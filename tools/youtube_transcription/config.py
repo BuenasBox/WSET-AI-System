@@ -1,9 +1,10 @@
 """Configuration helpers for the YouTube transcription pipeline.
 
-Future implementation will load playlist configuration, validate settings, and
-create required output folders. No network calls belong in this module.
+This module only handles local configuration and folders. No network calls
+belong here.
 """
 
+import json
 from pathlib import Path
 
 
@@ -31,3 +32,14 @@ def ensure_directories() -> None:
 def get_playlist_config_path() -> Path:
     """Return the default playlist configuration path."""
     return PLAYLIST_CONFIG_PATH
+
+
+def load_playlist_config(config_path: Path = PLAYLIST_CONFIG_PATH) -> list[dict]:
+    """Load playlist configuration records from JSON."""
+    with config_path.open("r", encoding="utf-8") as file:
+        data = json.load(file)
+
+    if not isinstance(data, list):
+        raise ValueError("Playlist config must contain a JSON list.")
+
+    return data
