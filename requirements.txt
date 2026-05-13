@@ -1,0 +1,10 @@
+yt-dlp
+youtube-transcript-api
+pydantic
+python-slugify
+tenacity
+tqdm
+faster-whisper
+langdetect
+orjson
+rich
