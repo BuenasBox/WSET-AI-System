@@ -99,6 +99,12 @@ knowledge/wine-with-jimmy/index/
 knowledge/wine-with-jimmy/reports/
 knowledge/wine-with-jimmy/enrichment-ready/
 
+# Manual curated local SRT imports and generated derivatives
+knowledge/wine-with-jimmy/manual-import/srt/
+knowledge/wine-with-jimmy/manual-import/processed/
+knowledge/wine-with-jimmy/manual-import/reports/
+knowledge/wine-with-jimmy/manual-import/rejected/
+
 # Embeddings (never committed — Tier 5 generated, vector-store only)
 knowledge/wine-with-jimmy/embeddings/
 

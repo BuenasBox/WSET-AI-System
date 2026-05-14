@@ -7,6 +7,7 @@ extraction. It does not download videos, audio, captions, or transcripts.
 import argparse
 import random
 import re
+import sys
 import time
 
 from .config import (
@@ -33,6 +34,7 @@ from .indexer import (
     write_discovered_outputs,
 )
 from .logger import configure_logging
+from .manual_srt import import_manual_srt_batch
 from .metadata import write_video_metadata
 from .playlist_loader import discover_playlist_videos, load_playlists
 from .targets import (
@@ -75,6 +77,16 @@ def main() -> None:
             f"completed={completed} dry_run={dry_runs} errors={errors} "
             f"report={WINE_WITH_JIMMY_ROOT / 'reports' / 'cleaning_batch_report.csv'}"
         )
+        return
+
+    if args.command == "import-manual-srt":
+        results = import_manual_srt_batch(
+            WINE_WITH_JIMMY_ROOT,
+            limit=args.limit,
+            dry_run=args.dry_run,
+            force=args.force,
+        )
+        _print_manual_srt_summary(results, dry_run=args.dry_run)
         return
 
     logger = configure_logging(WINE_WITH_JIMMY_ROOT / "logs")
@@ -336,6 +348,26 @@ def _build_parser() -> argparse.ArgumentParser:
         action="store_true",
         help="Overwrite derived outputs during real batch processing.",
     )
+    manual_srt_parser = subparsers.add_parser(
+        "import-manual-srt",
+        help="Import manually downloaded local SRT files into Tutor-only artifacts.",
+    )
+    manual_srt_parser.add_argument(
+        "--dry-run",
+        action="store_true",
+        help="Classify local SRT files and show expected outputs without writing derived artifacts.",
+    )
+    manual_srt_parser.add_argument(
+        "--limit",
+        type=int,
+        default=None,
+        help="Process only the first N local SRT files.",
+    )
+    manual_srt_parser.add_argument(
+        "--force",
+        action="store_true",
+        help="Overwrite derived manual import outputs.",
+    )
     return parser
 
 
@@ -493,6 +525,41 @@ def _count_targets_by_priority(targets: list[dict]) -> dict[str, int]:
         if priority in totals:
             totals[priority] += 1
     return totals
+
+
+def _print_manual_srt_summary(results: list[dict], dry_run: bool) -> None:
+    status_counts: dict[str, int] = {}
+    level_counts: dict[str, int] = {}
+    role_counts: dict[str, int] = {}
+    for result in results:
+        status = result.get("import_status", "")
+        level = result.get("academic_level", result.get("academic_level_guess", "UNKNOWN"))
+        role = result.get("pedagogical_role", result.get("pedagogical_role_guess", "unknown"))
+        status_counts[status] = status_counts.get(status, 0) + 1
+        level_counts[level] = level_counts.get(level, 0) + 1
+        role_counts[role] = role_counts.get(role, 0) + 1
+
+    print(
+        "Manual SRT import "
+        f"{'dry-run' if dry_run else 'complete'}. "
+        f"files={len(results)} statuses={status_counts}"
+    )
+    print(f"Academic levels: {level_counts}")
+    print(f"Pedagogical roles: {role_counts}")
+    if dry_run:
+        for result in results:
+            _safe_print(
+                f"- {result.get('source_filename', '')} | "
+                f"level={result.get('academic_level_guess', '')} "
+                f"role={result.get('pedagogical_role_guess', '')} "
+                f"video_id={result.get('video_id') or '<blank>'}"
+            )
+
+
+def _safe_print(message: str) -> None:
+    """Print filenames safely on legacy Windows console encodings."""
+    encoding = sys.stdout.encoding or "utf-8"
+    print(message.encode(encoding, errors="replace").decode(encoding, errors="replace"))
 
 
 def _normalize_error_message(message: object, max_length: int = 300) -> str:

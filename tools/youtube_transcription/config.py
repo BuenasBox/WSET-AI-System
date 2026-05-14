@@ -27,6 +27,11 @@ REQUIRED_DIRECTORIES = (
     WINE_WITH_JIMMY_ROOT / "logs",
     WINE_WITH_JIMMY_ROOT / "config",
     WINE_WITH_JIMMY_ROOT / "index",
+    WINE_WITH_JIMMY_ROOT / "manual-import" / "srt",
+    WINE_WITH_JIMMY_ROOT / "manual-import" / "processed",
+    WINE_WITH_JIMMY_ROOT / "manual-import" / "rejected",
+    WINE_WITH_JIMMY_ROOT / "manual-import" / "manifests",
+    WINE_WITH_JIMMY_ROOT / "manual-import" / "reports",
 )
 
 
