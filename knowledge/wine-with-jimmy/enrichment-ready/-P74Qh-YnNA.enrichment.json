@@ -1,0 +1,42 @@
+{
+  "video_id": "-P74Qh-YnNA",
+  "video_title": "Loire Valley Wine Basics: Muscadet & Melon Blanc Explained - WSET & Wine Lover Guide",
+  "source_type": "youtube_transcript",
+  "source_trust_tier": "pedagogical",
+  "agent_corpus": "tutor",
+  "safe_for_tutor": true,
+  "safe_for_examiner": false,
+  "academic_level": "UNKNOWN",
+  "pedagogical_role": "theory_explanation",
+  "quality_flags": [
+    "noisy_caption",
+    "theory_content"
+  ],
+  "cleaning_version": "transcript_cleaning_v1.0",
+  "processed_at": "2026-05-14T00:49:22+00:00",
+  "source_raw_txt_path": "C:\\Users\\esand\\OneDrive\\Documents\\WSET-AI-System\\knowledge\\wine-with-jimmy\\raw\\-P74Qh-YnNA__Loire_Valley_Wine_Basics_Muscadet_&_Melon_Blanc_Explained_-_WSET_&_Wine_Lover_Guide.raw.txt",
+  "source_raw_json_path": "C:\\Users\\esand\\OneDrive\\Documents\\WSET-AI-System\\knowledge\\wine-with-jimmy\\raw\\-P74Qh-YnNA__Loire_Valley_Wine_Basics_Muscadet_&_Melon_Blanc_Explained_-_WSET_&_Wine_Lover_Guide.raw.json",
+  "source_metadata_path": "C:\\Users\\esand\\OneDrive\\Documents\\WSET-AI-System\\knowledge\\wine-with-jimmy\\metadata\\-P74Qh-YnNA.metadata.json",
+  "clean_transcript_path": "C:\\Users\\esand\\OneDrive\\Documents\\WSET-AI-System\\knowledge\\wine-with-jimmy\\clean\\-P74Qh-YnNA__Loire_Valley_Wine_Basics_Muscadet_&_Melon_Blanc_Explained_-_WSET_&_Wine_Lover_Guide.clean.md",
+  "chunk_ready_path": "C:\\Users\\esand\\OneDrive\\Documents\\WSET-AI-System\\knowledge\\wine-with-jimmy\\chunk-ready\\-P74Qh-YnNA__Loire_Valley_Wine_Basics_Muscadet_&_Melon_Blanc_Explained_-_WSET_&_Wine_Lover_Guide.chunks.jsonl",
+  "word_count_raw": 1903,
+  "word_count_clean": 1299,
+  "chunk_count": 2,
+  "regions": [
+    "Bordeaux",
+    "Burgundy"
+  ],
+  "appellations": [],
+  "grape_varieties": [],
+  "sat_terms": [
+    "alcohol",
+    "body"
+  ],
+  "exam_terms": [],
+  "topics_detected": [
+    "regions",
+    "sat",
+    "winemaking",
+    "viticulture"
+  ]
+}

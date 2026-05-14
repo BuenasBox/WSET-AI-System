@@ -1,0 +1,251 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "calibration_manifest.schema.json",
+  "title": "WSET-AI-System Calibration Manifest",
+  "description": "Schema for the calibration manifest that records all sources approved for Examiner Agent use. Every source in the Examiner Agent's retrieval corpus must have a corresponding validated entry in an instance of this manifest. The manifest is the human-reviewed audit trail that enforces the calibration gate defined in EXAMINER_CALIBRATION_RULES.md.",
+  "type": "object",
+  "required": ["manifest_id", "manifest_version", "created_date", "last_reviewed_date", "sources", "_meta"],
+  "additionalProperties": false,
+  "properties": {
+
+    "manifest_id": {
+      "type": "string",
+      "pattern": "^CAL_MANIFEST_[A-Z0-9_]+$",
+      "description": "Unique identifier for this calibration manifest instance."
+    },
+
+    "manifest_version": {
+      "type": "string",
+      "description": "Semantic version of this manifest (e.g., '1.0.0')."
+    },
+
+    "created_date": {
+      "type": "string",
+      "format": "date",
+      "description": "ISO 8601 date when this manifest was first created."
+    },
+
+    "last_reviewed_date": {
+      "type": "string",
+      "format": "date",
+      "description": "ISO 8601 date of the most recent human calibration review."
+    },
+
+    "next_review_due": {
+      "type": "string",
+      "format": "date",
+      "description": "ISO 8601 date by which the next scheduled review must be completed. Manifests not reviewed by this date must be treated as expired."
+    },
+
+    "reviewed_by": {
+      "type": "string",
+      "description": "Identifier or initials of the WSET-qualified reviewer who performed the last review. Must hold minimum WSET Level 3 Award in Wines."
+    },
+
+    "reviewer_credentials": {
+      "type": "string",
+      "description": "WSET qualifications held by the reviewer (e.g., 'WSET Level 3 with Distinction', 'WSET Diploma', 'DipWSET'). Used to validate reviewer authority for the materials being reviewed."
+    },
+
+    "sources": {
+      "type": "array",
+      "description": "Array of individual source entries. Each entry represents one approved source for Examiner Agent retrieval.",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": [
+          "source_id",
+          "source_type",
+          "trust_tier",
+          "title",
+          "authority",
+          "edition_or_version",
+          "calibration_checks",
+          "examiner_eligible",
+          "tutor_eligible",
+          "ingestion_status"
+        ],
+        "additionalProperties": false,
+        "properties": {
+
+          "source_id": {
+            "type": "string",
+            "pattern": "^SRC_[A-Z0-9_]+$",
+            "description": "Unique identifier for this source."
+          },
+
+          "source_type": {
+            "type": "string",
+            "enum": [
+              "wset_mark_scheme",
+              "wset_examiner_guidance",
+              "wset_grade_descriptors",
+              "wset_textbook",
+              "wset_sat_official",
+              "benchmark_answer_set",
+              "wset_course_specification",
+              "wset_chief_examiner_report"
+            ],
+            "description": "Classification of the source type. Only types listed here are permitted in the Examiner Agent corpus."
+          },
+
+          "trust_tier": {
+            "type": "integer",
+            "enum": [0, 1, 2, 3],
+            "description": "Trust tier per SEMANTIC_RETRIEVAL_ARCHITECTURE.md. Examiner Agent permits Tiers 0–3 only. Tier 0 = official marking authority; Tier 1 = official specification; Tier 2 = SAT framework; Tier 3 = validated benchmark answers."
+          },
+
+          "title": {
+            "type": "string",
+            "description": "Full official title of the source material."
+          },
+
+          "authority": {
+            "type": "string",
+            "description": "Issuing authority (e.g., 'WSET Awards', 'WSET Qualifications')."
+          },
+
+          "edition_or_version": {
+            "type": "string",
+            "description": "Edition, version, or year of the source (e.g., '2023 edition', 'June 2024 sitting', 'v4.1'). Critical for ensuring currency."
+          },
+
+          "exam_session": {
+            "type": ["string", "null"],
+            "description": "For mark schemes tied to a specific exam session (e.g., 'June 2024'). Null for materials not session-specific."
+          },
+
+          "file_reference": {
+            "type": "string",
+            "description": "Internal file path or storage reference for the source document."
+          },
+
+          "ip_clearance": {
+            "type": "boolean",
+            "description": "Whether IP/legal clearance has been obtained to use this material in an AI system. Must be true before ingestion."
+          },
+
+          "calibration_checks": {
+            "type": "object",
+            "required": [
+              "source_authenticity_verified",
+              "currency_confirmed",
+              "no_pedagogical_contamination",
+              "sat_version_alignment",
+              "legal_ip_compliance"
+            ],
+            "additionalProperties": false,
+            "description": "Checklist of calibration gate requirements from EXAMINER_CALIBRATION_RULES.md §9.1.",
+            "properties": {
+              "source_authenticity_verified": {
+                "type": "boolean",
+                "description": "Reviewer confirmed source is genuine WSET-issued material."
+              },
+              "currency_confirmed": {
+                "type": "boolean",
+                "description": "Reviewer confirmed source is from the current WSET Level 3 specification."
+              },
+              "mark_scheme_completeness": {
+                "type": ["boolean", "null"],
+                "description": "For mark schemes: reviewer confirmed all marking points are present. Null for non-mark-scheme sources."
+              },
+              "grade_descriptor_accuracy": {
+                "type": ["boolean", "null"],
+                "description": "For grade descriptor sources: reviewer confirmed P/M/D criteria match current official criteria. Null for other sources."
+              },
+              "no_pedagogical_contamination": {
+                "type": "boolean",
+                "description": "Reviewer confirmed source contains no enrichment, pedagogical explanations, or Tutor Agent-appropriate content that could bias Examiner Agent scoring."
+              },
+              "sat_version_alignment": {
+                "type": ["boolean", "null"],
+                "description": "For SAT-related sources: reviewer confirmed content matches the current official WSET SAT version. Null for non-SAT sources."
+              },
+              "legal_ip_compliance": {
+                "type": "boolean",
+                "description": "Organisation has obtained rights to use this material in an AI system."
+              }
+            }
+          },
+
+          "examiner_eligible": {
+            "type": "boolean",
+            "description": "Whether this source is approved for the Examiner Agent retrieval corpus. Must be true for any source used in scoring operations.",
+            "const": true,
+            "description": "All sources in the calibration manifest are by definition examiner_eligible: true."
+          },
+
+          "tutor_eligible": {
+            "type": "boolean",
+            "description": "Whether this source may also be used in the Tutor Agent corpus. Tier 0 mark schemes should typically be false here to prevent mark scheme language from reaching learners directly."
+          },
+
+          "scoring_scope": {
+            "type": "array",
+            "description": "The question types or assessment domains this source provides scoring authority for (e.g., ['written_short_answer', 'tasting_note']).",
+            "items": {
+              "type": "string",
+              "enum": [
+                "written_short_answer",
+                "written_extended_answer",
+                "multiple_choice",
+                "tasting_note",
+                "matching",
+                "true_false",
+                "all"
+              ]
+            }
+          },
+
+          "ingestion_status": {
+            "type": "string",
+            "enum": ["approved", "pending_review", "expired", "revoked"],
+            "description": "Current ingestion status. Only 'approved' sources may be active in the Examiner Agent corpus."
+          },
+
+          "approval_date": {
+            "type": "string",
+            "format": "date",
+            "description": "ISO 8601 date when this source was approved for ingestion."
+          },
+
+          "expires": {
+            "type": ["string", "null"],
+            "format": "date",
+            "description": "ISO 8601 expiry date. Null for perennial materials (textbooks, grade descriptors). Mandatory for session-specific materials (mark schemes, examiner reports)."
+          },
+
+          "revocation_reason": {
+            "type": ["string", "null"],
+            "description": "If ingestion_status is 'revoked', the reason for revocation. Null otherwise."
+          },
+
+          "notes": {
+            "type": "string",
+            "description": "Free-text notes from the calibration reviewer about this source."
+          }
+        }
+      }
+    },
+
+    "_meta": {
+      "type": "object",
+      "required": ["schema_version", "created_date", "ingestion_status"],
+      "additionalProperties": false,
+      "properties": {
+        "schema_version": {
+          "type": "string",
+          "const": "1.0"
+        },
+        "created_date": {
+          "type": "string",
+          "format": "date"
+        },
+        "ingestion_status": {
+          "type": "string",
+          "enum": ["draft", "validated", "deprecated"]
+        }
+      }
+    }
+  }
+}

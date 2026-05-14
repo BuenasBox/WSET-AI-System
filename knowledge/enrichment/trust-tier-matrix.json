@@ -1,0 +1,345 @@
+{
+  "_description": "WSET-AI-System Trust Tier Matrix. Defines the complete data governance rules for each source type in the system. For each source, specifies: trust tier, access permissions per agent, retrieval weight, calibration status, whether it is graph-eligible, and specific agent access rules. This matrix is the single authoritative reference for source-level governance decisions. Cross-reference with retrieval_priority_matrix.json for retrieval weights and AGENT_BOUNDARIES.md for the full governance framework.",
+  "_version": "1.0",
+  "_date": "2026-05-13",
+  "_authority": "AGENT_BOUNDARIES.md + SEMANTIC_RETRIEVAL_ARCHITECTURE.md",
+
+  "tier_definitions": {
+    "tier_0": {
+      "name": "Official Marking Authority",
+      "description": "WSET-issued documents with direct scoring authority: mark schemes, examiner guidance, grade descriptors.",
+      "calibration_gate_required": true,
+      "tutor_access": "reference_only",
+      "examiner_access": "primary_authority",
+      "max_retrieval_weight": 1.0,
+      "enrichment_eligible": false
+    },
+    "tier_1": {
+      "name": "Official WSET Specification",
+      "description": "WSET-published course materials, textbooks, unit specifications.",
+      "calibration_gate_required": true,
+      "tutor_access": "primary",
+      "examiner_access": "secondary_context",
+      "max_retrieval_weight": 0.95,
+      "enrichment_eligible": false
+    },
+    "tier_2": {
+      "name": "Official SAT Framework",
+      "description": "WSET Systematic Approach to Tasting official documentation.",
+      "calibration_gate_required": true,
+      "tutor_access": "primary_for_tasting",
+      "examiner_access": "tasting_authority",
+      "max_retrieval_weight": 0.95,
+      "enrichment_eligible": false
+    },
+    "tier_3": {
+      "name": "Validated Benchmark Answers",
+      "description": "Human-reviewed exemplar answers calibrated to P/M/D standards.",
+      "calibration_gate_required": true,
+      "tutor_access": "exam_strategy_and_examples",
+      "examiner_access": "calibration_anchor_only",
+      "max_retrieval_weight": 0.85,
+      "enrichment_eligible": false
+    },
+    "tier_4": {
+      "name": "Pedagogical Enrichment",
+      "description": "High-quality educational content not officially WSET-sanctioned: Wine With Jimmy, Diploma enrichment, knowledge graph nodes.",
+      "calibration_gate_required": false,
+      "tutor_access": "full_with_framing",
+      "examiner_access": "FORBIDDEN",
+      "max_retrieval_weight": 0.80,
+      "enrichment_eligible": true
+    },
+    "tier_5": {
+      "name": "Generated / Internal",
+      "description": "AI-generated content, draft materials, internal examples pending review.",
+      "calibration_gate_required": false,
+      "tutor_access": "lowest_priority_only",
+      "examiner_access": "FORBIDDEN",
+      "max_retrieval_weight": 0.50,
+      "enrichment_eligible": true
+    }
+  },
+
+  "sources": {
+
+    "official_wset": {
+      "label": "All Official WSET Materials (combined)",
+      "trust_tier": 0,
+      "tutor_agent": {
+        "eligible": true,
+        "access_mode": "reference_and_knowledge_anchor",
+        "retrieval_weight": 1.0,
+        "may_quote_directly": false,
+        "may_paraphrase": true,
+        "pedagogical_roles_allowed": ["foundational", "reinforcement", "exam_strategy", "distinction_training", "tasting_alignment"],
+        "framing_required": false,
+        "notes": "Tutor Agent uses WSET official materials as the factual and structural anchor. May not reproduce mark scheme language verbatim. May paraphrase exam requirements and grade criteria."
+      },
+      "examiner_agent": {
+        "eligible": true,
+        "access_mode": "primary_scoring_authority",
+        "retrieval_weight": 1.0,
+        "may_quote_directly": true,
+        "may_paraphrase": true,
+        "scoring_authority": true,
+        "notes": "Examiner Agent's primary and mandatory source. All scoring decisions must trace to this source tier."
+      },
+      "calibration_gate": "mandatory",
+      "graph_eligible": false,
+      "calibration_safe": true
+    },
+
+    "sat": {
+      "label": "WSET SAT (Systematic Approach to Tasting)",
+      "trust_tier": 2,
+      "tutor_agent": {
+        "eligible": true,
+        "access_mode": "tasting_vocabulary_authority",
+        "retrieval_weight": 0.95,
+        "may_quote_directly": true,
+        "may_paraphrase": true,
+        "pedagogical_roles_allowed": ["tasting_alignment", "foundational", "reinforcement"],
+        "framing_required": false,
+        "notes": "The SAT is the mandatory vocabulary standard for all tasting notes. Tutor Agent must use SAT terminology for any sensory description guidance."
+      },
+      "examiner_agent": {
+        "eligible": true,
+        "access_mode": "tasting_scoring_authority",
+        "retrieval_weight": 1.0,
+        "may_quote_directly": true,
+        "scoring_authority": true,
+        "notes": "SAT carries equivalent scoring authority to Tier 0 for tasting-based assessment questions."
+      },
+      "calibration_gate": "mandatory",
+      "graph_eligible": true,
+      "calibration_safe": true
+    },
+
+    "marking_keys": {
+      "label": "WSET Mark Schemes (session-specific)",
+      "trust_tier": 0,
+      "tutor_agent": {
+        "eligible": true,
+        "access_mode": "reference_only",
+        "retrieval_weight": 1.0,
+        "may_quote_directly": false,
+        "may_paraphrase": true,
+        "pedagogical_roles_allowed": ["exam_strategy", "distinction_training"],
+        "framing_required": false,
+        "notes": "Tutor Agent reference use only. Must not expose mark scheme language directly to learners during assessment simulation. May use post-assessment to explain what was required."
+      },
+      "examiner_agent": {
+        "eligible": true,
+        "access_mode": "primary_scoring_authority",
+        "retrieval_weight": 1.0,
+        "may_quote_directly": true,
+        "scoring_authority": true,
+        "notes": "Primary scoring authority. Session-specific; expires after the exam session to which it applies."
+      },
+      "calibration_gate": "mandatory",
+      "graph_eligible": false,
+      "calibration_safe": true,
+      "expiry_policy": "session_specific"
+    },
+
+    "benchmark_answers": {
+      "label": "Validated Benchmark Answers",
+      "trust_tier": 3,
+      "tutor_agent": {
+        "eligible": true,
+        "access_mode": "exam_strategy_examples",
+        "retrieval_weight": 0.85,
+        "may_quote_directly": true,
+        "may_paraphrase": true,
+        "pedagogical_roles_allowed": ["exam_strategy", "distinction_training", "concise_answer_training"],
+        "framing_required": false,
+        "notes": "Validated benchmark answers are high-value for showing learners what Distinction looks like. Must carry individual L4 human sign-off."
+      },
+      "examiner_agent": {
+        "eligible": true,
+        "access_mode": "calibration_anchor_only",
+        "retrieval_weight": 0.70,
+        "may_quote_directly": false,
+        "scoring_authority": false,
+        "notes": "May inform calibration but never determines a score. Maximum weight 0.70 for Examiner Agent."
+      },
+      "calibration_gate": "required_for_examiner",
+      "graph_eligible": true,
+      "calibration_safe": true
+    },
+
+    "internal_question_bank": {
+      "label": "Internal Question Bank (WSET3_Banco_Maestro_V9)",
+      "trust_tier": 3,
+      "tutor_agent": {
+        "eligible": true,
+        "access_mode": "practice_and_reinforcement",
+        "retrieval_weight": 0.80,
+        "may_quote_directly": true,
+        "pedagogical_roles_allowed": ["reinforcement", "exam_strategy", "weakness_targeted", "foundational"],
+        "framing_required": false,
+        "notes": "Used for practice questions, spaced repetition, and weakness-targeted retrieval. Items with needs_human_review=true must be flagged to learners as unvalidated. allowed_for_examiner=false for all items."
+      },
+      "examiner_agent": {
+        "eligible": false,
+        "access_mode": "FORBIDDEN",
+        "retrieval_weight": 0.0,
+        "scoring_authority": false,
+        "notes": "The internal question bank has source_trust_tier=internal_training and allowed_for_examiner=False for all records. It must never enter the Examiner Agent corpus."
+      },
+      "calibration_gate": "not_required",
+      "graph_eligible": true,
+      "calibration_safe": false
+    },
+
+    "wine_with_jimmy": {
+      "label": "Wine With Jimmy Transcripts",
+      "trust_tier": 4,
+      "tutor_agent": {
+        "eligible": true,
+        "access_mode": "enrichment_only",
+        "retrieval_weight": 0.70,
+        "may_quote_directly": false,
+        "may_paraphrase": true,
+        "pedagogical_roles_allowed": ["advanced_enrichment", "tasting_alignment"],
+        "framing_required": true,
+        "framing_statement": "This comes from an informal pedagogical source and is for enrichment only — it is not WSET official guidance.",
+        "notes": "Requires human review and WSET accuracy check before ingestion. Must never be used for exam strategy, distinction training, or any content that claims to represent WSET marking criteria."
+      },
+      "examiner_agent": {
+        "eligible": false,
+        "access_mode": "FORBIDDEN",
+        "retrieval_weight": 0.0,
+        "scoring_authority": false,
+        "notes": "Absolutely and unconditionally forbidden for Examiner Agent use. No exception case exists."
+      },
+      "calibration_gate": "not_applicable",
+      "graph_eligible": true,
+      "calibration_safe": false
+    },
+
+    "diploma_content": {
+      "label": "WSET Diploma (L4) Content as L3 Enrichment",
+      "trust_tier": 4,
+      "tutor_agent": {
+        "eligible": true,
+        "access_mode": "advanced_enrichment_only",
+        "retrieval_weight": 0.70,
+        "may_quote_directly": false,
+        "may_paraphrase": true,
+        "pedagogical_roles_allowed": ["advanced_enrichment", "distinction_training"],
+        "framing_required": true,
+        "framing_statement": "This is Diploma-level content used here for deeper understanding — it goes beyond what is required for the WSET Level 3 exam.",
+        "notes": "Must carry explicit L3-downgrade annotation. May not introduce Diploma marking criteria or Diploma-level expectations. Access restricted to advanced_enrichment and distinction_training roles only."
+      },
+      "examiner_agent": {
+        "eligible": false,
+        "access_mode": "FORBIDDEN",
+        "retrieval_weight": 0.0,
+        "scoring_authority": false,
+        "notes": "Different qualification level. May not be used to interpret or supplement L3 mark schemes. Forbidden unconditionally."
+      },
+      "calibration_gate": "not_applicable",
+      "graph_eligible": true,
+      "calibration_safe": false
+    },
+
+    "generated_content": {
+      "label": "AI-Generated Content",
+      "trust_tier": 5,
+      "tutor_agent": {
+        "eligible": true,
+        "access_mode": "lowest_priority_supplemental",
+        "retrieval_weight": 0.50,
+        "may_quote_directly": false,
+        "may_paraphrase": true,
+        "pedagogical_roles_allowed": ["advanced_enrichment"],
+        "framing_required": true,
+        "framing_statement": "This explanation was generated by an AI system. Please verify against your official WSET course materials.",
+        "notes": "Used only when no higher-tier source covers the specific query. Must be labelled as AI-generated. graph_eligible=false until human-promoted."
+      },
+      "examiner_agent": {
+        "eligible": false,
+        "access_mode": "FORBIDDEN",
+        "retrieval_weight": 0.0,
+        "scoring_authority": false,
+        "notes": "No traceability to WSET authority. Forbidden unconditionally."
+      },
+      "calibration_gate": "not_applicable",
+      "graph_eligible": false,
+      "calibration_safe": false
+    },
+
+    "misconception_nodes": {
+      "label": "Knowledge Graph — Misconception Nodes",
+      "trust_tier": 4,
+      "tutor_agent": {
+        "eligible": true,
+        "access_mode": "forced_retrieval_on_detection_signal",
+        "retrieval_weight": 0.85,
+        "may_quote_directly": true,
+        "pedagogical_roles_allowed": ["misconception_correction"],
+        "framing_required": false,
+        "notes": "Forced retrieval when detection_signal match occurs. Not scored — always included. High pedagogical value. Not framing-required because correction itself is the framing."
+      },
+      "examiner_agent": {
+        "eligible": false,
+        "access_mode": "FORBIDDEN",
+        "retrieval_weight": 0.0,
+        "scoring_authority": false,
+        "notes": "Examiner Agent does not perform misconception correction. Unconditionally forbidden."
+      },
+      "calibration_gate": "not_applicable",
+      "graph_eligible": true,
+      "calibration_safe": false
+    },
+
+    "causal_chains": {
+      "label": "Knowledge Graph — Causal Chain Nodes",
+      "trust_tier": 4,
+      "tutor_agent": {
+        "eligible": true,
+        "access_mode": "distinction_and_mechanism_primary",
+        "retrieval_weight": 0.80,
+        "may_quote_directly": true,
+        "pedagogical_roles_allowed": ["distinction_training", "reinforcement", "exam_strategy", "linkage_training"],
+        "framing_required": false,
+        "notes": "Core Distinction-level content. Graph traversal bonus +0.10 applies. Not framing-required because causal chains represent pedagogically constructed (not informal or generated) knowledge."
+      },
+      "examiner_agent": {
+        "eligible": false,
+        "access_mode": "FORBIDDEN",
+        "retrieval_weight": 0.0,
+        "scoring_authority": false,
+        "notes": "Pedagogical depth content is not marking authority. Forbidden unconditionally."
+      },
+      "calibration_gate": "not_applicable",
+      "graph_eligible": true,
+      "calibration_safe": false
+    }
+  },
+
+  "agent_corpus_summary": {
+    "tutor_agent_eligible_tiers": [0, 1, 2, 3, 4, 5],
+    "examiner_agent_eligible_tiers": [0, 1, 2, 3],
+    "tutor_agent_minimum_composite_score": 0.55,
+    "examiner_agent_minimum_composite_score": 0.70,
+    "sources_forbidden_for_examiner": [
+      "wine_with_jimmy",
+      "diploma_content",
+      "generated_content",
+      "misconception_nodes",
+      "causal_chains",
+      "knowledge_graph_concept",
+      "internal_question_bank"
+    ],
+    "sources_requiring_calibration_gate_for_examiner": [
+      "official_wset",
+      "sat",
+      "marking_keys",
+      "benchmark_answers",
+      "wset_textbook"
+    ]
+  }
+}

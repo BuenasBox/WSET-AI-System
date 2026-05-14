@@ -1,0 +1,33 @@
+{
+  "video_id": "-Enx7PlS3Yg",
+  "video_title": "Grape Varieties - Sangiovese Advanced Level ideal for WSET Level 3 and Level 4 (WSET Diploma)",
+  "source_type": "youtube_transcript",
+  "source_trust_tier": "pedagogical",
+  "agent_corpus": "tutor",
+  "safe_for_tutor": true,
+  "safe_for_examiner": false,
+  "academic_level": "MIXED",
+  "pedagogical_role": "exam_strategy",
+  "quality_flags": [
+    "possible_asr_error",
+    "low_confidence_term",
+    "noisy_caption",
+    "mixed_level_content",
+    "exam_strategy_content",
+    "tasting_content",
+    "theory_content"
+  ],
+  "cleaning_version": "transcript_cleaning_v1.0",
+  "processed_at": "2026-05-14T00:49:22+00:00",
+  "clean_status": "completed",
+  "word_count_raw": 5130,
+  "word_count_clean": 3348,
+  "chunk_count": 5,
+  "output_clean_path": "C:\\Users\\esand\\OneDrive\\Documents\\WSET-AI-System\\knowledge\\wine-with-jimmy\\clean\\-Enx7PlS3Yg__Grape_Varieties_-_Sangiovese_Advanced_Level_ideal_for_WSET_Level_3_and_Level_4_(WSET_Diploma).clean.md",
+  "output_chunk_ready_path": "C:\\Users\\esand\\OneDrive\\Documents\\WSET-AI-System\\knowledge\\wine-with-jimmy\\chunk-ready\\-Enx7PlS3Yg__Grape_Varieties_-_Sangiovese_Advanced_Level_ideal_for_WSET_Level_3_and_Level_4_(WSET_Diploma).chunks.jsonl",
+  "output_enrichment_path": "C:\\Users\\esand\\OneDrive\\Documents\\WSET-AI-System\\knowledge\\wine-with-jimmy\\enrichment-ready\\-Enx7PlS3Yg.enrichment.json",
+  "report_path": "C:\\Users\\esand\\OneDrive\\Documents\\WSET-AI-System\\knowledge\\wine-with-jimmy\\reports\\-Enx7PlS3Yg.cleaning_report.json",
+  "removed_caption_artifact_lines": 0,
+  "collapsed_duplicate_fragments": 0,
+  "error_message": ""
+}

@@ -25,7 +25,7 @@ from .captions import (
     save_raw_transcript,
     utc_now,
 )
-from .cleaner import clean_one_video
+from .cleaner import clean_batch, clean_one_video
 from .indexer import (
     read_transcript_status_index,
     update_transcript_status_index,
@@ -44,12 +44,30 @@ def main() -> None:
     ensure_directories()
 
     if args.command == "clean-one":
-        report = clean_one_video(args.video_id, WINE_WITH_JIMMY_ROOT)
+        report = clean_one_video(args.video_id, WINE_WITH_JIMMY_ROOT, force=args.force)
         print("Clean-one complete.")
         print(f"Clean transcript: {report['output_clean_path']}")
-        print(f"Chunk-ready draft: {report['output_chunk_ready_path']}")
+        print(f"Chunk-ready JSONL: {report['output_chunk_ready_path']}")
+        print(f"Enrichment metadata: {report['output_enrichment_path']}")
         print(f"Cleaning report: {report['report_path']}")
         print(f"Quality flags: {', '.join(report['quality_flags']) or 'none'}")
+        return
+
+    if args.command == "clean-batch":
+        results = clean_batch(
+            WINE_WITH_JIMMY_ROOT,
+            limit=args.limit,
+            dry_run=args.dry_run,
+            force=args.force,
+        )
+        completed = sum(1 for result in results if result.get("clean_status") == "completed")
+        dry_runs = sum(1 for result in results if result.get("clean_status") == "dry_run")
+        errors = sum(1 for result in results if result.get("clean_status") == "error")
+        print(
+            "Clean-batch complete. "
+            f"completed={completed} dry_run={dry_runs} errors={errors} "
+            f"report={WINE_WITH_JIMMY_ROOT / 'reports' / 'cleaning_batch_report.csv'}"
+        )
         return
 
     logger = configure_logging(WINE_WITH_JIMMY_ROOT / "logs")
@@ -174,6 +192,31 @@ def _build_parser() -> argparse.ArgumentParser:
         "--video-id",
         required=True,
         help="YouTube video ID for one existing local raw transcript.",
+    )
+    clean_parser.add_argument(
+        "--force",
+        action="store_true",
+        help="Overwrite derived clean/chunk/enrichment/report outputs for this video.",
+    )
+    clean_batch_parser = subparsers.add_parser(
+        "clean-batch",
+        help="Clean a batch of existing completed/skipped local raw transcripts.",
+    )
+    clean_batch_parser.add_argument(
+        "--limit",
+        type=int,
+        default=None,
+        help="Process only the first N processable transcripts.",
+    )
+    clean_batch_parser.add_argument(
+        "--dry-run",
+        action="store_true",
+        help="List/write batch report entries without creating per-video derived outputs.",
+    )
+    clean_batch_parser.add_argument(
+        "--force",
+        action="store_true",
+        help="Overwrite derived outputs during real batch processing.",
     )
     return parser
 

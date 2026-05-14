@@ -1,0 +1,94 @@
+{
+  "video_id": "0LRBstQgK0I",
+  "video_title": "Understanding Southern France for WSET Level 3 Wines Part 1 - Climate Grapegrowing & Grape Varieties",
+  "source_type": "youtube_transcript",
+  "source_trust_tier": "pedagogical",
+  "agent_corpus": "tutor",
+  "safe_for_tutor": true,
+  "safe_for_examiner": false,
+  "academic_level": "WSET_L3",
+  "pedagogical_role": "exam_strategy",
+  "quality_flags": [
+    "noisy_caption",
+    "exam_strategy_content",
+    "tasting_content",
+    "theory_content"
+  ],
+  "asr_corrections_applied": [
+    {
+      "original": "wsct",
+      "corrected": "WSET",
+      "occurrences": 1,
+      "confidence": "high"
+    },
+    {
+      "original": "longodop rusilion",
+      "corrected": "Languedoc-Roussillon",
+      "occurrences": 1,
+      "confidence": "high"
+    },
+    {
+      "original": "victor culture",
+      "corrected": "viticulture",
+      "occurrences": 1,
+      "confidence": "high"
+    },
+    {
+      "original": "roan",
+      "corrected": "Rhône",
+      "occurrences": 1,
+      "confidence": "high"
+    },
+    {
+      "original": "russian",
+      "corrected": "Roussillon",
+      "occurrences": 1,
+      "confidence": "high",
+      "context": "Southern France"
+    }
+  ],
+  "low_confidence_terms": [],
+  "cleaning_version": "transcript_cleaning_v1.1",
+  "processed_at": "2026-05-14T00:59:13+00:00",
+  "source_raw_txt_path": "C:\\Users\\esand\\OneDrive\\Documents\\WSET-AI-System\\knowledge\\wine-with-jimmy\\raw\\0LRBstQgK0I__Understanding_Southern_France_for_WSET_Level_3_Wines_Part_1_-_Climate_Grapegrowing_&_Grape_Varieties.raw.txt",
+  "source_raw_json_path": "C:\\Users\\esand\\OneDrive\\Documents\\WSET-AI-System\\knowledge\\wine-with-jimmy\\raw\\0LRBstQgK0I__Understanding_Southern_France_for_WSET_Level_3_Wines_Part_1_-_Climate_Grapegrowing_&_Grape_Varieties.raw.json",
+  "source_metadata_path": "C:\\Users\\esand\\OneDrive\\Documents\\WSET-AI-System\\knowledge\\wine-with-jimmy\\metadata\\0LRBstQgK0I.metadata.json",
+  "clean_transcript_path": "C:\\Users\\esand\\OneDrive\\Documents\\WSET-AI-System\\knowledge\\wine-with-jimmy\\clean\\0LRBstQgK0I__Understanding_Southern_France_for_WSET_Level_3_Wines_Part_1_-_Climate_Grapegrowing_&_Grape_Varieties.clean.md",
+  "chunk_ready_path": "C:\\Users\\esand\\OneDrive\\Documents\\WSET-AI-System\\knowledge\\wine-with-jimmy\\chunk-ready\\0LRBstQgK0I__Understanding_Southern_France_for_WSET_Level_3_Wines_Part_1_-_Climate_Grapegrowing_&_Grape_Varieties.chunks.jsonl",
+  "word_count_raw": 5634,
+  "word_count_clean": 3608,
+  "chunk_count": 19,
+  "regions": [
+    "Bordeaux",
+    "Southern France",
+    "Provence",
+    "Languedoc-Roussillon",
+    "Roussillon",
+    "Rhône",
+    "Alsace"
+  ],
+  "appellations": [],
+  "grape_varieties": [
+    "Chardonnay",
+    "Sauvignon Blanc",
+    "Pinot Noir",
+    "Cabernet Sauvignon",
+    "Merlot",
+    "Syrah",
+    "Grenache"
+  ],
+  "sat_terms": [
+    "complexity"
+  ],
+  "exam_terms": [
+    "WSET Level 3"
+  ],
+  "topics_detected": [
+    "regions",
+    "grape_varieties",
+    "sat",
+    "winemaking",
+    "exam_strategy",
+    "viticulture"
+  ]
+}

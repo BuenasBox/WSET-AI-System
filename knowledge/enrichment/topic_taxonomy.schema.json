@@ -1,0 +1,199 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "topic_taxonomy.schema.json",
+  "title": "WSET-AI-System Topic Taxonomy",
+  "description": "Schema for topic taxonomy entries. The topic taxonomy maps the WSET Level 3 curriculum into a hierarchical classification system that governs retrieval scoping, concept grouping, and pedagogical sequencing. Each entry defines one topic node in the taxonomy tree.",
+  "type": "object",
+  "required": [
+    "topic_id",
+    "topic_name",
+    "result_area",
+    "level",
+    "parent_topic_id",
+    "description",
+    "exam_weight",
+    "concept_ids",
+    "_meta"
+  ],
+  "additionalProperties": false,
+  "properties": {
+
+    "topic_id": {
+      "type": "string",
+      "pattern": "^T_RA[1-5]_[A-Z0-9_]+$",
+      "description": "Unique topic identifier. Pattern: T_RA[1-5]_[UPPERCASE_SLUG]. Must be unique across all topic nodes."
+    },
+
+    "topic_name": {
+      "type": "string",
+      "description": "Human-readable topic name as it appears in the WSET Level 3 curriculum structure."
+    },
+
+    "result_area": {
+      "type": "string",
+      "enum": ["RA1", "RA2", "RA3", "RA4", "RA5"],
+      "description": "The WSET Level 3 Result Area this topic belongs to. RA1=Viticulture & Winemaking; RA2=Still Wines; RA3=Sparkling; RA4=Fortified; RA5=Laws & Commerce."
+    },
+
+    "level": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 3,
+      "description": "Hierarchy level within the taxonomy. Level 1 = RA root (e.g., T_RA1). Level 2 = major topic area (e.g., T_RA1_CLIMATE). Level 3 = specific topic (e.g., T_RA1_COOL_CLIMATE)."
+    },
+
+    "parent_topic_id": {
+      "type": ["string", "null"],
+      "description": "ID of the parent topic in the hierarchy. Null for Level 1 root topics."
+    },
+
+    "child_topic_ids": {
+      "type": "array",
+      "description": "IDs of child topics in the hierarchy. Empty array for leaf topics.",
+      "items": {
+        "type": "string",
+        "pattern": "^T_RA[1-5]_[A-Z0-9_]+$"
+      },
+      "default": []
+    },
+
+    "description": {
+      "type": "string",
+      "description": "Brief description of what this topic covers in the WSET Level 3 curriculum."
+    },
+
+    "wset_curriculum_reference": {
+      "type": "string",
+      "description": "Direct reference to the section or unit in the WSET Level 3 specification that corresponds to this topic."
+    },
+
+    "exam_weight": {
+      "type": "string",
+      "enum": ["critical", "high", "moderate", "low"],
+      "description": "Relative exam assessment weight. Based on frequency and mark allocation in WSET Level 3 assessments. 'critical' = frequently assessed, high mark allocation; 'low' = rarely assessed or low mark allocation."
+    },
+
+    "prerequisite_topic_ids": {
+      "type": "array",
+      "description": "Topics that must be understood before this topic. Used for pedagogical sequencing.",
+      "items": {
+        "type": "string",
+        "pattern": "^T_RA[1-5]_[A-Z0-9_]+$"
+      },
+      "default": []
+    },
+
+    "related_topic_ids": {
+      "type": "array",
+      "description": "Topics that are thematically related and should be retrieved together in composite questions.",
+      "items": {
+        "type": "string",
+        "pattern": "^T_RA[1-5]_[A-Z0-9_]+$"
+      },
+      "default": []
+    },
+
+    "concept_ids": {
+      "type": "array",
+      "description": "IDs of concept nodes that belong to this topic.",
+      "items": {
+        "type": "string",
+        "pattern": "^C_[A-Z0-9_]+$"
+      },
+      "default": []
+    },
+
+    "misconception_ids": {
+      "type": "array",
+      "description": "IDs of misconception nodes commonly triggered by content in this topic.",
+      "items": {
+        "type": "string",
+        "pattern": "^MC_[A-Z0-9_]+_[0-9]{2}$"
+      },
+      "default": []
+    },
+
+    "causal_chain_ids": {
+      "type": "array",
+      "description": "IDs of causal chains primarily associated with this topic.",
+      "items": {
+        "type": "string",
+        "pattern": "^CC_[A-Z0-9_]+$"
+      },
+      "default": []
+    },
+
+    "retrieval_scoping": {
+      "type": "object",
+      "description": "Retrieval configuration specific to this topic.",
+      "additionalProperties": false,
+      "properties": {
+        "dense_search_boost": {
+          "type": "number",
+          "minimum": 1.0,
+          "maximum": 2.0,
+          "description": "Multiplier applied to composite scores for chunks from this topic during retrieval. Default 1.0 (no boost).",
+          "default": 1.0
+        },
+        "graph_traversal_priority": {
+          "type": "string",
+          "enum": ["high", "normal", "low"],
+          "description": "Whether graph traversal should be aggressively initiated for this topic. 'high' for mechanistically complex topics where causal chains are critical.",
+          "default": "normal"
+        },
+        "requires_misconception_prepass": {
+          "type": "boolean",
+          "description": "Whether the misconception pre-pass should always be run for queries in this topic, regardless of whether a detection_signal match is found.",
+          "default": false
+        },
+        "examiner_eligible": {
+          "type": "boolean",
+          "description": "Whether this topic's content is in scope for Examiner Agent retrieval.",
+          "default": true
+        }
+      }
+    },
+
+    "pedagogical_notes": {
+      "type": "string",
+      "description": "Notes for content editors on the pedagogical complexity, common teaching challenges, or sequencing considerations for this topic."
+    },
+
+    "tags": {
+      "type": "array",
+      "description": "Free-form tags for filtering and grouping.",
+      "items": {
+        "type": "string"
+      },
+      "default": []
+    },
+
+    "_meta": {
+      "type": "object",
+      "required": ["schema_version", "created_date", "ingestion_status"],
+      "additionalProperties": false,
+      "properties": {
+        "schema_version": {
+          "type": "string",
+          "const": "1.0"
+        },
+        "created_date": {
+          "type": "string",
+          "format": "date"
+        },
+        "ingestion_status": {
+          "type": "string",
+          "enum": ["draft", "validated", "deprecated"]
+        },
+        "validated_by": {
+          "type": "string",
+          "description": "Reviewer ID or initials after L4 validation."
+        },
+        "validated_date": {
+          "type": "string",
+          "format": "date"
+        }
+      }
+    }
+  }
+}

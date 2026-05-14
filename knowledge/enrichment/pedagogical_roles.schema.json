@@ -1,0 +1,276 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "pedagogical_roles.schema.json",
+  "title": "WSET-AI-System Pedagogical Role Annotation",
+  "description": "Schema for annotating individual knowledge content chunks with their pedagogical role(s). These annotations are attached at ingestion and drive role-based retrieval filtering in the Tutor Agent. Roles are defined in full in PEDAGOGICAL_CLASSIFICATION_SYSTEM.md. This schema governs the annotation format — it is not the definition of the roles themselves.",
+  "type": "object",
+  "required": [
+    "annotation_id",
+    "content_ref",
+    "content_type",
+    "primary_role",
+    "permitted_roles",
+    "grade_band_target",
+    "tutor_eligible",
+    "examiner_eligible",
+    "_meta"
+  ],
+  "additionalProperties": false,
+  "properties": {
+
+    "annotation_id": {
+      "type": "string",
+      "pattern": "^PROLE_[A-Z0-9_]+$",
+      "description": "Unique identifier for this pedagogical role annotation."
+    },
+
+    "content_ref": {
+      "type": "string",
+      "description": "Reference to the content node or chunk this annotation applies to. For knowledge graph nodes, this is the node ID (e.g., 'C_ACIDITY', 'CC_COOL_CLIMATE_ACIDITY'). For flat text chunks, this is the chunk ID from the vector store."
+    },
+
+    "content_type": {
+      "type": "string",
+      "enum": [
+        "concept_definition",
+        "concept_distinction_insight",
+        "causal_chain_full",
+        "causal_chain_step",
+        "causal_chain_distinction_note",
+        "misconception_node",
+        "relationship_edge",
+        "benchmark_answer_pass",
+        "benchmark_answer_merit",
+        "benchmark_answer_distinction",
+        "sat_vocabulary",
+        "textbook_section",
+        "enrichment_chunk",
+        "generated_example"
+      ],
+      "description": "The structural type of the content being annotated. Determines default role eligibility."
+    },
+
+    "primary_role": {
+      "type": "string",
+      "enum": [
+        "foundational",
+        "reinforcement",
+        "misconception_correction",
+        "exam_strategy",
+        "advanced_enrichment",
+        "tasting_alignment",
+        "linkage_training",
+        "concise_answer_training",
+        "distinction_training"
+      ],
+      "description": "The default pedagogical role for this content. Used when no context override is active. See PEDAGOGICAL_CLASSIFICATION_SYSTEM.md for full definitions."
+    },
+
+    "permitted_roles": {
+      "type": "array",
+      "description": "All pedagogical roles this content may serve. The primary_role must be included. Context overrides may activate any role from this list.",
+      "minItems": 1,
+      "items": {
+        "type": "string",
+        "enum": [
+          "foundational",
+          "reinforcement",
+          "misconception_correction",
+          "exam_strategy",
+          "advanced_enrichment",
+          "tasting_alignment",
+          "linkage_training",
+          "concise_answer_training",
+          "distinction_training"
+        ]
+      }
+    },
+
+    "forbidden_roles": {
+      "type": "array",
+      "description": "Roles this content must never serve, even if context would normally trigger them. Enforces the forbidden role assignments defined in PEDAGOGICAL_CLASSIFICATION_SYSTEM.md §6.3.",
+      "items": {
+        "type": "string",
+        "enum": [
+          "foundational",
+          "reinforcement",
+          "misconception_correction",
+          "exam_strategy",
+          "advanced_enrichment",
+          "tasting_alignment",
+          "linkage_training",
+          "concise_answer_training",
+          "distinction_training"
+        ]
+      },
+      "default": []
+    },
+
+    "grade_band_target": {
+      "type": "array",
+      "description": "The WSET L3 grade band(s) this content is most appropriate for. Used for learner-level calibration.",
+      "minItems": 1,
+      "items": {
+        "type": "string",
+        "enum": ["below_pass", "pass", "merit", "distinction"]
+      }
+    },
+
+    "learner_level_min": {
+      "type": "string",
+      "enum": ["beginner", "intermediate", "advanced"],
+      "description": "Minimum learner level required to benefit from this content. Used for progression retrieval filtering.",
+      "default": "beginner"
+    },
+
+    "context_trigger_signals": {
+      "type": "array",
+      "description": "Query patterns or conversation signals that should trigger deployment of this content. Used for context-override logic in PEDAGOGICAL_CLASSIFICATION_SYSTEM.md §4.2.",
+      "items": {
+        "type": "string"
+      },
+      "default": []
+    },
+
+    "tutor_eligible": {
+      "type": "boolean",
+      "description": "Whether this content is approved for the Tutor Agent retrieval corpus.",
+      "default": true
+    },
+
+    "examiner_eligible": {
+      "type": "boolean",
+      "description": "Whether this content is approved for the Examiner Agent retrieval corpus. For most pedagogical content, this will be false.",
+      "default": false
+    },
+
+    "enrichment_flag": {
+      "type": "boolean",
+      "description": "Whether this content is classified as enrichment (Tier 4–5). If true, must be framed as enrichment in any Tutor Agent response and must not be used for exam strategy guidance.",
+      "default": false
+    },
+
+    "requires_framing": {
+      "type": "boolean",
+      "description": "Whether the Tutor Agent must include an explicit framing statement when deploying this content (e.g., 'This goes beyond L3 exam requirements'). Mandatory when enrichment_flag is true.",
+      "default": false
+    },
+
+    "framing_template": {
+      "type": ["string", "null"],
+      "description": "Suggested framing statement to prepend when deploying this content. Required when requires_framing is true.",
+      "examples": [
+        "For deeper context, which goes beyond what's required for the L3 exam...",
+        "This is Diploma-level enrichment — not needed for L3, but useful for deeper understanding..."
+      ]
+    },
+
+    "source_trust_tier": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 5,
+      "description": "Trust tier of the source from which this content was derived. Must match the trust tier recorded in the source's calibration manifest entry (if Tier 0–3) or enrichment catalog (if Tier 4–5)."
+    },
+
+    "related_concept_ids": {
+      "type": "array",
+      "description": "Concept IDs that this content is pedagogically associated with. Used for graph traversal entry point identification.",
+      "items": {
+        "type": "string",
+        "pattern": "^C_[A-Z0-9_]+$"
+      },
+      "default": []
+    },
+
+    "related_misconception_ids": {
+      "type": "array",
+      "description": "Misconception IDs that this content helps address. Used for misconception-aware retrieval routing.",
+      "items": {
+        "type": "string",
+        "pattern": "^MC_[A-Z0-9_]+_[0-9]{2}$"
+      },
+      "default": []
+    },
+
+    "composite_score_modifiers": {
+      "type": "object",
+      "description": "Retrieval scoring modifiers specific to this content annotation. Allows fine-tuning of the standard composite score formula.",
+      "additionalProperties": false,
+      "properties": {
+        "causal_richness_bonus": {
+          "type": "number",
+          "minimum": 0.0,
+          "maximum": 0.20,
+          "description": "Additional bonus to the CRS component for this content, above the standard formula.",
+          "default": 0.0
+        },
+        "misconception_density_bonus": {
+          "type": "number",
+          "minimum": 0.0,
+          "maximum": 0.20,
+          "description": "Additional bonus to the MDS component for this content.",
+          "default": 0.0
+        },
+        "topic_density_boost": {
+          "type": "number",
+          "minimum": 0.0,
+          "maximum": 0.20,
+          "description": "Additional boost to TDS for highly focused single-concept chunks.",
+          "default": 0.0
+        }
+      }
+    },
+
+    "deployment_constraints": {
+      "type": "object",
+      "description": "Constraints on when and how this content may be deployed.",
+      "additionalProperties": false,
+      "properties": {
+        "max_deployments_per_session": {
+          "type": ["integer", "null"],
+          "description": "Maximum number of times this content chunk should be retrieved in a single learner session. Prevents over-reliance on a single source. Null = no limit.",
+          "default": null
+        },
+        "requires_prior_concept": {
+          "type": ["string", "null"],
+          "description": "Concept ID that must have been previously introduced in the session before this content may be deployed. Enforces pedagogical sequencing.",
+          "default": null
+        },
+        "not_for_first_exposure": {
+          "type": "boolean",
+          "description": "If true, this content must not be used as the first exposure to its related concept. It assumes prior foundational knowledge.",
+          "default": false
+        }
+      }
+    },
+
+    "_meta": {
+      "type": "object",
+      "required": ["schema_version", "created_date", "ingestion_status"],
+      "additionalProperties": false,
+      "properties": {
+        "schema_version": {
+          "type": "string",
+          "const": "1.0"
+        },
+        "created_date": {
+          "type": "string",
+          "format": "date"
+        },
+        "ingestion_status": {
+          "type": "string",
+          "enum": ["draft", "validated", "deprecated"]
+        },
+        "annotated_by": {
+          "type": "string",
+          "description": "ID or initials of the editor who created or last modified this annotation."
+        },
+        "annotation_reviewed": {
+          "type": "boolean",
+          "description": "Whether this annotation has been reviewed by a second editor for consistency.",
+          "default": false
+        }
+      }
+    }
+  }
+}

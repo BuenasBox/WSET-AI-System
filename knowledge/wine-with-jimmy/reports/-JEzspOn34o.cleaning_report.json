@@ -1,0 +1,28 @@
+{
+  "video_id": "-JEzspOn34o",
+  "video_title": "Sweet food and wine pairing for WSET",
+  "source_type": "youtube_transcript",
+  "source_trust_tier": "pedagogical",
+  "agent_corpus": "tutor",
+  "safe_for_tutor": true,
+  "safe_for_examiner": false,
+  "academic_level": "UNKNOWN",
+  "pedagogical_role": "tasting_practice",
+  "quality_flags": [
+    "noisy_caption",
+    "tasting_content"
+  ],
+  "cleaning_version": "transcript_cleaning_v1.0",
+  "processed_at": "2026-05-14T00:49:22+00:00",
+  "clean_status": "completed",
+  "word_count_raw": 1676,
+  "word_count_clean": 1171,
+  "chunk_count": 2,
+  "output_clean_path": "C:\\Users\\esand\\OneDrive\\Documents\\WSET-AI-System\\knowledge\\wine-with-jimmy\\clean\\-JEzspOn34o__Sweet_food_and_wine_pairing_for_WSET.clean.md",
+  "output_chunk_ready_path": "C:\\Users\\esand\\OneDrive\\Documents\\WSET-AI-System\\knowledge\\wine-with-jimmy\\chunk-ready\\-JEzspOn34o__Sweet_food_and_wine_pairing_for_WSET.chunks.jsonl",
+  "output_enrichment_path": "C:\\Users\\esand\\OneDrive\\Documents\\WSET-AI-System\\knowledge\\wine-with-jimmy\\enrichment-ready\\-JEzspOn34o.enrichment.json",
+  "report_path": "C:\\Users\\esand\\OneDrive\\Documents\\WSET-AI-System\\knowledge\\wine-with-jimmy\\reports\\-JEzspOn34o.cleaning_report.json",
+  "removed_caption_artifact_lines": 1,
+  "collapsed_duplicate_fragments": 0,
+  "error_message": ""
+}

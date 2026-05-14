@@ -20,6 +20,7 @@ REQUIRED_DIRECTORIES = (
     WINE_WITH_JIMMY_ROOT / "raw",
     WINE_WITH_JIMMY_ROOT / "clean",
     WINE_WITH_JIMMY_ROOT / "chunk-ready",
+    WINE_WITH_JIMMY_ROOT / "enrichment-ready",
     WINE_WITH_JIMMY_ROOT / "reports",
     WINE_WITH_JIMMY_ROOT / "audio",
     WINE_WITH_JIMMY_ROOT / "metadata",

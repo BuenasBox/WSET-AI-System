@@ -1,0 +1,64 @@
+{
+  "video_id": "0LRBstQgK0I",
+  "video_title": "Understanding Southern France for WSET Level 3 Wines Part 1 - Climate Grapegrowing & Grape Varieties",
+  "source_type": "youtube_transcript",
+  "source_trust_tier": "pedagogical",
+  "agent_corpus": "tutor",
+  "safe_for_tutor": true,
+  "safe_for_examiner": false,
+  "academic_level": "WSET_L3",
+  "pedagogical_role": "exam_strategy",
+  "quality_flags": [
+    "noisy_caption",
+    "exam_strategy_content",
+    "tasting_content",
+    "theory_content"
+  ],
+  "asr_corrections_applied": [
+    {
+      "original": "wsct",
+      "corrected": "WSET",
+      "occurrences": 1,
+      "confidence": "high"
+    },
+    {
+      "original": "longodop rusilion",
+      "corrected": "Languedoc-Roussillon",
+      "occurrences": 1,
+      "confidence": "high"
+    },
+    {
+      "original": "victor culture",
+      "corrected": "viticulture",
+      "occurrences": 1,
+      "confidence": "high"
+    },
+    {
+      "original": "roan",
+      "corrected": "Rhône",
+      "occurrences": 1,
+      "confidence": "high"
+    },
+    {
+      "original": "russian",
+      "corrected": "Roussillon",
+      "occurrences": 1,
+      "confidence": "high",
+      "context": "Southern France"
+    }
+  ],
+  "low_confidence_terms": [],
+  "cleaning_version": "transcript_cleaning_v1.1",
+  "processed_at": "2026-05-14T00:59:13+00:00",
+  "clean_status": "completed",
+  "word_count_raw": 5634,
+  "word_count_clean": 3608,
+  "chunk_count": 19,
+  "output_clean_path": "C:\\Users\\esand\\OneDrive\\Documents\\WSET-AI-System\\knowledge\\wine-with-jimmy\\clean\\0LRBstQgK0I__Understanding_Southern_France_for_WSET_Level_3_Wines_Part_1_-_Climate_Grapegrowing_&_Grape_Varieties.clean.md",
+  "output_chunk_ready_path": "C:\\Users\\esand\\OneDrive\\Documents\\WSET-AI-System\\knowledge\\wine-with-jimmy\\chunk-ready\\0LRBstQgK0I__Understanding_Southern_France_for_WSET_Level_3_Wines_Part_1_-_Climate_Grapegrowing_&_Grape_Varieties.chunks.jsonl",
+  "output_enrichment_path": "C:\\Users\\esand\\OneDrive\\Documents\\WSET-AI-System\\knowledge\\wine-with-jimmy\\enrichment-ready\\0LRBstQgK0I.enrichment.json",
+  "report_path": "C:\\Users\\esand\\OneDrive\\Documents\\WSET-AI-System\\knowledge\\wine-with-jimmy\\reports\\0LRBstQgK0I.cleaning_report.json",
+  "removed_caption_artifact_lines": 2,
+  "collapsed_duplicate_fragments": 0,
+  "error_message": ""
+}
