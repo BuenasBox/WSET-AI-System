@@ -1,0 +1,33 @@
+{
+  "video_id": "bUy0-mVAJHs",
+  "video_title": "Canada Wine Regions Explained  | WSET Level 3 Study Guide",
+  "video_url": "https://www.youtube.com/watch?v=bUy0-mVAJHs",
+  "playlist_ids": [
+    "PLHvqIB13xXh2p_cuTnddrE9TJyBRDECXr",
+    "PLHvqIB13xXh2cUC1I-M-gckve9b44UpVS"
+  ],
+  "playlist_names": [
+    "WSET Level 3 Mock Exam Questions",
+    "Grape Varieties for WSET Level 3"
+  ],
+  "channel_name": "Wine With Jimmy",
+  "channel_url": "",
+  "duration": 791,
+  "upload_date": null,
+  "transcript_source": "unavailable",
+  "caption_language": "",
+  "language_detected": "",
+  "topics_detected": [],
+  "wset_learning_outcomes": [],
+  "sat_topics": [],
+  "contains_exam_tips": false,
+  "contains_tasting_content": false,
+  "contains_theory_content": false,
+  "contains_cause_effect_reasoning": false,
+  "processing_status": "failed",
+  "error_type": "network_error",
+  "error_message": "IpBlocked: Could not retrieve a transcript for the video https://www.youtube.com/watch?v=bUy0-mVAJHs! This is most likely caused by: YouTube is blocking requests from your IP. This usually is due to one of the following reasons: - You have done too many requests and your IP has been blocked by Yo...",
+  "raw_json_path": "C:\\Users\\esand\\OneDrive\\Documents\\WSET-AI-System\\knowledge\\wine-with-jimmy\\raw\\bUy0-mVAJHs__Canada_Wine_Regions_Explained_WSET_Level_3_Study_Guide.raw.json",
+  "raw_txt_path": "C:\\Users\\esand\\OneDrive\\Documents\\WSET-AI-System\\knowledge\\wine-with-jimmy\\raw\\bUy0-mVAJHs__Canada_Wine_Regions_Explained_WSET_Level_3_Study_Guide.raw.txt",
+  "last_processed": "2026-05-13T20:30:34+00:00"
+}

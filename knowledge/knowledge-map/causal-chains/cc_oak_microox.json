@@ -1,0 +1,57 @@
+{
+  "chain_id": "CC_OAK_MICROOX",
+  "chain_name": "Oak barrel porosity → micro-oxygenation → tannin polymerisation and colour stabilisation",
+  "starting_factor": {
+    "concept_id": "C_OAK_INFLUENCE",
+    "description": "Oak barrel staves are semi-permeable — tiny amounts of oxygen permeate through the wood over time, regardless of the barrel's age or fill level."
+  },
+  "intermediate_steps": [
+    {
+      "step_number": 1,
+      "concept_id": "C_OAK_INFLUENCE",
+      "description": "Oxygen ingress through the stave wood is very slow and continuous — approximately 20–40 mg O₂/L/year in a standard 225L barrique. This is dramatically slower than oxygen addition from racking or splashing, allowing gradual rather than sudden oxidation.",
+      "relationship_type": "causes"
+    },
+    {
+      "step_number": 2,
+      "concept_id": "C_TANNIN",
+      "description": "Controlled slow oxygen exposure facilitates polymerisation of condensed tannins — short, astringent tannin chains link together into longer polymer chains. Longer tannin polymers fall below the threshold of sensory detection for astringency, making the tannins 'softer' and better integrated.",
+      "relationship_type": "reduces"
+    },
+    {
+      "step_number": 3,
+      "concept_id": "C_OAK_INFLUENCE",
+      "description": "Oxygen also catalyses acetaldehyde-mediated reactions between anthocyanins (colour pigments) and tannins, producing stable pigment-tannin complexes (pyranoanthocyanins). These complexes resist oxidative fading and SO₂ bleaching, stabilising the wine's colour over time.",
+      "relationship_type": "produces"
+    }
+  ],
+  "final_outcome": {
+    "concept_id": "C_OAK_INFLUENCE",
+    "description": "Softer, more integrated tannin structure; more stable, deeper colour. Old oak barrels provide this micro-oxygenation effect with minimal flavour contribution — making old oak a tool specifically for structural development rather than flavour addition."
+  },
+  "examples": [
+    {
+      "region_or_wine": "Bordeaux Château barrel ageing (18–24 months in barriques)",
+      "description": "Progressive polymerisation of Cabernet Sauvignon tannins during barrel ageing transforms the initially extracted, grippy tannins into a silkier, integrated structure ready for bottle ageing."
+    },
+    {
+      "region_or_wine": "Spanish Vino de la Tierra aged in large old oak foudres",
+      "description": "Large old foudres provide micro-oxygenation without any flavour extraction, allowing producers to soften tannins and stabilise colour without adding an oaky taste to the wine."
+    }
+  ],
+  "related_exam_questions": [
+    "What is micro-oxygenation and how does it affect wine structure?",
+    "Why might a producer use old oak rather than new oak for extended ageing?",
+    "How does barrel ageing contribute to tannin integration in red wines?"
+  ],
+  "distinction_note": "A Distinction answer specifies the oxygen ingress rate, distinguishes micro-oxygenation from bulk aeration, explains tannin polymerisation (increased chain length → reduced astringency), and describes anthocyanin-tannin complex formation and its effect on colour stability.",
+  "complexity": "complex",
+  "exam_relevance": "high",
+  "tutor_use": true,
+  "examiner_use": false,
+  "_meta": {
+    "schema_version": "1.0",
+    "created_date": "2026-05-13",
+    "ingestion_status": "draft"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "video_id": "0LRBstQgK0I",
+  "source_raw_path": "C:\\Users\\esand\\OneDrive\\Documents\\WSET-AI-System\\knowledge\\wine-with-jimmy\\raw\\0LRBstQgK0I__Understanding_Southern_France_for_WSET_Level_3_Wines_Part_1_-_Climate_Grapegrowing_&_Grape_Varieties.raw.txt",
+  "source_metadata_path": "C:\\Users\\esand\\OneDrive\\Documents\\WSET-AI-System\\knowledge\\wine-with-jimmy\\metadata\\0LRBstQgK0I.metadata.json",
+  "cleaning_version": "transcript_cleaning_v0.1",
+  "processed_at": "2026-05-14T00:24:37+00:00",
+  "quality_flags": [
+    "possible_asr_error",
+    "low_confidence_term",
+    "noisy_caption"
+  ],
+  "word_count_raw": 5634,
+  "word_count_clean": 5626,
+  "output_clean_path": "C:\\Users\\esand\\OneDrive\\Documents\\WSET-AI-System\\knowledge\\wine-with-jimmy\\clean\\0LRBstQgK0I__Understanding_Southern_France_for_WSET_Level_3_Wines_Part_1_-_Climate_Grapegrowing_&_Grape_Varieties.clean.txt",
+  "output_chunk_ready_path": "C:\\Users\\esand\\OneDrive\\Documents\\WSET-AI-System\\knowledge\\wine-with-jimmy\\chunk-ready\\0LRBstQgK0I__Understanding_Southern_France_for_WSET_Level_3_Wines_Part_1_-_Climate_Grapegrowing_&_Grape_Varieties.chunk-ready.txt",
+  "report_path": "C:\\Users\\esand\\OneDrive\\Documents\\WSET-AI-System\\knowledge\\wine-with-jimmy\\reports\\0LRBstQgK0I__Understanding_Southern_France_for_WSET_Level_3_Wines_Part_1_-_Climate_Grapegrowing_&_Grape_Varieties.cleaning-report.json",
+  "removed_caption_artifact_lines": 2,
+  "collapsed_duplicate_fragments": 0
+}

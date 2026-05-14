@@ -1,0 +1,57 @@
+{
+  "chain_id": "CC_COOL_CLIMATE_ACIDITY",
+  "chain_name": "Cool climate → high acidity in finished wine",
+  "starting_factor": {
+    "concept_id": "C_COOL_CLIMATE",
+    "description": "Growing season temperatures are at the lower end of what allows full grape ripening."
+  },
+  "intermediate_steps": [
+    {
+      "step_number": 1,
+      "concept_id": "C_COOL_CLIMATE",
+      "description": "Low temperatures slow the rate of photosynthesis and grape ripening.",
+      "relationship_type": "causes"
+    },
+    {
+      "step_number": 2,
+      "concept_id": "C_ACIDITY",
+      "description": "Slower ripening means malic acid (which degrades enzymatically as grapes ripen) is retained at higher levels at harvest. Tartaric acid, being stable, remains constant regardless of ripening speed.",
+      "relationship_type": "increases"
+    },
+    {
+      "step_number": 3,
+      "concept_id": "C_ACIDITY",
+      "description": "Lower sugar accumulation at harvest results in lower potential alcohol, meaning less dilution of acid perception in the finished wine.",
+      "relationship_type": "influences"
+    }
+  ],
+  "final_outcome": {
+    "concept_id": "C_ACIDITY",
+    "description": "Higher total acidity and lower pH in the finished wine, perceived as freshness and crispness on the palate."
+  },
+  "examples": [
+    {
+      "region_or_wine": "Mosel Riesling Spätlese",
+      "description": "Cool Mosel valley temperatures result in high residual malic acid and characteristically high total acidity, providing structure and longevity even in wines with significant residual sugar."
+    },
+    {
+      "region_or_wine": "Champagne base wines",
+      "description": "Cool Champagne climate produces high-acidity, low-alcohol base wines — intentionally sought because secondary fermentation and dosage add sweetness that must be balanced by this natural acidity."
+    }
+  ],
+  "related_exam_questions": [
+    "Explain how climate affects the acidity of a finished wine.",
+    "Why do cool-climate wines tend to have higher acidity than warm-climate wines from the same grape variety?",
+    "Describe the relationship between ripening rate and acid retention in grapes."
+  ],
+  "distinction_note": "A Distinction answer explains the mechanism (malic acid degradation rate during ripening) not merely the correlation (cool climate = high acidity). It also notes that tartaric acid behaves differently from malic acid, and may mention diurnal variation as a nuancing factor.",
+  "complexity": "moderate",
+  "exam_relevance": "critical",
+  "tutor_use": true,
+  "examiner_use": false,
+  "_meta": {
+    "schema_version": "1.0",
+    "created_date": "2026-05-13",
+    "ingestion_status": "draft"
+  }
+}

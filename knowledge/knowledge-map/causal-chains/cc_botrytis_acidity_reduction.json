@@ -1,0 +1,57 @@
+{
+  "chain_id": "CC_BOTRYTIS_ACIDITY_REDUCTION",
+  "chain_name": "Botrytis cinerea → tartaric acid metabolism → unexpectedly lower acidity in botrytised wines",
+  "starting_factor": {
+    "concept_id": "C_BOTRYTIS_CINEREA",
+    "description": "Botrytis cinerea, unlike simple water evaporation, is a metabolically active fungal organism that consumes and transforms grape components during noble rot development."
+  },
+  "intermediate_steps": [
+    {
+      "step_number": 1,
+      "concept_id": "C_BOTRYTIS_CINEREA",
+      "description": "Botrytis hyphae penetrate grape skin cells and metabolise both tartaric acid and malic acid as carbon sources for fungal growth and energy. The botrytis organism produces gluconic acid (from glucose oxidation) as a key byproduct — a metabolic signature of botrytis infection.",
+      "relationship_type": "causes"
+    },
+    {
+      "step_number": 2,
+      "concept_id": "C_ACIDITY",
+      "description": "Tartaric acid — normally the dominant, stable acid in grapes (resistant to simple temperature-driven degradation) — is partially consumed by the Botrytis organism's oxidase enzymes. This is exceptional: tartaric acid is not metabolised in normal winemaking conditions but IS consumed by Botrytis.",
+      "relationship_type": "reduces"
+    },
+    {
+      "step_number": 3,
+      "concept_id": "C_ACIDITY",
+      "description": "The net effect is paradoxical: despite extreme concentration of all grape components (sugars, acids, glycerol) through water evaporation, acidity in the finished botrytised wine is LOWER than simple concentration arithmetic would predict. The botrytis-mediated tartaric acid loss partially offsets the concentration effect.",
+      "relationship_type": "influences"
+    }
+  ],
+  "final_outcome": {
+    "concept_id": "C_ACIDITY",
+    "description": "Botrytised wines have high sugar concentration but lower-than-expected acidity. The acidity is sufficient for balance and longevity — but the style depends on this precise balance of extreme sweetness with moderate (not extreme) acidity. Gluconic acid presence is a diagnostic marker of botrytis infection."
+  },
+  "examples": [
+    {
+      "region_or_wine": "Sauternes (Château d'Yquem)",
+      "description": "Despite ~200 g/L residual sugar, Sauternes does not taste excessively sweet and cloying because sufficient acidity remains to provide balance. The tartaric acid loss through botrytis metabolism means the acidity, though present and important, is not proportionately as high as the sugar concentration."
+    },
+    {
+      "region_or_wine": "Tokaji Aszú",
+      "description": "Hungarian Tokaji benefits from botrytised Furmint and Hárslevelű. The high tartaric content of Furmint combined with botrytis consumption creates a distinctive acid-sweet balance. Gluconic acid testing is used to verify botrytis infection in official classification."
+    }
+  ],
+  "related_exam_questions": [
+    "Why is the acidity of a Sauternes lower than simple concentration would predict?",
+    "What happens to tartaric acid during noble rot development?",
+    "What is gluconic acid and why is it a diagnostic marker for botrytis infection?"
+  ],
+  "distinction_note": "A Distinction answer specifically names tartaric acid (not just 'acids') as the substrate for botrytis metabolism, names gluconic acid as the diagnostic botrytis byproduct, and makes the paradox explicit — concentration should raise all acids, but tartaric acid loss partially offsets this.",
+  "complexity": "complex",
+  "exam_relevance": "critical",
+  "tutor_use": true,
+  "examiner_use": false,
+  "_meta": {
+    "schema_version": "1.0",
+    "created_date": "2026-05-13",
+    "ingestion_status": "draft"
+  }
+}

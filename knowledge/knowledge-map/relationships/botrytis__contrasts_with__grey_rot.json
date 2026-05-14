@@ -1,0 +1,18 @@
+{
+  "relationship_id": "R_BOTRYTIS_CINEREA__CONTRASTS_WITH__GREY_ROT",
+  "source_concept": "C_BOTRYTIS_CINEREA",
+  "target_concept": "C_BOTRYTIS_CINEREA",
+  "relationship_type": "contrasts_with",
+  "strength": "strong",
+  "conditions": "The same organism (Botrytis cinerea) produces noble rot under alternating morning humidity and dry sunny afternoons, and grey rot under sustained wet, humid conditions without drying. The critical condition is the alternation of wet and dry — not the presence of Botrytis itself.",
+  "direction": "noble rot (positive) ↔ grey rot (negative): same organism, opposite conditions",
+  "explanation": "Noble rot (pourriture noble) occurs when morning mists allow Botrytis to infect the grape skin, and dry afternoon conditions then cause water to evaporate through the perforated skin, concentrating sugars, acids, glycerol, and flavour compounds. Grey rot (pourriture grise) occurs when sustained rain prevents drying — the fungus multiplies unchecked, destroys the berry, and produces acetic acid, off-flavours (moldy, earthy), and depletes sugars. This is one of the most critical distinctions in viticulture: the same pathogen is either the most prized asset (Sauternes, Tokaj, TBA) or the most feared disease, depending on weather.",
+  "exam_relevance": "critical",
+  "tutor_use": true,
+  "examiner_use": false,
+  "_meta": {
+    "schema_version": "1.0",
+    "created_date": "2026-05-13",
+    "ingestion_status": "draft"
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "video_id": "0BoeJegd12o",
+  "video_title": "How to pass your WSET Level 3 Theory Exam!",
+  "video_url": "https://www.youtube.com/watch?v=0BoeJegd12o",
+  "playlist_ids": [
+    "PLHvqIB13xXh2LYc0V3PME6RSYirmhZ0j3",
+    "PLHvqIB13xXh2p_cuTnddrE9TJyBRDECXr"
+  ],
+  "playlist_names": [
+    "Understanding WSET Level 3 Wine Theory",
+    "WSET Level 3 Mock Exam Questions"
+  ],
+  "channel_name": "Wine With Jimmy",
+  "channel_url": "",
+  "duration": 1867,
+  "upload_date": null,
+  "transcript_source": "youtube_caption",
+  "caption_language": "",
+  "language_detected": "",
+  "topics_detected": [],
+  "wset_learning_outcomes": [],
+  "sat_topics": [],
+  "contains_exam_tips": false,
+  "contains_tasting_content": false,
+  "contains_theory_content": false,
+  "contains_cause_effect_reasoning": false,
+  "processing_status": "skipped",
+  "error_type": "",
+  "error_message": "",
+  "raw_json_path": "C:\\Users\\esand\\OneDrive\\Documents\\WSET-AI-System\\knowledge\\wine-with-jimmy\\raw\\0BoeJegd12o__How_to_pass_your_WSET_Level_3_Theory_Exam!.raw.json",
+  "raw_txt_path": "C:\\Users\\esand\\OneDrive\\Documents\\WSET-AI-System\\knowledge\\wine-with-jimmy\\raw\\0BoeJegd12o__How_to_pass_your_WSET_Level_3_Theory_Exam!.raw.txt",
+  "last_processed": "2026-05-13T20:19:44+00:00"
+}

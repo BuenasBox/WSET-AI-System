@@ -1,0 +1,57 @@
+{
+  "chain_id": "CC_MLF_DIACETYL",
+  "chain_name": "MLF → diacetyl production → buttery aroma (variable)",
+  "starting_factor": {
+    "concept_id": "C_MALOLACTIC_CONVERSION",
+    "description": "During MLF, lactic acid bacteria metabolise citric acid (present in small amounts in wine) in addition to malic acid, producing diacetyl as a byproduct."
+  },
+  "intermediate_steps": [
+    {
+      "step_number": 1,
+      "concept_id": "C_MALOLACTIC_CONVERSION",
+      "description": "Oenococcus oeni and other LAB metabolise citric acid via a citrate lyase pathway, producing diacetyl (2,3-butanedione) as a metabolic byproduct. The quantity produced depends on the bacterial strain, temperature, timing, and oxygen exposure.",
+      "relationship_type": "produces"
+    },
+    {
+      "step_number": 2,
+      "concept_id": "C_MALOLACTIC_CONVERSION",
+      "description": "Diacetyl has a very low sensory threshold (~0.2 mg/L in wine) and imparts a strong buttery, butterscotch, or dairy aroma. At levels above 5–7 mg/L it becomes a dominant and potentially faulty character.",
+      "relationship_type": "produces"
+    },
+    {
+      "step_number": 3,
+      "concept_id": "C_MALOLACTIC_CONVERSION",
+      "description": "Diacetyl levels are highly variable and controllable. Modern bacterial strains selected for low diacetyl production, inoculation timing (early vs. late MLF), temperature control, and bâtonnage (lees stirring — which provides reducing conditions that chemically bind diacetyl) all determine how much buttery character reaches the final wine.",
+      "relationship_type": "influences"
+    }
+  ],
+  "final_outcome": {
+    "concept_id": "C_MALOLACTIC_CONVERSION",
+    "description": "Variable buttery/dairy aroma intensity depending on winemaking choices. MLF does not automatically produce a buttery wine — diacetyl is a byproduct that can be minimised, managed, or even eliminated through deliberate winemaking technique."
+  },
+  "examples": [
+    {
+      "region_or_wine": "Classic California 'buttery' Chardonnay (pre-2010 style)",
+      "description": "High diacetyl from full MLF, no bâtonnage to reduce diacetyl, warm fermentation temperatures — all maximise buttery character. This style was considered a fault by European standards but a feature in some California market segments."
+    },
+    {
+      "region_or_wine": "Modern low-diacetyl Burgundy white",
+      "description": "Winemakers inoculate with low-diacetyl LAB strains, conduct MLF at cool temperatures, and use regular bâtonnage. The wine undergoes full MLF but shows only a subtle creamy character, not overt butteriness."
+    }
+  ],
+  "related_exam_questions": [
+    "Explain why not all wines that have undergone MLF taste buttery.",
+    "What winemaking choices affect diacetyl levels in a wine?",
+    "Why might a winemaker choose to rack away from lees early after MLF completes?"
+  ],
+  "distinction_note": "A Distinction answer identifies diacetyl specifically (not just 'MLF byproducts'), explains the citric acid metabolic pathway, and describes at least two controllable variables (bacterial strain selection, bâtonnage, timing, temperature) that allow winemakers to dial diacetyl up or down deliberately.",
+  "complexity": "complex",
+  "exam_relevance": "high",
+  "tutor_use": true,
+  "examiner_use": false,
+  "_meta": {
+    "schema_version": "1.0",
+    "created_date": "2026-05-13",
+    "ingestion_status": "draft"
+  }
+}

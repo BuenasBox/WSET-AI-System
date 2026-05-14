@@ -1,0 +1,99 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "wset-ai-system/knowledge-map/concept.schema.json",
+  "title": "WSET Knowledge Map — Concept",
+  "description": "An atomic, independently teachable unit of WSET L3 knowledge. Concepts are the primary nodes of the knowledge graph.",
+  "type": "object",
+  "required": ["concept_id", "concept_name", "topic_id", "definition", "tutor_allowed", "examiner_allowed"],
+  "additionalProperties": false,
+  "properties": {
+    "concept_id": {
+      "type": "string",
+      "description": "Stable unique identifier. Format: C_{SLUG} — e.g. C_ACIDITY, C_TANNIN_POLYMERISATION",
+      "pattern": "^C_[A-Z0-9_]+$"
+    },
+    "concept_name": {
+      "type": "string",
+      "description": "Human-readable concept name."
+    },
+    "topic_id": {
+      "type": "string",
+      "description": "topic_id of the parent topic this concept belongs to."
+    },
+    "definition": {
+      "type": "string",
+      "description": "Precise, technically correct definition of the concept. Must not contain vague or marketing language."
+    },
+    "common_misconceptions": {
+      "type": "array",
+      "description": "List of misconception_ids referencing records in ../misconceptions/.",
+      "items": { "type": "string" },
+      "default": []
+    },
+    "distinction_insights": {
+      "type": "array",
+      "description": "Key insights that separate a Distinction-level understanding of this concept from a Pass-level understanding.",
+      "items": { "type": "string" },
+      "default": []
+    },
+    "cause_effect_links": {
+      "type": "array",
+      "description": "List of chain_ids referencing causal chains in ../causal-chains/ where this concept is a factor.",
+      "items": { "type": "string" },
+      "default": []
+    },
+    "related_grapes": {
+      "type": "array",
+      "description": "Grape variety slugs that are strongly associated with this concept.",
+      "items": { "type": "string" },
+      "default": []
+    },
+    "related_regions": {
+      "type": "array",
+      "description": "Region slugs strongly associated with this concept.",
+      "items": { "type": "string" },
+      "default": []
+    },
+    "related_wine_laws": {
+      "type": "array",
+      "description": "Wine law slugs relevant to this concept.",
+      "items": { "type": "string" },
+      "default": []
+    },
+    "official_reference": {
+      "type": ["object", "null"],
+      "description": "Primary official WSET source reference for this concept. Null if no direct official reference identified.",
+      "properties": {
+        "source_type": {
+          "type": "string",
+          "enum": ["specification", "sat", "study-guide", "marking-key"]
+        },
+        "reference": { "type": "string" }
+      },
+      "default": null
+    },
+    "tutor_allowed": {
+      "type": "boolean",
+      "description": "Whether the Tutor Agent may draw on this concept in pedagogical responses. Almost always true.",
+      "default": true
+    },
+    "examiner_allowed": {
+      "type": "boolean",
+      "description": "Whether the Examiner Agent may reference this concept. True only if the concept is directly grounded in official WSET material (trust tier 0-1).",
+      "default": false
+    },
+    "_meta": {
+      "type": "object",
+      "properties": {
+        "schema_version": { "type": "string" },
+        "created_date": { "type": "string", "format": "date" },
+        "last_updated": { "type": "string", "format": "date" },
+        "reviewed_by": { "type": ["string", "null"] },
+        "ingestion_status": {
+          "type": "string",
+          "enum": ["draft", "review_pending", "approved", "deprecated"]
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "video_id": "5e4h4HWKcWw",
+  "video_title": "WSET Level 4 Diploma D3 Mastering the wines of Saint Estephe AOC, Bordeaux",
+  "video_url": "https://www.youtube.com/watch?v=5e4h4HWKcWw",
+  "playlist_ids": [
+    "PLHvqIB13xXh0gTZUlK524pUqXApwTKXyn"
+  ],
+  "playlist_names": [
+    "WSET Diploma - Unit 3 - Mastering Still Wines of the World"
+  ],
+  "channel_name": "Wine With Jimmy",
+  "channel_url": "",
+  "duration": 868,
+  "upload_date": null,
+  "transcript_source": "youtube_caption",
+  "caption_language": "en",
+  "language_detected": "",
+  "topics_detected": [],
+  "wset_learning_outcomes": [],
+  "sat_topics": [],
+  "contains_exam_tips": false,
+  "contains_tasting_content": false,
+  "contains_theory_content": false,
+  "contains_cause_effect_reasoning": false,
+  "processing_status": "completed",
+  "error_type": "",
+  "error_message": "",
+  "raw_json_path": "C:\\Users\\esand\\OneDrive\\Documents\\WSET-AI-System\\knowledge\\wine-with-jimmy\\raw\\5e4h4HWKcWw__WSET_Level_4_Diploma_D3_Mastering_the_wines_of_Saint_Estephe_AOC,_Bordeaux.raw.json",
+  "raw_txt_path": "C:\\Users\\esand\\OneDrive\\Documents\\WSET-AI-System\\knowledge\\wine-with-jimmy\\raw\\5e4h4HWKcWw__WSET_Level_4_Diploma_D3_Mastering_the_wines_of_Saint_Estephe_AOC,_Bordeaux.raw.txt",
+  "last_processed": "2026-05-13T20:20:34+00:00"
+}

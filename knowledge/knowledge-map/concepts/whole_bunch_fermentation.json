@@ -1,0 +1,30 @@
+{
+  "concept_id": "C_WHOLE_BUNCH_FERMENTATION",
+  "concept_name": "Whole Bunch Fermentation",
+  "topic_id": "T_RA1_WINEMAKING_RED",
+  "definition": "A red wine fermentation technique in which whole grape clusters, including stems, are placed into the fermentation vessel without destemming. Carbonic maceration may occur within intact berries, while crushed grapes ferment conventionally around them. Stems contribute additional tannin, potassium (which raises pH and lowers perceived acidity), and herbaceous or spicy aromatic compounds. The technique requires physiologically ripe stems to avoid aggressive green tannin.",
+  "common_misconceptions": ["MC_WHOLE_BUNCH_01"],
+  "distinction_insights": [
+    "Whole bunch fermentation does not produce the same result as carbonic maceration — in whole bunch, only intact uncrushed berries undergo intracellular fermentation; crushed grapes and juice ferment conventionally. True carbonic maceration requires fully intact uncrushed clusters in a CO₂-saturated environment.",
+    "The potassium released from stems raises the wine's pH, which reduces perceived acidity — this is often described incorrectly as 'lower acidity' when the actual total acidity may be similar, but perception is different due to pH change.",
+    "Stem ripeness is critical: unripe stems contribute harsh, aggressive green tannins; ripe stems contribute fine, structured tannins and add complexity. Winemakers must assess stem ripeness independently of berry ripeness.",
+    "The technique is associated with Burgundy (Côte d'Or Pinot Noir, especially from producers like Henri Jayer and Rousseau) but is not exclusively a Burgundian practice."
+  ],
+  "cause_effect_links": ["CC_WHOLE_BUNCH_TANNIN", "CC_WHOLE_BUNCH_PH"],
+  "related_grapes": ["pinot_noir", "syrah", "gamay"],
+  "related_regions": ["burgundy", "northern_rhone", "beaujolais"],
+  "related_wine_laws": [],
+  "official_reference": {
+    "source_type": "specification",
+    "reference": "RA1 — Winemaking: Red Wine Fermentation Techniques"
+  },
+  "tutor_allowed": true,
+  "examiner_allowed": false,
+  "_meta": {
+    "schema_version": "1.0",
+    "created_date": "2026-05-13",
+    "last_updated": "2026-05-13",
+    "reviewed_by": null,
+    "ingestion_status": "draft"
+  }
+}

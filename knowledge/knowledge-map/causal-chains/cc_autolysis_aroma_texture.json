@@ -1,0 +1,57 @@
+{
+  "chain_id": "CC_AUTOLYSIS_AROMA_TEXTURE",
+  "chain_name": "Yeast autolysis → amino acid and nucleotide release → autolytic aromas and umami complexity",
+  "starting_factor": {
+    "concept_id": "C_CHAMPAGNE_LEES_AGEING",
+    "description": "Beyond mannoproteins and polysaccharides, yeast autolysis also releases intracellular nitrogen compounds, amino acids, and other small molecules with direct aromatic and flavour impact."
+  },
+  "intermediate_steps": [
+    {
+      "step_number": 1,
+      "concept_id": "C_CHAMPAGNE_LEES_AGEING",
+      "description": "Yeast cell protease activity breaks down intracellular proteins into peptides and free amino acids. These nitrogenous compounds are released into the wine as autolysis progresses, particularly in the first 1–3 years of contact.",
+      "relationship_type": "produces"
+    },
+    {
+      "step_number": 2,
+      "concept_id": "C_CHAMPAGNE_LEES_AGEING",
+      "description": "Maillard-type reactions between released amino acids and reducing sugars (present at trace levels) generate heterocyclic aroma compounds — primarily pyrazines and furanones responsible for bread, biscuit, toast, and pastry aromas. These are the signature 'autolytic' notes of mature Champagne and traditional-method sparkling wines.",
+      "relationship_type": "produces"
+    },
+    {
+      "step_number": 3,
+      "concept_id": "C_CHAMPAGNE_LEES_AGEING",
+      "description": "Additional aromatic compounds from autolysis include fatty acid ethyl esters (toasty, waxy notes) and nucleotides (which contribute to overall flavour intensity and a savouriness analogous to umami — a sense of depth and complexity beyond simple fruitiness).",
+      "relationship_type": "produces"
+    }
+  ],
+  "final_outcome": {
+    "concept_id": "C_CHAMPAGNE_LEES_AGEING",
+    "description": "Characteristic autolytic aromas: brioche, bread dough, toast, pastry, biscuit, croissant, nutty notes. Combined with mannoprotein texture (previous chain), the result is the full Champagne style: fine persistent bubbles, creamy texture, complex autolytic aromatics over a fruit base."
+  },
+  "examples": [
+    {
+      "region_or_wine": "Blanc de Blancs Champagne (extended tirage, 5–10 years)",
+      "description": "Chardonnay-based Champagne with prolonged lees contact shows intense toasty, brioche, and hazelnut notes from autolysis, building on a citrus and stone-fruit primary foundation from the Chardonnay."
+    },
+    {
+      "region_or_wine": "English Traditional Method sparkling (Nyetimber, Ridgeview)",
+      "description": "English sparkling wines with extended tirage develop autolytic complexity comparable to Champagne. The English climate produces high-acid base wines that preserve freshness and integrate the autolytic notes over extended lees contact."
+    }
+  ],
+  "related_exam_questions": [
+    "Describe the autolytic aromas in a mature Champagne and explain their origin.",
+    "How does tirage lees contact time affect the aromatic complexity of traditional method sparkling wine?",
+    "What is the relationship between yeast autolysis and the brioche character in Champagne?"
+  ],
+  "distinction_note": "A Distinction answer names specific autolytic aroma descriptors (brioche, toast, biscuit), explains the Maillard reaction origin of these compounds, distinguishes autolytic aromas from primary fruit and secondary MLF aromas, and notes the temporal dimension (autolysis intensifies with time).",
+  "complexity": "complex",
+  "exam_relevance": "critical",
+  "tutor_use": true,
+  "examiner_use": false,
+  "_meta": {
+    "schema_version": "1.0",
+    "created_date": "2026-05-13",
+    "ingestion_status": "draft"
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "video_id": "FtB2x5kFYfc",
+  "video_title": "WSET Level 3 Wines - Understanding Aromatics With Working Written Question",
+  "video_url": "https://www.youtube.com/watch?v=FtB2x5kFYfc",
+  "playlist_ids": [
+    "PLHvqIB13xXh2LYc0V3PME6RSYirmhZ0j3"
+  ],
+  "playlist_names": [
+    "Understanding WSET Level 3 Wine Theory"
+  ],
+  "channel_name": "Wine With Jimmy",
+  "channel_url": "",
+  "duration": 1066,
+  "upload_date": null,
+  "transcript_source": "unavailable",
+  "caption_language": "",
+  "language_detected": "",
+  "topics_detected": [],
+  "wset_learning_outcomes": [],
+  "sat_topics": [],
+  "contains_exam_tips": false,
+  "contains_tasting_content": false,
+  "contains_theory_content": false,
+  "contains_cause_effect_reasoning": false,
+  "processing_status": "failed",
+  "error_type": "network_error",
+  "error_message": "IpBlocked: Could not retrieve a transcript for the video https://www.youtube.com/watch?v=FtB2x5kFYfc! This is most likely caused by: YouTube is blocking requests from your IP. This usually is due to one of the following reasons: - You have done too many requests and your IP has been blocked by Yo...",
+  "raw_json_path": "C:\\Users\\esand\\OneDrive\\Documents\\WSET-AI-System\\knowledge\\wine-with-jimmy\\raw\\FtB2x5kFYfc__WSET_Level_3_Wines_-_Understanding_Aromatics_With_Working_Written_Question.raw.json",
+  "raw_txt_path": "C:\\Users\\esand\\OneDrive\\Documents\\WSET-AI-System\\knowledge\\wine-with-jimmy\\raw\\FtB2x5kFYfc__WSET_Level_3_Wines_-_Understanding_Aromatics_With_Working_Written_Question.raw.txt",
+  "last_processed": "2026-05-13T23:53:24+00:00"
+}

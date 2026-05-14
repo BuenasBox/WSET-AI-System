@@ -1,0 +1,31 @@
+{
+  "video_id": "yPhsdnyXX30",
+  "video_title": "Grape Varieties - Verdicchio Advanced Version ideal for WSET Level 3 and Level 4 (WSET Diploma)",
+  "video_url": "https://www.youtube.com/watch?v=yPhsdnyXX30",
+  "playlist_ids": [
+    "PLHvqIB13xXh16S0NK1AtPda47MTQeLO23"
+  ],
+  "playlist_names": [
+    "WSET Level 3 & WSET Diploma (Level 4) - Grape Varieties"
+  ],
+  "channel_name": "Wine With Jimmy",
+  "channel_url": "",
+  "duration": 950,
+  "upload_date": null,
+  "transcript_source": "unavailable",
+  "caption_language": "",
+  "language_detected": "",
+  "topics_detected": [],
+  "wset_learning_outcomes": [],
+  "sat_topics": [],
+  "contains_exam_tips": false,
+  "contains_tasting_content": false,
+  "contains_theory_content": false,
+  "contains_cause_effect_reasoning": false,
+  "processing_status": "failed",
+  "error_type": "transcript_disabled",
+  "error_message": "TranscriptsDisabled: Could not retrieve a transcript for the video https://www.youtube.com/watch?v=yPhsdnyXX30! This is most likely caused by: Subtitles are disabled for this video If you are sure that the described cause is not responsible for this error and that a transcript should be retrievab...",
+  "raw_json_path": "C:\\Users\\esand\\OneDrive\\Documents\\WSET-AI-System\\knowledge\\wine-with-jimmy\\raw\\yPhsdnyXX30__Grape_Varieties_-_Verdicchio_Advanced_Version_ideal_for_WSET_Level_3_and_Level_4_(WSET_Diploma).raw.json",
+  "raw_txt_path": "C:\\Users\\esand\\OneDrive\\Documents\\WSET-AI-System\\knowledge\\wine-with-jimmy\\raw\\yPhsdnyXX30__Grape_Varieties_-_Verdicchio_Advanced_Version_ideal_for_WSET_Level_3_and_Level_4_(WSET_Diploma).raw.txt",
+  "last_processed": "2026-05-13T20:37:48+00:00"
+}

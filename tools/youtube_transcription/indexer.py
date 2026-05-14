@@ -22,6 +22,20 @@ DISCOVERED_COLUMNS = (
     "playlist_positions",
 )
 
+TRANSCRIPT_STATUS_COLUMNS = (
+    "video_id",
+    "video_title",
+    "video_url",
+    "transcript_status",
+    "transcript_source",
+    "language",
+    "raw_json_path",
+    "raw_txt_path",
+    "error_type",
+    "error_message",
+    "last_processed",
+)
+
 
 def write_discovered_outputs(videos: list[dict], index_dir: Path) -> tuple[Path, Path]:
     """Write discovered video metadata to CSV and JSONL.
@@ -41,6 +55,31 @@ def write_discovered_outputs(videos: list[dict], index_dir: Path) -> tuple[Path,
     return csv_path, jsonl_path
 
 
+def update_transcript_status_index(records: list[dict], index_dir: Path) -> Path:
+    """Create or update transcript_status.csv by video_id."""
+    index_dir.mkdir(parents=True, exist_ok=True)
+    path = index_dir / "transcript_status.csv"
+    existing = _read_existing_status(path)
+
+    for record in records:
+        video_id = record.get("video_id", "")
+        if video_id:
+            existing[video_id] = _normalize_status_row(record)
+
+    with path.open("w", encoding="utf-8", newline="") as file:
+        writer = csv.DictWriter(file, fieldnames=TRANSCRIPT_STATUS_COLUMNS)
+        writer.writeheader()
+        for video_id in sorted(existing):
+            writer.writerow(_normalize_status_row(existing[video_id]))
+
+    return path
+
+
+def read_transcript_status_index(index_dir: Path) -> dict[str, dict]:
+    """Read transcript_status.csv rows keyed by video_id."""
+    return _read_existing_status(index_dir / "transcript_status.csv")
+
+
 def _write_csv(videos: list[dict], path: Path) -> None:
     """Write flattened discovery records to CSV."""
     with path.open("w", encoding="utf-8", newline="") as file:
@@ -55,6 +94,39 @@ def _write_jsonl(videos: list[dict], path: Path) -> None:
     with path.open("w", encoding="utf-8") as file:
         for video in videos:
             file.write(json.dumps(video, ensure_ascii=False) + "\n")
+
+
+def _read_existing_status(path: Path) -> dict[str, dict]:
+    """Read existing transcript status rows keyed by video_id."""
+    if not path.exists():
+        return {}
+
+    with path.open("r", encoding="utf-8", newline="") as file:
+        reader = csv.DictReader(file)
+        return {
+            row.get("video_id", ""): _normalize_status_row(row)
+            for row in reader
+            if row.get("video_id")
+        }
+
+
+def _normalize_status_row(row: dict) -> dict:
+    """Normalize transcript status rows before CSV storage."""
+    normalized = {
+        column: row.get(column, "") for column in TRANSCRIPT_STATUS_COLUMNS
+    }
+    normalized["error_message"] = _csv_safe_text(normalized.get("error_message", ""))
+    normalized["error_type"] = _csv_safe_text(normalized.get("error_type", ""))
+    return normalized
+
+
+def _csv_safe_text(value: object, max_length: int = 300) -> str:
+    """Return a single-line, whitespace-normalized string for CSV fields."""
+    text = str(value or "")
+    text = " ".join(text.replace("\t", " ").split())
+    if len(text) > max_length:
+        return f"{text[: max_length - 3]}..."
+    return text
 
 
 def _flatten_for_csv(video: dict) -> dict:

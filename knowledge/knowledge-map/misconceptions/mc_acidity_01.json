@@ -1,0 +1,22 @@
+{
+  "misconception_id": "MC_ACIDITY_01",
+  "misconception": "High acidity in a wine means the wine is low quality or unpleasant.",
+  "why_incorrect": "Acidity is a structural component, not a quality indicator in isolation. High acidity in a cool-climate Riesling or Champagne is not a defect — it provides freshness, food-pairing versatility, and the backbone for long-term ageing. Whether acidity is pleasant depends on its balance with fruit intensity, residual sugar, and other wine components. An unbalanced high-acid wine may be unpleasant, but the acidity itself is not the cause of poor quality.",
+  "corrected_understanding": "High acidity can be a hallmark of quality in cool-climate wines. Its contribution to wine quality depends on whether it is balanced by other components — particularly fruit concentration, sweetness, and alcohol.",
+  "related_topics": ["T_RA1_WINE_COMPONENTS", "T_RA1_CLIMATE_VITICULTURE", "T_RA2_GERMANY"],
+  "related_concepts": ["C_ACIDITY", "C_COOL_CLIMATE"],
+  "severity": "medium",
+  "frequency": "common",
+  "distinction_relevance": true,
+  "tutor_intervention": "contrast_comparison",
+  "detection_signals": [
+    "I don't like acidic wines",
+    "This wine is too acidic so it must be poor quality",
+    "High acidity means it's unripe"
+  ],
+  "_meta": {
+    "schema_version": "1.0",
+    "created_date": "2026-05-13",
+    "ingestion_status": "draft"
+  }
+}

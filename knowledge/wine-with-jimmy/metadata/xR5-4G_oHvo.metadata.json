@@ -1,0 +1,31 @@
+{
+  "video_id": "xR5-4G_oHvo",
+  "video_title": "WSET Level 3 New Zealand | Short Written Question Practice",
+  "video_url": "https://www.youtube.com/watch?v=xR5-4G_oHvo",
+  "playlist_ids": [
+    "PLHvqIB13xXh2p_cuTnddrE9TJyBRDECXr"
+  ],
+  "playlist_names": [
+    "WSET Level 3 Mock Exam Questions"
+  ],
+  "channel_name": "Wine With Jimmy",
+  "channel_url": "",
+  "duration": 619,
+  "upload_date": null,
+  "transcript_source": "unavailable",
+  "caption_language": "",
+  "language_detected": "",
+  "topics_detected": [],
+  "wset_learning_outcomes": [],
+  "sat_topics": [],
+  "contains_exam_tips": false,
+  "contains_tasting_content": false,
+  "contains_theory_content": false,
+  "contains_cause_effect_reasoning": false,
+  "processing_status": "failed",
+  "error_type": "network_error",
+  "error_message": "IpBlocked: Could not retrieve a transcript for the video https://www.youtube.com/watch?v=xR5-4G_oHvo! This is most likely caused by: YouTube is blocking requests from your IP. This usually is due to one of the following reasons: - You have done too many requests and your IP has been blocked by Yo...",
+  "raw_json_path": "C:\\Users\\esand\\OneDrive\\Documents\\WSET-AI-System\\knowledge\\wine-with-jimmy\\raw\\xR5-4G_oHvo__WSET_Level_3_New_Zealand_Short_Written_Question_Practice.raw.json",
+  "raw_txt_path": "C:\\Users\\esand\\OneDrive\\Documents\\WSET-AI-System\\knowledge\\wine-with-jimmy\\raw\\xR5-4G_oHvo__WSET_Level_3_New_Zealand_Short_Written_Question_Practice.raw.txt",
+  "last_processed": "2026-05-13T20:37:29+00:00"
+}

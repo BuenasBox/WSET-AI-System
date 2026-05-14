@@ -1,0 +1,31 @@
+{
+  "video_id": "wBvVvn0YHwI",
+  "video_title": "[Private video]",
+  "video_url": "https://www.youtube.com/watch?v=wBvVvn0YHwI",
+  "playlist_ids": [
+    "PLHvqIB13xXh2LYc0V3PME6RSYirmhZ0j3"
+  ],
+  "playlist_names": [
+    "Understanding WSET Level 3 Wine Theory"
+  ],
+  "channel_name": "Wine With Jimmy",
+  "channel_url": "",
+  "duration": null,
+  "upload_date": null,
+  "transcript_source": "unavailable",
+  "caption_language": "",
+  "language_detected": "",
+  "topics_detected": [],
+  "wset_learning_outcomes": [],
+  "sat_topics": [],
+  "contains_exam_tips": false,
+  "contains_tasting_content": false,
+  "contains_theory_content": false,
+  "contains_cause_effect_reasoning": false,
+  "processing_status": "failed",
+  "error_type": "private_video",
+  "error_message": "VideoUnplayable: Could not retrieve a transcript for the video https://www.youtube.com/watch?v=wBvVvn0YHwI! This is most likely caused by: The video is unplayable for the following reason: This video is private Additional Details: - If the owner of this video has granted you access, please - sign...",
+  "raw_json_path": "C:\\Users\\esand\\OneDrive\\Documents\\WSET-AI-System\\knowledge\\wine-with-jimmy\\raw\\wBvVvn0YHwI__[Private_video].raw.json",
+  "raw_txt_path": "C:\\Users\\esand\\OneDrive\\Documents\\WSET-AI-System\\knowledge\\wine-with-jimmy\\raw\\wBvVvn0YHwI__[Private_video].raw.txt",
+  "last_processed": "2026-05-13T20:36:53+00:00"
+}

@@ -1,0 +1,22 @@
+{
+  "misconception_id": "MC_TANNIN_01",
+  "misconception": "Tannin is the same as bitterness.",
+  "why_incorrect": "Tannin produces astringency — a tactile, drying sensation caused by tannin molecules binding to salivary proteins and precipitating them. This is perceived as a dry, gripping feeling on the gums, inner cheeks, and palate. Bitterness is a taste (not a tactile sensation) perceived on the palate and is associated with different compounds (e.g., certain phenolics, but not the same as astringent tannins). A wine can be bitter without being astringent, and vice versa. On the SAT, tannin is assessed separately from bitterness.",
+  "corrected_understanding": "Tannin produces astringency (a drying, gripping tactile sensation), not bitterness (a taste). Both can be present in the same wine but they are assessed separately and have different causes.",
+  "related_topics": ["T_RA1_WINE_COMPONENTS", "T_RA1_SAT"],
+  "related_concepts": ["C_TANNIN"],
+  "severity": "high",
+  "frequency": "very_common",
+  "distinction_relevance": true,
+  "tutor_intervention": "direct_correction",
+  "detection_signals": [
+    "this wine is bitter because of the tannins",
+    "tannins are what make wine bitter",
+    "high tannin means bitter taste"
+  ],
+  "_meta": {
+    "schema_version": "1.0",
+    "created_date": "2026-05-13",
+    "ingestion_status": "draft"
+  }
+}

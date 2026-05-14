@@ -1,0 +1,22 @@
+{
+  "misconception_id": "MC_OAK_02",
+  "misconception": "New oak and old oak produce the same effect on wine.",
+  "why_incorrect": "New oak (first-fill barrique or barrel used for the first time) imparts significant flavour compounds — vanillin, lactones (coconut, sweet wood), toasty/spicy notes — and contributes tannins from the wood itself. It also allows a greater rate of micro-oxygenation. Old oak (second-fill or beyond) has had its extractable compounds largely depleted by previous use. It contributes minimal flavour or tannin and functions primarily as a vessel for controlled micro-oxygenation. Using 100% new oak vs. 100% old oak produces radically different wines from the same fruit. The percentage of new oak is a critical winemaking variable that skilled winemakers control precisely.",
+  "corrected_understanding": "New oak adds significant flavour compounds (vanilla, spice, toast), wood tannins, and micro-oxygenation. Old oak is primarily a micro-oxygenation vessel with minimal flavour extraction. The distinction is fundamental to understanding oak's role in winemaking.",
+  "related_topics": ["T_RA1_WINEMAKING_AGEING"],
+  "related_concepts": ["C_OAK_INFLUENCE"],
+  "severity": "high",
+  "frequency": "common",
+  "distinction_relevance": true,
+  "tutor_intervention": "contrast_comparison",
+  "detection_signals": [
+    "all oak barrels do the same thing",
+    "whether the barrel is new or old doesn't matter",
+    "oak is oak"
+  ],
+  "_meta": {
+    "schema_version": "1.0",
+    "created_date": "2026-05-13",
+    "ingestion_status": "draft"
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "chain_id": "CC_NOBLE_ROT_SUGAR_CONCENTRATION",
+  "chain_name": "Noble rot → sugar concentration → sweet wine style",
+  "starting_factor": {
+    "concept_id": "C_BOTRYTIS_CINEREA",
+    "description": "Botrytis cinerea infects ripe grapes under alternating morning mist and dry sunny afternoons."
+  },
+  "intermediate_steps": [
+    {
+      "step_number": 1,
+      "concept_id": "C_BOTRYTIS_CINEREA",
+      "description": "Botrytis hyphae penetrate grape skin, increasing permeability without destroying the berry.",
+      "relationship_type": "causes"
+    },
+    {
+      "step_number": 2,
+      "concept_id": "C_BOTRYTIS_CINEREA",
+      "description": "Under warm, dry afternoon conditions, water evaporates through the perforated skin, shrinking and raisining the grape. This concentrates all dissolved compounds: sugars, acids, glycerol precursors, and flavour compounds.",
+      "relationship_type": "produces"
+    },
+    {
+      "step_number": 3,
+      "concept_id": "C_ACIDITY",
+      "description": "Botrytis metabolises tartaric acid (via gluconic acid production), partially reducing acidity despite overall concentration. This is a critical nuance: acidity is lower than simple concentration would predict.",
+      "relationship_type": "reduces"
+    },
+    {
+      "step_number": 4,
+      "concept_id": "C_BOTRYTIS_CINEREA",
+      "description": "High sugar concentration at harvest (potential alcohol 20%+ in Sauternes) combined with retained acidity and botrytis-specific aromatic compounds (honey, apricot, marmalade) defines the style.",
+      "relationship_type": "produces"
+    }
+  ],
+  "final_outcome": {
+    "concept_id": "C_BOTRYTIS_CINEREA",
+    "description": "Intensely sweet wine with high residual sugar, rich glycerol texture, characteristic botrytised aromatics (honey, apricot, marmalade, ginger), and acidity lower than expected from concentration alone."
+  },
+  "examples": [
+    {
+      "region_or_wine": "Château d'Yquem, Sauternes",
+      "description": "Grapes harvested in multiple tries (tries multiples) at different stages of noble rot development. Resulting wine has ~200 g/L residual sugar, honeyed aromatics, and sufficient acidity for decades of ageing."
+    },
+    {
+      "region_or_wine": "Mosel Trockenbeerenauslese (TBA)",
+      "description": "Raisined, individually selected botrytised Riesling grapes produce some of the world's most concentrated and long-lived sweet wines. TBA requires exceptional vintages with the right climatic sequence."
+    }
+  ],
+  "related_exam_questions": [
+    "Explain how noble rot contributes to the style of Sauternes.",
+    "What conditions are necessary for noble rot to develop rather than grey rot?",
+    "Why do botrytis-affected wines have lower acidity than their sugar concentration would predict?"
+  ],
+  "distinction_note": "A Distinction answer specifies the climatic conditions required (alternating mist/sun), the mechanism of concentration (evaporation through perforated skin), the tartaric acid metabolism, and the specific aromatic compounds associated with botrytis — not just 'it concentrates sugars'.",
+  "complexity": "complex",
+  "exam_relevance": "critical",
+  "tutor_use": true,
+  "examiner_use": false,
+  "_meta": {
+    "schema_version": "1.0",
+    "created_date": "2026-05-13",
+    "ingestion_status": "draft"
+  }
+}

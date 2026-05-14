@@ -1,0 +1,31 @@
+{
+  "video_id": "yc484RQH1qU",
+  "video_title": "How to preserve an open bottle of wine! For WSET",
+  "video_url": "https://www.youtube.com/watch?v=yc484RQH1qU",
+  "playlist_ids": [
+    "PLHvqIB13xXh2LYc0V3PME6RSYirmhZ0j3"
+  ],
+  "playlist_names": [
+    "Understanding WSET Level 3 Wine Theory"
+  ],
+  "channel_name": "Wine With Jimmy",
+  "channel_url": "",
+  "duration": 545,
+  "upload_date": null,
+  "transcript_source": "unavailable",
+  "caption_language": "",
+  "language_detected": "",
+  "topics_detected": [],
+  "wset_learning_outcomes": [],
+  "sat_topics": [],
+  "contains_exam_tips": false,
+  "contains_tasting_content": false,
+  "contains_theory_content": false,
+  "contains_cause_effect_reasoning": false,
+  "processing_status": "failed",
+  "error_type": "network_error",
+  "error_message": "IpBlocked: Could not retrieve a transcript for the video https://www.youtube.com/watch?v=yc484RQH1qU! This is most likely caused by: YouTube is blocking requests from your IP. This usually is due to one of the following reasons: - You have done too many requests and your IP has been blocked by Yo...",
+  "raw_json_path": "C:\\Users\\esand\\OneDrive\\Documents\\WSET-AI-System\\knowledge\\wine-with-jimmy\\raw\\yc484RQH1qU__How_to_preserve_an_open_bottle_of_wine!_For_WSET.raw.json",
+  "raw_txt_path": "C:\\Users\\esand\\OneDrive\\Documents\\WSET-AI-System\\knowledge\\wine-with-jimmy\\raw\\yc484RQH1qU__How_to_preserve_an_open_bottle_of_wine!_For_WSET.raw.txt",
+  "last_processed": "2026-05-13T20:37:52+00:00"
+}

@@ -1,0 +1,77 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "wset-ai-system/knowledge-map/misconception.schema.json",
+  "title": "WSET Knowledge Map — Misconception",
+  "description": "A documented incorrect belief that learners systematically hold about a WSET L3 concept. Misconceptions are distinct from random errors — they are predictable, recurring cognitive patterns.",
+  "type": "object",
+  "required": ["misconception_id", "misconception", "why_incorrect", "corrected_understanding", "related_topics", "severity"],
+  "additionalProperties": false,
+  "properties": {
+    "misconception_id": {
+      "type": "string",
+      "description": "Stable unique identifier. Format: MC_{CONCEPT_SLUG}_{N:02d} — e.g. MC_TANNIN_01",
+      "pattern": "^MC_[A-Z0-9_]+_[0-9]{2}$"
+    },
+    "misconception": {
+      "type": "string",
+      "description": "The incorrect belief, stated precisely as a learner would hold it. Use first person or declarative form."
+    },
+    "why_incorrect": {
+      "type": "string",
+      "description": "Technical explanation of why this belief is wrong. Must be specific, not just 'this is false'."
+    },
+    "corrected_understanding": {
+      "type": "string",
+      "description": "The accurate replacement belief. Should be expressible as a single clear statement."
+    },
+    "related_topics": {
+      "type": "array",
+      "description": "List of topic_ids where this misconception is likely to arise.",
+      "items": { "type": "string" },
+      "minItems": 1
+    },
+    "related_concepts": {
+      "type": "array",
+      "description": "List of concept_ids most directly affected by this misconception.",
+      "items": { "type": "string" },
+      "default": []
+    },
+    "severity": {
+      "type": "string",
+      "description": "How damaging this misconception is for exam performance if uncorrected.",
+      "enum": ["low", "medium", "high", "critical"]
+    },
+    "frequency": {
+      "type": "string",
+      "description": "Estimated prevalence of this misconception among WSET L3 learners.",
+      "enum": ["rare", "occasional", "common", "very_common"]
+    },
+    "distinction_relevance": {
+      "type": "boolean",
+      "description": "Whether holding this misconception would prevent a learner from reaching Distinction level.",
+      "default": false
+    },
+    "tutor_intervention": {
+      "type": "string",
+      "description": "Recommended Tutor Agent intervention strategy when this misconception is detected.",
+      "enum": ["gentle_correction", "worked_example", "causal_chain_walkthrough", "contrast_comparison", "direct_correction"]
+    },
+    "detection_signals": {
+      "type": "array",
+      "description": "Phrases or answer patterns that signal a learner may hold this misconception.",
+      "items": { "type": "string" },
+      "default": []
+    },
+    "_meta": {
+      "type": "object",
+      "properties": {
+        "schema_version": { "type": "string" },
+        "created_date": { "type": "string", "format": "date" },
+        "ingestion_status": {
+          "type": "string",
+          "enum": ["draft", "review_pending", "approved", "deprecated"]
+        }
+      }
+    }
+  }
+}

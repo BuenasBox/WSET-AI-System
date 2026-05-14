@@ -1,0 +1,31 @@
+{
+  "video_id": "vvxA3tknQ5I",
+  "video_title": "WSET L4 Mastering the Wines of the World - France - Northern Rhone Part 1 - Introduction",
+  "video_url": "https://www.youtube.com/watch?v=vvxA3tknQ5I",
+  "playlist_ids": [
+    "PLHvqIB13xXh0gTZUlK524pUqXApwTKXyn"
+  ],
+  "playlist_names": [
+    "WSET Diploma - Unit 3 - Mastering Still Wines of the World"
+  ],
+  "channel_name": "Wine With Jimmy",
+  "channel_url": "",
+  "duration": 709,
+  "upload_date": null,
+  "transcript_source": "unavailable",
+  "caption_language": "",
+  "language_detected": "",
+  "topics_detected": [],
+  "wset_learning_outcomes": [],
+  "sat_topics": [],
+  "contains_exam_tips": false,
+  "contains_tasting_content": false,
+  "contains_theory_content": false,
+  "contains_cause_effect_reasoning": false,
+  "processing_status": "failed",
+  "error_type": "transcript_disabled",
+  "error_message": "TranscriptsDisabled: Could not retrieve a transcript for the video https://www.youtube.com/watch?v=vvxA3tknQ5I! This is most likely caused by: Subtitles are disabled for this video If you are sure that the described cause is not responsible for this error and that a transcript should be retrievab...",
+  "raw_json_path": "C:\\Users\\esand\\OneDrive\\Documents\\WSET-AI-System\\knowledge\\wine-with-jimmy\\raw\\vvxA3tknQ5I__WSET_L4_Mastering_the_Wines_of_the_World_-_France_-_Northern_Rhone_Part_1_-_Introduction.raw.json",
+  "raw_txt_path": "C:\\Users\\esand\\OneDrive\\Documents\\WSET-AI-System\\knowledge\\wine-with-jimmy\\raw\\vvxA3tknQ5I__WSET_L4_Mastering_the_Wines_of_the_World_-_France_-_Northern_Rhone_Part_1_-_Introduction.raw.txt",
+  "last_processed": "2026-05-13T20:36:45+00:00"
+}

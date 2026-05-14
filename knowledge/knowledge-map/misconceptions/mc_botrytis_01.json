@@ -1,0 +1,22 @@
+{
+  "misconception_id": "MC_BOTRYTIS_01",
+  "misconception": "All botrytis is noble rot and makes wines sweet and complex.",
+  "why_incorrect": "Botrytis cinerea causes two very different outcomes depending on climatic conditions. Noble rot (Botrytis bunch rot under alternating mist and sun) concentrates sugars and produces desirable honeyed, apricot, and marmalade aromatic compounds. Grey rot (Botrytis bunch rot under sustained wet, humid conditions without drying) destroys the grape, produces off-flavours, and is an unambiguous vineyard hazard. The same fungal organism produces opposite outcomes. Winemakers in Sauternes, Tokaj, and Mosel specifically seek noble rot; grey rot is always detrimental.",
+  "corrected_understanding": "Botrytis cinerea produces noble rot under specific conditions (alternating morning humidity and dry sunny afternoons) and grey rot under sustained wet conditions. Noble rot is desirable; grey rot is destructive. Same organism, opposite outcomes.",
+  "related_topics": ["T_RA1_VITICULTURE_HAZARDS", "T_RA2_BORDEAUX_SWEET", "T_RA2_GERMANY"],
+  "related_concepts": ["C_BOTRYTIS_CINEREA"],
+  "severity": "critical",
+  "frequency": "common",
+  "distinction_relevance": true,
+  "tutor_intervention": "contrast_comparison",
+  "detection_signals": [
+    "botrytis is always good for the wine",
+    "noble rot and botrytis are the same thing",
+    "any botrytis infection makes the wine sweet"
+  ],
+  "_meta": {
+    "schema_version": "1.0",
+    "created_date": "2026-05-13",
+    "ingestion_status": "draft"
+  }
+}

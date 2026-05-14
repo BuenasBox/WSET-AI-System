@@ -1,0 +1,31 @@
+{
+  "video_id": "6SHLsRJrS88",
+  "video_title": "Understanding Beaujolais for WSET Level 3 with working written question",
+  "video_url": "https://www.youtube.com/watch?v=6SHLsRJrS88",
+  "playlist_ids": [
+    "PLHvqIB13xXh2LYc0V3PME6RSYirmhZ0j3"
+  ],
+  "playlist_names": [
+    "Understanding WSET Level 3 Wine Theory"
+  ],
+  "channel_name": "Wine With Jimmy",
+  "channel_url": "",
+  "duration": 1677,
+  "upload_date": null,
+  "transcript_source": "unavailable",
+  "caption_language": "",
+  "language_detected": "",
+  "topics_detected": [],
+  "wset_learning_outcomes": [],
+  "sat_topics": [],
+  "contains_exam_tips": false,
+  "contains_tasting_content": false,
+  "contains_theory_content": false,
+  "contains_cause_effect_reasoning": false,
+  "processing_status": "failed",
+  "error_type": "network_error",
+  "error_message": "IpBlocked: Could not retrieve a transcript for the video https://www.youtube.com/watch?v=6SHLsRJrS88! This is most likely caused by: YouTube is blocking requests from your IP. This usually is due to one of the following reasons: - You have done too many requests and your IP has been blocked by Yo...",
+  "raw_json_path": "C:\\Users\\esand\\OneDrive\\Documents\\WSET-AI-System\\knowledge\\wine-with-jimmy\\raw\\6SHLsRJrS88__Understanding_Beaujolais_for_WSET_Level_3_with_working_written_question.raw.json",
+  "raw_txt_path": "C:\\Users\\esand\\OneDrive\\Documents\\WSET-AI-System\\knowledge\\wine-with-jimmy\\raw\\6SHLsRJrS88__Understanding_Beaujolais_for_WSET_Level_3_with_working_written_question.raw.txt",
+  "last_processed": "2026-05-13T23:54:54+00:00"
+}

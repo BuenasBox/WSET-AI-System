@@ -1,0 +1,30 @@
+{
+  "concept_id": "C_COOL_CLIMATE",
+  "concept_name": "Cool Climate",
+  "topic_id": "T_RA1_CLIMATE_VITICULTURE",
+  "definition": "A viticultural climate characterised by relatively low average growing-season temperatures, typically resulting in slower grape ripening, higher natural acidity, lower sugar accumulation, lower potential alcohol, and retention of primary aromatic compounds. The boundary between cool and moderate climate is not fixed; it is relative to the grape variety's ripening requirements.",
+  "common_misconceptions": ["MC_COOL_CLIMATE_01", "MC_COOL_CLIMATE_02"],
+  "distinction_insights": [
+    "Cool climate does not mean cold climate — it means the average temperature during the growing season is at the lower end of what allows full physiological ripeness, requiring long, slow ripening.",
+    "The key effects of cool climate are interrelated: slow ripening retains more malic acid, limits sugar accumulation, preserves aromatic compounds, and produces lower alcohol potential — all from a single root cause.",
+    "The same variety planted in a cool vs. warm climate produces structurally different wines: Chardonnay in Chablis (cool) vs. Barossa Valley (warm) illustrates body, alcohol, and aromatic profile differences.",
+    "Diurnal temperature variation (warm days, cool nights) within a warm region can partially mimic cool-climate effects on acidity retention, which is a distinction-level nuance."
+  ],
+  "cause_effect_links": ["CC_COOL_CLIMATE_ACIDITY", "CC_COOL_CLIMATE_AROMA", "CC_COOL_CLIMATE_ALCOHOL"],
+  "related_grapes": ["riesling", "pinot_noir", "chardonnay", "sauvignon_blanc", "gamay"],
+  "related_regions": ["champagne", "mosel", "alsace", "chablis", "marlborough", "central_otago", "willamette_valley"],
+  "related_wine_laws": [],
+  "official_reference": {
+    "source_type": "specification",
+    "reference": "RA1 — Climate and Its Effects on Grapes and Wine Style"
+  },
+  "tutor_allowed": true,
+  "examiner_allowed": false,
+  "_meta": {
+    "schema_version": "1.0",
+    "created_date": "2026-05-13",
+    "last_updated": "2026-05-13",
+    "reviewed_by": null,
+    "ingestion_status": "draft"
+  }
+}

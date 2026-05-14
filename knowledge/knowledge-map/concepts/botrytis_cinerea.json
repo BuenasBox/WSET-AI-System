@@ -1,0 +1,30 @@
+{
+  "concept_id": "C_BOTRYTIS_CINEREA",
+  "concept_name": "Botrytis cinerea",
+  "topic_id": "T_RA1_VITICULTURE_HAZARDS",
+  "definition": "A fungal infection (Botrytis cinerea) that can affect grapes in two forms: noble rot (botrytis bunch rot under specific microclimate conditions), which concentrates sugars, acids, and flavour compounds and is deliberately sought for certain sweet wine styles; and grey rot (bunch rot under wet, warm conditions), which is destructive and produces off-flavours. The same organism produces both outcomes depending on climatic conditions.",
+  "common_misconceptions": ["MC_BOTRYTIS_01"],
+  "distinction_insights": [
+    "Noble rot and grey rot are caused by the same organism (Botrytis cinerea) — the outcome depends entirely on the microclimate: alternating morning mist (promotes spore growth) and sunny, dry afternoons (desiccates grapes rather than causing rot). Without this specific pattern, infection produces destructive grey rot.",
+    "Noble rot does not merely concentrate sugars — it also produces glycerol (contributing to richness and viscosity), destroys tartaric acid (reducing acidity compared to what would be expected from concentration alone), and generates honeyed, marmalade, and apricot aromatic compounds specific to botrytised wines.",
+    "The destruction of tartaric acid by Botrytis cinerea is a critical distinguishing point: Sauternes' acidity is lower than one would predict from sugar concentration alone because the fungus actively metabolises tartaric acid.",
+    "Selective harvesting (tries multiples) is required because noble rot does not develop uniformly across a cluster or vineyard — this is why Sauternes production is labour-intensive and costly."
+  ],
+  "cause_effect_links": ["CC_NOBLE_ROT_SUGAR_CONCENTRATION", "CC_BOTRYTIS_ACIDITY_REDUCTION"],
+  "related_grapes": ["semillon", "sauvignon_blanc", "riesling", "furmint", "chenin_blanc"],
+  "related_regions": ["sauternes", "barsac", "tokaj", "mosel_trockenbeerenauslese", "vouvray"],
+  "related_wine_laws": ["france_aoc_sauternes", "hungary_tokaj_law"],
+  "official_reference": {
+    "source_type": "specification",
+    "reference": "RA1 — Viticulture: Botrytis and Sweet Wine Production"
+  },
+  "tutor_allowed": true,
+  "examiner_allowed": false,
+  "_meta": {
+    "schema_version": "1.0",
+    "created_date": "2026-05-13",
+    "last_updated": "2026-05-13",
+    "reviewed_by": null,
+    "ingestion_status": "draft"
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "video_id": "tdJWQvsd9X4",
+  "video_title": "Grape Varieties - Garganega Advanced Version ideal for WSET Level 3 and Level 4 (WSET Diploma)",
+  "video_url": "https://www.youtube.com/watch?v=tdJWQvsd9X4",
+  "playlist_ids": [
+    "PLHvqIB13xXh16S0NK1AtPda47MTQeLO23"
+  ],
+  "playlist_names": [
+    "WSET Level 3 & WSET Diploma (Level 4) - Grape Varieties"
+  ],
+  "channel_name": "Wine With Jimmy",
+  "channel_url": "",
+  "duration": 953,
+  "upload_date": null,
+  "transcript_source": "unavailable",
+  "caption_language": "",
+  "language_detected": "",
+  "topics_detected": [],
+  "wset_learning_outcomes": [],
+  "sat_topics": [],
+  "contains_exam_tips": false,
+  "contains_tasting_content": false,
+  "contains_theory_content": false,
+  "contains_cause_effect_reasoning": false,
+  "processing_status": "failed",
+  "error_type": "network_error",
+  "error_message": "IpBlocked: Could not retrieve a transcript for the video https://www.youtube.com/watch?v=tdJWQvsd9X4! This is most likely caused by: YouTube is blocking requests from your IP. This usually is due to one of the following reasons: - You have done too many requests and your IP has been blocked by Yo...",
+  "raw_json_path": "C:\\Users\\esand\\OneDrive\\Documents\\WSET-AI-System\\knowledge\\wine-with-jimmy\\raw\\tdJWQvsd9X4__Grape_Varieties_-_Garganega_Advanced_Version_ideal_for_WSET_Level_3_and_Level_4_(WSET_Diploma).raw.json",
+  "raw_txt_path": "C:\\Users\\esand\\OneDrive\\Documents\\WSET-AI-System\\knowledge\\wine-with-jimmy\\raw\\tdJWQvsd9X4__Grape_Varieties_-_Garganega_Advanced_Version_ideal_for_WSET_Level_3_and_Level_4_(WSET_Diploma).raw.txt",
+  "last_processed": "2026-05-13T20:36:12+00:00"
+}

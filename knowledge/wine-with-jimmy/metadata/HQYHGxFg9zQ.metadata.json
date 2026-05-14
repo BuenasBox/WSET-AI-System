@@ -1,0 +1,31 @@
+{
+  "video_id": "HQYHGxFg9zQ",
+  "video_title": "Jimmy's Top Tips for the London Real Wine Fair on  April 28/29th 2024",
+  "video_url": "https://www.youtube.com/watch?v=HQYHGxFg9zQ",
+  "playlist_ids": [
+    "PLHvqIB13xXh2LYc0V3PME6RSYirmhZ0j3"
+  ],
+  "playlist_names": [
+    "Understanding WSET Level 3 Wine Theory"
+  ],
+  "channel_name": "Wine With Jimmy",
+  "channel_url": "",
+  "duration": 456,
+  "upload_date": null,
+  "transcript_source": "unavailable",
+  "caption_language": "",
+  "language_detected": "",
+  "topics_detected": [],
+  "wset_learning_outcomes": [],
+  "sat_topics": [],
+  "contains_exam_tips": false,
+  "contains_tasting_content": false,
+  "contains_theory_content": false,
+  "contains_cause_effect_reasoning": false,
+  "processing_status": "failed",
+  "error_type": "network_error",
+  "error_message": "IpBlocked: Could not retrieve a transcript for the video https://www.youtube.com/watch?v=HQYHGxFg9zQ! This is most likely caused by: YouTube is blocking requests from your IP. This usually is due to one of the following reasons: - You have done too many requests and your IP has been blocked by Yo...",
+  "raw_json_path": "C:\\Users\\esand\\OneDrive\\Documents\\WSET-AI-System\\knowledge\\wine-with-jimmy\\raw\\HQYHGxFg9zQ__Jimmy's_Top_Tips_for_the_London_Real_Wine_Fair_on_April_2829th_2024.raw.json",
+  "raw_txt_path": "C:\\Users\\esand\\OneDrive\\Documents\\WSET-AI-System\\knowledge\\wine-with-jimmy\\raw\\HQYHGxFg9zQ__Jimmy's_Top_Tips_for_the_London_Real_Wine_Fair_on_April_2829th_2024.raw.txt",
+  "last_processed": "2026-05-14T00:21:31+00:00"
+}

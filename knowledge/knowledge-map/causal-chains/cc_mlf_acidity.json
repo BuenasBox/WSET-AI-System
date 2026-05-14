@@ -1,0 +1,57 @@
+{
+  "chain_id": "CC_MLF_ACIDITY",
+  "chain_name": "MLF → malic-to-lactic conversion → softer acid profile",
+  "starting_factor": {
+    "concept_id": "C_MALOLACTIC_CONVERSION",
+    "description": "Malolactic fermentation (MLF) is initiated by lactic acid bacteria, primarily Oenococcus oeni, after primary alcoholic fermentation."
+  },
+  "intermediate_steps": [
+    {
+      "step_number": 1,
+      "concept_id": "C_MALOLACTIC_CONVERSION",
+      "description": "Oenococcus oeni bacteria metabolise malic acid (a diprotic, sharp-tasting organic acid) and convert it to lactic acid (a monoprotic, softer-tasting organic acid) plus CO₂.",
+      "relationship_type": "causes"
+    },
+    {
+      "step_number": 2,
+      "concept_id": "C_ACIDITY",
+      "description": "Because lactic acid is monoprotic (one dissociable proton per molecule) versus malic acid's two protons, the same molar quantity of lactic acid releases fewer hydrogen ions. Total titratable acidity decreases; pH rises slightly.",
+      "relationship_type": "reduces"
+    },
+    {
+      "step_number": 3,
+      "concept_id": "C_ACIDITY",
+      "description": "Tartaric acid is chemically stable and completely unaffected by MLF. Any tartaric-dominated wine will retain significant acidity even after full MLF.",
+      "relationship_type": "influences"
+    }
+  ],
+  "final_outcome": {
+    "concept_id": "C_ACIDITY",
+    "description": "The wine's acid profile shifts from sharp/angular (malic-dominated) to softer/rounder (lactic-dominated). Total acidity decreases slightly, pH rises slightly (typically 0.1–0.2 units). Tartaric acid fraction is unchanged."
+  },
+  "examples": [
+    {
+      "region_or_wine": "White Burgundy (Chardonnay)",
+      "description": "Full MLF converts sharp green-apple malic notes to creamy lactic character. The resulting acidity is softer and integrates better with oak and secondary fermentation aromas."
+    },
+    {
+      "region_or_wine": "Muscadet Sèvre et Maine sur Lie",
+      "description": "Partial or no MLF (often blocked in Muscadet) preserves high malic acidity and a zippy, saline freshness that would be lost if full MLF occurred."
+    }
+  ],
+  "related_exam_questions": [
+    "Explain what happens to acidity during malolactic fermentation.",
+    "Why might a winemaker choose to block MLF in a white wine?",
+    "What is the difference between malic acid and lactic acid in terms of sensory perception?"
+  ],
+  "distinction_note": "A Distinction answer explains the diprotic vs. monoprotic chemistry, distinguishes malic and tartaric acid behaviour (tartaric is MLF-stable), and links the winemaker's decision to block or allow MLF to deliberate stylistic intent — not just as something that 'happens'.",
+  "complexity": "moderate",
+  "exam_relevance": "critical",
+  "tutor_use": true,
+  "examiner_use": false,
+  "_meta": {
+    "schema_version": "1.0",
+    "created_date": "2026-05-13",
+    "ingestion_status": "draft"
+  }
+}

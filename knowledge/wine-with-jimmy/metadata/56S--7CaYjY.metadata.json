@@ -1,0 +1,33 @@
+{
+  "video_id": "56S--7CaYjY",
+  "video_title": "WSET Level 3 New Zealand 🍷Understanding Central Otago and Pinot Noir",
+  "video_url": "https://www.youtube.com/watch?v=56S--7CaYjY",
+  "playlist_ids": [
+    "PLHvqIB13xXh16S0NK1AtPda47MTQeLO23",
+    "PLHvqIB13xXh2LYc0V3PME6RSYirmhZ0j3"
+  ],
+  "playlist_names": [
+    "WSET Level 3 & WSET Diploma (Level 4) - Grape Varieties",
+    "Understanding WSET Level 3 Wine Theory"
+  ],
+  "channel_name": "Wine With Jimmy",
+  "channel_url": "",
+  "duration": 1825,
+  "upload_date": null,
+  "transcript_source": "youtube_caption",
+  "caption_language": "en",
+  "language_detected": "",
+  "topics_detected": [],
+  "wset_learning_outcomes": [],
+  "sat_topics": [],
+  "contains_exam_tips": false,
+  "contains_tasting_content": false,
+  "contains_theory_content": false,
+  "contains_cause_effect_reasoning": false,
+  "processing_status": "completed",
+  "error_type": "",
+  "error_message": "",
+  "raw_json_path": "C:\\Users\\esand\\OneDrive\\Documents\\WSET-AI-System\\knowledge\\wine-with-jimmy\\raw\\56S--7CaYjY__WSET_Level_3_New_Zealand_🍷Understanding_Central_Otago_and_Pinot_Noir.raw.json",
+  "raw_txt_path": "C:\\Users\\esand\\OneDrive\\Documents\\WSET-AI-System\\knowledge\\wine-with-jimmy\\raw\\56S--7CaYjY__WSET_Level_3_New_Zealand_🍷Understanding_Central_Otago_and_Pinot_Noir.raw.txt",
+  "last_processed": "2026-05-13T20:20:31+00:00"
+}

@@ -1,0 +1,112 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "wset-ai-system/knowledge-map/topic.schema.json",
+  "title": "WSET Knowledge Map — Topic",
+  "description": "A curriculum-level grouping of related WSET L3 knowledge. Topics are the primary navigation layer of the knowledge map.",
+  "type": "object",
+  "required": ["topic_id", "topic_name", "ra", "difficulty"],
+  "additionalProperties": false,
+  "properties": {
+    "topic_id": {
+      "type": "string",
+      "description": "Stable unique identifier. Format: T_{RA}_{SLUG} — e.g. T_RA1_MALOLACTIC_CONVERSION",
+      "pattern": "^T_RA[1-5]_[A-Z0-9_]+$"
+    },
+    "topic_name": {
+      "type": "string",
+      "description": "Human-readable topic name as it appears in WSET curriculum."
+    },
+    "ra": {
+      "type": "string",
+      "description": "WSET Learning Area this topic belongs to.",
+      "enum": ["RA1", "RA2", "RA3", "RA4", "RA5"]
+    },
+    "parent_topic": {
+      "type": ["string", "null"],
+      "description": "topic_id of the parent topic, if this is a subtopic. Null for top-level topics.",
+      "default": null
+    },
+    "child_topics": {
+      "type": "array",
+      "description": "List of topic_ids that are subtopics of this topic.",
+      "items": { "type": "string" },
+      "default": []
+    },
+    "related_topics": {
+      "type": "array",
+      "description": "topic_ids that are semantically related but not parent/child.",
+      "items": { "type": "string" },
+      "default": []
+    },
+    "prerequisite_topics": {
+      "type": "array",
+      "description": "topic_ids that a learner should master before this topic. Used for adaptive sequencing.",
+      "items": { "type": "string" },
+      "default": []
+    },
+    "difficulty": {
+      "type": "string",
+      "description": "Estimated difficulty level for WSET L3 learners.",
+      "enum": ["foundational", "intermediate", "advanced", "distinction"]
+    },
+    "official_sources": {
+      "type": "array",
+      "description": "References to official WSET sources covering this topic.",
+      "items": {
+        "type": "object",
+        "required": ["source_type", "reference"],
+        "properties": {
+          "source_type": {
+            "type": "string",
+            "enum": ["specification", "sat", "study-guide", "marking-key", "sample-paper"]
+          },
+          "reference": {
+            "type": "string",
+            "description": "Chapter, section, or page reference within the official source."
+          }
+        }
+      },
+      "default": []
+    },
+    "pedagogical_sources": {
+      "type": "array",
+      "description": "Non-official pedagogical sources that cover this topic. For Tutor Agent only.",
+      "items": {
+        "type": "object",
+        "required": ["source_type", "reference"],
+        "properties": {
+          "source_type": {
+            "type": "string",
+            "enum": ["wine-with-jimmy", "benchmark-answer", "enrichment", "internal-question-bank"]
+          },
+          "reference": {
+            "type": "string",
+            "description": "Identifier or description of the specific pedagogical resource."
+          }
+        }
+      },
+      "default": []
+    },
+    "tags": {
+      "type": "array",
+      "description": "Free-form tags for search and filtering.",
+      "items": { "type": "string" },
+      "default": []
+    },
+    "_meta": {
+      "type": "object",
+      "description": "Metadata for version control and human review tracking.",
+      "properties": {
+        "schema_version": { "type": "string" },
+        "created_date": { "type": "string", "format": "date" },
+        "last_updated": { "type": "string", "format": "date" },
+        "reviewed_by": { "type": ["string", "null"] },
+        "review_date": { "type": ["string", "null"], "format": "date" },
+        "ingestion_status": {
+          "type": "string",
+          "enum": ["draft", "review_pending", "approved", "deprecated"]
+        }
+      }
+    }
+  }
+}

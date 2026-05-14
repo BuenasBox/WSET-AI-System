@@ -1,0 +1,57 @@
+{
+  "chain_id": "CC_LEES_AGEING_AUTOLYSIS",
+  "chain_name": "Yeast autolysis during tirage lees contact → mannoprotein and polysaccharide release → texture and stability",
+  "starting_factor": {
+    "concept_id": "C_CHAMPAGNE_LEES_AGEING",
+    "description": "After secondary fermentation in bottle (tirage), Champagne spends months or years in contact with the dead yeast cells (lees) that performed the fermentation."
+  },
+  "intermediate_steps": [
+    {
+      "step_number": 1,
+      "concept_id": "C_CHAMPAGNE_LEES_AGEING",
+      "description": "Dead yeast cells undergo autolysis — their own enzymes break down the cell wall and intracellular components. This is a slow process accelerated by higher temperature and longer contact time. It requires a minimum of 15 months for NV Champagne and 36 months for Vintage under AOC regulations.",
+      "relationship_type": "causes"
+    },
+    {
+      "step_number": 2,
+      "concept_id": "C_CHAMPAGNE_LEES_AGEING",
+      "description": "Autolysis releases mannoproteins (glycoproteins) and polysaccharides from the yeast cell wall into the wine. These large, viscous macromolecules coat the CO₂ bubbles, increasing their stability and reducing the rate at which they coalesce and escape — creating finer, more persistent, smaller bubbles.",
+      "relationship_type": "produces"
+    },
+    {
+      "step_number": 3,
+      "concept_id": "C_CHAMPAGNE_LEES_AGEING",
+      "description": "Mannoproteins and polysaccharides also contribute directly to palate weight and texture — a creamier, rounder mouthfeel and a perception of greater body even in a bone-dry wine. They also improve tartrate stability by inhibiting tartrate crystallisation.",
+      "relationship_type": "produces"
+    }
+  ],
+  "final_outcome": {
+    "concept_id": "C_CHAMPAGNE_LEES_AGEING",
+    "description": "Finer, more persistent bubbles; creamier texture; improved tartrate stability; and the foundation for autolytic aromatic character. The longer the tirage contact, the more pronounced these effects — though there is a practical maximum beyond which the wine may tire."
+  },
+  "examples": [
+    {
+      "region_or_wine": "Non-Vintage Champagne (minimum 15 months tirage)",
+      "description": "Minimum legal autolysis time produces some texture and bubble refinement. Most quality-focused NV houses age significantly longer (2–4 years) to develop more pronounced autolytic character and bubble fineness."
+    },
+    {
+      "region_or_wine": "Vintage Champagne (minimum 36 months tirage)",
+      "description": "Extended tirage produces significantly increased mannoprotein content. Premier Cru and Grand Cru wines often spend 5–8 years on lees, creating exceptionally fine, long-lived bubbles and a distinctive richness of texture."
+    }
+  ],
+  "related_exam_questions": [
+    "What is autolysis and how does it affect the style of Champagne?",
+    "Why does extended lees contact improve the quality of Champagne's bubbles?",
+    "What is the minimum lees ageing requirement for NV and Vintage Champagne?"
+  ],
+  "distinction_note": "A Distinction answer names mannoproteins and polysaccharides specifically, explains their role in bubble stability (coating CO₂ bubbles to slow coalescence) as distinct from their role in texture, and distinguishes the minimum legal requirement from typical quality-house practice.",
+  "complexity": "complex",
+  "exam_relevance": "critical",
+  "tutor_use": true,
+  "examiner_use": false,
+  "_meta": {
+    "schema_version": "1.0",
+    "created_date": "2026-05-13",
+    "ingestion_status": "draft"
+  }
+}

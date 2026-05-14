@@ -1,0 +1,22 @@
+{
+  "misconception_id": "MC_OAK_01",
+  "misconception": "Oaky wines are low quality or over-extracted.",
+  "why_incorrect": "Oak influence, when well-integrated and balanced, is a legitimate stylistic element rather than a quality defect. Classic Rioja Gran Reserva, top Napa Valley Cabernet Sauvignon, and White Burgundy all use significant oak contact and are considered benchmark quality wines. The issue is imbalance: when oak dominates fruit, or when cheap alternative oak products produce jarring flavours, the result may be poor quality. But the oak itself is not the quality problem — the lack of balance is.",
+  "corrected_understanding": "Oak influence is a stylistic tool. When well-integrated with fruit, it adds complexity and structure. It becomes a quality problem only when imbalanced or poorly applied.",
+  "related_topics": ["T_RA1_WINEMAKING_AGEING"],
+  "related_concepts": ["C_OAK_INFLUENCE"],
+  "severity": "medium",
+  "frequency": "common",
+  "distinction_relevance": false,
+  "tutor_intervention": "worked_example",
+  "detection_signals": [
+    "this wine smells of oak so it must be cheap",
+    "oaky wines are over-processed",
+    "I can taste the oak so the wine is not natural"
+  ],
+  "_meta": {
+    "schema_version": "1.0",
+    "created_date": "2026-05-13",
+    "ingestion_status": "draft"
+  }
+}

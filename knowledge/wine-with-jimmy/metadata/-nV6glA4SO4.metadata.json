@@ -1,0 +1,31 @@
+{
+  "video_id": "-nV6glA4SO4",
+  "video_title": "WSET Level 4 Diploma D3 Introduction to Chianti",
+  "video_url": "https://www.youtube.com/watch?v=-nV6glA4SO4",
+  "playlist_ids": [
+    "PLHvqIB13xXh0gTZUlK524pUqXApwTKXyn"
+  ],
+  "playlist_names": [
+    "WSET Diploma - Unit 3 - Mastering Still Wines of the World"
+  ],
+  "channel_name": "Wine With Jimmy",
+  "channel_url": "",
+  "duration": 970,
+  "upload_date": null,
+  "transcript_source": "youtube_caption",
+  "caption_language": "",
+  "language_detected": "",
+  "topics_detected": [],
+  "wset_learning_outcomes": [],
+  "sat_topics": [],
+  "contains_exam_tips": false,
+  "contains_tasting_content": false,
+  "contains_theory_content": false,
+  "contains_cause_effect_reasoning": false,
+  "processing_status": "skipped",
+  "error_type": "",
+  "error_message": "",
+  "raw_json_path": "C:\\Users\\esand\\OneDrive\\Documents\\WSET-AI-System\\knowledge\\wine-with-jimmy\\raw\\-nV6glA4SO4__WSET_Level_4_Diploma_D3_Introduction_to_Chianti.raw.json",
+  "raw_txt_path": "C:\\Users\\esand\\OneDrive\\Documents\\WSET-AI-System\\knowledge\\wine-with-jimmy\\raw\\-nV6glA4SO4__WSET_Level_4_Diploma_D3_Introduction_to_Chianti.raw.txt",
+  "last_processed": "2026-05-13T20:19:44+00:00"
+}

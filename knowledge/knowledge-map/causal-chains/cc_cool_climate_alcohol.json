@@ -1,0 +1,57 @@
+{
+  "chain_id": "CC_COOL_CLIMATE_ALCOHOL",
+  "chain_name": "Cool climate → limited sugar accumulation → lower potential alcohol",
+  "starting_factor": {
+    "concept_id": "C_COOL_CLIMATE",
+    "description": "In cool climates, the rate of photosynthesis and sugar accumulation in grape berries is lower than in warm climates due to reduced temperature-driven metabolic activity."
+  },
+  "intermediate_steps": [
+    {
+      "step_number": 1,
+      "concept_id": "C_COOL_CLIMATE",
+      "description": "Photosynthesis produces sucrose in the leaves, which is transported to the grape berries as glucose and fructose. Lower temperatures reduce the rate of photosynthesis and, critically, the rate at which sugars accumulate in the berry during the ripening period.",
+      "relationship_type": "causes"
+    },
+    {
+      "step_number": 2,
+      "concept_id": "C_COOL_CLIMATE",
+      "description": "Shorter growing seasons in cool regions (e.g., Champagne, Mosel, English Vineyards) further limit total sugar accumulation time. The growing season ends when temperatures drop or when rain increases fungal disease risk — often before sugars reach warm-climate levels.",
+      "relationship_type": "influences"
+    },
+    {
+      "step_number": 3,
+      "concept_id": "C_COOL_CLIMATE",
+      "description": "Lower sugar at harvest translates directly to lower potential alcohol. Typical cool-climate base wines for sparkling production (Champagne, English sparkling) have 9.5–10.5% potential alcohol before secondary fermentation. For comparison, warm-climate reds routinely reach 14–15%+ naturally.",
+      "relationship_type": "produces"
+    }
+  ],
+  "final_outcome": {
+    "concept_id": "C_COOL_CLIMATE",
+    "description": "Lower alcohol level in the finished wine (7–12% typical range for fully fermented cool-climate styles). This contributes to wine freshness, lower caloric content, and greater perceived acidity. For sparkling wine base wines, low natural alcohol is a deliberate quality objective."
+  },
+  "examples": [
+    {
+      "region_or_wine": "Champagne NV base wine blend",
+      "description": "Intentionally harvested at low ripeness for potential alcohol of 9.5–10% before secondary fermentation. The resulting 12–12.5% abv after tirage is considered ideal — the low base wine alcohol preserves acidity and freshness."
+    },
+    {
+      "region_or_wine": "Mosel Kabinett Riesling",
+      "description": "The lightest Prädikat level, harvested with minimum ripeness requirements. At 7–8% abv (with residual sugar), Kabinett exemplifies the cool climate's limited sugar accumulation used deliberately to produce a delicate, low-alcohol style."
+    }
+  ],
+  "related_exam_questions": [
+    "Why do cool-climate regions tend to produce wines with lower alcohol levels?",
+    "Why is low natural alcohol a desirable quality in Champagne base wines?",
+    "Describe the relationship between growing season temperature and sugar accumulation in grapes."
+  ],
+  "distinction_note": "A Distinction answer explains the photosynthesis mechanism, notes the additional constraint of shorter growing season length, distinguishes potential alcohol at harvest from final abv (which can be modified by winemaking), and gives a concrete abv range for a specific cool-climate style.",
+  "complexity": "simple",
+  "exam_relevance": "high",
+  "tutor_use": true,
+  "examiner_use": false,
+  "_meta": {
+    "schema_version": "1.0",
+    "created_date": "2026-05-13",
+    "ingestion_status": "draft"
+  }
+}

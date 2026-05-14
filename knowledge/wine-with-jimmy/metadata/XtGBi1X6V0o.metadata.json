@@ -1,0 +1,33 @@
+{
+  "video_id": "XtGBi1X6V0o",
+  "video_title": "Australia’s Top Grapes| Shiraz, Cabernet, Chardonnay, Riesling",
+  "video_url": "https://www.youtube.com/watch?v=XtGBi1X6V0o",
+  "playlist_ids": [
+    "PLHvqIB13xXh2LYc0V3PME6RSYirmhZ0j3",
+    "PLHvqIB13xXh2p_cuTnddrE9TJyBRDECXr"
+  ],
+  "playlist_names": [
+    "Understanding WSET Level 3 Wine Theory",
+    "WSET Level 3 Mock Exam Questions"
+  ],
+  "channel_name": "Wine With Jimmy",
+  "channel_url": "",
+  "duration": 1013,
+  "upload_date": null,
+  "transcript_source": "unavailable",
+  "caption_language": "",
+  "language_detected": "",
+  "topics_detected": [],
+  "wset_learning_outcomes": [],
+  "sat_topics": [],
+  "contains_exam_tips": false,
+  "contains_tasting_content": false,
+  "contains_theory_content": false,
+  "contains_cause_effect_reasoning": false,
+  "processing_status": "failed",
+  "error_type": "network_error",
+  "error_message": "IpBlocked: Could not retrieve a transcript for the video https://www.youtube.com/watch?v=XtGBi1X6V0o! This is most likely caused by: YouTube is blocking requests from your IP. This usually is due to one of the following reasons: - You have done too many requests and your IP has been blocked by Yo...",
+  "raw_json_path": "C:\\Users\\esand\\OneDrive\\Documents\\WSET-AI-System\\knowledge\\wine-with-jimmy\\raw\\XtGBi1X6V0o__Australia’s_Top_Grapes_Shiraz,_Cabernet,_Chardonnay,_Riesling.raw.json",
+  "raw_txt_path": "C:\\Users\\esand\\OneDrive\\Documents\\WSET-AI-System\\knowledge\\wine-with-jimmy\\raw\\XtGBi1X6V0o__Australia’s_Top_Grapes_Shiraz,_Cabernet,_Chardonnay,_Riesling.raw.txt",
+  "last_processed": "2026-05-13T20:29:14+00:00"
+}

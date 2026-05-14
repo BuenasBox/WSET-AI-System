@@ -1,0 +1,18 @@
+{
+  "relationship_id": "R_CHAMPAGNE_LEES_AGEING__PRODUCES__AUTOLYTIC_AROMA",
+  "source_concept": "C_CHAMPAGNE_LEES_AGEING",
+  "target_concept": "C_CHAMPAGNE_LEES_AGEING",
+  "relationship_type": "produces",
+  "strength": "strong",
+  "conditions": "Requires extended tirage contact of at least 12–15 months for noticeable autolytic character. Effect increases progressively with contact time up to approximately 5–8 years for most wines. Temperature affects autolysis rate — warmer cellars accelerate development but may compromise freshness.",
+  "direction": "C_CHAMPAGNE_LEES_AGEING → [autolytic aroma compound production]",
+  "explanation": "Yeast autolysis during tirage lees contact releases amino acids, peptides, and mannoproteins from dead yeast cells. Maillard reactions between released amino acids and trace residual sugars generate heterocyclic compounds (pyrazines, furanones) responsible for brioche, bread dough, toast, pastry, and biscuit aromatics. This autolytic aromatic character is the defining tertiary aroma profile of mature traditional-method sparkling wine and is inseparable from the lees ageing process.",
+  "exam_relevance": "critical",
+  "tutor_use": true,
+  "examiner_use": false,
+  "_meta": {
+    "schema_version": "1.0",
+    "created_date": "2026-05-13",
+    "ingestion_status": "draft"
+  }
+}

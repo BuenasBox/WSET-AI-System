@@ -1,0 +1,57 @@
+{
+  "chain_id": "CC_WHOLE_BUNCH_PH",
+  "chain_name": "Whole bunch fermentation → potassium leaching from stems → elevated pH",
+  "starting_factor": {
+    "concept_id": "C_WHOLE_BUNCH_FERMENTATION",
+    "description": "Grape stems contain high concentrations of potassium (K⁺), a cation that affects wine pH when leached into the must during fermentation."
+  },
+  "intermediate_steps": [
+    {
+      "step_number": 1,
+      "concept_id": "C_WHOLE_BUNCH_FERMENTATION",
+      "description": "During fermentation, ethanol and mechanical action (pumping over, punching down) extract potassium ions from stem tissue into the fermenting must. Potassium is highly soluble in alcoholic solution.",
+      "relationship_type": "causes"
+    },
+    {
+      "step_number": 2,
+      "concept_id": "C_ACIDITY",
+      "description": "Potassium ions (K⁺) precipitate tartaric acid as potassium bitartrate (cream of tartar). This removes free tartaric acid from solution, reducing total titratable acidity and raising pH. The higher the potassium extraction, the greater the pH rise.",
+      "relationship_type": "reduces"
+    },
+    {
+      "step_number": 3,
+      "concept_id": "C_ACIDITY",
+      "description": "A higher pH (lower acidity) from whole bunch potassium extraction changes perceived mouthfeel — wines may taste softer, rounder, or less sharp on the palate. However, at very high pH levels (>3.7–3.8), microbiological stability is compromised and the risk of bacterial spoilage increases.",
+      "relationship_type": "influences"
+    }
+  ],
+  "final_outcome": {
+    "concept_id": "C_ACIDITY",
+    "description": "Wine made with whole bunch fermentation typically shows higher pH than equivalent destemmed wines made from the same fruit. The magnitude depends on the proportion of stems used and fermentation conditions. This is a critical nuance in the flavour and stability of whole bunch wines."
+  },
+  "examples": [
+    {
+      "region_or_wine": "Burgundy Pinot Noir with 100% whole bunch",
+      "description": "Producers using 100% whole bunch (e.g., Prieuré-Roch in some years) accept lower acidity / higher pH as a trade-off for the complexity and texture contributed by stems. Winemakers must start with sufficient natural acidity to absorb this pH rise without compromising stability."
+    },
+    {
+      "region_or_wine": "Cool-climate Grenache with partial whole bunch",
+      "description": "In naturally lower-acid warm-climate Grenache, excessive whole bunch inclusion risks pushing pH beyond safe microbiological limits. Winemakers may choose low inclusion rates to gain structural benefit without compromising stability."
+    }
+  ],
+  "related_exam_questions": [
+    "How does whole bunch fermentation affect the pH and acidity of a wine?",
+    "Why might a winemaker be cautious about using whole bunch inclusion with low-acid grapes?",
+    "What is potassium bitartrate and how does it form during fermentation?"
+  ],
+  "distinction_note": "A Distinction answer explains the potassium-tartrate precipitation mechanism (not just 'stems add potassium'), links it to a specific chemical form (potassium bitartrate), and discusses the microbiological stability risk at high pH as a practical consequence of the chemistry.",
+  "complexity": "complex",
+  "exam_relevance": "high",
+  "tutor_use": true,
+  "examiner_use": false,
+  "_meta": {
+    "schema_version": "1.0",
+    "created_date": "2026-05-13",
+    "ingestion_status": "draft"
+  }
+}

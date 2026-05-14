@@ -1,0 +1,18 @@
+{
+  "relationship_id": "R_COOL_CLIMATE__INCREASES__ACIDITY",
+  "source_concept": "C_COOL_CLIMATE",
+  "target_concept": "C_ACIDITY",
+  "relationship_type": "increases",
+  "strength": "strong",
+  "conditions": "When grapes are grown in regions where growing season mean temperatures are below ~16–17°C. Effect is most pronounced for malic acid component; tartaric acid is temperature-independent.",
+  "direction": "C_COOL_CLIMATE → C_ACIDITY",
+  "explanation": "Low growing temperatures slow the enzymatic degradation of malic acid during ripening. Malic acid is consumed during normal grape ripening via respiration; slower ripening means more malic acid is retained at harvest. Tartaric acid is stable regardless of temperature. The net result is higher total acidity and lower pH in cool-climate wines compared to warm-climate wines of the same variety at equivalent ripeness.",
+  "exam_relevance": "critical",
+  "tutor_use": true,
+  "examiner_use": false,
+  "_meta": {
+    "schema_version": "1.0",
+    "created_date": "2026-05-13",
+    "ingestion_status": "draft"
+  }
+}

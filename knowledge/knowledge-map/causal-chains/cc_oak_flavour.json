@@ -1,0 +1,57 @@
+{
+  "chain_id": "CC_OAK_FLAVOUR",
+  "chain_name": "New oak toasting → aromatic compound extraction → oak-derived flavours",
+  "starting_factor": {
+    "concept_id": "C_OAK_INFLUENCE",
+    "description": "During barrel making (cooperage), the staves are toasted over fire. The degree and duration of toasting determines which aromatic compounds are created and preserved in the wood."
+  },
+  "intermediate_steps": [
+    {
+      "step_number": 1,
+      "concept_id": "C_OAK_INFLUENCE",
+      "description": "Light toast: preserves more wood tannins, extracts coconut/vanilla lactones (β-methyl-γ-octalactone, the 'oak lactone') — particularly pronounced in American oak (Quercus alba). Produces sweet, coconut, vanilla characters.",
+      "relationship_type": "produces"
+    },
+    {
+      "step_number": 2,
+      "concept_id": "C_OAK_INFLUENCE",
+      "description": "Medium toast: breaks down cellulose and hemicellulose into vanillin and other aldehyde compounds. Produces vanilla, toast, spice, and baking-spice characters. The most commonly used toast level for French oak barriquesin Bordeaux and Burgundy.",
+      "relationship_type": "produces"
+    },
+    {
+      "step_number": 3,
+      "concept_id": "C_OAK_INFLUENCE",
+      "description": "Heavy toast: generates phenolic aldehydes including furfural and 5-methylfurfural from Maillard reactions, and smoky, charred compounds. Darker, smokier, espresso, and dark-spice notes. Surface tannins are heavily degraded.",
+      "relationship_type": "produces"
+    }
+  ],
+  "final_outcome": {
+    "concept_id": "C_OAK_INFLUENCE",
+    "description": "Oak-derived aroma compounds (vanilla, toast, coconut, smoke, spice) integrated into the wine's aromatic profile. The specific character depends on oak species (French vs. American), grain tightness, toast level, and the degree of extraction (new vs. used oak)."
+  },
+  "examples": [
+    {
+      "region_or_wine": "Traditional Rioja Reserva (American oak, medium toast)",
+      "description": "American oak lactones produce a distinctive coconut/dill/vanilla character that is a recognisable stylistic signature of traditional Rioja, contrasting with the cedar/tobacco notes of French oak."
+    },
+    {
+      "region_or_wine": "Barossa Valley Shiraz (new French oak, medium-heavy toast)",
+      "description": "Rich dark fruit from warm climate combines with vanilla, mocha, and toasty notes from new French oak. Heavy toast creates a dark chocolate/espresso character that melds with the fruit."
+    }
+  ],
+  "related_exam_questions": [
+    "What flavour compounds are produced by oak barrel toasting?",
+    "How does French oak differ from American oak in the flavours it imparts?",
+    "Why might a winemaker choose heavy toast barrels rather than light toast?"
+  ],
+  "distinction_note": "A Distinction answer names specific compounds (vanillin, oak lactones, furfural) and links them to toast levels, distinguishes French vs. American oak lactone concentration, and connects flavour integration to wine ageing potential.",
+  "complexity": "moderate",
+  "exam_relevance": "high",
+  "tutor_use": true,
+  "examiner_use": false,
+  "_meta": {
+    "schema_version": "1.0",
+    "created_date": "2026-05-13",
+    "ingestion_status": "draft"
+  }
+}

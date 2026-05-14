@@ -1,0 +1,57 @@
+{
+  "chain_id": "CC_COOL_CLIMATE_AROMA",
+  "chain_name": "Cool climate → slower ripening → primary aroma profile (citrus/green fruit/floral)",
+  "starting_factor": {
+    "concept_id": "C_COOL_CLIMATE",
+    "description": "In cool growing regions, lower temperatures slow the enzymatic ripening processes in the grape, resulting in a different terpene and aroma precursor profile at harvest."
+  },
+  "intermediate_steps": [
+    {
+      "step_number": 1,
+      "concept_id": "C_COOL_CLIMATE",
+      "description": "Slower ripening means that the grape remains at lower sugar levels and higher acidity for a longer portion of the growing season. During this extended period, aromatic precursors develop that would be destroyed or transformed at higher temperatures.",
+      "relationship_type": "causes"
+    },
+    {
+      "step_number": 2,
+      "concept_id": "C_COOL_CLIMATE",
+      "description": "Higher methoxypyrazine concentrations survive when ripening is slower and cooler (methoxypyrazines degrade enzymatically with heat and light exposure). In grapes prone to methoxypyrazines (Sauvignon Blanc, Cabernet Sauvignon), this produces herbaceous, green capsicum, or grassy notes — a regional signature when grapes are slightly under-ripe.",
+      "relationship_type": "produces"
+    },
+    {
+      "step_number": 3,
+      "concept_id": "C_COOL_CLIMATE",
+      "description": "When cool-climate grapes achieve full phenolic ripeness, the aroma profile is dominated by primary aromas of citrus (lemon, grapefruit, lime), stone fruit (green apple, pear, white peach), and floral notes (elderflower, blossom) rather than the tropical fruit and jam characters of warm-climate versions of the same variety.",
+      "relationship_type": "produces"
+    }
+  ],
+  "final_outcome": {
+    "concept_id": "C_COOL_CLIMATE",
+    "description": "Cool-climate wines show citrus, green fruit, and floral primary aromas when fully ripe, or herbaceous/green notes if under-ripe. This contrasts with warm-climate versions of the same variety which show tropical fruit, stone fruit jam, and sometimes cooked fruit characters."
+  },
+  "examples": [
+    {
+      "region_or_wine": "Marlborough Sauvignon Blanc vs. Californian Sauvignon Blanc",
+      "description": "Cool Marlborough produces intense gooseberry, citrus, and herbaceous (cut grass) notes from retained methoxypyrazines and cool-climate aroma precursors. Warmer California Sauvignon Blanc tends toward melon, peach, and tropical fruit with far less herbal character."
+    },
+    {
+      "region_or_wine": "Mosel Riesling vs. Clare Valley Riesling",
+      "description": "Cool Mosel produces lime zest, green apple, and delicate floral notes. Warmer Clare Valley produces lime, but also tropical notes and a different mineral expression — the variety is the same, the climate shapes the fruit register."
+    }
+  ],
+  "related_exam_questions": [
+    "How does climate affect the primary aroma profile of a white wine?",
+    "Why does Sauvignon Blanc from Marlborough often show more herbaceous character than Californian examples?",
+    "Describe the difference in aroma profile between a cool-climate and warm-climate version of the same variety."
+  ],
+  "distinction_note": "A Distinction answer names methoxypyrazines as the compound responsible for herbaceous notes and explains their temperature-dependent degradation rate, contrasts specific citrus/floral vs. tropical descriptors for cool vs. warm climate, and names specific wine examples.",
+  "complexity": "moderate",
+  "exam_relevance": "critical",
+  "tutor_use": true,
+  "examiner_use": false,
+  "_meta": {
+    "schema_version": "1.0",
+    "created_date": "2026-05-13",
+    "ingestion_status": "draft"
+  }
+}

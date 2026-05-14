@@ -1,0 +1,31 @@
+{
+  "video_id": "DfTNMdLvodU",
+  "video_title": "Exploring Elqui Valley: Syrah, Sauvignon Blanc & the Future of Chilean Wines 🍷",
+  "video_url": "https://www.youtube.com/watch?v=DfTNMdLvodU",
+  "playlist_ids": [
+    "PLHvqIB13xXh0gTZUlK524pUqXApwTKXyn"
+  ],
+  "playlist_names": [
+    "WSET Diploma - Unit 3 - Mastering Still Wines of the World"
+  ],
+  "channel_name": "Wine With Jimmy",
+  "channel_url": "",
+  "duration": 662,
+  "upload_date": null,
+  "transcript_source": "unavailable",
+  "caption_language": "",
+  "language_detected": "",
+  "topics_detected": [],
+  "wset_learning_outcomes": [],
+  "sat_topics": [],
+  "contains_exam_tips": false,
+  "contains_tasting_content": false,
+  "contains_theory_content": false,
+  "contains_cause_effect_reasoning": false,
+  "processing_status": "failed",
+  "error_type": "network_error",
+  "error_message": "IpBlocked: Could not retrieve a transcript for the video https://www.youtube.com/watch?v=DfTNMdLvodU! This is most likely caused by: YouTube is blocking requests from your IP. This usually is due to one of the following reasons: - You have done too many requests and your IP has been blocked by Yo...",
+  "raw_json_path": "C:\\Users\\esand\\OneDrive\\Documents\\WSET-AI-System\\knowledge\\wine-with-jimmy\\raw\\DfTNMdLvodU__Exploring_Elqui_Valley_Syrah,_Sauvignon_Blanc_&_the_Future_of_Chilean_Wines_🍷.raw.json",
+  "raw_txt_path": "C:\\Users\\esand\\OneDrive\\Documents\\WSET-AI-System\\knowledge\\wine-with-jimmy\\raw\\DfTNMdLvodU__Exploring_Elqui_Valley_Syrah,_Sauvignon_Blanc_&_the_Future_of_Chilean_Wines_🍷.raw.txt",
+  "last_processed": "2026-05-13T23:19:12+00:00"
+}

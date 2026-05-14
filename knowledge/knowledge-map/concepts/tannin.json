@@ -1,0 +1,31 @@
+{
+  "concept_id": "C_TANNIN",
+  "concept_name": "Tannin",
+  "topic_id": "T_RA1_WINE_COMPONENTS",
+  "definition": "Phenolic compounds found primarily in grape skins, seeds, and stems, and extracted from oak during ageing. Tannins are perceived as astringency (a drying, gripping sensation on the gums and inner cheeks) rather than bitterness. They polymerise over time, contributing to texture development and ageability in red wines.",
+  "common_misconceptions": ["MC_TANNIN_01", "MC_TANNIN_02"],
+  "distinction_insights": [
+    "Tannin and bitterness are distinct sensations: tannin produces astringency (a tactile, drying sensation from tannin-protein binding in saliva), while bitterness is a taste sensation perceived on the palate.",
+    "Grape seed tannins tend to be coarser and more astringent than skin tannins; stem tannins (from whole-bunch fermentation) can add greenness or fine structure depending on ripeness.",
+    "Oak tannins (ellagitannins) differ structurally from grape tannins (condensed proanthocyanidins) and behave differently during polymerisation.",
+    "Tannin polymerisation during ageing produces longer, softer tannin chains — reducing perceived astringency and improving texture. This is why heavily tannic young wines become more approachable with age.",
+    "Food pairing relevance: fat and protein in food bind to tannins, reducing astringency perception — the basis for the red wine and red meat pairing principle."
+  ],
+  "cause_effect_links": ["CC_TANNIN_AGEABILITY", "CC_WHOLE_BUNCH_TANNIN", "CC_OAK_TANNIN"],
+  "related_grapes": ["cabernet_sauvignon", "nebbiolo", "syrah", "merlot", "tannat"],
+  "related_regions": ["bordeaux", "barossa_valley", "piedmont", "madiran"],
+  "related_wine_laws": [],
+  "official_reference": {
+    "source_type": "specification",
+    "reference": "RA1 — Wine Components: Tannin"
+  },
+  "tutor_allowed": true,
+  "examiner_allowed": false,
+  "_meta": {
+    "schema_version": "1.0",
+    "created_date": "2026-05-13",
+    "last_updated": "2026-05-13",
+    "reviewed_by": null,
+    "ingestion_status": "draft"
+  }
+}

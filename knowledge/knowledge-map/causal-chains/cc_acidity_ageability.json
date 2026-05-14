@@ -1,0 +1,57 @@
+{
+  "chain_id": "CC_ACIDITY_AGEABILITY",
+  "chain_name": "High acidity → antimicrobial and antioxidant protection → extended ageability",
+  "starting_factor": {
+    "concept_id": "C_ACIDITY",
+    "description": "A wine with high total acidity and low pH has enhanced chemical and microbiological stability that underpins long-term ageing potential."
+  },
+  "intermediate_steps": [
+    {
+      "step_number": 1,
+      "concept_id": "C_ACIDITY",
+      "description": "Low pH (high acidity) inhibits the growth of spoilage bacteria and wild yeasts that cause off-flavours in wine over time. Lactic acid bacteria (responsible for MLF and potential spoilage via Brett) are significantly inhibited below pH 3.5. This protection is fundamental to long-term bottle stability.",
+      "relationship_type": "reduces"
+    },
+    {
+      "step_number": 2,
+      "concept_id": "C_ACIDITY",
+      "description": "At low pH, SO₂ exists in a higher proportion as molecular SO₂ (the antimicrobial and antioxidant form) rather than dissociated bisulfite/sulfite ions. This means a lower total SO₂ addition achieves the same protective effect. High-acid wines are thus better protected against oxidation for a given SO₂ dose.",
+      "relationship_type": "influences"
+    },
+    {
+      "step_number": 3,
+      "concept_id": "C_ACIDITY",
+      "description": "Acidity preserves fresh, primary and secondary aromas by slowing ester hydrolysis and oxidative degradation. This allows a wine to retain its aromatic complexity over decades rather than losing it in years. High-acid wines age into tertiary complexity while retaining structural freshness.",
+      "relationship_type": "produces"
+    }
+  ],
+  "final_outcome": {
+    "concept_id": "C_ACIDITY",
+    "description": "High acidity is one of the three pillars of ageability (alongside tannin for reds and sugar for sweet wines). It functions as a preservative, an SO₂ potentiator, a microbial inhibitor, and an aromatic stabiliser — all simultaneously."
+  },
+  "examples": [
+    {
+      "region_or_wine": "Mosel Riesling Auslese (20–30+ years)",
+      "description": "The combination of high residual sugar, very high acidity, and low alcohol enables Mosel Riesling to age for decades, developing petrol/kerosene notes (TDN — 1,1,6-trimethyl-1,2-dihydronaphthalene) and honeyed complexity while retaining remarkable freshness."
+    },
+    {
+      "region_or_wine": "Hunter Valley Sémillon (10–15 years)",
+      "description": "Low-alcohol, bone-dry, searingly acidic Hunter Valley Sémillon transforms from a austere, reductive young wine into a toasty, honeyed, complex aged wine — driven entirely by acidity-enabled slow oxidative evolution."
+    }
+  ],
+  "related_exam_questions": [
+    "Explain how acidity contributes to the ageing potential of wine.",
+    "Why does a high-acid wine require less SO₂ for protection than a low-acid wine?",
+    "What three structural components are most associated with long ageing potential in wine?"
+  ],
+  "distinction_note": "A Distinction answer goes beyond 'acidity = freshness' to explain the microbial inhibition mechanism, the pH/SO₂ molecular form relationship, and the specific role in aroma preservation — while naming at least one concrete high-acid aged wine style.",
+  "complexity": "complex",
+  "exam_relevance": "critical",
+  "tutor_use": true,
+  "examiner_use": false,
+  "_meta": {
+    "schema_version": "1.0",
+    "created_date": "2026-05-13",
+    "ingestion_status": "draft"
+  }
+}

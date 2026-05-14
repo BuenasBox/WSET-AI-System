@@ -1,0 +1,445 @@
+{
+  "manifest_id": "WSET_AI_KNOWLEDGE_MAP_V1",
+  "manifest_name": "WSET-AI-System Knowledge Map — Phase 1 Manifest",
+  "description": "Index of all knowledge graph nodes created in Phase 1 (semantic architecture phase). Covers RA1 foundational concepts and RA3 Champagne lees ageing.",
+  "build_date": "2026-05-13",
+  "schema_version": "1.0",
+  "ingestion_status": "draft",
+
+  "summary": {
+    "topics": 0,
+    "concepts": 8,
+    "relationships": 10,
+    "misconceptions": 13,
+    "causal_chains": 17,
+    "total_nodes": 48
+  },
+
+  "concepts": [
+    {
+      "concept_id": "C_ACIDITY",
+      "file": "knowledge/knowledge-map/concepts/acidity.json",
+      "topic": "T_RA1_WINE_COMPONENTS",
+      "ingestion_status": "draft"
+    },
+    {
+      "concept_id": "C_TANNIN",
+      "file": "knowledge/knowledge-map/concepts/tannin.json",
+      "topic": "T_RA1_WINE_COMPONENTS",
+      "ingestion_status": "draft"
+    },
+    {
+      "concept_id": "C_COOL_CLIMATE",
+      "file": "knowledge/knowledge-map/concepts/cool_climate.json",
+      "topic": "T_RA1_CLIMATE_VITICULTURE",
+      "ingestion_status": "draft"
+    },
+    {
+      "concept_id": "C_BOTRYTIS_CINEREA",
+      "file": "knowledge/knowledge-map/concepts/botrytis_cinerea.json",
+      "topic": "T_RA1_VITICULTURE_HAZARDS",
+      "ingestion_status": "draft"
+    },
+    {
+      "concept_id": "C_WHOLE_BUNCH_FERMENTATION",
+      "file": "knowledge/knowledge-map/concepts/whole_bunch_fermentation.json",
+      "topic": "T_RA1_WINEMAKING_RED",
+      "ingestion_status": "draft"
+    },
+    {
+      "concept_id": "C_CHAMPAGNE_LEES_AGEING",
+      "file": "knowledge/knowledge-map/concepts/champagne_lees_ageing.json",
+      "topic": "T_RA3_CHAMPAGNE_PRODUCTION",
+      "ingestion_status": "draft"
+    },
+    {
+      "concept_id": "C_OAK_INFLUENCE",
+      "file": "knowledge/knowledge-map/concepts/oak_influence.json",
+      "topic": "T_RA1_WINEMAKING_AGEING",
+      "ingestion_status": "draft"
+    },
+    {
+      "concept_id": "C_MALOLACTIC_CONVERSION",
+      "file": "knowledge/knowledge-map/concepts/malolactic_conversion.json",
+      "topic": "T_RA1_WINEMAKING_WHITE",
+      "ingestion_status": "draft"
+    }
+  ],
+
+  "misconceptions": [
+    {
+      "misconception_id": "MC_ACIDITY_01",
+      "file": "knowledge/knowledge-map/misconceptions/mc_acidity_01.json",
+      "related_concept": "C_ACIDITY",
+      "severity": "medium",
+      "ingestion_status": "draft"
+    },
+    {
+      "misconception_id": "MC_ACIDITY_02",
+      "file": "knowledge/knowledge-map/misconceptions/mc_acidity_02.json",
+      "related_concept": "C_ACIDITY",
+      "severity": "high",
+      "ingestion_status": "draft"
+    },
+    {
+      "misconception_id": "MC_TANNIN_01",
+      "file": "knowledge/knowledge-map/misconceptions/mc_tannin_01.json",
+      "related_concept": "C_TANNIN",
+      "severity": "high",
+      "ingestion_status": "draft"
+    },
+    {
+      "misconception_id": "MC_TANNIN_02",
+      "file": "knowledge/knowledge-map/misconceptions/mc_tannin_02.json",
+      "related_concept": "C_TANNIN",
+      "severity": "high",
+      "ingestion_status": "draft"
+    },
+    {
+      "misconception_id": "MC_COOL_CLIMATE_01",
+      "file": "knowledge/knowledge-map/misconceptions/mc_cool_climate_01.json",
+      "related_concept": "C_COOL_CLIMATE",
+      "severity": "medium",
+      "ingestion_status": "draft"
+    },
+    {
+      "misconception_id": "MC_COOL_CLIMATE_02",
+      "file": "knowledge/knowledge-map/misconceptions/mc_cool_climate_02.json",
+      "related_concept": "C_COOL_CLIMATE",
+      "severity": "high",
+      "ingestion_status": "draft"
+    },
+    {
+      "misconception_id": "MC_BOTRYTIS_01",
+      "file": "knowledge/knowledge-map/misconceptions/mc_botrytis_01.json",
+      "related_concept": "C_BOTRYTIS_CINEREA",
+      "severity": "critical",
+      "ingestion_status": "draft"
+    },
+    {
+      "misconception_id": "MC_OAK_01",
+      "file": "knowledge/knowledge-map/misconceptions/mc_oak_01.json",
+      "related_concept": "C_OAK_INFLUENCE",
+      "severity": "medium",
+      "ingestion_status": "draft"
+    },
+    {
+      "misconception_id": "MC_OAK_02",
+      "file": "knowledge/knowledge-map/misconceptions/mc_oak_02.json",
+      "related_concept": "C_OAK_INFLUENCE",
+      "severity": "high",
+      "ingestion_status": "draft"
+    },
+    {
+      "misconception_id": "MC_MLF_01",
+      "file": "knowledge/knowledge-map/misconceptions/mc_mlf_01.json",
+      "related_concept": "C_MALOLACTIC_CONVERSION",
+      "severity": "medium",
+      "ingestion_status": "draft"
+    },
+    {
+      "misconception_id": "MC_MLF_02",
+      "file": "knowledge/knowledge-map/misconceptions/mc_mlf_02.json",
+      "related_concept": "C_MALOLACTIC_CONVERSION",
+      "severity": "high",
+      "ingestion_status": "draft"
+    },
+    {
+      "misconception_id": "MC_WHOLE_BUNCH_01",
+      "file": "knowledge/knowledge-map/misconceptions/mc_whole_bunch_01.json",
+      "related_concept": "C_WHOLE_BUNCH_FERMENTATION",
+      "severity": "medium",
+      "ingestion_status": "draft"
+    },
+    {
+      "misconception_id": "MC_LEES_AGEING_01",
+      "file": "knowledge/knowledge-map/misconceptions/mc_lees_ageing_01.json",
+      "related_concept": "C_CHAMPAGNE_LEES_AGEING",
+      "severity": "medium",
+      "ingestion_status": "draft"
+    }
+  ],
+
+  "causal_chains": [
+    {
+      "chain_id": "CC_COOL_CLIMATE_ACIDITY",
+      "file": "knowledge/knowledge-map/causal-chains/cc_cool_climate_acidity.json",
+      "starting_concept": "C_COOL_CLIMATE",
+      "final_concept": "C_ACIDITY",
+      "complexity": "moderate",
+      "exam_relevance": "critical",
+      "ingestion_status": "draft"
+    },
+    {
+      "chain_id": "CC_NOBLE_ROT_SUGAR_CONCENTRATION",
+      "file": "knowledge/knowledge-map/causal-chains/cc_noble_rot_concentration.json",
+      "starting_concept": "C_BOTRYTIS_CINEREA",
+      "final_concept": "C_BOTRYTIS_CINEREA",
+      "complexity": "complex",
+      "exam_relevance": "critical",
+      "ingestion_status": "draft"
+    },
+    {
+      "chain_id": "CC_MLF_ACIDITY",
+      "file": "knowledge/knowledge-map/causal-chains/cc_mlf_acidity.json",
+      "starting_concept": "C_MALOLACTIC_CONVERSION",
+      "final_concept": "C_ACIDITY",
+      "complexity": "moderate",
+      "exam_relevance": "critical",
+      "ingestion_status": "draft"
+    },
+    {
+      "chain_id": "CC_MLF_TEXTURE",
+      "file": "knowledge/knowledge-map/causal-chains/cc_mlf_texture.json",
+      "starting_concept": "C_MALOLACTIC_CONVERSION",
+      "final_concept": "C_MALOLACTIC_CONVERSION",
+      "complexity": "moderate",
+      "exam_relevance": "high",
+      "ingestion_status": "draft"
+    },
+    {
+      "chain_id": "CC_MLF_DIACETYL",
+      "file": "knowledge/knowledge-map/causal-chains/cc_mlf_diacetyl.json",
+      "starting_concept": "C_MALOLACTIC_CONVERSION",
+      "final_concept": "C_MALOLACTIC_CONVERSION",
+      "complexity": "complex",
+      "exam_relevance": "high",
+      "ingestion_status": "draft"
+    },
+    {
+      "chain_id": "CC_OAK_TANNIN",
+      "file": "knowledge/knowledge-map/causal-chains/cc_oak_tannin.json",
+      "starting_concept": "C_OAK_INFLUENCE",
+      "final_concept": "C_TANNIN",
+      "complexity": "moderate",
+      "exam_relevance": "high",
+      "ingestion_status": "draft"
+    },
+    {
+      "chain_id": "CC_OAK_FLAVOUR",
+      "file": "knowledge/knowledge-map/causal-chains/cc_oak_flavour.json",
+      "starting_concept": "C_OAK_INFLUENCE",
+      "final_concept": "C_OAK_INFLUENCE",
+      "complexity": "moderate",
+      "exam_relevance": "high",
+      "ingestion_status": "draft"
+    },
+    {
+      "chain_id": "CC_OAK_MICROOX",
+      "file": "knowledge/knowledge-map/causal-chains/cc_oak_microox.json",
+      "starting_concept": "C_OAK_INFLUENCE",
+      "final_concept": "C_OAK_INFLUENCE",
+      "complexity": "complex",
+      "exam_relevance": "high",
+      "ingestion_status": "draft"
+    },
+    {
+      "chain_id": "CC_TANNIN_AGEABILITY",
+      "file": "knowledge/knowledge-map/causal-chains/cc_tannin_ageability.json",
+      "starting_concept": "C_TANNIN",
+      "final_concept": "C_TANNIN",
+      "complexity": "complex",
+      "exam_relevance": "critical",
+      "ingestion_status": "draft"
+    },
+    {
+      "chain_id": "CC_WHOLE_BUNCH_TANNIN",
+      "file": "knowledge/knowledge-map/causal-chains/cc_whole_bunch_tannin.json",
+      "starting_concept": "C_WHOLE_BUNCH_FERMENTATION",
+      "final_concept": "C_TANNIN",
+      "complexity": "complex",
+      "exam_relevance": "high",
+      "ingestion_status": "draft"
+    },
+    {
+      "chain_id": "CC_WHOLE_BUNCH_PH",
+      "file": "knowledge/knowledge-map/causal-chains/cc_whole_bunch_ph.json",
+      "starting_concept": "C_WHOLE_BUNCH_FERMENTATION",
+      "final_concept": "C_ACIDITY",
+      "complexity": "complex",
+      "exam_relevance": "high",
+      "ingestion_status": "draft"
+    },
+    {
+      "chain_id": "CC_LEES_AGEING_AUTOLYSIS",
+      "file": "knowledge/knowledge-map/causal-chains/cc_lees_ageing_autolysis.json",
+      "starting_concept": "C_CHAMPAGNE_LEES_AGEING",
+      "final_concept": "C_CHAMPAGNE_LEES_AGEING",
+      "complexity": "complex",
+      "exam_relevance": "critical",
+      "ingestion_status": "draft"
+    },
+    {
+      "chain_id": "CC_AUTOLYSIS_AROMA_TEXTURE",
+      "file": "knowledge/knowledge-map/causal-chains/cc_autolysis_aroma_texture.json",
+      "starting_concept": "C_CHAMPAGNE_LEES_AGEING",
+      "final_concept": "C_CHAMPAGNE_LEES_AGEING",
+      "complexity": "complex",
+      "exam_relevance": "critical",
+      "ingestion_status": "draft"
+    },
+    {
+      "chain_id": "CC_ACIDITY_AGEABILITY",
+      "file": "knowledge/knowledge-map/causal-chains/cc_acidity_ageability.json",
+      "starting_concept": "C_ACIDITY",
+      "final_concept": "C_ACIDITY",
+      "complexity": "complex",
+      "exam_relevance": "critical",
+      "ingestion_status": "draft"
+    },
+    {
+      "chain_id": "CC_COOL_CLIMATE_AROMA",
+      "file": "knowledge/knowledge-map/causal-chains/cc_cool_climate_aroma.json",
+      "starting_concept": "C_COOL_CLIMATE",
+      "final_concept": "C_COOL_CLIMATE",
+      "complexity": "moderate",
+      "exam_relevance": "critical",
+      "ingestion_status": "draft"
+    },
+    {
+      "chain_id": "CC_COOL_CLIMATE_ALCOHOL",
+      "file": "knowledge/knowledge-map/causal-chains/cc_cool_climate_alcohol.json",
+      "starting_concept": "C_COOL_CLIMATE",
+      "final_concept": "C_COOL_CLIMATE",
+      "complexity": "simple",
+      "exam_relevance": "high",
+      "ingestion_status": "draft"
+    },
+    {
+      "chain_id": "CC_BOTRYTIS_ACIDITY_REDUCTION",
+      "file": "knowledge/knowledge-map/causal-chains/cc_botrytis_acidity_reduction.json",
+      "starting_concept": "C_BOTRYTIS_CINEREA",
+      "final_concept": "C_ACIDITY",
+      "complexity": "complex",
+      "exam_relevance": "critical",
+      "ingestion_status": "draft"
+    }
+  ],
+
+  "relationships": [
+    {
+      "relationship_id": "R_COOL_CLIMATE__INCREASES__ACIDITY",
+      "file": "knowledge/knowledge-map/relationships/cool_climate__increases__acidity.json",
+      "source": "C_COOL_CLIMATE",
+      "target": "C_ACIDITY",
+      "type": "increases",
+      "ingestion_status": "draft"
+    },
+    {
+      "relationship_id": "R_MALOLACTIC_CONVERSION__REDUCES__ACIDITY",
+      "file": "knowledge/knowledge-map/relationships/mlf__reduces__acidity.json",
+      "source": "C_MALOLACTIC_CONVERSION",
+      "target": "C_ACIDITY",
+      "type": "reduces",
+      "ingestion_status": "draft"
+    },
+    {
+      "relationship_id": "R_OAK_INFLUENCE__INCREASES__TANNIN",
+      "file": "knowledge/knowledge-map/relationships/oak_influence__increases__tannin.json",
+      "source": "C_OAK_INFLUENCE",
+      "target": "C_TANNIN",
+      "type": "increases",
+      "ingestion_status": "draft"
+    },
+    {
+      "relationship_id": "R_BOTRYTIS_CINEREA__REDUCES__ACIDITY",
+      "file": "knowledge/knowledge-map/relationships/botrytis__reduces__acidity.json",
+      "source": "C_BOTRYTIS_CINEREA",
+      "target": "C_ACIDITY",
+      "type": "reduces",
+      "ingestion_status": "draft"
+    },
+    {
+      "relationship_id": "R_WHOLE_BUNCH_FERMENTATION__INCREASES__TANNIN",
+      "file": "knowledge/knowledge-map/relationships/whole_bunch__increases__tannin.json",
+      "source": "C_WHOLE_BUNCH_FERMENTATION",
+      "target": "C_TANNIN",
+      "type": "increases",
+      "ingestion_status": "draft"
+    },
+    {
+      "relationship_id": "R_WHOLE_BUNCH_FERMENTATION__REDUCES__ACIDITY",
+      "file": "knowledge/knowledge-map/relationships/whole_bunch__reduces__acidity.json",
+      "source": "C_WHOLE_BUNCH_FERMENTATION",
+      "target": "C_ACIDITY",
+      "type": "reduces",
+      "ingestion_status": "draft"
+    },
+    {
+      "relationship_id": "R_ACIDITY__INFLUENCES__TANNIN",
+      "file": "knowledge/knowledge-map/relationships/acidity__influences__tannin.json",
+      "source": "C_ACIDITY",
+      "target": "C_TANNIN",
+      "type": "influences",
+      "ingestion_status": "draft"
+    },
+    {
+      "relationship_id": "R_CHAMPAGNE_LEES_AGEING__PRODUCES__AUTOLYTIC_AROMA",
+      "file": "knowledge/knowledge-map/relationships/champagne_lees__produces__autolytic_aroma.json",
+      "source": "C_CHAMPAGNE_LEES_AGEING",
+      "target": "C_CHAMPAGNE_LEES_AGEING",
+      "type": "produces",
+      "ingestion_status": "draft"
+    },
+    {
+      "relationship_id": "R_COOL_CLIMATE__OFTEN_CONFUSED_WITH__UNDER_RIPE",
+      "file": "knowledge/knowledge-map/relationships/cool_climate__often_confused_with__unripe.json",
+      "source": "C_COOL_CLIMATE",
+      "target": "C_COOL_CLIMATE",
+      "type": "often_confused_with",
+      "ingestion_status": "draft"
+    },
+    {
+      "relationship_id": "R_BOTRYTIS_CINEREA__CONTRASTS_WITH__GREY_ROT",
+      "file": "knowledge/knowledge-map/relationships/botrytis__contrasts_with__grey_rot.json",
+      "source": "C_BOTRYTIS_CINEREA",
+      "target": "C_BOTRYTIS_CINEREA",
+      "type": "contrasts_with",
+      "ingestion_status": "draft"
+    }
+  ],
+
+  "schemas": [
+    {
+      "schema_name": "topic.schema.json",
+      "file": "knowledge/knowledge-map/manifests/schemas/topic.schema.json",
+      "applies_to": "topics"
+    },
+    {
+      "schema_name": "concept.schema.json",
+      "file": "knowledge/knowledge-map/manifests/schemas/concept.schema.json",
+      "applies_to": "concepts"
+    },
+    {
+      "schema_name": "relationship.schema.json",
+      "file": "knowledge/knowledge-map/manifests/schemas/relationship.schema.json",
+      "applies_to": "relationships"
+    },
+    {
+      "schema_name": "misconception.schema.json",
+      "file": "knowledge/knowledge-map/manifests/schemas/misconception.schema.json",
+      "applies_to": "misconceptions"
+    },
+    {
+      "schema_name": "causal_chain.schema.json",
+      "file": "knowledge/knowledge-map/manifests/schemas/causal_chain.schema.json",
+      "applies_to": "causal_chains"
+    }
+  ],
+
+  "pending_nodes": {
+    "topics": "All RA1–RA5 topic nodes — not yet created",
+    "concepts_phase_2": ["C_WARM_CLIMATE", "C_CARBONIC_MACERATION", "C_SKIN_CONTACT", "C_TARTARIC_ACID", "C_MALIC_ACID", "C_SUGAR", "C_ALCOHOL", "C_PHENOLIC_RIPENESS"],
+    "concepts_ra2": "All major regional concepts — pending Phase 3",
+    "concepts_ra3": ["C_SECONDARY_FERMENTATION", "C_DISGORGEMENT", "C_DOSAGE", "C_REMUAGE"],
+    "concepts_ra4": "All fortified wine concepts — pending Phase 5",
+    "concepts_ra5": "All wine law concepts — pending Phase 6"
+  },
+
+  "_meta": {
+    "schema_version": "1.0",
+    "created_date": "2026-05-13",
+    "last_updated": "2026-05-13",
+    "ingestion_status": "draft"
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "concept_id": "C_MALOLACTIC_CONVERSION",
+  "concept_name": "Malolactic Conversion (MLF)",
+  "topic_id": "T_RA1_WINEMAKING_WHITE",
+  "definition": "A bacterial conversion (performed by lactic acid bacteria, primarily Oenococcus oeni) in which sharp-tasting diprotic malic acid is converted to softer monoprotic lactic acid plus CO₂. This reduces total titratable acidity and raises pH, making the wine taste rounder and less sharp. MLF also produces diacetyl, a compound that contributes a buttery aroma at higher concentrations. MLF is used in most red wines and many full-bodied whites (Chardonnay); it is typically prevented in wines where high acidity and freshness are desirable (Riesling, Sauvignon Blanc).",
+  "common_misconceptions": ["MC_MLF_01", "MC_MLF_02"],
+  "distinction_insights": [
+    "MLF does not simply 'reduce acidity' — it converts one acid (malic, diprotic, sharp) to another (lactic, monoprotic, softer). The total number of acid molecules decreases by half per malic acid molecule converted, but total acidity by weight decreases only modestly. The perceived softening is primarily due to the difference in sensory character between malic and lactic acid.",
+    "The amount of diacetyl (butter) produced by MLF depends on the bacterial strain, temperature, and timing. In most modern winemaking, diacetyl is managed to produce subtle creaminess rather than overt butteriness — overt butter in Chardonnay is often a deliberate stylistic choice.",
+    "MLF also affects a wine's colour stability (by consuming malic acid before it can react with anthocyanins) and microbiological stability (by eliminating a substrate that spoilage organisms could use).",
+    "Blocking MLF (using SO₂, sterile filtration, or cold temperatures) preserves malic acid's sharpness — this is a deliberate stylistic decision in high-acid whites like Riesling, Muscadet (before sur lie), and in wines destined to be blended for sparkling wine base."
+  ],
+  "cause_effect_links": ["CC_MLF_ACIDITY", "CC_MLF_TEXTURE", "CC_MLF_DIACETYL"],
+  "related_grapes": ["chardonnay", "riesling", "sauvignon_blanc", "pinot_noir", "cabernet_sauvignon"],
+  "related_regions": ["burgundy", "chablis", "champagne", "napa_valley", "mosel"],
+  "related_wine_laws": [],
+  "official_reference": {
+    "source_type": "specification",
+    "reference": "RA1 — Winemaking: Malolactic Conversion"
+  },
+  "tutor_allowed": true,
+  "examiner_allowed": false,
+  "_meta": {
+    "schema_version": "1.0",
+    "created_date": "2026-05-13",
+    "last_updated": "2026-05-13",
+    "reviewed_by": null,
+    "ingestion_status": "draft"
+  }
+}

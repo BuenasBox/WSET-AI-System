@@ -1,0 +1,18 @@
+{
+  "relationship_id": "R_WHOLE_BUNCH_FERMENTATION__INCREASES__TANNIN",
+  "source_concept": "C_WHOLE_BUNCH_FERMENTATION",
+  "target_concept": "C_TANNIN",
+  "relationship_type": "increases",
+  "strength": "moderate",
+  "conditions": "Effect depends critically on stem ripeness. Ripe, lignified (brown/woody) stems contribute fine, structural tannins with a savoury, spicy character. Unripe, green stems contribute harsh, bitter, astringent tannins with green/vegetal notes. Magnitude scales with the percentage of whole bunch inclusion.",
+  "direction": "C_WHOLE_BUNCH_FERMENTATION → C_TANNIN",
+  "explanation": "Lignified stem wood contains condensed tannins that are extracted by the fermenting must's ethanol over the course of fermentation. The texture of stem tannins is typically described as fine-grained, linear, or crunchy — distinct from the rounder, plumper texture of grape-skin tannins. Whole bunch also promotes partial carbonic maceration in intact berries (intracellular fermentation before berry burst), which generates glycerol and distinctive red-fruit/spice aromas alongside the tannin contribution.",
+  "exam_relevance": "high",
+  "tutor_use": true,
+  "examiner_use": false,
+  "_meta": {
+    "schema_version": "1.0",
+    "created_date": "2026-05-13",
+    "ingestion_status": "draft"
+  }
+}

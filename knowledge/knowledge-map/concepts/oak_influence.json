@@ -1,0 +1,31 @@
+{
+  "concept_id": "C_OAK_INFLUENCE",
+  "concept_name": "Oak Influence on Wine",
+  "topic_id": "T_RA1_WINEMAKING_AGEING",
+  "definition": "The range of effects that oak contact — whether from barrel fermentation, barrel ageing, or alternative oak products (staves, chips, inner staves) — has on a wine's aroma, flavour, texture, and structure. Oak contributes two categories of effect: (1) direct flavour compounds extracted from the wood (vanilla from vanillin, coconut from lactones, spice from eugenol, smoke/toast from pyrazines and furans); and (2) the controlled micro-oxygenation effect of oxygen permeation through barrel staves, which softens tannins and develops complexity.",
+  "common_misconceptions": ["MC_OAK_01", "MC_OAK_02"],
+  "distinction_insights": [
+    "New oak and old oak behave differently: new oak contributes high levels of extractable compounds (vanillin, tannin); old oak has been depleted of extractable compounds and functions primarily as a micro-oxygenation vessel.",
+    "Toast level (light, medium, heavy) affects which compounds are extracted: light toast preserves more vanillin and lactones; heavy toast produces more toasted/smoky pyrazines and reduces extractable tannin.",
+    "Oak origin matters: French oak (Quercus petraea / robur) has finer grain, more subtle flavour integration, and contributes silkier tannins; American oak (Quercus alba) has wider grain, releases more vanillin and lactones (coconut, vanilla) more quickly.",
+    "Micro-oxygenation through barrel staves promotes tannin polymerisation, which reduces perceived astringency — this is distinct from the flavour contribution and explains why barrel-aged reds feel softer even from new oak.",
+    "Alternative oak products (chips, staves) can replicate flavour extraction but cannot replicate micro-oxygenation — they produce different results from barrel ageing."
+  ],
+  "cause_effect_links": ["CC_OAK_TANNIN", "CC_OAK_FLAVOUR", "CC_OAK_MICROOX"],
+  "related_grapes": ["chardonnay", "cabernet_sauvignon", "tempranillo", "rioja"],
+  "related_regions": ["bordeaux", "rioja", "napa_valley", "barossa_valley"],
+  "related_wine_laws": [],
+  "official_reference": {
+    "source_type": "specification",
+    "reference": "RA1 — Winemaking: Maturation and Oak"
+  },
+  "tutor_allowed": true,
+  "examiner_allowed": false,
+  "_meta": {
+    "schema_version": "1.0",
+    "created_date": "2026-05-13",
+    "last_updated": "2026-05-13",
+    "reviewed_by": null,
+    "ingestion_status": "draft"
+  }
+}

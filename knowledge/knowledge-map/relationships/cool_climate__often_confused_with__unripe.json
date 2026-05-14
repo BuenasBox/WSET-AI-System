@@ -1,0 +1,18 @@
+{
+  "relationship_id": "R_COOL_CLIMATE__OFTEN_CONFUSED_WITH__UNDER_RIPE",
+  "source_concept": "C_COOL_CLIMATE",
+  "target_concept": "C_COOL_CLIMATE",
+  "relationship_type": "often_confused_with",
+  "strength": "strong",
+  "conditions": "Confusion arises when students assess cool-climate wines without distinguishing between wines from under-ripe fruit (green, high malic acid, harsh) and fully ripe cool-climate fruit (citrus, stone fruit, floral, balanced high acidity). The confusion is reinforced when students encounter green-herbal wines and incorrectly attribute the character to region rather than to harvest timing.",
+  "direction": "C_COOL_CLIMATE ↔ [under-ripeness / green character]",
+  "explanation": "Cool climate and under-ripeness produce overlapping aromatic signals (particularly methoxypyrazine-driven herbaceous notes) but are not the same thing. A fully ripe cool-climate wine from Chablis or Mosel does not taste green or unripe — it shows citrus, mineral, and floral characters. The confusion leads to systematic misassessment in SAT: a student who conflates cool climate with under-ripeness will incorrectly describe ripe Chablis as showing under-ripe characters, or conversely, will describe a poorly made wine's green faults as 'cool climate style'.",
+  "exam_relevance": "high",
+  "tutor_use": true,
+  "examiner_use": false,
+  "_meta": {
+    "schema_version": "1.0",
+    "created_date": "2026-05-13",
+    "ingestion_status": "draft"
+  }
+}

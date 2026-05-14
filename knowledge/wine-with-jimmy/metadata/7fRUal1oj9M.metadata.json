@@ -1,0 +1,33 @@
+{
+  "video_id": "7fRUal1oj9M",
+  "video_title": "Picpoul de Pinet Explained | The Zesty French White Wine Perfect for Seafood",
+  "video_url": "https://www.youtube.com/watch?v=7fRUal1oj9M",
+  "playlist_ids": [
+    "PLHvqIB13xXh2p_cuTnddrE9TJyBRDECXr",
+    "PLHvqIB13xXh2cUC1I-M-gckve9b44UpVS"
+  ],
+  "playlist_names": [
+    "WSET Level 3 Mock Exam Questions",
+    "Grape Varieties for WSET Level 3"
+  ],
+  "channel_name": "Wine With Jimmy",
+  "channel_url": "",
+  "duration": 1181,
+  "upload_date": null,
+  "transcript_source": "unavailable",
+  "caption_language": "",
+  "language_detected": "",
+  "topics_detected": [],
+  "wset_learning_outcomes": [],
+  "sat_topics": [],
+  "contains_exam_tips": false,
+  "contains_tasting_content": false,
+  "contains_theory_content": false,
+  "contains_cause_effect_reasoning": false,
+  "processing_status": "failed",
+  "error_type": "network_error",
+  "error_message": "IpBlocked: Could not retrieve a transcript for the video https://www.youtube.com/watch?v=7fRUal1oj9M! This is most likely caused by: YouTube is blocking requests from your IP. This usually is due to one of the following reasons: - You have done too many requests and your IP has been blocked by Yo...",
+  "raw_json_path": "C:\\Users\\esand\\OneDrive\\Documents\\WSET-AI-System\\knowledge\\wine-with-jimmy\\raw\\7fRUal1oj9M__Picpoul_de_Pinet_Explained_The_Zesty_French_White_Wine_Perfect_for_Seafood.raw.json",
+  "raw_txt_path": "C:\\Users\\esand\\OneDrive\\Documents\\WSET-AI-System\\knowledge\\wine-with-jimmy\\raw\\7fRUal1oj9M__Picpoul_de_Pinet_Explained_The_Zesty_French_White_Wine_Perfect_for_Seafood.raw.txt",
+  "last_processed": "2026-05-13T21:29:24+00:00"
+}

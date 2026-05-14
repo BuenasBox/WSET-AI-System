@@ -1,0 +1,57 @@
+{
+  "chain_id": "CC_WHOLE_BUNCH_TANNIN",
+  "chain_name": "Whole bunch fermentation → stem tannin extraction → distinctive tannin texture",
+  "starting_factor": {
+    "concept_id": "C_WHOLE_BUNCH_FERMENTATION",
+    "description": "Whole bunch (or whole cluster) fermentation includes grape stems in the fermentation vessel alongside or instead of destemmed grape must."
+  },
+  "intermediate_steps": [
+    {
+      "step_number": 1,
+      "concept_id": "C_WHOLE_BUNCH_FERMENTATION",
+      "description": "When lignified (ripe, brown, woody) stems are present during fermentation, ethanol and heat extract structural tannins from the lignified stem tissue. These stem-derived tannins are different in character from grape-skin-derived tannins — they tend to be more linear, fine-grained, and less grippy.",
+      "relationship_type": "causes"
+    },
+    {
+      "step_number": 2,
+      "concept_id": "C_TANNIN",
+      "description": "Stem tannins add to the total tannin load of the wine. In some descriptions, stem tannins feel 'stemmy' or 'savoury' in texture. When stems are ripe, the contribution is perceived as fine and structural; when stems are unripe (green chlorophyll-containing), the result is harsh, green, bitter astringency.",
+      "relationship_type": "increases"
+    },
+    {
+      "step_number": 3,
+      "concept_id": "C_WHOLE_BUNCH_FERMENTATION",
+      "description": "Whole bunch also promotes carbonic maceration in the uncrushed berries at the bottom of the vat, where intracellular fermentation occurs. This releases glycerol and aromatic compounds (red berry, spice) before the berries burst, adding an additional aromatic and textural dimension.",
+      "relationship_type": "produces"
+    }
+  ],
+  "final_outcome": {
+    "concept_id": "C_TANNIN",
+    "description": "A wine with a distinctive tannin texture — often described as 'crunchy', 'savoury', 'fine-grained', or 'structural' rather than the plush, rounded grape-skin tannin. Combined carbonic maceration-derived glycerol and aromatics add complexity and freshness."
+  },
+  "examples": [
+    {
+      "region_or_wine": "Côte de Nuits Pinot Noir (Burgundy), 20–50% whole bunch",
+      "description": "Some top Burgundy producers (e.g., Rousseau, Roumier) use partial whole bunch to add a savoury, spicy backbone to Pinot Noir's naturally silky tannins. The stems must be fully ripe or the result is vegetal."
+    },
+    {
+      "region_or_wine": "Côte-Rôtie (Syrah), partial whole bunch",
+      "description": "Traditional Northern Rhône Syrah is often made with partial whole cluster inclusion, contributing a characteristic peppery, stemmy spice and a tight, linear tannin structure alongside the dark fruit."
+    }
+  ],
+  "related_exam_questions": [
+    "What effect does whole bunch fermentation have on the tannin structure of a red wine?",
+    "Why is stem ripeness critical when using whole cluster fermentation?",
+    "How does whole bunch contribute to the aromatic profile of Pinot Noir?"
+  ],
+  "distinction_note": "A Distinction answer distinguishes stem tannin texture from skin tannin texture, identifies the carbonic maceration component, and specifies that the ripe/unripe stem condition is the critical variable determining whether whole bunch is positive or negative.",
+  "complexity": "complex",
+  "exam_relevance": "high",
+  "tutor_use": true,
+  "examiner_use": false,
+  "_meta": {
+    "schema_version": "1.0",
+    "created_date": "2026-05-13",
+    "ingestion_status": "draft"
+  }
+}

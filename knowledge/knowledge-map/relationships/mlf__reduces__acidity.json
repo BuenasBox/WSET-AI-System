@@ -1,0 +1,18 @@
+{
+  "relationship_id": "R_MALOLACTIC_CONVERSION__REDUCES__ACIDITY",
+  "source_concept": "C_MALOLACTIC_CONVERSION",
+  "target_concept": "C_ACIDITY",
+  "relationship_type": "reduces",
+  "strength": "moderate",
+  "conditions": "Effect depends on the proportion of malic acid present at the start of MLF. High-malic wines (cool climate, young vintage) see a greater reduction. Wines with little malic acid (warm climate, advanced ripeness) see a minimal effect. Tartaric acid component is completely unaffected.",
+  "direction": "C_MALOLACTIC_CONVERSION → C_ACIDITY",
+  "explanation": "MLF converts malic acid (diprotic: 2 H⁺ per molecule) to lactic acid (monoprotic: 1 H⁺ per molecule) plus CO₂. The conversion reduces total titratable acidity and raises pH slightly (typically 0.1–0.2 pH units). The reduction is partial — tartaric acid, the dominant acid in most wines, is unaffected by MLF. The sensory outcome is softer, rounder perceived acidity.",
+  "exam_relevance": "critical",
+  "tutor_use": true,
+  "examiner_use": false,
+  "_meta": {
+    "schema_version": "1.0",
+    "created_date": "2026-05-13",
+    "ingestion_status": "draft"
+  }
+}

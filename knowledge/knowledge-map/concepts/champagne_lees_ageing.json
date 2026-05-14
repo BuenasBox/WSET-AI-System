@@ -1,0 +1,30 @@
+{
+  "concept_id": "C_CHAMPAGNE_LEES_AGEING",
+  "concept_name": "Champagne Lees Ageing (Sur Lie)",
+  "topic_id": "T_RA3_CHAMPAGNE_PRODUCTION",
+  "definition": "The period during which a Champagne (or other traditional method sparkling wine) rests in contact with the dead yeast cells (lees) following secondary fermentation in bottle. During this time, autolysis occurs — the yeast cells break down and release mannoproteins, polysaccharides, and amino acids into the wine, contributing to texture, complexity, and the autolytic character (brioche, toast, biscuit, nutty notes). WSET L3 minimum lees contact periods: NV Champagne ≥15 months, Vintage Champagne ≥36 months.",
+  "common_misconceptions": ["MC_LEES_AGEING_01"],
+  "distinction_insights": [
+    "Autolysis is a time-dependent enzymatic process: yeast cell walls break down, releasing compounds that interact with the wine. The rate and character of autolysis is affected by temperature, pressure, and the yeast strain used — not simply by time alone.",
+    "The minimum periods set by Champagne AOC regulations (15 and 36 months) are floors, not targets. Prestige cuvées often rest for 5–10 years on lees, producing deeper autolytic complexity.",
+    "Autolytic character (brioche, toast, biscuit) is distinct from oxidative character (nuts, dried fruits) — both can appear in aged Champagne, but they have different origins. Distinguishing them in a tasting note is a Distinction-level skill.",
+    "Crémant and other traditional method sparkling wines also have minimum lees ageing requirements, but they are generally shorter than Champagne's — this affects the degree of autolytic character in the finished wine."
+  ],
+  "cause_effect_links": ["CC_LEES_AGEING_AUTOLYSIS", "CC_AUTOLYSIS_AROMA_TEXTURE"],
+  "related_grapes": ["chardonnay", "pinot_noir", "pinot_meunier"],
+  "related_regions": ["champagne", "cremant_d_alsace", "cava", "english_sparkling"],
+  "related_wine_laws": ["france_aoc_champagne"],
+  "official_reference": {
+    "source_type": "specification",
+    "reference": "RA3 — Sparkling Wine: Traditional Method Production"
+  },
+  "tutor_allowed": true,
+  "examiner_allowed": false,
+  "_meta": {
+    "schema_version": "1.0",
+    "created_date": "2026-05-13",
+    "last_updated": "2026-05-13",
+    "reviewed_by": null,
+    "ingestion_status": "draft"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "misconception_id": "MC_COOL_CLIMATE_01",
+  "misconception": "Cool climate wines are always low in alcohol.",
+  "why_incorrect": "While cool climates generally produce lower sugar accumulation (and therefore lower potential alcohol), this is not always the case. Late-harvest styles (e.g., German Auslese, Alsace Vendange Tardive) from cool climates can reach very high sugar levels. Additionally, global warming has increased sugar accumulation in historically cool regions such as Champagne, Burgundy, and Mosel, pushing alcohol levels higher than in past decades. The relationship between climate and alcohol is mediated by ripeness at harvest — cool climate is a tendency, not a rule.",
+  "corrected_understanding": "Cool climates tend to produce lower sugar accumulation and lower potential alcohol, but this depends on vintage conditions, ripeness at harvest, and wine style. Late-harvest, botrytised, and modern warm-vintage cool-region wines can achieve high sugar and alcohol levels.",
+  "related_topics": ["T_RA1_CLIMATE_VITICULTURE"],
+  "related_concepts": ["C_COOL_CLIMATE"],
+  "severity": "medium",
+  "frequency": "common",
+  "distinction_relevance": false,
+  "tutor_intervention": "worked_example",
+  "detection_signals": [
+    "cool climate means low alcohol",
+    "Riesling is always low alcohol because Germany is cold",
+    "Champagne must be low ABV because it's a cool region"
+  ],
+  "_meta": {
+    "schema_version": "1.0",
+    "created_date": "2026-05-13",
+    "ingestion_status": "draft"
+  }
+}

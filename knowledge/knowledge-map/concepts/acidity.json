@@ -1,0 +1,30 @@
+{
+  "concept_id": "C_ACIDITY",
+  "concept_name": "Acidity",
+  "topic_id": "T_RA1_WINE_COMPONENTS",
+  "definition": "The total concentration of acids in wine, primarily tartaric acid (stable, grape-derived), malic acid (tart, grape-derived, convertible via MLF), citric acid (minor, grape-derived), and lactic acid (softer, produced during malolactic conversion). Acidity is perceived as sourness on the palate and is expressed in the SAT as low / medium(-) / medium / medium(+) / high.",
+  "common_misconceptions": ["MC_ACIDITY_01", "MC_ACIDITY_02"],
+  "distinction_insights": [
+    "Acidity is not a single compound — tartaric and malic acid behave differently and can be selectively manipulated (MLF converts malic to lactic; tartaric is unaffected by MLF).",
+    "High acidity does not equal high quality; balance with fruit, alcohol, and residual sugar determines whether acidity is a positive structural component.",
+    "In cool climates, higher malic acid at harvest means MLF has a proportionally larger effect on perceived acidity reduction than in warm-climate wines.",
+    "Acidity affects ageability by protecting wine from oxidation (lower pH) and providing structural longevity."
+  ],
+  "cause_effect_links": ["CC_COOL_CLIMATE_ACIDITY", "CC_MLF_ACIDITY", "CC_ACIDITY_AGEABILITY"],
+  "related_grapes": ["riesling", "sauvignon_blanc", "pinot_noir", "chardonnay"],
+  "related_regions": ["champagne", "mosel", "marlborough", "chablis", "loire"],
+  "related_wine_laws": [],
+  "official_reference": {
+    "source_type": "specification",
+    "reference": "RA1 — Wine Components: Acidity"
+  },
+  "tutor_allowed": true,
+  "examiner_allowed": false,
+  "_meta": {
+    "schema_version": "1.0",
+    "created_date": "2026-05-13",
+    "last_updated": "2026-05-13",
+    "reviewed_by": null,
+    "ingestion_status": "draft"
+  }
+}

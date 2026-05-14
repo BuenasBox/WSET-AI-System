@@ -1,0 +1,37 @@
+{
+  "video_id": "5mfM5m0d5mY",
+  "video_title": "[Private video]",
+  "video_url": "https://www.youtube.com/watch?v=5mfM5m0d5mY",
+  "playlist_ids": [
+    "PLHvqIB13xXh2LYc0V3PME6RSYirmhZ0j3",
+    "PLHvqIB13xXh2p_cuTnddrE9TJyBRDECXr",
+    "PLHvqIB13xXh0gTZUlK524pUqXApwTKXyn",
+    "PLHvqIB13xXh2cUC1I-M-gckve9b44UpVS"
+  ],
+  "playlist_names": [
+    "Understanding WSET Level 3 Wine Theory",
+    "WSET Level 3 Mock Exam Questions",
+    "WSET Diploma - Unit 3 - Mastering Still Wines of the World",
+    "Grape Varieties for WSET Level 3"
+  ],
+  "channel_name": "Wine With Jimmy",
+  "channel_url": "",
+  "duration": null,
+  "upload_date": null,
+  "transcript_source": "unavailable",
+  "caption_language": "",
+  "language_detected": "",
+  "topics_detected": [],
+  "wset_learning_outcomes": [],
+  "sat_topics": [],
+  "contains_exam_tips": false,
+  "contains_tasting_content": false,
+  "contains_theory_content": false,
+  "contains_cause_effect_reasoning": false,
+  "processing_status": "failed",
+  "error_type": "private_video",
+  "error_message": "VideoUnplayable: Could not retrieve a transcript for the video https://www.youtube.com/watch?v=5mfM5m0d5mY! This is most likely caused by: The video is unplayable for the following reason: This video is private Additional Details: - If the owner of this video has granted you access, please - sign...",
+  "raw_json_path": "C:\\Users\\esand\\OneDrive\\Documents\\WSET-AI-System\\knowledge\\wine-with-jimmy\\raw\\5mfM5m0d5mY__[Private_video].raw.json",
+  "raw_txt_path": "C:\\Users\\esand\\OneDrive\\Documents\\WSET-AI-System\\knowledge\\wine-with-jimmy\\raw\\5mfM5m0d5mY__[Private_video].raw.txt",
+  "last_processed": "2026-05-13T23:37:18+00:00"
+}

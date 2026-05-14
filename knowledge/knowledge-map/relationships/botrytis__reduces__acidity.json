@@ -1,0 +1,18 @@
+{
+  "relationship_id": "R_BOTRYTIS_CINEREA__REDUCES__ACIDITY",
+  "source_concept": "C_BOTRYTIS_CINEREA",
+  "target_concept": "C_ACIDITY",
+  "relationship_type": "reduces",
+  "strength": "moderate",
+  "conditions": "Only occurs under noble rot conditions (alternating mist and dry afternoons allowing fungal activity with water evaporation). Grey rot under sustained wet conditions degrades flavour compounds but the acidity mechanism is the same. The tartaric acid consumption is partially offset by concentration of remaining acids through water evaporation.",
+  "direction": "C_BOTRYTIS_CINEREA → C_ACIDITY",
+  "explanation": "Botrytis cinerea metabolises tartaric acid (normally the most stable acid in wine, resistant to enzymatic degradation in healthy grapes) via its oxidase enzyme systems. This is a defining chemical distinction between botrytis-infected and healthy grapes: tartaric acid consumption by botrytis means that despite overall concentration of grape components through water evaporation, acidity is lower than concentration arithmetic alone would predict. Gluconic acid produced by botrytis from glucose oxidation is a diagnostic marker of infection.",
+  "exam_relevance": "critical",
+  "tutor_use": true,
+  "examiner_use": false,
+  "_meta": {
+    "schema_version": "1.0",
+    "created_date": "2026-05-13",
+    "ingestion_status": "draft"
+  }
+}

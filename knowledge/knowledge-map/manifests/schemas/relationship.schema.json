@@ -1,0 +1,92 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "wset-ai-system/knowledge-map/relationship.schema.json",
+  "title": "WSET Knowledge Map — Relationship",
+  "description": "A directed semantic relationship between two concepts. Relationships are the edges of the knowledge graph.",
+  "type": "object",
+  "required": ["relationship_id", "source_concept", "target_concept", "relationship_type"],
+  "additionalProperties": false,
+  "properties": {
+    "relationship_id": {
+      "type": "string",
+      "description": "Stable unique identifier. Format: R_{SOURCE}__{TYPE}__{TARGET} — e.g. R_COOL_CLIMATE__INCREASES__ACIDITY",
+      "pattern": "^R_[A-Z0-9_]+__[A-Z_]+__[A-Z0-9_]+$"
+    },
+    "source_concept": {
+      "type": "string",
+      "description": "concept_id of the source node."
+    },
+    "target_concept": {
+      "type": "string",
+      "description": "concept_id of the target node."
+    },
+    "relationship_type": {
+      "type": "string",
+      "description": "Semantic type of the relationship.",
+      "enum": [
+        "causes",
+        "influences",
+        "increases",
+        "decreases",
+        "requires",
+        "contrasts_with",
+        "often_confused_with",
+        "prerequisite_for",
+        "improves",
+        "reduces",
+        "accompanies",
+        "inhibits",
+        "produces",
+        "is_component_of",
+        "is_indicator_of"
+      ]
+    },
+    "strength": {
+      "type": "string",
+      "description": "How strong or reliable this relationship is in practice.",
+      "enum": ["weak", "moderate", "strong", "definitive"],
+      "default": "strong"
+    },
+    "conditions": {
+      "type": ["string", "null"],
+      "description": "Any conditions under which this relationship holds. Null if unconditional.",
+      "default": null
+    },
+    "direction": {
+      "type": "string",
+      "description": "Whether the relationship is directional or bidirectional.",
+      "enum": ["directed", "bidirectional"],
+      "default": "directed"
+    },
+    "explanation": {
+      "type": "string",
+      "description": "One to three sentences explaining the mechanism behind this relationship. Must be technically accurate."
+    },
+    "exam_relevance": {
+      "type": "string",
+      "description": "How frequently this relationship is tested in WSET L3 exams.",
+      "enum": ["low", "medium", "high", "critical"]
+    },
+    "tutor_use": {
+      "type": "boolean",
+      "description": "Whether the Tutor Agent should use this relationship in explanations.",
+      "default": true
+    },
+    "examiner_use": {
+      "type": "boolean",
+      "description": "Whether the Examiner Agent may use this relationship. False for all pedagogically-derived relationships.",
+      "default": false
+    },
+    "_meta": {
+      "type": "object",
+      "properties": {
+        "schema_version": { "type": "string" },
+        "created_date": { "type": "string", "format": "date" },
+        "ingestion_status": {
+          "type": "string",
+          "enum": ["draft", "review_pending", "approved", "deprecated"]
+        }
+      }
+    }
+  }
+}

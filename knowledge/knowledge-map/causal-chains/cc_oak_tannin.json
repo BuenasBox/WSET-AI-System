@@ -1,0 +1,57 @@
+{
+  "chain_id": "CC_OAK_TANNIN",
+  "chain_name": "New oak contact → wood tannin extraction → increased tannin and structure",
+  "starting_factor": {
+    "concept_id": "C_OAK_INFLUENCE",
+    "description": "Wine aged or fermented in new oak barrels comes into contact with wood cell wall components, including ellagitannins (wood tannins)."
+  },
+  "intermediate_steps": [
+    {
+      "step_number": 1,
+      "concept_id": "C_OAK_INFLUENCE",
+      "description": "Ethanol in wine solubilises ellagitannins from the wood cell walls of new oak. The extraction rate depends on alcohol level, contact time, barrel toast level, and oak grain tightness. New oak extracts significantly more than used oak.",
+      "relationship_type": "causes"
+    },
+    {
+      "step_number": 2,
+      "concept_id": "C_TANNIN",
+      "description": "Ellagitannins are hydrolysable tannins (different from the condensed tannins in grape skins and seeds). They contribute a structural, drying sensation on the palate and can also react with and stabilise grape-derived anthocyanins, contributing to colour stability.",
+      "relationship_type": "increases"
+    },
+    {
+      "step_number": 3,
+      "concept_id": "C_OAK_INFLUENCE",
+      "description": "At high toast levels, surface tannins in the barrel are partially degraded during toasting, reducing astringency from wood tannins. At low toast levels, more wood tannins are preserved and extractable. Toast level is thus a key tool for modulating oak tannin impact.",
+      "relationship_type": "influences"
+    }
+  ],
+  "final_outcome": {
+    "concept_id": "C_TANNIN",
+    "description": "New oak adds wood-derived ellagitannins to the wine, increasing structural tannin, contributing to colour stability, and adding to the wine's ageing potential. The magnitude depends on percentage new oak, barrel size, toast level, and contact time."
+  },
+  "examples": [
+    {
+      "region_or_wine": "Napa Valley Cabernet Sauvignon (100% new French oak)",
+      "description": "Combination of grape-derived condensed tannins and new oak ellagitannins creates the dense, structured tannin profile characteristic of premium Napa Cabernet. The ellagitannins contribute to long-term polymerisation and tannic evolution during bottle ageing."
+    },
+    {
+      "region_or_wine": "Rioja Gran Reserva (large old American oak casks)",
+      "description": "Traditional Rioja uses large, old American oak casks with minimal ellagitannin extraction. The tannin contribution is dominated by grape-derived tannins. The wood's primary role at this stage is micro-oxygenation."
+    }
+  ],
+  "related_exam_questions": [
+    "How does new oak affect the tannin structure of a red wine?",
+    "What is the difference between grape tannins and oak tannins?",
+    "How does barrel toast level affect tannin extraction from oak?"
+  ],
+  "distinction_note": "A Distinction answer distinguishes ellagitannins (hydrolysable, wood-derived) from condensed tannins (grape-derived), explains toast level's effect on extractable tannins, and links oak tannin addition to long-term colour and structural stability.",
+  "complexity": "moderate",
+  "exam_relevance": "high",
+  "tutor_use": true,
+  "examiner_use": false,
+  "_meta": {
+    "schema_version": "1.0",
+    "created_date": "2026-05-13",
+    "ingestion_status": "draft"
+  }
+}

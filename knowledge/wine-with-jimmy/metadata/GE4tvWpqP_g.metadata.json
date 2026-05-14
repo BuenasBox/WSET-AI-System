@@ -1,0 +1,31 @@
+{
+  "video_id": "GE4tvWpqP_g",
+  "video_title": "WSET Diploma D3 Exam Technique: Carmenère & Torrontés Masterclass",
+  "video_url": "https://www.youtube.com/watch?v=GE4tvWpqP_g",
+  "playlist_ids": [
+    "PLHvqIB13xXh0gTZUlK524pUqXApwTKXyn"
+  ],
+  "playlist_names": [
+    "WSET Diploma - Unit 3 - Mastering Still Wines of the World"
+  ],
+  "channel_name": "Wine With Jimmy",
+  "channel_url": "",
+  "duration": 1038,
+  "upload_date": null,
+  "transcript_source": "unavailable",
+  "caption_language": "",
+  "language_detected": "",
+  "topics_detected": [],
+  "wset_learning_outcomes": [],
+  "sat_topics": [],
+  "contains_exam_tips": false,
+  "contains_tasting_content": false,
+  "contains_theory_content": false,
+  "contains_cause_effect_reasoning": false,
+  "processing_status": "failed",
+  "error_type": "network_error",
+  "error_message": "IpBlocked: Could not retrieve a transcript for the video https://www.youtube.com/watch?v=GE4tvWpqP_g! This is most likely caused by: YouTube is blocking requests from your IP. This usually is due to one of the following reasons: - You have done too many requests and your IP has been blocked by Yo...",
+  "raw_json_path": "C:\\Users\\esand\\OneDrive\\Documents\\WSET-AI-System\\knowledge\\wine-with-jimmy\\raw\\GE4tvWpqP_g__WSET_Diploma_D3_Exam_Technique_Carmenère_&_Torrontés_Masterclass.raw.json",
+  "raw_txt_path": "C:\\Users\\esand\\OneDrive\\Documents\\WSET-AI-System\\knowledge\\wine-with-jimmy\\raw\\GE4tvWpqP_g__WSET_Diploma_D3_Exam_Technique_Carmenère_&_Torrontés_Masterclass.raw.txt",
+  "last_processed": "2026-05-14T00:03:03+00:00"
+}

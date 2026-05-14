@@ -1,0 +1,18 @@
+{
+  "relationship_id": "R_ACIDITY__INFLUENCES__TANNIN",
+  "source_concept": "C_ACIDITY",
+  "target_concept": "C_TANNIN",
+  "relationship_type": "influences",
+  "strength": "moderate",
+  "conditions": "Most relevant in wines with both moderate-to-high tannin and moderate-to-high acidity. In very low-acid wines, tannin is perceived as harsher. In very high-acid wines, tannin can taste harder and less integrated in youth but more elegant with age. The effect is one of structural balance, not chemical interaction.",
+  "direction": "C_ACIDITY → C_TANNIN",
+  "explanation": "Acidity and tannin are both structural components that interact at a sensory level. High acidity enhances the perception of freshness, which can make tannins seem more angular in youth but also keeps them from feeling heavy or cloying. In aged wines, the combined effect of polymerised tannins and sustained acidity (from tartaric acid) is perceived as elegance and length — neither component alone produces this effect. Acidity also inhibits tannin polymerisation rate very slightly, contributing to a longer evolutionary window.",
+  "exam_relevance": "high",
+  "tutor_use": true,
+  "examiner_use": false,
+  "_meta": {
+    "schema_version": "1.0",
+    "created_date": "2026-05-13",
+    "ingestion_status": "draft"
+  }
+}

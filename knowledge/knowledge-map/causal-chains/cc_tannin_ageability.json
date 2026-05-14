@@ -1,0 +1,57 @@
+{
+  "chain_id": "CC_TANNIN_AGEABILITY",
+  "chain_name": "High tannin → polymerisation over time → softened structure and ageability",
+  "starting_factor": {
+    "concept_id": "C_TANNIN",
+    "description": "A wine with high levels of condensed tannins at bottling has a large structural reserve that will evolve through polymerisation over years and decades."
+  },
+  "intermediate_steps": [
+    {
+      "step_number": 1,
+      "concept_id": "C_TANNIN",
+      "description": "Short tannin chain polymers (oligomeric tannins) are highly astringent because they strongly bind salivary proteins. In youth, high-tannin wines feel grippy, drying, and sometimes harsh.",
+      "relationship_type": "causes"
+    },
+    {
+      "step_number": 2,
+      "concept_id": "C_TANNIN",
+      "description": "Over time in bottle, in the presence of trace oxygen (from the cork), tannin chains polymerise — short chains link into long chains. Long-chain tannins exceed the molecular size threshold for efficient salivary protein binding and precipitate out of solution as sediment.",
+      "relationship_type": "reduces"
+    },
+    {
+      "step_number": 3,
+      "concept_id": "C_ACIDITY",
+      "description": "High acidity acts as a preservative — it inhibits microbial activity and slows oxidative degradation. In combination with high tannin, acidity forms the structural backbone that gives a wine both the raw material (tannin) and the protective environment (acidity/low pH) needed for long-term ageing.",
+      "relationship_type": "influences"
+    }
+  ],
+  "final_outcome": {
+    "concept_id": "C_TANNIN",
+    "description": "After a decade or more of bottle ageing, what was a gripping, structured wine becomes silky, complex, and fully integrated. Tannin sediment in old red wines is direct evidence of polymerisation. Wines lacking sufficient tannin reserves will have nothing to soften and will simply fade."
+  },
+  "examples": [
+    {
+      "region_or_wine": "Barolo (Nebbiolo), 10+ years",
+      "description": "Young Barolo is notoriously tannic and can be unapproachably grippy. With 10–20 years of ageing, the tannins polymerise and the wine reveals extraordinary complexity, secondary aromas, and a characteristic faded-brick colour."
+    },
+    {
+      "region_or_wine": "Hermitage Rouge (Syrah), 15+ years",
+      "description": "High tannin Northern Rhône Syrah develops from a dense, inky, tannic youth to a complex, silky wine showing leather, smoked meat, violets and iron — achievable only because the high tannin was present as raw material to evolve."
+    }
+  ],
+  "related_exam_questions": [
+    "Explain how tannins contribute to the ageing potential of a red wine.",
+    "Why do high-tannin wines often require extended cellaring before they are at their best?",
+    "What causes the sediment found in old red wines?"
+  ],
+  "distinction_note": "A Distinction answer explains tannin polymerisation (short-chain → long-chain → precipitation), distinguishes the role of tannin as structural reserve from acidity as preservative, and names a specific grape or region to illustrate the tannin ageing trajectory.",
+  "complexity": "complex",
+  "exam_relevance": "critical",
+  "tutor_use": true,
+  "examiner_use": false,
+  "_meta": {
+    "schema_version": "1.0",
+    "created_date": "2026-05-13",
+    "ingestion_status": "draft"
+  }
+}

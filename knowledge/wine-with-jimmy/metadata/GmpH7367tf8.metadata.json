@@ -1,0 +1,31 @@
+{
+  "video_id": "GmpH7367tf8",
+  "video_title": "Climate and Landscape: Uncovering the Secret to Priorat's World-Famous Wines for WSET Level 4",
+  "video_url": "https://www.youtube.com/watch?v=GmpH7367tf8",
+  "playlist_ids": [
+    "PLHvqIB13xXh0gTZUlK524pUqXApwTKXyn"
+  ],
+  "playlist_names": [
+    "WSET Diploma - Unit 3 - Mastering Still Wines of the World"
+  ],
+  "channel_name": "Wine With Jimmy",
+  "channel_url": "",
+  "duration": 665,
+  "upload_date": null,
+  "transcript_source": "unavailable",
+  "caption_language": "",
+  "language_detected": "",
+  "topics_detected": [],
+  "wset_learning_outcomes": [],
+  "sat_topics": [],
+  "contains_exam_tips": false,
+  "contains_tasting_content": false,
+  "contains_theory_content": false,
+  "contains_cause_effect_reasoning": false,
+  "processing_status": "failed",
+  "error_type": "network_error",
+  "error_message": "IpBlocked: Could not retrieve a transcript for the video https://www.youtube.com/watch?v=GmpH7367tf8! This is most likely caused by: YouTube is blocking requests from your IP. This usually is due to one of the following reasons: - You have done too many requests and your IP has been blocked by Yo...",
+  "raw_json_path": "C:\\Users\\esand\\OneDrive\\Documents\\WSET-AI-System\\knowledge\\wine-with-jimmy\\raw\\GmpH7367tf8__Climate_and_Landscape_Uncovering_the_Secret_to_Priorat's_World-Famous_Wines_for_WSET_Level_4.raw.json",
+  "raw_txt_path": "C:\\Users\\esand\\OneDrive\\Documents\\WSET-AI-System\\knowledge\\wine-with-jimmy\\raw\\GmpH7367tf8__Climate_and_Landscape_Uncovering_the_Secret_to_Priorat's_World-Famous_Wines_for_WSET_Level_4.raw.txt",
+  "last_processed": "2026-05-14T00:12:22+00:00"
+}
