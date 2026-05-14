@@ -9,20 +9,33 @@
   "academic_level": "MIXED",
   "pedagogical_role": "exam_strategy",
   "quality_flags": [
-    "possible_asr_error",
-    "low_confidence_term",
     "noisy_caption",
     "mixed_level_content",
     "exam_strategy_content",
     "tasting_content",
     "theory_content"
   ],
-  "cleaning_version": "transcript_cleaning_v1.0",
-  "processed_at": "2026-05-14T00:49:22+00:00",
+  "asr_corrections_applied": [
+    {
+      "original": "wsct",
+      "corrected": "WSET",
+      "occurrences": 1,
+      "confidence": "high"
+    },
+    {
+      "original": "santia basie",
+      "corrected": "Sangiovese",
+      "occurrences": 1,
+      "confidence": "high"
+    }
+  ],
+  "low_confidence_terms": [],
+  "cleaning_version": "transcript_cleaning_v1.1",
+  "processed_at": "2026-05-14T01:01:49+00:00",
   "clean_status": "completed",
   "word_count_raw": 5130,
-  "word_count_clean": 3348,
-  "chunk_count": 5,
+  "word_count_clean": 3347,
+  "chunk_count": 16,
   "output_clean_path": "C:\\Users\\esand\\OneDrive\\Documents\\WSET-AI-System\\knowledge\\wine-with-jimmy\\clean\\-Enx7PlS3Yg__Grape_Varieties_-_Sangiovese_Advanced_Level_ideal_for_WSET_Level_3_and_Level_4_(WSET_Diploma).clean.md",
   "output_chunk_ready_path": "C:\\Users\\esand\\OneDrive\\Documents\\WSET-AI-System\\knowledge\\wine-with-jimmy\\chunk-ready\\-Enx7PlS3Yg__Grape_Varieties_-_Sangiovese_Advanced_Level_ideal_for_WSET_Level_3_and_Level_4_(WSET_Diploma).chunks.jsonl",
   "output_enrichment_path": "C:\\Users\\esand\\OneDrive\\Documents\\WSET-AI-System\\knowledge\\wine-with-jimmy\\enrichment-ready\\-Enx7PlS3Yg.enrichment.json",

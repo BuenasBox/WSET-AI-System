@@ -7,20 +7,27 @@
   "safe_for_tutor": true,
   "safe_for_examiner": false,
   "academic_level": "WSET_DIPLOMA",
-  "pedagogical_role": "theory_explanation",
+  "pedagogical_role": "advanced_enrichment",
   "quality_flags": [
-    "possible_asr_error",
-    "low_confidence_term",
     "noisy_caption",
     "diploma_level_content",
     "theory_content"
   ],
-  "cleaning_version": "transcript_cleaning_v1.0",
-  "processed_at": "2026-05-14T00:49:22+00:00",
+  "asr_corrections_applied": [
+    {
+      "original": "wct",
+      "corrected": "WSET",
+      "occurrences": 1,
+      "confidence": "high"
+    }
+  ],
+  "low_confidence_terms": [],
+  "cleaning_version": "transcript_cleaning_v1.1",
+  "processed_at": "2026-05-14T01:01:49+00:00",
   "clean_status": "completed",
   "word_count_raw": 2100,
   "word_count_clean": 1439,
-  "chunk_count": 2,
+  "chunk_count": 8,
   "output_clean_path": "C:\\Users\\esand\\OneDrive\\Documents\\WSET-AI-System\\knowledge\\wine-with-jimmy\\clean\\-QCp0iTQVYY__Exploring_Australian_Climate_and_Geology_for_WSET_Level_4_Diploma🍷.clean.md",
   "output_chunk_ready_path": "C:\\Users\\esand\\OneDrive\\Documents\\WSET-AI-System\\knowledge\\wine-with-jimmy\\chunk-ready\\-QCp0iTQVYY__Exploring_Australian_Climate_and_Geology_for_WSET_Level_4_Diploma🍷.chunks.jsonl",
   "output_enrichment_path": "C:\\Users\\esand\\OneDrive\\Documents\\WSET-AI-System\\knowledge\\wine-with-jimmy\\enrichment-ready\\-QCp0iTQVYY.enrichment.json",

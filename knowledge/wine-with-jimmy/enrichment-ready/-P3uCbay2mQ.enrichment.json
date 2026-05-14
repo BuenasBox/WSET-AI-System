@@ -7,14 +7,17 @@
   "safe_for_tutor": true,
   "safe_for_examiner": false,
   "academic_level": "WSET_DIPLOMA",
-  "pedagogical_role": "theory_explanation",
+  "pedagogical_role": "advanced_enrichment",
   "quality_flags": [
     "noisy_caption",
     "diploma_level_content",
+    "tasting_content",
     "theory_content"
   ],
-  "cleaning_version": "transcript_cleaning_v1.0",
-  "processed_at": "2026-05-14T00:49:22+00:00",
+  "asr_corrections_applied": [],
+  "low_confidence_terms": [],
+  "cleaning_version": "transcript_cleaning_v1.1",
+  "processed_at": "2026-05-14T01:01:49+00:00",
   "source_raw_txt_path": "C:\\Users\\esand\\OneDrive\\Documents\\WSET-AI-System\\knowledge\\wine-with-jimmy\\raw\\-P3uCbay2mQ__Understanding_the_Vineyards_of_Argentina_for_WSET.raw.txt",
   "source_raw_json_path": "C:\\Users\\esand\\OneDrive\\Documents\\WSET-AI-System\\knowledge\\wine-with-jimmy\\raw\\-P3uCbay2mQ__Understanding_the_Vineyards_of_Argentina_for_WSET.raw.json",
   "source_metadata_path": "C:\\Users\\esand\\OneDrive\\Documents\\WSET-AI-System\\knowledge\\wine-with-jimmy\\metadata\\-P3uCbay2mQ.metadata.json",
@@ -22,7 +25,7 @@
   "chunk_ready_path": "C:\\Users\\esand\\OneDrive\\Documents\\WSET-AI-System\\knowledge\\wine-with-jimmy\\chunk-ready\\-P3uCbay2mQ__Understanding_the_Vineyards_of_Argentina_for_WSET.chunks.jsonl",
   "word_count_raw": 3124,
   "word_count_clean": 2139,
-  "chunk_count": 3,
+  "chunk_count": 10,
   "regions": [],
   "appellations": [],
   "grape_varieties": [],
@@ -36,6 +39,7 @@
   "topics_detected": [
     "regions",
     "sat",
+    "winemaking",
     "viticulture"
   ]
 }
