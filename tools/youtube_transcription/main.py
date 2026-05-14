@@ -12,6 +12,7 @@ import time
 from .config import (
     DEFAULT_SLEEP_MAX_SECONDS,
     DEFAULT_SLEEP_MIN_SECONDS,
+    PROJECT_ROOT,
     RETRY_BACKOFF_SECONDS,
     RETRYABLE_ERROR_TYPES,
     WINE_WITH_JIMMY_ROOT,
@@ -34,6 +35,12 @@ from .indexer import (
 from .logger import configure_logging
 from .metadata import write_video_metadata
 from .playlist_loader import discover_playlist_videos, load_playlists
+from .targets import (
+    generate_high_value_targets,
+    is_truthy_text,
+    read_high_value_targets,
+    target_row_to_video,
+)
 
 
 def main() -> None:
@@ -84,6 +91,35 @@ def main() -> None:
         logger.info("Dry-run complete. Unique videos discovered: %s", len(videos))
         logger.info("CSV output: %s", csv_path)
         logger.info("JSONL output: %s", jsonl_path)
+        return
+
+    if args.command == "generate-targets":
+        csv_path, jsonl_path, targets = generate_high_value_targets(WINE_WITH_JIMMY_ROOT)
+        totals = _count_targets_by_priority(targets)
+        recommended = sum(
+            1
+            for target in targets
+            if is_truthy_text(target.get("recommended_for_targeted_fetch"))
+        )
+        logger.info(
+            "High-value tutor targets generated. rows=%s recommended=%s S=%s A=%s B=%s C=%s",
+            len(targets),
+            recommended,
+            totals.get("S", 0),
+            totals.get("A", 0),
+            totals.get("B", 0),
+            totals.get("C", 0),
+        )
+        logger.info("Target CSV output: %s", csv_path)
+        logger.info("Target JSONL output: %s", jsonl_path)
+        print(f"Generated high-value tutor targets: {csv_path}")
+        print(f"Generated high-value tutor targets JSONL: {jsonl_path}")
+        print(
+            "Counts by priority: "
+            f"S={totals.get('S', 0)} A={totals.get('A', 0)} "
+            f"B={totals.get('B', 0)} C={totals.get('C', 0)} "
+            f"recommended={recommended}"
+        )
         return
 
     if args.command == "fetch-captions":
@@ -138,6 +174,62 @@ def main() -> None:
         logger.info("Caption retrieval complete. Status index: %s", status_path)
         return
 
+    if args.command == "fetch-targets":
+        target_path = WINE_WITH_JIMMY_ROOT / "config" / "high_value_tutor_targets.csv"
+        target_rows = read_high_value_targets(target_path)
+        status_by_video_id = read_transcript_status_index(WINE_WITH_JIMMY_ROOT / "index")
+        videos = _select_target_videos_for_fetch(
+            target_rows,
+            status_by_video_id,
+            limit=args.limit,
+        )
+
+        logger.info("Starting targeted caption retrieval. Videos queued: %s", len(videos))
+        totals = {"completed": 0, "failed": 0, "skipped": 0}
+        consecutive_throttle_errors = 0
+        status_path = WINE_WITH_JIMMY_ROOT / "index" / "transcript_status.csv"
+
+        for index, video in enumerate(videos, start=1):
+            status = _process_video_captions(
+                video,
+                force=False,
+                logger=logger,
+                sleep_min=args.sleep_min,
+                sleep_max=args.sleep_max,
+            )
+            write_video_metadata(
+                video,
+                status,
+                WINE_WITH_JIMMY_ROOT / "metadata",
+            )
+            status_path = update_transcript_status_index(
+                [status],
+                WINE_WITH_JIMMY_ROOT / "index",
+            )
+            transcript_status = status.get("transcript_status", "")
+            if transcript_status in totals:
+                totals[transcript_status] += 1
+
+            if _is_throttling_network_status(status):
+                consecutive_throttle_errors += 1
+            else:
+                consecutive_throttle_errors = 0
+
+            remaining = len(videos) - index
+            logger.info(
+                "Targeted progress: completed=%s failed=%s skipped=%s remaining=%s",
+                totals["completed"],
+                totals["failed"],
+                totals["skipped"],
+                remaining,
+            )
+            if consecutive_throttle_errors >= 2:
+                logger.error("TARGETED_FETCH_STOPPED_DUE_TO_THROTTLING")
+                break
+
+        logger.info("Targeted caption retrieval complete. Status index: %s", status_path)
+        return
+
     logger.info("YouTube transcription scaffold initialized.")
     logger.info("No videos were processed. Use the dry-run command for discovery.")
 
@@ -183,6 +275,32 @@ def _build_parser() -> argparse.ArgumentParser:
         "--retry-failed-only",
         action="store_true",
         help="Process only videos currently marked failed in transcript_status.csv.",
+    )
+    subparsers.add_parser(
+        "generate-targets",
+        help="Generate high-value Tutor Agent transcript targets from local metadata.",
+    )
+    target_fetch_parser = subparsers.add_parser(
+        "fetch-targets",
+        help="Fetch only recommended high-value Tutor Agent caption targets.",
+    )
+    target_fetch_parser.add_argument(
+        "--limit",
+        type=int,
+        default=3,
+        help="Maximum recommended target videos to process.",
+    )
+    target_fetch_parser.add_argument(
+        "--sleep-min",
+        type=float,
+        default=180.0,
+        help="Minimum seconds to sleep before each targeted caption request.",
+    )
+    target_fetch_parser.add_argument(
+        "--sleep-max",
+        type=float,
+        default=420.0,
+        help="Maximum seconds to sleep before each targeted caption request.",
     )
     clean_parser = subparsers.add_parser(
         "clean-one",
@@ -241,8 +359,8 @@ def _process_video_captions(
         "transcript_status": "pending",
         "transcript_source": "",
         "language": "",
-        "raw_json_path": str(raw_json_path),
-        "raw_txt_path": str(raw_txt_path),
+        "raw_json_path": _to_project_relative(raw_json_path),
+        "raw_txt_path": _to_project_relative(raw_txt_path),
         "error_type": "",
         "error_message": "",
         "last_processed": last_processed,
@@ -314,6 +432,8 @@ def _fetch_captions_with_retries(
             )
             _log_throttling_if_suspected(video_id, error_type, raw_error_message, logger)
 
+            if _is_throttling_message(error_type, raw_error_message):
+                raise
             if error_type not in RETRYABLE_ERROR_TYPES or attempt == attempts_allowed:
                 raise
 
@@ -337,6 +457,42 @@ def _sleep_before_request(video_id: str, sleep_min: float, sleep_max: float, log
         return
     logger.info("Sleeping %.2f seconds before request: video_id=%s", delay, video_id)
     time.sleep(delay)
+
+
+def _select_target_videos_for_fetch(
+    target_rows: list[dict],
+    status_by_video_id: dict[str, dict],
+    limit: int | None,
+) -> list[dict]:
+    """Select recommended targets in S/A/B priority order, skipping completed rows."""
+    selected_rows = []
+    for row in sorted(target_rows, key=_target_fetch_sort_key):
+        video_id = row.get("video_id", "")
+        current_status = status_by_video_id.get(video_id, {})
+        if not is_truthy_text(row.get("recommended_for_targeted_fetch")):
+            continue
+        if is_truthy_text(row.get("already_has_transcript")):
+            continue
+        if current_status.get("transcript_status") in {"completed", "skipped"}:
+            continue
+        selected_rows.append(row)
+        if limit is not None and len(selected_rows) >= limit:
+            break
+    return [target_row_to_video(row) for row in selected_rows]
+
+
+def _target_fetch_sort_key(row: dict) -> tuple[int, str]:
+    order = {"S": 0, "A": 1, "B": 2, "C": 3}
+    return (order.get(row.get("priority", "C"), 99), row.get("video_title", "").lower())
+
+
+def _count_targets_by_priority(targets: list[dict]) -> dict[str, int]:
+    totals = {"S": 0, "A": 0, "B": 0, "C": 0}
+    for target in targets:
+        priority = target.get("priority", "")
+        if priority in totals:
+            totals[priority] += 1
+    return totals
 
 
 def _normalize_error_message(message: object, max_length: int = 300) -> str:
@@ -390,16 +546,60 @@ def _log_throttling_if_suspected(
     logger,
 ) -> None:
     """Log a clear warning when YouTube throttling appears likely."""
-    haystack = raw_error_message.lower()
-    if error_type == "network_error" and any(
-        token in haystack
-        for token in ("429", "rate", "throttle", "too many requests")
-    ):
+    if _is_throttling_message(error_type, raw_error_message):
         logger.warning(
             "Possible YouTube throttling detected for %s. "
             "Use smaller batches or wider --sleep-min/--sleep-max values.",
             video_id,
         )
+
+
+def _is_throttling_network_status(status: dict) -> bool:
+    """Return True when a failed status indicates likely YouTube blocking."""
+    if status.get("error_type") != "network_error":
+        return False
+    return _is_throttling_message(
+        str(status.get("error_type", "") or ""),
+        str(status.get("error_message", "") or ""),
+    )
+
+
+def _is_throttling_message(error_type: str, message: str) -> bool:
+    """Return True for network messages that look like blocking/throttling."""
+    if error_type != "network_error":
+        return False
+    haystack = str(message or "").lower()
+    return any(
+        token in haystack
+        for token in (
+            "429",
+            "rate",
+            "ipblocked",
+            "ip blocked",
+            "too many requests",
+            "throttling",
+            "throttle",
+        )
+    )
+
+
+def _to_project_relative(path: Path) -> str:
+    """Return a POSIX-style project-relative path string.
+
+    Converts an absolute path to one relative to PROJECT_ROOT so that
+    stored metadata paths are portable across machines and operating systems.
+    Falls back to the original string representation if the path is not
+    under PROJECT_ROOT (e.g. in tests using temporary directories).
+
+    Example:
+        /home/user/WSET-AI-System/knowledge/wine-with-jimmy/raw/abc.raw.json
+        → "knowledge/wine-with-jimmy/raw/abc.raw.json"
+    """
+    try:
+        return path.relative_to(PROJECT_ROOT).as_posix()
+    except ValueError:
+        # Path is outside the project root (e.g. /tmp in tests); preserve as-is.
+        return path.as_posix()
 
 
 if __name__ == "__main__":

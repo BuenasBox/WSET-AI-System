@@ -26,7 +26,8 @@ Current status:
 - The playlist config exists.
 - Logging setup exists.
 - Dry-run playlist/video metadata discovery is available.
-- Audio download, transcript retrieval, Whisper transcription, transcript cleaning, embeddings, and agent integration are intentionally not implemented yet.
+- Targeted YouTube caption retrieval is available for small, high-value Tutor Agent batches.
+- Audio download, video download, Whisper transcription, embeddings, and Examiner Agent integration are intentionally not part of this pipeline.
 
 ### Dry-Run Playlist Metadata Extraction
 
@@ -100,5 +101,49 @@ python -m tools.youtube_transcription.main fetch-captions --retry-failed-only
 ```
 
 The status index is checkpointed after each processed video, so interrupted runs can be restarted safely. Processing remains sequential only.
+
+### High-Value Tutor Target List
+
+Generate a prioritized target list from local discovery/status metadata:
+
+```bash
+python -m tools.youtube_transcription.main generate-targets
+```
+
+This reads:
+
+```text
+knowledge/wine-with-jimmy/index/videos_discovered.csv
+knowledge/wine-with-jimmy/index/transcript_status.csv
+```
+
+It writes:
+
+```text
+knowledge/wine-with-jimmy/config/high_value_tutor_targets.csv
+knowledge/wine-with-jimmy/config/high_value_tutor_targets.jsonl
+```
+
+Targets are classified from video titles only. Priority S covers exam strategy, mock exams, tasting exam guidance, answer technique, pass/distinction tips, mistakes, time management, SAT tasting guidance, and answer structure. Priority A covers high-value cause-effect theory such as acidity, tannin, balance, quality assessment, climate, viticulture, winemaking choices, oak, malolactic conversion, lees ageing, botrytis, sparkling methods, and fortified methods. Priority B covers broader theory, important regions/grapes, and regional comparisons. Priority C is lower-value narrow or cultural/promotional content.
+
+The first pass recommends at most 30 WSET Level 3/L3-safe videos and does not recommend private videos, transcript-disabled videos, videos that already have local transcripts, or Diploma/D3/Level 4/MW content. Diploma targets can remain high-priority for later enrichment, but `first_pass_l3_fetch_priority` keeps them out of the initial Tutor-first fetch batch.
+
+### Targeted Tutor Fetch
+
+Run only the recommended high-value target batch:
+
+```bash
+python -m tools.youtube_transcription.main fetch-targets --limit 3 --sleep-min 180 --sleep-max 420
+```
+
+This command reads:
+
+```text
+knowledge/wine-with-jimmy/config/high_value_tutor_targets.csv
+```
+
+It processes only rows where `recommended_for_targeted_fetch = true` and `already_has_transcript = false`, in priority order S -> A -> B. It fetches one transcript at a time, uses long randomized pacing, skips existing completed/skipped transcripts, updates `transcript_status.csv`, and stops immediately with `TARGETED_FETCH_STOPPED_DUE_TO_THROTTLING` after two consecutive network errors that look like `IpBlocked`, too many requests, or throttling.
+
+Never run `fetch-targets` in parallel with `fetch-captions` or any playlist fetch. Keep this as a single sequential process.
 
 This pipeline is for pedagogical source ingestion only. YouTube transcripts must not override official WSET grading authority.

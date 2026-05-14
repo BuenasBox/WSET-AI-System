@@ -1,4 +1,18 @@
-"""Metadata writers for video transcript retrieval status."""
+"""Metadata writers for video transcript retrieval status.
+
+Path portability contract
+-------------------------
+All file-path fields (``raw_json_path``, ``raw_txt_path``) stored in metadata
+records MUST be project-relative POSIX strings, never absolute OS paths.
+
+The caller is responsible for converting absolute Path objects to relative
+strings before passing them in the ``status`` dict.  The canonical helper is
+``_to_project_relative()`` in ``main.py``, which converts any path under
+``PROJECT_ROOT`` to a POSIX-relative string.
+
+Rationale: absolute paths are machine-specific and break reproducibility when
+the project is cloned on a different machine or OS.
+"""
 
 from __future__ import annotations
 
@@ -7,7 +21,12 @@ from pathlib import Path
 
 
 def build_video_metadata(video: dict, status: dict) -> dict:
-    """Build a per-video metadata record for caption retrieval."""
+    """Build a per-video metadata record for caption retrieval.
+
+    The ``raw_json_path`` and ``raw_txt_path`` values in ``status`` must be
+    project-relative POSIX strings (e.g. ``knowledge/wine-with-jimmy/raw/xyz.raw.json``).
+    Absolute paths are forbidden. See module docstring for the path portability contract.
+    """
     return {
         "video_id": video.get("video_id", ""),
         "video_title": video.get("video_title", ""),
@@ -38,6 +57,29 @@ def build_video_metadata(video: dict, status: dict) -> dict:
         "raw_json_path": status.get("raw_json_path", ""),
         "raw_txt_path": status.get("raw_txt_path", ""),
         "last_processed": status.get("last_processed", ""),
+        # ----------------------------------------------------------------
+        # Curriculum-level governance (Task 3 — added 2026-05-14)
+        # ----------------------------------------------------------------
+        # curriculum_level: classification of the video's WSET curriculum scope.
+        # Valid values:
+        #   "l3_eligible"   — content confirmed as appropriate for WSET Level 3 use
+        #   "diploma_only"  — content is WSET Diploma (Level 4) only; must never
+        #                     enter L3 Tutor Agent corpus without L3-downgrade annotation
+        #   "mixed"         — video contains both L3 and Diploma content; requires
+        #                     manual chunk-level review before ingestion
+        #   "unclassified"  — not yet reviewed; default for all new records
+        #
+        # Governance rules:
+        #   - Only "l3_eligible" records may enter the Tutor Agent corpus.
+        #   - "diploma_only" and "mixed" records require explicit L3-downgrade
+        #     annotation per trust-tier-matrix.json § diploma_content.
+        #   - Classification must be performed by a human reviewer before any
+        #     record is promoted to ingestion_status: "validated".
+        #   - safe_for_examiner is ALWAYS False for Wine With Jimmy content
+        #     regardless of curriculum_level. This is unconditional per
+        #     trust-tier-matrix.json § wine_with_jimmy.
+        "curriculum_level": status.get("curriculum_level", "unclassified"),
+        "safe_for_examiner": False,
     }
 
 

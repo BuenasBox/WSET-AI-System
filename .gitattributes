@@ -1,0 +1,36 @@
+# =============================================================================
+# WSET-AI-System — .gitattributes
+# =============================================================================
+# Normalize line endings on commit so the repository is portable across
+# Windows, macOS, and Linux. Each developer gets their platform's native
+# line ending on checkout, but the stored object in git is always LF.
+
+* text=auto
+
+# Force LF for files that must remain LF regardless of platform
+# (shell scripts, JSON, JSONL, CSV, Markdown, Python source)
+*.sh        text eol=lf
+*.py        text eol=lf
+*.json      text eol=lf
+*.jsonl     text eol=lf
+*.csv       text eol=lf
+*.md        text eol=lf
+*.txt       text eol=lf
+*.yaml      text eol=lf
+*.yml       text eol=lf
+*.gitignore text eol=lf
+*.gitattributes text eol=lf
+
+# Binary files — never diff or modify
+*.pdf       binary
+*.png       binary
+*.jpg       binary
+*.jpeg      binary
+*.gif       binary
+*.ico       binary
+*.xlsx      binary
+*.xls       binary
+*.docx      binary
+*.mp3       binary
+*.mp4       binary
+*.wav       binary

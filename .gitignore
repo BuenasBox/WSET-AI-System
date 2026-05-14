@@ -69,12 +69,38 @@ knowledge/official/**/*.pdf
 
 # ----------------------------------------------------------------------------
 # Large generated transcript artifacts
-# Keep locally only unless explicitly needed
+# These directories contain generated/pipeline outputs that are machine-local
+# and must not be committed to version control.
+# The .gitkeep files inside are also excluded; ensure_directories() in
+# tools/youtube_transcription/config.py recreates the directory structure.
+#
+# IMPORTANT: If any of these directories were previously tracked in git,
+# run the following before your next commit:
+#   git rm --cached -r knowledge/wine-with-jimmy/metadata/
+#   git rm --cached -r knowledge/wine-with-jimmy/index/
+#   git rm --cached -r knowledge/wine-with-jimmy/reports/
+#   git rm --cached -r knowledge/wine-with-jimmy/enrichment-ready/
+#   git rm --cached -r knowledge/wine-with-jimmy/embeddings/
 # ----------------------------------------------------------------------------
+
+# Raw captions and transcripts (already excluded)
 knowledge/wine-with-jimmy/audio/
 knowledge/wine-with-jimmy/raw/
 knowledge/wine-with-jimmy/clean/
 knowledge/wine-with-jimmy/chunk-ready/
+
+# Per-video metadata JSON files (absolute-path risk; machine-local state)
+knowledge/wine-with-jimmy/metadata/
+
+# Discovery index outputs (CSV/JSONL of video inventory; machine-local)
+knowledge/wine-with-jimmy/index/
+
+# Cleaning and enrichment pipeline outputs
+knowledge/wine-with-jimmy/reports/
+knowledge/wine-with-jimmy/enrichment-ready/
+
+# Embeddings (never committed — Tier 5 generated, vector-store only)
+knowledge/wine-with-jimmy/embeddings/
 
 # ----------------------------------------------------------------------------
 # Temporary exports / caches

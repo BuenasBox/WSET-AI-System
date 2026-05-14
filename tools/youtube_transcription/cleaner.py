@@ -15,8 +15,15 @@ from datetime import UTC, datetime
 from pathlib import Path
 from typing import Any
 
+from .dictionary import (
+    WsetDictionary,
+    load_wset_dictionary,
+    low_confidence_terms as dictionary_low_confidence_terms,
+    summarize_matches,
+)
 
-CLEANING_VERSION = "transcript_cleaning_v1.1"
+
+CLEANING_VERSION = "transcript_cleaning_v1.2"
 ALLOWED_TRANSCRIPT_STATUSES = {"completed", "skipped"}
 QUALITY_FLAGS = (
     "possible_asr_error",
@@ -41,6 +48,10 @@ BATCH_REPORT_COLUMNS = (
     "word_count_raw",
     "word_count_clean",
     "chunk_count",
+    "dictionary_match_count",
+    "dictionary_categories_detected",
+    "asr_corrections_count",
+    "low_confidence_terms_count",
     "quality_flags",
     "safe_for_tutor",
     "safe_for_examiner",
@@ -229,6 +240,10 @@ def clean_batch(root: Path, limit: int | None = None, dry_run: bool = False, for
                     "safe_for_tutor": True,
                     "safe_for_examiner": False,
                     "processed_at": processed_at,
+                    "dictionary_match_count": 0,
+                    "dictionary_categories_detected": [],
+                    "asr_corrections_applied": [],
+                    "low_confidence_terms": [],
                     "quality_flags": [],
                 }
                 batch_rows.append(_batch_row_from_result(result, "dry_run", ""))
@@ -246,6 +261,10 @@ def clean_batch(root: Path, limit: int | None = None, dry_run: bool = False, for
                 "word_count_raw": 0,
                 "word_count_clean": 0,
                 "chunk_count": 0,
+                "dictionary_match_count": 0,
+                "dictionary_categories_detected": [],
+                "asr_corrections_applied": [],
+                "low_confidence_terms": [],
                 "quality_flags": [],
                 "safe_for_tutor": True,
                 "safe_for_examiner": False,
@@ -302,6 +321,7 @@ def _build_outputs(paths: TranscriptPaths, status_row: dict[str, str]) -> dict[s
     raw_text = paths.raw_txt_path.read_text(encoding="utf-8")
     metadata = _read_json(paths.metadata_path)
     raw_json = _read_json(paths.raw_json_path) if paths.raw_json_path else {}
+    dictionary = load_wset_dictionary()
 
     raw_lines = _load_caption_lines(raw_text, raw_json)
     clean_lines, removed_artifacts, collapsed_duplicates = _clean_lines(raw_lines)
@@ -309,6 +329,7 @@ def _build_outputs(paths: TranscriptPaths, status_row: dict[str, str]) -> dict[s
     clean_lines, asr_corrections_applied, low_confidence_terms = _apply_asr_corrections(
         clean_lines,
         f"{title}\n{raw_text}",
+        dictionary,
     )
     clean_paragraphs = _paragraphize(clean_lines)
     clean_body = "\n\n".join(clean_paragraphs).strip()
@@ -316,6 +337,11 @@ def _build_outputs(paths: TranscriptPaths, status_row: dict[str, str]) -> dict[s
     clean_word_count = _word_count(clean_body)
     processed_at = _utc_now()
     detected = detect_terms(f"{title}\n{clean_body}")
+    dictionary_matches = dictionary.find_matches(f"{title}\n{clean_body}")
+    dictionary_summary = summarize_matches(dictionary_matches)
+    low_confidence_terms = sorted(
+        set(low_confidence_terms) | set(dictionary_low_confidence_terms(dictionary_matches))
+    )
     academic_level = _academic_level(f"{title}\n{clean_body}")
     pedagogical_role = _pedagogical_role(f"{title}\n{clean_body}", academic_level)
     quality_flags = _quality_flags(
@@ -336,6 +362,7 @@ def _build_outputs(paths: TranscriptPaths, status_row: dict[str, str]) -> dict[s
         pedagogical_role=pedagogical_role,
         document_detected=detected,
         document_quality_flags=quality_flags,
+        dictionary=dictionary,
     )
     common = {
         "video_id": paths.video_id,
@@ -350,6 +377,10 @@ def _build_outputs(paths: TranscriptPaths, status_row: dict[str, str]) -> dict[s
         "quality_flags": quality_flags,
         "asr_corrections_applied": asr_corrections_applied,
         "low_confidence_terms": low_confidence_terms,
+        "dictionary_version": dictionary.version,
+        "dictionary_terms_matched": dictionary_summary["canonical_terms_detected"],
+        "dictionary_categories_detected": dictionary_summary["dictionary_categories_detected"],
+        "dictionary_match_count": len(dictionary_matches),
         "cleaning_version": CLEANING_VERSION,
         "processed_at": processed_at,
     }
@@ -365,6 +396,11 @@ def _build_outputs(paths: TranscriptPaths, status_row: dict[str, str]) -> dict[s
         "chunk_count": len(chunks),
         "asr_corrections_applied": asr_corrections_applied,
         "low_confidence_terms": low_confidence_terms,
+        "dictionary_version": dictionary.version,
+        "dictionary_terms_matched": dictionary_summary["canonical_terms_detected"],
+        "dictionary_categories_detected": dictionary_summary["dictionary_categories_detected"],
+        "dictionary_match_count": len(dictionary_matches),
+        "official_term_matches": dictionary_summary["official_term_matches"],
         **detected,
     }
     cleaning_report = {
@@ -402,6 +438,7 @@ def detect_terms(text: str) -> dict[str, list[str]]:
 def _apply_asr_corrections(
     clean_lines: list[str],
     context_text: str,
+    dictionary: WsetDictionary | None = None,
 ) -> tuple[list[str], list[dict[str, Any]], list[str]]:
     corrected_lines = clean_lines[:]
     applied: list[dict[str, Any]] = []
@@ -425,6 +462,20 @@ def _apply_asr_corrections(
                     "confidence": "high",
                 }
             )
+
+    if dictionary is not None:
+        for original, replacement in dictionary.high_confidence_alias_corrections:
+            corrected_lines, count = _replace_phrase(corrected_lines, original, replacement)
+            if count:
+                applied.append(
+                    {
+                        "original": original,
+                        "corrected": replacement,
+                        "occurrences": count,
+                        "confidence": "high",
+                        "source": "wset_master_dictionary",
+                    }
+                )
 
     corrected_lines, count = _replace_phrase(corrected_lines, "roan", "Rhône")
     if count:
@@ -489,6 +540,7 @@ def _make_chunks(
     pedagogical_role: str,
     document_detected: dict[str, list[str]],
     document_quality_flags: list[str],
+    dictionary: WsetDictionary | None = None,
 ) -> list[dict[str, Any]]:
     paragraphs = [paragraph.strip() for paragraph in clean_body.split("\n\n") if paragraph.strip()]
     chunks_text: list[str] = []
@@ -528,8 +580,10 @@ def _make_chunks(
         chunks_text = [clean_body.strip()]
 
     chunks: list[dict[str, Any]] = []
+    dictionary = dictionary or load_wset_dictionary()
     for index, text in enumerate(chunks_text):
         chunk_detected = detect_terms(text)
+        dictionary_summary = summarize_matches(dictionary.find_matches(text))
         chunk_role = _pedagogical_role(text, academic_level)
         segment_type = _segment_type(text, index, len(chunks_text))
         chunk_flags = [
@@ -560,6 +614,9 @@ def _make_chunks(
                 "appellations": chunk_detected["appellations"],
                 "sat_terms": chunk_detected["sat_terms"],
                 "exam_terms": chunk_detected["exam_terms"],
+                "canonical_terms_detected": dictionary_summary["canonical_terms_detected"],
+                "dictionary_categories_detected": dictionary_summary["dictionary_categories_detected"],
+                "official_term_matches": dictionary_summary["official_term_matches"],
                 "quality_flags": chunk_flags,
             }
         )
@@ -759,6 +816,9 @@ def _upsert_many_batch_rows(path: Path, rows: list[dict[str, Any]]) -> None:
 
 def _batch_row_from_result(result: dict[str, Any], status: str, error_message: str) -> dict[str, Any]:
     flags = result.get("quality_flags", [])
+    dictionary_categories = result.get("dictionary_categories_detected", [])
+    asr_corrections = result.get("asr_corrections_applied", [])
+    low_confidence = result.get("low_confidence_terms", [])
     return {
         "video_id": result.get("video_id", ""),
         "video_title": result.get("video_title", ""),
@@ -768,6 +828,12 @@ def _batch_row_from_result(result: dict[str, Any], status: str, error_message: s
         "word_count_raw": result.get("word_count_raw", ""),
         "word_count_clean": result.get("word_count_clean", ""),
         "chunk_count": result.get("chunk_count", ""),
+        "dictionary_match_count": result.get("dictionary_match_count", 0),
+        "dictionary_categories_detected": "|".join(dictionary_categories)
+        if isinstance(dictionary_categories, list)
+        else dictionary_categories,
+        "asr_corrections_count": len(asr_corrections) if isinstance(asr_corrections, list) else 0,
+        "low_confidence_terms_count": len(low_confidence) if isinstance(low_confidence, list) else 0,
         "quality_flags": "|".join(flags) if isinstance(flags, list) else flags,
         "safe_for_tutor": result.get("safe_for_tutor", True),
         "safe_for_examiner": result.get("safe_for_examiner", False),

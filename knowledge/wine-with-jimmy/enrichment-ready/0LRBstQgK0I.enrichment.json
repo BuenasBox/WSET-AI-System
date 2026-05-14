@@ -48,8 +48,40 @@
     }
   ],
   "low_confidence_terms": [],
-  "cleaning_version": "transcript_cleaning_v1.1",
-  "processed_at": "2026-05-14T00:59:13+00:00",
+  "dictionary_version": "canonical_terms_master.jsonl:sha256:fc68c74fb7dd",
+  "dictionary_terms_matched": [
+    "Bandol",
+    "Cabernet Sauvignon",
+    "Chardonnay",
+    "Grenache",
+    "Macabeo",
+    "Merlot",
+    "Muscat",
+    "Pinot Noir",
+    "Sauvignon Blanc",
+    "Syrah",
+    "Alsace",
+    "Beaujolais",
+    "Bordeaux",
+    "France",
+    "Alcohol",
+    "Color",
+    "floral",
+    "media",
+    "AOC",
+    "DOC",
+    "IGP"
+  ],
+  "dictionary_categories_detected": [
+    "appellation",
+    "grape_variety",
+    "region",
+    "sat_term",
+    "wine_law"
+  ],
+  "dictionary_match_count": 21,
+  "cleaning_version": "transcript_cleaning_v1.2",
+  "processed_at": "2026-05-14T17:51:36+00:00",
   "source_raw_txt_path": "C:\\Users\\esand\\OneDrive\\Documents\\WSET-AI-System\\knowledge\\wine-with-jimmy\\raw\\0LRBstQgK0I__Understanding_Southern_France_for_WSET_Level_3_Wines_Part_1_-_Climate_Grapegrowing_&_Grape_Varieties.raw.txt",
   "source_raw_json_path": "C:\\Users\\esand\\OneDrive\\Documents\\WSET-AI-System\\knowledge\\wine-with-jimmy\\raw\\0LRBstQgK0I__Understanding_Southern_France_for_WSET_Level_3_Wines_Part_1_-_Climate_Grapegrowing_&_Grape_Varieties.raw.json",
   "source_metadata_path": "C:\\Users\\esand\\OneDrive\\Documents\\WSET-AI-System\\knowledge\\wine-with-jimmy\\metadata\\0LRBstQgK0I.metadata.json",
@@ -58,6 +90,155 @@
   "word_count_raw": 5634,
   "word_count_clean": 3608,
   "chunk_count": 19,
+  "official_term_matches": [
+    {
+      "canonical_term": "Bandol",
+      "category": "appellation",
+      "confidence": "high",
+      "matched_text": "Bandol",
+      "match_type": "canonical"
+    },
+    {
+      "canonical_term": "Cabernet Sauvignon",
+      "category": "grape_variety",
+      "confidence": "high",
+      "matched_text": "Cabernet Sauvignon",
+      "match_type": "canonical"
+    },
+    {
+      "canonical_term": "Chardonnay",
+      "category": "grape_variety",
+      "confidence": "high",
+      "matched_text": "Chardonnay",
+      "match_type": "canonical"
+    },
+    {
+      "canonical_term": "Grenache",
+      "category": "grape_variety",
+      "confidence": "high",
+      "matched_text": "Grenache",
+      "match_type": "canonical"
+    },
+    {
+      "canonical_term": "Macabeo",
+      "category": "grape_variety",
+      "confidence": "high",
+      "matched_text": "Macabeo",
+      "match_type": "canonical"
+    },
+    {
+      "canonical_term": "Merlot",
+      "category": "grape_variety",
+      "confidence": "high",
+      "matched_text": "Merlot",
+      "match_type": "canonical"
+    },
+    {
+      "canonical_term": "Muscat",
+      "category": "grape_variety",
+      "confidence": "high",
+      "matched_text": "Muscat",
+      "match_type": "canonical"
+    },
+    {
+      "canonical_term": "Pinot Noir",
+      "category": "grape_variety",
+      "confidence": "high",
+      "matched_text": "Pinot Noir",
+      "match_type": "canonical"
+    },
+    {
+      "canonical_term": "Sauvignon Blanc",
+      "category": "grape_variety",
+      "confidence": "high",
+      "matched_text": "Sauvignon Blanc",
+      "match_type": "canonical"
+    },
+    {
+      "canonical_term": "Syrah",
+      "category": "grape_variety",
+      "confidence": "high",
+      "matched_text": "Syrah",
+      "match_type": "canonical"
+    },
+    {
+      "canonical_term": "Alsace",
+      "category": "region",
+      "confidence": "high",
+      "matched_text": "Alsace",
+      "match_type": "canonical"
+    },
+    {
+      "canonical_term": "Beaujolais",
+      "category": "region",
+      "confidence": "high",
+      "matched_text": "Beaujolais",
+      "match_type": "canonical"
+    },
+    {
+      "canonical_term": "Bordeaux",
+      "category": "region",
+      "confidence": "high",
+      "matched_text": "Bordeaux",
+      "match_type": "canonical"
+    },
+    {
+      "canonical_term": "France",
+      "category": "region",
+      "confidence": "high",
+      "matched_text": "France",
+      "match_type": "canonical"
+    },
+    {
+      "canonical_term": "Alcohol",
+      "category": "sat_term",
+      "confidence": "high",
+      "matched_text": "Alcohol",
+      "match_type": "canonical"
+    },
+    {
+      "canonical_term": "Color",
+      "category": "sat_term",
+      "confidence": "high",
+      "matched_text": "Color",
+      "match_type": "canonical"
+    },
+    {
+      "canonical_term": "floral",
+      "category": "sat_term",
+      "confidence": "high",
+      "matched_text": "floral",
+      "match_type": "canonical"
+    },
+    {
+      "canonical_term": "media",
+      "category": "sat_term",
+      "confidence": "high",
+      "matched_text": "media",
+      "match_type": "canonical"
+    },
+    {
+      "canonical_term": "AOC",
+      "category": "wine_law",
+      "confidence": "high",
+      "matched_text": "AOC",
+      "match_type": "canonical"
+    },
+    {
+      "canonical_term": "DOC",
+      "category": "wine_law",
+      "confidence": "high",
+      "matched_text": "DOC",
+      "match_type": "canonical"
+    },
+    {
+      "canonical_term": "IGP",
+      "category": "wine_law",
+      "confidence": "high",
+      "matched_text": "IGP",
+      "match_type": "canonical"
+    }
+  ],
   "regions": [
     "Bordeaux",
     "Southern France",
