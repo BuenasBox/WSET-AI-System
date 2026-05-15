@@ -1,0 +1,506 @@
+[
+  {
+    "file": "seccion_1_contents\\1_contents.md",
+    "title": "Contents",
+    "section": "1",
+    "subtopic": "1",
+    "parent_section": "Contents",
+    "start_page": 4,
+    "end_page": 5,
+    "char_count": 1361
+  },
+  {
+    "file": "seccion_2_foreword\\2_foreword.md",
+    "title": "Foreword",
+    "section": "2",
+    "subtopic": "2",
+    "parent_section": "Foreword",
+    "start_page": 6,
+    "end_page": 7,
+    "char_count": 2069
+  },
+  {
+    "file": "seccion_3_introduction\\3_introduction.md",
+    "title": "Introduction",
+    "section": "3",
+    "subtopic": "3",
+    "parent_section": "Introduction",
+    "start_page": 8,
+    "end_page": 9,
+    "char_count": 1779
+  },
+  {
+    "file": "seccion_4_section_1_wine_and_the_consumer\\4-1_1_the_systematic_approach_to_tasting_wine.md",
+    "title": "1 The Systematic Approach to Tasting Wine®",
+    "section": "4",
+    "subtopic": "4.1",
+    "parent_section": "Section 1: Wine and the Consumer",
+    "start_page": 10,
+    "end_page": 19,
+    "char_count": 41464
+  },
+  {
+    "file": "seccion_4_section_1_wine_and_the_consumer\\4-2_2_wine_with_food.md",
+    "title": "2 Wine with Food",
+    "section": "4",
+    "subtopic": "4.2",
+    "parent_section": "Section 1: Wine and the Consumer",
+    "start_page": 20,
+    "end_page": 23,
+    "char_count": 14732
+  },
+  {
+    "file": "seccion_4_section_1_wine_and_the_consumer\\4-3_3_storage_and_service_of_wine.md",
+    "title": "3 Storage and Service of Wine",
+    "section": "4",
+    "subtopic": "4.3",
+    "parent_section": "Section 1: Wine and the Consumer",
+    "start_page": 24,
+    "end_page": 27,
+    "char_count": 8880
+  },
+  {
+    "file": "seccion_5_section_2_factors_affecting_the_style_quality_and_price_of_w\\5-1_4_the_vine.md",
+    "title": "4 The Vine",
+    "section": "5",
+    "subtopic": "5.1",
+    "parent_section": "Section 2: Factors Affecting the Style, Quality and Price of Wine",
+    "start_page": 28,
+    "end_page": 32,
+    "char_count": 14303
+  },
+  {
+    "file": "seccion_5_section_2_factors_affecting_the_style_quality_and_price_of_w\\5-2_5_the_growing_environment.md",
+    "title": "5 The Growing Environment",
+    "section": "5",
+    "subtopic": "5.2",
+    "parent_section": "Section 2: Factors Affecting the Style, Quality and Price of Wine",
+    "start_page": 33,
+    "end_page": 41,
+    "char_count": 26077
+  },
+  {
+    "file": "seccion_5_section_2_factors_affecting_the_style_quality_and_price_of_w\\5-3_6_vineyard_management.md",
+    "title": "6 Vineyard Management",
+    "section": "5",
+    "subtopic": "5.3",
+    "parent_section": "Section 2: Factors Affecting the Style, Quality and Price of Wine",
+    "start_page": 42,
+    "end_page": 51,
+    "char_count": 33417
+  },
+  {
+    "file": "seccion_5_section_2_factors_affecting_the_style_quality_and_price_of_w\\5-4_7_common_elements_in_winemaking_and_maturation.md",
+    "title": "7 Common Elements in Winemaking and Maturation",
+    "section": "5",
+    "subtopic": "5.4",
+    "parent_section": "Section 2: Factors Affecting the Style, Quality and Price of Wine",
+    "start_page": 52,
+    "end_page": 63,
+    "char_count": 41571
+  },
+  {
+    "file": "seccion_5_section_2_factors_affecting_the_style_quality_and_price_of_w\\5-5_8_white_and_sweet_winemaking.md",
+    "title": "8 White and Sweet Winemaking",
+    "section": "5",
+    "subtopic": "5.5",
+    "parent_section": "Section 2: Factors Affecting the Style, Quality and Price of Wine",
+    "start_page": 64,
+    "end_page": 71,
+    "char_count": 32175
+  },
+  {
+    "file": "seccion_5_section_2_factors_affecting_the_style_quality_and_price_of_w\\5-6_9_red_and_rose_winemaking.md",
+    "title": "9 Red and Rosé Winemaking",
+    "section": "5",
+    "subtopic": "5.6",
+    "parent_section": "Section 2: Factors Affecting the Style, Quality and Price of Wine",
+    "start_page": 72,
+    "end_page": 79,
+    "char_count": 32723
+  },
+  {
+    "file": "seccion_5_section_2_factors_affecting_the_style_quality_and_price_of_w\\5-7_10_factors_that_affect_the_price_of_wine.md",
+    "title": "10 Factors that Affect the Price of Wine",
+    "section": "5",
+    "subtopic": "5.7",
+    "parent_section": "Section 2: Factors Affecting the Style, Quality and Price of Wine",
+    "start_page": 80,
+    "end_page": 82,
+    "char_count": 8062
+  },
+  {
+    "file": "seccion_5_section_2_factors_affecting_the_style_quality_and_price_of_w\\5-8_11_wine_and_the_law.md",
+    "title": "11 Wine and the Law",
+    "section": "5",
+    "subtopic": "5.8",
+    "parent_section": "Section 2: Factors Affecting the Style, Quality and Price of Wine",
+    "start_page": 83,
+    "end_page": 85,
+    "char_count": 11398,
+    "requires_human_review": true,
+    "source_type": "official_wset_extracted",
+    "trust_tier": 1,
+    "safe_for_examiner": false
+  },
+  {
+    "file": "seccion_6_section_3_still_wines_of_the_world\\6-1_12_introduction_to_france.md",
+    "title": "12 Introduction to France",
+    "section": "6",
+    "subtopic": "6.1",
+    "parent_section": "Section 3: Still Wines of the World",
+    "start_page": 86,
+    "end_page": 86,
+    "char_count": 2192
+  },
+  {
+    "file": "seccion_6_section_3_still_wines_of_the_world\\6-2_13_bordeaux.md",
+    "title": "13 Bordeaux",
+    "section": "6",
+    "subtopic": "6.2",
+    "parent_section": "Section 3: Still Wines of the World",
+    "start_page": 87,
+    "end_page": 91,
+    "char_count": 17722
+  },
+  {
+    "file": "seccion_6_section_3_still_wines_of_the_world\\6-3_14_the_dordogne_and_south_west_france.md",
+    "title": "14 The Dordogne and South West France",
+    "section": "6",
+    "subtopic": "6.3",
+    "parent_section": "Section 3: Still Wines of the World",
+    "start_page": 92,
+    "end_page": 93,
+    "char_count": 2725
+  },
+  {
+    "file": "seccion_6_section_3_still_wines_of_the_world\\6-4_15_burgundy.md",
+    "title": "15 Burgundy",
+    "section": "6",
+    "subtopic": "6.4",
+    "parent_section": "Section 3: Still Wines of the World",
+    "start_page": 94,
+    "end_page": 98,
+    "char_count": 14757
+  },
+  {
+    "file": "seccion_6_section_3_still_wines_of_the_world\\6-5_16_beaujolais.md",
+    "title": "16 Beaujolais",
+    "section": "6",
+    "subtopic": "6.5",
+    "parent_section": "Section 3: Still Wines of the World",
+    "start_page": 99,
+    "end_page": 100,
+    "char_count": 3739
+  },
+  {
+    "file": "seccion_6_section_3_still_wines_of_the_world\\6-6_17_alsace.md",
+    "title": "17 Alsace",
+    "section": "6",
+    "subtopic": "6.6",
+    "parent_section": "Section 3: Still Wines of the World",
+    "start_page": 101,
+    "end_page": 103,
+    "char_count": 10331
+  },
+  {
+    "file": "seccion_6_section_3_still_wines_of_the_world\\6-7_18_the_loire_valley.md",
+    "title": "18 The Loire Valley",
+    "section": "6",
+    "subtopic": "6.7",
+    "parent_section": "Section 3: Still Wines of the World",
+    "start_page": 104,
+    "end_page": 107,
+    "char_count": 12303
+  },
+  {
+    "file": "seccion_6_section_3_still_wines_of_the_world\\6-8_19_the_northern_rhone.md",
+    "title": "19 The Northern Rhône",
+    "section": "6",
+    "subtopic": "6.8",
+    "parent_section": "Section 3: Still Wines of the World",
+    "start_page": 108,
+    "end_page": 110,
+    "char_count": 7823
+  },
+  {
+    "file": "seccion_6_section_3_still_wines_of_the_world\\6-9_20_the_southern_rhone.md",
+    "title": "20 The Southern Rhône",
+    "section": "6",
+    "subtopic": "6.9",
+    "parent_section": "Section 3: Still Wines of the World",
+    "start_page": 111,
+    "end_page": 113,
+    "char_count": 8315
+  },
+  {
+    "file": "seccion_6_section_3_still_wines_of_the_world\\6-10_21_southern_france.md",
+    "title": "21 Southern France",
+    "section": "6",
+    "subtopic": "6.10",
+    "parent_section": "Section 3: Still Wines of the World",
+    "start_page": 114,
+    "end_page": 116,
+    "char_count": 9893
+  },
+  {
+    "file": "seccion_6_section_3_still_wines_of_the_world\\6-11_22_germany.md",
+    "title": "22 Germany",
+    "section": "6",
+    "subtopic": "6.11",
+    "parent_section": "Section 3: Still Wines of the World",
+    "start_page": 117,
+    "end_page": 121,
+    "char_count": 19232
+  },
+  {
+    "file": "seccion_6_section_3_still_wines_of_the_world\\6-12_23_austria.md",
+    "title": "23 Austria",
+    "section": "6",
+    "subtopic": "6.12",
+    "parent_section": "Section 3: Still Wines of the World",
+    "start_page": 122,
+    "end_page": 124,
+    "char_count": 7486
+  },
+  {
+    "file": "seccion_6_section_3_still_wines_of_the_world\\6-13_24_tokaj.md",
+    "title": "24 Tokaj",
+    "section": "6",
+    "subtopic": "6.13",
+    "parent_section": "Section 3: Still Wines of the World",
+    "start_page": 125,
+    "end_page": 126,
+    "char_count": 7204
+  },
+  {
+    "file": "seccion_6_section_3_still_wines_of_the_world\\6-14_25_greece.md",
+    "title": "25 Greece",
+    "section": "6",
+    "subtopic": "6.14",
+    "parent_section": "Section 3: Still Wines of the World",
+    "start_page": 127,
+    "end_page": 128,
+    "char_count": 5055
+  },
+  {
+    "file": "seccion_6_section_3_still_wines_of_the_world\\6-15_26_introduction_to_italy.md",
+    "title": "26 Introduction to Italy",
+    "section": "6",
+    "subtopic": "6.15",
+    "parent_section": "Section 3: Still Wines of the World",
+    "start_page": 129,
+    "end_page": 129,
+    "char_count": 1922
+  },
+  {
+    "file": "seccion_6_section_3_still_wines_of_the_world\\6-16_27_northern_italy.md",
+    "title": "27 Northern Italy",
+    "section": "6",
+    "subtopic": "6.16",
+    "parent_section": "Section 3: Still Wines of the World",
+    "start_page": 130,
+    "end_page": 134,
+    "char_count": 16680
+  },
+  {
+    "file": "seccion_6_section_3_still_wines_of_the_world\\6-17_28_central_italy.md",
+    "title": "28 Central Italy",
+    "section": "6",
+    "subtopic": "6.17",
+    "parent_section": "Section 3: Still Wines of the World",
+    "start_page": 135,
+    "end_page": 137,
+    "char_count": 8009
+  },
+  {
+    "file": "seccion_6_section_3_still_wines_of_the_world\\6-18_29_southern_italy.md",
+    "title": "29 Southern Italy",
+    "section": "6",
+    "subtopic": "6.18",
+    "parent_section": "Section 3: Still Wines of the World",
+    "start_page": 138,
+    "end_page": 139,
+    "char_count": 5795
+  },
+  {
+    "file": "seccion_6_section_3_still_wines_of_the_world\\6-19_30_spain.md",
+    "title": "30 Spain",
+    "section": "6",
+    "subtopic": "6.19",
+    "parent_section": "Section 3: Still Wines of the World",
+    "start_page": 140,
+    "end_page": 147,
+    "char_count": 23829
+  },
+  {
+    "file": "seccion_6_section_3_still_wines_of_the_world\\6-20_31_portugal.md",
+    "title": "31 Portugal",
+    "section": "6",
+    "subtopic": "6.20",
+    "parent_section": "Section 3: Still Wines of the World",
+    "start_page": 148,
+    "end_page": 150,
+    "char_count": 7957
+  },
+  {
+    "file": "seccion_6_section_3_still_wines_of_the_world\\6-21_32_introduction_to_the_usa.md",
+    "title": "32 Introduction to the USA",
+    "section": "6",
+    "subtopic": "6.21",
+    "parent_section": "Section 3: Still Wines of the World",
+    "start_page": 151,
+    "end_page": 151,
+    "char_count": 1624
+  },
+  {
+    "file": "seccion_6_section_3_still_wines_of_the_world\\6-22_33_california.md",
+    "title": "33 California",
+    "section": "6",
+    "subtopic": "6.22",
+    "parent_section": "Section 3: Still Wines of the World",
+    "start_page": 152,
+    "end_page": 156,
+    "char_count": 15503
+  },
+  {
+    "file": "seccion_6_section_3_still_wines_of_the_world\\6-23_34_oregon_washington_and_new_york.md",
+    "title": "34 Oregon, Washington and New York",
+    "section": "6",
+    "subtopic": "6.23",
+    "parent_section": "Section 3: Still Wines of the World",
+    "start_page": 157,
+    "end_page": 158,
+    "char_count": 3861
+  },
+  {
+    "file": "seccion_6_section_3_still_wines_of_the_world\\6-24_35_canada.md",
+    "title": "35 Canada",
+    "section": "6",
+    "subtopic": "6.24",
+    "parent_section": "Section 3: Still Wines of the World",
+    "start_page": 159,
+    "end_page": 160,
+    "char_count": 3195
+  },
+  {
+    "file": "seccion_6_section_3_still_wines_of_the_world\\6-25_36_chile.md",
+    "title": "36 Chile",
+    "section": "6",
+    "subtopic": "6.25",
+    "parent_section": "Section 3: Still Wines of the World",
+    "start_page": 161,
+    "end_page": 164,
+    "char_count": 14117
+  },
+  {
+    "file": "seccion_6_section_3_still_wines_of_the_world\\6-26_37_argentina.md",
+    "title": "37 Argentina",
+    "section": "6",
+    "subtopic": "6.26",
+    "parent_section": "Section 3: Still Wines of the World",
+    "start_page": 165,
+    "end_page": 168,
+    "char_count": 10830
+  },
+  {
+    "file": "seccion_6_section_3_still_wines_of_the_world\\6-27_38_south_africa.md",
+    "title": "38 South Africa",
+    "section": "6",
+    "subtopic": "6.27",
+    "parent_section": "Section 3: Still Wines of the World",
+    "start_page": 169,
+    "end_page": 172,
+    "char_count": 13518
+  },
+  {
+    "file": "seccion_6_section_3_still_wines_of_the_world\\6-28_39_australia.md",
+    "title": "39 Australia",
+    "section": "6",
+    "subtopic": "6.28",
+    "parent_section": "Section 3: Still Wines of the World",
+    "start_page": 173,
+    "end_page": 178,
+    "char_count": 19846
+  },
+  {
+    "file": "seccion_6_section_3_still_wines_of_the_world\\6-29_40_new_zealand.md",
+    "title": "40 New Zealand",
+    "section": "6",
+    "subtopic": "6.29",
+    "parent_section": "Section 3: Still Wines of the World",
+    "start_page": 179,
+    "end_page": 181,
+    "char_count": 9744
+  },
+  {
+    "file": "seccion_7_section_4_sparkling_wines_of_the_world\\7-1_41_sparkling_wine_production.md",
+    "title": "41 Sparkling Wine Production",
+    "section": "7",
+    "subtopic": "7.1",
+    "parent_section": "Section 4: Sparkling Wines of the World",
+    "start_page": 182,
+    "end_page": 187,
+    "char_count": 18112
+  },
+  {
+    "file": "seccion_7_section_4_sparkling_wines_of_the_world\\7-2_42_sparkling_wines_of_the_world.md",
+    "title": "42 Sparkling Wines of the World",
+    "section": "7",
+    "subtopic": "7.2",
+    "parent_section": "Section 4: Sparkling Wines of the World",
+    "start_page": 188,
+    "end_page": 192,
+    "char_count": 16534
+  },
+  {
+    "file": "seccion_8_section_5_fortified_wines_of_the_world\\8-1_43_sherry.md",
+    "title": "43 Sherry",
+    "section": "8",
+    "subtopic": "8.1",
+    "parent_section": "Section 5: Fortified Wines of the World",
+    "start_page": 193,
+    "end_page": 198,
+    "char_count": 19341
+  },
+  {
+    "file": "seccion_8_section_5_fortified_wines_of_the_world\\8-2_44_port.md",
+    "title": "44 Port",
+    "section": "8",
+    "subtopic": "8.2",
+    "parent_section": "Section 5: Fortified Wines of the World",
+    "start_page": 199,
+    "end_page": 203,
+    "char_count": 14984
+  },
+  {
+    "file": "seccion_8_section_5_fortified_wines_of_the_world\\8-3_45_fortified_muscats.md",
+    "title": "45 Fortified Muscats",
+    "section": "8",
+    "subtopic": "8.3",
+    "parent_section": "Section 5: Fortified Wines of the World",
+    "start_page": 204,
+    "end_page": 204,
+    "char_count": 3724
+  },
+  {
+    "file": "seccion_9_acknowledgements\\9_acknowledgements.md",
+    "title": "Acknowledgements",
+    "section": "9",
+    "subtopic": "9",
+    "parent_section": "Acknowledgements",
+    "start_page": 205,
+    "end_page": 205,
+    "char_count": 1205
+  },
+  {
+    "file": "seccion_10_index\\10_index.md",
+    "title": "Index",
+    "section": "10",
+    "subtopic": "10",
+    "parent_section": "Index",
+    "start_page": 206,
+    "end_page": 210,
+    "char_count": 21910
+  }
+]

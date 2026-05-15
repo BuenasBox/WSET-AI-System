@@ -67,6 +67,13 @@ knowledge/book/**/*.pdf
 knowledge/official-wset/**/*.pdf
 knowledge/official/**/*.pdf
 
+# Official WSET study-guide source PDFs and local extraction artifacts
+knowledge/official-wset/study-guide/original/
+knowledge/official-wset/study-guide/chapters/
+knowledge/official-wset/study-guide/extracted-text/
+knowledge/official-wset/study-guide/*.pdf
+knowledge/official-wset/study-guide/**/*.pdf
+
 # ----------------------------------------------------------------------------
 # Large generated transcript artifacts
 # These directories contain generated/pipeline outputs that are machine-local
@@ -114,6 +121,8 @@ knowledge/wine-with-jimmy/embeddings/
 tmp/
 temp/
 .cache/
+*.tmp
+config.local.*
 
 # ----------------------------------------------------------------------------
 # Jupyter
