@@ -28,6 +28,7 @@ from .captions import (
     utc_now,
 )
 from .cleaner import clean_batch, clean_one_video
+from .golden_tutor_chunks import generate_golden_tutor_chunk_reports
 from .indexer import (
     read_transcript_status_index,
     update_transcript_status_index,
@@ -43,6 +44,7 @@ from .targets import (
     read_high_value_targets,
     target_row_to_video,
 )
+from tools.retrieval.tutor_retrieval_sandbox import run_retrieval_sandbox
 
 
 def main() -> None:
@@ -87,6 +89,44 @@ def main() -> None:
             force=args.force,
         )
         _print_manual_srt_summary(results, dry_run=args.dry_run)
+        return
+
+    if args.command == "golden-tutor-chunks":
+        report = generate_golden_tutor_chunk_reports(WINE_WITH_JIMMY_ROOT)
+        golden_count = sum(1 for row in report.candidate_rows if row["golden_tutor_chunk_candidate"])
+        print(
+            "Golden Tutor Chunk QA complete. "
+            f"scanned={report.scanned_chunks} "
+            f"rows={len(report.candidate_rows)} "
+            f"golden={golden_count} "
+            f"csv={report.output_csv} "
+            f"jsonl={report.output_jsonl} "
+            f"summary={report.summary_path}"
+        )
+        return
+
+    if args.command == "retrieval-sandbox":
+        run = run_retrieval_sandbox(
+            root=PROJECT_ROOT,
+            query=args.query,
+            top_k=args.top_k,
+            output_prefix=args.output_prefix,
+        )
+        print(f"Query intent: {run['query_analysis']['query_intent']}")
+        print(f"Reasoning intent: {run['query_analysis']['reasoning_intent']}")
+        print(
+            "Retrieval sandbox complete. "
+            f"indexed={run['indexed_chunks']} "
+            f"golden={run['golden_chunks_loaded']} "
+            f"dictionary_terms={run['dictionary_terms_loaded']} "
+            f"retrieved={len(run['retrieved_chunks'])}"
+        )
+        for index, chunk in enumerate(run["retrieved_chunks"], start=1):
+            print(
+                f"{index}. {chunk['score']:.4f} {chunk['chunk_id']} "
+                f"[{chunk['reasoning_type']} / {chunk['retrieval_priority']}]"
+            )
+            print(f"   why: {'; '.join(chunk['why_retrieved'])}")
         return
 
     logger = configure_logging(WINE_WITH_JIMMY_ROOT / "logs")
@@ -367,6 +407,21 @@ def _build_parser() -> argparse.ArgumentParser:
         "--force",
         action="store_true",
         help="Overwrite derived manual import outputs.",
+    )
+    subparsers.add_parser(
+        "golden-tutor-chunks",
+        help="Write derived Tutor-only golden chunk QA candidate reports from manual SRT chunks.",
+    )
+    retrieval_parser = subparsers.add_parser(
+        "retrieval-sandbox",
+        help="Run rule-based Tutor retrieval validation for one natural-language query.",
+    )
+    retrieval_parser.add_argument("--query", required=True, help="Natural-language retrieval query.")
+    retrieval_parser.add_argument("--top-k", type=int, default=10, help="Number of chunks to retrieve.")
+    retrieval_parser.add_argument(
+        "--output-prefix",
+        default="retrieval_run",
+        help="Filename prefix under knowledge/retrieval-sandbox.",
     )
     return parser
 

@@ -1,0 +1,497 @@
+{
+  "_meta": {
+    "artifact_id": "SG_TOPIC_HIERARCHY_2026",
+    "artifact_type": "topic_hierarchy",
+    "source_document": "WSET_L3_Study_Guide_Official_2026.pdf",
+    "source_path": "knowledge/official-wset/study-guide/WSET_L3_Study_Guide_Official_2026.pdf",
+    "trust_tier": 1,
+    "source_type": "official_wset",
+    "safe_for_examiner": true,
+    "requires_human_review": true,
+    "human_review_note": "PDF could not be read directly. Structure derived from canonical WSET L3 curriculum. Every chapter, section, and topic reference must be verified against the actual PDF page numbers and exact section headings before system deployment.",
+    "created_date": "2026-05-14",
+    "schema_version": "1.0"
+  },
+
+  "qualification": "WSET Level 3 Award in Wines",
+  "edition": "2026",
+  "publisher": "Wine & Spirit Education Trust",
+
+  "result_areas": {
+
+    "RA1": {
+      "id": "RA1",
+      "title": "Factors that affect the style, quality and price of wine",
+      "exam_weight": "critical",
+      "chapters": {
+        "RA1_CH1": {
+          "id": "RA1_CH1",
+          "title": "Climate and Weather",
+          "sections": {
+            "RA1_CH1_S1": { "title": "Macroclimate", "topics": ["cool climate", "moderate climate", "warm/hot climate", "maritime climate", "continental climate", "Mediterranean climate"] },
+            "RA1_CH1_S2": { "title": "Regional and local climate", "topics": ["mesoclimate", "topography", "altitude", "aspect", "proximity to water", "fog"] },
+            "RA1_CH1_S3": { "title": "Vintage variation", "topics": ["annual weather variation", "impact on ripeness", "impact on yield", "vintage quality"] },
+            "RA1_CH1_S4": { "title": "Key climate risks", "topics": ["frost", "hail", "rain at harvest", "drought stress", "sunburn"] }
+          }
+        },
+        "RA1_CH2": {
+          "id": "RA1_CH2",
+          "title": "The Vine and Its Environment",
+          "sections": {
+            "RA1_CH2_S1": { "title": "Soils", "topics": ["drainage", "water retention", "soil temperature", "nutrient levels", "soil types (clay, limestone, gravel, sandy, volcanic)"] },
+            "RA1_CH2_S2": { "title": "Vine physiology", "topics": ["annual growth cycle", "dormancy", "budburst", "flowering", "fruit set", "veraison", "harvest", "photosynthesis", "sugar accumulation", "acid degradation"] },
+            "RA1_CH2_S3": { "title": "Vine diseases and pests", "topics": ["phylloxera", "downy mildew", "powdery mildew (oidium)", "botrytis cinerea (noble rot / grey rot)", "leafroll virus"] },
+            "RA1_CH2_S4": { "title": "Rootstocks", "topics": ["phylloxera resistance", "rootstock selection", "soil adaptation"] }
+          }
+        },
+        "RA1_CH3": {
+          "id": "RA1_CH3",
+          "title": "Viticulture",
+          "sections": {
+            "RA1_CH3_S1": { "title": "Vine training systems", "topics": ["Guyot (single, double)", "Cordon de Royat", "Gobelet (bush vine)", "Geneva Double Curtain", "pergola (Pergola Trentina)", "lyre"] },
+            "RA1_CH3_S2": { "title": "Pruning", "topics": ["spur pruning", "cane pruning", "pruning objectives", "yield control"] },
+            "RA1_CH3_S3": { "title": "Canopy management", "topics": ["leaf removal", "shoot positioning", "green harvest (crop thinning)", "hedging/topping"] },
+            "RA1_CH3_S4": { "title": "Irrigation", "topics": ["drip irrigation", "flood irrigation", "regulated deficit irrigation (RDI)", "irrigation restrictions (EU)"] },
+            "RA1_CH3_S5": { "title": "Organic and biodynamic viticulture", "topics": ["organic principles", "biodynamic principles", "certified organic", "sustainable viticulture"] },
+            "RA1_CH3_S6": { "title": "Harvest decisions", "topics": ["timing of harvest", "measuring ripeness (potential alcohol, acidity, tannin ripeness, phenolic ripeness)", "mechanical vs hand harvest", "selective harvesting (tries successives)", "night harvesting"] }
+          }
+        },
+        "RA1_CH4": {
+          "id": "RA1_CH4",
+          "title": "White Winemaking",
+          "sections": {
+            "RA1_CH4_S1": { "title": "Harvesting and sorting", "topics": ["whole-bunch pressing", "sorting table", "avoiding oxidation"] },
+            "RA1_CH4_S2": { "title": "Crushing and pressing", "topics": ["pneumatic press", "pressing cycle", "free-run juice", "press fractions"] },
+            "RA1_CH4_S3": { "title": "Pre-fermentation clarification", "topics": ["settling (débourbage)", "centrifugation", "flotation", "sulphur dioxide addition"] },
+            "RA1_CH4_S4": { "title": "Fermentation", "topics": ["indigenous/wild yeasts", "cultured yeasts", "fermentation temperature", "stainless steel tanks", "oak barrels (barrel fermentation)", "concrete eggs"] },
+            "RA1_CH4_S5": { "title": "Post-fermentation options", "topics": ["malolactic conversion (MLF)", "lees ageing (sur lie)", "bâtonnage (lees stirring)", "ageing on lees", "lees contact time"] },
+            "RA1_CH4_S6": { "title": "Oak influence on white wines", "topics": ["new oak", "used oak", "barrel size", "French oak", "American oak", "oak chips/staves", "toast level"] },
+            "RA1_CH4_S7": { "title": "Stabilisation and fining", "topics": ["cold stabilisation (tartrate stability)", "fining agents (bentonite, egg white, casein, isinglass)", "protein stability"] },
+            "RA1_CH4_S8": { "title": "Filtration and bottling", "topics": ["pad filtration", "membrane filtration", "sterile filtration", "closure types (cork, screwcap, DIAM)", "bottling under inert gas"] }
+          }
+        },
+        "RA1_CH5": {
+          "id": "RA1_CH5",
+          "title": "Red Winemaking",
+          "sections": {
+            "RA1_CH5_S1": { "title": "Harvesting and pre-fermentation", "topics": ["destemming", "crushing", "whole-bunch fermentation", "cold soak (pre-fermentation maceration)"] },
+            "RA1_CH5_S2": { "title": "Fermentation and maceration", "topics": ["extraction of colour (anthocyanins)", "extraction of tannins", "cap management", "pumping over (remontage)", "punching down (pigeage)", "rack and return (délestage)", "fermentation temperature", "fermentation vessel options"] },
+            "RA1_CH5_S3": { "title": "Post-fermentation maceration", "topics": ["extended maceration", "pressing timing", "free-run wine", "press wine"] },
+            "RA1_CH5_S4": { "title": "Pressing", "topics": ["press wine characteristics", "press fraction blending decisions"] },
+            "RA1_CH5_S5": { "title": "Malolactic conversion (MLF)", "topics": ["malic to lactic acid conversion", "softening effect", "diacetyl (buttery character)", "MLF in barrel vs tank"] },
+            "RA1_CH5_S6": { "title": "Élevage", "topics": ["barrel ageing", "new vs used oak", "barrel size", "French vs American oak", "duration of ageing", "topping up (ouillage)", "racking (soutirages)", "micro-oxygenation"] },
+            "RA1_CH5_S7": { "title": "Blending", "topics": ["inter-varietal blending", "inter-lot blending", "blending objectives"] },
+            "RA1_CH5_S8": { "title": "Fining and filtration", "topics": ["egg white fining", "filtration levels", "unfiltered wines"] }
+          }
+        },
+        "RA1_CH6": {
+          "id": "RA1_CH6",
+          "title": "Rosé Winemaking",
+          "sections": {
+            "RA1_CH6_S1": { "title": "Methods of rosé production", "topics": ["direct pressing (Provençal method)", "saignée method", "blending method (rare exceptions)", "short maceration"] },
+            "RA1_CH6_S2": { "title": "Rosé wine styles", "topics": ["dry still rosé", "off-dry rosé", "sparkling rosé"] }
+          }
+        },
+        "RA1_CH7": {
+          "id": "RA1_CH7",
+          "title": "Winemaking with Special Techniques",
+          "sections": {
+            "RA1_CH7_S1": { "title": "Sweet wine production", "topics": ["late harvest", "noble rot (Botrytis cinerea)", "dried/raisined grapes (passito, Amarone)", "freezing (ice wine/Eiswein)", "chaptalization (stopping fermentation)", "addition of sweet reserve (Süssreserve)"] },
+            "RA1_CH7_S2": { "title": "Sparkling wine production methods", "topics": ["traditional method (méthode champenoise)", "tank method (Charmat/cuve close)", "transfer method", "ancestral method (pétillant naturel)", "carbonation"] },
+            "RA1_CH7_S3": { "title": "Fortification", "topics": ["addition of grape spirit", "timing of fortification (during/after fermentation)", "impact on sweetness and style"] }
+          }
+        },
+        "RA1_CH8": {
+          "id": "RA1_CH8",
+          "title": "The Role of the Producer",
+          "sections": {
+            "RA1_CH8_S1": { "title": "Commercial factors affecting style", "topics": ["consumer preferences", "market positioning", "brand decisions", "winemaker philosophy"] },
+            "RA1_CH8_S2": { "title": "Quality levels and pricing", "topics": ["factors influencing wine price", "yield and quality", "labour-intensive production", "oak costs", "land values and appellation prestige"] }
+          }
+        }
+      }
+    },
+
+    "RA2": {
+      "id": "RA2",
+      "title": "Still wines — important wines of the world",
+      "exam_weight": "critical",
+      "chapters": {
+        "RA2_FRANCE": {
+          "id": "RA2_FRANCE",
+          "title": "France",
+          "sub_regions": {
+            "Bordeaux": {
+              "appellations": ["Médoc", "Haut-Médoc", "Saint-Estèphe", "Pauillac", "Saint-Julien", "Margaux", "Listrac-Médoc", "Moulis", "Graves", "Pessac-Léognan", "Pomerol", "Saint-Émilion", "Sauternes", "Barsac", "Bordeaux AOC"],
+              "key_grapes_red": ["Cabernet Sauvignon", "Merlot", "Cabernet Franc", "Petit Verdot", "Malbec"],
+              "key_grapes_white": ["Sauvignon Blanc", "Sémillon", "Muscadelle"],
+              "classification_systems": ["1855 Médoc Classification (1er to 5ème Cru)", "Saint-Émilion Classification", "Graves/Pessac-Léognan Cru Classé", "Cru Bourgeois"]
+            },
+            "Burgundy": {
+              "appellations": ["Chablis", "Petit Chablis", "Chablis Premier Cru", "Chablis Grand Cru", "Côte de Nuits (Gevrey-Chambertin, Chambolle-Musigny, Vosne-Romanée, Nuits-Saint-Georges)", "Côte de Beaune (Pommard, Volnay, Meursault, Puligny-Montrachet, Chassagne-Montrachet, Corton)", "Côte Chalonnaise (Mercurey, Givry, Rully, Montagny)", "Mâconnais (Mâcon, Pouilly-Fuissé)", "Beaujolais (Beaujolais-Villages, Crus: Fleurie, Moulin-à-Vent, Morgon, Brouilly, etc.)"],
+              "key_grapes": ["Pinot Noir", "Chardonnay", "Gamay", "Aligoté"],
+              "classification_system": "Grand Cru / Premier Cru / Village / Regional hierarchy"
+            },
+            "Northern Rhône": {
+              "appellations": ["Côte-Rôtie", "Condrieu", "Saint-Joseph", "Crozes-Hermitage", "Hermitage", "Cornas", "Saint-Péray"],
+              "key_grapes_red": ["Syrah"],
+              "key_grapes_white": ["Viognier", "Marsanne", "Roussanne"]
+            },
+            "Southern Rhône": {
+              "appellations": ["Châteauneuf-du-Pape", "Gigondas", "Vacqueyras", "Lirac", "Tavel", "Côtes du Rhône", "Côtes du Rhône Villages", "Muscat de Beaumes-de-Venise"],
+              "key_grapes_red": ["Grenache", "Syrah", "Mourvèdre", "Cinsault", "Carignan"],
+              "key_grapes_white": ["Grenache Blanc", "Clairette", "Bourboulenc", "Roussanne"]
+            },
+            "Loire Valley": {
+              "appellations": ["Muscadet (Muscadet Sèvre et Maine)", "Pouilly-Fumé", "Sancerre", "Menetou-Salon", "Chinon", "Bourgueil", "Saumur", "Vouvray", "Montlouis-sur-Loire", "Anjou", "Coteaux du Layon", "Bonnezeaux", "Quarts de Chaume"],
+              "key_grapes": ["Sauvignon Blanc", "Chenin Blanc", "Cabernet Franc", "Gamay", "Melon de Bourgogne"]
+            },
+            "Alsace": {
+              "appellations": ["Alsace AOC", "Alsace Grand Cru", "Crémant d'Alsace"],
+              "key_grapes": ["Riesling", "Gewurztraminer", "Pinot Gris", "Muscat", "Pinot Blanc", "Pinot Noir"],
+              "styles": ["Vendanges Tardives (VT)", "Sélection de Grains Nobles (SGN)"]
+            },
+            "Southern France": {
+              "appellations_aop": ["Côtes de Provence", "Bandol", "Baux-de-Provence", "Châteauneuf-du-Pape (NR/SR crossover)", "Languedoc (Pic Saint-Loup, Terrasses du Larzac)", "Roussillon (Collioure)", "Corbières", "Minervois", "Saint-Chinian", "Faugères"],
+              "appellations_igp": ["IGP Pays d'Oc"],
+              "key_grapes": ["Grenache", "Syrah", "Mourvèdre", "Carignan", "Cinsault", "Vermentino", "Viognier"]
+            }
+          }
+        },
+        "RA2_ITALY": {
+          "id": "RA2_ITALY",
+          "title": "Italy",
+          "sub_regions": {
+            "Piedmont": {
+              "appellations": ["Barolo DOCG", "Barbaresco DOCG", "Barbera d'Asti DOCG", "Barbera d'Alba DOC", "Gavi DOCG", "Moscato d'Asti DOCG", "Dolcetto d'Alba DOC", "Langhe DOC"],
+              "key_grapes": ["Nebbiolo", "Barbera", "Dolcetto", "Cortese", "Moscato Bianco"]
+            },
+            "Tuscany": {
+              "appellations": ["Chianti DOCG", "Chianti Classico DOCG", "Brunello di Montalcino DOCG", "Rosso di Montalcino DOC", "Vino Nobile di Montepulciano DOCG", "Morellino di Scansano DOCG", "Vernaccia di San Gimignano DOCG", "Bolgheri DOC (Super Tuscans)"],
+              "key_grapes": ["Sangiovese", "Cabernet Sauvignon", "Merlot", "Vernaccia"]
+            },
+            "Veneto": {
+              "appellations": ["Soave DOC / Soave Classico", "Soave Superiore DOCG", "Amarone della Valpolicella DOCG", "Valpolicella DOC", "Ripasso DOC", "Bardolino DOC", "Prosecco DOC / DOCG (see RA3)"],
+              "key_grapes": ["Garganega", "Trebbiano di Soave", "Corvina", "Corvinone", "Rondinella", "Molinara"]
+            },
+            "Other Italy": {
+              "appellations": ["Aglianico del Vulture DOC (Basilicata)", "Taurasi DOCG (Campania)", "Greco di Tufo DOCG", "Fiano di Avellino DOCG", "Etna DOC (Sicily)", "Nero d'Avola (Sicily)"],
+              "key_grapes": ["Aglianico", "Greco", "Fiano", "Nerello Mascalese", "Nero d'Avola"]
+            }
+          }
+        },
+        "RA2_SPAIN": {
+          "id": "RA2_SPAIN",
+          "title": "Spain",
+          "sub_regions": {
+            "Rioja": {
+              "appellations": ["DOCa Rioja (Rioja Alta, Rioja Alavesa, Rioja Oriental)"],
+              "key_grapes_red": ["Tempranillo", "Garnacha", "Graciano", "Mazuelo"],
+              "key_grapes_white": ["Viura (Macabeo)", "Malvasía", "Garnacha Blanca"],
+              "ageing_categories": ["Joven", "Crianza", "Reserva", "Gran Reserva"]
+            },
+            "Ribera del Duero": {
+              "appellations": ["DO Ribera del Duero"],
+              "key_grapes": ["Tempranillo (Tinto Fino)"]
+            },
+            "Priorat": {
+              "appellations": ["DOCa Priorat"],
+              "key_grapes": ["Garnacha", "Cariñena (Carignan)", "Cabernet Sauvignon", "Syrah"]
+            },
+            "Rías Baixas": {
+              "appellations": ["DO Rías Baixas"],
+              "key_grapes": ["Albariño"]
+            },
+            "Other Spain": {
+              "appellations": ["DO Rueda (Verdejo)", "DO Toro (Tinta de Toro)", "DO Bierzo (Mencía)", "DO Valdepeñas", "DO La Mancha", "DO Penedès"],
+              "key_grapes": ["Verdejo", "Mencía", "Albariño", "Tempranillo"]
+            }
+          }
+        },
+        "RA2_PORTUGAL": {
+          "id": "RA2_PORTUGAL",
+          "title": "Portugal",
+          "sub_regions": {
+            "Vinho Verde": {
+              "appellations": ["DO Vinho Verde"],
+              "key_grapes": ["Alvarinho", "Loureiro", "Arinto", "Trajadura"]
+            },
+            "Dão": {
+              "appellations": ["DO Dão"],
+              "key_grapes": ["Touriga Nacional", "Jaen", "Alfrocheiro", "Encruzado"]
+            },
+            "Douro": {
+              "appellations": ["DO Douro (table wines)", "DOC Port (see RA4)"],
+              "key_grapes": ["Touriga Nacional", "Touriga Franca", "Tinta Roriz", "Tinta Barroca", "Tinta Cão"]
+            },
+            "Alentejo": {
+              "appellations": ["DOC Alentejo"],
+              "key_grapes": ["Aragonês (Tempranillo)", "Trincadeira", "Alicante Bouschet", "Antão Vaz", "Arinto"]
+            }
+          }
+        },
+        "RA2_GERMANY": {
+          "id": "RA2_GERMANY",
+          "title": "Germany",
+          "sub_regions": {
+            "Mosel": {
+              "key_style": "Riesling — slate soils, steep slopes, light, high acidity, low alcohol, piercing minerality",
+              "quality_levels": ["Kabinett", "Spätlese", "Auslese", "Beerenauslese", "Trockenbeerenauslese", "Eiswein"]
+            },
+            "Rheingau": {
+              "key_style": "Riesling — fuller, more structured, longer ageing; Pinot Noir (Spätburgunder)"
+            },
+            "Rheinhessen": {
+              "key_style": "Diverse; Müller-Thurgau, Silvaner, Riesling; Liebfraumilch (historic)"
+            },
+            "Pfalz": {
+              "key_style": "Warmer; Riesling with more body; Pinot Noir, Dornfelder"
+            },
+            "Germany Wine Law": {
+              "quality_classifications": ["Prädikatswein (QmP): Kabinett, Spätlese, Auslese, Beerenauslese, Trockenbeerenauslese, Eiswein", "Qualitätswein (QbA)", "Landwein (PGI equivalent)", "Deutscher Wein (table wine)"],
+              "key_grape": "Riesling",
+              "other_grapes": ["Müller-Thurgau", "Silvaner", "Spätburgunder (Pinot Noir)", "Dornfelder", "Grauburgunder (Pinot Gris)", "Weißburgunder (Pinot Blanc)"]
+            }
+          }
+        },
+        "RA2_OTHER_EUROPE": {
+          "id": "RA2_OTHER_EUROPE",
+          "title": "Other European Countries",
+          "sub_regions": {
+            "Austria": {
+              "appellations": ["Wachau", "Kremstal", "Kamptal", "Grüner Veltliner", "Riesling", "Burgenland (Blaufränkisch, sweet wines)"],
+              "quality_levels": ["Steinfeder", "Federspiel", "Smaragd (Wachau-specific)", "DAC system"]
+            },
+            "Greece": {
+              "appellations": ["Santorini PDO (Assyrtiko)", "Naoussa PDO (Xinomavro)", "Nemea PDO (Agiorgitiko)", "Muscat of Samos PDO"]
+            }
+          }
+        },
+        "RA2_AUSTRALIA": {
+          "id": "RA2_AUSTRALIA",
+          "title": "Australia",
+          "sub_regions": {
+            "South Australia": {
+              "regions": ["Barossa Valley (Shiraz, Grenache, Cabernet Sauvignon)", "Eden Valley (Riesling, Shiraz)", "Clare Valley (Riesling, Shiraz)", "McLaren Vale (Shiraz, Grenache, Cabernet)", "Coonawarra (Cabernet Sauvignon, Terra Rossa soils)", "Adelaide Hills (Sauvignon Blanc, Pinot Gris, Chardonnay, cool climate)"]
+            },
+            "Victoria": {
+              "regions": ["Yarra Valley (Pinot Noir, Chardonnay, cool climate)", "Mornington Peninsula (Pinot Noir, cool climate)", "Heathcote (Shiraz)", "Rutherglen (Muscat fortified)"]
+            },
+            "Western Australia": {
+              "regions": ["Margaret River (Cabernet Sauvignon, Chardonnay, Sauvignon Blanc-Sémillon)"]
+            },
+            "New South Wales": {
+              "regions": ["Hunter Valley (Sémillon, Shiraz — unique climate)"]
+            },
+            "Wine Law": {
+              "system": "Geographic Indication (GI) system; Geographical Indications (Zone, Region, Sub-region)"
+            }
+          }
+        },
+        "RA2_NEW_ZEALAND": {
+          "id": "RA2_NEW_ZEALAND",
+          "title": "New Zealand",
+          "sub_regions": {
+            "Marlborough": "Sauvignon Blanc (dominant), Pinot Noir, Pinot Gris, Riesling",
+            "Central Otago": "Pinot Noir (continental climate, high altitude)",
+            "Hawke's Bay": "Cabernet Sauvignon, Merlot, Syrah, Chardonnay — Gimblett Gravels",
+            "Martinborough (Wairarapa)": "Pinot Noir",
+            "Waipara / North Canterbury": "Riesling, Pinot Noir"
+          }
+        },
+        "RA2_USA": {
+          "id": "RA2_USA",
+          "title": "United States of America",
+          "sub_regions": {
+            "California": {
+              "regions": {
+                "Napa Valley": "Cabernet Sauvignon, Merlot, Chardonnay; Napa Valley AVA and sub-AVAs (Stags Leap, Rutherford, Oakville, Howell Mountain)",
+                "Sonoma County": "Pinot Noir, Chardonnay, Zinfandel, Sauvignon Blanc; sub-AVAs (Russian River Valley, Carneros, Dry Creek Valley, Alexander Valley)",
+                "Carneros": "Pinot Noir, Chardonnay (cool, bay influence)"
+              }
+            },
+            "Oregon": {
+              "regions": {
+                "Willamette Valley": "Pinot Noir, Chardonnay, Pinot Gris (cool climate, Jory soils)"
+              }
+            },
+            "Washington State": {
+              "regions": {
+                "Columbia Valley": "Cabernet Sauvignon, Merlot, Riesling, Syrah; Walla Walla Valley"
+              }
+            },
+            "Wine Law": "AVA (American Viticultural Area) system; 85% of grapes must come from named AVA; varietal labelling requires 75% of stated variety"
+          }
+        },
+        "RA2_ARGENTINA": {
+          "id": "RA2_ARGENTINA",
+          "title": "Argentina",
+          "sub_regions": {
+            "Mendoza": {
+              "sub_regions": ["Luján de Cuyo", "Maipú", "Valle de Uco (Tupungato, Tunuyán, San Carlos)"],
+              "key_grapes": ["Malbec", "Cabernet Sauvignon", "Torrontés", "Chardonnay", "Bonarda"]
+            },
+            "Salta / Cafayate": "Torrontés, Malbec — high altitude",
+            "Patagonia (Río Negro, Neuquén)": "Pinot Noir, Malbec, Chardonnay — cooler climate",
+            "Wine Law": "Denominación de Origen Controlada (DOC) and Indicación Geográfica (IG)"
+          }
+        },
+        "RA2_CHILE": {
+          "id": "RA2_CHILE",
+          "title": "Chile",
+          "sub_regions": {
+            "Aconcagua": {
+              "regions": ["Aconcagua Valley (Cabernet Sauvignon, warm inland)", "Casablanca Valley (Sauvignon Blanc, Chardonnay, Pinot Noir — cool, Pacific influence)", "San Antonio Valley / Leyda (cool, coastal)"]
+            },
+            "Central Valley": {
+              "sub_valleys": ["Maipo Valley (Cabernet Sauvignon)", "Rapel Valley (Colchagua — Merlot, Carménère; Cachapoal)", "Curicó Valley", "Maule Valley (País, Carménère, Cabernet Sauvignon)"]
+            },
+            "Key grapes": ["Cabernet Sauvignon", "Carménère", "Merlot", "Sauvignon Blanc", "Chardonnay", "Pinot Noir", "País"],
+            "Wine Law": "Denominación de Origen (DO) system; valley, sub-valley, zone classifications"
+          }
+        },
+        "RA2_SOUTH_AFRICA": {
+          "id": "RA2_SOUTH_AFRICA",
+          "title": "South Africa",
+          "sub_regions": {
+            "Coastal Region": {
+              "districts": ["Stellenbosch (Cabernet Sauvignon, Pinotage, Chenin Blanc, Sauvignon Blanc)", "Franschhoek (Cabernet Sauvignon, Semillon, Chardonnay)", "Constantia (Sauvignon Blanc, Constantia Vin de Constance)", "Swartland (Chenin Blanc, Grenache, Syrah, old vine focus)", "Walker Bay (Pinot Noir, Chardonnay — Bot River, Hemel-en-Aarde)"]
+            },
+            "Cape South Coast": {
+              "districts": ["Elgin (cool climate — Sauvignon Blanc, Pinot Noir, Riesling)"]
+            },
+            "Key grapes": ["Chenin Blanc", "Cabernet Sauvignon", "Pinotage", "Sauvignon Blanc", "Syrah/Shiraz", "Pinot Noir", "Chardonnay"],
+            "Wine Law": "Wine of Origin (WO) system; region/district/ward hierarchy; 85% origin rule"
+          }
+        }
+      }
+    },
+
+    "RA3": {
+      "id": "RA3",
+      "title": "Sparkling wines",
+      "exam_weight": "high",
+      "chapters": {
+        "RA3_CH1": {
+          "id": "RA3_CH1",
+          "title": "Champagne",
+          "sections": {
+            "RA3_CH1_S1": { "title": "Region and grapes", "topics": ["Montagne de Reims (Pinot Noir)", "Vallée de la Marne (Pinot Meunier)", "Côte des Blancs (Chardonnay)", "Aube", "permitted grape varieties"] },
+            "RA3_CH1_S2": { "title": "Traditional method in detail", "topics": ["base wine production", "assemblage", "liqueur de tirage (second fermentation in bottle)", "crown cap", "lees ageing (autolysis)", "riddling (remuage)", "disgorgement (dégorgement)", "dosage (liqueur d'expédition)", "cork and cage"] },
+            "RA3_CH1_S3": { "title": "Champagne styles", "topics": ["Non-Vintage (NV) — minimum 15 months on lees", "Vintage — minimum 36 months on lees", "Blanc de Blancs (100% Chardonnay)", "Blanc de Noirs", "Rosé Champagne (assemblage or maceration method)", "Prestige Cuvée", "Récemment Dégorgé (RD)"] },
+            "RA3_CH1_S4": { "title": "Champagne wine law", "topics": ["AOC Champagne", "Grand Cru / Premier Cru villages", "Champagne houses vs growers (RM, NM, CM, RC designations)", "dosage levels: Brut Nature/Zéro, Extra Brut, Brut, Extra Sec, Sec, Demi-Sec, Doux"] }
+          }
+        },
+        "RA3_CH2": {
+          "id": "RA3_CH2",
+          "title": "Other Sparkling Wines",
+          "sections": {
+            "RA3_CH2_S1": { "title": "Crémant (France)", "topics": ["Crémant d'Alsace", "Crémant de Bourgogne", "Crémant de Loire", "Crémant de Bordeaux", "traditional method; lower pressure than Champagne"] },
+            "RA3_CH2_S2": { "title": "Cava (Spain)", "topics": ["DO Cava", "traditional method", "Penedès (main production area)", "Xarel-lo, Macabeo, Parellada, Chardonnay, Garnacha, Monastrell", "Cava quality categories: Cava, Cava Reserva, Cava Gran Reserva"] },
+            "RA3_CH2_S3": { "title": "Prosecco (Italy)", "topics": ["DOC Prosecco", "DOCG Conegliano Valdobbiadene", "DOCG Asolo Prosecco", "Glera grape", "tank method (Charmat/cuve close)", "Brut to Dry styles", "Prosecco Superiore Rive", "Prosecco Col Fondo (sur lie, ancestral)"] },
+            "RA3_CH2_S4": { "title": "Sekt (Germany)", "topics": ["Deutscher Sekt", "tank method (most)", "traditional method (Winzersekt)"] },
+            "RA3_CH2_S5": { "title": "Asti and Moscato d'Asti (Italy)", "topics": ["DOCG Asti Spumante", "DOCG Moscato d'Asti (slightly sparkling, low alcohol)", "tank method", "Moscato Bianco grape"] },
+            "RA3_CH2_S6": { "title": "English sparkling wine", "topics": ["traditional method", "Chardonnay, Pinot Noir, Pinot Meunier", "chalk soils (similar to Champagne)", "growing market"] }
+          }
+        }
+      }
+    },
+
+    "RA4": {
+      "id": "RA4",
+      "title": "Fortified wines",
+      "exam_weight": "high",
+      "chapters": {
+        "RA4_CH1": {
+          "id": "RA4_CH1",
+          "title": "Port",
+          "sections": {
+            "RA4_CH1_S1": { "title": "Douro Valley and production", "topics": ["schist soils", "Douro Superior, Cima Corgo, Baixo Corgo", "key grapes (Touriga Nacional, Touriga Franca, Tinta Roriz, Tinta Barroca, Tinta Cão)", "traditional foot-treading (lagares)", "autovinification", "fortification with grape spirit (77% abv)", "timing of fortification (during fermentation)", "lodges at Vila Nova de Gaia"] },
+            "RA4_CH1_S2": { "title": "Port styles — Ruby category", "topics": ["Ruby Port", "Late Bottled Vintage (LBV) — filtered and unfiltered", "Vintage Port (single year, aged in bottle)", "Single Quinta Vintage Port", "Crusted Port"] },
+            "RA4_CH1_S3": { "title": "Port styles — Tawny category", "topics": ["Tawny Port", "Aged Tawny (10, 20, 30, 40 year)", "Colheita (single vintage aged tawny)", "White Port"] },
+            "RA4_CH1_S4": { "title": "Port wine law", "topics": ["DOC Douro", "DOC Porto", "IVDP regulation", "beneficio system"] }
+          }
+        },
+        "RA4_CH2": {
+          "id": "RA4_CH2",
+          "title": "Sherry",
+          "sections": {
+            "RA4_CH2_S1": { "title": "Jerez region and production", "topics": ["Marco de Jerez (Jerez de la Frontera, Sanlúcar de Barrameda, El Puerto de Santa María)", "albariza soils (chalk)", "Palomino grape (majority)", "Pedro Ximénez (PX)", "Moscatel", "base wine fermentation (dry)", "fortification to 15-15.5% abv (fino) or 17-18% abv (oloroso)", "solera system (fractional blending)", "flor (yeast layer)"] },
+            "RA4_CH2_S2": { "title": "Sherry styles — biological ageing under flor", "topics": ["Fino (Jerez — under flor, 15% abv)", "Manzanilla (Sanlúcar — under flor, sea influence)", "Amontillado (Fino aged oxidatively after flor dies)", "Palo Cortado (rare style — fino that loses flor, aged oxidatively)"] },
+            "RA4_CH2_S3": { "title": "Sherry styles — oxidative ageing", "topics": ["Oloroso (fortified to 17-18%, no flor, full oxidative ageing)", "Cream Sherry (Oloroso sweetened with PX or rectified concentrated must)", "Pale Cream (Fino sweetened)", "Medium (Amontillado sweetened)"] },
+            "RA4_CH2_S4": { "title": "Sweet Sherry styles", "topics": ["Pedro Ximénez (PX) — sun-dried PX grapes, intensely sweet", "Moscatel Sherry"] },
+            "RA4_CH2_S5": { "title": "Sherry wine law", "topics": ["DO Jerez-Xérès-Sherry", "DO Manzanilla-Sanlúcar de Barrameda", "Consejo Regulador"] }
+          }
+        },
+        "RA4_CH3": {
+          "id": "RA4_CH3",
+          "title": "Other Fortified Wines",
+          "sections": {
+            "RA4_CH3_S1": { "title": "Madeira", "topics": ["island of Madeira (Portugal)", "estufagem (heating process)", "canteiro method (natural heat)", "grape varieties by style: Sercial (dry), Verdelho (off-dry), Bual (medium-sweet), Malmsey (sweet)", "Tinta Negra (volume production)", "vintage Madeira", "perpetual solera"] },
+            "RA4_CH3_S2": { "title": "Vin Doux Naturel (VDN — France)", "topics": ["Muscat de Beaumes-de-Venise AOP (Muscat Blanc à Petits Grains)", "Muscat de Rivesaltes AOP", "Muscat de Frontignan AOP", "Banyuls AOP (Grenache — oxidative or rancio styles)", "Rivesaltes AOP"] },
+            "RA4_CH3_S3": { "title": "Marsala (Italy)", "topics": ["Sicily", "Catarratto, Grillo, Inzolia", "concia process", "Marsala Fine, Superiore, Vergine/Soleras", "secco to dolce styles"] }
+          }
+        }
+      }
+    },
+
+    "RA5": {
+      "id": "RA5",
+      "title": "Legal and consumer information",
+      "exam_weight": "moderate",
+      "chapters": {
+        "RA5_CH1": {
+          "id": "RA5_CH1",
+          "title": "Wine Laws",
+          "sections": {
+            "RA5_CH1_S1": { "title": "European Union wine law", "topics": ["PDO (Protected Designation of Origin) = quality wines", "PGI (Protected Geographical Indication) = regional wines", "wine without GI (basic table wine)", "EU labelling rules"] },
+            "RA5_CH1_S2": { "title": "French wine law", "topics": ["AOC (Appellation d'Origine Contrôlée) system", "INAO", "rules: permitted grapes, yields, alcohol levels, viticultural and winemaking practices", "hierarchy: AOC > IGP > Vin de France"] },
+            "RA5_CH1_S3": { "title": "Italian wine law", "topics": ["DOCG (Denominazione di Origine Controllata e Garantita)", "DOC (Denominazione di Origine Controllata)", "IGT (Indicazione Geografica Tipica)", "Vino da Tavola", "Indicazione Geografica Protetta (IGP)"] },
+            "RA5_CH1_S4": { "title": "Spanish wine law", "topics": ["DOCa (Denominación de Origen Calificada) — highest tier", "DO (Denominación de Origen)", "VCIG / Vino de Calidad con Indicación Geográfica", "Vino de la Tierra (PGI equivalent)", "Vino de Mesa"] },
+            "RA5_CH1_S5": { "title": "German wine law", "topics": ["Qualitätswein (QbA)", "Prädikatswein with Prädikats: Kabinett, Spätlese, Auslese, Beerenauslese, Trockenbeerenauslese, Eiswein", "Landwein", "Deutscher Wein", "VDP classification (Gutswein, Ortswein, Erste Lage, Grosse Lage)"] },
+            "RA5_CH1_S6": { "title": "New World wine laws", "topics": ["Australia — Geographic Indications (GI) system", "USA — American Viticultural Area (AVA)", "New Zealand — Geographical Indication", "South Africa — Wine of Origin (WO)", "Certified origin rules (85% rule for most; US 75%)"] }
+          }
+        },
+        "RA5_CH2": {
+          "id": "RA5_CH2",
+          "title": "Wine Labelling",
+          "sections": {
+            "RA5_CH2_S1": { "title": "Mandatory label information (EU)", "topics": ["product category", "geographical indication or wine type", "alcohol content", "volume", "lot number", "allergen information (sulphites)", "importer/bottler details", "country of origin", "sugar content descriptor (sparkling)"] },
+            "RA5_CH2_S2": { "title": "Voluntary label information", "topics": ["vintage", "grape variety", "producer name", "estate/château designation", "quality level designation"] }
+          }
+        },
+        "RA5_CH3": {
+          "id": "RA5_CH3",
+          "title": "Storage and Service",
+          "sections": {
+            "RA5_CH3_S1": { "title": "Storage conditions", "topics": ["temperature (10-15°C ideal)", "humidity (70-80%)", "darkness", "vibration avoidance", "horizontal storage (cork wines)", "temperature stability"] },
+            "RA5_CH3_S2": { "title": "Service temperature", "topics": ["sparkling wines: 6-10°C", "white and rosé wines: 7-13°C", "light red wines: 13-15°C", "full-bodied red wines: 17-19°C", "fortified wines: varies by style"] },
+            "RA5_CH3_S3": { "title": "Glassware and service", "topics": ["glass shape (bowl, rim)", "decanting", "serving fortified wines"] }
+          }
+        },
+        "RA5_CH4": {
+          "id": "RA5_CH4",
+          "title": "Wine and Health",
+          "sections": {
+            "RA5_CH4_S1": { "title": "Health information", "topics": ["alcohol units", "recommended limits", "sulphite allergens", "responsible consumption messaging"] }
+          }
+        },
+        "RA5_CH5": {
+          "id": "RA5_CH5",
+          "title": "The Wine Trade",
+          "sections": {
+            "RA5_CH5_S1": { "title": "Wine trade structure", "topics": ["négociants", "cooperatives", "domaines and estates", "merchants", "importers and agents", "retailers", "on-trade vs off-trade"] },
+            "RA5_CH5_S2": { "title": "Factors affecting price", "topics": ["production cost", "scarcity", "appellation prestige", "brand recognition", "critic scores", "vintage reputation", "exchange rates"] }
+          }
+        }
+      }
+    }
+  },
+
+  "sat_chapter": {
+    "id": "SAT",
+    "title": "Systematic Approach to Tasting (SAT)",
+    "note": "SAT documentation is reproduced in the study guide. The canonical authority for SAT is the standalone official SAT document (WSET_L3_SAT_Official_2016.pdf). See study_guide_sat_terminology.jsonl for full SAT structure.",
+    "sections": ["Appearance", "Nose", "Palate", "Conclusions"]
+  }
+}
