@@ -1,0 +1,165 @@
+{
+  "student_query": "How do I justify quality in SAT?",
+  "language": "es",
+  "orchestrator_decision": {
+    "route": "normal_tutor",
+    "reason": "no_misconception_detected",
+    "matched_misconception_id": null
+  },
+  "pedagogical_act": "answer_normally",
+  "forced_retrieval_nodes": [],
+  "matched_misconception": {},
+  "learner_state_context": {
+    "learner_id": "nazareth",
+    "current_level": "WSET_L3",
+    "known_weak_areas": [],
+    "recent_misconceptions": [],
+    "session_count": 0,
+    "governance": {
+      "safe_for_examiner": false,
+      "examiner_scoring_active": false,
+      "embeddings_active": false,
+      "vector_db_active": false,
+      "cloud_services_active": false
+    }
+  },
+  "retrieval_plan": {
+    "mode": "normal_retrieval",
+    "query": "How do I justify quality in SAT?",
+    "top_k": 5,
+    "forced_retrieval_nodes": [],
+    "retrieval_engine": "tools.retrieval.tutor_retrieval_sandbox",
+    "uses_embeddings": false,
+    "uses_vector_db": false,
+    "uses_llm": false,
+    "uses_api": false
+  },
+  "retrieved_context": [
+    {
+      "context_type": "retrieval_sandbox_chunk",
+      "chunk_id": "How_to_prepare_for_the_WSET_Level_3_Tasting_Exam-0001",
+      "forced_retrieval": false,
+      "agent_corpus": "tutor",
+      "safe_for_examiner": false,
+      "score": 0.7187,
+      "reasoning_type": "exam_strategy",
+      "pedagogical_role": "exam_strategy",
+      "why_retrieved": [
+        "matched canonical/query terms: SAT",
+        "golden tutor chunk candidate",
+        "high retrieval priority in golden QA report",
+        "aligns with sat_logic reasoning intent",
+        "pedagogical role fits sat_coaching",
+        "matched SAT/tasting vocabulary",
+        "contains exam or marks strategy language"
+      ],
+      "text_excerpt": "So, let's go through um preparing you for the very famous and intensive and intimidating level three tasting examination. If you do follow all of these key points and you listen to your tutor, you will get through this tasting examination. It is in fact the least of your worries when it comes to the level three exam. uh it is in fact the uh the theory whe...",
+      "source_video": "How to prepare for the WSET Level 3 Tasting Exam",
+      "source_filename": "How to prepare for the WSET Level 3 Tasting Exam.srt"
+    },
+    {
+      "context_type": "retrieval_sandbox_chunk",
+      "chunk_id": "How_to_prepare_for_the_WSET_Level_3_Tasting_Exam-0004",
+      "forced_retrieval": false,
+      "agent_corpus": "tutor",
+      "safe_for_examiner": false,
+      "score": 0.571,
+      "reasoning_type": "common_mistake",
+      "pedagogical_role": "exam_strategy",
+      "why_retrieved": [
+        "golden tutor chunk candidate",
+        "high retrieval priority in golden QA report",
+        "aligns with sat_logic reasoning intent",
+        "pedagogical role fits sat_coaching",
+        "matched SAT/tasting vocabulary",
+        "contains exam or marks strategy language"
+      ],
+      "text_excerpt": "Please make sure you memorize and internalize the whole systematic approach to tasting. you will not be able to take your card in with you as we previously mentioned and still students don't put down everything and that's where they will lose marks. So please come up with some sort of mnemonic to remember the whole list of the systemic on the actual day o...",
+      "source_video": "How to prepare for the WSET Level 3 Tasting Exam",
+      "source_filename": "How to prepare for the WSET Level 3 Tasting Exam.srt"
+    },
+    {
+      "context_type": "retrieval_sandbox_chunk",
+      "chunk_id": "Introduction_to_the_WSET_Level_3_SAT-0004",
+      "forced_retrieval": false,
+      "agent_corpus": "tutor",
+      "safe_for_examiner": false,
+      "score": 0.5395,
+      "reasoning_type": "tasting_calibration",
+      "pedagogical_role": "tasting_practice",
+      "why_retrieved": [
+        "matched canonical/query terms: SAT, appearance, nose, quality, readiness, sat",
+        "aligns with sat_logic reasoning intent",
+        "pedagogical role fits sat_coaching",
+        "matched SAT/tasting vocabulary"
+      ],
+      "text_excerpt": "note that's the first part the second part is to draw conclusions come to some conclusions so this is the evaluative part of the sat so we have two areas here we have quality level and then we have the level of Readiness for drinking or potential for aging so you'll see the two areas just there on your slide the right hand column where we go on the qualit...",
+      "source_video": "Introduction to the WSET Level 3 SAT",
+      "source_filename": "Introduction to the WSET Level 3 SAT [English (auto-generated)] [DownloadYoutubeSubtitles.com].srt"
+    },
+    {
+      "context_type": "retrieval_sandbox_chunk",
+      "chunk_id": "How_to_assess_the_quality_of_a_wine_for_WSET_Level_3-0001",
+      "forced_retrieval": false,
+      "agent_corpus": "tutor",
+      "safe_for_examiner": false,
+      "score": 0.5272,
+      "reasoning_type": "tasting_calibration",
+      "pedagogical_role": "tasting_practice",
+      "why_retrieved": [
+        "matched canonical/query terms: balance, complexity, intensity, length, quality, readiness, sat",
+        "medium retrieval priority in golden QA report",
+        "aligns with sat_logic reasoning intent",
+        "pedagogical role fits sat_coaching",
+        "matched SAT/tasting vocabulary"
+      ],
+      "text_excerpt": "winwith jimmy.com okay okay the conclusion section overview here is the conclusion section as per the systematic approach to tasting split into that quality level and Readiness for drinking I've just left highlighted here the quality level as that's what we're going through here so many criteria is used when assessing quality of wine now there are many in...",
+      "source_video": "How to assess the quality of a wine for WSET Level 3",
+      "source_filename": "How to assess the quality of a wine for WSET Level 3 [English (auto-generated)] [DownloadYoutubeSubtitles.com].srt"
+    },
+    {
+      "context_type": "retrieval_sandbox_chunk",
+      "chunk_id": "Introduction_to_the_WSET_Level_3_SAT-0002",
+      "forced_retrieval": false,
+      "agent_corpus": "tutor",
+      "safe_for_examiner": false,
+      "score": 0.5272,
+      "reasoning_type": "tasting_calibration",
+      "pedagogical_role": "tasting_practice",
+      "why_retrieved": [
+        "matched canonical/query terms: appearance, intensity, nose, quality, quality assessment, readiness, sat",
+        "medium retrieval priority in golden QA report",
+        "aligns with sat_logic reasoning intent",
+        "pedagogical role fits sat_coaching",
+        "matched SAT/tasting vocabulary"
+      ],
+      "text_excerpt": "with its own qualifications and it's going to give you two main aims and you'll see them up here so it's basically the um the assessment of wine the ability to assess and describe a wine and then the ability to make reasonable conclusions at the level three standard on those wines okay we're not talking about exactly guessing the Vintage exactly guessing...",
+      "source_video": "Introduction to the WSET Level 3 SAT",
+      "source_filename": "Introduction to the WSET Level 3 SAT [English (auto-generated)] [DownloadYoutubeSubtitles.com].srt"
+    }
+  ],
+  "tutor_directive": {
+    "pedagogical_act": "answer_normally",
+    "forced_retrieval_nodes": [],
+    "safe_for_examiner": false,
+    "language": "es",
+    "response_language_instruction": "Respond in Spanish. Preserve official WSET terms where useful, and do not translate key terms if translation would reduce precision. Distinguish official WSET content from pedagogical content.",
+    "source_handling": [
+      "Use this as a context package only; do not treat it as a final answer.",
+      "Distinguish official WSET content from pedagogical enrichment when explaining.",
+      "Do not translate source chunks; preserve official WSET terms where useful.",
+      "Do not translate key terms if translation would reduce precision."
+    ]
+  },
+  "success_criteria": [
+    "Answer the learner's question using the retrieved Tutor context.",
+    "Preserve official WSET terminology where precision matters.",
+    "Distinguish official WSET content from pedagogical enrichment.",
+    "Keep Examiner scoring disabled and safe_for_examiner false."
+  ],
+  "governance": {
+    "agent_corpus": "tutor",
+    "safe_for_examiner": false,
+    "examiner_scoring_allowed": false
+  }
+}

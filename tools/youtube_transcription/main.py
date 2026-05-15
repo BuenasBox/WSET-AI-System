@@ -5,10 +5,12 @@ extraction. It does not download videos, audio, captions, or transcripts.
 """
 
 import argparse
+import json
 import random
 import re
 import sys
 import time
+from pathlib import Path
 
 from .config import (
     DEFAULT_SLEEP_MAX_SECONDS,
@@ -45,6 +47,8 @@ from .targets import (
     target_row_to_video,
 )
 from tools.retrieval.tutor_retrieval_sandbox import run_retrieval_sandbox
+from tools.orchestrator.orchestrator import run_orchestrator
+from tools.tutor.answer_builder import build_tutor_answer
 
 
 def main() -> None:
@@ -127,6 +131,44 @@ def main() -> None:
                 f"[{chunk['reasoning_type']} / {chunk['retrieval_priority']}]"
             )
             print(f"   why: {'; '.join(chunk['why_retrieved'])}")
+        return
+
+    if args.command == "orchestrator-test":
+        run = run_orchestrator(query=args.query, top_k=args.top_k, language=args.language)
+        print("Detected misconception:")
+        print(json.dumps(run["detected_misconception"], indent=2, ensure_ascii=True))
+        print("Orchestrator decision:")
+        print(json.dumps(run["orchestrator_decision"], indent=2, ensure_ascii=True))
+        print("Retrieval plan:")
+        print(json.dumps(run["retrieval_plan"], indent=2, ensure_ascii=True))
+        print("Retrieved context summary:")
+        for index, item in enumerate(run["retrieved_context"], start=1):
+            identifier = item.get("node_id") or item.get("chunk_id") or "<unknown>"
+            print(
+                f"{index}. {item['context_type']} {identifier} "
+                f"forced={item['forced_retrieval']} safe_for_examiner={item['safe_for_examiner']}"
+            )
+        print(f"Tutor-ready context package: {run['context_package_paths']['latest']}")
+        print(f"Timestamped context package: {run['context_package_paths']['timestamped']}")
+        print("Governance flags:")
+        print(json.dumps(run["governance_flags"], indent=2, ensure_ascii=True))
+        return
+
+    if args.command in {"tutor-answer", "tutor"}:
+        result = build_tutor_answer(
+            context_package_path=Path(args.context_package),
+            language=args.language,
+            output_path=Path(args.output) if args.output else None,
+            style=args.style,
+        )
+        print("Tutor answer created.")
+        print(f"Language: {result['language']}")
+        print(f"Pedagogical act: {result['pedagogical_act']}")
+        print(f"Style: {result['style']}")
+        print(f"Latest output: {result['output_paths']['latest']}")
+        print(f"Timestamped output: {result['output_paths']['timestamped']}")
+        print("Governance flags:")
+        print(json.dumps(result["governance"], indent=2, ensure_ascii=True))
         return
 
     logger = configure_logging(WINE_WITH_JIMMY_ROOT / "logs")
@@ -422,6 +464,62 @@ def _build_parser() -> argparse.ArgumentParser:
         "--output-prefix",
         default="retrieval_run",
         help="Filename prefix under knowledge/retrieval-sandbox.",
+    )
+    orchestrator_parser = subparsers.add_parser(
+        "orchestrator-test",
+        help="Run the local Minimal Brain v1 misconception pre-pass and Tutor directive.",
+    )
+    orchestrator_parser.add_argument("--query", required=True, help="Student query to route.")
+    orchestrator_parser.add_argument("--top-k", type=int, default=10, help="Number of supporting chunks to retrieve.")
+    orchestrator_parser.add_argument(
+        "--language",
+        choices=("es", "en"),
+        default="es",
+        help="Tutor directive response language.",
+    )
+    tutor_parser = subparsers.add_parser(
+        "tutor-answer",
+        help="Build a deterministic local Tutor answer from the latest context package.",
+    )
+    tutor_parser.add_argument(
+        "--context-package",
+        default=str(PROJECT_ROOT / "knowledge" / "nazareth" / "context_packages" / "latest_context_package.json"),
+        help="Path to a Tutor-ready context package JSON.",
+    )
+    tutor_parser.add_argument(
+        "--language",
+        choices=("es", "en"),
+        default=None,
+        help="Override context package response language.",
+    )
+    tutor_parser.add_argument("--output", default=None, help="Optional Markdown output path.")
+    tutor_parser.add_argument(
+        "--style",
+        choices=("concise", "standard", "detailed"),
+        default="standard",
+        help="Tutor answer detail level.",
+    )
+    tutor_alias_parser = subparsers.add_parser(
+        "tutor",
+        help="Alias for tutor-answer.",
+    )
+    tutor_alias_parser.add_argument(
+        "--context-package",
+        default=str(PROJECT_ROOT / "knowledge" / "nazareth" / "context_packages" / "latest_context_package.json"),
+        help="Path to a Tutor-ready context package JSON.",
+    )
+    tutor_alias_parser.add_argument(
+        "--language",
+        choices=("es", "en"),
+        default=None,
+        help="Override context package response language.",
+    )
+    tutor_alias_parser.add_argument("--output", default=None, help="Optional Markdown output path.")
+    tutor_alias_parser.add_argument(
+        "--style",
+        choices=("concise", "standard", "detailed"),
+        default="standard",
+        help="Tutor answer detail level.",
     )
     return parser
 

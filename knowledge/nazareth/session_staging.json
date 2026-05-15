@@ -1,0 +1,453 @@
+{
+  "schema_version": "minimal_brain_v2",
+  "updated_at": "2026-05-15T23:13:43.111134+00:00",
+  "latest_session": {
+    "student_query": "Does more tannin mean better wine?",
+    "detected_misconception": {
+      "detected": true,
+      "matched_misconception_id": "MC_TANNIN_01",
+      "confidence": 0.57,
+      "severity": "high",
+      "intervention_type": "direct_correction",
+      "corrected_understanding": "Tannin produces astringency (a drying, gripping tactile sensation), not bitterness (a taste). Both can be present in the same wine but they are assessed separately and have different causes.",
+      "matched_signals": [],
+      "misconception": "Tannin is the same as bitterness."
+    },
+    "les_context_used": {
+      "learner_id": "nazareth",
+      "current_level": "WSET_L3",
+      "known_weak_areas": [],
+      "recent_misconceptions": [],
+      "session_count": 0,
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_active": false,
+        "embeddings_active": false,
+        "vector_db_active": false,
+        "cloud_services_active": false
+      }
+    },
+    "orchestrator_decision": {
+      "route": "misconception_prepass",
+      "reason": "misconception_detected",
+      "matched_misconception_id": "MC_TANNIN_01"
+    },
+    "retrieval_plan": {
+      "mode": "forced_plus_supporting_chunks",
+      "query": "Does more tannin mean better wine? Tannin is the same as bitterness. Tannin produces astringency (a drying, gripping tactile sensation), not bitterness (a taste). Both can be present in the same wine but they are assessed separately and have different causes. C_TANNIN",
+      "top_k": 5,
+      "forced_retrieval_nodes": [
+        "MC_TANNIN_01"
+      ],
+      "retrieval_engine": "tools.retrieval.tutor_retrieval_sandbox",
+      "uses_embeddings": false,
+      "uses_vector_db": false,
+      "uses_llm": false,
+      "uses_api": false
+    },
+    "retrieved_context": [
+      {
+        "context_type": "misconception_node",
+        "node_id": "MC_TANNIN_01",
+        "forced_retrieval": true,
+        "agent_corpus": "tutor",
+        "safe_for_examiner": false,
+        "source_path": "C:/Users/esand/OneDrive/Documents/WSET-AI-System/knowledge/knowledge-map/misconceptions/mc_tannin_01.json",
+        "content": {
+          "misconception_id": "MC_TANNIN_01",
+          "misconception": "Tannin is the same as bitterness.",
+          "why_incorrect": "Tannin produces astringency \u2014 a tactile, drying sensation caused by tannin molecules binding to salivary proteins and precipitating them. This is perceived as a dry, gripping feeling on the gums, inner cheeks, and palate. Bitterness is a taste (not a tactile sensation) perceived on the palate and is associated with different compounds (e.g., certain phenolics, but not the same as astringent tannins). A wine can be bitter without being astringent, and vice versa. On the SAT, tannin is assessed separately from bitterness.",
+          "corrected_understanding": "Tannin produces astringency (a drying, gripping tactile sensation), not bitterness (a taste). Both can be present in the same wine but they are assessed separately and have different causes.",
+          "related_topics": [
+            "T_RA1_WINE_COMPONENTS",
+            "T_RA1_SAT"
+          ],
+          "related_concepts": [
+            "C_TANNIN"
+          ],
+          "severity": "high",
+          "frequency": "very_common",
+          "distinction_relevance": true,
+          "tutor_intervention": "direct_correction",
+          "detection_signals": [
+            "this wine is bitter because of the tannins",
+            "tannins are what make wine bitter",
+            "high tannin means bitter taste"
+          ],
+          "_meta": {
+            "schema_version": "1.0",
+            "created_date": "2026-05-13",
+            "ingestion_status": "draft"
+          },
+          "_source_path": "C:/Users/esand/OneDrive/Documents/WSET-AI-System/knowledge/knowledge-map/misconceptions/mc_tannin_01.json"
+        }
+      },
+      {
+        "context_type": "retrieval_sandbox_chunk",
+        "chunk_id": "WSET_Level_3_Wines_-_Understanding_the_Common_Elements_of_Winemaking_Part-0002",
+        "forced_retrieval": false,
+        "agent_corpus": "tutor",
+        "safe_for_examiner": false,
+        "score": 0.4551,
+        "reasoning_type": "cause_effect",
+        "pedagogical_role": "theory_explanation",
+        "why_retrieved": [
+          "matched canonical/query terms: both, have, more, present, tannin, wine",
+          "pedagogical role fits foundational_theory",
+          "matched SAT/tasting vocabulary",
+          "matches knowledge-map concept or relationship terms",
+          "matches knowledge-map concept vocabulary"
+        ],
+        "text_excerpt": "is sugar and sugar is very important of course as yeast will use it to ferment it into alcohol and this is the second largest component in the grape and then the third part here is acid and the acids we find numerous acids but there are two major acidities which wset on this syllabus wish you to understand the greatest is tartaric so tartaric acid has the...",
+        "source_video": "WSET Level 3 Wines - Understanding the Common Elements of Winemaking Part",
+        "source_filename": "[English (auto-generated)] WSET Level 3 Wines - Understanding the Common Elements of Winemaking Part.srt"
+      },
+      {
+        "context_type": "retrieval_sandbox_chunk",
+        "chunk_id": "How_to_prepare_for_the_WSET_Level_3_Tasting_Exam-0004",
+        "forced_retrieval": false,
+        "agent_corpus": "tutor",
+        "safe_for_examiner": false,
+        "score": 0.4485,
+        "reasoning_type": "common_mistake",
+        "pedagogical_role": "exam_strategy",
+        "why_retrieved": [
+          "matched canonical/query terms: better, have, taste, they",
+          "golden tutor chunk candidate",
+          "high retrieval priority in golden QA report",
+          "matched SAT/tasting vocabulary"
+        ],
+        "text_excerpt": "Please make sure you memorize and internalize the whole systematic approach to tasting. you will not be able to take your card in with you as we previously mentioned and still students don't put down everything and that's where they will lose marks. So please come up with some sort of mnemonic to remember the whole list of the systemic on the actual day o...",
+        "source_video": "How to prepare for the WSET Level 3 Tasting Exam",
+        "source_filename": "How to prepare for the WSET Level 3 Tasting Exam.srt"
+      },
+      {
+        "context_type": "retrieval_sandbox_chunk",
+        "chunk_id": "Understanding_Red_Wine_Making_for_WSET_Level_3-0001",
+        "forced_retrieval": false,
+        "agent_corpus": "tutor",
+        "safe_for_examiner": false,
+        "score": 0.4457,
+        "reasoning_type": "theory_foundation",
+        "pedagogical_role": "foundational",
+        "why_retrieved": [
+          "matched canonical/query terms: have, more, same, tannin, taste, they, wine",
+          "pedagogical role fits foundational_theory",
+          "matched SAT/tasting vocabulary",
+          "matches knowledge-map concept or relationship terms",
+          "matches knowledge-map concept vocabulary"
+        ],
+        "text_excerpt": "is all about that that type of processing we will go through a whole bunch and a whole bunch and Crush fruit combined Carbonic semic Carbonic in the next series so a little bit around destemming and crushing to begin with now these are of course optional processes now machine harvested grapes will arrive without stems and even if the grapes have been hand...",
+        "source_video": "Understanding Red Wine Making for WSET Level 3",
+        "source_filename": "Understanding Red Wine Making for WSET Level 3 [English (auto-generated)] [DownloadYoutubeSubtitles.com].srt"
+      },
+      {
+        "context_type": "retrieval_sandbox_chunk",
+        "chunk_id": "Understanding_Red_Wine_Making_for_WSET_Level_3-0003",
+        "forced_retrieval": false,
+        "agent_corpus": "tutor",
+        "safe_for_examiner": false,
+        "score": 0.439,
+        "reasoning_type": "cause_effect",
+        "pedagogical_role": "theory_explanation",
+        "why_retrieved": [
+          "matched canonical/query terms: better, different, more, tannin, wine",
+          "pedagogical role fits foundational_theory",
+          "matched SAT/tasting vocabulary",
+          "matches knowledge-map concept or relationship terms",
+          "matches knowledge-map concept vocabulary"
+        ],
+        "text_excerpt": "more so for very thin skin varieties like P Noir and then flavor brightness of flavor typically so it's a very useful process certainly for thin skin varieties but it is done across the world for a range of different great varieties what about the temperatures Now red wine fermentation temperatures usually range from about 20\u00b0 cus and up to about 32\u00b0 cels...",
+        "source_video": "Understanding Red Wine Making for WSET Level 3",
+        "source_filename": "Understanding Red Wine Making for WSET Level 3 [English (auto-generated)] [DownloadYoutubeSubtitles.com].srt"
+      },
+      {
+        "context_type": "retrieval_sandbox_chunk",
+        "chunk_id": "WSET_Level_3_Wines_-_Understanding_the_Common_Elements_of_Winemaking_Part-0003",
+        "forced_retrieval": false,
+        "agent_corpus": "tutor",
+        "safe_for_examiner": false,
+        "score": 0.439,
+        "reasoning_type": "cause_effect",
+        "pedagogical_role": "foundational",
+        "why_retrieved": [
+          "matched canonical/query terms: bitterness, have, tannin, they, wine",
+          "pedagogical role fits foundational_theory",
+          "matched SAT/tasting vocabulary",
+          "matches knowledge-map concept or relationship terms",
+          "matches knowledge-map concept vocabulary"
+        ],
+        "text_excerpt": "seeds in the center or larger seeds in the center than others there is a variety that immediately springs to mind which is from pia monte in north west italy which is called gringolino you don't need to know this for the level three syllabus but it's interesting because if you take grinnollino and then take it from the dialect it came from which is gerino...",
+        "source_video": "WSET Level 3 Wines - Understanding the Common Elements of Winemaking Part",
+        "source_filename": "[English (auto-generated)] WSET Level 3 Wines - Understanding the Common Elements of Winemaking Part.srt"
+      }
+    ],
+    "tutor_directive": {
+      "pedagogical_act": "misconception_intervention",
+      "forced_retrieval_nodes": [
+        "MC_TANNIN_01"
+      ],
+      "intervention_type": "direct_correction",
+      "corrected_understanding": "Tannin produces astringency (a drying, gripping tactile sensation), not bitterness (a taste). Both can be present in the same wine but they are assessed separately and have different causes.",
+      "safe_for_examiner": false
+    },
+    "recommended_les_update": {
+      "append_recent_misconception": "MC_TANNIN_01",
+      "increase_attention_to": "high"
+    },
+    "governance_flags": {
+      "safe_for_examiner": false,
+      "examiner_scoring_active": false,
+      "embeddings_active": false,
+      "vector_db_active": false,
+      "apis_connected": false,
+      "frontend_active": false,
+      "cloud_services_active": false
+    },
+    "context_package": {
+      "student_query": "Does more tannin mean better wine?",
+      "language": "es",
+      "orchestrator_decision": {
+        "route": "misconception_prepass",
+        "reason": "misconception_detected",
+        "matched_misconception_id": "MC_TANNIN_01"
+      },
+      "pedagogical_act": "misconception_intervention",
+      "forced_retrieval_nodes": [
+        "MC_TANNIN_01"
+      ],
+      "matched_misconception": {
+        "misconception_id": "MC_TANNIN_01",
+        "misconception": "Tannin is the same as bitterness.",
+        "why_incorrect": "Tannin produces astringency \u2014 a tactile, drying sensation caused by tannin molecules binding to salivary proteins and precipitating them. This is perceived as a dry, gripping feeling on the gums, inner cheeks, and palate. Bitterness is a taste (not a tactile sensation) perceived on the palate and is associated with different compounds (e.g., certain phenolics, but not the same as astringent tannins). A wine can be bitter without being astringent, and vice versa. On the SAT, tannin is assessed separately from bitterness.",
+        "corrected_understanding": "Tannin produces astringency (a drying, gripping tactile sensation), not bitterness (a taste). Both can be present in the same wine but they are assessed separately and have different causes.",
+        "related_topics": [
+          "T_RA1_WINE_COMPONENTS",
+          "T_RA1_SAT"
+        ],
+        "related_concepts": [
+          "C_TANNIN"
+        ],
+        "severity": "high",
+        "frequency": "very_common",
+        "distinction_relevance": true,
+        "tutor_intervention": "direct_correction",
+        "detection_signals": [
+          "this wine is bitter because of the tannins",
+          "tannins are what make wine bitter",
+          "high tannin means bitter taste"
+        ],
+        "_meta": {
+          "schema_version": "1.0",
+          "created_date": "2026-05-13",
+          "ingestion_status": "draft"
+        },
+        "_source_path": "C:/Users/esand/OneDrive/Documents/WSET-AI-System/knowledge/knowledge-map/misconceptions/mc_tannin_01.json"
+      },
+      "learner_state_context": {
+        "learner_id": "nazareth",
+        "current_level": "WSET_L3",
+        "known_weak_areas": [],
+        "recent_misconceptions": [],
+        "session_count": 0,
+        "governance": {
+          "safe_for_examiner": false,
+          "examiner_scoring_active": false,
+          "embeddings_active": false,
+          "vector_db_active": false,
+          "cloud_services_active": false
+        }
+      },
+      "retrieval_plan": {
+        "mode": "forced_plus_supporting_chunks",
+        "query": "Does more tannin mean better wine? Tannin is the same as bitterness. Tannin produces astringency (a drying, gripping tactile sensation), not bitterness (a taste). Both can be present in the same wine but they are assessed separately and have different causes. C_TANNIN",
+        "top_k": 5,
+        "forced_retrieval_nodes": [
+          "MC_TANNIN_01"
+        ],
+        "retrieval_engine": "tools.retrieval.tutor_retrieval_sandbox",
+        "uses_embeddings": false,
+        "uses_vector_db": false,
+        "uses_llm": false,
+        "uses_api": false
+      },
+      "retrieved_context": [
+        {
+          "context_type": "misconception_node",
+          "node_id": "MC_TANNIN_01",
+          "forced_retrieval": true,
+          "agent_corpus": "tutor",
+          "safe_for_examiner": false,
+          "source_path": "C:/Users/esand/OneDrive/Documents/WSET-AI-System/knowledge/knowledge-map/misconceptions/mc_tannin_01.json",
+          "content": {
+            "misconception_id": "MC_TANNIN_01",
+            "misconception": "Tannin is the same as bitterness.",
+            "why_incorrect": "Tannin produces astringency \u2014 a tactile, drying sensation caused by tannin molecules binding to salivary proteins and precipitating them. This is perceived as a dry, gripping feeling on the gums, inner cheeks, and palate. Bitterness is a taste (not a tactile sensation) perceived on the palate and is associated with different compounds (e.g., certain phenolics, but not the same as astringent tannins). A wine can be bitter without being astringent, and vice versa. On the SAT, tannin is assessed separately from bitterness.",
+            "corrected_understanding": "Tannin produces astringency (a drying, gripping tactile sensation), not bitterness (a taste). Both can be present in the same wine but they are assessed separately and have different causes.",
+            "related_topics": [
+              "T_RA1_WINE_COMPONENTS",
+              "T_RA1_SAT"
+            ],
+            "related_concepts": [
+              "C_TANNIN"
+            ],
+            "severity": "high",
+            "frequency": "very_common",
+            "distinction_relevance": true,
+            "tutor_intervention": "direct_correction",
+            "detection_signals": [
+              "this wine is bitter because of the tannins",
+              "tannins are what make wine bitter",
+              "high tannin means bitter taste"
+            ],
+            "_meta": {
+              "schema_version": "1.0",
+              "created_date": "2026-05-13",
+              "ingestion_status": "draft"
+            },
+            "_source_path": "C:/Users/esand/OneDrive/Documents/WSET-AI-System/knowledge/knowledge-map/misconceptions/mc_tannin_01.json"
+          }
+        },
+        {
+          "context_type": "retrieval_sandbox_chunk",
+          "chunk_id": "WSET_Level_3_Wines_-_Understanding_the_Common_Elements_of_Winemaking_Part-0002",
+          "forced_retrieval": false,
+          "agent_corpus": "tutor",
+          "safe_for_examiner": false,
+          "score": 0.4551,
+          "reasoning_type": "cause_effect",
+          "pedagogical_role": "theory_explanation",
+          "why_retrieved": [
+            "matched canonical/query terms: both, have, more, present, tannin, wine",
+            "pedagogical role fits foundational_theory",
+            "matched SAT/tasting vocabulary",
+            "matches knowledge-map concept or relationship terms",
+            "matches knowledge-map concept vocabulary"
+          ],
+          "text_excerpt": "is sugar and sugar is very important of course as yeast will use it to ferment it into alcohol and this is the second largest component in the grape and then the third part here is acid and the acids we find numerous acids but there are two major acidities which wset on this syllabus wish you to understand the greatest is tartaric so tartaric acid has the...",
+          "source_video": "WSET Level 3 Wines - Understanding the Common Elements of Winemaking Part",
+          "source_filename": "[English (auto-generated)] WSET Level 3 Wines - Understanding the Common Elements of Winemaking Part.srt"
+        },
+        {
+          "context_type": "retrieval_sandbox_chunk",
+          "chunk_id": "How_to_prepare_for_the_WSET_Level_3_Tasting_Exam-0004",
+          "forced_retrieval": false,
+          "agent_corpus": "tutor",
+          "safe_for_examiner": false,
+          "score": 0.4485,
+          "reasoning_type": "common_mistake",
+          "pedagogical_role": "exam_strategy",
+          "why_retrieved": [
+            "matched canonical/query terms: better, have, taste, they",
+            "golden tutor chunk candidate",
+            "high retrieval priority in golden QA report",
+            "matched SAT/tasting vocabulary"
+          ],
+          "text_excerpt": "Please make sure you memorize and internalize the whole systematic approach to tasting. you will not be able to take your card in with you as we previously mentioned and still students don't put down everything and that's where they will lose marks. So please come up with some sort of mnemonic to remember the whole list of the systemic on the actual day o...",
+          "source_video": "How to prepare for the WSET Level 3 Tasting Exam",
+          "source_filename": "How to prepare for the WSET Level 3 Tasting Exam.srt"
+        },
+        {
+          "context_type": "retrieval_sandbox_chunk",
+          "chunk_id": "Understanding_Red_Wine_Making_for_WSET_Level_3-0001",
+          "forced_retrieval": false,
+          "agent_corpus": "tutor",
+          "safe_for_examiner": false,
+          "score": 0.4457,
+          "reasoning_type": "theory_foundation",
+          "pedagogical_role": "foundational",
+          "why_retrieved": [
+            "matched canonical/query terms: have, more, same, tannin, taste, they, wine",
+            "pedagogical role fits foundational_theory",
+            "matched SAT/tasting vocabulary",
+            "matches knowledge-map concept or relationship terms",
+            "matches knowledge-map concept vocabulary"
+          ],
+          "text_excerpt": "is all about that that type of processing we will go through a whole bunch and a whole bunch and Crush fruit combined Carbonic semic Carbonic in the next series so a little bit around destemming and crushing to begin with now these are of course optional processes now machine harvested grapes will arrive without stems and even if the grapes have been hand...",
+          "source_video": "Understanding Red Wine Making for WSET Level 3",
+          "source_filename": "Understanding Red Wine Making for WSET Level 3 [English (auto-generated)] [DownloadYoutubeSubtitles.com].srt"
+        },
+        {
+          "context_type": "retrieval_sandbox_chunk",
+          "chunk_id": "Understanding_Red_Wine_Making_for_WSET_Level_3-0003",
+          "forced_retrieval": false,
+          "agent_corpus": "tutor",
+          "safe_for_examiner": false,
+          "score": 0.439,
+          "reasoning_type": "cause_effect",
+          "pedagogical_role": "theory_explanation",
+          "why_retrieved": [
+            "matched canonical/query terms: better, different, more, tannin, wine",
+            "pedagogical role fits foundational_theory",
+            "matched SAT/tasting vocabulary",
+            "matches knowledge-map concept or relationship terms",
+            "matches knowledge-map concept vocabulary"
+          ],
+          "text_excerpt": "more so for very thin skin varieties like P Noir and then flavor brightness of flavor typically so it's a very useful process certainly for thin skin varieties but it is done across the world for a range of different great varieties what about the temperatures Now red wine fermentation temperatures usually range from about 20\u00b0 cus and up to about 32\u00b0 cels...",
+          "source_video": "Understanding Red Wine Making for WSET Level 3",
+          "source_filename": "Understanding Red Wine Making for WSET Level 3 [English (auto-generated)] [DownloadYoutubeSubtitles.com].srt"
+        },
+        {
+          "context_type": "retrieval_sandbox_chunk",
+          "chunk_id": "WSET_Level_3_Wines_-_Understanding_the_Common_Elements_of_Winemaking_Part-0003",
+          "forced_retrieval": false,
+          "agent_corpus": "tutor",
+          "safe_for_examiner": false,
+          "score": 0.439,
+          "reasoning_type": "cause_effect",
+          "pedagogical_role": "foundational",
+          "why_retrieved": [
+            "matched canonical/query terms: bitterness, have, tannin, they, wine",
+            "pedagogical role fits foundational_theory",
+            "matched SAT/tasting vocabulary",
+            "matches knowledge-map concept or relationship terms",
+            "matches knowledge-map concept vocabulary"
+          ],
+          "text_excerpt": "seeds in the center or larger seeds in the center than others there is a variety that immediately springs to mind which is from pia monte in north west italy which is called gringolino you don't need to know this for the level three syllabus but it's interesting because if you take grinnollino and then take it from the dialect it came from which is gerino...",
+          "source_video": "WSET Level 3 Wines - Understanding the Common Elements of Winemaking Part",
+          "source_filename": "[English (auto-generated)] WSET Level 3 Wines - Understanding the Common Elements of Winemaking Part.srt"
+        }
+      ],
+      "tutor_directive": {
+        "pedagogical_act": "misconception_intervention",
+        "forced_retrieval_nodes": [
+          "MC_TANNIN_01"
+        ],
+        "intervention_type": "direct_correction",
+        "corrected_understanding": "Tannin produces astringency (a drying, gripping tactile sensation), not bitterness (a taste). Both can be present in the same wine but they are assessed separately and have different causes.",
+        "safe_for_examiner": false,
+        "language": "es",
+        "response_language_instruction": "Respond in Spanish. Preserve official WSET terms where useful, and do not translate key terms if translation would reduce precision. Distinguish official WSET content from pedagogical content.",
+        "source_handling": [
+          "Use this as a context package only; do not treat it as a final answer.",
+          "Distinguish official WSET content from pedagogical enrichment when explaining.",
+          "Do not translate source chunks; preserve official WSET terms where useful.",
+          "Do not translate key terms if translation would reduce precision."
+        ]
+      },
+      "success_criteria": [
+        "Identify the misconception before answering the learner's underlying question.",
+        "State the corrected understanding clearly.",
+        "Use supporting Tutor-context chunks only as pedagogical support.",
+        "Keep Examiner scoring disabled and safe_for_examiner false."
+      ],
+      "governance": {
+        "agent_corpus": "tutor",
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false
+      }
+    },
+    "context_package_paths": {
+      "latest": "C:/Users/esand/OneDrive/Documents/WSET-AI-System/knowledge/nazareth/context_packages/latest_context_package.json",
+      "timestamped": "C:/Users/esand/OneDrive/Documents/WSET-AI-System/knowledge/nazareth/context_packages/20260515_231343_context_package.json"
+    }
+  },
+  "latest_context_package_path": "C:/Users/esand/OneDrive/Documents/WSET-AI-System/knowledge/nazareth/context_packages/latest_context_package.json",
+  "governance": {
+    "safe_for_examiner": false,
+    "examiner_scoring_active": false,
+    "embeddings_active": false,
+    "vector_db_active": false,
+    "cloud_services_active": false
+  }
+}

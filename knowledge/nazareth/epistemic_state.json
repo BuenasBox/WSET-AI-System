@@ -1,0 +1,15 @@
+{
+  "learner_id": "nazareth",
+  "schema_version": "minimal_brain_v1",
+  "current_level": "WSET_L3",
+  "known_weak_areas": [],
+  "recent_misconceptions": [],
+  "session_count": 0,
+  "governance": {
+    "safe_for_examiner": false,
+    "examiner_scoring_active": false,
+    "embeddings_active": false,
+    "vector_db_active": false,
+    "cloud_services_active": false
+  }
+}

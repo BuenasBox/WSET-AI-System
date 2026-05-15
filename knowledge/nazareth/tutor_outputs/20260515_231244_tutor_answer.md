@@ -1,0 +1,24 @@
+# Borrador del Tutor: ¿Más tanino significa mejor vino?
+
+## 1. Corrección directa
+No exactamente. Más tanino no significa automáticamente mejor vino.
+
+## 2. Por qué esa idea confunde
+La idea confunde porque el tanino se siente con fuerza en el paladar; parece lógico pensar que más estructura equivale a más calidad. En WSET, estructura y calidad se justifican por separado.
+
+## 3. Marco WSET correcto
+Desde el marco WSET, el tanino es un componente estructural y una sensación táctil de sequedad/astringencia. Puede apoyar la calidad si está maduro e integrado con fruit concentration, balance, complexity y length; si domina o seca demasiado, puede perjudicar la impresión de calidad.
+
+## 4. Cadena causa → efecto
+Cadena: compuestos fenólicos de pieles, pepitas o extracción aportan tanino → el tanino se percibe como sequedad/astringencia → puede apoyar la estructura si está maduro e integrado, pero no garantiza calidad por sí solo.
+
+## 5. Cómo escribirlo para puntos
+Para efectos del examen: no escribas solo 'tiene mucho tanino, por eso es mejor'. Escribe: 'tanino alto pero integrado, junto con concentración de fruta, balance, complexity y length, puede apoyar una quality assessment más alta'.
+
+## 6. Mini práctica
+Reescribe esta frase: 'más tanino significa mejor vino', usando balance, integración y length.
+
+Nota de fuentes: el misconception_node es un objeto de corrección cognitiva; el material de Wine With Jimmy o transcripciones manuales es apoyo pedagógico, no autoridad oficial WSET.
+Ideas usadas del contexto: MC_TANNIN_01: el tanino es astringencia táctil, no simplemente amargor | apoyo pedagógico: en SAT conviene escribir todos los elementos relevantes y vincularlos con la conclusión.
+
+Nota: esta es una respuesta del Tutor, no una calificación oficial ni una evaluación del Examiner.

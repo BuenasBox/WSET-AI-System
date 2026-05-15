@@ -1,0 +1,178 @@
+{
+  "student_query": "How does cool climate affect acidity?",
+  "language": "es",
+  "orchestrator_decision": {
+    "route": "normal_tutor",
+    "reason": "no_misconception_detected",
+    "matched_misconception_id": null
+  },
+  "pedagogical_act": "answer_normally",
+  "forced_retrieval_nodes": [],
+  "matched_misconception": {},
+  "learner_state_context": {
+    "learner_id": "nazareth",
+    "current_level": "WSET_L3",
+    "known_weak_areas": [],
+    "recent_misconceptions": [],
+    "session_count": 0,
+    "governance": {
+      "safe_for_examiner": false,
+      "examiner_scoring_active": false,
+      "embeddings_active": false,
+      "vector_db_active": false,
+      "cloud_services_active": false
+    }
+  },
+  "retrieval_plan": {
+    "mode": "normal_retrieval",
+    "query": "How does cool climate affect acidity?",
+    "top_k": 5,
+    "forced_retrieval_nodes": [],
+    "retrieval_engine": "tools.retrieval.tutor_retrieval_sandbox",
+    "uses_embeddings": false,
+    "uses_vector_db": false,
+    "uses_llm": false,
+    "uses_api": false
+  },
+  "retrieved_context": [
+    {
+      "context_type": "retrieval_sandbox_chunk",
+      "chunk_id": "-P74Qh-YnNA-0002",
+      "forced_retrieval": false,
+      "agent_corpus": "tutor",
+      "safe_for_examiner": false,
+      "score": 0.7998,
+      "reasoning_type": "cause_effect",
+      "pedagogical_role": "theory_explanation",
+      "why_retrieved": [
+        "matched canonical/query terms: climate, cool, cool climate",
+        "aligns with cause_effect reasoning intent",
+        "pedagogical role fits cause_effect_explanation",
+        "matched SAT/tasting vocabulary",
+        "supports cause/effect explanation",
+        "matches knowledge-map concept or relationship terms",
+        "matches knowledge-map causal-chain mechanism",
+        "matches knowledge-map concept vocabulary",
+        "contains the source concept phrase from the query",
+        "quality flags reduced the score and require review"
+      ],
+      "text_excerpt": "So that map is now uh sort of transposed on a couple of pictures there on the left hand side the nonte vineyard. So that would be the red area on the far western side and then um the sair uh in the right hand picture which is the blue part of your previous map also transposed on that. Overall the climate is cold okay across all the areas but the central v...",
+      "source_video": "Loire Valley Wine Basics: Muscadet & Melon Blanc Explained - WSET & Wine Lover Guide",
+      "source_filename": ""
+    },
+    {
+      "context_type": "retrieval_sandbox_chunk",
+      "chunk_id": "WSET_Level_3_Wines_-_Understanding_the_Common_Elements_of_Winemaking_Part-0002",
+      "forced_retrieval": false,
+      "agent_corpus": "tutor",
+      "safe_for_examiner": false,
+      "score": 0.7336,
+      "reasoning_type": "cause_effect",
+      "pedagogical_role": "theory_explanation",
+      "why_retrieved": [
+        "matched canonical/query terms: acid, malic acid, tartaric acid",
+        "aligns with cause_effect reasoning intent",
+        "pedagogical role fits cause_effect_explanation",
+        "matched SAT/tasting vocabulary",
+        "supports cause/effect explanation",
+        "matches knowledge-map concept or relationship terms",
+        "matches knowledge-map causal-chain mechanism",
+        "matches knowledge-map concept vocabulary"
+      ],
+      "text_excerpt": "is sugar and sugar is very important of course as yeast will use it to ferment it into alcohol and this is the second largest component in the grape and then the third part here is acid and the acids we find numerous acids but there are two major acidities which wset on this syllabus wish you to understand the greatest is tartaric so tartaric acid has the...",
+      "source_video": "WSET Level 3 Wines - Understanding the Common Elements of Winemaking Part",
+      "source_filename": "[English (auto-generated)] WSET Level 3 Wines - Understanding the Common Elements of Winemaking Part.srt"
+    },
+    {
+      "context_type": "retrieval_sandbox_chunk",
+      "chunk_id": "How_to_Judge_Acidity_with_the_WSET_Level_3_Standard_Approach_to_Tasting-0005",
+      "forced_retrieval": false,
+      "agent_corpus": "tutor",
+      "safe_for_examiner": false,
+      "score": 0.6961,
+      "reasoning_type": "sat_logic",
+      "pedagogical_role": "foundational",
+      "why_retrieved": [
+        "matched canonical/query terms: acidity, freshness, high acidity",
+        "aligns with cause_effect reasoning intent",
+        "pedagogical role fits cause_effect_explanation",
+        "matched SAT/tasting vocabulary",
+        "supports cause/effect explanation",
+        "matches knowledge-map concept or relationship terms",
+        "matches knowledge-map causal-chain mechanism",
+        "matches knowledge-map concept vocabulary"
+      ],
+      "text_excerpt": "sweet then you think about the acidity try and push out the sugar level in your mind and all other factors and you taste and you find that salivation that mouthwatering note and you go yes it's high acidity and that is really important for sweet wines to have that balancing amount of acidity because sweet wines can be very flabby and oily if they don't ha...",
+      "source_video": "How to Judge Acidity with the WSET Level 3 Standard Approach to Tasting",
+      "source_filename": "How to Judge Acidity with the WSET Level 3 Standard Approach to Tasting [English (auto-generated)] [DownloadYoutubeSubtitles.com].srt"
+    },
+    {
+      "context_type": "retrieval_sandbox_chunk",
+      "chunk_id": "How_to_Judge_Acidity_with_the_WSET_Level_3_Standard_Approach_to_Tasting-0002",
+      "forced_retrieval": false,
+      "agent_corpus": "tutor",
+      "safe_for_examiner": false,
+      "score": 0.6824,
+      "reasoning_type": "cause_effect",
+      "pedagogical_role": "tasting_practice",
+      "why_retrieved": [
+        "matched canonical/query terms: acid, acidity, balance, malic acid",
+        "aligns with cause_effect reasoning intent",
+        "matched SAT/tasting vocabulary",
+        "supports cause/effect explanation",
+        "matches knowledge-map concept or relationship terms",
+        "matches knowledge-map causal-chain mechanism",
+        "matches knowledge-map concept vocabulary"
+      ],
+      "text_excerpt": "taric acid is the major one uh it is not one that we associate very significantly to a specific Aroma or flavor um certainly when we come to taste it whereas malic acid very much about green apple it's what we find in green apples and lactic acid in Dairy produce such as milk and cream for example so what about where we find this so for most people and th...",
+      "source_video": "How to Judge Acidity with the WSET Level 3 Standard Approach to Tasting",
+      "source_filename": "How to Judge Acidity with the WSET Level 3 Standard Approach to Tasting [English (auto-generated)] [DownloadYoutubeSubtitles.com].srt"
+    },
+    {
+      "context_type": "retrieval_sandbox_chunk",
+      "chunk_id": "How_to_Judge_Acidity_with_the_WSET_Level_3_Standard_Approach_to_Tasting-0004",
+      "forced_retrieval": false,
+      "agent_corpus": "tutor",
+      "safe_for_examiner": false,
+      "score": 0.6786,
+      "reasoning_type": "cause_effect",
+      "pedagogical_role": "tasting_practice",
+      "why_retrieved": [
+        "matched canonical/query terms: acid, acidity, balance, high acidity",
+        "aligns with cause_effect reasoning intent",
+        "matched SAT/tasting vocabulary",
+        "supports cause/effect explanation",
+        "matches knowledge-map concept or relationship terms",
+        "matches knowledge-map causal-chain mechanism",
+        "matches knowledge-map concept vocabulary"
+      ],
+      "text_excerpt": "distinctive so you will very commonly find say in a white wine this is all about a white wine that if you find high acidity you will very frequently find these characteristics now I'm not saying this is absolutely certain because there are chardonay being produced in warmer climates where acidity is added and you'll find this Peach this melon this pineapp...",
+      "source_video": "How to Judge Acidity with the WSET Level 3 Standard Approach to Tasting",
+      "source_filename": "How to Judge Acidity with the WSET Level 3 Standard Approach to Tasting [English (auto-generated)] [DownloadYoutubeSubtitles.com].srt"
+    }
+  ],
+  "tutor_directive": {
+    "pedagogical_act": "answer_normally",
+    "forced_retrieval_nodes": [],
+    "safe_for_examiner": false,
+    "language": "es",
+    "response_language_instruction": "Respond in Spanish. Preserve official WSET terms where useful, and do not translate key terms if translation would reduce precision. Distinguish official WSET content from pedagogical content.",
+    "source_handling": [
+      "Use this as a context package only; do not treat it as a final answer.",
+      "Distinguish official WSET content from pedagogical enrichment when explaining.",
+      "Do not translate source chunks; preserve official WSET terms where useful.",
+      "Do not translate key terms if translation would reduce precision."
+    ]
+  },
+  "success_criteria": [
+    "Answer the learner's question using the retrieved Tutor context.",
+    "Preserve official WSET terminology where precision matters.",
+    "Distinguish official WSET content from pedagogical enrichment.",
+    "Keep Examiner scoring disabled and safe_for_examiner false."
+  ],
+  "governance": {
+    "agent_corpus": "tutor",
+    "safe_for_examiner": false,
+    "examiner_scoring_allowed": false
+  }
+}
