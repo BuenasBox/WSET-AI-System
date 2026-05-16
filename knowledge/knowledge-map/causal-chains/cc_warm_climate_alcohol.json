@@ -1,0 +1,45 @@
+{
+  "node_type": "causal_chain",
+  "node_id": "CC_WARM_CLIMATE_ALCOHOL",
+  "topic": "warm climate and alcohol level",
+  "trigger_keywords": ["warm climate", "hot climate", "high alcohol", "alcohol", "full body", "sugar", "ripe", "ripeness"],
+  "steps": [
+    {
+      "step": 1,
+      "label": "cause",
+      "text": "Warm growing environment (high temperatures, low-latitude, or continental interior location)"
+    },
+    {
+      "step": 2,
+      "label": "mechanism",
+      "text": "Rapid ripening accelerates sugar accumulation in the grape berry; grapes reach high sugar levels before other components (acidity, tannin) have time to fully develop"
+    },
+    {
+      "step": 3,
+      "label": "effect",
+      "text": "High sugar content at harvest ferments to high alcohol levels; wines tend to show lower acidity, fuller body, and richer fruit flavour"
+    },
+    {
+      "step": 4,
+      "label": "exam_formulation",
+      "text": "Warm climates accelerate ripening, increasing sugar and thus potential alcohol, producing fuller-bodied wines with lower acidity."
+    }
+  ],
+  "sat_relevance": "Use when assessing high alcohol as a structural feature in warm-climate wines. High alcohol contributes to body and texture but can appear unbalanced if fruit concentration or acidity is insufficient.",
+  "linked_misconceptions": ["MC_ALCOHOL_QUALITY_01"],
+  "linked_topics": ["T_RA1_CLIMATE_VITICULTURE"],
+  "agent_corpus": "tutor",
+  "safe_for_examiner": false,
+  "examiner_scoring_allowed": false,
+  "requires_human_review": true,
+  "governance": {
+    "safe_for_examiner": false,
+    "examiner_scoring_allowed": false,
+    "agent_corpus": "tutor"
+  },
+  "_meta": {
+    "schema_version": "causal_chain_v1",
+    "created_date": "2026-05-15",
+    "ingestion_status": "draft"
+  }
+}

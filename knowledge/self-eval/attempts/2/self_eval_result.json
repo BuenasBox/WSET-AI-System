@@ -1,0 +1,75 @@
+{
+  "question_id": "2",
+  "question_type": "theory",
+  "question_text": "\u00bfQu\u00e9 m\u00e9todo se usa para detener la fermentaci\u00f3n en el vino de Oporto?",
+  "expected_topics": [
+    "port",
+    "fortification",
+    "fermentation"
+  ],
+  "expected_causal_links": [
+    "fortification -> yeast stops -> residual sugar"
+  ],
+  "expected_keywords": [
+    "aguardiente",
+    "fortificaci\u00f3n",
+    "fermentaci\u00f3n",
+    "az\u00facar residual"
+  ],
+  "expected_reasoning_type": "theory_foundation",
+  "difficulty": "foundational",
+  "source_type": "raw_question_bank_adapter",
+  "safe_for_examiner": false,
+  "tutor_attempt_path": "C:/Users/esand/OneDrive/Documents/WSET-AI-System/knowledge/self-eval/attempts/2/tutor_attempt.md",
+  "tutor_context_package_path": "C:/Users/esand/OneDrive/Documents/WSET-AI-System/knowledge/self-eval/attempts/2/tutor_context_package.json",
+  "comparison": {
+    "question_id": "2",
+    "question_type": "theory",
+    "strengths": [
+      "expected_keywords_present",
+      "expected_topics_present",
+      "exam_language_present"
+    ],
+    "present_keywords": [
+      "fortificaci\u00f3n",
+      "fermentaci\u00f3n"
+    ],
+    "missing_keywords": [
+      "aguardiente",
+      "az\u00facar residual"
+    ],
+    "present_causal_links": [],
+    "missing_causal_links": [
+      "fortification -> yeast stops -> residual sugar"
+    ],
+    "present_topics": [
+      "port"
+    ],
+    "missing_official_concepts": [
+      "fortification",
+      "fermentation"
+    ],
+    "expected_reasoning_type_present": true,
+    "failure_labels": [
+      "missing_causal_link",
+      "unsupported_conclusion"
+    ],
+    "strictness": "brutal",
+    "difficulty": "foundational",
+    "vague_claims": [],
+    "unsupported_conclusions": [
+      "conclusion is not fully tied to evidence"
+    ],
+    "likely_misconception_gaps": [],
+    "retrieval_weaknesses": [
+      "missing_keyword_support",
+      "missing_causal_link_support"
+    ]
+  },
+  "governance": {
+    "safe_for_examiner": false,
+    "examiner_scoring_allowed": false,
+    "official_marks_assigned": false,
+    "strictness": "brutal"
+  }
+}

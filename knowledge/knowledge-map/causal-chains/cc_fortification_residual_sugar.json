@@ -1,0 +1,45 @@
+{
+  "node_type": "causal_chain",
+  "node_id": "CC_FORTIFICATION_RESIDUAL_SUGAR",
+  "topic": "fortification and residual sugar retention",
+  "trigger_keywords": ["fortification", "residual sugar", "port", "sherry", "grape spirit", "yeast stops", "alcohol level", "fermentation stops"],
+  "steps": [
+    {
+      "step": 1,
+      "label": "cause",
+      "text": "Grape spirit (neutral spirit high in alcohol) is added to a partially fermented grape must or wine"
+    },
+    {
+      "step": 2,
+      "label": "mechanism",
+      "text": "The addition raises the alcohol content to a level (typically 15–18% ABV) at which yeast can no longer survive; fermentation stops and unfermented sugar remains in solution"
+    },
+    {
+      "step": 3,
+      "label": "effect",
+      "text": "The finished wine retains residual sugar from the unfermented must, producing a sweet or medium-sweet style"
+    },
+    {
+      "step": 4,
+      "label": "exam_formulation",
+      "text": "Fortification raises alcohol to a level that kills yeast, stopping fermentation and retaining residual sugar in the finished wine."
+    }
+  ],
+  "sat_relevance": "Use when assessing sweetness in fortified wines. Residual sugar in Port or sweet Sherry results directly from the timing of fortification — earlier addition means sweeter result.",
+  "linked_misconceptions": ["MC_RESIDUAL_SUGAR_SWEET_01"],
+  "linked_topics": ["T_RA3_PORT", "T_RA3_SHERRY"],
+  "agent_corpus": "tutor",
+  "safe_for_examiner": false,
+  "examiner_scoring_allowed": false,
+  "requires_human_review": true,
+  "governance": {
+    "safe_for_examiner": false,
+    "examiner_scoring_allowed": false,
+    "agent_corpus": "tutor"
+  },
+  "_meta": {
+    "schema_version": "causal_chain_v1",
+    "created_date": "2026-05-15",
+    "ingestion_status": "draft"
+  }
+}

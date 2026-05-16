@@ -1,0 +1,47 @@
+{
+  "question_id": "20",
+  "question_type": "theory",
+  "question_text": "\u00bfQu\u00e9 variable de vinificaci\u00f3n afecta m\u00e1s directamente el cuerpo del vino?",
+  "expected_topics": [],
+  "expected_causal_links": [],
+  "expected_keywords": [],
+  "expected_reasoning_type": "theory_foundation",
+  "difficulty": "intermediate",
+  "source_type": "raw_question_bank_adapter",
+  "safe_for_examiner": false,
+  "tutor_attempt_path": "C:/Users/esand/OneDrive/Documents/WSET-AI-System/knowledge/self-eval/attempts/20/tutor_attempt.md",
+  "tutor_context_package_path": "C:/Users/esand/OneDrive/Documents/WSET-AI-System/knowledge/self-eval/attempts/20/tutor_context_package.json",
+  "comparison": {
+    "question_id": "20",
+    "question_type": "theory",
+    "strengths": [
+      "exam_language_present"
+    ],
+    "present_keywords": [],
+    "missing_keywords": [],
+    "present_causal_links": [],
+    "missing_causal_links": [
+      "cause -> mechanism -> effect"
+    ],
+    "present_topics": [],
+    "missing_official_concepts": [],
+    "expected_reasoning_type_present": true,
+    "failure_labels": [
+      "missing_causal_link"
+    ],
+    "strictness": "brutal",
+    "difficulty": "intermediate",
+    "vague_claims": [],
+    "unsupported_conclusions": [],
+    "likely_misconception_gaps": [],
+    "retrieval_weaknesses": [
+      "missing_causal_link_support"
+    ]
+  },
+  "governance": {
+    "safe_for_examiner": false,
+    "examiner_scoring_allowed": false,
+    "official_marks_assigned": false,
+    "strictness": "brutal"
+  }
+}

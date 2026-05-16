@@ -1,0 +1,31 @@
+{
+  "misconception_id": "MC_COMPLEXITY_LENGTH_01",
+  "misconception": "Complexity and length are the same thing on the SAT.",
+  "why_incorrect": "Complexity and length are two distinct quality indicators assessed separately on the WSET SAT. Complexity refers to the range and variety of flavour and aroma types simultaneously present — a wine can show citrus, stone fruit, floral, mineral, and oak-derived notes simultaneously, making it complex. Length (or finish) refers to the persistence of flavour sensations after the wine has been swallowed or spat — how long the flavour lingers. A wine can have a long finish with limited complexity (one note sustained), or high complexity with a short finish. Both are assessed in the BICL framework (Balance, Intensity, Complexity, Length) and contribute separately to quality assessment.",
+  "corrected_understanding": "Complexity = range of flavour and aroma types present simultaneously. Length = duration of flavour after swallowing. These are separate criteria in SAT quality assessment and must be addressed independently.",
+  "related_topics": ["T_RA1_SAT"],
+  "related_concepts": ["C_COMPLEXITY", "C_LENGTH"],
+  "severity": "high",
+  "frequency": "very_common",
+  "distinction_relevance": true,
+  "tutor_intervention": "direct_correction",
+  "detection_signals": [
+    "complexity and length are the same thing",
+    "doesn't length mean how complex the wine is",
+    "if a wine is complex it must also have a long finish",
+    "I wrote complexity because the finish was long",
+    "length means how many flavours you get which is the same as complexity"
+  ],
+  "detection_keywords": [
+    {"tokens": ["complexity", "length"], "require_all": true, "bias": 0.24},
+    {"tokens": ["complex", "length"], "require_all": true, "bias": 0.20},
+    {"tokens": ["complexity", "finish"], "require_all": true, "bias": 0.18},
+    {"tokens": ["complex", "finish"], "require_all": true, "bias": 0.16},
+    {"tokens": ["complexity", "length", "same"], "require_all": true, "bias": 0.28}
+  ],
+  "_meta": {
+    "schema_version": "1.0",
+    "created_date": "2026-05-15",
+    "ingestion_status": "draft"
+  }
+}

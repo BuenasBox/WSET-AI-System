@@ -1,0 +1,74 @@
+{
+  "question_id": "3",
+  "question_type": "theory",
+  "question_text": "\u00bfCu\u00e1l es una caracter\u00edstica clave de los vinos de Porto Vintage?",
+  "expected_topics": [
+    "vintage port",
+    "bottle ageing"
+  ],
+  "expected_causal_links": [
+    "structure -> bottle ageing -> sediment"
+  ],
+  "expected_keywords": [
+    "Vintage Port",
+    "botella",
+    "tanino",
+    "sedimento"
+  ],
+  "expected_reasoning_type": "theory_foundation",
+  "difficulty": "intermediate",
+  "source_type": "raw_question_bank_adapter",
+  "safe_for_examiner": false,
+  "tutor_attempt_path": "C:/Users/esand/OneDrive/Documents/WSET-AI-System/knowledge/self-eval/attempts/3/tutor_attempt.md",
+  "tutor_context_package_path": "C:/Users/esand/OneDrive/Documents/WSET-AI-System/knowledge/self-eval/attempts/3/tutor_context_package.json",
+  "comparison": {
+    "question_id": "3",
+    "question_type": "theory",
+    "strengths": [
+      "expected_topics_present",
+      "exam_language_present"
+    ],
+    "present_keywords": [],
+    "missing_keywords": [
+      "Vintage Port",
+      "botella",
+      "tanino",
+      "sedimento"
+    ],
+    "present_causal_links": [],
+    "missing_causal_links": [
+      "structure -> bottle ageing -> sediment"
+    ],
+    "present_topics": [
+      "vintage port"
+    ],
+    "missing_official_concepts": [
+      "bottle ageing"
+    ],
+    "expected_reasoning_type_present": true,
+    "failure_labels": [
+      "missing_causal_link",
+      "unsupported_conclusion",
+      "shallow_retrieval",
+      "shallow_reasoning"
+    ],
+    "strictness": "brutal",
+    "difficulty": "intermediate",
+    "vague_claims": [],
+    "unsupported_conclusions": [
+      "conclusion is not fully tied to evidence"
+    ],
+    "likely_misconception_gaps": [],
+    "retrieval_weaknesses": [
+      "missing_keyword_support",
+      "missing_causal_link_support",
+      "shallow_retrieval"
+    ]
+  },
+  "governance": {
+    "safe_for_examiner": false,
+    "examiner_scoring_allowed": false,
+    "official_marks_assigned": false,
+    "strictness": "brutal"
+  }
+}

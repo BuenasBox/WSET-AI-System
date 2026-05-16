@@ -1,0 +1,45 @@
+{
+  "node_type": "causal_chain",
+  "node_id": "CC_TANNIN_ASTRINGENCY",
+  "topic": "tannin and astringency sensation",
+  "trigger_keywords": ["tannin", "tannins", "astringency", "drying", "gripping", "salivary protein", "phenolic", "tactile"],
+  "steps": [
+    {
+      "step": 1,
+      "label": "cause",
+      "text": "Tannin (polyphenolic compounds) is extracted from grape skins, seeds, or stems during maceration, or from oak during barrel ageing"
+    },
+    {
+      "step": 2,
+      "label": "mechanism",
+      "text": "Tannin molecules bind to salivary proteins in the mouth and cause them to precipitate; this removes the lubricating proteins from saliva"
+    },
+    {
+      "step": 3,
+      "label": "effect",
+      "text": "The palate experiences a drying, gripping, puckering tactile sensation called astringency — distinct from bitterness (a taste), which is assessed separately"
+    },
+    {
+      "step": 4,
+      "label": "exam_formulation",
+      "text": "Tannins bind to salivary proteins, causing astringency — a drying, gripping sensation assessed separately from bitterness on the WSET SAT."
+    }
+  ],
+  "sat_relevance": "On the SAT, tannin is assessed as a structural element (low/medium/high) and qualified (soft, grippy, chalky, silky). Astringency is not quality — ripe, integrated tannin supports quality; harsh tannin detracts from it.",
+  "linked_misconceptions": ["MC_TANNIN_01", "MC_TANNIN_QUALITY_02"],
+  "linked_topics": ["T_RA1_WINE_COMPONENTS", "T_RA1_SAT"],
+  "agent_corpus": "tutor",
+  "safe_for_examiner": false,
+  "examiner_scoring_allowed": false,
+  "requires_human_review": true,
+  "governance": {
+    "safe_for_examiner": false,
+    "examiner_scoring_allowed": false,
+    "agent_corpus": "tutor"
+  },
+  "_meta": {
+    "schema_version": "causal_chain_v1",
+    "created_date": "2026-05-15",
+    "ingestion_status": "draft"
+  }
+}

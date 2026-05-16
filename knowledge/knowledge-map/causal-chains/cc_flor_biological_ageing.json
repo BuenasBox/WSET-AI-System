@@ -1,0 +1,45 @@
+{
+  "node_type": "causal_chain",
+  "node_id": "CC_FLOR_BIOLOGICAL_AGEING",
+  "topic": "flor yeast and biological ageing in sherry",
+  "trigger_keywords": ["flor", "biological ageing", "fino", "manzanilla", "sherry", "oxygen protection", "acetaldehyde", "yeast autolysis"],
+  "steps": [
+    {
+      "step": 1,
+      "label": "cause",
+      "text": "Flor yeast (a film of Saccharomyces cerevisiae strains) forms on the surface of the wine in partially filled barrels"
+    },
+    {
+      "step": 2,
+      "label": "mechanism",
+      "text": "The flor layer excludes oxygen from the wine surface; the yeast metabolises ethanol and glycerol, producing acetaldehyde, and undergoes autolysis adding amino acids and breadlike compounds"
+    },
+    {
+      "step": 3,
+      "label": "effect",
+      "text": "The wine develops biological ageing character: almond, bread dough, and yeasty notes, low colour, low tannin, protected from oxidation despite barrel ageing"
+    },
+    {
+      "step": 4,
+      "label": "exam_formulation",
+      "text": "Flor yeast protects wine from oxygen, producing biological ageing with flavours of almond and bread dough while preventing oxidation."
+    }
+  ],
+  "sat_relevance": "Use when tasting or discussing Fino or Manzanilla sherry style. Biological ageing character (almond, bread, low colour) is a product of flor protection, distinct from oxidative ageing aromas.",
+  "linked_misconceptions": [],
+  "linked_topics": ["T_RA3_SHERRY", "T_RA2_SPAIN"],
+  "agent_corpus": "tutor",
+  "safe_for_examiner": false,
+  "examiner_scoring_allowed": false,
+  "requires_human_review": true,
+  "governance": {
+    "safe_for_examiner": false,
+    "examiner_scoring_allowed": false,
+    "agent_corpus": "tutor"
+  },
+  "_meta": {
+    "schema_version": "causal_chain_v1",
+    "created_date": "2026-05-15",
+    "ingestion_status": "draft"
+  }
+}

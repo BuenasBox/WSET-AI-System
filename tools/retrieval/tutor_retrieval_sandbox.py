@@ -19,7 +19,7 @@ from pathlib import Path
 from typing import Any
 
 
-ALLOWED_SOURCE_TYPES = {"manual_curated_srt", "youtube_transcript"}
+ALLOWED_SOURCE_TYPES = {"manual_curated_srt", "youtube_transcript", "official_wset_extracted"}
 ALLOWED_AGENT_CORPUS = "tutor"
 GOVERNANCE_FILTER_APPLIED = True
 INTENTS = (
@@ -160,7 +160,12 @@ def run_retrieval_sandbox(
     ]
     scored = [row for row in scored if row["score"] > 0]
     scored.sort(key=_ranking_key)
-    retrieved = scored[: max(1, top_k)]
+    retrieved = _select_diverse_results(scored, top_k)
+    # Extract full causal chain node objects for matched chains
+    matched_causal_chain_nodes = select_matched_causal_chain_nodes(
+        query_analysis.get("matched_causal_chains", []),
+        context.knowledge_nodes,
+    )
     run = {
         "query": query,
         "generated_at": datetime.now(UTC).isoformat(timespec="seconds"),
@@ -173,20 +178,66 @@ def run_retrieval_sandbox(
         "knowledge_nodes_loaded": len(context.knowledge_nodes),
         "top_k": top_k,
         "retrieved_chunks": retrieved,
+        "matched_causal_chain_nodes": matched_causal_chain_nodes,
         "summary_statistics": _summary_statistics(retrieved),
     }
     write_retrieval_reports(root, run, output_prefix=output_prefix)
     return run
 
 
+def select_matched_causal_chain_nodes(
+    matched_chains: list[dict[str, Any]],
+    knowledge_nodes: list[dict[str, Any]],
+) -> list[dict[str, Any]]:
+    """Return full causal chain node dicts for each matched chain ID.
+
+    The query analysis contains matched_causal_chains as lightweight {id, name, terms}
+    dicts. This function looks up the full node data by ID so the Orchestrator can
+    pass structured causal chain objects (with steps) to the Tutor rendering layer.
+
+    Governance: only returns nodes with safe_for_examiner != True and
+    agent_corpus == 'tutor'. Path field is stripped for clean output.
+    """
+    matched_ids = {str(item.get("id", "")) for item in matched_chains if item.get("id")}
+    if not matched_ids:
+        return []
+    result = []
+    for node in knowledge_nodes:
+        if _knowledge_node_type(node) != "causal_chains":
+            continue
+        node_id = _knowledge_node_id(node)
+        if node_id not in matched_ids:
+            continue
+        # Enforce governance — never surface nodes that claim examiner authority
+        if node.get("safe_for_examiner") is True:
+            continue
+        if node.get("examiner_scoring_allowed") is True:
+            continue
+        # Return a clean copy without the internal path field
+        clean = {k: v for k, v in node.items() if k != "path"}
+        clean.setdefault("node_id", node_id)
+        clean.setdefault("id", node_id)
+        clean.setdefault("node_type", "causal_chain")
+        clean.setdefault("type", "causal_chain")
+        clean["safe_for_examiner"] = False
+        clean["examiner_scoring_allowed"] = False
+        clean["agent_corpus"] = "tutor"
+        result.append(clean)
+    return result
+
+
 def load_retrieval_context(root: Path) -> RetrievalContext:
     chunk_dir = root / "knowledge" / "wine-with-jimmy" / "chunk-ready"
+    official_chunk_path = root / "knowledge" / "official-wset" / "study-guide" / "official-chunks" / "official_wset_chunks.jsonl"
     golden_path = (
         root / "knowledge" / "wine-with-jimmy" / "manual-import" / "reports" / "golden_tutor_chunk_candidates.jsonl"
     )
     dictionary_path = root / "knowledge" / "enrichment" / "wset_master_dictionary" / "consolidated" / "canonical_terms_master.jsonl"
     knowledge_map_dir = root / "knowledge" / "knowledge-map"
     chunks, excluded = load_chunks(chunk_dir)
+    official_chunks, official_excluded = load_official_chunks(official_chunk_path)
+    chunks.extend(official_chunks)
+    excluded += official_excluded
     return RetrievalContext(
         chunks=chunks,
         golden_by_chunk_id=load_golden_chunks(golden_path),
@@ -206,6 +257,17 @@ def load_chunks(chunk_dir: Path) -> tuple[list[dict[str, Any]], int]:
                 chunks.append(chunk)
             else:
                 excluded += 1
+    return chunks, excluded
+
+
+def load_official_chunks(path: Path) -> tuple[list[dict[str, Any]], int]:
+    chunks: list[dict[str, Any]] = []
+    excluded = 0
+    for chunk in _read_jsonl(path):
+        if _passes_governance_filter(chunk):
+            chunks.append(chunk)
+        else:
+            excluded += 1
     return chunks, excluded
 
 
@@ -419,6 +481,10 @@ def score_chunk_for_query(
     golden_boost = 1.0 if golden.get("golden_tutor_chunk_candidate") is True else 0.0
     priority_boost = PRIORITY_BOOSTS.get(str(golden.get("retrieval_priority", "")), 0.0)
     quality_penalty = min(0.18, 0.04 * len(_as_list(chunk.get("quality_flags")) + _as_list(golden.get("quality_flags"))))
+    official_source_boost = 1.0 if chunk.get("source_type") == "official_wset_extracted" else 0.0
+    exact_term_boost = 1.0 if matched_terms or matched_dictionary_terms else 0.0
+    section_topic_boost = _section_topic_match_score(chunk, query_analysis)
+    official_exam_register_boost = 1.0 if official_source_boost and _chunk_text_aligns_reasoning(text, "exam_strategy") else 0.0
     score = (
         0.18 * min(1.0, lexical_overlap)
         + 0.1 * min(1.0, expanded_overlap)
@@ -435,6 +501,10 @@ def score_chunk_for_query(
         + 0.08 * causal_chain_match_score
         + 0.06 * concept_match_score
         + 0.12 * source_concept_phrase_score
+        + 0.18 * official_source_boost
+        + 0.08 * exact_term_boost
+        + 0.08 * section_topic_boost
+        + 0.06 * official_exam_register_boost
         - quality_penalty
     )
     score = max(0.0, min(1.0, score))
@@ -454,6 +524,10 @@ def score_chunk_for_query(
         "causal_chain_match": round(0.08 * causal_chain_match_score, 4),
         "concept_match": round(0.06 * concept_match_score, 4),
         "source_concept_phrase_match": round(0.12 * source_concept_phrase_score, 4),
+        "official_source_boost": round(0.18 * official_source_boost, 4),
+        "exact_term_match_boost": round(0.08 * exact_term_boost, 4),
+        "section_topic_match_boost": round(0.08 * section_topic_boost, 4),
+        "official_exam_register_boost": round(0.06 * official_exam_register_boost, 4),
         "quality_flags_penalty": round(-quality_penalty, 4),
     }
     why = explain_retrieval(
@@ -468,6 +542,14 @@ def score_chunk_for_query(
         "score": round(score, 4),
         "source_video": str(chunk.get("video_title_guess") or chunk.get("video_title") or ""),
         "source_filename": str(chunk.get("source_filename", "")),
+        "source_type": str(chunk.get("source_type", "")),
+        "source_file": str(chunk.get("source_file", "")),
+        "source_trust_tier": chunk.get("source_trust_tier"),
+        "title": str(chunk.get("title", "")),
+        "section": str(chunk.get("section", "")),
+        "subtopic": str(chunk.get("subtopic", "")),
+        "official_grading_authority": bool(chunk.get("official_grading_authority", False)),
+        "requires_human_review": bool(chunk.get("requires_human_review", False)),
         "reasoning_type": str(golden.get("reasoning_type") or query_analysis.get("reasoning_intent") or "unknown"),
         "pedagogical_role": str(chunk.get("pedagogical_role", "")),
         "retrieval_priority": str(golden.get("retrieval_priority", "none")),
@@ -519,6 +601,12 @@ def explain_retrieval(
         reasons.append("matches knowledge-map concept vocabulary")
     if breakdown.get("source_concept_phrase_match", 0) > 0:
         reasons.append("contains the source concept phrase from the query")
+    if breakdown.get("official_source_boost", 0) > 0:
+        reasons.append("official WSET extracted Tutor support")
+    if breakdown.get("section_topic_match_boost", 0) > 0:
+        reasons.append("matched official section/topic metadata")
+    if breakdown.get("exact_term_match_boost", 0) > 0:
+        reasons.append("exact term match")
     if not reasons:
         reasons.append("low-confidence lexical match retained for ranking comparison")
     if _as_list(chunk.get("quality_flags")) or _as_list(golden.get("quality_flags")):
@@ -647,6 +735,7 @@ def _passes_governance_filter(chunk: dict[str, Any]) -> bool:
         chunk.get("source_type") in ALLOWED_SOURCE_TYPES
         and chunk.get("agent_corpus") == ALLOWED_AGENT_CORPUS
         and chunk.get("safe_for_examiner") is False
+        and chunk.get("official_grading_authority") is not True
     )
 
 
@@ -748,6 +837,40 @@ def _ranking_key(row: dict[str, Any]) -> tuple[float, str]:
     return (-float(row["score"]), row["chunk_id"])
 
 
+def _select_diverse_results(scored: list[dict[str, Any]], top_k: int) -> list[dict[str, Any]]:
+    limit = max(1, top_k)
+    selected = scored[:limit]
+    has_official = any(row.get("source_type") == "official_wset_extracted" for row in selected)
+    has_pedagogical = any(row.get("source_type") != "official_wset_extracted" for row in selected)
+    if has_official and has_pedagogical:
+        return selected
+    official = next((row for row in scored if row.get("source_type") == "official_wset_extracted"), None)
+    pedagogical = next((row for row in scored if row.get("source_type") != "official_wset_extracted"), None)
+    if official is None:
+        return selected
+    if not has_official and len(selected) < limit:
+        return selected + [official]
+    if not has_official:
+        return [official, *selected[: limit - 1]]
+    if pedagogical is not None and limit > 1:
+        return [*selected[: limit - 1], pedagogical]
+    return selected
+
+
+def _section_topic_match_score(chunk: dict[str, Any], query_analysis: dict[str, Any]) -> float:
+    metadata_text = " ".join(
+        str(chunk.get(key, ""))
+        for key in ("title", "section", "subtopic", "parent_section", "source_file")
+    ).lower()
+    if not metadata_text:
+        return 0.0
+    query_terms = set(query_analysis.get("query_tokens", [])) | set(_tokens(" ".join(query_analysis.get("query_expansion_terms", []))))
+    if not query_terms:
+        return 0.0
+    hits = sum(1 for term in query_terms if len(term) >= 4 and _contains_phrase(metadata_text, term))
+    return min(1.0, hits / max(1, min(len(query_terms), 6)))
+
+
 def _summary_statistics(retrieved: list[dict[str, Any]]) -> dict[str, Any]:
     return {
         "retrieved_count": len(retrieved),
@@ -758,6 +881,17 @@ def _summary_statistics(retrieved: list[dict[str, Any]]) -> dict[str, Any]:
 
 
 def _knowledge_node_type(node: dict[str, Any]) -> str:
+    # Prefer explicit node_type field (causal_chain_v1 schema)
+    explicit_type = str(node.get("node_type", "")).strip()
+    if explicit_type == "causal_chain":
+        return "causal_chains"
+    if explicit_type in {"concept", "concepts"}:
+        return "concepts"
+    if explicit_type in {"relationship", "relationships"}:
+        return "relationships"
+    if explicit_type in {"misconception", "misconceptions"}:
+        return "misconceptions"
+    # Fall back to path and legacy field heuristics
     path = str(node.get("path", "")).replace("\\", "/")
     if "/concepts/" in path or node.get("concept_id"):
         return "concepts"
@@ -771,7 +905,7 @@ def _knowledge_node_type(node: dict[str, Any]) -> str:
 
 
 def _knowledge_node_id(node: dict[str, Any]) -> str:
-    for key in ("concept_id", "chain_id", "relationship_id", "misconception_id", "id"):
+    for key in ("concept_id", "chain_id", "node_id", "relationship_id", "misconception_id", "id"):
         if node.get(key):
             return str(node[key])
     return Path(str(node.get("path", ""))).stem
@@ -815,6 +949,13 @@ def _knowledge_node_primary_phrases(node: dict[str, Any]) -> list[str]:
             phrases.add(_identifier_to_phrase(str(step.get("concept_id", ""))))
             phrases.update(_important_phrases(str(step.get("description", ""))))
             phrases.update(_important_phrases(str(step.get("relationship_type", ""))))
+    # Include trigger_keywords from causal chain nodes (causal_chain_v1 schema)
+    for kw in _as_list(node.get("trigger_keywords")):
+        phrases.add(str(kw).lower().strip())
+    # Include step texts from causal_chain_v1 schema
+    for step in node.get("steps", []) if isinstance(node.get("steps"), list) else []:
+        if isinstance(step, dict):
+            phrases.update(_important_phrases(str(step.get("text", ""))))
     return sorted({phrase.lower().strip() for phrase in phrases if len(phrase.strip()) >= 3})
 
 

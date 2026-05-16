@@ -12,7 +12,20 @@
   "detection_signals": [
     "I don't like acidic wines",
     "This wine is too acidic so it must be poor quality",
-    "High acidity means it's unripe"
+    "High acidity means it's unripe",
+    "So high acidity means the wine is lower quality",
+    "Doesn't high acidity mean the wine is bad",
+    "If it's too acidic it must be poor quality",
+    "This wine is too sharp so it probably got a low score",
+    "High acidity detracts from the quality of the wine"
+  ],
+  "detection_keywords": [
+    {"tokens": ["acid", "acidity"], "require_all": false, "bias": 0.14},
+    {"tokens": ["acid", "quality"], "require_all": true, "bias": 0.24},
+    {"tokens": ["acidity", "lower"], "require_all": true, "bias": 0.20},
+    {"tokens": ["acid", "poor"], "require_all": true, "bias": 0.20},
+    {"tokens": ["acidic", "quality"], "require_all": true, "bias": 0.20},
+    {"tokens": ["acid", "unripe"], "require_all": true, "bias": 0.16}
   ],
   "_meta": {
     "schema_version": "1.0",

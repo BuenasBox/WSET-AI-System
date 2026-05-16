@@ -1,0 +1,31 @@
+{
+  "misconception_id": "MC_ALCOHOL_QUALITY_01",
+  "misconception": "Higher alcohol automatically means fuller body and higher quality.",
+  "why_incorrect": "Alcohol does contribute to body — it increases viscosity and gives a warming sensation. However, high alcohol without sufficient fruit concentration, acidity, or tannin structure produces an unbalanced wine that WSET assessment would penalise. Alcohol above ~15% ABV can appear 'hot' or 'burning' if not balanced. Many of the most complex, highly regarded wines in the world (Grand Cru Mosel Riesling Auslese at 8% ABV, Champagne at 12%) have relatively low alcohol. The SAT assesses alcohol as a structural element, not as a quality indicator in isolation.",
+  "corrected_understanding": "Alcohol contributes to body and texture, but quality requires balance. High alcohol in an unbalanced wine is a structural fault. Low alcohol in a balanced, complex wine is not a defect.",
+  "related_topics": ["T_RA1_WINE_COMPONENTS", "T_RA1_SAT"],
+  "related_concepts": ["C_ALCOHOL"],
+  "severity": "medium",
+  "frequency": "common",
+  "distinction_relevance": true,
+  "tutor_intervention": "contrast_comparison",
+  "detection_signals": [
+    "higher alcohol means fuller body and better quality",
+    "doesn't more alcohol mean a more powerful wine",
+    "if the alcohol is higher it must be a better wine",
+    "this wine has 15% so it must have more body than the 12% one",
+    "I scored it higher because the alcohol was higher"
+  ],
+  "detection_keywords": [
+    {"tokens": ["alcohol", "quality"], "require_all": true, "bias": 0.20},
+    {"tokens": ["alcohol", "body"], "require_all": true, "bias": 0.18},
+    {"tokens": ["alcohol", "better"], "require_all": true, "bias": 0.18},
+    {"tokens": ["alcohol", "higher"], "require_all": true, "bias": 0.14},
+    {"tokens": ["alcohol"], "require_all": false, "bias": 0.10}
+  ],
+  "_meta": {
+    "schema_version": "1.0",
+    "created_date": "2026-05-15",
+    "ingestion_status": "draft"
+  }
+}

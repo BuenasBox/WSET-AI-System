@@ -18,8 +18,6 @@ STOPWORDS = {
     "are",
     "as",
     "because",
-    "climate",
-    "cool",
     "do",
     "does",
     "for",
@@ -32,7 +30,6 @@ STOPWORDS = {
     "its",
     "mean",
     "means",
-    "more",
     "of",
     "or",
     "right",
@@ -40,9 +37,10 @@ STOPWORDS = {
     "the",
     "this",
     "to",
-    "wine",
-    "wines",
 }
+# Domain terms removed from STOPWORDS (R07 fix):
+# "cool", "climate", "wine", "wines" were removed because they are
+# meaningful detection vocabulary for WSET L3 misconception queries.
 
 
 def load_misconception_nodes(directory: Path = DEFAULT_MISCONCEPTION_DIR) -> list[dict[str, Any]]:
@@ -128,31 +126,56 @@ def _score_node(query: str, node: dict[str, Any]) -> dict[str, Any]:
 
 
 def _concept_bias(query_tokens: set[str], query_text: str, node: dict[str, Any]) -> float:
-    node_id = str(node.get("misconception_id", ""))
-    misconception_tokens = _tokens(str(node.get("misconception", "")))
+    """Data-driven concept bias — reads detection_keywords from the node file.
+
+    Previously contained hardcoded references to specific node IDs (MC_ACIDITY_01,
+    MC_TANNIN_01, MC_COOL_CLIMATE_02). This created a maintenance coupling where
+    adding a new node did not automatically extend detection bias.
+
+    Now: each misconception node may define a 'detection_keywords' list of objects:
+      [{"tokens": ["acid", "quality"], "require_all": true, "bias": 0.24}, ...]
+
+    Or a simpler flat list of token strings for basic category-level boosting:
+      ["acid", "acidic", "acidity"]
+
+    The node file is the single source of truth for detection behavior (R02 fix).
+    """
     bias = 0.0
+    misconception_tokens = _tokens(str(node.get("misconception", "")))
+
+    # Universal: always/never pattern boost (applies to all nodes)
     if "always" in misconception_tokens and {"always", "never"} & query_tokens:
         bias += 0.1
-    if node_id.startswith("MC_ACIDITY") and {"acid", "acidic", "acidity"} & query_tokens:
-        bias += 0.14
-    if node_id.startswith("MC_TANNIN") and {"tannin", "tannins", "tannic"} & query_tokens:
-        bias += 0.14
-    if node_id.startswith("MC_COOL_CLIMATE") and "cool climate" in query_text:
-        bias += 0.18
-    if node_id == "MC_COOL_CLIMATE_02" and {"unripe", "underripe", "green", "vegetal"} & query_tokens:
-        bias += 0.3
-    if (
-        node_id == "MC_ACIDITY_01"
-        and {"acid", "acidic", "acidity"} & query_tokens
-        and {"quality", "lower", "poor", "unripe"} & query_tokens
-    ):
-        bias += 0.24
-    if (
-        node_id == "MC_TANNIN_01"
-        and {"tannin", "tannins", "tannic"} & query_tokens
-        and {"better", "quality", "bitter", "bitterness"} & query_tokens
-    ):
-        bias += 0.18
+
+    # Data-driven detection_keywords from node schema
+    detection_keywords = node.get("detection_keywords", [])
+    if not detection_keywords:
+        # Backward compatibility: nodes without detection_keywords get no extra bias
+        # (the old hardcoded ID-based logic is NOT reproduced here — it was the problem)
+        return bias
+
+    if isinstance(detection_keywords, list) and detection_keywords:
+        first = detection_keywords[0]
+        if isinstance(first, dict):
+            # Structured form: [{"tokens": [...], "require_all": bool, "bias": float}]
+            for rule in detection_keywords:
+                if not isinstance(rule, dict):
+                    continue
+                rule_tokens = {str(t).lower() for t in rule.get("tokens", [])}
+                rule_bias = float(rule.get("bias", 0.1))
+                require_all = bool(rule.get("require_all", False))
+                if require_all:
+                    if rule_tokens and rule_tokens.issubset(query_tokens):
+                        bias += rule_bias
+                else:
+                    if rule_tokens & query_tokens:
+                        bias += rule_bias
+        else:
+            # Simple list of token strings — category-level boost
+            kw_tokens = {str(kw).lower() for kw in detection_keywords}
+            if kw_tokens & query_tokens:
+                bias += 0.14
+
     return bias
 
 

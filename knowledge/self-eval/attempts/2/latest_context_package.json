@@ -1,0 +1,195 @@
+{
+  "student_query": "\u00bfQu\u00e9 m\u00e9todo se usa para detener la fermentaci\u00f3n en el vino de Oporto?",
+  "language": "es",
+  "orchestrator_decision": {
+    "route": "normal_tutor",
+    "reason": "no_misconception_detected",
+    "matched_misconception_id": null
+  },
+  "pedagogical_act": "answer_normally",
+  "forced_retrieval_nodes": [],
+  "matched_misconception": {},
+  "learner_state_context": {
+    "learner_id": "nazareth",
+    "current_level": "WSET_L3",
+    "known_weak_areas": [],
+    "recent_misconceptions": [],
+    "session_count": 0,
+    "governance": {
+      "safe_for_examiner": false,
+      "examiner_scoring_active": false,
+      "embeddings_active": false,
+      "vector_db_active": false,
+      "cloud_services_active": false
+    }
+  },
+  "retrieval_plan": {
+    "mode": "normal_retrieval",
+    "query": "\u00bfQu\u00e9 m\u00e9todo se usa para detener la fermentaci\u00f3n en el vino de Oporto?",
+    "top_k": 5,
+    "forced_retrieval_nodes": [],
+    "retrieval_engine": "tools.retrieval.tutor_retrieval_sandbox",
+    "uses_embeddings": false,
+    "uses_vector_db": false,
+    "uses_llm": false,
+    "uses_api": false
+  },
+  "retrieved_context": [
+    {
+      "context_type": "retrieval_sandbox_chunk",
+      "chunk_id": "OFFICIAL_WSET_GUIDE_WSET_MARKDOWN_SECCION_10_INDEX_10_INDEX_001",
+      "forced_retrieval": false,
+      "agent_corpus": "tutor",
+      "safe_for_examiner": false,
+      "score": 0.452,
+      "source_type": "official_wset_extracted",
+      "source_file": "knowledge/official-wset/study-guide/wset_markdown/seccion_10_index/10_index.md",
+      "source_trust_tier": 1,
+      "title": "Index",
+      "section": "10",
+      "subtopic": "10",
+      "official_grading_authority": false,
+      "requires_human_review": true,
+      "reasoning_type": "theory_foundation",
+      "pedagogical_role": "official_reference",
+      "why_retrieved": [
+        "matched canonical/query terms: USA, vino",
+        "official WSET extracted Tutor support",
+        "exact term match"
+      ],
+      "text_excerpt": "# Index <!-- p\u00e1gina 206 --> INDEX 197 Index Numbers in bold type indicates images, diagrams and illustrations. Abruzzo 128 bacterial diseases 40 canopy management 34, 35, 40, 85 acid 43, 48, 49 Baden 111-12 Canterbury 171-2 lactic 49 bag-in-box 52, 53 Cap C/assique (see Methode Cap C/assique) malic43,49 Baga 140 cap management 63 tartaric 43, 48 Bairrada...",
+      "source_video": "",
+      "source_filename": "10_index.md"
+    },
+    {
+      "context_type": "retrieval_sandbox_chunk",
+      "chunk_id": "OFFICIAL_WSET_WINES_OF_THE_WORLD_6_19_30_SPAIN_001",
+      "forced_retrieval": false,
+      "agent_corpus": "tutor",
+      "safe_for_examiner": false,
+      "score": 0.452,
+      "source_type": "official_wset_extracted",
+      "source_file": "knowledge/official-wset/study-guide/wset_markdown/seccion_6_section_3_still_wines_of_the_world/6-19_30_spain.md",
+      "source_trust_tier": 1,
+      "title": "30 Spain",
+      "section": "6",
+      "subtopic": "6.19",
+      "official_grading_authority": false,
+      "requires_human_review": true,
+      "reasoning_type": "theory_foundation",
+      "pedagogical_role": "official_reference",
+      "why_retrieved": [
+        "matched canonical/query terms: vino",
+        "official WSET extracted Tutor support",
+        "exact term match"
+      ],
+      "text_excerpt": "# 30 Spain <!-- p\u00e1gina 140 --> SPAIN 131 SpainS pain has a long history of wine production but its wines have only relatively recently come 30 to prominence on international markets. Styles vary from traditional barrel-aged reds to modern, fruity whites; and although international varieties have been planted in many of Spain's wine regions, it is the coun...",
+      "source_video": "",
+      "source_filename": "6-19_30_spain.md"
+    },
+    {
+      "context_type": "retrieval_sandbox_chunk",
+      "chunk_id": "OFFICIAL_WSET_7_2_42_SPARKLING_WINES_OF_THE_WORLD_001",
+      "forced_retrieval": false,
+      "agent_corpus": "tutor",
+      "safe_for_examiner": false,
+      "score": 0.424,
+      "source_type": "official_wset_extracted",
+      "source_file": "knowledge/official-wset/study-guide/wset_markdown/seccion_7_section_4_sparkling_wines_of_the_world/7-2_42_sparkling_wines_of_the_world.md",
+      "source_trust_tier": 1,
+      "title": "42 Sparkling Wines of the World",
+      "section": "7",
+      "subtopic": "7.2",
+      "official_grading_authority": false,
+      "requires_human_review": true,
+      "reasoning_type": "theory_foundation",
+      "pedagogical_role": "official_reference",
+      "why_retrieved": [
+        "matched canonical/query terms: USA",
+        "official WSET extracted Tutor support",
+        "exact term match"
+      ],
+      "text_excerpt": "# 42 Sparkling Wines of the World <!-- p\u00e1gina 188 --> SPARKLING WINES OF THE WORLD 179 SparklinWg ineso ft heW orld C~ampagne remains th~ m~st prestigiou_ss parkling wine and consequently 1tw ill be treated m the greatest detail here. Such is its reputation that most premium sparkling wines are not only made in the same way but also using the same grape v...",
+      "source_video": "",
+      "source_filename": "7-2_42_sparkling_wines_of_the_world.md"
+    },
+    {
+      "context_type": "retrieval_sandbox_chunk",
+      "chunk_id": "OFFICIAL_WSET_WINES_OF_THE_WORLD_6_4_15_BURGUNDY_001",
+      "forced_retrieval": false,
+      "agent_corpus": "tutor",
+      "safe_for_examiner": false,
+      "score": 0.424,
+      "source_type": "official_wset_extracted",
+      "source_file": "knowledge/official-wset/study-guide/wset_markdown/seccion_6_section_3_still_wines_of_the_world/6-4_15_burgundy.md",
+      "source_trust_tier": 1,
+      "title": "15 Burgundy",
+      "section": "6",
+      "subtopic": "6.4",
+      "official_grading_authority": false,
+      "requires_human_review": true,
+      "reasoning_type": "theory_foundation",
+      "pedagogical_role": "official_reference",
+      "why_retrieved": [
+        "matched canonical/query terms: USA",
+        "official WSET extracted Tutor support",
+        "exact term match"
+      ],
+      "text_excerpt": "# 15 Burgundy <!-- p\u00e1gina 94 --> BURGUNDY 85 Burgundy The large number of producers and appellations in Burgundy can make this region 15 seem very complicated. However, in essence Burgundy is quite simple. It is the home of Chardonnay and Pi not Noir and this region still provides the benchmark of excellence for these varieties against which all other pro...",
+      "source_video": "",
+      "source_filename": "6-4_15_burgundy.md"
+    },
+    {
+      "context_type": "retrieval_sandbox_chunk",
+      "chunk_id": "How_to_prepare_for_the_WSET_Level_3_Tasting_Exam-0001",
+      "forced_retrieval": false,
+      "agent_corpus": "tutor",
+      "safe_for_examiner": false,
+      "score": 0.22,
+      "source_type": "manual_curated_srt",
+      "source_file": "",
+      "source_trust_tier": "pedagogical",
+      "title": "",
+      "section": "",
+      "subtopic": "",
+      "official_grading_authority": false,
+      "requires_human_review": false,
+      "reasoning_type": "exam_strategy",
+      "pedagogical_role": "exam_strategy",
+      "why_retrieved": [
+        "golden tutor chunk candidate",
+        "high retrieval priority in golden QA report"
+      ],
+      "text_excerpt": "So, let's go through um preparing you for the very famous and intensive and intimidating level three tasting examination. If you do follow all of these key points and you listen to your tutor, you will get through this tasting examination. It is in fact the least of your worries when it comes to the level three exam. uh it is in fact the uh the theory whe...",
+      "source_video": "How to prepare for the WSET Level 3 Tasting Exam",
+      "source_filename": "How to prepare for the WSET Level 3 Tasting Exam.srt"
+    }
+  ],
+  "tutor_directive": {
+    "pedagogical_act": "answer_normally",
+    "forced_retrieval_nodes": [],
+    "safe_for_examiner": false,
+    "language": "es",
+    "response_language_instruction": "Respond in Spanish. Preserve official WSET terms where useful, and do not translate key terms if translation would reduce precision. Distinguish official WSET content from pedagogical content.",
+    "source_handling": [
+      "Use this as a context package only; do not treat it as a final answer.",
+      "Use official WSET support first when available.",
+      "Use pedagogical transcript chunks only as enrichment.",
+      "Do not present pedagogical sources as official authority.",
+      "Distinguish official WSET content from pedagogical enrichment when explaining.",
+      "Do not translate source chunks; preserve official WSET terms where useful.",
+      "Do not translate key terms if translation would reduce precision."
+    ]
+  },
+  "success_criteria": [
+    "Answer the learner's question using the retrieved Tutor context.",
+    "Preserve official WSET terminology where precision matters.",
+    "Distinguish official WSET content from pedagogical enrichment.",
+    "Keep Examiner scoring disabled and safe_for_examiner false."
+  ],
+  "governance": {
+    "agent_corpus": "tutor",
+    "safe_for_examiner": false,
+    "examiner_scoring_allowed": false
+  }
+}

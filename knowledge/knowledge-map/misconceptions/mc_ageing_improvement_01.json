@@ -1,0 +1,31 @@
+{
+  "misconception_id": "MC_AGEING_IMPROVEMENT_01",
+  "misconception": "All wines improve with age if stored correctly.",
+  "why_incorrect": "The vast majority of wines are made to be consumed young, within 1–3 years of production. Wines that improve with age are structurally specific: they require sufficient tannin (reds), acidity, residual sugar (some whites), or specific compounds (Sauternes, Sherry) that evolve favourably over time. A simple, fresh Pinot Grigio or Beaujolais Nouveau will not improve with extended cellaring — it will lose its primary fruit character and gain no complexity. The ability to age is a stylistic quality of certain wines, not a universal property. On the SAT, readiness to drink and ageing potential are assessed as part of quality, not as a default assumption.",
+  "corrected_understanding": "Only wines with specific structural characteristics — high tannin, high acidity, residual sugar, or particular stylistic qualities — benefit from extended ageing. Most wines are made to be consumed young.",
+  "related_topics": ["T_RA1_WINEMAKING", "T_RA1_SAT"],
+  "related_concepts": ["C_AGEING_POTENTIAL"],
+  "severity": "medium",
+  "frequency": "common",
+  "distinction_relevance": true,
+  "tutor_intervention": "contrast_comparison",
+  "detection_signals": [
+    "all wines improve with age",
+    "doesn't any wine get better if you store it long enough",
+    "if you keep a wine longer it will always improve",
+    "this wine must be better because it's been aged for ten years",
+    "I said it had high ageing potential because all wines improve with time"
+  ],
+  "detection_keywords": [
+    {"tokens": ["age", "improve"], "require_all": true, "bias": 0.22},
+    {"tokens": ["ageing", "better"], "require_all": true, "bias": 0.20},
+    {"tokens": ["age", "all"], "require_all": true, "bias": 0.16},
+    {"tokens": ["store", "improve"], "require_all": true, "bias": 0.18},
+    {"tokens": ["age", "always"], "require_all": true, "bias": 0.20}
+  ],
+  "_meta": {
+    "schema_version": "1.0",
+    "created_date": "2026-05-15",
+    "ingestion_status": "draft"
+  }
+}

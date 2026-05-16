@@ -1,57 +1,45 @@
 {
-  "chain_id": "CC_MLF_TEXTURE",
-  "chain_name": "MLF → glycerol and lactic acid production → rounder mouthfeel",
-  "starting_factor": {
-    "concept_id": "C_MALOLACTIC_CONVERSION",
-    "description": "MLF performed by lactic acid bacteria produces not only lactic acid but also secondary metabolites that affect wine texture."
-  },
-  "intermediate_steps": [
+  "node_type": "causal_chain",
+  "node_id": "CC_MLF_TEXTURE",
+  "topic": "malolactic fermentation and wine texture",
+  "trigger_keywords": ["malolactic fermentation", "MLF", "malolactic", "lactic acid", "malic acid", "texture", "creamy", "buttery", "softness"],
+  "steps": [
     {
-      "step_number": 1,
-      "concept_id": "C_MALOLACTIC_CONVERSION",
-      "description": "During MLF, lactic acid bacteria produce small amounts of additional glycerol, polysaccharides, and other complex molecules alongside lactic acid. These compounds have viscous, textural properties.",
-      "relationship_type": "produces"
+      "step": 1,
+      "label": "cause",
+      "text": "Malolactic fermentation (MLF) is induced, in which lactic acid bacteria convert malic acid to lactic acid"
     },
     {
-      "step_number": 2,
-      "concept_id": "C_MALOLACTIC_CONVERSION",
-      "description": "Lactic acid itself has a softer mouthfeel than malic acid. Lactic acid is associated with dairy products (yoghurt, cream) whereas malic acid is associated with tart fruit (green apple). This sensory difference is directly perceived as a rounder, creamier texture.",
-      "relationship_type": "influences"
+      "step": 2,
+      "label": "mechanism",
+      "text": "Malic acid (sharp, tart, green-apple flavour) is converted to lactic acid (softer, milky, creamier flavour); CO2 is released; the total acidity of the wine decreases and pH rises"
     },
     {
-      "step_number": 3,
-      "concept_id": "C_MALOLACTIC_CONVERSION",
-      "description": "In conjunction with sur lie (lees contact), the combined effect of MLF-derived compounds and mannoproteins from yeast autolysis creates the characteristic rich, creamy, full-bodied mouthfeel of many white Burgundy and oaked Chardonnay styles.",
-      "relationship_type": "produces"
+      "step": 3,
+      "label": "effect",
+      "text": "The wine shows reduced, softer acidity, a rounder texture on the palate, and may develop buttery or creamy flavour compounds (diacetyl) if bacterial activity is high"
+    },
+    {
+      "step": 4,
+      "label": "exam_formulation",
+      "text": "MLF converts sharp malic acid to softer lactic acid, reducing acidity and adding a creamy texture to the wine."
     }
   ],
-  "final_outcome": {
-    "concept_id": "C_MALOLACTIC_CONVERSION",
-    "description": "Rounder, creamier, fuller mouthfeel. The wine has a perception of weight and softness on the palate beyond what alcohol or residual sugar alone would provide."
+  "sat_relevance": "Use when assessing acidity softness or creamy texture in white wines. MLF is a deliberate winemaking choice — its presence or absence directly affects the wine's style and palate texture.",
+  "linked_misconceptions": [],
+  "linked_topics": ["T_RA1_WINEMAKING", "T_RA1_WINE_COMPONENTS"],
+  "agent_corpus": "tutor",
+  "safe_for_examiner": false,
+  "examiner_scoring_allowed": false,
+  "requires_human_review": true,
+  "governance": {
+    "safe_for_examiner": false,
+    "examiner_scoring_allowed": false,
+    "agent_corpus": "tutor"
   },
-  "examples": [
-    {
-      "region_or_wine": "Meursault, White Burgundy",
-      "description": "Full MLF combined with extended lees contact produces the hallmark rich, buttery-textured Meursault even without the wine being perceptibly sweet or having high residual sugar."
-    },
-    {
-      "region_or_wine": "Californian oaked Chardonnay",
-      "description": "100% MLF combined with new oak creates a full, round palate weight. When producers block MLF (e.g., some modern California producers seeking freshness), the wine is perceptibly leaner and more angular."
-    }
-  ],
-  "related_exam_questions": [
-    "How does MLF affect the texture and mouthfeel of a white wine?",
-    "Why might a winemaker use both MLF and lees contact together?",
-    "Describe how winemaking choices can create a full-bodied white wine style."
-  ],
-  "distinction_note": "A Distinction answer separates the acidity-softening effect (malic→lactic chemistry) from the textural contribution (glycerol, polysaccharides, lactic acid mouthfeel) and notes the synergy with lees contact.",
-  "complexity": "moderate",
-  "exam_relevance": "high",
-  "tutor_use": true,
-  "examiner_use": false,
   "_meta": {
-    "schema_version": "1.0",
-    "created_date": "2026-05-13",
+    "schema_version": "causal_chain_v1",
+    "created_date": "2026-05-15",
     "ingestion_status": "draft"
   }
 }

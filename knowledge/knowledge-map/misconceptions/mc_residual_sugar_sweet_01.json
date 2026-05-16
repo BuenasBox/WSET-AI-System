@@ -1,0 +1,31 @@
+{
+  "misconception_id": "MC_RESIDUAL_SUGAR_SWEET_01",
+  "misconception": "Residual sugar in a wine always means the wine will taste sweet.",
+  "why_incorrect": "Perceived sweetness is not determined solely by residual sugar level. High acidity can mask or balance sweetness so that a wine with significant RS tastes dry or off-dry. A German Mosel Kabinett with 25 g/L residual sugar can taste nearly dry because the acidity (TA ~8 g/L) balances the sugar. Conversely, a wine with low RS but low acidity might seem sweeter than expected. Alcohol and tannin also interact with sweetness perception. WSET assessment evaluates perceived sweetness on the palate, not the technical RS level in g/L.",
+  "corrected_understanding": "Perceived sweetness depends on the balance of residual sugar against acidity, tannin, and alcohol. High RS does not guarantee a sweet taste if acidity is high and balanced.",
+  "related_topics": ["T_RA1_WINE_COMPONENTS"],
+  "related_concepts": ["C_RESIDUAL_SUGAR", "C_ACIDITY"],
+  "severity": "medium",
+  "frequency": "common",
+  "distinction_relevance": true,
+  "tutor_intervention": "contrast_comparison",
+  "detection_signals": [
+    "residual sugar means the wine will be sweet",
+    "doesn't residual sugar always make a wine taste sweet",
+    "if there is sugar left in the wine it will be sweeter than a dry wine",
+    "this wine has residual sugar so it must taste sweet",
+    "I said the wine was sweet because it had residual sugar"
+  ],
+  "detection_keywords": [
+    {"tokens": ["residual", "sugar"], "require_all": true, "bias": 0.20},
+    {"tokens": ["residual", "sweet"], "require_all": true, "bias": 0.22},
+    {"tokens": ["sugar", "sweet"], "require_all": true, "bias": 0.18},
+    {"tokens": ["sugar", "taste"], "require_all": true, "bias": 0.14},
+    {"tokens": ["residual"], "require_all": false, "bias": 0.10}
+  ],
+  "_meta": {
+    "schema_version": "1.0",
+    "created_date": "2026-05-15",
+    "ingestion_status": "draft"
+  }
+}

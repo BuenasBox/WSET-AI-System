@@ -1,0 +1,72 @@
+{
+  "question_id": "5",
+  "question_type": "theory",
+  "question_text": "\u00bfQu\u00e9 diferencia al Oloroso del Amontillado en t\u00e9rminos de crianza?",
+  "expected_topics": [
+    "oloroso",
+    "amontillado",
+    "sherry ageing"
+  ],
+  "expected_causal_links": [
+    "flor dies -> oxidative ageing",
+    "no flor -> oxidative ageing"
+  ],
+  "expected_keywords": [
+    "flor",
+    "oxidativa",
+    "biol\u00f3gica",
+    "fortificaci\u00f3n"
+  ],
+  "expected_reasoning_type": "theory_foundation",
+  "difficulty": "distinction",
+  "source_type": "raw_question_bank_adapter",
+  "safe_for_examiner": false,
+  "tutor_attempt_path": "C:/Users/esand/OneDrive/Documents/WSET-AI-System/knowledge/self-eval/attempts/5/tutor_attempt.md",
+  "tutor_context_package_path": "C:/Users/esand/OneDrive/Documents/WSET-AI-System/knowledge/self-eval/attempts/5/tutor_context_package.json",
+  "comparison": {
+    "question_id": "5",
+    "question_type": "theory",
+    "strengths": [
+      "expected_topics_present",
+      "exam_language_present"
+    ],
+    "present_keywords": [],
+    "missing_keywords": [
+      "flor",
+      "oxidativa",
+      "biol\u00f3gica",
+      "fortificaci\u00f3n"
+    ],
+    "present_causal_links": [],
+    "missing_causal_links": [
+      "flor dies -> oxidative ageing",
+      "no flor -> oxidative ageing"
+    ],
+    "present_topics": [
+      "oloroso",
+      "amontillado",
+      "sherry ageing"
+    ],
+    "missing_official_concepts": [],
+    "expected_reasoning_type_present": true,
+    "failure_labels": [
+      "missing_causal_link",
+      "shallow_reasoning"
+    ],
+    "strictness": "brutal",
+    "difficulty": "distinction",
+    "vague_claims": [],
+    "unsupported_conclusions": [],
+    "likely_misconception_gaps": [],
+    "retrieval_weaknesses": [
+      "missing_keyword_support",
+      "missing_causal_link_support"
+    ]
+  },
+  "governance": {
+    "safe_for_examiner": false,
+    "examiner_scoring_allowed": false,
+    "official_marks_assigned": false,
+    "strictness": "brutal"
+  }
+}

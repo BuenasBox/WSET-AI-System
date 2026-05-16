@@ -1,6 +1,40 @@
 {
+  "node_type": "causal_chain",
+  "node_id": "CC_COOL_CLIMATE_ACIDITY",
   "chain_id": "CC_COOL_CLIMATE_ACIDITY",
   "chain_name": "Cool climate → high acidity in finished wine",
+  "topic": "cool climate and acidity retention",
+  "trigger_keywords": [
+    "cool climate",
+    "cold climate",
+    "high altitude",
+    "acidity",
+    "freshness",
+    "acid retention",
+    "slow ripening"
+  ],
+  "steps": [
+    {
+      "step": 1,
+      "label": "cause",
+      "text": "Cool growing environment (lower temperatures, high altitude, or high-latitude location)"
+    },
+    {
+      "step": 2,
+      "label": "mechanism",
+      "text": "Slow ripening delays sugar accumulation and preserves natural grape acids (malic and tartaric), reducing the rate at which malic acid is metabolised before harvest"
+    },
+    {
+      "step": 3,
+      "label": "effect",
+      "text": "Wines retain higher acidity, show freshness and crispness, and typically have lower alcohol levels"
+    },
+    {
+      "step": 4,
+      "label": "exam_formulation",
+      "text": "Cool climates slow ripening, preserving acidity and producing wines with higher acidity, freshness, and lower alcohol levels."
+    }
+  ],
   "starting_factor": {
     "concept_id": "C_COOL_CLIMATE",
     "description": "Growing season temperatures are at the lower end of what allows full grape ripening."
@@ -29,6 +63,9 @@
     "concept_id": "C_ACIDITY",
     "description": "Higher total acidity and lower pH in the finished wine, perceived as freshness and crispness on the palate."
   },
+  "sat_relevance": "Use when justifying high acidity as a positive structural element in SAT quality assessment. High acidity in a cool-climate context is a feature, not a fault — link it to freshness, food-pairing versatility, and ageing potential.",
+  "linked_misconceptions": ["MC_ACIDITY_01", "MC_COOL_CLIMATE_02"],
+  "linked_topics": ["T_RA1_CLIMATE_VITICULTURE"],
   "examples": [
     {
       "region_or_wine": "Mosel Riesling Spätlese",
@@ -49,9 +86,19 @@
   "exam_relevance": "critical",
   "tutor_use": true,
   "examiner_use": false,
+  "agent_corpus": "tutor",
+  "safe_for_examiner": false,
+  "examiner_scoring_allowed": false,
+  "requires_human_review": true,
+  "governance": {
+    "safe_for_examiner": false,
+    "examiner_scoring_allowed": false,
+    "agent_corpus": "tutor"
+  },
   "_meta": {
-    "schema_version": "1.0",
+    "schema_version": "causal_chain_v1",
     "created_date": "2026-05-13",
+    "updated_date": "2026-05-15",
     "ingestion_status": "draft"
   }
 }

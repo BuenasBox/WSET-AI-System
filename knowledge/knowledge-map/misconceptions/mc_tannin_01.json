@@ -12,7 +12,20 @@
   "detection_signals": [
     "this wine is bitter because of the tannins",
     "tannins are what make wine bitter",
-    "high tannin means bitter taste"
+    "high tannin means bitter taste",
+    "the bitterness comes from the tannins",
+    "tannin is the same as bitterness",
+    "tannic wines are bitter wines",
+    "if a wine is bitter it must be high in tannins",
+    "tannin equals bitterness on the palate"
+  ],
+  "detection_keywords": [
+    {"tokens": ["tannin", "tannins"], "require_all": false, "bias": 0.14},
+    {"tokens": ["tannin", "bitter"], "require_all": true, "bias": 0.18},
+    {"tokens": ["tannins", "bitterness"], "require_all": true, "bias": 0.20},
+    {"tokens": ["tannic", "bitter"], "require_all": true, "bias": 0.18},
+    {"tokens": ["tannin", "quality"], "require_all": true, "bias": 0.14},
+    {"tokens": ["tannin", "better"], "require_all": true, "bias": 0.14}
   ],
   "_meta": {
     "schema_version": "1.0",

@@ -115,6 +115,7 @@ def run_orchestrator(
         matched_node=matched_node,
         retrieved_chunks=retrieval_run["retrieved_chunks"],
     )
+    matched_causal_chain_nodes = retrieval_run.get("matched_causal_chain_nodes", [])
     context_package = build_context_package(
         query=query,
         language=language,
@@ -126,6 +127,7 @@ def run_orchestrator(
         retrieval_plan=retrieval_plan,
         retrieved_context=retrieved_context,
         tutor_directive=tutor_directive,
+        forced_causal_chains=matched_causal_chain_nodes,
     )
     package_paths = write_context_package(context_package, context_package_dir)
     result = {
@@ -190,6 +192,14 @@ def build_retrieved_context(
                 "agent_corpus": chunk.get("agent_corpus", "tutor"),
                 "safe_for_examiner": False,
                 "score": chunk.get("score"),
+                "source_type": chunk.get("source_type", ""),
+                "source_file": chunk.get("source_file", ""),
+                "source_trust_tier": chunk.get("source_trust_tier"),
+                "title": chunk.get("title", ""),
+                "section": chunk.get("section", ""),
+                "subtopic": chunk.get("subtopic", ""),
+                "official_grading_authority": False,
+                "requires_human_review": bool(chunk.get("requires_human_review", False)),
                 "reasoning_type": chunk.get("reasoning_type"),
                 "pedagogical_role": chunk.get("pedagogical_role"),
                 "why_retrieved": chunk.get("why_retrieved", []),
@@ -212,6 +222,7 @@ def build_context_package(
     retrieval_plan: dict[str, Any],
     retrieved_context: list[dict[str, Any]],
     tutor_directive: dict[str, Any],
+    forced_causal_chains: list[dict[str, Any]] | None = None,
 ) -> dict[str, Any]:
     """Create the Minimal Brain v2 Tutor-ready context package."""
     directive = {
@@ -220,9 +231,13 @@ def build_context_package(
         "response_language_instruction": _language_instruction(language),
         "source_handling": [
             "Use this as a context package only; do not treat it as a final answer.",
+            "Use official WSET support first when available.",
+            "Use pedagogical transcript chunks only as enrichment.",
+            "Do not present pedagogical sources as official authority.",
             "Distinguish official WSET content from pedagogical enrichment when explaining.",
             "Do not translate source chunks; preserve official WSET terms where useful.",
             "Do not translate key terms if translation would reduce precision.",
+            "If forced_causal_chains is populated, render the causal chain steps for the Cadena causa → efecto section.",
         ],
         "safe_for_examiner": False,
     }
@@ -236,6 +251,7 @@ def build_context_package(
         "learner_state_context": les_context,
         "retrieval_plan": retrieval_plan,
         "retrieved_context": retrieved_context,
+        "forced_causal_chains": forced_causal_chains or [],
         "tutor_directive": directive,
         "success_criteria": _success_criteria(pedagogical_act),
         "governance": {

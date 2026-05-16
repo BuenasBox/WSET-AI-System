@@ -277,6 +277,12 @@ def _write_misconception_fixture(directory: Path) -> Path:
             "detection_signals": [
                 "This wine is too acidic so it must be poor quality",
                 "High acidity means it's unripe",
+                "So high acidity means the wine is lower quality",
+            ],
+            "detection_keywords": [
+                {"tokens": ["acid", "quality"], "require_all": True, "bias": 0.24},
+                {"tokens": ["acidity", "lower"], "require_all": True, "bias": 0.20},
+                {"tokens": ["acid", "acidity"], "require_all": False, "bias": 0.14},
             ],
         },
         {

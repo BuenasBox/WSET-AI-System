@@ -260,7 +260,78 @@ def _misconception_direct_correction(query: str, language: str) -> str:
     return "No exactamente. En WSET, ese atajo no es fiable por sí solo."
 
 
+def _render_causal_chain(chain: dict[str, Any], language: str) -> str:
+    """Render a causal chain node as a structured cause → mechanism → effect block.
+
+    This replaces keyword-dispatch hardcoded strings for queries where a matching
+    causal chain node has been retrieved. The output comes from the node's steps
+    array, not from hardcoded content in this module.
+
+    Governance: chain must have safe_for_examiner != True.
+    """
+    if chain.get("safe_for_examiner") is True:
+        return ""
+    steps = chain.get("steps", [])
+    if not steps:
+        return ""
+    label_map_es = {
+        "cause": "CAUSA",
+        "mechanism": "MECANISMO",
+        "effect": "EFECTO",
+        "exam_formulation": "FORMULACIÓN DE EXAMEN",
+    }
+    label_map_en = {
+        "cause": "CAUSE",
+        "mechanism": "MECHANISM",
+        "effect": "EFFECT",
+        "exam_formulation": "EXAM FORMULATION",
+    }
+    label_map = label_map_es if language == "es" else label_map_en
+    lines = []
+    for step in sorted(steps, key=lambda s: int(s.get("step", 0))):
+        label_key = str(step.get("label", "")).lower()
+        label = label_map.get(label_key, label_key.upper())
+        text = str(step.get("text", "")).strip()
+        if text:
+            lines.append(f"**{label}:** {text}")
+    sat_rel = str(chain.get("sat_relevance", "")).strip()
+    if sat_rel:
+        prefix = "Relevancia SAT" if language == "es" else "SAT Relevance"
+        lines.append(f"\n*{prefix}: {sat_rel}*")
+    return "\n".join(lines)
+
+
+def _select_best_causal_chain(package: dict[str, Any]) -> dict[str, Any] | None:
+    """Select the most relevant causal chain node from forced_causal_chains.
+
+    Returns the first chain whose trigger_keywords overlap most with the query,
+    or the first chain if no keyword scoring is possible.
+    """
+    chains = package.get("forced_causal_chains", []) or []
+    if not chains:
+        return None
+    query = str(package.get("student_query") or "").lower()
+    best = None
+    best_score = -1
+    for chain in chains:
+        keywords = [str(kw).lower() for kw in chain.get("trigger_keywords", [])]
+        score = sum(1 for kw in keywords if kw in query)
+        if score > best_score:
+            best_score = score
+            best = chain
+    return best
+
+
 def _cause_effect_line(package: dict[str, Any], language: str, ideas: list[dict[str, str]]) -> str:
+    # Phase D: prefer structured causal chain node over hardcoded keyword dispatch
+    best_chain = _select_best_causal_chain(package)
+    if best_chain:
+        rendered = _render_causal_chain(best_chain, language)
+        if rendered:
+            return rendered
+
+    # Fallback: deterministic keyword dispatch (preserved for backward compatibility
+    # and for queries where no causal chain node was matched)
     query = str(package.get("student_query") or "").lower()
     misconception = package.get("matched_misconception") or {}
     why = str(misconception.get("why_incorrect") or "").lower()
@@ -389,6 +460,10 @@ def _context_rank(item: dict[str, Any]) -> float:
 
 
 def _idea_from_context_item(item: dict[str, Any], package: dict[str, Any]) -> str:
+    if _is_official_source(item):
+        official = _official_idea_from_text(str(item.get("text_excerpt") or ""), package)
+        if official:
+            return official
     if item.get("context_type") == "misconception_node":
         content = item.get("content") or package.get("matched_misconception") or {}
         corrected = str(content.get("corrected_understanding") or "")
@@ -449,6 +524,10 @@ def _is_official_source(item: dict[str, Any]) -> bool:
     }
 
 
+def _has_official_support(package: dict[str, Any]) -> bool:
+    return any(_is_official_source(item) for item in package.get("retrieved_context", []) if isinstance(item, dict))
+
+
 def _confusion_line(package: dict[str, Any], language: str) -> str:
     query = str(package.get("student_query") or "").lower()
     if language == "en":
@@ -466,6 +545,7 @@ def _confusion_line(package: dict[str, Any], language: str) -> str:
 
 def _wset_framing_line(query: str, language: str, corrected: str, ideas: list[dict[str, str]]) -> str:
     lowered = query.lower()
+    has_official = any(item["source"] in {"official_wset", "official WSET"} for item in ideas)
     if language == "en":
         if corrected:
             return corrected
@@ -473,12 +553,35 @@ def _wset_framing_line(query: str, language: str, corrected: str, ideas: list[di
             return f"Use WSET terms precisely: {KEY_TERMS}. Quality needs evidence, not a single isolated descriptor."
         return f"Frame the answer through WSET vocabulary where useful: {KEY_TERMS}."
     if "tannin" in lowered:
-        return "Desde el marco WSET, el tanino es un componente estructural y una sensación táctil de sequedad/astringencia. Puede apoyar la calidad si está maduro e integrado con fruit concentration, balance, complexity y length; si domina o seca demasiado, puede perjudicar la impresión de calidad."
+        prefix = "Desde el marco WSET" if has_official else "Como formulación de Tutor"
+        return f"{prefix}, el tanino es un componente estructural y una sensación táctil de sequedad/astringencia. Puede apoyar la calidad si está maduro e integrado con fruit concentration, balance, complexity y length; si domina o seca demasiado, puede perjudicar la impresión de calidad."
     if "acid" in lowered and "quality" in lowered:
-        return "Desde el marco WSET, high acidity no es buena ni mala por sí sola. Puede aportar frescura, definición y capacidad de guarda si está integrada con fruit concentration, sweetness, alcohol, body y balance."
+        prefix = "Desde el marco WSET" if has_official else "Como formulación de Tutor"
+        return f"{prefix}, high acidity no es buena ni mala por sí sola. Puede aportar frescura, definición y capacidad de guarda si está integrada con fruit concentration, sweetness, alcohol, body y balance."
     if corrected:
         return _spanish_paraphrase(corrected)
-    return f"Desde el marco WSET, usa términos precisos cuando ayuden: {KEY_TERMS}. La conclusión debe apoyarse en evidencia, no en un descriptor aislado."
+    prefix = "Desde el marco WSET" if has_official else "Como apoyo pedagógico"
+    return f"{prefix}, usa términos precisos cuando ayuden: {KEY_TERMS}. La conclusión debe apoyarse en evidencia, no en un descriptor aislado."
+
+
+def _official_idea_from_text(text: str, package: dict[str, Any]) -> str:
+    lowered = text.lower()
+    query = str(package.get("student_query") or "").lower()
+    if "cool" in query and "acid" in query:
+        return "el material oficial relaciona clima/growing environment con maduración y retención de acidez"
+    if "tannin" in query:
+        return "el material oficial sitúa el tannin dentro de estructura, extracción y evaluación de calidad"
+    if "sat" in query or "quality" in query:
+        return "el material oficial apoya una quality assessment basada en balance, intensity, complexity y length"
+    if "flor" in query:
+        return "el material oficial conecta flor, crianza biológica y protección frente a oxidación"
+    if "port" in query or "oporto" in query:
+        return "el material oficial conecta fortificación, parada de fermentación y estilo final del vino"
+    if "sherry" in query or "jerez" in query:
+        return "el material oficial distingue crianza biológica y oxidativa en Jerez"
+    if lowered:
+        return _clean_idea(text)
+    return ""
 
 
 def _exam_line(query: str, language: str, ideas: list[dict[str, str]]) -> str:

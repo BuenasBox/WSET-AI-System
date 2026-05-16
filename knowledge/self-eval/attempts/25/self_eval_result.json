@@ -1,0 +1,46 @@
+{
+  "question_id": "25",
+  "question_type": "short_answer",
+  "question_text": "\u00bfCu\u00e1l es el prop\u00f3sito del licor de tiraje?",
+  "expected_topics": [],
+  "expected_causal_links": [],
+  "expected_keywords": [],
+  "expected_reasoning_type": "theory_foundation",
+  "difficulty": "intermediate",
+  "source_type": "raw_question_bank_adapter",
+  "safe_for_examiner": false,
+  "tutor_attempt_path": "C:/Users/esand/OneDrive/Documents/WSET-AI-System/knowledge/self-eval/attempts/25/tutor_attempt.md",
+  "tutor_context_package_path": "C:/Users/esand/OneDrive/Documents/WSET-AI-System/knowledge/self-eval/attempts/25/tutor_context_package.json",
+  "comparison": {
+    "question_id": "25",
+    "question_type": "short_answer",
+    "strengths": [
+      "exam_language_present"
+    ],
+    "present_keywords": [],
+    "missing_keywords": [],
+    "present_causal_links": [],
+    "missing_causal_links": [],
+    "present_topics": [],
+    "missing_official_concepts": [],
+    "expected_reasoning_type_present": true,
+    "failure_labels": [
+      "unsupported_conclusion",
+      "weak_exam_register"
+    ],
+    "strictness": "brutal",
+    "difficulty": "intermediate",
+    "vague_claims": [],
+    "unsupported_conclusions": [
+      "conclusion is not fully tied to evidence"
+    ],
+    "likely_misconception_gaps": [],
+    "retrieval_weaknesses": []
+  },
+  "governance": {
+    "safe_for_examiner": false,
+    "examiner_scoring_allowed": false,
+    "official_marks_assigned": false,
+    "strictness": "brutal"
+  }
+}

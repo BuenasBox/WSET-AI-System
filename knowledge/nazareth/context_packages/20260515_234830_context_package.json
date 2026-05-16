@@ -1,0 +1,372 @@
+{
+  "student_query": "Does more tannin mean better wine?",
+  "language": "es",
+  "orchestrator_decision": {
+    "route": "misconception_prepass",
+    "reason": "misconception_detected",
+    "matched_misconception_id": "MC_TANNIN_01"
+  },
+  "pedagogical_act": "misconception_intervention",
+  "forced_retrieval_nodes": [
+    "MC_TANNIN_01"
+  ],
+  "matched_misconception": {
+    "misconception_id": "MC_TANNIN_01",
+    "misconception": "Tannin is the same as bitterness.",
+    "why_incorrect": "Tannin produces astringency \u2014 a tactile, drying sensation caused by tannin molecules binding to salivary proteins and precipitating them. This is perceived as a dry, gripping feeling on the gums, inner cheeks, and palate. Bitterness is a taste (not a tactile sensation) perceived on the palate and is associated with different compounds (e.g., certain phenolics, but not the same as astringent tannins). A wine can be bitter without being astringent, and vice versa. On the SAT, tannin is assessed separately from bitterness.",
+    "corrected_understanding": "Tannin produces astringency (a drying, gripping tactile sensation), not bitterness (a taste). Both can be present in the same wine but they are assessed separately and have different causes.",
+    "related_topics": [
+      "T_RA1_WINE_COMPONENTS",
+      "T_RA1_SAT"
+    ],
+    "related_concepts": [
+      "C_TANNIN"
+    ],
+    "severity": "high",
+    "frequency": "very_common",
+    "distinction_relevance": true,
+    "tutor_intervention": "direct_correction",
+    "detection_signals": [
+      "this wine is bitter because of the tannins",
+      "tannins are what make wine bitter",
+      "high tannin means bitter taste"
+    ],
+    "_meta": {
+      "schema_version": "1.0",
+      "created_date": "2026-05-13",
+      "ingestion_status": "draft"
+    },
+    "_source_path": "C:/Users/esand/OneDrive/Documents/WSET-AI-System/knowledge/knowledge-map/misconceptions/mc_tannin_01.json"
+  },
+  "learner_state_context": {
+    "learner_id": "nazareth",
+    "current_level": "WSET_L3",
+    "known_weak_areas": [],
+    "recent_misconceptions": [],
+    "session_count": 0,
+    "governance": {
+      "safe_for_examiner": false,
+      "examiner_scoring_active": false,
+      "embeddings_active": false,
+      "vector_db_active": false,
+      "cloud_services_active": false
+    }
+  },
+  "retrieval_plan": {
+    "mode": "forced_plus_supporting_chunks",
+    "query": "Does more tannin mean better wine? Tannin is the same as bitterness. Tannin produces astringency (a drying, gripping tactile sensation), not bitterness (a taste). Both can be present in the same wine but they are assessed separately and have different causes. C_TANNIN",
+    "top_k": 8,
+    "forced_retrieval_nodes": [
+      "MC_TANNIN_01"
+    ],
+    "retrieval_engine": "tools.retrieval.tutor_retrieval_sandbox",
+    "uses_embeddings": false,
+    "uses_vector_db": false,
+    "uses_llm": false,
+    "uses_api": false
+  },
+  "retrieved_context": [
+    {
+      "context_type": "misconception_node",
+      "node_id": "MC_TANNIN_01",
+      "forced_retrieval": true,
+      "agent_corpus": "tutor",
+      "safe_for_examiner": false,
+      "source_path": "C:/Users/esand/OneDrive/Documents/WSET-AI-System/knowledge/knowledge-map/misconceptions/mc_tannin_01.json",
+      "content": {
+        "misconception_id": "MC_TANNIN_01",
+        "misconception": "Tannin is the same as bitterness.",
+        "why_incorrect": "Tannin produces astringency \u2014 a tactile, drying sensation caused by tannin molecules binding to salivary proteins and precipitating them. This is perceived as a dry, gripping feeling on the gums, inner cheeks, and palate. Bitterness is a taste (not a tactile sensation) perceived on the palate and is associated with different compounds (e.g., certain phenolics, but not the same as astringent tannins). A wine can be bitter without being astringent, and vice versa. On the SAT, tannin is assessed separately from bitterness.",
+        "corrected_understanding": "Tannin produces astringency (a drying, gripping tactile sensation), not bitterness (a taste). Both can be present in the same wine but they are assessed separately and have different causes.",
+        "related_topics": [
+          "T_RA1_WINE_COMPONENTS",
+          "T_RA1_SAT"
+        ],
+        "related_concepts": [
+          "C_TANNIN"
+        ],
+        "severity": "high",
+        "frequency": "very_common",
+        "distinction_relevance": true,
+        "tutor_intervention": "direct_correction",
+        "detection_signals": [
+          "this wine is bitter because of the tannins",
+          "tannins are what make wine bitter",
+          "high tannin means bitter taste"
+        ],
+        "_meta": {
+          "schema_version": "1.0",
+          "created_date": "2026-05-13",
+          "ingestion_status": "draft"
+        },
+        "_source_path": "C:/Users/esand/OneDrive/Documents/WSET-AI-System/knowledge/knowledge-map/misconceptions/mc_tannin_01.json"
+      }
+    },
+    {
+      "context_type": "retrieval_sandbox_chunk",
+      "chunk_id": "OFFICIAL_WSET_1_1_THE_SYSTEMATIC_APPROACH_TO_TASTING_WINE_001",
+      "forced_retrieval": false,
+      "agent_corpus": "tutor",
+      "safe_for_examiner": false,
+      "score": 0.8925,
+      "source_type": "official_wset_extracted",
+      "source_file": "knowledge/official-wset/study-guide/wset_markdown/seccion_4_section_1_wine_and_the_consumer/4-1_1_the_systematic_approach_to_tasting_wine.md",
+      "source_trust_tier": 1,
+      "title": "1 The Systematic Approach to Tasting Wine\u00ae",
+      "section": "4",
+      "subtopic": "4.1",
+      "official_grading_authority": false,
+      "requires_human_review": true,
+      "reasoning_type": "theory_foundation",
+      "pedagogical_role": "official_reference",
+      "why_retrieved": [
+        "matched canonical/query terms: acidity, appearance, assessed, astringency, balance, better, bitterness, both",
+        "matched SAT/tasting vocabulary",
+        "matches knowledge-map concept or relationship terms",
+        "matches knowledge-map concept vocabulary",
+        "official WSET extracted Tutor support",
+        "matched official section/topic metadata",
+        "exact term match"
+      ],
+      "text_excerpt": "# 1 The Systematic Approach to Tasting Wine\u00ae <!-- p\u00e1gina 10 --> THES YSTEMATICA PPROACHT OT ASTINGW INE\" TheS ystematiAc pproactho TastinWg ine\u00ae The WSET Level 3. Syst~matic Approach to Tasting Wine (SAT) is a tool that allows you to write a complete description of a wine and then use this information to make an evaluation of its quality and readiness for...",
+      "source_video": "",
+      "source_filename": "4-1_1_the_systematic_approach_to_tasting_wine.md"
+    },
+    {
+      "context_type": "retrieval_sandbox_chunk",
+      "chunk_id": "OFFICIAL_WSET_4_7_COMMON_ELEMENTS_IN_WINEMAKING_AND_MATURATION_001",
+      "forced_retrieval": false,
+      "agent_corpus": "tutor",
+      "safe_for_examiner": false,
+      "score": 0.8529,
+      "source_type": "official_wset_extracted",
+      "source_file": "knowledge/official-wset/study-guide/wset_markdown/seccion_5_section_2_factors_affecting_the_style_quality_and_price_of_w/5-4_7_common_elements_in_winemaking_and_maturation.md",
+      "source_trust_tier": 1,
+      "title": "7 Common Elements in Winemaking and Maturation",
+      "section": "5",
+      "subtopic": "5.4",
+      "official_grading_authority": false,
+      "requires_human_review": true,
+      "reasoning_type": "theory_foundation",
+      "pedagogical_role": "official_reference",
+      "why_retrieved": [
+        "matched canonical/query terms: acidity, appearance, balance, better, both, causes, complexity, different",
+        "matched SAT/tasting vocabulary",
+        "matches knowledge-map concept or relationship terms",
+        "matches knowledge-map concept vocabulary",
+        "official WSET extracted Tutor support",
+        "matched official section/topic metadata",
+        "exact term match"
+      ],
+      "text_excerpt": "# 7 Common Elements in Winemaking and Maturation <!-- p\u00e1gina 52 --> COMMONE LEMENTISN W INEMAKINGAN D MATURATION 43 CommoEnl ementisn W inemakinagn dM aturation 7 There are certain factors and processes that are common to all wines and these are explored in this chapter. It is important to get an appreciation of their roles in winemaking and maturation an...",
+      "source_video": "",
+      "source_filename": "5-4_7_common_elements_in_winemaking_and_maturation.md"
+    },
+    {
+      "context_type": "retrieval_sandbox_chunk",
+      "chunk_id": "OFFICIAL_WSET_W_5_6_9_RED_AND_ROSE_WINEMAKING_001",
+      "forced_retrieval": false,
+      "agent_corpus": "tutor",
+      "safe_for_examiner": false,
+      "score": 0.8052,
+      "source_type": "official_wset_extracted",
+      "source_file": "knowledge/official-wset/study-guide/wset_markdown/seccion_5_section_2_factors_affecting_the_style_quality_and_price_of_w/5-6_9_red_and_rose_winemaking.md",
+      "source_trust_tier": 1,
+      "title": "9 Red and Ros\u00e9 Winemaking",
+      "section": "5",
+      "subtopic": "5.6",
+      "official_grading_authority": false,
+      "requires_human_review": true,
+      "reasoning_type": "theory_foundation",
+      "pedagogical_role": "official_reference",
+      "why_retrieved": [
+        "matched canonical/query terms: acidity, balance, better, both, causes, complexity, different, have",
+        "matched SAT/tasting vocabulary",
+        "matches knowledge-map concept or relationship terms",
+        "matches knowledge-map concept vocabulary",
+        "official WSET extracted Tutor support",
+        "matched official section/topic metadata",
+        "exact term match"
+      ],
+      "text_excerpt": "# 9 Red and Ros\u00e9 Winemaking <!-- p\u00e1gina 72 --> RED AND ROS~ WINEMAKING 63 Reda ndR osWe inemakinRged winemaking is more involved than white 9 winemaking because the grapes must be fermented on their skins in order to extract both colour and tannin. This chapter will focus on the various ways in which colour and tannin can be extracted and how winemakers u...",
+      "source_video": "",
+      "source_filename": "5-6_9_red_and_rose_winemaking.md"
+    },
+    {
+      "context_type": "retrieval_sandbox_chunk",
+      "chunk_id": "OFFICIAL_WSET_WINES_OF_THE_WORLD_6_19_30_SPAIN_001",
+      "forced_retrieval": false,
+      "agent_corpus": "tutor",
+      "safe_for_examiner": false,
+      "score": 0.7505,
+      "source_type": "official_wset_extracted",
+      "source_file": "knowledge/official-wset/study-guide/wset_markdown/seccion_6_section_3_still_wines_of_the_world/6-19_30_spain.md",
+      "source_trust_tier": 1,
+      "title": "30 Spain",
+      "section": "6",
+      "subtopic": "6.19",
+      "official_grading_authority": false,
+      "requires_human_review": true,
+      "reasoning_type": "theory_foundation",
+      "pedagogical_role": "official_reference",
+      "why_retrieved": [
+        "matched canonical/query terms: acidity, balance, better, both, complexity, different, have, high acidity",
+        "matched SAT/tasting vocabulary",
+        "matches knowledge-map concept or relationship terms",
+        "matches knowledge-map concept vocabulary",
+        "official WSET extracted Tutor support",
+        "exact term match"
+      ],
+      "text_excerpt": "# 30 Spain <!-- p\u00e1gina 140 --> SPAIN 131 SpainS pain has a long history of wine production but its wines have only relatively recently come 30 to prominence on international markets. Styles vary from traditional barrel-aged reds to modern, fruity whites; and although international varieties have been planted in many of Spain's wine regions, it is the coun...",
+      "source_video": "",
+      "source_filename": "6-19_30_spain.md"
+    },
+    {
+      "context_type": "retrieval_sandbox_chunk",
+      "chunk_id": "OFFICIAL_WSET_OF_THE_WORLD_6_16_27_NORTHERN_ITALY_001",
+      "forced_retrieval": false,
+      "agent_corpus": "tutor",
+      "safe_for_examiner": false,
+      "score": 0.7294,
+      "source_type": "official_wset_extracted",
+      "source_file": "knowledge/official-wset/study-guide/wset_markdown/seccion_6_section_3_still_wines_of_the_world/6-16_27_northern_italy.md",
+      "source_trust_tier": 1,
+      "title": "27 Northern Italy",
+      "section": "6",
+      "subtopic": "6.16",
+      "official_grading_authority": false,
+      "requires_human_review": true,
+      "reasoning_type": "theory_foundation",
+      "pedagogical_role": "official_reference",
+      "why_retrieved": [
+        "matched canonical/query terms: acidity, both, complexity, different, have, high acidity, length, mean",
+        "matched SAT/tasting vocabulary",
+        "matches knowledge-map concept or relationship terms",
+        "matches knowledge-map concept vocabulary",
+        "official WSET extracted Tutor support",
+        "exact term match"
+      ],
+      "text_excerpt": "# 27 Northern Italy <!-- p\u00e1gina 130 --> NORTHERN ITALY 121 NorthernIt aly Northern Italy produces a wide range of wine styles from the full-bodied 27 tannic reds of Barolo to the delicate white wines of Soave. All this is possible because of diverse geography and an incredible number of unique local grape varieties. This chapter will cover the regions of...",
+      "source_video": "",
+      "source_filename": "6-16_27_northern_italy.md"
+    },
+    {
+      "context_type": "retrieval_sandbox_chunk",
+      "chunk_id": "OFFICIAL_WSET_WINES_OF_THE_WORLD_8_2_44_PORT_001",
+      "forced_retrieval": false,
+      "agent_corpus": "tutor",
+      "safe_for_examiner": false,
+      "score": 0.726,
+      "source_type": "official_wset_extracted",
+      "source_file": "knowledge/official-wset/study-guide/wset_markdown/seccion_8_section_5_fortified_wines_of_the_world/8-2_44_port.md",
+      "source_trust_tier": 1,
+      "title": "44 Port",
+      "section": "8",
+      "subtopic": "8.2",
+      "official_grading_authority": false,
+      "requires_human_review": true,
+      "reasoning_type": "theory_foundation",
+      "pedagogical_role": "official_reference",
+      "why_retrieved": [
+        "matched canonical/query terms: both, complexity, different, have, more, produces, same, separately",
+        "matched SAT/tasting vocabulary",
+        "matches knowledge-map concept or relationship terms",
+        "matches knowledge-map concept vocabulary",
+        "official WSET extracted Tutor support",
+        "exact term match"
+      ],
+      "text_excerpt": "# 44 Port <!-- p\u00e1gina 199 --> 190 UNDERSTANDING WINES: EXPLAINING STYLE AND QUALITY Port 44 Ports are made by adding grape spirit to a fermenting juice to create an alcoholic sweet wine. This is a technique that has been used in this region since the eighteenth century and it is now used to make wines of a similar style throughout the world. Port is made...",
+      "source_video": "",
+      "source_filename": "8-2_44_port.md"
+    },
+    {
+      "context_type": "retrieval_sandbox_chunk",
+      "chunk_id": "OFFICIAL_WSET_OF_THE_WORLD_6_10_21_SOUTHERN_FRANCE_001",
+      "forced_retrieval": false,
+      "agent_corpus": "tutor",
+      "safe_for_examiner": false,
+      "score": 0.7188,
+      "source_type": "official_wset_extracted",
+      "source_file": "knowledge/official-wset/study-guide/wset_markdown/seccion_6_section_3_still_wines_of_the_world/6-10_21_southern_france.md",
+      "source_trust_tier": 1,
+      "title": "21 Southern France",
+      "section": "6",
+      "subtopic": "6.10",
+      "official_grading_authority": false,
+      "requires_human_review": true,
+      "reasoning_type": "theory_foundation",
+      "pedagogical_role": "official_reference",
+      "why_retrieved": [
+        "matched canonical/query terms: acidity, better, both, complexity, different, have, high acidity, more",
+        "matched SAT/tasting vocabulary",
+        "matches knowledge-map concept or relationship terms",
+        "matches knowledge-map concept vocabulary",
+        "official WSET extracted Tutor support",
+        "exact term match"
+      ],
+      "text_excerpt": "# 21 Southern France <!-- p\u00e1gina 114 --> SOUTHERN FRANCE 105 SoutherFnr ance The vineyards of southern France lie along the Mediterranean coast 21 from Italy in the east to the Spanish border in the west. They are split into three broad areas: Languedoc and Roussillon to the west of the Rhone, and Provence to the east. The prevalence of the local IGP, Pay...",
+      "source_video": "",
+      "source_filename": "6-10_21_southern_france.md"
+    },
+    {
+      "context_type": "retrieval_sandbox_chunk",
+      "chunk_id": "WSET_Level_3_Wines_-_Understanding_the_Common_Elements_of_Winemaking_Part-0002",
+      "forced_retrieval": false,
+      "agent_corpus": "tutor",
+      "safe_for_examiner": false,
+      "score": 0.5351,
+      "source_type": "manual_curated_srt",
+      "source_file": "",
+      "source_trust_tier": "pedagogical",
+      "title": "",
+      "section": "",
+      "subtopic": "",
+      "official_grading_authority": false,
+      "requires_human_review": false,
+      "reasoning_type": "cause_effect",
+      "pedagogical_role": "theory_explanation",
+      "why_retrieved": [
+        "matched canonical/query terms: both, have, more, present, tannin, wine",
+        "pedagogical role fits foundational_theory",
+        "matched SAT/tasting vocabulary",
+        "matches knowledge-map concept or relationship terms",
+        "matches knowledge-map concept vocabulary",
+        "exact term match"
+      ],
+      "text_excerpt": "is sugar and sugar is very important of course as yeast will use it to ferment it into alcohol and this is the second largest component in the grape and then the third part here is acid and the acids we find numerous acids but there are two major acidities which wset on this syllabus wish you to understand the greatest is tartaric so tartaric acid has the...",
+      "source_video": "WSET Level 3 Wines - Understanding the Common Elements of Winemaking Part",
+      "source_filename": "[English (auto-generated)] WSET Level 3 Wines - Understanding the Common Elements of Winemaking Part.srt"
+    }
+  ],
+  "tutor_directive": {
+    "pedagogical_act": "misconception_intervention",
+    "forced_retrieval_nodes": [
+      "MC_TANNIN_01"
+    ],
+    "intervention_type": "direct_correction",
+    "corrected_understanding": "Tannin produces astringency (a drying, gripping tactile sensation), not bitterness (a taste). Both can be present in the same wine but they are assessed separately and have different causes.",
+    "safe_for_examiner": false,
+    "language": "es",
+    "response_language_instruction": "Respond in Spanish. Preserve official WSET terms where useful, and do not translate key terms if translation would reduce precision. Distinguish official WSET content from pedagogical content.",
+    "source_handling": [
+      "Use this as a context package only; do not treat it as a final answer.",
+      "Use official WSET support first when available.",
+      "Use pedagogical transcript chunks only as enrichment.",
+      "Do not present pedagogical sources as official authority.",
+      "Distinguish official WSET content from pedagogical enrichment when explaining.",
+      "Do not translate source chunks; preserve official WSET terms where useful.",
+      "Do not translate key terms if translation would reduce precision."
+    ]
+  },
+  "success_criteria": [
+    "Identify the misconception before answering the learner's underlying question.",
+    "State the corrected understanding clearly.",
+    "Use supporting Tutor-context chunks only as pedagogical support.",
+    "Keep Examiner scoring disabled and safe_for_examiner false."
+  ],
+  "governance": {
+    "agent_corpus": "tutor",
+    "safe_for_examiner": false,
+    "examiner_scoring_allowed": false
+  }
+}

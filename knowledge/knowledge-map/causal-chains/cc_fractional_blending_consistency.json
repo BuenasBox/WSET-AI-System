@@ -1,0 +1,45 @@
+{
+  "node_type": "causal_chain",
+  "node_id": "CC_FRACTIONAL_BLENDING_CONSISTENCY",
+  "topic": "solera fractional blending and style consistency",
+  "trigger_keywords": ["solera", "fractional blending", "criadera", "consistency", "non-vintage", "sherry", "house style", "blending"],
+  "steps": [
+    {
+      "step": 1,
+      "label": "cause",
+      "text": "A solera system is established: a series of barrels (criaderas) arranged by age, each containing wine at different stages of maturation"
+    },
+    {
+      "step": 2,
+      "label": "mechanism",
+      "text": "When wine is drawn from the oldest barrels (the solera level) for bottling, those barrels are partially refilled with younger wine from the next criadera level; this cascade continues up through all levels with the youngest wine topping the freshest criadera"
+    },
+    {
+      "step": 3,
+      "label": "effect",
+      "text": "Each bottling contains a blend of wines from multiple vintages; the consistent addition of older wine to younger wine and vice versa maintains a stable average age and style year after year"
+    },
+    {
+      "step": 4,
+      "label": "exam_formulation",
+      "text": "The solera system blends wine across multiple vintages, producing a consistent non-vintage style that maintains the house character regardless of harvest variation."
+    }
+  ],
+  "sat_relevance": "Solera-produced wines are typically assessed as non-vintage styles. Consistency across bottlings is the key feature. Complexity may be attributed partly to the blend of different aged components.",
+  "linked_misconceptions": [],
+  "linked_topics": ["T_RA3_SHERRY", "T_RA2_SPAIN"],
+  "agent_corpus": "tutor",
+  "safe_for_examiner": false,
+  "examiner_scoring_allowed": false,
+  "requires_human_review": true,
+  "governance": {
+    "safe_for_examiner": false,
+    "examiner_scoring_allowed": false,
+    "agent_corpus": "tutor"
+  },
+  "_meta": {
+    "schema_version": "causal_chain_v1",
+    "created_date": "2026-05-15",
+    "ingestion_status": "draft"
+  }
+}

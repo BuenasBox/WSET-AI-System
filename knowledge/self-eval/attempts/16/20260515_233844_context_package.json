@@ -1,0 +1,148 @@
+{
+  "student_query": "\u00bfQu\u00e9 pr\u00e1ctica enol\u00f3gica se utiliza para aumentar la extracci\u00f3n de color y taninos en tintos?",
+  "language": "es",
+  "orchestrator_decision": {
+    "route": "normal_tutor",
+    "reason": "no_misconception_detected",
+    "matched_misconception_id": null
+  },
+  "pedagogical_act": "answer_normally",
+  "forced_retrieval_nodes": [],
+  "matched_misconception": {},
+  "learner_state_context": {
+    "learner_id": "nazareth",
+    "current_level": "WSET_L3",
+    "known_weak_areas": [],
+    "recent_misconceptions": [],
+    "session_count": 0,
+    "governance": {
+      "safe_for_examiner": false,
+      "examiner_scoring_active": false,
+      "embeddings_active": false,
+      "vector_db_active": false,
+      "cloud_services_active": false
+    }
+  },
+  "retrieval_plan": {
+    "mode": "normal_retrieval",
+    "query": "\u00bfQu\u00e9 pr\u00e1ctica enol\u00f3gica se utiliza para aumentar la extracci\u00f3n de color y taninos en tintos?",
+    "top_k": 5,
+    "forced_retrieval_nodes": [],
+    "retrieval_engine": "tools.retrieval.tutor_retrieval_sandbox",
+    "uses_embeddings": false,
+    "uses_vector_db": false,
+    "uses_llm": false,
+    "uses_api": false
+  },
+  "retrieved_context": [
+    {
+      "context_type": "retrieval_sandbox_chunk",
+      "chunk_id": "Explaining_Wine_Terminology_-_Semi-Carbonic_Maceration_for_WSET_Level_3-0008",
+      "forced_retrieval": false,
+      "agent_corpus": "tutor",
+      "safe_for_examiner": false,
+      "score": 0.228,
+      "reasoning_type": "cause_effect",
+      "pedagogical_role": "theory_explanation",
+      "why_retrieved": [
+        "matched canonical/query terms: Color, color",
+        "pedagogical role fits foundational_theory"
+      ],
+      "text_excerpt": "malic acid so that malic acid is converted to ethanol and that's what we are showing you at the bottom of that diagram again and that's through the enzymes and this is really where the foundation box for those compounds in classic semi-carbonic macerated wines that produce those kind of curshy bubble gummy characteristics the pigment and the tannin is abs...",
+      "source_video": "Explaining Wine Terminology - Semi-Carbonic Maceration for WSET Level 3 &",
+      "source_filename": "[English (auto-generated)] Explaining Wine Terminology - Semi-Carbonic Maceration for WSET Level 3 &.srt"
+    },
+    {
+      "context_type": "retrieval_sandbox_chunk",
+      "chunk_id": "Explaining_Wine_Terminology_-_Semi-Carbonic_Maceration_for_WSET_Level_3-0010",
+      "forced_retrieval": false,
+      "agent_corpus": "tutor",
+      "safe_for_examiner": false,
+      "score": 0.228,
+      "reasoning_type": "cause_effect",
+      "pedagogical_role": "theory_explanation",
+      "why_retrieved": [
+        "matched canonical/query terms: Color, color",
+        "pedagogical role fits foundational_theory"
+      ],
+      "text_excerpt": "gone through will mean that you will have greater extraction in that press wine of color and of tannic structure as well okay now um during enzymatic fermentation the grape berries will actually burst as we mentioned and that will release that bit of juice into the fat that juice will need to go under a yeast driven fermentation as well and basically what...",
+      "source_video": "Explaining Wine Terminology - Semi-Carbonic Maceration for WSET Level 3 &",
+      "source_filename": "[English (auto-generated)] Explaining Wine Terminology - Semi-Carbonic Maceration for WSET Level 3 &.srt"
+    },
+    {
+      "context_type": "retrieval_sandbox_chunk",
+      "chunk_id": "Master_Winemaking_for_WSET_Level_3_Exam_Clarification_Techniques_Explained-0007",
+      "forced_retrieval": false,
+      "agent_corpus": "tutor",
+      "safe_for_examiner": false,
+      "score": 0.228,
+      "reasoning_type": "cause_effect",
+      "pedagogical_role": "foundational",
+      "why_retrieved": [
+        "matched canonical/query terms: Color, color",
+        "pedagogical role fits foundational_theory"
+      ],
+      "text_excerpt": "it's actually repeated here for filtration some W makers again believe that filtration this should WR sorry here filtration can adversely affect flavor and texture now quite clearly you have seen that I just copy and pasted that and I should have changed it to filtration so please make sure that you do on yours hopefully with my mistake you will remember...",
+      "source_video": "Master Winemaking for WSET Level 3 Exam Clarification Techniques Explained \ud83c\udf77",
+      "source_filename": "Master Winemaking for WSET Level 3 Exam Clarification Techniques Explained \ud83c\udf77 [English (auto-generated)] [DownloadYoutubeSubtitles.com].srt"
+    },
+    {
+      "context_type": "retrieval_sandbox_chunk",
+      "chunk_id": "Red_Wine_Extraction_Techniques_Advanced_Version_useful_for_WSET_L3_and_L4-0009",
+      "forced_retrieval": false,
+      "agent_corpus": "tutor",
+      "safe_for_examiner": false,
+      "score": 0.228,
+      "reasoning_type": "cause_effect",
+      "pedagogical_role": "theory_explanation",
+      "why_retrieved": [
+        "matched canonical/query terms: Color, color",
+        "pedagogical role fits foundational_theory"
+      ],
+      "text_excerpt": "settling on those grape skins and pips for further extraction if it is possible something which is quite widely practiced in newer world regions and places like California with napa cabernet sauvignon can go through often something like a couple of weeks of this up to well over a month and that the main sort of aim of this is to further enhance color flav...",
+      "source_video": "Red Wine Extraction Techniques Advanced Version useful for WSET L3 and L4",
+      "source_filename": "[English (auto-generated)] Red Wine Extraction Techniques Advanced Version useful for WSET L3 and L4.srt"
+    },
+    {
+      "context_type": "retrieval_sandbox_chunk",
+      "chunk_id": "Understanding_Red_Wine_Making_for_WSET_Level_3-0002",
+      "forced_retrieval": false,
+      "agent_corpus": "tutor",
+      "safe_for_examiner": false,
+      "score": 0.228,
+      "reasoning_type": "cause_effect",
+      "pedagogical_role": "theory_explanation",
+      "why_retrieved": [
+        "matched canonical/query terms: Color, color",
+        "pedagogical role fits foundational_theory"
+      ],
+      "text_excerpt": "fruit has been crushed some wine makers prefer to leave the grapes uh so everything so that's skins and the juice to mate for a period of time at a low temperature before allowing fermentation to start so typically we are talking about temperatures below 10\u00b0 C somewhere around sort of two to five but maybe 2 to8 dependent basically we want this lower than...",
+      "source_video": "Understanding Red Wine Making for WSET Level 3",
+      "source_filename": "Understanding Red Wine Making for WSET Level 3 [English (auto-generated)] [DownloadYoutubeSubtitles.com].srt"
+    }
+  ],
+  "tutor_directive": {
+    "pedagogical_act": "answer_normally",
+    "forced_retrieval_nodes": [],
+    "safe_for_examiner": false,
+    "language": "es",
+    "response_language_instruction": "Respond in Spanish. Preserve official WSET terms where useful, and do not translate key terms if translation would reduce precision. Distinguish official WSET content from pedagogical content.",
+    "source_handling": [
+      "Use this as a context package only; do not treat it as a final answer.",
+      "Distinguish official WSET content from pedagogical enrichment when explaining.",
+      "Do not translate source chunks; preserve official WSET terms where useful.",
+      "Do not translate key terms if translation would reduce precision."
+    ]
+  },
+  "success_criteria": [
+    "Answer the learner's question using the retrieved Tutor context.",
+    "Preserve official WSET terminology where precision matters.",
+    "Distinguish official WSET content from pedagogical enrichment.",
+    "Keep Examiner scoring disabled and safe_for_examiner false."
+  ],
+  "governance": {
+    "agent_corpus": "tutor",
+    "safe_for_examiner": false,
+    "examiner_scoring_allowed": false
+  }
+}

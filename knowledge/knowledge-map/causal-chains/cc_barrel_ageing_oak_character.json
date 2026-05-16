@@ -1,0 +1,45 @@
+{
+  "node_type": "causal_chain",
+  "node_id": "CC_BARREL_AGEING_OAK_CHARACTER",
+  "topic": "barrel ageing and oak flavour integration",
+  "trigger_keywords": ["barrel", "oak", "barrel ageing", "vanilla", "toast", "spice", "tannin", "oxygen ingress", "lees", "barrel fermentation"],
+  "steps": [
+    {
+      "step": 1,
+      "label": "cause",
+      "text": "Wine is aged in oak barrels (new or old, various sizes) for a period measured in months to years"
+    },
+    {
+      "step": 2,
+      "label": "mechanism",
+      "text": "Oxygen enters slowly through barrel staves, softening tannins and stabilising colour; flavour compounds (vanillin, lactones, toast compounds) are extracted from the oak wood; lees contact (if present) adds texture"
+    },
+    {
+      "step": 3,
+      "label": "effect",
+      "text": "The wine shows vanilla, toast, spice, and coconut flavours from the oak; tannins are softened and integrated; colour is stabilised; the wine develops additional structural complexity"
+    },
+    {
+      "step": 4,
+      "label": "exam_formulation",
+      "text": "Barrel ageing imparts vanilla and toast flavours from oak and allows slow oxygen ingress, softening tannins and adding structural complexity."
+    }
+  ],
+  "sat_relevance": "Oak-derived characteristics (vanilla, toast, coconut) are assessed on the nose and palate. New oak and barrel ageing are significant winemaking decisions that affect style, intensity, complexity, and ageing potential.",
+  "linked_misconceptions": ["MC_OAK_QUALITY_01"],
+  "linked_topics": ["T_RA1_WINEMAKING"],
+  "agent_corpus": "tutor",
+  "safe_for_examiner": false,
+  "examiner_scoring_allowed": false,
+  "requires_human_review": true,
+  "governance": {
+    "safe_for_examiner": false,
+    "examiner_scoring_allowed": false,
+    "agent_corpus": "tutor"
+  },
+  "_meta": {
+    "schema_version": "causal_chain_v1",
+    "created_date": "2026-05-15",
+    "ingestion_status": "draft"
+  }
+}

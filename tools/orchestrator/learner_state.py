@@ -16,7 +16,7 @@ DEFAULT_SESSION_STAGING_PATH = NAZARETH_ROOT / "session_staging.json"
 
 DEFAULT_LES: dict[str, Any] = {
     "learner_id": "nazareth",
-    "schema_version": "minimal_brain_v1",
+    "schema_version": "minimal_brain_v2",
     "current_level": "WSET_L3",
     "known_weak_areas": [],
     "recent_misconceptions": [],
@@ -31,7 +31,7 @@ DEFAULT_LES: dict[str, Any] = {
 }
 
 DEFAULT_SESSION_STAGING: dict[str, Any] = {
-    "schema_version": "minimal_brain_v1",
+    "schema_version": "minimal_brain_v2",
     "latest_session": None,
     "governance": {
         "safe_for_examiner": False,

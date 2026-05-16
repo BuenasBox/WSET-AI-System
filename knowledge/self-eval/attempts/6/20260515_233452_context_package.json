@@ -1,0 +1,146 @@
+{
+  "student_query": "\u00bfCu\u00e1l es una caracter\u00edstica clave del vino de Jerez Fino?",
+  "language": "es",
+  "orchestrator_decision": {
+    "route": "normal_tutor",
+    "reason": "no_misconception_detected",
+    "matched_misconception_id": null
+  },
+  "pedagogical_act": "answer_normally",
+  "forced_retrieval_nodes": [],
+  "matched_misconception": {},
+  "learner_state_context": {
+    "learner_id": "nazareth",
+    "current_level": "WSET_L3",
+    "known_weak_areas": [],
+    "recent_misconceptions": [],
+    "session_count": 0,
+    "governance": {
+      "safe_for_examiner": false,
+      "examiner_scoring_active": false,
+      "embeddings_active": false,
+      "vector_db_active": false,
+      "cloud_services_active": false
+    }
+  },
+  "retrieval_plan": {
+    "mode": "normal_retrieval",
+    "query": "\u00bfCu\u00e1l es una caracter\u00edstica clave del vino de Jerez Fino?",
+    "top_k": 5,
+    "forced_retrieval_nodes": [],
+    "retrieval_engine": "tools.retrieval.tutor_retrieval_sandbox",
+    "uses_embeddings": false,
+    "uses_vector_db": false,
+    "uses_llm": false,
+    "uses_api": false
+  },
+  "retrieved_context": [
+    {
+      "context_type": "retrieval_sandbox_chunk",
+      "chunk_id": "How_to_prepare_for_the_WSET_Level_3_Tasting_Exam-0001",
+      "forced_retrieval": false,
+      "agent_corpus": "tutor",
+      "safe_for_examiner": false,
+      "score": 0.22,
+      "reasoning_type": "exam_strategy",
+      "pedagogical_role": "exam_strategy",
+      "why_retrieved": [
+        "golden tutor chunk candidate",
+        "high retrieval priority in golden QA report"
+      ],
+      "text_excerpt": "So, let's go through um preparing you for the very famous and intensive and intimidating level three tasting examination. If you do follow all of these key points and you listen to your tutor, you will get through this tasting examination. It is in fact the least of your worries when it comes to the level three exam. uh it is in fact the uh the theory whe...",
+      "source_video": "How to prepare for the WSET Level 3 Tasting Exam",
+      "source_filename": "How to prepare for the WSET Level 3 Tasting Exam.srt"
+    },
+    {
+      "context_type": "retrieval_sandbox_chunk",
+      "chunk_id": "How_to_prepare_for_the_WSET_Level_3_Tasting_Exam-0004",
+      "forced_retrieval": false,
+      "agent_corpus": "tutor",
+      "safe_for_examiner": false,
+      "score": 0.22,
+      "reasoning_type": "common_mistake",
+      "pedagogical_role": "exam_strategy",
+      "why_retrieved": [
+        "golden tutor chunk candidate",
+        "high retrieval priority in golden QA report"
+      ],
+      "text_excerpt": "Please make sure you memorize and internalize the whole systematic approach to tasting. you will not be able to take your card in with you as we previously mentioned and still students don't put down everything and that's where they will lose marks. So please come up with some sort of mnemonic to remember the whole list of the systemic on the actual day o...",
+      "source_video": "How to prepare for the WSET Level 3 Tasting Exam",
+      "source_filename": "How to prepare for the WSET Level 3 Tasting Exam.srt"
+    },
+    {
+      "context_type": "retrieval_sandbox_chunk",
+      "chunk_id": "How_to_pass_your_WSET_Level_3_Theory_Exam-0006",
+      "forced_retrieval": false,
+      "agent_corpus": "tutor",
+      "safe_for_examiner": false,
+      "score": 0.16,
+      "reasoning_type": "exam_strategy",
+      "pedagogical_role": "foundational",
+      "why_retrieved": [
+        "medium retrieval priority in golden QA report",
+        "pedagogical role fits foundational_theory"
+      ],
+      "text_excerpt": "must must must revise it it is still the most poorly done the least successfully done question of the whole level three syllabus so why because it's different and it's often taught at the end of the course and it's often the least understood by students now you have the opportunity to correct this in the world you now know it's coming so please revise it...",
+      "source_video": "How to pass your WSET Level 3 Theory Exam!",
+      "source_filename": "[English (auto-generated)] How to pass your WSET Level 3 Theory Exam! [DownSub.com].srt"
+    },
+    {
+      "context_type": "retrieval_sandbox_chunk",
+      "chunk_id": "Red_Wine_Extraction_Techniques_Advanced_Version_useful_for_WSET_L3_and_L4-0008",
+      "forced_retrieval": false,
+      "agent_corpus": "tutor",
+      "safe_for_examiner": false,
+      "score": 0.155,
+      "reasoning_type": "cause_effect",
+      "pedagogical_role": "theory_explanation",
+      "why_retrieved": [
+        "pedagogical role fits foundational_theory"
+      ],
+      "text_excerpt": "aggressive some people are a little bit more loath to adapt this method because in fact you are using pumps mechanical pumps and which some people say is detrimental to the wines production but this is quite useful for large productions big vats where it is quite difficult to be more artisanal and hands-on so this is the other montage process the pumping...",
+      "source_video": "Red Wine Extraction Techniques Advanced Version useful for WSET L3 and L4",
+      "source_filename": "[English (auto-generated)] Red Wine Extraction Techniques Advanced Version useful for WSET L3 and L4.srt"
+    },
+    {
+      "context_type": "retrieval_sandbox_chunk",
+      "chunk_id": "WSET_Level_3_Wines_-_Understanding_the_Growing_Environment_-_Climate_Part_1-0004",
+      "forced_retrieval": false,
+      "agent_corpus": "tutor",
+      "safe_for_examiner": false,
+      "score": 0.155,
+      "reasoning_type": "cause_effect",
+      "pedagogical_role": "theory_explanation",
+      "why_retrieved": [
+        "pedagogical role fits foundational_theory"
+      ],
+      "text_excerpt": "if you were to compare this to a continental zone maybe somewhere like ribera del duero in central spain or the mosetta plain or something like that there's more consistency within the temperatures and the rainfall patterns but differences here in places like maritime climates for example cool so the next thing we are going to talk about is the temperatur...",
+      "source_video": "WSET Level 3 Wines - Understanding the Growing Environment - Climate Part 1",
+      "source_filename": "WSET Level 3 Wines - Understanding the Growing Environment - Climate Part 1 [English (auto-generated)] [DownloadYoutubeSubtitles.com].srt"
+    }
+  ],
+  "tutor_directive": {
+    "pedagogical_act": "answer_normally",
+    "forced_retrieval_nodes": [],
+    "safe_for_examiner": false,
+    "language": "es",
+    "response_language_instruction": "Respond in Spanish. Preserve official WSET terms where useful, and do not translate key terms if translation would reduce precision. Distinguish official WSET content from pedagogical content.",
+    "source_handling": [
+      "Use this as a context package only; do not treat it as a final answer.",
+      "Distinguish official WSET content from pedagogical enrichment when explaining.",
+      "Do not translate source chunks; preserve official WSET terms where useful.",
+      "Do not translate key terms if translation would reduce precision."
+    ]
+  },
+  "success_criteria": [
+    "Answer the learner's question using the retrieved Tutor context.",
+    "Preserve official WSET terminology where precision matters.",
+    "Distinguish official WSET content from pedagogical enrichment.",
+    "Keep Examiner scoring disabled and safe_for_examiner false."
+  ],
+  "governance": {
+    "agent_corpus": "tutor",
+    "safe_for_examiner": false,
+    "examiner_scoring_allowed": false
+  }
+}

@@ -37,7 +37,7 @@ class TutorAnswerBuilderTests(unittest.TestCase):
             result = build_tutor_answer(package_path, output_path=root / "latest.md")
             answer = Path(result["output_paths"]["latest"]).read_text(encoding="utf-8")
 
-        self.assertIn("Desde el marco WSET", answer)
+        self.assertIn("Como apoyo pedagógico", answer)
         self.assertIn("Para efectos del examen", answer)
         self.assertIn("Nota: esta es una respuesta del Tutor", answer)
 

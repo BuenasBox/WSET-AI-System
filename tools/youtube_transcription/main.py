@@ -49,6 +49,8 @@ from .targets import (
 from tools.retrieval.tutor_retrieval_sandbox import run_retrieval_sandbox
 from tools.orchestrator.orchestrator import run_orchestrator
 from tools.tutor.answer_builder import build_tutor_answer
+from tools.self_eval.question_runner import run_self_eval
+from tools.retrieval.official_wset_chunks import build_official_wset_chunks
 
 
 def main() -> None:
@@ -133,6 +135,16 @@ def main() -> None:
             print(f"   why: {'; '.join(chunk['why_retrieved'])}")
         return
 
+    if args.command == "build-official-chunks":
+        result = build_official_wset_chunks()
+        print("Official WSET Tutor chunks built.")
+        print(f"Markdown files loaded: {result['markdown_files_loaded']}")
+        print(f"Chunks created: {result['chunks_created']}")
+        print(f"JSONL: {result['jsonl_path']}")
+        print(f"Report: {result['report_path']}")
+        print("Governance: safe_for_examiner=false; official_grading_authority=false; agent_corpus=tutor")
+        return
+
     if args.command == "orchestrator-test":
         run = run_orchestrator(query=args.query, top_k=args.top_k, language=args.language)
         print("Detected misconception:")
@@ -167,6 +179,29 @@ def main() -> None:
         print(f"Style: {result['style']}")
         print(f"Latest output: {result['output_paths']['latest']}")
         print(f"Timestamped output: {result['output_paths']['timestamped']}")
+        print("Governance flags:")
+        print(json.dumps(result["governance"], indent=2, ensure_ascii=True))
+        return
+
+    if args.command == "self-eval":
+        result = run_self_eval(
+            question_type=args.question_type,
+            limit=args.limit,
+            output_dir=Path(args.output_dir),
+            strictness=args.strictness,
+        )
+        print("Local Tutor self-evaluation complete.")
+        print(f"Questions attempted: {result['questions_attempted']}")
+        print(f"Strictness: {args.strictness}")
+        print(f"Summary report: {result['report_paths']['summary']}")
+        print(f"CSV results: {result['report_paths']['csv']}")
+        print(f"JSONL results: {result['report_paths']['jsonl']}")
+        print(f"LES feedback simulation: {result['report_paths']['feedback']}")
+        labels = {}
+        for item in result["results"]:
+            for label in item.get("comparison", {}).get("failure_labels", []):
+                labels[label] = labels.get(label, 0) + 1
+        print(f"Most common failure labels: {labels}")
         print("Governance flags:")
         print(json.dumps(result["governance"], indent=2, ensure_ascii=True))
         return
@@ -454,6 +489,10 @@ def _build_parser() -> argparse.ArgumentParser:
         "golden-tutor-chunks",
         help="Write derived Tutor-only golden chunk QA candidate reports from manual SRT chunks.",
     )
+    subparsers.add_parser(
+        "build-official-chunks",
+        help="Build local Tutor-only chunks from official WSET markdown.",
+    )
     retrieval_parser = subparsers.add_parser(
         "retrieval-sandbox",
         help="Run rule-based Tutor retrieval validation for one natural-language query.",
@@ -520,6 +559,28 @@ def _build_parser() -> argparse.ArgumentParser:
         choices=("concise", "standard", "detailed"),
         default="standard",
         help="Tutor answer detail level.",
+    )
+    self_eval_parser = subparsers.add_parser(
+        "self-eval",
+        help="Run local Tutor-development self-evaluation simulation.",
+    )
+    self_eval_parser.add_argument(
+        "--question-type",
+        choices=("theory", "sat", "all"),
+        default="all",
+        help="Question type filter.",
+    )
+    self_eval_parser.add_argument("--limit", type=int, default=10, help="Maximum questions to attempt.")
+    self_eval_parser.add_argument(
+        "--strictness",
+        choices=("normal", "hard", "brutal"),
+        default="hard",
+        help="Diagnostic strictness for deterministic comparison.",
+    )
+    self_eval_parser.add_argument(
+        "--output-dir",
+        default=str(PROJECT_ROOT / "knowledge" / "self-eval"),
+        help="Directory for self-eval reports and attempts.",
     )
     return parser
 

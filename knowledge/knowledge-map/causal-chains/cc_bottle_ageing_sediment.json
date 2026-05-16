@@ -1,0 +1,45 @@
+{
+  "node_type": "causal_chain",
+  "node_id": "CC_BOTTLE_AGEING_SEDIMENT",
+  "topic": "bottle ageing, sediment formation, and tertiary character",
+  "trigger_keywords": ["bottle ageing", "sediment", "tertiary", "tannin polymerisation", "colour pigment", "ageing", "bottle age", "development"],
+  "steps": [
+    {
+      "step": 1,
+      "label": "cause",
+      "text": "A red wine with sufficient tannin, pigment, and structural components is aged in bottle over an extended period (years to decades)"
+    },
+    {
+      "step": 2,
+      "label": "mechanism",
+      "text": "Tannin molecules and anthocyanin pigments polymerise (join together into larger molecules) and eventually precipitate out of solution; the wine's structure gradually softens as free tannins decrease"
+    },
+    {
+      "step": 3,
+      "label": "effect",
+      "text": "Sediment (dark, gritty deposit) forms in the bottle; the wine develops tertiary aromas (leather, earth, dried fruit, mushroom, tobacco); tannins become softer and more integrated"
+    },
+    {
+      "step": 4,
+      "label": "exam_formulation",
+      "text": "In bottle, tannins and pigments polymerise over time, forming sediment and producing tertiary aromas as the wine develops."
+    }
+  ],
+  "sat_relevance": "Tertiary aromas and soft tannins signal bottle development on the SAT. A wine showing tertiary character has aged; readiness to drink should be assessed from tannin integration, fruit condition, and balance.",
+  "linked_misconceptions": ["MC_AGEING_IMPROVEMENT_01"],
+  "linked_topics": ["T_RA1_WINEMAKING", "T_RA1_SAT"],
+  "agent_corpus": "tutor",
+  "safe_for_examiner": false,
+  "examiner_scoring_allowed": false,
+  "requires_human_review": true,
+  "governance": {
+    "safe_for_examiner": false,
+    "examiner_scoring_allowed": false,
+    "agent_corpus": "tutor"
+  },
+  "_meta": {
+    "schema_version": "causal_chain_v1",
+    "created_date": "2026-05-15",
+    "ingestion_status": "draft"
+  }
+}

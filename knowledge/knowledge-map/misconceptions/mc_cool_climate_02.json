@@ -12,7 +12,22 @@
   "detection_signals": [
     "cool climate wines taste green",
     "if it's from a cold region it will be unripe",
-    "Chablis always tastes vegetal"
+    "Chablis always tastes vegetal",
+    "cool climate always means underripe grapes",
+    "wines from cool regions are always too green",
+    "cold climate wine will be herbaceous",
+    "if the climate is cool the grapes won't ripen properly",
+    "cool climate means unripe and green flavours"
+  ],
+  "detection_keywords": [
+    {"tokens": ["cool", "climate"], "require_all": true, "bias": 0.18},
+    {"tokens": ["cool", "unripe"], "require_all": true, "bias": 0.20},
+    {"tokens": ["cool", "green"], "require_all": true, "bias": 0.20},
+    {"tokens": ["cool", "vegetal"], "require_all": true, "bias": 0.22},
+    {"tokens": ["cold", "unripe"], "require_all": true, "bias": 0.18},
+    {"tokens": ["cool", "underripe"], "require_all": true, "bias": 0.22},
+    {"tokens": ["cool", "herbaceous"], "require_all": true, "bias": 0.20},
+    {"tokens": ["climate", "green"], "require_all": true, "bias": 0.14}
   ],
   "_meta": {
     "schema_version": "1.0",
