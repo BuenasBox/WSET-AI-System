@@ -120,6 +120,7 @@
 ```bash
 cd C:\Users\esand\OneDrive\Documents\WSET-AI-System
 python -m unittest discover -s tests -v
+python -m py_compile tools\retrieval\tutor_retrieval_sandbox.py tools\orchestrator\orchestrator.py tools\tutor\answer_builder.py
 ```
 
 Expected outcome based on code inspection: all 35 new tests should pass. The one risk is `test_causal_chains_present_in_context_package` — this test relies on the knowledge-map directory being present under the root path passed to `run_orchestrator()`. The test fixture builds the chain dir under tmp; whether the real Orchestrator finds the chains depends on `PROJECT_ROOT` resolution.

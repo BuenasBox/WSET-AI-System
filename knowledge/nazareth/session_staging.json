@@ -1,6 +1,6 @@
 {
   "schema_version": "minimal_brain_v2",
-  "updated_at": "2026-05-16T02:13:50.953244+00:00",
+  "updated_at": "2026-05-16T02:44:04.919748+00:00",
   "latest_session": {
     "student_query": "How does cool climate affect acidity?",
     "detected_misconception": {
@@ -31,7 +31,7 @@
         "fragile:missing_causal_link_support"
       ],
       "recent_misconceptions": [],
-      "session_count": 6,
+      "session_count": 15,
       "governance": {
         "safe_for_examiner": false,
         "examiner_scoring_active": false,
@@ -48,7 +48,7 @@
     "retrieval_plan": {
       "mode": "forced_plus_supporting_chunks",
       "query": "How does cool climate affect acidity? Cool climate wines always have green, unripe flavours. Green, herbaceous notes come from methoxypyrazines and indicate under-ripeness. Cool climates require careful viticulture to achieve full ripeness, but when they do, wines show ripe fruit, floral, and mineral characters \u2014 not greenness. C_COOL_CLIMATE",
-      "top_k": 3,
+      "top_k": 5,
       "forced_retrieval_nodes": [
         "MC_COOL_CLIMATE_02"
       ],
@@ -233,6 +233,72 @@
       },
       {
         "context_type": "retrieval_sandbox_chunk",
+        "chunk_id": "OFFICIAL_WSET_7_2_42_SPARKLING_WINES_OF_THE_WORLD_001",
+        "forced_retrieval": false,
+        "agent_corpus": "tutor",
+        "safe_for_examiner": false,
+        "score": 1.0,
+        "source_type": "official_wset_extracted",
+        "source_file": "knowledge/official-wset/study-guide/wset_markdown/seccion_7_section_4_sparkling_wines_of_the_world/7-2_42_sparkling_wines_of_the_world.md",
+        "source_trust_tier": 1,
+        "title": "42 Sparkling Wines of the World",
+        "section": "7",
+        "subtopic": "7.2",
+        "official_grading_authority": false,
+        "requires_human_review": true,
+        "reasoning_type": "cause_effect",
+        "pedagogical_role": "official_reference",
+        "why_retrieved": [
+          "matched canonical/query terms: achieve, acid, acidity, alcohol, always, balance, characters, climate",
+          "aligns with cause_effect reasoning intent",
+          "matched SAT/tasting vocabulary",
+          "supports cause/effect explanation",
+          "matches knowledge-map concept or relationship terms",
+          "matches knowledge-map causal-chain mechanism",
+          "matches knowledge-map concept vocabulary",
+          "official WSET extracted Tutor support",
+          "matched official section/topic metadata",
+          "exact term match"
+        ],
+        "text_excerpt": "# 42 Sparkling Wines of the World <!-- p\u00e1gina 188 --> SPARKLING WINES OF THE WORLD 179 SparklinWg ineso ft heW orld C~ampagne remains th~ m~st prestigiou_ss parkling wine and consequently 1tw ill be treated m the greatest detail here. Such is its reputation that most premium sparkling wines are not only made in the same way but also using the same grape v...",
+        "source_video": "",
+        "source_filename": "7-2_42_sparkling_wines_of_the_world.md"
+      },
+      {
+        "context_type": "retrieval_sandbox_chunk",
+        "chunk_id": "OFFICIAL_WSET_OF_THE_WORLD_6_16_27_NORTHERN_ITALY_001",
+        "forced_retrieval": false,
+        "agent_corpus": "tutor",
+        "safe_for_examiner": false,
+        "score": 1.0,
+        "source_type": "official_wset_extracted",
+        "source_file": "knowledge/official-wset/study-guide/wset_markdown/seccion_6_section_3_still_wines_of_the_world/6-16_27_northern_italy.md",
+        "source_trust_tier": 1,
+        "title": "27 Northern Italy",
+        "section": "6",
+        "subtopic": "6.16",
+        "official_grading_authority": false,
+        "requires_human_review": true,
+        "reasoning_type": "cause_effect",
+        "pedagogical_role": "official_reference",
+        "why_retrieved": [
+          "matched canonical/query terms: achieve, acidity, alcohol, climate, come, complexity, cool, flavours",
+          "aligns with cause_effect reasoning intent",
+          "matched SAT/tasting vocabulary",
+          "supports cause/effect explanation",
+          "matches knowledge-map concept or relationship terms",
+          "matches knowledge-map causal-chain mechanism",
+          "matches knowledge-map concept vocabulary",
+          "official WSET extracted Tutor support",
+          "matched official section/topic metadata",
+          "exact term match"
+        ],
+        "text_excerpt": "# 27 Northern Italy <!-- p\u00e1gina 130 --> NORTHERN ITALY 121 NorthernIt aly Northern Italy produces a wide range of wine styles from the full-bodied 27 tannic reds of Barolo to the delicate white wines of Soave. All this is possible because of diverse geography and an incredible number of unique local grape varieties. This chapter will cover the regions of...",
+        "source_video": "",
+        "source_filename": "6-16_27_northern_italy.md"
+      },
+      {
+        "context_type": "retrieval_sandbox_chunk",
         "chunk_id": "WSET_Level_3_Wines_-_Understanding_the_Common_Elements_of_Winemaking_Part-0002",
         "forced_retrieval": false,
         "agent_corpus": "tutor",
@@ -411,7 +477,7 @@
           "fragile:missing_causal_link_support"
         ],
         "recent_misconceptions": [],
-        "session_count": 6,
+        "session_count": 15,
         "governance": {
           "safe_for_examiner": false,
           "examiner_scoring_active": false,
@@ -423,7 +489,7 @@
       "retrieval_plan": {
         "mode": "forced_plus_supporting_chunks",
         "query": "How does cool climate affect acidity? Cool climate wines always have green, unripe flavours. Green, herbaceous notes come from methoxypyrazines and indicate under-ripeness. Cool climates require careful viticulture to achieve full ripeness, but when they do, wines show ripe fruit, floral, and mineral characters \u2014 not greenness. C_COOL_CLIMATE",
-        "top_k": 3,
+        "top_k": 5,
         "forced_retrieval_nodes": [
           "MC_COOL_CLIMATE_02"
         ],
@@ -605,6 +671,72 @@
           "text_excerpt": "# 7 Common Elements in Winemaking and Maturation <!-- p\u00e1gina 52 --> COMMONE LEMENTISN W INEMAKINGAN D MATURATION 43 CommoEnl ementisn W inemakinagn dM aturation 7 There are certain factors and processes that are common to all wines and these are explored in this chapter. It is important to get an appreciation of their roles in winemaking and maturation an...",
           "source_video": "",
           "source_filename": "5-4_7_common_elements_in_winemaking_and_maturation.md"
+        },
+        {
+          "context_type": "retrieval_sandbox_chunk",
+          "chunk_id": "OFFICIAL_WSET_7_2_42_SPARKLING_WINES_OF_THE_WORLD_001",
+          "forced_retrieval": false,
+          "agent_corpus": "tutor",
+          "safe_for_examiner": false,
+          "score": 1.0,
+          "source_type": "official_wset_extracted",
+          "source_file": "knowledge/official-wset/study-guide/wset_markdown/seccion_7_section_4_sparkling_wines_of_the_world/7-2_42_sparkling_wines_of_the_world.md",
+          "source_trust_tier": 1,
+          "title": "42 Sparkling Wines of the World",
+          "section": "7",
+          "subtopic": "7.2",
+          "official_grading_authority": false,
+          "requires_human_review": true,
+          "reasoning_type": "cause_effect",
+          "pedagogical_role": "official_reference",
+          "why_retrieved": [
+            "matched canonical/query terms: achieve, acid, acidity, alcohol, always, balance, characters, climate",
+            "aligns with cause_effect reasoning intent",
+            "matched SAT/tasting vocabulary",
+            "supports cause/effect explanation",
+            "matches knowledge-map concept or relationship terms",
+            "matches knowledge-map causal-chain mechanism",
+            "matches knowledge-map concept vocabulary",
+            "official WSET extracted Tutor support",
+            "matched official section/topic metadata",
+            "exact term match"
+          ],
+          "text_excerpt": "# 42 Sparkling Wines of the World <!-- p\u00e1gina 188 --> SPARKLING WINES OF THE WORLD 179 SparklinWg ineso ft heW orld C~ampagne remains th~ m~st prestigiou_ss parkling wine and consequently 1tw ill be treated m the greatest detail here. Such is its reputation that most premium sparkling wines are not only made in the same way but also using the same grape v...",
+          "source_video": "",
+          "source_filename": "7-2_42_sparkling_wines_of_the_world.md"
+        },
+        {
+          "context_type": "retrieval_sandbox_chunk",
+          "chunk_id": "OFFICIAL_WSET_OF_THE_WORLD_6_16_27_NORTHERN_ITALY_001",
+          "forced_retrieval": false,
+          "agent_corpus": "tutor",
+          "safe_for_examiner": false,
+          "score": 1.0,
+          "source_type": "official_wset_extracted",
+          "source_file": "knowledge/official-wset/study-guide/wset_markdown/seccion_6_section_3_still_wines_of_the_world/6-16_27_northern_italy.md",
+          "source_trust_tier": 1,
+          "title": "27 Northern Italy",
+          "section": "6",
+          "subtopic": "6.16",
+          "official_grading_authority": false,
+          "requires_human_review": true,
+          "reasoning_type": "cause_effect",
+          "pedagogical_role": "official_reference",
+          "why_retrieved": [
+            "matched canonical/query terms: achieve, acidity, alcohol, climate, come, complexity, cool, flavours",
+            "aligns with cause_effect reasoning intent",
+            "matched SAT/tasting vocabulary",
+            "supports cause/effect explanation",
+            "matches knowledge-map concept or relationship terms",
+            "matches knowledge-map causal-chain mechanism",
+            "matches knowledge-map concept vocabulary",
+            "official WSET extracted Tutor support",
+            "matched official section/topic metadata",
+            "exact term match"
+          ],
+          "text_excerpt": "# 27 Northern Italy <!-- p\u00e1gina 130 --> NORTHERN ITALY 121 NorthernIt aly Northern Italy produces a wide range of wine styles from the full-bodied 27 tannic reds of Barolo to the delicate white wines of Soave. All this is possible because of diverse geography and an incredible number of unique local grape varieties. This chapter will cover the regions of...",
+          "source_video": "",
+          "source_filename": "6-16_27_northern_italy.md"
         },
         {
           "context_type": "retrieval_sandbox_chunk",
@@ -1038,11 +1170,11 @@
       }
     },
     "context_package_paths": {
-      "latest": "C:/Users/esand/OneDrive/Documents/WSET-AI-System/knowledge/nazareth/context_packages/latest_context_package.json",
-      "timestamped": "C:/Users/esand/OneDrive/Documents/WSET-AI-System/knowledge/nazareth/context_packages/20260516_021350_context_package.json"
+      "latest": "C:/Users/esand/AppData/Local/Temp/tmpte7fuf7c/attempts/TEST_CLIMATE_01/latest_context_package.json",
+      "timestamped": "C:/Users/esand/AppData/Local/Temp/tmpte7fuf7c/attempts/TEST_CLIMATE_01/20260516_024404_context_package.json"
     }
   },
-  "latest_context_package_path": "C:/Users/esand/OneDrive/Documents/WSET-AI-System/knowledge/nazareth/context_packages/latest_context_package.json",
+  "latest_context_package_path": "C:/Users/esand/AppData/Local/Temp/tmpte7fuf7c/attempts/TEST_CLIMATE_01/latest_context_package.json",
   "governance": {
     "safe_for_examiner": false,
     "examiner_scoring_active": false,
