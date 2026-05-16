@@ -8,6 +8,12 @@ from collections import Counter
 from pathlib import Path
 from typing import Any
 
+from tools.learner_model.knowledge_tracing import (
+    DEFAULT_PEDAGOGICAL_MEMORY_PATH,
+    load_pedagogical_memory,
+    save_pedagogical_memory,
+    update_memory_from_results,
+)
 from tools.tutor.explanation_priority import calculate_tutor_evaluation_signals
 from tools.youtube_transcription.config import PROJECT_ROOT
 
@@ -22,6 +28,7 @@ def write_evaluation_reports(
     feedback_path: Path = DEFAULT_FEEDBACK_PATH,
     strictness: str = "hard",
     reconcile_les: bool = True,
+    memory_path: Path = DEFAULT_PEDAGOGICAL_MEMORY_PATH,
 ) -> dict[str, str]:
     """Write Markdown, CSV, JSONL, and LES feedback simulation artifacts.
 
@@ -30,11 +37,15 @@ def write_evaluation_reports(
     """
     output_dir.mkdir(parents=True, exist_ok=True)
     results = _with_tutor_evaluation_signals(results)
+    if memory_path == DEFAULT_PEDAGOGICAL_MEMORY_PATH and feedback_path != DEFAULT_FEEDBACK_PATH:
+        memory_path = feedback_path.parent / "pedagogical_memory.json"
     summary_path = output_dir / "self_eval_summary.md"
     csv_path = output_dir / "self_eval_results.csv"
     jsonl_path = output_dir / "self_eval_results.jsonl"
     # Annotate feedback with questions_attempted so the reconciler can use it
     feedback = build_les_feedback(results, strictness=strictness)
+    memory = update_memory_from_results(load_pedagogical_memory(memory_path), results)
+    memory_path = save_pedagogical_memory(memory, memory_path)
     feedback["questions_attempted"] = len(results)
     summary_path.write_text(_render_summary(results, strictness=strictness), encoding="utf-8")
     _write_csv(csv_path, results)
@@ -46,6 +57,7 @@ def write_evaluation_reports(
         "csv": csv_path.as_posix(),
         "jsonl": jsonl_path.as_posix(),
         "feedback": feedback_path.as_posix(),
+        "pedagogical_memory": memory_path.as_posix(),
     }
     if reconcile_les:
         try:
@@ -119,6 +131,7 @@ def _render_summary(results: list[dict[str, Any]], strictness: str) -> str:
     failed_answers = []
     evaluation_signal_totals = Counter()
     evaluation_signal_count = 0
+    reflection_signal_totals = Counter()
     for result in results:
         comparison = result.get("comparison", {})
         labels = comparison.get("failure_labels", [])
@@ -141,8 +154,19 @@ def _render_summary(results: list[dict[str, Any]], strictness: str) -> str:
         signals = result.get("tutor_evaluation_signals") or {}
         if signals:
             evaluation_signal_count += 1
-            for key in ("explanation_density", "causal_coherence", "misconception_coverage", "reasoning_depth_score"):
+            for key in (
+                "explanation_density",
+                "causal_coherence",
+                "misconception_coverage",
+                "reasoning_depth_score",
+                "retention_risk",
+                "learning_velocity",
+                "misconception_persistence",
+                "scaffolding_effectiveness",
+            ):
                 evaluation_signal_totals[key] += float(signals.get(key) or 0)
+            for key in ("retention_risk", "learning_velocity", "misconception_persistence", "scaffolding_effectiveness"):
+                reflection_signal_totals[key] += float(signals.get(key) or 0)
 
     strongest = domain_strengths.most_common(3)
     weakest = domain_weaknesses.most_common(3)
@@ -172,6 +196,7 @@ def _render_summary(results: list[dict[str, Any]], strictness: str) -> str:
         f"Top improvement priorities: {priorities or 'none'}",
         f"Orchestrator intervention priorities: {_orchestrator_recommendations(causal_missing, Counter(unresolved), retrieval_weaknesses) or 'none'}",
         f"Tutor evaluation signals: {_average_signals(evaluation_signal_totals, evaluation_signal_count)}",
+        f"Tutor reflection signals: {_average_signals(reflection_signal_totals, evaluation_signal_count)}",
         f"Sample failed answers: {failed_answers[:5] or 'none'}",
         "",
         "Governance: safe_for_examiner=false; examiner_scoring_allowed=false.",
@@ -196,6 +221,10 @@ def _write_csv(path: Path, results: list[dict[str, Any]]) -> None:
         "causal_coherence",
         "misconception_coverage",
         "reasoning_depth_score",
+        "retention_risk",
+        "learning_velocity",
+        "misconception_persistence",
+        "scaffolding_effectiveness",
     ]
     with path.open("w", encoding="utf-8", newline="") as file:
         writer = csv.DictWriter(file, fieldnames=fields)
@@ -220,6 +249,10 @@ def _write_csv(path: Path, results: list[dict[str, Any]]) -> None:
                     "causal_coherence": signals.get("causal_coherence", ""),
                     "misconception_coverage": signals.get("misconception_coverage", ""),
                     "reasoning_depth_score": signals.get("reasoning_depth_score", ""),
+                    "retention_risk": signals.get("retention_risk", ""),
+                    "learning_velocity": signals.get("learning_velocity", ""),
+                    "misconception_persistence": signals.get("misconception_persistence", ""),
+                    "scaffolding_effectiveness": signals.get("scaffolding_effectiveness", ""),
                 }
             )
 

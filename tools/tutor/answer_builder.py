@@ -10,6 +10,7 @@ from typing import Any
 
 from tools.orchestrator.orchestrator import DEFAULT_CONTEXT_PACKAGE_DIR
 from tools.tutor.explanation_priority import DEPTH_TO_STYLE, build_explanation_priority
+from tools.tutor.scaffolding_policy import select_scaffolding_policy
 from tools.youtube_transcription.config import PROJECT_ROOT
 
 
@@ -67,6 +68,7 @@ def render_answer(package: dict[str, Any], language: str, style: str = "standard
     act = str(package.get("pedagogical_act") or "")
     priority_plan = build_explanation_priority(package)
     depth = _select_explanation_depth(package, style, priority_plan)
+    package["_scaffolding_policy"] = _scaffolding_policy_for_package(package, priority_plan)
     if act == "misconception_intervention":
         return _render_misconception_answer(package, language, style, depth, priority_plan)
     return _render_normal_answer(package, language, style, depth, priority_plan)
@@ -459,8 +461,11 @@ def _select_explanation_depth(
     severity = str(misconception.get("severity") or "").lower()
     confidence = _package_confidence(package)
     cognitive_load = str(priority_plan.get("cognitive_load_estimate") or "medium")
+    boost = (package.get("retrieval_plan") or {}).get("pedagogical_priority_boost") or {}
     les_context = package.get("learner_state_context") or {}
     mastery = str(les_context.get("mastery") or les_context.get("current_mastery") or "").lower()
+    if boost.get("force_deep_explanation") and cognitive_load != "high":
+        return "deep"
     if cognitive_load == "high":
         return "standard"
     if confidence < 0.55 or severity in {"high", "critical"}:
@@ -468,6 +473,21 @@ def _select_explanation_depth(
     if mastery in {"high", "advanced", "strong"} and not misconception:
         return "minimal"
     return str(priority_plan.get("recommended_depth") or "standard")
+
+
+def _scaffolding_policy_for_package(package: dict[str, Any], priority_plan: dict[str, Any]) -> dict[str, Any]:
+    memory = (package.get("learner_state_context") or {}).get("pedagogical_memory") or {}
+    low_mastery = memory.get("low_mastery_concepts") or []
+    mastery = None
+    if low_mastery and isinstance(low_mastery[0], dict):
+        mastery = float(low_mastery[0].get("mastery_probability", 0.5) or 0.5)
+    misconception = package.get("matched_misconception") or {}
+    return select_scaffolding_policy(
+        mastery_probability=mastery,
+        cognitive_load=str(priority_plan.get("cognitive_load_estimate") or "medium"),
+        urgency=str(priority_plan.get("urgency") or "medium"),
+        misconception_severity=str(misconception.get("severity") or "medium"),
+    )
 
 
 def _compress_explanation(text: str, depth: str = "minimal") -> str:

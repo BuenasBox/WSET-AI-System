@@ -32,7 +32,12 @@ def run_self_eval(
     for question in questions:
         result = run_question_attempt(question, attempts_dir, strictness=strictness)
         results.append(result)
-    report_paths = write_evaluation_reports(results, output_dir=output_dir, strictness=strictness)
+    report_paths = write_evaluation_reports(
+        results,
+        output_dir=output_dir,
+        strictness=strictness,
+        memory_path=output_dir / "pedagogical_memory.json",
+    )
     return {
         "questions_attempted": len(results),
         "results": results,

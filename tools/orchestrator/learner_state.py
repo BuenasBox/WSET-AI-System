@@ -7,6 +7,12 @@ from copy import deepcopy
 from pathlib import Path
 from typing import Any
 
+from tools.learner_model.knowledge_tracing import (
+    DEFAULT_PEDAGOGICAL_MEMORY_PATH,
+    build_memory_summary,
+    ensure_pedagogical_memory,
+    load_pedagogical_memory,
+)
 from tools.youtube_transcription.config import PROJECT_ROOT
 
 
@@ -46,12 +52,14 @@ DEFAULT_SESSION_STAGING: dict[str, Any] = {
 def ensure_learner_files(
     les_path: Path = DEFAULT_LES_PATH,
     staging_path: Path = DEFAULT_SESSION_STAGING_PATH,
+    memory_path: Path = DEFAULT_PEDAGOGICAL_MEMORY_PATH,
 ) -> None:
     """Create minimal learner files when absent, preserving existing state."""
     if not les_path.exists():
         _write_json(les_path, DEFAULT_LES)
     if not staging_path.exists():
         _write_json(staging_path, DEFAULT_SESSION_STAGING)
+    ensure_pedagogical_memory(memory_path)
 
 
 def load_learner_state(path: Path = DEFAULT_LES_PATH) -> dict[str, Any]:
@@ -68,12 +76,14 @@ def load_learner_state(path: Path = DEFAULT_LES_PATH) -> dict[str, Any]:
 def build_les_context(state: dict[str, Any]) -> dict[str, Any]:
     """Return the small LES context used by Minimal Brain v1 decisions."""
     governance = _governance_false(state.get("governance", {}))
+    memory_summary = build_memory_summary(load_pedagogical_memory())
     return {
         "learner_id": state.get("learner_id", "nazareth"),
         "current_level": state.get("current_level", "WSET_L3"),
         "known_weak_areas": list(state.get("known_weak_areas", [])),
         "recent_misconceptions": list(state.get("recent_misconceptions", [])),
         "session_count": int(state.get("session_count", 0) or 0),
+        "pedagogical_memory": memory_summary,
         "governance": governance,
     }
 

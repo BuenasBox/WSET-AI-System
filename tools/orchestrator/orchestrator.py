@@ -43,6 +43,7 @@ def run_orchestrator(
     language = _normalize_language(language)
     learner_state = load_learner_state(les_path)
     les_context = build_les_context(learner_state)
+    pedagogical_boost = _pedagogical_priority_boost(les_context)
     prepass = detect_misconception(query, misconception_dir)
 
     if prepass["detected"]:
@@ -103,6 +104,7 @@ def run_orchestrator(
         "query": retrieval_query,
         "top_k": top_k,
         "forced_retrieval_nodes": tutor_directive["forced_retrieval_nodes"],
+        "pedagogical_priority_boost": pedagogical_boost,
         "retrieval_engine": "tools.retrieval.tutor_retrieval_sandbox",
         "uses_embeddings": False,
         "uses_vector_db": False,
@@ -317,6 +319,26 @@ def _success_criteria(pedagogical_act: str) -> list[str]:
         "Distinguish official WSET content from pedagogical enrichment.",
         "Keep Examiner scoring disabled and safe_for_examiner false.",
     ]
+
+
+def _pedagogical_priority_boost(les_context: dict[str, Any]) -> dict[str, Any]:
+    """Build retrieval-facing memory hints without changing retrieval contracts."""
+    memory = les_context.get("pedagogical_memory") or {}
+    low_mastery = memory.get("low_mastery_concepts") or []
+    recurrent = memory.get("recurrent_misconceptions") or []
+    retention = memory.get("retention_risks") or []
+    difficult_chains = memory.get("difficult_causal_chains") or []
+    force_deep = any(float(item.get("persistence", 0) or 0) >= 0.6 for item in recurrent if isinstance(item, dict))
+    return {
+        "low_mastery_concepts": [item.get("concept_id") for item in low_mastery if isinstance(item, dict) and item.get("concept_id")],
+        "causal_chain_boosts": [item.get("chain_id") for item in difficult_chains if isinstance(item, dict) and item.get("chain_id")],
+        "misconception_persistence_boost": force_deep,
+        "force_deep_explanation": force_deep,
+        "resurfacing_concepts": [item.get("concept_id") for item in retention if isinstance(item, dict) and item.get("concept_id")],
+        "preferred_depth": memory.get("preferred_depth", "standard"),
+        "safe_for_examiner": False,
+        "examiner_scoring_allowed": False,
+    }
 
 
 def _normalize_language(language: str) -> str:

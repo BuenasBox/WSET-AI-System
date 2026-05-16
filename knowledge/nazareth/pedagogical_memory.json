@@ -1,0 +1,20 @@
+{
+  "schema_version": "pedagogical_memory_v1",
+  "learner_id": "nazareth",
+  "updated_at": null,
+  "skills": {},
+  "recurrent_misconceptions": {},
+  "difficult_causal_chains": {},
+  "mastered_concepts": [],
+  "preferred_depth": "standard",
+  "overload_patterns": [],
+  "governance": {
+    "safe_for_examiner": false,
+    "examiner_scoring_allowed": false,
+    "uses_llm": false,
+    "uses_api": false,
+    "uses_embeddings": false,
+    "uses_vector_db": false,
+    "cloud_services_active": false
+  }
+}
