@@ -9,6 +9,7 @@ from pathlib import Path
 from typing import Any
 
 from tools.orchestrator.orchestrator import DEFAULT_CONTEXT_PACKAGE_DIR
+from tools.tutor.explanation_priority import DEPTH_TO_STYLE, build_explanation_priority
 from tools.youtube_transcription.config import PROJECT_ROOT
 
 
@@ -64,9 +65,11 @@ def load_context_package(path: Path = DEFAULT_CONTEXT_PACKAGE_PATH) -> dict[str,
 def render_answer(package: dict[str, Any], language: str, style: str = "standard") -> str:
     """Render a deterministic Markdown Tutor draft from package fields."""
     act = str(package.get("pedagogical_act") or "")
+    priority_plan = build_explanation_priority(package)
+    depth = _select_explanation_depth(package, style, priority_plan)
     if act == "misconception_intervention":
-        return _render_misconception_answer(package, language, style)
-    return _render_normal_answer(package, language, style)
+        return _render_misconception_answer(package, language, style, depth, priority_plan)
+    return _render_normal_answer(package, language, style, depth, priority_plan)
 
 
 def write_tutor_answer(answer: str, output_path: Path | None = None) -> dict[str, str]:
@@ -84,18 +87,28 @@ def write_tutor_answer(answer: str, output_path: Path | None = None) -> dict[str
     }
 
 
-def _render_misconception_answer(package: dict[str, Any], language: str, style: str) -> str:
+def _render_misconception_answer(
+    package: dict[str, Any],
+    language: str,
+    style: str,
+    depth: str = "standard",
+    priority_plan: dict[str, Any] | None = None,
+) -> str:
     query = str(package.get("student_query") or "")
     misconception = package.get("matched_misconception") or {}
     corrected = str(misconception.get("corrected_understanding") or package.get("tutor_directive", {}).get("corrected_understanding") or "")
     direct_correction = _misconception_direct_correction(query, language)
-    ideas = _extract_context_ideas(package, style)
+    ideas = _extract_context_ideas(package, _depth_to_style(depth, style))
     source_note = _source_note(package, language)
     support = _support_summary(package, language, ideas)
     confusion = _confusion_line(package, language)
     framing = _wset_framing_line(query, language, corrected, ideas)
-    cause = _cause_effect_line(package, language, ideas)
+    cause = _cause_effect_line(package, language, ideas, depth)
     exam = _exam_line(query, language, ideas)
+    if depth == "minimal":
+        support = _compress_explanation(support, depth)
+        confusion = _compress_explanation(confusion, depth)
+        exam = _compress_explanation(exam, depth)
 
     if language == "en":
         lines = [
@@ -154,15 +167,25 @@ def _render_misconception_answer(package: dict[str, Any], language: str, style: 
     return "\n".join(line for line in lines if line is not None)
 
 
-def _render_normal_answer(package: dict[str, Any], language: str, style: str) -> str:
+def _render_normal_answer(
+    package: dict[str, Any],
+    language: str,
+    style: str,
+    depth: str = "standard",
+    priority_plan: dict[str, Any] | None = None,
+) -> str:
     query = str(package.get("student_query") or "")
-    ideas = _extract_context_ideas(package, style)
+    ideas = _extract_context_ideas(package, _depth_to_style(depth, style))
     support = _support_summary(package, language, ideas)
     source_note = _source_note(package, language)
     direct = _normal_direct_answer(query, language)
     framing = _wset_framing_line(query, language, "", ideas)
-    cause = _cause_effect_line(package, language, ideas)
+    cause = _cause_effect_line(package, language, ideas, depth)
     exam = _exam_line(query, language, ideas)
+    if depth == "minimal":
+        support = _compress_explanation(support, depth)
+        framing = _compress_explanation(framing, depth)
+        exam = _compress_explanation(exam, depth)
 
     if language == "en":
         lines = [
@@ -260,7 +283,7 @@ def _misconception_direct_correction(query: str, language: str) -> str:
     return "No exactamente. En WSET, ese atajo no es fiable por sí solo."
 
 
-def _render_causal_chain(chain: dict[str, Any], language: str) -> str:
+def _render_causal_chain(chain: dict[str, Any], language: str, max_steps: int | None = None) -> str:
     """Render a causal chain node as a structured cause → mechanism → effect block.
 
     This replaces keyword-dispatch hardcoded strings for queries where a matching
@@ -288,7 +311,10 @@ def _render_causal_chain(chain: dict[str, Any], language: str) -> str:
     }
     label_map = label_map_es if language == "es" else label_map_en
     lines = []
-    for step in sorted(steps, key=lambda s: int(s.get("step", 0))):
+    ordered_steps = sorted(steps, key=lambda s: int(s.get("step", 0)))
+    if max_steps is not None and len(ordered_steps) > max_steps:
+        ordered_steps = _essential_causal_steps(ordered_steps, max_steps)
+    for step in ordered_steps:
         label_key = str(step.get("label", "")).lower()
         label = label_map.get(label_key, label_key.upper())
         text = str(step.get("text", "")).strip()
@@ -322,11 +348,16 @@ def _select_best_causal_chain(package: dict[str, Any]) -> dict[str, Any] | None:
     return best
 
 
-def _cause_effect_line(package: dict[str, Any], language: str, ideas: list[dict[str, str]]) -> str:
+def _cause_effect_line(
+    package: dict[str, Any],
+    language: str,
+    ideas: list[dict[str, str]],
+    depth: str | None = None,
+) -> str:
     # Phase D: prefer structured causal chain node over hardcoded keyword dispatch
     best_chain = _select_best_causal_chain(package)
     if best_chain:
-        rendered = _render_causal_chain(best_chain, language)
+        rendered = _render_causal_chain(best_chain, language, max_steps=_max_causal_steps(depth))
         if rendered:
             return rendered
 
@@ -411,6 +442,87 @@ def _normalize_language(language: str) -> str:
 
 def _normalize_style(style: str) -> str:
     return style if style in STYLES else "standard"
+
+
+def _select_explanation_depth(
+    package: dict[str, Any],
+    style: str = "standard",
+    priority_plan: dict[str, Any] | None = None,
+) -> str:
+    """Select answer depth from confidence, severity, LES, and cognitive load."""
+    priority_plan = priority_plan or build_explanation_priority(package)
+    if _normalize_style(style) == "concise":
+        return "minimal"
+    if _normalize_style(style) == "detailed":
+        return "deep"
+    misconception = package.get("matched_misconception") or {}
+    severity = str(misconception.get("severity") or "").lower()
+    confidence = _package_confidence(package)
+    cognitive_load = str(priority_plan.get("cognitive_load_estimate") or "medium")
+    les_context = package.get("learner_state_context") or {}
+    mastery = str(les_context.get("mastery") or les_context.get("current_mastery") or "").lower()
+    if cognitive_load == "high":
+        return "standard"
+    if confidence < 0.55 or severity in {"high", "critical"}:
+        return "deep"
+    if mastery in {"high", "advanced", "strong"} and not misconception:
+        return "minimal"
+    return str(priority_plan.get("recommended_depth") or "standard")
+
+
+def _compress_explanation(text: str, depth: str = "minimal") -> str:
+    """Reduce redundancy while keeping the causal spine intact."""
+    if depth != "minimal":
+        return text
+    sentences = re.split(r"(?<=[.!?])\s+", text.strip())
+    if len(sentences) <= 1:
+        return text
+    causal = [sentence for sentence in sentences if re.search(r"\b(porque|because|causa|cause|mecanismo|mechanism|efecto|effect|por eso|therefore|so)\b", sentence, re.IGNORECASE)]
+    selected = causal[:2] or sentences[:2]
+    return " ".join(selected).strip()
+
+
+def _depth_to_style(depth: str, fallback_style: str) -> str:
+    return DEPTH_TO_STYLE.get(depth, _normalize_style(fallback_style))
+
+
+def _package_confidence(package: dict[str, Any]) -> float:
+    for container in (package.get("orchestrator_decision"), package.get("tutor_directive"), package.get("matched_misconception")):
+        if isinstance(container, dict) and container.get("confidence") is not None:
+            try:
+                return max(0.0, min(1.0, float(container.get("confidence"))))
+            except (TypeError, ValueError):
+                return 0.65
+    return 0.65 if package.get("matched_misconception") else 0.8
+
+
+def _max_causal_steps(depth: str | None) -> int | None:
+    if depth == "minimal":
+        return 3
+    return None
+
+
+def _essential_causal_steps(steps: list[dict[str, Any]], max_steps: int) -> list[dict[str, Any]]:
+    if len(steps) <= max_steps:
+        return steps
+    essentials = []
+    used = set()
+    for label in ("cause", "mechanism", "effect", "exam_formulation"):
+        for index, step in enumerate(steps):
+            if index in used:
+                continue
+            if str(step.get("label", "")).lower() == label:
+                essentials.append(step)
+                used.add(index)
+                break
+            if len(essentials) >= max_steps:
+                return essentials
+    for index, step in enumerate(steps):
+        if len(essentials) >= max_steps:
+            break
+        if index not in used:
+            essentials.append(step)
+    return essentials[:max_steps]
 
 
 def _extract_context_ideas(package: dict[str, Any], style: str) -> list[dict[str, str]]:

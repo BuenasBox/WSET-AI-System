@@ -50,12 +50,14 @@ def run_orchestrator(
             "route": "misconception_prepass",
             "reason": "misconception_detected",
             "matched_misconception_id": prepass["matched_misconception_id"],
+            "confidence": prepass.get("confidence", 0.0),
         }
         tutor_directive = {
             "pedagogical_act": "misconception_intervention",
             "forced_retrieval_nodes": [prepass["matched_misconception_id"]],
             "intervention_type": prepass["intervention_type"],
             "corrected_understanding": prepass["corrected_understanding"],
+            "confidence": prepass.get("confidence", 0.0),
             "safe_for_examiner": False,
         }
         recommended_update = {
@@ -72,10 +74,12 @@ def run_orchestrator(
             "route": "normal_tutor",
             "reason": "no_misconception_detected",
             "matched_misconception_id": None,
+            "confidence": prepass.get("confidence", 0.0),
         }
         tutor_directive = {
             "pedagogical_act": "answer_normally",
             "forced_retrieval_nodes": [],
+            "confidence": prepass.get("confidence", 0.0),
             "safe_for_examiner": False,
         }
         recommended_update = {
