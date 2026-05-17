@@ -1,17 +1,17 @@
 # Tutor Retrieval Sandbox Run
 
-Query: How does cool climate affect acidity? Cool climate wines always have green, unripe flavours. Green, herbaceous notes come from methoxypyrazines and indicate under-ripeness. Cool climates require careful viticulture to achieve full ripeness, but when they do, wines show ripe fruit, floral, and mineral characters — not greenness. C_COOL_CLIMATE
-Generated at: 2026-05-16T02:44:04+00:00
+Query: ¿Cuál es el propósito del licor de tiraje?
+Generated at: 2026-05-17T03:48:58+00:00
 Governance filter applied: true
 
 ## Query Analysis
 
-- query_intent: cause_effect_explanation
-- reasoning_intent: cause_effect
-- matched_terms: climate, cool climate, acidity, floral
-- query_expansion_terms: acid, acid retention, acidity, acidity 01, acidity ageability, ageing improvement 01, ageing potential, alcohol, all wines improve with age if stored correctly., balance, botrytis acidity reduction, botrytis cinerea, botrytis cinerea → tartaric acid metabolism → unexpectedly lower acidity in botrytised wines, climate, cold climate, complexity, cool climate, cool climate 01, cool climate 02, cool climate acidity, cool climate alcohol, cool climate aroma, cool climate under ripe, cool climate wines always have green, unripe flavours., cool climate wines are always low in alcohol., cool climate → high acidity in finished wine, cool climate → limited sugar accumulation → lower potential alcohol, cool climate → slower ripening → primary aroma profile (citrus/green fruit/floral), crispness, floral, freshness, full body, growing season, high acidity, high acidity in a wine means the wine is low quality or unpleasant., high alcohol, high altitude, higher acidity, hot climate, intensity, length, low temperature, low temperatures, lower ph, malic acid, malolactic conversion, malolactic conversion acidity, mlf acidity, noble rot, readiness, residual sugar, residual sugar in a wine always means the wine will taste sweet., residual sugar sweet 01, ripe, ripeness, slow ripening, slower ripening, sugar, tannin, tannin 02, tannins and acidity both taste 'sharp' so they are the same thing., tartaric acid, warm climate, warm climate alcohol, whole bunch, whole bunch 01, whole bunch fermentation, whole bunch fermentation always adds a green, stalky character to wine.
-- matched_concepts: Acidity, Cool Climate
-- matched_causal_chains: Botrytis cinerea → tartaric acid metabolism → unexpectedly lower acidity in botrytised wines, Cool climate → high acidity in finished wine, Cool climate → limited sugar accumulation → lower potential alcohol, Cool climate → slower ripening → primary aroma profile (citrus/green fruit/floral), warm climate alcohol
+- query_intent: foundational_theory
+- reasoning_intent: theory_foundation
+- matched_terms: none
+- query_expansion_terms: none
+- matched_concepts: none
+- matched_causal_chains: none
 
 ## Corpus
 
@@ -23,64 +23,64 @@ Governance filter applied: true
 
 ## Retrieved Chunks
 
-1. 1.0000 OFFICIAL_WSET_1_1_THE_SYSTEMATIC_APPROACH_TO_TASTING_WINE_001 - 
-   - reasoning_type: cause_effect
+1. 0.3333 OFFICIAL_WSET_WINES_OF_THE_WORLD_6_13_24_TOKAJ_001 - 
+   - reasoning_type: theory_foundation
    - pedagogical_role: official_reference
    - retrieval_priority: none
-   - matched_terms: acid, acidity, affect, alcohol, always, balance, characters, climate, come, complexity, cool, flavours, floral, freshness, fruit, full, green, greenness, have, herbaceous, high acidity, high alcohol, higher acidity, hot climate, indicate, intensity, length, malic acid, notes, readiness, ripe, show, sugar, tannin, they, unripe, wines
-   - matched_concepts: Acidity, Cool Climate, acidity, balance, high acidity, malic acid
-   - matched_causal_chains: Botrytis cinerea → tartaric acid metabolism → unexpectedly lower acidity in botrytised wines, Cool climate → high acidity in finished wine, Cool climate → limited sugar accumulation → lower potential alcohol, Cool climate → slower ripening → primary aroma profile (citrus/green fruit/floral), acidity, alcohol, balance, freshness, high acidity, high alcohol, higher acidity, hot climate, length, malic acid, ripe, warm climate alcohol
-   - query_expansion_terms: acid, acid retention, acidity, acidity 01, acidity ageability, ageing improvement 01, ageing potential, alcohol, all wines improve with age if stored correctly., balance, botrytis acidity reduction, botrytis cinerea
-   - knowledge_graph_boost_applied: true
-   - why: matched canonical/query terms: acid, acidity, affect, alcohol, always, balance, characters, climate; aligns with cause_effect reasoning intent; matched SAT/tasting vocabulary; supports cause/effect explanation; matches knowledge-map concept or relationship terms; matches knowledge-map causal-chain mechanism; matches knowledge-map concept vocabulary; official WSET extracted Tutor support; matched official section/topic metadata; exact term match
-   - excerpt: # 1 The Systematic Approach to Tasting Wine® <!-- página 10 --> THES YSTEMATICA PPROACHT OT ASTINGW INE" TheS ystematiAc pproactho TastinWg ine® The WSET Level 3. Syst~matic Approach to Tasting Wine (SAT) is a tool that allows you to write a complete description of a wine and then use this information to make an evaluation of its quality and readiness for...
+   - matched_terms: none
+   - matched_concepts: none
+   - matched_causal_chains: none
+   - query_expansion_terms: none
+   - knowledge_graph_boost_applied: false
+   - why: official WSET extracted Tutor support
+   - excerpt: # 24 Tokaj <!-- página 125 --> 116 UNDERSTANDINGW INES:E XPLAININGS TYLEA ND QUALITY 24 TokajT he region of Tokaj (note the wine it produces is called Tokaji) is located in the foothills of the Carpathian Mountains in the far north east of Hungary and close to the Slovakian border. It has a long-standing reputation for producing premium botrytised sweet w...
 
-2. 1.0000 OFFICIAL_WSET_4_7_COMMON_ELEMENTS_IN_WINEMAKING_AND_MATURATION_001 - 
-   - reasoning_type: cause_effect
+2. 0.3200 OFFICIAL_WSET_WINES_OF_THE_WORLD_8_1_43_SHERRY_001 - 
+   - reasoning_type: theory_foundation
    - pedagogical_role: official_reference
    - retrieval_priority: none
-   - matched_terms: achieve, acid, acidity, affect, alcohol, balance, careful, characters, climate, climates, come, complexity, cool, flavours, floral, freshness, fruit, full, have, length, notes, require, residual sugar, show, sugar, tannin, tartaric acid, they, unripe, wines
-   - matched_concepts: Acidity, acidity, balance, tartaric acid
-   - matched_causal_chains: Botrytis cinerea → tartaric acid metabolism → unexpectedly lower acidity in botrytised wines, Cool climate → high acidity in finished wine, Cool climate → limited sugar accumulation → lower potential alcohol, acidity, alcohol, balance, freshness, length, sugar, tartaric acid, warm climate alcohol
-   - query_expansion_terms: acid, acid retention, acidity, acidity 01, acidity ageability, ageing improvement 01, ageing potential, alcohol, all wines improve with age if stored correctly., balance, botrytis acidity reduction, botrytis cinerea
-   - knowledge_graph_boost_applied: true
-   - why: matched canonical/query terms: achieve, acid, acidity, affect, alcohol, balance, careful, characters; aligns with cause_effect reasoning intent; matched SAT/tasting vocabulary; supports cause/effect explanation; matches knowledge-map concept or relationship terms; matches knowledge-map causal-chain mechanism; matches knowledge-map concept vocabulary; official WSET extracted Tutor support; matched official section/topic metadata; exact term match
+   - matched_terms: none
+   - matched_concepts: none
+   - matched_causal_chains: none
+   - query_expansion_terms: none
+   - knowledge_graph_boost_applied: false
+   - why: official WSET extracted Tutor support
+   - excerpt: # 43 Sherry <!-- página 193 --> 184 UNDERSTANDINGW INES: EXPLAININGST YLEA ND QUALITY Sherry 43 Probably more than any other wine, Sherry is a wine style that is defined by the processes used during maturation. None of the key techniques, the so/era system, biological ageing or oxidative ageing, are unique to this region, but it is in Jerez that they are...
+
+3. 0.2867 OFFICIAL_WSET_4_7_COMMON_ELEMENTS_IN_WINEMAKING_AND_MATURATION_001 - 
+   - reasoning_type: theory_foundation
+   - pedagogical_role: official_reference
+   - retrieval_priority: none
+   - matched_terms: none
+   - matched_concepts: none
+   - matched_causal_chains: none
+   - query_expansion_terms: none
+   - knowledge_graph_boost_applied: false
+   - why: official WSET extracted Tutor support
    - excerpt: # 7 Common Elements in Winemaking and Maturation <!-- página 52 --> COMMONE LEMENTISN W INEMAKINGAN D MATURATION 43 CommoEnl ementisn W inemakinagn dM aturation 7 There are certain factors and processes that are common to all wines and these are explored in this chapter. It is important to get an appreciation of their roles in winemaking and maturation an...
 
-3. 1.0000 OFFICIAL_WSET_7_2_42_SPARKLING_WINES_OF_THE_WORLD_001 - 
-   - reasoning_type: cause_effect
+4. 0.2867 OFFICIAL_WSET_WINES_OF_THE_WORLD_6_11_22_GERMANY_001 - 
+   - reasoning_type: theory_foundation
    - pedagogical_role: official_reference
    - retrieval_priority: none
-   - matched_terms: achieve, acid, acidity, alcohol, always, balance, characters, climate, come, complexity, cool, flavours, floral, fruit, full, green, have, high acidity, indicate, length, notes, residual sugar, sugar, they, viticulture, warm climate, wines
-   - matched_concepts: Acidity, acidity, balance, high acidity
-   - matched_causal_chains: Botrytis cinerea → tartaric acid metabolism → unexpectedly lower acidity in botrytised wines, Cool climate → high acidity in finished wine, Cool climate → limited sugar accumulation → lower potential alcohol, acidity, alcohol, balance, high acidity, length, sugar, warm climate, warm climate alcohol
-   - query_expansion_terms: acid, acid retention, acidity, acidity 01, acidity ageability, ageing improvement 01, ageing potential, alcohol, all wines improve with age if stored correctly., balance, botrytis acidity reduction, botrytis cinerea
-   - knowledge_graph_boost_applied: true
-   - why: matched canonical/query terms: achieve, acid, acidity, alcohol, always, balance, characters, climate; aligns with cause_effect reasoning intent; matched SAT/tasting vocabulary; supports cause/effect explanation; matches knowledge-map concept or relationship terms; matches knowledge-map causal-chain mechanism; matches knowledge-map concept vocabulary; official WSET extracted Tutor support; matched official section/topic metadata; exact term match
-   - excerpt: # 42 Sparkling Wines of the World <!-- página 188 --> SPARKLING WINES OF THE WORLD 179 SparklinWg ineso ft heW orld C~ampagne remains th~ m~st prestigiou_ss parkling wine and consequently 1tw ill be treated m the greatest detail here. Such is its reputation that most premium sparkling wines are not only made in the same way but also using the same grape v...
+   - matched_terms: none
+   - matched_concepts: none
+   - matched_causal_chains: none
+   - query_expansion_terms: none
+   - knowledge_graph_boost_applied: false
+   - why: official WSET extracted Tutor support
+   - excerpt: # 22 Germany <!-- página 117 --> 108 UNDERSTANDINGW INES:E XPLAININGST YLEA ND QUALITY Germany 22 Germany is the country producing the highest concentration of world-class Rieslings. Whether dry and steely, medium-sweet and floral, or lusciously sweet, German winemakers' mastery of this variety is unquestionable. However, there is more to German wines tha...
 
-4. 1.0000 OFFICIAL_WSET_OF_THE_WORLD_6_16_27_NORTHERN_ITALY_001 - 
-   - reasoning_type: cause_effect
-   - pedagogical_role: official_reference
-   - retrieval_priority: none
-   - matched_terms: achieve, acidity, alcohol, climate, come, complexity, cool, flavours, floral, fruit, full, full body, green, growing season, have, high acidity, high alcohol, length, ripe, ripeness, slow ripening, sugar, tannin, they, viticulture, wines
-   - matched_concepts: Acidity, Cool Climate, acidity, growing season, high acidity, slow ripening
-   - matched_causal_chains: Botrytis cinerea → tartaric acid metabolism → unexpectedly lower acidity in botrytised wines, Cool climate → high acidity in finished wine, Cool climate → limited sugar accumulation → lower potential alcohol, Cool climate → slower ripening → primary aroma profile (citrus/green fruit/floral), acidity, alcohol, full body, growing season, high acidity, high alcohol, length, ripe, slow ripening, warm climate alcohol
-   - query_expansion_terms: acid, acid retention, acidity, acidity 01, acidity ageability, ageing improvement 01, ageing potential, alcohol, all wines improve with age if stored correctly., balance, botrytis acidity reduction, botrytis cinerea
-   - knowledge_graph_boost_applied: true
-   - why: matched canonical/query terms: achieve, acidity, alcohol, climate, come, complexity, cool, flavours; aligns with cause_effect reasoning intent; matched SAT/tasting vocabulary; supports cause/effect explanation; matches knowledge-map concept or relationship terms; matches knowledge-map causal-chain mechanism; matches knowledge-map concept vocabulary; official WSET extracted Tutor support; matched official section/topic metadata; exact term match
-   - excerpt: # 27 Northern Italy <!-- página 130 --> NORTHERN ITALY 121 NorthernIt aly Northern Italy produces a wide range of wine styles from the full-bodied 27 tannic reds of Barolo to the delicate white wines of Soave. All this is possible because of diverse geography and an incredible number of unique local grape varieties. This chapter will cover the regions of...
-
-5. 0.8379 WSET_Level_3_Wines_-_Understanding_the_Common_Elements_of_Winemaking_Part-0002 - WSET Level 3 Wines - Understanding the Common Elements of Winemaking Part
-   - reasoning_type: cause_effect
-   - pedagogical_role: theory_explanation
-   - retrieval_priority: low
-   - matched_terms: acid, alcohol, have, malic acid, sugar, tannin, tartaric acid
-   - matched_concepts: Acidity, Cool Climate, malic acid, tartaric acid
-   - matched_causal_chains: Botrytis cinerea → tartaric acid metabolism → unexpectedly lower acidity in botrytised wines, Cool climate → high acidity in finished wine, alcohol, malic acid, sugar, tartaric acid, warm climate alcohol
-   - query_expansion_terms: acid, acid retention, acidity, acidity 01, acidity ageability, ageing improvement 01, ageing potential, alcohol, all wines improve with age if stored correctly., balance, botrytis acidity reduction, botrytis cinerea
-   - knowledge_graph_boost_applied: true
-   - why: matched canonical/query terms: acid, alcohol, have, malic acid, sugar, tannin, tartaric acid; aligns with cause_effect reasoning intent; pedagogical role fits cause_effect_explanation; matched SAT/tasting vocabulary; supports cause/effect explanation; matches knowledge-map concept or relationship terms; matches knowledge-map causal-chain mechanism; matches knowledge-map concept vocabulary; exact term match
-   - excerpt: is sugar and sugar is very important of course as yeast will use it to ferment it into alcohol and this is the second largest component in the grape and then the third part here is acid and the acids we find numerous acids but there are two major acidities which wset on this syllabus wish you to understand the greatest is tartaric so tartaric acid has the...
+5. 0.2200 How_to_prepare_for_the_WSET_Level_3_Tasting_Exam-0001 - How to prepare for the WSET Level 3 Tasting Exam
+   - reasoning_type: exam_strategy
+   - pedagogical_role: exam_strategy
+   - retrieval_priority: high
+   - matched_terms: none
+   - matched_concepts: none
+   - matched_causal_chains: none
+   - query_expansion_terms: none
+   - knowledge_graph_boost_applied: false
+   - why: golden tutor chunk candidate; high retrieval priority in golden QA report
+   - excerpt: So, let's go through um preparing you for the very famous and intensive and intimidating level three tasting examination. If you do follow all of these key points and you listen to your tutor, you will get through this tasting examination. It is in fact the least of your worries when it comes to the level three exam. uh it is in fact the uh the theory whe...
 
 No tutoring answer was generated. This run validates retrieval and ranking only.

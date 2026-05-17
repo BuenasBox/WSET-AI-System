@@ -1,20 +1,16 @@
 {
   "schema_version": "minimal_brain_v2",
-  "updated_at": "2026-05-16T02:44:04.919748+00:00",
+  "updated_at": "2026-05-17T03:48:58.094768+00:00",
   "latest_session": {
-    "student_query": "How does cool climate affect acidity?",
+    "student_query": "\u00bfCu\u00e1l es el prop\u00f3sito del licor de tiraje?",
     "detected_misconception": {
-      "detected": true,
-      "matched_misconception_id": "MC_COOL_CLIMATE_02",
-      "confidence": 0.48,
-      "severity": "high",
-      "intervention_type": "causal_chain_walkthrough",
-      "corrected_understanding": "Green, herbaceous notes come from methoxypyrazines and indicate under-ripeness. Cool climates require careful viticulture to achieve full ripeness, but when they do, wines show ripe fruit, floral, and mineral characters \u2014 not greenness.",
-      "matched_signals": [
-        "cool climate wines taste green",
-        "cool climate means unripe and green flavours"
-      ],
-      "misconception": "Cool climate wines always have green, unripe flavours."
+      "detected": false,
+      "matched_misconception_id": null,
+      "confidence": 0.0,
+      "severity": null,
+      "intervention_type": null,
+      "corrected_understanding": null,
+      "matched_signals": []
     },
     "les_context_used": {
       "learner_id": "nazareth",
@@ -28,10 +24,45 @@
         "retrieval:missing_causal_link_support",
         "retrieval:missing_keyword_support",
         "fragile:missing_keyword_support",
-        "fragile:missing_causal_link_support"
+        "fragile:missing_causal_link_support",
+        "causal_chain:fortification -> yeast stops -> residual sugar",
+        "causal_chain:structure -> bottle ageing -> sediment",
+        "causal_chain:fractional blending -> consistency",
+        "causal_chain:flor dies -> oxidative ageing",
+        "causal_chain:no flor -> oxidative ageing",
+        "retrieval:shallow_retrieval",
+        "label:missing_causal_link",
+        "label:unsupported_conclusion",
+        "label:shallow_retrieval",
+        "label:shallow_reasoning",
+        "label:weak_exam_register",
+        "fragile:flor dies -> oxidative ageing",
+        "fragile:no flor -> oxidative ageing",
+        "fragile:shallow_retrieval",
+        "causal_chain:cause -> mechanism -> effect",
+        "fragile:cause -> mechanism -> effect"
       ],
       "recent_misconceptions": [],
-      "session_count": 15,
+      "session_count": 118,
+      "pedagogical_memory": {
+        "schema_version": "pedagogical_memory_v1",
+        "low_mastery_concepts": [],
+        "retention_risks": [],
+        "recurrent_misconceptions": [],
+        "difficult_causal_chains": [],
+        "mastered_concepts": [],
+        "preferred_depth": "standard",
+        "overload_patterns": [],
+        "governance": {
+          "safe_for_examiner": false,
+          "examiner_scoring_allowed": false,
+          "uses_llm": false,
+          "uses_api": false,
+          "uses_embeddings": false,
+          "uses_vector_db": false,
+          "cloud_services_active": false
+        }
+      },
       "governance": {
         "safe_for_examiner": false,
         "examiner_scoring_active": false,
@@ -41,17 +72,26 @@
       }
     },
     "orchestrator_decision": {
-      "route": "misconception_prepass",
-      "reason": "misconception_detected",
-      "matched_misconception_id": "MC_COOL_CLIMATE_02"
+      "route": "normal_tutor",
+      "reason": "no_misconception_detected",
+      "matched_misconception_id": null,
+      "confidence": 0.0
     },
     "retrieval_plan": {
-      "mode": "forced_plus_supporting_chunks",
-      "query": "How does cool climate affect acidity? Cool climate wines always have green, unripe flavours. Green, herbaceous notes come from methoxypyrazines and indicate under-ripeness. Cool climates require careful viticulture to achieve full ripeness, but when they do, wines show ripe fruit, floral, and mineral characters \u2014 not greenness. C_COOL_CLIMATE",
+      "mode": "normal_retrieval",
+      "query": "\u00bfCu\u00e1l es el prop\u00f3sito del licor de tiraje?",
       "top_k": 5,
-      "forced_retrieval_nodes": [
-        "MC_COOL_CLIMATE_02"
-      ],
+      "forced_retrieval_nodes": [],
+      "pedagogical_priority_boost": {
+        "low_mastery_concepts": [],
+        "causal_chain_boosts": [],
+        "misconception_persistence_boost": false,
+        "force_deep_explanation": false,
+        "resurfacing_concepts": [],
+        "preferred_depth": "standard",
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false
+      },
       "retrieval_engine": "tools.retrieval.tutor_retrieval_sandbox",
       "uses_embeddings": false,
       "uses_vector_db": false,
@@ -60,143 +100,52 @@
     },
     "retrieved_context": [
       {
-        "context_type": "misconception_node",
-        "node_id": "MC_COOL_CLIMATE_02",
-        "forced_retrieval": true,
-        "agent_corpus": "tutor",
-        "safe_for_examiner": false,
-        "source_path": "C:/Users/esand/OneDrive/Documents/WSET-AI-System/knowledge/knowledge-map/misconceptions/mc_cool_climate_02.json",
-        "content": {
-          "misconception_id": "MC_COOL_CLIMATE_02",
-          "misconception": "Cool climate wines always have green, unripe flavours.",
-          "why_incorrect": "Green or herbaceous characters in grapes arise from methoxypyrazines \u2014 compounds that degrade as grapes ripen. In a cool climate, if grapes achieve full phenolic and sugar ripeness before harvest, methoxypyrazines will have degraded and the wine will not taste green. The green flavour is a sign of under-ripeness, not of cool climate per se. A well-made, fully ripe Mosel Sp\u00e4tlese or Chablis Premier Cru shows no green notes \u2014 it shows citrus, stone fruit, mineral, and floral characters. Growers in cool climates manage canopy, yield, and harvest date specifically to achieve ripeness.",
-          "corrected_understanding": "Green, herbaceous notes come from methoxypyrazines and indicate under-ripeness. Cool climates require careful viticulture to achieve full ripeness, but when they do, wines show ripe fruit, floral, and mineral characters \u2014 not greenness.",
-          "related_topics": [
-            "T_RA1_CLIMATE_VITICULTURE"
-          ],
-          "related_concepts": [
-            "C_COOL_CLIMATE"
-          ],
-          "severity": "high",
-          "frequency": "very_common",
-          "distinction_relevance": true,
-          "tutor_intervention": "causal_chain_walkthrough",
-          "detection_signals": [
-            "cool climate wines taste green",
-            "if it's from a cold region it will be unripe",
-            "Chablis always tastes vegetal",
-            "cool climate always means underripe grapes",
-            "wines from cool regions are always too green",
-            "cold climate wine will be herbaceous",
-            "if the climate is cool the grapes won't ripen properly",
-            "cool climate means unripe and green flavours"
-          ],
-          "detection_keywords": [
-            {
-              "tokens": [
-                "cool",
-                "climate"
-              ],
-              "require_all": true,
-              "bias": 0.18
-            },
-            {
-              "tokens": [
-                "cool",
-                "unripe"
-              ],
-              "require_all": true,
-              "bias": 0.2
-            },
-            {
-              "tokens": [
-                "cool",
-                "green"
-              ],
-              "require_all": true,
-              "bias": 0.2
-            },
-            {
-              "tokens": [
-                "cool",
-                "vegetal"
-              ],
-              "require_all": true,
-              "bias": 0.22
-            },
-            {
-              "tokens": [
-                "cold",
-                "unripe"
-              ],
-              "require_all": true,
-              "bias": 0.18
-            },
-            {
-              "tokens": [
-                "cool",
-                "underripe"
-              ],
-              "require_all": true,
-              "bias": 0.22
-            },
-            {
-              "tokens": [
-                "cool",
-                "herbaceous"
-              ],
-              "require_all": true,
-              "bias": 0.2
-            },
-            {
-              "tokens": [
-                "climate",
-                "green"
-              ],
-              "require_all": true,
-              "bias": 0.14
-            }
-          ],
-          "_meta": {
-            "schema_version": "1.0",
-            "created_date": "2026-05-13",
-            "ingestion_status": "draft"
-          },
-          "_source_path": "C:/Users/esand/OneDrive/Documents/WSET-AI-System/knowledge/knowledge-map/misconceptions/mc_cool_climate_02.json"
-        }
-      },
-      {
         "context_type": "retrieval_sandbox_chunk",
-        "chunk_id": "OFFICIAL_WSET_1_1_THE_SYSTEMATIC_APPROACH_TO_TASTING_WINE_001",
+        "chunk_id": "OFFICIAL_WSET_WINES_OF_THE_WORLD_6_13_24_TOKAJ_001",
         "forced_retrieval": false,
         "agent_corpus": "tutor",
         "safe_for_examiner": false,
-        "score": 1.0,
+        "score": 0.3333,
         "source_type": "official_wset_extracted",
-        "source_file": "knowledge/official-wset/study-guide/wset_markdown/seccion_4_section_1_wine_and_the_consumer/4-1_1_the_systematic_approach_to_tasting_wine.md",
+        "source_file": "knowledge/official-wset/study-guide/wset_markdown/seccion_6_section_3_still_wines_of_the_world/6-13_24_tokaj.md",
         "source_trust_tier": 1,
-        "title": "1 The Systematic Approach to Tasting Wine\u00ae",
-        "section": "4",
-        "subtopic": "4.1",
+        "title": "24 Tokaj",
+        "section": "6",
+        "subtopic": "6.13",
         "official_grading_authority": false,
         "requires_human_review": true,
-        "reasoning_type": "cause_effect",
+        "reasoning_type": "theory_foundation",
         "pedagogical_role": "official_reference",
         "why_retrieved": [
-          "matched canonical/query terms: acid, acidity, affect, alcohol, always, balance, characters, climate",
-          "aligns with cause_effect reasoning intent",
-          "matched SAT/tasting vocabulary",
-          "supports cause/effect explanation",
-          "matches knowledge-map concept or relationship terms",
-          "matches knowledge-map causal-chain mechanism",
-          "matches knowledge-map concept vocabulary",
-          "official WSET extracted Tutor support",
-          "matched official section/topic metadata",
-          "exact term match"
+          "official WSET extracted Tutor support"
         ],
-        "text_excerpt": "# 1 The Systematic Approach to Tasting Wine\u00ae <!-- p\u00e1gina 10 --> THES YSTEMATICA PPROACHT OT ASTINGW INE\" TheS ystematiAc pproactho TastinWg ine\u00ae The WSET Level 3. Syst~matic Approach to Tasting Wine (SAT) is a tool that allows you to write a complete description of a wine and then use this information to make an evaluation of its quality and readiness for...",
+        "text_excerpt": "# 24 Tokaj <!-- p\u00e1gina 125 --> 116 UNDERSTANDINGW INES:E XPLAININGS TYLEA ND QUALITY 24 TokajT he region of Tokaj (note the wine it produces is called Tokaji) is located in the foothills of the Carpathian Mountains in the far north east of Hungary and close to the Slovakian border. It has a long-standing reputation for producing premium botrytised sweet w...",
         "source_video": "",
-        "source_filename": "4-1_1_the_systematic_approach_to_tasting_wine.md"
+        "source_filename": "6-13_24_tokaj.md"
+      },
+      {
+        "context_type": "retrieval_sandbox_chunk",
+        "chunk_id": "OFFICIAL_WSET_WINES_OF_THE_WORLD_8_1_43_SHERRY_001",
+        "forced_retrieval": false,
+        "agent_corpus": "tutor",
+        "safe_for_examiner": false,
+        "score": 0.32,
+        "source_type": "official_wset_extracted",
+        "source_file": "knowledge/official-wset/study-guide/wset_markdown/seccion_8_section_5_fortified_wines_of_the_world/8-1_43_sherry.md",
+        "source_trust_tier": 1,
+        "title": "43 Sherry",
+        "section": "8",
+        "subtopic": "8.1",
+        "official_grading_authority": false,
+        "requires_human_review": true,
+        "reasoning_type": "theory_foundation",
+        "pedagogical_role": "official_reference",
+        "why_retrieved": [
+          "official WSET extracted Tutor support"
+        ],
+        "text_excerpt": "# 43 Sherry <!-- p\u00e1gina 193 --> 184 UNDERSTANDINGW INES: EXPLAININGST YLEA ND QUALITY Sherry 43 Probably more than any other wine, Sherry is a wine style that is defined by the processes used during maturation. None of the key techniques, the so/era system, biological ageing or oxidative ageing, are unique to this region, but it is in Jerez that they are...",
+        "source_video": "",
+        "source_filename": "8-1_43_sherry.md"
       },
       {
         "context_type": "retrieval_sandbox_chunk",
@@ -204,7 +153,7 @@
         "forced_retrieval": false,
         "agent_corpus": "tutor",
         "safe_for_examiner": false,
-        "score": 1.0,
+        "score": 0.2867,
         "source_type": "official_wset_extracted",
         "source_file": "knowledge/official-wset/study-guide/wset_markdown/seccion_5_section_2_factors_affecting_the_style_quality_and_price_of_w/5-4_7_common_elements_in_winemaking_and_maturation.md",
         "source_trust_tier": 1,
@@ -213,19 +162,10 @@
         "subtopic": "5.4",
         "official_grading_authority": false,
         "requires_human_review": true,
-        "reasoning_type": "cause_effect",
+        "reasoning_type": "theory_foundation",
         "pedagogical_role": "official_reference",
         "why_retrieved": [
-          "matched canonical/query terms: achieve, acid, acidity, affect, alcohol, balance, careful, characters",
-          "aligns with cause_effect reasoning intent",
-          "matched SAT/tasting vocabulary",
-          "supports cause/effect explanation",
-          "matches knowledge-map concept or relationship terms",
-          "matches knowledge-map causal-chain mechanism",
-          "matches knowledge-map concept vocabulary",
-          "official WSET extracted Tutor support",
-          "matched official section/topic metadata",
-          "exact term match"
+          "official WSET extracted Tutor support"
         ],
         "text_excerpt": "# 7 Common Elements in Winemaking and Maturation <!-- p\u00e1gina 52 --> COMMONE LEMENTISN W INEMAKINGAN D MATURATION 43 CommoEnl ementisn W inemakinagn dM aturation 7 There are certain factors and processes that are common to all wines and these are explored in this chapter. It is important to get an appreciation of their roles in winemaking and maturation an...",
         "source_video": "",
@@ -233,77 +173,35 @@
       },
       {
         "context_type": "retrieval_sandbox_chunk",
-        "chunk_id": "OFFICIAL_WSET_7_2_42_SPARKLING_WINES_OF_THE_WORLD_001",
+        "chunk_id": "OFFICIAL_WSET_WINES_OF_THE_WORLD_6_11_22_GERMANY_001",
         "forced_retrieval": false,
         "agent_corpus": "tutor",
         "safe_for_examiner": false,
-        "score": 1.0,
+        "score": 0.2867,
         "source_type": "official_wset_extracted",
-        "source_file": "knowledge/official-wset/study-guide/wset_markdown/seccion_7_section_4_sparkling_wines_of_the_world/7-2_42_sparkling_wines_of_the_world.md",
+        "source_file": "knowledge/official-wset/study-guide/wset_markdown/seccion_6_section_3_still_wines_of_the_world/6-11_22_germany.md",
         "source_trust_tier": 1,
-        "title": "42 Sparkling Wines of the World",
-        "section": "7",
-        "subtopic": "7.2",
-        "official_grading_authority": false,
-        "requires_human_review": true,
-        "reasoning_type": "cause_effect",
-        "pedagogical_role": "official_reference",
-        "why_retrieved": [
-          "matched canonical/query terms: achieve, acid, acidity, alcohol, always, balance, characters, climate",
-          "aligns with cause_effect reasoning intent",
-          "matched SAT/tasting vocabulary",
-          "supports cause/effect explanation",
-          "matches knowledge-map concept or relationship terms",
-          "matches knowledge-map causal-chain mechanism",
-          "matches knowledge-map concept vocabulary",
-          "official WSET extracted Tutor support",
-          "matched official section/topic metadata",
-          "exact term match"
-        ],
-        "text_excerpt": "# 42 Sparkling Wines of the World <!-- p\u00e1gina 188 --> SPARKLING WINES OF THE WORLD 179 SparklinWg ineso ft heW orld C~ampagne remains th~ m~st prestigiou_ss parkling wine and consequently 1tw ill be treated m the greatest detail here. Such is its reputation that most premium sparkling wines are not only made in the same way but also using the same grape v...",
-        "source_video": "",
-        "source_filename": "7-2_42_sparkling_wines_of_the_world.md"
-      },
-      {
-        "context_type": "retrieval_sandbox_chunk",
-        "chunk_id": "OFFICIAL_WSET_OF_THE_WORLD_6_16_27_NORTHERN_ITALY_001",
-        "forced_retrieval": false,
-        "agent_corpus": "tutor",
-        "safe_for_examiner": false,
-        "score": 1.0,
-        "source_type": "official_wset_extracted",
-        "source_file": "knowledge/official-wset/study-guide/wset_markdown/seccion_6_section_3_still_wines_of_the_world/6-16_27_northern_italy.md",
-        "source_trust_tier": 1,
-        "title": "27 Northern Italy",
+        "title": "22 Germany",
         "section": "6",
-        "subtopic": "6.16",
+        "subtopic": "6.11",
         "official_grading_authority": false,
         "requires_human_review": true,
-        "reasoning_type": "cause_effect",
+        "reasoning_type": "theory_foundation",
         "pedagogical_role": "official_reference",
         "why_retrieved": [
-          "matched canonical/query terms: achieve, acidity, alcohol, climate, come, complexity, cool, flavours",
-          "aligns with cause_effect reasoning intent",
-          "matched SAT/tasting vocabulary",
-          "supports cause/effect explanation",
-          "matches knowledge-map concept or relationship terms",
-          "matches knowledge-map causal-chain mechanism",
-          "matches knowledge-map concept vocabulary",
-          "official WSET extracted Tutor support",
-          "matched official section/topic metadata",
-          "exact term match"
+          "official WSET extracted Tutor support"
         ],
-        "text_excerpt": "# 27 Northern Italy <!-- p\u00e1gina 130 --> NORTHERN ITALY 121 NorthernIt aly Northern Italy produces a wide range of wine styles from the full-bodied 27 tannic reds of Barolo to the delicate white wines of Soave. All this is possible because of diverse geography and an incredible number of unique local grape varieties. This chapter will cover the regions of...",
+        "text_excerpt": "# 22 Germany <!-- p\u00e1gina 117 --> 108 UNDERSTANDINGW INES:E XPLAININGST YLEA ND QUALITY Germany 22 Germany is the country producing the highest concentration of world-class Rieslings. Whether dry and steely, medium-sweet and floral, or lusciously sweet, German winemakers' mastery of this variety is unquestionable. However, there is more to German wines tha...",
         "source_video": "",
-        "source_filename": "6-16_27_northern_italy.md"
+        "source_filename": "6-11_22_germany.md"
       },
       {
         "context_type": "retrieval_sandbox_chunk",
-        "chunk_id": "WSET_Level_3_Wines_-_Understanding_the_Common_Elements_of_Winemaking_Part-0002",
+        "chunk_id": "How_to_prepare_for_the_WSET_Level_3_Tasting_Exam-0001",
         "forced_retrieval": false,
         "agent_corpus": "tutor",
         "safe_for_examiner": false,
-        "score": 0.8379,
+        "score": 0.22,
         "source_type": "manual_curated_srt",
         "source_file": "",
         "source_trust_tier": "pedagogical",
@@ -312,36 +210,26 @@
         "subtopic": "",
         "official_grading_authority": false,
         "requires_human_review": false,
-        "reasoning_type": "cause_effect",
-        "pedagogical_role": "theory_explanation",
+        "reasoning_type": "exam_strategy",
+        "pedagogical_role": "exam_strategy",
         "why_retrieved": [
-          "matched canonical/query terms: acid, alcohol, have, malic acid, sugar, tannin, tartaric acid",
-          "aligns with cause_effect reasoning intent",
-          "pedagogical role fits cause_effect_explanation",
-          "matched SAT/tasting vocabulary",
-          "supports cause/effect explanation",
-          "matches knowledge-map concept or relationship terms",
-          "matches knowledge-map causal-chain mechanism",
-          "matches knowledge-map concept vocabulary",
-          "exact term match"
+          "golden tutor chunk candidate",
+          "high retrieval priority in golden QA report"
         ],
-        "text_excerpt": "is sugar and sugar is very important of course as yeast will use it to ferment it into alcohol and this is the second largest component in the grape and then the third part here is acid and the acids we find numerous acids but there are two major acidities which wset on this syllabus wish you to understand the greatest is tartaric so tartaric acid has the...",
-        "source_video": "WSET Level 3 Wines - Understanding the Common Elements of Winemaking Part",
-        "source_filename": "[English (auto-generated)] WSET Level 3 Wines - Understanding the Common Elements of Winemaking Part.srt"
+        "text_excerpt": "So, let's go through um preparing you for the very famous and intensive and intimidating level three tasting examination. If you do follow all of these key points and you listen to your tutor, you will get through this tasting examination. It is in fact the least of your worries when it comes to the level three exam. uh it is in fact the uh the theory whe...",
+        "source_video": "How to prepare for the WSET Level 3 Tasting Exam",
+        "source_filename": "How to prepare for the WSET Level 3 Tasting Exam.srt"
       }
     ],
     "tutor_directive": {
-      "pedagogical_act": "misconception_intervention",
-      "forced_retrieval_nodes": [
-        "MC_COOL_CLIMATE_02"
-      ],
-      "intervention_type": "causal_chain_walkthrough",
-      "corrected_understanding": "Green, herbaceous notes come from methoxypyrazines and indicate under-ripeness. Cool climates require careful viticulture to achieve full ripeness, but when they do, wines show ripe fruit, floral, and mineral characters \u2014 not greenness.",
+      "pedagogical_act": "answer_normally",
+      "forced_retrieval_nodes": [],
+      "confidence": 0.0,
       "safe_for_examiner": false
     },
     "recommended_les_update": {
-      "append_recent_misconception": "MC_COOL_CLIMATE_02",
-      "increase_attention_to": "high"
+      "append_recent_misconception": null,
+      "increase_attention_to": null
     },
     "governance_flags": {
       "safe_for_examiner": false,
@@ -353,115 +241,17 @@
       "cloud_services_active": false
     },
     "context_package": {
-      "student_query": "How does cool climate affect acidity?",
+      "student_query": "\u00bfCu\u00e1l es el prop\u00f3sito del licor de tiraje?",
       "language": "es",
       "orchestrator_decision": {
-        "route": "misconception_prepass",
-        "reason": "misconception_detected",
-        "matched_misconception_id": "MC_COOL_CLIMATE_02"
+        "route": "normal_tutor",
+        "reason": "no_misconception_detected",
+        "matched_misconception_id": null,
+        "confidence": 0.0
       },
-      "pedagogical_act": "misconception_intervention",
-      "forced_retrieval_nodes": [
-        "MC_COOL_CLIMATE_02"
-      ],
-      "matched_misconception": {
-        "misconception_id": "MC_COOL_CLIMATE_02",
-        "misconception": "Cool climate wines always have green, unripe flavours.",
-        "why_incorrect": "Green or herbaceous characters in grapes arise from methoxypyrazines \u2014 compounds that degrade as grapes ripen. In a cool climate, if grapes achieve full phenolic and sugar ripeness before harvest, methoxypyrazines will have degraded and the wine will not taste green. The green flavour is a sign of under-ripeness, not of cool climate per se. A well-made, fully ripe Mosel Sp\u00e4tlese or Chablis Premier Cru shows no green notes \u2014 it shows citrus, stone fruit, mineral, and floral characters. Growers in cool climates manage canopy, yield, and harvest date specifically to achieve ripeness.",
-        "corrected_understanding": "Green, herbaceous notes come from methoxypyrazines and indicate under-ripeness. Cool climates require careful viticulture to achieve full ripeness, but when they do, wines show ripe fruit, floral, and mineral characters \u2014 not greenness.",
-        "related_topics": [
-          "T_RA1_CLIMATE_VITICULTURE"
-        ],
-        "related_concepts": [
-          "C_COOL_CLIMATE"
-        ],
-        "severity": "high",
-        "frequency": "very_common",
-        "distinction_relevance": true,
-        "tutor_intervention": "causal_chain_walkthrough",
-        "detection_signals": [
-          "cool climate wines taste green",
-          "if it's from a cold region it will be unripe",
-          "Chablis always tastes vegetal",
-          "cool climate always means underripe grapes",
-          "wines from cool regions are always too green",
-          "cold climate wine will be herbaceous",
-          "if the climate is cool the grapes won't ripen properly",
-          "cool climate means unripe and green flavours"
-        ],
-        "detection_keywords": [
-          {
-            "tokens": [
-              "cool",
-              "climate"
-            ],
-            "require_all": true,
-            "bias": 0.18
-          },
-          {
-            "tokens": [
-              "cool",
-              "unripe"
-            ],
-            "require_all": true,
-            "bias": 0.2
-          },
-          {
-            "tokens": [
-              "cool",
-              "green"
-            ],
-            "require_all": true,
-            "bias": 0.2
-          },
-          {
-            "tokens": [
-              "cool",
-              "vegetal"
-            ],
-            "require_all": true,
-            "bias": 0.22
-          },
-          {
-            "tokens": [
-              "cold",
-              "unripe"
-            ],
-            "require_all": true,
-            "bias": 0.18
-          },
-          {
-            "tokens": [
-              "cool",
-              "underripe"
-            ],
-            "require_all": true,
-            "bias": 0.22
-          },
-          {
-            "tokens": [
-              "cool",
-              "herbaceous"
-            ],
-            "require_all": true,
-            "bias": 0.2
-          },
-          {
-            "tokens": [
-              "climate",
-              "green"
-            ],
-            "require_all": true,
-            "bias": 0.14
-          }
-        ],
-        "_meta": {
-          "schema_version": "1.0",
-          "created_date": "2026-05-13",
-          "ingestion_status": "draft"
-        },
-        "_source_path": "C:/Users/esand/OneDrive/Documents/WSET-AI-System/knowledge/knowledge-map/misconceptions/mc_cool_climate_02.json"
-      },
+      "pedagogical_act": "answer_normally",
+      "forced_retrieval_nodes": [],
+      "matched_misconception": {},
       "learner_state_context": {
         "learner_id": "nazareth",
         "current_level": "WSET_L3",
@@ -474,10 +264,45 @@
           "retrieval:missing_causal_link_support",
           "retrieval:missing_keyword_support",
           "fragile:missing_keyword_support",
-          "fragile:missing_causal_link_support"
+          "fragile:missing_causal_link_support",
+          "causal_chain:fortification -> yeast stops -> residual sugar",
+          "causal_chain:structure -> bottle ageing -> sediment",
+          "causal_chain:fractional blending -> consistency",
+          "causal_chain:flor dies -> oxidative ageing",
+          "causal_chain:no flor -> oxidative ageing",
+          "retrieval:shallow_retrieval",
+          "label:missing_causal_link",
+          "label:unsupported_conclusion",
+          "label:shallow_retrieval",
+          "label:shallow_reasoning",
+          "label:weak_exam_register",
+          "fragile:flor dies -> oxidative ageing",
+          "fragile:no flor -> oxidative ageing",
+          "fragile:shallow_retrieval",
+          "causal_chain:cause -> mechanism -> effect",
+          "fragile:cause -> mechanism -> effect"
         ],
         "recent_misconceptions": [],
-        "session_count": 15,
+        "session_count": 118,
+        "pedagogical_memory": {
+          "schema_version": "pedagogical_memory_v1",
+          "low_mastery_concepts": [],
+          "retention_risks": [],
+          "recurrent_misconceptions": [],
+          "difficult_causal_chains": [],
+          "mastered_concepts": [],
+          "preferred_depth": "standard",
+          "overload_patterns": [],
+          "governance": {
+            "safe_for_examiner": false,
+            "examiner_scoring_allowed": false,
+            "uses_llm": false,
+            "uses_api": false,
+            "uses_embeddings": false,
+            "uses_vector_db": false,
+            "cloud_services_active": false
+          }
+        },
         "governance": {
           "safe_for_examiner": false,
           "examiner_scoring_active": false,
@@ -487,12 +312,20 @@
         }
       },
       "retrieval_plan": {
-        "mode": "forced_plus_supporting_chunks",
-        "query": "How does cool climate affect acidity? Cool climate wines always have green, unripe flavours. Green, herbaceous notes come from methoxypyrazines and indicate under-ripeness. Cool climates require careful viticulture to achieve full ripeness, but when they do, wines show ripe fruit, floral, and mineral characters \u2014 not greenness. C_COOL_CLIMATE",
+        "mode": "normal_retrieval",
+        "query": "\u00bfCu\u00e1l es el prop\u00f3sito del licor de tiraje?",
         "top_k": 5,
-        "forced_retrieval_nodes": [
-          "MC_COOL_CLIMATE_02"
-        ],
+        "forced_retrieval_nodes": [],
+        "pedagogical_priority_boost": {
+          "low_mastery_concepts": [],
+          "causal_chain_boosts": [],
+          "misconception_persistence_boost": false,
+          "force_deep_explanation": false,
+          "resurfacing_concepts": [],
+          "preferred_depth": "standard",
+          "safe_for_examiner": false,
+          "examiner_scoring_allowed": false
+        },
         "retrieval_engine": "tools.retrieval.tutor_retrieval_sandbox",
         "uses_embeddings": false,
         "uses_vector_db": false,
@@ -501,143 +334,52 @@
       },
       "retrieved_context": [
         {
-          "context_type": "misconception_node",
-          "node_id": "MC_COOL_CLIMATE_02",
-          "forced_retrieval": true,
-          "agent_corpus": "tutor",
-          "safe_for_examiner": false,
-          "source_path": "C:/Users/esand/OneDrive/Documents/WSET-AI-System/knowledge/knowledge-map/misconceptions/mc_cool_climate_02.json",
-          "content": {
-            "misconception_id": "MC_COOL_CLIMATE_02",
-            "misconception": "Cool climate wines always have green, unripe flavours.",
-            "why_incorrect": "Green or herbaceous characters in grapes arise from methoxypyrazines \u2014 compounds that degrade as grapes ripen. In a cool climate, if grapes achieve full phenolic and sugar ripeness before harvest, methoxypyrazines will have degraded and the wine will not taste green. The green flavour is a sign of under-ripeness, not of cool climate per se. A well-made, fully ripe Mosel Sp\u00e4tlese or Chablis Premier Cru shows no green notes \u2014 it shows citrus, stone fruit, mineral, and floral characters. Growers in cool climates manage canopy, yield, and harvest date specifically to achieve ripeness.",
-            "corrected_understanding": "Green, herbaceous notes come from methoxypyrazines and indicate under-ripeness. Cool climates require careful viticulture to achieve full ripeness, but when they do, wines show ripe fruit, floral, and mineral characters \u2014 not greenness.",
-            "related_topics": [
-              "T_RA1_CLIMATE_VITICULTURE"
-            ],
-            "related_concepts": [
-              "C_COOL_CLIMATE"
-            ],
-            "severity": "high",
-            "frequency": "very_common",
-            "distinction_relevance": true,
-            "tutor_intervention": "causal_chain_walkthrough",
-            "detection_signals": [
-              "cool climate wines taste green",
-              "if it's from a cold region it will be unripe",
-              "Chablis always tastes vegetal",
-              "cool climate always means underripe grapes",
-              "wines from cool regions are always too green",
-              "cold climate wine will be herbaceous",
-              "if the climate is cool the grapes won't ripen properly",
-              "cool climate means unripe and green flavours"
-            ],
-            "detection_keywords": [
-              {
-                "tokens": [
-                  "cool",
-                  "climate"
-                ],
-                "require_all": true,
-                "bias": 0.18
-              },
-              {
-                "tokens": [
-                  "cool",
-                  "unripe"
-                ],
-                "require_all": true,
-                "bias": 0.2
-              },
-              {
-                "tokens": [
-                  "cool",
-                  "green"
-                ],
-                "require_all": true,
-                "bias": 0.2
-              },
-              {
-                "tokens": [
-                  "cool",
-                  "vegetal"
-                ],
-                "require_all": true,
-                "bias": 0.22
-              },
-              {
-                "tokens": [
-                  "cold",
-                  "unripe"
-                ],
-                "require_all": true,
-                "bias": 0.18
-              },
-              {
-                "tokens": [
-                  "cool",
-                  "underripe"
-                ],
-                "require_all": true,
-                "bias": 0.22
-              },
-              {
-                "tokens": [
-                  "cool",
-                  "herbaceous"
-                ],
-                "require_all": true,
-                "bias": 0.2
-              },
-              {
-                "tokens": [
-                  "climate",
-                  "green"
-                ],
-                "require_all": true,
-                "bias": 0.14
-              }
-            ],
-            "_meta": {
-              "schema_version": "1.0",
-              "created_date": "2026-05-13",
-              "ingestion_status": "draft"
-            },
-            "_source_path": "C:/Users/esand/OneDrive/Documents/WSET-AI-System/knowledge/knowledge-map/misconceptions/mc_cool_climate_02.json"
-          }
-        },
-        {
           "context_type": "retrieval_sandbox_chunk",
-          "chunk_id": "OFFICIAL_WSET_1_1_THE_SYSTEMATIC_APPROACH_TO_TASTING_WINE_001",
+          "chunk_id": "OFFICIAL_WSET_WINES_OF_THE_WORLD_6_13_24_TOKAJ_001",
           "forced_retrieval": false,
           "agent_corpus": "tutor",
           "safe_for_examiner": false,
-          "score": 1.0,
+          "score": 0.3333,
           "source_type": "official_wset_extracted",
-          "source_file": "knowledge/official-wset/study-guide/wset_markdown/seccion_4_section_1_wine_and_the_consumer/4-1_1_the_systematic_approach_to_tasting_wine.md",
+          "source_file": "knowledge/official-wset/study-guide/wset_markdown/seccion_6_section_3_still_wines_of_the_world/6-13_24_tokaj.md",
           "source_trust_tier": 1,
-          "title": "1 The Systematic Approach to Tasting Wine\u00ae",
-          "section": "4",
-          "subtopic": "4.1",
+          "title": "24 Tokaj",
+          "section": "6",
+          "subtopic": "6.13",
           "official_grading_authority": false,
           "requires_human_review": true,
-          "reasoning_type": "cause_effect",
+          "reasoning_type": "theory_foundation",
           "pedagogical_role": "official_reference",
           "why_retrieved": [
-            "matched canonical/query terms: acid, acidity, affect, alcohol, always, balance, characters, climate",
-            "aligns with cause_effect reasoning intent",
-            "matched SAT/tasting vocabulary",
-            "supports cause/effect explanation",
-            "matches knowledge-map concept or relationship terms",
-            "matches knowledge-map causal-chain mechanism",
-            "matches knowledge-map concept vocabulary",
-            "official WSET extracted Tutor support",
-            "matched official section/topic metadata",
-            "exact term match"
+            "official WSET extracted Tutor support"
           ],
-          "text_excerpt": "# 1 The Systematic Approach to Tasting Wine\u00ae <!-- p\u00e1gina 10 --> THES YSTEMATICA PPROACHT OT ASTINGW INE\" TheS ystematiAc pproactho TastinWg ine\u00ae The WSET Level 3. Syst~matic Approach to Tasting Wine (SAT) is a tool that allows you to write a complete description of a wine and then use this information to make an evaluation of its quality and readiness for...",
+          "text_excerpt": "# 24 Tokaj <!-- p\u00e1gina 125 --> 116 UNDERSTANDINGW INES:E XPLAININGS TYLEA ND QUALITY 24 TokajT he region of Tokaj (note the wine it produces is called Tokaji) is located in the foothills of the Carpathian Mountains in the far north east of Hungary and close to the Slovakian border. It has a long-standing reputation for producing premium botrytised sweet w...",
           "source_video": "",
-          "source_filename": "4-1_1_the_systematic_approach_to_tasting_wine.md"
+          "source_filename": "6-13_24_tokaj.md"
+        },
+        {
+          "context_type": "retrieval_sandbox_chunk",
+          "chunk_id": "OFFICIAL_WSET_WINES_OF_THE_WORLD_8_1_43_SHERRY_001",
+          "forced_retrieval": false,
+          "agent_corpus": "tutor",
+          "safe_for_examiner": false,
+          "score": 0.32,
+          "source_type": "official_wset_extracted",
+          "source_file": "knowledge/official-wset/study-guide/wset_markdown/seccion_8_section_5_fortified_wines_of_the_world/8-1_43_sherry.md",
+          "source_trust_tier": 1,
+          "title": "43 Sherry",
+          "section": "8",
+          "subtopic": "8.1",
+          "official_grading_authority": false,
+          "requires_human_review": true,
+          "reasoning_type": "theory_foundation",
+          "pedagogical_role": "official_reference",
+          "why_retrieved": [
+            "official WSET extracted Tutor support"
+          ],
+          "text_excerpt": "# 43 Sherry <!-- p\u00e1gina 193 --> 184 UNDERSTANDINGW INES: EXPLAININGST YLEA ND QUALITY Sherry 43 Probably more than any other wine, Sherry is a wine style that is defined by the processes used during maturation. None of the key techniques, the so/era system, biological ageing or oxidative ageing, are unique to this region, but it is in Jerez that they are...",
+          "source_video": "",
+          "source_filename": "8-1_43_sherry.md"
         },
         {
           "context_type": "retrieval_sandbox_chunk",
@@ -645,7 +387,7 @@
           "forced_retrieval": false,
           "agent_corpus": "tutor",
           "safe_for_examiner": false,
-          "score": 1.0,
+          "score": 0.2867,
           "source_type": "official_wset_extracted",
           "source_file": "knowledge/official-wset/study-guide/wset_markdown/seccion_5_section_2_factors_affecting_the_style_quality_and_price_of_w/5-4_7_common_elements_in_winemaking_and_maturation.md",
           "source_trust_tier": 1,
@@ -654,19 +396,10 @@
           "subtopic": "5.4",
           "official_grading_authority": false,
           "requires_human_review": true,
-          "reasoning_type": "cause_effect",
+          "reasoning_type": "theory_foundation",
           "pedagogical_role": "official_reference",
           "why_retrieved": [
-            "matched canonical/query terms: achieve, acid, acidity, affect, alcohol, balance, careful, characters",
-            "aligns with cause_effect reasoning intent",
-            "matched SAT/tasting vocabulary",
-            "supports cause/effect explanation",
-            "matches knowledge-map concept or relationship terms",
-            "matches knowledge-map causal-chain mechanism",
-            "matches knowledge-map concept vocabulary",
-            "official WSET extracted Tutor support",
-            "matched official section/topic metadata",
-            "exact term match"
+            "official WSET extracted Tutor support"
           ],
           "text_excerpt": "# 7 Common Elements in Winemaking and Maturation <!-- p\u00e1gina 52 --> COMMONE LEMENTISN W INEMAKINGAN D MATURATION 43 CommoEnl ementisn W inemakinagn dM aturation 7 There are certain factors and processes that are common to all wines and these are explored in this chapter. It is important to get an appreciation of their roles in winemaking and maturation an...",
           "source_video": "",
@@ -674,77 +407,35 @@
         },
         {
           "context_type": "retrieval_sandbox_chunk",
-          "chunk_id": "OFFICIAL_WSET_7_2_42_SPARKLING_WINES_OF_THE_WORLD_001",
+          "chunk_id": "OFFICIAL_WSET_WINES_OF_THE_WORLD_6_11_22_GERMANY_001",
           "forced_retrieval": false,
           "agent_corpus": "tutor",
           "safe_for_examiner": false,
-          "score": 1.0,
+          "score": 0.2867,
           "source_type": "official_wset_extracted",
-          "source_file": "knowledge/official-wset/study-guide/wset_markdown/seccion_7_section_4_sparkling_wines_of_the_world/7-2_42_sparkling_wines_of_the_world.md",
+          "source_file": "knowledge/official-wset/study-guide/wset_markdown/seccion_6_section_3_still_wines_of_the_world/6-11_22_germany.md",
           "source_trust_tier": 1,
-          "title": "42 Sparkling Wines of the World",
-          "section": "7",
-          "subtopic": "7.2",
-          "official_grading_authority": false,
-          "requires_human_review": true,
-          "reasoning_type": "cause_effect",
-          "pedagogical_role": "official_reference",
-          "why_retrieved": [
-            "matched canonical/query terms: achieve, acid, acidity, alcohol, always, balance, characters, climate",
-            "aligns with cause_effect reasoning intent",
-            "matched SAT/tasting vocabulary",
-            "supports cause/effect explanation",
-            "matches knowledge-map concept or relationship terms",
-            "matches knowledge-map causal-chain mechanism",
-            "matches knowledge-map concept vocabulary",
-            "official WSET extracted Tutor support",
-            "matched official section/topic metadata",
-            "exact term match"
-          ],
-          "text_excerpt": "# 42 Sparkling Wines of the World <!-- p\u00e1gina 188 --> SPARKLING WINES OF THE WORLD 179 SparklinWg ineso ft heW orld C~ampagne remains th~ m~st prestigiou_ss parkling wine and consequently 1tw ill be treated m the greatest detail here. Such is its reputation that most premium sparkling wines are not only made in the same way but also using the same grape v...",
-          "source_video": "",
-          "source_filename": "7-2_42_sparkling_wines_of_the_world.md"
-        },
-        {
-          "context_type": "retrieval_sandbox_chunk",
-          "chunk_id": "OFFICIAL_WSET_OF_THE_WORLD_6_16_27_NORTHERN_ITALY_001",
-          "forced_retrieval": false,
-          "agent_corpus": "tutor",
-          "safe_for_examiner": false,
-          "score": 1.0,
-          "source_type": "official_wset_extracted",
-          "source_file": "knowledge/official-wset/study-guide/wset_markdown/seccion_6_section_3_still_wines_of_the_world/6-16_27_northern_italy.md",
-          "source_trust_tier": 1,
-          "title": "27 Northern Italy",
+          "title": "22 Germany",
           "section": "6",
-          "subtopic": "6.16",
+          "subtopic": "6.11",
           "official_grading_authority": false,
           "requires_human_review": true,
-          "reasoning_type": "cause_effect",
+          "reasoning_type": "theory_foundation",
           "pedagogical_role": "official_reference",
           "why_retrieved": [
-            "matched canonical/query terms: achieve, acidity, alcohol, climate, come, complexity, cool, flavours",
-            "aligns with cause_effect reasoning intent",
-            "matched SAT/tasting vocabulary",
-            "supports cause/effect explanation",
-            "matches knowledge-map concept or relationship terms",
-            "matches knowledge-map causal-chain mechanism",
-            "matches knowledge-map concept vocabulary",
-            "official WSET extracted Tutor support",
-            "matched official section/topic metadata",
-            "exact term match"
+            "official WSET extracted Tutor support"
           ],
-          "text_excerpt": "# 27 Northern Italy <!-- p\u00e1gina 130 --> NORTHERN ITALY 121 NorthernIt aly Northern Italy produces a wide range of wine styles from the full-bodied 27 tannic reds of Barolo to the delicate white wines of Soave. All this is possible because of diverse geography and an incredible number of unique local grape varieties. This chapter will cover the regions of...",
+          "text_excerpt": "# 22 Germany <!-- p\u00e1gina 117 --> 108 UNDERSTANDINGW INES:E XPLAININGST YLEA ND QUALITY Germany 22 Germany is the country producing the highest concentration of world-class Rieslings. Whether dry and steely, medium-sweet and floral, or lusciously sweet, German winemakers' mastery of this variety is unquestionable. However, there is more to German wines tha...",
           "source_video": "",
-          "source_filename": "6-16_27_northern_italy.md"
+          "source_filename": "6-11_22_germany.md"
         },
         {
           "context_type": "retrieval_sandbox_chunk",
-          "chunk_id": "WSET_Level_3_Wines_-_Understanding_the_Common_Elements_of_Winemaking_Part-0002",
+          "chunk_id": "How_to_prepare_for_the_WSET_Level_3_Tasting_Exam-0001",
           "forced_retrieval": false,
           "agent_corpus": "tutor",
           "safe_for_examiner": false,
-          "score": 0.8379,
+          "score": 0.22,
           "source_type": "manual_curated_srt",
           "source_file": "",
           "source_trust_tier": "pedagogical",
@@ -753,396 +444,22 @@
           "subtopic": "",
           "official_grading_authority": false,
           "requires_human_review": false,
-          "reasoning_type": "cause_effect",
-          "pedagogical_role": "theory_explanation",
+          "reasoning_type": "exam_strategy",
+          "pedagogical_role": "exam_strategy",
           "why_retrieved": [
-            "matched canonical/query terms: acid, alcohol, have, malic acid, sugar, tannin, tartaric acid",
-            "aligns with cause_effect reasoning intent",
-            "pedagogical role fits cause_effect_explanation",
-            "matched SAT/tasting vocabulary",
-            "supports cause/effect explanation",
-            "matches knowledge-map concept or relationship terms",
-            "matches knowledge-map causal-chain mechanism",
-            "matches knowledge-map concept vocabulary",
-            "exact term match"
+            "golden tutor chunk candidate",
+            "high retrieval priority in golden QA report"
           ],
-          "text_excerpt": "is sugar and sugar is very important of course as yeast will use it to ferment it into alcohol and this is the second largest component in the grape and then the third part here is acid and the acids we find numerous acids but there are two major acidities which wset on this syllabus wish you to understand the greatest is tartaric so tartaric acid has the...",
-          "source_video": "WSET Level 3 Wines - Understanding the Common Elements of Winemaking Part",
-          "source_filename": "[English (auto-generated)] WSET Level 3 Wines - Understanding the Common Elements of Winemaking Part.srt"
+          "text_excerpt": "So, let's go through um preparing you for the very famous and intensive and intimidating level three tasting examination. If you do follow all of these key points and you listen to your tutor, you will get through this tasting examination. It is in fact the least of your worries when it comes to the level three exam. uh it is in fact the uh the theory whe...",
+          "source_video": "How to prepare for the WSET Level 3 Tasting Exam",
+          "source_filename": "How to prepare for the WSET Level 3 Tasting Exam.srt"
         }
       ],
-      "forced_causal_chains": [
-        {
-          "chain_id": "CC_BOTRYTIS_ACIDITY_REDUCTION",
-          "chain_name": "Botrytis cinerea \u2192 tartaric acid metabolism \u2192 unexpectedly lower acidity in botrytised wines",
-          "starting_factor": {
-            "concept_id": "C_BOTRYTIS_CINEREA",
-            "description": "Botrytis cinerea, unlike simple water evaporation, is a metabolically active fungal organism that consumes and transforms grape components during noble rot development."
-          },
-          "intermediate_steps": [
-            {
-              "step_number": 1,
-              "concept_id": "C_BOTRYTIS_CINEREA",
-              "description": "Botrytis hyphae penetrate grape skin cells and metabolise both tartaric acid and malic acid as carbon sources for fungal growth and energy. The botrytis organism produces gluconic acid (from glucose oxidation) as a key byproduct \u2014 a metabolic signature of botrytis infection.",
-              "relationship_type": "causes"
-            },
-            {
-              "step_number": 2,
-              "concept_id": "C_ACIDITY",
-              "description": "Tartaric acid \u2014 normally the dominant, stable acid in grapes (resistant to simple temperature-driven degradation) \u2014 is partially consumed by the Botrytis organism's oxidase enzymes. This is exceptional: tartaric acid is not metabolised in normal winemaking conditions but IS consumed by Botrytis.",
-              "relationship_type": "reduces"
-            },
-            {
-              "step_number": 3,
-              "concept_id": "C_ACIDITY",
-              "description": "The net effect is paradoxical: despite extreme concentration of all grape components (sugars, acids, glycerol) through water evaporation, acidity in the finished botrytised wine is LOWER than simple concentration arithmetic would predict. The botrytis-mediated tartaric acid loss partially offsets the concentration effect.",
-              "relationship_type": "influences"
-            }
-          ],
-          "final_outcome": {
-            "concept_id": "C_ACIDITY",
-            "description": "Botrytised wines have high sugar concentration but lower-than-expected acidity. The acidity is sufficient for balance and longevity \u2014 but the style depends on this precise balance of extreme sweetness with moderate (not extreme) acidity. Gluconic acid presence is a diagnostic marker of botrytis infection."
-          },
-          "examples": [
-            {
-              "region_or_wine": "Sauternes (Ch\u00e2teau d'Yquem)",
-              "description": "Despite ~200 g/L residual sugar, Sauternes does not taste excessively sweet and cloying because sufficient acidity remains to provide balance. The tartaric acid loss through botrytis metabolism means the acidity, though present and important, is not proportionately as high as the sugar concentration."
-            },
-            {
-              "region_or_wine": "Tokaji Asz\u00fa",
-              "description": "Hungarian Tokaji benefits from botrytised Furmint and H\u00e1rslevel\u0171. The high tartaric content of Furmint combined with botrytis consumption creates a distinctive acid-sweet balance. Gluconic acid testing is used to verify botrytis infection in official classification."
-            }
-          ],
-          "related_exam_questions": [
-            "Why is the acidity of a Sauternes lower than simple concentration would predict?",
-            "What happens to tartaric acid during noble rot development?",
-            "What is gluconic acid and why is it a diagnostic marker for botrytis infection?"
-          ],
-          "distinction_note": "A Distinction answer specifically names tartaric acid (not just 'acids') as the substrate for botrytis metabolism, names gluconic acid as the diagnostic botrytis byproduct, and makes the paradox explicit \u2014 concentration should raise all acids, but tartaric acid loss partially offsets this.",
-          "complexity": "complex",
-          "exam_relevance": "critical",
-          "tutor_use": true,
-          "examiner_use": false,
-          "_meta": {
-            "schema_version": "1.0",
-            "created_date": "2026-05-13",
-            "ingestion_status": "draft"
-          },
-          "node_id": "CC_BOTRYTIS_ACIDITY_REDUCTION",
-          "id": "CC_BOTRYTIS_ACIDITY_REDUCTION",
-          "node_type": "causal_chain",
-          "type": "causal_chain",
-          "safe_for_examiner": false,
-          "examiner_scoring_allowed": false,
-          "agent_corpus": "tutor"
-        },
-        {
-          "node_type": "causal_chain",
-          "node_id": "CC_COOL_CLIMATE_ACIDITY",
-          "chain_id": "CC_COOL_CLIMATE_ACIDITY",
-          "chain_name": "Cool climate \u2192 high acidity in finished wine",
-          "topic": "cool climate and acidity retention",
-          "trigger_keywords": [
-            "cool climate",
-            "cold climate",
-            "high altitude",
-            "acidity",
-            "freshness",
-            "acid retention",
-            "slow ripening"
-          ],
-          "steps": [
-            {
-              "step": 1,
-              "label": "cause",
-              "text": "Cool growing environment (lower temperatures, high altitude, or high-latitude location)"
-            },
-            {
-              "step": 2,
-              "label": "mechanism",
-              "text": "Slow ripening delays sugar accumulation and preserves natural grape acids (malic and tartaric), reducing the rate at which malic acid is metabolised before harvest"
-            },
-            {
-              "step": 3,
-              "label": "effect",
-              "text": "Wines retain higher acidity, show freshness and crispness, and typically have lower alcohol levels"
-            },
-            {
-              "step": 4,
-              "label": "exam_formulation",
-              "text": "Cool climates slow ripening, preserving acidity and producing wines with higher acidity, freshness, and lower alcohol levels."
-            }
-          ],
-          "starting_factor": {
-            "concept_id": "C_COOL_CLIMATE",
-            "description": "Growing season temperatures are at the lower end of what allows full grape ripening."
-          },
-          "intermediate_steps": [
-            {
-              "step_number": 1,
-              "concept_id": "C_COOL_CLIMATE",
-              "description": "Low temperatures slow the rate of photosynthesis and grape ripening.",
-              "relationship_type": "causes"
-            },
-            {
-              "step_number": 2,
-              "concept_id": "C_ACIDITY",
-              "description": "Slower ripening means malic acid (which degrades enzymatically as grapes ripen) is retained at higher levels at harvest. Tartaric acid, being stable, remains constant regardless of ripening speed.",
-              "relationship_type": "increases"
-            },
-            {
-              "step_number": 3,
-              "concept_id": "C_ACIDITY",
-              "description": "Lower sugar accumulation at harvest results in lower potential alcohol, meaning less dilution of acid perception in the finished wine.",
-              "relationship_type": "influences"
-            }
-          ],
-          "final_outcome": {
-            "concept_id": "C_ACIDITY",
-            "description": "Higher total acidity and lower pH in the finished wine, perceived as freshness and crispness on the palate."
-          },
-          "sat_relevance": "Use when justifying high acidity as a positive structural element in SAT quality assessment. High acidity in a cool-climate context is a feature, not a fault \u2014 link it to freshness, food-pairing versatility, and ageing potential.",
-          "linked_misconceptions": [
-            "MC_ACIDITY_01",
-            "MC_COOL_CLIMATE_02"
-          ],
-          "linked_topics": [
-            "T_RA1_CLIMATE_VITICULTURE"
-          ],
-          "examples": [
-            {
-              "region_or_wine": "Mosel Riesling Sp\u00e4tlese",
-              "description": "Cool Mosel valley temperatures result in high residual malic acid and characteristically high total acidity, providing structure and longevity even in wines with significant residual sugar."
-            },
-            {
-              "region_or_wine": "Champagne base wines",
-              "description": "Cool Champagne climate produces high-acidity, low-alcohol base wines \u2014 intentionally sought because secondary fermentation and dosage add sweetness that must be balanced by this natural acidity."
-            }
-          ],
-          "related_exam_questions": [
-            "Explain how climate affects the acidity of a finished wine.",
-            "Why do cool-climate wines tend to have higher acidity than warm-climate wines from the same grape variety?",
-            "Describe the relationship between ripening rate and acid retention in grapes."
-          ],
-          "distinction_note": "A Distinction answer explains the mechanism (malic acid degradation rate during ripening) not merely the correlation (cool climate = high acidity). It also notes that tartaric acid behaves differently from malic acid, and may mention diurnal variation as a nuancing factor.",
-          "complexity": "moderate",
-          "exam_relevance": "critical",
-          "tutor_use": true,
-          "examiner_use": false,
-          "agent_corpus": "tutor",
-          "safe_for_examiner": false,
-          "examiner_scoring_allowed": false,
-          "requires_human_review": true,
-          "governance": {
-            "safe_for_examiner": false,
-            "examiner_scoring_allowed": false,
-            "agent_corpus": "tutor"
-          },
-          "_meta": {
-            "schema_version": "causal_chain_v1",
-            "created_date": "2026-05-13",
-            "updated_date": "2026-05-15",
-            "ingestion_status": "draft"
-          },
-          "id": "CC_COOL_CLIMATE_ACIDITY",
-          "type": "causal_chain"
-        },
-        {
-          "chain_id": "CC_COOL_CLIMATE_ALCOHOL",
-          "chain_name": "Cool climate \u2192 limited sugar accumulation \u2192 lower potential alcohol",
-          "starting_factor": {
-            "concept_id": "C_COOL_CLIMATE",
-            "description": "In cool climates, the rate of photosynthesis and sugar accumulation in grape berries is lower than in warm climates due to reduced temperature-driven metabolic activity."
-          },
-          "intermediate_steps": [
-            {
-              "step_number": 1,
-              "concept_id": "C_COOL_CLIMATE",
-              "description": "Photosynthesis produces sucrose in the leaves, which is transported to the grape berries as glucose and fructose. Lower temperatures reduce the rate of photosynthesis and, critically, the rate at which sugars accumulate in the berry during the ripening period.",
-              "relationship_type": "causes"
-            },
-            {
-              "step_number": 2,
-              "concept_id": "C_COOL_CLIMATE",
-              "description": "Shorter growing seasons in cool regions (e.g., Champagne, Mosel, English Vineyards) further limit total sugar accumulation time. The growing season ends when temperatures drop or when rain increases fungal disease risk \u2014 often before sugars reach warm-climate levels.",
-              "relationship_type": "influences"
-            },
-            {
-              "step_number": 3,
-              "concept_id": "C_COOL_CLIMATE",
-              "description": "Lower sugar at harvest translates directly to lower potential alcohol. Typical cool-climate base wines for sparkling production (Champagne, English sparkling) have 9.5\u201310.5% potential alcohol before secondary fermentation. For comparison, warm-climate reds routinely reach 14\u201315%+ naturally.",
-              "relationship_type": "produces"
-            }
-          ],
-          "final_outcome": {
-            "concept_id": "C_COOL_CLIMATE",
-            "description": "Lower alcohol level in the finished wine (7\u201312% typical range for fully fermented cool-climate styles). This contributes to wine freshness, lower caloric content, and greater perceived acidity. For sparkling wine base wines, low natural alcohol is a deliberate quality objective."
-          },
-          "examples": [
-            {
-              "region_or_wine": "Champagne NV base wine blend",
-              "description": "Intentionally harvested at low ripeness for potential alcohol of 9.5\u201310% before secondary fermentation. The resulting 12\u201312.5% abv after tirage is considered ideal \u2014 the low base wine alcohol preserves acidity and freshness."
-            },
-            {
-              "region_or_wine": "Mosel Kabinett Riesling",
-              "description": "The lightest Pr\u00e4dikat level, harvested with minimum ripeness requirements. At 7\u20138% abv (with residual sugar), Kabinett exemplifies the cool climate's limited sugar accumulation used deliberately to produce a delicate, low-alcohol style."
-            }
-          ],
-          "related_exam_questions": [
-            "Why do cool-climate regions tend to produce wines with lower alcohol levels?",
-            "Why is low natural alcohol a desirable quality in Champagne base wines?",
-            "Describe the relationship between growing season temperature and sugar accumulation in grapes."
-          ],
-          "distinction_note": "A Distinction answer explains the photosynthesis mechanism, notes the additional constraint of shorter growing season length, distinguishes potential alcohol at harvest from final abv (which can be modified by winemaking), and gives a concrete abv range for a specific cool-climate style.",
-          "complexity": "simple",
-          "exam_relevance": "high",
-          "tutor_use": true,
-          "examiner_use": false,
-          "_meta": {
-            "schema_version": "1.0",
-            "created_date": "2026-05-13",
-            "ingestion_status": "draft"
-          },
-          "node_id": "CC_COOL_CLIMATE_ALCOHOL",
-          "id": "CC_COOL_CLIMATE_ALCOHOL",
-          "node_type": "causal_chain",
-          "type": "causal_chain",
-          "safe_for_examiner": false,
-          "examiner_scoring_allowed": false,
-          "agent_corpus": "tutor"
-        },
-        {
-          "chain_id": "CC_COOL_CLIMATE_AROMA",
-          "chain_name": "Cool climate \u2192 slower ripening \u2192 primary aroma profile (citrus/green fruit/floral)",
-          "starting_factor": {
-            "concept_id": "C_COOL_CLIMATE",
-            "description": "In cool growing regions, lower temperatures slow the enzymatic ripening processes in the grape, resulting in a different terpene and aroma precursor profile at harvest."
-          },
-          "intermediate_steps": [
-            {
-              "step_number": 1,
-              "concept_id": "C_COOL_CLIMATE",
-              "description": "Slower ripening means that the grape remains at lower sugar levels and higher acidity for a longer portion of the growing season. During this extended period, aromatic precursors develop that would be destroyed or transformed at higher temperatures.",
-              "relationship_type": "causes"
-            },
-            {
-              "step_number": 2,
-              "concept_id": "C_COOL_CLIMATE",
-              "description": "Higher methoxypyrazine concentrations survive when ripening is slower and cooler (methoxypyrazines degrade enzymatically with heat and light exposure). In grapes prone to methoxypyrazines (Sauvignon Blanc, Cabernet Sauvignon), this produces herbaceous, green capsicum, or grassy notes \u2014 a regional signature when grapes are slightly under-ripe.",
-              "relationship_type": "produces"
-            },
-            {
-              "step_number": 3,
-              "concept_id": "C_COOL_CLIMATE",
-              "description": "When cool-climate grapes achieve full phenolic ripeness, the aroma profile is dominated by primary aromas of citrus (lemon, grapefruit, lime), stone fruit (green apple, pear, white peach), and floral notes (elderflower, blossom) rather than the tropical fruit and jam characters of warm-climate versions of the same variety.",
-              "relationship_type": "produces"
-            }
-          ],
-          "final_outcome": {
-            "concept_id": "C_COOL_CLIMATE",
-            "description": "Cool-climate wines show citrus, green fruit, and floral primary aromas when fully ripe, or herbaceous/green notes if under-ripe. This contrasts with warm-climate versions of the same variety which show tropical fruit, stone fruit jam, and sometimes cooked fruit characters."
-          },
-          "examples": [
-            {
-              "region_or_wine": "Marlborough Sauvignon Blanc vs. Californian Sauvignon Blanc",
-              "description": "Cool Marlborough produces intense gooseberry, citrus, and herbaceous (cut grass) notes from retained methoxypyrazines and cool-climate aroma precursors. Warmer California Sauvignon Blanc tends toward melon, peach, and tropical fruit with far less herbal character."
-            },
-            {
-              "region_or_wine": "Mosel Riesling vs. Clare Valley Riesling",
-              "description": "Cool Mosel produces lime zest, green apple, and delicate floral notes. Warmer Clare Valley produces lime, but also tropical notes and a different mineral expression \u2014 the variety is the same, the climate shapes the fruit register."
-            }
-          ],
-          "related_exam_questions": [
-            "How does climate affect the primary aroma profile of a white wine?",
-            "Why does Sauvignon Blanc from Marlborough often show more herbaceous character than Californian examples?",
-            "Describe the difference in aroma profile between a cool-climate and warm-climate version of the same variety."
-          ],
-          "distinction_note": "A Distinction answer names methoxypyrazines as the compound responsible for herbaceous notes and explains their temperature-dependent degradation rate, contrasts specific citrus/floral vs. tropical descriptors for cool vs. warm climate, and names specific wine examples.",
-          "complexity": "moderate",
-          "exam_relevance": "critical",
-          "tutor_use": true,
-          "examiner_use": false,
-          "_meta": {
-            "schema_version": "1.0",
-            "created_date": "2026-05-13",
-            "ingestion_status": "draft"
-          },
-          "node_id": "CC_COOL_CLIMATE_AROMA",
-          "id": "CC_COOL_CLIMATE_AROMA",
-          "node_type": "causal_chain",
-          "type": "causal_chain",
-          "safe_for_examiner": false,
-          "examiner_scoring_allowed": false,
-          "agent_corpus": "tutor"
-        },
-        {
-          "node_type": "causal_chain",
-          "node_id": "CC_WARM_CLIMATE_ALCOHOL",
-          "topic": "warm climate and alcohol level",
-          "trigger_keywords": [
-            "warm climate",
-            "hot climate",
-            "high alcohol",
-            "alcohol",
-            "full body",
-            "sugar",
-            "ripe",
-            "ripeness"
-          ],
-          "steps": [
-            {
-              "step": 1,
-              "label": "cause",
-              "text": "Warm growing environment (high temperatures, low-latitude, or continental interior location)"
-            },
-            {
-              "step": 2,
-              "label": "mechanism",
-              "text": "Rapid ripening accelerates sugar accumulation in the grape berry; grapes reach high sugar levels before other components (acidity, tannin) have time to fully develop"
-            },
-            {
-              "step": 3,
-              "label": "effect",
-              "text": "High sugar content at harvest ferments to high alcohol levels; wines tend to show lower acidity, fuller body, and richer fruit flavour"
-            },
-            {
-              "step": 4,
-              "label": "exam_formulation",
-              "text": "Warm climates accelerate ripening, increasing sugar and thus potential alcohol, producing fuller-bodied wines with lower acidity."
-            }
-          ],
-          "sat_relevance": "Use when assessing high alcohol as a structural feature in warm-climate wines. High alcohol contributes to body and texture but can appear unbalanced if fruit concentration or acidity is insufficient.",
-          "linked_misconceptions": [
-            "MC_ALCOHOL_QUALITY_01"
-          ],
-          "linked_topics": [
-            "T_RA1_CLIMATE_VITICULTURE"
-          ],
-          "agent_corpus": "tutor",
-          "safe_for_examiner": false,
-          "examiner_scoring_allowed": false,
-          "requires_human_review": true,
-          "governance": {
-            "safe_for_examiner": false,
-            "examiner_scoring_allowed": false,
-            "agent_corpus": "tutor"
-          },
-          "_meta": {
-            "schema_version": "causal_chain_v1",
-            "created_date": "2026-05-15",
-            "ingestion_status": "draft"
-          },
-          "id": "CC_WARM_CLIMATE_ALCOHOL",
-          "type": "causal_chain"
-        }
-      ],
+      "forced_causal_chains": [],
       "tutor_directive": {
-        "pedagogical_act": "misconception_intervention",
-        "forced_retrieval_nodes": [
-          "MC_COOL_CLIMATE_02"
-        ],
-        "intervention_type": "causal_chain_walkthrough",
-        "corrected_understanding": "Green, herbaceous notes come from methoxypyrazines and indicate under-ripeness. Cool climates require careful viticulture to achieve full ripeness, but when they do, wines show ripe fruit, floral, and mineral characters \u2014 not greenness.",
+        "pedagogical_act": "answer_normally",
+        "forced_retrieval_nodes": [],
+        "confidence": 0.0,
         "safe_for_examiner": false,
         "language": "es",
         "response_language_instruction": "Respond in Spanish. Preserve official WSET terms where useful, and do not translate key terms if translation would reduce precision. Distinguish official WSET content from pedagogical content.",
@@ -1158,9 +475,9 @@
         ]
       },
       "success_criteria": [
-        "Identify the misconception before answering the learner's underlying question.",
-        "State the corrected understanding clearly.",
-        "Use supporting Tutor-context chunks only as pedagogical support.",
+        "Answer the learner's question using the retrieved Tutor context.",
+        "Preserve official WSET terminology where precision matters.",
+        "Distinguish official WSET content from pedagogical enrichment.",
         "Keep Examiner scoring disabled and safe_for_examiner false."
       ],
       "governance": {
@@ -1170,11 +487,11 @@
       }
     },
     "context_package_paths": {
-      "latest": "C:/Users/esand/AppData/Local/Temp/tmpte7fuf7c/attempts/TEST_CLIMATE_01/latest_context_package.json",
-      "timestamped": "C:/Users/esand/AppData/Local/Temp/tmpte7fuf7c/attempts/TEST_CLIMATE_01/20260516_024404_context_package.json"
+      "latest": "C:/Users/esand/OneDrive/Documents/WSET-AI-System/knowledge/self-eval/attempts/25/latest_context_package.json",
+      "timestamped": "C:/Users/esand/OneDrive/Documents/WSET-AI-System/knowledge/self-eval/attempts/25/20260517_034858_context_package.json"
     }
   },
-  "latest_context_package_path": "C:/Users/esand/AppData/Local/Temp/tmpte7fuf7c/attempts/TEST_CLIMATE_01/latest_context_package.json",
+  "latest_context_package_path": "C:/Users/esand/OneDrive/Documents/WSET-AI-System/knowledge/self-eval/attempts/25/latest_context_package.json",
   "governance": {
     "safe_for_examiner": false,
     "examiner_scoring_active": false,

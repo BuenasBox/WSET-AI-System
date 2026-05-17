@@ -42,6 +42,27 @@ STOPWORDS = {
 # "cool", "climate", "wine", "wines" were removed because they are
 # meaningful detection vocabulary for WSET L3 misconception queries.
 
+# Explanatory-intent guard (R09 fix)
+# Queries that are purely explanatory (how/why/affect framing) without asserting a
+# misconception should not be routed as misconception interventions. This prevents
+# false positives for theory questions whose lexical tokens happen to overlap with
+# misconception signal vocabulary (e.g. "How does cool climate affect acidity?"
+# contains "cool" + "climate" which triggers MC_COOL_CLIMATE_02).
+EXPLANATORY_INTENT_WORDS: frozenset = frozenset({
+    "how", "why", "affect", "affects", "affected", "explain", "explains",
+    "explanation", "relationship", "influence", "influences", "impact",
+    "impacts", "causes", "mechanism", "process", "leads",
+})
+MISCONCEPTION_FRAMING_WORDS: frozenset = frozenset({
+    "always", "never", "underripe", "green", "herbaceous", "bad", "thin", "weak",
+})
+MISCONCEPTION_FRAMING_PHRASES: frozenset = frozenset({"low quality", "poor quality"})
+# Confidence reduction applied to all nodes when query is identified as explanatory.
+# Sized to suppress the worst observed false positive (confidence=0.48) to below
+# the detection threshold (0.45) while leaving genuine misconception queries
+# (which lack explanatory framing or carry framing markers) unaffected.
+EXPLANATORY_PENALTY: float = 0.22
+
 
 def load_misconception_nodes(directory: Path = DEFAULT_MISCONCEPTION_DIR) -> list[dict[str, Any]]:
     """Load misconception JSON nodes from the local knowledge map."""
@@ -113,6 +134,8 @@ def _score_node(query: str, node: dict[str, Any]) -> dict[str, Any]:
             confidence = max(confidence, 0.9)
 
     confidence += _concept_bias(query_tokens, query_text, node)
+    if _is_explanatory_query(query):
+        confidence -= EXPLANATORY_PENALTY
     return {
         "node_id": node.get("misconception_id", ""),
         "misconception": node.get("misconception", ""),
@@ -177,6 +200,34 @@ def _concept_bias(query_tokens: set[str], query_text: str, node: dict[str, Any])
                 bias += 0.14
 
     return bias
+
+
+def _is_explanatory_query(query: str) -> bool:
+    """Return True when the query is framed as a theory/explanation question
+    with no misconception-assertion markers.
+
+    Examples that return True (explanatory, no framing — should NOT detect):
+      "How does cool climate affect acidity?"
+      "Why does flor protect the wine?"
+      "Explain the relationship between tannin and astringency."
+
+    Examples that return False (framing words present — SHOULD detect):
+      "Cool climate always means underripe grapes."
+      "Does high acidity mean poor quality?"  (no explanatory word)
+      "Why does cool climate always produce green, herbaceous wines?"  (has "always")
+
+    The check uses raw query text (not tokens) because key intent words
+    such as "how" and "why" are in STOPWORDS and would be stripped before
+    _tokens() is called.
+    """
+    query_lower = query.lower()
+    query_words = set(re.findall(r"[a-z]+", query_lower))
+    if not (query_words & EXPLANATORY_INTENT_WORDS):
+        return False
+    has_framing = bool(query_words & MISCONCEPTION_FRAMING_WORDS) or any(
+        phrase in query_lower for phrase in MISCONCEPTION_FRAMING_PHRASES
+    )
+    return not has_framing
 
 
 def _tokens(text: str) -> set[str]:

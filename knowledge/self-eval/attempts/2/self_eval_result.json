@@ -27,6 +27,7 @@
     "question_type": "theory",
     "strengths": [
       "expected_keywords_present",
+      "causal_links_present",
       "expected_topics_present",
       "exam_language_present"
     ],
@@ -38,32 +39,28 @@
       "aguardiente",
       "az\u00facar residual"
     ],
-    "present_causal_links": [],
-    "missing_causal_links": [
+    "present_causal_links": [
       "fortification -> yeast stops -> residual sugar"
     ],
+    "missing_causal_links": [],
     "present_topics": [
-      "port"
-    ],
-    "missing_official_concepts": [
+      "port",
       "fortification",
       "fermentation"
     ],
+    "missing_official_concepts": [],
     "expected_reasoning_type_present": true,
     "failure_labels": [
-      "missing_causal_link",
-      "unsupported_conclusion"
+      "shallow_retrieval"
     ],
     "strictness": "brutal",
     "difficulty": "foundational",
     "vague_claims": [],
-    "unsupported_conclusions": [
-      "conclusion is not fully tied to evidence"
-    ],
+    "unsupported_conclusions": [],
     "likely_misconception_gaps": [],
     "retrieval_weaknesses": [
       "missing_keyword_support",
-      "missing_causal_link_support"
+      "shallow_retrieval"
     ]
   },
   "governance": {

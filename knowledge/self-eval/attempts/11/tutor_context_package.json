@@ -4,7 +4,8 @@
   "orchestrator_decision": {
     "route": "normal_tutor",
     "reason": "no_misconception_detected",
-    "matched_misconception_id": null
+    "matched_misconception_id": null,
+    "confidence": 0.0
   },
   "pedagogical_act": "answer_normally",
   "forced_retrieval_nodes": [],
@@ -12,9 +13,54 @@
   "learner_state_context": {
     "learner_id": "nazareth",
     "current_level": "WSET_L3",
-    "known_weak_areas": [],
+    "known_weak_areas": [
+      "causal_chain:flor -> oxygen protection -> biological ageing",
+      "retrieval:weak_context_support",
+      "fragile:flor -> oxygen protection -> biological ageing",
+      "fragile:weak_context_support",
+      "causal_chain:cool climate -> acid retention",
+      "retrieval:missing_causal_link_support",
+      "retrieval:missing_keyword_support",
+      "fragile:missing_keyword_support",
+      "fragile:missing_causal_link_support",
+      "causal_chain:fortification -> yeast stops -> residual sugar",
+      "causal_chain:structure -> bottle ageing -> sediment",
+      "causal_chain:fractional blending -> consistency",
+      "causal_chain:flor dies -> oxidative ageing",
+      "causal_chain:no flor -> oxidative ageing",
+      "retrieval:shallow_retrieval",
+      "label:missing_causal_link",
+      "label:unsupported_conclusion",
+      "label:shallow_retrieval",
+      "label:shallow_reasoning",
+      "label:weak_exam_register",
+      "fragile:flor dies -> oxidative ageing",
+      "fragile:no flor -> oxidative ageing",
+      "fragile:shallow_retrieval",
+      "causal_chain:cause -> mechanism -> effect",
+      "fragile:cause -> mechanism -> effect"
+    ],
     "recent_misconceptions": [],
-    "session_count": 0,
+    "session_count": 118,
+    "pedagogical_memory": {
+      "schema_version": "pedagogical_memory_v1",
+      "low_mastery_concepts": [],
+      "retention_risks": [],
+      "recurrent_misconceptions": [],
+      "difficult_causal_chains": [],
+      "mastered_concepts": [],
+      "preferred_depth": "standard",
+      "overload_patterns": [],
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "uses_llm": false,
+        "uses_api": false,
+        "uses_embeddings": false,
+        "uses_vector_db": false,
+        "cloud_services_active": false
+      }
+    },
     "governance": {
       "safe_for_examiner": false,
       "examiner_scoring_active": false,
@@ -28,6 +74,16 @@
     "query": "\u00bfCu\u00e1l de los siguientes climas se asocia com\u00fanmente con una alta acidez en los vinos blancos?",
     "top_k": 5,
     "forced_retrieval_nodes": [],
+    "pedagogical_priority_boost": {
+      "low_mastery_concepts": [],
+      "causal_chain_boosts": [],
+      "misconception_persistence_boost": false,
+      "force_deep_explanation": false,
+      "resurfacing_concepts": [],
+      "preferred_depth": "standard",
+      "safe_for_examiner": false,
+      "examiner_scoring_allowed": false
+    },
     "retrieval_engine": "tools.retrieval.tutor_retrieval_sandbox",
     "uses_embeddings": false,
     "uses_vector_db": false,
@@ -159,9 +215,11 @@
       "source_filename": "How to prepare for the WSET Level 3 Tasting Exam.srt"
     }
   ],
+  "forced_causal_chains": [],
   "tutor_directive": {
     "pedagogical_act": "answer_normally",
     "forced_retrieval_nodes": [],
+    "confidence": 0.0,
     "safe_for_examiner": false,
     "language": "es",
     "response_language_instruction": "Respond in Spanish. Preserve official WSET terms where useful, and do not translate key terms if translation would reduce precision. Distinguish official WSET content from pedagogical content.",
@@ -172,7 +230,8 @@
       "Do not present pedagogical sources as official authority.",
       "Distinguish official WSET content from pedagogical enrichment when explaining.",
       "Do not translate source chunks; preserve official WSET terms where useful.",
-      "Do not translate key terms if translation would reduce precision."
+      "Do not translate key terms if translation would reduce precision.",
+      "If forced_causal_chains is populated, render the causal chain steps for the Cadena causa \u2192 efecto section."
     ]
   },
   "success_criteria": [

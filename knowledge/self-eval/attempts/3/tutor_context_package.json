@@ -4,7 +4,8 @@
   "orchestrator_decision": {
     "route": "normal_tutor",
     "reason": "no_misconception_detected",
-    "matched_misconception_id": null
+    "matched_misconception_id": null,
+    "confidence": 0.0
   },
   "pedagogical_act": "answer_normally",
   "forced_retrieval_nodes": [],
@@ -12,9 +13,54 @@
   "learner_state_context": {
     "learner_id": "nazareth",
     "current_level": "WSET_L3",
-    "known_weak_areas": [],
+    "known_weak_areas": [
+      "causal_chain:flor -> oxygen protection -> biological ageing",
+      "retrieval:weak_context_support",
+      "fragile:flor -> oxygen protection -> biological ageing",
+      "fragile:weak_context_support",
+      "causal_chain:cool climate -> acid retention",
+      "retrieval:missing_causal_link_support",
+      "retrieval:missing_keyword_support",
+      "fragile:missing_keyword_support",
+      "fragile:missing_causal_link_support",
+      "causal_chain:fortification -> yeast stops -> residual sugar",
+      "causal_chain:structure -> bottle ageing -> sediment",
+      "causal_chain:fractional blending -> consistency",
+      "causal_chain:flor dies -> oxidative ageing",
+      "causal_chain:no flor -> oxidative ageing",
+      "retrieval:shallow_retrieval",
+      "label:missing_causal_link",
+      "label:unsupported_conclusion",
+      "label:shallow_retrieval",
+      "label:shallow_reasoning",
+      "label:weak_exam_register",
+      "fragile:flor dies -> oxidative ageing",
+      "fragile:no flor -> oxidative ageing",
+      "fragile:shallow_retrieval",
+      "causal_chain:cause -> mechanism -> effect",
+      "fragile:cause -> mechanism -> effect"
+    ],
     "recent_misconceptions": [],
-    "session_count": 0,
+    "session_count": 118,
+    "pedagogical_memory": {
+      "schema_version": "pedagogical_memory_v1",
+      "low_mastery_concepts": [],
+      "retention_risks": [],
+      "recurrent_misconceptions": [],
+      "difficult_causal_chains": [],
+      "mastered_concepts": [],
+      "preferred_depth": "standard",
+      "overload_patterns": [],
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "uses_llm": false,
+        "uses_api": false,
+        "uses_embeddings": false,
+        "uses_vector_db": false,
+        "cloud_services_active": false
+      }
+    },
     "governance": {
       "safe_for_examiner": false,
       "examiner_scoring_active": false,
@@ -28,6 +74,16 @@
     "query": "\u00bfCu\u00e1l es una caracter\u00edstica clave de los vinos de Porto Vintage?",
     "top_k": 5,
     "forced_retrieval_nodes": [],
+    "pedagogical_priority_boost": {
+      "low_mastery_concepts": [],
+      "causal_chain_boosts": [],
+      "misconception_persistence_boost": false,
+      "force_deep_explanation": false,
+      "resurfacing_concepts": [],
+      "preferred_depth": "standard",
+      "safe_for_examiner": false,
+      "examiner_scoring_allowed": false
+    },
     "retrieval_engine": "tools.retrieval.tutor_retrieval_sandbox",
     "uses_embeddings": false,
     "uses_vector_db": false,
@@ -37,37 +93,11 @@
   "retrieved_context": [
     {
       "context_type": "retrieval_sandbox_chunk",
-      "chunk_id": "OFFICIAL_WSET_W_5_5_8_WHITE_AND_SWEET_WINEMAKING_001",
-      "forced_retrieval": false,
-      "agent_corpus": "tutor",
-      "safe_for_examiner": false,
-      "score": 0.48,
-      "source_type": "official_wset_extracted",
-      "source_file": "knowledge/official-wset/study-guide/wset_markdown/seccion_5_section_2_factors_affecting_the_style_quality_and_price_of_w/5-5_8_white_and_sweet_winemaking.md",
-      "source_trust_tier": 1,
-      "title": "8 White and Sweet Winemaking",
-      "section": "5",
-      "subtopic": "5.5",
-      "official_grading_authority": false,
-      "requires_human_review": true,
-      "reasoning_type": "theory_foundation",
-      "pedagogical_role": "official_reference",
-      "why_retrieved": [
-        "matched canonical/query terms: Vintage, vintage",
-        "official WSET extracted Tutor support",
-        "exact term match"
-      ],
-      "text_excerpt": "# 8 White and Sweet Winemaking <!-- p\u00e1gina 64 --> WHITEA ND SWEETWINEMAKING 55 Whitea ndS weeWt inemakingRel atively speaking, white winemaking is far 8 less involved compared with red winemaking. This chapter will focus on winemaking options for white wine and then look at how high volume, inexpensive wines and premium wines are made. It should be noted...",
-      "source_video": "",
-      "source_filename": "5-5_8_white_and_sweet_winemaking.md"
-    },
-    {
-      "context_type": "retrieval_sandbox_chunk",
       "chunk_id": "OFFICIAL_WSET_4_7_COMMON_ELEMENTS_IN_WINEMAKING_AND_MATURATION_001",
       "forced_retrieval": false,
       "agent_corpus": "tutor",
       "safe_for_examiner": false,
-      "score": 0.47,
+      "score": 0.675,
       "source_type": "official_wset_extracted",
       "source_file": "knowledge/official-wset/study-guide/wset_markdown/seccion_5_section_2_factors_affecting_the_style_quality_and_price_of_w/5-4_7_common_elements_in_winemaking_and_maturation.md",
       "source_trust_tier": 1,
@@ -79,7 +109,9 @@
       "reasoning_type": "theory_foundation",
       "pedagogical_role": "official_reference",
       "why_retrieved": [
-        "matched canonical/query terms: Vintage, vintage",
+        "matched canonical/query terms: Vintage, ageing, bottle ageing, development, sediment, tertiary, vintage",
+        "matches knowledge-map concept or relationship terms",
+        "matches knowledge-map causal-chain mechanism",
         "official WSET extracted Tutor support",
         "exact term match"
       ],
@@ -89,11 +121,67 @@
     },
     {
       "context_type": "retrieval_sandbox_chunk",
+      "chunk_id": "OFFICIAL_WSET_W_5_5_8_WHITE_AND_SWEET_WINEMAKING_001",
+      "forced_retrieval": false,
+      "agent_corpus": "tutor",
+      "safe_for_examiner": false,
+      "score": 0.6555,
+      "source_type": "official_wset_extracted",
+      "source_file": "knowledge/official-wset/study-guide/wset_markdown/seccion_5_section_2_factors_affecting_the_style_quality_and_price_of_w/5-5_8_white_and_sweet_winemaking.md",
+      "source_trust_tier": 1,
+      "title": "8 White and Sweet Winemaking",
+      "section": "5",
+      "subtopic": "5.5",
+      "official_grading_authority": false,
+      "requires_human_review": true,
+      "reasoning_type": "theory_foundation",
+      "pedagogical_role": "official_reference",
+      "why_retrieved": [
+        "matched canonical/query terms: Vintage, ageing, sediment, vintage",
+        "matches knowledge-map concept or relationship terms",
+        "matches knowledge-map causal-chain mechanism",
+        "official WSET extracted Tutor support",
+        "exact term match"
+      ],
+      "text_excerpt": "# 8 White and Sweet Winemaking <!-- p\u00e1gina 64 --> WHITEA ND SWEETWINEMAKING 55 Whitea ndS weeWt inemakingRel atively speaking, white winemaking is far 8 less involved compared with red winemaking. This chapter will focus on winemaking options for white wine and then look at how high volume, inexpensive wines and premium wines are made. It should be noted...",
+      "source_video": "",
+      "source_filename": "5-5_8_white_and_sweet_winemaking.md"
+    },
+    {
+      "context_type": "retrieval_sandbox_chunk",
+      "chunk_id": "OFFICIAL_WSET_1_1_THE_SYSTEMATIC_APPROACH_TO_TASTING_WINE_001",
+      "forced_retrieval": false,
+      "agent_corpus": "tutor",
+      "safe_for_examiner": false,
+      "score": 0.648,
+      "source_type": "official_wset_extracted",
+      "source_file": "knowledge/official-wset/study-guide/wset_markdown/seccion_4_section_1_wine_and_the_consumer/4-1_1_the_systematic_approach_to_tasting_wine.md",
+      "source_trust_tier": 1,
+      "title": "1 The Systematic Approach to Tasting Wine\u00ae",
+      "section": "4",
+      "subtopic": "4.1",
+      "official_grading_authority": false,
+      "requires_human_review": true,
+      "reasoning_type": "theory_foundation",
+      "pedagogical_role": "official_reference",
+      "why_retrieved": [
+        "matched canonical/query terms: Vintage, ageing, development, tertiary, vintage",
+        "matches knowledge-map concept or relationship terms",
+        "matches knowledge-map causal-chain mechanism",
+        "official WSET extracted Tutor support",
+        "exact term match"
+      ],
+      "text_excerpt": "# 1 The Systematic Approach to Tasting Wine\u00ae <!-- p\u00e1gina 10 --> THES YSTEMATICA PPROACHT OT ASTINGW INE\" TheS ystematiAc pproactho TastinWg ine\u00ae The WSET Level 3. Syst~matic Approach to Tasting Wine (SAT) is a tool that allows you to write a complete description of a wine and then use this information to make an evaluation of its quality and readiness for...",
+      "source_video": "",
+      "source_filename": "4-1_1_the_systematic_approach_to_tasting_wine.md"
+    },
+    {
+      "context_type": "retrieval_sandbox_chunk",
       "chunk_id": "OFFICIAL_WSET_WINES_OF_THE_WORLD_6_13_24_TOKAJ_001",
       "forced_retrieval": false,
       "agent_corpus": "tutor",
       "safe_for_examiner": false,
-      "score": 0.47,
+      "score": 0.6477,
       "source_type": "official_wset_extracted",
       "source_file": "knowledge/official-wset/study-guide/wset_markdown/seccion_6_section_3_still_wines_of_the_world/6-13_24_tokaj.md",
       "source_trust_tier": 1,
@@ -105,7 +193,9 @@
       "reasoning_type": "theory_foundation",
       "pedagogical_role": "official_reference",
       "why_retrieved": [
-        "matched canonical/query terms: Vintage, vintage",
+        "matched canonical/query terms: Vintage, development, vintage",
+        "matches knowledge-map concept or relationship terms",
+        "matches knowledge-map causal-chain mechanism",
         "official WSET extracted Tutor support",
         "exact term match"
       ],
@@ -115,37 +205,11 @@
     },
     {
       "context_type": "retrieval_sandbox_chunk",
-      "chunk_id": "OFFICIAL_WSET_GUIDE_WSET_MARKDOWN_SECCION_10_INDEX_10_INDEX_001",
+      "chunk_id": "How_to_prepare_for_the_WSET_Level_3_Tasting_Exam-0009",
       "forced_retrieval": false,
       "agent_corpus": "tutor",
       "safe_for_examiner": false,
-      "score": 0.445,
-      "source_type": "official_wset_extracted",
-      "source_file": "knowledge/official-wset/study-guide/wset_markdown/seccion_10_index/10_index.md",
-      "source_trust_tier": 1,
-      "title": "Index",
-      "section": "10",
-      "subtopic": "10",
-      "official_grading_authority": false,
-      "requires_human_review": true,
-      "reasoning_type": "theory_foundation",
-      "pedagogical_role": "official_reference",
-      "why_retrieved": [
-        "matched canonical/query terms: Vintage, vintage",
-        "official WSET extracted Tutor support",
-        "exact term match"
-      ],
-      "text_excerpt": "# Index <!-- p\u00e1gina 206 --> INDEX 197 Index Numbers in bold type indicates images, diagrams and illustrations. Abruzzo 128 bacterial diseases 40 canopy management 34, 35, 40, 85 acid 43, 48, 49 Baden 111-12 Canterbury 171-2 lactic 49 bag-in-box 52, 53 Cap C/assique (see Methode Cap C/assique) malic43,49 Baga 140 cap management 63 tartaric 43, 48 Bairrada...",
-      "source_video": "",
-      "source_filename": "10_index.md"
-    },
-    {
-      "context_type": "retrieval_sandbox_chunk",
-      "chunk_id": "WSET_Level_3_Wines_-_Understanding_the_Growing_Environment_-_Climate_Part_1-0005",
-      "forced_retrieval": false,
-      "agent_corpus": "tutor",
-      "safe_for_examiner": false,
-      "score": 0.295,
+      "score": 0.4091,
       "source_type": "manual_curated_srt",
       "source_file": "",
       "source_trust_tier": "pedagogical",
@@ -154,21 +218,92 @@
       "subtopic": "",
       "official_grading_authority": false,
       "requires_human_review": false,
-      "reasoning_type": "theory_foundation",
-      "pedagogical_role": "theory_explanation",
+      "reasoning_type": "exam_strategy",
+      "pedagogical_role": "exam_strategy",
       "why_retrieved": [
-        "matched canonical/query terms: Vintage, vintage",
-        "pedagogical role fits foundational_theory",
+        "matched canonical/query terms: development, tertiary",
+        "medium retrieval priority in golden QA report",
+        "matches knowledge-map concept or relationship terms",
+        "matches knowledge-map causal-chain mechanism",
         "exact term match"
       ],
-      "text_excerpt": "definition of a cool climate so we have some examples well i've given you one example here this is the mosul in germany classified as a cool continental climate so the description of cool means that the average temperatures during the growth season are below 16.5 degrees celsius you could also say that alsace in eastern france which is in fact down here i...",
-      "source_video": "WSET Level 3 Wines - Understanding the Growing Environment - Climate Part 1",
-      "source_filename": "WSET Level 3 Wines - Understanding the Growing Environment - Climate Part 1 [English (auto-generated)] [DownloadYoutubeSubtitles.com].srt"
+      "text_excerpt": "remarking. Remember, so there will be five marks available here. So, please put down a minimum of five aroma compounds as descriptors. Okay? You can in your tasting note because there's a big space for you to write this group them in their sectors of primary, secondary or tertiary to help you answer the development section. Okay? Uh you don't have to, you...",
+      "source_video": "How to prepare for the WSET Level 3 Tasting Exam",
+      "source_filename": "How to prepare for the WSET Level 3 Tasting Exam.srt"
+    }
+  ],
+  "forced_causal_chains": [
+    {
+      "node_type": "causal_chain",
+      "node_id": "CC_BOTTLE_AGEING_SEDIMENT",
+      "topic": "bottle ageing, sediment formation, and tertiary character",
+      "trigger_keywords": [
+        "bottle ageing",
+        "sediment",
+        "tertiary",
+        "tannin polymerisation",
+        "colour pigment",
+        "ageing",
+        "bottle age",
+        "development",
+        "sedimento",
+        "botella",
+        "vintage",
+        "porto",
+        "aromas terciarios"
+      ],
+      "steps": [
+        {
+          "step": 1,
+          "label": "cause",
+          "text": "A red wine with sufficient tannin, pigment, and structural components is aged in bottle over an extended period (years to decades)"
+        },
+        {
+          "step": 2,
+          "label": "mechanism",
+          "text": "Tannin molecules and anthocyanin pigments polymerise (join together into larger molecules) and eventually precipitate out of solution; the wine's structure gradually softens as free tannins decrease"
+        },
+        {
+          "step": 3,
+          "label": "effect",
+          "text": "Sediment (dark, gritty deposit) forms in the bottle; the wine develops tertiary aromas (leather, earth, dried fruit, mushroom, tobacco); tannins become softer and more integrated"
+        },
+        {
+          "step": 4,
+          "label": "exam_formulation",
+          "text": "A structured red wine, through bottle ageing, sees tannins and pigments polymerise, forming sediment and developing tertiary aromas (leather, earth, dried fruit) over time."
+        }
+      ],
+      "sat_relevance": "Tertiary aromas and soft tannins signal bottle development on the SAT. A wine showing tertiary character has aged; readiness to drink should be assessed from tannin integration, fruit condition, and balance.",
+      "linked_misconceptions": [
+        "MC_AGEING_IMPROVEMENT_01"
+      ],
+      "linked_topics": [
+        "T_RA1_WINEMAKING",
+        "T_RA1_SAT"
+      ],
+      "agent_corpus": "tutor",
+      "safe_for_examiner": false,
+      "examiner_scoring_allowed": false,
+      "requires_human_review": true,
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "agent_corpus": "tutor"
+      },
+      "_meta": {
+        "schema_version": "causal_chain_v1",
+        "created_date": "2026-05-15",
+        "ingestion_status": "draft"
+      },
+      "id": "CC_BOTTLE_AGEING_SEDIMENT",
+      "type": "causal_chain"
     }
   ],
   "tutor_directive": {
     "pedagogical_act": "answer_normally",
     "forced_retrieval_nodes": [],
+    "confidence": 0.0,
     "safe_for_examiner": false,
     "language": "es",
     "response_language_instruction": "Respond in Spanish. Preserve official WSET terms where useful, and do not translate key terms if translation would reduce precision. Distinguish official WSET content from pedagogical content.",
@@ -179,7 +314,8 @@
       "Do not present pedagogical sources as official authority.",
       "Distinguish official WSET content from pedagogical enrichment when explaining.",
       "Do not translate source chunks; preserve official WSET terms where useful.",
-      "Do not translate key terms if translation would reduce precision."
+      "Do not translate key terms if translation would reduce precision.",
+      "If forced_causal_chains is populated, render the causal chain steps for the Cadena causa \u2192 efecto section."
     ]
   },
   "success_criteria": [

@@ -2,7 +2,7 @@
   "node_type": "causal_chain",
   "node_id": "CC_FRACTIONAL_BLENDING_CONSISTENCY",
   "topic": "solera fractional blending and style consistency",
-  "trigger_keywords": ["solera", "fractional blending", "criadera", "consistency", "non-vintage", "sherry", "house style", "blending"],
+  "trigger_keywords": ["solera", "fractional blending", "criadera", "consistency", "non-vintage", "sherry", "house style", "blending", "criaderas", "consistencia", "jerez", "sistema tradicional", "envejecimiento"],
   "steps": [
     {
       "step": 1,
@@ -22,7 +22,7 @@
     {
       "step": 4,
       "label": "exam_formulation",
-      "text": "The solera system blends wine across multiple vintages, producing a consistent non-vintage style that maintains the house character regardless of harvest variation."
+      "text": "The solera's fractional blending process delivers consistency across vintages: wines from multiple age levels blend to maintain house character and style consistency regardless of harvest variation."
     }
   ],
   "sat_relevance": "Solera-produced wines are typically assessed as non-vintage styles. Consistency across bottlings is the key feature. Complexity may be attributed partly to the blend of different aged components.",

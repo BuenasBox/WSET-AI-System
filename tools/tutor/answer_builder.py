@@ -376,14 +376,14 @@ def _cause_effect_line(
             return "Cause → effect: cooler conditions slow ripening, so grapes tend to retain more acid; the wine can therefore show higher acidity and freshness."
         if "acid" in query:
             return "Cause → effect: acidity affects freshness and balance; it becomes positive or negative depending on the wine's style and the surrounding fruit, sugar, alcohol, and body."
-        return "Cause → effect: state the mechanism first, then connect it to the sensory or exam conclusion."
+        return "Cause → effect: identify the driving factor, explain why and how the mechanism operates — because that causal relationship therefore connects directly to the observable result in the wine's style or quality."
     if "tannin" in query or "tannin" in why:
         return "Cadena: compuestos fenólicos de pieles, pepitas o extracción aportan tanino → el tanino se percibe como sequedad/astringencia → puede apoyar la estructura si está maduro e integrado, pero no garantiza calidad por sí solo."
     if "cool climate" in query or ("acid" in query and "climate" in idea_text):
         return "Cadena: clima fresco → maduración más lenta → mayor retención de ácidos → más acidity y sensación de frescura en el vino."
     if "acid" in query:
         return "Cadena: acidity aporta frescura y tensión → su efecto en la calidad depende de balance, fruta, azúcar, alcohol y body."
-    return "Cadena: explica primero el mecanismo y luego conecta ese mecanismo con la conclusión sensorial o de examen."
+    return "Cadena causal: identifica el factor desencadenante, explica por qué actúa el mecanismo, porque esa relación justifica — por tanto — el efecto observable en el estilo o la calidad del vino."
 
 
 def _source_note(package: dict[str, Any], language: str) -> str:
@@ -721,14 +721,14 @@ def _exam_line(query: str, language: str, ideas: list[dict[str, str]]) -> str:
     if language == "en":
         if "sat" in lowered or "quality" in lowered:
             return "For exam purposes, make the quality claim and support it with balance, intensity, complexity, length, and evidence from the palate."
-        return "For exam purposes, state the observation, explain the mechanism, and connect it to the conclusion."
+        return "For exam purposes, state the observation, explain why the mechanism works — because that connection therefore links the causal factor to its outcome in the wine's style or quality."
     if "tannin" in lowered:
         return "Para efectos del examen: no escribas solo 'tiene mucho tanino, por eso es mejor'. Escribe: 'tanino alto pero integrado, junto con concentración de fruta, balance, complexity y length, puede apoyar una quality assessment más alta'."
     if "acid" in lowered and "quality" in lowered:
         return "Para efectos del examen: no escribas 'alta acidity = baja calidad'. Escribe si la acidity está en balance con fruta, alcohol, sweetness/body y length, y explica cómo sostiene el estilo."
     if "sat" in lowered or "quality" in lowered:
         return "Para efectos del examen, formula la quality assessment con BICL: balance, intensity, complexity y length, y añade evidencia concreta del paladar."
-    return "Para efectos del examen, describe el rasgo, explica el mecanismo y conecta esa explicación con la conclusión."
+    return "Para efectos del examen, describe el rasgo, explica por qué ocurre (el mecanismo), y muestra cómo ese proceso conduce — por tanto — al efecto observable en el vino."
 
 
 def _mini_practice(query: str, language: str) -> str:

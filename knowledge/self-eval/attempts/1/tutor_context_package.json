@@ -4,7 +4,8 @@
   "orchestrator_decision": {
     "route": "normal_tutor",
     "reason": "no_misconception_detected",
-    "matched_misconception_id": null
+    "matched_misconception_id": null,
+    "confidence": 0.0
   },
   "pedagogical_act": "answer_normally",
   "forced_retrieval_nodes": [],
@@ -12,9 +13,54 @@
   "learner_state_context": {
     "learner_id": "nazareth",
     "current_level": "WSET_L3",
-    "known_weak_areas": [],
+    "known_weak_areas": [
+      "causal_chain:flor -> oxygen protection -> biological ageing",
+      "retrieval:weak_context_support",
+      "fragile:flor -> oxygen protection -> biological ageing",
+      "fragile:weak_context_support",
+      "causal_chain:cool climate -> acid retention",
+      "retrieval:missing_causal_link_support",
+      "retrieval:missing_keyword_support",
+      "fragile:missing_keyword_support",
+      "fragile:missing_causal_link_support",
+      "causal_chain:fortification -> yeast stops -> residual sugar",
+      "causal_chain:structure -> bottle ageing -> sediment",
+      "causal_chain:fractional blending -> consistency",
+      "causal_chain:flor dies -> oxidative ageing",
+      "causal_chain:no flor -> oxidative ageing",
+      "retrieval:shallow_retrieval",
+      "label:missing_causal_link",
+      "label:unsupported_conclusion",
+      "label:shallow_retrieval",
+      "label:shallow_reasoning",
+      "label:weak_exam_register",
+      "fragile:flor dies -> oxidative ageing",
+      "fragile:no flor -> oxidative ageing",
+      "fragile:shallow_retrieval",
+      "causal_chain:cause -> mechanism -> effect",
+      "fragile:cause -> mechanism -> effect"
+    ],
     "recent_misconceptions": [],
-    "session_count": 0,
+    "session_count": 118,
+    "pedagogical_memory": {
+      "schema_version": "pedagogical_memory_v1",
+      "low_mastery_concepts": [],
+      "retention_risks": [],
+      "recurrent_misconceptions": [],
+      "difficult_causal_chains": [],
+      "mastered_concepts": [],
+      "preferred_depth": "standard",
+      "overload_patterns": [],
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "uses_llm": false,
+        "uses_api": false,
+        "uses_embeddings": false,
+        "uses_vector_db": false,
+        "cloud_services_active": false
+      }
+    },
     "governance": {
       "safe_for_examiner": false,
       "examiner_scoring_active": false,
@@ -28,6 +74,16 @@
     "query": "\u00bfQu\u00e9 rol juega la 'flor' en la crianza biol\u00f3gica del Jerez?",
     "top_k": 5,
     "forced_retrieval_nodes": [],
+    "pedagogical_priority_boost": {
+      "low_mastery_concepts": [],
+      "causal_chain_boosts": [],
+      "misconception_persistence_boost": false,
+      "force_deep_explanation": false,
+      "resurfacing_concepts": [],
+      "preferred_depth": "standard",
+      "safe_for_examiner": false,
+      "examiner_scoring_allowed": false
+    },
     "retrieval_engine": "tools.retrieval.tutor_retrieval_sandbox",
     "uses_embeddings": false,
     "uses_vector_db": false,
@@ -37,11 +93,40 @@
   "retrieved_context": [
     {
       "context_type": "retrieval_sandbox_chunk",
+      "chunk_id": "OFFICIAL_WSET_WINES_OF_THE_WORLD_8_1_43_SHERRY_001",
+      "forced_retrieval": false,
+      "agent_corpus": "tutor",
+      "safe_for_examiner": false,
+      "score": 0.6865,
+      "source_type": "official_wset_extracted",
+      "source_file": "knowledge/official-wset/study-guide/wset_markdown/seccion_8_section_5_fortified_wines_of_the_world/8-1_43_sherry.md",
+      "source_trust_tier": 1,
+      "title": "43 Sherry",
+      "section": "8",
+      "subtopic": "8.1",
+      "official_grading_authority": false,
+      "requires_human_review": true,
+      "reasoning_type": "theory_foundation",
+      "pedagogical_role": "official_reference",
+      "why_retrieved": [
+        "matched canonical/query terms: acetaldehyde, biological ageing, fino, flor, jerez, manzanilla, sherry",
+        "matches knowledge-map concept or relationship terms",
+        "matches knowledge-map causal-chain mechanism",
+        "official WSET extracted Tutor support",
+        "matched official section/topic metadata",
+        "exact term match"
+      ],
+      "text_excerpt": "# 43 Sherry <!-- p\u00e1gina 193 --> 184 UNDERSTANDINGW INES: EXPLAININGST YLEA ND QUALITY Sherry 43 Probably more than any other wine, Sherry is a wine style that is defined by the processes used during maturation. None of the key techniques, the so/era system, biological ageing or oxidative ageing, are unique to this region, but it is in Jerez that they are...",
+      "source_video": "",
+      "source_filename": "8-1_43_sherry.md"
+    },
+    {
+      "context_type": "retrieval_sandbox_chunk",
       "chunk_id": "OFFICIAL_WSET_GUIDE_WSET_MARKDOWN_SECCION_10_INDEX_10_INDEX_001",
       "forced_retrieval": false,
       "agent_corpus": "tutor",
       "safe_for_examiner": false,
-      "score": 0.48,
+      "score": 0.6732,
       "source_type": "official_wset_extracted",
       "source_file": "knowledge/official-wset/study-guide/wset_markdown/seccion_10_index/10_index.md",
       "source_trust_tier": 1,
@@ -53,7 +138,9 @@
       "reasoning_type": "theory_foundation",
       "pedagogical_role": "official_reference",
       "why_retrieved": [
-        "matched canonical/query terms: Crianza, crianza, jerez",
+        "matched canonical/query terms: Crianza, biological ageing, crianza, fino, jerez, manzanilla, sherry, yeast autolysis",
+        "matches knowledge-map concept or relationship terms",
+        "matches knowledge-map causal-chain mechanism",
         "official WSET extracted Tutor support",
         "exact term match"
       ],
@@ -67,7 +154,7 @@
       "forced_retrieval": false,
       "agent_corpus": "tutor",
       "safe_for_examiner": false,
-      "score": 0.48,
+      "score": 0.6468,
       "source_type": "official_wset_extracted",
       "source_file": "knowledge/official-wset/study-guide/wset_markdown/seccion_6_section_3_still_wines_of_the_world/6-19_30_spain.md",
       "source_trust_tier": 1,
@@ -79,7 +166,9 @@
       "reasoning_type": "theory_foundation",
       "pedagogical_role": "official_reference",
       "why_retrieved": [
-        "matched canonical/query terms: Crianza, crianza, jerez",
+        "matched canonical/query terms: Crianza, crianza, jerez, sherry",
+        "matches knowledge-map concept or relationship terms",
+        "matches knowledge-map causal-chain mechanism",
         "official WSET extracted Tutor support",
         "exact term match"
       ],
@@ -89,61 +178,39 @@
     },
     {
       "context_type": "retrieval_sandbox_chunk",
-      "chunk_id": "OFFICIAL_WSET_WINES_OF_THE_WORLD_8_1_43_SHERRY_001",
+      "chunk_id": "OFFICIAL_WSET_WINES_OF_THE_WORLD_6_13_24_TOKAJ_001",
       "forced_retrieval": false,
       "agent_corpus": "tutor",
       "safe_for_examiner": false,
-      "score": 0.48,
+      "score": 0.6236,
       "source_type": "official_wset_extracted",
-      "source_file": "knowledge/official-wset/study-guide/wset_markdown/seccion_8_section_5_fortified_wines_of_the_world/8-1_43_sherry.md",
+      "source_file": "knowledge/official-wset/study-guide/wset_markdown/seccion_6_section_3_still_wines_of_the_world/6-13_24_tokaj.md",
       "source_trust_tier": 1,
-      "title": "43 Sherry",
-      "section": "8",
-      "subtopic": "8.1",
+      "title": "24 Tokaj",
+      "section": "6",
+      "subtopic": "6.13",
       "official_grading_authority": false,
       "requires_human_review": true,
       "reasoning_type": "theory_foundation",
       "pedagogical_role": "official_reference",
       "why_retrieved": [
-        "matched canonical/query terms: flor, jerez",
+        "matched canonical/query terms: fino, sherry",
+        "matches knowledge-map concept or relationship terms",
+        "matches knowledge-map causal-chain mechanism",
         "official WSET extracted Tutor support",
         "exact term match"
       ],
-      "text_excerpt": "# 43 Sherry <!-- p\u00e1gina 193 --> 184 UNDERSTANDINGW INES: EXPLAININGST YLEA ND QUALITY Sherry 43 Probably more than any other wine, Sherry is a wine style that is defined by the processes used during maturation. None of the key techniques, the so/era system, biological ageing or oxidative ageing, are unique to this region, but it is in Jerez that they are...",
+      "text_excerpt": "# 24 Tokaj <!-- p\u00e1gina 125 --> 116 UNDERSTANDINGW INES:E XPLAININGS TYLEA ND QUALITY 24 TokajT he region of Tokaj (note the wine it produces is called Tokaji) is located in the foothills of the Carpathian Mountains in the far north east of Hungary and close to the Slovakian border. It has a long-standing reputation for producing premium botrytised sweet w...",
       "source_video": "",
-      "source_filename": "8-1_43_sherry.md"
+      "source_filename": "6-13_24_tokaj.md"
     },
     {
       "context_type": "retrieval_sandbox_chunk",
-      "chunk_id": "OFFICIAL_WSET_WINES_OF_THE_WORLD_6_11_22_GERMANY_001",
+      "chunk_id": "WSET_Level_3_Mock_Theory_Exam_Questions_Part_1_of_4_with_Jimmy_Smith_D-0005",
       "forced_retrieval": false,
       "agent_corpus": "tutor",
       "safe_for_examiner": false,
-      "score": 0.275,
-      "source_type": "official_wset_extracted",
-      "source_file": "knowledge/official-wset/study-guide/wset_markdown/seccion_6_section_3_still_wines_of_the_world/6-11_22_germany.md",
-      "source_trust_tier": 1,
-      "title": "22 Germany",
-      "section": "6",
-      "subtopic": "6.11",
-      "official_grading_authority": false,
-      "requires_human_review": true,
-      "reasoning_type": "theory_foundation",
-      "pedagogical_role": "official_reference",
-      "why_retrieved": [
-        "official WSET extracted Tutor support"
-      ],
-      "text_excerpt": "# 22 Germany <!-- p\u00e1gina 117 --> 108 UNDERSTANDINGW INES:E XPLAININGST YLEA ND QUALITY Germany 22 Germany is the country producing the highest concentration of world-class Rieslings. Whether dry and steely, medium-sweet and floral, or lusciously sweet, German winemakers' mastery of this variety is unquestionable. However, there is more to German wines tha...",
-      "source_video": "",
-      "source_filename": "6-11_22_germany.md"
-    },
-    {
-      "context_type": "retrieval_sandbox_chunk",
-      "chunk_id": "How_to_prepare_for_the_WSET_Level_3_Tasting_Exam-0001",
-      "forced_retrieval": false,
-      "agent_corpus": "tutor",
-      "safe_for_examiner": false,
-      "score": 0.22,
+      "score": 0.3853,
       "source_type": "manual_curated_srt",
       "source_file": "",
       "source_trust_tier": "pedagogical",
@@ -152,20 +219,88 @@
       "subtopic": "",
       "official_grading_authority": false,
       "requires_human_review": false,
-      "reasoning_type": "exam_strategy",
-      "pedagogical_role": "exam_strategy",
+      "reasoning_type": "theory_foundation",
+      "pedagogical_role": "foundational",
       "why_retrieved": [
-        "golden tutor chunk candidate",
-        "high retrieval priority in golden QA report"
+        "matched canonical/query terms: sherry",
+        "pedagogical role fits foundational_theory",
+        "matches knowledge-map concept or relationship terms",
+        "matches knowledge-map causal-chain mechanism",
+        "exact term match"
       ],
-      "text_excerpt": "So, let's go through um preparing you for the very famous and intensive and intimidating level three tasting examination. If you do follow all of these key points and you listen to your tutor, you will get through this tasting examination. It is in fact the least of your worries when it comes to the level three exam. uh it is in fact the uh the theory whe...",
-      "source_video": "How to prepare for the WSET Level 3 Tasting Exam",
-      "source_filename": "How to prepare for the WSET Level 3 Tasting Exam.srt"
+      "text_excerpt": "Fortified wines from Spain. Um now we know that the fortified wine from Spain is sherry and all associ assoc associated styles. Uh so that can't be true. Um but some of you who have done some studies may know that there are some Pago uh um names around the Sherry region. Uh wines from a single estate with a high reputation. So these are very high quality...",
+      "source_video": "WSET Level 3 Mock Theory Exam Questions Part 1 (of 4) with Jimmy Smith [D",
+      "source_filename": "[English (auto-generated)] WSET Level 3 Mock Theory Exam Questions Part 1 (of 4) with Jimmy Smith [D.srt"
+    }
+  ],
+  "forced_causal_chains": [
+    {
+      "node_type": "causal_chain",
+      "node_id": "CC_FLOR_BIOLOGICAL_AGEING",
+      "topic": "flor yeast and biological ageing in sherry",
+      "trigger_keywords": [
+        "flor",
+        "biological ageing",
+        "fino",
+        "manzanilla",
+        "sherry",
+        "oxygen protection",
+        "acetaldehyde",
+        "yeast autolysis",
+        "crianza biologica",
+        "jerez",
+        "crianza"
+      ],
+      "steps": [
+        {
+          "step": 1,
+          "label": "cause",
+          "text": "Flor yeast (a film of Saccharomyces cerevisiae strains) forms on the surface of the wine in partially filled barrels"
+        },
+        {
+          "step": 2,
+          "label": "mechanism",
+          "text": "The flor layer provides oxygen protection by excluding oxygen from the wine surface; the yeast metabolises ethanol and glycerol, producing acetaldehyde, and undergoes autolysis adding amino acids and breadlike compounds"
+        },
+        {
+          "step": 3,
+          "label": "effect",
+          "text": "The wine develops biological ageing character: almond, bread dough, and yeasty notes, low colour, low tannin, protected from oxidation despite barrel ageing"
+        },
+        {
+          "step": 4,
+          "label": "exam_formulation",
+          "text": "Flor yeast provides oxygen protection, producing biological ageing character: almond and bread dough flavours develop while oxidation is prevented by the flor layer."
+        }
+      ],
+      "sat_relevance": "Use when tasting or discussing Fino or Manzanilla sherry style. Biological ageing character (almond, bread, low colour) is a product of flor protection, distinct from oxidative ageing aromas.",
+      "linked_misconceptions": [],
+      "linked_topics": [
+        "T_RA3_SHERRY",
+        "T_RA2_SPAIN"
+      ],
+      "agent_corpus": "tutor",
+      "safe_for_examiner": false,
+      "examiner_scoring_allowed": false,
+      "requires_human_review": true,
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "agent_corpus": "tutor"
+      },
+      "_meta": {
+        "schema_version": "causal_chain_v1",
+        "created_date": "2026-05-15",
+        "ingestion_status": "draft"
+      },
+      "id": "CC_FLOR_BIOLOGICAL_AGEING",
+      "type": "causal_chain"
     }
   ],
   "tutor_directive": {
     "pedagogical_act": "answer_normally",
     "forced_retrieval_nodes": [],
+    "confidence": 0.0,
     "safe_for_examiner": false,
     "language": "es",
     "response_language_instruction": "Respond in Spanish. Preserve official WSET terms where useful, and do not translate key terms if translation would reduce precision. Distinguish official WSET content from pedagogical content.",
@@ -176,7 +311,8 @@
       "Do not present pedagogical sources as official authority.",
       "Distinguish official WSET content from pedagogical enrichment when explaining.",
       "Do not translate source chunks; preserve official WSET terms where useful.",
-      "Do not translate key terms if translation would reduce precision."
+      "Do not translate key terms if translation would reduce precision.",
+      "If forced_causal_chains is populated, render the causal chain steps for the Cadena causa \u2192 efecto section."
     ]
   },
   "success_criteria": [

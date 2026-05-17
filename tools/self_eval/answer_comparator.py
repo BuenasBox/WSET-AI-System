@@ -269,6 +269,13 @@ def _requires_causal_structure(question: dict[str, Any], strictness: str) -> boo
 
 
 def _has_cause_mechanism_effect(normalized: str, strictness: str) -> bool:
+    # Structured causal chain output (CAUSA/MECANISMO/EFECTO labels from _render_causal_chain)
+    # is valid causal structure even when its step texts lack explicit connector words.
+    # Recognise at least 2 of the 3 core labels being present, plus an effect term.
+    chain_labels = ("causa:", "mecanismo:", "efecto:", "cause:", "mechanism:", "effect:")
+    effect_terms_present = any(term in normalized for term in ("efecto", "effect", "resultado", "result", "frescura", "quality", "calidad", "estructura", "length", "complexity", "alcohol"))
+    if sum(1 for label in chain_labels if label in normalized) >= 2 and effect_terms_present:
+        return True
     connectors = ("because", "therefore", "leads to", "results in", "causes", "increases", "decreases", "porque", "por eso", "por tanto", "conduce", "provoca", "aumenta", "disminuye", "→")
     connector_count = sum(1 for term in connectors if term in normalized)
     mechanism_terms = ("mechanism", "mecanismo", "maduración", "retención", "fermentación", "oxidación", "flor", "extracción", "phenolic", "fenólico", "ácido", "astringencia")

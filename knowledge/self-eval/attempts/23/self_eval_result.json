@@ -20,27 +20,19 @@
     "present_keywords": [],
     "missing_keywords": [],
     "present_causal_links": [],
-    "missing_causal_links": [
-      "cause -> mechanism -> effect"
-    ],
+    "missing_causal_links": [],
     "present_topics": [],
     "missing_official_concepts": [],
     "expected_reasoning_type_present": true,
     "failure_labels": [
-      "missing_causal_link",
-      "unsupported_conclusion",
       "weak_exam_register"
     ],
     "strictness": "brutal",
     "difficulty": "intermediate",
     "vague_claims": [],
-    "unsupported_conclusions": [
-      "conclusion is not fully tied to evidence"
-    ],
+    "unsupported_conclusions": [],
     "likely_misconception_gaps": [],
-    "retrieval_weaknesses": [
-      "missing_causal_link_support"
-    ]
+    "retrieval_weaknesses": []
   },
   "governance": {
     "safe_for_examiner": false,

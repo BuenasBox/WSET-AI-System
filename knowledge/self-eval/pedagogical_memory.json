@@ -1,0 +1,932 @@
+{
+  "schema_version": "pedagogical_memory_v1",
+  "learner_id": "nazareth",
+  "updated_at": "2026-05-17T03:48:58.131578+00:00",
+  "skills": {
+    "acetaldeh\u00eddo": {
+      "concept_id": "acetaldeh\u00eddo",
+      "mastery_probability": 0.172,
+      "attempts": 5,
+      "successes": 0,
+      "recent_failures": 5,
+      "misconception_hits": 0,
+      "last_seen": "2026-05-17T03:48:58.130679+00:00",
+      "confidence_trend": [
+        -0.29,
+        -0.29,
+        -0.07,
+        -0.07,
+        -0.07
+      ]
+    },
+    "biological ageing": {
+      "concept_id": "biological ageing",
+      "mastery_probability": 0.172,
+      "attempts": 5,
+      "successes": 0,
+      "recent_failures": 5,
+      "misconception_hits": 0,
+      "last_seen": "2026-05-17T03:48:58.130711+00:00",
+      "confidence_trend": [
+        -0.29,
+        -0.29,
+        -0.07,
+        -0.07,
+        -0.07
+      ]
+    },
+    "crianza biol\u00f3gica": {
+      "concept_id": "crianza biol\u00f3gica",
+      "mastery_probability": 0.172,
+      "attempts": 5,
+      "successes": 0,
+      "recent_failures": 5,
+      "misconception_hits": 0,
+      "last_seen": "2026-05-17T03:48:58.130729+00:00",
+      "confidence_trend": [
+        -0.29,
+        -0.29,
+        -0.07,
+        -0.07,
+        -0.07
+      ]
+    },
+    "flor": {
+      "concept_id": "flor",
+      "mastery_probability": 0.083,
+      "attempts": 10,
+      "successes": 0,
+      "recent_failures": 10,
+      "misconception_hits": 0,
+      "last_seen": "2026-05-17T03:48:58.131112+00:00",
+      "confidence_trend": [
+        -0.29,
+        -0.29,
+        -0.07,
+        -0.07,
+        -0.07,
+        -0.07,
+        -0.07,
+        -0.07
+      ]
+    },
+    "flor -> oxygen protection -> biological ageing": {
+      "concept_id": "flor -> oxygen protection -> biological ageing",
+      "mastery_probability": 0.172,
+      "attempts": 5,
+      "successes": 0,
+      "recent_failures": 5,
+      "misconception_hits": 0,
+      "last_seen": "2026-05-17T03:48:58.130756+00:00",
+      "confidence_trend": [
+        -0.29,
+        -0.29,
+        -0.07,
+        -0.07,
+        -0.07
+      ]
+    },
+    "jerez": {
+      "concept_id": "jerez",
+      "mastery_probability": 0.083,
+      "attempts": 10,
+      "successes": 0,
+      "recent_failures": 10,
+      "misconception_hits": 0,
+      "last_seen": "2026-05-17T03:48:58.131044+00:00",
+      "confidence_trend": [
+        -0.29,
+        -0.29,
+        -0.07,
+        -0.07,
+        -0.07,
+        -0.07,
+        -0.07,
+        -0.07
+      ]
+    },
+    "ox\u00edgeno": {
+      "concept_id": "ox\u00edgeno",
+      "mastery_probability": 0.172,
+      "attempts": 5,
+      "successes": 0,
+      "recent_failures": 5,
+      "misconception_hits": 0,
+      "last_seen": "2026-05-17T03:48:58.130781+00:00",
+      "confidence_trend": [
+        -0.29,
+        -0.29,
+        -0.07,
+        -0.07,
+        -0.07
+      ]
+    },
+    "aguardiente": {
+      "concept_id": "aguardiente",
+      "mastery_probability": 0.172,
+      "attempts": 5,
+      "successes": 0,
+      "recent_failures": 5,
+      "misconception_hits": 0,
+      "last_seen": "2026-05-17T03:48:58.130806+00:00",
+      "confidence_trend": [
+        -0.29,
+        -0.29,
+        -0.07,
+        -0.07,
+        -0.07
+      ]
+    },
+    "az\u00facar residual": {
+      "concept_id": "az\u00facar residual",
+      "mastery_probability": 0.172,
+      "attempts": 5,
+      "successes": 0,
+      "recent_failures": 5,
+      "misconception_hits": 0,
+      "last_seen": "2026-05-17T03:48:58.130818+00:00",
+      "confidence_trend": [
+        -0.29,
+        -0.29,
+        -0.07,
+        -0.07,
+        -0.07
+      ]
+    },
+    "fermentaci\u00f3n": {
+      "concept_id": "fermentaci\u00f3n",
+      "mastery_probability": 0.172,
+      "attempts": 5,
+      "successes": 0,
+      "recent_failures": 5,
+      "misconception_hits": 0,
+      "last_seen": "2026-05-17T03:48:58.130830+00:00",
+      "confidence_trend": [
+        -0.29,
+        -0.29,
+        -0.07,
+        -0.07,
+        -0.07
+      ]
+    },
+    "fermentation": {
+      "concept_id": "fermentation",
+      "mastery_probability": 0.172,
+      "attempts": 5,
+      "successes": 0,
+      "recent_failures": 5,
+      "misconception_hits": 0,
+      "last_seen": "2026-05-17T03:48:58.130842+00:00",
+      "confidence_trend": [
+        -0.29,
+        -0.29,
+        -0.07,
+        -0.07,
+        -0.07
+      ]
+    },
+    "fortificaci\u00f3n": {
+      "concept_id": "fortificaci\u00f3n",
+      "mastery_probability": 0.083,
+      "attempts": 10,
+      "successes": 0,
+      "recent_failures": 10,
+      "misconception_hits": 0,
+      "last_seen": "2026-05-17T03:48:58.131136+00:00",
+      "confidence_trend": [
+        -0.29,
+        -0.29,
+        -0.07,
+        -0.07,
+        -0.07,
+        -0.07,
+        -0.07,
+        -0.07
+      ]
+    },
+    "fortification": {
+      "concept_id": "fortification",
+      "mastery_probability": 0.172,
+      "attempts": 5,
+      "successes": 0,
+      "recent_failures": 5,
+      "misconception_hits": 0,
+      "last_seen": "2026-05-17T03:48:58.130867+00:00",
+      "confidence_trend": [
+        -0.29,
+        -0.29,
+        -0.07,
+        -0.07,
+        -0.07
+      ]
+    },
+    "fortification -> yeast stops -> residual sugar": {
+      "concept_id": "fortification -> yeast stops -> residual sugar",
+      "mastery_probability": 0.172,
+      "attempts": 5,
+      "successes": 0,
+      "recent_failures": 5,
+      "misconception_hits": 0,
+      "last_seen": "2026-05-17T03:48:58.130879+00:00",
+      "confidence_trend": [
+        -0.29,
+        -0.29,
+        -0.07,
+        -0.07,
+        -0.07
+      ]
+    },
+    "port": {
+      "concept_id": "port",
+      "mastery_probability": 0.172,
+      "attempts": 5,
+      "successes": 0,
+      "recent_failures": 5,
+      "misconception_hits": 0,
+      "last_seen": "2026-05-17T03:48:58.130891+00:00",
+      "confidence_trend": [
+        -0.29,
+        -0.29,
+        -0.07,
+        -0.07,
+        -0.07
+      ]
+    },
+    "Vintage Port": {
+      "concept_id": "Vintage Port",
+      "mastery_probability": 0.172,
+      "attempts": 5,
+      "successes": 0,
+      "recent_failures": 5,
+      "misconception_hits": 0,
+      "last_seen": "2026-05-17T03:48:58.130911+00:00",
+      "confidence_trend": [
+        -0.29,
+        -0.29,
+        -0.07,
+        -0.07,
+        -0.07
+      ]
+    },
+    "botella": {
+      "concept_id": "botella",
+      "mastery_probability": 0.172,
+      "attempts": 5,
+      "successes": 0,
+      "recent_failures": 5,
+      "misconception_hits": 0,
+      "last_seen": "2026-05-17T03:48:58.130924+00:00",
+      "confidence_trend": [
+        -0.29,
+        -0.29,
+        -0.07,
+        -0.07,
+        -0.07
+      ]
+    },
+    "bottle ageing": {
+      "concept_id": "bottle ageing",
+      "mastery_probability": 0.172,
+      "attempts": 5,
+      "successes": 0,
+      "recent_failures": 5,
+      "misconception_hits": 0,
+      "last_seen": "2026-05-17T03:48:58.130936+00:00",
+      "confidence_trend": [
+        -0.29,
+        -0.29,
+        -0.07,
+        -0.07,
+        -0.07
+      ]
+    },
+    "sedimento": {
+      "concept_id": "sedimento",
+      "mastery_probability": 0.172,
+      "attempts": 5,
+      "successes": 0,
+      "recent_failures": 5,
+      "misconception_hits": 0,
+      "last_seen": "2026-05-17T03:48:58.130948+00:00",
+      "confidence_trend": [
+        -0.29,
+        -0.29,
+        -0.07,
+        -0.07,
+        -0.07
+      ]
+    },
+    "structure -> bottle ageing -> sediment": {
+      "concept_id": "structure -> bottle ageing -> sediment",
+      "mastery_probability": 0.172,
+      "attempts": 5,
+      "successes": 0,
+      "recent_failures": 5,
+      "misconception_hits": 0,
+      "last_seen": "2026-05-17T03:48:58.130963+00:00",
+      "confidence_trend": [
+        -0.29,
+        -0.29,
+        -0.07,
+        -0.07,
+        -0.07
+      ]
+    },
+    "tanino": {
+      "concept_id": "tanino",
+      "mastery_probability": 0.172,
+      "attempts": 5,
+      "successes": 0,
+      "recent_failures": 5,
+      "misconception_hits": 0,
+      "last_seen": "2026-05-17T03:48:58.130975+00:00",
+      "confidence_trend": [
+        -0.29,
+        -0.29,
+        -0.07,
+        -0.07,
+        -0.07
+      ]
+    },
+    "vintage port": {
+      "concept_id": "vintage port",
+      "mastery_probability": 0.172,
+      "attempts": 5,
+      "successes": 0,
+      "recent_failures": 5,
+      "misconception_hits": 0,
+      "last_seen": "2026-05-17T03:48:58.130987+00:00",
+      "confidence_trend": [
+        -0.29,
+        -0.29,
+        -0.07,
+        -0.07,
+        -0.07
+      ]
+    },
+    "consistencia": {
+      "concept_id": "consistencia",
+      "mastery_probability": 0.172,
+      "attempts": 5,
+      "successes": 0,
+      "recent_failures": 5,
+      "misconception_hits": 0,
+      "last_seen": "2026-05-17T03:48:58.131008+00:00",
+      "confidence_trend": [
+        -0.29,
+        -0.29,
+        -0.07,
+        -0.07,
+        -0.07
+      ]
+    },
+    "criaderas": {
+      "concept_id": "criaderas",
+      "mastery_probability": 0.172,
+      "attempts": 5,
+      "successes": 0,
+      "recent_failures": 5,
+      "misconception_hits": 0,
+      "last_seen": "2026-05-17T03:48:58.131020+00:00",
+      "confidence_trend": [
+        -0.29,
+        -0.29,
+        -0.07,
+        -0.07,
+        -0.07
+      ]
+    },
+    "fractional blending -> consistency": {
+      "concept_id": "fractional blending -> consistency",
+      "mastery_probability": 0.172,
+      "attempts": 5,
+      "successes": 0,
+      "recent_failures": 5,
+      "misconception_hits": 0,
+      "last_seen": "2026-05-17T03:48:58.131032+00:00",
+      "confidence_trend": [
+        -0.29,
+        -0.29,
+        -0.07,
+        -0.07,
+        -0.07
+      ]
+    },
+    "mezcla": {
+      "concept_id": "mezcla",
+      "mastery_probability": 0.172,
+      "attempts": 5,
+      "successes": 0,
+      "recent_failures": 5,
+      "misconception_hits": 0,
+      "last_seen": "2026-05-17T03:48:58.131057+00:00",
+      "confidence_trend": [
+        -0.29,
+        -0.29,
+        -0.07,
+        -0.07,
+        -0.07
+      ]
+    },
+    "solera": {
+      "concept_id": "solera",
+      "mastery_probability": 0.172,
+      "attempts": 5,
+      "successes": 0,
+      "recent_failures": 5,
+      "misconception_hits": 0,
+      "last_seen": "2026-05-17T03:48:58.131069+00:00",
+      "confidence_trend": [
+        -0.29,
+        -0.29,
+        -0.07,
+        -0.07,
+        -0.07
+      ]
+    },
+    "amontillado": {
+      "concept_id": "amontillado",
+      "mastery_probability": 0.172,
+      "attempts": 5,
+      "successes": 0,
+      "recent_failures": 5,
+      "misconception_hits": 0,
+      "last_seen": "2026-05-17T03:48:58.131089+00:00",
+      "confidence_trend": [
+        -0.29,
+        -0.29,
+        -0.07,
+        -0.07,
+        -0.07
+      ]
+    },
+    "biol\u00f3gica": {
+      "concept_id": "biol\u00f3gica",
+      "mastery_probability": 0.172,
+      "attempts": 5,
+      "successes": 0,
+      "recent_failures": 5,
+      "misconception_hits": 0,
+      "last_seen": "2026-05-17T03:48:58.131101+00:00",
+      "confidence_trend": [
+        -0.29,
+        -0.29,
+        -0.07,
+        -0.07,
+        -0.07
+      ]
+    },
+    "flor dies -> oxidative ageing": {
+      "concept_id": "flor dies -> oxidative ageing",
+      "mastery_probability": 0.172,
+      "attempts": 5,
+      "successes": 0,
+      "recent_failures": 5,
+      "misconception_hits": 0,
+      "last_seen": "2026-05-17T03:48:58.131124+00:00",
+      "confidence_trend": [
+        -0.29,
+        -0.29,
+        -0.07,
+        -0.07,
+        -0.07
+      ]
+    },
+    "no flor -> oxidative ageing": {
+      "concept_id": "no flor -> oxidative ageing",
+      "mastery_probability": 0.172,
+      "attempts": 5,
+      "successes": 0,
+      "recent_failures": 5,
+      "misconception_hits": 0,
+      "last_seen": "2026-05-17T03:48:58.131148+00:00",
+      "confidence_trend": [
+        -0.29,
+        -0.29,
+        -0.07,
+        -0.07,
+        -0.07
+      ]
+    },
+    "oloroso": {
+      "concept_id": "oloroso",
+      "mastery_probability": 0.172,
+      "attempts": 5,
+      "successes": 0,
+      "recent_failures": 5,
+      "misconception_hits": 0,
+      "last_seen": "2026-05-17T03:48:58.131159+00:00",
+      "confidence_trend": [
+        -0.29,
+        -0.29,
+        -0.07,
+        -0.07,
+        -0.07
+      ]
+    },
+    "oxidativa": {
+      "concept_id": "oxidativa",
+      "mastery_probability": 0.172,
+      "attempts": 5,
+      "successes": 0,
+      "recent_failures": 5,
+      "misconception_hits": 0,
+      "last_seen": "2026-05-17T03:48:58.131171+00:00",
+      "confidence_trend": [
+        -0.29,
+        -0.29,
+        -0.07,
+        -0.07,
+        -0.07
+      ]
+    },
+    "sherry ageing": {
+      "concept_id": "sherry ageing",
+      "mastery_probability": 0.172,
+      "attempts": 5,
+      "successes": 0,
+      "recent_failures": 5,
+      "misconception_hits": 0,
+      "last_seen": "2026-05-17T03:48:58.131183+00:00",
+      "confidence_trend": [
+        -0.29,
+        -0.29,
+        -0.07,
+        -0.07,
+        -0.07
+      ]
+    },
+    "6": {
+      "concept_id": "6",
+      "mastery_probability": 0.172,
+      "attempts": 5,
+      "successes": 0,
+      "recent_failures": 5,
+      "misconception_hits": 0,
+      "last_seen": "2026-05-17T03:48:58.131210+00:00",
+      "confidence_trend": [
+        -0.29,
+        -0.29,
+        -0.07,
+        -0.07,
+        -0.07
+      ]
+    },
+    "7": {
+      "concept_id": "7",
+      "mastery_probability": 0.172,
+      "attempts": 5,
+      "successes": 0,
+      "recent_failures": 5,
+      "misconception_hits": 0,
+      "last_seen": "2026-05-17T03:48:58.131229+00:00",
+      "confidence_trend": [
+        -0.29,
+        -0.29,
+        -0.07,
+        -0.07,
+        -0.07
+      ]
+    },
+    "8": {
+      "concept_id": "8",
+      "mastery_probability": 0.172,
+      "attempts": 5,
+      "successes": 0,
+      "recent_failures": 5,
+      "misconception_hits": 0,
+      "last_seen": "2026-05-17T03:48:58.131245+00:00",
+      "confidence_trend": [
+        -0.29,
+        -0.29,
+        -0.07,
+        -0.07,
+        -0.07
+      ]
+    },
+    "9": {
+      "concept_id": "9",
+      "mastery_probability": 0.764,
+      "attempts": 5,
+      "successes": 4,
+      "recent_failures": 0,
+      "misconception_hits": 0,
+      "last_seen": "2026-05-17T03:48:58.131264+00:00",
+      "confidence_trend": [
+        0.71,
+        -0.29,
+        0.93,
+        0.93,
+        0.93
+      ]
+    },
+    "10": {
+      "concept_id": "10",
+      "mastery_probability": 0.692,
+      "attempts": 5,
+      "successes": 3,
+      "recent_failures": 0,
+      "misconception_hits": 0,
+      "last_seen": "2026-05-17T03:48:58.131282+00:00",
+      "confidence_trend": [
+        -0.29,
+        -0.29,
+        0.93,
+        0.93,
+        0.93
+      ]
+    },
+    "11": {
+      "concept_id": "11",
+      "mastery_probability": 0.675,
+      "attempts": 5,
+      "successes": 3,
+      "recent_failures": 0,
+      "misconception_hits": 0,
+      "last_seen": "2026-05-17T03:48:58.131299+00:00",
+      "confidence_trend": [
+        -0.37,
+        -0.37,
+        0.78,
+        0.78,
+        0.78
+      ]
+    },
+    "12": {
+      "concept_id": "12",
+      "mastery_probability": 0.172,
+      "attempts": 5,
+      "successes": 0,
+      "recent_failures": 5,
+      "misconception_hits": 0,
+      "last_seen": "2026-05-17T03:48:58.131316+00:00",
+      "confidence_trend": [
+        -0.29,
+        -0.29,
+        -0.07,
+        -0.07,
+        -0.07
+      ]
+    },
+    "13": {
+      "concept_id": "13",
+      "mastery_probability": 0.172,
+      "attempts": 5,
+      "successes": 0,
+      "recent_failures": 5,
+      "misconception_hits": 0,
+      "last_seen": "2026-05-17T03:48:58.131332+00:00",
+      "confidence_trend": [
+        -0.29,
+        -0.29,
+        -0.07,
+        -0.07,
+        -0.07
+      ]
+    },
+    "14": {
+      "concept_id": "14",
+      "mastery_probability": 0.173,
+      "attempts": 5,
+      "successes": 0,
+      "recent_failures": 5,
+      "misconception_hits": 0,
+      "last_seen": "2026-05-17T03:48:58.131349+00:00",
+      "confidence_trend": [
+        -0.22,
+        -0.22,
+        -0.07,
+        -0.07,
+        -0.07
+      ]
+    },
+    "15": {
+      "concept_id": "15",
+      "mastery_probability": 0.764,
+      "attempts": 5,
+      "successes": 4,
+      "recent_failures": 0,
+      "misconception_hits": 0,
+      "last_seen": "2026-05-17T03:48:58.131365+00:00",
+      "confidence_trend": [
+        0.71,
+        -0.29,
+        0.93,
+        0.93,
+        0.93
+      ]
+    },
+    "16": {
+      "concept_id": "16",
+      "mastery_probability": 0.172,
+      "attempts": 5,
+      "successes": 0,
+      "recent_failures": 5,
+      "misconception_hits": 0,
+      "last_seen": "2026-05-17T03:48:58.131381+00:00",
+      "confidence_trend": [
+        -0.29,
+        -0.29,
+        -0.07,
+        -0.07,
+        -0.07
+      ]
+    },
+    "17": {
+      "concept_id": "17",
+      "mastery_probability": 0.172,
+      "attempts": 5,
+      "successes": 0,
+      "recent_failures": 5,
+      "misconception_hits": 0,
+      "last_seen": "2026-05-17T03:48:58.131397+00:00",
+      "confidence_trend": [
+        -0.29,
+        -0.29,
+        -0.07,
+        -0.07,
+        -0.07
+      ]
+    },
+    "18": {
+      "concept_id": "18",
+      "mastery_probability": 0.172,
+      "attempts": 5,
+      "successes": 0,
+      "recent_failures": 5,
+      "misconception_hits": 0,
+      "last_seen": "2026-05-17T03:48:58.131412+00:00",
+      "confidence_trend": [
+        -0.29,
+        -0.29,
+        -0.07,
+        -0.07,
+        -0.07
+      ]
+    },
+    "19": {
+      "concept_id": "19",
+      "mastery_probability": 0.693,
+      "attempts": 5,
+      "successes": 3,
+      "recent_failures": 0,
+      "misconception_hits": 0,
+      "last_seen": "2026-05-17T03:48:58.131428+00:00",
+      "confidence_trend": [
+        -0.22,
+        -0.22,
+        0.93,
+        0.93,
+        0.93
+      ]
+    },
+    "20": {
+      "concept_id": "20",
+      "mastery_probability": 0.764,
+      "attempts": 5,
+      "successes": 4,
+      "recent_failures": 0,
+      "misconception_hits": 0,
+      "last_seen": "2026-05-17T03:48:58.131443+00:00",
+      "confidence_trend": [
+        0.71,
+        -0.29,
+        0.93,
+        0.93,
+        0.93
+      ]
+    },
+    "21": {
+      "concept_id": "21",
+      "mastery_probability": 0.172,
+      "attempts": 5,
+      "successes": 0,
+      "recent_failures": 5,
+      "misconception_hits": 0,
+      "last_seen": "2026-05-17T03:48:58.131459+00:00",
+      "confidence_trend": [
+        -0.29,
+        -0.29,
+        -0.07,
+        -0.07,
+        -0.07
+      ]
+    },
+    "22": {
+      "concept_id": "22",
+      "mastery_probability": 0.172,
+      "attempts": 5,
+      "successes": 0,
+      "recent_failures": 5,
+      "misconception_hits": 0,
+      "last_seen": "2026-05-17T03:48:58.131476+00:00",
+      "confidence_trend": [
+        -0.29,
+        -0.29,
+        -0.07,
+        -0.07,
+        -0.07
+      ]
+    },
+    "23": {
+      "concept_id": "23",
+      "mastery_probability": 0.173,
+      "attempts": 5,
+      "successes": 0,
+      "recent_failures": 5,
+      "misconception_hits": 0,
+      "last_seen": "2026-05-17T03:48:58.131491+00:00",
+      "confidence_trend": [
+        -0.22,
+        -0.22,
+        -0.07,
+        -0.07,
+        -0.07
+      ]
+    },
+    "24": {
+      "concept_id": "24",
+      "mastery_probability": 0.172,
+      "attempts": 5,
+      "successes": 0,
+      "recent_failures": 5,
+      "misconception_hits": 0,
+      "last_seen": "2026-05-17T03:48:58.131507+00:00",
+      "confidence_trend": [
+        -0.29,
+        -0.29,
+        -0.07,
+        -0.07,
+        -0.07
+      ]
+    },
+    "25": {
+      "concept_id": "25",
+      "mastery_probability": 0.172,
+      "attempts": 5,
+      "successes": 0,
+      "recent_failures": 5,
+      "misconception_hits": 0,
+      "last_seen": "2026-05-17T03:48:58.131522+00:00",
+      "confidence_trend": [
+        -0.29,
+        -0.29,
+        -0.07,
+        -0.07,
+        -0.07
+      ]
+    }
+  },
+  "recurrent_misconceptions": {},
+  "difficult_causal_chains": {
+    "flor -> oxygen protection -> biological ageing": {
+      "chain_id": "flor -> oxygen protection -> biological ageing",
+      "failures": 2,
+      "retention_risk": 0.5
+    },
+    "fortification -> yeast stops -> residual sugar": {
+      "chain_id": "fortification -> yeast stops -> residual sugar",
+      "failures": 2,
+      "retention_risk": 0.5
+    },
+    "structure -> bottle ageing -> sediment": {
+      "chain_id": "structure -> bottle ageing -> sediment",
+      "failures": 2,
+      "retention_risk": 0.5
+    },
+    "fractional blending -> consistency": {
+      "chain_id": "fractional blending -> consistency",
+      "failures": 2,
+      "retention_risk": 0.5
+    },
+    "flor dies -> oxidative ageing": {
+      "chain_id": "flor dies -> oxidative ageing",
+      "failures": 5,
+      "retention_risk": 1.0
+    },
+    "no flor -> oxidative ageing": {
+      "chain_id": "no flor -> oxidative ageing",
+      "failures": 5,
+      "retention_risk": 1.0
+    },
+    "cause -> mechanism -> effect": {
+      "chain_id": "cause -> mechanism -> effect",
+      "failures": 14,
+      "retention_risk": 1.0
+    }
+  },
+  "mastered_concepts": [],
+  "preferred_depth": "deep",
+  "overload_patterns": [
+    "needs_more_scaffolded_context"
+  ],
+  "governance": {
+    "safe_for_examiner": false,
+    "examiner_scoring_allowed": false,
+    "uses_llm": false,
+    "uses_api": false,
+    "uses_embeddings": false,
+    "uses_vector_db": false,
+    "cloud_services_active": false
+  }
+}
