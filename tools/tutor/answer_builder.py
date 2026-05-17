@@ -20,6 +20,10 @@ DISCLAIMER_ES = "Nota: esta es una respuesta del Tutor, no una calificación ofi
 DISCLAIMER_EN = "Note: this is a Tutor response, not an official grade or an Examiner evaluation."
 KEY_TERMS = "SAT, BICL, balance, intensity, complexity, length, acidity, tannin, body, quality assessment"
 STYLES = {"concise", "standard", "detailed"}
+TUTOR_DISCLAIMERS = {
+    "en": DISCLAIMER_EN,
+    "es": DISCLAIMER_ES,
+}
 TUTOR_MARKDOWN_LABELS = {
     "en": {
         "title": "Tutor Draft",
@@ -178,7 +182,7 @@ def _render_misconception_answer(
             source_note,
             support,
             "",
-            DISCLAIMER_EN,
+            TUTOR_DISCLAIMERS["en"],
         ]
     else:
         labels = TUTOR_MARKDOWN_LABELS["es"]
@@ -206,7 +210,7 @@ def _render_misconception_answer(
             source_note,
             support,
             "",
-            DISCLAIMER_ES,
+            TUTOR_DISCLAIMERS["es"],
         ]
     return "\n".join(line for line in lines if line is not None)
 
@@ -254,7 +258,7 @@ def _render_normal_answer(
             source_note,
             support,
             "",
-            DISCLAIMER_EN,
+            TUTOR_DISCLAIMERS["en"],
         ]
     else:
         labels = TUTOR_MARKDOWN_LABELS["es"]
@@ -279,7 +283,7 @@ def _render_normal_answer(
             source_note,
             support,
             "",
-            DISCLAIMER_ES,
+            TUTOR_DISCLAIMERS["es"],
         ]
     return "\n".join(line for line in lines if line is not None)
 

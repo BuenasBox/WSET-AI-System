@@ -4,6 +4,9 @@ import unittest
 from pathlib import Path
 
 from tools.tutor.answer_builder import (
+    DISCLAIMER_EN,
+    DISCLAIMER_ES,
+    TUTOR_DISCLAIMERS,
     TUTOR_MARKDOWN_LABELS,
     TUTOR_SOURCE_NOTES,
     _source_note,
@@ -13,6 +16,56 @@ from tools.tutor.answer_builder import (
 
 
 class TutorAnswerBuilderTests(unittest.TestCase):
+    def test_tutor_disclaimer_registry_preserves_exact_footers(self):
+        self.assertEqual(TUTOR_DISCLAIMERS["en"], DISCLAIMER_EN)
+        self.assertEqual(TUTOR_DISCLAIMERS["es"], DISCLAIMER_ES)
+        self.assertEqual(
+            DISCLAIMER_EN,
+            "Note: this is a Tutor response, not an official grade or an Examiner evaluation.",
+        )
+        self.assertEqual(
+            DISCLAIMER_ES,
+            "Nota: esta es una respuesta del Tutor, no una calificación oficial ni una evaluación del Examiner.",
+        )
+
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            normal_es = build_tutor_answer(
+                _write_package(root / "normal_es.json", _normal_package(language="es")),
+                output_path=root / "normal_es.md",
+            )
+            normal_en = build_tutor_answer(
+                _write_package(root / "normal_en.json", _normal_package(language="en")),
+                output_path=root / "normal_en.md",
+            )
+            misconception_es = build_tutor_answer(
+                _write_package(root / "misconception_es.json", _misconception_package(language="es")),
+                output_path=root / "misconception_es.md",
+            )
+            misconception_en = build_tutor_answer(
+                _write_package(root / "misconception_en.json", _misconception_package(language="en")),
+                output_path=root / "misconception_en.md",
+            )
+
+            normal_es_answer = Path(normal_es["output_paths"]["latest"]).read_text(encoding="utf-8")
+            normal_en_answer = Path(normal_en["output_paths"]["latest"]).read_text(encoding="utf-8")
+            misconception_es_answer = Path(misconception_es["output_paths"]["latest"]).read_text(encoding="utf-8")
+            misconception_en_answer = Path(misconception_en["output_paths"]["latest"]).read_text(encoding="utf-8")
+
+        for answer in (normal_es_answer, misconception_es_answer):
+            self.assertTrue(answer.endswith(DISCLAIMER_ES))
+            self.assertEqual(answer.count(DISCLAIMER_ES), 1)
+        for answer in (normal_en_answer, misconception_en_answer):
+            self.assertTrue(answer.endswith(DISCLAIMER_EN))
+            self.assertEqual(answer.count(DISCLAIMER_EN), 1)
+
+        self.assertEqual(len(_headings(normal_es_answer)), 6)
+        self.assertEqual(len(_headings(normal_en_answer)), 6)
+        self.assertEqual(len(_headings(misconception_es_answer)), 7)
+        self.assertEqual(len(_headings(misconception_en_answer)), 7)
+        for result in (normal_es, normal_en, misconception_es, misconception_en):
+            self.assertFalse(result["governance"]["safe_for_examiner"])
+
     def test_tutor_source_note_registry_preserves_exact_notes(self):
         self.assertEqual(
             _source_note(_official_package(language="en"), "en"),
