@@ -254,6 +254,11 @@ def _audit_retrieval(context_package: dict[str, Any], strictness: str) -> dict[s
     ]
     priority_text = " ".join(" ".join(item.get("why_retrieved", [])) + " " + str(item.get("retrieval_priority", "")) for item in contexts).lower()
     high_priority = priority_text.count("high") + priority_text.count("golden")
+    # Forced causal chains are high-priority curated content: count them toward
+    # priority signal so that chain-injected answers are not penalised as shallow.
+    forced_chains = [c for c in (context_package.get("forced_causal_chains") or []) if isinstance(c, dict)]
+    if forced_chains:
+        high_priority += len(forced_chains)
     return {
         "retrieval_gap": len(contexts) == 0 or (strictness == "brutal" and pedagogical and not official),
         "weak_context_support": len(non_forced) < threshold,
@@ -313,7 +318,9 @@ def _requires_exam_language(question: dict[str, Any], strictness: str) -> bool:
 def _weak_exam_register(normalized: str, question: dict[str, Any], strictness: str) -> bool:
     if strictness == "normal":
         return False
-    conversational = ("basically", "kind of", "sort of", "muy fácil", "simplemente", "bueno,", "ok")
+    # "ok" as a bare 2-char substring matches wine terms like "tokaji" (t-ok-aji); require
+    # a leading space so mid-word occurrences in wine names do not false-positive.
+    conversational = ("basically", "kind of", "sort of", "muy fácil", "simplemente", "bueno,", " ok")
     if any(term in normalized for term in conversational):
         return True
     if strictness == "brutal" and question.get("question_type") in {"theory", "sat"}:

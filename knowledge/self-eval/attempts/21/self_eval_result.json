@@ -24,17 +24,13 @@
     "present_topics": [],
     "missing_official_concepts": [],
     "expected_reasoning_type_present": true,
-    "failure_labels": [
-      "shallow_retrieval"
-    ],
+    "failure_labels": [],
     "strictness": "brutal",
     "difficulty": "intermediate",
     "vague_claims": [],
     "unsupported_conclusions": [],
     "likely_misconception_gaps": [],
-    "retrieval_weaknesses": [
-      "shallow_retrieval"
-    ]
+    "retrieval_weaknesses": []
   },
   "governance": {
     "safe_for_examiner": false,

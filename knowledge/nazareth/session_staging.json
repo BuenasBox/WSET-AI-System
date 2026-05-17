@@ -1,6 +1,6 @@
 {
   "schema_version": "minimal_brain_v2",
-  "updated_at": "2026-05-17T03:48:58.094768+00:00",
+  "updated_at": "2026-05-17T18:41:49.917079+00:00",
   "latest_session": {
     "student_query": "\u00bfCu\u00e1l es el prop\u00f3sito del licor de tiraje?",
     "detected_misconception": {
@@ -43,7 +43,7 @@
         "fragile:cause -> mechanism -> effect"
       ],
       "recent_misconceptions": [],
-      "session_count": 118,
+      "session_count": 193,
       "pedagogical_memory": {
         "schema_version": "pedagogical_memory_v1",
         "low_mastery_concepts": [],
@@ -105,7 +105,7 @@
         "forced_retrieval": false,
         "agent_corpus": "tutor",
         "safe_for_examiner": false,
-        "score": 0.3333,
+        "score": 0.5084,
         "source_type": "official_wset_extracted",
         "source_file": "knowledge/official-wset/study-guide/wset_markdown/seccion_6_section_3_still_wines_of_the_world/6-13_24_tokaj.md",
         "source_trust_tier": 1,
@@ -117,7 +117,9 @@
         "reasoning_type": "theory_foundation",
         "pedagogical_role": "official_reference",
         "why_retrieved": [
-          "official WSET extracted Tutor support"
+          "matched canonical/query terms: aszu, botrytis, concentrated, hungary, noble rot, sugar, tokaji, yeast",
+          "official WSET extracted Tutor support",
+          "exact term match"
         ],
         "text_excerpt": "# 24 Tokaj <!-- p\u00e1gina 125 --> 116 UNDERSTANDINGW INES:E XPLAININGS TYLEA ND QUALITY 24 TokajT he region of Tokaj (note the wine it produces is called Tokaji) is located in the foothills of the Carpathian Mountains in the far north east of Hungary and close to the Slovakian border. It has a long-standing reputation for producing premium botrytised sweet w...",
         "source_video": "",
@@ -125,59 +127,11 @@
       },
       {
         "context_type": "retrieval_sandbox_chunk",
-        "chunk_id": "OFFICIAL_WSET_WINES_OF_THE_WORLD_8_1_43_SHERRY_001",
-        "forced_retrieval": false,
-        "agent_corpus": "tutor",
-        "safe_for_examiner": false,
-        "score": 0.32,
-        "source_type": "official_wset_extracted",
-        "source_file": "knowledge/official-wset/study-guide/wset_markdown/seccion_8_section_5_fortified_wines_of_the_world/8-1_43_sherry.md",
-        "source_trust_tier": 1,
-        "title": "43 Sherry",
-        "section": "8",
-        "subtopic": "8.1",
-        "official_grading_authority": false,
-        "requires_human_review": true,
-        "reasoning_type": "theory_foundation",
-        "pedagogical_role": "official_reference",
-        "why_retrieved": [
-          "official WSET extracted Tutor support"
-        ],
-        "text_excerpt": "# 43 Sherry <!-- p\u00e1gina 193 --> 184 UNDERSTANDINGW INES: EXPLAININGST YLEA ND QUALITY Sherry 43 Probably more than any other wine, Sherry is a wine style that is defined by the processes used during maturation. None of the key techniques, the so/era system, biological ageing or oxidative ageing, are unique to this region, but it is in Jerez that they are...",
-        "source_video": "",
-        "source_filename": "8-1_43_sherry.md"
-      },
-      {
-        "context_type": "retrieval_sandbox_chunk",
-        "chunk_id": "OFFICIAL_WSET_4_7_COMMON_ELEMENTS_IN_WINEMAKING_AND_MATURATION_001",
-        "forced_retrieval": false,
-        "agent_corpus": "tutor",
-        "safe_for_examiner": false,
-        "score": 0.2867,
-        "source_type": "official_wset_extracted",
-        "source_file": "knowledge/official-wset/study-guide/wset_markdown/seccion_5_section_2_factors_affecting_the_style_quality_and_price_of_w/5-4_7_common_elements_in_winemaking_and_maturation.md",
-        "source_trust_tier": 1,
-        "title": "7 Common Elements in Winemaking and Maturation",
-        "section": "5",
-        "subtopic": "5.4",
-        "official_grading_authority": false,
-        "requires_human_review": true,
-        "reasoning_type": "theory_foundation",
-        "pedagogical_role": "official_reference",
-        "why_retrieved": [
-          "official WSET extracted Tutor support"
-        ],
-        "text_excerpt": "# 7 Common Elements in Winemaking and Maturation <!-- p\u00e1gina 52 --> COMMONE LEMENTISN W INEMAKINGAN D MATURATION 43 CommoEnl ementisn W inemakinagn dM aturation 7 There are certain factors and processes that are common to all wines and these are explored in this chapter. It is important to get an appreciation of their roles in winemaking and maturation an...",
-        "source_video": "",
-        "source_filename": "5-4_7_common_elements_in_winemaking_and_maturation.md"
-      },
-      {
-        "context_type": "retrieval_sandbox_chunk",
         "chunk_id": "OFFICIAL_WSET_WINES_OF_THE_WORLD_6_11_22_GERMANY_001",
         "forced_retrieval": false,
         "agent_corpus": "tutor",
         "safe_for_examiner": false,
-        "score": 0.2867,
+        "score": 0.4687,
         "source_type": "official_wset_extracted",
         "source_file": "knowledge/official-wset/study-guide/wset_markdown/seccion_6_section_3_still_wines_of_the_world/6-11_22_germany.md",
         "source_trust_tier": 1,
@@ -189,7 +143,9 @@
         "reasoning_type": "theory_foundation",
         "pedagogical_role": "official_reference",
         "why_retrieved": [
-          "official WSET extracted Tutor support"
+          "matched canonical/query terms: alsace, concentrated, noble rot, sparkling, sugar, yeast",
+          "official WSET extracted Tutor support",
+          "exact term match"
         ],
         "text_excerpt": "# 22 Germany <!-- p\u00e1gina 117 --> 108 UNDERSTANDINGW INES:E XPLAININGST YLEA ND QUALITY Germany 22 Germany is the country producing the highest concentration of world-class Rieslings. Whether dry and steely, medium-sweet and floral, or lusciously sweet, German winemakers' mastery of this variety is unquestionable. However, there is more to German wines tha...",
         "source_video": "",
@@ -197,11 +153,63 @@
       },
       {
         "context_type": "retrieval_sandbox_chunk",
-        "chunk_id": "How_to_prepare_for_the_WSET_Level_3_Tasting_Exam-0001",
+        "chunk_id": "OFFICIAL_WSET_GUIDE_WSET_MARKDOWN_SECCION_10_INDEX_10_INDEX_001",
         "forced_retrieval": false,
         "agent_corpus": "tutor",
         "safe_for_examiner": false,
-        "score": 0.22,
+        "score": 0.4677,
+        "source_type": "official_wset_extracted",
+        "source_file": "knowledge/official-wset/study-guide/wset_markdown/seccion_10_index/10_index.md",
+        "source_trust_tier": 1,
+        "title": "Index",
+        "section": "10",
+        "subtopic": "10",
+        "official_grading_authority": false,
+        "requires_human_review": true,
+        "reasoning_type": "theory_foundation",
+        "pedagogical_role": "official_reference",
+        "why_retrieved": [
+          "matched canonical/query terms: alsace, aszu, botrytis, burgundy, chenin blanc, concentrated, liqueur de tirage, loire",
+          "official WSET extracted Tutor support",
+          "exact term match"
+        ],
+        "text_excerpt": "# Index <!-- p\u00e1gina 206 --> INDEX 197 Index Numbers in bold type indicates images, diagrams and illustrations. Abruzzo 128 bacterial diseases 40 canopy management 34, 35, 40, 85 acid 43, 48, 49 Baden 111-12 Canterbury 171-2 lactic 49 bag-in-box 52, 53 Cap C/assique (see Methode Cap C/assique) malic43,49 Baga 140 cap management 63 tartaric 43, 48 Bairrada...",
+        "source_video": "",
+        "source_filename": "10_index.md"
+      },
+      {
+        "context_type": "retrieval_sandbox_chunk",
+        "chunk_id": "OFFICIAL_WSET_WINES_OF_THE_WORLD_8_1_43_SHERRY_001",
+        "forced_retrieval": false,
+        "agent_corpus": "tutor",
+        "safe_for_examiner": false,
+        "score": 0.4623,
+        "source_type": "official_wset_extracted",
+        "source_file": "knowledge/official-wset/study-guide/wset_markdown/seccion_8_section_5_fortified_wines_of_the_world/8-1_43_sherry.md",
+        "source_trust_tier": 1,
+        "title": "43 Sherry",
+        "section": "8",
+        "subtopic": "8.1",
+        "official_grading_authority": false,
+        "requires_human_review": true,
+        "reasoning_type": "theory_foundation",
+        "pedagogical_role": "official_reference",
+        "why_retrieved": [
+          "matched canonical/query terms: concentrated, sugar, yeast",
+          "official WSET extracted Tutor support",
+          "exact term match"
+        ],
+        "text_excerpt": "# 43 Sherry <!-- p\u00e1gina 193 --> 184 UNDERSTANDINGW INES: EXPLAININGST YLEA ND QUALITY Sherry 43 Probably more than any other wine, Sherry is a wine style that is defined by the processes used during maturation. None of the key techniques, the so/era system, biological ageing or oxidative ageing, are unique to this region, but it is in Jerez that they are...",
+        "source_video": "",
+        "source_filename": "8-1_43_sherry.md"
+      },
+      {
+        "context_type": "retrieval_sandbox_chunk",
+        "chunk_id": "How_to_pass_your_WSET_Level_3_Theory_Exam-0006",
+        "forced_retrieval": false,
+        "agent_corpus": "tutor",
+        "safe_for_examiner": false,
+        "score": 0.3265,
         "source_type": "manual_curated_srt",
         "source_file": "",
         "source_trust_tier": "pedagogical",
@@ -211,14 +219,16 @@
         "official_grading_authority": false,
         "requires_human_review": false,
         "reasoning_type": "exam_strategy",
-        "pedagogical_role": "exam_strategy",
+        "pedagogical_role": "foundational",
         "why_retrieved": [
-          "golden tutor chunk candidate",
-          "high retrieval priority in golden QA report"
+          "matched canonical/query terms: burgundy, sparkling",
+          "medium retrieval priority in golden QA report",
+          "pedagogical role fits foundational_theory",
+          "exact term match"
         ],
-        "text_excerpt": "So, let's go through um preparing you for the very famous and intensive and intimidating level three tasting examination. If you do follow all of these key points and you listen to your tutor, you will get through this tasting examination. It is in fact the least of your worries when it comes to the level three exam. uh it is in fact the uh the theory whe...",
-        "source_video": "How to prepare for the WSET Level 3 Tasting Exam",
-        "source_filename": "How to prepare for the WSET Level 3 Tasting Exam.srt"
+        "text_excerpt": "must must must revise it it is still the most poorly done the least successfully done question of the whole level three syllabus so why because it's different and it's often taught at the end of the course and it's often the least understood by students now you have the opportunity to correct this in the world you now know it's coming so please revise it...",
+        "source_video": "How to pass your WSET Level 3 Theory Exam!",
+        "source_filename": "[English (auto-generated)] How to pass your WSET Level 3 Theory Exam! [DownSub.com].srt"
       }
     ],
     "tutor_directive": {
@@ -283,7 +293,7 @@
           "fragile:cause -> mechanism -> effect"
         ],
         "recent_misconceptions": [],
-        "session_count": 118,
+        "session_count": 193,
         "pedagogical_memory": {
           "schema_version": "pedagogical_memory_v1",
           "low_mastery_concepts": [],
@@ -339,7 +349,7 @@
           "forced_retrieval": false,
           "agent_corpus": "tutor",
           "safe_for_examiner": false,
-          "score": 0.3333,
+          "score": 0.5084,
           "source_type": "official_wset_extracted",
           "source_file": "knowledge/official-wset/study-guide/wset_markdown/seccion_6_section_3_still_wines_of_the_world/6-13_24_tokaj.md",
           "source_trust_tier": 1,
@@ -351,7 +361,9 @@
           "reasoning_type": "theory_foundation",
           "pedagogical_role": "official_reference",
           "why_retrieved": [
-            "official WSET extracted Tutor support"
+            "matched canonical/query terms: aszu, botrytis, concentrated, hungary, noble rot, sugar, tokaji, yeast",
+            "official WSET extracted Tutor support",
+            "exact term match"
           ],
           "text_excerpt": "# 24 Tokaj <!-- p\u00e1gina 125 --> 116 UNDERSTANDINGW INES:E XPLAININGS TYLEA ND QUALITY 24 TokajT he region of Tokaj (note the wine it produces is called Tokaji) is located in the foothills of the Carpathian Mountains in the far north east of Hungary and close to the Slovakian border. It has a long-standing reputation for producing premium botrytised sweet w...",
           "source_video": "",
@@ -359,59 +371,11 @@
         },
         {
           "context_type": "retrieval_sandbox_chunk",
-          "chunk_id": "OFFICIAL_WSET_WINES_OF_THE_WORLD_8_1_43_SHERRY_001",
-          "forced_retrieval": false,
-          "agent_corpus": "tutor",
-          "safe_for_examiner": false,
-          "score": 0.32,
-          "source_type": "official_wset_extracted",
-          "source_file": "knowledge/official-wset/study-guide/wset_markdown/seccion_8_section_5_fortified_wines_of_the_world/8-1_43_sherry.md",
-          "source_trust_tier": 1,
-          "title": "43 Sherry",
-          "section": "8",
-          "subtopic": "8.1",
-          "official_grading_authority": false,
-          "requires_human_review": true,
-          "reasoning_type": "theory_foundation",
-          "pedagogical_role": "official_reference",
-          "why_retrieved": [
-            "official WSET extracted Tutor support"
-          ],
-          "text_excerpt": "# 43 Sherry <!-- p\u00e1gina 193 --> 184 UNDERSTANDINGW INES: EXPLAININGST YLEA ND QUALITY Sherry 43 Probably more than any other wine, Sherry is a wine style that is defined by the processes used during maturation. None of the key techniques, the so/era system, biological ageing or oxidative ageing, are unique to this region, but it is in Jerez that they are...",
-          "source_video": "",
-          "source_filename": "8-1_43_sherry.md"
-        },
-        {
-          "context_type": "retrieval_sandbox_chunk",
-          "chunk_id": "OFFICIAL_WSET_4_7_COMMON_ELEMENTS_IN_WINEMAKING_AND_MATURATION_001",
-          "forced_retrieval": false,
-          "agent_corpus": "tutor",
-          "safe_for_examiner": false,
-          "score": 0.2867,
-          "source_type": "official_wset_extracted",
-          "source_file": "knowledge/official-wset/study-guide/wset_markdown/seccion_5_section_2_factors_affecting_the_style_quality_and_price_of_w/5-4_7_common_elements_in_winemaking_and_maturation.md",
-          "source_trust_tier": 1,
-          "title": "7 Common Elements in Winemaking and Maturation",
-          "section": "5",
-          "subtopic": "5.4",
-          "official_grading_authority": false,
-          "requires_human_review": true,
-          "reasoning_type": "theory_foundation",
-          "pedagogical_role": "official_reference",
-          "why_retrieved": [
-            "official WSET extracted Tutor support"
-          ],
-          "text_excerpt": "# 7 Common Elements in Winemaking and Maturation <!-- p\u00e1gina 52 --> COMMONE LEMENTISN W INEMAKINGAN D MATURATION 43 CommoEnl ementisn W inemakinagn dM aturation 7 There are certain factors and processes that are common to all wines and these are explored in this chapter. It is important to get an appreciation of their roles in winemaking and maturation an...",
-          "source_video": "",
-          "source_filename": "5-4_7_common_elements_in_winemaking_and_maturation.md"
-        },
-        {
-          "context_type": "retrieval_sandbox_chunk",
           "chunk_id": "OFFICIAL_WSET_WINES_OF_THE_WORLD_6_11_22_GERMANY_001",
           "forced_retrieval": false,
           "agent_corpus": "tutor",
           "safe_for_examiner": false,
-          "score": 0.2867,
+          "score": 0.4687,
           "source_type": "official_wset_extracted",
           "source_file": "knowledge/official-wset/study-guide/wset_markdown/seccion_6_section_3_still_wines_of_the_world/6-11_22_germany.md",
           "source_trust_tier": 1,
@@ -423,7 +387,9 @@
           "reasoning_type": "theory_foundation",
           "pedagogical_role": "official_reference",
           "why_retrieved": [
-            "official WSET extracted Tutor support"
+            "matched canonical/query terms: alsace, concentrated, noble rot, sparkling, sugar, yeast",
+            "official WSET extracted Tutor support",
+            "exact term match"
           ],
           "text_excerpt": "# 22 Germany <!-- p\u00e1gina 117 --> 108 UNDERSTANDINGW INES:E XPLAININGST YLEA ND QUALITY Germany 22 Germany is the country producing the highest concentration of world-class Rieslings. Whether dry and steely, medium-sweet and floral, or lusciously sweet, German winemakers' mastery of this variety is unquestionable. However, there is more to German wines tha...",
           "source_video": "",
@@ -431,11 +397,63 @@
         },
         {
           "context_type": "retrieval_sandbox_chunk",
-          "chunk_id": "How_to_prepare_for_the_WSET_Level_3_Tasting_Exam-0001",
+          "chunk_id": "OFFICIAL_WSET_GUIDE_WSET_MARKDOWN_SECCION_10_INDEX_10_INDEX_001",
           "forced_retrieval": false,
           "agent_corpus": "tutor",
           "safe_for_examiner": false,
-          "score": 0.22,
+          "score": 0.4677,
+          "source_type": "official_wset_extracted",
+          "source_file": "knowledge/official-wset/study-guide/wset_markdown/seccion_10_index/10_index.md",
+          "source_trust_tier": 1,
+          "title": "Index",
+          "section": "10",
+          "subtopic": "10",
+          "official_grading_authority": false,
+          "requires_human_review": true,
+          "reasoning_type": "theory_foundation",
+          "pedagogical_role": "official_reference",
+          "why_retrieved": [
+            "matched canonical/query terms: alsace, aszu, botrytis, burgundy, chenin blanc, concentrated, liqueur de tirage, loire",
+            "official WSET extracted Tutor support",
+            "exact term match"
+          ],
+          "text_excerpt": "# Index <!-- p\u00e1gina 206 --> INDEX 197 Index Numbers in bold type indicates images, diagrams and illustrations. Abruzzo 128 bacterial diseases 40 canopy management 34, 35, 40, 85 acid 43, 48, 49 Baden 111-12 Canterbury 171-2 lactic 49 bag-in-box 52, 53 Cap C/assique (see Methode Cap C/assique) malic43,49 Baga 140 cap management 63 tartaric 43, 48 Bairrada...",
+          "source_video": "",
+          "source_filename": "10_index.md"
+        },
+        {
+          "context_type": "retrieval_sandbox_chunk",
+          "chunk_id": "OFFICIAL_WSET_WINES_OF_THE_WORLD_8_1_43_SHERRY_001",
+          "forced_retrieval": false,
+          "agent_corpus": "tutor",
+          "safe_for_examiner": false,
+          "score": 0.4623,
+          "source_type": "official_wset_extracted",
+          "source_file": "knowledge/official-wset/study-guide/wset_markdown/seccion_8_section_5_fortified_wines_of_the_world/8-1_43_sherry.md",
+          "source_trust_tier": 1,
+          "title": "43 Sherry",
+          "section": "8",
+          "subtopic": "8.1",
+          "official_grading_authority": false,
+          "requires_human_review": true,
+          "reasoning_type": "theory_foundation",
+          "pedagogical_role": "official_reference",
+          "why_retrieved": [
+            "matched canonical/query terms: concentrated, sugar, yeast",
+            "official WSET extracted Tutor support",
+            "exact term match"
+          ],
+          "text_excerpt": "# 43 Sherry <!-- p\u00e1gina 193 --> 184 UNDERSTANDINGW INES: EXPLAININGST YLEA ND QUALITY Sherry 43 Probably more than any other wine, Sherry is a wine style that is defined by the processes used during maturation. None of the key techniques, the so/era system, biological ageing or oxidative ageing, are unique to this region, but it is in Jerez that they are...",
+          "source_video": "",
+          "source_filename": "8-1_43_sherry.md"
+        },
+        {
+          "context_type": "retrieval_sandbox_chunk",
+          "chunk_id": "How_to_pass_your_WSET_Level_3_Theory_Exam-0006",
+          "forced_retrieval": false,
+          "agent_corpus": "tutor",
+          "safe_for_examiner": false,
+          "score": 0.3265,
           "source_type": "manual_curated_srt",
           "source_file": "",
           "source_trust_tier": "pedagogical",
@@ -445,14 +463,16 @@
           "official_grading_authority": false,
           "requires_human_review": false,
           "reasoning_type": "exam_strategy",
-          "pedagogical_role": "exam_strategy",
+          "pedagogical_role": "foundational",
           "why_retrieved": [
-            "golden tutor chunk candidate",
-            "high retrieval priority in golden QA report"
+            "matched canonical/query terms: burgundy, sparkling",
+            "medium retrieval priority in golden QA report",
+            "pedagogical role fits foundational_theory",
+            "exact term match"
           ],
-          "text_excerpt": "So, let's go through um preparing you for the very famous and intensive and intimidating level three tasting examination. If you do follow all of these key points and you listen to your tutor, you will get through this tasting examination. It is in fact the least of your worries when it comes to the level three exam. uh it is in fact the uh the theory whe...",
-          "source_video": "How to prepare for the WSET Level 3 Tasting Exam",
-          "source_filename": "How to prepare for the WSET Level 3 Tasting Exam.srt"
+          "text_excerpt": "must must must revise it it is still the most poorly done the least successfully done question of the whole level three syllabus so why because it's different and it's often taught at the end of the course and it's often the least understood by students now you have the opportunity to correct this in the world you now know it's coming so please revise it...",
+          "source_video": "How to pass your WSET Level 3 Theory Exam!",
+          "source_filename": "[English (auto-generated)] How to pass your WSET Level 3 Theory Exam! [DownSub.com].srt"
         }
       ],
       "forced_causal_chains": [],
@@ -488,7 +508,7 @@
     },
     "context_package_paths": {
       "latest": "C:/Users/esand/OneDrive/Documents/WSET-AI-System/knowledge/self-eval/attempts/25/latest_context_package.json",
-      "timestamped": "C:/Users/esand/OneDrive/Documents/WSET-AI-System/knowledge/self-eval/attempts/25/20260517_034858_context_package.json"
+      "timestamped": "C:/Users/esand/OneDrive/Documents/WSET-AI-System/knowledge/self-eval/attempts/25/20260517_184149_context_package.json"
     }
   },
   "latest_context_package_path": "C:/Users/esand/OneDrive/Documents/WSET-AI-System/knowledge/self-eval/attempts/25/latest_context_package.json",

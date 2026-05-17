@@ -41,7 +41,7 @@
       "fragile:cause -> mechanism -> effect"
     ],
     "recent_misconceptions": [],
-    "session_count": 118,
+    "session_count": 193,
     "pedagogical_memory": {
       "schema_version": "pedagogical_memory_v1",
       "low_mastery_concepts": [],
@@ -97,7 +97,7 @@
       "forced_retrieval": false,
       "agent_corpus": "tutor",
       "safe_for_examiner": false,
-      "score": 0.54,
+      "score": 0.5371,
       "source_type": "official_wset_extracted",
       "source_file": "knowledge/official-wset/study-guide/wset_markdown/seccion_6_section_3_still_wines_of_the_world/6-13_24_tokaj.md",
       "source_trust_tier": 1,
@@ -109,7 +109,7 @@
       "reasoning_type": "theory_foundation",
       "pedagogical_role": "official_reference",
       "why_retrieved": [
-        "matched canonical/query terms: principal",
+        "matched canonical/query terms: aszu, botrytis, concentrated, fermentation, hungary, noble rot, principal, tokaji",
         "official WSET extracted Tutor support",
         "exact term match"
       ],
@@ -119,55 +119,29 @@
     },
     {
       "context_type": "retrieval_sandbox_chunk",
-      "chunk_id": "OFFICIAL_WSET_WINES_OF_THE_WORLD_6_19_30_SPAIN_001",
+      "chunk_id": "OFFICIAL_WSET_GUIDE_WSET_MARKDOWN_SECCION_10_INDEX_10_INDEX_001",
       "forced_retrieval": false,
       "agent_corpus": "tutor",
       "safe_for_examiner": false,
-      "score": 0.48,
+      "score": 0.4722,
       "source_type": "official_wset_extracted",
-      "source_file": "knowledge/official-wset/study-guide/wset_markdown/seccion_6_section_3_still_wines_of_the_world/6-19_30_spain.md",
+      "source_file": "knowledge/official-wset/study-guide/wset_markdown/seccion_10_index/10_index.md",
       "source_trust_tier": 1,
-      "title": "30 Spain",
-      "section": "6",
-      "subtopic": "6.19",
+      "title": "Index",
+      "section": "10",
+      "subtopic": "10",
       "official_grading_authority": false,
       "requires_human_review": true,
       "reasoning_type": "theory_foundation",
       "pedagogical_role": "official_reference",
       "why_retrieved": [
-        "matched canonical/query terms: principal",
+        "matched canonical/query terms: alsace, aszu, botrytis, burgundy, chenin blanc, concentrated, destemming, fermentation",
         "official WSET extracted Tutor support",
         "exact term match"
       ],
-      "text_excerpt": "# 30 Spain <!-- p\u00e1gina 140 --> SPAIN 131 SpainS pain has a long history of wine production but its wines have only relatively recently come 30 to prominence on international markets. Styles vary from traditional barrel-aged reds to modern, fruity whites; and although international varieties have been planted in many of Spain's wine regions, it is the coun...",
+      "text_excerpt": "# Index <!-- p\u00e1gina 206 --> INDEX 197 Index Numbers in bold type indicates images, diagrams and illustrations. Abruzzo 128 bacterial diseases 40 canopy management 34, 35, 40, 85 acid 43, 48, 49 Baden 111-12 Canterbury 171-2 lactic 49 bag-in-box 52, 53 Cap C/assique (see Methode Cap C/assique) malic43,49 Baga 140 cap management 63 tartaric 43, 48 Bairrada...",
       "source_video": "",
-      "source_filename": "6-19_30_spain.md"
-    },
-    {
-      "context_type": "retrieval_sandbox_chunk",
-      "chunk_id": "OFFICIAL_WSET_WINES_OF_THE_WORLD_6_25_36_CHILE_001",
-      "forced_retrieval": false,
-      "agent_corpus": "tutor",
-      "safe_for_examiner": false,
-      "score": 0.48,
-      "source_type": "official_wset_extracted",
-      "source_file": "knowledge/official-wset/study-guide/wset_markdown/seccion_6_section_3_still_wines_of_the_world/6-25_36_chile.md",
-      "source_trust_tier": 1,
-      "title": "36 Chile",
-      "section": "6",
-      "subtopic": "6.25",
-      "official_grading_authority": false,
-      "requires_human_review": true,
-      "reasoning_type": "theory_foundation",
-      "pedagogical_role": "official_reference",
-      "why_retrieved": [
-        "matched canonical/query terms: principal",
-        "official WSET extracted Tutor support",
-        "exact term match"
-      ],
-      "text_excerpt": "# 36 Chile <!-- p\u00e1gina 161 --> 152 UNDERSTANDING WINES: EXPLAINING STYLE AND QUALITY ChIie 36 Located between the Andes to the east and the Pacific to the west, Chile has an unusual geography. However, it is this geography, which combines cooling influences from the Pacific and Andes along with plentiful sunshine, that explains why Chile has found success...",
-      "source_video": "",
-      "source_filename": "6-25_36_chile.md"
+      "source_filename": "10_index.md"
     },
     {
       "context_type": "retrieval_sandbox_chunk",
@@ -175,7 +149,7 @@
       "forced_retrieval": false,
       "agent_corpus": "tutor",
       "safe_for_examiner": false,
-      "score": 0.47,
+      "score": 0.4715,
       "source_type": "official_wset_extracted",
       "source_file": "knowledge/official-wset/study-guide/wset_markdown/seccion_5_section_2_factors_affecting_the_style_quality_and_price_of_w/5-4_7_common_elements_in_winemaking_and_maturation.md",
       "source_trust_tier": 1,
@@ -187,7 +161,7 @@
       "reasoning_type": "theory_foundation",
       "pedagogical_role": "official_reference",
       "why_retrieved": [
-        "matched canonical/query terms: principal",
+        "matched canonical/query terms: concentrated, destemming, fermentation, hungary, principal",
         "official WSET extracted Tutor support",
         "exact term match"
       ],
@@ -197,11 +171,37 @@
     },
     {
       "context_type": "retrieval_sandbox_chunk",
-      "chunk_id": "WSET_Level_3_Wines_-_Understanding_the_Vine_Part_1_Vine_Anatomy-0001",
+      "chunk_id": "OFFICIAL_WSET_WINES_OF_THE_WORLD_6_19_30_SPAIN_001",
       "forced_retrieval": false,
       "agent_corpus": "tutor",
       "safe_for_examiner": false,
-      "score": 0.315,
+      "score": 0.4653,
+      "source_type": "official_wset_extracted",
+      "source_file": "knowledge/official-wset/study-guide/wset_markdown/seccion_6_section_3_still_wines_of_the_world/6-19_30_spain.md",
+      "source_trust_tier": 1,
+      "title": "30 Spain",
+      "section": "6",
+      "subtopic": "6.19",
+      "official_grading_authority": false,
+      "requires_human_review": true,
+      "reasoning_type": "theory_foundation",
+      "pedagogical_role": "official_reference",
+      "why_retrieved": [
+        "matched canonical/query terms: concentrated, fermentation, principal, sparkling",
+        "official WSET extracted Tutor support",
+        "exact term match"
+      ],
+      "text_excerpt": "# 30 Spain <!-- p\u00e1gina 140 --> SPAIN 131 SpainS pain has a long history of wine production but its wines have only relatively recently come 30 to prominence on international markets. Styles vary from traditional barrel-aged reds to modern, fruity whites; and although international varieties have been planted in many of Spain's wine regions, it is the coun...",
+      "source_video": "",
+      "source_filename": "6-19_30_spain.md"
+    },
+    {
+      "context_type": "retrieval_sandbox_chunk",
+      "chunk_id": "How_to_pass_your_WSET_Level_3_Theory_Exam-0006",
+      "forced_retrieval": false,
+      "agent_corpus": "tutor",
+      "safe_for_examiner": false,
+      "score": 0.3259,
       "source_type": "manual_curated_srt",
       "source_file": "",
       "source_trust_tier": "pedagogical",
@@ -210,16 +210,17 @@
       "subtopic": "",
       "official_grading_authority": false,
       "requires_human_review": false,
-      "reasoning_type": "cause_effect",
+      "reasoning_type": "exam_strategy",
       "pedagogical_role": "foundational",
       "why_retrieved": [
-        "matched canonical/query terms: principal",
+        "matched canonical/query terms: burgundy, sparkling",
+        "medium retrieval priority in golden QA report",
         "pedagogical role fits foundational_theory",
         "exact term match"
       ],
-      "text_excerpt": "are those that are the new freshly grown parts of the vine so they grow very new every year so therefore they are that current year's growth so that's what we're going to be looking at the principal structure that you can see here we actually have a a hardened cane a one-year-old wood at the bottom we're ignoring that for now we're just looking at all the...",
-      "source_video": "WSET Level 3 Wines - Understanding the Vine Part 1 Vine Anatomy",
-      "source_filename": "WSET Level 3 Wines - Understanding the Vine Part 1 Vine Anatomy [English (auto-generated)] [DownloadYoutubeSubtitles.com].srt"
+      "text_excerpt": "must must must revise it it is still the most poorly done the least successfully done question of the whole level three syllabus so why because it's different and it's often taught at the end of the course and it's often the least understood by students now you have the opportunity to correct this in the world you now know it's coming so please revise it...",
+      "source_video": "How to pass your WSET Level 3 Theory Exam!",
+      "source_filename": "[English (auto-generated)] How to pass your WSET Level 3 Theory Exam! [DownSub.com].srt"
     }
   ],
   "forced_causal_chains": [],

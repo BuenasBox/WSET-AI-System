@@ -41,7 +41,7 @@
       "fragile:cause -> mechanism -> effect"
     ],
     "recent_misconceptions": [],
-    "session_count": 118,
+    "session_count": 193,
     "pedagogical_memory": {
       "schema_version": "pedagogical_memory_v1",
       "low_mastery_concepts": [],
@@ -97,7 +97,7 @@
       "forced_retrieval": false,
       "agent_corpus": "tutor",
       "safe_for_examiner": false,
-      "score": 0.445,
+      "score": 0.4755,
       "source_type": "official_wset_extracted",
       "source_file": "knowledge/official-wset/study-guide/wset_markdown/seccion_10_index/10_index.md",
       "source_trust_tier": 1,
@@ -109,7 +109,7 @@
       "reasoning_type": "theory_foundation",
       "pedagogical_role": "official_reference",
       "why_retrieved": [
-        "matched canonical/query terms: vino",
+        "matched canonical/query terms: alsace, aszu, botrytis, burgundy, chenin blanc, concentrated, loire, noble rot",
         "official WSET extracted Tutor support",
         "exact term match"
       ],
@@ -119,55 +119,29 @@
     },
     {
       "context_type": "retrieval_sandbox_chunk",
-      "chunk_id": "OFFICIAL_WSET_WINES_OF_THE_WORLD_6_19_30_SPAIN_001",
+      "chunk_id": "OFFICIAL_WSET_WINES_OF_THE_WORLD_6_13_24_TOKAJ_001",
       "forced_retrieval": false,
       "agent_corpus": "tutor",
       "safe_for_examiner": false,
-      "score": 0.41,
+      "score": 0.4665,
       "source_type": "official_wset_extracted",
-      "source_file": "knowledge/official-wset/study-guide/wset_markdown/seccion_6_section_3_still_wines_of_the_world/6-19_30_spain.md",
+      "source_file": "knowledge/official-wset/study-guide/wset_markdown/seccion_6_section_3_still_wines_of_the_world/6-13_24_tokaj.md",
       "source_trust_tier": 1,
-      "title": "30 Spain",
+      "title": "24 Tokaj",
       "section": "6",
-      "subtopic": "6.19",
+      "subtopic": "6.13",
       "official_grading_authority": false,
       "requires_human_review": true,
       "reasoning_type": "theory_foundation",
       "pedagogical_role": "official_reference",
       "why_retrieved": [
-        "matched canonical/query terms: vino",
+        "matched canonical/query terms: aszu, botrytis, concentrated, hungary, noble rot, tokaji",
         "official WSET extracted Tutor support",
         "exact term match"
       ],
-      "text_excerpt": "# 30 Spain <!-- p\u00e1gina 140 --> SPAIN 131 SpainS pain has a long history of wine production but its wines have only relatively recently come 30 to prominence on international markets. Styles vary from traditional barrel-aged reds to modern, fruity whites; and although international varieties have been planted in many of Spain's wine regions, it is the coun...",
+      "text_excerpt": "# 24 Tokaj <!-- p\u00e1gina 125 --> 116 UNDERSTANDINGW INES:E XPLAININGS TYLEA ND QUALITY 24 TokajT he region of Tokaj (note the wine it produces is called Tokaji) is located in the foothills of the Carpathian Mountains in the far north east of Hungary and close to the Slovakian border. It has a long-standing reputation for producing premium botrytised sweet w...",
       "source_video": "",
-      "source_filename": "6-19_30_spain.md"
-    },
-    {
-      "context_type": "retrieval_sandbox_chunk",
-      "chunk_id": "OFFICIAL_WSET_OF_THE_WORLD_6_17_28_CENTRAL_ITALY_001",
-      "forced_retrieval": false,
-      "agent_corpus": "tutor",
-      "safe_for_examiner": false,
-      "score": 0.375,
-      "source_type": "official_wset_extracted",
-      "source_file": "knowledge/official-wset/study-guide/wset_markdown/seccion_6_section_3_still_wines_of_the_world/6-17_28_central_italy.md",
-      "source_trust_tier": 1,
-      "title": "28 Central Italy",
-      "section": "6",
-      "subtopic": "6.17",
-      "official_grading_authority": false,
-      "requires_human_review": true,
-      "reasoning_type": "theory_foundation",
-      "pedagogical_role": "official_reference",
-      "why_retrieved": [
-        "matched canonical/query terms: vino",
-        "official WSET extracted Tutor support",
-        "exact term match"
-      ],
-      "text_excerpt": "# 28 Central Italy <!-- p\u00e1gina 135 --> 126 UNDERSTANDING WINES: EXPLAINING STYLE AND QUALITY CentrIa l tal y 28 This part of Italy is most widely associated with the grape variety Sangiovese and the most famous wine made from it, Chianti. However, there is more to central Italy than this. Refreshing whites and premium full-bodied reds from both local and...",
-      "source_video": "",
-      "source_filename": "6-17_28_central_italy.md"
+      "source_filename": "6-13_24_tokaj.md"
     },
     {
       "context_type": "retrieval_sandbox_chunk",
@@ -175,7 +149,7 @@
       "forced_retrieval": false,
       "agent_corpus": "tutor",
       "safe_for_examiner": false,
-      "score": 0.285,
+      "score": 0.4475,
       "source_type": "official_wset_extracted",
       "source_file": "knowledge/official-wset/study-guide/wset_markdown/seccion_5_section_2_factors_affecting_the_style_quality_and_price_of_w/5-5_8_white_and_sweet_winemaking.md",
       "source_trust_tier": 1,
@@ -187,7 +161,9 @@
       "reasoning_type": "theory_foundation",
       "pedagogical_role": "official_reference",
       "why_retrieved": [
-        "official WSET extracted Tutor support"
+        "matched canonical/query terms: alsace, burgundy, concentrated, loire",
+        "official WSET extracted Tutor support",
+        "exact term match"
       ],
       "text_excerpt": "# 8 White and Sweet Winemaking <!-- p\u00e1gina 64 --> WHITEA ND SWEETWINEMAKING 55 Whitea ndS weeWt inemakingRel atively speaking, white winemaking is far 8 less involved compared with red winemaking. This chapter will focus on winemaking options for white wine and then look at how high volume, inexpensive wines and premium wines are made. It should be noted...",
       "source_video": "",
@@ -195,11 +171,37 @@
     },
     {
       "context_type": "retrieval_sandbox_chunk",
-      "chunk_id": "How_to_prepare_for_the_WSET_Level_3_Tasting_Exam-0001",
+      "chunk_id": "OFFICIAL_WSET_4_7_COMMON_ELEMENTS_IN_WINEMAKING_AND_MATURATION_001",
       "forced_retrieval": false,
       "agent_corpus": "tutor",
       "safe_for_examiner": false,
-      "score": 0.22,
+      "score": 0.4345,
+      "source_type": "official_wset_extracted",
+      "source_file": "knowledge/official-wset/study-guide/wset_markdown/seccion_5_section_2_factors_affecting_the_style_quality_and_price_of_w/5-4_7_common_elements_in_winemaking_and_maturation.md",
+      "source_trust_tier": 1,
+      "title": "7 Common Elements in Winemaking and Maturation",
+      "section": "5",
+      "subtopic": "5.4",
+      "official_grading_authority": false,
+      "requires_human_review": true,
+      "reasoning_type": "theory_foundation",
+      "pedagogical_role": "official_reference",
+      "why_retrieved": [
+        "matched canonical/query terms: concentrated, hungary",
+        "official WSET extracted Tutor support",
+        "exact term match"
+      ],
+      "text_excerpt": "# 7 Common Elements in Winemaking and Maturation <!-- p\u00e1gina 52 --> COMMONE LEMENTISN W INEMAKINGAN D MATURATION 43 CommoEnl ementisn W inemakinagn dM aturation 7 There are certain factors and processes that are common to all wines and these are explored in this chapter. It is important to get an appreciation of their roles in winemaking and maturation an...",
+      "source_video": "",
+      "source_filename": "5-4_7_common_elements_in_winemaking_and_maturation.md"
+    },
+    {
+      "context_type": "retrieval_sandbox_chunk",
+      "chunk_id": "How_to_pass_your_WSET_Level_3_Theory_Exam-0006",
+      "forced_retrieval": false,
+      "agent_corpus": "tutor",
+      "safe_for_examiner": false,
+      "score": 0.328,
       "source_type": "manual_curated_srt",
       "source_file": "",
       "source_trust_tier": "pedagogical",
@@ -209,14 +211,16 @@
       "official_grading_authority": false,
       "requires_human_review": false,
       "reasoning_type": "exam_strategy",
-      "pedagogical_role": "exam_strategy",
+      "pedagogical_role": "foundational",
       "why_retrieved": [
-        "golden tutor chunk candidate",
-        "high retrieval priority in golden QA report"
+        "matched canonical/query terms: burgundy, sparkling",
+        "medium retrieval priority in golden QA report",
+        "pedagogical role fits foundational_theory",
+        "exact term match"
       ],
-      "text_excerpt": "So, let's go through um preparing you for the very famous and intensive and intimidating level three tasting examination. If you do follow all of these key points and you listen to your tutor, you will get through this tasting examination. It is in fact the least of your worries when it comes to the level three exam. uh it is in fact the uh the theory whe...",
-      "source_video": "How to prepare for the WSET Level 3 Tasting Exam",
-      "source_filename": "How to prepare for the WSET Level 3 Tasting Exam.srt"
+      "text_excerpt": "must must must revise it it is still the most poorly done the least successfully done question of the whole level three syllabus so why because it's different and it's often taught at the end of the course and it's often the least understood by students now you have the opportunity to correct this in the world you now know it's coming so please revise it...",
+      "source_video": "How to pass your WSET Level 3 Theory Exam!",
+      "source_filename": "[English (auto-generated)] How to pass your WSET Level 3 Theory Exam! [DownSub.com].srt"
     }
   ],
   "forced_causal_chains": [],

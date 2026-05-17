@@ -5,69 +5,26 @@
   "examiner_scoring_allowed": false,
   "fragile_concepts": [
     {
-      "concept": "flor dies -> oxidative ageing",
-      "weakness_count": 3,
-      "severity": "medium"
-    },
-    {
-      "concept": "no flor -> oxidative ageing",
-      "weakness_count": 3,
-      "severity": "medium"
-    },
-    {
-      "concept": "shallow_retrieval",
-      "weakness_count": 19,
-      "severity": "high"
-    },
-    {
       "concept": "missing_keyword_support",
       "weakness_count": 10,
       "severity": "high"
-    },
-    {
-      "concept": "missing_causal_link_support",
-      "weakness_count": 3,
-      "severity": "medium"
     }
   ],
   "weakness_counters": {
-    "causal_chains": {
-      "flor dies -> oxidative ageing": 3,
-      "no flor -> oxidative ageing": 3
-    },
+    "causal_chains": {},
     "misconceptions": {},
     "retrieval": {
-      "missing_keyword_support": 10,
-      "shallow_retrieval": 19,
-      "missing_causal_link_support": 3
+      "missing_keyword_support": 10
     },
     "failure_labels": {
-      "shallow_retrieval": 10,
-      "shallow_reasoning": 2,
-      "missing_causal_link": 1,
-      "weak_exam_register": 9
+      "shallow_reasoning": 1
     }
   },
   "suggested_misconception_investigations": [],
   "orchestrator_recommendations": [
-    "Increase forced causal-chain retrieval for 'flor dies -> oxidative ageing' (weighted failures=3).",
-    "Increase forced causal-chain retrieval for 'no flor -> oxidative ageing' (weighted failures=3).",
-    "Improve retrieval plan for 'shallow_retrieval' (weighted failures=19).",
-    "Improve retrieval plan for 'missing_keyword_support' (weighted failures=10).",
-    "Improve retrieval plan for 'missing_causal_link_support' (weighted failures=3)."
+    "Improve retrieval plan for 'missing_keyword_support' (weighted failures=10)."
   ],
-  "retrieval_gap_question_ids": [
-    "1",
-    "2",
-    "4",
-    "6",
-    "12",
-    "14",
-    "16",
-    "17",
-    "21",
-    "24"
-  ],
+  "retrieval_gap_question_ids": [],
   "note": "Self-eval feedback artifact; real LES is updated by les_reconciler.reconcile_les_from_feedback().",
   "questions_attempted": 25
 }

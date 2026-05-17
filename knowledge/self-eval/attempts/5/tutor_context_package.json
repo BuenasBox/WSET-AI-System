@@ -41,7 +41,7 @@
       "fragile:cause -> mechanism -> effect"
     ],
     "recent_misconceptions": [],
-    "session_count": 118,
+    "session_count": 193,
     "pedagogical_memory": {
       "schema_version": "pedagogical_memory_v1",
       "low_mastery_concepts": [],
@@ -97,7 +97,7 @@
       "forced_retrieval": false,
       "agent_corpus": "tutor",
       "safe_for_examiner": false,
-      "score": 0.515,
+      "score": 0.5285,
       "source_type": "official_wset_extracted",
       "source_file": "knowledge/official-wset/study-guide/wset_markdown/seccion_10_index/10_index.md",
       "source_trust_tier": 1,
@@ -109,7 +109,7 @@
       "reasoning_type": "theory_foundation",
       "pedagogical_role": "official_reference",
       "why_retrieved": [
-        "matched canonical/query terms: Crianza, amontillado, crianza, oloroso",
+        "matched canonical/query terms: Crianza, alsace, amontillado, aszu, botrytis, burgundy, chenin blanc, concentrated",
         "official WSET extracted Tutor support",
         "exact term match"
       ],
@@ -123,7 +123,7 @@
       "forced_retrieval": false,
       "agent_corpus": "tutor",
       "safe_for_examiner": false,
-      "score": 0.48,
+      "score": 0.466,
       "source_type": "official_wset_extracted",
       "source_file": "knowledge/official-wset/study-guide/wset_markdown/seccion_6_section_3_still_wines_of_the_world/6-19_30_spain.md",
       "source_trust_tier": 1,
@@ -135,7 +135,7 @@
       "reasoning_type": "theory_foundation",
       "pedagogical_role": "official_reference",
       "why_retrieved": [
-        "matched canonical/query terms: Crianza, crianza",
+        "matched canonical/query terms: Crianza, concentrated, crianza, sparkling",
         "official WSET extracted Tutor support",
         "exact term match"
       ],
@@ -149,7 +149,7 @@
       "forced_retrieval": false,
       "agent_corpus": "tutor",
       "safe_for_examiner": false,
-      "score": 0.48,
+      "score": 0.454,
       "source_type": "official_wset_extracted",
       "source_file": "knowledge/official-wset/study-guide/wset_markdown/seccion_8_section_5_fortified_wines_of_the_world/8-1_43_sherry.md",
       "source_trust_tier": 1,
@@ -161,7 +161,7 @@
       "reasoning_type": "theory_foundation",
       "pedagogical_role": "official_reference",
       "why_retrieved": [
-        "matched canonical/query terms: amontillado, oloroso",
+        "matched canonical/query terms: amontillado, concentrated, oloroso",
         "official WSET extracted Tutor support",
         "exact term match"
       ],
@@ -171,37 +171,37 @@
     },
     {
       "context_type": "retrieval_sandbox_chunk",
-      "chunk_id": "OFFICIAL_WSET_W_5_8_11_WINE_AND_THE_LAW_001",
+      "chunk_id": "OFFICIAL_WSET_WINES_OF_THE_WORLD_6_11_22_GERMANY_001",
       "forced_retrieval": false,
       "agent_corpus": "tutor",
       "safe_for_examiner": false,
-      "score": 0.41,
+      "score": 0.4505,
       "source_type": "official_wset_extracted",
-      "source_file": "knowledge/official-wset/study-guide/wset_markdown/seccion_5_section_2_factors_affecting_the_style_quality_and_price_of_w/5-8_11_wine_and_the_law.md",
+      "source_file": "knowledge/official-wset/study-guide/wset_markdown/seccion_6_section_3_still_wines_of_the_world/6-11_22_germany.md",
       "source_trust_tier": 1,
-      "title": "11 Wine and the Law",
-      "section": "5",
-      "subtopic": "5.8",
+      "title": "22 Germany",
+      "section": "6",
+      "subtopic": "6.11",
       "official_grading_authority": false,
       "requires_human_review": true,
       "reasoning_type": "theory_foundation",
       "pedagogical_role": "official_reference",
       "why_retrieved": [
-        "matched canonical/query terms: amontillado",
+        "matched canonical/query terms: alsace, concentrated, noble rot, sparkling",
         "official WSET extracted Tutor support",
         "exact term match"
       ],
-      "text_excerpt": "# 11 Wine and the Law <!-- page 83 --> 74 UNDERSTANDING WINES: EXPLAINING STYLE AND QUALITY Winea ndt he Law 11 In countries where it is legal to purchase and consume alcohol, legislation relating to wine is concerned with three important issues: ensuring it is safe for human consumption; checking the information on the label accurately describes what is...",
+      "text_excerpt": "# 22 Germany <!-- p\u00e1gina 117 --> 108 UNDERSTANDINGW INES:E XPLAININGST YLEA ND QUALITY Germany 22 Germany is the country producing the highest concentration of world-class Rieslings. Whether dry and steely, medium-sweet and floral, or lusciously sweet, German winemakers' mastery of this variety is unquestionable. However, there is more to German wines tha...",
       "source_video": "",
-      "source_filename": "5-8_11_wine_and_the_law.md"
+      "source_filename": "6-11_22_germany.md"
     },
     {
       "context_type": "retrieval_sandbox_chunk",
-      "chunk_id": "How_to_prepare_for_the_WSET_Level_3_Tasting_Exam-0001",
+      "chunk_id": "How_to_pass_your_WSET_Level_3_Theory_Exam-0006",
       "forced_retrieval": false,
       "agent_corpus": "tutor",
       "safe_for_examiner": false,
-      "score": 0.22,
+      "score": 0.328,
       "source_type": "manual_curated_srt",
       "source_file": "",
       "source_trust_tier": "pedagogical",
@@ -211,14 +211,16 @@
       "official_grading_authority": false,
       "requires_human_review": false,
       "reasoning_type": "exam_strategy",
-      "pedagogical_role": "exam_strategy",
+      "pedagogical_role": "foundational",
       "why_retrieved": [
-        "golden tutor chunk candidate",
-        "high retrieval priority in golden QA report"
+        "matched canonical/query terms: burgundy, sparkling",
+        "medium retrieval priority in golden QA report",
+        "pedagogical role fits foundational_theory",
+        "exact term match"
       ],
-      "text_excerpt": "So, let's go through um preparing you for the very famous and intensive and intimidating level three tasting examination. If you do follow all of these key points and you listen to your tutor, you will get through this tasting examination. It is in fact the least of your worries when it comes to the level three exam. uh it is in fact the uh the theory whe...",
-      "source_video": "How to prepare for the WSET Level 3 Tasting Exam",
-      "source_filename": "How to prepare for the WSET Level 3 Tasting Exam.srt"
+      "text_excerpt": "must must must revise it it is still the most poorly done the least successfully done question of the whole level three syllabus so why because it's different and it's often taught at the end of the course and it's often the least understood by students now you have the opportunity to correct this in the world you now know it's coming so please revise it...",
+      "source_video": "How to pass your WSET Level 3 Theory Exam!",
+      "source_filename": "[English (auto-generated)] How to pass your WSET Level 3 Theory Exam! [DownSub.com].srt"
     }
   ],
   "forced_causal_chains": [],
