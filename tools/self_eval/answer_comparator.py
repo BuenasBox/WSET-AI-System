@@ -27,6 +27,107 @@ COGNITIVE_ERROR_LABELS = (
     "weak_exam_register",
 )
 
+COGNITIVE_ERROR_LABEL_METADATA = {
+    "missing_causal_link": {
+        "label": "missing_causal_link",
+        "label_es": "falta_enlace_causal",
+        "description_es": "La respuesta no conecta claramente causa, mecanismo y efecto.",
+        "severity_hint": "high",
+        "learner_facing": True,
+    },
+    "vague_claim": {
+        "label": "vague_claim",
+        "label_es": "afirmacion_vaga",
+        "description_es": "La respuesta usa una afirmacion general sin suficiente precision.",
+        "severity_hint": "medium",
+        "learner_facing": True,
+    },
+    "unsupported_conclusion": {
+        "label": "unsupported_conclusion",
+        "label_es": "conclusion_sin_apoyo",
+        "description_es": "La conclusion no esta suficientemente conectada con evidencia.",
+        "severity_hint": "high",
+        "learner_facing": True,
+    },
+    "missing_exam_language": {
+        "label": "missing_exam_language",
+        "label_es": "falta_lenguaje_de_examen",
+        "description_es": "La respuesta no usa suficiente formulacion util para examen.",
+        "severity_hint": "medium",
+        "learner_facing": True,
+    },
+    "incomplete_balance_justification": {
+        "label": "incomplete_balance_justification",
+        "label_es": "justificacion_de_balance_incompleta",
+        "description_es": "La justificacion de balance no integra suficientes elementos SAT.",
+        "severity_hint": "medium",
+        "learner_facing": True,
+    },
+    "weak_sat_commitment": {
+        "label": "weak_sat_commitment",
+        "label_es": "compromiso_sat_debil",
+        "description_es": "La respuesta no formula una conclusion SAT suficientemente clara.",
+        "severity_hint": "medium",
+        "learner_facing": True,
+    },
+    "misconception_unresolved": {
+        "label": "misconception_unresolved",
+        "label_es": "malentendido_no_resuelto",
+        "description_es": "La respuesta no corrige completamente el malentendido detectado.",
+        "severity_hint": "high",
+        "learner_facing": True,
+    },
+    "missing_counterexample": {
+        "label": "missing_counterexample",
+        "label_es": "falta_contraejemplo",
+        "description_es": "La respuesta necesita un contraejemplo para evitar una regla absoluta.",
+        "severity_hint": "medium",
+        "learner_facing": True,
+    },
+    "retrieval_gap": {
+        "label": "retrieval_gap",
+        "label_es": "brecha_de_recuperacion",
+        "description_es": "El contexto recuperado no aporta suficiente soporte relevante.",
+        "severity_hint": "high",
+        "learner_facing": False,
+    },
+    "weak_context_support": {
+        "label": "weak_context_support",
+        "label_es": "soporte_contextual_debil",
+        "description_es": "Hay poco contexto util para sostener la respuesta.",
+        "severity_hint": "medium",
+        "learner_facing": False,
+    },
+    "shallow_retrieval": {
+        "label": "shallow_retrieval",
+        "label_es": "recuperacion_superficial",
+        "description_es": "El contexto recuperado tiene senales debiles de prioridad o profundidad.",
+        "severity_hint": "medium",
+        "learner_facing": False,
+    },
+    "shallow_reasoning": {
+        "label": "shallow_reasoning",
+        "label_es": "razonamiento_superficial",
+        "description_es": "La explicacion no desarrolla suficientemente el mecanismo.",
+        "severity_hint": "medium",
+        "learner_facing": True,
+    },
+    "misconception_reinforcement_risk": {
+        "label": "misconception_reinforcement_risk",
+        "label_es": "riesgo_de_reforzar_malentendido",
+        "description_es": "La respuesta puede repetir el malentendido sin correccion clara.",
+        "severity_hint": "high",
+        "learner_facing": False,
+    },
+    "weak_exam_register": {
+        "label": "weak_exam_register",
+        "label_es": "registro_de_examen_debil",
+        "description_es": "El tono o vocabulario no esta suficientemente alineado con examen.",
+        "severity_hint": "medium",
+        "learner_facing": True,
+    },
+}
+
 
 def compare_answer(
     question: dict[str, Any],

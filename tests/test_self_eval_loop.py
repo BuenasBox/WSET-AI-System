@@ -3,12 +3,41 @@ import tempfile
 import unittest
 from pathlib import Path
 
-from tools.self_eval.answer_comparator import compare_answer
+from tools.self_eval.answer_comparator import COGNITIVE_ERROR_LABELS, COGNITIVE_ERROR_LABEL_METADATA, compare_answer
 from tools.self_eval.evaluation_reporter import write_evaluation_reports
 from tools.self_eval.question_runner import load_questions, run_question_attempt, run_self_eval
 
 
 class SelfEvalLoopTests(unittest.TestCase):
+    def test_cognitive_error_label_metadata_preserves_internal_labels(self):
+        expected_labels = (
+            "missing_causal_link",
+            "vague_claim",
+            "unsupported_conclusion",
+            "missing_exam_language",
+            "incomplete_balance_justification",
+            "weak_sat_commitment",
+            "misconception_unresolved",
+            "missing_counterexample",
+            "retrieval_gap",
+            "weak_context_support",
+            "shallow_retrieval",
+            "shallow_reasoning",
+            "misconception_reinforcement_risk",
+            "weak_exam_register",
+        )
+
+        self.assertEqual(COGNITIVE_ERROR_LABELS, expected_labels)
+        self.assertEqual(len(COGNITIVE_ERROR_LABELS), len(set(COGNITIVE_ERROR_LABELS)))
+        self.assertEqual(set(COGNITIVE_ERROR_LABEL_METADATA), set(COGNITIVE_ERROR_LABELS))
+        for label in COGNITIVE_ERROR_LABELS:
+            metadata = COGNITIVE_ERROR_LABEL_METADATA[label]
+            self.assertEqual(metadata["label"], label)
+            self.assertTrue(metadata["label_es"])
+            self.assertTrue(metadata["description_es"])
+            self.assertIn(metadata["severity_hint"], {"low", "medium", "high"})
+            self.assertIsInstance(metadata["learner_facing"], bool)
+
     def test_question_loading(self):
         with tempfile.TemporaryDirectory() as tmp:
             root = Path(tmp)
