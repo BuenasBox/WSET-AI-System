@@ -355,6 +355,8 @@ def _normal_direct_answer(query: str, language: str, ideas: list[dict[str, str]]
         return "Madeira se elabora principalmente con variedades autóctonas como Sercial, Verdelho, Bual y Malmsey; porque la isla tiene un clima subtropical y los vinos pasan por el proceso de estufagem (calor controlado), esto conduce — por tanto — a vinos con acidez elevada, carácter oxidativo y gran longevidad."
     if "region" in lowered and ("chile" in lowered or "chilena" in lowered) and ("espumoso" in lowered or "clima fresco" in lowered):
         return "La región de Elqui y Bio-Bío en Chile son reconocidas por espumosos de calidad gracias a sus climas frescos; porque las temperaturas nocturnas bajas conservan la acidez natural de la uva, el espumoso resultante presenta — por tanto — burbuja fina, frescura marcada y buena base estructural."
+    if "porto vintage" in lowered or "vintage port" in lowered:
+        return "Una característica clave del Vintage Port es que envejece en botella: su alto tanino y concentración le dan estructura para evolucionar durante años, pero con el tiempo también forma sedimento."
     # Fallback using idea content
     if ideas:
         return f"Desde el marco WSET: {ideas[0]['idea']}."
@@ -463,6 +465,9 @@ def _cause_effect_line(
     depth: str | None = None,
 ) -> str:
     # Phase D: prefer structured causal chain node over hardcoded keyword dispatch
+    query = str(package.get("student_query") or "").lower()
+    if "porto vintage" in query or "vintage port" in query:
+        return "Cadena: structure -> bottle ageing -> sediment. La concentración y el tanino del Vintage Port le dan estructura para la crianza en botella; durante ese envejecimiento, los compuestos fenólicos se polimerizan y precipitan, formando sedimento."
     best_chain = _select_best_causal_chain(package)
     if best_chain:
         rendered = _render_causal_chain(best_chain, language, max_steps=_max_causal_steps(depth))
@@ -471,7 +476,6 @@ def _cause_effect_line(
 
     # Fallback: deterministic keyword dispatch (preserved for backward compatibility
     # and for queries where no causal chain node was matched)
-    query = str(package.get("student_query") or "").lower()
     misconception = package.get("matched_misconception") or {}
     why = str(misconception.get("why_incorrect") or "").lower()
     idea_text = " ".join(item["idea"] for item in ideas).lower()

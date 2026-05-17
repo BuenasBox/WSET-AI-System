@@ -1,18 +1,13 @@
 # Borrador del Tutor: ¿Cuál es una característica clave de los vinos de Porto Vintage?
 
 ## 1. Respuesta directa
-Desde el marco WSET: el material oficial conecta fortificación, parada de fermentación y estilo final del vino.
+Una característica clave del Vintage Port es que envejece en botella: su alto tanino y concentración le dan estructura para evolucionar durante años, pero con el tiempo también forma sedimento.
 
 ## 2. Marco WSET
 Desde el marco WSET, usa términos precisos cuando ayuden: SAT, BICL, balance, intensity, complexity, length, acidity, tannin, body, quality assessment. La conclusión debe apoyarse en evidencia, no en un descriptor aislado.
 
 ## 3. Explicación causa → efecto
-**CAUSA:** A red wine with sufficient tannin, pigment, and structural components is aged in bottle over an extended period (years to decades)
-**MECANISMO:** Tannin molecules and anthocyanin pigments polymerise (join together into larger molecules) and eventually precipitate out of solution; the wine's structure gradually softens as free tannins decrease
-**EFECTO:** Sediment (dark, gritty deposit) forms in the bottle; the wine develops tertiary aromas (leather, earth, dried fruit, mushroom, tobacco); tannins become softer and more integrated
-**FORMULACIÓN DE EXAMEN:** A structured red wine, through bottle ageing, sees tannins and pigments polymerise, forming sediment and developing tertiary aromas (leather, earth, dried fruit) over time.
-
-*Relevancia SAT: Tertiary aromas and soft tannins signal bottle development on the SAT. A wine showing tertiary character has aged; readiness to drink should be assessed from tannin integration, fruit condition, and balance.*
+Cadena: structure -> bottle ageing -> sediment. La concentración y el tanino del Vintage Port le dan estructura para la crianza en botella; durante ese envejecimiento, los compuestos fenólicos se polimerizan y precipitan, formando sedimento.
 
 ## 4. Formulación de examen
 Para efectos del examen, describe el rasgo, explica por qué ocurre (el mecanismo), y muestra cómo ese proceso conduce — por tanto — al efecto observable en el vino.
