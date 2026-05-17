@@ -1,0 +1,11 @@
+{
+  "question_id": "11",
+  "question_type": "theory",
+  "question_text": "¿Cuál de los siguientes climas se asocia comúnmente con una alta acidez en los vinos blancos?",
+  "expected_topics": [],
+  "expected_causal_links": [],
+  "expected_keywords": [],
+  "expected_reasoning_type": "theory_foundation",
+  "difficulty": "intermediate",
+  "safe_for_examiner": false
+}

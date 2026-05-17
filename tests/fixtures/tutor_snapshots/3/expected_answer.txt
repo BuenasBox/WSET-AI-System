@@ -1,0 +1,26 @@
+# Borrador del Tutor: ¿Cuál es una característica clave de los vinos de Porto Vintage?
+
+## 1. Respuesta directa
+Desde el marco WSET: el material oficial conecta fortificación, parada de fermentación y estilo final del vino.
+
+## 2. Marco WSET
+Desde el marco WSET, usa términos precisos cuando ayuden: SAT, BICL, balance, intensity, complexity, length, acidity, tannin, body, quality assessment. La conclusión debe apoyarse en evidencia, no en un descriptor aislado.
+
+## 3. Explicación causa → efecto
+**CAUSA:** A red wine with sufficient tannin, pigment, and structural components is aged in bottle over an extended period (years to decades)
+**MECANISMO:** Tannin molecules and anthocyanin pigments polymerise (join together into larger molecules) and eventually precipitate out of solution; the wine's structure gradually softens as free tannins decrease
+**EFECTO:** Sediment (dark, gritty deposit) forms in the bottle; the wine develops tertiary aromas (leather, earth, dried fruit, mushroom, tobacco); tannins become softer and more integrated
+**FORMULACIÓN DE EXAMEN:** A structured red wine, through bottle ageing, sees tannins and pigments polymerise, forming sediment and developing tertiary aromas (leather, earth, dried fruit) over time.
+
+*Relevancia SAT: Tertiary aromas and soft tannins signal bottle development on the SAT. A wine showing tertiary character has aged; readiness to drink should be assessed from tannin integration, fruit condition, and balance.*
+
+## 4. Formulación de examen
+Para efectos del examen, describe el rasgo, explica por qué ocurre (el mecanismo), y muestra cómo ese proceso conduce — por tanto — al efecto observable en el vino.
+
+## 5. Mini práctica
+Escribe una frase que conecte evidencia con conclusión.
+
+Nota de fuentes: desde el marco WSET, el material oficial es la referencia; el material de transcripción sirve solo como apoyo pedagógico.
+Ideas usadas del contexto: official_wset: el material oficial conecta fortificación, parada de fermentación y estilo final del vino | apoyo pedagógico: en SAT conviene escribir todos los elementos relevantes y vincularlos con la conclusión.
+
+Nota: esta es una respuesta del Tutor, no una calificación oficial ni una evaluación del Examiner.

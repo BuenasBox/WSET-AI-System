@@ -1,0 +1,152 @@
+[
+  {
+    "question_id": "1",
+    "question_type": "theory",
+    "question_text": "¿Qué rol juega la 'flor' en la crianza biológica del Jerez?",
+    "difficulty": "distinction"
+  },
+  {
+    "question_id": "2",
+    "question_type": "theory",
+    "question_text": "¿Qué método se usa para detener la fermentación en el vino de Oporto?",
+    "difficulty": "foundational"
+  },
+  {
+    "question_id": "3",
+    "question_type": "theory",
+    "question_text": "¿Cuál es una característica clave de los vinos de Porto Vintage?",
+    "difficulty": "intermediate"
+  },
+  {
+    "question_id": "4",
+    "question_type": "theory",
+    "question_text": "¿Cuál es el sistema tradicional de envejecimiento utilizado en Jerez?",
+    "difficulty": "foundational"
+  },
+  {
+    "question_id": "5",
+    "question_type": "theory",
+    "question_text": "¿Qué diferencia al Oloroso del Amontillado en términos de crianza?",
+    "difficulty": "distinction"
+  },
+  {
+    "question_id": "6",
+    "question_type": "theory",
+    "question_text": "¿Cuál es una característica clave del vino de Jerez Fino?",
+    "difficulty": "intermediate"
+  },
+  {
+    "question_id": "7",
+    "question_type": "theory",
+    "question_text": "¿Qué influencia tiene el envejecimiento oxidativo en los vinos generosos?",
+    "difficulty": "intermediate"
+  },
+  {
+    "question_id": "8",
+    "question_type": "short_answer",
+    "question_text": "¿Qué práctica específica distingue al Tokaji Aszú?",
+    "difficulty": "intermediate"
+  },
+  {
+    "question_id": "9",
+    "question_type": "theory",
+    "question_text": "¿Qué variedad se asocia comúnmente con los vinos de Madeira?",
+    "difficulty": "intermediate"
+  },
+  {
+    "question_id": "10",
+    "question_type": "theory",
+    "question_text": "¿Cuál de los siguientes es un vino generoso portugués reconocido?",
+    "difficulty": "intermediate"
+  },
+  {
+    "question_id": "11",
+    "question_type": "theory",
+    "question_text": "¿Cuál de los siguientes climas se asocia comúnmente con una alta acidez en los vinos blancos?",
+    "difficulty": "intermediate"
+  },
+  {
+    "question_id": "12",
+    "question_type": "theory",
+    "question_text": "¿Qué factor natural tiene mayor influencia en el riesgo de heladas primaverales?",
+    "difficulty": "intermediate"
+  },
+  {
+    "question_id": "13",
+    "question_type": "theory",
+    "question_text": "¿Qué elemento del suelo influye más directamente en el drenaje del viñedo?",
+    "difficulty": "intermediate"
+  },
+  {
+    "question_id": "14",
+    "question_type": "theory",
+    "question_text": "¿Cuál es el principal efecto de la vendimia mecánica sobre el estilo del vino?",
+    "difficulty": "intermediate"
+  },
+  {
+    "question_id": "15",
+    "question_type": "theory",
+    "question_text": "¿Cuál de los siguientes factores humanos tiene un impacto directo en el precio de producción del vino?",
+    "difficulty": "intermediate"
+  },
+  {
+    "question_id": "16",
+    "question_type": "theory",
+    "question_text": "¿Qué práctica enológica se utiliza para aumentar la extracción de color y taninos en tintos?",
+    "difficulty": "intermediate"
+  },
+  {
+    "question_id": "17",
+    "question_type": "theory",
+    "question_text": "¿Cuál es el propósito principal del despalillado antes de la fermentación?",
+    "difficulty": "intermediate"
+  },
+  {
+    "question_id": "18",
+    "question_type": "short_answer",
+    "question_text": "¿Cuál es una consecuencia del uso excesivo de sulfitos?",
+    "difficulty": "intermediate"
+  },
+  {
+    "question_id": "19",
+    "question_type": "short_answer",
+    "question_text": "¿Qué efecto tiene una densidad de plantación alta?",
+    "difficulty": "intermediate"
+  },
+  {
+    "question_id": "20",
+    "question_type": "theory",
+    "question_text": "¿Qué variable de vinificación afecta más directamente el cuerpo del vino?",
+    "difficulty": "intermediate"
+  },
+  {
+    "question_id": "21",
+    "question_type": "theory",
+    "question_text": "¿Cuál es una variedad comúnmente utilizada en el espumoso Crémant de Loire?",
+    "difficulty": "intermediate"
+  },
+  {
+    "question_id": "22",
+    "question_type": "theory",
+    "question_text": "¿Qué región chilena es reconocida por espumosos de calidad debido a su clima fresco?",
+    "difficulty": "intermediate"
+  },
+  {
+    "question_id": "23",
+    "question_type": "theory",
+    "question_text": "¿Cuál es el efecto de una presión menor a 3 atmósferas en un espumoso?",
+    "difficulty": "intermediate"
+  },
+  {
+    "question_id": "24",
+    "question_type": "short_answer",
+    "question_text": "¿Cuál es una diferencia técnica entre Cava y Champagne?",
+    "difficulty": "intermediate"
+  },
+  {
+    "question_id": "25",
+    "question_type": "short_answer",
+    "question_text": "¿Cuál es el propósito del licor de tiraje?",
+    "difficulty": "intermediate"
+  }
+]

@@ -1,0 +1,21 @@
+# Borrador del Tutor: ¿Cuál es el principal efecto de la vendimia mecánica sobre el estilo del vino?
+
+## 1. Respuesta directa
+La vendimia mecánica puede introducir oxidación y rotura de la baya antes de la elaboración; porque el oxígeno entra en contacto con el mosto expuesto, esto conduce — por tanto — a una menor frescura aromática y potencialmente mayor extracción de compuestos fenólicos.
+
+## 2. Marco WSET
+Desde el marco WSET, usa términos precisos cuando ayuden: SAT, BICL, balance, intensity, complexity, length, acidity, tannin, body, quality assessment. La conclusión debe apoyarse en evidencia, no en un descriptor aislado.
+
+## 3. Explicación causa → efecto
+Cadena: la máquina de vendimia rompe la baya antes de llegar a bodega → el mosto queda expuesto al oxígeno → oxidación prematura de los aromas → menor frescura aromática en el vino terminado. La gestión del oxígeno en bodega puede mitigar este efecto.
+
+## 4. Formulación de examen
+Para efectos del examen: nombra el proceso (vendimia mecánica), explica el mecanismo (rotura de la baya antes de llegar a bodega) y conecta el efecto — porque el mosto queda expuesto al oxígeno, la frescura aromática se reduce — por tanto — en comparación con una vendimia manual cuidadosa.
+
+## 5. Mini práctica
+Completa esta frase: 'Porque la vendimia mecánica [mecanismo], el vino — por tanto — [efecto en la frescura aromática]'.
+
+Nota de fuentes: desde el marco WSET, el material oficial es la referencia; el material de transcripción sirve solo como apoyo pedagógico.
+Ideas usadas del contexto: official_wset: el material oficial vincula los métodos de vendimia con el potencial aromático y la integridad de la baya en la elaboración | apoyo pedagógico: are those that are the new freshly grown parts of the vine they grow very new every year therefore they are that current year's growth that's what we're going to be looking at....
+
+Nota: esta es una respuesta del Tutor, no una calificación oficial ni una evaluación del Examiner.

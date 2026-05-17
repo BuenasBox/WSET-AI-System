@@ -1,0 +1,26 @@
+# Borrador del Tutor: ¿Qué método se usa para detener la fermentación en el vino de Oporto?
+
+## 1. Respuesta directa
+Desde el marco WSET: el material oficial conecta fortificación, parada de fermentación y estilo final del vino.
+
+## 2. Marco WSET
+Desde el marco WSET, usa términos precisos cuando ayuden: SAT, BICL, balance, intensity, complexity, length, acidity, tannin, body, quality assessment. La conclusión debe apoyarse en evidencia, no en un descriptor aislado.
+
+## 3. Explicación causa → efecto
+**CAUSA:** Grape spirit (neutral spirit high in alcohol) is added to a partially fermented grape must or wine
+**MECANISMO:** The addition raises the alcohol content to a level (typically 15–18% ABV) at which yeast stops; yeast can no longer survive, fermentation halts and unfermented sugar remains in solution
+**EFECTO:** The finished wine retains residual sugar from the unfermented must, producing a sweet or medium-sweet style
+**FORMULACIÓN DE EXAMEN:** Fortification raises alcohol to a level at which yeast stops fermenting; fermentation ceases, retaining residual sugar in the finished wine.
+
+*Relevancia SAT: Use when assessing sweetness in fortified wines. Residual sugar in Port or sweet Sherry results directly from the timing of fortification — earlier addition means sweeter result.*
+
+## 4. Formulación de examen
+Para efectos del examen, describe el rasgo, explica por qué ocurre (el mecanismo), y muestra cómo ese proceso conduce — por tanto — al efecto observable en el vino.
+
+## 5. Mini práctica
+Escribe una frase que conecte evidencia con conclusión.
+
+Nota de fuentes: desde el marco WSET, el material oficial es la referencia; el material de transcripción sirve solo como apoyo pedagógico.
+Ideas usadas del contexto: official_wset: el material oficial conecta fortificación, parada de fermentación y estilo final del vino | apoyo pedagógico: and that's why this is classified as a warm climate and the full definition of the climates of places like provence and longadoc and Roussillon would be warm mediterranean and....
+
+Nota: esta es una respuesta del Tutor, no una calificación oficial ni una evaluación del Examiner.

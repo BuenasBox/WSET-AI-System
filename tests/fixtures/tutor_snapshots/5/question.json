@@ -1,0 +1,23 @@
+{
+  "question_id": "5",
+  "question_type": "theory",
+  "question_text": "¿Qué diferencia al Oloroso del Amontillado en términos de crianza?",
+  "expected_topics": [
+    "oloroso",
+    "amontillado",
+    "sherry ageing"
+  ],
+  "expected_causal_links": [
+    "flor dies -> oxidative ageing",
+    "no flor -> oxidative ageing"
+  ],
+  "expected_keywords": [
+    "flor",
+    "oxidativa",
+    "biológica",
+    "fortificación"
+  ],
+  "expected_reasoning_type": "theory_foundation",
+  "difficulty": "distinction",
+  "safe_for_examiner": false
+}

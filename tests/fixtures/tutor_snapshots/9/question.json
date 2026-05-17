@@ -1,0 +1,11 @@
+{
+  "question_id": "9",
+  "question_type": "theory",
+  "question_text": "¿Qué variedad se asocia comúnmente con los vinos de Madeira?",
+  "expected_topics": [],
+  "expected_causal_links": [],
+  "expected_keywords": [],
+  "expected_reasoning_type": "theory_foundation",
+  "difficulty": "intermediate",
+  "safe_for_examiner": false
+}

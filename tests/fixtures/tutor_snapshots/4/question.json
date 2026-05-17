@@ -1,0 +1,21 @@
+{
+  "question_id": "4",
+  "question_type": "theory",
+  "question_text": "¿Cuál es el sistema tradicional de envejecimiento utilizado en Jerez?",
+  "expected_topics": [
+    "jerez",
+    "solera"
+  ],
+  "expected_causal_links": [
+    "fractional blending -> consistency"
+  ],
+  "expected_keywords": [
+    "solera",
+    "criaderas",
+    "mezcla",
+    "consistencia"
+  ],
+  "expected_reasoning_type": "theory_foundation",
+  "difficulty": "foundational",
+  "safe_for_examiner": false
+}

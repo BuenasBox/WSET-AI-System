@@ -1,0 +1,11 @@
+{
+  "question_id": "14",
+  "question_type": "theory",
+  "question_text": "¿Cuál es el principal efecto de la vendimia mecánica sobre el estilo del vino?",
+  "expected_topics": [],
+  "expected_causal_links": [],
+  "expected_keywords": [],
+  "expected_reasoning_type": "theory_foundation",
+  "difficulty": "intermediate",
+  "safe_for_examiner": false
+}
