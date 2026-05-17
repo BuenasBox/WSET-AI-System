@@ -41,7 +41,7 @@
       "fragile:cause -> mechanism -> effect"
     ],
     "recent_misconceptions": [],
-    "session_count": 193,
+    "session_count": 221,
     "pedagogical_memory": {
       "schema_version": "pedagogical_memory_v1",
       "low_mastery_concepts": [],
@@ -93,37 +93,11 @@
   "retrieved_context": [
     {
       "context_type": "retrieval_sandbox_chunk",
-      "chunk_id": "OFFICIAL_WSET_WINES_OF_THE_WORLD_6_13_24_TOKAJ_001",
-      "forced_retrieval": false,
-      "agent_corpus": "tutor",
-      "safe_for_examiner": false,
-      "score": 0.4539,
-      "source_type": "official_wset_extracted",
-      "source_file": "knowledge/official-wset/study-guide/wset_markdown/seccion_6_section_3_still_wines_of_the_world/6-13_24_tokaj.md",
-      "source_trust_tier": 1,
-      "title": "24 Tokaj",
-      "section": "6",
-      "subtopic": "6.13",
-      "official_grading_authority": false,
-      "requires_human_review": true,
-      "reasoning_type": "theory_foundation",
-      "pedagogical_role": "official_reference",
-      "why_retrieved": [
-        "matched canonical/query terms: aszu, botrytis, concentrated, hungary, noble rot, tokaji",
-        "official WSET extracted Tutor support",
-        "exact term match"
-      ],
-      "text_excerpt": "# 24 Tokaj <!-- p\u00e1gina 125 --> 116 UNDERSTANDINGW INES:E XPLAININGS TYLEA ND QUALITY 24 TokajT he region of Tokaj (note the wine it produces is called Tokaji) is located in the foothills of the Carpathian Mountains in the far north east of Hungary and close to the Slovakian border. It has a long-standing reputation for producing premium botrytised sweet w...",
-      "source_video": "",
-      "source_filename": "6-13_24_tokaj.md"
-    },
-    {
-      "context_type": "retrieval_sandbox_chunk",
       "chunk_id": "OFFICIAL_WSET_4_7_COMMON_ELEMENTS_IN_WINEMAKING_AND_MATURATION_001",
       "forced_retrieval": false,
       "agent_corpus": "tutor",
       "safe_for_examiner": false,
-      "score": 0.4396,
+      "score": 0.4411,
       "source_type": "official_wset_extracted",
       "source_file": "knowledge/official-wset/study-guide/wset_markdown/seccion_5_section_2_factors_affecting_the_style_quality_and_price_of_w/5-4_7_common_elements_in_winemaking_and_maturation.md",
       "source_trust_tier": 1,
@@ -135,7 +109,7 @@
       "reasoning_type": "theory_foundation",
       "pedagogical_role": "official_reference",
       "why_retrieved": [
-        "matched canonical/query terms: antioxidant, concentrated, hungary, sulfur dioxide",
+        "matched canonical/query terms: antioxidant, sulfur dioxide",
         "official WSET extracted Tutor support",
         "exact term match"
       ],
@@ -145,11 +119,37 @@
     },
     {
       "context_type": "retrieval_sandbox_chunk",
+      "chunk_id": "OFFICIAL_WSET_1_1_THE_SYSTEMATIC_APPROACH_TO_TASTING_WINE_001",
+      "forced_retrieval": false,
+      "agent_corpus": "tutor",
+      "safe_for_examiner": false,
+      "score": 0.4105,
+      "source_type": "official_wset_extracted",
+      "source_file": "knowledge/official-wset/study-guide/wset_markdown/seccion_4_section_1_wine_and_the_consumer/4-1_1_the_systematic_approach_to_tasting_wine.md",
+      "source_trust_tier": 1,
+      "title": "1 The Systematic Approach to Tasting Wine\u00ae",
+      "section": "4",
+      "subtopic": "4.1",
+      "official_grading_authority": false,
+      "requires_human_review": true,
+      "reasoning_type": "theory_foundation",
+      "pedagogical_role": "official_reference",
+      "why_retrieved": [
+        "matched canonical/query terms: sulfur dioxide",
+        "official WSET extracted Tutor support",
+        "exact term match"
+      ],
+      "text_excerpt": "# 1 The Systematic Approach to Tasting Wine\u00ae <!-- p\u00e1gina 10 --> THES YSTEMATICA PPROACHT OT ASTINGW INE\" TheS ystematiAc pproactho TastinWg ine\u00ae The WSET Level 3. Syst~matic Approach to Tasting Wine (SAT) is a tool that allows you to write a complete description of a wine and then use this information to make an evaluation of its quality and readiness for...",
+      "source_video": "",
+      "source_filename": "4-1_1_the_systematic_approach_to_tasting_wine.md"
+    },
+    {
+      "context_type": "retrieval_sandbox_chunk",
       "chunk_id": "OFFICIAL_WSET_GUIDE_WSET_MARKDOWN_SECCION_10_INDEX_10_INDEX_001",
       "forced_retrieval": false,
       "agent_corpus": "tutor",
       "safe_for_examiner": false,
-      "score": 0.4364,
+      "score": 0.4011,
       "source_type": "official_wset_extracted",
       "source_file": "knowledge/official-wset/study-guide/wset_markdown/seccion_10_index/10_index.md",
       "source_trust_tier": 1,
@@ -161,7 +161,7 @@
       "reasoning_type": "theory_foundation",
       "pedagogical_role": "official_reference",
       "why_retrieved": [
-        "matched canonical/query terms: alsace, aszu, botrytis, burgundy, chenin blanc, concentrated, loire, noble rot",
+        "matched canonical/query terms: sulfur dioxide",
         "official WSET extracted Tutor support",
         "exact term match"
       ],
@@ -171,37 +171,37 @@
     },
     {
       "context_type": "retrieval_sandbox_chunk",
-      "chunk_id": "OFFICIAL_WSET_WINES_OF_THE_WORLD_6_11_22_GERMANY_001",
+      "chunk_id": "OFFICIAL_WSET_W_5_8_11_WINE_AND_THE_LAW_001",
       "forced_retrieval": false,
       "agent_corpus": "tutor",
       "safe_for_examiner": false,
-      "score": 0.4171,
+      "score": 0.3705,
       "source_type": "official_wset_extracted",
-      "source_file": "knowledge/official-wset/study-guide/wset_markdown/seccion_6_section_3_still_wines_of_the_world/6-11_22_germany.md",
+      "source_file": "knowledge/official-wset/study-guide/wset_markdown/seccion_5_section_2_factors_affecting_the_style_quality_and_price_of_w/5-8_11_wine_and_the_law.md",
       "source_trust_tier": 1,
-      "title": "22 Germany",
-      "section": "6",
-      "subtopic": "6.11",
+      "title": "11 Wine and the Law",
+      "section": "5",
+      "subtopic": "5.8",
       "official_grading_authority": false,
       "requires_human_review": true,
       "reasoning_type": "theory_foundation",
       "pedagogical_role": "official_reference",
       "why_retrieved": [
-        "matched canonical/query terms: alsace, concentrated, noble rot, sparkling",
+        "matched canonical/query terms: sulfites",
         "official WSET extracted Tutor support",
         "exact term match"
       ],
-      "text_excerpt": "# 22 Germany <!-- p\u00e1gina 117 --> 108 UNDERSTANDINGW INES:E XPLAININGST YLEA ND QUALITY Germany 22 Germany is the country producing the highest concentration of world-class Rieslings. Whether dry and steely, medium-sweet and floral, or lusciously sweet, German winemakers' mastery of this variety is unquestionable. However, there is more to German wines tha...",
+      "text_excerpt": "# 11 Wine and the Law <!-- page 83 --> 74 UNDERSTANDING WINES: EXPLAINING STYLE AND QUALITY Winea ndt he Law 11 In countries where it is legal to purchase and consume alcohol, legislation relating to wine is concerned with three important issues: ensuring it is safe for human consumption; checking the information on the label accurately describes what is...",
       "source_video": "",
-      "source_filename": "6-11_22_germany.md"
+      "source_filename": "5-8_11_wine_and_the_law.md"
     },
     {
       "context_type": "retrieval_sandbox_chunk",
-      "chunk_id": "How_to_pass_your_WSET_Level_3_Theory_Exam-0006",
+      "chunk_id": "WSET_Level_3_Wines_-_Understanding_Aromatics_With_Working_Written_Questio-0005",
       "forced_retrieval": false,
       "agent_corpus": "tutor",
       "safe_for_examiner": false,
-      "score": 0.3257,
+      "score": 0.2958,
       "source_type": "manual_curated_srt",
       "source_file": "",
       "source_trust_tier": "pedagogical",
@@ -210,17 +210,16 @@
       "subtopic": "",
       "official_grading_authority": false,
       "requires_human_review": false,
-      "reasoning_type": "exam_strategy",
-      "pedagogical_role": "foundational",
+      "reasoning_type": "cause_effect",
+      "pedagogical_role": "theory_explanation",
       "why_retrieved": [
-        "matched canonical/query terms: burgundy, sparkling",
-        "medium retrieval priority in golden QA report",
+        "matched canonical/query terms: antioxidant, sulfur dioxide",
         "pedagogical role fits foundational_theory",
         "exact term match"
       ],
-      "text_excerpt": "must must must revise it it is still the most poorly done the least successfully done question of the whole level three syllabus so why because it's different and it's often taught at the end of the course and it's often the least understood by students now you have the opportunity to correct this in the world you now know it's coming so please revise it...",
-      "source_video": "How to pass your WSET Level 3 Theory Exam!",
-      "source_filename": "[English (auto-generated)] How to pass your WSET Level 3 Theory Exam! [DownSub.com].srt"
+      "text_excerpt": "very key wine making options so to give you a point of counter have a little think about chardonnay which is not an aromatic that will often have a lot of wine making influences things like malolactic fermentation lee's contact things like oak and often new oak and always to give it a bit more character that's the opposite with our aromatic grape varietie...",
+      "source_video": "WSET Level 3 Wines - Understanding Aromatics With Working Written Questio",
+      "source_filename": "[English (auto-generated)] WSET Level 3 Wines - Understanding Aromatics With Working Written Questio.srt"
     }
   ],
   "forced_causal_chains": [],

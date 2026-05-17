@@ -1184,7 +1184,7 @@ def _read_jsonl(path: Path) -> list[dict[str, Any]]:
 def _tokens(text: str) -> list[str]:
     return [
         token
-        for token in re.findall(r"\b[a-zA-Z][a-zA-Z0-9'-]*\b", text.lower())
+        for token in re.findall(r"(?u)\b[^\W\d_](?:[^\W_]|['-])*\b", text.lower())
         if token not in STOPWORDS and len(token) > 1
     ]
 

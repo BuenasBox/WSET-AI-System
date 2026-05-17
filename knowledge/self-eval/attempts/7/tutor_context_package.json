@@ -41,7 +41,7 @@
       "fragile:cause -> mechanism -> effect"
     ],
     "recent_misconceptions": [],
-    "session_count": 193,
+    "session_count": 221,
     "pedagogical_memory": {
       "schema_version": "pedagogical_memory_v1",
       "low_mastery_concepts": [],
@@ -93,63 +93,11 @@
   "retrieved_context": [
     {
       "context_type": "retrieval_sandbox_chunk",
-      "chunk_id": "OFFICIAL_WSET_WINES_OF_THE_WORLD_6_11_22_GERMANY_001",
-      "forced_retrieval": false,
-      "agent_corpus": "tutor",
-      "safe_for_examiner": false,
-      "score": 0.4638,
-      "source_type": "official_wset_extracted",
-      "source_file": "knowledge/official-wset/study-guide/wset_markdown/seccion_6_section_3_still_wines_of_the_world/6-11_22_germany.md",
-      "source_trust_tier": 1,
-      "title": "22 Germany",
-      "section": "6",
-      "subtopic": "6.11",
-      "official_grading_authority": false,
-      "requires_human_review": true,
-      "reasoning_type": "theory_foundation",
-      "pedagogical_role": "official_reference",
-      "why_retrieved": [
-        "matched canonical/query terms: alsace, concentrated, noble rot, sparkling",
-        "official WSET extracted Tutor support",
-        "exact term match"
-      ],
-      "text_excerpt": "# 22 Germany <!-- p\u00e1gina 117 --> 108 UNDERSTANDINGW INES:E XPLAININGST YLEA ND QUALITY Germany 22 Germany is the country producing the highest concentration of world-class Rieslings. Whether dry and steely, medium-sweet and floral, or lusciously sweet, German winemakers' mastery of this variety is unquestionable. However, there is more to German wines tha...",
-      "source_video": "",
-      "source_filename": "6-11_22_germany.md"
-    },
-    {
-      "context_type": "retrieval_sandbox_chunk",
-      "chunk_id": "OFFICIAL_WSET_WINES_OF_THE_WORLD_6_13_24_TOKAJ_001",
-      "forced_retrieval": false,
-      "agent_corpus": "tutor",
-      "safe_for_examiner": false,
-      "score": 0.4533,
-      "source_type": "official_wset_extracted",
-      "source_file": "knowledge/official-wset/study-guide/wset_markdown/seccion_6_section_3_still_wines_of_the_world/6-13_24_tokaj.md",
-      "source_trust_tier": 1,
-      "title": "24 Tokaj",
-      "section": "6",
-      "subtopic": "6.13",
-      "official_grading_authority": false,
-      "requires_human_review": true,
-      "reasoning_type": "theory_foundation",
-      "pedagogical_role": "official_reference",
-      "why_retrieved": [
-        "matched canonical/query terms: aszu, botrytis, concentrated, hungary, noble rot, sherry, tokaji",
-        "official WSET extracted Tutor support",
-        "exact term match"
-      ],
-      "text_excerpt": "# 24 Tokaj <!-- p\u00e1gina 125 --> 116 UNDERSTANDINGW INES:E XPLAININGS TYLEA ND QUALITY 24 TokajT he region of Tokaj (note the wine it produces is called Tokaji) is located in the foothills of the Carpathian Mountains in the far north east of Hungary and close to the Slovakian border. It has a long-standing reputation for producing premium botrytised sweet w...",
-      "source_video": "",
-      "source_filename": "6-13_24_tokaj.md"
-    },
-    {
-      "context_type": "retrieval_sandbox_chunk",
       "chunk_id": "OFFICIAL_WSET_WINES_OF_THE_WORLD_8_1_43_SHERRY_001",
       "forced_retrieval": false,
       "agent_corpus": "tutor",
       "safe_for_examiner": false,
-      "score": 0.4424,
+      "score": 0.4527,
       "source_type": "official_wset_extracted",
       "source_file": "knowledge/official-wset/study-guide/wset_markdown/seccion_8_section_5_fortified_wines_of_the_world/8-1_43_sherry.md",
       "source_trust_tier": 1,
@@ -161,7 +109,7 @@
       "reasoning_type": "theory_foundation",
       "pedagogical_role": "official_reference",
       "why_retrieved": [
-        "matched canonical/query terms: acetaldehyde, amontillado, concentrated, dried fruit, fortified, jerez, oloroso, oxidative ageing",
+        "matched canonical/query terms: acetaldehyde, amontillado, dried fruit, fortified, jerez, oloroso, oxidative ageing, sherry",
         "official WSET extracted Tutor support",
         "matched official section/topic metadata",
         "exact term match"
@@ -172,11 +120,37 @@
     },
     {
       "context_type": "retrieval_sandbox_chunk",
+      "chunk_id": "OFFICIAL_WSET_WINES_OF_THE_WORLD_6_13_24_TOKAJ_001",
+      "forced_retrieval": false,
+      "agent_corpus": "tutor",
+      "safe_for_examiner": false,
+      "score": 0.4334,
+      "source_type": "official_wset_extracted",
+      "source_file": "knowledge/official-wset/study-guide/wset_markdown/seccion_6_section_3_still_wines_of_the_world/6-13_24_tokaj.md",
+      "source_trust_tier": 1,
+      "title": "24 Tokaj",
+      "section": "6",
+      "subtopic": "6.13",
+      "official_grading_authority": false,
+      "requires_human_review": true,
+      "reasoning_type": "theory_foundation",
+      "pedagogical_role": "official_reference",
+      "why_retrieved": [
+        "matched canonical/query terms: sherry",
+        "official WSET extracted Tutor support",
+        "exact term match"
+      ],
+      "text_excerpt": "# 24 Tokaj <!-- p\u00e1gina 125 --> 116 UNDERSTANDINGW INES:E XPLAININGS TYLEA ND QUALITY 24 TokajT he region of Tokaj (note the wine it produces is called Tokaji) is located in the foothills of the Carpathian Mountains in the far north east of Hungary and close to the Slovakian border. It has a long-standing reputation for producing premium botrytised sweet w...",
+      "source_video": "",
+      "source_filename": "6-13_24_tokaj.md"
+    },
+    {
+      "context_type": "retrieval_sandbox_chunk",
       "chunk_id": "OFFICIAL_WSET_1_1_THE_SYSTEMATIC_APPROACH_TO_TASTING_WINE_001",
       "forced_retrieval": false,
       "agent_corpus": "tutor",
       "safe_for_examiner": false,
-      "score": 0.4238,
+      "score": 0.4308,
       "source_type": "official_wset_extracted",
       "source_file": "knowledge/official-wset/study-guide/wset_markdown/seccion_4_section_1_wine_and_the_consumer/4-1_1_the_systematic_approach_to_tasting_wine.md",
       "source_trust_tier": 1,
@@ -188,7 +162,7 @@
       "reasoning_type": "theory_foundation",
       "pedagogical_role": "official_reference",
       "why_retrieved": [
-        "matched canonical/query terms: alsace, dried fruit, fortified, sherry, sparkling",
+        "matched canonical/query terms: dried fruit, fortified, sherry",
         "official WSET extracted Tutor support",
         "exact term match"
       ],
@@ -198,11 +172,37 @@
     },
     {
       "context_type": "retrieval_sandbox_chunk",
+      "chunk_id": "OFFICIAL_WSET_4_7_COMMON_ELEMENTS_IN_WINEMAKING_AND_MATURATION_001",
+      "forced_retrieval": false,
+      "agent_corpus": "tutor",
+      "safe_for_examiner": false,
+      "score": 0.4308,
+      "source_type": "official_wset_extracted",
+      "source_file": "knowledge/official-wset/study-guide/wset_markdown/seccion_5_section_2_factors_affecting_the_style_quality_and_price_of_w/5-4_7_common_elements_in_winemaking_and_maturation.md",
+      "source_trust_tier": 1,
+      "title": "7 Common Elements in Winemaking and Maturation",
+      "section": "5",
+      "subtopic": "5.4",
+      "official_grading_authority": false,
+      "requires_human_review": true,
+      "reasoning_type": "theory_foundation",
+      "pedagogical_role": "official_reference",
+      "why_retrieved": [
+        "matched canonical/query terms: dried fruit, fortified, oxygen contact, sherry",
+        "official WSET extracted Tutor support",
+        "exact term match"
+      ],
+      "text_excerpt": "# 7 Common Elements in Winemaking and Maturation <!-- p\u00e1gina 52 --> COMMONE LEMENTISN W INEMAKINGAN D MATURATION 43 CommoEnl ementisn W inemakinagn dM aturation 7 There are certain factors and processes that are common to all wines and these are explored in this chapter. It is important to get an appreciation of their roles in winemaking and maturation an...",
+      "source_video": "",
+      "source_filename": "5-4_7_common_elements_in_winemaking_and_maturation.md"
+    },
+    {
+      "context_type": "retrieval_sandbox_chunk",
       "chunk_id": "How_to_pass_your_WSET_Level_3_Theory_Exam-0006",
       "forced_retrieval": false,
       "agent_corpus": "tutor",
       "safe_for_examiner": false,
-      "score": 0.3271,
+      "score": 0.3238,
       "source_type": "manual_curated_srt",
       "source_file": "",
       "source_trust_tier": "pedagogical",
@@ -214,7 +214,7 @@
       "reasoning_type": "exam_strategy",
       "pedagogical_role": "foundational",
       "why_retrieved": [
-        "matched canonical/query terms: burgundy, fortified, sparkling",
+        "matched canonical/query terms: fortified",
         "medium retrieval priority in golden QA report",
         "pedagogical role fits foundational_theory",
         "exact term match"

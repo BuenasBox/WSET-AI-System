@@ -41,7 +41,7 @@
       "fragile:cause -> mechanism -> effect"
     ],
     "recent_misconceptions": [],
-    "session_count": 193,
+    "session_count": 221,
     "pedagogical_memory": {
       "schema_version": "pedagogical_memory_v1",
       "low_mastery_concepts": [],
@@ -93,11 +93,37 @@
   "retrieved_context": [
     {
       "context_type": "retrieval_sandbox_chunk",
+      "chunk_id": "OFFICIAL_WSET_1_1_THE_SYSTEMATIC_APPROACH_TO_TASTING_WINE_001",
+      "forced_retrieval": false,
+      "agent_corpus": "tutor",
+      "safe_for_examiner": false,
+      "score": 0.4255,
+      "source_type": "official_wset_extracted",
+      "source_file": "knowledge/official-wset/study-guide/wset_markdown/seccion_4_section_1_wine_and_the_consumer/4-1_1_the_systematic_approach_to_tasting_wine.md",
+      "source_trust_tier": 1,
+      "title": "1 The Systematic Approach to Tasting Wine\u00ae",
+      "section": "4",
+      "subtopic": "4.1",
+      "official_grading_authority": false,
+      "requires_human_review": true,
+      "reasoning_type": "theory_foundation",
+      "pedagogical_role": "official_reference",
+      "why_retrieved": [
+        "matched canonical/query terms: variable",
+        "official WSET extracted Tutor support",
+        "exact term match"
+      ],
+      "text_excerpt": "# 1 The Systematic Approach to Tasting Wine\u00ae <!-- p\u00e1gina 10 --> THES YSTEMATICA PPROACHT OT ASTINGW INE\" TheS ystematiAc pproactho TastinWg ine\u00ae The WSET Level 3. Syst~matic Approach to Tasting Wine (SAT) is a tool that allows you to write a complete description of a wine and then use this information to make an evaluation of its quality and readiness for...",
+      "source_video": "",
+      "source_filename": "4-1_1_the_systematic_approach_to_tasting_wine.md"
+    },
+    {
+      "context_type": "retrieval_sandbox_chunk",
       "chunk_id": "OFFICIAL_WSET_GUIDE_WSET_MARKDOWN_SECCION_10_INDEX_10_INDEX_001",
       "forced_retrieval": false,
       "agent_corpus": "tutor",
       "safe_for_examiner": false,
-      "score": 0.4755,
+      "score": 0.4164,
       "source_type": "official_wset_extracted",
       "source_file": "knowledge/official-wset/study-guide/wset_markdown/seccion_10_index/10_index.md",
       "source_trust_tier": 1,
@@ -109,7 +135,7 @@
       "reasoning_type": "theory_foundation",
       "pedagogical_role": "official_reference",
       "why_retrieved": [
-        "matched canonical/query terms: alsace, aszu, botrytis, burgundy, chenin blanc, concentrated, loire, noble rot",
+        "matched canonical/query terms: vino",
         "official WSET extracted Tutor support",
         "exact term match"
       ],
@@ -119,63 +145,11 @@
     },
     {
       "context_type": "retrieval_sandbox_chunk",
-      "chunk_id": "OFFICIAL_WSET_WINES_OF_THE_WORLD_6_13_24_TOKAJ_001",
-      "forced_retrieval": false,
-      "agent_corpus": "tutor",
-      "safe_for_examiner": false,
-      "score": 0.4665,
-      "source_type": "official_wset_extracted",
-      "source_file": "knowledge/official-wset/study-guide/wset_markdown/seccion_6_section_3_still_wines_of_the_world/6-13_24_tokaj.md",
-      "source_trust_tier": 1,
-      "title": "24 Tokaj",
-      "section": "6",
-      "subtopic": "6.13",
-      "official_grading_authority": false,
-      "requires_human_review": true,
-      "reasoning_type": "theory_foundation",
-      "pedagogical_role": "official_reference",
-      "why_retrieved": [
-        "matched canonical/query terms: aszu, botrytis, concentrated, hungary, noble rot, tokaji",
-        "official WSET extracted Tutor support",
-        "exact term match"
-      ],
-      "text_excerpt": "# 24 Tokaj <!-- p\u00e1gina 125 --> 116 UNDERSTANDINGW INES:E XPLAININGS TYLEA ND QUALITY 24 TokajT he region of Tokaj (note the wine it produces is called Tokaji) is located in the foothills of the Carpathian Mountains in the far north east of Hungary and close to the Slovakian border. It has a long-standing reputation for producing premium botrytised sweet w...",
-      "source_video": "",
-      "source_filename": "6-13_24_tokaj.md"
-    },
-    {
-      "context_type": "retrieval_sandbox_chunk",
-      "chunk_id": "OFFICIAL_WSET_WINES_OF_THE_WORLD_6_11_22_GERMANY_001",
-      "forced_retrieval": false,
-      "agent_corpus": "tutor",
-      "safe_for_examiner": false,
-      "score": 0.4505,
-      "source_type": "official_wset_extracted",
-      "source_file": "knowledge/official-wset/study-guide/wset_markdown/seccion_6_section_3_still_wines_of_the_world/6-11_22_germany.md",
-      "source_trust_tier": 1,
-      "title": "22 Germany",
-      "section": "6",
-      "subtopic": "6.11",
-      "official_grading_authority": false,
-      "requires_human_review": true,
-      "reasoning_type": "theory_foundation",
-      "pedagogical_role": "official_reference",
-      "why_retrieved": [
-        "matched canonical/query terms: alsace, concentrated, noble rot, sparkling",
-        "official WSET extracted Tutor support",
-        "exact term match"
-      ],
-      "text_excerpt": "# 22 Germany <!-- p\u00e1gina 117 --> 108 UNDERSTANDINGW INES:E XPLAININGST YLEA ND QUALITY Germany 22 Germany is the country producing the highest concentration of world-class Rieslings. Whether dry and steely, medium-sweet and floral, or lusciously sweet, German winemakers' mastery of this variety is unquestionable. However, there is more to German wines tha...",
-      "source_video": "",
-      "source_filename": "6-11_22_germany.md"
-    },
-    {
-      "context_type": "retrieval_sandbox_chunk",
       "chunk_id": "OFFICIAL_WSET_WINES_OF_THE_WORLD_6_19_30_SPAIN_001",
       "forced_retrieval": false,
       "agent_corpus": "tutor",
       "safe_for_examiner": false,
-      "score": 0.4395,
+      "score": 0.4164,
       "source_type": "official_wset_extracted",
       "source_file": "knowledge/official-wset/study-guide/wset_markdown/seccion_6_section_3_still_wines_of_the_world/6-19_30_spain.md",
       "source_trust_tier": 1,
@@ -187,7 +161,7 @@
       "reasoning_type": "theory_foundation",
       "pedagogical_role": "official_reference",
       "why_retrieved": [
-        "matched canonical/query terms: concentrated, sparkling, vino",
+        "matched canonical/query terms: vino",
         "official WSET extracted Tutor support",
         "exact term match"
       ],
@@ -197,11 +171,37 @@
     },
     {
       "context_type": "retrieval_sandbox_chunk",
-      "chunk_id": "How_to_pass_your_WSET_Level_3_Theory_Exam-0006",
+      "chunk_id": "OFFICIAL_WSET_OF_THE_WORLD_6_17_28_CENTRAL_ITALY_001",
       "forced_retrieval": false,
       "agent_corpus": "tutor",
       "safe_for_examiner": false,
-      "score": 0.328,
+      "score": 0.3655,
+      "source_type": "official_wset_extracted",
+      "source_file": "knowledge/official-wset/study-guide/wset_markdown/seccion_6_section_3_still_wines_of_the_world/6-17_28_central_italy.md",
+      "source_trust_tier": 1,
+      "title": "28 Central Italy",
+      "section": "6",
+      "subtopic": "6.17",
+      "official_grading_authority": false,
+      "requires_human_review": true,
+      "reasoning_type": "theory_foundation",
+      "pedagogical_role": "official_reference",
+      "why_retrieved": [
+        "matched canonical/query terms: vino",
+        "official WSET extracted Tutor support",
+        "exact term match"
+      ],
+      "text_excerpt": "# 28 Central Italy <!-- p\u00e1gina 135 --> 126 UNDERSTANDING WINES: EXPLAINING STYLE AND QUALITY CentrIa l tal y 28 This part of Italy is most widely associated with the grape variety Sangiovese and the most famous wine made from it, Chianti. However, there is more to central Italy than this. Refreshing whites and premium full-bodied reds from both local and...",
+      "source_video": "",
+      "source_filename": "6-17_28_central_italy.md"
+    },
+    {
+      "context_type": "retrieval_sandbox_chunk",
+      "chunk_id": "How_to_prepare_for_the_WSET_Level_3_Tasting_Exam-0001",
+      "forced_retrieval": false,
+      "agent_corpus": "tutor",
+      "safe_for_examiner": false,
+      "score": 0.22,
       "source_type": "manual_curated_srt",
       "source_file": "",
       "source_trust_tier": "pedagogical",
@@ -211,16 +211,14 @@
       "official_grading_authority": false,
       "requires_human_review": false,
       "reasoning_type": "exam_strategy",
-      "pedagogical_role": "foundational",
+      "pedagogical_role": "exam_strategy",
       "why_retrieved": [
-        "matched canonical/query terms: burgundy, sparkling",
-        "medium retrieval priority in golden QA report",
-        "pedagogical role fits foundational_theory",
-        "exact term match"
+        "golden tutor chunk candidate",
+        "high retrieval priority in golden QA report"
       ],
-      "text_excerpt": "must must must revise it it is still the most poorly done the least successfully done question of the whole level three syllabus so why because it's different and it's often taught at the end of the course and it's often the least understood by students now you have the opportunity to correct this in the world you now know it's coming so please revise it...",
-      "source_video": "How to pass your WSET Level 3 Theory Exam!",
-      "source_filename": "[English (auto-generated)] How to pass your WSET Level 3 Theory Exam! [DownSub.com].srt"
+      "text_excerpt": "So, let's go through um preparing you for the very famous and intensive and intimidating level three tasting examination. If you do follow all of these key points and you listen to your tutor, you will get through this tasting examination. It is in fact the least of your worries when it comes to the level three exam. uh it is in fact the uh the theory whe...",
+      "source_video": "How to prepare for the WSET Level 3 Tasting Exam",
+      "source_filename": "How to prepare for the WSET Level 3 Tasting Exam.srt"
     }
   ],
   "forced_causal_chains": [],

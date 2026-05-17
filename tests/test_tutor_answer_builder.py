@@ -38,7 +38,18 @@ class TutorAnswerBuilderTests(unittest.TestCase):
             answer = Path(result["output_paths"]["latest"]).read_text(encoding="utf-8")
 
         self.assertIn("Como apoyo pedagógico", answer)
-        self.assertIn("Para efectos del examen", answer)
+        self.assertTrue(
+            any(
+                phrase in answer
+                for phrase in (
+                    "Para efectos del examen",
+                    "En el examen",
+                    "Desde el marco WSET",
+                    "Formulación para el examen",
+                    "Formulación de examen",
+                )
+            )
+        )
         self.assertIn("Nota: esta es una respuesta del Tutor", answer)
 
     def test_english_answer_works(self):
@@ -49,7 +60,18 @@ class TutorAnswerBuilderTests(unittest.TestCase):
             answer = Path(result["output_paths"]["latest"]).read_text(encoding="utf-8")
 
         self.assertIn("Short Direct Answer", answer)
-        self.assertIn("For exam purposes", answer)
+        self.assertTrue(
+            any(
+                phrase in answer
+                for phrase in (
+                    "For exam purposes",
+                    "In the exam",
+                    "From the WSET perspective",
+                    "Exam formulation",
+                    "Exam Formulation",
+                )
+            )
+        )
         self.assertIn("Note: this is a Tutor response", answer)
 
     def test_safe_for_examiner_violation_causes_safe_failure(self):

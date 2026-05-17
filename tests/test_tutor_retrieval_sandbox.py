@@ -4,6 +4,7 @@ import unittest
 from pathlib import Path
 
 from tools.retrieval.tutor_retrieval_sandbox import (
+    _tokens,
     classify_query,
     load_chunks,
     run_retrieval_sandbox,
@@ -12,6 +13,37 @@ from tools.retrieval.tutor_retrieval_sandbox import (
 
 
 class TutorRetrievalSandboxTests(unittest.TestCase):
+    def test_tokens_preserve_unicode_accents_hyphens_and_apostrophes(self):
+        tokens = _tokens(
+            "biológica fermentación oxidación acidez azúcar tanino espumoso "
+            "cool climate biological ageing bottle-ageing wine's acidity"
+        )
+
+        for expected in (
+            "biológica",
+            "fermentación",
+            "oxidación",
+            "acidez",
+            "azúcar",
+            "tanino",
+            "espumoso",
+            "cool",
+            "climate",
+            "biological",
+            "ageing",
+            "bottle-ageing",
+            "wine's",
+            "acidity",
+        ):
+            self.assertIn(expected, tokens)
+
+        self.assertNotIn("biol", tokens)
+        self.assertNotIn("gica", tokens)
+        self.assertNotIn("fermentaci", tokens)
+        self.assertNotIn("oxidaci", tokens)
+        self.assertNotIn("az", tokens)
+        self.assertNotIn("car", tokens)
+
     def test_query_intent_classification(self):
         self.assertEqual(classify_query("How do I justify quality in SAT?")["query_intent"], "sat_coaching")
         self.assertEqual(

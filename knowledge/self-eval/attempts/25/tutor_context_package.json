@@ -41,7 +41,7 @@
       "fragile:cause -> mechanism -> effect"
     ],
     "recent_misconceptions": [],
-    "session_count": 193,
+    "session_count": 221,
     "pedagogical_memory": {
       "schema_version": "pedagogical_memory_v1",
       "low_mastery_concepts": [],
@@ -97,7 +97,7 @@
       "forced_retrieval": false,
       "agent_corpus": "tutor",
       "safe_for_examiner": false,
-      "score": 0.5084,
+      "score": 0.4818,
       "source_type": "official_wset_extracted",
       "source_file": "knowledge/official-wset/study-guide/wset_markdown/seccion_6_section_3_still_wines_of_the_world/6-13_24_tokaj.md",
       "source_trust_tier": 1,
@@ -109,7 +109,7 @@
       "reasoning_type": "theory_foundation",
       "pedagogical_role": "official_reference",
       "why_retrieved": [
-        "matched canonical/query terms: aszu, botrytis, concentrated, hungary, noble rot, sugar, tokaji, yeast",
+        "matched canonical/query terms: sugar, yeast",
         "official WSET extracted Tutor support",
         "exact term match"
       ],
@@ -123,7 +123,7 @@
       "forced_retrieval": false,
       "agent_corpus": "tutor",
       "safe_for_examiner": false,
-      "score": 0.4687,
+      "score": 0.4593,
       "source_type": "official_wset_extracted",
       "source_file": "knowledge/official-wset/study-guide/wset_markdown/seccion_6_section_3_still_wines_of_the_world/6-11_22_germany.md",
       "source_trust_tier": 1,
@@ -135,7 +135,7 @@
       "reasoning_type": "theory_foundation",
       "pedagogical_role": "official_reference",
       "why_retrieved": [
-        "matched canonical/query terms: alsace, concentrated, noble rot, sparkling, sugar, yeast",
+        "matched canonical/query terms: sparkling, sugar, yeast",
         "official WSET extracted Tutor support",
         "exact term match"
       ],
@@ -145,37 +145,11 @@
     },
     {
       "context_type": "retrieval_sandbox_chunk",
-      "chunk_id": "OFFICIAL_WSET_GUIDE_WSET_MARKDOWN_SECCION_10_INDEX_10_INDEX_001",
-      "forced_retrieval": false,
-      "agent_corpus": "tutor",
-      "safe_for_examiner": false,
-      "score": 0.4677,
-      "source_type": "official_wset_extracted",
-      "source_file": "knowledge/official-wset/study-guide/wset_markdown/seccion_10_index/10_index.md",
-      "source_trust_tier": 1,
-      "title": "Index",
-      "section": "10",
-      "subtopic": "10",
-      "official_grading_authority": false,
-      "requires_human_review": true,
-      "reasoning_type": "theory_foundation",
-      "pedagogical_role": "official_reference",
-      "why_retrieved": [
-        "matched canonical/query terms: alsace, aszu, botrytis, burgundy, chenin blanc, concentrated, liqueur de tirage, loire",
-        "official WSET extracted Tutor support",
-        "exact term match"
-      ],
-      "text_excerpt": "# Index <!-- p\u00e1gina 206 --> INDEX 197 Index Numbers in bold type indicates images, diagrams and illustrations. Abruzzo 128 bacterial diseases 40 canopy management 34, 35, 40, 85 acid 43, 48, 49 Baden 111-12 Canterbury 171-2 lactic 49 bag-in-box 52, 53 Cap C/assique (see Methode Cap C/assique) malic43,49 Baga 140 cap management 63 tartaric 43, 48 Bairrada...",
-      "source_video": "",
-      "source_filename": "10_index.md"
-    },
-    {
-      "context_type": "retrieval_sandbox_chunk",
       "chunk_id": "OFFICIAL_WSET_WINES_OF_THE_WORLD_8_1_43_SHERRY_001",
       "forced_retrieval": false,
       "agent_corpus": "tutor",
       "safe_for_examiner": false,
-      "score": 0.4623,
+      "score": 0.4549,
       "source_type": "official_wset_extracted",
       "source_file": "knowledge/official-wset/study-guide/wset_markdown/seccion_8_section_5_fortified_wines_of_the_world/8-1_43_sherry.md",
       "source_trust_tier": 1,
@@ -187,7 +161,7 @@
       "reasoning_type": "theory_foundation",
       "pedagogical_role": "official_reference",
       "why_retrieved": [
-        "matched canonical/query terms: concentrated, sugar, yeast",
+        "matched canonical/query terms: sugar, yeast",
         "official WSET extracted Tutor support",
         "exact term match"
       ],
@@ -197,11 +171,37 @@
     },
     {
       "context_type": "retrieval_sandbox_chunk",
+      "chunk_id": "OFFICIAL_WSET_4_7_COMMON_ELEMENTS_IN_WINEMAKING_AND_MATURATION_001",
+      "forced_retrieval": false,
+      "agent_corpus": "tutor",
+      "safe_for_examiner": false,
+      "score": 0.4488,
+      "source_type": "official_wset_extracted",
+      "source_file": "knowledge/official-wset/study-guide/wset_markdown/seccion_5_section_2_factors_affecting_the_style_quality_and_price_of_w/5-4_7_common_elements_in_winemaking_and_maturation.md",
+      "source_trust_tier": 1,
+      "title": "7 Common Elements in Winemaking and Maturation",
+      "section": "5",
+      "subtopic": "5.4",
+      "official_grading_authority": false,
+      "requires_human_review": true,
+      "reasoning_type": "theory_foundation",
+      "pedagogical_role": "official_reference",
+      "why_retrieved": [
+        "matched canonical/query terms: sugar, yeast",
+        "official WSET extracted Tutor support",
+        "exact term match"
+      ],
+      "text_excerpt": "# 7 Common Elements in Winemaking and Maturation <!-- p\u00e1gina 52 --> COMMONE LEMENTISN W INEMAKINGAN D MATURATION 43 CommoEnl ementisn W inemakinagn dM aturation 7 There are certain factors and processes that are common to all wines and these are explored in this chapter. It is important to get an appreciation of their roles in winemaking and maturation an...",
+      "source_video": "",
+      "source_filename": "5-4_7_common_elements_in_winemaking_and_maturation.md"
+    },
+    {
+      "context_type": "retrieval_sandbox_chunk",
       "chunk_id": "How_to_pass_your_WSET_Level_3_Theory_Exam-0006",
       "forced_retrieval": false,
       "agent_corpus": "tutor",
       "safe_for_examiner": false,
-      "score": 0.3265,
+      "score": 0.3253,
       "source_type": "manual_curated_srt",
       "source_file": "",
       "source_trust_tier": "pedagogical",
@@ -213,7 +213,7 @@
       "reasoning_type": "exam_strategy",
       "pedagogical_role": "foundational",
       "why_retrieved": [
-        "matched canonical/query terms: burgundy, sparkling",
+        "matched canonical/query terms: sparkling",
         "medium retrieval priority in golden QA report",
         "pedagogical role fits foundational_theory",
         "exact term match"

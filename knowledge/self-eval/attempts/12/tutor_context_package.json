@@ -41,7 +41,7 @@
       "fragile:cause -> mechanism -> effect"
     ],
     "recent_misconceptions": [],
-    "session_count": 193,
+    "session_count": 221,
     "pedagogical_memory": {
       "schema_version": "pedagogical_memory_v1",
       "low_mastery_concepts": [],
@@ -97,7 +97,7 @@
       "forced_retrieval": false,
       "agent_corpus": "tutor",
       "safe_for_examiner": false,
-      "score": 0.4617,
+      "score": 0.4755,
       "source_type": "official_wset_extracted",
       "source_file": "knowledge/official-wset/study-guide/wset_markdown/seccion_5_section_2_factors_affecting_the_style_quality_and_price_of_w/5-2_5_the_growing_environment.md",
       "source_trust_tier": 1,
@@ -109,7 +109,7 @@
       "reasoning_type": "theory_foundation",
       "pedagogical_role": "official_reference",
       "why_retrieved": [
-        "matched canonical/query terms: cold air, concentrated, factor, natural, spring frost, valley",
+        "matched canonical/query terms: cold air, factor, natural, spring frost, valley",
         "official WSET extracted Tutor support",
         "exact term match"
       ],
@@ -119,55 +119,30 @@
     },
     {
       "context_type": "retrieval_sandbox_chunk",
-      "chunk_id": "OFFICIAL_WSET_WINES_OF_THE_WORLD_6_11_22_GERMANY_001",
+      "chunk_id": "OFFICIAL_WSET_PRICE_OF_W_5_3_6_VINEYARD_MANAGEMENT_001",
       "forced_retrieval": false,
       "agent_corpus": "tutor",
       "safe_for_examiner": false,
-      "score": 0.459,
+      "score": 0.4392,
       "source_type": "official_wset_extracted",
-      "source_file": "knowledge/official-wset/study-guide/wset_markdown/seccion_6_section_3_still_wines_of_the_world/6-11_22_germany.md",
+      "source_file": "knowledge/official-wset/study-guide/wset_markdown/seccion_5_section_2_factors_affecting_the_style_quality_and_price_of_w/5-3_6_vineyard_management.md",
       "source_trust_tier": 1,
-      "title": "22 Germany",
-      "section": "6",
-      "subtopic": "6.11",
+      "title": "6 Vineyard Management",
+      "section": "5",
+      "subtopic": "5.3",
       "official_grading_authority": false,
       "requires_human_review": true,
       "reasoning_type": "theory_foundation",
       "pedagogical_role": "official_reference",
       "why_retrieved": [
-        "matched canonical/query terms: alsace, concentrated, noble rot, sparkling",
+        "matched canonical/query terms: canopy management, factor, topography",
         "official WSET extracted Tutor support",
+        "matched official section/topic metadata",
         "exact term match"
       ],
-      "text_excerpt": "# 22 Germany <!-- p\u00e1gina 117 --> 108 UNDERSTANDINGW INES:E XPLAININGST YLEA ND QUALITY Germany 22 Germany is the country producing the highest concentration of world-class Rieslings. Whether dry and steely, medium-sweet and floral, or lusciously sweet, German winemakers' mastery of this variety is unquestionable. However, there is more to German wines tha...",
+      "text_excerpt": "# 6 Vineyard Management <!-- p\u00e1gina 42 --> VINEYARDM ANAGEMENT 33 VineyarMd anagement The gra~e grower has_av ery simple goal: to ~roduce a healthy crop of ripe grapes suitable for the style of wine the winemaker wants to make. In order to be able to do this it is necessary to apply an understanding of how the environment affects the vine's growth. In thi...",
       "source_video": "",
-      "source_filename": "6-11_22_germany.md"
-    },
-    {
-      "context_type": "retrieval_sandbox_chunk",
-      "chunk_id": "OFFICIAL_WSET_WINES_OF_THE_WORLD_6_13_24_TOKAJ_001",
-      "forced_retrieval": false,
-      "agent_corpus": "tutor",
-      "safe_for_examiner": false,
-      "score": 0.4453,
-      "source_type": "official_wset_extracted",
-      "source_file": "knowledge/official-wset/study-guide/wset_markdown/seccion_6_section_3_still_wines_of_the_world/6-13_24_tokaj.md",
-      "source_trust_tier": 1,
-      "title": "24 Tokaj",
-      "section": "6",
-      "subtopic": "6.13",
-      "official_grading_authority": false,
-      "requires_human_review": true,
-      "reasoning_type": "theory_foundation",
-      "pedagogical_role": "official_reference",
-      "why_retrieved": [
-        "matched canonical/query terms: aszu, botrytis, concentrated, hungary, noble rot, tokaji",
-        "official WSET extracted Tutor support",
-        "exact term match"
-      ],
-      "text_excerpt": "# 24 Tokaj <!-- p\u00e1gina 125 --> 116 UNDERSTANDINGW INES:E XPLAININGS TYLEA ND QUALITY 24 TokajT he region of Tokaj (note the wine it produces is called Tokaji) is located in the foothills of the Carpathian Mountains in the far north east of Hungary and close to the Slovakian border. It has a long-standing reputation for producing premium botrytised sweet w...",
-      "source_video": "",
-      "source_filename": "6-13_24_tokaj.md"
+      "source_filename": "5-3_6_vineyard_management.md"
     },
     {
       "context_type": "retrieval_sandbox_chunk",
@@ -175,7 +150,7 @@
       "forced_retrieval": false,
       "agent_corpus": "tutor",
       "safe_for_examiner": false,
-      "score": 0.4433,
+      "score": 0.4391,
       "source_type": "official_wset_extracted",
       "source_file": "knowledge/official-wset/study-guide/wset_markdown/seccion_4_section_1_wine_and_the_consumer/4-1_1_the_systematic_approach_to_tasting_wine.md",
       "source_trust_tier": 1,
@@ -187,7 +162,7 @@
       "reasoning_type": "theory_foundation",
       "pedagogical_role": "official_reference",
       "why_retrieved": [
-        "matched canonical/query terms: alsace, factor, natural, sparkling",
+        "matched canonical/query terms: factor, natural",
         "official WSET extracted Tutor support",
         "exact term match"
       ],
@@ -197,11 +172,37 @@
     },
     {
       "context_type": "retrieval_sandbox_chunk",
-      "chunk_id": "How_to_pass_your_WSET_Level_3_Theory_Exam-0006",
+      "chunk_id": "OFFICIAL_WSET_4_3_3_STORAGE_AND_SERVICE_OF_WINE_001",
       "forced_retrieval": false,
       "agent_corpus": "tutor",
       "safe_for_examiner": false,
-      "score": 0.3253,
+      "score": 0.4377,
+      "source_type": "official_wset_extracted",
+      "source_file": "knowledge/official-wset/study-guide/wset_markdown/seccion_4_section_1_wine_and_the_consumer/4-3_3_storage_and_service_of_wine.md",
+      "source_trust_tier": 1,
+      "title": "3 Storage and Service of Wine",
+      "section": "4",
+      "subtopic": "4.3",
+      "official_grading_authority": false,
+      "requires_human_review": true,
+      "reasoning_type": "theory_foundation",
+      "pedagogical_role": "official_reference",
+      "why_retrieved": [
+        "matched canonical/query terms: natural",
+        "official WSET extracted Tutor support",
+        "exact term match"
+      ],
+      "text_excerpt": "# 3 Storage and Service of Wine <!-- p\u00e1gina 24 --> STORAGEA ND SERVICEO F WINE 15 Storagaen dS ervicoef W ine In order to get the best out of any wine it is important 3 that it is stored correctly and served at the correct temperature. It may not be necessary to invest in expensive storage units and elaborate devices: simple common sense and standard equi...",
+      "source_video": "",
+      "source_filename": "4-3_3_storage_and_service_of_wine.md"
+    },
+    {
+      "context_type": "retrieval_sandbox_chunk",
+      "chunk_id": "WSET_Level_3_Wines_-_Understanding_the_Common_Elements_of_Winemaking_Part-0005",
+      "forced_retrieval": false,
+      "agent_corpus": "tutor",
+      "safe_for_examiner": false,
+      "score": 0.3191,
       "source_type": "manual_curated_srt",
       "source_file": "",
       "source_trust_tier": "pedagogical",
@@ -210,17 +211,16 @@
       "subtopic": "",
       "official_grading_authority": false,
       "requires_human_review": false,
-      "reasoning_type": "exam_strategy",
+      "reasoning_type": "cause_effect",
       "pedagogical_role": "foundational",
       "why_retrieved": [
-        "matched canonical/query terms: burgundy, sparkling",
-        "medium retrieval priority in golden QA report",
+        "matched canonical/query terms: factor, natural",
         "pedagogical role fits foundational_theory",
         "exact term match"
       ],
-      "text_excerpt": "must must must revise it it is still the most poorly done the least successfully done question of the whole level three syllabus so why because it's different and it's often taught at the end of the course and it's often the least understood by students now you have the opportunity to correct this in the world you now know it's coming so please revise it...",
-      "source_video": "How to pass your WSET Level 3 Theory Exam!",
-      "source_filename": "[English (auto-generated)] How to pass your WSET Level 3 Theory Exam! [DownSub.com].srt"
+      "text_excerpt": "covers the skin of the grapes and here within this bloom this waxy service surface you'll find things like natural yeasts or ambient yeasts or wild yeasts they're sometimes called as well so of course if you don't add in any yeasts at winemaking stage you will be fermenting wild or with the natural yeasts and that is a a stylistic choice that is a philoso...",
+      "source_video": "WSET Level 3 Wines - Understanding the Common Elements of Winemaking Part",
+      "source_filename": "[English (auto-generated)] WSET Level 3 Wines - Understanding the Common Elements of Winemaking Part.srt"
     }
   ],
   "forced_causal_chains": [],
