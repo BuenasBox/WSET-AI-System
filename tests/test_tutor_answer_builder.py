@@ -3,10 +3,100 @@ import tempfile
 import unittest
 from pathlib import Path
 
-from tools.tutor.answer_builder import build_tutor_answer, _validate_governance
+from tools.tutor.answer_builder import TUTOR_MARKDOWN_LABELS, build_tutor_answer, _validate_governance
 
 
 class TutorAnswerBuilderTests(unittest.TestCase):
+    def test_tutor_markdown_heading_registry_preserves_rendered_structure(self):
+        expected_keys = {
+            "title",
+            "normal_direct",
+            "normal_framing",
+            "cause_effect",
+            "normal_exam",
+            "mini_practice",
+            "misconception_direct",
+            "misconception_confusion",
+            "misconception_framing",
+            "misconception_cause_effect",
+            "misconception_exam",
+        }
+        self.assertEqual(set(TUTOR_MARKDOWN_LABELS["en"]), expected_keys)
+        self.assertEqual(set(TUTOR_MARKDOWN_LABELS["es"]), expected_keys)
+
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            normal_es = build_tutor_answer(
+                _write_package(root / "normal_es.json", _normal_package(language="es")),
+                output_path=root / "normal_es.md",
+            )
+            normal_en = build_tutor_answer(
+                _write_package(root / "normal_en.json", _normal_package(language="en")),
+                output_path=root / "normal_en.md",
+            )
+            misconception_es = build_tutor_answer(
+                _write_package(root / "misconception_es.json", _misconception_package(language="es")),
+                output_path=root / "misconception_es.md",
+            )
+            misconception_en = build_tutor_answer(
+                _write_package(root / "misconception_en.json", _misconception_package(language="en")),
+                output_path=root / "misconception_en.md",
+            )
+
+            normal_es_answer = Path(normal_es["output_paths"]["latest"]).read_text(encoding="utf-8")
+            normal_en_answer = Path(normal_en["output_paths"]["latest"]).read_text(encoding="utf-8")
+            misconception_es_answer = Path(misconception_es["output_paths"]["latest"]).read_text(encoding="utf-8")
+            misconception_en_answer = Path(misconception_en["output_paths"]["latest"]).read_text(encoding="utf-8")
+
+        self.assertEqual(
+            _headings(normal_es_answer),
+            [
+                "# Borrador del Tutor: ¿Cómo justifico la quality assessment en SAT?",
+                "## 1. Respuesta directa",
+                "## 2. Marco WSET",
+                "## 3. Explicación causa → efecto",
+                "## 4. Formulación de examen",
+                "## 5. Mini práctica",
+            ],
+        )
+        self.assertEqual(
+            _headings(normal_en_answer),
+            [
+                "# Tutor Draft: How do I justify quality in SAT?",
+                "## 1. Short Direct Answer",
+                "## 2. WSET Framing",
+                "## 3. Cause/Effect Explanation",
+                "## 4. Exam Formulation",
+                "## 5. Mini Practice",
+            ],
+        )
+        self.assertEqual(
+            _headings(misconception_es_answer),
+            [
+                "# Borrador del Tutor: ¿High acidity significa menor calidad?",
+                "## 1. Corrección directa",
+                "## 2. Por qué esa idea confunde",
+                "## 3. Marco WSET correcto",
+                "## 4. Cadena causa → efecto",
+                "## 5. Cómo escribirlo para puntos",
+                "## 6. Mini práctica",
+            ],
+        )
+        self.assertEqual(
+            _headings(misconception_en_answer),
+            [
+                "# Tutor Draft: So high acidity means the wine is lower quality?",
+                "## 1. Direct Correction",
+                "## 2. Why The Misconception Is Tempting",
+                "## 3. Correct WSET Framing",
+                "## 4. Cause/Effect Explanation",
+                "## 5. How To Write It For Marks",
+                "## 6. Mini Practice",
+            ],
+        )
+        for result in (normal_es, normal_en, misconception_es, misconception_en):
+            self.assertFalse(result["governance"]["safe_for_examiner"])
+
     def test_tutor_answer_created_from_misconception_package(self):
         with tempfile.TemporaryDirectory() as tmp:
             root = Path(tmp)
@@ -179,6 +269,10 @@ class TutorAnswerBuilderTests(unittest.TestCase):
 def _write_package(path: Path, package: dict) -> Path:
     path.write_text(json.dumps(package), encoding="utf-8")
     return path
+
+
+def _headings(answer: str) -> list[str]:
+    return [line for line in answer.splitlines() if line.startswith("#")]
 
 
 def _base_package(language: str) -> dict:

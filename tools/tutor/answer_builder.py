@@ -20,6 +20,34 @@ DISCLAIMER_ES = "Nota: esta es una respuesta del Tutor, no una calificación ofi
 DISCLAIMER_EN = "Note: this is a Tutor response, not an official grade or an Examiner evaluation."
 KEY_TERMS = "SAT, BICL, balance, intensity, complexity, length, acidity, tannin, body, quality assessment"
 STYLES = {"concise", "standard", "detailed"}
+TUTOR_MARKDOWN_LABELS = {
+    "en": {
+        "title": "Tutor Draft",
+        "normal_direct": "Short Direct Answer",
+        "normal_framing": "WSET Framing",
+        "cause_effect": "Cause/Effect Explanation",
+        "normal_exam": "Exam Formulation",
+        "mini_practice": "Mini Practice",
+        "misconception_direct": "Direct Correction",
+        "misconception_confusion": "Why The Misconception Is Tempting",
+        "misconception_framing": "Correct WSET Framing",
+        "misconception_cause_effect": "Cause/Effect Explanation",
+        "misconception_exam": "How To Write It For Marks",
+    },
+    "es": {
+        "title": "Borrador del Tutor",
+        "normal_direct": "Respuesta directa",
+        "normal_framing": "Marco WSET",
+        "cause_effect": "Explicación causa → efecto",
+        "normal_exam": "Formulación de examen",
+        "mini_practice": "Mini práctica",
+        "misconception_direct": "Corrección directa",
+        "misconception_confusion": "Por qué esa idea confunde",
+        "misconception_framing": "Marco WSET correcto",
+        "misconception_cause_effect": "Cadena causa → efecto",
+        "misconception_exam": "Cómo escribirlo para puntos",
+    },
+}
 
 
 def build_tutor_answer(
@@ -113,25 +141,26 @@ def _render_misconception_answer(
         exam = _compress_explanation(exam, depth)
 
     if language == "en":
+        labels = TUTOR_MARKDOWN_LABELS["en"]
         lines = [
-            f"# Tutor Draft: {query}",
+            f"# {labels['title']}: {query}",
             "",
-            "## 1. Direct Correction",
+            f"## 1. {labels['misconception_direct']}",
             direct_correction,
             "",
-            "## 2. Why The Misconception Is Tempting",
+            f"## 2. {labels['misconception_confusion']}",
             confusion,
             "",
-            "## 3. Correct WSET Framing",
+            f"## 3. {labels['misconception_framing']}",
             framing,
             "",
-            "## 4. Cause/Effect Explanation",
+            f"## 4. {labels['misconception_cause_effect']}",
             cause,
             "",
-            "## 5. How To Write It For Marks",
+            f"## 5. {labels['misconception_exam']}",
             exam,
             "",
-            "## 6. Mini Practice",
+            f"## 6. {labels['mini_practice']}",
             _mini_practice(query, language),
             "",
             source_note,
@@ -140,25 +169,26 @@ def _render_misconception_answer(
             DISCLAIMER_EN,
         ]
     else:
+        labels = TUTOR_MARKDOWN_LABELS["es"]
         lines = [
-            f"# Borrador del Tutor: {_display_query(query, language)}",
+            f"# {labels['title']}: {_display_query(query, language)}",
             "",
-            "## 1. Corrección directa",
+            f"## 1. {labels['misconception_direct']}",
             direct_correction,
             "",
-            "## 2. Por qué esa idea confunde",
+            f"## 2. {labels['misconception_confusion']}",
             confusion,
             "",
-            "## 3. Marco WSET correcto",
+            f"## 3. {labels['misconception_framing']}",
             framing,
             "",
-            "## 4. Cadena causa → efecto",
+            f"## 4. {labels['misconception_cause_effect']}",
             cause,
             "",
-            "## 5. Cómo escribirlo para puntos",
+            f"## 5. {labels['misconception_exam']}",
             exam,
             "",
-            "## 6. Mini práctica",
+            f"## 6. {labels['mini_practice']}",
             _mini_practice(query, language),
             "",
             source_note,
@@ -190,22 +220,23 @@ def _render_normal_answer(
         exam = _compress_explanation(exam, depth)
 
     if language == "en":
+        labels = TUTOR_MARKDOWN_LABELS["en"]
         lines = [
-            f"# Tutor Draft: {query}",
+            f"# {labels['title']}: {query}",
             "",
-            "## 1. Short Direct Answer",
+            f"## 1. {labels['normal_direct']}",
             direct,
             "",
-            "## 2. WSET Framing",
+            f"## 2. {labels['normal_framing']}",
             framing,
             "",
-            "## 3. Cause/Effect Explanation",
+            f"## 3. {labels['cause_effect']}",
             cause,
             "",
-            "## 4. Exam Formulation",
+            f"## 4. {labels['normal_exam']}",
             exam,
             "",
-            "## 5. Mini Practice",
+            f"## 5. {labels['mini_practice']}",
             _mini_practice(query, language),
             "",
             source_note,
@@ -214,22 +245,23 @@ def _render_normal_answer(
             DISCLAIMER_EN,
         ]
     else:
+        labels = TUTOR_MARKDOWN_LABELS["es"]
         lines = [
-            f"# Borrador del Tutor: {_display_query(query, language)}",
+            f"# {labels['title']}: {_display_query(query, language)}",
             "",
-            "## 1. Respuesta directa",
+            f"## 1. {labels['normal_direct']}",
             direct,
             "",
-            "## 2. Marco WSET",
+            f"## 2. {labels['normal_framing']}",
             framing,
             "",
-            "## 3. Explicación causa → efecto",
+            f"## 3. {labels['cause_effect']}",
             cause,
             "",
-            "## 4. Formulación de examen",
+            f"## 4. {labels['normal_exam']}",
             exam,
             "",
-            "## 5. Mini práctica",
+            f"## 5. {labels['mini_practice']}",
             _mini_practice(query, language),
             "",
             source_note,
