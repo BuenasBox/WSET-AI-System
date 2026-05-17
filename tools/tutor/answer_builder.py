@@ -48,6 +48,18 @@ TUTOR_MARKDOWN_LABELS = {
         "misconception_exam": "Cómo escribirlo para puntos",
     },
 }
+TUTOR_SOURCE_NOTES = {
+    "en": {
+        "official_reference": "Source note: from the WSET framework, treat official context as the reference point; use transcript material only as pedagogical support.",
+        "cognitive_correction": "Source note: the misconception node is a cognitive correction object, and Wine With Jimmy/manual transcript material is pedagogical support, not official WSET authority.",
+        "pedagogical_support": "Source note: Wine With Jimmy/manual transcript material is pedagogical support, not official WSET authority.",
+    },
+    "es": {
+        "official_reference": "Nota de fuentes: desde el marco WSET, el material oficial es la referencia; el material de transcripción sirve solo como apoyo pedagógico.",
+        "cognitive_correction": "Nota de fuentes: el misconception_node es un objeto de corrección cognitiva; el material de Wine With Jimmy o transcripciones manuales es apoyo pedagógico, no autoridad oficial WSET.",
+        "pedagogical_support": "Nota de fuentes: el material de Wine With Jimmy o transcripciones manuales es apoyo pedagógico, no autoridad oficial WSET.",
+    },
+}
 
 
 def build_tutor_answer(
@@ -526,17 +538,18 @@ def _cause_effect_line(
 
 def _source_note(package: dict[str, Any], language: str) -> str:
     source_types = _source_types(package)
+    notes = TUTOR_SOURCE_NOTES["en"] if language == "en" else TUTOR_SOURCE_NOTES["es"]
     if language == "en":
         if "official reference" in source_types:
-            return "Source note: from the WSET framework, treat official context as the reference point; use transcript material only as pedagogical support."
+            return notes["official_reference"]
         if "cognitive correction object" in source_types:
-            return "Source note: the misconception node is a cognitive correction object, and Wine With Jimmy/manual transcript material is pedagogical support, not official WSET authority."
-        return "Source note: Wine With Jimmy/manual transcript material is pedagogical support, not official WSET authority."
+            return notes["cognitive_correction"]
+        return notes["pedagogical_support"]
     if "official reference" in source_types:
-        return "Nota de fuentes: desde el marco WSET, el material oficial es la referencia; el material de transcripción sirve solo como apoyo pedagógico."
+        return notes["official_reference"]
     if "cognitive correction object" in source_types:
-        return "Nota de fuentes: el misconception_node es un objeto de corrección cognitiva; el material de Wine With Jimmy o transcripciones manuales es apoyo pedagógico, no autoridad oficial WSET."
-    return "Nota de fuentes: el material de Wine With Jimmy o transcripciones manuales es apoyo pedagógico, no autoridad oficial WSET."
+        return notes["cognitive_correction"]
+    return notes["pedagogical_support"]
 
 
 def _support_summary(package: dict[str, Any], language: str, ideas: list[dict[str, str]]) -> str:

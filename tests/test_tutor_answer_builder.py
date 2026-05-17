@@ -3,10 +3,56 @@ import tempfile
 import unittest
 from pathlib import Path
 
-from tools.tutor.answer_builder import TUTOR_MARKDOWN_LABELS, build_tutor_answer, _validate_governance
+from tools.tutor.answer_builder import (
+    TUTOR_MARKDOWN_LABELS,
+    TUTOR_SOURCE_NOTES,
+    _source_note,
+    _validate_governance,
+    build_tutor_answer,
+)
 
 
 class TutorAnswerBuilderTests(unittest.TestCase):
+    def test_tutor_source_note_registry_preserves_exact_notes(self):
+        self.assertEqual(
+            _source_note(_official_package(language="en"), "en"),
+            "Source note: from the WSET framework, treat official context as the reference point; use transcript material only as pedagogical support.",
+        )
+        self.assertEqual(
+            _source_note(_misconception_package(language="en"), "en"),
+            "Source note: the misconception node is a cognitive correction object, and Wine With Jimmy/manual transcript material is pedagogical support, not official WSET authority.",
+        )
+        self.assertEqual(
+            _source_note(_normal_package(language="en"), "en"),
+            "Source note: Wine With Jimmy/manual transcript material is pedagogical support, not official WSET authority.",
+        )
+        self.assertEqual(
+            _source_note(_official_package(language="es"), "es"),
+            "Nota de fuentes: desde el marco WSET, el material oficial es la referencia; el material de transcripción sirve solo como apoyo pedagógico.",
+        )
+        self.assertEqual(
+            _source_note(_misconception_package(language="es"), "es"),
+            "Nota de fuentes: el misconception_node es un objeto de corrección cognitiva; el material de Wine With Jimmy o transcripciones manuales es apoyo pedagógico, no autoridad oficial WSET.",
+        )
+        self.assertEqual(
+            _source_note(_normal_package(language="es"), "es"),
+            "Nota de fuentes: el material de Wine With Jimmy o transcripciones manuales es apoyo pedagógico, no autoridad oficial WSET.",
+        )
+        self.assertEqual(
+            set(TUTOR_SOURCE_NOTES["en"]),
+            {"official_reference", "cognitive_correction", "pedagogical_support"},
+        )
+        self.assertEqual(set(TUTOR_SOURCE_NOTES["es"]), set(TUTOR_SOURCE_NOTES["en"]))
+
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            result = build_tutor_answer(
+                _write_package(root / "context.json", _normal_package(language="es")),
+                output_path=root / "latest.md",
+            )
+
+        self.assertFalse(result["governance"]["safe_for_examiner"])
+
     def test_tutor_markdown_heading_registry_preserves_rendered_structure(self):
         expected_keys = {
             "title",
@@ -311,6 +357,13 @@ def _base_package(language: str) -> dict:
 def _normal_package(language: str) -> dict:
     package = _base_package(language)
     package["pedagogical_act"] = "answer_normally"
+    return package
+
+
+def _official_package(language: str) -> dict:
+    package = _normal_package(language)
+    package["retrieved_context"][0]["source_type"] = "official_wset_extracted"
+    package["retrieved_context"][0]["source_filename"] = "official_wset_chunks.jsonl"
     return package
 
 
