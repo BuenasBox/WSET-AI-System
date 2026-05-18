@@ -22,6 +22,19 @@ from tools.constants import (
 from tools.tutor.explanation_priority import DEPTH_TO_STYLE, build_explanation_priority
 from tools.tutor.scaffolding_policy import select_scaffolding_policy
 
+try:
+    from tools.tutor.sat_reasoner import (
+        discard_invalid_hypotheses,
+        extract_sat_observations,
+        formulate_quality_assessment,
+        is_sat_query,
+        score_quality_hypotheses,
+    )
+
+    _SAT_REASONER_AVAILABLE = True
+except ImportError:
+    _SAT_REASONER_AVAILABLE = False
+
 
 DEFAULT_CONTEXT_PACKAGE_PATH = CONTEXT_PACKAGES_DIR / "latest_context_package.json"
 DEFAULT_TUTOR_OUTPUT_DIR = NAZARETH_DIR / "tutor_outputs"
@@ -60,6 +73,10 @@ TUTOR_MARKDOWN_LABELS = {
         "misconception_cause_effect": "Cadena causa → efecto",
         "misconception_exam": "Cómo escribirlo para puntos",
     },
+}
+TUTOR_SAT_MARKDOWN_LABELS = {
+    "en": "SAT Quality Assessment",
+    "es": "Evaluación de Calidad SAT",
 }
 TUTOR_SOURCE_NOTES = {
     "en": {
@@ -239,6 +256,19 @@ def _render_normal_answer(
     framing = _wset_framing_line(query, language, "", ideas)
     cause = _cause_effect_line(package, language, ideas, depth)
     exam = _exam_line(query, language, ideas)
+    sat_block = None
+    if _SAT_REASONER_AVAILABLE and _is_quality_assessment_query(query, language) and is_sat_query(query, language):
+        observations = extract_sat_observations(query, language)
+        if observations:
+            scored = score_quality_hypotheses(observations)
+            surviving = discard_invalid_hypotheses(scored, observations)
+            causal_chains = package.get("forced_causal_chains") or None
+            sat_block = formulate_quality_assessment(
+                observations,
+                surviving,
+                language,
+                causal_chains=causal_chains,
+            )
     if depth == "minimal":
         support = _compress_explanation(support, depth)
         framing = _compress_explanation(framing, depth)
@@ -255,6 +285,14 @@ def _render_normal_answer(
             f"## 2. {labels['normal_framing']}",
             framing,
             "",
+        ]
+        if sat_block is not None:
+            lines.extend([
+                f"## {TUTOR_SAT_MARKDOWN_LABELS['en']}",
+                sat_block,
+                "",
+            ])
+        lines.extend([
             f"## 3. {labels['cause_effect']}",
             cause,
             "",
@@ -268,7 +306,7 @@ def _render_normal_answer(
             support,
             "",
             TUTOR_DISCLAIMERS["en"],
-        ]
+        ])
     else:
         labels = TUTOR_MARKDOWN_LABELS["es"]
         lines = [
@@ -280,6 +318,14 @@ def _render_normal_answer(
             f"## 2. {labels['normal_framing']}",
             framing,
             "",
+        ]
+        if sat_block is not None:
+            lines.extend([
+                f"## {TUTOR_SAT_MARKDOWN_LABELS['es']}",
+                sat_block,
+                "",
+            ])
+        lines.extend([
             f"## 3. {labels['cause_effect']}",
             cause,
             "",
@@ -293,7 +339,7 @@ def _render_normal_answer(
             support,
             "",
             TUTOR_DISCLAIMERS["es"],
-        ]
+        ])
     return "\n".join(line for line in lines if line is not None)
 
 
@@ -385,6 +431,22 @@ def _display_query(query: str, language: str) -> str:
     if "quality" in lowered and "sat" in lowered:
         return "¿Cómo justifico la quality assessment en SAT?"
     return query
+
+
+def _is_quality_assessment_query(query: str, language: str) -> bool:
+    del language
+    lowered = query.lower()
+    terms = (
+        "assess quality",
+        "quality assessment",
+        "evaluate quality",
+        "quality",
+        "calidad",
+        "evalúa",
+        "evaluar",
+        "evaluación",
+    )
+    return any(term in lowered for term in terms)
 
 
 def _misconception_direct_correction(query: str, language: str) -> str:
