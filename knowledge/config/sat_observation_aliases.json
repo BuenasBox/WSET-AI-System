@@ -1,0 +1,159 @@
+{
+  "schema_version": "sat_aliases_v1",
+  "safe_for_examiner": false,
+  "examiner_scoring_allowed": false,
+  "parameters": {
+    "acidity": {
+      "levels": ["low", "medium(-)", "medium", "medium(+)", "high"],
+      "aliases_es": {
+        "low": ["acidez baja", "poca acidez", "poco ácido", "suave de acidez"],
+        "medium(-)": ["acidez media baja", "acidez media-", "acidez moderada baja"],
+        "medium": ["acidez media", "acidez moderada"],
+        "medium(+)": ["acidez media alta", "acidez media+", "buena acidez"],
+        "high": ["acidez alta", "alta acidez", "muy ácido", "acidez elevada"]
+      },
+      "aliases_en": {
+        "low": ["low acidity", "soft acidity", "little acidity"],
+        "medium(-)": ["medium minus acidity", "medium-minus acidity", "medium(-) acidity"],
+        "medium": ["medium acidity", "moderate acidity"],
+        "medium(+)": ["medium plus acidity", "medium-plus acidity", "medium(+) acidity"],
+        "high": ["high acidity", "very acidic", "sharp acidity", "elevated acidity"]
+      }
+    },
+    "tannin": {
+      "levels": ["none", "low", "medium(-)", "medium", "medium(+)", "high"],
+      "aliases_es": {
+        "none": ["sin tanino", "tanino ausente", "sin taninos"],
+        "low": ["tanino bajo", "taninos bajos", "poco tanino"],
+        "medium(-)": ["tanino medio bajo", "tanino medio-", "taninos medio bajos"],
+        "medium": ["tanino medio", "taninos medios"],
+        "medium(+)": ["tanino medio alto", "tanino medio+", "taninos medio altos"],
+        "high": ["tanino alto", "taninos altos", "mucho tanino", "tánico"]
+      },
+      "aliases_en": {
+        "none": ["no tannin", "tannin absent", "no tannins"],
+        "low": ["low tannin", "low tannins", "little tannin"],
+        "medium(-)": ["medium minus tannin", "medium-minus tannin", "medium(-) tannin"],
+        "medium": ["medium tannin", "medium tannins"],
+        "medium(+)": ["medium plus tannin", "medium-plus tannin", "medium(+) tannin"],
+        "high": ["high tannin", "high tannins", "tannic", "grippy tannins"]
+      }
+    },
+    "sweetness": {
+      "levels": ["dry", "off-dry", "medium-dry", "medium-sweet", "sweet", "luscious"],
+      "aliases_es": {
+        "dry": ["seco", "vino seco", "sin dulzor"],
+        "off-dry": ["ligeramente dulce", "casi seco", "semiseco"],
+        "medium-dry": ["semiseco medio", "medio seco", "dulzor medio bajo"],
+        "medium-sweet": ["semidulce", "medio dulce", "dulzor medio"],
+        "sweet": ["dulce", "vino dulce", "dulzor alto"],
+        "luscious": ["muy dulce", "dulzor intenso", "dulce opulento"]
+      },
+      "aliases_en": {
+        "dry": ["dry", "dry wine", "no sweetness"],
+        "off-dry": ["off-dry", "slightly sweet", "nearly dry"],
+        "medium-dry": ["medium-dry", "medium dry", "medium-low sweetness"],
+        "medium-sweet": ["medium-sweet", "medium sweet", "semi-sweet"],
+        "sweet": ["sweet", "sweet wine", "high sweetness"],
+        "luscious": ["luscious", "very sweet", "intensely sweet"]
+      }
+    },
+    "body": {
+      "levels": ["light", "medium(-)", "medium", "medium(+)", "full"],
+      "aliases_es": {
+        "light": ["cuerpo ligero", "ligero de cuerpo", "poco cuerpo"],
+        "medium(-)": ["cuerpo medio bajo", "cuerpo medio-", "cuerpo moderado bajo"],
+        "medium": ["cuerpo medio", "medio cuerpo"],
+        "medium(+)": ["cuerpo medio alto", "cuerpo medio+", "bastante cuerpo"],
+        "full": ["cuerpo pleno", "cuerpo completo", "mucho cuerpo", "gran cuerpo"]
+      },
+      "aliases_en": {
+        "light": ["light body", "light-bodied", "low body"],
+        "medium(-)": ["medium minus body", "medium-minus body", "medium(-) body"],
+        "medium": ["medium body", "medium-bodied"],
+        "medium(+)": ["medium plus body", "medium-plus body", "medium(+) body"],
+        "full": ["full body", "full-bodied", "full bodied"]
+      }
+    },
+    "finish": {
+      "levels": ["short", "medium(-)", "medium", "medium(+)", "long"],
+      "aliases_es": {
+        "short": ["final corto", "persistencia corta", "poca persistencia"],
+        "medium(-)": ["final medio corto", "final medio-", "persistencia media baja"],
+        "medium": ["final medio", "persistencia media"],
+        "medium(+)": ["final medio largo", "final medio+", "persistencia media alta"],
+        "long": ["final largo", "larga persistencia", "persistencia larga"]
+      },
+      "aliases_en": {
+        "short": ["short finish", "short length", "little persistence"],
+        "medium(-)": ["medium minus finish", "medium-minus finish", "medium(-) finish"],
+        "medium": ["medium finish", "medium length"],
+        "medium(+)": ["medium plus finish", "medium-plus finish", "medium(+) finish"],
+        "long": ["long finish", "long length", "persistent finish"]
+      }
+    },
+    "intensity": {
+      "levels": ["light", "medium", "pronounced"],
+      "aliases_es": {
+        "light": ["intensidad ligera", "intensidad baja", "aroma ligero"],
+        "medium": ["intensidad media", "aroma medio", "intensidad moderada"],
+        "pronounced": ["intensidad pronunciada", "aroma pronunciado", "intensidad alta"]
+      },
+      "aliases_en": {
+        "light": ["light intensity", "low intensity", "light aroma"],
+        "medium": ["medium intensity", "moderate intensity", "medium aroma"],
+        "pronounced": ["pronounced intensity", "pronounced aroma", "high intensity"]
+      }
+    },
+    "complexity": {
+      "levels": ["absent", "present", "high"],
+      "aliases_es": {
+        "absent": ["sin complejidad", "complejidad ausente", "simple"],
+        "present": ["complejidad presente", "algo complejo", "complejidad media"],
+        "high": ["complejidad alta", "muy complejo", "gran complejidad"]
+      },
+      "aliases_en": {
+        "absent": ["no complexity", "complexity absent", "simple"],
+        "present": ["complexity present", "some complexity", "moderate complexity"],
+        "high": ["high complexity", "very complex", "great complexity"]
+      }
+    },
+    "balance": {
+      "levels": ["unbalanced", "balanced"],
+      "aliases_es": {
+        "unbalanced": ["desequilibrado", "sin equilibrio", "no equilibrado"],
+        "balanced": ["equilibrado", "en equilibrio", "buen equilibrio"]
+      },
+      "aliases_en": {
+        "unbalanced": ["unbalanced", "not balanced", "out of balance"],
+        "balanced": ["balanced", "in balance", "good balance"]
+      }
+    },
+    "condition": {
+      "levels": ["faulty", "clean"],
+      "aliases_es": {
+        "faulty": ["defectuoso", "con defecto", "vino defectuoso", "no limpio"],
+        "clean": ["limpio", "sin defectos", "condición limpia"]
+      },
+      "aliases_en": {
+        "faulty": ["faulty", "faulty condition", "with fault", "unclean"],
+        "clean": ["clean", "clean condition", "no faults", "fault free"]
+      }
+    },
+    "development": {
+      "levels": ["youthful", "some development", "fully developed", "past its best"],
+      "aliases_es": {
+        "youthful": ["joven", "vino joven", "carácter joven"],
+        "some development": ["con desarrollo", "algo desarrollado", "desarrollo moderado"],
+        "fully developed": ["desarrollado", "plenamente desarrollado", "totalmente desarrollado"],
+        "past its best": ["pasado", "pasado de su mejor momento", "demasiado evolucionado"]
+      },
+      "aliases_en": {
+        "youthful": ["youthful", "young", "youthful character"],
+        "some development": ["some development", "developing", "moderate development"],
+        "fully developed": ["fully developed", "developed", "mature"],
+        "past its best": ["past its best", "past peak", "overdeveloped"]
+      }
+    }
+  }
+}
