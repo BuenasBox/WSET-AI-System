@@ -1,0 +1,55 @@
+{
+  "node_type": "causal_chain",
+  "node_id": "CC_DESTEMMING_TANNIN_STRUCTURE",
+  "topic": "destemming and its effect on tannin structure",
+  "trigger_keywords": [
+    "despalillado",
+    "destem",
+    "raspones",
+    "stems",
+    "taninos verdes",
+    "green tannins",
+    "astringencia",
+    "astringency",
+    "estructura tánica",
+    "tannin structure"
+  ],
+  "steps": [
+    {
+      "step": 1,
+      "label": "cause",
+      "text": "Stems or raspones can be present with the grapes before fermentation and can contribute green, astringent tannins."
+    },
+    {
+      "step": 2,
+      "label": "mechanism",
+      "text": "If stems remain during fermentation, tannins and green phenolic compounds can be extracted from them into the must."
+    },
+    {
+      "step": 3,
+      "label": "effect",
+      "text": "Destemming removes this source of green tannins, leading to softer, rounder tannins and a cleaner palate structure."
+    },
+    {
+      "step": 4,
+      "label": "exam_formulation",
+      "text": "Destemming improves control of tannin structure because it removes stems before fermentation; the wine therefore avoids excessive green astringency and can show softer tannins."
+    }
+  ],
+  "sat_relevance": "",
+  "linked_topics": [],
+  "agent_corpus": "tutor",
+  "safe_for_examiner": false,
+  "examiner_scoring_allowed": false,
+  "requires_human_review": true,
+  "governance": {
+    "safe_for_examiner": false,
+    "examiner_scoring_allowed": false,
+    "agent_corpus": "tutor"
+  },
+  "_meta": {
+    "schema_version": "causal_chain_v1",
+    "created_date": "2026-05-17",
+    "ingestion_status": "draft"
+  }
+}

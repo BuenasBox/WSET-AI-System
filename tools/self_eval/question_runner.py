@@ -7,14 +7,24 @@ import shutil
 from pathlib import Path
 from typing import Any
 
+from tools.constants import (
+    CLOUD_SERVICES_ACTIVE,
+    EXAMINER_SCORING_ALLOWED,
+    KNOWLEDGE_DIR,
+    PROJECT_ROOT,
+    SAFE_FOR_EXAMINER,
+    USES_API,
+    USES_EMBEDDINGS,
+    USES_LLM,
+    USES_VECTOR_DB,
+)
 from tools.orchestrator.orchestrator import run_orchestrator
 from tools.self_eval.answer_comparator import compare_answer
 from tools.self_eval.evaluation_reporter import DEFAULT_SELF_EVAL_DIR, write_evaluation_reports
 from tools.tutor.answer_builder import build_tutor_answer
-from tools.youtube_transcription.config import PROJECT_ROOT
 
 
-QUESTION_BANK_ROOT = PROJECT_ROOT / "knowledge" / "question-bank"
+QUESTION_BANK_ROOT = KNOWLEDGE_DIR / "question-bank"
 DEFAULT_QUESTION_LIMIT = 10
 
 
@@ -43,13 +53,13 @@ def run_self_eval(
         "results": results,
         "report_paths": report_paths,
         "governance": {
-            "safe_for_examiner": False,
-            "examiner_scoring_allowed": False,
-            "uses_llm": False,
-            "uses_api": False,
-            "uses_embeddings": False,
-            "uses_vector_db": False,
-            "cloud_services_active": False,
+            "safe_for_examiner": SAFE_FOR_EXAMINER,
+            "examiner_scoring_allowed": EXAMINER_SCORING_ALLOWED,
+            "uses_llm": USES_LLM,
+            "uses_api": USES_API,
+            "uses_embeddings": USES_EMBEDDINGS,
+            "uses_vector_db": USES_VECTOR_DB,
+            "cloud_services_active": CLOUD_SERVICES_ACTIVE,
             "strictness": strictness,
         },
     }
@@ -89,13 +99,13 @@ def run_question_attempt(question: dict[str, Any], attempts_dir: Path, strictnes
         "expected_reasoning_type": question.get("expected_reasoning_type", ""),
         "difficulty": question.get("difficulty", "intermediate"),
         "source_type": question.get("source_type", "internal_adapter"),
-        "safe_for_examiner": False,
+        "safe_for_examiner": SAFE_FOR_EXAMINER,
         "tutor_attempt_path": tutor_result["output_paths"]["latest"],
         "tutor_context_package_path": saved_context_path.as_posix(),
         "comparison": comparison,
         "governance": {
-            "safe_for_examiner": False,
-            "examiner_scoring_allowed": False,
+            "safe_for_examiner": SAFE_FOR_EXAMINER,
+            "examiner_scoring_allowed": EXAMINER_SCORING_ALLOWED,
             "official_marks_assigned": False,
             "strictness": strictness,
         },

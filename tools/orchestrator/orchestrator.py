@@ -7,8 +7,18 @@ from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
 
+from tools.constants import (
+    CLOUD_SERVICES_ACTIVE,
+    CONTEXT_PACKAGES_DIR,
+    EXAMINER_SCORING_ALLOWED,
+    PROJECT_ROOT,
+    SAFE_FOR_EXAMINER,
+    USES_API,
+    USES_EMBEDDINGS,
+    USES_LLM,
+    USES_VECTOR_DB,
+)
 from tools.retrieval.tutor_retrieval_sandbox import run_retrieval_sandbox
-from tools.youtube_transcription.config import PROJECT_ROOT
 
 from .learner_state import (
     DEFAULT_LES_PATH,
@@ -25,7 +35,7 @@ from .misconception_prepass import (
 )
 
 
-DEFAULT_CONTEXT_PACKAGE_DIR = PROJECT_ROOT / "knowledge" / "nazareth" / "context_packages"
+DEFAULT_CONTEXT_PACKAGE_DIR = CONTEXT_PACKAGES_DIR
 
 
 def run_orchestrator(
@@ -59,7 +69,7 @@ def run_orchestrator(
             "intervention_type": prepass["intervention_type"],
             "corrected_understanding": prepass["corrected_understanding"],
             "confidence": prepass.get("confidence", 0.0),
-            "safe_for_examiner": False,
+            "safe_for_examiner": SAFE_FOR_EXAMINER,
         }
         recommended_update = {
             "append_recent_misconception": prepass["matched_misconception_id"],
@@ -81,7 +91,7 @@ def run_orchestrator(
             "pedagogical_act": "answer_normally",
             "forced_retrieval_nodes": [],
             "confidence": prepass.get("confidence", 0.0),
-            "safe_for_examiner": False,
+            "safe_for_examiner": SAFE_FOR_EXAMINER,
         }
         recommended_update = {
             "append_recent_misconception": None,
@@ -91,13 +101,13 @@ def run_orchestrator(
         retrieval_query = query
 
     governance = {
-        "safe_for_examiner": False,
+        "safe_for_examiner": SAFE_FOR_EXAMINER,
         "examiner_scoring_active": False,
         "embeddings_active": False,
         "vector_db_active": False,
         "apis_connected": False,
         "frontend_active": False,
-        "cloud_services_active": False,
+        "cloud_services_active": CLOUD_SERVICES_ACTIVE,
     }
     retrieval_plan = {
         "mode": "forced_plus_supporting_chunks" if prepass["detected"] else "normal_retrieval",
@@ -106,10 +116,10 @@ def run_orchestrator(
         "forced_retrieval_nodes": tutor_directive["forced_retrieval_nodes"],
         "pedagogical_priority_boost": pedagogical_boost,
         "retrieval_engine": "tools.retrieval.tutor_retrieval_sandbox",
-        "uses_embeddings": False,
-        "uses_vector_db": False,
-        "uses_llm": False,
-        "uses_api": False,
+        "uses_embeddings": USES_EMBEDDINGS,
+        "uses_vector_db": USES_VECTOR_DB,
+        "uses_llm": USES_LLM,
+        "uses_api": USES_API,
     }
     retrieval_run = run_retrieval_sandbox(
         root=root,
@@ -245,7 +255,7 @@ def build_context_package(
             "Do not translate key terms if translation would reduce precision.",
             "If forced_causal_chains is populated, render the causal chain steps for the Cadena causa → efecto section.",
         ],
-        "safe_for_examiner": False,
+        "safe_for_examiner": SAFE_FOR_EXAMINER,
     }
     return {
         "student_query": query,
@@ -262,8 +272,8 @@ def build_context_package(
         "success_criteria": _success_criteria(pedagogical_act),
         "governance": {
             "agent_corpus": "tutor",
-            "safe_for_examiner": False,
-            "examiner_scoring_allowed": False,
+            "safe_for_examiner": SAFE_FOR_EXAMINER,
+            "examiner_scoring_allowed": EXAMINER_SCORING_ALLOWED,
         },
     }
 
@@ -336,8 +346,8 @@ def _pedagogical_priority_boost(les_context: dict[str, Any]) -> dict[str, Any]:
         "force_deep_explanation": force_deep,
         "resurfacing_concepts": [item.get("concept_id") for item in retention if isinstance(item, dict) and item.get("concept_id")],
         "preferred_depth": memory.get("preferred_depth", "standard"),
-        "safe_for_examiner": False,
-        "examiner_scoring_allowed": False,
+        "safe_for_examiner": SAFE_FOR_EXAMINER,
+        "examiner_scoring_allowed": EXAMINER_SCORING_ALLOWED,
     }
 
 

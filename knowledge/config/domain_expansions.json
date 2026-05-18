@@ -1,0 +1,222 @@
+{
+  "SAT_EXPANSIONS": {
+    "sat": [
+      "balance",
+      "intensity",
+      "complexity",
+      "length",
+      "readiness",
+      "quality assessment",
+      "bicL",
+      "appearance",
+      "nose",
+      "palate"
+    ],
+    "quality": [
+      "balance",
+      "intensity",
+      "complexity",
+      "length",
+      "readiness",
+      "quality assessment",
+      "bicL"
+    ],
+    "balance": [
+      "quality assessment",
+      "intensity",
+      "complexity",
+      "length",
+      "readiness",
+      "acid",
+      "tannin",
+      "alcohol"
+    ]
+  },
+  "DOMAIN_EXPANSIONS": {
+    "cool climate": [
+      "slow ripening",
+      "slower ripening",
+      "acid retention",
+      "high acidity",
+      "higher acidity",
+      "malic acid",
+      "lower ph",
+      "growing season",
+      "freshness",
+      "crispness",
+      "low temperature",
+      "low temperatures"
+    ],
+    "acidity": [
+      "acid",
+      "malic acid",
+      "tartaric acid",
+      "freshness",
+      "crispness",
+      "lower ph",
+      "high acidity"
+    ],
+    "envejecimiento oxidativo": [
+      "oxidative ageing",
+      "oxidative aging",
+      "oxygen contact",
+      "acetaldehyde",
+      "aldehyde",
+      "oloroso",
+      "rancio",
+      "nutty",
+      "dried fruit",
+      "amontillado",
+      "fortified",
+      "sherry",
+      "jerez"
+    ],
+    "crianza oxidativa": [
+      "oxidative ageing",
+      "oxidative aging",
+      "oxygen contact",
+      "oloroso",
+      "acetaldehyde",
+      "fortified",
+      "sherry",
+      "jerez"
+    ],
+    "vendimia mecanica": [
+      "mechanical harvesting",
+      "mechanical harvest",
+      "machine harvest",
+      "oxidation",
+      "berry damage",
+      "skin rupture",
+      "aromatic freshness"
+    ],
+    "vendimia mecánica": [
+      "mechanical harvesting",
+      "mechanical harvest",
+      "machine harvest",
+      "oxidation",
+      "berry damage"
+    ],
+    "despalillado": [
+      "destemming",
+      "stalks",
+      "green tannins",
+      "stem tannins",
+      "astringency",
+      "fermentation",
+      "tannin extraction"
+    ],
+    "sulfitos": [
+      "sulphites",
+      "sulfites",
+      "so2",
+      "sulphur dioxide",
+      "sulfur dioxide",
+      "antioxidant",
+      "antimicrobial",
+      "reductive",
+      "preservation"
+    ],
+    "tiraje": [
+      "liqueur de tirage",
+      "second fermentation",
+      "traditional method",
+      "sparkling",
+      "co2",
+      "yeast",
+      "sugar",
+      "bottle fermentation"
+    ],
+    "licor de tiraje": [
+      "liqueur de tirage",
+      "second fermentation",
+      "traditional method",
+      "sparkling",
+      "co2"
+    ],
+    "espumoso": [
+      "sparkling",
+      "effervescent",
+      "traditional method",
+      "co2",
+      "pressure",
+      "atmospheres",
+      "mousse",
+      "pétillant",
+      "semi-sparkling"
+    ],
+    "tokaji": [
+      "tokaji",
+      "tokay",
+      "aszú",
+      "aszu",
+      "botrytis",
+      "noble rot",
+      "putonyos",
+      "sweet wine",
+      "hungary",
+      "concentrated",
+      "furmint"
+    ],
+    "aszú": [
+      "aszú",
+      "aszu",
+      "tokaji",
+      "botrytis",
+      "noble rot",
+      "putonyos",
+      "concentrated",
+      "hungary"
+    ],
+    "crémant": [
+      "crémant",
+      "cremant",
+      "traditional method",
+      "loire",
+      "chenin blanc",
+      "sparkling",
+      "alsace",
+      "burgundy"
+    ],
+    "madeira": [
+      "madeira",
+      "estufagem",
+      "maderisation",
+      "fortified",
+      "tropical",
+      "oxidation",
+      "longevity",
+      "sercial",
+      "verdelho",
+      "bual",
+      "malmsey"
+    ],
+    "heladas primaverales": [
+      "spring frost",
+      "frost risk",
+      "cold air",
+      "topography",
+      "valley",
+      "air drainage",
+      "canopy management"
+    ],
+    "densidad de plantacion": [
+      "planting density",
+      "vine density",
+      "competition",
+      "vigour",
+      "concentration",
+      "yield",
+      "roots"
+    ],
+    "drenaje del suelo": [
+      "soil drainage",
+      "well-drained",
+      "water retention",
+      "root depth",
+      "vigour",
+      "concentration",
+      "texture"
+    ]
+  }
+}

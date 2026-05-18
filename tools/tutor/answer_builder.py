@@ -8,14 +8,23 @@ from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
 
-from tools.orchestrator.orchestrator import DEFAULT_CONTEXT_PACKAGE_DIR
+from tools.constants import (
+    CLOUD_SERVICES_ACTIVE,
+    CONTEXT_PACKAGES_DIR,
+    EXAMINER_SCORING_ALLOWED,
+    NAZARETH_DIR,
+    SAFE_FOR_EXAMINER,
+    USES_API,
+    USES_EMBEDDINGS,
+    USES_LLM,
+    USES_VECTOR_DB,
+)
 from tools.tutor.explanation_priority import DEPTH_TO_STYLE, build_explanation_priority
 from tools.tutor.scaffolding_policy import select_scaffolding_policy
-from tools.youtube_transcription.config import PROJECT_ROOT
 
 
-DEFAULT_CONTEXT_PACKAGE_PATH = DEFAULT_CONTEXT_PACKAGE_DIR / "latest_context_package.json"
-DEFAULT_TUTOR_OUTPUT_DIR = PROJECT_ROOT / "knowledge" / "nazareth" / "tutor_outputs"
+DEFAULT_CONTEXT_PACKAGE_PATH = CONTEXT_PACKAGES_DIR / "latest_context_package.json"
+DEFAULT_TUTOR_OUTPUT_DIR = NAZARETH_DIR / "tutor_outputs"
 DISCLAIMER_ES = "Nota: esta es una respuesta del Tutor, no una calificación oficial ni una evaluación del Examiner."
 DISCLAIMER_EN = "Note: this is a Tutor response, not an official grade or an Examiner evaluation."
 KEY_TERMS = "SAT, BICL, balance, intensity, complexity, length, acidity, tannin, body, quality assessment"
@@ -87,13 +96,13 @@ def build_tutor_answer(
         "style": selected_style,
         "student_query": package.get("student_query", ""),
         "governance": {
-            "safe_for_examiner": False,
-            "examiner_scoring_allowed": False,
-            "uses_llm": False,
-            "uses_api": False,
-            "uses_embeddings": False,
-            "uses_vector_db": False,
-            "cloud_services_active": False,
+            "safe_for_examiner": SAFE_FOR_EXAMINER,
+            "examiner_scoring_allowed": EXAMINER_SCORING_ALLOWED,
+            "uses_llm": USES_LLM,
+            "uses_api": USES_API,
+            "uses_embeddings": USES_EMBEDDINGS,
+            "uses_vector_db": USES_VECTOR_DB,
+            "cloud_services_active": CLOUD_SERVICES_ACTIVE,
         },
     }
 

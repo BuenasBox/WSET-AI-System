@@ -1,0 +1,55 @@
+{
+  "node_type": "causal_chain",
+  "node_id": "CC_SPRING_FROST_TOPOGRAPHY",
+  "topic": "spring frost risk and vineyard topography",
+  "trigger_keywords": [
+    "helada",
+    "heladas primaverales",
+    "topografía",
+    "spring frost",
+    "frost risk",
+    "aire frío",
+    "drenaje del aire",
+    "cold air",
+    "valle",
+    "ladera"
+  ],
+  "steps": [
+    {
+      "step": 1,
+      "label": "cause",
+      "text": "Spring frost risk is strongly influenced by vineyard topography and the movement of cold air across the site."
+    },
+    {
+      "step": 2,
+      "label": "mechanism",
+      "text": "Cold air is denser than warm air, so it descends and accumulates in low points such as valleys and hollows, while slopes with good air drainage allow cold air to move away."
+    },
+    {
+      "step": 3,
+      "label": "effect",
+      "text": "Vines in valleys or depressions have greater exposure to spring frost, whereas vines on slopes with good cold-air drainage have lower frost risk."
+    },
+    {
+      "step": 4,
+      "label": "exam_formulation",
+      "text": "Spring frost risk is higher in low-lying sites because cold air descends and pools there; slopes with good air drainage are therefore less exposed to frost damage."
+    }
+  ],
+  "sat_relevance": "",
+  "linked_topics": [],
+  "agent_corpus": "tutor",
+  "safe_for_examiner": false,
+  "examiner_scoring_allowed": false,
+  "requires_human_review": true,
+  "governance": {
+    "safe_for_examiner": false,
+    "examiner_scoring_allowed": false,
+    "agent_corpus": "tutor"
+  },
+  "_meta": {
+    "schema_version": "causal_chain_v1",
+    "created_date": "2026-05-17",
+    "ingestion_status": "draft"
+  }
+}

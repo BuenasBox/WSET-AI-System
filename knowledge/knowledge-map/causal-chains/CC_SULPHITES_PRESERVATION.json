@@ -1,0 +1,56 @@
+{
+  "node_type": "causal_chain",
+  "node_id": "CC_SULPHITES_PRESERVATION",
+  "topic": "sulphites (SO₂) and consequences of excessive use",
+  "trigger_keywords": [
+    "sulfitos",
+    "sulphites",
+    "sulfites",
+    "so2",
+    "SO₂",
+    "dióxido de azufre",
+    "sulphur dioxide",
+    "aromas reductivos",
+    "reductive aromas",
+    "cerilla",
+    "struck match"
+  ],
+  "steps": [
+    {
+      "step": 1,
+      "label": "cause",
+      "text": "Sulphur dioxide, or SO₂, is used as an antioxidant and antimicrobial preservative in winemaking."
+    },
+    {
+      "step": 2,
+      "label": "mechanism",
+      "text": "When used excessively, SO₂ can suppress microbial and fermentative activity too broadly and leave perceptible residual sulphur characters in the wine."
+    },
+    {
+      "step": 3,
+      "label": "effect",
+      "text": "The wine can show reductive aromas such as struck match, burnt rubber, or sulphur, and its fruit character can seem masked."
+    },
+    {
+      "step": 4,
+      "label": "exam_formulation",
+      "text": "Excess sulphites can harm wine character because too much SO₂ suppresses fermentative expression and can leave reductive aromas; precise dosing is therefore needed to preserve the wine without masking it."
+    }
+  ],
+  "sat_relevance": "",
+  "linked_topics": [],
+  "agent_corpus": "tutor",
+  "safe_for_examiner": false,
+  "examiner_scoring_allowed": false,
+  "requires_human_review": true,
+  "governance": {
+    "safe_for_examiner": false,
+    "examiner_scoring_allowed": false,
+    "agent_corpus": "tutor"
+  },
+  "_meta": {
+    "schema_version": "causal_chain_v1",
+    "created_date": "2026-05-17",
+    "ingestion_status": "draft"
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "node_type": "causal_chain",
+  "node_id": "CC_SOIL_DRAINAGE_VINE_VIGOUR",
+  "topic": "soil drainage, root depth, and vine vigour",
+  "trigger_keywords": [
+    "drenaje",
+    "textura del suelo",
+    "soil drainage",
+    "soil texture",
+    "raíces",
+    "vigor",
+    "concentración",
+    "drainage",
+    "gravel",
+    "grava",
+    "sandy soil"
+  ],
+  "steps": [
+    {
+      "step": 1,
+      "label": "cause",
+      "text": "Soil texture and composition influence how effectively water drains through the vineyard soil."
+    },
+    {
+      "step": 2,
+      "label": "mechanism",
+      "text": "In well-drained soils, vine roots must grow deeper to find water, which limits excessive vine vigour and reduces the plant's resources available for canopy growth."
+    },
+    {
+      "step": 3,
+      "label": "effect",
+      "text": "Lower vine vigour can lead to more concentrated fruit, with better flavour concentration and generally higher grape quality potential."
+    },
+    {
+      "step": 4,
+      "label": "exam_formulation",
+      "text": "Well-drained soil supports grape quality because it encourages deeper roots and limits vigour; the vine can therefore produce more concentrated fruit."
+    }
+  ],
+  "sat_relevance": "",
+  "linked_topics": [],
+  "agent_corpus": "tutor",
+  "safe_for_examiner": false,
+  "examiner_scoring_allowed": false,
+  "requires_human_review": true,
+  "governance": {
+    "safe_for_examiner": false,
+    "examiner_scoring_allowed": false,
+    "agent_corpus": "tutor"
+  },
+  "_meta": {
+    "schema_version": "causal_chain_v1",
+    "created_date": "2026-05-17",
+    "ingestion_status": "draft"
+  }
+}

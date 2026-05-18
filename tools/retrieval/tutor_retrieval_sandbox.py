@@ -18,6 +18,7 @@ from datetime import UTC, datetime
 from pathlib import Path
 from typing import Any
 
+from tools.constants import KNOWLEDGE_DIR, OFFICIAL_WSET_DIR, PROJECT_ROOT, RETRIEVAL_SANDBOX_DIR
 
 ALLOWED_SOURCE_TYPES = {"manual_curated_srt", "youtube_transcript", "official_wset_extracted"}
 ALLOWED_AGENT_CORPUS = "tutor"
@@ -85,191 +86,21 @@ SAT_TERMS = {
 }
 CAUSE_EFFECT_TERMS = {"affect", "because", "cause", "effect", "increase", "decrease", "leads", "therefore", "why"}
 EXAM_TERMS = {"exam", "marks", "answer", "question", "structure", "justify", "pass", "wset"}
-SAT_EXPANSIONS = {
-    "sat": {"balance", "intensity", "complexity", "length", "readiness", "quality assessment", "bicL", "appearance", "nose", "palate"},
-    "quality": {"balance", "intensity", "complexity", "length", "readiness", "quality assessment", "bicL"},
-    "balance": {"quality assessment", "intensity", "complexity", "length", "readiness", "acid", "tannin", "alcohol"},
-}
-DOMAIN_EXPANSIONS = {
-    "cool climate": {
-        "slow ripening",
-        "slower ripening",
-        "acid retention",
-        "high acidity",
-        "higher acidity",
-        "malic acid",
-        "lower ph",
-        "growing season",
-        "freshness",
-        "crispness",
-        "low temperature",
-        "low temperatures",
-    },
-    "acidity": {"acid", "malic acid", "tartaric acid", "freshness", "crispness", "lower ph", "high acidity"},
-    # Spanish topic expansions — surface relevant official chunks for key self-eval topics
-    "envejecimiento oxidativo": {
-        "oxidative ageing",
-        "oxidative aging",
-        "oxygen contact",
-        "acetaldehyde",
-        "aldehyde",
-        "oloroso",
-        "rancio",
-        "nutty",
-        "dried fruit",
-        "amontillado",
-        "fortified",
-        "sherry",
-        "jerez",
-    },
-    "crianza oxidativa": {
-        "oxidative ageing",
-        "oxidative aging",
-        "oxygen contact",
-        "oloroso",
-        "acetaldehyde",
-        "fortified",
-        "sherry",
-        "jerez",
-    },
-    "vendimia mecanica": {
-        "mechanical harvesting",
-        "mechanical harvest",
-        "machine harvest",
-        "oxidation",
-        "berry damage",
-        "skin rupture",
-        "aromatic freshness",
-    },
-    "vendimia mecánica": {
-        "mechanical harvesting",
-        "mechanical harvest",
-        "machine harvest",
-        "oxidation",
-        "berry damage",
-    },
-    "despalillado": {
-        "destemming",
-        "stalks",
-        "green tannins",
-        "stem tannins",
-        "astringency",
-        "fermentation",
-        "tannin extraction",
-    },
-    "sulfitos": {
-        "sulphites",
-        "sulfites",
-        "so2",
-        "sulphur dioxide",
-        "sulfur dioxide",
-        "antioxidant",
-        "antimicrobial",
-        "reductive",
-        "preservation",
-    },
-    "tiraje": {
-        "liqueur de tirage",
-        "second fermentation",
-        "traditional method",
-        "sparkling",
-        "co2",
-        "yeast",
-        "sugar",
-        "bottle fermentation",
-    },
-    "licor de tiraje": {
-        "liqueur de tirage",
-        "second fermentation",
-        "traditional method",
-        "sparkling",
-        "co2",
-    },
-    "espumoso": {
-        "sparkling",
-        "effervescent",
-        "traditional method",
-        "co2",
-        "pressure",
-        "atmospheres",
-        "mousse",
-        "pétillant",
-        "semi-sparkling",
-    },
-    "tokaji": {
-        "tokaji",
-        "tokay",
-        "aszú",
-        "aszu",
-        "botrytis",
-        "noble rot",
-        "putonyos",
-        "sweet wine",
-        "hungary",
-        "concentrated",
-        "furmint",
-    },
-    "aszú": {
-        "aszú",
-        "aszu",
-        "tokaji",
-        "botrytis",
-        "noble rot",
-        "putonyos",
-        "concentrated",
-        "hungary",
-    },
-    "crémant": {
-        "crémant",
-        "cremant",
-        "traditional method",
-        "loire",
-        "chenin blanc",
-        "sparkling",
-        "alsace",
-        "burgundy",
-    },
-    "madeira": {
-        "madeira",
-        "estufagem",
-        "maderisation",
-        "fortified",
-        "tropical",
-        "oxidation",
-        "longevity",
-        "sercial",
-        "verdelho",
-        "bual",
-        "malmsey",
-    },
-    "heladas primaverales": {
-        "spring frost",
-        "frost risk",
-        "cold air",
-        "topography",
-        "valley",
-        "air drainage",
-        "canopy management",
-    },
-    "densidad de plantacion": {
-        "planting density",
-        "vine density",
-        "competition",
-        "vigour",
-        "concentration",
-        "yield",
-        "roots",
-    },
-    "drenaje del suelo": {
-        "soil drainage",
-        "well-drained",
-        "water retention",
-        "root depth",
-        "vigour",
-        "concentration",
-        "texture",
-    },
-}
+_EXPANSIONS_PATH = KNOWLEDGE_DIR / "config" / "domain_expansions.json"
+
+
+def _load_domain_expansions() -> dict:
+    if not _EXPANSIONS_PATH.exists():
+        raise FileNotFoundError(
+            f"domain_expansions.json not found at {_EXPANSIONS_PATH}. "
+            "This file is required for retrieval to function."
+        )
+    return json.loads(_EXPANSIONS_PATH.read_text(encoding="utf-8"))
+
+
+_EXPANSIONS_CONFIG = _load_domain_expansions()
+SAT_EXPANSIONS = _EXPANSIONS_CONFIG["SAT_EXPANSIONS"]
+DOMAIN_EXPANSIONS = _EXPANSIONS_CONFIG["DOMAIN_EXPANSIONS"]
 REASONING_BY_INTENT = {
     "sat_coaching": "sat_logic",
     "tasting_exam_strategy": "exam_strategy",
@@ -391,7 +222,7 @@ def select_matched_causal_chain_nodes(
 
 def load_retrieval_context(root: Path) -> RetrievalContext:
     chunk_dir = root / "knowledge" / "wine-with-jimmy" / "chunk-ready"
-    official_chunk_path = root / "knowledge" / "official-wset" / "study-guide" / "official-chunks" / "official_wset_chunks.jsonl"
+    official_chunk_path = root / OFFICIAL_WSET_DIR.relative_to(PROJECT_ROOT) / "study-guide" / "official-chunks" / "official_wset_chunks.jsonl"
     golden_path = (
         root / "knowledge" / "wine-with-jimmy" / "manual-import" / "reports" / "golden_tutor_chunk_candidates.jsonl"
     )
@@ -778,7 +609,7 @@ def explain_retrieval(
 
 
 def write_retrieval_reports(root: Path, run: dict[str, Any], output_prefix: str = "retrieval_run") -> None:
-    output_dir = root / "knowledge" / "retrieval-sandbox"
+    output_dir = root / RETRIEVAL_SANDBOX_DIR.relative_to(PROJECT_ROOT)
     output_dir.mkdir(parents=True, exist_ok=True)
     safe_prefix = _safe_output_prefix(output_prefix)
     json_path = output_dir / f"{safe_prefix}.json"

@@ -1,0 +1,61 @@
+{
+  "node_type": "causal_chain",
+  "node_id": "CC_MACERATION_EXTRACTION",
+  "topic": "maceration and extraction of colour and tannins",
+  "trigger_keywords": [
+    "maceración",
+    "maceration",
+    "extracción",
+    "extraction",
+    "color",
+    "colour",
+    "taninos",
+    "tannins",
+    "hollejos",
+    "skins",
+    "remontage",
+    "pigeage",
+    "délestage",
+    "cap management",
+    "sombrero",
+    "gestión del sombrero"
+  ],
+  "steps": [
+    {
+      "step": 1,
+      "label": "cause",
+      "text": "In red winemaking, colour pigments and tannins are extracted mainly from grape skins during contact between the fermenting must and the solids."
+    },
+    {
+      "step": 2,
+      "label": "mechanism",
+      "text": "Maceration and cap-management practices such as remontage, pigeage, or délestage increase contact between the liquid and the skins, allowing more colour and tannin to move into the wine."
+    },
+    {
+      "step": 3,
+      "label": "effect",
+      "text": "Greater extraction produces red wines with deeper colour, more tannic structure, and a fuller impression on the palate."
+    },
+    {
+      "step": 4,
+      "label": "exam_formulation",
+      "text": "Maceration increases colour and tannin extraction because it keeps the fermenting must in contact with grape skins; cap management strengthens this contact and therefore builds colour and structure."
+    }
+  ],
+  "sat_relevance": "",
+  "linked_topics": [],
+  "agent_corpus": "tutor",
+  "safe_for_examiner": false,
+  "examiner_scoring_allowed": false,
+  "requires_human_review": true,
+  "governance": {
+    "safe_for_examiner": false,
+    "examiner_scoring_allowed": false,
+    "agent_corpus": "tutor"
+  },
+  "_meta": {
+    "schema_version": "causal_chain_v1",
+    "created_date": "2026-05-17",
+    "ingestion_status": "draft"
+  }
+}

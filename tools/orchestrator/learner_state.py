@@ -7,16 +7,16 @@ from copy import deepcopy
 from pathlib import Path
 from typing import Any
 
+from tools.constants import CLOUD_SERVICES_ACTIVE, NAZARETH_DIR, SAFE_FOR_EXAMINER
 from tools.learner_model.knowledge_tracing import (
     DEFAULT_PEDAGOGICAL_MEMORY_PATH,
     build_memory_summary,
     ensure_pedagogical_memory,
     load_pedagogical_memory,
 )
-from tools.youtube_transcription.config import PROJECT_ROOT
 
 
-NAZARETH_ROOT = PROJECT_ROOT / "knowledge" / "nazareth"
+NAZARETH_ROOT = NAZARETH_DIR
 DEFAULT_LES_PATH = NAZARETH_ROOT / "epistemic_state.json"
 DEFAULT_SESSION_STAGING_PATH = NAZARETH_ROOT / "session_staging.json"
 
@@ -28,11 +28,11 @@ DEFAULT_LES: dict[str, Any] = {
     "recent_misconceptions": [],
     "session_count": 0,
     "governance": {
-        "safe_for_examiner": False,
+        "safe_for_examiner": SAFE_FOR_EXAMINER,
         "examiner_scoring_active": False,
         "embeddings_active": False,
         "vector_db_active": False,
-        "cloud_services_active": False,
+        "cloud_services_active": CLOUD_SERVICES_ACTIVE,
     },
 }
 
@@ -40,11 +40,11 @@ DEFAULT_SESSION_STAGING: dict[str, Any] = {
     "schema_version": "minimal_brain_v2",
     "latest_session": None,
     "governance": {
-        "safe_for_examiner": False,
+        "safe_for_examiner": SAFE_FOR_EXAMINER,
         "examiner_scoring_active": False,
         "embeddings_active": False,
         "vector_db_active": False,
-        "cloud_services_active": False,
+        "cloud_services_active": CLOUD_SERVICES_ACTIVE,
     },
 }
 
@@ -108,11 +108,11 @@ def _with_governance_defaults(state: dict[str, Any]) -> dict[str, Any]:
 
 def _governance_false(existing: dict[str, Any]) -> dict[str, bool]:
     governance = {
-        "safe_for_examiner": False,
+        "safe_for_examiner": SAFE_FOR_EXAMINER,
         "examiner_scoring_active": False,
         "embeddings_active": False,
         "vector_db_active": False,
-        "cloud_services_active": False,
+        "cloud_services_active": CLOUD_SERVICES_ACTIVE,
     }
     for key in governance:
         governance[key] = False if key == "safe_for_examiner" else bool(existing.get(key, False))

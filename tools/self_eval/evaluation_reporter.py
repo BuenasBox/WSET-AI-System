@@ -8,6 +8,7 @@ from collections import Counter
 from pathlib import Path
 from typing import Any
 
+from tools.constants import EXAMINER_SCORING_ALLOWED, NAZARETH_DIR, SAFE_FOR_EXAMINER, SELF_EVAL_DIR
 from tools.learner_model.knowledge_tracing import (
     DEFAULT_PEDAGOGICAL_MEMORY_PATH,
     load_pedagogical_memory,
@@ -15,11 +16,10 @@ from tools.learner_model.knowledge_tracing import (
     update_memory_from_results,
 )
 from tools.tutor.explanation_priority import calculate_tutor_evaluation_signals
-from tools.youtube_transcription.config import PROJECT_ROOT
 
 
-DEFAULT_SELF_EVAL_DIR = PROJECT_ROOT / "knowledge" / "self-eval"
-DEFAULT_FEEDBACK_PATH = PROJECT_ROOT / "knowledge" / "nazareth" / "self_eval_feedback.json"
+DEFAULT_SELF_EVAL_DIR = SELF_EVAL_DIR
+DEFAULT_FEEDBACK_PATH = NAZARETH_DIR / "self_eval_feedback.json"
 
 
 def write_evaluation_reports(
@@ -101,8 +101,8 @@ def build_les_feedback(results: list[dict[str, Any]], strictness: str = "hard") 
     return {
         "schema_version": "self_eval_feedback_v2",
         "strictness": strictness,
-        "safe_for_examiner": False,
-        "examiner_scoring_allowed": False,
+        "safe_for_examiner": SAFE_FOR_EXAMINER,
+        "examiner_scoring_allowed": EXAMINER_SCORING_ALLOWED,
         "fragile_concepts": fragile + retrieval_fragile,
         "weakness_counters": {
             "causal_chains": dict(causal_counter),
