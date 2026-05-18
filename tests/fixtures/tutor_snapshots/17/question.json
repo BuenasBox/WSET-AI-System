@@ -2,9 +2,20 @@
   "question_id": "17",
   "question_type": "theory",
   "question_text": "¿Cuál es el propósito principal del despalillado antes de la fermentación?",
-  "expected_topics": [],
-  "expected_causal_links": [],
-  "expected_keywords": [],
+  "expected_topics": [
+    "despalillado",
+    "fermentación",
+    "estructura tánica"
+  ],
+  "expected_causal_links": [
+    "raspones -> taninos verdes -> estructura"
+  ],
+  "expected_keywords": [
+    "despalillado",
+    "raspones",
+    "taninos verdes",
+    "astringencia"
+  ],
   "expected_reasoning_type": "theory_foundation",
   "difficulty": "intermediate",
   "safe_for_examiner": false

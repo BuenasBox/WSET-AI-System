@@ -2,9 +2,17 @@
   "question_id": "16",
   "question_type": "theory",
   "question_text": "¿Qué práctica enológica se utiliza para aumentar la extracción de color y taninos en tintos?",
-  "expected_topics": [],
+  "expected_topics": [
+    "extracción",
+    "taninos"
+  ],
   "expected_causal_links": [],
-  "expected_keywords": [],
+  "expected_keywords": [
+    "extracción",
+    "color",
+    "taninos",
+    "estructura"
+  ],
   "expected_reasoning_type": "theory_foundation",
   "difficulty": "intermediate",
   "safe_for_examiner": false

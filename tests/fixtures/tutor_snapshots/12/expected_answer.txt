@@ -7,7 +7,10 @@ El riesgo de heladas primaverales está determinado principalmente por la topogr
 Desde el marco WSET, usa términos precisos cuando ayuden: SAT, BICL, balance, intensity, complexity, length, acidity, tannin, body, quality assessment. La conclusión debe apoyarse en evidencia, no en un descriptor aislado.
 
 ## 3. Explicación causa → efecto
-Cadena: aire frío más denso → desciende y se acumula en los puntos bajos → vides en valles o depresiones → mayor exposición al frío. Por tanto, el riesgo de heladas primaverales es mayor en las zonas topográficamente bajas y menor en las laderas con buen drenaje del aire frío.
+**CAUSA:** Spring frost risk is strongly influenced by vineyard topography and the movement of cold air across the site.
+**MECANISMO:** Cold air is denser than warm air, so it descends and accumulates in low points such as valleys and hollows, while slopes with good air drainage allow cold air to move away.
+**EFECTO:** Vines in valleys or depressions have greater exposure to spring frost, whereas vines on slopes with good cold-air drainage have lower frost risk.
+**FORMULACIÓN DE EXAMEN:** Spring frost risk is higher in low-lying sites because cold air descends and pools there; slopes with good air drainage are therefore less exposed to frost damage.
 
 ## 4. Formulación de examen
 Para efectos del examen: explica el mecanismo topográfico — el aire frío es más denso y desciende; porque se acumula en los puntos bajos del terreno, el riesgo de helada primaveral es — por tanto — mayor en valles y hondonadas y menor en laderas con buen drenaje del aire frío.
@@ -16,6 +19,6 @@ Para efectos del examen: explica el mecanismo topográfico — el aire frío es 
 Completa esta frase: 'Porque el aire frío [movimiento], el riesgo de helada primaveral es — por tanto — mayor en [qué posición topográfica]'.
 
 Nota de fuentes: desde el marco WSET, el material oficial es la referencia; el material de transcripción sirve solo como apoyo pedagógico.
-Ideas usadas del contexto: official_wset: el material oficial vincula la topografía, el drenaje del aire frío y el riesgo de heladas primaverales en la viticultura | apoyo pedagógico: covers the skin of the grapes and here within this bloom this waxy service surface you'll find things like natural yeasts or ambient yeasts or wild yeasts they're sometimes....
+Ideas usadas del contexto: official_wset: el material oficial vincula la topografía, el drenaje del aire frío y el riesgo de heladas primaverales en la viticultura | apoyo pedagógico: protecting the weakest point of the of the vine this is what we call earthing up and that will reduce the effect of the winter freeze which is settling above ground that is....
 
 Nota: esta es una respuesta del Tutor, no una calificación oficial ni una evaluación del Examiner.

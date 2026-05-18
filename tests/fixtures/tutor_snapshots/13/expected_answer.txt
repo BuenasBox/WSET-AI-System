@@ -7,7 +7,10 @@ La textura y composición del suelo influyen directamente en el drenaje; porque 
 Desde el marco WSET, usa términos precisos cuando ayuden: SAT, BICL, balance, intensity, complexity, length, acidity, tannin, body, quality assessment. La conclusión debe apoyarse en evidencia, no en un descriptor aislado.
 
 ## 3. Explicación causa → efecto
-Cadena: textura del suelo → capacidad de retención de agua → profundidad de las raíces → vigor de la vid. Un suelo con buen drenaje obliga a las raíces a descender en busca de agua; porque eso limita el vigor, la vid concentra sus recursos en menos fruta. Por tanto, suelos bien drenados tienden — por tanto — a producir uvas más concentradas y de mayor calidad potencial.
+**CAUSA:** Soil texture and composition influence how effectively water drains through the vineyard soil.
+**MECANISMO:** In well-drained soils, vine roots must grow deeper to find water, which limits excessive vine vigour and reduces the plant's resources available for canopy growth.
+**EFECTO:** Lower vine vigour can lead to more concentrated fruit, with better flavour concentration and generally higher grape quality potential.
+**FORMULACIÓN DE EXAMEN:** Well-drained soil supports grape quality because it encourages deeper roots and limits vigour; the vine can therefore produce more concentrated fruit.
 
 ## 4. Formulación de examen
 Para efectos del examen: explica la cadena drenaje→calidad — la textura del suelo controla la retención de agua; porque un suelo bien drenado fuerza a las raíces a profundizar, el vigor de la vid se reduce — por tanto — y la concentración de la fruta aumenta, apoyando mayor potencial de calidad.

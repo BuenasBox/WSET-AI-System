@@ -41,7 +41,7 @@
       "fragile:cause -> mechanism -> effect"
     ],
     "recent_misconceptions": [],
-    "session_count": 221,
+    "session_count": 252,
     "pedagogical_memory": {
       "schema_version": "pedagogical_memory_v1",
       "low_mastery_concepts": [],
@@ -93,89 +93,11 @@
   "retrieved_context": [
     {
       "context_type": "retrieval_sandbox_chunk",
-      "chunk_id": "OFFICIAL_WSET_WINES_OF_THE_WORLD_6_11_22_GERMANY_001",
-      "forced_retrieval": false,
-      "agent_corpus": "tutor",
-      "safe_for_examiner": false,
-      "score": 0.4565,
-      "source_type": "official_wset_extracted",
-      "source_file": "knowledge/official-wset/study-guide/wset_markdown/seccion_6_section_3_still_wines_of_the_world/6-11_22_germany.md",
-      "source_trust_tier": 1,
-      "title": "22 Germany",
-      "section": "6",
-      "subtopic": "6.11",
-      "official_grading_authority": false,
-      "requires_human_review": true,
-      "reasoning_type": "theory_foundation",
-      "pedagogical_role": "official_reference",
-      "why_retrieved": [
-        "matched canonical/query terms: concentration",
-        "official WSET extracted Tutor support",
-        "exact term match"
-      ],
-      "text_excerpt": "# 22 Germany <!-- p\u00e1gina 117 --> 108 UNDERSTANDINGW INES:E XPLAININGST YLEA ND QUALITY Germany 22 Germany is the country producing the highest concentration of world-class Rieslings. Whether dry and steely, medium-sweet and floral, or lusciously sweet, German winemakers' mastery of this variety is unquestionable. However, there is more to German wines tha...",
-      "source_video": "",
-      "source_filename": "6-11_22_germany.md"
-    },
-    {
-      "context_type": "retrieval_sandbox_chunk",
-      "chunk_id": "OFFICIAL_WSET_1_1_THE_SYSTEMATIC_APPROACH_TO_TASTING_WINE_001",
-      "forced_retrieval": false,
-      "agent_corpus": "tutor",
-      "safe_for_examiner": false,
-      "score": 0.419,
-      "source_type": "official_wset_extracted",
-      "source_file": "knowledge/official-wset/study-guide/wset_markdown/seccion_4_section_1_wine_and_the_consumer/4-1_1_the_systematic_approach_to_tasting_wine.md",
-      "source_trust_tier": 1,
-      "title": "1 The Systematic Approach to Tasting Wine\u00ae",
-      "section": "4",
-      "subtopic": "4.1",
-      "official_grading_authority": false,
-      "requires_human_review": true,
-      "reasoning_type": "theory_foundation",
-      "pedagogical_role": "official_reference",
-      "why_retrieved": [
-        "matched canonical/query terms: concentration, texture",
-        "official WSET extracted Tutor support",
-        "exact term match"
-      ],
-      "text_excerpt": "# 1 The Systematic Approach to Tasting Wine\u00ae <!-- p\u00e1gina 10 --> THES YSTEMATICA PPROACHT OT ASTINGW INE\" TheS ystematiAc pproactho TastinWg ine\u00ae The WSET Level 3. Syst~matic Approach to Tasting Wine (SAT) is a tool that allows you to write a complete description of a wine and then use this information to make an evaluation of its quality and readiness for...",
-      "source_video": "",
-      "source_filename": "4-1_1_the_systematic_approach_to_tasting_wine.md"
-    },
-    {
-      "context_type": "retrieval_sandbox_chunk",
-      "chunk_id": "OFFICIAL_WSET_4_7_COMMON_ELEMENTS_IN_WINEMAKING_AND_MATURATION_001",
-      "forced_retrieval": false,
-      "agent_corpus": "tutor",
-      "safe_for_examiner": false,
-      "score": 0.419,
-      "source_type": "official_wset_extracted",
-      "source_file": "knowledge/official-wset/study-guide/wset_markdown/seccion_5_section_2_factors_affecting_the_style_quality_and_price_of_w/5-4_7_common_elements_in_winemaking_and_maturation.md",
-      "source_trust_tier": 1,
-      "title": "7 Common Elements in Winemaking and Maturation",
-      "section": "5",
-      "subtopic": "5.4",
-      "official_grading_authority": false,
-      "requires_human_review": true,
-      "reasoning_type": "theory_foundation",
-      "pedagogical_role": "official_reference",
-      "why_retrieved": [
-        "matched canonical/query terms: concentration, texture",
-        "official WSET extracted Tutor support",
-        "exact term match"
-      ],
-      "text_excerpt": "# 7 Common Elements in Winemaking and Maturation <!-- p\u00e1gina 52 --> COMMONE LEMENTISN W INEMAKINGAN D MATURATION 43 CommoEnl ementisn W inemakinagn dM aturation 7 There are certain factors and processes that are common to all wines and these are explored in this chapter. It is important to get an appreciation of their roles in winemaking and maturation an...",
-      "source_video": "",
-      "source_filename": "5-4_7_common_elements_in_winemaking_and_maturation.md"
-    },
-    {
-      "context_type": "retrieval_sandbox_chunk",
       "chunk_id": "OFFICIAL_WSET_OF_W_5_2_5_THE_GROWING_ENVIRONMENT_001",
       "forced_retrieval": false,
       "agent_corpus": "tutor",
       "safe_for_examiner": false,
-      "score": 0.419,
+      "score": 0.5733,
       "source_type": "official_wset_extracted",
       "source_file": "knowledge/official-wset/study-guide/wset_markdown/seccion_5_section_2_factors_affecting_the_style_quality_and_price_of_w/5-2_5_the_growing_environment.md",
       "source_trust_tier": 1,
@@ -187,7 +109,9 @@
       "reasoning_type": "theory_foundation",
       "pedagogical_role": "official_reference",
       "why_retrieved": [
-        "matched canonical/query terms: texture",
+        "matched canonical/query terms: cold air, drainage, spring frost, texture",
+        "matches knowledge-map concept or relationship terms",
+        "matches knowledge-map causal-chain mechanism",
         "official WSET extracted Tutor support",
         "exact term match"
       ],
@@ -197,11 +121,95 @@
     },
     {
       "context_type": "retrieval_sandbox_chunk",
+      "chunk_id": "OFFICIAL_WSET_OF_THE_WORLD_6_16_27_NORTHERN_ITALY_001",
+      "forced_retrieval": false,
+      "agent_corpus": "tutor",
+      "safe_for_examiner": false,
+      "score": 0.4786,
+      "source_type": "official_wset_extracted",
+      "source_file": "knowledge/official-wset/study-guide/wset_markdown/seccion_6_section_3_still_wines_of_the_world/6-16_27_northern_italy.md",
+      "source_trust_tier": 1,
+      "title": "27 Northern Italy",
+      "section": "6",
+      "subtopic": "6.16",
+      "official_grading_authority": false,
+      "requires_human_review": true,
+      "reasoning_type": "theory_foundation",
+      "pedagogical_role": "official_reference",
+      "why_retrieved": [
+        "matched canonical/query terms: cold air, concentration, gravel",
+        "matches knowledge-map concept or relationship terms",
+        "matches knowledge-map causal-chain mechanism",
+        "official WSET extracted Tutor support",
+        "exact term match"
+      ],
+      "text_excerpt": "# 27 Northern Italy <!-- p\u00e1gina 130 --> NORTHERN ITALY 121 NorthernIt aly Northern Italy produces a wide range of wine styles from the full-bodied 27 tannic reds of Barolo to the delicate white wines of Soave. All this is possible because of diverse geography and an incredible number of unique local grape varieties. This chapter will cover the regions of...",
+      "source_video": "",
+      "source_filename": "6-16_27_northern_italy.md"
+    },
+    {
+      "context_type": "retrieval_sandbox_chunk",
+      "chunk_id": "OFFICIAL_WSET_WINES_OF_THE_WORLD_6_25_36_CHILE_001",
+      "forced_retrieval": false,
+      "agent_corpus": "tutor",
+      "safe_for_examiner": false,
+      "score": 0.4603,
+      "source_type": "official_wset_extracted",
+      "source_file": "knowledge/official-wset/study-guide/wset_markdown/seccion_6_section_3_still_wines_of_the_world/6-25_36_chile.md",
+      "source_trust_tier": 1,
+      "title": "36 Chile",
+      "section": "6",
+      "subtopic": "6.25",
+      "official_grading_authority": false,
+      "requires_human_review": true,
+      "reasoning_type": "theory_foundation",
+      "pedagogical_role": "official_reference",
+      "why_retrieved": [
+        "matched canonical/query terms: cold air, texture, valle",
+        "matches knowledge-map concept or relationship terms",
+        "matches knowledge-map causal-chain mechanism",
+        "official WSET extracted Tutor support",
+        "exact term match"
+      ],
+      "text_excerpt": "# 36 Chile <!-- p\u00e1gina 161 --> 152 UNDERSTANDING WINES: EXPLAINING STYLE AND QUALITY ChIie 36 Located between the Andes to the east and the Pacific to the west, Chile has an unusual geography. However, it is this geography, which combines cooling influences from the Pacific and Andes along with plentiful sunshine, that explains why Chile has found success...",
+      "source_video": "",
+      "source_filename": "6-25_36_chile.md"
+    },
+    {
+      "context_type": "retrieval_sandbox_chunk",
+      "chunk_id": "OFFICIAL_WSET_WINES_OF_THE_WORLD_8_1_43_SHERRY_001",
+      "forced_retrieval": false,
+      "agent_corpus": "tutor",
+      "safe_for_examiner": false,
+      "score": 0.4583,
+      "source_type": "official_wset_extracted",
+      "source_file": "knowledge/official-wset/study-guide/wset_markdown/seccion_8_section_5_fortified_wines_of_the_world/8-1_43_sherry.md",
+      "source_trust_tier": 1,
+      "title": "43 Sherry",
+      "section": "8",
+      "subtopic": "8.1",
+      "official_grading_authority": false,
+      "requires_human_review": true,
+      "reasoning_type": "theory_foundation",
+      "pedagogical_role": "official_reference",
+      "why_retrieved": [
+        "matched canonical/query terms: drainage",
+        "matches knowledge-map concept or relationship terms",
+        "matches knowledge-map causal-chain mechanism",
+        "official WSET extracted Tutor support",
+        "exact term match"
+      ],
+      "text_excerpt": "# 43 Sherry <!-- p\u00e1gina 193 --> 184 UNDERSTANDINGW INES: EXPLAININGST YLEA ND QUALITY Sherry 43 Probably more than any other wine, Sherry is a wine style that is defined by the processes used during maturation. None of the key techniques, the so/era system, biological ageing or oxidative ageing, are unique to this region, but it is in Jerez that they are...",
+      "source_video": "",
+      "source_filename": "8-1_43_sherry.md"
+    },
+    {
+      "context_type": "retrieval_sandbox_chunk",
       "chunk_id": "WSET_Level_3_Wines_-_Understanding_the_Growing_Environment_Soils_Part_1-0006",
       "forced_retrieval": false,
       "agent_corpus": "tutor",
       "safe_for_examiner": false,
-      "score": 0.2943,
+      "score": 0.3516,
       "source_type": "manual_curated_srt",
       "source_file": "",
       "source_trust_tier": "pedagogical",
@@ -213,8 +221,10 @@
       "reasoning_type": "cause_effect",
       "pedagogical_role": "theory_explanation",
       "why_retrieved": [
-        "matched canonical/query terms: texture",
+        "matched canonical/query terms: sandy soil, texture",
         "pedagogical role fits foundational_theory",
+        "matches knowledge-map concept or relationship terms",
+        "matches knowledge-map causal-chain mechanism",
         "exact term match"
       ],
       "text_excerpt": "can be quite problematic it is a soil that warms up and cools down quite quickly you'll know that on a beach for example if you walk barefooted along a beach and the sun is shining the sand is quite hot um as soon as the sun goes down it becomes very cold and that really is that kind of heat transfer with uh with sand um but um the pest phylloxera cannot...",
@@ -222,7 +232,123 @@
       "source_filename": "[English (auto-generated)] WSET Level 3 Wines - Understanding the Growing Environment Soils Part 1 [.srt"
     }
   ],
-  "forced_causal_chains": [],
+  "forced_causal_chains": [
+    {
+      "node_type": "causal_chain",
+      "node_id": "CC_SOIL_DRAINAGE_VINE_VIGOUR",
+      "topic": "soil drainage, root depth, and vine vigour",
+      "trigger_keywords": [
+        "drenaje",
+        "textura del suelo",
+        "soil drainage",
+        "soil texture",
+        "ra\u00edces",
+        "vigor",
+        "concentraci\u00f3n",
+        "drainage",
+        "gravel",
+        "grava",
+        "sandy soil"
+      ],
+      "steps": [
+        {
+          "step": 1,
+          "label": "cause",
+          "text": "Soil texture and composition influence how effectively water drains through the vineyard soil."
+        },
+        {
+          "step": 2,
+          "label": "mechanism",
+          "text": "In well-drained soils, vine roots must grow deeper to find water, which limits excessive vine vigour and reduces the plant's resources available for canopy growth."
+        },
+        {
+          "step": 3,
+          "label": "effect",
+          "text": "Lower vine vigour can lead to more concentrated fruit, with better flavour concentration and generally higher grape quality potential."
+        },
+        {
+          "step": 4,
+          "label": "exam_formulation",
+          "text": "Well-drained soil supports grape quality because it encourages deeper roots and limits vigour; the vine can therefore produce more concentrated fruit."
+        }
+      ],
+      "sat_relevance": "",
+      "linked_topics": [],
+      "agent_corpus": "tutor",
+      "safe_for_examiner": false,
+      "examiner_scoring_allowed": false,
+      "requires_human_review": true,
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "agent_corpus": "tutor"
+      },
+      "_meta": {
+        "schema_version": "causal_chain_v1",
+        "created_date": "2026-05-17",
+        "ingestion_status": "draft"
+      },
+      "id": "CC_SOIL_DRAINAGE_VINE_VIGOUR",
+      "type": "causal_chain"
+    },
+    {
+      "node_type": "causal_chain",
+      "node_id": "CC_SPRING_FROST_TOPOGRAPHY",
+      "topic": "spring frost risk and vineyard topography",
+      "trigger_keywords": [
+        "helada",
+        "heladas primaverales",
+        "topograf\u00eda",
+        "spring frost",
+        "frost risk",
+        "aire fr\u00edo",
+        "drenaje del aire",
+        "cold air",
+        "valle",
+        "ladera"
+      ],
+      "steps": [
+        {
+          "step": 1,
+          "label": "cause",
+          "text": "Spring frost risk is strongly influenced by vineyard topography and the movement of cold air across the site."
+        },
+        {
+          "step": 2,
+          "label": "mechanism",
+          "text": "Cold air is denser than warm air, so it descends and accumulates in low points such as valleys and hollows, while slopes with good air drainage allow cold air to move away."
+        },
+        {
+          "step": 3,
+          "label": "effect",
+          "text": "Vines in valleys or depressions have greater exposure to spring frost, whereas vines on slopes with good cold-air drainage have lower frost risk."
+        },
+        {
+          "step": 4,
+          "label": "exam_formulation",
+          "text": "Spring frost risk is higher in low-lying sites because cold air descends and pools there; slopes with good air drainage are therefore less exposed to frost damage."
+        }
+      ],
+      "sat_relevance": "",
+      "linked_topics": [],
+      "agent_corpus": "tutor",
+      "safe_for_examiner": false,
+      "examiner_scoring_allowed": false,
+      "requires_human_review": true,
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "agent_corpus": "tutor"
+      },
+      "_meta": {
+        "schema_version": "causal_chain_v1",
+        "created_date": "2026-05-17",
+        "ingestion_status": "draft"
+      },
+      "id": "CC_SPRING_FROST_TOPOGRAPHY",
+      "type": "causal_chain"
+    }
+  ],
   "tutor_directive": {
     "pedagogical_act": "answer_normally",
     "forced_retrieval_nodes": [],

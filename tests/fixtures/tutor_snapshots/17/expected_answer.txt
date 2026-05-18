@@ -7,7 +7,10 @@ El despalillado elimina los raspones verdes antes de la fermentación; porque lo
 Desde el marco WSET, usa términos precisos cuando ayuden: SAT, BICL, balance, intensity, complexity, length, acidity, tannin, body, quality assessment. La conclusión debe apoyarse en evidencia, no en un descriptor aislado.
 
 ## 3. Explicación causa → efecto
-Cadena: raspones presentes → fermentación extrae taninos verdes y astringentes de los raspones → vino con estructura áspera y notas herbáceas. Sin raspones: fermentación extrae tanino solo de pieles y pepitas → taninos más suaves y maduros. Por tanto, el despalillado conduce a un mejor control de la calidad táctil del vino.
+**CAUSA:** Mechanical harvesting can break berries before they reach the winery.
+**MECANISMO:** When berries are broken, the must is exposed to oxygen before processing, which can begin premature oxidation of aromas and increase phenolic extraction.
+**EFECTO:** The finished wine can show reduced aromatic freshness and potentially greater extraction of phenolic compounds compared with carefully handled intact fruit.
+**FORMULACIÓN DE EXAMEN:** Mechanical harvesting can reduce aromatic freshness because berry breakage exposes must to oxygen before winemaking; this increases oxidation risk unless handling is rapid and protective.
 
 ## 4. Formulación de examen
 Para efectos del examen: describe el despalillado (eliminación de raspones), explica el mecanismo (los raspones aportan taninos verdes y astringencia áspera) y conecta el resultado — porque su eliminación conduce — por tanto — a vinos con taninos más suaves y redondeados y una estructura de paladar más limpia.
@@ -16,6 +19,6 @@ Para efectos del examen: describe el despalillado (eliminación de raspones), ex
 Completa esta frase: 'Porque el despalillado elimina [qué], la fermentación extrae — por tanto — [efecto en la estructura tánica]'.
 
 Nota de fuentes: desde el marco WSET, el material oficial es la referencia; el material de transcripción sirve solo como apoyo pedagógico.
-Ideas usadas del contexto: official_wset: el material oficial relaciona el despalillado con la extracción de taninos y la estructura tánica del vino | apoyo pedagógico: are those that are the new freshly grown parts of the vine they grow very new every year therefore they are that current year's growth that's what we're going to be looking at....
+Ideas usadas del contexto: official_wset: el material oficial relaciona el despalillado con la extracción de taninos y la estructura tánica del vino | apoyo pedagógico: aggressive some people are a little bit more loath to adapt this method because in fact you are using pumps mechanical pumps and which some people say is detrimental to the....
 
 Nota: esta es una respuesta del Tutor, no una calificación oficial ni una evaluación del Examiner.

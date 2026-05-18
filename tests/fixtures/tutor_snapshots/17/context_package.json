@@ -41,7 +41,7 @@
       "fragile:cause -> mechanism -> effect"
     ],
     "recent_misconceptions": [],
-    "session_count": 221,
+    "session_count": 252,
     "pedagogical_memory": {
       "schema_version": "pedagogical_memory_v1",
       "low_mastery_concepts": [],
@@ -93,11 +93,39 @@
   "retrieved_context": [
     {
       "context_type": "retrieval_sandbox_chunk",
+      "chunk_id": "OFFICIAL_WSET_PRICE_OF_W_5_3_6_VINEYARD_MANAGEMENT_001",
+      "forced_retrieval": false,
+      "agent_corpus": "tutor",
+      "safe_for_examiner": false,
+      "score": 0.5316,
+      "source_type": "official_wset_extracted",
+      "source_file": "knowledge/official-wset/study-guide/wset_markdown/seccion_5_section_2_factors_affecting_the_style_quality_and_price_of_w/5-3_6_vineyard_management.md",
+      "source_trust_tier": 1,
+      "title": "6 Vineyard Management",
+      "section": "5",
+      "subtopic": "5.3",
+      "official_grading_authority": false,
+      "requires_human_review": true,
+      "reasoning_type": "theory_foundation",
+      "pedagogical_role": "official_reference",
+      "why_retrieved": [
+        "matched canonical/query terms: fermentation, mechanical harvesting, stalks",
+        "matches knowledge-map concept or relationship terms",
+        "matches knowledge-map causal-chain mechanism",
+        "official WSET extracted Tutor support",
+        "exact term match"
+      ],
+      "text_excerpt": "# 6 Vineyard Management <!-- p\u00e1gina 42 --> VINEYARDM ANAGEMENT 33 VineyarMd anagement The gra~e grower has_av ery simple goal: to ~roduce a healthy crop of ripe grapes suitable for the style of wine the winemaker wants to make. In order to be able to do this it is necessary to apply an understanding of how the environment affects the vine's growth. In thi...",
+      "source_video": "",
+      "source_filename": "5-3_6_vineyard_management.md"
+    },
+    {
+      "context_type": "retrieval_sandbox_chunk",
       "chunk_id": "OFFICIAL_WSET_WINES_OF_THE_WORLD_6_13_24_TOKAJ_001",
       "forced_retrieval": false,
       "agent_corpus": "tutor",
       "safe_for_examiner": false,
-      "score": 0.4955,
+      "score": 0.4877,
       "source_type": "official_wset_extracted",
       "source_file": "knowledge/official-wset/study-guide/wset_markdown/seccion_6_section_3_still_wines_of_the_world/6-13_24_tokaj.md",
       "source_trust_tier": 1,
@@ -123,7 +151,7 @@
       "forced_retrieval": false,
       "agent_corpus": "tutor",
       "safe_for_examiner": false,
-      "score": 0.4677,
+      "score": 0.4661,
       "source_type": "official_wset_extracted",
       "source_file": "knowledge/official-wset/study-guide/wset_markdown/seccion_5_section_2_factors_affecting_the_style_quality_and_price_of_w/5-4_7_common_elements_in_winemaking_and_maturation.md",
       "source_trust_tier": 1,
@@ -145,37 +173,11 @@
     },
     {
       "context_type": "retrieval_sandbox_chunk",
-      "chunk_id": "OFFICIAL_WSET_WINES_OF_THE_WORLD_6_19_30_SPAIN_001",
-      "forced_retrieval": false,
-      "agent_corpus": "tutor",
-      "safe_for_examiner": false,
-      "score": 0.4405,
-      "source_type": "official_wset_extracted",
-      "source_file": "knowledge/official-wset/study-guide/wset_markdown/seccion_6_section_3_still_wines_of_the_world/6-19_30_spain.md",
-      "source_trust_tier": 1,
-      "title": "30 Spain",
-      "section": "6",
-      "subtopic": "6.19",
-      "official_grading_authority": false,
-      "requires_human_review": true,
-      "reasoning_type": "theory_foundation",
-      "pedagogical_role": "official_reference",
-      "why_retrieved": [
-        "matched canonical/query terms: fermentation, principal",
-        "official WSET extracted Tutor support",
-        "exact term match"
-      ],
-      "text_excerpt": "# 30 Spain <!-- p\u00e1gina 140 --> SPAIN 131 SpainS pain has a long history of wine production but its wines have only relatively recently come 30 to prominence on international markets. Styles vary from traditional barrel-aged reds to modern, fruity whites; and although international varieties have been planted in many of Spain's wine regions, it is the coun...",
-      "source_video": "",
-      "source_filename": "6-19_30_spain.md"
-    },
-    {
-      "context_type": "retrieval_sandbox_chunk",
       "chunk_id": "OFFICIAL_WSET_WINES_OF_THE_WORLD_8_1_43_SHERRY_001",
       "forced_retrieval": false,
       "agent_corpus": "tutor",
       "safe_for_examiner": false,
-      "score": 0.4405,
+      "score": 0.4388,
       "source_type": "official_wset_extracted",
       "source_file": "knowledge/official-wset/study-guide/wset_markdown/seccion_8_section_5_fortified_wines_of_the_world/8-1_43_sherry.md",
       "source_trust_tier": 1,
@@ -197,11 +199,11 @@
     },
     {
       "context_type": "retrieval_sandbox_chunk",
-      "chunk_id": "WSET_Level_3_Wines_-_Understanding_the_Vine_Part_1_Vine_Anatomy-0001",
+      "chunk_id": "Red_Wine_Extraction_Techniques_Advanced_Version_useful_for_WSET_L3_and_L4-0008",
       "forced_retrieval": false,
       "agent_corpus": "tutor",
       "safe_for_examiner": false,
-      "score": 0.3114,
+      "score": 0.3047,
       "source_type": "manual_curated_srt",
       "source_file": "",
       "source_trust_tier": "pedagogical",
@@ -211,18 +213,75 @@
       "official_grading_authority": false,
       "requires_human_review": false,
       "reasoning_type": "cause_effect",
-      "pedagogical_role": "foundational",
+      "pedagogical_role": "theory_explanation",
       "why_retrieved": [
-        "matched canonical/query terms: principal",
+        "matched canonical/query terms: fermentation",
         "pedagogical role fits foundational_theory",
         "exact term match"
       ],
-      "text_excerpt": "are those that are the new freshly grown parts of the vine so they grow very new every year so therefore they are that current year's growth so that's what we're going to be looking at the principal structure that you can see here we actually have a a hardened cane a one-year-old wood at the bottom we're ignoring that for now we're just looking at all the...",
-      "source_video": "WSET Level 3 Wines - Understanding the Vine Part 1 Vine Anatomy",
-      "source_filename": "WSET Level 3 Wines - Understanding the Vine Part 1 Vine Anatomy [English (auto-generated)] [DownloadYoutubeSubtitles.com].srt"
+      "text_excerpt": "aggressive some people are a little bit more loath to adapt this method because in fact you are using pumps mechanical pumps and which some people say is detrimental to the wines production but this is quite useful for large productions big vats where it is quite difficult to be more artisanal and hands-on so this is the other montage process the pumping...",
+      "source_video": "Red Wine Extraction Techniques Advanced Version useful for WSET L3 and L4",
+      "source_filename": "[English (auto-generated)] Red Wine Extraction Techniques Advanced Version useful for WSET L3 and L4.srt"
     }
   ],
-  "forced_causal_chains": [],
+  "forced_causal_chains": [
+    {
+      "node_type": "causal_chain",
+      "node_id": "CC_MECHANICAL_HARVEST_OXIDATION",
+      "topic": "mechanical harvesting and oxidation risk",
+      "trigger_keywords": [
+        "vendimia mec\u00e1nica",
+        "vendimia mec",
+        "mechanical harvesting",
+        "mechanical harvest",
+        "rotura de la baya",
+        "berry damage",
+        "oxidaci\u00f3n",
+        "frescura arom\u00e1tica",
+        "aroma freshness"
+      ],
+      "steps": [
+        {
+          "step": 1,
+          "label": "cause",
+          "text": "Mechanical harvesting can break berries before they reach the winery."
+        },
+        {
+          "step": 2,
+          "label": "mechanism",
+          "text": "When berries are broken, the must is exposed to oxygen before processing, which can begin premature oxidation of aromas and increase phenolic extraction."
+        },
+        {
+          "step": 3,
+          "label": "effect",
+          "text": "The finished wine can show reduced aromatic freshness and potentially greater extraction of phenolic compounds compared with carefully handled intact fruit."
+        },
+        {
+          "step": 4,
+          "label": "exam_formulation",
+          "text": "Mechanical harvesting can reduce aromatic freshness because berry breakage exposes must to oxygen before winemaking; this increases oxidation risk unless handling is rapid and protective."
+        }
+      ],
+      "sat_relevance": "",
+      "linked_topics": [],
+      "agent_corpus": "tutor",
+      "safe_for_examiner": false,
+      "examiner_scoring_allowed": false,
+      "requires_human_review": true,
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "agent_corpus": "tutor"
+      },
+      "_meta": {
+        "schema_version": "causal_chain_v1",
+        "created_date": "2026-05-17",
+        "ingestion_status": "draft"
+      },
+      "id": "CC_MECHANICAL_HARVEST_OXIDATION",
+      "type": "causal_chain"
+    }
+  ],
   "tutor_directive": {
     "pedagogical_act": "answer_normally",
     "forced_retrieval_nodes": [],
