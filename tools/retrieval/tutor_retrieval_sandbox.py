@@ -20,6 +20,16 @@ from typing import Any
 
 from tools.constants import KNOWLEDGE_DIR, OFFICIAL_WSET_DIR, PROJECT_ROOT, RETRIEVAL_SANDBOX_DIR
 
+try:
+    from tools.tutor.sat_reasoner import (
+        extract_sat_observations,
+        is_sat_query,
+    )
+
+    _SAT_REASONER_AVAILABLE = True
+except ImportError:
+    _SAT_REASONER_AVAILABLE = False
+
 ALLOWED_SOURCE_TYPES = {"manual_curated_srt", "youtube_transcript", "official_wset_extracted"}
 ALLOWED_AGENT_CORPUS = "tutor"
 GOVERNANCE_FILTER_APPLIED = True
@@ -349,6 +359,26 @@ def classify_query(
     if intent == "cause_effect_explanation":
         reasoning_intent = "cause_effect"
     expansion_terms = expand_query_terms(query, matched_terms, matched_knowledge)
+    if _SAT_REASONER_AVAILABLE:
+        _sat_lang = "es" if re.search(
+            r"\b(?:acidez|tanino|cuerpo|final|equilibrio|complejidad"
+            r"|intensidad|limpio|defectuoso|desarrollado)\b",
+            text,
+        ) else "en"
+        if is_sat_query(query, _sat_lang):
+            _sat_obs = extract_sat_observations(query, _sat_lang)
+            if _sat_obs:
+                _sat_extra: list[str] = []
+                for _param, _level in _sat_obs.items():
+                    _sat_extra.append(_param)
+                    _sat_extra.append(f"{_level} {_param}")
+                expansion_terms = sorted(
+                    set(expansion_terms)
+                    | {
+                        t for t in _sat_extra
+                        if t and t.lower() not in STOPWORDS
+                    }
+                )
     return {
         "query_intent": intent,
         "reasoning_intent": reasoning_intent,

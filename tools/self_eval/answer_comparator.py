@@ -9,6 +9,13 @@ from __future__ import annotations
 import re
 from typing import Any
 
+try:
+    from tools.tutor.sat_reasoner import is_sat_query
+
+    _SAT_REASONER_AVAILABLE = True
+except ImportError:
+    _SAT_REASONER_AVAILABLE = False
+
 
 COGNITIVE_ERROR_LABELS = (
     "missing_causal_link",
@@ -187,6 +194,9 @@ def compare_answer(
 
     labels = [label for label in COGNITIVE_ERROR_LABELS if label in set(labels)]
     strengths = _strengths(present_keywords, present_links, present_topics, expected_reasoning, normalized, strictness)
+    _extra = _sat_strengths(question, normalized)
+    if _extra:
+        strengths = sorted(set(strengths) | set(_extra))
     return {
         "question_id": question.get("question_id", ""),
         "question_type": question.get("question_type", "theory"),
@@ -206,6 +216,72 @@ def compare_answer(
         "likely_misconception_gaps": [question.get("question_id", "")] if "misconception_unresolved" in labels else [],
         "retrieval_weaknesses": _retrieval_weaknesses(context_package, missing_keywords, missing_links, retrieval_audit),
     }
+
+
+def _sat_strengths(
+    question: dict[str, Any],
+    normalized: str,
+) -> list[str]:
+    """Return SAT-specific strength labels for SAT-type answers.
+
+    These are diagnostic strengths only - not official scores.
+    Only fires when the question is detected as SAT-type.
+    """
+    if not _SAT_REASONER_AVAILABLE:
+        return []
+
+    q_type = str(question.get("question_type") or "")
+    q_text = str(question.get("question_text") or "")
+    lang = (
+        "es"
+        if re.search(
+            r"\b(?:qué|cómo|cuál|calidad|acidez|tanino|cuerpo|"
+            r"final|equilibrio|complejidad|intensidad)\b",
+            q_text.lower(),
+        )
+        else "en"
+    )
+    is_sat = q_type == "sat"
+    if not is_sat and q_text:
+        is_sat = is_sat_query(q_text, lang)
+    if not is_sat:
+        return []
+
+    strengths: list[str] = []
+    bicl_terms = ("balance", "intensity", "complexity", "length")
+    bicl_present = any(term in normalized for term in bicl_terms)
+
+    # bicl_criteria_present: at least one BICL criterion cited
+    if bicl_present:
+        strengths.append("bicl_criteria_present")
+
+    # quality_tier_stated: a quality tier term appears in the answer
+    quality_tiers = (
+        "outstanding", "very good", "good", "acceptable", "poor",
+        "sobresaliente", "muy buena", "buena", "aceptable",
+        "deficiente",
+    )
+    if any(term in normalized for term in quality_tiers):
+        strengths.append("quality_tier_stated")
+
+    # causal_quality_link_present: BICL criterion linked to quality
+    # conclusion via causal language
+    causal_terms = (
+        "because", "therefore", "this suggests", "points toward",
+        "porque", "por tanto", "esto sugiere", "apunta a",
+        "indica",
+    )
+    quality_ref = (
+        "quality", "assessment", "calidad", "evaluación",
+    )
+    if (
+        bicl_present
+        and any(term in normalized for term in causal_terms)
+        and any(term in normalized for term in quality_ref)
+    ):
+        strengths.append("causal_quality_link_present")
+
+    return strengths
 
 
 def _strengths(

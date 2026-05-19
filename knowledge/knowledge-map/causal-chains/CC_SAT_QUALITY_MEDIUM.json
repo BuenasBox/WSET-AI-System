@@ -1,0 +1,61 @@
+{
+  "node_type": "causal_chain",
+  "node_id": "CC_SAT_QUALITY_MEDIUM",
+  "topic": "SAT quality assessment — medium quality tier (Good / Acceptable)",
+  "trigger_keywords": [
+    "quality assessment",
+    "calidad",
+    "good quality",
+    "acceptable",
+    "buena calidad",
+    "aceptable",
+    "balance",
+    "medium finish",
+    "moderate complexity",
+    "complejidad moderada",
+    "final medio",
+    "calidad media",
+    "evaluar calidad",
+    "quality assessment sat"
+  ],
+  "steps": [
+    {
+      "step": 1,
+      "label": "cause",
+      "text": "The wine shows adequate but not outstanding structure: acidity and body are present but not fully integrated; intensity is medium; complexity is present but not layered; finish is of medium length."
+    },
+    {
+      "step": 2,
+      "label": "mechanism",
+      "text": "The BICL criteria are partially satisfied: Balance is present but not complete (one or more structural elements are slightly out of proportion); Intensity is medium; Complexity is present but limited to one or two aromatic dimensions; Length is medium, indicating adequate but not prolonged flavour persistence."
+    },
+    {
+      "step": 3,
+      "label": "effect",
+      "text": "The quality assessment is Good if balance and length are at least medium and no fault is detected. It falls to Acceptable if one or more BICL criteria are weak or if balance is compromised. Poor is reserved for wines with significant structural defects or faults."
+    },
+    {
+      "step": 4,
+      "label": "exam_formulation",
+      "text": "Justify a Good or Acceptable quality assessment by naming which BICL criteria are partially met and which are limiting the conclusion: for example, 'balance is adequate but intensity is only medium and complexity is limited, therefore the wine shows Good rather than Very Good quality.' Because not all four criteria reach a high level, this therefore constrains the quality conclusion to the Good or Acceptable tier."
+    }
+  ],
+  "sat_relevance": "Use when a student asks how to justify a medium-tier quality assessment in SAT, or when not all BICL criteria are strongly met. Helps students articulate why a wine is Good but not Very Good, or Acceptable but not Good.",
+  "linked_topics": [
+    "CC_SAT_QUALITY_HIGH"
+  ],
+  "agent_corpus": "tutor",
+  "safe_for_examiner": false,
+  "examiner_scoring_allowed": false,
+  "requires_human_review": true,
+  "governance": {
+    "safe_for_examiner": false,
+    "examiner_scoring_allowed": false,
+    "agent_corpus": "tutor"
+  },
+  "_meta": {
+    "schema_version": "causal_chain_v1",
+    "created_date": "2026-05-19",
+    "ingestion_status": "draft"
+  }
+}

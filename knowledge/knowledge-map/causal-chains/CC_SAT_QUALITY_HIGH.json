@@ -1,0 +1,63 @@
+{
+  "node_type": "causal_chain",
+  "node_id": "CC_SAT_QUALITY_HIGH",
+  "topic": "SAT quality assessment — high quality tier (Very Good / Outstanding)",
+  "trigger_keywords": [
+    "quality assessment",
+    "calidad",
+    "justify quality",
+    "outstanding",
+    "very good",
+    "muy buena",
+    "sobresaliente",
+    "balance",
+    "intensity",
+    "complexity",
+    "length",
+    "finish",
+    "bicl",
+    "calidad alta",
+    "evaluar calidad",
+    "quality assessment sat"
+  ],
+  "steps": [
+    {
+      "step": 1,
+      "label": "cause",
+      "text": "The wine shows balanced structure (acidity, tannin, and alcohol in harmony), pronounced intensity on both nose and palate, high complexity across the aromatic profile, and a long finish."
+    },
+    {
+      "step": 2,
+      "label": "mechanism",
+      "text": "All four BICL quality criteria are satisfied: Balance is achieved across structural components; Intensity is pronounced; Complexity is present and layered; Length is long, indicating persistence of flavour after swallowing."
+    },
+    {
+      "step": 3,
+      "label": "effect",
+      "text": "The quality assessment is Very Good or Outstanding. The distinction between the two tiers depends on the degree of integration, the depth of complexity, and whether all structural elements are not only present but in complete harmony."
+    },
+    {
+      "step": 4,
+      "label": "exam_formulation",
+      "text": "Justify quality by explicitly linking each BICL criterion to a specific tasting observation: balance (acidity and tannin in harmony with alcohol and body), intensity (pronounced aromatic and flavour intensity), complexity (multiple and layered aromatic characteristics), length (long finish). Because all four criteria are present and supported by evidence, this therefore points toward a Very Good or Outstanding quality assessment."
+    }
+  ],
+  "sat_relevance": "Use when a student asks how to justify a high quality assessment in SAT. All four BICL criteria — balance, intensity, complexity, length — must be explicitly referenced and linked to specific observed evidence from the wine.",
+  "linked_topics": [
+    "CC_SAT_QUALITY_MEDIUM"
+  ],
+  "agent_corpus": "tutor",
+  "safe_for_examiner": false,
+  "examiner_scoring_allowed": false,
+  "requires_human_review": true,
+  "governance": {
+    "safe_for_examiner": false,
+    "examiner_scoring_allowed": false,
+    "agent_corpus": "tutor"
+  },
+  "_meta": {
+    "schema_version": "causal_chain_v1",
+    "created_date": "2026-05-19",
+    "ingestion_status": "draft"
+  }
+}
