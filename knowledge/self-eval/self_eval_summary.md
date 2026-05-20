@@ -21,7 +21,7 @@ Causal chains frequently missing: []
 SAT weaknesses: none
 Top improvement priorities: none
 Orchestrator intervention priorities: ["Improve retrieval plan for 'missing_keyword_support' (weighted failures=5)."]
-Tutor evaluation signals: {'explanation_density': 3.24, 'causal_coherence': 0.99, 'misconception_coverage': 1.0, 'reasoning_depth_score': 0.89, 'retention_risk': 0.0, 'learning_velocity': 0.5, 'misconception_persistence': 0.0, 'scaffolding_effectiveness': 0.99}
+Tutor evaluation signals: {'explanation_density': 3.38, 'causal_coherence': 0.99, 'misconception_coverage': 1.0, 'reasoning_depth_score': 0.89, 'retention_risk': 0.0, 'learning_velocity': 0.5, 'misconception_persistence': 0.0, 'scaffolding_effectiveness': 0.99}
 Tutor reflection signals: {'retention_risk': 0.0, 'learning_velocity': 0.5, 'misconception_persistence': 0.0, 'scaffolding_effectiveness': 0.99}
 Sample failed answers: none
 

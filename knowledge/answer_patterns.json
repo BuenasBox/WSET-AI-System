@@ -1,0 +1,596 @@
+[
+  {
+    "topic_slug": "cool_climate_acidity_en",
+    "patterns_es": [
+      "__no_cross_language_pattern__"
+    ],
+    "patterns_en": [
+      "cool climate.*acid"
+    ],
+    "normal_answer": "Cool climate generally helps retain acidity because grapes ripen more slowly and lose less acid before harvest.",
+    "cause_effect": "Cause → effect: cooler conditions slow ripening, so grapes tend to retain more acid; the wine can therefore show higher acidity and freshness.",
+    "exam_formulation": null,
+    "mini_practice_prompt": "Rewrite this: 'High acidity means low quality' using balance and wine style.",
+    "official_idea_hint": "el material oficial relaciona clima/growing environment con maduración y retención de acidez"
+  },
+  {
+    "topic_slug": "cool_climate_acidity_es",
+    "patterns_es": [
+      "cool climate.*acid"
+    ],
+    "patterns_en": [
+      "__no_cross_language_pattern__"
+    ],
+    "normal_answer": "Un clima fresco suele conservar más acidity porque la uva madura más lentamente y pierde menos ácido antes de la vendimia.",
+    "cause_effect": "Cadena: clima fresco → maduración más lenta → mayor retención de ácidos → más acidity y sensación de frescura en el vino.",
+    "exam_formulation": null,
+    "mini_practice_prompt": "Escribe una frase que conecte clima fresco → maduración lenta → retención de acidity → frescura.",
+    "official_idea_hint": "el material oficial relaciona clima/growing environment con maduración y retención de acidez"
+  },
+  {
+    "topic_slug": "sat_quality_en",
+    "patterns_es": [
+      "__no_cross_language_pattern__"
+    ],
+    "patterns_en": [
+      "quality.*sat",
+      "sat.*quality"
+    ],
+    "normal_answer": "In SAT, justify quality by linking your conclusion to balance, intensity, complexity, length, and the condition of the fruit and structure. Because all those elements support the palate impression, this therefore points toward a quality assessment grounded in evidence — not a single descriptor.",
+    "cause_effect": null,
+    "exam_formulation": "For exam purposes, make the quality claim and support it with balance, intensity, complexity, length, and evidence from the palate. Because the evidence supports the conclusion, this therefore points toward a clear, justified quality assessment.",
+    "mini_practice_prompt": null,
+    "official_idea_hint": "el material oficial apoya una quality assessment basada en balance, intensity, complexity y length"
+  },
+  {
+    "topic_slug": "sat_quality_es",
+    "patterns_es": [
+      "quality.*sat",
+      "sat.*quality"
+    ],
+    "patterns_en": [
+      "__no_cross_language_pattern__"
+    ],
+    "normal_answer": "En SAT, justifica la quality assessment vinculando tu conclusión con balance, intensity, complexity, length y la condición de la fruta y la estructura. Porque esos elementos sostienen la impresión del paladar, la quality assessment — por tanto — se apoya en evidencia, no en un descriptor aislado.",
+    "cause_effect": null,
+    "exam_formulation": "Para efectos del examen, formula la quality assessment con BICL: balance, intensity, complexity y length, y añade evidencia concreta del paladar. Porque esa evidencia respalda la conclusión, esto sugiere — por tanto — una quality assessment justificada, no basada en un solo rasgo aislado.",
+    "mini_practice_prompt": null,
+    "official_idea_hint": "el material oficial apoya una quality assessment basada en balance, intensity, complexity y length"
+  },
+  {
+    "topic_slug": "oxidative_ageing_en",
+    "patterns_es": [
+      "__no_cross_language_pattern__"
+    ],
+    "patterns_en": [
+      "oxidative.*ageing",
+      "oxidative.*aging"
+    ],
+    "normal_answer": "Oxidative ageing in fortified wines exposes the wine to oxygen over time; because that contact drives aldehyde development, the wine therefore gains nutty, dried-fruit, and rancio character while losing primary fruit and colour.",
+    "cause_effect": "Cause → effect: oxygen contact over time drives aldehyde formation (notably acetaldehyde); because these compounds accumulate in the wine, the result is therefore nutty, dried-fruit, and amber character alongside reduced primary fruit and colour.",
+    "exam_formulation": "For exam purposes: state the practice (extended oxygen contact), explain the mechanism (aldehyde formation, especially acetaldehyde), and link the result — because that oxidation therefore develops nutty, dried-fruit and rancio complexity while reducing primary fruit and lightening colour.",
+    "mini_practice_prompt": "Write one sentence that links oxygen contact → aldehyde development → nutty/dried-fruit complexity in a fortified wine.",
+    "official_idea_hint": null
+  },
+  {
+    "topic_slug": "oxidative_ageing_es",
+    "patterns_es": [
+      "oxidativ.*(?:envejec|crianza)",
+      "(?:envejec|crianza).*oxidativ"
+    ],
+    "patterns_en": [
+      "__no_cross_language_pattern__"
+    ],
+    "normal_answer": "El envejecimiento oxidativo en vinos generosos como el Oloroso expone el vino al contacto con el oxígeno durante la crianza; porque ese proceso impulsa la formación de acetaldehído y otros aldehídos, el vino desarrolla — por tanto — aromas a nueces, frutas secas y tonos ambarados, con pérdida del color original.",
+    "cause_effect": "Cadena: contacto del vino con el oxígeno → formación de acetaldehído y otros aldehídos → desarrollo de aromas a nueces, frutos secos y notas rancias; porque ese proceso consume el carácter primario de la fruta, el vino adquiere — por tanto — mayor complejidad terciaria y color ambarino.",
+    "exam_formulation": "Para efectos del examen: nombra la práctica (crianza oxidativa con contacto prolongado con el oxígeno), explica el mecanismo (formación de acetaldehído y otros aldehídos) y conecta el resultado — porque ese proceso desarrolla — por tanto — aromas a nueces, frutas secas y complejidad terciaria, con pérdida del carácter de fruta primaria y del color.",
+    "mini_practice_prompt": "Escribe una frase que conecte contacto con oxígeno → formación de acetaldehído → aromas a nueces y frutas secas en un vino generoso.",
+    "official_idea_hint": "el material oficial relaciona contacto con oxígeno, formación de aldehídos y desarrollo de complejidad terciaria en vinos generosos"
+  },
+  {
+    "topic_slug": "mechanical_harvest_en",
+    "patterns_es": [
+      "__no_cross_language_pattern__"
+    ],
+    "patterns_en": [
+      "mechanical.*harvest"
+    ],
+    "normal_answer": "Mechanical harvesting can lead to oxidation and physical damage to the berry before winemaking begins; because the skin breaks early, this therefore affects aroma freshness and may increase extraction.",
+    "cause_effect": "Cause → effect: mechanical harvesting breaks berry skin before the winery; because this causes early oxidation of the juice, the wine therefore shows reduced aromatic freshness compared to carefully hand-harvested fruit.",
+    "exam_formulation": "For exam purposes: name the process (mechanical harvesting), explain the mechanism (berry skin rupture before the winery), and draw the conclusion — because early oxidation of exposed juice therefore reduces aromatic freshness compared to careful hand-harvesting.",
+    "mini_practice_prompt": "Write one sentence: 'Because mechanical harvesting [mechanism], the wine therefore [effect]'.",
+    "official_idea_hint": null
+  },
+  {
+    "topic_slug": "mechanical_harvest_es",
+    "patterns_es": [
+      "vendimia mec",
+      "vendimia.*mec"
+    ],
+    "patterns_en": [
+      "__no_cross_language_pattern__"
+    ],
+    "normal_answer": "La vendimia mecánica puede introducir oxidación y rotura de la baya antes de la elaboración; porque el oxígeno entra en contacto con el mosto expuesto, esto conduce — por tanto — a una menor frescura aromática y potencialmente mayor extracción de compuestos fenólicos.",
+    "cause_effect": "Cadena: la máquina de vendimia rompe la baya antes de llegar a bodega → el mosto queda expuesto al oxígeno → oxidación prematura de los aromas → menor frescura aromática en el vino terminado. La gestión del oxígeno en bodega puede mitigar este efecto.",
+    "exam_formulation": "Para efectos del examen: nombra el proceso (vendimia mecánica), explica el mecanismo (rotura de la baya antes de llegar a bodega) y conecta el efecto — porque el mosto queda expuesto al oxígeno, la frescura aromática se reduce — por tanto — en comparación con una vendimia manual cuidadosa.",
+    "mini_practice_prompt": "Completa esta frase: 'Porque la vendimia mecánica [mecanismo], el vino — por tanto — [efecto en la frescura aromática]'.",
+    "official_idea_hint": "el material oficial vincula los métodos de vendimia con el potencial aromático y la integridad de la baya en la elaboración"
+  },
+  {
+    "topic_slug": "destemming_en",
+    "patterns_es": [
+      "__no_cross_language_pattern__"
+    ],
+    "patterns_en": [
+      "destem",
+      "destemming"
+    ],
+    "normal_answer": "Destemming removes the green, woody stalks before fermentation; because stalks add harsh green tannins and excess astringency, removing them therefore results in softer, rounder tannins and a cleaner palate structure.",
+    "cause_effect": "Cause → effect: stalks contribute harsh, green tannins; because destemming removes this source, the resulting fermentation therefore extracts softer, riper tannin from skins and seeds only.",
+    "exam_formulation": "For exam purposes: state that destemming removes stalks, explain why that matters (stalks add harsh green tannins), and connect the result — because their removal therefore produces softer, rounder tannins and a cleaner palate structure.",
+    "mini_practice_prompt": "Write one sentence: 'Because destemming removes [what], fermentation therefore [outcome for tannin structure]'.",
+    "official_idea_hint": null
+  },
+  {
+    "topic_slug": "destemming_es",
+    "patterns_es": [
+      "despalillado"
+    ],
+    "patterns_en": [
+      "__no_cross_language_pattern__"
+    ],
+    "normal_answer": "El despalillado elimina los raspones verdes antes de la fermentación; porque los raspones aportan taninos verdes y astringencia excesiva, su eliminación conduce — por tanto — a vinos con taninos más suaves, redondeados y una estructura de paladar más limpia.",
+    "cause_effect": "Cadena: raspones presentes → fermentación extrae taninos verdes y astringentes de los raspones → vino con estructura áspera y notas herbáceas. Sin raspones: fermentación extrae tanino solo de pieles y pepitas → taninos más suaves y maduros. Por tanto, el despalillado conduce a un mejor control de la calidad táctil del vino.",
+    "exam_formulation": "Para efectos del examen: describe el despalillado (eliminación de raspones), explica el mecanismo (los raspones aportan taninos verdes y astringencia áspera) y conecta el resultado — porque su eliminación conduce — por tanto — a vinos con taninos más suaves y redondeados y una estructura de paladar más limpia.",
+    "mini_practice_prompt": "Completa esta frase: 'Porque el despalillado elimina [qué], la fermentación extrae — por tanto — [efecto en la estructura tánica]'.",
+    "official_idea_hint": "el material oficial relaciona el despalillado con la extracción de taninos y la estructura tánica del vino"
+  },
+  {
+    "topic_slug": "sulphites_en",
+    "patterns_es": [
+      "__no_cross_language_pattern__"
+    ],
+    "patterns_en": [
+      "sulphite",
+      "sulfite",
+      "so2",
+      "sulfit"
+    ],
+    "normal_answer": "Excessive use of sulphites can produce reductive off-aromas (struck match, rubber), and in sensitive individuals may cause adverse reactions; because sulphur dioxide suppresses yeast and bacterial activity broadly, therefore precise dosing is essential to balance preservation with wine character.",
+    "cause_effect": "Cause → effect: SO₂ inhibits oxidation and microbial activity; because excess sulphites suppress these processes too broadly, the wine therefore retains less natural complexity and may show reductive off-aromas.",
+    "exam_formulation": "For exam purposes: state the role of SO₂ (antioxidant and antimicrobial agent), then explain the risk of overuse — because excess sulphites suppress fermentation character too broadly and may leave reductive off-aromas (struck match, rubber), therefore precise dosing is essential.",
+    "mini_practice_prompt": "Write one sentence connecting excess SO₂ → suppressed fermentation character → reductive off-aromas.",
+    "official_idea_hint": "el material oficial trata el SO₂ como agente conservante y antimicrobiano con implicaciones para el carácter del vino"
+  },
+  {
+    "topic_slug": "sulphites_es",
+    "patterns_es": [
+      "sulfit",
+      "so2"
+    ],
+    "patterns_en": [
+      "__no_cross_language_pattern__"
+    ],
+    "normal_answer": "El uso excesivo de sulfitos puede producir aromas reductivos (cerilla, goma) y, en personas sensibles, reacciones adversas; porque el dióxido de azufre actúa como conservante e inhibidor microbiano, un exceso puede — por tanto — enmascarar el carácter del vino y dejar residuos perceptibles.",
+    "cause_effect": "Cadena: SO₂ en exceso → inhibición excesiva de levaduras y bacterias → menor complejidad fermentativa; además, el SO₂ residual puede producir aromas reductivos (cerilla, azufre). Por tanto, un uso excesivo de sulfitos perjudica — en vez de proteger — el carácter del vino.",
+    "exam_formulation": "Para efectos del examen: nombra el papel del SO₂ (agente antioxidante y antimicrobiano), explica el riesgo del exceso — porque un uso excesivo suprime demasiado ampliamente la actividad fermentativa y puede dejar aromas reductivos (cerilla, goma), por tanto la dosificación precisa es clave para preservar el carácter del vino.",
+    "mini_practice_prompt": "Escribe una frase que conecte exceso de SO₂ → supresión del carácter fermentativo → aromas reductivos en el vino.",
+    "official_idea_hint": "el material oficial trata el SO₂ como agente conservante y antimicrobiano con implicaciones para el carácter del vino"
+  },
+  {
+    "topic_slug": "sparkling_pressure_en",
+    "patterns_es": [
+      "__no_cross_language_pattern__"
+    ],
+    "patterns_en": [
+      "pressure.*(?:sparkling|atmosphe)",
+      "(?:sparkling|effervescent).*pressure"
+    ],
+    "normal_answer": "Sparkling wines below 3 atmospheres of pressure are classified as semi-sparkling (pétillant); because the CO₂ level is lower, the mousse is softer and less persistent than a fully sparkling wine above 5 atmospheres.",
+    "cause_effect": "Cause → effect: less sugar in the tirage produces less CO₂; because CO₂ determines internal pressure, a pressure below 3 atmospheres therefore classifies the wine as semi-sparkling (pétillant) rather than fully sparkling.",
+    "exam_formulation": "For exam purposes: link the CO₂ level to pressure classification — because wines below 3 atmospheres are classified as semi-sparkling (pétillant) and wines above 5 atmospheres as fully sparkling, the level of effervescence is therefore a direct function of tirage sugar quantity.",
+    "mini_practice_prompt": "Complete this: 'Because the CO₂ level is below 3 atmospheres, the wine is classified as [?] and its mousse is therefore [?]'.",
+    "official_idea_hint": null
+  },
+  {
+    "topic_slug": "sparkling_pressure_es",
+    "patterns_es": [
+      "(?:espumoso|espumante).*(?:presi|atm)",
+      "(?:presi|atm).*(?:espumoso|espumante|semi.espumoso|perlant)"
+    ],
+    "patterns_en": [
+      "__no_cross_language_pattern__"
+    ],
+    "normal_answer": "Los vinos espumosos con presión inferior a 3 atmósferas se clasifican como semi-espumosos o perlantes; porque el nivel de CO₂ es menor, la burbuja es más suave y menos persistente que en un espumoso completo por encima de 5 atmósferas.",
+    "cause_effect": "Cadena: menor cantidad de azúcar en el tiraje → la fermentación produce menos CO₂ → presión interna más baja → burbuja más fina y suave. Por tanto, una presión inferior a 3 atm clasifica el vino como semi-espumoso o perlante; ese mecanismo de fermentación es el que define directamente la intensidad de la efervescencia.",
+    "exam_formulation": "Para efectos del examen: conecta el nivel de CO₂ con la clasificación — porque los vinos con menos de 3 atm se clasifican como semi-espumosos y los de más de 5 atm como espumosos completos, el nivel de efervescencia es — por tanto — función directa de la cantidad de azúcar en el tiraje.",
+    "mini_practice_prompt": "Completa esta frase: 'Porque el nivel de CO₂ es inferior a 3 atm, el vino se clasifica como [?] y su burbuja es — por tanto — [?]'.",
+    "official_idea_hint": "el material oficial relaciona la presión interna de CO₂ con la clasificación del vino como espumoso, semi-espumoso o perlante"
+  },
+  {
+    "topic_slug": "tirage_en",
+    "patterns_es": [
+      "__no_cross_language_pattern__"
+    ],
+    "patterns_en": [
+      "tirage",
+      "liqueur de tirage"
+    ],
+    "normal_answer": "The liqueur de tirage is a mixture of wine, sugar, and yeast added to a still base wine before the second fermentation in bottle; because it provides the fermentable sugar and yeast, it therefore generates the CO₂ that makes the wine sparkling.",
+    "cause_effect": "Cause → effect: the tirage adds sugar and yeast to the base wine; because yeast ferments the sugar in a sealed bottle, CO₂ therefore builds up and cannot escape, making the wine sparkling.",
+    "exam_formulation": "For exam purposes: define the liqueur de tirage (wine + sugar + yeast), explain the mechanism (second fermentation in sealed bottle), and state the effect — because the CO₂ produced cannot escape, the wine therefore becomes sparkling.",
+    "mini_practice_prompt": "Write one sentence: 'The liqueur de tirage causes [mechanism], which therefore [effect in the finished wine]'.",
+    "official_idea_hint": null
+  },
+  {
+    "topic_slug": "tirage_es",
+    "patterns_es": [
+      "tiraje",
+      "licor de tiraje"
+    ],
+    "patterns_en": [
+      "__no_cross_language_pattern__"
+    ],
+    "normal_answer": "El licor de tiraje es una mezcla de vino, azúcar y levaduras añadida al vino base antes de la segunda fermentación en botella; porque aporta el azúcar fermentable y las levaduras necesarias, por tanto genera el CO₂ que convierte el vino en espumoso.",
+    "cause_effect": "Cadena: se añade azúcar + levaduras al vino base → segunda fermentación en botella cerrada → el CO₂ producido no puede escapar → la presión sube → el vino se vuelve espumoso. Por tanto, el licor de tiraje es el mecanismo que genera la efervescencia en el método tradicional.",
+    "exam_formulation": "Para efectos del examen: define el licor de tiraje (vino + azúcar + levaduras), explica el mecanismo (segunda fermentación en botella cerrada) y el efecto — porque el CO₂ producido no puede escapar, el vino se convierte — por tanto — en espumoso.",
+    "mini_practice_prompt": "Completa esta frase: 'El licor de tiraje provoca [mecanismo], lo que — por tanto — [efecto en el vino terminado]'.",
+    "official_idea_hint": "el material oficial explica el licor de tiraje como mecanismo de la segunda fermentación en botella en el método tradicional"
+  },
+  {
+    "topic_slug": "cava_champagne_en",
+    "patterns_es": [
+      "__no_cross_language_pattern__"
+    ],
+    "patterns_en": [
+      "cava.*champagne"
+    ],
+    "normal_answer": "Cava is produced using the traditional method (secondary fermentation in bottle), as is Champagne, but the key technical differences lie in grape varieties (Macabeo, Xarel-lo, Parellada vs Chardonnay/Pinot Noir/Meunier), climate, and the minimum ageing periods required.",
+    "cause_effect": null,
+    "exam_formulation": "For exam purposes: do not just say 'both use traditional method'. Explain the technical differences — grape varieties, climate, and minimum ageing requirements — and show how these produce distinct stylistic outcomes despite the shared production method.",
+    "mini_practice_prompt": null,
+    "official_idea_hint": "el material oficial contrasta variedades, clima y normativas de Cava y Champagne como vinos espumosos de método tradicional"
+  },
+  {
+    "topic_slug": "cava_champagne_es",
+    "patterns_es": [
+      "cava.*(?:champagne|champan)"
+    ],
+    "patterns_en": [
+      "__no_cross_language_pattern__"
+    ],
+    "normal_answer": "Tanto el Cava como el Champagne se elaboran por el método tradicional (segunda fermentación en botella), pero sus diferencias técnicas clave residen en las variedades de uva (Macabeo, Xarel-lo, Parellada frente a Chardonnay/Pinot Noir/Meunier), el clima y los períodos mínimos de crianza exigidos por cada denominación.",
+    "cause_effect": "Cadena: mismo método (segunda fermentación en botella), pero variedades, clima y normativa distintos → perfiles organolépticos diferentes. Cava (Macabeo, Xarel-lo, Parellada + clima mediterráneo) tiende hacia tonos más frutales y maduros; Champagne (Chardonnay/Pinot + clima frío) tiende hacia mayor acidez y mineralidad. Por tanto, la diferencia técnica se traduce en diferencias de estilo perceptibles.",
+    "exam_formulation": "Para efectos del examen: no basta con decir 'los dos usan método tradicional'. Explica las diferencias técnicas (variedades, clima, períodos mínimos de crianza) y muestra cómo producen resultados estilísticos distintos a pesar del método compartido.",
+    "mini_practice_prompt": "Escribe una frase que compare Cava y Champagne, nombrando una diferencia técnica concreta y su efecto estilístico.",
+    "official_idea_hint": "el material oficial contrasta variedades, clima y normativas de Cava y Champagne como vinos espumosos de método tradicional"
+  },
+  {
+    "topic_slug": "soil_drainage_en",
+    "patterns_es": [
+      "__no_cross_language_pattern__"
+    ],
+    "patterns_en": [
+      "soil.*drain",
+      "drainage.*soil"
+    ],
+    "normal_answer": "Soil texture and composition directly affect drainage; because well-drained soils force vine roots deeper to find water, this therefore reduces vigour, concentrates flavour, and generally supports better quality.",
+    "cause_effect": "Cause → effect: soil texture controls water retention; because well-drained soils remove excess water from the root zone, vines therefore control their own vigour and tend to produce smaller, more concentrated berries.",
+    "exam_formulation": "For exam purposes: explain the drainage-to-quality chain — soil texture controls water retention; because well-drained soils force roots deeper, vine vigour is therefore reduced and fruit concentration increases, supporting higher quality potential.",
+    "mini_practice_prompt": "Write one sentence linking soil drainage → root depth → vine vigour → fruit concentration.",
+    "official_idea_hint": null
+  },
+  {
+    "topic_slug": "soil_drainage_es",
+    "patterns_es": [
+      "(?:suelo|tierra).*(?:drenaje|drena)"
+    ],
+    "patterns_en": [
+      "__no_cross_language_pattern__"
+    ],
+    "normal_answer": "La textura y composición del suelo influyen directamente en el drenaje; porque un suelo bien drenado obliga a las raíces a profundizar en busca de agua, esto conduce — por tanto — a menor vigor, mayor concentración de sabor y, generalmente, mejor calidad de la uva.",
+    "cause_effect": "Cadena: textura del suelo → capacidad de retención de agua → profundidad de las raíces → vigor de la vid. Un suelo con buen drenaje obliga a las raíces a descender en busca de agua; porque eso limita el vigor, la vid concentra sus recursos en menos fruta. Por tanto, suelos bien drenados tienden — por tanto — a producir uvas más concentradas y de mayor calidad potencial.",
+    "exam_formulation": "Para efectos del examen: explica la cadena drenaje→calidad — la textura del suelo controla la retención de agua; porque un suelo bien drenado fuerza a las raíces a profundizar, el vigor de la vid se reduce — por tanto — y la concentración de la fruta aumenta, apoyando mayor potencial de calidad.",
+    "mini_practice_prompt": "Escribe una frase que conecte textura del suelo → drenaje → profundidad de raíces → concentración de la fruta.",
+    "official_idea_hint": "el material oficial relaciona la composición y el drenaje del suelo con el vigor de la vid y el potencial de calidad de la uva"
+  },
+  {
+    "topic_slug": "spring_frost_en",
+    "patterns_es": [
+      "__no_cross_language_pattern__"
+    ],
+    "patterns_en": [
+      "frost.*(?:spring|risk)",
+      "spring frost"
+    ],
+    "normal_answer": "Spring frost is primarily determined by topography and air drainage patterns; because cold air settles into low-lying areas, frost risk is therefore highest in valley floors and natural hollows.",
+    "cause_effect": "Cause → effect: cold air is denser than warm air and flows downhill; because it settles in low-lying hollows and valley floors, spring frosts therefore pose the greatest risk to vines planted in these topographical positions.",
+    "exam_formulation": "For exam purposes: explain the topographical mechanism — cold air is denser and flows downhill; because it accumulates in valley floors and hollows, spring frost risk is therefore highest in these low-lying positions and lowest on well-aired slopes.",
+    "mini_practice_prompt": "Write one sentence: 'Because cold air [movement], spring frost risk is therefore [highest/lowest] in [which positions?]'.",
+    "official_idea_hint": null
+  },
+  {
+    "topic_slug": "spring_frost_es",
+    "patterns_es": [
+      "helada.*(?:primavera|riesgo)"
+    ],
+    "patterns_en": [
+      "__no_cross_language_pattern__"
+    ],
+    "normal_answer": "El riesgo de heladas primaverales está determinado principalmente por la topografía y la circulación del aire frío; porque el aire frío desciende y se acumula en las zonas bajas, el riesgo es — por tanto — mayor en valles y hondonadas que en laderas con buen drenaje aéreo.",
+    "cause_effect": "Cadena: aire frío más denso → desciende y se acumula en los puntos bajos → vides en valles o depresiones → mayor exposición al frío. Por tanto, el riesgo de heladas primaverales es mayor en las zonas topográficamente bajas y menor en las laderas con buen drenaje del aire frío.",
+    "exam_formulation": "Para efectos del examen: explica el mecanismo topográfico — el aire frío es más denso y desciende; porque se acumula en los puntos bajos del terreno, el riesgo de helada primaveral es — por tanto — mayor en valles y hondonadas y menor en laderas con buen drenaje del aire frío.",
+    "mini_practice_prompt": "Completa esta frase: 'Porque el aire frío [movimiento], el riesgo de helada primaveral es — por tanto — mayor en [qué posición topográfica]'.",
+    "official_idea_hint": "el material oficial vincula la topografía, el drenaje del aire frío y el riesgo de heladas primaverales en la viticultura"
+  },
+  {
+    "topic_slug": "planting_density_en",
+    "patterns_es": [
+      "__no_cross_language_pattern__"
+    ],
+    "patterns_en": [
+      "planting density",
+      "plant.*density",
+      "density.*plant"
+    ],
+    "normal_answer": "Higher planting density increases vine-to-vine competition for water and nutrients; because each vine has access to fewer resources, the resulting fruit is therefore more concentrated and yields per vine are lower.",
+    "cause_effect": "Cause → effect: denser planting forces each vine to compete for limited soil nutrients and water; because resources per vine are restricted, vine vigour is therefore reduced and fruit concentration increases.",
+    "exam_formulation": "For exam purposes: explain the resource-competition chain — higher density means each vine competes for fewer nutrients and water; because this restricts vigour, yields per vine are therefore lower and fruit concentration higher, supporting quality potential.",
+    "mini_practice_prompt": "Write one sentence: 'Higher planting density causes [mechanism], which therefore [effect on fruit concentration]'.",
+    "official_idea_hint": null
+  },
+  {
+    "topic_slug": "planting_density_es",
+    "patterns_es": [
+      "plantaci.*(?:densidad|alta)"
+    ],
+    "patterns_en": [
+      "__no_cross_language_pattern__"
+    ],
+    "normal_answer": "Una alta densidad de plantación aumenta la competencia entre cepas por agua y nutrientes; porque cada vid accede a menos recursos, la uva resultante es — por tanto — más concentrada y los rendimientos por vid son menores.",
+    "cause_effect": "Cadena: más cepas por hectárea → competencia por agua y nutrientes → menor vigor individual → menor rendimiento por cepa → mayor concentración en las bayas. Por tanto, una alta densidad de plantación conduce — por tanto — a vinos potencialmente más complejos y concentrados, aunque implica mayor coste de producción.",
+    "exam_formulation": "Para efectos del examen: explica la cadena competencia→concentración — a mayor densidad de plantación, cada vid compite por menos recursos; porque eso limita el vigor, los rendimientos son — por tanto — menores y la concentración de la fruta mayor, lo que apoya el potencial de calidad.",
+    "mini_practice_prompt": "Escribe una frase que conecte alta densidad de plantación → competencia por recursos → concentración de la fruta.",
+    "official_idea_hint": "el material oficial relaciona la densidad de plantación con la competencia entre cepas, el vigor y la concentración de la fruta"
+  },
+  {
+    "topic_slug": "oloroso_amontillado_es",
+    "patterns_es": [
+      "oloroso.*amontillado.*crianza",
+      "amontillado.*oloroso.*crianza"
+    ],
+    "patterns_en": [
+      "__no_cross_language_pattern__"
+    ],
+    "normal_answer": "La diferencia clave radica en la crianza: el Amontillado comienza con crianza biológica bajo la flor, pero la flor dies cuando el alcohol sube — entonces la oxidative ageing toma el relevo (no flor → oxidative ageing). El Oloroso, por tanto, nunca desarrolla flor y experimenta desde el inicio una crianza completamente oxidativa, desarrollando aromas a nueces, frutos secos y color ambarino intenso.",
+    "cause_effect": "Cadena (Oloroso vs Amontillado): el Amontillado comienza con crianza biológica bajo la capa de flor, pero la flor dies cuando el nivel alcohólico sube o las condiciones cambian → sin flor, empieza la oxidative ageing — no flor → oxidative ageing toma el control → el vino desarrolla aromas a nueces, frutos secos y color ambarino. El Oloroso, por tanto, nunca tuvo flor: desde el inicio experimenta crianza oxidativa completa.",
+    "exam_formulation": null,
+    "mini_practice_prompt": null,
+    "official_idea_hint": null
+  },
+  {
+    "topic_slug": "tokaji_aszu_en",
+    "patterns_es": [
+      "__no_cross_language_pattern__"
+    ],
+    "patterns_en": [
+      "tokaj",
+      "asz"
+    ],
+    "normal_answer": null,
+    "cause_effect": null,
+    "exam_formulation": "For exam purposes: name the distinguishing practice (addition of botrytised Aszú grapes to base wine), explain the mechanism (noble rot concentrates sugars, acids, and glycerol), and draw the conclusion — because partial fermentation of this paste therefore produces a wine of great sweetness, complexity, and ageing potential.",
+    "mini_practice_prompt": "Write one sentence: 'Because Botrytis cinerea [what it does to the grape], the resulting Tokaji Aszú therefore [style outcome]'.",
+    "official_idea_hint": "el material oficial describe el Tokaji Aszú y la adición de uvas botrytizadas como práctica definitoria de este estilo de vino dulce"
+  },
+  {
+    "topic_slug": "tokaji_aszu_es",
+    "patterns_es": [
+      "tokaji",
+      "tokay",
+      "asz"
+    ],
+    "patterns_en": [
+      "__no_cross_language_pattern__"
+    ],
+    "normal_answer": "La práctica que distingue al Tokaji Aszú es la adición de uvas botrytizadas (afectadas por Botrytis cinerea en su forma noble) al vino base; porque la podredumbre noble concentra azúcares y ácidos y produce glicerol, esto conduce — por tanto — a un vino dulce de gran concentración, complejidad y capacidad de guarda.",
+    "cause_effect": "Cadena: uvas botrytizadas (Botrytis cinerea en forma noble) concentran azúcares, ácidos y glicerol → se añaden al vino base como pasta → fermentación parcial → vino con gran concentración de azúcar residual, acidez y complejidad. Por tanto, la adición de aszú es el mecanismo que define el estilo único del Tokaji.",
+    "exam_formulation": "Para efectos del examen: nombra la práctica distintiva (adición de uvas Aszú botrytizadas al vino base), explica el mecanismo (la podredumbre noble concentra azúcares, ácidos y glicerol) y conecta el resultado — porque la fermentación parcial de esa pasta produce — por tanto — un vino de gran dulzura, complejidad y potencial de guarda.",
+    "mini_practice_prompt": "Escribe una frase: 'Porque la Botrytis cinerea [qué hace a la uva], el Tokaji Aszú resultante — por tanto — [resultado estilístico]'.",
+    "official_idea_hint": "el material oficial describe el Tokaji Aszú y la adición de uvas botrytizadas como práctica definitoria de este estilo de vino dulce"
+  },
+  {
+    "topic_slug": "cremant_en",
+    "patterns_es": [
+      "__no_cross_language_pattern__"
+    ],
+    "patterns_en": [
+      "cremant",
+      "crémant"
+    ],
+    "normal_answer": null,
+    "cause_effect": null,
+    "exam_formulation": "For exam purposes: explain what makes Crémant distinctive — traditional method production, regional grapes, and (for Crémant de Loire) Chenin Blanc's naturally high acidity — and link these to the stylistic outcome: fine, persistent mousse and marked freshness.",
+    "mini_practice_prompt": "Write one sentence linking Crémant de Loire's cool climate → high acidity in Chenin Blanc → sparkling wine style.",
+    "official_idea_hint": "el material oficial relaciona el Crémant con el método tradicional, las variedades regionales y el perfil de acidez característico"
+  },
+  {
+    "topic_slug": "cremant_es",
+    "patterns_es": [
+      "cremant",
+      "crémant"
+    ],
+    "patterns_en": [
+      "__no_cross_language_pattern__"
+    ],
+    "normal_answer": "El Crémant de Loire se elabora por el método tradicional con uvas de la región del Loira, principalmente Chenin Blanc; porque el clima fresco del Loira favorece una acidez natural elevada, el espumoso resultante presenta — por tanto — burbuja fina, frescura marcada y buen equilibrio.",
+    "cause_effect": "Cadena: clima fresco del Loira → alta acidez natural en Chenin Blanc → segunda fermentación en botella (método tradicional) → burbuja fina y persistente. Por tanto, el Crémant de Loire es reconocido por su frescura y equilibrio como resultado directo de su origen climático y método de elaboración.",
+    "exam_formulation": "Para efectos del examen: explica qué distingue al Crémant — método tradicional, uvas regionales y (en el caso del Crémant de Loire) la acidez natural elevada del Chenin Blanc — y conecta esos factores con el perfil estilístico: burbuja fina y persistente, frescura marcada y buen equilibrio.",
+    "mini_practice_prompt": "Escribe una frase que conecte clima fresco del Loira → acidez natural elevada en Chenin Blanc → estilo del espumoso.",
+    "official_idea_hint": "el material oficial relaciona el Crémant con el método tradicional, las variedades regionales y el perfil de acidez característico"
+  },
+  {
+    "topic_slug": "madeira_en",
+    "patterns_es": [
+      "__no_cross_language_pattern__"
+    ],
+    "patterns_en": [
+      "madeira"
+    ],
+    "normal_answer": null,
+    "cause_effect": null,
+    "exam_formulation": "For exam purposes: explain the estufagem mechanism (controlled heating), link it to the effect (accelerated oxidation, development of tertiary aromas, caramelisation), and then connect to outcome — because this unique thermal process combined with high natural acidity therefore gives Madeira its exceptional longevity and complexity.",
+    "mini_practice_prompt": "Write one sentence: 'Because estufagem [mechanism], Madeira therefore [style and longevity outcome]'.",
+    "official_idea_hint": "el material oficial describe el estufagem como el proceso térmico que distingue la crianza del Madeira y explica su longevidad"
+  },
+  {
+    "topic_slug": "madeira_es",
+    "patterns_es": [
+      "madeira",
+      "madera"
+    ],
+    "patterns_en": [
+      "__no_cross_language_pattern__"
+    ],
+    "normal_answer": "Madeira se elabora principalmente con variedades autóctonas como Sercial, Verdelho, Bual y Malmsey; porque la isla tiene un clima subtropical y los vinos pasan por el proceso de estufagem (calor controlado), esto conduce — por tanto — a vinos con acidez elevada, carácter oxidativo y gran longevidad.",
+    "cause_effect": "Cadena: estufagem (calor controlado) + oxidación controlada → desarrollo de aromas terciarios (frutos secos, caramelo, malta) + alta acidez → longevidad excepcional. Por tanto, el proceso térmico es el mecanismo que distingue la crianza del Madeira y explica su capacidad de envejecimiento única.",
+    "exam_formulation": "Para efectos del examen: explica el estufagem (calentamiento controlado), conecta el mecanismo (oxidación acelerada, desarrollo de aromas terciarios, caramelización) con el efecto — porque ese proceso térmico único combinado con la alta acidez natural confiere — por tanto — al Madeira su longevidad excepcional y su complejidad distintiva.",
+    "mini_practice_prompt": "Completa esta frase: 'Porque el estufagem [mecanismo], el Madeira — por tanto — [resultado estilístico y de longevidad]'.",
+    "official_idea_hint": "el material oficial describe el estufagem como el proceso térmico que distingue la crianza del Madeira y explica su longevidad"
+  },
+  {
+    "topic_slug": "chile_sparkling_es",
+    "patterns_es": [
+      "(?:chile|chilena).*(?:espumoso|clima fresco)",
+      "region.*chile.*espumoso"
+    ],
+    "patterns_en": [
+      "__no_cross_language_pattern__"
+    ],
+    "normal_answer": null,
+    "cause_effect": "Cadena: altitud elevada o influencia marítima → temperaturas nocturnas frescas → maduración lenta de la uva → conservación de acidez natural → base ideal para espumoso. Por tanto, el clima fresco de ciertas regiones chilenas es la causa directa de la calidad de sus espumosos.",
+    "exam_formulation": "Para efectos del examen: explica por qué el clima fresco de ciertas regiones chilenas favorece la producción de espumosos de calidad — las temperaturas nocturnas bajas conservan la acidez natural; porque esa acidez es la base estructural del espumoso, las regiones frescas de Chile ofrecen — por tanto — un punto de partida ideal para este estilo.",
+    "mini_practice_prompt": "Escribe una frase que conecte temperaturas nocturnas frescas en regiones chilenas → conservación de acidez → base ideal para espumoso de calidad.",
+    "official_idea_hint": "el material oficial vincula el clima fresco de ciertas regiones de Chile con la producción de espumosos de calidad"
+  },
+  {
+    "topic_slug": "vintage_port",
+    "patterns_es": [
+      "porto vintage",
+      "vintage port"
+    ],
+    "patterns_en": [
+      "porto vintage",
+      "vintage port"
+    ],
+    "normal_answer": "Una característica clave del Vintage Port es que envejece en botella: su alto tanino y concentración le dan estructura para evolucionar durante años, pero con el tiempo también forma sedimento.",
+    "cause_effect": "Cadena: structure -> bottle ageing -> sediment. La concentración y el tanino del Vintage Port le dan estructura para la crianza en botella; durante ese envejecimiento, los compuestos fenólicos se polimerizan y precipitan, formando sedimento.",
+    "exam_formulation": null,
+    "mini_practice_prompt": null,
+    "official_idea_hint": "el material oficial conecta fortificación, parada de fermentación y estilo final del vino"
+  },
+  {
+    "topic_slug": "tannin_quality_en",
+    "patterns_es": [
+      "__no_cross_language_pattern__"
+    ],
+    "patterns_en": [
+      "tannin"
+    ],
+    "normal_answer": null,
+    "cause_effect": "Cause → effect: phenolic material contributes tannin; tannin is felt as drying astringency, so quality depends on whether that structure is ripe, balanced, and integrated.",
+    "exam_formulation": null,
+    "mini_practice_prompt": "Rewrite this: 'More tannin means better wine' using balance, integration, and length.",
+    "official_idea_hint": "el material oficial sitúa el tannin dentro de estructura, extracción y evaluación de calidad"
+  },
+  {
+    "topic_slug": "tannin_quality_es",
+    "patterns_es": [
+      "tannin"
+    ],
+    "patterns_en": [
+      "__no_cross_language_pattern__"
+    ],
+    "normal_answer": null,
+    "cause_effect": "Cadena: compuestos fenólicos de pieles, pepitas o extracción aportan tanino → el tanino se percibe como sequedad/astringencia → puede apoyar la estructura si está maduro e integrado, pero no garantiza calidad por sí solo.",
+    "exam_formulation": "Para efectos del examen: no escribas solo 'tiene mucho tanino, por eso es mejor'. Escribe: 'tanino alto pero integrado, junto con concentración de fruta, balance, complexity y length, puede apoyar una quality assessment más alta'.",
+    "mini_practice_prompt": "Reescribe esta frase: 'más tanino significa mejor vino', usando balance, integración y length.",
+    "official_idea_hint": "el material oficial sitúa el tannin dentro de estructura, extracción y evaluación de calidad"
+  },
+  {
+    "topic_slug": "acidity_quality_en",
+    "patterns_es": [
+      "__no_cross_language_pattern__"
+    ],
+    "patterns_en": [
+      "acid.*quality",
+      "high acidity"
+    ],
+    "normal_answer": null,
+    "cause_effect": "Cause → effect: acidity affects freshness and balance; it becomes positive or negative depending on the wine's style and the surrounding fruit, sugar, alcohol, and body.",
+    "exam_formulation": "For exam purposes, make the quality claim and support it with balance, intensity, complexity, length, and evidence from the palate. Because the evidence supports the conclusion, this therefore points toward a clear, justified quality assessment.",
+    "mini_practice_prompt": "Rewrite this: 'High acidity means low quality' using balance and wine style.",
+    "official_idea_hint": "el material oficial apoya una quality assessment basada en balance, intensity, complexity y length"
+  },
+  {
+    "topic_slug": "acidity_quality_es",
+    "patterns_es": [
+      "acid.*(?:quality|calidad)",
+      "(?:quality|calidad).*acid"
+    ],
+    "patterns_en": [
+      "__no_cross_language_pattern__"
+    ],
+    "normal_answer": null,
+    "cause_effect": "Cadena: acidity aporta frescura y tensión → su efecto en la calidad depende de balance, fruta, azúcar, alcohol y body.",
+    "exam_formulation": "Para efectos del examen: no escribas 'alta acidity = baja calidad'. Escribe si la acidity está en balance con fruta, alcohol, sweetness/body y length, y explica cómo sostiene el estilo.",
+    "mini_practice_prompt": "Reescribe esta frase: 'high acidity significa baja calidad', usando balance y estilo del vino.",
+    "official_idea_hint": "el material oficial apoya una quality assessment basada en balance, intensity, complexity y length"
+  },
+  {
+    "topic_slug": "flor_official",
+    "patterns_es": [
+      "flor"
+    ],
+    "patterns_en": [
+      "flor"
+    ],
+    "normal_answer": null,
+    "cause_effect": null,
+    "exam_formulation": null,
+    "mini_practice_prompt": null,
+    "official_idea_hint": "el material oficial conecta flor, crianza biológica y protección frente a oxidación"
+  },
+  {
+    "topic_slug": "port_official",
+    "patterns_es": [
+      "port",
+      "oporto"
+    ],
+    "patterns_en": [
+      "port",
+      "oporto"
+    ],
+    "normal_answer": null,
+    "cause_effect": null,
+    "exam_formulation": null,
+    "mini_practice_prompt": null,
+    "official_idea_hint": "el material oficial conecta fortificación, parada de fermentación y estilo final del vino"
+  },
+  {
+    "topic_slug": "sherry_official",
+    "patterns_es": [
+      "sherry",
+      "jerez"
+    ],
+    "patterns_en": [
+      "sherry",
+      "jerez"
+    ],
+    "normal_answer": null,
+    "cause_effect": null,
+    "exam_formulation": null,
+    "mini_practice_prompt": null,
+    "official_idea_hint": "el material oficial distingue crianza biológica y oxidativa en Jerez"
+  }
+]

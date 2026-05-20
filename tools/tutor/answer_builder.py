@@ -5,6 +5,7 @@ from __future__ import annotations
 import json
 import re
 from datetime import datetime, timezone
+from functools import lru_cache
 from pathlib import Path
 from typing import Any
 
@@ -12,6 +13,7 @@ from tools.constants import (
     CLOUD_SERVICES_ACTIVE,
     CONTEXT_PACKAGES_DIR,
     EXAMINER_SCORING_ALLOWED,
+    KNOWLEDGE_DIR,
     NAZARETH_DIR,
     SAFE_FOR_EXAMINER,
     SAT_EVALUATION_TERMS,
@@ -91,6 +93,18 @@ TUTOR_SOURCE_NOTES = {
         "pedagogical_support": "Nota de fuentes: el material de Wine With Jimmy o transcripciones manuales es apoyo pedagógico, no autoridad oficial WSET.",
     },
 }
+
+
+@lru_cache(maxsize=1)
+def _load_answer_patterns() -> list[dict[str, Any]]:
+    path = KNOWLEDGE_DIR / "answer_patterns.json"
+    with path.open(encoding="utf-8") as file:
+        return json.load(file)
+
+
+def _match_pattern(text: str, patterns: list[str]) -> bool:
+    text_lower = text.lower()
+    return any(re.search(pattern, text_lower) for pattern in patterns)
 
 
 def build_tutor_answer(
@@ -345,75 +359,16 @@ def _render_normal_answer(
 
 
 def _normal_direct_answer(query: str, language: str, ideas: list[dict[str, str]] | None = None) -> str:  # noqa: C901
-    lowered = query.lower()
     ideas = ideas or []
+    pattern_key = "patterns_es" if language == "es" else "patterns_en"
+    for entry in _load_answer_patterns():
+        if _match_pattern(query, entry.get(pattern_key, [])) and entry.get("normal_answer") is not None:
+            return str(entry["normal_answer"])
+
     if language == "en":
-        if "cool climate" in lowered and "acid" in lowered:
-            return "Cool climate generally helps retain acidity because grapes ripen more slowly and lose less acid before harvest."
-        if "quality" in lowered and "sat" in lowered:
-            return "In SAT, justify quality by linking your conclusion to balance, intensity, complexity, length, and the condition of the fruit and structure. Because all those elements support the palate impression, this therefore points toward a quality assessment grounded in evidence — not a single descriptor."
-        if "oxidative" in lowered and ("ageing" in lowered or "aging" in lowered):
-            return "Oxidative ageing in fortified wines exposes the wine to oxygen over time; because that contact drives aldehyde development, the wine therefore gains nutty, dried-fruit, and rancio character while losing primary fruit and colour."
-        if "mechanical" in lowered and "harvest" in lowered:
-            return "Mechanical harvesting can lead to oxidation and physical damage to the berry before winemaking begins; because the skin breaks early, this therefore affects aroma freshness and may increase extraction."
-        if "destemming" in lowered or "destem" in lowered:
-            return "Destemming removes the green, woody stalks before fermentation; because stalks add harsh green tannins and excess astringency, removing them therefore results in softer, rounder tannins and a cleaner palate structure."
-        if "sulfit" in lowered or "so2" in lowered:
-            return "Excessive use of sulphites can produce reductive off-aromas (struck match, rubber), and in sensitive individuals may cause adverse reactions; because sulphur dioxide suppresses yeast and bacterial activity broadly, therefore precise dosing is essential to balance preservation with wine character."
-        if ("sparkling" in lowered or "effervescent" in lowered) and "pressure" in lowered:
-            return "Sparkling wines below 3 atmospheres of pressure are classified as semi-sparkling (pétillant); because the CO₂ level is lower, the mousse is softer and less persistent than a fully sparkling wine above 5 atmospheres."
-        if "tirage" in lowered or "liqueur de tirage" in lowered:
-            return "The liqueur de tirage is a mixture of wine, sugar, and yeast added to a still base wine before the second fermentation in bottle; because it provides the fermentable sugar and yeast, it therefore generates the CO₂ that makes the wine sparkling."
-        if "cava" in lowered and "champagne" in lowered:
-            return "Cava is produced using the traditional method (secondary fermentation in bottle), as is Champagne, but the key technical differences lie in grape varieties (Macabeo, Xarel-lo, Parellada vs Chardonnay/Pinot Noir/Meunier), climate, and the minimum ageing periods required."
-        if "soil" in lowered and ("drainage" in lowered or "drain" in lowered):
-            return "Soil texture and composition directly affect drainage; because well-drained soils force vine roots deeper to find water, this therefore reduces vigour, concentrates flavour, and generally supports better quality."
-        if "frost" in lowered and ("spring" in lowered or "risk" in lowered):
-            return "Spring frost is primarily determined by topography and air drainage patterns; because cold air settles into low-lying areas, frost risk is therefore highest in valley floors and natural hollows."
-        if "planting density" in lowered or ("plant" in lowered and "density" in lowered):
-            return "Higher planting density increases vine-to-vine competition for water and nutrients; because each vine has access to fewer resources, the resulting fruit is therefore more concentrated and yields per vine are lower."
-        # Fallback using idea content
         if ideas:
             return f"From the WSET perspective: {ideas[0]['idea']}."
         return "Answer the question through the WSET framework, then support the conclusion with clear evidence."
-    # Spanish paths
-    if "cool climate" in lowered and "acid" in lowered:
-        return "Un clima fresco suele conservar más acidity porque la uva madura más lentamente y pierde menos ácido antes de la vendimia."
-    if "quality" in lowered and "sat" in lowered:
-        return "En SAT, justifica la quality assessment vinculando tu conclusión con balance, intensity, complexity, length y la condición de la fruta y la estructura. Porque esos elementos sostienen la impresión del paladar, la quality assessment — por tanto — se apoya en evidencia, no en un descriptor aislado."
-    if ("oloroso" in lowered or "amontillado" in lowered) and "crianza" in lowered:
-        return "La diferencia clave radica en la crianza: el Amontillado comienza con crianza biológica bajo la flor, pero la flor dies cuando el alcohol sube — entonces la oxidative ageing toma el relevo (no flor → oxidative ageing). El Oloroso, por tanto, nunca desarrolla flor y experimenta desde el inicio una crianza completamente oxidativa, desarrollando aromas a nueces, frutos secos y color ambarino intenso."
-    if "oxidativ" in lowered and ("envejec" in lowered or "crianza" in lowered):
-        return "El envejecimiento oxidativo en vinos generosos como el Oloroso expone el vino al contacto con el oxígeno durante la crianza; porque ese proceso impulsa la formación de acetaldehído y otros aldehídos, el vino desarrolla — por tanto — aromas a nueces, frutas secas y tonos ambarados, con pérdida del color original."
-    if "vendimia mec" in lowered or ("vendimia" in lowered and "mec" in lowered):
-        return "La vendimia mecánica puede introducir oxidación y rotura de la baya antes de la elaboración; porque el oxígeno entra en contacto con el mosto expuesto, esto conduce — por tanto — a una menor frescura aromática y potencialmente mayor extracción de compuestos fenólicos."
-    if "despalillado" in lowered:
-        return "El despalillado elimina los raspones verdes antes de la fermentación; porque los raspones aportan taninos verdes y astringencia excesiva, su eliminación conduce — por tanto — a vinos con taninos más suaves, redondeados y una estructura de paladar más limpia."
-    if "sulfit" in lowered or ("so2" in lowered):
-        return "El uso excesivo de sulfitos puede producir aromas reductivos (cerilla, goma) y, en personas sensibles, reacciones adversas; porque el dióxido de azufre actúa como conservante e inhibidor microbiano, un exceso puede — por tanto — enmascarar el carácter del vino y dejar residuos perceptibles."
-    if ("espumoso" in lowered or "espumante" in lowered) and ("presi" in lowered or "atm" in lowered):
-        return "Los vinos espumosos con presión inferior a 3 atmósferas se clasifican como semi-espumosos o perlantes; porque el nivel de CO₂ es menor, la burbuja es más suave y menos persistente que en un espumoso completo por encima de 5 atmósferas."
-    if "tiraje" in lowered or "licor de tiraje" in lowered:
-        return "El licor de tiraje es una mezcla de vino, azúcar y levaduras añadida al vino base antes de la segunda fermentación en botella; porque aporta el azúcar fermentable y las levaduras necesarias, por tanto genera el CO₂ que convierte el vino en espumoso."
-    if "cava" in lowered and ("champagne" in lowered or "champan" in lowered):
-        return "Tanto el Cava como el Champagne se elaboran por el método tradicional (segunda fermentación en botella), pero sus diferencias técnicas clave residen en las variedades de uva (Macabeo, Xarel-lo, Parellada frente a Chardonnay/Pinot Noir/Meunier), el clima y los períodos mínimos de crianza exigidos por cada denominación."
-    if ("suelo" in lowered or "tierra" in lowered) and ("drenaje" in lowered or "drena" in lowered):
-        return "La textura y composición del suelo influyen directamente en el drenaje; porque un suelo bien drenado obliga a las raíces a profundizar en busca de agua, esto conduce — por tanto — a menor vigor, mayor concentración de sabor y, generalmente, mejor calidad de la uva."
-    if "helada" in lowered and ("primavera" in lowered or "riesgo" in lowered):
-        return "El riesgo de heladas primaverales está determinado principalmente por la topografía y la circulación del aire frío; porque el aire frío desciende y se acumula en las zonas bajas, el riesgo es — por tanto — mayor en valles y hondonadas que en laderas con buen drenaje aéreo."
-    if "plantaci" in lowered and ("densidad" in lowered or "alta" in lowered):
-        return "Una alta densidad de plantación aumenta la competencia entre cepas por agua y nutrientes; porque cada vid accede a menos recursos, la uva resultante es — por tanto — más concentrada y los rendimientos por vid son menores."
-    if ("tokaji" in lowered or "tokay" in lowered or "asz" in lowered):
-        return "La práctica que distingue al Tokaji Aszú es la adición de uvas botrytizadas (afectadas por Botrytis cinerea en su forma noble) al vino base; porque la podredumbre noble concentra azúcares y ácidos y produce glicerol, esto conduce — por tanto — a un vino dulce de gran concentración, complejidad y capacidad de guarda."
-    if "cremant" in lowered or "crémant" in lowered:
-        return "El Crémant de Loire se elabora por el método tradicional con uvas de la región del Loira, principalmente Chenin Blanc; porque el clima fresco del Loira favorece una acidez natural elevada, el espumoso resultante presenta — por tanto — burbuja fina, frescura marcada y buen equilibrio."
-    if "madeira" in lowered or "madera" in lowered:
-        return "Madeira se elabora principalmente con variedades autóctonas como Sercial, Verdelho, Bual y Malmsey; porque la isla tiene un clima subtropical y los vinos pasan por el proceso de estufagem (calor controlado), esto conduce — por tanto — a vinos con acidez elevada, carácter oxidativo y gran longevidad."
-    if "region" in lowered and ("chile" in lowered or "chilena" in lowered) and ("espumoso" in lowered or "clima fresco" in lowered):
-        return "La región de Elqui y Bio-Bío en Chile son reconocidas por espumosos de calidad gracias a sus climas frescos; porque las temperaturas nocturnas bajas conservan la acidez natural de la uva, el espumoso resultante presenta — por tanto — burbuja fina, frescura marcada y buena base estructural."
-    if "porto vintage" in lowered or "vintage port" in lowered:
-        return "Una característica clave del Vintage Port es que envejece en botella: su alto tanino y concentración le dan estructura para evolucionar durante años, pero con el tiempo también forma sedimento."
-    # Fallback using idea content
     if ideas:
         return f"Desde el marco WSET: {ideas[0]['idea']}."
     return "Responde desde el marco WSET y apoya la conclusión con evidencia clara."
@@ -551,68 +506,25 @@ def _cause_effect_line(
     misconception = package.get("matched_misconception") or {}
     why = str(misconception.get("why_incorrect") or "").lower()
     idea_text = " ".join(item["idea"] for item in ideas).lower()
+    pattern_key = "patterns_es" if language == "es" else "patterns_en"
+    for entry in _load_answer_patterns():
+        if _match_pattern(query, entry.get(pattern_key, [])) and entry.get("cause_effect") is not None:
+            return str(entry["cause_effect"])
+
     if language == "en":
-        if "tannin" in query or "tannin" in why:
+        if "tannin" in why:
             return "Cause → effect: phenolic material contributes tannin; tannin is felt as drying astringency, so quality depends on whether that structure is ripe, balanced, and integrated."
-        if "cool climate" in query or ("acid" in query and "climate" in idea_text):
+        if "acid" in query and "climate" in idea_text:
             return "Cause → effect: cooler conditions slow ripening, so grapes tend to retain more acid; the wine can therefore show higher acidity and freshness."
         if "acid" in query:
             return "Cause → effect: acidity affects freshness and balance; it becomes positive or negative depending on the wine's style and the surrounding fruit, sugar, alcohol, and body."
-        if "oxidative" in query and ("ageing" in query or "aging" in query):
-            return "Cause → effect: oxygen contact over time drives aldehyde formation (notably acetaldehyde); because these compounds accumulate in the wine, the result is therefore nutty, dried-fruit, and amber character alongside reduced primary fruit and colour."
-        if "mechanical" in query and "harvest" in query:
-            return "Cause → effect: mechanical harvesting breaks berry skin before the winery; because this causes early oxidation of the juice, the wine therefore shows reduced aromatic freshness compared to carefully hand-harvested fruit."
-        if "destem" in query:
-            return "Cause → effect: stalks contribute harsh, green tannins; because destemming removes this source, the resulting fermentation therefore extracts softer, riper tannin from skins and seeds only."
-        if "sulphite" in query or "sulfite" in query or "so2" in query:
-            return "Cause → effect: SO₂ inhibits oxidation and microbial activity; because excess sulphites suppress these processes too broadly, the wine therefore retains less natural complexity and may show reductive off-aromas."
-        if "tirage" in query or "liqueur de tirage" in query:
-            return "Cause → effect: the tirage adds sugar and yeast to the base wine; because yeast ferments the sugar in a sealed bottle, CO₂ therefore builds up and cannot escape, making the wine sparkling."
-        if "pressure" in query and ("sparkling" in query or "atmosphe" in query):
-            return "Cause → effect: less sugar in the tirage produces less CO₂; because CO₂ determines internal pressure, a pressure below 3 atmospheres therefore classifies the wine as semi-sparkling (pétillant) rather than fully sparkling."
-        if "drainage" in query and "soil" in query:
-            return "Cause → effect: soil texture controls water retention; because well-drained soils remove excess water from the root zone, vines therefore control their own vigour and tend to produce smaller, more concentrated berries."
-        if "frost" in query:
-            return "Cause → effect: cold air is denser than warm air and flows downhill; because it settles in low-lying hollows and valley floors, spring frosts therefore pose the greatest risk to vines planted in these topographical positions."
-        if "planting density" in query or ("density" in query and "plant" in query):
-            return "Cause → effect: denser planting forces each vine to compete for limited soil nutrients and water; because resources per vine are restricted, vine vigour is therefore reduced and fruit concentration increases."
         return "Cause → effect: identify the driving factor, explain why and how the mechanism operates — because that causal relationship therefore connects directly to the observable result in the wine's style or quality."
-    if "tannin" in query or "tannin" in why:
+    if "tannin" in why:
         return "Cadena: compuestos fenólicos de pieles, pepitas o extracción aportan tanino → el tanino se percibe como sequedad/astringencia → puede apoyar la estructura si está maduro e integrado, pero no garantiza calidad por sí solo."
-    if "cool climate" in query or ("acid" in query and "climate" in idea_text):
+    if "acid" in query and "climate" in idea_text:
         return "Cadena: clima fresco → maduración más lenta → mayor retención de ácidos → más acidity y sensación de frescura en el vino."
     if "acid" in query:
         return "Cadena: acidity aporta frescura y tensión → su efecto en la calidad depende de balance, fruta, azúcar, alcohol y body."
-    if ("oloroso" in query or "amontillado" in query) and "crianza" in query:
-        return "Cadena (Oloroso vs Amontillado): el Amontillado comienza con crianza biológica bajo la capa de flor, pero la flor dies cuando el nivel alcohólico sube o las condiciones cambian → sin flor, empieza la oxidative ageing — no flor → oxidative ageing toma el control → el vino desarrolla aromas a nueces, frutos secos y color ambarino. El Oloroso, por tanto, nunca tuvo flor: desde el inicio experimenta crianza oxidativa completa."
-    if "oxidativ" in query and ("envejec" in query or "crianza" in query):
-        return "Cadena: contacto del vino con el oxígeno → formación de acetaldehído y otros aldehídos → desarrollo de aromas a nueces, frutos secos y notas rancias; porque ese proceso consume el carácter primario de la fruta, el vino adquiere — por tanto — mayor complejidad terciaria y color ambarino."
-    if "vendimia mec" in query or ("vendimia" in query and "mec" in query):
-        return "Cadena: la máquina de vendimia rompe la baya antes de llegar a bodega → el mosto queda expuesto al oxígeno → oxidación prematura de los aromas → menor frescura aromática en el vino terminado. La gestión del oxígeno en bodega puede mitigar este efecto."
-    if "despalillado" in query:
-        return "Cadena: raspones presentes → fermentación extrae taninos verdes y astringentes de los raspones → vino con estructura áspera y notas herbáceas. Sin raspones: fermentación extrae tanino solo de pieles y pepitas → taninos más suaves y maduros. Por tanto, el despalillado conduce a un mejor control de la calidad táctil del vino."
-    if "sulfit" in query or "so2" in query:
-        return "Cadena: SO₂ en exceso → inhibición excesiva de levaduras y bacterias → menor complejidad fermentativa; además, el SO₂ residual puede producir aromas reductivos (cerilla, azufre). Por tanto, un uso excesivo de sulfitos perjudica — en vez de proteger — el carácter del vino."
-    if "tiraje" in query or "licor de tiraje" in query:
-        return "Cadena: se añade azúcar + levaduras al vino base → segunda fermentación en botella cerrada → el CO₂ producido no puede escapar → la presión sube → el vino se vuelve espumoso. Por tanto, el licor de tiraje es el mecanismo que genera la efervescencia en el método tradicional."
-    if ("espumoso" in query or "espumante" in query) and ("presi" in query or "atm" in query):
-        return "Cadena: menor cantidad de azúcar en el tiraje → la fermentación produce menos CO₂ → presión interna más baja → burbuja más fina y suave. Por tanto, una presión inferior a 3 atm clasifica el vino como semi-espumoso o perlante; ese mecanismo de fermentación es el que define directamente la intensidad de la efervescencia."
-    if "cava" in query and ("champagne" in query or "champan" in query):
-        return "Cadena: mismo método (segunda fermentación en botella), pero variedades, clima y normativa distintos → perfiles organolépticos diferentes. Cava (Macabeo, Xarel-lo, Parellada + clima mediterráneo) tiende hacia tonos más frutales y maduros; Champagne (Chardonnay/Pinot + clima frío) tiende hacia mayor acidez y mineralidad. Por tanto, la diferencia técnica se traduce en diferencias de estilo perceptibles."
-    if ("suelo" in query or "tierra" in query) and ("drenaje" in query or "drena" in query):
-        return "Cadena: textura del suelo → capacidad de retención de agua → profundidad de las raíces → vigor de la vid. Un suelo con buen drenaje obliga a las raíces a descender en busca de agua; porque eso limita el vigor, la vid concentra sus recursos en menos fruta. Por tanto, suelos bien drenados tienden — por tanto — a producir uvas más concentradas y de mayor calidad potencial."
-    if "helada" in query and ("primavera" in query or "riesgo" in query):
-        return "Cadena: aire frío más denso → desciende y se acumula en los puntos bajos → vides en valles o depresiones → mayor exposición al frío. Por tanto, el riesgo de heladas primaverales es mayor en las zonas topográficamente bajas y menor en las laderas con buen drenaje del aire frío."
-    if "plantaci" in query and ("densidad" in query or "alta" in query):
-        return "Cadena: más cepas por hectárea → competencia por agua y nutrientes → menor vigor individual → menor rendimiento por cepa → mayor concentración en las bayas. Por tanto, una alta densidad de plantación conduce — por tanto — a vinos potencialmente más complejos y concentrados, aunque implica mayor coste de producción."
-    if "tokaji" in query or "asz" in query:
-        return "Cadena: uvas botrytizadas (Botrytis cinerea en forma noble) concentran azúcares, ácidos y glicerol → se añaden al vino base como pasta → fermentación parcial → vino con gran concentración de azúcar residual, acidez y complejidad. Por tanto, la adición de aszú es el mecanismo que define el estilo único del Tokaji."
-    if "cremant" in query or "crémant" in query:
-        return "Cadena: clima fresco del Loira → alta acidez natural en Chenin Blanc → segunda fermentación en botella (método tradicional) → burbuja fina y persistente. Por tanto, el Crémant de Loire es reconocido por su frescura y equilibrio como resultado directo de su origen climático y método de elaboración."
-    if "madeira" in query:
-        return "Cadena: estufagem (calor controlado) + oxidación controlada → desarrollo de aromas terciarios (frutos secos, caramelo, malta) + alta acidez → longevidad excepcional. Por tanto, el proceso térmico es el mecanismo que distingue la crianza del Madeira y explica su capacidad de envejecimiento única."
-    if ("chile" in query or "chilena" in query) and ("espumoso" in query or "clima fresco" in query):
-        return "Cadena: altitud elevada o influencia marítima → temperaturas nocturnas frescas → maduración lenta de la uva → conservación de acidez natural → base ideal para espumoso. Por tanto, el clima fresco de ciertas regiones chilenas es la causa directa de la calidad de sus espumosos."
     return "Cadena causal: identifica el factor desencadenante, explica por qué actúa el mecanismo, porque esa relación justifica — por tanto — el efecto observable en el estilo o la calidad del vino."
 
 
@@ -977,69 +889,16 @@ def _official_idea_from_text(text: str, package: dict[str, Any]) -> str:  # noqa
 
 def _exam_line(query: str, language: str, ideas: list[dict[str, str]]) -> str:  # noqa: C901
     lowered = query.lower()
+    pattern_key = "patterns_es" if language == "es" else "patterns_en"
+    for entry in _load_answer_patterns():
+        if _match_pattern(query, entry.get(pattern_key, [])) and entry.get("exam_formulation") is not None:
+            return str(entry["exam_formulation"])
+
     if language == "en":
-        if "oxidative" in lowered and ("ageing" in lowered or "aging" in lowered):
-            return "For exam purposes: state the practice (extended oxygen contact), explain the mechanism (aldehyde formation, especially acetaldehyde), and link the result — because that oxidation therefore develops nutty, dried-fruit and rancio complexity while reducing primary fruit and lightening colour."
-        if "mechanical" in lowered and "harvest" in lowered:
-            return "For exam purposes: name the process (mechanical harvesting), explain the mechanism (berry skin rupture before the winery), and draw the conclusion — because early oxidation of exposed juice therefore reduces aromatic freshness compared to careful hand-harvesting."
-        if "destem" in lowered:
-            return "For exam purposes: state that destemming removes stalks, explain why that matters (stalks add harsh green tannins), and connect the result — because their removal therefore produces softer, rounder tannins and a cleaner palate structure."
-        if "sulphite" in lowered or "sulfite" in lowered or "so2" in lowered:
-            return "For exam purposes: state the role of SO₂ (antioxidant and antimicrobial agent), then explain the risk of overuse — because excess sulphites suppress fermentation character too broadly and may leave reductive off-aromas (struck match, rubber), therefore precise dosing is essential."
-        if "tirage" in lowered or "liqueur de tirage" in lowered:
-            return "For exam purposes: define the liqueur de tirage (wine + sugar + yeast), explain the mechanism (second fermentation in sealed bottle), and state the effect — because the CO₂ produced cannot escape, the wine therefore becomes sparkling."
-        if "pressure" in lowered and ("sparkling" in lowered or "atmosphe" in lowered):
-            return "For exam purposes: link the CO₂ level to pressure classification — because wines below 3 atmospheres are classified as semi-sparkling (pétillant) and wines above 5 atmospheres as fully sparkling, the level of effervescence is therefore a direct function of tirage sugar quantity."
-        if "cava" in lowered and "champagne" in lowered:
-            return "For exam purposes: do not just say 'both use traditional method'. Explain the technical differences — grape varieties, climate, and minimum ageing requirements — and show how these produce distinct stylistic outcomes despite the shared production method."
-        if "drainage" in lowered and "soil" in lowered:
-            return "For exam purposes: explain the drainage-to-quality chain — soil texture controls water retention; because well-drained soils force roots deeper, vine vigour is therefore reduced and fruit concentration increases, supporting higher quality potential."
-        if "frost" in lowered and ("spring" in lowered or "risk" in lowered):
-            return "For exam purposes: explain the topographical mechanism — cold air is denser and flows downhill; because it accumulates in valley floors and hollows, spring frost risk is therefore highest in these low-lying positions and lowest on well-aired slopes."
-        if "planting density" in lowered or ("density" in lowered and "plant" in lowered):
-            return "For exam purposes: explain the resource-competition chain — higher density means each vine competes for fewer nutrients and water; because this restricts vigour, yields per vine are therefore lower and fruit concentration higher, supporting quality potential."
-        if "tokaj" in lowered or "asz" in lowered:
-            return "For exam purposes: name the distinguishing practice (addition of botrytised Aszú grapes to base wine), explain the mechanism (noble rot concentrates sugars, acids, and glycerol), and draw the conclusion — because partial fermentation of this paste therefore produces a wine of great sweetness, complexity, and ageing potential."
-        if "cremant" in lowered or "crémant" in lowered:
-            return "For exam purposes: explain what makes Crémant distinctive — traditional method production, regional grapes, and (for Crémant de Loire) Chenin Blanc's naturally high acidity — and link these to the stylistic outcome: fine, persistent mousse and marked freshness."
-        if "madeira" in lowered:
-            return "For exam purposes: explain the estufagem mechanism (controlled heating), link it to the effect (accelerated oxidation, development of tertiary aromas, caramelisation), and then connect to outcome — because this unique thermal process combined with high natural acidity therefore gives Madeira its exceptional longevity and complexity."
         if "sat" in lowered or "quality" in lowered:
             return "For exam purposes, make the quality claim and support it with balance, intensity, complexity, length, and evidence from the palate. Because the evidence supports the conclusion, this therefore points toward a clear, justified quality assessment."
         return "For exam purposes, state the observation, explain why the mechanism works — because that connection therefore links the causal factor to its outcome in the wine's style or quality."
     # Spanish paths
-    if "tannin" in lowered:
-        return "Para efectos del examen: no escribas solo 'tiene mucho tanino, por eso es mejor'. Escribe: 'tanino alto pero integrado, junto con concentración de fruta, balance, complexity y length, puede apoyar una quality assessment más alta'."
-    if "acid" in lowered and "quality" in lowered:
-        return "Para efectos del examen: no escribas 'alta acidity = baja calidad'. Escribe si la acidity está en balance con fruta, alcohol, sweetness/body y length, y explica cómo sostiene el estilo."
-    if "oxidativ" in lowered and ("envejec" in lowered or "crianza" in lowered):
-        return "Para efectos del examen: nombra la práctica (crianza oxidativa con contacto prolongado con el oxígeno), explica el mecanismo (formación de acetaldehído y otros aldehídos) y conecta el resultado — porque ese proceso desarrolla — por tanto — aromas a nueces, frutas secas y complejidad terciaria, con pérdida del carácter de fruta primaria y del color."
-    if "vendimia mec" in lowered or ("vendimia" in lowered and "mec" in lowered):
-        return "Para efectos del examen: nombra el proceso (vendimia mecánica), explica el mecanismo (rotura de la baya antes de llegar a bodega) y conecta el efecto — porque el mosto queda expuesto al oxígeno, la frescura aromática se reduce — por tanto — en comparación con una vendimia manual cuidadosa."
-    if "despalillado" in lowered:
-        return "Para efectos del examen: describe el despalillado (eliminación de raspones), explica el mecanismo (los raspones aportan taninos verdes y astringencia áspera) y conecta el resultado — porque su eliminación conduce — por tanto — a vinos con taninos más suaves y redondeados y una estructura de paladar más limpia."
-    if "sulfit" in lowered or "so2" in lowered:
-        return "Para efectos del examen: nombra el papel del SO₂ (agente antioxidante y antimicrobiano), explica el riesgo del exceso — porque un uso excesivo suprime demasiado ampliamente la actividad fermentativa y puede dejar aromas reductivos (cerilla, goma), por tanto la dosificación precisa es clave para preservar el carácter del vino."
-    if "tiraje" in lowered or "licor de tiraje" in lowered:
-        return "Para efectos del examen: define el licor de tiraje (vino + azúcar + levaduras), explica el mecanismo (segunda fermentación en botella cerrada) y el efecto — porque el CO₂ producido no puede escapar, el vino se convierte — por tanto — en espumoso."
-    if ("espumoso" in lowered or "espumante" in lowered) and ("presi" in lowered or "atm" in lowered):
-        return "Para efectos del examen: conecta el nivel de CO₂ con la clasificación — porque los vinos con menos de 3 atm se clasifican como semi-espumosos y los de más de 5 atm como espumosos completos, el nivel de efervescencia es — por tanto — función directa de la cantidad de azúcar en el tiraje."
-    if "cava" in lowered and ("champagne" in lowered or "champan" in lowered):
-        return "Para efectos del examen: no basta con decir 'los dos usan método tradicional'. Explica las diferencias técnicas (variedades, clima, períodos mínimos de crianza) y muestra cómo producen resultados estilísticos distintos a pesar del método compartido."
-    if ("suelo" in lowered or "tierra" in lowered) and ("drenaje" in lowered or "drena" in lowered):
-        return "Para efectos del examen: explica la cadena drenaje→calidad — la textura del suelo controla la retención de agua; porque un suelo bien drenado fuerza a las raíces a profundizar, el vigor de la vid se reduce — por tanto — y la concentración de la fruta aumenta, apoyando mayor potencial de calidad."
-    if "helada" in lowered and ("primavera" in lowered or "riesgo" in lowered):
-        return "Para efectos del examen: explica el mecanismo topográfico — el aire frío es más denso y desciende; porque se acumula en los puntos bajos del terreno, el riesgo de helada primaveral es — por tanto — mayor en valles y hondonadas y menor en laderas con buen drenaje del aire frío."
-    if "plantaci" in lowered and ("densidad" in lowered or "alta" in lowered):
-        return "Para efectos del examen: explica la cadena competencia→concentración — a mayor densidad de plantación, cada vid compite por menos recursos; porque eso limita el vigor, los rendimientos son — por tanto — menores y la concentración de la fruta mayor, lo que apoya el potencial de calidad."
-    if "tokaji" in lowered or "tokay" in lowered or "asz" in lowered:
-        return "Para efectos del examen: nombra la práctica distintiva (adición de uvas Aszú botrytizadas al vino base), explica el mecanismo (la podredumbre noble concentra azúcares, ácidos y glicerol) y conecta el resultado — porque la fermentación parcial de esa pasta produce — por tanto — un vino de gran dulzura, complejidad y potencial de guarda."
-    if "cremant" in lowered or "crémant" in lowered:
-        return "Para efectos del examen: explica qué distingue al Crémant — método tradicional, uvas regionales y (en el caso del Crémant de Loire) la acidez natural elevada del Chenin Blanc — y conecta esos factores con el perfil estilístico: burbuja fina y persistente, frescura marcada y buen equilibrio."
-    if "madeira" in lowered:
-        return "Para efectos del examen: explica el estufagem (calentamiento controlado), conecta el mecanismo (oxidación acelerada, desarrollo de aromas terciarios, caramelización) con el efecto — porque ese proceso térmico único combinado con la alta acidez natural confiere — por tanto — al Madeira su longevidad excepcional y su complejidad distintiva."
-    if ("chile" in lowered or "chilena" in lowered) and ("espumoso" in lowered or "clima fresco" in lowered):
-        return "Para efectos del examen: explica por qué el clima fresco de ciertas regiones chilenas favorece la producción de espumosos de calidad — las temperaturas nocturnas bajas conservan la acidez natural; porque esa acidez es la base estructural del espumoso, las regiones frescas de Chile ofrecen — por tanto — un punto de partida ideal para este estilo."
     if "sat" in lowered or "quality" in lowered:
         return "Para efectos del examen, formula la quality assessment con BICL: balance, intensity, complexity y length, y añade evidencia concreta del paladar. Porque esa evidencia respalda la conclusión, esto sugiere — por tanto — una quality assessment justificada, no basada en un solo rasgo aislado."
     return "Para efectos del examen, describe el rasgo, explica por qué ocurre (el mecanismo), y muestra cómo ese proceso conduce — por tanto — al efecto observable en el vino."

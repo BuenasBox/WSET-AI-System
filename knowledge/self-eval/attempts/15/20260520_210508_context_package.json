@@ -1,0 +1,252 @@
+{
+  "student_query": "\u00bfCu\u00e1l de los siguientes factores humanos tiene un impacto directo en el precio de producci\u00f3n del vino?",
+  "language": "es",
+  "orchestrator_decision": {
+    "route": "normal_tutor",
+    "reason": "no_misconception_detected",
+    "matched_misconception_id": null,
+    "confidence": 0.0
+  },
+  "pedagogical_act": "answer_normally",
+  "forced_retrieval_nodes": [],
+  "matched_misconception": {},
+  "learner_state_context": {
+    "learner_id": "nazareth",
+    "current_level": "WSET_L3",
+    "known_weak_areas": [
+      "causal_chain:flor -> oxygen protection -> biological ageing",
+      "retrieval:weak_context_support",
+      "fragile:flor -> oxygen protection -> biological ageing",
+      "fragile:weak_context_support",
+      "causal_chain:cool climate -> acid retention",
+      "retrieval:missing_causal_link_support",
+      "retrieval:missing_keyword_support",
+      "fragile:missing_keyword_support",
+      "fragile:missing_causal_link_support",
+      "causal_chain:fortification -> yeast stops -> residual sugar",
+      "causal_chain:structure -> bottle ageing -> sediment",
+      "causal_chain:fractional blending -> consistency",
+      "causal_chain:flor dies -> oxidative ageing",
+      "causal_chain:no flor -> oxidative ageing",
+      "retrieval:shallow_retrieval",
+      "label:missing_causal_link",
+      "label:unsupported_conclusion",
+      "label:shallow_retrieval",
+      "label:shallow_reasoning",
+      "label:weak_exam_register",
+      "fragile:flor dies -> oxidative ageing",
+      "fragile:no flor -> oxidative ageing",
+      "fragile:shallow_retrieval",
+      "causal_chain:cause -> mechanism -> effect",
+      "fragile:cause -> mechanism -> effect"
+    ],
+    "recent_misconceptions": [],
+    "session_count": 307,
+    "pedagogical_memory": {
+      "schema_version": "pedagogical_memory_v1",
+      "low_mastery_concepts": [],
+      "retention_risks": [],
+      "recurrent_misconceptions": [],
+      "difficult_causal_chains": [],
+      "mastered_concepts": [],
+      "preferred_depth": "standard",
+      "overload_patterns": [],
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "uses_llm": false,
+        "uses_api": false,
+        "uses_embeddings": false,
+        "uses_vector_db": false,
+        "cloud_services_active": false
+      }
+    },
+    "governance": {
+      "safe_for_examiner": false,
+      "examiner_scoring_active": false,
+      "embeddings_active": false,
+      "vector_db_active": false,
+      "cloud_services_active": false
+    }
+  },
+  "retrieval_plan": {
+    "mode": "normal_retrieval",
+    "query": "\u00bfCu\u00e1l de los siguientes factores humanos tiene un impacto directo en el precio de producci\u00f3n del vino?",
+    "top_k": 5,
+    "forced_retrieval_nodes": [],
+    "pedagogical_priority_boost": {
+      "low_mastery_concepts": [],
+      "causal_chain_boosts": [],
+      "misconception_persistence_boost": false,
+      "force_deep_explanation": false,
+      "resurfacing_concepts": [],
+      "preferred_depth": "standard",
+      "safe_for_examiner": false,
+      "examiner_scoring_allowed": false
+    },
+    "retrieval_engine": "tools.retrieval.tutor_retrieval_sandbox",
+    "uses_embeddings": false,
+    "uses_vector_db": false,
+    "uses_llm": false,
+    "uses_api": false
+  },
+  "retrieved_context": [
+    {
+      "context_type": "retrieval_sandbox_chunk",
+      "chunk_id": "OFFICIAL_WSET_GUIDE_WSET_MARKDOWN_SECCION_10_INDEX_10_INDEX_001",
+      "forced_retrieval": false,
+      "agent_corpus": "tutor",
+      "safe_for_examiner": false,
+      "score": 0.41,
+      "source_type": "official_wset_extracted",
+      "source_file": "knowledge/official-wset/study-guide/wset_markdown/seccion_10_index/10_index.md",
+      "source_trust_tier": 1,
+      "title": "Index",
+      "section": "10",
+      "subtopic": "10",
+      "official_grading_authority": false,
+      "requires_human_review": true,
+      "reasoning_type": "theory_foundation",
+      "pedagogical_role": "official_reference",
+      "why_retrieved": [
+        "matched canonical/query terms: vino",
+        "official WSET extracted Tutor support",
+        "exact term match"
+      ],
+      "text_excerpt": "# Index <!-- p\u00e1gina 206 --> INDEX 197 Index Numbers in bold type indicates images, diagrams and illustrations. Abruzzo 128 bacterial diseases 40 canopy management 34, 35, 40, 85 acid 43, 48, 49 Baden 111-12 Canterbury 171-2 lactic 49 bag-in-box 52, 53 Cap C/assique (see Methode Cap C/assique) malic43,49 Baga 140 cap management 63 tartaric 43, 48 Bairrada...",
+      "source_video": "",
+      "source_filename": "10_index.md"
+    },
+    {
+      "context_type": "retrieval_sandbox_chunk",
+      "chunk_id": "OFFICIAL_WSET_WINES_OF_THE_WORLD_6_19_30_SPAIN_001",
+      "forced_retrieval": false,
+      "agent_corpus": "tutor",
+      "safe_for_examiner": false,
+      "score": 0.3925,
+      "source_type": "official_wset_extracted",
+      "source_file": "knowledge/official-wset/study-guide/wset_markdown/seccion_6_section_3_still_wines_of_the_world/6-19_30_spain.md",
+      "source_trust_tier": 1,
+      "title": "30 Spain",
+      "section": "6",
+      "subtopic": "6.19",
+      "official_grading_authority": false,
+      "requires_human_review": true,
+      "reasoning_type": "theory_foundation",
+      "pedagogical_role": "official_reference",
+      "why_retrieved": [
+        "matched canonical/query terms: vino",
+        "official WSET extracted Tutor support",
+        "exact term match"
+      ],
+      "text_excerpt": "# 30 Spain <!-- p\u00e1gina 140 --> SPAIN 131 SpainS pain has a long history of wine production but its wines have only relatively recently come 30 to prominence on international markets. Styles vary from traditional barrel-aged reds to modern, fruity whites; and although international varieties have been planted in many of Spain's wine regions, it is the coun...",
+      "source_video": "",
+      "source_filename": "6-19_30_spain.md"
+    },
+    {
+      "context_type": "retrieval_sandbox_chunk",
+      "chunk_id": "OFFICIAL_WSET_OF_THE_WORLD_6_17_28_CENTRAL_ITALY_001",
+      "forced_retrieval": false,
+      "agent_corpus": "tutor",
+      "safe_for_examiner": false,
+      "score": 0.3575,
+      "source_type": "official_wset_extracted",
+      "source_file": "knowledge/official-wset/study-guide/wset_markdown/seccion_6_section_3_still_wines_of_the_world/6-17_28_central_italy.md",
+      "source_trust_tier": 1,
+      "title": "28 Central Italy",
+      "section": "6",
+      "subtopic": "6.17",
+      "official_grading_authority": false,
+      "requires_human_review": true,
+      "reasoning_type": "theory_foundation",
+      "pedagogical_role": "official_reference",
+      "why_retrieved": [
+        "matched canonical/query terms: vino",
+        "official WSET extracted Tutor support",
+        "exact term match"
+      ],
+      "text_excerpt": "# 28 Central Italy <!-- p\u00e1gina 135 --> 126 UNDERSTANDING WINES: EXPLAINING STYLE AND QUALITY CentrIa l tal y 28 This part of Italy is most widely associated with the grape variety Sangiovese and the most famous wine made from it, Chianti. However, there is more to central Italy than this. Refreshing whites and premium full-bodied reds from both local and...",
+      "source_video": "",
+      "source_filename": "6-17_28_central_italy.md"
+    },
+    {
+      "context_type": "retrieval_sandbox_chunk",
+      "chunk_id": "OFFICIAL_WSET_WINES_OF_THE_WORLD_6_11_22_GERMANY_001",
+      "forced_retrieval": false,
+      "agent_corpus": "tutor",
+      "safe_for_examiner": false,
+      "score": 0.275,
+      "source_type": "official_wset_extracted",
+      "source_file": "knowledge/official-wset/study-guide/wset_markdown/seccion_6_section_3_still_wines_of_the_world/6-11_22_germany.md",
+      "source_trust_tier": 1,
+      "title": "22 Germany",
+      "section": "6",
+      "subtopic": "6.11",
+      "official_grading_authority": false,
+      "requires_human_review": true,
+      "reasoning_type": "theory_foundation",
+      "pedagogical_role": "official_reference",
+      "why_retrieved": [
+        "official WSET extracted Tutor support"
+      ],
+      "text_excerpt": "# 22 Germany <!-- p\u00e1gina 117 --> 108 UNDERSTANDINGW INES:E XPLAININGST YLEA ND QUALITY Germany 22 Germany is the country producing the highest concentration of world-class Rieslings. Whether dry and steely, medium-sweet and floral, or lusciously sweet, German winemakers' mastery of this variety is unquestionable. However, there is more to German wines tha...",
+      "source_video": "",
+      "source_filename": "6-11_22_germany.md"
+    },
+    {
+      "context_type": "retrieval_sandbox_chunk",
+      "chunk_id": "How_to_prepare_for_the_WSET_Level_3_Tasting_Exam-0001",
+      "forced_retrieval": false,
+      "agent_corpus": "tutor",
+      "safe_for_examiner": false,
+      "score": 0.22,
+      "source_type": "manual_curated_srt",
+      "source_file": "",
+      "source_trust_tier": "pedagogical",
+      "title": "",
+      "section": "",
+      "subtopic": "",
+      "official_grading_authority": false,
+      "requires_human_review": false,
+      "reasoning_type": "exam_strategy",
+      "pedagogical_role": "exam_strategy",
+      "why_retrieved": [
+        "golden tutor chunk candidate",
+        "high retrieval priority in golden QA report"
+      ],
+      "text_excerpt": "So, let's go through um preparing you for the very famous and intensive and intimidating level three tasting examination. If you do follow all of these key points and you listen to your tutor, you will get through this tasting examination. It is in fact the least of your worries when it comes to the level three exam. uh it is in fact the uh the theory whe...",
+      "source_video": "How to prepare for the WSET Level 3 Tasting Exam",
+      "source_filename": "How to prepare for the WSET Level 3 Tasting Exam.srt"
+    }
+  ],
+  "forced_causal_chains": [],
+  "tutor_directive": {
+    "pedagogical_act": "answer_normally",
+    "forced_retrieval_nodes": [],
+    "confidence": 0.0,
+    "safe_for_examiner": false,
+    "language": "es",
+    "response_language_instruction": "Respond in Spanish. Preserve official WSET terms where useful, and do not translate key terms if translation would reduce precision. Distinguish official WSET content from pedagogical content.",
+    "source_handling": [
+      "Use this as a context package only; do not treat it as a final answer.",
+      "Use official WSET support first when available.",
+      "Use pedagogical transcript chunks only as enrichment.",
+      "Do not present pedagogical sources as official authority.",
+      "Distinguish official WSET content from pedagogical enrichment when explaining.",
+      "Do not translate source chunks; preserve official WSET terms where useful.",
+      "Do not translate key terms if translation would reduce precision.",
+      "If forced_causal_chains is populated, render the causal chain steps for the Cadena causa \u2192 efecto section."
+    ]
+  },
+  "success_criteria": [
+    "Answer the learner's question using the retrieved Tutor context.",
+    "Preserve official WSET terminology where precision matters.",
+    "Distinguish official WSET content from pedagogical enrichment.",
+    "Keep Examiner scoring disabled and safe_for_examiner false."
+  ],
+  "governance": {
+    "agent_corpus": "tutor",
+    "safe_for_examiner": false,
+    "examiner_scoring_allowed": false
+  }
+}

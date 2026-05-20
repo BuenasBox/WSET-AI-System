@@ -1,0 +1,381 @@
+{
+  "student_query": "\u00bfQu\u00e9 elemento del suelo influye m\u00e1s directamente en el drenaje del vi\u00f1edo?",
+  "language": "es",
+  "orchestrator_decision": {
+    "route": "normal_tutor",
+    "reason": "no_misconception_detected",
+    "matched_misconception_id": null,
+    "confidence": 0.0
+  },
+  "pedagogical_act": "answer_normally",
+  "forced_retrieval_nodes": [],
+  "matched_misconception": {},
+  "learner_state_context": {
+    "learner_id": "nazareth",
+    "current_level": "WSET_L3",
+    "known_weak_areas": [
+      "causal_chain:flor -> oxygen protection -> biological ageing",
+      "retrieval:weak_context_support",
+      "fragile:flor -> oxygen protection -> biological ageing",
+      "fragile:weak_context_support",
+      "causal_chain:cool climate -> acid retention",
+      "retrieval:missing_causal_link_support",
+      "retrieval:missing_keyword_support",
+      "fragile:missing_keyword_support",
+      "fragile:missing_causal_link_support",
+      "causal_chain:fortification -> yeast stops -> residual sugar",
+      "causal_chain:structure -> bottle ageing -> sediment",
+      "causal_chain:fractional blending -> consistency",
+      "causal_chain:flor dies -> oxidative ageing",
+      "causal_chain:no flor -> oxidative ageing",
+      "retrieval:shallow_retrieval",
+      "label:missing_causal_link",
+      "label:unsupported_conclusion",
+      "label:shallow_retrieval",
+      "label:shallow_reasoning",
+      "label:weak_exam_register",
+      "fragile:flor dies -> oxidative ageing",
+      "fragile:no flor -> oxidative ageing",
+      "fragile:shallow_retrieval",
+      "causal_chain:cause -> mechanism -> effect",
+      "fragile:cause -> mechanism -> effect"
+    ],
+    "recent_misconceptions": [],
+    "session_count": 335,
+    "pedagogical_memory": {
+      "schema_version": "pedagogical_memory_v1",
+      "low_mastery_concepts": [],
+      "retention_risks": [],
+      "recurrent_misconceptions": [],
+      "difficult_causal_chains": [],
+      "mastered_concepts": [],
+      "preferred_depth": "standard",
+      "overload_patterns": [],
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "uses_llm": false,
+        "uses_api": false,
+        "uses_embeddings": false,
+        "uses_vector_db": false,
+        "cloud_services_active": false
+      }
+    },
+    "governance": {
+      "safe_for_examiner": false,
+      "examiner_scoring_active": false,
+      "embeddings_active": false,
+      "vector_db_active": false,
+      "cloud_services_active": false
+    }
+  },
+  "retrieval_plan": {
+    "mode": "normal_retrieval",
+    "query": "\u00bfQu\u00e9 elemento del suelo influye m\u00e1s directamente en el drenaje del vi\u00f1edo?",
+    "top_k": 5,
+    "forced_retrieval_nodes": [],
+    "pedagogical_priority_boost": {
+      "low_mastery_concepts": [],
+      "causal_chain_boosts": [],
+      "misconception_persistence_boost": false,
+      "force_deep_explanation": false,
+      "resurfacing_concepts": [],
+      "preferred_depth": "standard",
+      "safe_for_examiner": false,
+      "examiner_scoring_allowed": false
+    },
+    "retrieval_engine": "tools.retrieval.tutor_retrieval_sandbox",
+    "uses_embeddings": false,
+    "uses_vector_db": false,
+    "uses_llm": false,
+    "uses_api": false
+  },
+  "retrieved_context": [
+    {
+      "context_type": "retrieval_sandbox_chunk",
+      "chunk_id": "OFFICIAL_WSET_OF_W_5_2_5_THE_GROWING_ENVIRONMENT_001",
+      "forced_retrieval": false,
+      "agent_corpus": "tutor",
+      "safe_for_examiner": false,
+      "score": 0.5733,
+      "source_type": "official_wset_extracted",
+      "source_file": "knowledge/official-wset/study-guide/wset_markdown/seccion_5_section_2_factors_affecting_the_style_quality_and_price_of_w/5-2_5_the_growing_environment.md",
+      "source_trust_tier": 1,
+      "title": "5 The Growing Environment",
+      "section": "5",
+      "subtopic": "5.2",
+      "official_grading_authority": false,
+      "requires_human_review": true,
+      "reasoning_type": "theory_foundation",
+      "pedagogical_role": "official_reference",
+      "why_retrieved": [
+        "matched canonical/query terms: cold air, drainage, spring frost, texture",
+        "matches knowledge-map concept or relationship terms",
+        "matches knowledge-map causal-chain mechanism",
+        "official WSET extracted Tutor support",
+        "exact term match"
+      ],
+      "text_excerpt": "# 5 The Growing Environment <!-- p\u00e1gina 33 --> 24 UNDERSTANDINWG INES:E XPLAININGST YLEA ND QUALITY TheG rowinEgn vironment In order to s~rvive, the ~ine must b_ea ble to t~ke all_i t needs from its surroundings. The vine needs five things: heat, sunlight, water, nutrients and carbon dioxide. They can all have an impact on how well a vine grows and the qu...",
+      "source_video": "",
+      "source_filename": "5-2_5_the_growing_environment.md"
+    },
+    {
+      "context_type": "retrieval_sandbox_chunk",
+      "chunk_id": "OFFICIAL_WSET_OF_THE_WORLD_6_16_27_NORTHERN_ITALY_001",
+      "forced_retrieval": false,
+      "agent_corpus": "tutor",
+      "safe_for_examiner": false,
+      "score": 0.4786,
+      "source_type": "official_wset_extracted",
+      "source_file": "knowledge/official-wset/study-guide/wset_markdown/seccion_6_section_3_still_wines_of_the_world/6-16_27_northern_italy.md",
+      "source_trust_tier": 1,
+      "title": "27 Northern Italy",
+      "section": "6",
+      "subtopic": "6.16",
+      "official_grading_authority": false,
+      "requires_human_review": true,
+      "reasoning_type": "theory_foundation",
+      "pedagogical_role": "official_reference",
+      "why_retrieved": [
+        "matched canonical/query terms: cold air, concentration, gravel",
+        "matches knowledge-map concept or relationship terms",
+        "matches knowledge-map causal-chain mechanism",
+        "official WSET extracted Tutor support",
+        "exact term match"
+      ],
+      "text_excerpt": "# 27 Northern Italy <!-- p\u00e1gina 130 --> NORTHERN ITALY 121 NorthernIt aly Northern Italy produces a wide range of wine styles from the full-bodied 27 tannic reds of Barolo to the delicate white wines of Soave. All this is possible because of diverse geography and an incredible number of unique local grape varieties. This chapter will cover the regions of...",
+      "source_video": "",
+      "source_filename": "6-16_27_northern_italy.md"
+    },
+    {
+      "context_type": "retrieval_sandbox_chunk",
+      "chunk_id": "OFFICIAL_WSET_WINES_OF_THE_WORLD_6_25_36_CHILE_001",
+      "forced_retrieval": false,
+      "agent_corpus": "tutor",
+      "safe_for_examiner": false,
+      "score": 0.4603,
+      "source_type": "official_wset_extracted",
+      "source_file": "knowledge/official-wset/study-guide/wset_markdown/seccion_6_section_3_still_wines_of_the_world/6-25_36_chile.md",
+      "source_trust_tier": 1,
+      "title": "36 Chile",
+      "section": "6",
+      "subtopic": "6.25",
+      "official_grading_authority": false,
+      "requires_human_review": true,
+      "reasoning_type": "theory_foundation",
+      "pedagogical_role": "official_reference",
+      "why_retrieved": [
+        "matched canonical/query terms: cold air, texture, valle",
+        "matches knowledge-map concept or relationship terms",
+        "matches knowledge-map causal-chain mechanism",
+        "official WSET extracted Tutor support",
+        "exact term match"
+      ],
+      "text_excerpt": "# 36 Chile <!-- p\u00e1gina 161 --> 152 UNDERSTANDING WINES: EXPLAINING STYLE AND QUALITY ChIie 36 Located between the Andes to the east and the Pacific to the west, Chile has an unusual geography. However, it is this geography, which combines cooling influences from the Pacific and Andes along with plentiful sunshine, that explains why Chile has found success...",
+      "source_video": "",
+      "source_filename": "6-25_36_chile.md"
+    },
+    {
+      "context_type": "retrieval_sandbox_chunk",
+      "chunk_id": "OFFICIAL_WSET_WINES_OF_THE_WORLD_8_1_43_SHERRY_001",
+      "forced_retrieval": false,
+      "agent_corpus": "tutor",
+      "safe_for_examiner": false,
+      "score": 0.4583,
+      "source_type": "official_wset_extracted",
+      "source_file": "knowledge/official-wset/study-guide/wset_markdown/seccion_8_section_5_fortified_wines_of_the_world/8-1_43_sherry.md",
+      "source_trust_tier": 1,
+      "title": "43 Sherry",
+      "section": "8",
+      "subtopic": "8.1",
+      "official_grading_authority": false,
+      "requires_human_review": true,
+      "reasoning_type": "theory_foundation",
+      "pedagogical_role": "official_reference",
+      "why_retrieved": [
+        "matched canonical/query terms: drainage",
+        "matches knowledge-map concept or relationship terms",
+        "matches knowledge-map causal-chain mechanism",
+        "official WSET extracted Tutor support",
+        "exact term match"
+      ],
+      "text_excerpt": "# 43 Sherry <!-- p\u00e1gina 193 --> 184 UNDERSTANDINGW INES: EXPLAININGST YLEA ND QUALITY Sherry 43 Probably more than any other wine, Sherry is a wine style that is defined by the processes used during maturation. None of the key techniques, the so/era system, biological ageing or oxidative ageing, are unique to this region, but it is in Jerez that they are...",
+      "source_video": "",
+      "source_filename": "8-1_43_sherry.md"
+    },
+    {
+      "context_type": "retrieval_sandbox_chunk",
+      "chunk_id": "WSET_Level_3_Wines_-_Understanding_the_Growing_Environment_Soils_Part_1-0006",
+      "forced_retrieval": false,
+      "agent_corpus": "tutor",
+      "safe_for_examiner": false,
+      "score": 0.3516,
+      "source_type": "manual_curated_srt",
+      "source_file": "",
+      "source_trust_tier": "pedagogical",
+      "title": "",
+      "section": "",
+      "subtopic": "",
+      "official_grading_authority": false,
+      "requires_human_review": false,
+      "reasoning_type": "cause_effect",
+      "pedagogical_role": "theory_explanation",
+      "why_retrieved": [
+        "matched canonical/query terms: sandy soil, texture",
+        "pedagogical role fits foundational_theory",
+        "matches knowledge-map concept or relationship terms",
+        "matches knowledge-map causal-chain mechanism",
+        "exact term match"
+      ],
+      "text_excerpt": "can be quite problematic it is a soil that warms up and cools down quite quickly you'll know that on a beach for example if you walk barefooted along a beach and the sun is shining the sand is quite hot um as soon as the sun goes down it becomes very cold and that really is that kind of heat transfer with uh with sand um but um the pest phylloxera cannot...",
+      "source_video": "WSET Level 3 Wines - Understanding the Growing Environment Soils Part 1",
+      "source_filename": "[English (auto-generated)] WSET Level 3 Wines - Understanding the Growing Environment Soils Part 1 [.srt"
+    }
+  ],
+  "forced_causal_chains": [
+    {
+      "node_type": "causal_chain",
+      "node_id": "CC_SOIL_DRAINAGE_VINE_VIGOUR",
+      "topic": "soil drainage, root depth, and vine vigour",
+      "trigger_keywords": [
+        "drenaje",
+        "textura del suelo",
+        "soil drainage",
+        "soil texture",
+        "ra\u00edces",
+        "vigor",
+        "concentraci\u00f3n",
+        "drainage",
+        "gravel",
+        "grava",
+        "sandy soil"
+      ],
+      "steps": [
+        {
+          "step": 1,
+          "label": "cause",
+          "text": "Soil texture and composition influence how effectively water drains through the vineyard soil."
+        },
+        {
+          "step": 2,
+          "label": "mechanism",
+          "text": "In well-drained soils, vine roots must grow deeper to find water, which limits excessive vine vigour and reduces the plant's resources available for canopy growth."
+        },
+        {
+          "step": 3,
+          "label": "effect",
+          "text": "Lower vine vigour can lead to more concentrated fruit, with better flavour concentration and generally higher grape quality potential."
+        },
+        {
+          "step": 4,
+          "label": "exam_formulation",
+          "text": "Well-drained soil supports grape quality because it encourages deeper roots and limits vigour; the vine can therefore produce more concentrated fruit."
+        }
+      ],
+      "sat_relevance": "",
+      "linked_topics": [],
+      "agent_corpus": "tutor",
+      "safe_for_examiner": false,
+      "examiner_scoring_allowed": false,
+      "requires_human_review": true,
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "agent_corpus": "tutor"
+      },
+      "_meta": {
+        "schema_version": "causal_chain_v1",
+        "created_date": "2026-05-17",
+        "ingestion_status": "draft"
+      },
+      "id": "CC_SOIL_DRAINAGE_VINE_VIGOUR",
+      "type": "causal_chain"
+    },
+    {
+      "node_type": "causal_chain",
+      "node_id": "CC_SPRING_FROST_TOPOGRAPHY",
+      "topic": "spring frost risk and vineyard topography",
+      "trigger_keywords": [
+        "helada",
+        "heladas primaverales",
+        "topograf\u00eda",
+        "spring frost",
+        "frost risk",
+        "aire fr\u00edo",
+        "drenaje del aire",
+        "cold air",
+        "valle",
+        "ladera"
+      ],
+      "steps": [
+        {
+          "step": 1,
+          "label": "cause",
+          "text": "Spring frost risk is strongly influenced by vineyard topography and the movement of cold air across the site."
+        },
+        {
+          "step": 2,
+          "label": "mechanism",
+          "text": "Cold air is denser than warm air, so it descends and accumulates in low points such as valleys and hollows, while slopes with good air drainage allow cold air to move away."
+        },
+        {
+          "step": 3,
+          "label": "effect",
+          "text": "Vines in valleys or depressions have greater exposure to spring frost, whereas vines on slopes with good cold-air drainage have lower frost risk."
+        },
+        {
+          "step": 4,
+          "label": "exam_formulation",
+          "text": "Spring frost risk is higher in low-lying sites because cold air descends and pools there; slopes with good air drainage are therefore less exposed to frost damage."
+        }
+      ],
+      "sat_relevance": "",
+      "linked_topics": [],
+      "agent_corpus": "tutor",
+      "safe_for_examiner": false,
+      "examiner_scoring_allowed": false,
+      "requires_human_review": true,
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "agent_corpus": "tutor"
+      },
+      "_meta": {
+        "schema_version": "causal_chain_v1",
+        "created_date": "2026-05-17",
+        "ingestion_status": "draft"
+      },
+      "id": "CC_SPRING_FROST_TOPOGRAPHY",
+      "type": "causal_chain"
+    }
+  ],
+  "tutor_directive": {
+    "pedagogical_act": "answer_normally",
+    "forced_retrieval_nodes": [],
+    "confidence": 0.0,
+    "safe_for_examiner": false,
+    "language": "es",
+    "response_language_instruction": "Respond in Spanish. Preserve official WSET terms where useful, and do not translate key terms if translation would reduce precision. Distinguish official WSET content from pedagogical content.",
+    "source_handling": [
+      "Use this as a context package only; do not treat it as a final answer.",
+      "Use official WSET support first when available.",
+      "Use pedagogical transcript chunks only as enrichment.",
+      "Do not present pedagogical sources as official authority.",
+      "Distinguish official WSET content from pedagogical enrichment when explaining.",
+      "Do not translate source chunks; preserve official WSET terms where useful.",
+      "Do not translate key terms if translation would reduce precision.",
+      "If forced_causal_chains is populated, render the causal chain steps for the Cadena causa \u2192 efecto section."
+    ]
+  },
+  "success_criteria": [
+    "Answer the learner's question using the retrieved Tutor context.",
+    "Preserve official WSET terminology where precision matters.",
+    "Distinguish official WSET content from pedagogical enrichment.",
+    "Keep Examiner scoring disabled and safe_for_examiner false."
+  ],
+  "governance": {
+    "agent_corpus": "tutor",
+    "safe_for_examiner": false,
+    "examiner_scoring_allowed": false
+  }
+}

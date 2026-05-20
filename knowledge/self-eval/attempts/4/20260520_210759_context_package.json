@@ -1,0 +1,333 @@
+{
+  "student_query": "\u00bfCu\u00e1l es el sistema tradicional de envejecimiento utilizado en Jerez?",
+  "language": "es",
+  "orchestrator_decision": {
+    "route": "normal_tutor",
+    "reason": "no_misconception_detected",
+    "matched_misconception_id": null,
+    "confidence": 0.0
+  },
+  "pedagogical_act": "answer_normally",
+  "forced_retrieval_nodes": [],
+  "matched_misconception": {},
+  "learner_state_context": {
+    "learner_id": "nazareth",
+    "current_level": "WSET_L3",
+    "known_weak_areas": [
+      "causal_chain:flor -> oxygen protection -> biological ageing",
+      "retrieval:weak_context_support",
+      "fragile:flor -> oxygen protection -> biological ageing",
+      "fragile:weak_context_support",
+      "causal_chain:cool climate -> acid retention",
+      "retrieval:missing_causal_link_support",
+      "retrieval:missing_keyword_support",
+      "fragile:missing_keyword_support",
+      "fragile:missing_causal_link_support",
+      "causal_chain:fortification -> yeast stops -> residual sugar",
+      "causal_chain:structure -> bottle ageing -> sediment",
+      "causal_chain:fractional blending -> consistency",
+      "causal_chain:flor dies -> oxidative ageing",
+      "causal_chain:no flor -> oxidative ageing",
+      "retrieval:shallow_retrieval",
+      "label:missing_causal_link",
+      "label:unsupported_conclusion",
+      "label:shallow_retrieval",
+      "label:shallow_reasoning",
+      "label:weak_exam_register",
+      "fragile:flor dies -> oxidative ageing",
+      "fragile:no flor -> oxidative ageing",
+      "fragile:shallow_retrieval",
+      "causal_chain:cause -> mechanism -> effect",
+      "fragile:cause -> mechanism -> effect"
+    ],
+    "recent_misconceptions": [],
+    "session_count": 335,
+    "pedagogical_memory": {
+      "schema_version": "pedagogical_memory_v1",
+      "low_mastery_concepts": [],
+      "retention_risks": [],
+      "recurrent_misconceptions": [],
+      "difficult_causal_chains": [],
+      "mastered_concepts": [],
+      "preferred_depth": "standard",
+      "overload_patterns": [],
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "uses_llm": false,
+        "uses_api": false,
+        "uses_embeddings": false,
+        "uses_vector_db": false,
+        "cloud_services_active": false
+      }
+    },
+    "governance": {
+      "safe_for_examiner": false,
+      "examiner_scoring_active": false,
+      "embeddings_active": false,
+      "vector_db_active": false,
+      "cloud_services_active": false
+    }
+  },
+  "retrieval_plan": {
+    "mode": "normal_retrieval",
+    "query": "\u00bfCu\u00e1l es el sistema tradicional de envejecimiento utilizado en Jerez?",
+    "top_k": 5,
+    "forced_retrieval_nodes": [],
+    "pedagogical_priority_boost": {
+      "low_mastery_concepts": [],
+      "causal_chain_boosts": [],
+      "misconception_persistence_boost": false,
+      "force_deep_explanation": false,
+      "resurfacing_concepts": [],
+      "preferred_depth": "standard",
+      "safe_for_examiner": false,
+      "examiner_scoring_allowed": false
+    },
+    "retrieval_engine": "tools.retrieval.tutor_retrieval_sandbox",
+    "uses_embeddings": false,
+    "uses_vector_db": false,
+    "uses_llm": false,
+    "uses_api": false
+  },
+  "retrieved_context": [
+    {
+      "context_type": "retrieval_sandbox_chunk",
+      "chunk_id": "OFFICIAL_WSET_WINES_OF_THE_WORLD_8_1_43_SHERRY_001",
+      "forced_retrieval": false,
+      "agent_corpus": "tutor",
+      "safe_for_examiner": false,
+      "score": 0.6852,
+      "source_type": "official_wset_extracted",
+      "source_file": "knowledge/official-wset/study-guide/wset_markdown/seccion_8_section_5_fortified_wines_of_the_world/8-1_43_sherry.md",
+      "source_trust_tier": 1,
+      "title": "43 Sherry",
+      "section": "8",
+      "subtopic": "8.1",
+      "official_grading_authority": false,
+      "requires_human_review": true,
+      "reasoning_type": "theory_foundation",
+      "pedagogical_role": "official_reference",
+      "why_retrieved": [
+        "matched canonical/query terms: blending, consistency, criadera, criaderas, house style, jerez, sherry, solera",
+        "matches knowledge-map concept or relationship terms",
+        "matches knowledge-map causal-chain mechanism",
+        "official WSET extracted Tutor support",
+        "matched official section/topic metadata",
+        "exact term match"
+      ],
+      "text_excerpt": "# 43 Sherry <!-- p\u00e1gina 193 --> 184 UNDERSTANDINGW INES: EXPLAININGST YLEA ND QUALITY Sherry 43 Probably more than any other wine, Sherry is a wine style that is defined by the processes used during maturation. None of the key techniques, the so/era system, biological ageing or oxidative ageing, are unique to this region, but it is in Jerez that they are...",
+      "source_video": "",
+      "source_filename": "8-1_43_sherry.md"
+    },
+    {
+      "context_type": "retrieval_sandbox_chunk",
+      "chunk_id": "OFFICIAL_WSET_4_7_COMMON_ELEMENTS_IN_WINEMAKING_AND_MATURATION_001",
+      "forced_retrieval": false,
+      "agent_corpus": "tutor",
+      "safe_for_examiner": false,
+      "score": 0.6399,
+      "source_type": "official_wset_extracted",
+      "source_file": "knowledge/official-wset/study-guide/wset_markdown/seccion_5_section_2_factors_affecting_the_style_quality_and_price_of_w/5-4_7_common_elements_in_winemaking_and_maturation.md",
+      "source_trust_tier": 1,
+      "title": "7 Common Elements in Winemaking and Maturation",
+      "section": "5",
+      "subtopic": "5.4",
+      "official_grading_authority": false,
+      "requires_human_review": true,
+      "reasoning_type": "theory_foundation",
+      "pedagogical_role": "official_reference",
+      "why_retrieved": [
+        "matched canonical/query terms: blending, consistency, house style, sherry",
+        "matches knowledge-map concept or relationship terms",
+        "matches knowledge-map causal-chain mechanism",
+        "official WSET extracted Tutor support",
+        "matched official section/topic metadata",
+        "exact term match"
+      ],
+      "text_excerpt": "# 7 Common Elements in Winemaking and Maturation <!-- p\u00e1gina 52 --> COMMONE LEMENTISN W INEMAKINGAN D MATURATION 43 CommoEnl ementisn W inemakinagn dM aturation 7 There are certain factors and processes that are common to all wines and these are explored in this chapter. It is important to get an appreciation of their roles in winemaking and maturation an...",
+      "source_video": "",
+      "source_filename": "5-4_7_common_elements_in_winemaking_and_maturation.md"
+    },
+    {
+      "context_type": "retrieval_sandbox_chunk",
+      "chunk_id": "OFFICIAL_WSET_W_5_5_8_WHITE_AND_SWEET_WINEMAKING_001",
+      "forced_retrieval": false,
+      "agent_corpus": "tutor",
+      "safe_for_examiner": false,
+      "score": 0.6159,
+      "source_type": "official_wset_extracted",
+      "source_file": "knowledge/official-wset/study-guide/wset_markdown/seccion_5_section_2_factors_affecting_the_style_quality_and_price_of_w/5-5_8_white_and_sweet_winemaking.md",
+      "source_trust_tier": 1,
+      "title": "8 White and Sweet Winemaking",
+      "section": "5",
+      "subtopic": "5.5",
+      "official_grading_authority": false,
+      "requires_human_review": true,
+      "reasoning_type": "theory_foundation",
+      "pedagogical_role": "official_reference",
+      "why_retrieved": [
+        "matched canonical/query terms: blending, consistency",
+        "matches knowledge-map concept or relationship terms",
+        "matches knowledge-map causal-chain mechanism",
+        "official WSET extracted Tutor support",
+        "matched official section/topic metadata",
+        "exact term match"
+      ],
+      "text_excerpt": "# 8 White and Sweet Winemaking <!-- p\u00e1gina 64 --> WHITEA ND SWEETWINEMAKING 55 Whitea ndS weeWt inemakingRel atively speaking, white winemaking is far 8 less involved compared with red winemaking. This chapter will focus on winemaking options for white wine and then look at how high volume, inexpensive wines and premium wines are made. It should be noted...",
+      "source_video": "",
+      "source_filename": "5-5_8_white_and_sweet_winemaking.md"
+    },
+    {
+      "context_type": "retrieval_sandbox_chunk",
+      "chunk_id": "OFFICIAL_WSET_GUIDE_WSET_MARKDOWN_SECCION_10_INDEX_10_INDEX_001",
+      "forced_retrieval": false,
+      "agent_corpus": "tutor",
+      "safe_for_examiner": false,
+      "score": 0.5846,
+      "source_type": "official_wset_extracted",
+      "source_file": "knowledge/official-wset/study-guide/wset_markdown/seccion_10_index/10_index.md",
+      "source_trust_tier": 1,
+      "title": "Index",
+      "section": "10",
+      "subtopic": "10",
+      "official_grading_authority": false,
+      "requires_human_review": true,
+      "reasoning_type": "theory_foundation",
+      "pedagogical_role": "official_reference",
+      "why_retrieved": [
+        "matched canonical/query terms: blending, criadera, jerez, sherry",
+        "matches knowledge-map concept or relationship terms",
+        "matches knowledge-map causal-chain mechanism",
+        "official WSET extracted Tutor support",
+        "exact term match"
+      ],
+      "text_excerpt": "# Index <!-- p\u00e1gina 206 --> INDEX 197 Index Numbers in bold type indicates images, diagrams and illustrations. Abruzzo 128 bacterial diseases 40 canopy management 34, 35, 40, 85 acid 43, 48, 49 Baden 111-12 Canterbury 171-2 lactic 49 bag-in-box 52, 53 Cap C/assique (see Methode Cap C/assique) malic43,49 Baga 140 cap management 63 tartaric 43, 48 Bairrada...",
+      "source_video": "",
+      "source_filename": "10_index.md"
+    },
+    {
+      "context_type": "retrieval_sandbox_chunk",
+      "chunk_id": "Understanding_Red_Wine_Making_for_WSET_Level_3-0000",
+      "forced_retrieval": false,
+      "agent_corpus": "tutor",
+      "safe_for_examiner": false,
+      "score": 0.4048,
+      "source_type": "manual_curated_srt",
+      "source_file": "",
+      "source_trust_tier": "pedagogical",
+      "title": "",
+      "section": "",
+      "subtopic": "",
+      "official_grading_authority": false,
+      "requires_human_review": false,
+      "reasoning_type": "cause_effect",
+      "pedagogical_role": "theory_explanation",
+      "why_retrieved": [
+        "matched canonical/query terms: blending",
+        "pedagogical role fits foundational_theory",
+        "matches knowledge-map concept or relationship terms",
+        "matches knowledge-map causal-chain mechanism",
+        "exact term match"
+      ],
+      "text_excerpt": "hello everybody and welcome here to the wine with jimy Channel thank you so much for stopping by now this is a wine Channel which is giving you all the information you need to help you understand and enjoy wine to a greater level so here we have a w level three series and we're looking at red and pink wine making in this series so we're going to go throug...",
+      "source_video": "Understanding Red Wine Making for WSET Level 3",
+      "source_filename": "Understanding Red Wine Making for WSET Level 3 [English (auto-generated)] [DownloadYoutubeSubtitles.com].srt"
+    }
+  ],
+  "forced_causal_chains": [
+    {
+      "node_type": "causal_chain",
+      "node_id": "CC_FRACTIONAL_BLENDING_CONSISTENCY",
+      "topic": "solera fractional blending and style consistency",
+      "trigger_keywords": [
+        "solera",
+        "fractional blending",
+        "criadera",
+        "consistency",
+        "non-vintage",
+        "sherry",
+        "house style",
+        "blending",
+        "criaderas",
+        "consistencia",
+        "jerez",
+        "sistema tradicional",
+        "envejecimiento"
+      ],
+      "steps": [
+        {
+          "step": 1,
+          "label": "cause",
+          "text": "A solera system is established: a series of barrels (criaderas) arranged by age, each containing wine at different stages of maturation"
+        },
+        {
+          "step": 2,
+          "label": "mechanism",
+          "text": "When wine is drawn from the oldest barrels (the solera level) for bottling, those barrels are partially refilled with younger wine from the next criadera level; this cascade continues up through all levels with the youngest wine topping the freshest criadera"
+        },
+        {
+          "step": 3,
+          "label": "effect",
+          "text": "Each bottling contains a blend of wines from multiple vintages; the consistent addition of older wine to younger wine and vice versa maintains a stable average age and style year after year"
+        },
+        {
+          "step": 4,
+          "label": "exam_formulation",
+          "text": "The solera's fractional blending process delivers consistency across vintages: wines from multiple age levels blend to maintain house character and style consistency regardless of harvest variation."
+        }
+      ],
+      "sat_relevance": "Solera-produced wines are typically assessed as non-vintage styles. Consistency across bottlings is the key feature. Complexity may be attributed partly to the blend of different aged components.",
+      "linked_misconceptions": [],
+      "linked_topics": [
+        "T_RA3_SHERRY",
+        "T_RA2_SPAIN"
+      ],
+      "agent_corpus": "tutor",
+      "safe_for_examiner": false,
+      "examiner_scoring_allowed": false,
+      "requires_human_review": true,
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "agent_corpus": "tutor"
+      },
+      "_meta": {
+        "schema_version": "causal_chain_v1",
+        "created_date": "2026-05-15",
+        "ingestion_status": "draft"
+      },
+      "id": "CC_FRACTIONAL_BLENDING_CONSISTENCY",
+      "type": "causal_chain"
+    }
+  ],
+  "tutor_directive": {
+    "pedagogical_act": "answer_normally",
+    "forced_retrieval_nodes": [],
+    "confidence": 0.0,
+    "safe_for_examiner": false,
+    "language": "es",
+    "response_language_instruction": "Respond in Spanish. Preserve official WSET terms where useful, and do not translate key terms if translation would reduce precision. Distinguish official WSET content from pedagogical content.",
+    "source_handling": [
+      "Use this as a context package only; do not treat it as a final answer.",
+      "Use official WSET support first when available.",
+      "Use pedagogical transcript chunks only as enrichment.",
+      "Do not present pedagogical sources as official authority.",
+      "Distinguish official WSET content from pedagogical enrichment when explaining.",
+      "Do not translate source chunks; preserve official WSET terms where useful.",
+      "Do not translate key terms if translation would reduce precision.",
+      "If forced_causal_chains is populated, render the causal chain steps for the Cadena causa \u2192 efecto section."
+    ]
+  },
+  "success_criteria": [
+    "Answer the learner's question using the retrieved Tutor context.",
+    "Preserve official WSET terminology where precision matters.",
+    "Distinguish official WSET content from pedagogical enrichment.",
+    "Keep Examiner scoring disabled and safe_for_examiner false."
+  ],
+  "governance": {
+    "agent_corpus": "tutor",
+    "safe_for_examiner": false,
+    "examiner_scoring_allowed": false
+  }
+}
