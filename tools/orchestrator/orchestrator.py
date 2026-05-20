@@ -5,7 +5,7 @@ from __future__ import annotations
 import json
 from datetime import datetime, timezone
 from pathlib import Path
-from typing import Any
+from typing import TYPE_CHECKING, Any
 
 from tools.constants import (
     CLOUD_SERVICES_ACTIVE,
@@ -34,8 +34,20 @@ from .misconception_prepass import (
     load_misconception_nodes,
 )
 
+if TYPE_CHECKING:
+    from .protocols import (
+        AnswerBuilderProtocol,
+        LearnerStateProtocol,
+        RetrievalProtocol,
+        ScaffoldingProtocol,
+    )
+
 
 DEFAULT_CONTEXT_PACKAGE_DIR = CONTEXT_PACKAGES_DIR
+_retrieval_contract: "RetrievalProtocol"
+_learner_state_contract: "LearnerStateProtocol"
+_answer_builder_contract: "AnswerBuilderProtocol"
+_scaffolding_contract: "ScaffoldingProtocol"
 
 
 def run_orchestrator(

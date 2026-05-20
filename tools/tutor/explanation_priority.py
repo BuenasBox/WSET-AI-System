@@ -11,7 +11,7 @@ import re
 from functools import lru_cache
 from typing import Any
 
-from tools.constants import KNOWLEDGE_DIR
+from tools.constants import KNOWLEDGE_DIR, tokenize_term
 
 _EXPLANATION_PRIORITY_CONFIG_PATH = KNOWLEDGE_DIR / "config" / "explanation_priority_config.json"
 
@@ -88,11 +88,11 @@ def calculate_tutor_evaluation_signals(answer_text: str, context_package: dict[s
     These are not scores, grades, marks, or Examiner signals.
     """
     normalized = _normalize(answer_text)
-    words = re.findall(r"[a-zA-ZáéíóúüñÁÉÍÓÚÜÑ]+", answer_text)
+    words = tokenize_term(answer_text)
     causal_terms = re.findall(r"\b(causa|cause|mecanismo|mechanism|efecto|effect|porque|because|therefore|por tanto|leads?|results?|causes?|aumenta|reduce|increases?|decreases?)\b", normalized)
     misconception = context_package.get("matched_misconception") or {}
     corrected = str(misconception.get("corrected_understanding") or "").lower()
-    correction_terms = [term for term in re.findall(r"[a-zA-Záéíóúüñ]+", corrected) if len(term) > 4]
+    correction_terms = [term for term in tokenize_term(corrected) if len(term) > 4]
     covered_terms = [term for term in correction_terms[:8] if term in normalized]
     sections = len(re.findall(r"^##\s+", answer_text, flags=re.MULTILINE))
     memory = (context_package.get("learner_state_context") or {}).get("pedagogical_memory") or {}

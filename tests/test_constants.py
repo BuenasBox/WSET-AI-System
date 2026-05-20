@@ -31,6 +31,13 @@ class ConstantsTests(unittest.TestCase):
             if name.isupper():
                 self.assertIsNot(getattr(constants, name), True, name)
 
+    def test_tokenize_term_preserves_unicode_accents_and_hyphens(self) -> None:
+        self.assertEqual(constants.tokenize_term("fermentación"), ["fermentación"])
+        self.assertEqual(constants.tokenize_term("aszú"), ["aszú"])
+        self.assertNotIn("fermentaci", constants.tokenize_term("fermentación"))
+        self.assertEqual(constants.tokenize_term("Gewürztraminer"), ["gewürztraminer"])
+        self.assertEqual(constants.tokenize_term("sauvignon-blanc"), ["sauvignon-blanc"])
+
 
 if __name__ == "__main__":
     unittest.main()

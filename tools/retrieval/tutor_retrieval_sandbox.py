@@ -19,7 +19,7 @@ from functools import lru_cache
 from pathlib import Path
 from typing import Any
 
-from tools.constants import KNOWLEDGE_DIR, OFFICIAL_WSET_DIR, PROJECT_ROOT, RETRIEVAL_SANDBOX_DIR
+from tools.constants import KNOWLEDGE_DIR, OFFICIAL_WSET_DIR, PROJECT_ROOT, RETRIEVAL_SANDBOX_DIR, tokenize_term
 
 try:
     from tools.tutor.sat_reasoner import (
@@ -1066,11 +1066,7 @@ def _read_jsonl(path: Path) -> list[dict[str, Any]]:
 
 
 def _tokens(text: str) -> list[str]:
-    return [
-        token
-        for token in re.findall(r"(?u)\b[^\W\d_](?:[^\W_]|['-])*\b", text.lower())
-        if token not in STOPWORDS and len(token) > 1
-    ]
+    return [token for token in tokenize_term(text) if token not in STOPWORDS]
 
 
 def _contains_phrase(haystack_lower: str, phrase: str) -> bool:

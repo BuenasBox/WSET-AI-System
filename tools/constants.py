@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 from pathlib import Path
+import re as _re
 
 
 # Repo root (anchor for all relative paths)
@@ -44,3 +45,12 @@ SAT_EVALUATION_TERMS: frozenset[str] = frozenset(
         "acabado",
     }
 )
+
+
+def tokenize_term(text: str) -> list[str]:
+    """Unicode-aware tokenizer. Handles Spanish accents, hyphens, apostrophes."""
+    return [
+        token
+        for token in _re.findall(r"(?u)\b[^\W\d_](?:[^\W_]|['-])*\b", str(text or "").lower())
+        if len(token) > 1
+    ]

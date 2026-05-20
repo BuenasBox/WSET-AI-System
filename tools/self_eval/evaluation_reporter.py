@@ -17,6 +17,13 @@ from tools.learner_model.knowledge_tracing import (
 )
 from tools.tutor.explanation_priority import calculate_tutor_evaluation_signals
 
+try:
+    from tools.orchestrator.les_reconciler import reconcile_les_from_feedback
+except ImportError as exc:
+    raise ImportError(
+        f"les_reconciler unavailable — cannot run LES reconciliation: {exc}"
+    ) from exc
+
 
 DEFAULT_SELF_EVAL_DIR = SELF_EVAL_DIR
 DEFAULT_FEEDBACK_PATH = NAZARETH_DIR / "self_eval_feedback.json"
@@ -61,10 +68,9 @@ def write_evaluation_reports(
     }
     if reconcile_les:
         try:
-            from tools.orchestrator.les_reconciler import reconcile_les_from_feedback
             reconciliation = reconcile_les_from_feedback(feedback_path=feedback_path)
             paths["les_reconciliation_status"] = reconciliation.get("status", "unknown")
-        except Exception as exc:  # pragma: no cover — reconciler errors must not break the reporter
+        except Exception as exc:  # pragma: no cover — reconciler runtime errors must not break the reporter
             paths["les_reconciliation_status"] = f"error: {exc}"
     return paths
 
