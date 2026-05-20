@@ -1,0 +1,65 @@
+[
+  {
+    "topic_pattern": "flor.*(?:jerez|sherry)|(?:jerez|sherry).*flor",
+    "expected_topics": ["flor", "jerez", "biological ageing"],
+    "expected_causal_links": ["flor -> oxygen protection -> biological ageing"],
+    "expected_keywords": ["flor", "crianza biológica", "oxígeno", "acetaldehído"],
+    "difficulty": "distinction"
+  },
+  {
+    "topic_pattern": "oporto.*ferment",
+    "expected_topics": ["port", "fortification", "fermentation"],
+    "expected_causal_links": ["fortification -> yeast stops -> residual sugar"],
+    "expected_keywords": ["aguardiente", "fortificación", "fermentación", "azúcar residual"],
+    "difficulty": "foundational"
+  },
+  {
+    "topic_pattern": "porto vintage|port vintage",
+    "expected_topics": ["vintage port", "bottle ageing"],
+    "expected_causal_links": ["structure -> bottle ageing -> sediment"],
+    "expected_keywords": ["Vintage Port", "botella", "tanino", "sedimento"],
+    "difficulty": "intermediate"
+  },
+  {
+    "topic_pattern": "solera|sistema tradicional.*jerez",
+    "expected_topics": ["jerez", "solera"],
+    "expected_causal_links": ["fractional blending -> consistency"],
+    "expected_keywords": ["solera", "criaderas", "mezcla", "consistencia"],
+    "difficulty": "foundational"
+  },
+  {
+    "topic_pattern": "oloroso.*amontillado|amontillado.*oloroso",
+    "expected_topics": ["oloroso", "amontillado", "sherry ageing"],
+    "expected_causal_links": ["flor dies -> oxidative ageing", "no flor -> oxidative ageing"],
+    "expected_keywords": ["flor", "oxidativa", "biológica", "fortificación"],
+    "difficulty": "distinction"
+  },
+  {
+    "topic_pattern": "cool climate.*acid|acid.*cool climate",
+    "expected_topics": ["cool climate", "acidity"],
+    "expected_causal_links": ["cool climate -> slow ripening -> acid retention"],
+    "expected_keywords": ["clima fresco", "maduración", "acidity", "frescura"],
+    "difficulty": "intermediate"
+  },
+  {
+    "topic_pattern": "tannin",
+    "expected_topics": ["tannin", "quality"],
+    "expected_causal_links": ["phenolics -> astringency", "balance -> quality assessment"],
+    "expected_keywords": ["tanino", "astringencia", "balance", "complexity", "length"],
+    "difficulty": "intermediate"
+  },
+  {
+    "topic_pattern": "high acidity|acidity.*quality|quality.*acidity",
+    "expected_topics": ["acidity", "quality"],
+    "expected_causal_links": ["acidity -> freshness", "balance -> quality assessment"],
+    "expected_keywords": ["high acidity", "balance", "fruit", "quality assessment"],
+    "difficulty": "intermediate"
+  },
+  {
+    "topic_pattern": "sat|quality assessment",
+    "expected_topics": ["SAT", "quality assessment"],
+    "expected_causal_links": ["evidence -> conclusion"],
+    "expected_keywords": ["SAT", "balance", "intensity", "complexity", "length", "quality assessment"],
+    "difficulty": "distinction"
+  }
+]

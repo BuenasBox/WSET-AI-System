@@ -3,7 +3,9 @@
 from __future__ import annotations
 
 import json
+import re
 import shutil
+from functools import lru_cache
 from pathlib import Path
 from typing import Any
 
@@ -13,6 +15,7 @@ from tools.constants import (
     KNOWLEDGE_DIR,
     PROJECT_ROOT,
     SAFE_FOR_EXAMINER,
+    SELF_EVAL_DIR,
     USES_API,
     USES_EMBEDDINGS,
     USES_LLM,
@@ -26,6 +29,8 @@ from tools.tutor.answer_builder import build_tutor_answer
 
 QUESTION_BANK_ROOT = KNOWLEDGE_DIR / "question-bank"
 DEFAULT_QUESTION_LIMIT = 10
+SAMPLE_QUESTIONS_PATH = SELF_EVAL_DIR / "sample_questions.json"
+QUESTION_EXPECTATIONS_PATH = SELF_EVAL_DIR / "question_expectations.json"
 
 
 def run_self_eval(
@@ -207,68 +212,17 @@ def _normalize_question(question: dict[str, Any], index: int) -> dict[str, Any]:
 
 
 def _sample_questions() -> list[dict[str, Any]]:
-    return [
-        {
-            "question_id": "SELF_SAMPLE_TANNIN_01",
-            "question_text": "Does more tannin mean better wine?",
-            "question_type": "theory",
-            "expected_topics": ["tannin", "quality"],
-            "expected_causal_links": ["phenolics -> astringency", "balance -> quality assessment"],
-            "expected_keywords": ["tanino", "astringencia", "balance", "complexity", "length"],
-            "expected_reasoning_type": "common_mistake",
-            "difficulty": "intermediate",
-            "source_type": "internal_sample",
-            "safe_for_examiner": False,
-        },
-        {
-            "question_id": "SELF_SAMPLE_CLIMATE_01",
-            "question_text": "How does cool climate affect acidity?",
-            "question_type": "theory",
-            "expected_topics": ["cool climate", "acidity"],
-            "expected_causal_links": ["cool climate -> slow ripening -> acid retention"],
-            "expected_keywords": ["clima fresco", "maduración", "acidity", "frescura"],
-            "expected_reasoning_type": "cause_effect",
-            "difficulty": "intermediate",
-            "source_type": "internal_sample",
-            "safe_for_examiner": False,
-        },
-        {
-            "question_id": "SELF_SAMPLE_SAT_01",
-            "question_text": "How do I justify quality in SAT?",
-            "question_type": "sat",
-            "expected_topics": ["SAT", "quality assessment"],
-            "expected_causal_links": ["evidence -> conclusion"],
-            "expected_keywords": ["SAT", "balance", "intensity", "complexity", "length", "quality assessment"],
-            "expected_reasoning_type": "sat_logic",
-            "difficulty": "distinction",
-            "source_type": "internal_sample",
-            "safe_for_examiner": False,
-        },
-        {
-            "question_id": "SELF_SAMPLE_ACIDITY_01",
-            "question_text": "So high acidity means the wine is lower quality?",
-            "question_type": "theory",
-            "expected_topics": ["acidity", "quality"],
-            "expected_causal_links": ["acidity -> freshness", "balance -> quality assessment"],
-            "expected_keywords": ["high acidity", "balance", "fruit", "quality assessment"],
-            "expected_reasoning_type": "common_mistake",
-            "difficulty": "intermediate",
-            "source_type": "internal_sample",
-            "safe_for_examiner": False,
-        },
-        {
-            "question_id": "SELF_SAMPLE_SAT_02",
-            "question_text": "Explain how balance supports a quality assessment in SAT.",
-            "question_type": "sat",
-            "expected_topics": ["balance", "quality assessment"],
-            "expected_causal_links": ["balance -> quality assessment"],
-            "expected_keywords": ["balance", "intensity", "complexity", "length", "SAT"],
-            "expected_reasoning_type": "sat_logic",
-            "difficulty": "distinction",
-            "source_type": "internal_sample",
-            "safe_for_examiner": False,
-        },
-    ]
+    return list(_load_sample_questions())
+
+
+@lru_cache(maxsize=1)
+def _load_sample_questions() -> tuple[dict[str, Any], ...]:
+    return tuple(json.loads(SAMPLE_QUESTIONS_PATH.read_text(encoding="utf-8")))
+
+
+@lru_cache(maxsize=1)
+def _load_question_expectations() -> tuple[dict[str, Any], ...]:
+    return tuple(json.loads(QUESTION_EXPECTATIONS_PATH.read_text(encoding="utf-8")))
 
 
 def _infer_question_type(text: str) -> str:
@@ -291,53 +245,19 @@ def _infer_reasoning_type(text: str) -> str:
 
 def _infer_expectations(text: str) -> dict[str, Any]:
     lowered = text.lower()
-    expected_topics: list[str] = []
-    expected_links: list[str] = []
-    expected_keywords: list[str] = []
-    difficulty = "intermediate"
-    if "flor" in lowered and ("jerez" in lowered or "sherry" in lowered):
-        expected_topics = ["flor", "jerez", "biological ageing"]
-        expected_links = ["flor -> oxygen protection -> biological ageing"]
-        expected_keywords = ["flor", "crianza biológica", "oxígeno", "acetaldehído"]
-        difficulty = "distinction"
-    elif "oporto" in lowered and "ferment" in lowered:
-        expected_topics = ["port", "fortification", "fermentation"]
-        expected_links = ["fortification -> yeast stops -> residual sugar"]
-        expected_keywords = ["aguardiente", "fortificación", "fermentación", "azúcar residual"]
-        difficulty = "foundational"
-    elif "porto vintage" in lowered or "port vintage" in lowered:
-        expected_topics = ["vintage port", "bottle ageing"]
-        expected_links = ["structure -> bottle ageing -> sediment"]
-        expected_keywords = ["Vintage Port", "botella", "tanino", "sedimento"]
-        difficulty = "intermediate"
-    elif "solera" in lowered or "sistema tradicional" in lowered and "jerez" in lowered:
-        expected_topics = ["jerez", "solera"]
-        expected_links = ["fractional blending -> consistency"]
-        expected_keywords = ["solera", "criaderas", "mezcla", "consistencia"]
-        difficulty = "foundational"
-    elif "oloroso" in lowered and "amontillado" in lowered:
-        expected_topics = ["oloroso", "amontillado", "sherry ageing"]
-        expected_links = ["flor dies -> oxidative ageing", "no flor -> oxidative ageing"]
-        expected_keywords = ["flor", "oxidativa", "biológica", "fortificación"]
-        difficulty = "distinction"
-    elif "cool climate" in lowered and "acid" in lowered:
-        expected_topics = ["cool climate", "acidity"]
-        expected_links = ["cool climate -> slow ripening -> acid retention"]
-        expected_keywords = ["clima fresco", "maduración", "acidity", "frescura"]
-    elif "tannin" in lowered:
-        expected_topics = ["tannin", "quality"]
-        expected_links = ["phenolics -> astringency", "balance -> quality assessment"]
-        expected_keywords = ["tanino", "astringencia", "balance", "complexity", "length"]
-    elif "sat" in lowered or "quality assessment" in lowered:
-        expected_topics = ["SAT", "quality assessment"]
-        expected_links = ["evidence -> conclusion"]
-        expected_keywords = ["SAT", "balance", "intensity", "complexity", "length", "quality assessment"]
-        difficulty = "distinction"
+    for template in _load_question_expectations():
+        if re.search(str(template.get("topic_pattern", "")), lowered):
+            return {
+                "expected_topics": _as_list(template.get("expected_topics")),
+                "expected_causal_links": _as_list(template.get("expected_causal_links")),
+                "expected_keywords": _as_list(template.get("expected_keywords")),
+                "difficulty": str(template.get("difficulty") or "intermediate"),
+            }
     return {
-        "expected_topics": expected_topics,
-        "expected_causal_links": expected_links,
-        "expected_keywords": expected_keywords,
-        "difficulty": difficulty,
+        "expected_topics": [],
+        "expected_causal_links": [],
+        "expected_keywords": [],
+        "difficulty": "intermediate",
     }
 
 
