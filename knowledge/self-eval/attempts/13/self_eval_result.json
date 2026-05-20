@@ -2,12 +2,23 @@
   "question_id": "13",
   "question_type": "theory",
   "question_text": "\u00bfQu\u00e9 elemento del suelo influye m\u00e1s directamente en el drenaje del vi\u00f1edo?",
-  "expected_topics": [],
-  "expected_causal_links": [],
-  "expected_keywords": [],
+  "expected_topics": [
+    "textura del suelo",
+    "drenaje",
+    "vigor de la vid"
+  ],
+  "expected_causal_links": [
+    "textura del suelo -> retenci\u00f3n de agua -> vigor de la vid"
+  ],
+  "expected_keywords": [
+    "textura del suelo",
+    "drenaje",
+    "ra\u00edces",
+    "concentraci\u00f3n"
+  ],
   "expected_reasoning_type": "theory_foundation",
   "difficulty": "intermediate",
-  "source_type": "raw_question_bank_adapter",
+  "source_type": "structured_question_bank",
   "safe_for_examiner": false,
   "tutor_attempt_path": "C:/Users/esand/OneDrive/Documents/WSET-AI-System/knowledge/self-eval/attempts/13/tutor_attempt.md",
   "tutor_context_package_path": "C:/Users/esand/OneDrive/Documents/WSET-AI-System/knowledge/self-eval/attempts/13/tutor_context_package.json",
@@ -15,26 +26,36 @@
     "question_id": "13",
     "question_type": "theory",
     "strengths": [
+      "expected_keywords_present",
+      "causal_links_present",
+      "expected_topics_present",
       "exam_language_present"
     ],
-    "present_keywords": [],
+    "present_keywords": [
+      "textura del suelo",
+      "drenaje",
+      "ra\u00edces",
+      "concentraci\u00f3n"
+    ],
     "missing_keywords": [],
-    "present_causal_links": [],
+    "present_causal_links": [
+      "textura del suelo -> retenci\u00f3n de agua -> vigor de la vid"
+    ],
     "missing_causal_links": [],
-    "present_topics": [],
+    "present_topics": [
+      "textura del suelo",
+      "drenaje",
+      "vigor de la vid"
+    ],
     "missing_official_concepts": [],
     "expected_reasoning_type_present": true,
-    "failure_labels": [
-      "shallow_retrieval"
-    ],
+    "failure_labels": [],
     "strictness": "brutal",
     "difficulty": "intermediate",
     "vague_claims": [],
     "unsupported_conclusions": [],
     "likely_misconception_gaps": [],
-    "retrieval_weaknesses": [
-      "shallow_retrieval"
-    ]
+    "retrieval_weaknesses": []
   },
   "governance": {
     "safe_for_examiner": false,

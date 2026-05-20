@@ -6,12 +6,35 @@ embeddings, vector databases, or Examiner scoring.
 
 from __future__ import annotations
 
+import json
 import re
+from functools import lru_cache
 from typing import Any
 
+from tools.constants import KNOWLEDGE_DIR
 
-SEVERITY_WEIGHT = {"low": 0.2, "medium": 0.45, "high": 0.75, "critical": 0.9}
-DEPTH_TO_STYLE = {"minimal": "concise", "standard": "standard", "deep": "detailed"}
+_EXPLANATION_PRIORITY_CONFIG_PATH = KNOWLEDGE_DIR / "config" / "explanation_priority_config.json"
+
+
+@lru_cache(maxsize=1)
+def _load_explanation_priority_config() -> dict[str, Any]:
+    if not _EXPLANATION_PRIORITY_CONFIG_PATH.exists():
+        raise FileNotFoundError(
+            f"explanation_priority_config.json not found at {_EXPLANATION_PRIORITY_CONFIG_PATH}. "
+            "This file is required for explanation prioritization."
+        )
+    return json.loads(_EXPLANATION_PRIORITY_CONFIG_PATH.read_text(encoding="utf-8"))
+
+
+_EXPLANATION_PRIORITY_CONFIG = _load_explanation_priority_config()
+SEVERITY_WEIGHT = {
+    key: float(value["value"])
+    for key, value in _EXPLANATION_PRIORITY_CONFIG["SEVERITY_WEIGHT"].items()
+}
+DEPTH_TO_STYLE = {
+    key: str(value["value"])
+    for key, value in _EXPLANATION_PRIORITY_CONFIG["DEPTH_TO_STYLE"].items()
+}
 
 
 def build_explanation_priority(package: dict[str, Any], confidence: float | None = None) -> dict[str, Any]:

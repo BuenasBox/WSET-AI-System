@@ -1,0 +1,62 @@
+[
+  {
+    "question_id": "SELF_SAMPLE_TANNIN_01",
+    "question_text": "Does more tannin mean better wine?",
+    "question_type": "theory",
+    "expected_topics": ["tannin", "quality"],
+    "expected_causal_links": ["phenolics -> astringency", "balance -> quality assessment"],
+    "expected_keywords": ["tanino", "astringencia", "balance", "complexity", "length"],
+    "expected_reasoning_type": "common_mistake",
+    "difficulty": "intermediate",
+    "source_type": "internal_sample",
+    "safe_for_examiner": false
+  },
+  {
+    "question_id": "SELF_SAMPLE_CLIMATE_01",
+    "question_text": "How does cool climate affect acidity?",
+    "question_type": "theory",
+    "expected_topics": ["cool climate", "acidity"],
+    "expected_causal_links": ["cool climate -> slow ripening -> acid retention"],
+    "expected_keywords": ["clima fresco", "maduración", "acidity", "frescura"],
+    "expected_reasoning_type": "cause_effect",
+    "difficulty": "intermediate",
+    "source_type": "internal_sample",
+    "safe_for_examiner": false
+  },
+  {
+    "question_id": "SELF_SAMPLE_SAT_01",
+    "question_text": "How do I justify quality in SAT?",
+    "question_type": "sat",
+    "expected_topics": ["SAT", "quality assessment"],
+    "expected_causal_links": ["evidence -> conclusion"],
+    "expected_keywords": ["SAT", "balance", "intensity", "complexity", "length", "quality assessment"],
+    "expected_reasoning_type": "sat_logic",
+    "difficulty": "distinction",
+    "source_type": "internal_sample",
+    "safe_for_examiner": false
+  },
+  {
+    "question_id": "SELF_SAMPLE_ACIDITY_01",
+    "question_text": "So high acidity means the wine is lower quality?",
+    "question_type": "theory",
+    "expected_topics": ["acidity", "quality"],
+    "expected_causal_links": ["acidity -> freshness", "balance -> quality assessment"],
+    "expected_keywords": ["high acidity", "balance", "fruit", "quality assessment"],
+    "expected_reasoning_type": "common_mistake",
+    "difficulty": "intermediate",
+    "source_type": "internal_sample",
+    "safe_for_examiner": false
+  },
+  {
+    "question_id": "SELF_SAMPLE_SAT_02",
+    "question_text": "Explain how balance supports a quality assessment in SAT.",
+    "question_type": "sat",
+    "expected_topics": ["balance", "quality assessment"],
+    "expected_causal_links": ["balance -> quality assessment"],
+    "expected_keywords": ["balance", "intensity", "complexity", "length", "SAT"],
+    "expected_reasoning_type": "sat_logic",
+    "difficulty": "distinction",
+    "source_type": "internal_sample",
+    "safe_for_examiner": false
+  }
+]

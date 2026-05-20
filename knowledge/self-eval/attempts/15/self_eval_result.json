@@ -7,7 +7,7 @@
   "expected_keywords": [],
   "expected_reasoning_type": "theory_foundation",
   "difficulty": "intermediate",
-  "source_type": "raw_question_bank_adapter",
+  "source_type": "structured_question_bank",
   "safe_for_examiner": false,
   "tutor_attempt_path": "C:/Users/esand/OneDrive/Documents/WSET-AI-System/knowledge/self-eval/attempts/15/tutor_attempt.md",
   "tutor_context_package_path": "C:/Users/esand/OneDrive/Documents/WSET-AI-System/knowledge/self-eval/attempts/15/tutor_context_package.json",

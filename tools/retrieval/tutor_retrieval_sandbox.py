@@ -15,6 +15,7 @@ import re
 from collections import Counter
 from dataclasses import dataclass
 from datetime import UTC, datetime
+from functools import lru_cache
 from pathlib import Path
 from typing import Any
 
@@ -122,7 +123,25 @@ REASONING_BY_INTENT = {
     "foundational_theory": "theory_foundation",
     "advanced_enrichment": "theory_foundation",
 }
-PRIORITY_BOOSTS = {"high": 0.12, "medium": 0.06, "low": 0.02}
+_RETRIEVAL_CONFIG_PATH = KNOWLEDGE_DIR / "config" / "retrieval_config.json"
+
+
+@lru_cache(maxsize=1)
+def _load_retrieval_config() -> dict[str, Any]:
+    if not _RETRIEVAL_CONFIG_PATH.exists():
+        raise FileNotFoundError(
+            f"retrieval_config.json not found at {_RETRIEVAL_CONFIG_PATH}. "
+            "This file is required for retrieval scoring."
+        )
+    return json.loads(_RETRIEVAL_CONFIG_PATH.read_text(encoding="utf-8"))
+
+
+_RETRIEVAL_CONFIG = _load_retrieval_config()
+PRIORITY_BOOSTS = {
+    key: float(value["value"])
+    for key, value in _RETRIEVAL_CONFIG["PRIORITY_BOOSTS"].items()
+}
+SCORE_WEIGHTS = _RETRIEVAL_CONFIG["SCORE_WEIGHTS"]
 ROLE_ALIGNMENT = {
     "sat_coaching": {"tasting_practice", "exam_strategy"},
     "tasting_exam_strategy": {"exam_strategy", "tasting_practice"},
@@ -497,61 +516,65 @@ def score_chunk_for_query(
     knowledge_graph_match_score = max(concept_match_score, causal_chain_match_score, relationship_match_score)
     reasoning_alignment = 1.0 if golden.get("reasoning_type") == query_analysis.get("reasoning_intent") else 0.0
     if not reasoning_alignment and _chunk_text_aligns_reasoning(text, query_analysis.get("reasoning_intent", "")):
-        reasoning_alignment = 0.65
+        reasoning_alignment = SCORE_WEIGHTS["reasoning_alignment_fallback"]
     role_alignment = 1.0 if chunk.get("pedagogical_role") in ROLE_ALIGNMENT.get(query_analysis["query_intent"], set()) else 0.0
     sat_boost = 1.0 if query_tokens & SAT_TERMS and chunk_tokens & SAT_TERMS else 0.0
     cause_effect_boost = 1.0 if query_tokens & CAUSE_EFFECT_TERMS and _chunk_text_aligns_reasoning(text, "cause_effect") else 0.0
     exam_strategy_boost = 1.0 if query_tokens & EXAM_TERMS and chunk_tokens & EXAM_TERMS else 0.0
     golden_boost = 1.0 if golden.get("golden_tutor_chunk_candidate") is True else 0.0
     priority_boost = PRIORITY_BOOSTS.get(str(golden.get("retrieval_priority", "")), 0.0)
-    quality_penalty = min(0.18, 0.04 * len(_as_list(chunk.get("quality_flags")) + _as_list(golden.get("quality_flags"))))
+    quality_penalty = min(
+        SCORE_WEIGHTS["quality_flags_penalty_max"],
+        SCORE_WEIGHTS["quality_flags_penalty_per_flag"]
+        * len(_as_list(chunk.get("quality_flags")) + _as_list(golden.get("quality_flags"))),
+    )
     official_source_boost = 1.0 if chunk.get("source_type") == "official_wset_extracted" else 0.0
     exact_term_boost = 1.0 if matched_terms or matched_dictionary_terms else 0.0
     section_topic_boost = _section_topic_match_score(chunk, query_analysis)
     official_exam_register_boost = 1.0 if official_source_boost and _chunk_text_aligns_reasoning(text, "exam_strategy") else 0.0
     score = (
-        0.18 * min(1.0, lexical_overlap)
-        + 0.1 * min(1.0, expanded_overlap)
-        + 0.08 * dictionary_score
-        + 0.05 * dictionary_category_score
-        + 0.1 * golden_boost
-        + 0.14 * reasoning_alignment
-        + 0.1 * role_alignment
+        SCORE_WEIGHTS["lexical_overlap"] * min(1.0, lexical_overlap)
+        + SCORE_WEIGHTS["expanded_lexical_overlap"] * min(1.0, expanded_overlap)
+        + SCORE_WEIGHTS["canonical_dictionary_terms"] * dictionary_score
+        + SCORE_WEIGHTS["dictionary_category_match"] * dictionary_category_score
+        + SCORE_WEIGHTS["golden_chunk_boost"] * golden_boost
+        + SCORE_WEIGHTS["reasoning_type_alignment"] * reasoning_alignment
+        + SCORE_WEIGHTS["pedagogical_role_alignment"] * role_alignment
         + priority_boost
-        + 0.09 * sat_boost
-        + 0.1 * cause_effect_boost
-        + 0.07 * exam_strategy_boost
-        + 0.1 * knowledge_graph_match_score
-        + 0.08 * causal_chain_match_score
-        + 0.06 * concept_match_score
-        + 0.12 * source_concept_phrase_score
-        + 0.18 * official_source_boost
-        + 0.08 * exact_term_boost
-        + 0.08 * section_topic_boost
-        + 0.06 * official_exam_register_boost
+        + SCORE_WEIGHTS["sat_term_boost"] * sat_boost
+        + SCORE_WEIGHTS["cause_effect_boost"] * cause_effect_boost
+        + SCORE_WEIGHTS["exam_strategy_boost"] * exam_strategy_boost
+        + SCORE_WEIGHTS["knowledge_graph_match"] * knowledge_graph_match_score
+        + SCORE_WEIGHTS["causal_chain_match"] * causal_chain_match_score
+        + SCORE_WEIGHTS["concept_match"] * concept_match_score
+        + SCORE_WEIGHTS["source_concept_phrase_match"] * source_concept_phrase_score
+        + SCORE_WEIGHTS["official_source_boost"] * official_source_boost
+        + SCORE_WEIGHTS["exact_term_match_boost"] * exact_term_boost
+        + SCORE_WEIGHTS["section_topic_match_boost"] * section_topic_boost
+        + SCORE_WEIGHTS["official_exam_register_boost"] * official_exam_register_boost
         - quality_penalty
     )
     score = max(0.0, min(1.0, score))
     breakdown = {
-        "lexical_overlap": round(0.18 * min(1.0, lexical_overlap), 4),
-        "expanded_lexical_overlap": round(0.1 * min(1.0, expanded_overlap), 4),
-        "canonical_dictionary_terms": round(0.08 * dictionary_score, 4),
-        "dictionary_category_match": round(0.05 * dictionary_category_score, 4),
-        "golden_chunk_boost": round(0.1 * golden_boost, 4),
-        "reasoning_type_alignment": round(0.14 * reasoning_alignment, 4),
-        "pedagogical_role_alignment": round(0.1 * role_alignment, 4),
+        "lexical_overlap": round(SCORE_WEIGHTS["lexical_overlap"] * min(1.0, lexical_overlap), 4),
+        "expanded_lexical_overlap": round(SCORE_WEIGHTS["expanded_lexical_overlap"] * min(1.0, expanded_overlap), 4),
+        "canonical_dictionary_terms": round(SCORE_WEIGHTS["canonical_dictionary_terms"] * dictionary_score, 4),
+        "dictionary_category_match": round(SCORE_WEIGHTS["dictionary_category_match"] * dictionary_category_score, 4),
+        "golden_chunk_boost": round(SCORE_WEIGHTS["golden_chunk_boost"] * golden_boost, 4),
+        "reasoning_type_alignment": round(SCORE_WEIGHTS["reasoning_type_alignment"] * reasoning_alignment, 4),
+        "pedagogical_role_alignment": round(SCORE_WEIGHTS["pedagogical_role_alignment"] * role_alignment, 4),
         "retrieval_priority_boost": round(priority_boost, 4),
-        "sat_term_boost": round(0.09 * sat_boost, 4),
-        "cause_effect_boost": round(0.1 * cause_effect_boost, 4),
-        "exam_strategy_boost": round(0.07 * exam_strategy_boost, 4),
-        "knowledge_graph_match": round(0.1 * knowledge_graph_match_score, 4),
-        "causal_chain_match": round(0.08 * causal_chain_match_score, 4),
-        "concept_match": round(0.06 * concept_match_score, 4),
-        "source_concept_phrase_match": round(0.12 * source_concept_phrase_score, 4),
-        "official_source_boost": round(0.18 * official_source_boost, 4),
-        "exact_term_match_boost": round(0.08 * exact_term_boost, 4),
-        "section_topic_match_boost": round(0.08 * section_topic_boost, 4),
-        "official_exam_register_boost": round(0.06 * official_exam_register_boost, 4),
+        "sat_term_boost": round(SCORE_WEIGHTS["sat_term_boost"] * sat_boost, 4),
+        "cause_effect_boost": round(SCORE_WEIGHTS["cause_effect_boost"] * cause_effect_boost, 4),
+        "exam_strategy_boost": round(SCORE_WEIGHTS["exam_strategy_boost"] * exam_strategy_boost, 4),
+        "knowledge_graph_match": round(SCORE_WEIGHTS["knowledge_graph_match"] * knowledge_graph_match_score, 4),
+        "causal_chain_match": round(SCORE_WEIGHTS["causal_chain_match"] * causal_chain_match_score, 4),
+        "concept_match": round(SCORE_WEIGHTS["concept_match"] * concept_match_score, 4),
+        "source_concept_phrase_match": round(SCORE_WEIGHTS["source_concept_phrase_match"] * source_concept_phrase_score, 4),
+        "official_source_boost": round(SCORE_WEIGHTS["official_source_boost"] * official_source_boost, 4),
+        "exact_term_match_boost": round(SCORE_WEIGHTS["exact_term_match_boost"] * exact_term_boost, 4),
+        "section_topic_match_boost": round(SCORE_WEIGHTS["section_topic_match_boost"] * section_topic_boost, 4),
+        "official_exam_register_boost": round(SCORE_WEIGHTS["official_exam_register_boost"] * official_exam_register_boost, 4),
         "quality_flags_penalty": round(-quality_penalty, 4),
     }
     why = explain_retrieval(

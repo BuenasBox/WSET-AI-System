@@ -257,3 +257,62 @@ tools/knowledge/official_wset_chunks.py
 ---
 
 *This document is a development diagnostic. It does not represent WSET assessment or examiner evaluation.*
+
+---
+
+## Status Update — 2026-05-19
+
+**Brutal self-eval at update time:** `{}` (all 25 questions clean, 231 tests passing)  
+**Commit baseline:** `47cb941` (SAT observation alias table) → consolidated Phases 3–7 commit
+
+### Items Resolved Since 2026-05-17 Audit
+
+The following audit items have been confirmed resolved by direct code inspection:
+
+| ID | Original description | Resolution |
+|----|---------------------|------------|
+| **B-09** | No `tools/constants.py` — constants scattered across 7+ files | ✅ `tools/constants.py` created. Contains `PROJECT_ROOT`, all path constants (`KNOWLEDGE_DIR`, `NAZARETH_DIR`, `CONTEXT_PACKAGES_DIR`, etc.), and governance sentinels. All modules now import from it. |
+| **A-03** | Governance sentinels not protected by named constants | ✅ `constants.py` defines `SAFE_FOR_EXAMINER = False`, `EXAMINER_SCORING_ALLOWED = False`, `USES_LLM = False`, `USES_API = False`, `USES_EMBEDDINGS = False`, `USES_VECTOR_DB = False`, `CLOUD_SERVICES_ACTIVE = False`. |
+| **B-03** | `answer_builder.py` imports `PROJECT_ROOT` from orchestrator (reverse dep) | ✅ `answer_builder.py` now imports from `tools.constants`. |
+| **B-04** | `tutor_retrieval_sandbox.py` imports from orchestrator (reverse dep) | ✅ `tutor_retrieval_sandbox.py` imports `KNOWLEDGE_DIR`, `OFFICIAL_WSET_DIR`, `PROJECT_ROOT`, `RETRIEVAL_SANDBOX_DIR` from `tools.constants`. |
+| **B-05** | `learner_state.py` imports from orchestrator (reverse dep) | ✅ `learner_state.py` imports `CLOUD_SERVICES_ACTIVE`, `NAZARETH_DIR`, `SAFE_FOR_EXAMINER` from `tools.constants`. |
+| **A-14** | `DEFAULT_CONTEXT_PACKAGE_DIR` hardcoded absolute path in `orchestrator.py` | ✅ Now derived: `DEFAULT_CONTEXT_PACKAGE_DIR = CONTEXT_PACKAGES_DIR` (from constants). Portable. |
+| **A-16** | `NAZARETH_ROOT` and DEFAULT paths hardcoded in `learner_state.py` | ✅ Paths now derived from `NAZARETH_DIR` (from constants). `DEFAULT_LES_PATH = NAZARETH_ROOT / "epistemic_state.json"`. |
+| **A-19** | `DEFAULT_MISCONCEPTION_DIR` hardcoded absolute path | ✅ `misconception_prepass.py` now uses `DEFAULT_MISCONCEPTION_DIR = PROJECT_ROOT / "knowledge" / "knowledge-map" / "misconceptions"`. |
+| **A-26** | `DEFAULT_MARKDOWN_DIR` / `DEFAULT_OUTPUT_DIR` / `DEFAULT_JSONL_PATH` hardcoded | ✅ `official_wset_chunks.py` derives all paths from `PROJECT_ROOT`. |
+| **A-27** | `DEFAULT_PEDAGOGICAL_MEMORY_PATH` hardcoded absolute path | ✅ `knowledge_tracing.py` uses `DEFAULT_PEDAGOGICAL_MEMORY_PATH = PROJECT_ROOT / "knowledge" / "nazareth" / "pedagogical_memory.json"`. |
+| **A-04** | `DOMAIN_EXPANSIONS` / `SAT_EXPANSIONS` dicts inline in source | ✅ Moved to `knowledge/config/domain_expansions.json`. Module loads from JSON at import. |
+| **L-01** | `_tokens()` ASCII-only regex silently corrupts Spanish tokenization | ✅ `_tokens()` now uses `r"(?u)\b[^\W\d_](?:[^\W_]|['-])*\b"` — Unicode-aware, handles all accented characters. `fermentación` → `["fermentación"]`. |
+| **T-03** | No unit test for `_tokens()` Unicode behavior | ✅ `tests/test_tutor_retrieval_sandbox.py` asserts `"fermentación"` ∈ tokens and `"fermentaci"` ∉ tokens. |
+
+**Before-frontend blockers resolved:** 13 of 21 original BF items confirmed closed (B-09, A-03, B-03, B-04, B-05, A-14, A-16, A-19, A-26, A-27, A-04, L-01, T-03).  
+**Remaining before-frontend blockers:** 8 items still open (A-01, A-05, A-07, A-11, A-12, A-15, A-22, B-01, B-02, C-01, C-02–05, L-02, L-05, P-01, P-02, T-01, T-02, T-04, T-06 — see remediation plan).
+
+---
+
+### SAT Reasoning Layer — New Codebase Items (2026-05-19)
+
+The SAT Reasoning Layer (7 phases) was implemented and committed after the 2026-05-17 audit baseline. The following new files are now in scope for future audits:
+
+| File | Type | Governance status |
+|------|------|------------------|
+| `tools/tutor/sat_reasoner.py` | Core module | `safe_for_examiner=False` enforced via constants; no LLM, no API, no file writes, deterministic |
+| `knowledge/config/sat_observation_aliases.json` | Config | Static data; no governance flags required |
+| `knowledge/knowledge-map/causal-chains/CC_SAT_QUALITY_HIGH.json` | Knowledge node | `safe_for_examiner: false` in node schema |
+| `knowledge/knowledge-map/causal-chains/CC_SAT_QUALITY_MEDIUM.json` | Knowledge node | `safe_for_examiner: false` in node schema |
+
+**SAT integration guard pattern** (`_SAT_REASONER_AVAILABLE`) is used consistently in `answer_builder.py`, `tutor_retrieval_sandbox.py`, and `answer_comparator.py`. Import failure degrades gracefully to pre-SAT behavior without raising exceptions.
+
+**SAT test coverage added:** 5 new test files (230 → 231 total tests).  
+**Brutal self-eval impact:** No new failure labels introduced. `{}` maintained.
+
+---
+
+### Revised Before-Frontend Blocker Count
+
+| Status | Count | Items |
+|--------|-------|-------|
+| ✅ Resolved | 13 | B-09, A-03, B-03, B-04, B-05, A-14, A-16, A-19, A-26, A-27, A-04, L-01, T-03 |
+| 🔴 Still open | 8+ | A-01, A-02, A-05, A-07, A-11, A-12, A-15, A-22, B-01, B-02, C-01–05, L-02, L-05, P-01, P-02, T-01, T-02, T-04, T-06 |
+
+See `docs/backend_stability_remediation_plan.md` for sequenced remediation plan.

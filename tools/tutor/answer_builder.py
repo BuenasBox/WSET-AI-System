@@ -14,6 +14,7 @@ from tools.constants import (
     EXAMINER_SCORING_ALLOWED,
     NAZARETH_DIR,
     SAFE_FOR_EXAMINER,
+    SAT_EVALUATION_TERMS,
     USES_API,
     USES_EMBEDDINGS,
     USES_LLM,
@@ -854,7 +855,7 @@ def _idea_from_context_item(item: dict[str, Any], package: dict[str, Any]) -> st
         return "el clima fresco tiende a ralentizar la maduración y conservar acidity"
     if "acid" in haystack or "acidity" in haystack:
         return "la acidity aporta frescura, pero debe leerse dentro del balance del vino"
-    if "balance" in haystack or "complexity" in haystack or "length" in haystack:
+    if any(term in haystack for term in SAT_EVALUATION_TERMS):
         return "quality assessment se justifica con balance, intensity, complexity y length"
     return _clean_idea(str(item.get("text_excerpt") or ""))
 

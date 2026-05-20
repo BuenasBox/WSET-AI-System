@@ -1,7 +1,7 @@
 # Tutor Retrieval Sandbox Run
 
 Query: How does cool climate affect acidity?
-Generated at: 2026-05-17T19:42:07+00:00
+Generated at: 2026-05-20T17:54:12+00:00
 Governance filter applied: true
 
 ## Query Analysis
@@ -19,7 +19,7 @@ Governance filter applied: true
 - excluded_chunks: 0
 - golden_chunks_loaded: 166
 - dictionary_terms_loaded: 424
-- knowledge_nodes_loaded: 68
+- knowledge_nodes_loaded: 76
 
 ## Retrieved Chunks
 

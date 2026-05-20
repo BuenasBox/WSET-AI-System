@@ -41,7 +41,7 @@
       "fragile:cause -> mechanism -> effect"
     ],
     "recent_misconceptions": [],
-    "session_count": 221,
+    "session_count": 252,
     "pedagogical_memory": {
       "schema_version": "pedagogical_memory_v1",
       "low_mastery_concepts": [],
@@ -97,7 +97,7 @@
       "forced_retrieval": false,
       "agent_corpus": "tutor",
       "safe_for_examiner": false,
-      "score": 0.4755,
+      "score": 0.6433,
       "source_type": "official_wset_extracted",
       "source_file": "knowledge/official-wset/study-guide/wset_markdown/seccion_5_section_2_factors_affecting_the_style_quality_and_price_of_w/5-2_5_the_growing_environment.md",
       "source_trust_tier": 1,
@@ -110,6 +110,8 @@
       "pedagogical_role": "official_reference",
       "why_retrieved": [
         "matched canonical/query terms: cold air, factor, natural, spring frost, valley",
+        "matches knowledge-map concept or relationship terms",
+        "matches knowledge-map causal-chain mechanism",
         "official WSET extracted Tutor support",
         "exact term match"
       ],
@@ -119,90 +121,95 @@
     },
     {
       "context_type": "retrieval_sandbox_chunk",
-      "chunk_id": "OFFICIAL_WSET_PRICE_OF_W_5_3_6_VINEYARD_MANAGEMENT_001",
+      "chunk_id": "OFFICIAL_WSET_WINES_OF_THE_WORLD_6_25_36_CHILE_001",
       "forced_retrieval": false,
       "agent_corpus": "tutor",
       "safe_for_examiner": false,
-      "score": 0.4392,
+      "score": 0.5517,
       "source_type": "official_wset_extracted",
-      "source_file": "knowledge/official-wset/study-guide/wset_markdown/seccion_5_section_2_factors_affecting_the_style_quality_and_price_of_w/5-3_6_vineyard_management.md",
+      "source_file": "knowledge/official-wset/study-guide/wset_markdown/seccion_6_section_3_still_wines_of_the_world/6-25_36_chile.md",
       "source_trust_tier": 1,
-      "title": "6 Vineyard Management",
-      "section": "5",
-      "subtopic": "5.3",
+      "title": "36 Chile",
+      "section": "6",
+      "subtopic": "6.25",
       "official_grading_authority": false,
       "requires_human_review": true,
       "reasoning_type": "theory_foundation",
       "pedagogical_role": "official_reference",
       "why_retrieved": [
-        "matched canonical/query terms: canopy management, factor, topography",
+        "matched canonical/query terms: cold air, valle, valley",
+        "matches knowledge-map concept or relationship terms",
+        "matches knowledge-map causal-chain mechanism",
         "official WSET extracted Tutor support",
-        "matched official section/topic metadata",
         "exact term match"
       ],
-      "text_excerpt": "# 6 Vineyard Management <!-- p\u00e1gina 42 --> VINEYARDM ANAGEMENT 33 VineyarMd anagement The gra~e grower has_av ery simple goal: to ~roduce a healthy crop of ripe grapes suitable for the style of wine the winemaker wants to make. In order to be able to do this it is necessary to apply an understanding of how the environment affects the vine's growth. In thi...",
+      "text_excerpt": "# 36 Chile <!-- p\u00e1gina 161 --> 152 UNDERSTANDING WINES: EXPLAINING STYLE AND QUALITY ChIie 36 Located between the Andes to the east and the Pacific to the west, Chile has an unusual geography. However, it is this geography, which combines cooling influences from the Pacific and Andes along with plentiful sunshine, that explains why Chile has found success...",
       "source_video": "",
-      "source_filename": "5-3_6_vineyard_management.md"
+      "source_filename": "6-25_36_chile.md"
     },
     {
       "context_type": "retrieval_sandbox_chunk",
-      "chunk_id": "OFFICIAL_WSET_1_1_THE_SYSTEMATIC_APPROACH_TO_TASTING_WINE_001",
+      "chunk_id": "OFFICIAL_WSET_OF_THE_WORLD_6_16_27_NORTHERN_ITALY_001",
       "forced_retrieval": false,
       "agent_corpus": "tutor",
       "safe_for_examiner": false,
-      "score": 0.4391,
+      "score": 0.5017,
       "source_type": "official_wset_extracted",
-      "source_file": "knowledge/official-wset/study-guide/wset_markdown/seccion_4_section_1_wine_and_the_consumer/4-1_1_the_systematic_approach_to_tasting_wine.md",
+      "source_file": "knowledge/official-wset/study-guide/wset_markdown/seccion_6_section_3_still_wines_of_the_world/6-16_27_northern_italy.md",
       "source_trust_tier": 1,
-      "title": "1 The Systematic Approach to Tasting Wine\u00ae",
-      "section": "4",
-      "subtopic": "4.1",
+      "title": "27 Northern Italy",
+      "section": "6",
+      "subtopic": "6.16",
       "official_grading_authority": false,
       "requires_human_review": true,
       "reasoning_type": "theory_foundation",
       "pedagogical_role": "official_reference",
       "why_retrieved": [
-        "matched canonical/query terms: factor, natural",
+        "matched canonical/query terms: cold air, natural, topography, valley",
+        "matches knowledge-map concept or relationship terms",
+        "matches knowledge-map causal-chain mechanism",
         "official WSET extracted Tutor support",
         "exact term match"
       ],
-      "text_excerpt": "# 1 The Systematic Approach to Tasting Wine\u00ae <!-- p\u00e1gina 10 --> THES YSTEMATICA PPROACHT OT ASTINGW INE\" TheS ystematiAc pproactho TastinWg ine\u00ae The WSET Level 3. Syst~matic Approach to Tasting Wine (SAT) is a tool that allows you to write a complete description of a wine and then use this information to make an evaluation of its quality and readiness for...",
+      "text_excerpt": "# 27 Northern Italy <!-- p\u00e1gina 130 --> NORTHERN ITALY 121 NorthernIt aly Northern Italy produces a wide range of wine styles from the full-bodied 27 tannic reds of Barolo to the delicate white wines of Soave. All this is possible because of diverse geography and an incredible number of unique local grape varieties. This chapter will cover the regions of...",
       "source_video": "",
-      "source_filename": "4-1_1_the_systematic_approach_to_tasting_wine.md"
+      "source_filename": "6-16_27_northern_italy.md"
     },
     {
       "context_type": "retrieval_sandbox_chunk",
-      "chunk_id": "OFFICIAL_WSET_4_3_3_STORAGE_AND_SERVICE_OF_WINE_001",
+      "chunk_id": "OFFICIAL_WSET_WINES_OF_THE_WORLD_6_22_33_CALIFORNIA_001",
       "forced_retrieval": false,
       "agent_corpus": "tutor",
       "safe_for_examiner": false,
-      "score": 0.4377,
+      "score": 0.4917,
       "source_type": "official_wset_extracted",
-      "source_file": "knowledge/official-wset/study-guide/wset_markdown/seccion_4_section_1_wine_and_the_consumer/4-3_3_storage_and_service_of_wine.md",
+      "source_file": "knowledge/official-wset/study-guide/wset_markdown/seccion_6_section_3_still_wines_of_the_world/6-22_33_california.md",
       "source_trust_tier": 1,
-      "title": "3 Storage and Service of Wine",
-      "section": "4",
-      "subtopic": "4.3",
+      "title": "33 California",
+      "section": "6",
+      "subtopic": "6.22",
       "official_grading_authority": false,
       "requires_human_review": true,
       "reasoning_type": "theory_foundation",
       "pedagogical_role": "official_reference",
       "why_retrieved": [
-        "matched canonical/query terms: natural",
+        "matched canonical/query terms: cold air, factor, valley",
+        "matches knowledge-map concept or relationship terms",
+        "matches knowledge-map causal-chain mechanism",
         "official WSET extracted Tutor support",
         "exact term match"
       ],
-      "text_excerpt": "# 3 Storage and Service of Wine <!-- p\u00e1gina 24 --> STORAGEA ND SERVICEO F WINE 15 Storagaen dS ervicoef W ine In order to get the best out of any wine it is important 3 that it is stored correctly and served at the correct temperature. It may not be necessary to invest in expensive storage units and elaborate devices: simple common sense and standard equi...",
+      "text_excerpt": "# 33 California <!-- p\u00e1gina 152 --> CALIFORNIA 143 CaIi fornia California is home not only to the vast majority of wine made in the USA but also to many of the country's most celebrated wines. Combinations of warmth, bright sun and cooling influences from ocean and altitude mean that California's winemakers are able to deliver a diverse range of premium s...",
       "source_video": "",
-      "source_filename": "4-3_3_storage_and_service_of_wine.md"
+      "source_filename": "6-22_33_california.md"
     },
     {
       "context_type": "retrieval_sandbox_chunk",
-      "chunk_id": "WSET_Level_3_Wines_-_Understanding_the_Common_Elements_of_Winemaking_Part-0005",
+      "chunk_id": "WSET_L3_Understanding_Growing_Environment_Problems_Short_Written_Question_Part_1-0004",
       "forced_retrieval": false,
       "agent_corpus": "tutor",
       "safe_for_examiner": false,
-      "score": 0.3191,
+      "score": 0.39,
       "source_type": "manual_curated_srt",
       "source_file": "",
       "source_trust_tier": "pedagogical",
@@ -211,19 +218,79 @@
       "subtopic": "",
       "official_grading_authority": false,
       "requires_human_review": false,
-      "reasoning_type": "cause_effect",
+      "reasoning_type": "theory_foundation",
       "pedagogical_role": "foundational",
       "why_retrieved": [
-        "matched canonical/query terms: factor, natural",
+        "matched canonical/query terms: spring frost, valley",
         "pedagogical role fits foundational_theory",
+        "matches knowledge-map concept or relationship terms",
+        "matches knowledge-map causal-chain mechanism",
         "exact term match"
       ],
-      "text_excerpt": "covers the skin of the grapes and here within this bloom this waxy service surface you'll find things like natural yeasts or ambient yeasts or wild yeasts they're sometimes called as well so of course if you don't add in any yeasts at winemaking stage you will be fermenting wild or with the natural yeasts and that is a a stylistic choice that is a philoso...",
-      "source_video": "WSET Level 3 Wines - Understanding the Common Elements of Winemaking Part",
-      "source_filename": "[English (auto-generated)] WSET Level 3 Wines - Understanding the Common Elements of Winemaking Part.srt"
+      "text_excerpt": "protecting the weakest point of the of the vine so this is what we call earthing up and that will reduce the effect of the winter freeze which is settling above ground okay so that is winter freeze complete remember typically in questions around malbec so it might be included in a malbec question if you're talking about the south west of france for exampl...",
+      "source_video": "WSET L3 Understanding Growing Environment Problems Short Written Question Part 1",
+      "source_filename": "WSET L3 Understanding Growing Environment Problems Short Written Question Part 1 [English (auto-generated)] [DownloadYoutubeSubtitles.com].srt"
     }
   ],
-  "forced_causal_chains": [],
+  "forced_causal_chains": [
+    {
+      "node_type": "causal_chain",
+      "node_id": "CC_SPRING_FROST_TOPOGRAPHY",
+      "topic": "spring frost risk and vineyard topography",
+      "trigger_keywords": [
+        "helada",
+        "heladas primaverales",
+        "topograf\u00eda",
+        "spring frost",
+        "frost risk",
+        "aire fr\u00edo",
+        "drenaje del aire",
+        "cold air",
+        "valle",
+        "ladera"
+      ],
+      "steps": [
+        {
+          "step": 1,
+          "label": "cause",
+          "text": "Spring frost risk is strongly influenced by vineyard topography and the movement of cold air across the site."
+        },
+        {
+          "step": 2,
+          "label": "mechanism",
+          "text": "Cold air is denser than warm air, so it descends and accumulates in low points such as valleys and hollows, while slopes with good air drainage allow cold air to move away."
+        },
+        {
+          "step": 3,
+          "label": "effect",
+          "text": "Vines in valleys or depressions have greater exposure to spring frost, whereas vines on slopes with good cold-air drainage have lower frost risk."
+        },
+        {
+          "step": 4,
+          "label": "exam_formulation",
+          "text": "Spring frost risk is higher in low-lying sites because cold air descends and pools there; slopes with good air drainage are therefore less exposed to frost damage."
+        }
+      ],
+      "sat_relevance": "",
+      "linked_topics": [],
+      "agent_corpus": "tutor",
+      "safe_for_examiner": false,
+      "examiner_scoring_allowed": false,
+      "requires_human_review": true,
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "agent_corpus": "tutor"
+      },
+      "_meta": {
+        "schema_version": "causal_chain_v1",
+        "created_date": "2026-05-17",
+        "ingestion_status": "draft"
+      },
+      "id": "CC_SPRING_FROST_TOPOGRAPHY",
+      "type": "causal_chain"
+    }
+  ],
   "tutor_directive": {
     "pedagogical_act": "answer_normally",
     "forced_retrieval_nodes": [],

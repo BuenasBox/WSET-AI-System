@@ -1,6 +1,6 @@
 {
   "schema_version": "minimal_brain_v2",
-  "updated_at": "2026-05-17T19:42:07.765298+00:00",
+  "updated_at": "2026-05-20T17:54:12.679651+00:00",
   "latest_session": {
     "student_query": "How does cool climate affect acidity?",
     "detected_misconception": {
@@ -43,7 +43,7 @@
         "fragile:cause -> mechanism -> effect"
       ],
       "recent_misconceptions": [],
-      "session_count": 249,
+      "session_count": 283,
       "pedagogical_memory": {
         "schema_version": "pedagogical_memory_v1",
         "low_mastery_concepts": [],
@@ -328,7 +328,7 @@
           "fragile:cause -> mechanism -> effect"
         ],
         "recent_misconceptions": [],
-        "session_count": 249,
+        "session_count": 283,
         "pedagogical_memory": {
           "schema_version": "pedagogical_memory_v1",
           "low_mastery_concepts": [],
@@ -817,11 +817,11 @@
       }
     },
     "context_package_paths": {
-      "latest": "C:/Users/esand/AppData/Local/Temp/tmp34v8r8kj/attempts/TEST_CLIMATE_01/latest_context_package.json",
-      "timestamped": "C:/Users/esand/AppData/Local/Temp/tmp34v8r8kj/attempts/TEST_CLIMATE_01/20260517_194207_context_package.json"
+      "latest": "C:/Users/esand/AppData/Local/Temp/tmpfa5qw6zn/attempts/TEST_CLIMATE_01/latest_context_package.json",
+      "timestamped": "C:/Users/esand/AppData/Local/Temp/tmpfa5qw6zn/attempts/TEST_CLIMATE_01/20260520_175412_context_package.json"
     }
   },
-  "latest_context_package_path": "C:/Users/esand/AppData/Local/Temp/tmp34v8r8kj/attempts/TEST_CLIMATE_01/latest_context_package.json",
+  "latest_context_package_path": "C:/Users/esand/AppData/Local/Temp/tmpfa5qw6zn/attempts/TEST_CLIMATE_01/latest_context_package.json",
   "governance": {
     "safe_for_examiner": false,
     "examiner_scoring_active": false,

@@ -28,3 +28,19 @@ USES_API = False
 USES_EMBEDDINGS = False
 USES_VECTOR_DB = False
 CLOUD_SERVICES_ACTIVE = False
+
+# SAT/BICL detection vocabulary (control logic only, not student-facing prose)
+SAT_EVALUATION_TERMS: frozenset[str] = frozenset(
+    {
+        "balance",
+        "intensity",
+        "complexity",
+        "length",
+        "finish",
+        "bicl",
+        "intensidad",
+        "complejidad",
+        "longitud",
+        "acabado",
+    }
+)

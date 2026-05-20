@@ -1,8 +1,10 @@
 # SAT Reasoning Layer — Design Document
 
-**Status:** Design only. No code implemented.  
+**Status:** ✅ Implemented. All 7 phases complete (2026-05-19).  
 **Prepared by:** Claude (design review session, 2026-05-17)  
+**Implemented by:** Codex (Phases 1–7, 2026-05-17 → 2026-05-19)  
 **Preconditions:** Option A complete (183 tests green, constants.py, domain_expansions.json, governance clean).  
+**Final test count:** 231 tests passing. Brutal self-eval: `{}`. Governance clean.  
 **Governance invariant:** `safe_for_examiner = False`, `examiner_scoring_allowed = False` throughout.
 
 ---
