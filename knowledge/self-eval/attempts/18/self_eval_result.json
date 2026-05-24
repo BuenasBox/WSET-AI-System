@@ -45,7 +45,7 @@
     "missing_official_concepts": [],
     "expected_reasoning_type_present": true,
     "failure_labels": [],
-    "strictness": "brutal",
+    "strictness": "hard",
     "difficulty": "intermediate",
     "vague_claims": [],
     "unsupported_conclusions": [],
@@ -56,6 +56,6 @@
     "safe_for_examiner": false,
     "examiner_scoring_allowed": false,
     "official_marks_assigned": false,
-    "strictness": "brutal"
+    "strictness": "hard"
   }
 }

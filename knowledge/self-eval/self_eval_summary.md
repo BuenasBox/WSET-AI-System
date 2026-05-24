@@ -2,7 +2,7 @@
 
 This is a local Tutor-development simulation. It is not official Examiner grading, does not assign marks, and does not claim WSET grading accuracy.
 
-Strictness: brutal
+Strictness: hard
 Questions attempted: 25
 Strongest domains: [('theory', 20), ('short_answer', 5)]
 Weakest domains: none
