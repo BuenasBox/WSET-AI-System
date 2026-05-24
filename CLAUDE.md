@@ -200,6 +200,29 @@ Blocked by `.gitignore`: `*.pdf`, `*.doc`, `*.docx`, `*.xls`, `*.xlsx`, `*.ppt`,
 
 ---
 
+## COGNITIVE ARTIFACT PROTECTION
+
+The following are **machine-local cognitive objects** and must NEVER be committed or deployed to Vercel/GitHub public. Risks: cognitive leakage, operational drift, false authority, learner-data exposure.
+
+| Path | What it is | Risk |
+|------|-----------|------|
+| `knowledge/nazareth/` | Live LES, session staging, pedagogical memory | Learner state exposure |
+| `knowledge/self-eval/reports/` | Dynamic self-eval run outputs | Drift / false authority |
+| `knowledge/self-eval/attempts/` | Per-question attempt artifacts | Operational noise |
+| `knowledge/retrieval-sandbox/` | Derived retrieval outputs | Contamination |
+| `*.jsonl` | Pipeline stream outputs | Machine-local traces |
+| `.claude/` | Agent tooling state | Tooling leakage |
+| `.vercel/` | Vercel deployment cache | CI contamination |
+
+**What IS intentionally versioned in `knowledge/self-eval/`:**
+- `sample_questions.json` — config, not runtime output
+- `question_expectations.json` — config, not runtime output
+- `golden_brutal_output.json` — intentional CI baseline (future R4-C)
+
+**Regression harness is protected:** `tests/fixtures/tutor_snapshots/` has explicit `!`-negations in `.gitignore` as a safety net. This must never be excluded.
+
+---
+
 ## WHAT NOT TO TOUCH
 
 - Do not refactor `answer_builder.py` behavior-dense code without snapshots

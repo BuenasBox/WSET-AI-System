@@ -162,3 +162,78 @@ config.local.*
 # Windows
 # ----------------------------------------------------------------------------
 desktop.ini
+
+# ============================================================================
+# COGNITIVE / EPISTEMIC STATE — NEVER COMMIT
+# These are live machine-local cognitive objects. Committing them risks:
+# - cognitive leakage (learner state exposed in public repo)
+# - operational drift (stale LES imported in fresh sessions)
+# - false authority (snapshot of a session treated as canonical truth)
+# - accidental Vercel/CI deployment of learner-private data
+#
+# EXCEPTION: if you intentionally want to version a stable LES seed, do it
+# explicitly with `git add -f` and document the decision in CLAUDE.md.
+# ============================================================================
+
+# ----------------------------------------------------------------------------
+# Learner epistemic state (LES) and session artifacts
+# knowledge/nazareth/ is the active cognitive workspace — never auto-tracked.
+# ----------------------------------------------------------------------------
+knowledge/nazareth/
+
+# ----------------------------------------------------------------------------
+# Self-eval dynamic outputs
+# sample_questions.json and question_expectations.json ARE intentionally
+# versioned (they are config, not runtime output). Everything else is dynamic.
+# ----------------------------------------------------------------------------
+knowledge/self-eval/reports/
+knowledge/self-eval/generated/
+knowledge/self-eval/attempts/
+knowledge/self-eval/tmp/
+knowledge/self-eval/self_eval_summary*.md
+knowledge/self-eval/self_eval_results*.json
+
+# ----------------------------------------------------------------------------
+# Retrieval sandbox artifacts — derived outputs, not source knowledge
+# ----------------------------------------------------------------------------
+knowledge/retrieval-sandbox/*.json
+knowledge/retrieval-sandbox/*.md
+
+# ----------------------------------------------------------------------------
+# JSONL and snapshot stream files — always machine-local pipeline outputs
+# ----------------------------------------------------------------------------
+*.jsonl
+*.snap
+
+# ============================================================================
+# TOOLING — Agent / Vercel / Node
+# ============================================================================
+
+# ----------------------------------------------------------------------------
+# Claude / agent tooling
+# ----------------------------------------------------------------------------
+.claude/
+.skills/
+
+# ----------------------------------------------------------------------------
+# Node / npm / Vercel
+# ----------------------------------------------------------------------------
+node_modules/
+npm-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+.next/
+.vercel/
+.turbo/
+out/
+
+# ============================================================================
+# REGRESSION HARNESS PROTECTION
+# tests/fixtures/tutor_snapshots/ is the regression guard — it MUST stay in
+# git. The negation below is a safety net in case a future glob rule would
+# accidentally catch it. Do not remove this block.
+# ============================================================================
+!tests/
+!tests/fixtures/
+!tests/fixtures/tutor_snapshots/
+!tests/fixtures/tutor_snapshots/**
