@@ -1,5 +1,18 @@
 # WSET AI System
 
+## Contributing — Documentation Convention
+
+**No binary documents in the repository.** PDFs, Word files (`.docx`), Excel (`.xlsx`), and PowerPoint (`.pptx`) are blocked by `.gitignore`. Before committing any reference material or documentation, convert it to Markdown first using [markitdown](https://github.com/microsoft/markitdown):
+
+```bash
+markitdown source.pdf > knowledge/official-wset/study-guide/wset_markdown/output.md
+markitdown source.docx > docs/output.md
+```
+
+The `.md` file is what gets committed. The original binary stays local only.
+
+---
+
 ## YouTube Transcription Ingestion Pipeline
 
 Initial scaffold location:

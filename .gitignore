@@ -58,8 +58,26 @@ dist/
 *.egg-info/
 
 # ----------------------------------------------------------------------------
+# Binary document formats — DO NOT COMMIT
+# All documentation must be converted to .md using markitdown before committing.
+# Run: markitdown <file> > output.md
+# This applies project-wide — no PDFs, Word, Excel, or PowerPoint in the repo.
+# ----------------------------------------------------------------------------
+*.pdf
+*.doc
+*.docx
+*.xls
+*.xlsx
+*.ppt
+*.pptx
+*.odt
+*.ods
+*.odp
+
+# ----------------------------------------------------------------------------
 # Large local-only study materials
 # DO NOT PUSH OFFICIAL WSET PDFs OR LARGE BOOKS TO GITHUB
+# (covered by the global *.pdf rule above — kept for explicitness)
 # ----------------------------------------------------------------------------
 knowledge/book/*.pdf
 knowledge/book/**/*.pdf
