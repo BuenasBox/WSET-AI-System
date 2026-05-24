@@ -1,0 +1,17 @@
+{
+  "schema_version": "golden_brutal_output_v1",
+  "generated_at_commit": "batch-c-complete",
+  "questions_attempted": 25,
+  "strictness": "hard",
+  "failure_labels": {},
+  "retrieval_weaknesses": {
+    "missing_keyword_support": 5
+  },
+  "causal_chains_missing": {},
+  "misconceptions_flagged": {},
+  "sat_weakness_question_ids": [],
+  "retrieval_gap_question_ids": [],
+  "notes": {
+    "missing_keyword_support": "Known pre-existing weakness (5 occurrences). Tracked as informational baseline — not a hard regression gate."
+  }
+}

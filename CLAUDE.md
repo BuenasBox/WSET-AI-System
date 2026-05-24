@@ -79,10 +79,11 @@ Questions loaded from `knowledge/question-bank/structured/` → raw XLSX if avai
 
 ## CURRENT TESTING STATUS
 
-- Test count: **238** via `python -m unittest discover -s tests -v`
-- All 238 pass locally. (`pytest` not installed in active venv — use `python -m unittest`)
+- Test count: **262** via `python -m unittest discover -s tests -v` (255 regular + 7 slow, skipped by default)
+- All 262 pass locally. (`pytest` not installed in active venv — use `python -m unittest`)
+- Slow golden baseline: `RUN_SLOW_TESTS=1 python -m unittest tests.test_golden_self_eval -v` → 7/7 OK
 - Brutal self-eval: 25 questions, no failure labels, no retrieval gaps, no SAT weaknesses.
-- Known retrieval weakness: `missing_keyword_support` count = 5.
+- Known retrieval weakness: `missing_keyword_support` count = 5 (frozen in golden baseline).
 - Snapshots: green for all 25 fixtures.
 
 ---
@@ -92,98 +93,52 @@ Questions loaded from `knowledge/question-bank/structured/` → raw XLSX if avai
 Plan document: `docs/backend_stability_remediation_plan.md`
 Workflow: Claude plans/reviews/writes prompts → Codex implements → Claude verifies → commit only when green.
 
-### Completed batches
+### ALL BATCHES COMPLETE ✅
 
-**Batch A — R1-C (question runner config extraction)**
-- `knowledge/self-eval/sample_questions.json` — 5 sample questions extracted
-- `knowledge/self-eval/question_expectations.json` — expectation templates extracted
-- `question_runner.py` updated to load both from JSON via `lru_cache`
-- `tests/test_question_runner_expectations.py` added (5 sample questions × non-empty expectations)
-- Fixed: `SELF_EVAL_DIR` import was missing; `SELF_SAMPLE_ACIDITY_01` needed bidirectional acidity pattern in expectations
-- Result: 236 → 238 tests green, brutal self-eval `{}`
+**Batch A — R1-C** (question runner config extraction) ✅
+- `knowledge/self-eval/sample_questions.json`, `question_expectations.json` extracted
+- `tests/test_question_runner_expectations.py` added
+- Result: 236 → 238 tests
 
-**Batch B — R1-A, R1-B, R1-D + R2-A, R2-B, R2-C**
-- `SAT_EVALUATION_TERMS` frozenset added to `tools/constants.py`
-- `answer_builder.py` detection-context occurrences replaced with `SAT_EVALUATION_TERMS` membership checks
-- `knowledge/config/retrieval_config.json` created with `PRIORITY_BOOSTS` and `SCORE_WEIGHTS`
-- `knowledge/config/explanation_priority_config.json` created with `SEVERITY_WEIGHT` and `DEPTH_TO_STYLE`
-- `tools/constants.py` — `tokenize_term()` Unicode-aware tokenizer added
-- `tools/orchestrator/protocols.py` — `AnswerBuilderProtocol`, `RetrievalProtocol`, `LearnerStateProtocol`, `ScaffoldingProtocol`
-- `evaluation_reporter.py` — explicit `ImportError` for `les_reconciler` (B-01 fixed)
-- `tutor_retrieval_sandbox.py` — `_tokens()` wraps `tokenize_term()`
-- `explanation_priority.py` — reuses `tokenize_term()`
-- Tests added: `test_retrieval_config.py`, `test_constants.py`
-- Result: 238 tests green, brutal self-eval `{}`
+**Batch B — R1-A, R1-B, R1-D + R2-A, R2-B, R2-C** ✅
+- `SAT_EVALUATION_TERMS` in `tools/constants.py`; `tokenize_term()` added
+- `knowledge/config/retrieval_config.json`, `explanation_priority_config.json` created
+- `tools/orchestrator/protocols.py` — typed protocol interfaces
+- `evaluation_reporter.py` — explicit `ImportError` for `les_reconciler`
+- `tests/test_retrieval_config.py`, `test_constants.py` added
+- Result: 238 tests
 
-**Batch C (in progress) — R3-A: data-driven topic dispatch in `answer_builder.py`**
+**Batch C — R3-A (data-driven topic dispatch) + R3-B (score helpers)** ✅
+- `knowledge/answer_patterns.json` (41 entries, bilingual, sentinel `__no_cross_language_pattern__`)
+- `answer_builder.py`: all 5 dispatch functions data-driven (`_normal_direct_answer`, `_cause_effect_line`, `_exam_line`, `_mini_practice`, `_official_idea_from_text`)
+- `score_chunk_for_query()` decomposed into 5 named helpers: `_score_lexical_overlap`, `_score_term_and_concept_matches`, `_score_boost_signals`, `_aggregate_chunk_score`, `_build_score_breakdown`. Orchestrator body ≤20 lines of logic.
+- `tests/test_answer_patterns_schema.py` added (8 schema tests)
+- Result: 238 → 246 tests
 
-`knowledge/answer_patterns.json` created with full topic dispatch table. Schema per entry:
-```json
-{
-  "topic_slug": "...",
-  "patterns_es": ["..."],
-  "patterns_en": ["__no_cross_language_pattern__"],
-  "normal_answer": "...",
-  "cause_effect": "...",
-  "exam_formulation": "...",
-  "mini_practice_prompt": "...",
-  "official_idea_hint": "..."
-}
-```
-Null fields are skipped by the corresponding function's lookup loop. Use `"__no_cross_language_pattern__"` sentinel for entries that only apply in one language.
+**Batch D — R4-A, R4-B, R4-C** ✅
+- `tests/test_regression_r4a.py` — 9 regression tests (Tokaji + forced_causal_chains)
+- `knowledge/self-eval/golden_brutal_output.json` — frozen CI baseline
+- `tests/test_golden_self_eval.py` — 7 slow golden tests (guard: `RUN_SLOW_TESTS=1`)
+- Result: 246 → 262 tests (255 regular + 7 slow)
 
-Bidirectional patterns required: Spanish word order varies — always include both directions in `patterns_es`.
+### Pending tasks
 
-`_load_answer_patterns()` + `_match_pattern()` added to `answer_builder.py`.
+1. **`tests/test_score_components.py`** — unit tests for each of the 5 `score_chunk_for_query` helpers in isolation (from original R3-B plan). Verification: 262+ tests, brutal self-eval `{}`.
 
-Sub-steps completed in R3-A:
-- R3-A-1: `knowledge/answer_patterns.json` created ✅
-- R3-A-2: `_load_answer_patterns()` + `_match_pattern()` added ✅
-- R3-A-3: `_normal_direct_answer()` refactored ✅ (fixed bidirectional patterns for Q7 oxidative, Q23 sparkling)
-- R3-A-4: `_cause_effect_line()` refactored ✅
-- R3-A-5: `_exam_line()` refactored ✅
-
-**R3-A-6: `_mini_practice()` — BLOCKED, reverted, fix identified, NOT YET applied**
-
-Root cause: Q11 (`¿Cuál de los siguientes climas se asocia comúnmente con una alta acidez en los vinos blancos?`) needs mini practice `"Reescribe esta frase: 'high acidity significa baja calidad', usando balance y estilo del vino."` — but adding `"acidez"` to the existing `acidity_quality_es` entry causes `_exam_line()` (already refactored) to also match and return the wrong exam_formulation for Q11.
-
-**Correct fix (ready to send to Codex):**
-Add a NEW entry to `knowledge/answer_patterns.json` with `topic_slug: "acidity_mini_es"`, `patterns_es: ["acidez"]`, ALL fields null except `mini_practice_prompt`. This way `_exam_line()` matches but skips (null), `_mini_practice()` matches and returns.
-
-```json
-{
-  "topic_slug": "acidity_mini_es",
-  "patterns_es": ["acidez"],
-  "patterns_en": ["__no_cross_language_pattern__"],
-  "normal_answer": null,
-  "cause_effect": null,
-  "exam_formulation": null,
-  "mini_practice_prompt": "Reescribe esta frase: 'high acidity significa baja calidad', usando balance y estilo del vino.",
-  "official_idea_hint": null
-}
-```
-
-State after last Codex run: 238 tests green, brutal self-eval `{}`, `_mini_practice()` refactor reverted.
-
-### Pending tasks (in order)
-
-1. **R3-A-6** — Apply `acidity_mini_es` entry + refactor `_mini_practice()`. Verification: 238+ tests, snapshot Q11 passes, brutal self-eval `{}`.
-2. **R3-A-7** — Refactor `_official_idea_from_text()` using `"official_idea_hint"` field. Same verification gate.
-3. **R3-A-8** — Create `tests/test_answer_patterns_schema.py`: every topic slug has ES+EN patterns, all 5 response fields populated (null is allowed per-field, but structure must be valid).
-4. **R3-B** — Decompose `score_chunk_for_query()` into named helpers (requires `retrieval_config.json` from R1-B, already done). Target: ≤30 line orchestrator body.
-5. **Commit Batch C** — after all above green.
-6. **Batch D: R4-A** — regression tests for Tokaji (must not trigger `weak_exam_register`) and `forced_causal_chains` (must not produce `shallow_retrieval=True`). Tests only — no behavior changes.
-7. **Batch D: R4-B** — `tests/test_answer_patterns_schema.py` (may overlap with R3-A-8).
-8. **Batch D: R4-C** — golden output CI baseline (`knowledge/self-eval/golden_brutal_output.json` + `tests/test_golden_self_eval.py`, marked `@pytest.mark.slow`).
+All other items in `docs/backend_stability_remediation_plan.md` are either complete or explicitly deferred to post-frontend stabilization (see "Items Explicitly Out of Scope" section).
 
 ---
 
 ## VERIFICATION GATE PROTOCOL
 
-After every single function refactor in R3-A, before touching the next:
+After every code change:
 ```
-python -m unittest discover -s tests -v   → must stay at 238+ passing
+python -m unittest discover -s tests -v   → must stay at 262+ passing
 brutal self-eval                          → must stay {}
+```
+Slow golden suite (only when touching self-eval pipeline):
+```
+$env:RUN_SLOW_TESTS=1; python -m unittest tests.test_golden_self_eval -v
 ```
 Any regression = rollback that sub-step before proceeding.
 
@@ -237,18 +192,20 @@ The following are **machine-local cognitive objects** and must NEVER be committe
 
 ## REPO STATUS (as of last session)
 
-Latest commit: `06bf369 chore: block binary doc formats globally; add markitdown convention`
+Latest commits (session 2026-05-24):
+- `feat(batch-c): R3-A data-driven topic dispatch in answer_builder; add schema tests`
+- `refactor(batch-c): decompose score_chunk_for_query into named helpers (R3-B)`
+- `feat(batch-d): R4-A regression tests (Tokaji + causal chains); R4-C golden CI baseline`
 
-Dirty worktree:
-- `.gitignore`, `README.md` — binary doc rules added (uncommitted)
-- `knowledge/nazareth/epistemic_state.json`, `session_staging.json` — modified locally
-- `knowledge/question-bank/raw/WSET3_Banco_Maestro_V9.xlsx` — deleted from git index (git rm --cached done)
-- `.claude/` — untracked
+Dirty worktree (not committed — runtime / local only):
+- `knowledge/nazareth/epistemic_state.json`, `session_staging.json` — modified locally (machine-local cognitive objects, never commit)
+- `knowledge/self-eval/attempts/` — runtime self-eval outputs (gitignored)
 
-Recommended next commit after R3-A-6 fix is confirmed green:
+Pending commit (next session):
 ```
-git add .gitignore README.md CLAUDE.md
-git commit -m "docs: add CLAUDE.md project memory; finalize binary doc gitignore"
+git add CLAUDE.md tests/test_score_components.py
+git commit -m "docs: update CLAUDE.md to completed plan state; add R3-B score component tests"
+git push
 ```
 
 ---
