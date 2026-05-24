@@ -1,6 +1,6 @@
 {
   "query": "How does cool climate affect acidity?",
-  "generated_at": "2026-05-20T21:14:28+00:00",
+  "generated_at": "2026-05-24T17:47:47+00:00",
   "governance_filter_applied": true,
   "query_analysis": {
     "query_intent": "cause_effect_explanation",
