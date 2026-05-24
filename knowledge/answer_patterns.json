@@ -592,5 +592,19 @@
     "exam_formulation": null,
     "mini_practice_prompt": null,
     "official_idea_hint": "el material oficial distingue crianza biológica y oxidativa en Jerez"
+  },
+  {
+    "topic_slug": "acidity_mini_es",
+    "patterns_es": [
+      "acidez"
+    ],
+    "patterns_en": [
+      "__no_cross_language_pattern__"
+    ],
+    "normal_answer": null,
+    "cause_effect": null,
+    "exam_formulation": null,
+    "mini_practice_prompt": "Reescribe esta frase: 'high acidity significa baja calidad', usando balance y estilo del vino.",
+    "official_idea_hint": null
   }
 ]

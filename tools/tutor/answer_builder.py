@@ -840,8 +840,16 @@ def _wset_framing_line(query: str, language: str, corrected: str, ideas: list[di
 
 
 def _official_idea_from_text(text: str, package: dict[str, Any]) -> str:  # noqa: C901
+    query = str(package.get("student_query") or "")
+    for entry in _load_answer_patterns():
+        hint = entry.get("official_idea_hint")
+        if hint is None:
+            continue
+        if _match_pattern(query, entry.get("patterns_es", [])) or _match_pattern(query, entry.get("patterns_en", [])):
+            return str(hint)
+
     lowered = text.lower()
-    query = str(package.get("student_query") or "").lower()
+    query = query.lower()
     if "cool" in query and "acid" in query:
         return "el material oficial relaciona clima/growing environment con maduración y retención de acidez"
     if "tannin" in query:
@@ -905,6 +913,11 @@ def _exam_line(query: str, language: str, ideas: list[dict[str, str]]) -> str:  
 
 
 def _mini_practice(query: str, language: str) -> str:  # noqa: C901
+    pattern_key = "patterns_es" if language == "es" else "patterns_en"
+    for entry in _load_answer_patterns():
+        if _match_pattern(query, entry.get(pattern_key, [])) and entry.get("mini_practice_prompt") is not None:
+            return str(entry["mini_practice_prompt"])
+
     lowered = query.lower()
     if language == "en":
         if "tannin" in lowered:
