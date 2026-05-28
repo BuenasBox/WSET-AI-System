@@ -28,7 +28,7 @@ def _minimal_query_analysis(intent: str = "explain") -> dict:
     return {
         "query_tokens": ["tannin", "structure"],
         "expanded_query_tokens": ["tannin", "structure", "tanino"],
-        "matched_terms": ["tannin"],
+        "matched_terms": [{"canonical_term": "tannin", "category": ""}],
         "matched_concepts": [],
         "matched_causal_chains": [],
         "matched_relationships": [],
