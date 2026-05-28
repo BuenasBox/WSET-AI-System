@@ -79,7 +79,7 @@ Questions loaded from `knowledge/question-bank/structured/` → raw XLSX if avai
 
 ## CURRENT TESTING STATUS
 
-- Test count: **262** via `python -m unittest discover -s tests -v` (255 regular + 7 slow, skipped by default)
+- Test count: **298** via `python -m unittest discover -s tests -v` (291 regular + 7 slow, skipped by default)
 - All 262 pass locally. (`pytest` not installed in active venv — use `python -m unittest`)
 - Slow golden baseline: `RUN_SLOW_TESTS=1 python -m unittest tests.test_golden_self_eval -v` → 7/7 OK
 - Brutal self-eval: 25 questions, no failure labels, no retrieval gaps, no SAT weaknesses.
@@ -121,11 +121,14 @@ Workflow: Claude plans/reviews/writes prompts → Codex implements → Claude ve
 - `tests/test_golden_self_eval.py` — 7 slow golden tests (guard: `RUN_SLOW_TESTS=1`)
 - Result: 246 → 262 tests (255 regular + 7 slow)
 
+**Batch E — R3-B score component tests** ✅
+- `tests/test_score_components.py` — 36 unit tests for all 5 `score_chunk_for_query` helpers in isolation
+- Fixed fixture bug: `matched_terms` in query_analysis must be `[{"canonical_term": ..., "category": ...}]`, not strings
+- Result: 262 → 298 tests (291 regular + 7 slow)
+
 ### Pending tasks
 
-1. **`tests/test_score_components.py`** — unit tests for each of the 5 `score_chunk_for_query` helpers in isolation (from original R3-B plan). Verification: 262+ tests, brutal self-eval `{}`.
-
-All other items in `docs/backend_stability_remediation_plan.md` are either complete or explicitly deferred to post-frontend stabilization (see "Items Explicitly Out of Scope" section).
+**None.** All items in `docs/backend_stability_remediation_plan.md` are either complete or explicitly deferred to post-frontend stabilization (see "Items Explicitly Out of Scope" section).
 
 ---
 
@@ -192,7 +195,8 @@ The following are **machine-local cognitive objects** and must NEVER be committe
 
 ## REPO STATUS (as of last session)
 
-Latest commits (session 2026-05-24):
+Latest commits (session 2026-05-28):
+- `fix(test): correct matched_terms fixture format in test_score_components (dicts not strings)`
 - `feat(batch-c): R3-A data-driven topic dispatch in answer_builder; add schema tests`
 - `refactor(batch-c): decompose score_chunk_for_query into named helpers (R3-B)`
 - `feat(batch-d): R4-A regression tests (Tokaji + causal chains); R4-C golden CI baseline`
@@ -200,13 +204,7 @@ Latest commits (session 2026-05-24):
 Dirty worktree (not committed — runtime / local only):
 - `knowledge/nazareth/epistemic_state.json`, `session_staging.json` — modified locally (machine-local cognitive objects, never commit)
 - `knowledge/self-eval/attempts/` — runtime self-eval outputs (gitignored)
-
-Pending commit (next session):
-```
-git add CLAUDE.md tests/test_score_components.py
-git commit -m "docs: update CLAUDE.md to completed plan state; add R3-B score component tests"
-git push
-```
+- `CLAUDE.md` — updated to reflect completed plan state (commit when convenient)
 
 ---
 
