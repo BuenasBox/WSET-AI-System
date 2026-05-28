@@ -82,8 +82,8 @@ Questions loaded from `knowledge/question-bank/structured/` → raw XLSX if avai
 
 ## CURRENT TESTING STATUS
 
-- Test count: **386** via `python -m unittest discover -s tests -v` (379 regular + 7 slow, skipped by default)
-- All 386 pass locally. (`pytest` not installed in active venv — use `python -m unittest`)
+- Test count: **412** via `python -m unittest discover -s tests -v` (405 regular + 7 slow, skipped by default)
+- All 412 pass locally. (`pytest` not installed in active venv — use `python -m unittest`)
 - Slow golden baseline: `RUN_SLOW_TESTS=1 python -m unittest tests.test_golden_self_eval -v` → 7/7 OK
 - Brutal self-eval: 25 questions, no failure labels, no retrieval gaps, no SAT weaknesses.
 - Known retrieval weakness: `missing_keyword_support` count = 5 (frozen in golden baseline).
@@ -144,6 +144,12 @@ Workflow: Claude plans/reviews/writes prompts → Codex implements → Claude ve
 **Phase 1B.5 — Semantic contract hardening** ✅
 - `docs/STRATEGIC_PLANNER_CONTRACT.md` — authority model, signal ownership, depth semantics, migration path for `strategic_planner` vs `_pedagogical_priority_boost()`. Key finding: `_pedagogical_priority_boost()` does NOT influence retrieval (retrieval sandbox never receives it); it only affects Tutor rendering via `force_deep_explanation`. Adapter is fully inert at runtime today (skills={}). No code changes.
 
+**Batch I — Phase 2A session cognitive ledger** ✅
+- `tools/orchestrator/session_ledger.py` — new write-only telemetry module; `append_to_ledger()` records structured signals (route, review_topics, misconceptions_triggered, causal_chains_seen, sat_drill_needed, difficulty_progression, planning_confidence, cold_start); bounded to last 100 sessions; governance-clean; no raw queries/answers/chunks
+- `tools/orchestrator/orchestrator.py` — ledger appended after staging write; ledger_path derived from `les_path.parent` so tests automatically use temp dirs
+- `tests/test_session_ledger.py` — 26 tests across 10 classes covering all 14 required tests
+- Result: 386 → 412 tests (405 regular + 7 slow)
+
 **Batch H — Phase 1C strategic plan persistence** ✅
 - `tools/orchestrator/orchestrator.py` — `staging` dict extended with top-level `"strategic_plan"` key (write-only observation snapshot; never read back by planner)
 - `tests/test_strategic_plan_persistence.py` — 17 tests across 7 classes; verifies top-level persistence, JSON round-trip, cold-start/warm-start correctness, governance cleanliness, no-readback guarantee, and planner determinism regardless of staging contents
@@ -165,7 +171,7 @@ Workflow: Claude plans/reviews/writes prompts → Codex implements → Claude ve
 
 After every code change:
 ```
-python -m unittest discover -s tests -v   → must stay at 386+ passing
+python -m unittest discover -s tests -v   → must stay at 412+ passing
 brutal self-eval                          → must stay {}
 ```
 Slow golden suite (only when touching self-eval pipeline):
@@ -225,7 +231,8 @@ The following are **machine-local cognitive objects** and must NEVER be committe
 ## REPO STATUS (as of last session)
 
 Latest commits (session 2026-05-28):
-- `feat(phase-1c): persist strategic_plan to session_staging; add persistence tests` ← next commit
+- `feat(phase-2a): add session cognitive ledger; write-only telemetry` ← next commit
+- `feat(phase-1c): persist strategic_plan to session_staging; add persistence tests`
 - `docs(phase-1b5): add STRATEGIC_PLANNER_CONTRACT.md; semantic contract hardening`
 - `feat(phase-1b): wire strategic_planner into orchestrator; add integration tests`
 - `feat(phase-1a): add strategic_planner module and tests in isolation`

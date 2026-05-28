@@ -33,6 +33,7 @@ from .misconception_prepass import (
     detect_misconception,
     load_misconception_nodes,
 )
+from .session_ledger import append_to_ledger
 from .strategic_planner import run_strategic_planner
 
 if TYPE_CHECKING:
@@ -194,6 +195,12 @@ def run_orchestrator(
         "strategic_plan": strategic_plan,
     }
     write_session_staging(staging, staging_path)
+    # Phase 2A: append to cognitive ledger — write-only telemetry.
+    # Ledger lives alongside the LES in les_path.parent so temp dirs in tests
+    # automatically get a temp ledger without requiring a new parameter.
+    # The ledger is NEVER read back by the planner, retrieval, or Tutor.
+    ledger_path = les_path.parent / "session_ledger.json"
+    append_to_ledger(result, ledger_path)
     result["session_staging_path"] = staging_path.as_posix()
     return result
 
