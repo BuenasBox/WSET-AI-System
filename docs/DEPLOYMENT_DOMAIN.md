@@ -3,6 +3,7 @@
 **Status:** Reserved for future frontend testing.
 **Frontend status:** Not active.
 **Deployment status:** Not active.
+**DNS delegation status:** Active in Cloudflare.
 **Temporary domain:** `epistemiclab.dpdns.org`
 
 This document records the temporary domain plan for the project without starting
@@ -19,8 +20,9 @@ that backend governance gates have been cleared.
 - The repository has no active frontend application.
 - The repository has no active web deployment pipeline.
 - The intended temporary custom domain is `epistemiclab.dpdns.org`.
-- No custom domain is currently bound to an active deployment.
-- No DNS records are tracked in this repository.
+- The domain is delegated from DigitalPlat to Cloudflare nameservers.
+- No custom domain is currently bound to an active GitHub Pages deployment.
+- DNS records are managed in Cloudflare and documented here for traceability.
 - DNS provider API keys must not be committed to the repository.
 
 ## Intended GitHub Pages Setup
@@ -106,7 +108,12 @@ zone for any existing production site.
 
 3. Choose the free plan unless a paid feature is explicitly needed.
 4. Skip importing records if Cloudflare does not discover any existing records.
-5. Copy the two Cloudflare nameservers assigned to this new zone.
+5. Copy the two Cloudflare nameservers assigned to this new zone:
+
+   ```text
+   maria.ns.cloudflare.com
+   olof.ns.cloudflare.com
+   ```
 6. In DigitalPlat, update only `epistemiclab.dpdns.org` to use those two
    Cloudflare nameservers.
 7. Return to Cloudflare and wait for the zone to become active.
@@ -146,6 +153,30 @@ Safety checks before changing DigitalPlat nameservers:
   to this new zone.
 - Do not use the nameservers from an unrelated existing Cloudflare zone unless
   Cloudflare explicitly assigned the same pair to `epistemiclab.dpdns.org`.
+
+Assigned Cloudflare nameservers for `epistemiclab.dpdns.org`:
+
+```text
+maria.ns.cloudflare.com
+olof.ns.cloudflare.com
+```
+
+DigitalPlat API verification returned `success: true`, and public DNS
+resolution confirmed these nameservers for `epistemiclab.dpdns.org`.
+
+Cloudflare CNAME flattening is active at the zone apex. Public `A` resolution
+for `epistemiclab.dpdns.org` returns the GitHub Pages address set:
+
+```text
+185.199.108.153
+185.199.109.153
+185.199.110.153
+185.199.111.153
+```
+
+Public `AAAA` resolution also returns the GitHub Pages IPv6 address set. A
+direct public `CNAME` query may return the zone SOA instead of a CNAME because
+Cloudflare flattens apex CNAME records.
 
 ## Optional DigitalPlat API Checks
 
