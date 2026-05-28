@@ -188,6 +188,10 @@ def run_orchestrator(
         "latest_session": result,
         "latest_context_package_path": package_paths["latest"],
         "governance": governance,
+        # Phase 1C: top-level observation snapshot — write-only, never read back.
+        # The planner re-derives from fresh LES each session; this persisted copy
+        # is for session-to-session observability and future Phase 2 ledger work only.
+        "strategic_plan": strategic_plan,
     }
     write_session_staging(staging, staging_path)
     result["session_staging_path"] = staging_path.as_posix()

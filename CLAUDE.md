@@ -82,8 +82,8 @@ Questions loaded from `knowledge/question-bank/structured/` → raw XLSX if avai
 
 ## CURRENT TESTING STATUS
 
-- Test count: **369** via `python -m unittest discover -s tests -v` (362 regular + 7 slow, skipped by default)
-- All 369 pass locally. (`pytest` not installed in active venv — use `python -m unittest`)
+- Test count: **386** via `python -m unittest discover -s tests -v` (379 regular + 7 slow, skipped by default)
+- All 386 pass locally. (`pytest` not installed in active venv — use `python -m unittest`)
 - Slow golden baseline: `RUN_SLOW_TESTS=1 python -m unittest tests.test_golden_self_eval -v` → 7/7 OK
 - Brutal self-eval: 25 questions, no failure labels, no retrieval gaps, no SAT weaknesses.
 - Known retrieval weakness: `missing_keyword_support` count = 5 (frozen in golden baseline).
@@ -141,12 +141,19 @@ Workflow: Claude plans/reviews/writes prompts → Codex implements → Claude ve
 - Zero snapshot drift (35/35 snapshots unchanged)
 - Result: 347 → 369 tests (362 regular + 7 slow)
 
+**Phase 1B.5 — Semantic contract hardening** ✅
+- `docs/STRATEGIC_PLANNER_CONTRACT.md` — authority model, signal ownership, depth semantics, migration path for `strategic_planner` vs `_pedagogical_priority_boost()`. Key finding: `_pedagogical_priority_boost()` does NOT influence retrieval (retrieval sandbox never receives it); it only affects Tutor rendering via `force_deep_explanation`. Adapter is fully inert at runtime today (skills={}). No code changes.
+
+**Batch H — Phase 1C strategic plan persistence** ✅
+- `tools/orchestrator/orchestrator.py` — `staging` dict extended with top-level `"strategic_plan"` key (write-only observation snapshot; never read back by planner)
+- `tests/test_strategic_plan_persistence.py` — 17 tests across 7 classes; verifies top-level persistence, JSON round-trip, cold-start/warm-start correctness, governance cleanliness, no-readback guarantee, and planner determinism regardless of staging contents
+- Result: 369 → 386 tests (379 regular + 7 slow)
+
 ### Pending tasks
 
 **None from remediation plan.** All items in `docs/backend_stability_remediation_plan.md` are complete or deferred.
 
 **Next phases:**
-- **Phase 1C** — Persist `strategic_plan` into `session_staging.json` (additive key only; plan must re-derive from fresh LES each session — persisted copy is for observability only). Pre-condition: read `docs/STRATEGIC_PLANNER_CONTRACT.md`.
 - **Phase 2** — Session cognitive ledger.
 - **Phase 3** — WSET L3 topic sequence to populate `recommended_next_topics`.
 
@@ -158,7 +165,7 @@ Workflow: Claude plans/reviews/writes prompts → Codex implements → Claude ve
 
 After every code change:
 ```
-python -m unittest discover -s tests -v   → must stay at 369+ passing
+python -m unittest discover -s tests -v   → must stay at 386+ passing
 brutal self-eval                          → must stay {}
 ```
 Slow golden suite (only when touching self-eval pipeline):
@@ -218,7 +225,8 @@ The following are **machine-local cognitive objects** and must NEVER be committe
 ## REPO STATUS (as of last session)
 
 Latest commits (session 2026-05-28):
-- `docs(phase-1b5): add STRATEGIC_PLANNER_CONTRACT.md; semantic contract hardening` ← next commit
+- `feat(phase-1c): persist strategic_plan to session_staging; add persistence tests` ← next commit
+- `docs(phase-1b5): add STRATEGIC_PLANNER_CONTRACT.md; semantic contract hardening`
 - `feat(phase-1b): wire strategic_planner into orchestrator; add integration tests`
 - `feat(phase-1a): add strategic_planner module and tests in isolation`
 - `fix(test): correct matched_terms fixture format in test_score_components (dicts not strings)`
