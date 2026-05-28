@@ -49,6 +49,9 @@ This system is deterministic. All outputs must be reproducible.
 ### Orchestrator
 `tools/orchestrator/orchestrator.py` — local cognitive loop: ensure learner files → load LES → run misconception pre-pass → route to `misconception_prepass` or `normal_tutor` → run retrieval → build retrieved context → thread matched causal chains into `forced_causal_chains` → write context packages → stage session. Currently a router, not a full strategic planner. Protocol typing: `tools/orchestrator/protocols.py`.
 
+### Strategic planner (Phase 1A — isolated)
+`tools/orchestrator/strategic_planner.py` — deterministic pedagogical planning module. Pure function over learner state signals (memory_summary + les_context + optional prepass_result). Returns structured plan dict: `recommended_next_topics`, `review_topics`, `avoid_topics`, `misconception_focus`, `causal_chain_focus`, `sat_drill_needed`, `difficulty_progression`, `planning_confidence`, `plan_generated_at`, `cold_start`. Zero imports from retrieval or answer_builder. Zero side effects. All thresholds are module-level constants. Phase 1B will wire it into `run_orchestrator()`.
+
 ### Learner / epistemic state
 `tools/orchestrator/learner_state.py` — LES defaults and session staging.
 `tools/orchestrator/les_reconciler.py` — reconciles self-eval feedback into LES.
@@ -79,8 +82,8 @@ Questions loaded from `knowledge/question-bank/structured/` → raw XLSX if avai
 
 ## CURRENT TESTING STATUS
 
-- Test count: **298** via `python -m unittest discover -s tests -v` (291 regular + 7 slow, skipped by default)
-- All 262 pass locally. (`pytest` not installed in active venv — use `python -m unittest`)
+- Test count: **347** via `python -m unittest discover -s tests -v` (340 regular + 7 slow, skipped by default)
+- All 347 pass locally. (`pytest` not installed in active venv — use `python -m unittest`)
 - Slow golden baseline: `RUN_SLOW_TESTS=1 python -m unittest tests.test_golden_self_eval -v` → 7/7 OK
 - Brutal self-eval: 25 questions, no failure labels, no retrieval gaps, no SAT weaknesses.
 - Known retrieval weakness: `missing_keyword_support` count = 5 (frozen in golden baseline).
@@ -126,9 +129,20 @@ Workflow: Claude plans/reviews/writes prompts → Codex implements → Claude ve
 - Fixed fixture bug: `matched_terms` in query_analysis must be `[{"canonical_term": ..., "category": ...}]`, not strings
 - Result: 262 → 298 tests (291 regular + 7 slow)
 
+**Batch F — Phase 1A strategic planner (isolated)** ✅
+- `tools/orchestrator/strategic_planner.py` — new deterministic planning module (side-effect-free, governance-clean, cold-start safe, import-isolated)
+- `tests/test_strategic_planner.py` — 49 tests across 10 classes; covers all 15 required tests + edge cases
+- `_pedagogical_priority_boost()` in orchestrator preserved unchanged (Phase 1B concern)
+- Result: 298 → 347 tests (340 regular + 7 slow)
+
 ### Pending tasks
 
-**None.** All items in `docs/backend_stability_remediation_plan.md` are either complete or explicitly deferred to post-frontend stabilization (see "Items Explicitly Out of Scope" section).
+**None from remediation plan.** All items in `docs/backend_stability_remediation_plan.md` are complete or deferred.
+
+**Next phase (not yet started):**
+- **Phase 1B** — Wire `run_strategic_planner()` into `run_orchestrator()`, add plan to context package output.
+- **Phase 2** — Session cognitive ledger.
+- **Phase 3** — WSET L3 topic sequence to populate `recommended_next_topics`.
 
 ---
 
@@ -136,7 +150,7 @@ Workflow: Claude plans/reviews/writes prompts → Codex implements → Claude ve
 
 After every code change:
 ```
-python -m unittest discover -s tests -v   → must stay at 262+ passing
+python -m unittest discover -s tests -v   → must stay at 347+ passing
 brutal self-eval                          → must stay {}
 ```
 Slow golden suite (only when touching self-eval pipeline):
@@ -196,6 +210,7 @@ The following are **machine-local cognitive objects** and must NEVER be committe
 ## REPO STATUS (as of last session)
 
 Latest commits (session 2026-05-28):
+- `feat(phase-1a): add strategic_planner module and tests in isolation` ← next commit
 - `fix(test): correct matched_terms fixture format in test_score_components (dicts not strings)`
 - `feat(batch-c): R3-A data-driven topic dispatch in answer_builder; add schema tests`
 - `refactor(batch-c): decompose score_chunk_for_query into named helpers (R3-B)`
@@ -204,7 +219,7 @@ Latest commits (session 2026-05-28):
 Dirty worktree (not committed — runtime / local only):
 - `knowledge/nazareth/epistemic_state.json`, `session_staging.json` — modified locally (machine-local cognitive objects, never commit)
 - `knowledge/self-eval/attempts/` — runtime self-eval outputs (gitignored)
-- `CLAUDE.md` — updated to reflect completed plan state (commit when convenient)
+- `CLAUDE.md` — updated for Phase 1A (commit with the planner files)
 
 ---
 
