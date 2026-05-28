@@ -33,6 +33,7 @@ from .misconception_prepass import (
     detect_misconception,
     load_misconception_nodes,
 )
+from .strategic_planner import run_strategic_planner
 
 if TYPE_CHECKING:
     from .protocols import (
@@ -67,6 +68,15 @@ def run_orchestrator(
     les_context = build_les_context(learner_state)
     pedagogical_boost = _pedagogical_priority_boost(les_context)
     prepass = detect_misconception(query, misconception_dir)
+    # Phase 1B: strategic planner — informational only, inert.
+    # Runs after LES + prepass so prepass_result is available.
+    # Output is NOT injected into context_package to guarantee zero
+    # impact on retrieval ranking, Tutor rendering, and snapshot outputs.
+    strategic_plan = run_strategic_planner(
+        memory_summary=les_context.get("pedagogical_memory"),
+        les_context=les_context,
+        prepass_result=prepass,
+    )
 
     if prepass["detected"]:
         decision = {
@@ -170,6 +180,7 @@ def run_orchestrator(
         "governance_flags": governance,
         "context_package": context_package,
         "context_package_paths": package_paths,
+        "strategic_plan": strategic_plan,
     }
     staging = {
         "schema_version": "minimal_brain_v2",
