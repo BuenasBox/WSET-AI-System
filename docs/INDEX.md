@@ -71,6 +71,7 @@ architecture or governance documentation.
 |------|--------|---------|-------|
 | `product-requirements.md` | 📖 Reference | Product requirements for the full WSET-AI-System | |
 | `roadmap.md` | 📖 Reference | Phase-by-phase project roadmap | |
+| `DEPLOYMENT_DOMAIN.md` | 📖 Reference | Temporary domain plan for future frontend testing; records activation checklist without enabling deployment | No active frontend or deployment exists yet. |
 | `folder_structure_audit.md` | ⚠️ Stale | Audit of folder structure from an early project phase | Does **not** reflect the current directory structure, which has grown substantially across Phases A, B, and C. Do not use as a reference for the current layout. See `knowledge/knowledge-map/manifests/knowledge_map_manifest.json` for the authoritative node inventory. |
 
 ---
