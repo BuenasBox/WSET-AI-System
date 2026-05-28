@@ -146,9 +146,11 @@ Workflow: Claude plans/reviews/writes prompts → Codex implements → Claude ve
 **None from remediation plan.** All items in `docs/backend_stability_remediation_plan.md` are complete or deferred.
 
 **Next phases:**
-- **Phase 1C** — Persist `strategic_plan` into `session_staging.json` for session-to-session continuity.
+- **Phase 1C** — Persist `strategic_plan` into `session_staging.json` (additive key only; plan must re-derive from fresh LES each session — persisted copy is for observability only). Pre-condition: read `docs/STRATEGIC_PLANNER_CONTRACT.md`.
 - **Phase 2** — Session cognitive ledger.
 - **Phase 3** — WSET L3 topic sequence to populate `recommended_next_topics`.
+
+**Semantic contract:** `docs/STRATEGIC_PLANNER_CONTRACT.md` — defines authority model, signal ownership, depth semantics, and migration path between `strategic_planner` and `_pedagogical_priority_boost()`. Read before touching either component.
 
 ---
 
@@ -216,7 +218,8 @@ The following are **machine-local cognitive objects** and must NEVER be committe
 ## REPO STATUS (as of last session)
 
 Latest commits (session 2026-05-28):
-- `feat(phase-1b): wire strategic_planner into orchestrator; add integration tests` ← next commit
+- `docs(phase-1b5): add STRATEGIC_PLANNER_CONTRACT.md; semantic contract hardening` ← next commit
+- `feat(phase-1b): wire strategic_planner into orchestrator; add integration tests`
 - `feat(phase-1a): add strategic_planner module and tests in isolation`
 - `fix(test): correct matched_terms fixture format in test_score_components (dicts not strings)`
 - `feat(batch-c): R3-A data-driven topic dispatch in answer_builder; add schema tests`
