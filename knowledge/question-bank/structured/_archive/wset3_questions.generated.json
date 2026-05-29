@@ -13467,35 +13467,12 @@
     "question_text": "Discute cómo el uso de prácticas sostenibles en el viñedo puede influir en el precio del vino y en su percepción comercial.",
     "question_type": "short_answer",
     "expected_topics": [
-      "RA1",
-      "sostenibilidad",
-      "precio",
-      "coste de producción",
-      "percepción comercial"
+      "RA1"
     ],
-    "expected_causal_links": [
-      "sostenibilidad -> coste -> precio",
-      "certificación -> diferenciación -> percepción"
-    ],
-    "expected_keywords": [
-      "sostenibilidad",
-      "sostenible",
-      "certificación",
-      "orgánico",
-      "biodinámico",
-      "coste",
-      "costo",
-      "precio",
-      "mano de obra",
-      "rendimiento",
-      "diferenciación",
-      "percepción",
-      "consumidor",
-      "mercado",
-      "valor"
-    ],
-    "expected_reasoning_type": "cause_effect",
-    "difficulty": "distinction",
+    "expected_causal_links": [],
+    "expected_keywords": [],
+    "expected_reasoning_type": "theory_foundation",
+    "difficulty": "intermediate",
     "source_type": "WSET3_RA1_Banco_Preguntas_TOTAL.xlsx | Abiertas",
     "safe_for_examiner": false,
     "options": {
@@ -13512,37 +13489,12 @@
     "question_text": "Justifica el uso de la fermentación maloláctica en la producción de ciertos estilos de vino blanco y cómo contribuye a la calidad final.",
     "question_type": "short_answer",
     "expected_topics": [
-      "RA1",
-      "fermentación maloláctica",
-      "vino blanco",
-      "estilo",
-      "calidad"
+      "RA1"
     ],
-    "expected_causal_links": [
-      "maloláctica -> acidez -> textura",
-      "diacetilo -> mantequilla -> complejidad"
-    ],
-    "expected_keywords": [
-      "fermentación maloláctica",
-      "maloláctica",
-      "ácido málico",
-      "ácido láctico",
-      "acidez",
-      "suave",
-      "suaviza",
-      "textura",
-      "cremosa",
-      "cremosidad",
-      "diacetilo",
-      "mantequilla",
-      "láctico",
-      "cuerpo",
-      "complejidad",
-      "calidad",
-      "estilo"
-    ],
-    "expected_reasoning_type": "cause_effect",
-    "difficulty": "distinction",
+    "expected_causal_links": [],
+    "expected_keywords": [],
+    "expected_reasoning_type": "theory_foundation",
+    "difficulty": "intermediate",
     "source_type": "WSET3_RA1_Banco_Preguntas_TOTAL.xlsx | Abiertas",
     "safe_for_examiner": false,
     "options": {
@@ -13559,36 +13511,11 @@
     "question_text": "Explica cómo la altitud puede influir en el estilo de un vino tinto.",
     "question_type": "short_answer",
     "expected_topics": [
-      "RA1",
-      "altitud",
-      "clima",
-      "maduración",
-      "estilo de vino tinto"
+      "RA1"
     ],
-    "expected_causal_links": [
-      "altitud -> temperatura -> maduración",
-      "altitud -> rango diurno -> acidez",
-      "maduración -> azúcar -> alcohol"
-    ],
-    "expected_keywords": [
-      "altitud",
-      "altura",
-      "temperatura",
-      "frío",
-      "fresco",
-      "rango diurno",
-      "oscilación térmica",
-      "maduración",
-      "madura",
-      "lenta",
-      "despacio",
-      "acidez",
-      "azúcar",
-      "alcohol",
-      "estilo",
-      "frescura"
-    ],
-    "expected_reasoning_type": "cause_effect",
+    "expected_causal_links": [],
+    "expected_keywords": [],
+    "expected_reasoning_type": "theory_foundation",
     "difficulty": "intermediate",
     "source_type": "WSET3_RA1_Banco_Preguntas_Bloque2.xlsx | Preguntas_Abiertas",
     "safe_for_examiner": false,
@@ -13606,34 +13533,11 @@
     "question_text": "Explique cómo la orientación y la pendiente del viñedo pueden afectar la maduración de la uva.",
     "question_type": "short_answer",
     "expected_topics": [
-      "RA1",
-      "orientación",
-      "pendiente",
-      "exposición solar",
-      "maduración"
+      "RA1"
     ],
-    "expected_causal_links": [
-      "orientación -> exposición -> maduración",
-      "pendiente -> drenaje -> maduración"
-    ],
-    "expected_keywords": [
-      "orientación",
-      "pendiente",
-      "ladera",
-      "exposición",
-      "sol",
-      "solar",
-      "insolación",
-      "drenaje",
-      "agua",
-      "maduración",
-      "madura",
-      "azúcar",
-      "acidez",
-      "sombra",
-      "temperatura"
-    ],
-    "expected_reasoning_type": "cause_effect",
+    "expected_causal_links": [],
+    "expected_keywords": [],
+    "expected_reasoning_type": "theory_foundation",
     "difficulty": "intermediate",
     "source_type": "WSET3_RA1_Banco_Preguntas_Bloque8.xlsx | Desarrollo",
     "safe_for_examiner": false,
@@ -13651,36 +13555,11 @@
     "question_text": "Describa cómo las prácticas de manejo en la bodega pueden reducir el riesgo de oxidación en vinos blancos.",
     "question_type": "short_answer",
     "expected_topics": [
-      "RA1",
-      "oxidación",
-      "vino blanco",
-      "bodega",
-      "manejo del oxígeno"
+      "RA1"
     ],
-    "expected_causal_links": [
-      "oxígeno -> oxidación -> aromas",
-      "sulfuroso -> oxidación -> protección"
-    ],
-    "expected_keywords": [
-      "oxidación",
-      "oxígeno",
-      "proteger",
-      "protección",
-      "sulfuroso",
-      "SO2",
-      "inerte",
-      "gas inerte",
-      "temperatura",
-      "frío",
-      "prensado",
-      "depósito",
-      "aromas",
-      "fruta",
-      "frescura",
-      "color",
-      "pardeamiento"
-    ],
-    "expected_reasoning_type": "cause_effect",
+    "expected_causal_links": [],
+    "expected_keywords": [],
+    "expected_reasoning_type": "theory_foundation",
     "difficulty": "intermediate",
     "source_type": "WSET3_RA1_Banco_Preguntas_Bloque8.xlsx | Desarrollo",
     "safe_for_examiner": false,
@@ -13698,33 +13577,11 @@
     "question_text": "Explique la influencia de la elección de levaduras en el perfil sensorial del vino.",
     "question_type": "short_answer",
     "expected_topics": [
-      "RA1",
-      "levaduras",
-      "fermentación",
-      "aromas",
-      "perfil sensorial"
+      "RA1"
     ],
-    "expected_causal_links": [
-      "levadura -> fermentación -> aromas",
-      "levadura seleccionada -> control -> estilo"
-    ],
-    "expected_keywords": [
-      "levadura",
-      "levaduras",
-      "fermentación",
-      "aromas",
-      "ésteres",
-      "perfil sensorial",
-      "sensorial",
-      "levadura seleccionada",
-      "seleccionada",
-      "control",
-      "predecible",
-      "estilo",
-      "fruta",
-      "compuestos aromáticos"
-    ],
-    "expected_reasoning_type": "cause_effect",
+    "expected_causal_links": [],
+    "expected_keywords": [],
+    "expected_reasoning_type": "theory_foundation",
     "difficulty": "intermediate",
     "source_type": "WSET3_RA1_Banco_Preguntas_Bloque8.xlsx | Desarrollo",
     "safe_for_examiner": false,
@@ -13742,34 +13599,11 @@
     "question_text": "Analice el impacto del tipo de suelo en el estilo y la calidad del vino.",
     "question_type": "short_answer",
     "expected_topics": [
-      "RA1",
-      "suelo",
-      "drenaje",
-      "vigor",
-      "estilo",
-      "calidad"
+      "RA1"
     ],
-    "expected_causal_links": [
-      "suelo -> drenaje -> vigor",
-      "vigor -> rendimiento -> concentración"
-    ],
-    "expected_keywords": [
-      "suelo",
-      "drenaje",
-      "agua",
-      "retención",
-      "nutrientes",
-      "vigor",
-      "rendimiento",
-      "concentración",
-      "maduración",
-      "estilo",
-      "calidad",
-      "arcilla",
-      "grava",
-      "arena"
-    ],
-    "expected_reasoning_type": "cause_effect",
+    "expected_causal_links": [],
+    "expected_keywords": [],
+    "expected_reasoning_type": "theory_foundation",
     "difficulty": "intermediate",
     "source_type": "WSET3_RA1_Banco_Preguntas_Bloque8.xlsx | Desarrollo",
     "safe_for_examiner": false,
@@ -13787,39 +13621,12 @@
     "question_text": "Expón cómo la elección del tipo de roble (americano vs francés) puede afectar el perfil sensorial y la percepción de calidad en vinos tintos.",
     "question_type": "short_answer",
     "expected_topics": [
-      "RA1",
-      "roble",
-      "roble americano",
-      "roble francés",
-      "perfil sensorial",
-      "calidad"
+      "RA1"
     ],
-    "expected_causal_links": [
-      "roble americano -> vainilla -> perfil",
-      "roble francés -> especias -> integración",
-      "roble nuevo -> coste -> calidad"
-    ],
-    "expected_keywords": [
-      "roble",
-      "americano",
-      "francés",
-      "vainilla",
-      "coco",
-      "dulce",
-      "especias",
-      "cedro",
-      "tostado",
-      "tanino",
-      "integración",
-      "perfil sensorial",
-      "coste",
-      "costo",
-      "calidad",
-      "complejidad",
-      "nuevo"
-    ],
-    "expected_reasoning_type": "cause_effect",
-    "difficulty": "distinction",
+    "expected_causal_links": [],
+    "expected_keywords": [],
+    "expected_reasoning_type": "theory_foundation",
+    "difficulty": "intermediate",
     "source_type": "WSET3_RA1_Banco_Preguntas_TOTAL.xlsx | Abiertas",
     "safe_for_examiner": false,
     "options": {
@@ -13836,35 +13643,11 @@
     "question_text": "Describa dos técnicas de manejo del dosel (canopy management) y sus beneficios.",
     "question_type": "short_answer",
     "expected_topics": [
-      "RA1",
-      "manejo del dosel",
-      "técnicas de viñedo",
-      "maduración",
-      "sanidad de la uva"
+      "RA1"
     ],
-    "expected_causal_links": [
-      "deshojado -> exposición -> maduración",
-      "brotes -> aireación -> enfermedad"
-    ],
-    "expected_keywords": [
-      "manejo del dosel",
-      "dosel",
-      "canopy",
-      "deshojado",
-      "hojas",
-      "posicionamiento de brotes",
-      "brotes",
-      "exposición",
-      "sol",
-      "maduración",
-      "aireación",
-      "circulación de aire",
-      "enfermedad",
-      "hongos",
-      "sombra",
-      "racimos"
-    ],
-    "expected_reasoning_type": "cause_effect",
+    "expected_causal_links": [],
+    "expected_keywords": [],
+    "expected_reasoning_type": "theory_foundation",
     "difficulty": "intermediate",
     "source_type": "WSET3_RA1_Banco_Preguntas_TOTAL.xlsx | Abiertas",
     "safe_for_examiner": false,
@@ -13882,39 +13665,12 @@
     "question_text": "Describe cómo las decisiones humanas en la viña pueden compensar las condiciones climáticas extremas y así mantener la calidad del vino.",
     "question_type": "short_answer",
     "expected_topics": [
-      "RA1",
-      "decisiones humanas",
-      "clima extremo",
-      "gestión del viñedo",
-      "calidad"
+      "RA1"
     ],
-    "expected_causal_links": [
-      "riego -> estrés hídrico -> maduración",
-      "dosel -> exposición -> equilibrio",
-      "vendimia -> selección -> calidad"
-    ],
-    "expected_keywords": [
-      "decisiones humanas",
-      "gestión",
-      "viña",
-      "viñedo",
-      "riego",
-      "estrés hídrico",
-      "sequía",
-      "dosel",
-      "exposición",
-      "sombra",
-      "helada",
-      "granizo",
-      "vendimia",
-      "selección",
-      "maduración",
-      "equilibrio",
-      "calidad",
-      "clima extremo"
-    ],
-    "expected_reasoning_type": "cause_effect",
-    "difficulty": "distinction",
+    "expected_causal_links": [],
+    "expected_keywords": [],
+    "expected_reasoning_type": "theory_foundation",
+    "difficulty": "intermediate",
     "source_type": "WSET3_RA1_Banco_Preguntas_TOTAL.xlsx | Abiertas",
     "safe_for_examiner": false,
     "options": {
@@ -13931,38 +13687,12 @@
     "question_text": "Explica por qué la densidad de plantación es un factor clave en la gestión del viñedo y cómo afecta el estilo y costo del vino producido.",
     "question_type": "short_answer",
     "expected_topics": [
-      "RA1",
-      "densidad de plantación",
-      "competencia",
-      "vigor",
-      "coste",
-      "estilo"
+      "RA1"
     ],
-    "expected_causal_links": [
-      "densidad -> competencia -> vigor",
-      "vigor -> rendimiento -> concentración",
-      "densidad -> mano de obra -> coste"
-    ],
-    "expected_keywords": [
-      "densidad de plantación",
-      "densidad",
-      "plantación",
-      "competencia",
-      "vigor",
-      "rendimiento",
-      "producción",
-      "cosecha",
-      "concentración",
-      "uva",
-      "estilo",
-      "coste",
-      "costo",
-      "mano de obra",
-      "mecanización",
-      "precio"
-    ],
-    "expected_reasoning_type": "cause_effect",
-    "difficulty": "distinction",
+    "expected_causal_links": [],
+    "expected_keywords": [],
+    "expected_reasoning_type": "theory_foundation",
+    "difficulty": "intermediate",
     "source_type": "WSET3_RA1_Banco_Preguntas_TOTAL.xlsx | Abiertas",
     "safe_for_examiner": false,
     "options": {
@@ -13979,37 +13709,12 @@
     "question_text": "Compara las ventajas y desventajas del uso de levaduras seleccionadas frente a levaduras autóctonas en la producción de vinos premium.",
     "question_type": "short_answer",
     "expected_topics": [
-      "RA1",
-      "levaduras seleccionadas",
-      "levaduras autóctonas",
-      "vino premium",
-      "riesgo"
+      "RA1"
     ],
-    "expected_causal_links": [
-      "levaduras seleccionadas -> control -> consistencia",
-      "levaduras autóctonas -> variabilidad -> complejidad",
-      "variabilidad -> riesgo -> calidad"
-    ],
-    "expected_keywords": [
-      "levaduras seleccionadas",
-      "seleccionadas",
-      "levaduras autóctonas",
-      "autóctonas",
-      "salvajes",
-      "fermentación",
-      "control",
-      "consistencia",
-      "predecible",
-      "variabilidad",
-      "complejidad",
-      "riesgo",
-      "parada fermentativa",
-      "aromas no deseados",
-      "calidad",
-      "premium"
-    ],
-    "expected_reasoning_type": "cause_effect",
-    "difficulty": "distinction",
+    "expected_causal_links": [],
+    "expected_keywords": [],
+    "expected_reasoning_type": "theory_foundation",
+    "difficulty": "intermediate",
     "source_type": "WSET3_RA1_Banco_Preguntas_TOTAL.xlsx | Abiertas",
     "safe_for_examiner": false,
     "options": {
@@ -14026,37 +13731,12 @@
     "question_text": "Evalúa las consecuencias del estrés hídrico moderado en viñedos de alta calidad y su impacto en el precio del vino.",
     "question_type": "short_answer",
     "expected_topics": [
-      "RA1",
-      "estrés hídrico",
-      "calidad",
-      "rendimiento",
-      "precio"
+      "RA1"
     ],
-    "expected_causal_links": [
-      "estrés hídrico -> baya -> concentración",
-      "rendimiento -> coste -> precio",
-      "concentración -> calidad -> valor"
-    ],
-    "expected_keywords": [
-      "estrés hídrico",
-      "agua",
-      "moderado",
-      "baya",
-      "bayas pequeñas",
-      "concentración",
-      "piel",
-      "rendimiento",
-      "coste",
-      "costo",
-      "precio",
-      "calidad",
-      "valor",
-      "maduración",
-      "azúcar",
-      "fenoles"
-    ],
-    "expected_reasoning_type": "cause_effect",
-    "difficulty": "distinction",
+    "expected_causal_links": [],
+    "expected_keywords": [],
+    "expected_reasoning_type": "theory_foundation",
+    "difficulty": "intermediate",
     "source_type": "WSET3_RA1_Banco_Preguntas_TOTAL.xlsx | Abiertas",
     "safe_for_examiner": false,
     "options": {
@@ -14073,34 +13753,11 @@
     "question_text": "Describe cómo la latitud y la altitud interactúan para influir en el estilo del vino en una región de clima cálido.",
     "question_type": "short_answer",
     "expected_topics": [
-      "RA1",
-      "latitud",
-      "altitud",
-      "clima cálido",
-      "estilo"
+      "RA1"
     ],
-    "expected_causal_links": [
-      "latitud -> temperatura -> maduración",
-      "altitud -> temperatura -> acidez",
-      "rango diurno -> frescura -> estilo"
-    ],
-    "expected_keywords": [
-      "latitud",
-      "altitud",
-      "altura",
-      "clima cálido",
-      "temperatura",
-      "calor",
-      "maduración",
-      "rápida",
-      "acidez",
-      "rango diurno",
-      "oscilación térmica",
-      "frescura",
-      "alcohol",
-      "estilo"
-    ],
-    "expected_reasoning_type": "cause_effect",
+    "expected_causal_links": [],
+    "expected_keywords": [],
+    "expected_reasoning_type": "theory_foundation",
     "difficulty": "intermediate",
     "source_type": "WSET3_RA1_Banco_Preguntas_TOTAL.xlsx | Abiertas",
     "safe_for_examiner": false,
@@ -14118,32 +13775,11 @@
     "question_text": "Explica cómo el estrés hídrico moderado puede influir en la calidad del vino.",
     "question_type": "short_answer",
     "expected_topics": [
-      "RA1",
-      "estrés hídrico",
-      "calidad",
-      "concentración",
-      "maduración"
+      "RA1"
     ],
-    "expected_causal_links": [
-      "estrés hídrico -> vigor -> concentración",
-      "estrés hídrico -> baya -> calidad"
-    ],
-    "expected_keywords": [
-      "estrés hídrico",
-      "agua",
-      "moderado",
-      "vigor",
-      "crecimiento vegetativo",
-      "baya",
-      "bayas pequeñas",
-      "concentración",
-      "maduración",
-      "rendimiento",
-      "calidad",
-      "azúcar",
-      "fenoles"
-    ],
-    "expected_reasoning_type": "cause_effect",
+    "expected_causal_links": [],
+    "expected_keywords": [],
+    "expected_reasoning_type": "theory_foundation",
     "difficulty": "intermediate",
     "source_type": "WSET3_RA1_Banco_Preguntas_TOTAL.xlsx | Abiertas",
     "safe_for_examiner": false,
@@ -14161,30 +13797,12 @@
     "question_text": "Menciona un riesgo enológico del uso de levaduras autóctonas.",
     "question_type": "short_answer",
     "expected_topics": [
-      "RA1",
-      "levaduras autóctonas",
-      "riesgo enológico",
-      "fermentación"
+      "RA1"
     ],
-    "expected_causal_links": [
-      "levaduras autóctonas -> riesgo"
-    ],
-    "expected_keywords": [
-      "levaduras autóctonas",
-      "autóctonas",
-      "salvajes",
-      "fermentación",
-      "riesgo",
-      "parada fermentativa",
-      "lenta",
-      "impredecible",
-      "aromas no deseados",
-      "defectos",
-      "control",
-      "calidad"
-    ],
-    "expected_reasoning_type": "cause_effect",
-    "difficulty": "foundational",
+    "expected_causal_links": [],
+    "expected_keywords": [],
+    "expected_reasoning_type": "theory_foundation",
+    "difficulty": "intermediate",
     "source_type": "WSET3_RA1_Banco_Preguntas_Bloque2.xlsx | Preguntas_Abiertas",
     "safe_for_examiner": false,
     "options": {
@@ -14201,32 +13819,12 @@
     "question_text": "Justifica por qué un viticultor utilizaría poda en invierno.",
     "question_type": "short_answer",
     "expected_topics": [
-      "RA1",
-      "poda de invierno",
-      "rendimiento",
-      "vigor",
-      "equilibrio de la vid"
+      "RA1"
     ],
-    "expected_causal_links": [
-      "poda -> yemas -> rendimiento",
-      "rendimiento -> equilibrio -> maduración"
-    ],
-    "expected_keywords": [
-      "poda",
-      "poda de invierno",
-      "invierno",
-      "yemas",
-      "brotes",
-      "rendimiento",
-      "vigor",
-      "equilibrio",
-      "maduración",
-      "calidad",
-      "uva",
-      "vid"
-    ],
-    "expected_reasoning_type": "cause_effect",
-    "difficulty": "foundational",
+    "expected_causal_links": [],
+    "expected_keywords": [],
+    "expected_reasoning_type": "theory_foundation",
+    "difficulty": "intermediate",
     "source_type": "WSET3_RA1_Banco_Preguntas_Bloque2.xlsx | Preguntas_Abiertas",
     "safe_for_examiner": false,
     "options": {
@@ -14243,32 +13841,12 @@
     "question_text": "Describe un beneficio técnico de la fermentación en acero inoxidable.",
     "question_type": "short_answer",
     "expected_topics": [
-      "RA1",
-      "acero inoxidable",
-      "fermentación",
-      "control de temperatura",
-      "estilo fresco"
+      "RA1"
     ],
-    "expected_causal_links": [
-      "acero inoxidable -> temperatura -> aromas",
-      "recipiente inerte -> fruta -> frescura"
-    ],
-    "expected_keywords": [
-      "acero inoxidable",
-      "inoxidable",
-      "temperatura",
-      "control de temperatura",
-      "fermentación",
-      "inerte",
-      "aromas primarios",
-      "fruta",
-      "frescura",
-      "limpio",
-      "oxígeno",
-      "sabor"
-    ],
-    "expected_reasoning_type": "cause_effect",
-    "difficulty": "foundational",
+    "expected_causal_links": [],
+    "expected_keywords": [],
+    "expected_reasoning_type": "theory_foundation",
+    "difficulty": "intermediate",
     "source_type": "WSET3_RA1_Banco_Preguntas_Bloque2.xlsx | Preguntas_Abiertas",
     "safe_for_examiner": false,
     "options": {
@@ -14285,37 +13863,12 @@
     "question_text": "Analiza los efectos de la maceración prolongada en la vinificación de vinos tintos desde el punto de vista del estilo y calidad final.",
     "question_type": "short_answer",
     "expected_topics": [
-      "RA1",
-      "maceración prolongada",
-      "vino tinto",
-      "extracción",
-      "estilo",
-      "calidad"
+      "RA1"
     ],
-    "expected_causal_links": [
-      "maceración -> extracción -> tanino",
-      "tanino -> estructura -> envejecimiento",
-      "extracción -> equilibrio -> calidad"
-    ],
-    "expected_keywords": [
-      "maceración prolongada",
-      "maceración",
-      "extracción",
-      "color",
-      "tanino",
-      "antocianos",
-      "fenoles",
-      "estructura",
-      "cuerpo",
-      "envejecimiento",
-      "guarda",
-      "astringencia",
-      "amargor",
-      "equilibrio",
-      "calidad"
-    ],
-    "expected_reasoning_type": "cause_effect",
-    "difficulty": "distinction",
+    "expected_causal_links": [],
+    "expected_keywords": [],
+    "expected_reasoning_type": "theory_foundation",
+    "difficulty": "intermediate",
     "source_type": "WSET3_RA1_Banco_Preguntas_TOTAL.xlsx | Abiertas",
     "safe_for_examiner": false,
     "options": {
@@ -14332,36 +13885,11 @@
     "question_text": "Explica el impacto de diferentes tipos de suelos (arena, arcilla, grava) en el vigor de la vid y cómo esto puede influir en el estilo del vino.",
     "question_type": "short_answer",
     "expected_topics": [
-      "RA1",
-      "suelo",
-      "arena",
-      "arcilla",
-      "grava",
-      "vigor",
-      "estilo"
+      "RA1"
     ],
-    "expected_causal_links": [
-      "arena -> drenaje -> vigor",
-      "arcilla -> agua -> vigor",
-      "grava -> drenaje -> maduración"
-    ],
-    "expected_keywords": [
-      "suelo",
-      "arena",
-      "arcilla",
-      "grava",
-      "drenaje",
-      "retención de agua",
-      "agua",
-      "calor",
-      "retención de calor",
-      "vigor",
-      "maduración",
-      "rendimiento",
-      "concentración",
-      "estilo"
-    ],
-    "expected_reasoning_type": "cause_effect",
+    "expected_causal_links": [],
+    "expected_keywords": [],
+    "expected_reasoning_type": "theory_foundation",
     "difficulty": "intermediate",
     "source_type": "WSET3_RA1_Banco_Preguntas_TOTAL.xlsx | Abiertas",
     "safe_for_examiner": false,
