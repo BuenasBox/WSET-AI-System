@@ -51,6 +51,19 @@ _learner_state_contract: "LearnerStateProtocol"
 _answer_builder_contract: "AnswerBuilderProtocol"
 _scaffolding_contract: "ScaffoldingProtocol"
 
+# ---------------------------------------------------------------------------
+# Phase 3A.1 — planner query expansion gate (disabled by default)
+# ---------------------------------------------------------------------------
+
+# Master gate for causal_chain_focus → query expansion.
+# MUST remain False until Phase 3A.2 flag-on experiment is approved.
+# See docs/PLANNER_INFLUENCE_BOUNDARY.md Section 5 for entry criteria.
+ENABLE_PLANNER_QUERY_EXPANSION: bool = False
+
+# Hard cap on the number of causal-chain hint tokens appended to the query.
+# Changing this value is a deliberate, auditable, testable act.
+MAX_PLANNER_CHAIN_HINTS: int = 3
+
 
 def run_orchestrator(
     query: str,
@@ -122,6 +135,12 @@ def run_orchestrator(
         }
         matched_node = {}
         retrieval_query = query
+
+    # Phase 3A.1: apply planner query hints.
+    # Gate is currently False — this is a deterministic no-op at runtime.
+    # When the gate is enabled (Phase 3A.2), causal_chain_focus IDs are
+    # appended as compact tokens. Retrieval scoring is unchanged.
+    retrieval_query = _apply_planner_query_hints(retrieval_query, strategic_plan)
 
     governance = {
         "safe_for_examiner": SAFE_FOR_EXAMINER,
@@ -387,6 +406,59 @@ def _pedagogical_priority_boost(les_context: dict[str, Any]) -> dict[str, Any]:
 
 def _normalize_language(language: str) -> str:
     return "en" if str(language).lower() == "en" else "es"
+
+
+def _apply_planner_query_hints(
+    query: str,
+    strategic_plan: dict[str, Any] | None,
+) -> str:
+    """Return an optionally hint-expanded query string for retrieval.
+
+    When ENABLE_PLANNER_QUERY_EXPANSION is False (the default) this function
+    is a strict no-op — it returns the original query unchanged, preserving
+    Phase 2C baseline behavior exactly.
+
+    When the gate is enabled (Phase 3A.2 experiment):
+      - Only causal_chain_focus IDs are appended as compact hint tokens.
+      - Format: "<original_query> causal_chain:<id1> causal_chain:<id2> ..."
+      - Bounded to MAX_PLANNER_CHAIN_HINTS items (currently 3).
+      - Deterministic: same inputs → same output, always.
+      - No governance fields, no full prose, no chain descriptions.
+
+    Only causal_chain_focus is used. All other planner signals
+    (review_topics, misconception_focus, difficulty_progression,
+    planning_confidence, cold_start, avoid_topics) are explicitly ignored.
+    See docs/PLANNER_INFLUENCE_BOUNDARY.md for the full signal classification.
+
+    Args:
+        query:          The current retrieval query string (possibly already
+                        expanded by misconception pre-pass logic).
+        strategic_plan: The current session's strategic_plan dict, or None.
+
+    Returns:
+        str — the original query (gate off / no plan / no chains) or
+              the query with bounded causal-chain hint tokens appended.
+    """
+    if not ENABLE_PLANNER_QUERY_EXPANSION:
+        return query
+
+    if not strategic_plan or not isinstance(strategic_plan, dict):
+        return query
+
+    chain_ids: list[str] = [
+        str(cid).strip()
+        for cid in (strategic_plan.get("causal_chain_focus") or [])
+        if str(cid).strip()
+    ]
+    if not chain_ids:
+        return query
+
+    # Bounded, deterministic expansion — compact ID tokens only, no prose
+    hint_tokens: str = " ".join(
+        f"causal_chain:{cid}"
+        for cid in chain_ids[:MAX_PLANNER_CHAIN_HINTS]
+    )
+    return f"{query} {hint_tokens}"
 
 
 def _write_json(path: Path, data: dict[str, Any]) -> None:
