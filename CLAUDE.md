@@ -160,6 +160,14 @@ Workflow: Claude plans/reviews/writes prompts → Codex implements → Claude ve
 - No new scoring weights; no ranking override; no Tutor changes; no governance fields; no snapshot drift
 - Result: 584 → 600 tests (592 passing + 8 skipped)
 
+**Phase 3A.8 — Planner causal-chain activation readiness review** ✅
+- `docs/PLANNER_CAUSAL_CHAIN_ACTIVATION_REVIEW.md` — decision review covering evidence from 3A.4 A/B comparison, 3A.5 score deltas, 3A.6 adversarial negatives, and 3A.7 semantic compatibility hardening
+- Recommendation: keep experimental behind gates; do not activate globally
+- `ENABLE_PLANNER_QUERY_EXPANSION = False` and `ENABLE_PLANNER_CAUSAL_CHAIN_INJECTION = False` remain required defaults
+- Rationale: semantic compatibility mitigates known adversarial failures, but incremental value after gating is not yet strong enough because many compatible positives are already matched organically
+- Activation criteria documented: larger representative fixtures, organic-miss positive wins, wrong-hint score delta below threshold, no ranking corruption, unchanged snapshots, governance-clean outputs, and explicit rollback plan
+- Result: 660 tests (652 passing + 8 skipped), 35 snapshots green
+
 **Question bank converter** ✅
 - `tools/question_bank/convert_xlsx_to_json.py` — Excel → JSON converter; reads structured question XLSX, normalises columns, protects `Abierta` questions (strips `correct_answer` / `explanation` fields before export), writes `knowledge/question-bank/structured/wset3_questions.json`; governance-clean; no LLM/API calls
 - `tools/question_bank/__init__.py` — package init
@@ -200,7 +208,7 @@ Workflow: Claude plans/reviews/writes prompts → Codex implements → Claude ve
 **None from remediation plan.** All items in `docs/backend_stability_remediation_plan.md` are complete or deferred.
 
 **Next phases:**
-- **Phase 3A.4** — Controlled A/B retrieval comparison: run gate-off vs gate-on retrieval fixtures, measure rank deltas and precision impact before any default enablement.
+- **Phase 3A activation readiness** — Keep causal-chain planner influence gated OFF until additional evidence shows value beyond organic retrieval without adversarial regressions.
 - **Phase 3B** — WSET L3 topic sequence to populate `recommended_next_topics`.
 
 **Semantic contract:** `docs/STRATEGIC_PLANNER_CONTRACT.md` — defines authority model, signal ownership, depth semantics, and migration path between `strategic_planner` and `_pedagogical_priority_boost()`. Read before touching either component.
@@ -211,7 +219,7 @@ Workflow: Claude plans/reviews/writes prompts → Codex implements → Claude ve
 
 After every code change:
 ```
-python -m unittest discover -s tests -v   → must stay at 600+ passing/skipped
+python -m unittest discover -s tests -v   → must stay at 660+ passing/skipped
 brutal self-eval                          → must stay {}
 ```
 Slow golden suite (only when touching self-eval pipeline):
