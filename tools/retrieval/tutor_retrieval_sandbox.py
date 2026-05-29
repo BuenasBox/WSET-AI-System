@@ -169,6 +169,10 @@ _HINT_TOKEN_RE: re.Pattern[str] = re.compile(r"(?<!\w)causal_chain:([A-Za-z0-9_]
 # Local cap mirrors MAX_PLANNER_CHAIN_HINTS in orchestrator.  Kept in sync manually.
 _MAX_HINT_IDS: int = 3
 
+# Phase 3A.3 — retrieval-local experiment gate.  Default OFF: parsed planner
+# hints are observable but do not influence matched causal chains or scoring.
+ENABLE_PLANNER_CAUSAL_CHAIN_INJECTION: bool = False
+
 
 @dataclass(frozen=True)
 class RetrievalContext:
@@ -195,6 +199,11 @@ def run_retrieval_sandbox(
     # With no hint tokens present this is a strict no-op.
     clean_query, hint_chain_ids = _parse_planner_query_hints(query)
     query_analysis = classify_query(clean_query, context.dictionary_terms, context.knowledge_nodes)
+    query_analysis = _inject_planner_causal_chain_hints(
+        query_analysis,
+        hint_chain_ids,
+        context.knowledge_nodes,
+    )
     scored = [
         score_chunk_for_query(chunk, query_analysis, context.golden_by_chunk_id)
         for chunk in context.chunks
@@ -1224,6 +1233,62 @@ def _parse_planner_query_hints(query: str) -> tuple[str, list[str]]:
     clean = _HINT_TOKEN_RE.sub("", query)
     clean = re.sub(r"\s+", " ", clean).strip()
     return clean, hint_ids
+
+
+def _causal_chain_match_shape(node: dict[str, Any]) -> dict[str, Any]:
+    """Return the lightweight causal-chain shape consumed by retrieval scoring."""
+    return {
+        "id": _knowledge_node_id(node),
+        "name": _knowledge_node_name(node),
+        "terms": sorted(set(_knowledge_node_primary_phrases(node)))[:18],
+    }
+
+
+def _inject_planner_causal_chain_hints(
+    query_analysis: dict,
+    hint_chain_ids: list[str],
+    knowledge_nodes: list[dict],
+) -> dict:
+    """Inject gated planner causal-chain hints into native retrieval analysis.
+
+    This is intentionally a retrieval-local, default-off experiment.  When the
+    gate is enabled, valid hint IDs are converted into the same lightweight
+    ``matched_causal_chains`` objects produced by organic query matching, so the
+    existing ``causal_chain_match_score`` path can consume them unchanged.
+    """
+    if not ENABLE_PLANNER_CAUSAL_CHAIN_INJECTION or not hint_chain_ids:
+        return query_analysis
+
+    existing_matches = list(query_analysis.get("matched_causal_chains", []))
+    matched_ids = {str(item.get("id", "")) for item in existing_matches if item.get("id")}
+    causal_nodes_by_id: dict[str, dict] = {}
+    for node in knowledge_nodes:
+        if _knowledge_node_type(node) != "causal_chains":
+            continue
+        node_id = _knowledge_node_id(node)
+        if node_id and node_id not in causal_nodes_by_id:
+            causal_nodes_by_id[node_id] = node
+
+    seen_hints: set[str] = set()
+    additions: list[dict[str, Any]] = []
+    for hint_id in hint_chain_ids[:_MAX_HINT_IDS]:
+        if hint_id in seen_hints:
+            continue
+        seen_hints.add(hint_id)
+        if hint_id in matched_ids:
+            continue
+        node = causal_nodes_by_id.get(hint_id)
+        if not node:
+            continue
+        additions.append(_causal_chain_match_shape(node))
+        matched_ids.add(hint_id)
+
+    if not additions:
+        return query_analysis
+
+    injected = dict(query_analysis)
+    injected["matched_causal_chains"] = [*existing_matches, *additions]
+    return injected
 
 
 def main(argv: list[str] | None = None) -> None:

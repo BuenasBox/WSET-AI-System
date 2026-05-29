@@ -154,6 +154,12 @@ Workflow: Claude plans/reviews/writes prompts → Codex implements → Claude ve
 - Zero behavior change for hint-free queries; zero snapshot drift
 - Result: 546 → 584 tests (576 passing + 8 skipped)
 
+**Phase 3A.3 — Controlled causal-chain hint injection experiment** ✅
+- `tools/retrieval/tutor_retrieval_sandbox.py` — added retrieval-local `ENABLE_PLANNER_CAUSAL_CHAIN_INJECTION = False` gate and `_inject_planner_causal_chain_hints()` helper; parsed `planner_hint_chain_ids` can be converted into native lightweight `matched_causal_chains` only when the gate is explicitly enabled; default runtime remains unchanged
+- `tests/test_retrieval_planner_causal_chain_injection.py` — 16 tests; verifies gate-off no-op, empty/unknown ID no-op, valid ID injection, multi-ID order preservation, deduplication, organic match preservation, no mutation, native shape, governance cleanliness, no full causal-chain prose, no scoring weight changes, default snapshot invariance, and reuse of existing `causal_chain_match_score`
+- No new scoring weights; no ranking override; no Tutor changes; no governance fields; no snapshot drift
+- Result: 584 → 600 tests (592 passing + 8 skipped)
+
 **Question bank converter** ✅
 - `tools/question_bank/convert_xlsx_to_json.py` — Excel → JSON converter; reads structured question XLSX, normalises columns, protects `Abierta` questions (strips `correct_answer` / `explanation` fields before export), writes `knowledge/question-bank/structured/wset3_questions.json`; governance-clean; no LLM/API calls
 - `tools/question_bank/__init__.py` — package init
@@ -194,7 +200,7 @@ Workflow: Claude plans/reviews/writes prompts → Codex implements → Claude ve
 **None from remediation plan.** All items in `docs/backend_stability_remediation_plan.md` are complete or deferred.
 
 **Next phases:**
-- **Phase 3A.3** — Controlled boosting experiment: wire parsed `planner_hint_chain_ids` into `causal_chain_match_score`, enable gate, measure retrieval rank delta against golden baseline.
+- **Phase 3A.4** — Controlled A/B retrieval comparison: run gate-off vs gate-on retrieval fixtures, measure rank deltas and precision impact before any default enablement.
 - **Phase 3B** — WSET L3 topic sequence to populate `recommended_next_topics`.
 
 **Semantic contract:** `docs/STRATEGIC_PLANNER_CONTRACT.md` — defines authority model, signal ownership, depth semantics, and migration path between `strategic_planner` and `_pedagogical_priority_boost()`. Read before touching either component.
@@ -205,7 +211,7 @@ Workflow: Claude plans/reviews/writes prompts → Codex implements → Claude ve
 
 After every code change:
 ```
-python -m unittest discover -s tests -v   → must stay at 584+ passing/skipped
+python -m unittest discover -s tests -v   → must stay at 600+ passing/skipped
 brutal self-eval                          → must stay {}
 ```
 Slow golden suite (only when touching self-eval pipeline):
