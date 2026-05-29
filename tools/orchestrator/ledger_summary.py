@@ -23,7 +23,11 @@ Design principles:
 
 from __future__ import annotations
 
+import argparse
+import json
+import sys
 from collections import Counter
+from pathlib import Path
 from typing import Any
 
 
@@ -229,3 +233,180 @@ def _safe_list(value: Any) -> list[Any]:
     if isinstance(value, list):
         return value
     return []
+
+
+# ---------------------------------------------------------------------------
+# CLI — Phase 2C (read-only observability entry point)
+# ---------------------------------------------------------------------------
+
+# Default ledger path — used when --ledger is not supplied
+try:
+    from tools.constants import NAZARETH_DIR as _NAZARETH_DIR
+    DEFAULT_LEDGER_PATH: Path = _NAZARETH_DIR / "session_ledger.json"
+except Exception:  # pragma: no cover — constants may not be importable in all envs
+    DEFAULT_LEDGER_PATH = Path("knowledge/nazareth/session_ledger.json")
+
+
+def load_ledger_file(path: Path) -> dict[str, Any]:
+    """Load and return the ledger JSON from *path*.
+
+    Raises:
+        FileNotFoundError: if the file does not exist.
+        ValueError: if the file contains invalid JSON.
+
+    This function is read-only — it never writes to any file.
+    """
+    if not path.exists():
+        raise FileNotFoundError(f"Ledger file not found: {path}")
+    try:
+        with path.open("r", encoding="utf-8") as fh:
+            return json.load(fh)
+    except json.JSONDecodeError as exc:
+        raise ValueError(f"Ledger file contains invalid JSON: {path}") from exc
+
+
+def format_report(summary: dict[str, Any], top_n: int = TOP_N) -> str:
+    """Render *summary* as a deterministic, human-readable report string.
+
+    Args:
+        summary: Output of summarize_ledger().
+        top_n:   Maximum items to show in each ranked list. Defaults to TOP_N.
+
+    Returns:
+        A multi-line string suitable for printing to stdout.
+        Output is deterministic for any given summary dict.
+    """
+    lines: list[str] = []
+    _h = lines.append  # shorthand
+
+    _h("=" * 52)
+    _h("  WSET-AI-System — Ledger Summary")
+    _h("=" * 52)
+    _h("")
+
+    n = summary.get("sessions_analysed", 0)
+    _h(f"Sessions analysed:          {n}")
+    _h(f"Average planning confidence:{summary.get('average_planning_confidence', 0.0):>8.3f}")
+    _h(f"SAT drill rate:             {summary.get('sat_drill_rate', 0.0):>8.3f}")
+    _h(f"Cold-start rate:            {summary.get('cold_start_rate', 0.0):>8.3f}")
+    _h("")
+
+    # Difficulty distribution
+    diff = summary.get("difficulty_distribution", {})
+    diff_pct = summary.get("difficulty_distribution_pct", {})
+    _h("Difficulty distribution:")
+    for key in DIFFICULTY_VALUES:
+        count = diff.get(key, 0)
+        pct = diff_pct.get(key, 0.0)
+        _h(f"  {key:<14} {count:>4}  ({pct:.1%})")
+    _h("")
+
+    # Route distribution
+    route_dist = summary.get("route_distribution", {})
+    if route_dist:
+        _h("Route distribution:")
+        for route, count in sorted(route_dist.items()):
+            _h(f"  {route:<30} {count:>4}")
+        _h("")
+
+    # Top review topics
+    top_topics = summary.get("top_review_topics", [])[:top_n]
+    _h(f"Top review topics (top {top_n}):")
+    if top_topics:
+        for i, item in enumerate(top_topics, 1):
+            _h(f"  {i:>2}. {item['value']}  (×{item['count']}, {item['frequency']:.1%})")
+    else:
+        _h("  (none recorded)")
+    _h("")
+
+    # Top misconceptions
+    top_mc = summary.get("top_misconceptions", [])[:top_n]
+    _h(f"Top misconceptions (top {top_n}):")
+    if top_mc:
+        for i, item in enumerate(top_mc, 1):
+            _h(f"  {i:>2}. {item['value']}  (×{item['count']}, {item['frequency']:.1%})")
+    else:
+        _h("  (none recorded)")
+    _h("")
+
+    # Top causal chains
+    top_cc = summary.get("top_causal_chains", [])[:top_n]
+    _h(f"Top causal chains (top {top_n}):")
+    if top_cc:
+        for i, item in enumerate(top_cc, 1):
+            _h(f"  {i:>2}. {item['value']}  (×{item['count']}, {item['frequency']:.1%})")
+    else:
+        _h("  (none recorded)")
+    _h("")
+
+    _h("=" * 52)
+    return "\n".join(lines)
+
+
+def _cli(argv: list[str] | None = None) -> int:
+    """CLI entry point for ledger summary inspection.
+
+    Returns exit code (0 = success, 1 = error).
+    Read-only: never writes to any file.
+    """
+    parser = argparse.ArgumentParser(
+        prog="python -m tools.orchestrator.ledger_summary",
+        description=(
+            "Inspect the WSET-AI-System session cognitive ledger. "
+            "Read-only — never modifies the ledger, LES, or session staging."
+        ),
+    )
+    parser.add_argument(
+        "--ledger",
+        type=Path,
+        default=DEFAULT_LEDGER_PATH,
+        metavar="PATH",
+        help=f"Path to session_ledger.json (default: {DEFAULT_LEDGER_PATH})",
+    )
+    parser.add_argument(
+        "--json",
+        action="store_true",
+        dest="json_output",
+        help="Output raw summary as JSON instead of formatted report.",
+    )
+    parser.add_argument(
+        "--top-n",
+        type=int,
+        default=TOP_N,
+        metavar="N",
+        dest="top_n",
+        help=f"Maximum items in each ranked list (default: {TOP_N}).",
+    )
+    parser.add_argument(
+        "--pretty",
+        action="store_true",
+        help="Explicit formatted output (default when --json is not set).",
+    )
+
+    args = parser.parse_args(argv)
+
+    try:
+        ledger = load_ledger_file(args.ledger)
+    except FileNotFoundError as exc:
+        print(f"Error: {exc}", file=sys.stderr)
+        print(
+            "Tip: Run at least one tutoring session first to populate the ledger.",
+            file=sys.stderr,
+        )
+        return 1
+    except ValueError as exc:
+        print(f"Error: {exc}", file=sys.stderr)
+        return 1
+
+    summary = summarize_ledger(ledger)
+
+    if args.json_output:
+        print(json.dumps(summary, indent=2, ensure_ascii=True))
+    else:
+        print(format_report(summary, top_n=args.top_n))
+
+    return 0
+
+
+if __name__ == "__main__":
+    sys.exit(_cli())
