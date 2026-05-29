@@ -144,6 +144,9 @@ Workflow: Claude plans/reviews/writes prompts → Codex implements → Claude ve
 **Phase 1B.5 — Semantic contract hardening** ✅
 - `docs/STRATEGIC_PLANNER_CONTRACT.md` — authority model, signal ownership, depth semantics, migration path for `strategic_planner` vs `_pedagogical_priority_boost()`. Key finding: `_pedagogical_priority_boost()` does NOT influence retrieval (retrieval sandbox never receives it); it only affects Tutor rendering via `force_deep_explanation`. Adapter is fully inert at runtime today (skills={}). No code changes.
 
+**Phase 3A.0 — Planner influence boundary contract** ✅
+- `docs/PLANNER_INFLUENCE_BOUNDARY.md` — pre-Phase-3 governance document; classifies all planner signals (ALLOWED/CONDITIONALLY_ALLOWED/FORBIDDEN); classifies all influence targets; governance analysis; risk matrix; Phase 3 entry criteria (Section 5); identifies `causal_chain_focus → query expansion` as the first safe influence; permanently forbidden directions. No code changes.
+
 **Batch K — Phase 2C ledger summary CLI** ✅
 - `tools/orchestrator/ledger_summary.py` — extended with CLI block: `load_ledger_file()`, `format_report()`, `_cli()`, `DEFAULT_LEDGER_PATH`; `python -m tools.orchestrator.ledger_summary --ledger <path>` prints formatted report; `--json` outputs raw summary JSON; `--top-n N` overrides display limit; read-only, no file writes
 - `tests/test_ledger_summary_cli.py` — 27 tests across 10 classes covering all 10 required tests; verifies read-only invariants (ledger, LES, staging unchanged), error handling, JSON mode, governance cleanliness
@@ -242,7 +245,8 @@ The following are **machine-local cognitive objects** and must NEVER be committe
 ## REPO STATUS (as of last session)
 
 Latest commits (session 2026-05-28):
-- `feat(phase-2c): add ledger summary CLI; complete observability loop` ← next commit
+- `docs(phase-3a0): add PLANNER_INFLUENCE_BOUNDARY.md; governance contract` ← next commit
+- `feat(phase-2c): add ledger summary CLI; complete observability loop`
 - `feat(phase-2b): add ledger summary layer; pure reporting function`
 - `feat(phase-2a): add session cognitive ledger; write-only telemetry`
 - `feat(phase-1c): persist strategic_plan to session_staging; add persistence tests`
