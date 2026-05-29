@@ -82,8 +82,8 @@ Questions loaded from `knowledge/question-bank/structured/` → raw XLSX if avai
 
 ## CURRENT TESTING STATUS
 
-- Test count: **481** via `python -m unittest discover -s tests -v` (474 regular + 7 slow, skipped by default)
-- All 481 pass locally. (`pytest` not installed in active venv — use `python -m unittest`)
+- Test count: **507** via `python -m unittest discover -s tests -v` (500 regular + 7 slow, skipped by default)
+- All 507 pass locally. (`pytest` not installed in active venv — use `python -m unittest`)
 - Slow golden baseline: `RUN_SLOW_TESTS=1 python -m unittest tests.test_golden_self_eval -v` → 7/7 OK
 - Brutal self-eval: 25 questions, no failure labels, no retrieval gaps, no SAT weaknesses.
 - Known retrieval weakness: `missing_keyword_support` count = 5 (frozen in golden baseline).
@@ -147,6 +147,19 @@ Workflow: Claude plans/reviews/writes prompts → Codex implements → Claude ve
 **Phase 3A.0 — Planner influence boundary contract** ✅
 - `docs/PLANNER_INFLUENCE_BOUNDARY.md` — pre-Phase-3 governance document; classifies all planner signals (ALLOWED/CONDITIONALLY_ALLOWED/FORBIDDEN); classifies all influence targets; governance analysis; risk matrix; Phase 3 entry criteria (Section 5); identifies `causal_chain_focus → query expansion` as the first safe influence; permanently forbidden directions. No code changes.
 
+**Question bank converter** ✅
+- `tools/question_bank/convert_xlsx_to_json.py` — Excel → JSON converter; reads structured question XLSX, normalises columns, protects `Abierta` questions (strips `correct_answer` / `explanation` fields before export), writes `knowledge/question-bank/structured/wset3_questions.json`; governance-clean; no LLM/API calls
+- `tools/question_bank/__init__.py` — package init
+- `requirements.txt` — declares `openpyxl` dependency
+- `tests/test_question_bank_converter.py` — 39 tests across N classes; covers column normalisation, Abierta protection, round-trip JSON schema, governance cleanliness, file-write invariants
+- Result: 507 → 546 tests (539 regular + 7 slow)
+
+**Phase 3A.1 — Planner query expansion gate** ✅
+- `tools/orchestrator/orchestrator.py` — added `ENABLE_PLANNER_QUERY_EXPANSION = False`, `MAX_PLANNER_CHAIN_HINTS = 3`, `_apply_planner_query_hints()` helper; wired before `run_retrieval_sandbox()` call; gate is a deterministic no-op with flag off; only `causal_chain_focus` IDs used when flag on; all other planner signals explicitly ignored; expansion bounded to 3 compact tokens (`causal_chain:<id>`); no governance fields, no prose
+- `tests/test_planner_query_expansion_gate.py` — 26 tests across 8 classes; covers all 15 required tests; verifies flag-off no-op, missing-plan guard, empty-chain guard, signal isolation (review_topics/misconception_focus/difficulty_progression/planning_confidence), bounding, determinism, governance cleanliness, prose safety, and end-to-end orchestrator invariants
+- Zero behavior change with flag off; zero snapshot drift
+- Result: 481 → 507 tests (500 regular + 7 slow)
+
 **Batch K — Phase 2C ledger summary CLI** ✅
 - `tools/orchestrator/ledger_summary.py` — extended with CLI block: `load_ledger_file()`, `format_report()`, `_cli()`, `DEFAULT_LEDGER_PATH`; `python -m tools.orchestrator.ledger_summary --ledger <path>` prints formatted report; `--json` outputs raw summary JSON; `--top-n N` overrides display limit; read-only, no file writes
 - `tests/test_ledger_summary_cli.py` — 27 tests across 10 classes covering all 10 required tests; verifies read-only invariants (ledger, LES, staging unchanged), error handling, JSON mode, governance cleanliness
@@ -174,8 +187,8 @@ Workflow: Claude plans/reviews/writes prompts → Codex implements → Claude ve
 **None from remediation plan.** All items in `docs/backend_stability_remediation_plan.md` are complete or deferred.
 
 **Next phases:**
-- **Phase 2** — Session cognitive ledger.
-- **Phase 3** — WSET L3 topic sequence to populate `recommended_next_topics`.
+- **Phase 3A.2** — Flag-on experiment: wire `causal_chain:` token recognition into `score_chunk_for_query`, enable gate, measure retrieval rank delta against golden baseline.
+- **Phase 3B** — WSET L3 topic sequence to populate `recommended_next_topics`.
 
 **Semantic contract:** `docs/STRATEGIC_PLANNER_CONTRACT.md` — defines authority model, signal ownership, depth semantics, and migration path between `strategic_planner` and `_pedagogical_priority_boost()`. Read before touching either component.
 
@@ -185,7 +198,7 @@ Workflow: Claude plans/reviews/writes prompts → Codex implements → Claude ve
 
 After every code change:
 ```
-python -m unittest discover -s tests -v   → must stay at 481+ passing
+python -m unittest discover -s tests -v   → must stay at 546+ passing
 brutal self-eval                          → must stay {}
 ```
 Slow golden suite (only when touching self-eval pipeline):
@@ -244,8 +257,10 @@ The following are **machine-local cognitive objects** and must NEVER be committe
 
 ## REPO STATUS (as of last session)
 
-Latest commits (session 2026-05-28):
-- `docs(phase-3a0): add PLANNER_INFLUENCE_BOUNDARY.md; governance contract` ← next commit
+Latest commits (session 2026-05-29):
+- `feat(question-bank): add Excel→JSON converter; protect Abierta questions; declare openpyxl` ← Commit 2 (this session)
+- `feat(phase-3a1): wire planner query expansion gate; add gate tests` ← Commit 1 (this session)
+- `docs(phase-3a0): add PLANNER_INFLUENCE_BOUNDARY.md; governance contract`
 - `feat(phase-2c): add ledger summary CLI; complete observability loop`
 - `feat(phase-2b): add ledger summary layer; pure reporting function`
 - `feat(phase-2a): add session cognitive ledger; write-only telemetry`
@@ -253,15 +268,10 @@ Latest commits (session 2026-05-28):
 - `docs(phase-1b5): add STRATEGIC_PLANNER_CONTRACT.md; semantic contract hardening`
 - `feat(phase-1b): wire strategic_planner into orchestrator; add integration tests`
 - `feat(phase-1a): add strategic_planner module and tests in isolation`
-- `fix(test): correct matched_terms fixture format in test_score_components (dicts not strings)`
-- `feat(batch-c): R3-A data-driven topic dispatch in answer_builder; add schema tests`
-- `refactor(batch-c): decompose score_chunk_for_query into named helpers (R3-B)`
-- `feat(batch-d): R4-A regression tests (Tokaji + causal chains); R4-C golden CI baseline`
 
 Dirty worktree (not committed — runtime / local only):
 - `knowledge/nazareth/epistemic_state.json`, `session_staging.json` — modified locally (machine-local cognitive objects, never commit)
 - `knowledge/self-eval/attempts/` — runtime self-eval outputs (gitignored)
-- `CLAUDE.md` — updated for Phase 1A (commit with the planner files)
 
 ---
 
