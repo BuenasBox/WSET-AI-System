@@ -158,6 +158,18 @@ ROLE_ALIGNMENT = {
 }
 
 
+# ---------------------------------------------------------------------------
+# Phase 3A.2 — planner query hint parsing (gate-neutral, no scoring impact)
+# ---------------------------------------------------------------------------
+# Regex matches the compact hint-token format produced by _apply_planner_query_hints
+# in tools/orchestrator/orchestrator.py.
+# Format: causal_chain:<ID>  where ID = [A-Za-z0-9_]+
+# The (?<!\w) lookbehind ensures we only strip whole tokens, not substrings.
+_HINT_TOKEN_RE: re.Pattern[str] = re.compile(r"(?<!\w)causal_chain:([A-Za-z0-9_]+)")
+# Local cap mirrors MAX_PLANNER_CHAIN_HINTS in orchestrator.  Kept in sync manually.
+_MAX_HINT_IDS: int = 3
+
+
 @dataclass(frozen=True)
 class RetrievalContext:
     chunks: list[dict[str, Any]]
@@ -175,7 +187,14 @@ def run_retrieval_sandbox(
     output_prefix: str = "retrieval_run",
 ) -> dict[str, Any]:
     context = load_retrieval_context(root)
-    query_analysis = classify_query(query, context.dictionary_terms, context.knowledge_nodes)
+    # Phase 3A.2: strip planner hint tokens before lexical analysis so
+    # causal_chain:<id> component words (e.g. "sat", "quality" from
+    # CC_SAT_QUALITY_HIGH) cannot accidentally pollute query_tokens or
+    # activate sat_boost / lexical_overlap.  Parsed IDs are stored in
+    # the run output for future Phase 3A.3 controlled boosting.
+    # With no hint tokens present this is a strict no-op.
+    clean_query, hint_chain_ids = _parse_planner_query_hints(query)
+    query_analysis = classify_query(clean_query, context.dictionary_terms, context.knowledge_nodes)
     scored = [
         score_chunk_for_query(chunk, query_analysis, context.golden_by_chunk_id)
         for chunk in context.chunks
@@ -190,7 +209,9 @@ def run_retrieval_sandbox(
         context.knowledge_nodes,
     )
     run = {
-        "query": query,
+        "query": query,           # original query preserved for traceability
+        "clean_query": clean_query,  # hint tokens stripped; used for all scoring
+        "planner_hint_chain_ids": hint_chain_ids,  # Phase 3A.3: future gated boosting
         "generated_at": datetime.now(UTC).isoformat(timespec="seconds"),
         "governance_filter_applied": GOVERNANCE_FILTER_APPLIED,
         "query_analysis": query_analysis,
@@ -1160,6 +1181,49 @@ def _as_list(value: Any) -> list[str]:
 def _safe_output_prefix(value: str) -> str:
     safe = re.sub(r"[^A-Za-z0-9._-]+", "_", value).strip("._-")
     return safe or "retrieval_run"
+
+
+def _parse_planner_query_hints(query: str) -> tuple[str, list[str]]:
+    """Extract ``causal_chain:<id>`` hint tokens from a retrieval query.
+
+    These tokens are injected by ``_apply_planner_query_hints()`` in
+    ``tools/orchestrator/orchestrator.py`` when ``ENABLE_PLANNER_QUERY_EXPANSION``
+    is True.  This parser runs unconditionally so hint tokens never reach the
+    lexical scoring pipeline as accidental noise regardless of the gate state.
+
+    Behavior
+    --------
+    * Extracts all ``causal_chain:<ID>`` tokens matching ``[A-Za-z0-9_]+``.
+    * Returns a deduplicated, order-preserving list bounded to ``_MAX_HINT_IDS``.
+    * Returns the query with all hint tokens removed and whitespace normalised.
+    * Pure function: no I/O, no side effects, no external calls.
+    * If the query contains no hint tokens the returned clean query equals the
+      input exactly and the ID list is empty — strict no-op for normal queries.
+
+    Parameters
+    ----------
+    query:
+        Raw retrieval query string, possibly containing hint tokens.
+
+    Returns
+    -------
+    tuple[str, list[str]]
+        ``(clean_query, hint_chain_ids)`` where ``clean_query`` has all
+        ``causal_chain:*`` tokens removed and ``hint_chain_ids`` is the
+        bounded, deduplicated ordered list of extracted chain IDs.
+    """
+    matches = _HINT_TOKEN_RE.findall(query)
+    # Deduplicate preserving order; bound to _MAX_HINT_IDS
+    seen: set[str] = set()
+    hint_ids: list[str] = []
+    for match in matches:
+        if match not in seen and len(hint_ids) < _MAX_HINT_IDS:
+            seen.add(match)
+            hint_ids.append(match)
+    # Remove all hint tokens and normalise whitespace
+    clean = _HINT_TOKEN_RE.sub("", query)
+    clean = re.sub(r"\s+", " ", clean).strip()
+    return clean, hint_ids
 
 
 def main(argv: list[str] | None = None) -> None:

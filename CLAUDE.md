@@ -147,6 +147,13 @@ Workflow: Claude plans/reviews/writes prompts → Codex implements → Claude ve
 **Phase 3A.0 — Planner influence boundary contract** ✅
 - `docs/PLANNER_INFLUENCE_BOUNDARY.md` — pre-Phase-3 governance document; classifies all planner signals (ALLOWED/CONDITIONALLY_ALLOWED/FORBIDDEN); classifies all influence targets; governance analysis; risk matrix; Phase 3 entry criteria (Section 5); identifies `causal_chain_focus → query expansion` as the first safe influence; permanently forbidden directions. No code changes.
 
+**Phase 3A.2 — Retrieval compatibility for planner query hints** ✅
+- `tools/retrieval/tutor_retrieval_sandbox.py` — added `_HINT_TOKEN_RE`, `_MAX_HINT_IDS = 3`, `_parse_planner_query_hints()` helper; wired into `run_retrieval_sandbox()` before `classify_query()` so `causal_chain:<id>` tokens never reach lexical scoring; `clean_query` and `planner_hint_chain_ids` added to run output; strict no-op for hint-free queries
+- `tests/test_retrieval_planner_query_hints.py` — 38 tests across 13 classes; covers all 12 required tests; verifies single/multi-hint parsing, order preservation, malformed token rejection, deduplication, bounding, clean query integrity, governance cleanliness, no lexical noise (negative control included), no-op for normal queries, snapshot invariance, flag invariant
+- Audit confirmed: CC_SAT_QUALITY_HIGH would inject `sat`, `quality`, `high`, `cc` into query_tokens as noise — parsing eliminates this
+- Zero behavior change for hint-free queries; zero snapshot drift
+- Result: 546 → 584 tests (576 passing + 8 skipped)
+
 **Question bank converter** ✅
 - `tools/question_bank/convert_xlsx_to_json.py` — Excel → JSON converter; reads structured question XLSX, normalises columns, protects `Abierta` questions (strips `correct_answer` / `explanation` fields before export), writes `knowledge/question-bank/structured/wset3_questions.json`; governance-clean; no LLM/API calls
 - `tools/question_bank/__init__.py` — package init
@@ -187,7 +194,7 @@ Workflow: Claude plans/reviews/writes prompts → Codex implements → Claude ve
 **None from remediation plan.** All items in `docs/backend_stability_remediation_plan.md` are complete or deferred.
 
 **Next phases:**
-- **Phase 3A.2** — Flag-on experiment: wire `causal_chain:` token recognition into `score_chunk_for_query`, enable gate, measure retrieval rank delta against golden baseline.
+- **Phase 3A.3** — Controlled boosting experiment: wire parsed `planner_hint_chain_ids` into `causal_chain_match_score`, enable gate, measure retrieval rank delta against golden baseline.
 - **Phase 3B** — WSET L3 topic sequence to populate `recommended_next_topics`.
 
 **Semantic contract:** `docs/STRATEGIC_PLANNER_CONTRACT.md` — defines authority model, signal ownership, depth semantics, and migration path between `strategic_planner` and `_pedagogical_priority_boost()`. Read before touching either component.
@@ -198,7 +205,7 @@ Workflow: Claude plans/reviews/writes prompts → Codex implements → Claude ve
 
 After every code change:
 ```
-python -m unittest discover -s tests -v   → must stay at 546+ passing
+python -m unittest discover -s tests -v   → must stay at 584+ passing/skipped
 brutal self-eval                          → must stay {}
 ```
 Slow golden suite (only when touching self-eval pipeline):
@@ -258,6 +265,7 @@ The following are **machine-local cognitive objects** and must NEVER be committe
 ## REPO STATUS (as of last session)
 
 Latest commits (session 2026-05-29):
+- `feat(phase-3a2): parse planner causal-chain query hints safely` ← next commit
 - `feat(question-bank): add Excel→JSON converter; protect Abierta questions; declare openpyxl` ← Commit 2 (this session)
 - `feat(phase-3a1): wire planner query expansion gate; add gate tests` ← Commit 1 (this session)
 - `docs(phase-3a0): add PLANNER_INFLUENCE_BOUNDARY.md; governance contract`
