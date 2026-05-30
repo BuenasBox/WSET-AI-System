@@ -173,6 +173,34 @@ _MAX_HINT_IDS: int = 3
 # hints are observable but do not influence matched causal chains or scoring.
 ENABLE_PLANNER_CAUSAL_CHAIN_INJECTION: bool = False
 
+# Phase 3A.7 — fail-closed semantic compatibility gate for hinted chains.
+_MIN_CHAIN_HINT_COMPATIBILITY_TERMS: int = 2
+_GENERIC_CHAIN_HINT_TERMS: frozenset[str] = frozenset({
+    "assessment",
+    "balance",
+    "balanced",
+    "complexity",
+    "drink",
+    "drinking",
+    "fruit",
+    "fruits",
+    "high",
+    "higher",
+    "intensity",
+    "judge",
+    "length",
+    "quality",
+    "readiness",
+    "sat",
+    "structure",
+    "structured",
+    "taste",
+    "tastes",
+    "tasting",
+    "wine",
+    "wines",
+})
+
 
 @dataclass(frozen=True)
 class RetrievalContext:
@@ -203,6 +231,7 @@ def run_retrieval_sandbox(
         query_analysis,
         hint_chain_ids,
         context.knowledge_nodes,
+        clean_query=clean_query,
     )
     scored = [
         score_chunk_for_query(chunk, query_analysis, context.golden_by_chunk_id)
@@ -1244,10 +1273,49 @@ def _causal_chain_match_shape(node: dict[str, Any]) -> dict[str, Any]:
     }
 
 
+def _meaningful_chain_hint_tokens(text: str) -> set[str]:
+    return {
+        token
+        for token in _tokens(text)
+        if len(token) >= 3 and token not in _GENERIC_CHAIN_HINT_TERMS
+    }
+
+
+def _chain_hint_compatibility_terms(chain_node: dict[str, Any]) -> set[str]:
+    text_parts: list[str] = [
+        _knowledge_node_id(chain_node),
+        _knowledge_node_name(chain_node),
+    ]
+    text_parts.extend(_as_list(chain_node.get("trigger_keywords")))
+    text_parts.extend(_knowledge_node_primary_phrases(chain_node))
+    return _meaningful_chain_hint_tokens(" ".join(text_parts))
+
+
+def _is_chain_hint_semantically_compatible(
+    clean_query: str,
+    chain_node: dict,
+) -> bool:
+    """Return True only when a planner hint is supported by the clean query.
+
+    Planner influence is intentionally fail-closed: if the clean user query does
+    not share enough non-generic terms with the hinted causal-chain node, the
+    hint is ignored.  This remains deterministic and uses only local retrieval
+    data: tokenized clean query plus existing causal-chain node metadata.
+    """
+    query_terms = _meaningful_chain_hint_tokens(clean_query)
+    if len(query_terms) < _MIN_CHAIN_HINT_COMPATIBILITY_TERMS:
+        return False
+    chain_terms = _chain_hint_compatibility_terms(chain_node)
+    if not chain_terms:
+        return False
+    return len(query_terms & chain_terms) >= _MIN_CHAIN_HINT_COMPATIBILITY_TERMS
+
+
 def _inject_planner_causal_chain_hints(
     query_analysis: dict,
     hint_chain_ids: list[str],
     knowledge_nodes: list[dict],
+    clean_query: str = "",
 ) -> dict:
     """Inject gated planner causal-chain hints into native retrieval analysis.
 
@@ -1255,6 +1323,8 @@ def _inject_planner_causal_chain_hints(
     gate is enabled, valid hint IDs are converted into the same lightweight
     ``matched_causal_chains`` objects produced by organic query matching, so the
     existing ``causal_chain_match_score`` path can consume them unchanged.
+    Phase 3A.7 adds a fail-closed semantic compatibility check against the
+    clean query before any hinted chain can be injected.
     """
     if not ENABLE_PLANNER_CAUSAL_CHAIN_INJECTION or not hint_chain_ids:
         return query_analysis
@@ -1279,6 +1349,8 @@ def _inject_planner_causal_chain_hints(
             continue
         node = causal_nodes_by_id.get(hint_id)
         if not node:
+            continue
+        if not _is_chain_hint_semantically_compatible(clean_query, node):
             continue
         additions.append(_causal_chain_match_shape(node))
         matched_ids.add(hint_id)

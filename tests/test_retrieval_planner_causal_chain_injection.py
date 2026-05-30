@@ -92,12 +92,13 @@ def _query_analysis(**overrides):
     return base
 
 
-def _inject(query_analysis, hint_ids, nodes=None):
+def _inject(query_analysis, hint_ids, nodes=None, clean_query="cool climate warm climate sugar"):
     with patch.object(retrieval, "ENABLE_PLANNER_CAUSAL_CHAIN_INJECTION", True):
         return retrieval._inject_planner_causal_chain_hints(
             query_analysis,
             hint_ids,
             nodes if nodes is not None else [CHAIN_A, CHAIN_B, NON_CAUSAL_NODE],
+            clean_query=clean_query,
         )
 
 
@@ -108,6 +109,7 @@ class PlannerCausalChainInjectionTests(unittest.TestCase):
             analysis,
             ["CC_COOL_CLIMATE_ACIDITY"],
             [CHAIN_A],
+            clean_query="cool climate acidity",
         )
         self.assertIs(result, analysis)
         self.assertEqual(result, analysis)
@@ -211,6 +213,7 @@ class PlannerCausalChainInjectionTests(unittest.TestCase):
             direct,
             ["CC_COOL_CLIMATE_ACIDITY"],
             [CHAIN_A],
+            clean_query=query,
         )
         self.assertIs(result, direct)
         self.assertEqual(result, direct)
@@ -227,13 +230,18 @@ class PlannerCausalChainInjectionTests(unittest.TestCase):
             with self.subTest(query=query):
                 clean, hint_ids = retrieval._parse_planner_query_hints(query)
                 analysis = retrieval.classify_query(clean, [], [CHAIN_A])
-                result = retrieval._inject_planner_causal_chain_hints(analysis, hint_ids, [CHAIN_A])
+                result = retrieval._inject_planner_causal_chain_hints(
+                    analysis,
+                    hint_ids,
+                    [CHAIN_A],
+                    clean_query=clean,
+                )
                 self.assertEqual(clean, query)
                 self.assertEqual(hint_ids, [])
                 self.assertIs(result, analysis)
 
     def test_gate_on_injected_chain_is_seen_by_causal_chain_match_score(self):
-        result = _inject(_query_analysis(), ["CC_COOL_CLIMATE_ACIDITY"])
+        result = _inject(_query_analysis(), ["CC_COOL_CLIMATE_ACIDITY"], clean_query="cool climate acidity")
         match_scores = retrieval._score_term_and_concept_matches(
             {},
             result,
