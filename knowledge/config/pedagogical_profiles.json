@@ -1,0 +1,417 @@
+{
+  "_meta": {
+    "schema_version": "1.0.0",
+    "description": "Declarative pedagogical function weights for tutor modes and visible roles. All weights must sum to 1.0. No LLM, no API, no embeddings, no vector DB, no examiner authority.",
+    "governance": {
+      "safe_for_examiner": false,
+      "examiner_scoring_allowed": false,
+      "uses_llm": false,
+      "uses_api": false,
+      "uses_embeddings": false,
+      "uses_vector_db": false
+    }
+  },
+  "allowed_functions": [
+    "cartographer",
+    "scientist",
+    "host",
+    "storyteller",
+    "critic",
+    "challenger"
+  ],
+  "allowed_tutor_modes": [
+    "mentor",
+    "trainer",
+    "reviewer",
+    "distinction",
+    "exam_pressure"
+  ],
+  "allowed_visible_roles": [
+    "mentor_fundamentos",
+    "entrenador_sensorial",
+    "investigador_causalidad",
+    "revisor_respuestas",
+    "entrenador_distinction"
+  ],
+  "default_profile": {
+    "id": "default",
+    "description": "Balanced mentor fallback. Used when tutor_role or tutor_mode is unknown or missing. Not severe: host >= 0.25, challenger <= 0.10.",
+    "rationale": "A safe default must never punish the learner for an unresolved routing case. Host is elevated to maintain rapport. Challenger is minimal to avoid adversarial pressure without context.",
+    "functions": {
+      "cartographer": {
+        "weight": 0.20,
+        "rationale": "Provide orientation and structure without overwhelming."
+      },
+      "scientist": {
+        "weight": 0.15,
+        "rationale": "Light causal framing as a baseline without demanding deep chains."
+      },
+      "host": {
+        "weight": 0.30,
+        "rationale": "Default fallback must be warm and supportive."
+      },
+      "storyteller": {
+        "weight": 0.20,
+        "rationale": "Narrative aids memory consolidation as a general-purpose tool."
+      },
+      "critic": {
+        "weight": 0.10,
+        "rationale": "Minimal precision feedback without triggering evaluation anxiety."
+      },
+      "challenger": {
+        "weight": 0.05,
+        "rationale": "Minimal adversarial pressure in unknown context."
+      }
+    }
+  },
+  "tutor_modes": {
+    "mentor": {
+      "description": "Balanced guidance mode. Combines structure, narrative, and warmth for foundational learning.",
+      "rationale": "Mentor mode is the primary mode for learners building conceptual foundations. Host and storyteller are elevated to promote psychological safety and memory encoding.",
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false
+      },
+      "functions": {
+        "cartographer": {
+          "weight": 0.20,
+          "rationale": "Provides conceptual maps and regional context without overwhelming."
+        },
+        "scientist": {
+          "weight": 0.20,
+          "rationale": "Causal chains at a moderate level for mechanism understanding."
+        },
+        "host": {
+          "weight": 0.30,
+          "rationale": "Primary support function — reduces anxiety, builds confidence."
+        },
+        "storyteller": {
+          "weight": 0.20,
+          "rationale": "Analogies and narrative consolidate memory without replacing evidence."
+        },
+        "critic": {
+          "weight": 0.05,
+          "rationale": "Light precision feedback. Not the focus in foundational mode."
+        },
+        "challenger": {
+          "weight": 0.05,
+          "rationale": "Minimal adversarial pressure. Challenges are gentle probes, not stress tests."
+        }
+      }
+    },
+    "trainer": {
+      "description": "Practice-focused mode. Emphasises mechanism and deliberate feedback.",
+      "rationale": "Trainer mode is for learners who need repetitive skill-building. Scientist and critic are elevated to reinforce causal thinking and flag imprecision. Host remains present to maintain engagement.",
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false
+      },
+      "functions": {
+        "cartographer": {
+          "weight": 0.15,
+          "rationale": "Context mapping is lighter — learner has basic orientation."
+        },
+        "scientist": {
+          "weight": 0.25,
+          "rationale": "Causal chains and mechanism explanations are central to skill training."
+        },
+        "host": {
+          "weight": 0.20,
+          "rationale": "Maintains engagement during repetitive practice without excessive softening."
+        },
+        "storyteller": {
+          "weight": 0.10,
+          "rationale": "Narrative is reduced — practice favours precision over memorability."
+        },
+        "critic": {
+          "weight": 0.15,
+          "rationale": "Precision feedback marks imprecision clearly without scoring officially."
+        },
+        "challenger": {
+          "weight": 0.15,
+          "rationale": "Deliberate challenges expose assumption gaps during practice."
+        }
+      }
+    },
+    "reviewer": {
+      "description": "Evaluation-support mode. Emphasises precision and coverage without official scoring.",
+      "rationale": "Reviewer mode is for learners checking their own understanding before assessment. Critic is elevated to surface gaps. Governance explicitly forbids examiner authority.",
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false
+      },
+      "functions": {
+        "cartographer": {
+          "weight": 0.20,
+          "rationale": "Helps learner verify topical coverage and locate conceptual gaps."
+        },
+        "scientist": {
+          "weight": 0.20,
+          "rationale": "Causal accuracy is critical during review."
+        },
+        "host": {
+          "weight": 0.15,
+          "rationale": "Reduced support without abandoning learner — review can be stressful."
+        },
+        "storyteller": {
+          "weight": 0.10,
+          "rationale": "Minimal narrative — review favours accuracy over memorability."
+        },
+        "critic": {
+          "weight": 0.25,
+          "rationale": "Primary function: surface imprecision and vague reasoning."
+        },
+        "challenger": {
+          "weight": 0.10,
+          "rationale": "Moderate challenge to test whether understanding is solid."
+        }
+      }
+    },
+    "distinction": {
+      "description": "High-standard mode for distinction-level candidates. Exigent but governance-safe.",
+      "rationale": "Distinction mode demands precise causal chains, strong evidence, and self-monitoring. Critic and scientist are co-dominant. Host is present but reduced — distinction candidates can tolerate more challenge. Governance: no examiner scoring, no official marks.",
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false
+      },
+      "functions": {
+        "cartographer": {
+          "weight": 0.15,
+          "rationale": "Conceptual coverage remains important but is not the bottleneck at distinction level."
+        },
+        "scientist": {
+          "weight": 0.25,
+          "rationale": "Mechanism precision and causal depth are central to distinction performance."
+        },
+        "host": {
+          "weight": 0.10,
+          "rationale": "Reduced but present — distinction candidates are resilient but still learners."
+        },
+        "storyteller": {
+          "weight": 0.10,
+          "rationale": "Narrative is minimal — distinction answers require evidence, not metaphor."
+        },
+        "critic": {
+          "weight": 0.25,
+          "rationale": "Precision and benchmarking against WSET standards are primary functions."
+        },
+        "challenger": {
+          "weight": 0.15,
+          "rationale": "Adversarial probing of assumptions is part of distinction-level thinking."
+        }
+      }
+    },
+    "exam_pressure": {
+      "description": "High-challenge exam-simulation mode. Maximum critic and challenger. Governance: never activates examiner authority.",
+      "rationale": "exam_pressure is for learners within ~14 days of their exam who need stress-testing. Critic and challenger are at maximum. Host is reduced but never zero — psychological safety must be preserved. This mode NEVER claims official grading authority.",
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "governance_note": "exam_pressure must never claim to evaluate answers as an official WSET examiner. Feedback is pedagogical, not official."
+      },
+      "functions": {
+        "cartographer": {
+          "weight": 0.10,
+          "rationale": "Minimal orientation — learner is expected to know the map."
+        },
+        "scientist": {
+          "weight": 0.20,
+          "rationale": "Causal precision remains important under exam conditions."
+        },
+        "host": {
+          "weight": 0.15,
+          "rationale": "Reduced but mandatory — minimum emotional floor to prevent panic."
+        },
+        "storyteller": {
+          "weight": 0.05,
+          "rationale": "Narrative is nearly absent — exam answers require precision, not story."
+        },
+        "critic": {
+          "weight": 0.25,
+          "rationale": "Maximum precision pressure. Flags every vague or unsupported claim."
+        },
+        "challenger": {
+          "weight": 0.25,
+          "rationale": "Maximum adversarial challenge. Exposes every assumption gap."
+        }
+      }
+    }
+  },
+  "visible_roles": {
+    "mentor_fundamentos": {
+      "description": "Warm foundational tutor for learners beginning their WSET Level 3 journey.",
+      "tutor_mode": "mentor",
+      "rationale": "mentor_fundamentos prioritises comfort and orientation. Host is at maximum weight. Storyteller supports memory without replacing retrieval.",
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false
+      },
+      "functions": {
+        "cartographer": {
+          "weight": 0.25,
+          "rationale": "Strong orientation for learners who need conceptual geography."
+        },
+        "scientist": {
+          "weight": 0.15,
+          "rationale": "Light causal framing — mechanisms introduced gently."
+        },
+        "host": {
+          "weight": 0.35,
+          "rationale": "Primary function for foundational learners. Warmth and confidence-building."
+        },
+        "storyteller": {
+          "weight": 0.15,
+          "rationale": "Narrative bridges new concepts to existing knowledge."
+        },
+        "critic": {
+          "weight": 0.05,
+          "rationale": "Minimal — not the right moment for precision pressure."
+        },
+        "challenger": {
+          "weight": 0.05,
+          "rationale": "Minimal — gentle probes only."
+        }
+      }
+    },
+    "entrenador_sensorial": {
+      "description": "Practice-focused role specialising in sensory analysis and tasting vocabulary.",
+      "tutor_mode": "trainer",
+      "rationale": "entrenador_sensorial combines scientist (mechanism behind sensory perception) with storyteller (narrative memory for flavour profiles). Cartographer is light — tasting is not primarily a map exercise.",
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false
+      },
+      "functions": {
+        "cartographer": {
+          "weight": 0.10,
+          "rationale": "Minimal — sensory training is not primarily about regional geography."
+        },
+        "scientist": {
+          "weight": 0.30,
+          "rationale": "Mechanisms behind sensory perception (tannin, acidity, volatile esters) are central."
+        },
+        "host": {
+          "weight": 0.20,
+          "rationale": "Sensory learning can feel subjective and vulnerable — support is important."
+        },
+        "storyteller": {
+          "weight": 0.25,
+          "rationale": "Narrative and analogy are powerful for encoding sensory memory."
+        },
+        "critic": {
+          "weight": 0.10,
+          "rationale": "Precision in SAT vocabulary requires light critical feedback."
+        },
+        "challenger": {
+          "weight": 0.05,
+          "rationale": "Minimal challenge — sensory confidence builds through positive repetition."
+        }
+      }
+    },
+    "investigador_causalidad": {
+      "description": "Causal-chain specialist for learners who need to understand wine mechanisms deeply.",
+      "tutor_mode": "trainer",
+      "rationale": "investigador_causalidad is scientist-dominant. Analogies support causal reasoning but never replace retrieval-backed explanations.",
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false
+      },
+      "functions": {
+        "cartographer": {
+          "weight": 0.15,
+          "rationale": "Contextualises causal chains within regional or viticultural geography."
+        },
+        "scientist": {
+          "weight": 0.35,
+          "rationale": "Primary function — mechanism explanation, cause-effect chains, variable isolation."
+        },
+        "host": {
+          "weight": 0.15,
+          "rationale": "Maintains learner engagement during complex causal exposition."
+        },
+        "storyteller": {
+          "weight": 0.15,
+          "rationale": "Analogies illuminate mechanisms — must be grounded in retrieved evidence."
+        },
+        "critic": {
+          "weight": 0.10,
+          "rationale": "Precision in causal language (causa → mecanismo → efecto)."
+        },
+        "challenger": {
+          "weight": 0.10,
+          "rationale": "Tests whether the learner can apply the mechanism to novel cases."
+        }
+      }
+    },
+    "revisor_respuestas": {
+      "description": "Answer-review specialist for self-assessment and gap identification.",
+      "tutor_mode": "reviewer",
+      "rationale": "revisor_respuestas is critic-dominant. Surfaces gaps and vague reasoning. Does not claim official grading authority. Feedback is traceable to retrieved evidence.",
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false
+      },
+      "functions": {
+        "cartographer": {
+          "weight": 0.15,
+          "rationale": "Verifies topical and regional coverage."
+        },
+        "scientist": {
+          "weight": 0.20,
+          "rationale": "Checks causal accuracy of the learner's answer."
+        },
+        "host": {
+          "weight": 0.10,
+          "rationale": "Minimal support — reviewer mode favours honest feedback over comfort."
+        },
+        "storyteller": {
+          "weight": 0.10,
+          "rationale": "Minimal narrative — review answers require precision over memorability."
+        },
+        "critic": {
+          "weight": 0.35,
+          "rationale": "Primary function — surfaces imprecision, vagueness, and unsupported claims."
+        },
+        "challenger": {
+          "weight": 0.10,
+          "rationale": "Tests whether the learner's answer holds under adversarial questioning."
+        }
+      }
+    },
+    "entrenador_distinction": {
+      "description": "Distinction-level specialist for advanced candidates targeting the highest band.",
+      "tutor_mode": "distinction",
+      "rationale": "entrenador_distinction is co-dominant scientist and critic with significant challenger. Exigent but never claims examiner authority. Host is present at minimum viable weight.",
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false
+      },
+      "functions": {
+        "cartographer": {
+          "weight": 0.10,
+          "rationale": "Distinction candidates are expected to know the conceptual map."
+        },
+        "scientist": {
+          "weight": 0.25,
+          "rationale": "Mechanism precision is the distinction differentiator."
+        },
+        "host": {
+          "weight": 0.10,
+          "rationale": "Minimum viable support — distinction candidates are resilient."
+        },
+        "storyteller": {
+          "weight": 0.10,
+          "rationale": "Minimal — distinction answers require evidence, not narrative."
+        },
+        "critic": {
+          "weight": 0.25,
+          "rationale": "Precision and benchmarking at distinction standard."
+        },
+        "challenger": {
+          "weight": 0.20,
+          "rationale": "Adversarial probing exposes assumption gaps at distinction level."
+        }
+      }
+    }
+  }
+}

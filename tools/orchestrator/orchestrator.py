@@ -19,6 +19,10 @@ from tools.constants import (
     USES_VECTOR_DB,
 )
 from tools.retrieval.tutor_retrieval_sandbox import run_retrieval_sandbox
+from tools.tutor.pedagogical_strategy.strategy_layer import (
+    ENABLE_PEDAGOGICAL_STRATEGY_LAYER,
+    build_pedagogical_strategy,
+)
 
 from .learner_state import (
     DEFAULT_LES_PATH,
@@ -187,6 +191,16 @@ def run_orchestrator(
         tutor_directive=tutor_directive,
         forced_causal_chains=matched_causal_chain_nodes,
     )
+    # Connection C: inject psl_directive into context_package when gate is active.
+    # When ENABLE_PEDAGOGICAL_STRATEGY_LAYER=False this is a strict no-op — the
+    # context_package is unchanged and all downstream behaviour is identical.
+    if ENABLE_PEDAGOGICAL_STRATEGY_LAYER:
+        _psl_directive = build_pedagogical_strategy(
+            context_package=context_package,
+            strategic_plan=strategic_plan,
+        )
+        context_package["psl_directive"] = _psl_directive
+
     package_paths = write_context_package(context_package, context_package_dir)
     result = {
         "student_query": query,

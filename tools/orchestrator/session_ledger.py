@@ -153,6 +153,17 @@ def _build_session_entry(result: dict[str, Any], timestamp: str) -> dict[str, An
         "causal_chains_seen": causal_chain_ids,
     }
 
+    # Connection D: PSL audit trace — included only when gate was active.
+    # Contains ONLY strategy metadata (no learner content, no queries, no governance fields).
+    psl_dir: dict[str, Any] = pkg.get("psl_directive") or {}
+    if psl_dir.get("strategy_active"):
+        entry["psl_trace"] = {
+            "tutor_mode": psl_dir.get("profile_id"),
+            "function_weights": dict(psl_dir.get("function_weights") or {}),
+            "feedback_intensity": psl_dir.get("feedback_intensity"),
+            "timestamp": timestamp,
+        }
+
     # Final safety pass: strip any blocked field that might have leaked in
     for key in _BLOCKED_FIELDS:
         entry.pop(key, None)

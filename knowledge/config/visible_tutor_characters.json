@@ -1,0 +1,99 @@
+{
+  "_meta": {
+    "schema_version": "1.0.0",
+    "description": "Contract for visible tutor characters (frontend presentation layer). These are fictional original characters — not real people, not likenesses, not biographies. This config defines runtime contracts only. Any research inspiration is documented in internal research notes and never appears in runtime public fields.",
+    "governance": {
+      "safe_for_examiner": false,
+      "examiner_scoring_allowed": false,
+      "uses_llm": false,
+      "uses_api": false,
+      "uses_embeddings": false,
+      "uses_vector_db": false,
+      "governance_note": "No character in this file may claim WSET examiner authority. No character may be described as a real person or as inspired by a real person in any runtime-visible field. Characters are pedagogical presentation, not official evaluation."
+    }
+  },
+  "governance_rules": {
+    "no_real_person_names": true,
+    "no_real_likenesses": true,
+    "no_official_wset_authority": true,
+    "no_examiner_scoring": true,
+    "inspiration_notes_internal_only": true
+  },
+  "characters": [
+    {
+      "id": "clara_mapas",
+      "display_name": "Astrid",
+      "role_label": "Tutora de fundamentos",
+      "short_description": "Una tutora paciente y orientadora que ayuda a construir mapas conceptuales claros. Especialista en hacer que lo complejo parezca manejable.",
+      "allowed_modes": ["mentor"],
+      "default_mode": "mentor",
+      "strategy_profile_id": "mentor_fundamentos",
+      "visual_direction": "Warm tones, open body language, calm expression. Illustrated style, not photorealistic.",
+      "governance_notes": "Fictional original character. No real person name or likeness. No WSET examiner authority. May not produce official scores or marks.",
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false
+      }
+    },
+    {
+      "id": "marco_sentidos",
+      "display_name": "Andrey",
+      "role_label": "Entrenador sensorial",
+      "short_description": "Un entrenador preciso y cercano que acompaña el desarrollo del vocabulario de cata. Usa analogías para anclar sensaciones, siempre respaldadas por evidencia.",
+      "allowed_modes": ["trainer"],
+      "default_mode": "trainer",
+      "strategy_profile_id": "entrenador_sensorial",
+      "visual_direction": "Professional but approachable. Associated with sensory vocabulary and tasting environments. Illustrated style.",
+      "governance_notes": "Fictional original character. No real person name or likeness. No WSET examiner authority. Analogies used by this character must not substitute retrieved evidence.",
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false
+      }
+    },
+    {
+      "id": "ines_causas",
+      "display_name": "María",
+      "role_label": "Investigadora de causalidad",
+      "short_description": "Una especialista rigurosa en cadenas causales. Pregunta siempre '¿por qué?' y '¿qué mecanismo explica esto?'. No acepta respuestas memorísticas sin razonamiento.",
+      "allowed_modes": ["trainer", "distinction"],
+      "default_mode": "trainer",
+      "strategy_profile_id": "investigador_causalidad",
+      "visual_direction": "Analytical, precise. Associated with diagrams and mechanism charts. Illustrated style.",
+      "governance_notes": "Fictional original character. No real person name or likeness. No WSET examiner authority. Causal explanations must be grounded in retrieved knowledge, never invented.",
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false
+      }
+    },
+    {
+      "id": "rafael_revision",
+      "display_name": "Arturo",
+      "role_label": "Revisor de respuestas",
+      "short_description": "Un revisor meticuloso que identifica vacíos y vaguedades en las respuestas. Directo pero nunca cruel. No califica oficialmente — señala qué falta y por qué.",
+      "allowed_modes": ["reviewer"],
+      "default_mode": "reviewer",
+      "strategy_profile_id": "revisor_respuestas",
+      "visual_direction": "Focused, measured. Associated with review checklists and structured feedback. Illustrated style.",
+      "governance_notes": "Fictional original character. No real person name or likeness. No WSET examiner authority. Feedback is pedagogical gap identification, not official grading.",
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false
+      }
+    },
+    {
+      "id": "sofia_distinction",
+      "display_name": "Fernanda",
+      "role_label": "Entrenadora de distinción",
+      "short_description": "Una entrenadora exigente para candidatos que aspiran a la banda más alta. Eleva el estándar de precisión y evidencia. Nunca actúa como examinadora oficial.",
+      "allowed_modes": ["distinction", "exam_pressure"],
+      "default_mode": "distinction",
+      "strategy_profile_id": "entrenador_distinction",
+      "visual_direction": "High-standard, confident. Associated with precision and advanced assessment preparation. Illustrated style.",
+      "governance_notes": "Fictional original character. No real person name or likeness. No WSET examiner authority. Distinction-level feedback is pedagogical benchmarking, not official marks.",
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false
+      }
+    }
+  ]
+}

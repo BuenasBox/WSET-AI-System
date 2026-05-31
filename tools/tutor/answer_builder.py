@@ -615,6 +615,15 @@ def _select_explanation_depth(
         return "deep"
     if mastery in {"high", "advanced", "strong"} and not misconception:
         return "minimal"
+    # Connection E: PSL causal_depth_required modulation — no-op when gate off
+    # (psl_directive absent from package when gate is False).
+    psl = package.get("psl_directive")
+    if psl and psl.get("strategy_active"):
+        psl_causal_depth = psl.get("causal_depth_required")
+        if psl_causal_depth == "deep" and cognitive_load != "high":
+            return "deep"
+        if psl_causal_depth == "minimal":
+            return "minimal"
     return str(priority_plan.get("recommended_depth") or "standard")
 
 
@@ -625,10 +634,21 @@ def _scaffolding_policy_for_package(package: dict[str, Any], priority_plan: dict
     if low_mastery and isinstance(low_mastery[0], dict):
         mastery = float(low_mastery[0].get("mastery_probability", 0.5) or 0.5)
     misconception = package.get("matched_misconception") or {}
+    cognitive_load = str(priority_plan.get("cognitive_load_estimate") or "medium")
+    urgency = str(priority_plan.get("urgency") or "medium")
+    # Connection B: PSL directive provides scaffolding hints when gate is active.
+    # When gate is off, psl_directive is absent — this block is a strict no-op.
+    psl = package.get("psl_directive")
+    if psl and psl.get("strategy_active"):
+        if (psl.get("emotional_support_level") == "low"
+                and psl.get("feedback_intensity") == "high"):
+            cognitive_load = "high"
+        if psl.get("challenge_level") == "high":
+            urgency = "high"
     return select_scaffolding_policy(
         mastery_probability=mastery,
-        cognitive_load=str(priority_plan.get("cognitive_load_estimate") or "medium"),
-        urgency=str(priority_plan.get("urgency") or "medium"),
+        cognitive_load=cognitive_load,
+        urgency=urgency,
         misconception_severity=str(misconception.get("severity") or "medium"),
     )
 
