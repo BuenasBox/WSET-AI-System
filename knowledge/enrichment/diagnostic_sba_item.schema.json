@@ -1,0 +1,531 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://wset-ai-system.local/schemas/diagnostic_sba_item.schema.json",
+  "title": "Diagnostic Single Best Answer Item",
+  "description": "Training-only, source-grounded diagnostic single-best-answer item schema for WSET-AI-System.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "identity",
+    "curriculum",
+    "question",
+    "options",
+    "source_support",
+    "feedback",
+    "governance",
+    "attempt_analytics_placeholders"
+  ],
+  "properties": {
+    "schema_version": {
+      "type": "string",
+      "const": "diagnostic_sba_item_v1"
+    },
+    "identity": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "item_id",
+        "item_version",
+        "created_by",
+        "generation_method",
+        "training_item_only"
+      ],
+      "properties": {
+        "item_id": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "^[a-z0-9][a-z0-9_\\-]*$"
+        },
+        "item_version": {
+          "type": "string",
+          "minLength": 1
+        },
+        "created_by": {
+          "type": "string",
+          "minLength": 1
+        },
+        "generation_method": {
+          "type": "string",
+          "enum": [
+            "manual_schema_fixture",
+            "deterministic_template",
+            "human_authored"
+          ]
+        },
+        "training_item_only": {
+          "type": "boolean",
+          "const": true
+        }
+      }
+    },
+    "curriculum": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "ra_id",
+        "topic",
+        "subtopic",
+        "difficulty",
+        "learning_objective"
+      ],
+      "properties": {
+        "ra_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "topic": {
+          "type": "string",
+          "minLength": 1
+        },
+        "subtopic": {
+          "type": "string",
+          "minLength": 1
+        },
+        "difficulty": {
+          "type": "string",
+          "enum": [
+            "foundational",
+            "intermediate",
+            "advanced",
+            "distinction"
+          ]
+        },
+        "learning_objective": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "question": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "stem",
+        "question_type",
+        "expected_reasoning_type"
+      ],
+      "properties": {
+        "stem": {
+          "type": "string",
+          "minLength": 1
+        },
+        "question_type": {
+          "type": "string",
+          "const": "diagnostic_single_best_answer"
+        },
+        "expected_reasoning_type": {
+          "type": "string",
+          "enum": [
+            "definition",
+            "cause_effect",
+            "process",
+            "sat_reasoning",
+            "misconception_correction",
+            "regional_comparison",
+            "vocabulary",
+            "diagnostic_review"
+          ]
+        }
+      }
+    },
+    "options": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "properties": {
+        "A": {
+          "$ref": "#/$defs/option"
+        },
+        "B": {
+          "$ref": "#/$defs/option"
+        },
+        "C": {
+          "$ref": "#/$defs/option"
+        },
+        "D": {
+          "$ref": "#/$defs/option"
+        }
+      },
+      "oneOf": [
+        {
+          "properties": {
+            "A": {
+              "properties": {
+                "is_correct": {
+                  "const": true
+                }
+              }
+            },
+            "B": {
+              "properties": {
+                "is_correct": {
+                  "const": false
+                }
+              }
+            },
+            "C": {
+              "properties": {
+                "is_correct": {
+                  "const": false
+                }
+              }
+            },
+            "D": {
+              "properties": {
+                "is_correct": {
+                  "const": false
+                }
+              }
+            }
+          }
+        },
+        {
+          "properties": {
+            "A": {
+              "properties": {
+                "is_correct": {
+                  "const": false
+                }
+              }
+            },
+            "B": {
+              "properties": {
+                "is_correct": {
+                  "const": true
+                }
+              }
+            },
+            "C": {
+              "properties": {
+                "is_correct": {
+                  "const": false
+                }
+              }
+            },
+            "D": {
+              "properties": {
+                "is_correct": {
+                  "const": false
+                }
+              }
+            }
+          }
+        },
+        {
+          "properties": {
+            "A": {
+              "properties": {
+                "is_correct": {
+                  "const": false
+                }
+              }
+            },
+            "B": {
+              "properties": {
+                "is_correct": {
+                  "const": false
+                }
+              }
+            },
+            "C": {
+              "properties": {
+                "is_correct": {
+                  "const": true
+                }
+              }
+            },
+            "D": {
+              "properties": {
+                "is_correct": {
+                  "const": false
+                }
+              }
+            }
+          }
+        },
+        {
+          "properties": {
+            "A": {
+              "properties": {
+                "is_correct": {
+                  "const": false
+                }
+              }
+            },
+            "B": {
+              "properties": {
+                "is_correct": {
+                  "const": false
+                }
+              }
+            },
+            "C": {
+              "properties": {
+                "is_correct": {
+                  "const": false
+                }
+              }
+            },
+            "D": {
+              "properties": {
+                "is_correct": {
+                  "const": true
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "source_support": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "source_ids",
+        "source_chunks",
+        "support_rationale"
+      ],
+      "properties": {
+        "source_ids": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "source_chunks": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "support_rationale": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "feedback": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "correct_rationale",
+        "why_other_options_are_wrong",
+        "remediation_recommendation"
+      ],
+      "properties": {
+        "correct_rationale": {
+          "type": "string",
+          "minLength": 1
+        },
+        "why_other_options_are_wrong": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "A",
+            "B",
+            "C",
+            "D"
+          ],
+          "properties": {
+            "A": {
+              "type": "string",
+              "minLength": 1
+            },
+            "B": {
+              "type": "string",
+              "minLength": 1
+            },
+            "C": {
+              "type": "string",
+              "minLength": 1
+            },
+            "D": {
+              "type": "string",
+              "minLength": 1
+            }
+          }
+        },
+        "remediation_recommendation": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "governance": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "safe_for_examiner",
+        "examiner_scoring_allowed",
+        "official_wset_question",
+        "training_item_only",
+        "uses_llm",
+        "uses_api",
+        "uses_embeddings",
+        "uses_vector_db",
+        "cloud_services_active"
+      ],
+      "properties": {
+        "safe_for_examiner": {
+          "type": "boolean",
+          "const": false
+        },
+        "examiner_scoring_allowed": {
+          "type": "boolean",
+          "const": false
+        },
+        "official_wset_question": {
+          "type": "boolean",
+          "const": false
+        },
+        "training_item_only": {
+          "type": "boolean",
+          "const": true
+        },
+        "uses_llm": {
+          "type": "boolean",
+          "const": false
+        },
+        "uses_api": {
+          "type": "boolean",
+          "const": false
+        },
+        "uses_embeddings": {
+          "type": "boolean",
+          "const": false
+        },
+        "uses_vector_db": {
+          "type": "boolean",
+          "const": false
+        },
+        "cloud_services_active": {
+          "type": "boolean",
+          "const": false
+        }
+      }
+    },
+    "attempt_analytics_placeholders": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "response_time",
+        "confidence",
+        "answer_changed",
+        "diagnosed_error_type",
+        "hesitation",
+        "recommended_next_action"
+      ],
+      "properties": {
+        "response_time": {
+          "type": [
+            "null",
+            "number"
+          ],
+          "minimum": 0
+        },
+        "confidence": {
+          "type": [
+            "null",
+            "string"
+          ],
+          "enum": [
+            null,
+            "low",
+            "medium",
+            "high"
+          ]
+        },
+        "answer_changed": {
+          "type": [
+            "null",
+            "boolean"
+          ]
+        },
+        "diagnosed_error_type": {
+          "type": [
+            "null",
+            "string"
+          ],
+          "minLength": 1
+        },
+        "hesitation": {
+          "type": [
+            "null",
+            "boolean"
+          ]
+        },
+        "recommended_next_action": {
+          "type": [
+            "null",
+            "string"
+          ],
+          "minLength": 1
+        }
+      }
+    }
+  },
+  "$defs": {
+    "option": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "option_id",
+        "option_text",
+        "is_correct",
+        "diagnostic_role"
+      ],
+      "properties": {
+        "option_id": {
+          "type": "string",
+          "enum": [
+            "A",
+            "B",
+            "C",
+            "D"
+          ]
+        },
+        "option_text": {
+          "type": "string",
+          "minLength": 1
+        },
+        "is_correct": {
+          "type": "boolean"
+        },
+        "diagnostic_role": {
+          "type": "string",
+          "enum": [
+            "correct",
+            "misconception",
+            "partial_reasoning",
+            "keyword_trap",
+            "causal_confusion",
+            "sat_confusion",
+            "near_neighbor_confusion",
+            "scope_error",
+            "regional_confusion",
+            "term_confusion",
+            "unsupported_inference"
+          ]
+        },
+        "misconception_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "misconception_description": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    }
+  }
+}
