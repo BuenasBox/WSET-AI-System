@@ -1,0 +1,407 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://wset-ai-system.local/schemas/diagnostic_outcome.schema.json",
+  "title": "Diagnostic SBA Outcome",
+  "description": "Training-only diagnostic outcome model for future single-best-answer attempts.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "identity",
+    "attempt_observation",
+    "diagnostic_classification",
+    "source_trace",
+    "timing_interpretation",
+    "remediation_routing",
+    "learner_state_effect_placeholders",
+    "governance"
+  ],
+  "properties": {
+    "schema_version": {
+      "type": "string",
+      "const": "diagnostic_outcome_v1"
+    },
+    "identity": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "outcome_id",
+        "item_id",
+        "attempt_id",
+        "outcome_version",
+        "generated_by",
+        "training_diagnostic_only"
+      ],
+      "properties": {
+        "outcome_id": {
+          "$ref": "#/$defs/idString"
+        },
+        "item_id": {
+          "$ref": "#/$defs/idString"
+        },
+        "attempt_id": {
+          "$ref": "#/$defs/idString"
+        },
+        "outcome_version": {
+          "$ref": "#/$defs/safeString"
+        },
+        "generated_by": {
+          "$ref": "#/$defs/safeString"
+        },
+        "training_diagnostic_only": {
+          "type": "boolean",
+          "const": true
+        }
+      }
+    },
+    "attempt_observation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "selected_option_id",
+        "is_correct",
+        "response_time_ms",
+        "answer_changed",
+        "confidence_self_report",
+        "hesitation_flag"
+      ],
+      "properties": {
+        "selected_option_id": {
+          "type": "string",
+          "enum": [
+            "A",
+            "B",
+            "C",
+            "D"
+          ]
+        },
+        "is_correct": {
+          "type": "boolean"
+        },
+        "response_time_ms": {
+          "type": [
+            "null",
+            "integer"
+          ],
+          "minimum": 0
+        },
+        "answer_changed": {
+          "type": "boolean"
+        },
+        "confidence_self_report": {
+          "type": "string",
+          "enum": [
+            "low",
+            "medium",
+            "high",
+            "not_reported"
+          ]
+        },
+        "hesitation_flag": {
+          "type": "boolean"
+        }
+      }
+    },
+    "diagnostic_classification": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "diagnosed_error_type",
+        "confidence_alignment"
+      ],
+      "properties": {
+        "diagnosed_error_type": {
+          "type": "string",
+          "enum": [
+            "none",
+            "knowledge_gap",
+            "causal_confusion",
+            "sat_confusion",
+            "terminology_confusion",
+            "process_confusion",
+            "regional_confusion",
+            "misconception_reinforced",
+            "partial_reasoning",
+            "keyword_trap",
+            "guessing_behavior",
+            "confidence_mismatch"
+          ]
+        },
+        "confidence_alignment": {
+          "type": "string",
+          "enum": [
+            "aligned",
+            "overconfident_wrong",
+            "underconfident_correct",
+            "uncertain_correct",
+            "uncertain_wrong",
+            "not_reported"
+          ]
+        }
+      }
+    },
+    "source_trace": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "item_source_ids",
+        "selected_option_diagnostic_role",
+        "misconception_id",
+        "causal_chain_id",
+        "sat_relevance",
+        "topic",
+        "subtopic",
+        "ra_id"
+      ],
+      "properties": {
+        "item_source_ids": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "$ref": "#/$defs/safeString"
+          }
+        },
+        "selected_option_diagnostic_role": {
+          "type": "string",
+          "enum": [
+            "correct",
+            "misconception",
+            "partial_reasoning",
+            "keyword_trap",
+            "causal_confusion",
+            "sat_confusion",
+            "near_neighbor_confusion",
+            "scope_error",
+            "regional_confusion",
+            "term_confusion",
+            "unsupported_inference"
+          ]
+        },
+        "misconception_id": {
+          "$ref": "#/$defs/nullableSafeString"
+        },
+        "causal_chain_id": {
+          "$ref": "#/$defs/nullableSafeString"
+        },
+        "sat_relevance": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/safeString"
+          }
+        },
+        "topic": {
+          "$ref": "#/$defs/safeString"
+        },
+        "subtopic": {
+          "$ref": "#/$defs/safeString"
+        },
+        "ra_id": {
+          "$ref": "#/$defs/safeString"
+        }
+      }
+    },
+    "timing_interpretation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "timing_band",
+        "timing_interpretation"
+      ],
+      "properties": {
+        "timing_band": {
+          "type": "string",
+          "enum": [
+            "fast",
+            "expected",
+            "slow",
+            "very_slow",
+            "not_measured"
+          ]
+        },
+        "timing_interpretation": {
+          "type": "string",
+          "enum": [
+            "fluent_recall",
+            "deliberate_reasoning",
+            "hesitation",
+            "likely_guess",
+            "uncertainty_signal",
+            "not_measured"
+          ]
+        }
+      }
+    },
+    "remediation_routing": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "recommended_next_action",
+        "remediation_target_type",
+        "remediation_target_id",
+        "feedback_priority"
+      ],
+      "properties": {
+        "recommended_next_action": {
+          "type": "string",
+          "enum": [
+            "continue",
+            "review_topic",
+            "review_causal_chain",
+            "review_misconception",
+            "review_sat_skill",
+            "repeat_similar_item",
+            "reduce_difficulty",
+            "increase_difficulty",
+            "switch_to_explanation",
+            "schedule_review"
+          ]
+        },
+        "remediation_target_type": {
+          "type": "string",
+          "enum": [
+            "topic",
+            "subtopic",
+            "causal_chain",
+            "misconception",
+            "sat_skill",
+            "source_chunk",
+            "none"
+          ]
+        },
+        "remediation_target_id": {
+          "$ref": "#/$defs/nullableSafeString"
+        },
+        "feedback_priority": {
+          "type": "string",
+          "enum": [
+            "low",
+            "medium",
+            "high",
+            "urgent"
+          ]
+        }
+      }
+    },
+    "learner_state_effect_placeholders": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "mastery_signal",
+        "confidence_signal",
+        "retention_signal",
+        "misconception_signal",
+        "recommended_ledger_event"
+      ],
+      "properties": {
+        "mastery_signal": {
+          "$ref": "#/$defs/placeholderSignal"
+        },
+        "confidence_signal": {
+          "$ref": "#/$defs/placeholderSignal"
+        },
+        "retention_signal": {
+          "$ref": "#/$defs/placeholderSignal"
+        },
+        "misconception_signal": {
+          "$ref": "#/$defs/placeholderSignal"
+        },
+        "recommended_ledger_event": {
+          "$ref": "#/$defs/placeholderSignal"
+        }
+      }
+    },
+    "governance": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "safe_for_examiner",
+        "examiner_scoring_allowed",
+        "official_wset_score",
+        "training_diagnostic_only",
+        "uses_llm",
+        "uses_api",
+        "uses_embeddings",
+        "uses_vector_db",
+        "cloud_services_active"
+      ],
+      "properties": {
+        "safe_for_examiner": {
+          "type": "boolean",
+          "const": false
+        },
+        "examiner_scoring_allowed": {
+          "type": "boolean",
+          "const": false
+        },
+        "official_wset_score": {
+          "type": "boolean",
+          "const": false
+        },
+        "training_diagnostic_only": {
+          "type": "boolean",
+          "const": true
+        },
+        "uses_llm": {
+          "type": "boolean",
+          "const": false
+        },
+        "uses_api": {
+          "type": "boolean",
+          "const": false
+        },
+        "uses_embeddings": {
+          "type": "boolean",
+          "const": false
+        },
+        "uses_vector_db": {
+          "type": "boolean",
+          "const": false
+        },
+        "cloud_services_active": {
+          "type": "boolean",
+          "const": false
+        }
+      }
+    }
+  },
+  "$defs": {
+    "idString": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "^[a-zA-Z0-9][a-zA-Z0-9_\\-:.]*$",
+      "not": {
+        "$ref": "#/$defs/unsafeTextPattern"
+      }
+    },
+    "safeString": {
+      "type": "string",
+      "minLength": 1,
+      "not": {
+        "$ref": "#/$defs/unsafeTextPattern"
+      }
+    },
+    "nullableSafeString": {
+      "anyOf": [
+        {
+          "type": "null"
+        },
+        {
+          "$ref": "#/$defs/safeString"
+        }
+      ]
+    },
+    "placeholderSignal": {
+      "anyOf": [
+        {
+          "type": "null"
+        },
+        {
+          "$ref": "#/$defs/safeString"
+        }
+      ]
+    },
+    "unsafeTextPattern": {
+      "pattern": "official mark|official score|examiner judgment|grade prediction|official WSET result|official wset result|certified pass|certification readiness|guaranteed pass|pass/fail certification"
+    }
+  }
+}
