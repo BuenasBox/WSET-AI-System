@@ -1,0 +1,696 @@
+[
+  {
+    "schema_version": "diagnostic_sba_item_v1",
+    "draft_notice": "Human-review draft only. Not a production item, not a pilot bank item, and not official assessment material.",
+    "enrichment_status": "defer_for_human_review",
+    "identity": {
+      "item_id": "draft_diag_sba_structured_1",
+      "item_version": "0.1.0-draft",
+      "created_by": "phase_4a3_7_9_first_5_enrichment_drafts",
+      "generation_method": "manual_repo_local_enrichment_draft",
+      "training_item_only": true,
+      "source_question_id": "1"
+    },
+    "lineage": {
+      "source_question_id": "1",
+      "source_bank_path": "knowledge/question-bank/structured/wset3_questions.json",
+      "adapter_version": "structured_adapter_v0",
+      "enrichment_version": "first_5_enrichment_draft_v0",
+      "transformation_notes": [
+        "Preserves original structured-bank stem and options.",
+        "Adds draft source support candidates from repo-local knowledge-map and official chunks.",
+        "Requires human review before any production use."
+      ]
+    },
+    "curriculum": {
+      "ra_id": "RA4",
+      "topic": "fortified_wines",
+      "subtopic": "sherry_flor_biological_ageing",
+      "difficulty": "intermediate",
+      "learning_objective": "Identify the role of flor in biological ageing as a training-only diagnostic item."
+    },
+    "question": {
+      "stem": "¿Qué rol juega la 'flor' en la crianza biológica del Jerez?",
+      "question_type": "single_best_answer",
+      "expected_reasoning_type": "cause_effect"
+    },
+    "options": {
+      "A": {
+        "option_id": "A",
+        "option_text": "Incrementa la acidez volátil",
+        "is_correct": false,
+        "diagnostic_role": "causal_confusion",
+        "misconception_id": null,
+        "diagnostic_note": "Confuses biological-ageing protection with a volatile-acidity effect."
+      },
+      "B": {
+        "option_id": "B",
+        "option_text": "Reduce la concentración alcohólica",
+        "is_correct": false,
+        "diagnostic_role": "scope_error",
+        "misconception_id": null,
+        "diagnostic_note": "Over-focuses on alcohol change rather than the oxygen-protection role."
+      },
+      "C": {
+        "option_id": "C",
+        "option_text": "Protege al vino del oxígeno y desarrolla sabores únicos",
+        "is_correct": true,
+        "diagnostic_role": "correct",
+        "misconception_id": null,
+        "diagnostic_note": "Matches the local causal-chain draft for flor protection and biological-ageing character."
+      },
+      "D": {
+        "option_id": "D",
+        "option_text": "Oxida completamente el vino",
+        "is_correct": false,
+        "diagnostic_role": "causal_confusion",
+        "misconception_id": null,
+        "diagnostic_note": "Reverses the contrast between biological ageing under flor and oxidative ageing."
+      }
+    },
+    "source_support": {
+      "source_ids": [
+        "CC_FLOR_BIOLOGICAL_AGEING",
+        "OFFICIAL_WSET_WINES_OF_THE_WORLD_8_1_43_SHERRY_001"
+      ],
+      "source_chunks": [
+        "knowledge/knowledge-map/causal-chains/cc_flor_biological_ageing.json",
+        "OFFICIAL_WSET_WINES_OF_THE_WORLD_8_1_43_SHERRY_001"
+      ],
+      "support_rationale": "The knowledge-map causal chain states that flor provides oxygen protection and creates biological-ageing character; the sherry official chunk is a candidate grounding source for human review.",
+      "source_role": "knowledge_map_support",
+      "status": "draft_requires_human_review"
+    },
+    "causal_chain_linkage": {
+      "causal_chain_id": "CC_FLOR_BIOLOGICAL_AGEING",
+      "status": "draft_supported_by_expected_causal_links"
+    },
+    "misconception_linkage": {
+      "status": "none_attached",
+      "notes": "No direct misconception node was confirmed during candidate selection."
+    },
+    "sat_relevance": [],
+    "feedback": {
+      "correct_rationale": "Flor is a surface yeast layer used in biological ageing. The draft support indicates that it protects the wine from oxygen while contributing biological-ageing character, making option C the best answer.",
+      "why_other_options_are_wrong": {
+        "A": "Volatile acidity increase is not the tested role of flor in this draft support.",
+        "B": "Alcohol reduction is not the main diagnostic relationship being tested.",
+        "C": "This is the correct answer.",
+        "D": "Complete oxidation conflicts with the draft causal-chain contrast that flor protects the wine from oxygen."
+      },
+      "remediation_recommendation": "Review the flor biological-ageing causal chain and compare biological ageing with oxidative ageing.",
+      "remediation_target": {
+        "target_type": "causal_chain",
+        "target_id": "CC_FLOR_BIOLOGICAL_AGEING"
+      }
+    },
+    "governance": {
+      "safe_for_examiner": false,
+      "examiner_scoring_allowed": false,
+      "official_wset_question": false,
+      "training_item_only": true,
+      "uses_llm": false,
+      "uses_api": false,
+      "uses_embeddings": false,
+      "uses_vector_db": false,
+      "cloud_services_active": false
+    },
+    "attempt_analytics_placeholders": {
+      "response_time": null,
+      "confidence": null,
+      "answer_changed": null,
+      "diagnosed_error_type": null,
+      "hesitation": null,
+      "recommended_next_action": null
+    },
+    "human_review": {
+      "required": true,
+      "reasons": [
+        "Confirm source chunk grounding without wording imitation.",
+        "Confirm distractor diagnostic roles and rationales.",
+        "Confirm no direct misconception node should be attached."
+      ],
+      "risk_level": "medium",
+      "reviewer_notes": ""
+    }
+  },
+  {
+    "schema_version": "diagnostic_sba_item_v1",
+    "draft_notice": "Human-review draft only. Not a production item, not a pilot bank item, and not official assessment material.",
+    "enrichment_status": "defer_for_human_review",
+    "identity": {
+      "item_id": "draft_diag_sba_structured_2",
+      "item_version": "0.1.0-draft",
+      "created_by": "phase_4a3_7_9_first_5_enrichment_drafts",
+      "generation_method": "manual_repo_local_enrichment_draft",
+      "training_item_only": true,
+      "source_question_id": "2"
+    },
+    "lineage": {
+      "source_question_id": "2",
+      "source_bank_path": "knowledge/question-bank/structured/wset3_questions.json",
+      "adapter_version": "structured_adapter_v0",
+      "enrichment_version": "first_5_enrichment_draft_v0",
+      "transformation_notes": [
+        "Preserves original structured-bank stem and options.",
+        "Adds draft support candidates for fortification and fermentation halt.",
+        "Requires human review before any production use."
+      ]
+    },
+    "curriculum": {
+      "ra_id": "RA4",
+      "topic": "fortified_wines",
+      "subtopic": "port_fortification_fermentation",
+      "difficulty": "intermediate",
+      "learning_objective": "Identify how fortification stops fermentation in a training-only diagnostic item."
+    },
+    "question": {
+      "stem": "¿Qué método se usa para detener la fermentación en el vino de Oporto?",
+      "question_type": "single_best_answer",
+      "expected_reasoning_type": "process"
+    },
+    "options": {
+      "A": {
+        "option_id": "A",
+        "option_text": "Crianza en roble americano",
+        "is_correct": false,
+        "diagnostic_role": "process_confusion",
+        "misconception_id": null,
+        "diagnostic_note": "Confuses maturation vessel choice with fermentation control."
+      },
+      "B": {
+        "option_id": "B",
+        "option_text": "Uso de crianza larga",
+        "is_correct": false,
+        "diagnostic_role": "process_confusion",
+        "misconception_id": null,
+        "diagnostic_note": "Confuses ageing duration with stopping active fermentation."
+      },
+      "C": {
+        "option_id": "C",
+        "option_text": "Adición de aguardiente vínico",
+        "is_correct": true,
+        "diagnostic_role": "correct",
+        "misconception_id": null,
+        "diagnostic_note": "Matches the causal-chain draft for fortification stopping yeast activity."
+      },
+      "D": {
+        "option_id": "D",
+        "option_text": "Secado de uvas al sol",
+        "is_correct": false,
+        "diagnostic_role": "regional_confusion",
+        "misconception_id": null,
+        "diagnostic_note": "Confuses a grape-concentration technique with Port fortification."
+      }
+    },
+    "source_support": {
+      "source_ids": [
+        "CC_FORTIFICATION_RESIDUAL_SUGAR",
+        "OFFICIAL_WSET_WINES_OF_THE_WORLD_8_2_44_PORT_001"
+      ],
+      "source_chunks": [
+        "knowledge/knowledge-map/causal-chains/cc_fortification_residual_sugar.json",
+        "OFFICIAL_WSET_WINES_OF_THE_WORLD_8_2_44_PORT_001"
+      ],
+      "support_rationale": "The knowledge-map causal chain states that adding grape spirit raises alcohol enough to stop yeast activity and retain residual sugar; the Port official chunk is a candidate grounding source for human review.",
+      "source_role": "knowledge_map_support",
+      "status": "draft_requires_human_review"
+    },
+    "causal_chain_linkage": {
+      "causal_chain_id": "CC_FORTIFICATION_RESIDUAL_SUGAR",
+      "status": "draft_supported_by_expected_causal_links"
+    },
+    "misconception_linkage": {
+      "status": "not_attached",
+      "candidate_misconception_ids": [
+        "MC_RESIDUAL_SUGAR_SWEET_01"
+      ],
+      "notes": "Residual sugar misconception is adjacent but not required by this production-method item."
+    },
+    "sat_relevance": [
+      {
+        "parameter": "sweetness",
+        "status": "tentative",
+        "reason": "Residual sugar is implicated by the causal chain, but the question asks about production method rather than tasting assessment."
+      }
+    ],
+    "feedback": {
+      "correct_rationale": "Adding grape spirit during fermentation raises alcohol to a level that stops yeast activity. The draft support therefore makes option C the best answer.",
+      "why_other_options_are_wrong": {
+        "A": "Oak choice affects maturation style but does not stop fermentation.",
+        "B": "Long ageing changes development but is not the method used to halt fermentation.",
+        "C": "This is the correct answer.",
+        "D": "Drying grapes concentrates sugars but is not the Port fortification method described by the draft support."
+      },
+      "remediation_recommendation": "Review the fortification and residual-sugar causal chain, then contrast production method with maturation choices.",
+      "remediation_target": {
+        "target_type": "causal_chain",
+        "target_id": "CC_FORTIFICATION_RESIDUAL_SUGAR"
+      }
+    },
+    "governance": {
+      "safe_for_examiner": false,
+      "examiner_scoring_allowed": false,
+      "official_wset_question": false,
+      "training_item_only": true,
+      "uses_llm": false,
+      "uses_api": false,
+      "uses_embeddings": false,
+      "uses_vector_db": false,
+      "cloud_services_active": false
+    },
+    "attempt_analytics_placeholders": {
+      "response_time": null,
+      "confidence": null,
+      "answer_changed": null,
+      "diagnosed_error_type": null,
+      "hesitation": null,
+      "recommended_next_action": null
+    },
+    "human_review": {
+      "required": true,
+      "reasons": [
+        "Confirm source chunk grounding without wording imitation.",
+        "Decide whether sweetness SAT relevance should be retained or removed.",
+        "Confirm residual-sugar misconception should remain unattached."
+      ],
+      "risk_level": "low",
+      "reviewer_notes": ""
+    }
+  },
+  {
+    "schema_version": "diagnostic_sba_item_v1",
+    "draft_notice": "Human-review draft only. Not a production item, not a pilot bank item, and not official assessment material.",
+    "enrichment_status": "defer_for_human_review",
+    "identity": {
+      "item_id": "draft_diag_sba_structured_12",
+      "item_version": "0.1.0-draft",
+      "created_by": "phase_4a3_7_9_first_5_enrichment_drafts",
+      "generation_method": "manual_repo_local_enrichment_draft",
+      "training_item_only": true,
+      "source_question_id": "12"
+    },
+    "lineage": {
+      "source_question_id": "12",
+      "source_bank_path": "knowledge/question-bank/structured/wset3_questions.json",
+      "adapter_version": "structured_adapter_v0",
+      "enrichment_version": "first_5_enrichment_draft_v0",
+      "transformation_notes": [
+        "Preserves original structured-bank stem and options.",
+        "Adds draft source support candidates for spring frost and topography.",
+        "Requires human review before any production use."
+      ]
+    },
+    "curriculum": {
+      "ra_id": "RA1",
+      "topic": "viticulture",
+      "subtopic": "spring_frost_topography",
+      "difficulty": "intermediate",
+      "learning_objective": "Identify how topography affects spring frost risk in a training-only diagnostic item."
+    },
+    "question": {
+      "stem": "¿Qué factor natural tiene mayor influencia en el riesgo de heladas primaverales?",
+      "question_type": "single_best_answer",
+      "expected_reasoning_type": "cause_effect"
+    },
+    "options": {
+      "A": {
+        "option_id": "A",
+        "option_text": "Exposición al sol",
+        "is_correct": false,
+        "diagnostic_role": "partial_reasoning",
+        "misconception_id": null,
+        "diagnostic_note": "Sun exposure matters generally but does not target cold-air pooling."
+      },
+      "B": {
+        "option_id": "B",
+        "option_text": "Altitud",
+        "is_correct": false,
+        "diagnostic_role": "partial_reasoning",
+        "misconception_id": null,
+        "diagnostic_note": "Altitude can affect temperature but is less precise than slope/topography for this cold-air-drainage relationship."
+      },
+      "C": {
+        "option_id": "C",
+        "option_text": "Pendiente del terreno",
+        "is_correct": true,
+        "diagnostic_role": "correct",
+        "misconception_id": null,
+        "diagnostic_note": "Matches the draft causal chain about cold-air drainage and low-lying frost risk."
+      },
+      "D": {
+        "option_id": "D",
+        "option_text": "Latitud",
+        "is_correct": false,
+        "diagnostic_role": "scope_error",
+        "misconception_id": null,
+        "diagnostic_note": "Confuses broad climate location with site-level topography."
+      }
+    },
+    "source_support": {
+      "source_ids": [
+        "CC_SPRING_FROST_TOPOGRAPHY",
+        "OFFICIAL_WSET_OF_W_5_2_5_THE_GROWING_ENVIRONMENT_001"
+      ],
+      "source_chunks": [
+        "knowledge/knowledge-map/causal-chains/CC_SPRING_FROST_TOPOGRAPHY.json",
+        "OFFICIAL_WSET_OF_W_5_2_5_THE_GROWING_ENVIRONMENT_001"
+      ],
+      "support_rationale": "The knowledge-map causal chain describes cold air pooling in low points and slopes with better air drainage; the growing-environment official chunk is a candidate grounding source for human review.",
+      "source_role": "knowledge_map_support",
+      "status": "draft_requires_human_review"
+    },
+    "causal_chain_linkage": {
+      "causal_chain_id": "CC_SPRING_FROST_TOPOGRAPHY",
+      "status": "draft_supported_by_expected_causal_links"
+    },
+    "misconception_linkage": {
+      "status": "none_attached",
+      "notes": "No direct frost/topography misconception node was confirmed."
+    },
+    "sat_relevance": [],
+    "feedback": {
+      "correct_rationale": "Slope/topography is the best answer because cold air can drain away from slopes and accumulate in low-lying areas, changing spring frost risk.",
+      "why_other_options_are_wrong": {
+        "A": "Sun exposure can matter to ripening but does not directly describe cold-air drainage.",
+        "B": "Altitude may influence temperature, but the draft support focuses on site shape and air movement.",
+        "C": "This is the correct answer.",
+        "D": "Latitude is a broad regional factor, not the site-level factor tested here."
+      },
+      "remediation_recommendation": "Review the spring frost and vineyard topography causal chain before retrying a viticulture risk item.",
+      "remediation_target": {
+        "target_type": "causal_chain",
+        "target_id": "CC_SPRING_FROST_TOPOGRAPHY"
+      }
+    },
+    "governance": {
+      "safe_for_examiner": false,
+      "examiner_scoring_allowed": false,
+      "official_wset_question": false,
+      "training_item_only": true,
+      "uses_llm": false,
+      "uses_api": false,
+      "uses_embeddings": false,
+      "uses_vector_db": false,
+      "cloud_services_active": false
+    },
+    "attempt_analytics_placeholders": {
+      "response_time": null,
+      "confidence": null,
+      "answer_changed": null,
+      "diagnosed_error_type": null,
+      "hesitation": null,
+      "recommended_next_action": null
+    },
+    "human_review": {
+      "required": true,
+      "reasons": [
+        "Confirm that the source support justifies slope as the single best answer.",
+        "Review altitude distractor because it is plausible and may need sharper rationale.",
+        "Confirm no frost misconception node should be attached."
+      ],
+      "risk_level": "low",
+      "reviewer_notes": ""
+    }
+  },
+  {
+    "schema_version": "diagnostic_sba_item_v1",
+    "draft_notice": "Human-review draft only. Not a production item, not a pilot bank item, and not official assessment material.",
+    "enrichment_status": "defer_for_human_review",
+    "identity": {
+      "item_id": "draft_diag_sba_structured_13",
+      "item_version": "0.1.0-draft",
+      "created_by": "phase_4a3_7_9_first_5_enrichment_drafts",
+      "generation_method": "manual_repo_local_enrichment_draft",
+      "training_item_only": true,
+      "source_question_id": "13"
+    },
+    "lineage": {
+      "source_question_id": "13",
+      "source_bank_path": "knowledge/question-bank/structured/wset3_questions.json",
+      "adapter_version": "structured_adapter_v0",
+      "enrichment_version": "first_5_enrichment_draft_v0",
+      "transformation_notes": [
+        "Preserves original structured-bank stem and options.",
+        "Adds draft source support candidates for soil texture and drainage.",
+        "Requires human review before any production use."
+      ]
+    },
+    "curriculum": {
+      "ra_id": "RA1",
+      "topic": "viticulture",
+      "subtopic": "soil_texture_drainage",
+      "difficulty": "intermediate",
+      "learning_objective": "Identify the soil-texture factor most directly linked to vineyard drainage in a training-only diagnostic item."
+    },
+    "question": {
+      "stem": "¿Qué elemento del suelo influye más directamente en el drenaje del viñedo?",
+      "question_type": "single_best_answer",
+      "expected_reasoning_type": "cause_effect"
+    },
+    "options": {
+      "A": {
+        "option_id": "A",
+        "option_text": "Contenido de arcilla",
+        "is_correct": false,
+        "diagnostic_role": "near_neighbor_confusion",
+        "misconception_id": null,
+        "diagnostic_note": "Clay relates to water retention but is not the best answer for drainage in this draft."
+      },
+      "B": {
+        "option_id": "B",
+        "option_text": "Presencia de piedra caliza",
+        "is_correct": false,
+        "diagnostic_role": "terminology_confusion",
+        "misconception_id": null,
+        "diagnostic_note": "Confuses a soil composition term with the drainage-focused texture relationship."
+      },
+      "C": {
+        "option_id": "C",
+        "option_text": "Estructura arenosa",
+        "is_correct": true,
+        "diagnostic_role": "correct",
+        "misconception_id": null,
+        "diagnostic_note": "Matches the draft soil drainage relationship."
+      },
+      "D": {
+        "option_id": "D",
+        "option_text": "Materia orgánica",
+        "is_correct": false,
+        "diagnostic_role": "partial_reasoning",
+        "misconception_id": null,
+        "diagnostic_note": "Organic matter may influence soil behavior but is not the direct drainage answer in this draft."
+      }
+    },
+    "source_support": {
+      "source_ids": [
+        "CC_SOIL_DRAINAGE_VINE_VIGOUR",
+        "OFFICIAL_WSET_OF_W_5_2_5_THE_GROWING_ENVIRONMENT_001"
+      ],
+      "source_chunks": [
+        "knowledge/knowledge-map/causal-chains/CC_SOIL_DRAINAGE_VINE_VIGOUR.json",
+        "OFFICIAL_WSET_OF_W_5_2_5_THE_GROWING_ENVIRONMENT_001"
+      ],
+      "support_rationale": "The knowledge-map causal chain links soil texture and drainage to vine vigour; the growing-environment official chunk is a candidate grounding source for human review.",
+      "source_role": "knowledge_map_support",
+      "status": "draft_requires_human_review"
+    },
+    "causal_chain_linkage": {
+      "causal_chain_id": "CC_SOIL_DRAINAGE_VINE_VIGOUR",
+      "status": "draft_supported_by_expected_causal_links"
+    },
+    "misconception_linkage": {
+      "status": "none_attached",
+      "notes": "No direct soil-drainage misconception node was confirmed."
+    },
+    "sat_relevance": [],
+    "feedback": {
+      "correct_rationale": "A sandy structure is the best answer in this draft because the selected support connects soil texture with drainage behavior.",
+      "why_other_options_are_wrong": {
+        "A": "Clay tends to retain water and is not the selected drainage answer in this draft.",
+        "B": "Limestone is a soil composition clue but does not by itself answer the drainage-texture relationship.",
+        "C": "This is the correct answer.",
+        "D": "Organic matter can affect soil condition, but the tested relationship focuses on texture and drainage."
+      },
+      "remediation_recommendation": "Review soil texture, drainage, and vine vigour before retrying a vineyard-site item.",
+      "remediation_target": {
+        "target_type": "causal_chain",
+        "target_id": "CC_SOIL_DRAINAGE_VINE_VIGOUR"
+      }
+    },
+    "governance": {
+      "safe_for_examiner": false,
+      "examiner_scoring_allowed": false,
+      "official_wset_question": false,
+      "training_item_only": true,
+      "uses_llm": false,
+      "uses_api": false,
+      "uses_embeddings": false,
+      "uses_vector_db": false,
+      "cloud_services_active": false
+    },
+    "attempt_analytics_placeholders": {
+      "response_time": null,
+      "confidence": null,
+      "answer_changed": null,
+      "diagnosed_error_type": null,
+      "hesitation": null,
+      "recommended_next_action": null
+    },
+    "human_review": {
+      "required": true,
+      "reasons": [
+        "Confirm sandy structure is sufficiently supported as the single best option.",
+        "Review clay and organic matter distractors for ambiguity.",
+        "Confirm the wording is not over-specific relative to available grounding."
+      ],
+      "risk_level": "medium",
+      "reviewer_notes": ""
+    }
+  },
+  {
+    "schema_version": "diagnostic_sba_item_v1",
+    "draft_notice": "Human-review draft only. Not a production item, not a pilot bank item, and not official assessment material.",
+    "enrichment_status": "defer_for_human_review",
+    "identity": {
+      "item_id": "draft_diag_sba_structured_17",
+      "item_version": "0.1.0-draft",
+      "created_by": "phase_4a3_7_9_first_5_enrichment_drafts",
+      "generation_method": "manual_repo_local_enrichment_draft",
+      "training_item_only": true,
+      "source_question_id": "17"
+    },
+    "lineage": {
+      "source_question_id": "17",
+      "source_bank_path": "knowledge/question-bank/structured/wset3_questions.json",
+      "adapter_version": "structured_adapter_v0",
+      "enrichment_version": "first_5_enrichment_draft_v0",
+      "transformation_notes": [
+        "Preserves original structured-bank stem and options.",
+        "Adds draft source support candidates for destemming and green tannin extraction.",
+        "Requires human review before any production use."
+      ]
+    },
+    "curriculum": {
+      "ra_id": "RA1",
+      "topic": "winemaking",
+      "subtopic": "destemming_tannin_extraction",
+      "difficulty": "intermediate",
+      "learning_objective": "Identify why destemming can reduce extraction of green tannins in a training-only diagnostic item."
+    },
+    "question": {
+      "stem": "¿Cuál es el propósito principal del despalillado antes de la fermentación?",
+      "question_type": "single_best_answer",
+      "expected_reasoning_type": "process"
+    },
+    "options": {
+      "A": {
+        "option_id": "A",
+        "option_text": "Reducir el nivel de azúcar",
+        "is_correct": false,
+        "diagnostic_role": "process_confusion",
+        "misconception_id": null,
+        "diagnostic_note": "Confuses destemming with sugar adjustment."
+      },
+      "B": {
+        "option_id": "B",
+        "option_text": "Evitar la extracción de taninos verdes",
+        "is_correct": true,
+        "diagnostic_role": "correct",
+        "misconception_id": null,
+        "diagnostic_note": "Matches the draft causal chain for stems, green tannins, and structure."
+      },
+      "C": {
+        "option_id": "C",
+        "option_text": "Estimular la fermentación maloláctica",
+        "is_correct": false,
+        "diagnostic_role": "process_confusion",
+        "misconception_id": null,
+        "diagnostic_note": "Confuses grape handling before fermentation with malolactic conversion."
+      },
+      "D": {
+        "option_id": "D",
+        "option_text": "Mejorar la retención aromática",
+        "is_correct": false,
+        "diagnostic_role": "partial_reasoning",
+        "misconception_id": null,
+        "diagnostic_note": "Aroma protection may matter in other processes, but the draft support focuses on tannin extraction from stems."
+      }
+    },
+    "source_support": {
+      "source_ids": [
+        "CC_DESTEMMING_TANNIN_STRUCTURE",
+        "OFFICIAL_WSET_4_7_COMMON_ELEMENTS_IN_WINEMAKING_AND_MATURATION_001"
+      ],
+      "source_chunks": [
+        "knowledge/knowledge-map/causal-chains/CC_DESTEMMING_TANNIN_STRUCTURE.json",
+        "OFFICIAL_WSET_4_7_COMMON_ELEMENTS_IN_WINEMAKING_AND_MATURATION_001"
+      ],
+      "support_rationale": "The knowledge-map causal chain links stems to green tannin extraction and astringency; the common winemaking official chunk is a candidate grounding source for human review.",
+      "source_role": "knowledge_map_support",
+      "status": "draft_requires_human_review"
+    },
+    "causal_chain_linkage": {
+      "causal_chain_id": "CC_DESTEMMING_TANNIN_STRUCTURE",
+      "status": "draft_supported_by_expected_causal_links"
+    },
+    "misconception_linkage": {
+      "status": "not_attached",
+      "candidate_misconception_ids": [
+        "MC_TANNIN_01",
+        "MC_TANNIN_02"
+      ],
+      "notes": "Tannin misconceptions are adjacent but not direct matches unless a future rationale targets tannin/astringency confusion."
+    },
+    "sat_relevance": [
+      {
+        "parameter": "tannin",
+        "status": "tentative",
+        "reason": "The item concerns green tannin extraction, but the question is about production process rather than tasting assessment."
+      }
+    ],
+    "feedback": {
+      "correct_rationale": "Destemming removes stems before fermentation. The draft support links stems to green tannin extraction, making option B the best answer.",
+      "why_other_options_are_wrong": {
+        "A": "Destemming does not primarily reduce grape sugar.",
+        "B": "This is the correct answer.",
+        "C": "Malolactic conversion is a separate process and is not stimulated by destemming in this draft relationship.",
+        "D": "Aroma retention is not the main relationship supported by the destemming/tannin draft support."
+      },
+      "remediation_recommendation": "Review the destemming and tannin-structure causal chain, then contrast grape handling with fermentation and maturation processes.",
+      "remediation_target": {
+        "target_type": "causal_chain",
+        "target_id": "CC_DESTEMMING_TANNIN_STRUCTURE"
+      }
+    },
+    "governance": {
+      "safe_for_examiner": false,
+      "examiner_scoring_allowed": false,
+      "official_wset_question": false,
+      "training_item_only": true,
+      "uses_llm": false,
+      "uses_api": false,
+      "uses_embeddings": false,
+      "uses_vector_db": false,
+      "cloud_services_active": false
+    },
+    "attempt_analytics_placeholders": {
+      "response_time": null,
+      "confidence": null,
+      "answer_changed": null,
+      "diagnosed_error_type": null,
+      "hesitation": null,
+      "recommended_next_action": null
+    },
+    "human_review": {
+      "required": true,
+      "reasons": [
+        "Confirm source chunk grounding without wording imitation.",
+        "Decide whether tentative tannin SAT relevance should be retained.",
+        "Confirm adjacent tannin misconception nodes should remain unattached."
+      ],
+      "risk_level": "low",
+      "reviewer_notes": ""
+    }
+  }
+]
