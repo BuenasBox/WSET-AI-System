@@ -617,7 +617,7 @@
     <span style="color:rgba(0,212,255,0.18);">·</span>
     <span>ENTRENAMIENTO DIAGNÓSTICO SBA</span>
     <!-- BLOCKER 2: visible disclaimer -->
-    <span class="proto-badge">PROTOTIPO · ENTRENAMIENTO · NO EVALUACIÓN OFICIAL WSET</span>
+    <span class="proto-badge">PROTOTIPO ESTÁTICO · ENTRENAMIENTO · NO EVALUACIÓN OFICIAL WSET</span>
   </div>
   <div class="hdr-meta">
     <div class="meta-block">
@@ -791,244 +791,196 @@
 (function () {
   'use strict';
 
-  /* ════════════════════════════════════════════════════════════════
-     BANCO DE PREGUNTAS DEMO
-     mock — 4 preguntas de demostración, NO banco oficial WSET.
-     Campos schema_version / ra_id / subtopic / diagnostic_role
-     añadidos para alineación con diagnostic_sba_item_v1.
-     En producción: reemplazar con fetch('./preguntas.json')
-  ════════════════════════════════════════════════════════════════ */
-  var QS = [
+  var DATA_URL = './preguntas.json';
+  var DISCLAIMER = 'PROTOTIPO ESTÁTICO · ENTRENAMIENTO · NO EVALUACIÓN OFICIAL WSET';
+  var CONF_LABELS = ['', 'INSEGURO', 'POCO SEGURO', 'NEUTRO', 'SEGURO', 'MUY SEGURO'];
+  var SAT_LEVELS = { d: 'DÉBIL', m: 'MEDIA', f: 'FUERTE' };
+  var SAT_CLASSES = { d: 'd', m: 'm', f: 'f' };
 
-    /* ── Q-001 ─────────────────────────────────────── correcta: B */
-    {
-      id: 'Q-001',
-      schema_version: 'diagnostic_sba_item_v1',
-      ra_id: 'RA2',
-      subtopic: 'fermentacion_malolactica',
-      learning_objective: 'Identificar el mecanismo bioquímico de la FML y su efecto sobre la acidez percibida y la textura.',
-      expected_reasoning_type: 'process',
-      governance: { training_item_only: true, safe_for_examiner: false },
-      stem: '¿Cuál de las siguientes afirmaciones describe con mayor precisión el efecto principal de la fermentación maloláctica (FML) sobre la estructura sensorial de un Chardonnay elaborado en barrica de roble?',
-      dominio: 'Vinificación — Fermentación Maloláctica',
-      dificultad: 'INTERMEDIO',
-      sat: 'Análisis de procesos enológicos',
-      opts: [
-        { id:'A', txt:'Aumenta la acidez total al transformar el ácido tartárico en ácido láctico de menor peso molecular, elevando la percepción de frescura en boca.', dr:'keyword_trap' },
-        { id:'B', txt:'Reduce la acidez percibida y confiere textura mantecosa al convertir el ácido málico diprótico en ácido láctico monoprótico, con producción de diacetil como subproducto del metabolismo cítrico bacteriano.', dr:'correct' },
-        { id:'C', txt:'Elimina el ácido cítrico residual mediante fermentación bacteriana, previniendo el refermentado posterior y elevando la estabilidad microbiológica a largo plazo.', dr:'misconception' },
-        { id:'D', txt:'Genera diacetil de forma exclusiva a partir de la fermentación de azúcares residuales por bacterias lácticas, sin modificar la concentración de ácido málico en el vino.', dr:'causal_confusion' }
-      ],
-      correcta: 'B',
-      diag: {
-        razon_ok: 'La FML convierte ácido málico (diprótico, mayor potencia ácida) en ácido láctico (monoprótico, menor potencia), reduciendo la acidez percibida. El diacetil surge del metabolismo del ácido cítrico por bacterias lácticas, aportando notas a mantequilla.',
-        distractores: {
-          A: { atractiva: 'Menciona correctamente el ácido láctico como producto, activando la asociación parcial con la FML. El error está en el ácido de partida: es el málico, no el tartárico.', error: 'Confusión entre ácido tartárico y ácido málico como sustrato de la FML.' },
-          C: { atractiva: 'El concepto de "estabilidad microbiológica" suena técnicamente correcto en el contexto bacteriano. Sin embargo, la FML no elimina el cítrico como mecanismo primario.', error: 'Confusión entre fermentación maloláctica y procesos de estabilización del ácido cítrico.' },
-          D: { atractiva: 'El diacetil sí es subproducto real de la FML, pero no proviene de azúcares residuales sino del metabolismo del ácido cítrico por bacterias lácticas.', error: 'Atribución incorrecta del origen bioquímico del diacetil en la FML.' }
-        },
-        misc: { id:'MC-FML-TARTARICO', nombre:'Confusión de sustratos en FML', desc:'El aprendiz confunde el ácido tartárico (estable, no fermentado en FML) con el ácido málico (sustrato real). Patrón recurrente en examinados que memorizan "ácido → láctico" sin anclar el sustrato correcto.' },
-        cc: { id:'CC_FML_TEXTURE', causa:'Presencia de ácido málico diprótico tras la fermentación alcohólica', mec:'Bacterias lácticas (Oenococcus oeni) convierten ácido málico (diprótico) en ácido láctico (monoprótico) + CO₂; metabolizan ácido cítrico generando diacetil como subproducto', efecto:'Descenso de acidez percibida, textura más redonda, notas a mantequilla/nata si diacetil elevado', exam:'Identificar FML como proceso que reduce acidez y aporta complejidad láctea; sustrato específico = ácido málico.' },
-        sat: { nivel:'d', desc:'Señal SAT débil: el aprendiz no ancló el proceso enológico a su mecanismo bioquímico preciso. Drill recomendado sobre cadena FML.' },
-        remed: 'Revisar cadena causal CC_FML_TEXTURE. Énfasis en: (1) ácido málico como único sustrato FML, no el tartárico; (2) diferencia diprótico/monoprótico y su impacto en acidez percibida; (3) diacetil desde metabolismo cítrico, no desde azúcares.',
-        accion: { tipo:'review_causal_chain', label:'DRILL · Cadena Causal FML → Textura Mantecosa' }
-      }
-    },
+  var QS = [];
+  var OUTCOMES_BY_ITEM_ID = {};
+  var EXPORT_PAYLOAD = null;
 
-    /* ── Q-002 ─────────────────────────────────────── correcta: C
-       QUALITY FIX: opciones reordenadas (original B→C, original C→B)
-       para variar la posición de la respuesta correcta.            */
-    {
-      id: 'Q-002',
-      schema_version: 'diagnostic_sba_item_v1',
-      ra_id: 'RA2',
-      subtopic: 'crianza_barrica',
-      learning_objective: 'Describir el efecto de la micro-oxigenación en barrica sobre la polimerización tánica y la astringencia percibida.',
-      expected_reasoning_type: 'cause_effect',
-      governance: { training_item_only: true, safe_for_examiner: false },
-      stem: 'Un enólogo decide extender la crianza en barrica nueva de roble francés de 12 a 24 meses para un Cabernet Sauvignon. ¿Cuál es el efecto estructural más probable sobre los taninos del vino durante ese período adicional?',
-      dominio: 'Elaboración — Crianza en Barrica de Roble',
-      dificultad: 'AVANZADO',
-      sat: 'Análisis tánico y estructura en tinto',
-      opts: [
-        { id:'A', txt:'Los taninos de la uva se disuelven progresivamente en el roble y son reemplazados por elágitaninos de mayor peso molecular que incrementan la astringencia final del vino.', dr:'misconception' },
-        { id:'B', txt:'El toastado de la barrica destruye los elágitaninos del roble durante su fabricación, por lo que la extensión de la crianza no aporta compuestos tánicos adicionales al vino.', dr:'partial_reasoning' },
-        { id:'C', txt:'La micro-oxigenación continua a través de las duelas favorece la polimerización de taninos condensados con antocianos, reduciendo su reactividad con proteínas salivares y, por tanto, la astringencia percibida.', dr:'correct' },
-        { id:'D', txt:'La barrica actúa como oxigenador masivo, acelerando la oxidación total de los taninos condensados y transformándolos en compuestos no astringentes de cadena corta en menos de seis meses.', dr:'scope_error' }
-      ],
-      correcta: 'C',
-      diag: {
-        razon_ok: 'La madera permite una entrada controlada de oxígeno (micro-oxigenación, ~15–30 mg/L/año). Este O₂ media reacciones de polimerización entre taninos condensados y antocianos, formando complejos tano-antociánicos de mayor tamaño que presentan menor reactividad con proteínas salivares y reducen la astringencia percibida.',
-        distractores: {
-          A: { atractiva: 'Identifica correctamente que el roble aporta elágitaninos, pero el mecanismo de "disolución y reemplazo" no existe: los taninos de la uva no se disuelven en la madera.', error: 'Confusión entre extracción de taninos de madera y sustitución de taninos propios de la uva.' },
-          B: { atractiva: 'El toastado sí modifica los taninos del roble, pero no los destruye totalmente. Una barrica muy tostada tiene menos elágitaninos, no ausencia completa.', error: 'Sobregeneralización del efecto del toastado; confusión entre reducción y eliminación total.' },
-          D: { atractiva: 'La oxidación como mecanismo de suavizado tánico es parcialmente correcto, pero la escala temporal y la afirmación de "oxidación total" son incorrectas; la barrica no es un oxigenador masivo.', error: 'Sobrestimación del rol oxidativo de la barrica; confusión entre micro-oxigenación y oxidación acelerada.' }
-        },
-        misc: { id:'MC-BARRICA-MICROOX', nombre:'Sobrestimación oxidativa de la barrica', desc:'El aprendiz entiende la barrica como agente de oxidación intensa en lugar de micro-oxigenación controlada. La diferencia cuantitativa es fundamental para comprender el efecto real sobre la estructura tánica.' },
-        cc: { id:'CC_OAK_TANNIN_POLY', causa:'Entrada controlada de O₂ a través de las duelas (micro-oxigenación, ~15–30 mg/L/año)', mec:'O₂ actúa como mediador en condensación: taninos condensados + antocianos → polímeros tano-antociánicos de mayor peso molecular con menor reactividad frente a proteínas salivares', efecto:'Reducción de astringencia percibida, mayor suavidad en boca, estabilización y profundización del color, incremento de complejidad estructural', exam:'Describir micro-oxigenación en barrica como proceso de polimerización tánica que reduce astringencia sin oxidar el vino de forma perjudicial.' },
-        sat: { nivel:'m', desc:'Señal SAT media: el aprendiz reconoce el rol de la barrica pero no ancla el mecanismo de polimerización tano-antociánica con precisión suficiente para nivel L3.' },
-        remed: 'Revisar CC_OAK_TANNIN_POLY. Distinguir micro-oxigenación (barrica, controlada) vs. oxidación perjudicial (excesiva). Énfasis en el resultado sensorial: tanino libre → astringente vs. tanino polimerizado → suave.',
-        accion: { tipo:'review_causal_chain', label:'REVIEW · Cadena Causal Barrica → Polimerización Tánica' }
-      }
-    },
+  var S = freshSession();
 
-    /* ── Q-003 ─────────────────────────────────────── correcta: B */
-    {
-      id: 'Q-003',
-      schema_version: 'diagnostic_sba_item_v1',
-      ra_id: 'RA3',
-      subtopic: 'evaluacion_sat_taninos',
-      learning_objective: 'Formular una hipótesis causal SAT para señales tánicas, usando lenguaje de probabilidad apropiado para el examen L3.',
-      expected_reasoning_type: 'sat_reasoning',
-      governance: { training_item_only: true, safe_for_examiner: false },
-      stem: 'Al evaluar un vino tinto joven mediante la metodología SAT del WSET Nivel 3, el evaluador registra: "Taninos medios, textura granular, retrogusto corto". ¿Qué hipótesis causal justifica mejor esta observación para un examen escrito de nivel L3?',
-      dominio: 'Evaluación Sensorial — Metodología SAT',
-      dificultad: 'AVANZADO',
-      sat: 'Formulación SAT y justificación causal tánica',
-      opts: [
-        { id:'A', txt:'La textura granular de los taninos indica invariablemente fermentación a temperatura excesivamente alta, lo que fragmentó las cadenas poliméricas condensadas durante la vinificación.', dr:'misconception' },
-        { id:'B', txt:'Los taninos de extracción directa de pieles, aún no completamente polimerizados en un vino joven, presentan mayor reactividad con proteínas salivares; el retrogusto corto refuerza la hipótesis de polimerización tánica insuficiente.', dr:'correct' },
-        { id:'C', txt:'La granularidad tánica es consecuencia exclusiva del contacto prolongado con las pepitas durante la maceración, siendo el único factor diferenciador respecto a taninos sedosos o aterciopelados.', dr:'scope_error' },
-        { id:'D', txt:'Taninos medios con textura granular y retrogusto corto son marcadores diagnósticos definitivos de zona de clima frío con madurez fenólica insuficiente en la cosecha.', dr:'unsupported_inference' }
-      ],
-      correcta: 'B',
-      diag: {
-        razon_ok: 'En vinos jóvenes, los taninos condensados de piel no han completado procesos de polimerización que reducirían su reactividad con proteínas salivares (prolinas). La granularidad refleja esta mayor reactividad de taninos de bajo peso molecular. El retrogusto corto refuerza la hipótesis. Esta cadena causa-mecanismo-efecto es el nivel de justificación exigido en el examen WSET L3.',
-        distractores: {
-          A: { atractiva: 'La temperatura de fermentación sí afecta la extracción tánica, pero "exceso de temperatura → fragmentación → granularidad" es una sobresimplificación que no refleja el mecanismo primario del SAT.', error: 'Reducción de causa única: atribución de granularidad tánica exclusivamente a temperatura de fermentación.' },
-          C: { atractiva: 'Los taninos de pepita sí tienen características particulares (mayor amargor, astringencia), pero la granularidad no es exclusiva de ellos; los taninos de piel jóvenes también pueden ser granulares.', error: 'Atribución exclusiva de granularidad a taninos de pepita; ignorando el factor de polimerización como variable principal.' },
-          D: { atractiva: 'La madurez fenólica sí influye en el perfil tánico, pero calificar estos tres marcadores como "diagnósticos definitivos de zona fría" es una sobregeneralización incorrecta para nivel L3.', error: 'Determinismo climático: lectura de señales SAT multifactoriales como indicadores climáticos exclusivos.' }
-        },
-        misc: { id:'MC-SAT-CAUSAL-UNICA', nombre:'Atribución de causa única en señal SAT tánica', desc:'El aprendiz tiende a asignar una sola causa a señales SAT multifactoriales. La granularidad tánica resulta de la interacción entre madurez, extracción, vinificación y tiempo de crianza. El examen L3 espera lenguaje de hipótesis, no de certeza absoluta.' },
-        cc: { id:'CC_SAT_TANNIN_GRANULAR', causa:'Taninos condensados de piel en estado de baja polimerización (vino joven, crianza insuficiente)', mec:'Alta reactividad de taninos monómeros/oligómeros con proteínas salivares (prolinas ricas) → precipitación tánica percibida como aspereza granular en boca', efecto:'Textura tánica granular, retrogusto moderado/corto, sensación de sequedad en encías; la crianza reduce progresivamente esta característica al favorecer polimerización', exam:'Justificar granularidad como función de polimerización insuficiente; usar lenguaje de hipótesis ("sugiere", "podría indicar") en lugar de diagnóstico absoluto.' },
-        sat: { nivel:'f', desc:'Señal SAT fuerte en identificación tánica, pero el aprendiz requiere calibrar el grado de certeza de sus afirmaciones para alcanzar el registro lingüístico correcto del examen L3.' },
-        remed: 'Revisar estructura de justificación causal SAT. Énfasis en: (1) señales SAT como hipótesis, no diagnósticos definitivos; (2) rol de polimerización tánica en evolución sensorial; (3) vocabulario de certeza apropiado en examen (nivel L3 penaliza afirmaciones absolutas).',
-        accion: { tipo:'review_sat_skill', label:'CALIBRACIÓN · Lenguaje SAT y grado de certeza en examen' }
-      }
-    },
+  function freshSession() {
+    return {
+      idx: 0,
+      sel: null,
+      done: false,
+      conf: null,
+      hesit: 0,
+      t0: null,
+      tFinal: null,
+      ticker: null,
+      results: [],
+      mastery: 0
+    };
+  }
 
-    /* ── Q-004 ─────────────────────────────────────── correcta: A
-       QUALITY FIX: opciones reordenadas (original B→A, original A→B)
-       para variar la posición de la respuesta correcta.            */
-    {
-      id: 'Q-004',
-      schema_version: 'diagnostic_sba_item_v1',
-      ra_id: 'RA4',
-      subtopic: 'rodano_septentrional_meridional',
-      learning_objective: 'Contrastar el perfil sensorial del Syrah del Ródano Septentrional vs. Meridional en función de sus diferencias climáticas.',
-      expected_reasoning_type: 'regional_comparison',
-      governance: { training_item_only: true, safe_for_examiner: false },
-      stem: '¿Por qué los vinos elaborados con Syrah en el Ródano Septentrional presentan típicamente mayor acidez y especias negras más pronunciadas que sus homólogos elaborados en el Ródano Meridional?',
-      dominio: 'Regiones Vitivinícolas — Valle del Ródano',
-      dificultad: 'INTERMEDIO',
-      sat: 'Influencia climática en perfil sensorial',
-      opts: [
-        { id:'A', txt:'El clima continental más fresco del Ródano Septentrional ralentiza la maduración, preservando mayor acidez natural y favoreciendo la síntesis de rotundona, compuesto responsable del aroma a pimienta negra en el Syrah.', dr:'correct' },
-        { id:'B', txt:'El Ródano Septentrional tiene veranos más cálidos que el Meridional, lo que genera mayor concentración de antocianos y reduce la acidez residual por degradación acelerada durante la maduración.', dr:'regional_confusion' },
-        { id:'C', txt:'En el Ródano Septentrional es obligatorio incorporar Viognier en la mezcla, y son los aromas de esta variedad los que aportan la complejidad especiada y la mayor acidez aromática percibida.', dr:'partial_reasoning' },
-        { id:'D', txt:'La altitud media superior del Ródano Septentrional favorece una maduración más rápida por mayor irradiación solar, concentrando compuestos fenólicos y reduciendo el tiempo de exposición a la acidez degradante.', dr:'causal_confusion' }
-      ],
-      correcta: 'A',
-      diag: {
-        razon_ok: 'El Ródano Septentrional tiene clima continental más fresco (Côte-Rôtie, Hermitage), mientras el Meridional es mediterráneo cálido y seco (Châteauneuf-du-Pape). El frío preserva acidez (menor degradación enzimática del málico) y favorece la síntesis de rotundona, tiol responsable del aroma a pimienta negra característico del Syrah septentrional.',
-        distractores: {
-          B: { atractiva: 'Aplica correctamente la lógica "calor → menor acidez", pero invierte la geografía climática: el Septentrional es el más FRESCO, no el más cálido.', error: 'Inversión climática Norte-Sur: el aprendiz asume que el norte del Ródano es más cálido que el sur.' },
-          C: { atractiva: 'El Viognier sí se co-fermenta con Syrah en Côte-Rôtie (hasta 20%) y aporta complejidad aromática, pero no explica la diferencia de acidez y no es obligatorio en todo el Septentrional.', error: 'Sobrepeso del factor varietal (Viognier) como explicación de diferencias que son primariamente climáticas.' },
-          D: { atractiva: 'La altitud puede influir en el perfil, pero mayor altitud implica temperaturas más frías y maduración más lenta, no más rápida. La irradiación no compensa el descenso térmico.', error: 'Confusión altitud-irradiación: mayor altitud no implica maduración más rápida; el efecto térmico domina.' }
-        },
-        misc: { id:'MC-RODANO-NORTE-SUR', nombre:'Inversión climática Norte-Sur del Valle del Ródano', desc:'Patrón frecuente: el aprendiz aplica la lógica calor-acidez correctamente pero invierte la orientación geográfica. El Septentrional es significativamente más fresco que el Meridional, y esta diferencia determina sus perfiles sensoriales contrastantes.' },
-        cc: { id:'CC_RHONE_CLIMATE_SENSORY', causa:'Clima continental-húmedo más fresco en Ródano Septentrional vs. mediterráneo cálido y seco en el Meridional', mec:'Menor temperatura → menor degradación metabólica del ácido málico durante la maduración → mayor acidez final; frío y humedad → síntesis de rotundona (tiol responsable del aroma a pimienta negra en Syrah)', efecto:'Vinos de mayor acidez, perfil especiado (pimienta negra, aceitunas negras) pronunciado, mayor elegancia estructural; Meridional más pleno, alcohólico y con fruta madura dominante', exam:'Relacionar clima septentrional fresco con preservación de acidez y síntesis de rotundona; contrastar perfil con Meridional mediterráneo.' },
-        sat: { nivel:'m', desc:'Señal SAT media: el aprendiz aplica la lógica clima-sensorial correctamente pero con orientación geográfica invertida. Requiere anclar el perfil climático específico de cada subzona del Ródano.' },
-        remed: 'Revisar mapa climático del Valle del Ródano. Fijar: Septentrional = continental fresco (Côte-Rôtie, Hermitage, Crozes-Hermitage, Saint-Joseph); Meridional = mediterráneo cálido (Châteauneuf-du-Pape, Gigondas). Revisar rol de rotundona en Syrah septentrional.',
-        accion: { tipo:'review_topic', label:'REVIEW · Mapa climático y perfiles sensoriales — Valle del Ródano' }
-      }
-    }
+  function setText(id, value) {
+    document.getElementById(id).textContent = value == null || value === '' ? '—' : value;
+  }
 
-  ];
+  function escapeHtml(value) {
+    return String(value == null ? '' : value)
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;')
+      .replace(/'/g, '&#39;');
+  }
 
-  /* ════════════════════════════════════════════════════════════════
-     ESTADO DE SESIÓN
-  ════════════════════════════════════════════════════════════════ */
-  var S = {
-    idx:     0,
-    sel:     null,
-    done:    false,
-    conf:    null,
-    hesit:   0,
-    t0:      null,
-    tFinal:  null,
-    ticker:  null,
-    results: [],
-    mastery: 0
-  };
+  function optionText(options, id) {
+    var found = (options || []).filter(function(option) { return option.option_id === id; })[0];
+    return found ? found.option_text : '';
+  }
 
-  /* ════════════════════════════════════════════════════════════════
-     CARGA DE PREGUNTA
-  ════════════════════════════════════════════════════════════════ */
+  function displayDifficulty(value) {
+    var text = String(value || 'intermediate').toUpperCase();
+    if (text === 'BASIC') return 'BASICO';
+    if (text === 'ADVANCED') return 'AVANZADO';
+    if (text === 'INTERMEDIATE') return 'INTERMEDIO';
+    return text;
+  }
+
+  function domainLabel(q) {
+    var parts = [];
+    if (q.topic) parts.push(String(q.topic).replace(/_/g, ' '));
+    if (q.subtopic) parts.push(String(q.subtopic).replace(/_/g, ' '));
+    return parts.length ? parts.join(' — ') : 'Diagnóstico SBA';
+  }
+
+  function satLabel(q) {
+    if (q.subtopic) return String(q.subtopic).replace(/_/g, ' ');
+    if (q.topic) return String(q.topic).replace(/_/g, ' ');
+    return 'Razonamiento diagnóstico SBA';
+  }
+
+  function setLoadingState() {
+    stopTimer();
+    setText('hdr-ra', '—');
+    setText('hdr-domain', 'Cargando');
+    setText('hdr-dif', '—');
+    setText('hdr-sat', '—');
+    document.getElementById('q-counter').innerHTML = '0<em>/0</em>';
+    setText('domain-tag', 'Cargando demo estática');
+    setText('dif-badge', '—');
+    document.getElementById('stem').textContent = 'Cargando preguntas desde ./preguntas.json...';
+    document.getElementById('opts').innerHTML = '';
+    document.getElementById('waiting').textContent = 'Cargando payload estático de entrenamiento';
+    document.getElementById('result').classList.remove('show');
+    document.getElementById('btn-confirm').style.display = 'none';
+    document.getElementById('kbd-hint').classList.remove('show');
+    document.getElementById('conf-wrap').classList.remove('show');
+    renderProgress();
+  }
+
+  function setErrorState(message) {
+    stopTimer();
+    document.getElementById('stem').textContent = message || 'No se pudo cargar el demo estático.';
+    document.getElementById('opts').innerHTML = '';
+    document.getElementById('waiting').textContent = 'ERROR · No se cargó preguntas.json · Sin diagnóstico parcial';
+    document.getElementById('result').classList.remove('show');
+    document.getElementById('btn-confirm').style.display = 'none';
+    document.getElementById('kbd-hint').classList.remove('show');
+    document.getElementById('conf-wrap').classList.remove('show');
+  }
+
+  function validatePayload(payload) {
+    if (!payload || payload.export_version !== 'static_demo_export_v0') return false;
+    if (payload.static_demo_only !== true) return false;
+    if (!Array.isArray(payload.items) || payload.items.length === 0) return false;
+    if (!payload.outcomes_by_item_id || typeof payload.outcomes_by_item_id !== 'object') return false;
+    return payload.items.every(function(item) {
+      return item && item.static_demo_only === true && item.training_item_only === true &&
+        item.official_wset_question === false && item.safe_for_examiner === false &&
+        item.examiner_scoring_allowed === false && Array.isArray(item.options) && item.options.length === 4 &&
+        payload.outcomes_by_item_id[item.item_id];
+    });
+  }
+
+  function loadStaticDemoPayload() {
+    setLoadingState();
+    fetch(DATA_URL)
+      .then(function(response) {
+        if (!response.ok) throw new Error('HTTP ' + response.status);
+        return response.json();
+      })
+      .then(function(payload) {
+        if (!validatePayload(payload)) throw new Error('Payload estático inválido');
+        EXPORT_PAYLOAD = payload;
+        QS = payload.items;
+        OUTCOMES_BY_ITEM_ID = payload.outcomes_by_item_id;
+        document.querySelectorAll('.proto-badge').forEach(function(el) { el.textContent = DISCLAIMER; });
+        S = freshSession();
+        loadQ(0);
+      })
+      .catch(function(error) {
+        setErrorState('No se pudo cargar ./preguntas.json. Demo estático sin backend. ' + error.message);
+      });
+  }
+
   function loadQ(idx) {
     var q = QS[idx];
-    S.sel   = null;
-    S.done  = false;
-    S.conf  = null;
+    if (!q) {
+      setErrorState('No hay preguntas disponibles en preguntas.json.');
+      return;
+    }
+
+    S.sel = null;
+    S.done = false;
+    S.conf = null;
     S.hesit = 0;
 
-    /* Header */
-    document.getElementById('hdr-ra').textContent     = q.ra_id || '—';
-    document.getElementById('hdr-domain').textContent = q.dominio.split('—')[0].trim();
-    document.getElementById('hdr-dif').textContent    = q.dificultad;
-    document.getElementById('hdr-sat').textContent    = q.sat.split(' ').slice(0,3).join(' ') + '…';
-    document.getElementById('q-counter').innerHTML    = (idx+1) + '<em>/' + QS.length + '</em>';
+    setText('hdr-ra', q.ra_id || '—');
+    setText('hdr-domain', domainLabel(q).split('—')[0].trim());
+    setText('hdr-dif', displayDifficulty(q.difficulty));
+    setText('hdr-sat', satLabel(q).split(' ').slice(0, 3).join(' ') + '…');
+    document.getElementById('q-counter').innerHTML = (idx + 1) + '<em>/' + QS.length + '</em>';
 
-    /* Domain row */
-    document.getElementById('domain-tag').textContent = q.dominio;
+    setText('domain-tag', domainLabel(q));
     var badge = document.getElementById('dif-badge');
-    badge.textContent = q.dificultad;
-    badge.className   = 'dif-badge ' + ({BASICO:'dif-basico',INTERMEDIO:'dif-intermedio',AVANZADO:'dif-avanzado'}[q.dificultad] || 'dif-intermedio');
+    var dif = displayDifficulty(q.difficulty);
+    badge.textContent = dif;
+    badge.className = 'dif-badge ' + ({ BASICO: 'dif-basico', INTERMEDIO: 'dif-intermedio', AVANZADO: 'dif-avanzado' }[dif] || 'dif-intermedio');
 
-    /* Stem */
     document.getElementById('stem').textContent = q.stem;
 
-    /* Options */
     var lista = document.getElementById('opts');
     lista.innerHTML = '';
-    q.opts.forEach(function(op) {
+    q.options.forEach(function(op) {
       var div = document.createElement('div');
-      div.className  = 'opt';
-      div.dataset.id = op.id;
-      div.innerHTML  =
-        '<div class="opt-key">' + op.id + '</div>' +
-        '<div class="opt-txt">' + op.txt + '</div>' +
+      div.className = 'opt';
+      div.dataset.id = op.option_id;
+      div.innerHTML =
+        '<div class="opt-key">' + escapeHtml(op.option_id) + '</div>' +
+        '<div class="opt-txt">' + escapeHtml(op.option_text) + '</div>' +
         '<div class="opt-mark"></div>';
-      div.addEventListener('click', function() { pickOpt(op.id); });
+      div.addEventListener('click', function() { pickOpt(op.option_id); });
       lista.appendChild(div);
     });
 
-    /* Confidence */
     document.getElementById('conf-wrap').classList.remove('show');
     document.querySelectorAll('.conf-btn').forEach(function(b) { b.classList.remove('sel'); });
 
-    /* Confirm */
     var bc = document.getElementById('btn-confirm');
-    bc.className     = '';
-    bc.disabled      = true;
+    bc.className = '';
+    bc.disabled = true;
     bc.style.display = '';
 
     document.getElementById('kbd-hint').classList.remove('show');
-
-    /* Instruments */
-    document.getElementById('instr-sat').textContent = q.sat;
+    setText('instr-sat', satLabel(q));
     document.getElementById('hesit-val').textContent = '0';
     document.getElementById('hesit-val').classList.remove('active');
 
-    /* Diagnostic reset */
+    document.getElementById('waiting').textContent = 'Sistema en escucha activa · Esperando respuesta del aprendiz';
     document.getElementById('waiting').style.display = '';
     document.getElementById('result').classList.remove('show');
-    /* BLOCKER 1 FIX: reset ds-misc visibility for new question */
     document.getElementById('ds-misc').style.display = '';
-    document.querySelectorAll('.dsec').forEach(function(s) {
-      s.classList.remove('on', 'collapsed');
+    document.querySelectorAll('.dsec').forEach(function(sec) {
+      sec.classList.remove('on', 'collapsed');
     });
-    /* Causal starts collapsed */
     document.getElementById('ds-causal').classList.add('collapsed');
     var causalToggle = document.querySelector('#ds-causal .dtoggle');
     if (causalToggle) causalToggle.textContent = '▸';
@@ -1037,11 +989,8 @@
     startTimer();
   }
 
-  /* ════════════════════════════════════════════════════════════════
-     SELECCIÓN DE OPCIÓN
-  ════════════════════════════════════════════════════════════════ */
   function pickOpt(id) {
-    if (S.done) return;
+    if (S.done || QS.length === 0) return;
     if (S.sel && S.sel !== id) {
       S.hesit++;
       var hv = document.getElementById('hesit-val');
@@ -1061,45 +1010,49 @@
     document.getElementById('kbd-hint').classList.add('show');
   }
 
-  /* Confidence */
   document.querySelectorAll('.conf-btn').forEach(function(btn) {
     btn.addEventListener('click', function() {
-      S.conf = parseInt(btn.dataset.n);
+      S.conf = parseInt(btn.dataset.n, 10);
       document.querySelectorAll('.conf-btn').forEach(function(b) { b.classList.remove('sel'); });
       btn.classList.add('sel');
     });
   });
 
-  /* Confirm */
   document.getElementById('btn-confirm').addEventListener('click', function() {
     if (!S.sel || S.done) return;
     confirmAnswer();
   });
 
-  /* Keyboard */
   document.addEventListener('keydown', function(e) {
-    if (S.done) return;
+    if (S.done || QS.length === 0) return;
     var k = e.key.toUpperCase();
-    if (['A','B','C','D'].indexOf(k) !== -1) { pickOpt(k); return; }
+    if (['A', 'B', 'C', 'D'].indexOf(k) !== -1) { pickOpt(k); return; }
     if (e.key === 'Enter' && S.sel) { confirmAnswer(); }
   });
 
-  /* ════════════════════════════════════════════════════════════════
-     CONFIRMACIÓN
-  ════════════════════════════════════════════════════════════════ */
   function confirmAnswer() {
     S.done = true;
     stopTimer();
 
-    var q    = QS[S.idx];
-    var isOk = S.sel === q.correcta;
+    var q = QS[S.idx];
+    var outcome = OUTCOMES_BY_ITEM_ID[q.item_id];
+    if (!outcome || !outcome.correct_option_id) {
+      setErrorState('No se encontró outcome post-submit para este item.');
+      return;
+    }
+    if (!outcome.governance || outcome.governance.safe_for_examiner === true || outcome.governance.official_wset_question === true) {
+      setErrorState('Violación de gobernanza en outcome estático.');
+      return;
+    }
 
-    /* Lock options */
+    var correctId = outcome.correct_option_id;
+    var isOk = S.sel === correctId;
+
     document.querySelectorAll('.opt').forEach(function(d) {
       d.classList.add('locked');
       var oid = d.dataset.id;
-      var mk  = d.querySelector('.opt-mark');
-      if (oid === q.correcta) {
+      var mk = d.querySelector('.opt-mark');
+      if (oid === correctId) {
         d.classList.remove('sel');
         d.classList.add('ok');
         mk.textContent = '✓';
@@ -1114,12 +1067,10 @@
     document.getElementById('kbd-hint').classList.remove('show');
 
     S.results.push({ ok: isOk, t: S.tFinal, hesit: S.hesit, conf: S.conf });
-
     var nOk = S.results.filter(function(r) { return r.ok; }).length;
     S.mastery = Math.round((nOk / S.results.length) * 100);
     renderProgress();
-
-    showDiag(q, isOk);
+    showDiag(q, outcome, isOk);
 
     if (window.innerWidth <= 860) {
       setTimeout(function() {
@@ -1128,20 +1079,27 @@
     }
   }
 
-  /* ════════════════════════════════════════════════════════════════
-     RENDER DIAGNÓSTICO
-  ════════════════════════════════════════════════════════════════ */
-  var CONF_LABELS = ['','INSEGURO','POCO SEGURO','NEUTRO','SEGURO','MUY SEGURO'];
-  var SAT_LEVELS  = { d:'DÉBIL', m:'MEDIA', f:'FUERTE' };
-  var SAT_CLASSES = { d:'d',     m:'m',     f:'f' };
+  function selectedDiagnostic(outcome) {
+    var diagnostics = outcome.option_diagnostics || {};
+    return diagnostics[S.sel] || {};
+  }
 
-  function showDiag(q, isOk) {
-    var d = q.diag;
+  function satLevel(outcome) {
+    var relevance = Array.isArray(outcome.sat_relevance) ? outcome.sat_relevance : [];
+    if (relevance.length === 0) return 'm';
+    if (relevance.some(function(entry) { return entry && entry.status === 'tentative'; })) return 'm';
+    return 'f';
+  }
+
+  function showDiag(q, outcome, isOk) {
+    var selected = selectedDiagnostic(outcome);
+    var feedback = outcome.feedback || {};
+    var wrong = feedback.why_other_options_are_wrong || {};
+    var correctId = outcome.correct_option_id;
 
     document.getElementById('waiting').style.display = 'none';
     document.getElementById('result').classList.add('show');
 
-    /* ── VEREDICTO */
     var metaLine = '';
     if (S.tFinal !== null) {
       metaLine = 'Tiempo: ' + S.tFinal + 's';
@@ -1154,85 +1112,72 @@
       '<div class="v-info">' +
         '<div class="v-title ' + (isOk ? 'ok' : 'fail') + '">' + (isOk ? 'RESPUESTA CORRECTA' : 'RESPUESTA INCORRECTA') + '</div>' +
         '<div class="v-sub">' + (isOk
-          ? 'Fundamento confirmado · Sin misconception activa'
-          : 'Opción seleccionada: ' + S.sel + ' &nbsp;·&nbsp; Correcta: ' + q.correcta) + '</div>' +
+          ? 'Fundamento confirmado · Entrenamiento estático'
+          : 'Opción seleccionada: ' + escapeHtml(S.sel) + ' &nbsp;·&nbsp; Correcta: ' + escapeHtml(correctId)) + '</div>' +
         (metaLine ? '<div class="v-sub" style="margin-top:3px;color:rgba(0,212,255,0.35);">' + metaLine + '</div>' : '') +
       '</div>';
 
-    /* ── DISTRACTOR / FUNDAMENTO */
     var distBody = document.getElementById('dist-body');
-    var distEye  = document.getElementById('dist-eye');
-
-    if (!isOk && d.distractores[S.sel]) {
-      var da = d.distractores[S.sel];
-      /* Find diagnostic_role of selected wrong option */
-      var selOpt   = q.opts.filter(function(o) { return o.id === S.sel; })[0];
-      var roleTag  = selOpt && selOpt.dr
-        ? '<div class="tag tag-dim" style="margin-bottom:8px;">' + selOpt.dr.replace(/_/g,' ').toUpperCase() + '</div>'
-        : '';
+    var distEye = document.getElementById('dist-eye');
+    if (!isOk) {
       distEye.textContent = 'Análisis del Distractor';
       distEye.style.color = 'rgba(255,68,102,0.52)';
-      distBody.innerHTML  =
+      var roleTag = selected.diagnostic_role
+        ? '<div class="tag tag-dim" style="margin-bottom:8px;">' + escapeHtml(String(selected.diagnostic_role).replace(/_/g, ' ').toUpperCase()) + '</div>'
+        : '';
+      distBody.innerHTML =
         roleTag +
         '<div class="dr"><span class="dk">›</span><span class="dv" style="color:rgba(255,68,102,0.68);font-size:10.5px;font-weight:700;">Por qué resultó atractiva</span></div>' +
-        '<div class="dr" style="margin-bottom:10px;"><span class="dk"></span><span class="dv">' + da.atractiva + '</span></div>' +
-        '<div class="dr"><span class="dk">›</span><span class="dv" style="color:rgba(255,170,0,0.68);font-size:10.5px;font-weight:700;">Error de razonamiento</span></div>' +
-        '<div class="dr"><span class="dk"></span><span class="dv">' + da.error + '</span></div>';
+        '<div class="dr" style="margin-bottom:10px;"><span class="dk"></span><span class="dv">' + escapeHtml(selected.diagnostic_note || wrong[S.sel] || 'Distractor seleccionado para revisión diagnóstica.') + '</span></div>' +
+        '<div class="dr"><span class="dk">›</span><span class="dv" style="color:rgba(255,170,0,0.68);font-size:10.5px;font-weight:700;">Lógica correcta</span></div>' +
+        '<div class="dr"><span class="dk"></span><span class="dv">' + escapeHtml(feedback.correct_rationale || '') + '</span></div>';
     } else {
       distEye.textContent = 'Fundamento de la Respuesta Correcta';
       distEye.style.color = 'rgba(0,255,136,0.52)';
-      distBody.innerHTML  =
-        '<div class="dr"><span class="dk">›</span><span class="dv" style="color:rgba(0,255,136,0.72);">' + d.razon_ok + '</span></div>';
+      distBody.innerHTML = '<div class="dr"><span class="dk">›</span><span class="dv" style="color:rgba(0,255,136,0.72);">' + escapeHtml(feedback.correct_rationale || '') + '</span></div>';
     }
 
-    /* ── BLOCKER 1 FIX: misconception only when answer is incorrect */
     var miscEl = document.getElementById('ds-misc');
-    if (!isOk) {
+    if (!isOk && selected.misconception_id) {
       miscEl.style.display = '';
-      var mc = d.misc;
       document.getElementById('misc-body').innerHTML =
-        '<div class="tag tag-amber">' + mc.id + '</div>' +
-        '<div class="dr" style="margin-bottom:5px;"><span class="dk"></span>' +
-          '<span class="dv" style="color:rgba(220,198,115,0.88);font-size:11.5px;font-weight:700;">' + mc.nombre + '</span></div>' +
-        '<div class="dr"><span class="dk"></span><span class="dv">' + mc.desc + '</span></div>';
+        '<div class="tag tag-amber">' + escapeHtml(selected.misconception_id) + '</div>' +
+        '<div class="dr"><span class="dk"></span><span class="dv">Señal diagnóstica local asociada a la opción seleccionada. No es evaluación oficial.</span></div>';
     } else {
-      /* Correct answer: hide misconception entirely */
       miscEl.style.display = 'none';
     }
 
-    /* ── CADENA CAUSAL */
-    var cc = d.cc;
+    var cc = outcome.causal_chain_linkage || {};
     document.getElementById('causal-body').innerHTML =
-      '<div class="tag tag-purple" style="margin-bottom:9px;">' + cc.id + '</div>' +
-      '<div class="cr"><div class="ck">Causa</div><div class="cv">' + cc.causa + '</div></div>' +
-      '<div class="cr"><div class="ck">Mecanismo</div><div class="cv">' + cc.mec + '</div></div>' +
-      '<div class="cr"><div class="ck">Efecto</div><div class="cv">' + cc.efecto + '</div></div>' +
-      '<div class="cr"><div class="ck">Formulación</div><div class="cv" style="color:rgba(153,119,238,0.55);">' + cc.exam + '</div></div>';
+      '<div class="tag tag-purple" style="margin-bottom:9px;">' + escapeHtml(cc.causal_chain_id || 'CAUSAL_CHAIN_LOCAL') + '</div>' +
+      '<div class="cr"><div class="ck">Causa</div><div class="cv">Relación causal local usada para construir el item diagnóstico.</div></div>' +
+      '<div class="cr"><div class="ck">Mecanismo</div><div class="cv">Contrastar la opción elegida con el mecanismo entrenado por el draft aprobado.</div></div>' +
+      '<div class="cr"><div class="ck">Efecto</div><div class="cv">Refuerza la explicación de por qué una opción es la mejor respuesta de entrenamiento.</div></div>' +
+      '<div class="cr"><div class="ck">Estado</div><div class="cv" style="color:rgba(153,119,238,0.55);">' + escapeHtml(cc.status || 'static_demo_link') + '</div></div>';
 
-    /* ── SEÑAL SAT */
-    var sat      = d.sat;
-    var satColor = { d:'var(--red)', m:'var(--amber)', f:'var(--green)' }[sat.nivel];
+    var level = satLevel(outcome);
+    var satColor = { d: 'var(--red)', m: 'var(--amber)', f: 'var(--green)' }[level];
+    var satText = Array.isArray(outcome.sat_relevance) && outcome.sat_relevance.length
+      ? outcome.sat_relevance.map(function(entry) { return entry.parameter || entry.reason || 'SAT'; }).join(' · ')
+      : satLabel(q);
     document.getElementById('sat-body').innerHTML =
       '<div class="sat-row" style="margin-bottom:8px;">' +
-        '<div class="sat-dot ' + SAT_CLASSES[sat.nivel] + '"></div>' +
-        '<div style="font-size:11px;font-weight:700;color:' + satColor + ';">SEÑAL ' + SAT_LEVELS[sat.nivel] + ' · ' + q.sat + '</div>' +
+        '<div class="sat-dot ' + SAT_CLASSES[level] + '"></div>' +
+        '<div style="font-size:11px;font-weight:700;color:' + satColor + ';">SEÑAL ' + SAT_LEVELS[level] + ' · ' + escapeHtml(satLabel(q)) + '</div>' +
       '</div>' +
-      '<div class="dr"><span class="dk"></span><span class="dv">' + sat.desc + '</span></div>';
+      '<div class="dr"><span class="dk"></span><span class="dv">' + escapeHtml(satText) + '</span></div>';
 
-    /* ── REMEDIACIÓN */
+    var remediation = outcome.remediation || {};
     document.getElementById('remed-body').innerHTML =
-      '<div class="dr"><span class="dk"></span><span class="dv">' + d.remed + '</span></div>';
+      '<div class="dr"><span class="dk"></span><span class="dv">' + escapeHtml(remediation.recommendation || 'Revisar la lógica de la opción correcta y repetir una pregunta SBA similar.') + '</span></div>';
 
-    /* ── SIGUIENTE ACCIÓN */
-    document.getElementById('btn-next').textContent =
-      S.idx < QS.length - 1 ? 'Siguiente pregunta →' : 'Ver resumen de sesión →';
-    document.getElementById('action-label').textContent = d.accion.label;
+    document.getElementById('btn-next').textContent = S.idx < QS.length - 1 ? 'Siguiente pregunta →' : 'Ver resumen de sesión →';
+    var target = remediation.target || {};
+    document.getElementById('action-label').textContent = target.target_id ? 'REVIEW · ' + target.target_id : 'REVIEW · Entrenamiento SBA';
 
-    /* ── BLOCKER 1 FIX: stagger reveal — misc only included when incorrect */
     var secs = ['ds-veredicto', 'ds-distractor'];
-    if (!isOk) secs.push('ds-misc');
+    if (!isOk && selected.misconception_id) secs.push('ds-misc');
     secs.push('ds-causal', 'ds-sat', 'ds-remed', 'ds-next');
-
     secs.forEach(function(id, i) {
       setTimeout(function() {
         var el = document.getElementById(id);
@@ -1241,7 +1186,6 @@
     });
   }
 
-  /* Next question */
   document.getElementById('btn-next').addEventListener('click', function() {
     if (S.idx < QS.length - 1) {
       S.idx++;
@@ -1251,7 +1195,6 @@
     }
   });
 
-  /* Toggle collapse */
   window.toggleSec = function(id) {
     var sec = document.getElementById(id);
     sec.classList.toggle('collapsed');
@@ -1259,62 +1202,54 @@
     if (tog) tog.textContent = sec.classList.contains('collapsed') ? '▸' : '▾';
   };
 
-  /* ════════════════════════════════════════════════════════════════
-     TIMER
-  ════════════════════════════════════════════════════════════════ */
   function startTimer() {
     if (S.ticker) clearInterval(S.ticker);
-    S.t0     = Date.now();
+    S.t0 = Date.now();
     S.tFinal = null;
 
-    var tv  = document.getElementById('timer-val');
+    var tv = document.getElementById('timer-val');
     var bar = document.getElementById('tbar-fill');
     var MAX = 120;
     tv.className = '';
+    tv.innerHTML = '0<span class="timer-u">s</span>';
+    bar.style.width = '0%';
+    bar.style.background = 'var(--blue)';
 
     S.ticker = setInterval(function() {
       if (S.done) return;
       var el = Math.floor((Date.now() - S.t0) / 1000);
       tv.innerHTML = el + '<span class="timer-u">s</span>';
-
-      if      (el >= 60) { tv.className = 'slow'; bar.style.background = 'var(--red)'; }
+      if (el >= 60) { tv.className = 'slow'; bar.style.background = 'var(--red)'; }
       else if (el >= 30) { tv.className = 'warn'; bar.style.background = 'var(--amber)'; }
-      else               { tv.className = '';      bar.style.background = 'var(--blue)'; }
-
+      else { tv.className = ''; bar.style.background = 'var(--blue)'; }
       bar.style.width = Math.min(100, (el / MAX) * 100) + '%';
     }, 1000);
   }
 
   function stopTimer() {
     if (S.ticker) clearInterval(S.ticker);
-    S.tFinal = Math.floor((Date.now() - S.t0) / 1000);
+    if (S.t0) S.tFinal = Math.floor((Date.now() - S.t0) / 1000);
   }
 
-  /* ════════════════════════════════════════════════════════════════
-     PROGRESS
-  ════════════════════════════════════════════════════════════════ */
   function renderProgress() {
     var dots = document.getElementById('prog-dots');
     dots.innerHTML = '';
     QS.forEach(function(_, i) {
       var dot = document.createElement('div');
       dot.className = 'pdot';
-      if      (i < S.results.length) dot.className += S.results[i].ok ? ' good' : ' bad';
-      else if (i === S.idx)          dot.className += ' now';
+      if (i < S.results.length) dot.className += S.results[i].ok ? ' good' : ' bad';
+      else if (i === S.idx) dot.className += ' now';
       dots.appendChild(dot);
     });
-
     document.getElementById('mastery-fill').style.width = S.mastery + '%';
-    document.getElementById('mastery-pct').textContent  = S.mastery + '%';
+    document.getElementById('mastery-pct').textContent = S.mastery + '%';
   }
 
-  /* ════════════════════════════════════════════════════════════════
-     SESIÓN COMPLETA
-  ════════════════════════════════════════════════════════════════ */
   function showEnd() {
-    var nOk   = S.results.filter(function(r) { return r.ok; }).length;
-    var tAvg  = Math.round(S.results.reduce(function(a,r){return a+r.t;},0) / S.results.length);
-    var hAvg  = (S.results.reduce(function(a,r){return a+r.hesit;},0) / S.results.length).toFixed(1);
+    stopTimer();
+    var nOk = S.results.filter(function(r) { return r.ok; }).length;
+    var tAvg = S.results.length ? Math.round(S.results.reduce(function(a, r) { return a + r.t; }, 0) / S.results.length) : 0;
+    var hAvg = S.results.length ? (S.results.reduce(function(a, r) { return a + r.hesit; }, 0) / S.results.length).toFixed(1) : '0.0';
 
     document.getElementById('end-stats').innerHTML =
       stat(nOk + '/' + QS.length, 'var(--green)', 'Correctas') +
@@ -1323,11 +1258,11 @@
       stat(hAvg, 'rgba(153,119,238,0.90)', 'Cambios / preg.');
 
     var weak = S.results
-      .map(function(r, i) { return r.ok ? null : '· ' + QS[i].dominio; })
+      .map(function(r, i) { return r.ok ? null : '· ' + domainLabel(QS[i]); })
       .filter(Boolean);
 
     document.getElementById('end-weak').innerHTML = weak.length
-      ? 'Dominios con señal de debilidad:<br>' + weak.join('<br>')
+      ? 'Dominios con señal de debilidad:<br>' + weak.map(escapeHtml).join('<br>')
       : 'Sin dominios débiles detectados en esta sesión. Señales registradas localmente.';
 
     document.getElementById('overlay-end').classList.add('show');
@@ -1338,16 +1273,14 @@
   }
 
   window.resetSession = function() {
-    S = { idx:0, sel:null, done:false, conf:null, hesit:0, t0:null, tFinal:null, ticker:null, results:[], mastery:0 };
+    S = freshSession();
     document.getElementById('overlay-end').classList.remove('show');
     document.getElementById('btn-confirm').style.display = '';
-    loadQ(0);
+    if (QS.length) loadQ(0);
+    else loadStaticDemoPayload();
   };
 
-  /* ════════════════════════════════════════════════════════════════
-     INIT
-  ════════════════════════════════════════════════════════════════ */
-  loadQ(0);
+  loadStaticDemoPayload();
 
 })();
 </script>
