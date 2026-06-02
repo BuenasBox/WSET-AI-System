@@ -1006,7 +1006,7 @@
     document.getElementById('conf-wrap').classList.add('show');
     var bc = document.getElementById('btn-confirm');
     bc.classList.add('show');
-    bc.disabled = false;
+    bc.disabled = S.conf === null;
     document.getElementById('kbd-hint').classList.add('show');
   }
 
@@ -1015,11 +1015,12 @@
       S.conf = parseInt(btn.dataset.n, 10);
       document.querySelectorAll('.conf-btn').forEach(function(b) { b.classList.remove('sel'); });
       btn.classList.add('sel');
+      if (S.sel && !S.done) document.getElementById('btn-confirm').disabled = false;
     });
   });
 
   document.getElementById('btn-confirm').addEventListener('click', function() {
-    if (!S.sel || S.done) return;
+    if (!S.sel || S.conf === null || S.done) return;
     confirmAnswer();
   });
 
@@ -1027,7 +1028,7 @@
     if (S.done || QS.length === 0) return;
     var k = e.key.toUpperCase();
     if (['A', 'B', 'C', 'D'].indexOf(k) !== -1) { pickOpt(k); return; }
-    if (e.key === 'Enter' && S.sel) { confirmAnswer(); }
+    if (e.key === 'Enter' && S.sel && S.conf !== null) { confirmAnswer(); }
   });
 
   function confirmAnswer() {

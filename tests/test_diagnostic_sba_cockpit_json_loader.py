@@ -105,6 +105,21 @@ class DiagnosticSbaCockpitJsonLoaderTests(unittest.TestCase):
         self.assertIn("Análisis del Distractor", self.html)
         self.assertIn("Cadena Causal", self.html)
 
+    def test_confidence_is_required_before_commit(self) -> None:
+        pick_opt = function_body(self.html, "pickOpt")
+        confirm_click = self.html[
+            self.html.index("document.getElementById('btn-confirm').addEventListener('click'")
+            : self.html.index("document.addEventListener('keydown'")
+        ]
+        keydown = self.html[
+            self.html.index("document.addEventListener('keydown'")
+            : self.html.index("function confirmAnswer()")
+        ]
+
+        self.assertIn("bc.disabled = S.conf === null;", pick_opt)
+        self.assertIn("S.conf === null", confirm_click)
+        self.assertIn("S.conf !== null", keydown)
+
 
 if __name__ == "__main__":
     unittest.main()
