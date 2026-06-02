@@ -139,10 +139,13 @@ class StaticDemoExporterTests(unittest.TestCase):
 
         self.assertEqual(validate_static_demo_export_payload(payload), [])
 
-    def test_no_preguntas_json_created(self) -> None:
+    def test_build_payload_does_not_modify_preguntas_json(self) -> None:
+        before = PREGUNTAS_PATH.read_text(encoding="utf-8") if PREGUNTAS_PATH.exists() else None
+
         build_static_demo_export_payload(self.drafts, self.reviews)
 
-        self.assertFalse(PREGUNTAS_PATH.exists())
+        after = PREGUNTAS_PATH.read_text(encoding="utf-8") if PREGUNTAS_PATH.exists() else None
+        self.assertEqual(after, before)
 
     def test_no_frontend_files_modified(self) -> None:
         before = FRONTEND_INDEX_PATH.read_text(encoding="utf-8")

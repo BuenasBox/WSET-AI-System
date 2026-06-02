@@ -109,8 +109,13 @@ class StaticDemoExportDryRunTests(unittest.TestCase):
         self.assertEqual(self.payload, reversed_payload)
         self.assertEqual(self.payload["export_metadata"]["source_question_ids"], ["2", "12", "17"])
 
-    def test_no_frontend_preguntas_json_exists(self) -> None:
-        self.assertFalse(FRONTEND_PREGUNTAS_PATH.exists())
+    def test_dry_run_does_not_modify_frontend_preguntas_json(self) -> None:
+        before = FRONTEND_PREGUNTAS_PATH.read_text(encoding="utf-8") if FRONTEND_PREGUNTAS_PATH.exists() else None
+
+        build_static_demo_export_payload(self.drafts, self.reviews)
+
+        after = FRONTEND_PREGUNTAS_PATH.read_text(encoding="utf-8") if FRONTEND_PREGUNTAS_PATH.exists() else None
+        self.assertEqual(after, before)
 
     def test_no_frontend_files_modified(self) -> None:
         before = FRONTEND_INDEX_PATH.read_text(encoding="utf-8")
