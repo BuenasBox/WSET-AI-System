@@ -1,0 +1,2255 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>WSET L3 · Diagnostic SBA Cockpit v2 · PROTOTIPO</title>
+<style>
+/* =====================================================================
+   WSET-AI-System · Diagnostic SBA Cockpit v2
+   PROTOTIPO ESTÁTICO — ENTRENAMIENTO — SIN AUTORIDAD EXAMINADORA
+   ===================================================================== */
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --bg-primary:    #0a0a0f;
+  --bg-secondary:  #0d1117;
+  --bg-card:       #111827;
+  --bg-card-alt:   #161d2b;
+  --border:        #1e2d3d;
+  --border-accent: #2a3f57;
+  --gold:          #c9a84c;
+  --gold-light:    #e5c97a;
+  --gold-dim:      #7a6230;
+  --text-primary:  #f0f4f8;
+  --text-secondary:#8b9ab0;
+  --text-muted:    #4a5568;
+  --green:         #22c55e;
+  --amber:         #f59e0b;
+  --red:           #ef4444;
+  --blue:          #3b82f6;
+  --purple:        #8b5cf6;
+  --stage-prepare: #3b82f6;
+  --stage-read:    #22c55e;
+  --stage-commit:  #c9a84c;
+  --stage-cross:   #f59e0b;
+  --stage-reveal:  #8b5cf6;
+  --stage-train:   #06b6d4;
+  --stage-map:     #ec4899;
+}
+
+html, body {
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: system-ui, -apple-system, 'Segoe UI', sans-serif;
+  font-size: 15px;
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+/* ---- GOVERNANCE BANNER ---- */
+.gov-banner {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 1000;
+  background: #1a0f00;
+  border-bottom: 1px solid var(--gold-dim);
+  padding: 6px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  font-size: 11px;
+  color: var(--gold-dim);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+.gov-banner span { color: var(--gold); }
+
+/* ---- PROGRESS BAR ---- */
+.progress-bar-wrap {
+  position: fixed;
+  top: 35px; left: 0; right: 0;
+  z-index: 999;
+  height: 3px;
+  background: var(--bg-secondary);
+}
+.progress-bar {
+  height: 100%;
+  background: var(--gold);
+  transition: width 0.6s ease;
+  width: 0%;
+}
+
+/* ---- LAYOUT ---- */
+.app {
+  padding-top: 60px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 24px;
+  border-bottom: 1px solid var(--border);
+  background: var(--bg-secondary);
+}
+
+.header-brand {
+  display: flex;
+  flex-direction: column;
+}
+.header-brand .brand-name {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+.header-brand .brand-sub {
+  font-size: 10px;
+  color: var(--text-muted);
+  letter-spacing: 0.05em;
+}
+
+.header-controls {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.toggle-label {
+  font-size: 11px;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.toggle-switch {
+  position: relative;
+  width: 40px;
+  height: 20px;
+  display: inline-block;
+}
+.toggle-switch input { display: none; }
+.toggle-slider {
+  position: absolute;
+  inset: 0;
+  background: var(--bg-card);
+  border: 1px solid var(--border-accent);
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.toggle-slider::before {
+  content: '';
+  position: absolute;
+  width: 14px; height: 14px;
+  background: var(--text-muted);
+  border-radius: 50%;
+  top: 2px; left: 2px;
+  transition: transform 0.2s, background 0.2s;
+}
+.toggle-switch input:checked + .toggle-slider { background: #1a1200; border-color: var(--gold-dim); }
+.toggle-switch input:checked + .toggle-slider::before { transform: translateX(20px); background: var(--gold); }
+
+.mentor-select {
+  background: var(--bg-card);
+  border: 1px solid var(--border-accent);
+  color: var(--text-primary);
+  font-size: 12px;
+  padding: 4px 8px;
+  border-radius: 4px;
+  outline: none;
+  cursor: pointer;
+}
+.mentor-select:focus { border-color: var(--gold); }
+
+/* ---- MAIN CONTENT ---- */
+.main {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 1fr 340px;
+  gap: 0;
+}
+@media (max-width: 860px) {
+  .main { grid-template-columns: 1fr; }
+  .sidebar { display: none; }
+}
+
+.content { padding: 24px; min-width: 0; }
+.sidebar {
+  padding: 24px 20px;
+  border-left: 1px solid var(--border);
+  background: var(--bg-secondary);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* ---- CARDS ---- */
+.card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 2px;
+  padding: 20px;
+  margin-bottom: 16px;
+}
+.card-title {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 14px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.card-title::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--border);
+}
+
+/* ---- STAGE INDICATOR ---- */
+.stage-indicator {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+.stage-pip {
+  height: 3px;
+  flex: 1;
+  min-width: 30px;
+  border-radius: 1px;
+  background: var(--border);
+  transition: background 0.4s;
+}
+.stage-pip.active { background: var(--gold); }
+.stage-pip.done { background: var(--gold-dim); }
+
+.stage-label {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 6px;
+}
+.stage-label span {
+  color: var(--gold);
+  margin-left: 6px;
+}
+
+/* ---- MENTOR SIGNAL ---- */
+.mentor-signal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+.signal-orb-wrap {
+  position: relative;
+  width: 60px; height: 60px;
+}
+.signal-orb {
+  width: 60px; height: 60px;
+}
+.signal-orb circle.ring {
+  fill: none;
+  stroke-width: 1.5;
+  transform-origin: 30px 30px;
+}
+.signal-orb circle.core {
+  transform-origin: 30px 30px;
+}
+.ring-1 { animation: ring-pulse 2.5s ease-in-out infinite; }
+.ring-2 { animation: ring-pulse 2.5s ease-in-out infinite 0.6s; }
+.ring-3 { animation: ring-pulse 2.5s ease-in-out infinite 1.2s; }
+@keyframes ring-pulse {
+  0%, 100% { opacity: 0; r: 12; }
+  50% { opacity: 0.5; r: 22; }
+}
+.signal-core-pulse {
+  animation: core-pulse 2.5s ease-in-out infinite;
+}
+@keyframes core-pulse {
+  0%, 100% { r: 7; opacity: 0.9; }
+  50% { r: 9; opacity: 1; }
+}
+.signal-label {
+  font-size: 10px;
+  text-align: center;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+.signal-status {
+  font-size: 11px;
+  color: var(--text-secondary);
+  text-align: center;
+}
+
+/* Animation speeds by stage */
+.orb-calm .ring-1 { animation-duration: 3s; }
+.orb-calm .ring-2 { animation-duration: 3s; animation-delay: 0.8s; }
+.orb-calm .ring-3 { animation-duration: 3s; animation-delay: 1.6s; }
+.orb-active .ring-1 { animation-duration: 1.5s; }
+.orb-active .ring-2 { animation-duration: 1.5s; animation-delay: 0.4s; }
+.orb-active .ring-3 { animation-duration: 1.5s; animation-delay: 0.8s; }
+.orb-intense .ring-1 { animation-duration: 0.8s; }
+.orb-intense .ring-2 { animation-duration: 0.8s; animation-delay: 0.2s; }
+.orb-intense .ring-3 { animation-duration: 0.8s; animation-delay: 0.4s; }
+
+/* ---- TIMER ---- */
+.timer-wrap {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 14px;
+  border: 1px solid var(--border);
+  border-radius: 2px;
+  background: var(--bg-secondary);
+  margin-bottom: 16px;
+}
+.timer-label { font-size: 11px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.06em; }
+.timer-value {
+  font-size: 22px;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -0.02em;
+  transition: color 0.5s;
+}
+.timer-value.green { color: var(--green); }
+.timer-value.amber { color: var(--amber); }
+.timer-value.red { color: var(--red); }
+.timer-bar {
+  flex: 1;
+  height: 4px;
+  background: var(--border);
+  border-radius: 2px;
+  overflow: hidden;
+}
+.timer-bar-fill {
+  height: 100%;
+  border-radius: 2px;
+  transition: width 1s linear, background 0.5s;
+}
+
+/* ---- QUESTION DISPLAY ---- */
+.q-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 14px;
+}
+.q-tag {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 3px 8px;
+  border-radius: 2px;
+}
+.q-tag.topic  { background: #0f1e33; border: 1px solid #1e3a5f; color: #5b9bd5; }
+.q-tag.diff   { background: #1a0f00; border: 1px solid #3d2500; color: var(--gold); }
+.q-tag.skill  { background: #0f1a0f; border: 1px solid #1e3d1e; color: #5bd55b; }
+.q-tag.train  { background: #1a0a0a; border: 1px solid #3d1a1a; color: #a05050; }
+
+.question-text {
+  font-size: 17px;
+  font-weight: 500;
+  line-height: 1.65;
+  color: var(--text-primary);
+  margin-bottom: 22px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid var(--border);
+}
+
+/* ---- ANSWER OPTIONS ---- */
+.options-list { display: flex; flex-direction: column; gap: 10px; margin-bottom: 20px; }
+.option-btn {
+  width: 100%;
+  text-align: left;
+  background: var(--bg-card-alt);
+  border: 1px solid var(--border-accent);
+  color: var(--text-primary);
+  padding: 14px 18px;
+  border-radius: 2px;
+  cursor: pointer;
+  font-size: 14px;
+  line-height: 1.5;
+  transition: border-color 0.15s, background 0.15s, transform 0.1s;
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+}
+.option-btn:hover:not(:disabled) { border-color: var(--gold); background: #17201a; }
+.option-btn.selected { border-color: var(--gold); background: #1a1400; }
+.option-btn.correct-reveal { border-color: var(--green) !important; background: #0a1a0a !important; }
+.option-btn.wrong-reveal   { border-color: var(--red) !important; background: #1a0a0a !important; }
+.option-btn.neutral-reveal { border-color: var(--border); opacity: 0.5; }
+.option-btn:disabled { cursor: default; }
+.option-btn .opt-letter {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  color: var(--text-muted);
+  background: var(--border);
+  border-radius: 2px;
+  padding: 2px 6px;
+  min-width: 24px;
+  text-align: center;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+.option-btn.selected .opt-letter { background: var(--gold-dim); color: var(--gold-light); }
+.option-btn.correct-reveal .opt-letter { background: var(--green); color: #fff; }
+.option-btn.wrong-reveal .opt-letter   { background: var(--red); color: #fff; }
+
+/* ---- CONFIDENCE GAUGE ---- */
+.confidence-section { margin-bottom: 18px; }
+.conf-label { font-size: 11px; color: var(--text-secondary); margin-bottom: 8px; text-transform: uppercase; letter-spacing: 0.05em; }
+.conf-options {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6px;
+}
+@media (max-width: 480px) { .conf-options { grid-template-columns: 1fr; } }
+.conf-btn {
+  padding: 9px 12px;
+  border: 1px solid var(--border-accent);
+  background: var(--bg-card-alt);
+  color: var(--text-secondary);
+  font-size: 12px;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: border-color 0.15s, background 0.15s;
+  text-align: center;
+}
+.conf-btn:hover { border-color: var(--gold); color: var(--text-primary); }
+.conf-btn.selected { border-color: var(--gold); background: #1a1400; color: var(--gold-light); }
+
+/* Confidence visual indicator */
+.conf-gauge-bar {
+  height: 5px;
+  background: var(--border);
+  border-radius: 2px;
+  margin-top: 10px;
+  overflow: hidden;
+}
+.conf-gauge-fill {
+  height: 100%;
+  border-radius: 2px;
+  transition: width 0.4s ease, background 0.3s;
+  width: 0%;
+}
+
+/* ---- MICRO TAGS ---- */
+.microtag-section { margin-bottom: 18px; }
+.microtag-label { font-size: 11px; color: var(--text-muted); margin-bottom: 8px; text-transform: uppercase; letter-spacing: 0.05em; }
+.microtag-options { display: flex; flex-wrap: wrap; gap: 6px; }
+.microtag-btn {
+  padding: 5px 10px;
+  border: 1px solid var(--border);
+  background: var(--bg-secondary);
+  color: var(--text-muted);
+  font-size: 11px;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: border-color 0.15s, color 0.15s;
+}
+.microtag-btn:hover { border-color: var(--border-accent); color: var(--text-secondary); }
+.microtag-btn.selected { border-color: var(--gold-dim); color: var(--gold-light); background: #120f00; }
+
+/* ---- COMMIT BUTTON & LOCK ANIMATION ---- */
+.commit-btn {
+  width: 100%;
+  padding: 14px 20px;
+  background: var(--gold);
+  color: #0a0a0f;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: background 0.15s, transform 0.1s, opacity 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+.commit-btn:hover:not(:disabled) { background: var(--gold-light); }
+.commit-btn:disabled { opacity: 0.4; cursor: default; }
+.commit-btn.locked {
+  background: var(--border);
+  color: var(--text-muted);
+  cursor: default;
+}
+
+.lock-animation {
+  display: inline-block;
+  transition: transform 0.3s;
+}
+.commit-btn.locking .lock-animation { animation: lock-bounce 0.4s ease; }
+@keyframes lock-bounce {
+  0% { transform: scale(1); }
+  30% { transform: scale(1.4) rotate(-10deg); }
+  60% { transform: scale(0.9) rotate(5deg); }
+  100% { transform: scale(1) rotate(0deg); }
+}
+
+.btn-secondary {
+  padding: 11px 18px;
+  background: transparent;
+  border: 1px solid var(--border-accent);
+  color: var(--text-secondary);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: border-color 0.15s, color 0.15s;
+}
+.btn-secondary:hover { border-color: var(--gold-dim); color: var(--text-primary); }
+
+.btn-row {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+.btn-row .commit-btn { flex: 1; }
+
+/* ---- CROSS-EXAM CHALLENGE ---- */
+.cross-challenge {
+  background: #100d00;
+  border: 1px solid var(--gold-dim);
+  border-left: 3px solid var(--amber);
+  border-radius: 2px;
+  padding: 16px 18px;
+  margin-bottom: 18px;
+}
+.cross-challenge-label {
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--amber);
+  margin-bottom: 8px;
+}
+.cross-challenge-text {
+  font-size: 15px;
+  color: var(--text-primary);
+  font-style: italic;
+  line-height: 1.6;
+}
+
+/* ---- HESITATION TRACKER ---- */
+.hesitation-track {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 8px;
+  font-size: 11px;
+  color: var(--text-muted);
+}
+.hesitation-dot {
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  background: var(--text-muted);
+  transition: background 0.3s, box-shadow 0.3s;
+}
+.hesitation-dot.triggered {
+  background: var(--amber);
+  box-shadow: 0 0 6px var(--amber);
+  animation: hes-pulse 1s ease-in-out 3;
+}
+@keyframes hes-pulse {
+  0%, 100% { box-shadow: 0 0 4px var(--amber); }
+  50% { box-shadow: 0 0 14px var(--amber); }
+}
+
+/* ---- REVEAL SECTION ---- */
+.correctness-badge {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 18px;
+  border-radius: 2px;
+  margin-bottom: 16px;
+}
+.correctness-badge.correct { background: #0a1a0a; border: 1px solid var(--green); }
+.correctness-badge.wrong   { background: #1a0a0a; border: 1px solid var(--red); }
+.correctness-icon { font-size: 26px; }
+.correctness-text { font-size: 14px; font-weight: 600; }
+.correctness-badge.correct .correctness-text { color: var(--green); }
+.correctness-badge.wrong   .correctness-text { color: var(--red); }
+
+.reveal-metrics {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+.metric-chip {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: 2px;
+  padding: 10px 12px;
+}
+.metric-chip-label { font-size: 10px; text-transform: uppercase; letter-spacing: 0.06em; color: var(--text-muted); margin-bottom: 4px; }
+.metric-chip-value { font-size: 13px; font-weight: 600; color: var(--text-primary); }
+.metric-chip-value.warn { color: var(--amber); }
+.metric-chip-value.danger { color: var(--red); }
+.metric-chip-value.good { color: var(--green); }
+
+/* ---- CAUSAL CHAIN VISUALIZER ---- */
+.causal-chain {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-accent);
+  border-radius: 2px;
+  padding: 16px;
+  margin-bottom: 16px;
+}
+.causal-chain-title {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--purple);
+  margin-bottom: 14px;
+}
+.causal-flow {
+  display: flex;
+  align-items: stretch;
+  gap: 0;
+  flex-wrap: wrap;
+}
+.causal-node {
+  flex: 1;
+  min-width: 100px;
+  padding: 12px;
+  text-align: center;
+  border-radius: 2px;
+}
+.causal-node.causa     { background: #100e1a; border: 1px solid #3b2f6e; }
+.causal-node.mecanismo { background: #0d1a0d; border: 1px solid #2f5f2f; }
+.causal-node.efecto    { background: #1a100d; border: 1px solid #5f3f2f; }
+.causal-node-label { font-size: 9px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 6px; }
+.causal-node.causa .causal-node-label     { color: #9b8de8; }
+.causal-node.mecanismo .causal-node-label { color: #6bc97a; }
+.causal-node.efecto .causal-node-label    { color: #d4936b; }
+.causal-node-text { font-size: 12px; line-height: 1.45; color: var(--text-primary); }
+.causal-arrow {
+  display: flex;
+  align-items: center;
+  padding: 0 6px;
+  color: var(--text-muted);
+  font-size: 16px;
+  flex-shrink: 0;
+}
+@media (max-width: 600px) {
+  .causal-flow { flex-direction: column; }
+  .causal-arrow { transform: rotate(90deg); align-self: center; }
+}
+
+/* ---- DISTRACTOR / FEEDBACK ---- */
+.feedback-block {
+  background: var(--bg-card-alt);
+  border: 1px solid var(--border);
+  border-radius: 2px;
+  padding: 14px 16px;
+  margin-bottom: 12px;
+}
+.feedback-block-title {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+.feedback-block-title.distractor { color: var(--amber); }
+.feedback-block-title.misconception { color: var(--red); }
+.feedback-block-title.sat { color: var(--blue); }
+.feedback-block-title.mentor { color: var(--gold); }
+.feedback-block p { font-size: 13px; line-height: 1.6; color: var(--text-secondary); }
+.feedback-block p em { color: var(--text-primary); font-style: normal; font-weight: 500; }
+
+/* ---- MICRO DRILL ---- */
+.drill-section {
+  background: #070f14;
+  border: 1px solid #1e3d57;
+  border-radius: 2px;
+  padding: 18px;
+  margin-bottom: 16px;
+}
+.drill-title {
+  font-size: 10px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;
+  color: #5bb8d4;
+  margin-bottom: 12px;
+}
+.drill-prompt { font-size: 14px; color: var(--text-primary); margin-bottom: 14px; line-height: 1.5; }
+.drill-chain-display {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 14px;
+}
+.drill-cell {
+  padding: 8px 14px;
+  border: 1px solid var(--border-accent);
+  border-radius: 2px;
+  font-size: 13px;
+  min-width: 90px;
+  text-align: center;
+  background: var(--bg-secondary);
+}
+.drill-cell.blank {
+  border-style: dashed;
+  border-color: var(--gold-dim);
+  color: var(--text-muted);
+  cursor: default;
+}
+.drill-cell.blank.filled { border-style: solid; border-color: var(--gold); color: var(--gold-light); }
+.drill-cell.blank.correct-fill { border-color: var(--green); color: var(--green); background: #0a1a0a; }
+.drill-cell.blank.wrong-fill   { border-color: var(--red); color: var(--red); background: #1a0a0a; }
+.drill-arrow { color: var(--text-muted); font-size: 14px; }
+
+.word-bank {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 14px;
+}
+.word-chip {
+  padding: 6px 12px;
+  border: 1px solid var(--border-accent);
+  background: var(--bg-card-alt);
+  color: var(--text-primary);
+  font-size: 12px;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: border-color 0.15s, background 0.15s, opacity 0.2s;
+}
+.word-chip:hover:not(.used) { border-color: var(--gold); background: #1a1400; }
+.word-chip.used { opacity: 0.3; cursor: default; }
+
+.tag-bank { display: flex; flex-wrap: wrap; gap: 8px; }
+.tag-chip {
+  padding: 7px 14px;
+  border: 1px solid var(--border-accent);
+  background: var(--bg-card-alt);
+  color: var(--text-primary);
+  font-size: 12px;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: border-color 0.15s;
+}
+.tag-chip:hover { border-color: var(--blue); }
+.tag-chip.selected-tag { border-color: var(--blue); background: #0a0f1a; color: #5b9bd5; }
+.tag-chip.correct-tag { border-color: var(--green); background: #0a1a0a; color: var(--green); }
+.tag-chip.wrong-tag   { border-color: var(--red); background: #1a0a0a; color: var(--red); }
+
+.drill-result {
+  font-size: 13px;
+  padding: 8px 12px;
+  border-radius: 2px;
+  margin-top: 10px;
+  display: none;
+}
+.drill-result.correct { background: #0a1a0a; border: 1px solid var(--green); color: var(--green); }
+.drill-result.wrong   { background: #1a0a0a; border: 1px solid var(--red); color: var(--red); }
+
+/* ---- SESSION MAP / RADAR ---- */
+.radar-wrap {
+  display: flex;
+  justify-content: center;
+  margin: 10px 0 16px;
+}
+.session-stats-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin-bottom: 14px;
+}
+.stat-cell {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: 2px;
+  padding: 10px 12px;
+}
+.stat-cell-label { font-size: 10px; text-transform: uppercase; letter-spacing: 0.06em; color: var(--text-muted); margin-bottom: 4px; }
+.stat-cell-value { font-size: 20px; font-weight: 700; color: var(--text-primary); }
+.stat-cell-value.warn { color: var(--amber); }
+.stat-cell-value.good { color: var(--green); }
+.stat-cell-value.danger { color: var(--red); }
+
+.pattern-note {
+  background: #0d0f1a;
+  border: 1px solid #2a2f5f;
+  border-left: 3px solid var(--purple);
+  border-radius: 2px;
+  padding: 12px 14px;
+  font-size: 13px;
+  color: var(--text-secondary);
+  margin-bottom: 16px;
+  line-height: 1.5;
+}
+.pattern-note strong { color: var(--text-primary); }
+
+/* ---- NAVIGATION BTN ---- */
+.nav-btn {
+  width: 100%;
+  padding: 13px 18px;
+  background: transparent;
+  border: 1px solid var(--gold-dim);
+  color: var(--gold);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: background 0.15s, border-color 0.15s;
+  margin-bottom: 10px;
+}
+.nav-btn:hover { background: #1a1200; border-color: var(--gold); }
+.nav-btn.primary-nav {
+  background: var(--gold);
+  color: #0a0a0f;
+}
+.nav-btn.primary-nav:hover { background: var(--gold-light); }
+
+/* ---- PREPARE STAGE SPECIFICS ---- */
+.prepare-meta {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+.prepare-meta-item {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: 2px;
+  padding: 12px 14px;
+}
+.prepare-meta-item-label { font-size: 10px; text-transform: uppercase; letter-spacing: 0.06em; color: var(--text-muted); margin-bottom: 6px; }
+.prepare-meta-item-value { font-size: 14px; color: var(--text-primary); font-weight: 500; }
+
+/* ---- FOOTER ---- */
+footer {
+  padding: 16px 24px;
+  border-top: 1px solid var(--border);
+  background: var(--bg-secondary);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+.footer-note {
+  font-size: 10px;
+  color: var(--text-muted);
+  text-align: center;
+  letter-spacing: 0.03em;
+}
+.footer-note span { color: #4a4030; }
+
+/* ---- UTILITIES ---- */
+.hidden { display: none !important; }
+.fade-in { animation: fade-in 0.3s ease; }
+@keyframes fade-in {
+  from { opacity: 0; transform: translateY(6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.gold-text { color: var(--gold); }
+.section-sep { height: 1px; background: var(--border); margin: 16px 0; }
+
+/* Pressure mode badge */
+.pressure-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 10px;
+  font-weight: 700;
+  padding: 3px 8px;
+  border-radius: 2px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+.pressure-badge.on  { background: #1a0a0a; border: 1px solid var(--red); color: var(--red); }
+.pressure-badge.off { background: var(--bg-card); border: 1px solid var(--border); color: var(--text-muted); }
+
+/* Overconfidence banner */
+.overconf-banner {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 14px;
+  background: #1a0e00;
+  border: 1px solid var(--amber);
+  border-left: 3px solid var(--amber);
+  border-radius: 2px;
+  margin-bottom: 12px;
+  font-size: 12px;
+  color: var(--amber);
+  font-weight: 600;
+}
+
+/* Q counter */
+.q-counter {
+  font-size: 11px;
+  color: var(--text-muted);
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.q-counter strong { color: var(--text-secondary); font-size: 13px; }
+</style>
+</head>
+<body>
+
+<!-- GOVERNANCE BANNER (always visible) -->
+<div class="gov-banner">
+  <span>⚠</span>
+  PROTOTIPO ESTÁTICO · ENTRENAMIENTO · <span>NO EVALUACIÓN OFICIAL WSET</span>
+  · Sin puntuación oficial · Sin autoridad examinadora · Sin scoring oficial
+</div>
+
+<!-- PROGRESS BAR -->
+<div class="progress-bar-wrap"><div class="progress-bar" id="progressBar"></div></div>
+
+<div class="app">
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="header-brand">
+      <div class="brand-name">WSET L3 · Diagnostic SBA Cockpit <span style="color:var(--text-muted)">v2</span></div>
+      <div class="brand-sub">Sistema de Entrenamiento · Prototipo Estático</div>
+    </div>
+    <div class="header-controls">
+      <span class="toggle-label">Presión</span>
+      <label class="toggle-switch">
+        <input type="checkbox" id="pressureToggle" onchange="togglePressure()">
+        <span class="toggle-slider"></span>
+      </label>
+      <select class="mentor-select" id="mentorMode" onchange="updateMentorMode()">
+        <option value="mentor">Mentor Guía</option>
+        <option value="trainer">Entrenador Técnico</option>
+        <option value="reviewer">Revisor Estricto</option>
+      </select>
+    </div>
+  </header>
+
+  <!-- MAIN -->
+  <div class="main">
+
+    <!-- CONTENT (left panel) -->
+    <div class="content" id="mainContent">
+      <!-- Populated by JS -->
+    </div>
+
+    <!-- SIDEBAR (right panel) -->
+    <div class="sidebar" id="sidebar">
+
+      <!-- Mentor Signal -->
+      <div>
+        <div class="card-title">Señal Mentor</div>
+        <div class="mentor-signal">
+          <div class="signal-orb-wrap">
+            <svg class="signal-orb orb-calm" id="signalOrb" viewBox="0 0 60 60">
+              <defs>
+                <radialGradient id="coreGrad" cx="50%" cy="50%" r="50%">
+                  <stop offset="0%" stop-color="#e5c97a"/>
+                  <stop offset="100%" stop-color="#c9a84c"/>
+                </radialGradient>
+              </defs>
+              <circle class="ring ring-1" cx="30" cy="30" r="18" stroke="#c9a84c" opacity="0"/>
+              <circle class="ring ring-2" cx="30" cy="30" r="22" stroke="#c9a84c" opacity="0"/>
+              <circle class="ring ring-3" cx="30" cy="30" r="25" stroke="#c9a84c" opacity="0"/>
+              <circle class="core signal-core-pulse" cx="30" cy="30" r="8" fill="url(#coreGrad)"/>
+            </svg>
+          </div>
+          <div class="signal-label" id="signalLabel">Sistema activo</div>
+          <div class="signal-status" id="signalStatus">Preparando sesión de entrenamiento</div>
+        </div>
+      </div>
+
+      <!-- Stage progress -->
+      <div>
+        <div class="card-title">Etapa actual</div>
+        <div class="stage-indicator" id="stagePips">
+          <div class="stage-pip" title="Preparar"></div>
+          <div class="stage-pip" title="Leer"></div>
+          <div class="stage-pip" title="Confirmar"></div>
+          <div class="stage-pip" title="Contraste"></div>
+          <div class="stage-pip" title="Revelar"></div>
+          <div class="stage-pip" title="Entrenar"></div>
+          <div class="stage-pip" title="Mapa"></div>
+        </div>
+        <div class="stage-label" id="stageLabelText">—</div>
+      </div>
+
+      <!-- Session quick stats -->
+      <div id="sidebarStats">
+        <div class="card-title">Sesión</div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:6px">
+          <div class="metric-chip">
+            <div class="metric-chip-label">Preguntas</div>
+            <div class="metric-chip-value" id="statQTotal">0 / 4</div>
+          </div>
+          <div class="metric-chip">
+            <div class="metric-chip-label">Correctas</div>
+            <div class="metric-chip-value good" id="statCorrect">—</div>
+          </div>
+          <div class="metric-chip">
+            <div class="metric-chip-label">Confianza</div>
+            <div class="metric-chip-value" id="statConf">—</div>
+          </div>
+          <div class="metric-chip">
+            <div class="metric-chip-label">Vacilaciones</div>
+            <div class="metric-chip-value warn" id="statHes">—</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Pressure mode status -->
+      <div>
+        <div class="card-title">Modo presión</div>
+        <div class="pressure-badge off" id="pressureBadge">⬤ Desactivado</div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-note">PROTOTIPO ESTÁTICO · ENTRENAMIENTO SOLAMENTE</div>
+    <div class="footer-note"><span>Sin puntuación oficial WSET</span></div>
+    <div class="footer-note"><span>Sin autoridad examinadora · Sin scoring real</span></div>
+    <div class="footer-note">Todas las preguntas marcadas como Pregunta de Entrenamiento</div>
+  </footer>
+
+</div>
+
+<!-- =====================================================================
+     JAVASCRIPT
+     ===================================================================== -->
+<script>
+// -----------------------------------------------------------------------
+// MOCK DATA — PREGUNTAS DE ENTRENAMIENTO (4 preguntas)
+// Marcadas explícitamente como datos de entrenamiento. No representan
+// preguntas oficiales WSET ni evaluación examinadora.
+// -----------------------------------------------------------------------
+const QUESTIONS = [
+  {
+    id: 1,
+    topic: "Procesos Enológicos",
+    difficulty: "Alta",
+    cognitive_skill: "Cadena Causal",
+    est_time: "60–90 s",
+    text: "¿Por qué la fermentación maloláctica (FML) reduce la acidez percibida de un vino y modifica su textura en boca?",
+    options: [
+      "Porque convierte el ácido málico (diácido) en ácido láctico (monoacido), reduciendo la acidez total titulable y produciendo una sensación más suave.",
+      "Porque las bacterias lácticas consumen el azúcar residual, disminuyendo el cuerpo del vino.",
+      "Porque el CO₂ liberado durante la FML actúa como tampón de la acidez volátil.",
+      "Porque la FML eleva el pH al convertir ácidos fijos en ácidos volátiles de menor peso molecular."
+    ],
+    correct_index: 0,
+    distractor_traps: "Las opciones B y C confunden el sustrato de la FML (ácido málico, no azúcar) y el rol del CO₂ (subproducto menor, no tampón de acidez). La opción D invierte la relación ácidos fijos/volátiles — la FML no produce acidez volátil significativa.",
+    causal_chain: {
+      causa: "Ácido málico (diácido, aroma verde/duro) presente en el vino base",
+      mecanismo: "Bacterias lácticas (Oenococcus oeni) convierten ácido málico → ácido láctico (monoacido, percepción más suave) + CO₂",
+      efecto: "Reducción de acidez total titulable, pH más alto, textura mantecosa/cremosa, aromas de mantequilla por diacetilo"
+    },
+    misconception: "Confusión FML = fermentación alcohólica",
+    cross_exam_challenge: "¿Tu respuesta explica la causa química (tipo de ácido) o solo el efecto organoléptico? ¿Qué rol específico tienen los grupos carboxílicos?",
+    sat_relevance: "Relevante para la evaluación de acidez (RA): vinos con FML completa suelen puntuarse como 'baja' a 'media' acidez en cata a ciegas. El catador WSET debe reconocer la textura como indicador de FML.",
+    micro_drill: {
+      type: "chain_fill",
+      prompt: "Completa la cadena causal de la FML:",
+      blanks: ["Ácido ___", "→ Bacterias lácticas →", "Ácido ___"],
+      word_bank: ["málico", "láctico", "acético", "tartárico", "cítrico"],
+      answers: ["málico", "láctico"],
+      fixed: [false, true, false]
+    },
+    feedback_by_mode: {
+      mentor: "Bien encaminado si elegiste A. La FML es un proceso de desacidificación biológica: el ácido málico tiene dos grupos carboxílicos (diácido, percepción más agresiva) y el láctico solo uno. Esa diferencia estructural es la razón química de la suavidad percibida. El diacetilo, subproducto de la FML, aporta los aromas lácteos/mantequilla.",
+      trainer: "La respuesta correcta es A. Diferencia clave: ácido málico = diácido (pKa1 ≈ 3.4, pKa2 ≈ 5.2); ácido láctico = monoacido (pKa ≈ 3.86). La reducción de grupos ionizables explica la caída de acidez titulable. La FML no actúa sobre azúcares (opción B: error de sustrato). El CO₂ es subproducto menor, no tampón eficaz.",
+      reviewer: "A es correcta. Las demás opciones revelan errores conceptuales graves: B confunde FML con fermentación alcohólica, C malinterpreta el CO₂, D invierte la clasificación ácidos fijos/volátiles. En examen, la pregunta sobre FML casi siempre evalúa si el candidato sabe que el sustrato es el ácido málico, no el azúcar."
+    }
+  },
+  {
+    id: 2,
+    topic: "Clasificación Regional · Borgoña",
+    difficulty: "Media-Alta",
+    cognitive_skill: "Clasificación Jerárquica",
+    est_time: "45–60 s",
+    text: "¿Cuál de las siguientes afirmaciones describe correctamente la jerarquía de denominaciones en la Côte de Nuits (Borgoña)?",
+    options: [
+      "Regional → Village → Premier Cru → Grand Cru, donde Grand Cru es la denominación más específica y se aplica solo a parcelas individuales con reconocimiento propio.",
+      "Grand Cru es la categoría más amplia y incluye múltiples comunas con viñedos de alta calidad.",
+      "Los vinos Premier Cru pueden mezclar uvas de diferentes comunas siempre que estén dentro de la Côte de Nuits.",
+      "La denominación Village solo aplica a vinos elaborados en el municipio de Gevrey-Chambertin."
+    ],
+    correct_index: 0,
+    distractor_traps: "La opción B invierte la pirámide: Grand Cru es la más específica (menor volumen), no la más amplia. La opción C confunde Premier Cru con Regional — los Premier Cru son vinos de parcelas específicas dentro de una sola commune. La opción D confunde Village con denominación exclusiva de Gevrey.",
+    causal_chain: {
+      causa: "Sistema de clasificación de viñedos de Borgoña basado en el concepto de terroir (clima, suelo, exposición por parcela)",
+      mecanismo: "Jerarquía legal de AOC en cuatro niveles: Regional (mayor volumen, menor especificidad) → Village → Premier Cru → Grand Cru (menor volumen, mayor especificidad geográfica)",
+      efecto: "Los Grand Cru poseen su propia AOC (ej. Chambertin, Romanée-Conti); Premier Cru incluye el nombre de la commune + nom du climat"
+    },
+    misconception: "Inversión de la pirámide (creer que Grand Cru es la categoría más amplia)",
+    cross_exam_challenge: "¿Estás seguro de que 'Grand Cru' significa siempre la categoría más pequeña y específica? ¿Cómo se llama legalmente un Grand Cru en la etiqueta — incluye el nombre de la commune?",
+    sat_relevance: "No directamente aplicable al SAT, pero el conocimiento de la jerarquía permite contextualizar la calidad y el precio esperado del vino al catarlo.",
+    micro_drill: {
+      type: "tag_select",
+      prompt: "¿Cuáles de estos niveles corresponden a la jerarquía de Borgoña en orden correcto (de menor a mayor especificidad)?",
+      tags: ["Regional", "Village", "Premier Cru", "Grand Cru", "AOC Bourgogne", "Cru Classé"],
+      correct_tags: ["Regional", "Village", "Premier Cru", "Grand Cru"]
+    },
+    feedback_by_mode: {
+      mentor: "La pirámide de Borgoña es fundamental: a mayor especificidad geográfica, mayor categoría. Grand Cru es la cima — y lo importante es que tienen su propia denominación (Chambertin, no 'Gevrey-Chambertin Grand Cru'). En examen, la trampa clásica es invertir la pirámide o confundir Premier Cru con un nivel más alto que Grand Cru.",
+      trainer: "Respuesta correcta: A. La jerarquía de Borgoña sigue una lógica de especificidad creciente: Regional → Village → Premier Cru → Grand Cru. Los Grand Cru tienen su propia AOC; no se etiquetan con el nombre de la commune. Los Premier Cru se etiquetan 'Commune + Premier Cru [+ Climat]'. La opción C es incorrecta porque Premier Cru siempre es monocommunal.",
+      reviewer: "A es la única respuesta correcta. La opción B es el error más grave (inversión de pirámide) y el más frecuente en examen. B, C y D revelan comprensión incompleta del sistema de clasificación borgoñón. En WSET L3, se espera que el candidato domine la estructura jerárquica completa y sepa cómo aparece en la etiqueta."
+    }
+  },
+  {
+    id: 3,
+    topic: "SAT · Técnica de Cata",
+    difficulty: "Media",
+    cognitive_skill: "SAT / Evaluación de Acidez",
+    est_time: "45–60 s",
+    text: "Al evaluar la acidez de un vino blanco mediante el SAT, ¿qué respuesta fisiológica confirma principalmente la presencia de acidez alta?",
+    options: [
+      "Salivación intensa y prolongada después de tragar o escupir, que persiste más de 30 segundos.",
+      "Sensación de sequedad y astringencia en el paladar medio.",
+      "Calor pronunciado en la garganta y pecho.",
+      "Amargor intenso en el paladar posterior."
+    ],
+    correct_index: 0,
+    distractor_traps: "La sequedad y astringencia (opción B) son señales de tanino, no de acidez. El calor (opción C) indica alta graduación alcohólica. El amargor (opción D) corresponde a taninos, fenoles o algunos compuestos amargos — no a la acidez. La salivación es la respuesta fisiológica característica de los ácidos.",
+    causal_chain: {
+      causa: "Alta concentración de ácidos orgánicos (tartárico, málico, láctico) en el vino",
+      mecanismo: "Los ácidos estimulan los receptores gustativos ácidos (células tipo III) y activan el reflejo de salivación como mecanismo de neutralización/dilución",
+      efecto: "Salivación intensa y persistente; la boca produce más saliva para neutralizar la acidez — indicador fisiológico confiable y consistente"
+    },
+    misconception: "Confundir señales de acidez con señales de tanino (astringencia)",
+    cross_exam_challenge: "¿La salivación que describes ocurre durante la cata o después de escupir/tragar? La persistencia temporal es clave en la evaluación SAT de acidez. ¿Puedes precisar ese detalle?",
+    sat_relevance: "Directamente relevante: la evaluación de acidez en el SAT WSET se basa en la salivación post-deglución. 'Baja' acidez = poca salivación, boca seca. 'Alta' acidez = salivación intensa y persistente (>30s). Este indicador es el ancla fisiológica del descriptor de acidez en la hoja SAT.",
+    micro_drill: {
+      type: "chain_fill",
+      prompt: "Completa la cadena: ácidos orgánicos → [mecanismo] → [efecto observable]",
+      blanks: ["Ácidos orgánicos", "→ ___ de receptores ácidos →", "___ intensa"],
+      word_bank: ["Estimulación", "Inhibición", "Salivación", "Astringencia", "Amargura"],
+      answers: ["Estimulación", "Salivación"],
+      fixed: [true, false, false]
+    },
+    feedback_by_mode: {
+      mentor: "Excelente ancla fisiológica: la salivación es la respuesta del cuerpo a los ácidos. Tu boca intenta neutralizar el pH bajo produciendo más saliva. Por eso, cuando catas un Riesling Mosel o un Chablis y notas que la boca 'fluye' después de escupir, estás confirmando acidez alta. Las opciones B, C, D son señales de otras características — confundirlas es un error frecuente en las primeras catas.",
+      trainer: "A es correcta. La fisiología es precisa: los H⁺ activan los receptores ácidos (TAS2R no, sino canales iónicos específicos) y generan salivación refleja. La persistencia temporal (>30 s) distingue acidez alta de media en el protocolo SAT. La astringencia (B) es precipitación de proteínas salivales por taninos — mecanismo completamente distinto.",
+      reviewer: "A es la única respuesta correcta. En examen, B es la trampa más frecuente: los candidatos confunden 'sequedad' con 'acidez' porque ambas producen incomodidad. La diferencia es mecanística y fisiológica. La salivación post-deglución es el marcador SAT oficial de acidez. Quien no la conoce no puede evaluar acidez con fiabilidad."
+    }
+  },
+  {
+    id: 4,
+    topic: "Viticultura · Clima",
+    difficulty: "Media",
+    cognitive_skill: "Cadena Causal / Clima-Estilo",
+    est_time: "50–70 s",
+    text: "¿Por qué los vinos producidos en climas continentales suelen tener mayor acidez y menor graduación alcohólica que los de climas mediterráneos, incluso con la misma variedad de uva?",
+    options: [
+      "Porque las veranos cortos y frescos de los climas continentales limitan la acumulación de azúcar en la uva, y la menor temperatura conserva los ácidos naturales (tartárico y málico).",
+      "Porque el suelo volcánico típico de los climas continentales retiene más agua y produce uvas con menor concentración de azúcar.",
+      "Porque en climas continentales las viñas reciben menos horas de sol directas, reduciendo la fotosíntesis y la producción de polifenoles.",
+      "Porque las lluvias frecuentes en climas continentales diluyen los azúcares en la baya, pero aumentan los taninos por estrés hídrico."
+    ],
+    correct_index: 0,
+    distractor_traps: "La opción B confunde tipo de clima con tipo de suelo — no existe correlación directa entre clima continental y suelo volcánico. La opción C malinterpreta la relación fotosíntesis-polifenoles y no aborda el mecanismo de azúcar/acidez. La opción D contradice la viticultura: el estrés hídrico no aumenta los taninos en contexto de lluvia abundante — son conceptos opuestos.",
+    causal_chain: {
+      causa: "Clima continental: veranos cortos, inviernos fríos, alta amplitud térmica diaria y estacional",
+      mecanismo: "Menor temperatura media durante la maduración → menor actividad metabólica de la uva → acumulación más lenta y limitada de azúcar + menor degradación de ácidos málico y tartárico por temperaturas nocturnas bajas",
+      efecto: "Uva con menor °Brix (→ vino con menor ABV) y mayor acidez total titulable (→ perfil ácido, fresco, de guarda)"
+    },
+    misconception: "Confundir la influencia del clima con la del suelo en el perfil de acidez/alcohol",
+    cross_exam_challenge: "¿Tu respuesta distingue entre el efecto de la temperatura sobre los azúcares y su efecto sobre los ácidos por separado? Son dos mecanismos distintos. ¿Cuál predomina en la determinación de la acidez final?",
+    sat_relevance: "Relevante para inferir origen en cata a ciegas: acidez alta + alcohol moderado + color pálido sugieren clima fresco (continental o oceánico). Esta cadena clima → composición → perfil SAT es un razonamiento de distinción frecuente en WSET L3.",
+    micro_drill: {
+      type: "chain_fill",
+      prompt: "Completa la cadena causal: clima continental → [mecanismo] → perfil del vino",
+      blanks: ["Clima continental", "→ Veranos ___ y frescos →", "Mayor ___ / menor alcohol"],
+      word_bank: ["cortos", "largos", "acidez", "taninos", "color"],
+      answers: ["cortos", "acidez"],
+      fixed: [true, false, false]
+    },
+    feedback_by_mode: {
+      mentor: "Muy bien si elegiste A. La lógica es elegante: el frío es el protagonista. Las noches frías conservan los ácidos (la uva no los metaboliza tan rápido) y el verano corto no da tiempo para que los azúcares lleguen a niveles altos. Por eso Borgoña, Alsacia, y el Loira producen vinos más ácidos y más delgados en alcohol que Priorat o Barossa — misma variedad, clima diferente, perfil diferente.",
+      trainer: "A es correcta. El mecanismo tiene dos componentes: (1) menor temperatura → menor respiración celular → menor degradación de ácidos orgánicos; (2) temporada más corta → fotosíntesis limitada → menor acumulación de hexosas (azúcar). La opción B introduce un error de categoría (confunde clima con geología). La D introduce una contradicción interna (lluvia + estrés hídrico).",
+      reviewer: "A es la única respuesta correcta. En examen L3, la confusión clima/suelo (opción B) y la introducción de polifenoles sin base (opción C) son errores que penalizan. La pregunta evalúa comprensión causal del binomio temperatura-acidez/alcohol. Quien entiende este mecanismo puede extrapolar a cualquier región — esa es la competencia que evalúa el examen."
+    }
+  }
+];
+
+// -----------------------------------------------------------------------
+// STATE
+// -----------------------------------------------------------------------
+const STATE = {
+  stage: 'prepare',         // prepare | read | commit | cross | reveal | train | map
+  questionIndex: 0,
+  selectedOption: null,
+  selectedConfidence: null,
+  selectedTag: null,
+  crossChanged: false,
+  pressureMode: false,
+  mentorMode: 'mentor',
+  timerInterval: null,
+  timerSeconds: 0,
+  timeElapsed: 0,
+  readTimeElapsed: 0,
+  session: {
+    answered: 0,
+    correct: 0,
+    overconfident: 0,
+    hesitated: 0,
+    causalWeakness: 0,
+    trapSusceptibility: 0
+  },
+  drillAnswers: [],
+  drillSelectedTags: [],
+  drillSubmitted: false
+};
+
+// -----------------------------------------------------------------------
+// HELPERS
+// -----------------------------------------------------------------------
+function currentQ() { return QUESTIONS[STATE.questionIndex]; }
+
+function setProgress(pct) {
+  document.getElementById('progressBar').style.width = pct + '%';
+}
+
+function updateStagePips() {
+  const stages = ['prepare','read','commit','cross','reveal','train','map'];
+  const idx = stages.indexOf(STATE.stage);
+  const pips = document.querySelectorAll('.stage-pip');
+  pips.forEach((p, i) => {
+    p.classList.remove('active','done');
+    if (i === idx) p.classList.add('active');
+    else if (i < idx) p.classList.add('done');
+  });
+  const labels = {
+    prepare: 'PREPARAR', read: 'LEER', commit: 'CONFIRMAR',
+    cross: 'CONTRASTE', reveal: 'REVELAR', train: 'ENTRENAR', map: 'MAPA COGNITIVO'
+  };
+  document.getElementById('stageLabelText').innerHTML =
+    `Etapa <span>${labels[STATE.stage] || ''}</span>`;
+}
+
+function updateOrb(speed, color) {
+  const orb = document.getElementById('signalOrb');
+  orb.className = 'signal-orb ' + speed;
+  // Update ring stroke colors
+  orb.querySelectorAll('.ring').forEach(r => r.setAttribute('stroke', color));
+  orb.querySelector('.core').setAttribute('fill', color);
+}
+
+function setOrbStage(stage) {
+  const configs = {
+    prepare: { speed: 'orb-calm',   color: '#3b82f6', label: 'En espera',       status: 'Preparando sesión de entrenamiento' },
+    read:    { speed: 'orb-calm',   color: '#22c55e', label: 'Activo',           status: 'Monitorizando lectura' },
+    commit:  { speed: 'orb-active', color: '#c9a84c', label: 'Atento',           status: 'Esperando confirmación de respuesta' },
+    cross:   { speed: 'orb-intense',color: '#f59e0b', label: 'Intenso',          status: 'Análisis de contraste activo' },
+    reveal:  { speed: 'orb-active', color: '#8b5cf6', label: 'Procesando',       status: 'Generando retroalimentación' },
+    train:   { speed: 'orb-calm',   color: '#06b6d4', label: 'Entrenando',       status: 'Micro-ejercicio activo' },
+    map:     { speed: 'orb-calm',   color: '#ec4899', label: 'Mapa listo',       status: 'Análisis cognitivo completado' }
+  };
+  const cfg = configs[stage] || configs.prepare;
+  updateOrb(cfg.speed, cfg.color);
+  document.getElementById('signalLabel').textContent = cfg.label;
+  document.getElementById('signalStatus').textContent = cfg.status;
+}
+
+function stopTimer() {
+  if (STATE.timerInterval) { clearInterval(STATE.timerInterval); STATE.timerInterval = null; }
+}
+
+function startTimer(seconds, onTick, onEnd) {
+  stopTimer();
+  STATE.timerSeconds = seconds;
+  let elapsed = 0;
+  onTick(seconds, elapsed, seconds);
+  STATE.timerInterval = setInterval(() => {
+    elapsed++;
+    STATE.timerSeconds--;
+    onTick(STATE.timerSeconds, elapsed, seconds);
+    if (STATE.timerSeconds <= 0) { stopTimer(); if (onEnd) onEnd(); }
+  }, 1000);
+}
+
+function getTimingBand(secs) {
+  if (secs < 30) return { label: 'Respuesta rápida (<30 s)', cls: 'good' };
+  if (secs <= 60) return { label: 'Ritmo normal (30–60 s)', cls: '' };
+  return { label: 'Indecisión (>60 s)', cls: 'warn' };
+}
+
+function getConfLabel(conf) {
+  const m = { seguro: 'Seguro/a', bastante: 'Bastante seguro/a', dudas: 'Tengo dudas', adivinando: 'Estoy adivinando' };
+  return m[conf] || '—';
+}
+
+function updateSessionStats() {
+  document.getElementById('statQTotal').textContent =
+    STATE.session.answered + ' / ' + QUESTIONS.length;
+  document.getElementById('statCorrect').textContent =
+    STATE.session.answered > 0
+      ? Math.round(STATE.session.correct / STATE.session.answered * 100) + '%'
+      : '—';
+  document.getElementById('statConf').textContent =
+    STATE.session.overconfident > 0 ? '⚠ ' + STATE.session.overconfident : '—';
+  document.getElementById('statHes').textContent =
+    STATE.session.hesitated > 0 ? STATE.session.hesitated : '—';
+}
+
+function togglePressure() {
+  STATE.pressureMode = document.getElementById('pressureToggle').checked;
+  const badge = document.getElementById('pressureBadge');
+  if (STATE.pressureMode) {
+    badge.className = 'pressure-badge on';
+    badge.textContent = '⬤ Activado';
+  } else {
+    badge.className = 'pressure-badge off';
+    badge.textContent = '⬤ Desactivado';
+  }
+}
+
+function updateMentorMode() {
+  STATE.mentorMode = document.getElementById('mentorMode').value;
+}
+
+function escapeHtml(s) {
+  return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+}
+
+// -----------------------------------------------------------------------
+// RENDER STAGES
+// -----------------------------------------------------------------------
+function render() {
+  updateStagePips();
+  setOrbStage(STATE.stage);
+  updateSessionStats();
+
+  const stages = ['prepare','read','commit','cross','reveal','train','map'];
+  const idx = stages.indexOf(STATE.stage);
+  setProgress(Math.round((idx / 6) * 100));
+
+  const fn = {
+    prepare: renderPrepare,
+    read:    renderRead,
+    commit:  renderCommit,
+    cross:   renderCross,
+    reveal:  renderReveal,
+    train:   renderTrain,
+    map:     renderMap
+  };
+  if (fn[STATE.stage]) fn[STATE.stage]();
+}
+
+// ---- STAGE 1: PREPARE ----
+function renderPrepare() {
+  stopTimer();
+  const q = currentQ();
+  const doc = document.getElementById('mainContent');
+  doc.innerHTML = `
+    <div class="fade-in">
+      <div class="q-counter">
+        Pregunta <strong>${STATE.questionIndex + 1} de ${QUESTIONS.length}</strong>
+        &nbsp;·&nbsp; Pregunta de Entrenamiento
+      </div>
+
+      <div class="card-title">Preparar</div>
+
+      <div class="q-meta">
+        <span class="q-tag train">🔒 Entrenamiento</span>
+        <span class="q-tag topic">${escapeHtml(q.topic)}</span>
+        <span class="q-tag diff">Nivel 3 · Dificultad ${escapeHtml(q.difficulty)}</span>
+        <span class="q-tag skill">${escapeHtml(q.cognitive_skill)}</span>
+      </div>
+
+      <div class="prepare-meta">
+        <div class="prepare-meta-item">
+          <div class="prepare-meta-item-label">Habilidad cognitiva</div>
+          <div class="prepare-meta-item-value">${escapeHtml(q.cognitive_skill)}</div>
+        </div>
+        <div class="prepare-meta-item">
+          <div class="prepare-meta-item-label">Tiempo estimado</div>
+          <div class="prepare-meta-item-value">${escapeHtml(q.est_time)}</div>
+        </div>
+        <div class="prepare-meta-item">
+          <div class="prepare-meta-item-label">Modo presión</div>
+          <div class="prepare-meta-item-value">${STATE.pressureMode ? '⚡ Activado' : 'Normal'}</div>
+        </div>
+        <div class="prepare-meta-item">
+          <div class="prepare-meta-item-label">Mentor</div>
+          <div class="prepare-meta-item-value">${mentorLabel()}</div>
+        </div>
+      </div>
+
+      <div class="card" style="background:#0d0f1a;border-color:#2a2f5f;">
+        <div style="font-size:11px;text-transform:uppercase;letter-spacing:0.08em;color:#5b7ba8;margin-bottom:8px;">Señal del mentor</div>
+        <div style="font-size:13px;color:var(--text-secondary);line-height:1.6;">
+          Esta pregunta evalúa tu comprensión de <em style="color:var(--text-primary)">${escapeHtml(q.cognitive_skill)}</em>.
+          Antes de entrar en modo examen, asegúrate de que puedes razonar la cadena causal completa, no solo recordar la respuesta.
+        </div>
+      </div>
+
+      <button class="commit-btn" onclick="goToRead()">
+        <span>Entrar en modo examen</span> →
+      </button>
+    </div>
+  `;
+}
+
+function mentorLabel() {
+  const m = { mentor: 'Mentor Guía', trainer: 'Entrenador Técnico', reviewer: 'Revisor Estricto' };
+  return m[STATE.mentorMode] || 'Mentor Guía';
+}
+
+// ---- STAGE 2: READ ----
+function renderRead() {
+  const q = currentQ();
+  const totalTime = STATE.pressureMode ? 45 : 90;
+  STATE.readTimeElapsed = 0;
+  const doc = document.getElementById('mainContent');
+  doc.innerHTML = `
+    <div class="fade-in">
+      <div class="q-counter">Pregunta <strong>${STATE.questionIndex + 1} de ${QUESTIONS.length}</strong></div>
+
+      <div class="card-title">Leer</div>
+
+      <div class="timer-wrap">
+        <span class="timer-label">Tiempo</span>
+        <span class="timer-value green" id="timerVal">—</span>
+        <div class="timer-bar"><div class="timer-bar-fill" id="timerFill" style="width:100%;background:var(--green)"></div></div>
+      </div>
+
+      <div class="q-meta">
+        <span class="q-tag train">Entrenamiento</span>
+        <span class="q-tag topic">${escapeHtml(q.topic)}</span>
+        <span class="q-tag diff">Dificultad ${escapeHtml(q.difficulty)}</span>
+      </div>
+
+      <div class="question-text">${escapeHtml(q.text)}</div>
+
+      <div style="font-size:12px;color:var(--text-muted);margin-bottom:18px;">
+        Las opciones se mostrarán cuando estés listo. Lee la pregunta con atención.
+      </div>
+
+      <button class="commit-btn" id="readyBtn" onclick="goToCommit()">
+        Estoy listo para responder →
+      </button>
+    </div>
+  `;
+
+  startTimer(totalTime, (remaining, elapsed, total) => {
+    STATE.readTimeElapsed = elapsed;
+    const tv = document.getElementById('timerVal');
+    const tf = document.getElementById('timerFill');
+    if (!tv || !tf) { stopTimer(); return; }
+
+    const pct = (remaining / total) * 100;
+    tv.textContent = remaining + ' s';
+    tf.style.width = pct + '%';
+
+    if (pct > 55) {
+      tv.className = 'timer-value green';
+      tf.style.background = 'var(--green)';
+    } else if (pct > 25) {
+      tv.className = 'timer-value amber';
+      tf.style.background = 'var(--amber)';
+    } else {
+      tv.className = 'timer-value red';
+      tf.style.background = 'var(--red)';
+    }
+  }, () => {
+    // time up — auto-advance
+    goToCommit();
+  });
+}
+
+// ---- STAGE 3: COMMIT ----
+function renderCommit() {
+  stopTimer();
+  const q = currentQ();
+  STATE.selectedOption = null;
+  STATE.selectedConfidence = null;
+  STATE.selectedTag = null;
+  STATE.timeElapsed = 0;
+  STATE.drillSubmitted = false;
+
+  const totalTime = STATE.pressureMode ? 45 : 120;
+
+  const doc = document.getElementById('mainContent');
+  doc.innerHTML = `
+    <div class="fade-in">
+      <div class="q-counter">Pregunta <strong>${STATE.questionIndex + 1} de ${QUESTIONS.length}</strong></div>
+      <div class="card-title">Confirmar respuesta</div>
+
+      <div class="timer-wrap">
+        <span class="timer-label">Tiempo</span>
+        <span class="timer-value green" id="timerVal">—</span>
+        <div class="timer-bar"><div class="timer-bar-fill" id="timerFill" style="width:100%;background:var(--green)"></div></div>
+      </div>
+
+      <div class="question-text">${escapeHtml(q.text)}</div>
+
+      <div class="options-list" id="optionsList">
+        ${q.options.map((o, i) => `
+          <button class="option-btn" id="opt${i}" onclick="selectOption(${i})">
+            <span class="opt-letter">${String.fromCharCode(65+i)}</span>
+            <span>${escapeHtml(o)}</span>
+          </button>
+        `).join('')}
+      </div>
+
+      <div class="section-sep"></div>
+
+      <div class="confidence-section">
+        <div class="conf-label">Calibración de confianza — selecciona antes de confirmar</div>
+        <div class="conf-options">
+          <button class="conf-btn" id="conf-seguro" onclick="selectConf('seguro')">Seguro/a</button>
+          <button class="conf-btn" id="conf-bastante" onclick="selectConf('bastante')">Bastante seguro/a</button>
+          <button class="conf-btn" id="conf-dudas" onclick="selectConf('dudas')">Tengo dudas</button>
+          <button class="conf-btn" id="conf-adivinando" onclick="selectConf('adivinando')">Estoy adivinando</button>
+        </div>
+        <div class="conf-gauge-bar">
+          <div class="conf-gauge-fill" id="confGaugeFill"></div>
+        </div>
+      </div>
+
+      <div class="microtag-section">
+        <div class="microtag-label">Razonamiento (opcional)</div>
+        <div class="microtag-options">
+          <button class="microtag-btn" id="tag-eliminacion" onclick="selectTag('eliminacion')">Por eliminación</button>
+          <button class="microtag-btn" id="tag-libro" onclick="selectTag('libro')">Lo recuerdo del libro</button>
+          <button class="microtag-btn" id="tag-causal" onclick="selectTag('causal')">Razonamiento causal</button>
+          <button class="microtag-btn" id="tag-instinto" onclick="selectTag('instinto')">Instinto</button>
+        </div>
+      </div>
+
+      <button class="commit-btn" id="commitBtn" onclick="commitAnswer()" disabled>
+        <span class="lock-animation" id="lockIcon">🔓</span>
+        Confirmar respuesta
+      </button>
+    </div>
+  `;
+
+  startTimer(totalTime, (remaining, elapsed, total) => {
+    STATE.timeElapsed = elapsed;
+    const tv = document.getElementById('timerVal');
+    const tf = document.getElementById('timerFill');
+    if (!tv || !tf) { stopTimer(); return; }
+    const pct = (remaining / total) * 100;
+    tv.textContent = remaining + ' s';
+    tf.style.width = pct + '%';
+    if (pct > 55)       { tv.className = 'timer-value green'; tf.style.background = 'var(--green)'; }
+    else if (pct > 25)  { tv.className = 'timer-value amber'; tf.style.background = 'var(--amber)'; }
+    else                { tv.className = 'timer-value red';   tf.style.background = 'var(--red)'; }
+  }, () => { commitAnswer(); });
+}
+
+function selectOption(i) {
+  STATE.selectedOption = i;
+  document.querySelectorAll('.option-btn').forEach((b, idx) => {
+    b.classList.toggle('selected', idx === i);
+  });
+  checkCommitReady();
+}
+
+function selectConf(c) {
+  STATE.selectedConfidence = c;
+  document.querySelectorAll('.conf-btn').forEach(b => b.classList.remove('selected'));
+  document.getElementById('conf-' + c).classList.add('selected');
+  // Update gauge
+  const widths = { seguro: '100%', bastante: '70%', dudas: '40%', adivinando: '15%' };
+  const colors = { seguro: '#22c55e', bastante: '#f59e0b', dudas: '#c9a84c', adivinando: '#ef4444' };
+  const fill = document.getElementById('confGaugeFill');
+  if (fill) { fill.style.width = widths[c]; fill.style.background = colors[c]; }
+  checkCommitReady();
+}
+
+function selectTag(t) {
+  STATE.selectedTag = STATE.selectedTag === t ? null : t;
+  document.querySelectorAll('.microtag-btn').forEach(b => b.classList.remove('selected'));
+  if (STATE.selectedTag) {
+    document.getElementById('tag-' + STATE.selectedTag)?.classList.add('selected');
+  }
+}
+
+function checkCommitReady() {
+  const btn = document.getElementById('commitBtn');
+  if (!btn) return;
+  const ready = STATE.selectedOption !== null && STATE.selectedConfidence !== null;
+  btn.disabled = !ready;
+}
+
+function commitAnswer() {
+  if (STATE.selectedOption === null || STATE.selectedConfidence === null) return;
+  stopTimer();
+  // Lock animation
+  const btn = document.getElementById('commitBtn');
+  if (btn) {
+    btn.classList.add('locked', 'locking');
+    const icon = document.getElementById('lockIcon');
+    if (icon) { setTimeout(() => { icon.textContent = '🔒'; }, 200); }
+    btn.disabled = true;
+  }
+  setTimeout(() => { STATE.stage = 'cross'; render(); }, 500);
+}
+
+// ---- STAGE 4: CROSS-EXAMINE ----
+function renderCross() {
+  const q = currentQ();
+  STATE.crossChanged = false;
+  const pressureIntro = STATE.pressureMode
+    ? 'Antes de revelar el resultado — responde con precisión:'
+    : 'Antes de revelar el resultado — reflexiona:';
+
+  const doc = document.getElementById('mainContent');
+  doc.innerHTML = `
+    <div class="fade-in">
+      <div class="q-counter">Pregunta <strong>${STATE.questionIndex + 1} de ${QUESTIONS.length}</strong></div>
+      <div class="card-title">Contraste · Pre-revelación</div>
+
+      <div class="question-text" style="font-size:15px;">${escapeHtml(q.text)}</div>
+
+      <div style="font-size:13px;color:var(--text-muted);margin-bottom:12px;">
+        Tu respuesta seleccionada:
+        <strong style="color:var(--gold)">${String.fromCharCode(65 + STATE.selectedOption)}. ${escapeHtml(q.options[STATE.selectedOption])}</strong>
+      </div>
+
+      <div class="cross-challenge">
+        <div class="cross-challenge-label">⚡ Desafío del mentor</div>
+        <div class="cross-challenge-text">${escapeHtml(q.cross_exam_challenge)}</div>
+      </div>
+
+      <div style="font-size:12px;color:var(--text-muted);margin-bottom:14px;">
+        ¿Confirmas tu respuesta o deseas cambiarla?
+      </div>
+
+      <div class="hesitation-track">
+        <div class="hesitation-dot" id="hesitationDot"></div>
+        <span id="hesitationLabel">Sin vacilación registrada</span>
+      </div>
+
+      <div class="btn-row" style="margin-top:16px;">
+        <button class="commit-btn" onclick="confirmCross()">✓ Confirmo mi respuesta</button>
+        <button class="btn-secondary" onclick="changeCross()">↩ Cambiar respuesta</button>
+      </div>
+
+      <div id="changeOptionsArea" class="hidden" style="margin-top:16px;">
+        <div style="font-size:11px;text-transform:uppercase;letter-spacing:0.06em;color:var(--text-muted);margin-bottom:10px;">
+          Selecciona nueva respuesta (bloqueo definitivo):
+        </div>
+        <div class="options-list" id="changeOptionsList">
+          ${q.options.map((o, i) => `
+            <button class="option-btn ${i === STATE.selectedOption ? 'selected' : ''}" id="chopt${i}" onclick="reSelectOption(${i})">
+              <span class="opt-letter">${String.fromCharCode(65+i)}</span>
+              <span>${escapeHtml(o)}</span>
+            </button>
+          `).join('')}
+        </div>
+        <button class="commit-btn" id="hardLockBtn" onclick="hardLock()" style="margin-top:10px;">
+          🔒 Confirmar nueva respuesta (definitivo)
+        </button>
+      </div>
+    </div>
+  `;
+}
+
+function changeCross() {
+  STATE.crossChanged = true;
+  const dot = document.getElementById('hesitationDot');
+  const lbl = document.getElementById('hesitationLabel');
+  if (dot) dot.classList.add('triggered');
+  if (lbl) lbl.textContent = '⚡ Vacilación detectada';
+  document.getElementById('changeOptionsArea')?.classList.remove('hidden');
+}
+
+function reSelectOption(i) {
+  STATE.selectedOption = i;
+  document.querySelectorAll('[id^="chopt"]').forEach((b, idx) => {
+    b.classList.toggle('selected', idx === i);
+  });
+}
+
+function confirmCross() {
+  goToReveal();
+}
+
+function hardLock() {
+  goToReveal();
+}
+
+function goToReveal() {
+  stopTimer();
+  const q = currentQ();
+  const isCorrect = STATE.selectedOption === q.correct_index;
+
+  // Update session stats
+  STATE.session.answered++;
+  if (isCorrect) STATE.session.correct++;
+  if (isCorrect === false && STATE.selectedConfidence === 'seguro') STATE.session.overconfident++;
+  if (STATE.crossChanged) STATE.session.hesitated++;
+
+  STATE.stage = 'reveal';
+  render();
+}
+
+// ---- STAGE 5: REVEAL ----
+function renderReveal() {
+  const q = currentQ();
+  const isCorrect = STATE.selectedOption === q.correct_index;
+  const timing = getTimingBand(STATE.timeElapsed);
+  const isOverconf = !isCorrect && STATE.selectedConfidence === 'seguro';
+  const feedback = q.feedback_by_mode[STATE.mentorMode] || q.feedback_by_mode.mentor;
+
+  const doc = document.getElementById('mainContent');
+  doc.innerHTML = `
+    <div class="fade-in">
+      <div class="q-counter">Pregunta <strong>${STATE.questionIndex + 1} de ${QUESTIONS.length}</strong></div>
+      <div class="card-title">Resultado y retroalimentación</div>
+
+      <div class="correctness-badge ${isCorrect ? 'correct' : 'wrong'}">
+        <div class="correctness-icon">${isCorrect ? '✓' : '✗'}</div>
+        <div>
+          <div class="correctness-text">${isCorrect ? 'Respuesta correcta' : 'Respuesta incorrecta'}</div>
+          <div style="font-size:12px;color:var(--text-muted);margin-top:2px;">
+            ${isCorrect ? 'Bien razonado.' : `La respuesta correcta era: <strong style="color:var(--green)">${String.fromCharCode(65 + q.correct_index)}</strong>`}
+          </div>
+        </div>
+      </div>
+
+      ${isOverconf ? `<div class="overconf-banner">⚠ Sobreconfianza detectada — respondiste "Seguro/a" pero la respuesta fue incorrecta</div>` : ''}
+
+      <div class="reveal-metrics">
+        <div class="metric-chip">
+          <div class="metric-chip-label">Tiempo de respuesta</div>
+          <div class="metric-chip-value ${timing.cls}">${STATE.timeElapsed} s</div>
+        </div>
+        <div class="metric-chip">
+          <div class="metric-chip-label">Banda temporal</div>
+          <div class="metric-chip-value ${timing.cls}" style="font-size:11px;">${timing.label}</div>
+        </div>
+        <div class="metric-chip">
+          <div class="metric-chip-label">Confianza declarada</div>
+          <div class="metric-chip-value ${isOverconf ? 'danger' : ''}">${getConfLabel(STATE.selectedConfidence)}</div>
+        </div>
+        <div class="metric-chip">
+          <div class="metric-chip-label">Vacilación</div>
+          <div class="metric-chip-value ${STATE.crossChanged ? 'warn' : ''}">${STATE.crossChanged ? 'Sí — respuesta cambiada' : 'No'}</div>
+        </div>
+      </div>
+
+      <div style="margin-bottom:12px;">
+        <div style="font-size:11px;text-transform:uppercase;letter-spacing:0.06em;color:var(--text-muted);margin-bottom:8px;">Opciones</div>
+        <div class="options-list">
+          ${q.options.map((o, i) => `
+            <button class="option-btn ${
+              i === q.correct_index ? 'correct-reveal' :
+              (i === STATE.selectedOption && !isCorrect) ? 'wrong-reveal' : 'neutral-reveal'
+            }" disabled>
+              <span class="opt-letter">${String.fromCharCode(65+i)}</span>
+              <span>${escapeHtml(o)}</span>
+            </button>
+          `).join('')}
+        </div>
+      </div>
+
+      <div class="causal-chain">
+        <div class="causal-chain-title">▶ Cadena Causal</div>
+        <div class="causal-flow">
+          <div class="causal-node causa">
+            <div class="causal-node-label">Causa</div>
+            <div class="causal-node-text">${escapeHtml(q.causal_chain.causa)}</div>
+          </div>
+          <div class="causal-arrow">→</div>
+          <div class="causal-node mecanismo">
+            <div class="causal-node-label">Mecanismo</div>
+            <div class="causal-node-text">${escapeHtml(q.causal_chain.mecanismo)}</div>
+          </div>
+          <div class="causal-arrow">→</div>
+          <div class="causal-node efecto">
+            <div class="causal-node-label">Efecto</div>
+            <div class="causal-node-text">${escapeHtml(q.causal_chain.efecto)}</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="feedback-block">
+        <div class="feedback-block-title distractor">Trampas de distractor</div>
+        <p>${escapeHtml(q.distractor_traps)}</p>
+      </div>
+
+      <div class="feedback-block">
+        <div class="feedback-block-title misconception">Misconception frecuente</div>
+        <p><em>${escapeHtml(q.misconception)}</em></p>
+      </div>
+
+      <div class="feedback-block">
+        <div class="feedback-block-title sat">Relevancia SAT</div>
+        <p>${escapeHtml(q.sat_relevance)}</p>
+      </div>
+
+      <div class="feedback-block">
+        <div class="feedback-block-title mentor">${mentorLabel()}</div>
+        <p>${escapeHtml(feedback)}</p>
+      </div>
+
+      <button class="nav-btn primary-nav" onclick="goToTrain()">Continuar → Micro-entrenamiento</button>
+    </div>
+  `;
+}
+
+// ---- STAGE 6: TRAIN ----
+function renderTrain() {
+  const q = currentQ();
+  const drill = q.micro_drill;
+  STATE.drillAnswers = Array(drill.blanks ? drill.blanks.length : 0).fill(null);
+  STATE.drillSelectedTags = [];
+  STATE.drillSubmitted = false;
+
+  const doc = document.getElementById('mainContent');
+  let drillHTML = '';
+
+  if (drill.type === 'chain_fill') {
+    drillHTML = `
+      <div class="drill-chain-display" id="drillChainDisplay">
+        ${drill.blanks.map((b, i) => {
+          if (drill.fixed && drill.fixed[i]) {
+            return `<div class="drill-cell">${escapeHtml(b)}</div>${i < drill.blanks.length-1 ? '' : ''}`;
+          }
+          const isArrow = b.startsWith('→');
+          if (isArrow) {
+            // Arrow cell fixed
+            return `<div class="drill-cell" style="background:transparent;border:none;color:var(--text-muted);">${escapeHtml(b)}</div>`;
+          }
+          return `<div class="drill-cell blank" id="blank_${i}" onclick="fillBlank(${i})">—</div>`;
+        }).join('<div class="drill-arrow">→</div>')}
+      </div>
+
+      <div class="word-bank" id="wordBank">
+        ${drill.word_bank.map((w, wi) => `
+          <button class="word-chip" id="wchip_${wi}" onclick="useWordChip(${wi}, '${escapeHtml(w)}')">
+            ${escapeHtml(w)}
+          </button>
+        `).join('')}
+      </div>
+
+      <div id="drillFeedback" class="drill-result"></div>
+
+      <button class="commit-btn" onclick="submitDrill()" id="drillSubmitBtn">Verificar respuesta</button>
+    `;
+  } else if (drill.type === 'tag_select') {
+    drillHTML = `
+      <div class="tag-bank" id="tagBank">
+        ${drill.tags.map((t, i) => `
+          <button class="tag-chip" id="tag_${i}" onclick="selectDrillTag(${i}, '${escapeHtml(t)}')">
+            ${escapeHtml(t)}
+          </button>
+        `).join('')}
+      </div>
+
+      <div id="drillFeedback" class="drill-result" style="margin-top:12px;"></div>
+
+      <button class="commit-btn" onclick="submitTagDrill()" id="drillSubmitBtn" style="margin-top:14px;">Verificar selección</button>
+    `;
+  }
+
+  doc.innerHTML = `
+    <div class="fade-in">
+      <div class="q-counter">Pregunta <strong>${STATE.questionIndex + 1} de ${QUESTIONS.length}</strong></div>
+      <div class="card-title">Micro-entrenamiento</div>
+
+      <div class="drill-section">
+        <div class="drill-title">▶ Ejercicio de Consolidación</div>
+        <div class="drill-prompt">${escapeHtml(drill.prompt)}</div>
+        ${drillHTML}
+      </div>
+
+      <button class="nav-btn" id="nextQBtn" onclick="nextQuestion()" style="display:none;">
+        ${STATE.questionIndex + 1 < QUESTIONS.length ? 'Siguiente pregunta →' : 'Ver Mapa Cognitivo →'}
+      </button>
+    </div>
+  `;
+
+  // Track which blanks we're filling (chain_fill state)
+  STATE._pendingBlank = null;
+  STATE._blankAnswers = {};
+}
+
+// Chain fill interactions
+STATE._pendingBlank = null;
+STATE._blankAnswers = {};
+
+function fillBlank(i) {
+  // Highlight the selected blank
+  document.querySelectorAll('.drill-cell.blank').forEach(c => c.style.boxShadow = '');
+  const cell = document.getElementById('blank_' + i);
+  if (cell && !STATE._blankAnswers[i]) {
+    STATE._pendingBlank = i;
+    cell.style.boxShadow = '0 0 0 2px var(--gold)';
+  }
+}
+
+function useWordChip(wi, word) {
+  if (STATE.drillSubmitted) return;
+  const chip = document.getElementById('wchip_' + wi);
+  if (chip && chip.classList.contains('used')) return;
+
+  // Find target blank
+  let targetBlank = STATE._pendingBlank;
+  if (targetBlank === null) {
+    // Auto-find first empty blank
+    const q = currentQ();
+    const drill = q.micro_drill;
+    for (let i = 0; i < drill.blanks.length; i++) {
+      if (!(drill.fixed && drill.fixed[i]) && !STATE._blankAnswers[i]) {
+        targetBlank = i;
+        break;
+      }
+    }
+  }
+  if (targetBlank === null) return;
+  if (STATE._blankAnswers[targetBlank]) return;
+
+  STATE._blankAnswers[targetBlank] = word;
+  const cell = document.getElementById('blank_' + targetBlank);
+  if (cell) {
+    cell.textContent = word;
+    cell.classList.add('filled');
+    cell.style.boxShadow = '';
+  }
+  if (chip) chip.classList.add('used');
+  STATE._pendingBlank = null;
+}
+
+function submitDrill() {
+  if (STATE.drillSubmitted) return;
+  STATE.drillSubmitted = true;
+  const q = currentQ();
+  const drill = q.micro_drill;
+  let allCorrect = true;
+  let answerIdx = 0;
+
+  drill.blanks.forEach((b, i) => {
+    if (drill.fixed && drill.fixed[i]) return;
+    if (b.startsWith('→')) return;
+    const userAns = (STATE._blankAnswers[i] || '').toLowerCase().trim();
+    const correctAns = (drill.answers[answerIdx] || '').toLowerCase().trim();
+    const cell = document.getElementById('blank_' + i);
+    if (userAns === correctAns) {
+      if (cell) cell.classList.add('correct-fill');
+    } else {
+      allCorrect = false;
+      if (cell) { cell.classList.add('wrong-fill'); cell.textContent = STATE._blankAnswers[i] || '—'; }
+    }
+    answerIdx++;
+  });
+
+  const fb = document.getElementById('drillFeedback');
+  if (fb) {
+    fb.style.display = 'block';
+    fb.className = 'drill-result ' + (allCorrect ? 'correct' : 'wrong');
+    fb.textContent = allCorrect
+      ? '✓ Correcto. Cadena consolidada.'
+      : '✗ Revisa la cadena. Respuesta correcta: ' + drill.answers.join(' → ');
+  }
+
+  const nextBtn = document.getElementById('nextQBtn');
+  if (nextBtn) nextBtn.style.display = 'block';
+}
+
+// Tag select interactions
+function selectDrillTag(i, tag) {
+  if (STATE.drillSubmitted) return;
+  const el = document.getElementById('tag_' + i);
+  if (!el) return;
+  const idx = STATE.drillSelectedTags.indexOf(tag);
+  if (idx >= 0) {
+    STATE.drillSelectedTags.splice(idx, 1);
+    el.classList.remove('selected-tag');
+  } else {
+    STATE.drillSelectedTags.push(tag);
+    el.classList.add('selected-tag');
+  }
+}
+
+function submitTagDrill() {
+  if (STATE.drillSubmitted) return;
+  STATE.drillSubmitted = true;
+  const q = currentQ();
+  const drill = q.micro_drill;
+  const correct = drill.correct_tags;
+
+  let allCorrect = true;
+  drill.tags.forEach((t, i) => {
+    const el = document.getElementById('tag_' + i);
+    const isCorrect = correct.includes(t);
+    const isSelected = STATE.drillSelectedTags.includes(t);
+    if (el) {
+      el.classList.remove('selected-tag');
+      if (isCorrect && isSelected) el.classList.add('correct-tag');
+      else if (!isCorrect && isSelected) { el.classList.add('wrong-tag'); allCorrect = false; }
+      else if (isCorrect && !isSelected) { el.classList.add('correct-tag'); allCorrect = false; }
+    }
+  });
+
+  const fb = document.getElementById('drillFeedback');
+  if (fb) {
+    fb.style.display = 'block';
+    fb.className = 'drill-result ' + (allCorrect ? 'correct' : 'wrong');
+    fb.textContent = allCorrect
+      ? '✓ Selección correcta.'
+      : '✗ Revisa — los elementos correctos están marcados en verde.';
+  }
+
+  const nextBtn = document.getElementById('nextQBtn');
+  if (nextBtn) nextBtn.style.display = 'block';
+}
+
+function nextQuestion() {
+  if (STATE.questionIndex + 1 < QUESTIONS.length) {
+    STATE.questionIndex++;
+    STATE.stage = 'prepare';
+  } else {
+    STATE.stage = 'map';
+  }
+  render();
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+// ---- STAGE 7: SESSION MAP ----
+function renderMap() {
+  stopTimer();
+  const s = STATE.session;
+  const total = s.answered || 1;
+  const accuracy = Math.round((s.correct / total) * 100);
+  const overconfRate = Math.round((s.overconfident / total) * 100);
+  const hesRate = Math.round((s.hesitated / total) * 100);
+  // Derived weakness signals
+  const causalWeakness = 100 - accuracy; // simplified proxy
+  const trapSusc = Math.round(((total - s.correct) / total) * 60); // proxy
+
+  // Radar data: [accuracy, calibration, decisiveness, causal, trap_resist]
+  const radarData = [
+    accuracy,
+    Math.max(0, 100 - overconfRate * 2),
+    Math.max(0, 100 - hesRate * 2),
+    Math.max(0, 100 - causalWeakness),
+    Math.max(0, 100 - trapSusc)
+  ];
+  const radarLabels = ['Precisión', 'Calibración', 'Decisión', 'Causal', 'Anti-trampa'];
+
+  function patternNote() {
+    if (s.overconfident > 0 && s.hesitated > 0)
+      return 'Patrón mixto: sobreconfianza en algunos ítems, vacilación en otros. Revisa tu calibración antes del examen.';
+    if (s.overconfident > 0)
+      return 'Tendencia a sobreestimar la certeza. Practica identificar cuándo estás razonando vs. recordando.';
+    if (s.hesitated > 0)
+      return 'Tendencia a vacilar bajo presión de contraste. Confía más en tu primer razonamiento causal.';
+    if (accuracy === 100)
+      return 'Excelente sesión. Todas las respuestas correctas. Aumenta el modo de presión para el siguiente ciclo.';
+    return 'Tiendes a confundir causa con correlación en cadenas complejas. Practica la estructura CAUSA → MECANISMO → EFECTO.';
+  }
+
+  const svgRadar = buildRadarSVG(radarData, radarLabels);
+
+  const doc = document.getElementById('mainContent');
+  doc.innerHTML = `
+    <div class="fade-in">
+      <div class="card-title">Mapa Cognitivo · Sesión completada</div>
+
+      <div class="session-stats-grid">
+        <div class="stat-cell">
+          <div class="stat-cell-label">Precisión global</div>
+          <div class="stat-cell-value ${accuracy >= 75 ? 'good' : accuracy >= 50 ? 'warn' : 'danger'}">${accuracy}%</div>
+        </div>
+        <div class="stat-cell">
+          <div class="stat-cell-label">Correctas / Total</div>
+          <div class="stat-cell-value">${s.correct} / ${s.answered}</div>
+        </div>
+        <div class="stat-cell">
+          <div class="stat-cell-label">Sobreconfianza</div>
+          <div class="stat-cell-value ${s.overconfident > 0 ? 'warn' : ''}">${s.overconfident > 0 ? s.overconfident + ' evento(s)' : '—'}</div>
+        </div>
+        <div class="stat-cell">
+          <div class="stat-cell-label">Vacilaciones</div>
+          <div class="stat-cell-value ${s.hesitated > 0 ? 'warn' : ''}">${s.hesitated > 0 ? s.hesitated : '—'}</div>
+        </div>
+      </div>
+
+      <div class="radar-wrap">${svgRadar}</div>
+
+      <div class="pattern-note">
+        <strong>Patrón detectado:</strong> ${patternNote()}
+      </div>
+
+      <div class="feedback-block">
+        <div class="feedback-block-title mentor">Resumen de sesión · ${mentorLabel()}</div>
+        <p>
+          Completaste ${s.answered} pregunta(s) de entrenamiento WSET L3.
+          ${s.correct === s.answered
+            ? 'Todas correctas — demuestras dominio de los conceptos evaluados.'
+            : `${s.correct} correcta(s). Las preguntas fallidas son oportunidades de diagnóstico, no penalizaciones.`}
+          ${s.overconfident > 0 ? ' La sobreconfianza detectada sugiere revisar la técnica de calibración antes del examen oficial.' : ''}
+          ${s.hesitated > 0 ? ' Las vacilaciones indican áreas donde el razonamiento causal necesita consolidación adicional.' : ''}
+        </p>
+      </div>
+
+      <div style="font-size:11px;text-transform:uppercase;letter-spacing:0.06em;color:var(--text-muted);margin-bottom:10px;margin-top:4px;">
+        Indicadores de huella cognitiva
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:6px;margin-bottom:20px;">
+        ${radarLabels.map((l, i) => `
+          <div class="metric-chip" style="text-align:center;">
+            <div class="metric-chip-label">${l}</div>
+            <div class="metric-chip-value ${radarData[i] >= 70 ? 'good' : radarData[i] >= 40 ? 'warn' : 'danger'}">${radarData[i]}</div>
+          </div>
+        `).join('')}
+      </div>
+
+      <button class="nav-btn primary-nav" onclick="restartSession()">↺ Nueva sesión de entrenamiento</button>
+      <button class="nav-btn" onclick="restartFromQ1()">↩ Repasar desde pregunta 1</button>
+
+      <div style="margin-top:16px;padding:12px 14px;background:#0d0800;border:1px solid #2a1a00;border-radius:2px;">
+        <div style="font-size:10px;text-transform:uppercase;letter-spacing:0.08em;color:var(--gold-dim);margin-bottom:6px;">
+          Recordatorio de gobernanza
+        </div>
+        <div style="font-size:11px;color:var(--text-muted);line-height:1.6;">
+          Este mapa es un instrumento de entrenamiento, no una evaluación oficial WSET.
+          No representa puntuación examinadora real. Tus resultados aquí no tienen validez
+          en el contexto del examen oficial WSET Level 3.
+        </div>
+      </div>
+    </div>
+  `;
+}
+
+function buildRadarSVG(data, labels) {
+  const cx = 150, cy = 150, r = 110;
+  const n = data.length;
+  const maxVal = 100;
+
+  function polarToCart(angle, radius) {
+    const rad = (angle - 90) * Math.PI / 180;
+    return { x: cx + radius * Math.cos(rad), y: cy + radius * Math.sin(rad) };
+  }
+
+  // Grid rings
+  let gridLines = '';
+  [20, 40, 60, 80, 100].forEach(pct => {
+    const ringR = (pct / 100) * r;
+    const pts = Array.from({length: n}, (_, i) => {
+      const {x, y} = polarToCart((360 / n) * i, ringR);
+      return x + ',' + y;
+    }).join(' ');
+    gridLines += `<polygon points="${pts}" fill="none" stroke="#1e2d3d" stroke-width="0.8"/>`;
+  });
+
+  // Axes
+  let axes = '';
+  for (let i = 0; i < n; i++) {
+    const {x, y} = polarToCart((360 / n) * i, r);
+    axes += `<line x1="${cx}" y1="${cy}" x2="${x}" y2="${y}" stroke="#1e2d3d" stroke-width="0.8"/>`;
+  }
+
+  // Data polygon
+  const dataPts = data.map((d, i) => {
+    const {x, y} = polarToCart((360 / n) * i, (d / maxVal) * r);
+    return x + ',' + y;
+  }).join(' ');
+
+  // Labels
+  let lbls = '';
+  labels.forEach((l, i) => {
+    const {x, y} = polarToCart((360 / n) * i, r + 22);
+    lbls += `<text x="${x}" y="${y}" text-anchor="middle" dominant-baseline="middle" fill="#8b9ab0" font-size="11" font-family="system-ui">${l}</text>`;
+  });
+
+  // Data points
+  let dots = '';
+  data.forEach((d, i) => {
+    const {x, y} = polarToCart((360 / n) * i, (d / maxVal) * r);
+    dots += `<circle cx="${x}" cy="${y}" r="3.5" fill="#c9a84c"/>`;
+  });
+
+  return `
+    <svg viewBox="0 0 300 300" width="300" height="300" xmlns="http://www.w3.org/2000/svg">
+      ${gridLines}
+      ${axes}
+      <polygon points="${dataPts}" fill="#c9a84c" fill-opacity="0.15" stroke="#c9a84c" stroke-width="1.5"/>
+      ${dots}
+      ${lbls}
+      <circle cx="${cx}" cy="${cy}" r="3" fill="#4a5568"/>
+    </svg>
+  `;
+}
+
+function restartSession() {
+  STATE.stage = 'prepare';
+  STATE.questionIndex = 0;
+  STATE.selectedOption = null;
+  STATE.selectedConfidence = null;
+  STATE.selectedTag = null;
+  STATE.crossChanged = false;
+  STATE.session = { answered: 0, correct: 0, overconfident: 0, hesitated: 0, causalWeakness: 0, trapSusceptibility: 0 };
+  STATE._blankAnswers = {};
+  STATE._pendingBlank = null;
+  render();
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+function restartFromQ1() {
+  restartSession();
+}
+
+// ---- NAVIGATION FUNCTIONS ----
+function goToRead() {
+  STATE.stage = 'read';
+  render();
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+function goToCommit() {
+  stopTimer();
+  STATE.stage = 'commit';
+  render();
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+function goToTrain() {
+  STATE.stage = 'train';
+  render();
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+// -----------------------------------------------------------------------
+// INIT
+// -----------------------------------------------------------------------
+document.addEventListener('DOMContentLoaded', function() {
+  render();
+});
+</script>
+</body>
+</html>
