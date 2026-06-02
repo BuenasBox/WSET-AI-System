@@ -1,0 +1,206 @@
+[
+  {
+    "review_id": "review_1_20260602_001",
+    "source_question_id": "1",
+    "draft_id": "draft_diag_sba_structured_1",
+    "reviewer": "phase_4a3_7_12_human_review_pass",
+    "reviewed_at": "2026-06-02T00:00:00Z",
+    "review_status": "requires_revision",
+    "risk_before": "medium",
+    "risk_after": "medium",
+    "checklist": {
+      "source_support_checked": true,
+      "correct_answer_checked": true,
+      "distractor_logic_checked": true,
+      "diagnostic_roles_checked": true,
+      "misconception_links_checked": false,
+      "causal_chain_links_checked": true,
+      "sat_relevance_checked": true,
+      "rationale_quality_checked": true,
+      "remediation_quality_checked": true,
+      "wording_safety_checked": false,
+      "governance_checked": true
+    },
+    "issues_found": [
+      "Review should confirm that the flor wording is sufficiently paraphrased from local support.",
+      "Review should confirm whether a misconception linkage should remain unattached."
+    ],
+    "required_changes": [
+      "Record explicit wording-safety signoff before any static demo use.",
+      "Record final decision on misconception linkage."
+    ],
+    "approval_scope": "internal_review_only",
+    "governance_confirmation": {
+      "safe_for_examiner": false,
+      "examiner_scoring_allowed": false,
+      "official_wset_question": false,
+      "training_item_only": true,
+      "uses_llm": false,
+      "uses_api": false,
+      "uses_embeddings": false,
+      "uses_vector_db": false,
+      "cloud_services_active": false
+    },
+    "notes": "Structurally strong, but retained for revision because the draft itself flags wording and misconception-linkage uncertainty."
+  },
+  {
+    "review_id": "review_2_20260602_001",
+    "source_question_id": "2",
+    "draft_id": "draft_diag_sba_structured_2",
+    "reviewer": "phase_4a3_7_12_human_review_pass",
+    "reviewed_at": "2026-06-02T00:00:00Z",
+    "review_status": "approved_for_static_demo",
+    "risk_before": "low",
+    "risk_after": "low",
+    "checklist": {
+      "source_support_checked": true,
+      "correct_answer_checked": true,
+      "distractor_logic_checked": true,
+      "diagnostic_roles_checked": true,
+      "misconception_links_checked": true,
+      "causal_chain_links_checked": true,
+      "sat_relevance_checked": true,
+      "rationale_quality_checked": true,
+      "remediation_quality_checked": true,
+      "wording_safety_checked": true,
+      "governance_checked": true
+    },
+    "issues_found": [],
+    "required_changes": [],
+    "approval_scope": "static_demo_only",
+    "governance_confirmation": {
+      "safe_for_examiner": false,
+      "examiner_scoring_allowed": false,
+      "official_wset_question": false,
+      "training_item_only": true,
+      "uses_llm": false,
+      "uses_api": false,
+      "uses_embeddings": false,
+      "uses_vector_db": false,
+      "cloud_services_active": false
+    },
+    "notes": "Approved only for a future static demo export phase. The fortification answer, distractor roles, remediation target, and governance boundary are clear."
+  },
+  {
+    "review_id": "review_12_20260602_001",
+    "source_question_id": "12",
+    "draft_id": "draft_diag_sba_structured_12",
+    "reviewer": "phase_4a3_7_12_human_review_pass",
+    "reviewed_at": "2026-06-02T00:00:00Z",
+    "review_status": "approved_for_static_demo",
+    "risk_before": "low",
+    "risk_after": "low",
+    "checklist": {
+      "source_support_checked": true,
+      "correct_answer_checked": true,
+      "distractor_logic_checked": true,
+      "diagnostic_roles_checked": true,
+      "misconception_links_checked": true,
+      "causal_chain_links_checked": true,
+      "sat_relevance_checked": true,
+      "rationale_quality_checked": true,
+      "remediation_quality_checked": true,
+      "wording_safety_checked": true,
+      "governance_checked": true
+    },
+    "issues_found": [],
+    "required_changes": [],
+    "approval_scope": "static_demo_only",
+    "governance_confirmation": {
+      "safe_for_examiner": false,
+      "examiner_scoring_allowed": false,
+      "official_wset_question": false,
+      "training_item_only": true,
+      "uses_llm": false,
+      "uses_api": false,
+      "uses_embeddings": false,
+      "uses_vector_db": false,
+      "cloud_services_active": false
+    },
+    "notes": "Approved only for a future static demo export phase. The frost-risk stem, slope/topography causal linkage, distractor handling, and remediation are sufficiently bounded for demo use."
+  },
+  {
+    "review_id": "review_13_20260602_001",
+    "source_question_id": "13",
+    "draft_id": "draft_diag_sba_structured_13",
+    "reviewer": "phase_4a3_7_12_human_review_pass",
+    "reviewed_at": "2026-06-02T00:00:00Z",
+    "review_status": "requires_revision",
+    "risk_before": "medium",
+    "risk_after": "medium",
+    "checklist": {
+      "source_support_checked": true,
+      "correct_answer_checked": false,
+      "distractor_logic_checked": false,
+      "diagnostic_roles_checked": true,
+      "misconception_links_checked": true,
+      "causal_chain_links_checked": true,
+      "sat_relevance_checked": true,
+      "rationale_quality_checked": false,
+      "remediation_quality_checked": true,
+      "wording_safety_checked": false,
+      "governance_checked": true
+    },
+    "issues_found": [
+      "The draft flags possible ambiguity around sandy structure as the single best answer.",
+      "Clay and organic matter distractors need sharper rationale before demo use.",
+      "Wording may be too specific relative to the current grounding."
+    ],
+    "required_changes": [
+      "Tighten the stem or option wording to reduce ambiguity.",
+      "Strengthen the rationale for why the selected soil element is the single best answer.",
+      "Recheck distractor diagnostics after wording changes."
+    ],
+    "approval_scope": "internal_review_only",
+    "governance_confirmation": {
+      "safe_for_examiner": false,
+      "examiner_scoring_allowed": false,
+      "official_wset_question": false,
+      "training_item_only": true,
+      "uses_llm": false,
+      "uses_api": false,
+      "uses_embeddings": false,
+      "uses_vector_db": false,
+      "cloud_services_active": false
+    },
+    "notes": "Retained for revision because the source support and option set leave more ambiguity than is appropriate for static demo use."
+  },
+  {
+    "review_id": "review_17_20260602_001",
+    "source_question_id": "17",
+    "draft_id": "draft_diag_sba_structured_17",
+    "reviewer": "phase_4a3_7_12_human_review_pass",
+    "reviewed_at": "2026-06-02T00:00:00Z",
+    "review_status": "approved_for_static_demo",
+    "risk_before": "low",
+    "risk_after": "low",
+    "checklist": {
+      "source_support_checked": true,
+      "correct_answer_checked": true,
+      "distractor_logic_checked": true,
+      "diagnostic_roles_checked": true,
+      "misconception_links_checked": true,
+      "causal_chain_links_checked": true,
+      "sat_relevance_checked": true,
+      "rationale_quality_checked": true,
+      "remediation_quality_checked": true,
+      "wording_safety_checked": true,
+      "governance_checked": true
+    },
+    "issues_found": [],
+    "required_changes": [],
+    "approval_scope": "static_demo_only",
+    "governance_confirmation": {
+      "safe_for_examiner": false,
+      "examiner_scoring_allowed": false,
+      "official_wset_question": false,
+      "training_item_only": true,
+      "uses_llm": false,
+      "uses_api": false,
+      "uses_embeddings": false,
+      "uses_vector_db": false,
+      "cloud_services_active": false
+    },
+    "notes": "Approved only for a future static demo export phase. The destemming purpose, tannin-structure linkage, option diagnostics, and remediation target are sufficiently bounded for demo use."
+  }
+]
