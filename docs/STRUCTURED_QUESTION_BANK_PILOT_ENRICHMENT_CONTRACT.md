@@ -289,11 +289,11 @@ An enriched item must pass:
 
 Current compatibility note:
 
-- The JSON schema uses `diagnostic_single_best_answer`.
-- The current validator accepts `single_best_answer`.
+- The JSON schema uses `single_best_answer` (resolved in Phase 4A.3.7.26).
+- The validator accepts `single_best_answer`.
 
-Future implementation must resolve this before claiming combined schema and
-validator compatibility. This contract does not modify either file.
+Both the JSON schema and Python validator now agree on the canonical value
+`single_best_answer`. The prior divergence has been resolved.
 
 ## 16. Implementation Boundary For The Next Phase
 

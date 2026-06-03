@@ -95,7 +95,7 @@ contaminate the display or leak answers.
   },
   "question": {
     "stem": "¿Cuál de las siguientes afirmaciones describe con mayor precisión el efecto principal de la FML...?",
-    "question_type": "diagnostic_single_best_answer",
+    "question_type": "single_best_answer",
     "expected_reasoning_type": "process",
     "estimated_time_seconds": 60
   },

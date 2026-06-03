@@ -99,7 +99,7 @@ not enough; `topic` and `subtopic` must be present.
 Required fields:
 
 - `stem`: The question stem.
-- `question_type`: Must be `diagnostic_single_best_answer`.
+- `question_type`: Must be `single_best_answer`.
 - `expected_reasoning_type`: Controlled reasoning label.
 
 Allowed reasoning labels:
@@ -276,7 +276,7 @@ be treated as production content.
   },
   "question": {
     "stem": "Which option best describes the relationship being tested?",
-    "question_type": "diagnostic_single_best_answer",
+    "question_type": "single_best_answer",
     "expected_reasoning_type": "cause_effect"
   },
   "options": {

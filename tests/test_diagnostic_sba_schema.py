@@ -41,7 +41,7 @@ def valid_item() -> dict:
         },
         "question": {
             "stem": "Which option best describes the source-grounded relationship?",
-            "question_type": "diagnostic_single_best_answer",
+            "question_type": "single_best_answer",
             "expected_reasoning_type": "cause_effect",
         },
         "options": {
@@ -194,6 +194,52 @@ class TestDiagnosticSbaSchema(DiagnosticSbaSchemaTestCase):
         item = valid_item()
         item["governance"]["training_item_only"] = False
         self.assertInvalid(item)
+
+    def test_wrong_question_type_rejected(self) -> None:
+        item = valid_item()
+        item["question"]["question_type"] = "diagnostic_single_best_answer"
+        self.assertInvalid(item)
+
+
+class TestQuestionTypeSchemaValidatorAgreement(DiagnosticSbaSchemaTestCase):
+    """Schema and Python validator must agree on the canonical question_type value."""
+
+    def _make_validator_errors(self, item: dict) -> list:
+        from tools.question_generation.diagnostic_sba_validator import validate_diagnostic_sba_item
+        return validate_diagnostic_sba_item(item)
+
+    def test_single_best_answer_passes_schema(self) -> None:
+        item = valid_item()
+        item["question"]["question_type"] = "single_best_answer"
+        self.assertValid(item)
+
+    def test_diagnostic_single_best_answer_fails_schema(self) -> None:
+        item = valid_item()
+        item["question"]["question_type"] = "diagnostic_single_best_answer"
+        self.assertInvalid(item)
+
+    def test_single_best_answer_passes_validator(self) -> None:
+        from tests.test_structured_question_bank_adapter_contract import (
+            enriched_validator_compatible_item,
+        )
+        item = enriched_validator_compatible_item()
+        item["question"]["question_type"] = "single_best_answer"
+        errors = self._make_validator_errors(item)
+        qt_errors = [e for e in errors if "question_type" in e]
+        self.assertEqual(qt_errors, [])
+
+    def test_diagnostic_single_best_answer_fails_validator(self) -> None:
+        from tests.test_structured_question_bank_adapter_contract import (
+            enriched_validator_compatible_item,
+        )
+        item = enriched_validator_compatible_item()
+        item["question"]["question_type"] = "diagnostic_single_best_answer"
+        errors = self._make_validator_errors(item)
+        qt_errors = [e for e in errors if "question_type" in e]
+        self.assertGreater(
+            len(qt_errors), 0,
+            "Expected validator to reject diagnostic_single_best_answer",
+        )
 
 
 if __name__ == "__main__":

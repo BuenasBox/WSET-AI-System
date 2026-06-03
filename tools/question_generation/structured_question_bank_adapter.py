@@ -24,7 +24,7 @@ class AdapterStatus:
 OPTION_KEYS: tuple[str, ...] = ("A", "B", "C", "D")
 VALID_ANSWER_LETTERS: frozenset[str] = frozenset(OPTION_KEYS)
 SBA_LIKE_QUESTION_TYPES: frozenset[str] = frozenset(
-    ("theory", "single_best_answer", "diagnostic_single_best_answer", "sba")
+    ("theory", "single_best_answer", "single_best_answer", "sba")
 )
 
 GOVERNANCE_SAFE_DEFAULTS: dict[str, bool] = {
@@ -175,7 +175,7 @@ def map_structured_question_skeleton(item: dict, source_bank_path: str) -> dict:
         },
         "question": {
             "stem": item.get("question_text"),
-            "question_type": "diagnostic_single_best_answer",
+            "question_type": "single_best_answer",
             "expected_reasoning_type": item.get("expected_reasoning_type"),
         },
         "options": {

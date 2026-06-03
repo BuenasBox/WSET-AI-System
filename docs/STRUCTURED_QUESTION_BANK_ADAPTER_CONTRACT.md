@@ -111,7 +111,7 @@ The future adapter must use deterministic field mapping.
 | --- | --- | --- |
 | `question_id` | `identity.source_question_id` and item ID seed | Preserve exactly as lineage. Generate adapter item IDs deterministically with a prefix, not by overwriting the original ID. |
 | `question_text` | `question.stem` | Preserve as candidate stem unless a later approved enrichment phase records an explicit paraphrase. Never silently rewrite. |
-| `question_type` | `question.question_type` | Existing `theory` can map only to `diagnostic_single_best_answer` after SBA eligibility checks. Existing `short_answer` must be preserved for open-response, not forced into SBA. |
+| `question_type` | `question.question_type` | Existing `theory` can map only to `single_best_answer` after SBA eligibility checks. Existing `short_answer` must be preserved for open-response, not forced into SBA. |
 | `expected_reasoning_type` | `question.expected_reasoning_type` | Map directly only when compatible with the schema enum. Otherwise map through an approved deterministic table and record the mapping note. |
 | `difficulty` | `curriculum.difficulty` | Map if it is one of the allowed diagnostic labels. Unknown values must fail or require enrichment. |
 | `expected_topics` | `curriculum.ra_id`, `curriculum.topic`, `curriculum.subtopic`, `curriculum.learning_objective` candidates | Use only as hints. Must be resolved into explicit curriculum fields before validation. |

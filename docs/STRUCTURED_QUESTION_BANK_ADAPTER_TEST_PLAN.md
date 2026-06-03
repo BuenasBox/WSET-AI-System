@@ -241,13 +241,12 @@ After enrichment, a candidate must pass:
 Current implementation note:
 
 - `knowledge/enrichment/diagnostic_sba_item.schema.json` requires
-  `question.question_type = "diagnostic_single_best_answer"`.
-- `tools/question_generation/diagnostic_sba_validator.py` currently requires
+  `question.question_type = "single_best_answer"`.
+- `tools/question_generation/diagnostic_sba_validator.py` requires
   `question.question_type = "single_best_answer"`.
 
-This mismatch must be resolved before adapter implementation can claim full
-schema-plus-validator compatibility. Phase 4A.3.7.2 does not change either
-file.
+This divergence was resolved in Phase 4A.3.7.26: both the JSON schema and the
+Python validator now agree on the canonical value `single_best_answer`.
 
 ## 14. Contract Test File
 

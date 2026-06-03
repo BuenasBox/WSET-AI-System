@@ -84,7 +84,7 @@ The practical pilot pool should be the 520 clean `theory` records, further reduc
 | --- | --- | --- |
 | `question_id` | `identity.item_id` | Usable with deterministic prefix/versioning. |
 | `question_text` | `question.stem` | Usable only after wording and source-support review. |
-| `question_type` | `question.question_type` | Not directly compatible. Must become `diagnostic_single_best_answer`. Existing `theory` is too broad. |
+| `question_type` | `question.question_type` | Not directly compatible. Must become `single_best_answer`. Existing `theory` is too broad. |
 | `expected_reasoning_type` | `question.expected_reasoning_type` | Partial. Existing `theory_foundation` is not an allowed schema value; `cause_effect` maps directly. |
 | `difficulty` | `curriculum.difficulty` | Partial. `foundational`, `intermediate`, `distinction` are allowed; no `advanced` present. |
 | `expected_topics` | `curriculum.ra_id`, `topic`, `subtopic` | Partial. Needs deterministic parsing/enrichment. |

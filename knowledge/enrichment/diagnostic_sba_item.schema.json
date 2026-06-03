@@ -112,7 +112,7 @@
         },
         "question_type": {
           "type": "string",
-          "const": "diagnostic_single_best_answer"
+          "const": "single_best_answer"
         },
         "expected_reasoning_type": {
           "type": "string",

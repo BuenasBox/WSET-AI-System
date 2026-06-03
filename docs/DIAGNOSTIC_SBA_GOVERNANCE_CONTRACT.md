@@ -245,7 +245,7 @@ Every diagnostic item must include at minimum:
 
 - `id`.
 - `schema_version`.
-- `question_type`: must be `diagnostic_single_best_answer`.
+- `question_type`: must be `single_best_answer`.
 - `language`.
 - `question`.
 - `options`.
