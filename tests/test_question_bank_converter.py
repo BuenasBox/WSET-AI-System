@@ -168,6 +168,9 @@ class TestIntegrationConvert(unittest.TestCase):
 
     @classmethod
     def setUpClass(cls):
+        if not XLSX_PATH.exists():
+            raise unittest.SkipTest(f"local gitignored XLSX fixture not available: {XLSX_PATH}")
+
         cls._tmpdir = tempfile.TemporaryDirectory()
         cls.tmp_root = Path(cls._tmpdir.name)
         cls.tmp_structured = cls.tmp_root / "structured"

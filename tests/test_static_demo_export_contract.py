@@ -315,8 +315,13 @@ class StaticDemoExportContractTests(unittest.TestCase):
 
         self.assertEqual([item["source_question_id"] for item in payload["items"]], ["2", "12", "17"])
 
-    def test_no_preguntas_json_created(self) -> None:
-        self.assertFalse(PREGUNTAS_PATH.exists())
+    def test_contract_builder_does_not_write_preguntas_json(self) -> None:
+        before = PREGUNTAS_PATH.read_text(encoding="utf-8") if PREGUNTAS_PATH.exists() else None
+
+        build_contract_payload([valid_draft("2")], [valid_review("2")])
+
+        after = PREGUNTAS_PATH.read_text(encoding="utf-8") if PREGUNTAS_PATH.exists() else None
+        self.assertEqual(after, before)
 
 
 if __name__ == "__main__":

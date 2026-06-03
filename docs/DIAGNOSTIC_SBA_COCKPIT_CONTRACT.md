@@ -40,12 +40,16 @@ The contract is not an implementation plan. It defines:
 
 ### 2.1 Current (static prototype)
 
-- `frontend/diagnostic-sba/index.html` — self-contained, no HTTP calls.
-- Question data, correct answers, distractor analysis, misconception, causal chain,
-  SAT signal, and remediation are all embedded in the `QS` array at the top of
-  the script block.
+- `frontend/diagnostic-sba/index.html` — static frontend with one same-path fetch
+  to `./preguntas.json`; no backend or external HTTP calls.
+- `frontend/diagnostic-sba/preguntas.json` keeps pre-submit `items[]` separate
+  from post-submit `outcomes_by_item_id`.
+- The loader validates minimum item structure, matching outcomes, and fail-closed
+  governance flags before activating the loaded data.
+- If the JSON is missing or invalid, the private lab shows a clear error state,
+  disables answer submission, and does not invent or activate fallback questions.
 - The frontend derives correctness, misconception display, and stagger order
-  directly from the embedded data.
+  from the static post-submit outcome map only after answer confirmation.
 - No backend, no attempt logging, no LES writes.
 - Governance disclaimer: visible badge. Timer: client-side. Session state: ephemeral
   in `window` scope.
@@ -427,7 +431,8 @@ independently.
 
 ### 7.1 What the frontend must always render
 
-- The `proto-badge` disclaimer: `PROTOTIPO · ENTRENAMIENTO · NO EVALUACIÓN OFICIAL WSET`
+- The `proto-badge` must visibly retain the training/non-official disclaimer and
+  state that the cockpit is a private lab with no examiner authority.
   must be visible in the header while any item governance flag reads
   `training_item_only: true` or `official_wset_question: false`.
   This badge must never be removed by any item or session configuration.

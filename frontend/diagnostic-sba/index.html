@@ -617,7 +617,7 @@
     <span style="color:rgba(0,212,255,0.18);">·</span>
     <span>ENTRENAMIENTO DIAGNÓSTICO SBA</span>
     <!-- BLOCKER 2: visible disclaimer -->
-    <span class="proto-badge">PROTOTIPO ESTÁTICO · ENTRENAMIENTO · NO EVALUACIÓN OFICIAL WSET</span>
+    <span class="proto-badge">LABORATORIO PRIVADO · PROTOTIPO ESTÁTICO · ENTRENAMIENTO · NO EVALUACIÓN OFICIAL WSET · SIN AUTORIDAD EXAMINADORA</span>
   </div>
   <div class="hdr-meta">
     <div class="meta-block">
@@ -792,7 +792,7 @@
   'use strict';
 
   var DATA_URL = './preguntas.json';
-  var DISCLAIMER = 'PROTOTIPO ESTÁTICO · ENTRENAMIENTO · NO EVALUACIÓN OFICIAL WSET';
+  var DISCLAIMER = 'LABORATORIO PRIVADO · PROTOTIPO ESTÁTICO · ENTRENAMIENTO · NO EVALUACIÓN OFICIAL WSET · SIN AUTORIDAD EXAMINADORA';
   var CONF_LABELS = ['', 'INSEGURO', 'POCO SEGURO', 'NEUTRO', 'SEGURO', 'MUY SEGURO'];
   var SAT_LEVELS = { d: 'DÉBIL', m: 'MEDIA', f: 'FUERTE' };
   var SAT_CLASSES = { d: 'd', m: 'm', f: 'f' };
@@ -880,24 +880,60 @@
     stopTimer();
     document.getElementById('stem').textContent = message || 'No se pudo cargar el demo estático.';
     document.getElementById('opts').innerHTML = '';
-    document.getElementById('waiting').textContent = 'ERROR · No se cargó preguntas.json · Sin diagnóstico parcial';
+    document.getElementById('waiting').textContent = 'ERROR · Laboratorio privado · No se cargó preguntas.json · Sin diagnóstico parcial';
     document.getElementById('result').classList.remove('show');
     document.getElementById('btn-confirm').style.display = 'none';
     document.getElementById('kbd-hint').classList.remove('show');
     document.getElementById('conf-wrap').classList.remove('show');
   }
 
+  function isObject(value) {
+    return value !== null && typeof value === 'object' && !Array.isArray(value);
+  }
+
+  function isNonEmptyString(value) {
+    return typeof value === 'string' && value.trim() !== '';
+  }
+
+  function hasSafeGovernance(value) {
+    return isObject(value) && value.training_item_only === true &&
+      value.static_demo_only === true && value.official_wset_question === false &&
+      value.safe_for_examiner === false && value.examiner_scoring_allowed === false;
+  }
+
+  function validateOption(option) {
+    return isObject(option) && isNonEmptyString(option.option_id) &&
+      isNonEmptyString(option.option_text);
+  }
+
+  function validateOutcome(outcome, itemId, optionIds) {
+    return isObject(outcome) && outcome.item_id === itemId &&
+      isNonEmptyString(outcome.correct_option_id) &&
+      optionIds.indexOf(outcome.correct_option_id) !== -1 &&
+      hasSafeGovernance(outcome.governance);
+  }
+
+  function validateItem(item, outcomesByItemId) {
+    if (!isObject(item) || !isNonEmptyString(item.item_id) || !isNonEmptyString(item.stem)) return false;
+    if (item.static_demo_only !== true || item.training_item_only !== true ||
+        item.official_wset_question !== false || item.safe_for_examiner !== false ||
+        item.examiner_scoring_allowed !== false || !hasSafeGovernance(item.governance)) return false;
+    if (!Array.isArray(item.options) || item.options.length !== 4 || !item.options.every(validateOption)) return false;
+
+    var optionIds = item.options.map(function(option) { return option.option_id; });
+    if (optionIds.join(',') !== 'A,B,C,D') return false;
+    return validateOutcome(outcomesByItemId[item.item_id], item.item_id, optionIds);
+  }
+
   function validatePayload(payload) {
-    if (!payload || payload.export_version !== 'static_demo_export_v0') return false;
+    if (!isObject(payload) || payload.export_version !== 'static_demo_export_v0') return false;
     if (payload.static_demo_only !== true) return false;
     if (!Array.isArray(payload.items) || payload.items.length === 0) return false;
-    if (!payload.outcomes_by_item_id || typeof payload.outcomes_by_item_id !== 'object') return false;
-    return payload.items.every(function(item) {
-      return item && item.static_demo_only === true && item.training_item_only === true &&
-        item.official_wset_question === false && item.safe_for_examiner === false &&
-        item.examiner_scoring_allowed === false && Array.isArray(item.options) && item.options.length === 4 &&
-        payload.outcomes_by_item_id[item.item_id];
-    });
+    if (!isObject(payload.outcomes_by_item_id)) return false;
+
+    var itemIds = payload.items.map(function(item) { return item && item.item_id; });
+    if (new Set(itemIds).size !== itemIds.length) return false;
+    return payload.items.every(function(item) { return validateItem(item, payload.outcomes_by_item_id); });
   }
 
   function loadStaticDemoPayload() {
@@ -917,7 +953,7 @@
         loadQ(0);
       })
       .catch(function(error) {
-        setErrorState('No se pudo cargar ./preguntas.json. Demo estático sin backend. ' + error.message);
+        setErrorState('No se pudo cargar ./preguntas.json. Laboratorio privado estático sin backend. ' + error.message);
       });
   }
 

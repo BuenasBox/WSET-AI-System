@@ -41,7 +41,58 @@ class DiagnosticSbaCockpitJsonLoaderTests(unittest.TestCase):
 
     def test_cockpit_contains_error_state(self) -> None:
         self.assertIn("function setErrorState(message)", self.html)
-        self.assertIn("ERROR · No se cargó preguntas.json", self.html)
+        self.assertIn("ERROR · Laboratorio privado · No se cargó preguntas.json", self.html)
+        self.assertIn("Laboratorio privado estático sin backend", self.html)
+
+    def test_payload_validation_covers_minimum_render_structure(self) -> None:
+        validate_item = function_body(self.html, "validateItem")
+
+        for token in ("item.item_id", "item.stem", "item.options", "option.option_id", "option.option_text"):
+            self.assertIn(token, self.html)
+        self.assertIn("item.options.length !== 4", validate_item)
+        self.assertIn("optionIds.join(',') !== 'A,B,C,D'", validate_item)
+
+    def test_payload_validation_is_governance_fail_closed(self) -> None:
+        safe_governance = function_body(self.html, "hasSafeGovernance")
+        validate_item = function_body(self.html, "validateItem")
+        validate_outcome = function_body(self.html, "validateOutcome")
+
+        for token in (
+            "training_item_only === true",
+            "static_demo_only === true",
+            "official_wset_question === false",
+            "safe_for_examiner === false",
+            "examiner_scoring_allowed === false",
+        ):
+            self.assertIn(token, safe_governance)
+        self.assertIn("hasSafeGovernance(item.governance)", validate_item)
+        self.assertIn("hasSafeGovernance(outcome.governance)", validate_outcome)
+
+    def test_payload_validation_requires_matching_usable_outcome(self) -> None:
+        validate_outcome = function_body(self.html, "validateOutcome")
+        validate_payload = function_body(self.html, "validatePayload")
+
+        self.assertIn("outcome.item_id === itemId", validate_outcome)
+        self.assertIn("outcome.correct_option_id", validate_outcome)
+        self.assertIn("optionIds.indexOf(outcome.correct_option_id) !== -1", validate_outcome)
+        self.assertIn("new Set(itemIds).size !== itemIds.length", validate_payload)
+
+    def test_loader_validates_before_activating_loaded_data(self) -> None:
+        loader = function_body(self.html, "loadStaticDemoPayload")
+
+        validation_index = loader.index("validatePayload(payload)")
+        question_assignment_index = loader.index("QS = payload.items")
+        outcome_assignment_index = loader.index("OUTCOMES_BY_ITEM_ID = payload.outcomes_by_item_id")
+
+        self.assertLess(validation_index, question_assignment_index)
+        self.assertLess(validation_index, outcome_assignment_index)
+
+    def test_error_state_has_no_embedded_question_fallback(self) -> None:
+        error_state = function_body(self.html, "setErrorState")
+
+        self.assertIn("document.getElementById('opts').innerHTML = ''", error_state)
+        self.assertIn("document.getElementById('btn-confirm').style.display = 'none'", error_state)
+        self.assertNotIn("QS =", error_state)
 
     def test_cockpit_does_not_embed_old_mock_bank_as_primary_source(self) -> None:
         self.assertNotRegex(self.html, r"var\s+QS\s*=\s*\[\s*\{")
@@ -67,8 +118,18 @@ class DiagnosticSbaCockpitJsonLoaderTests(unittest.TestCase):
         self.assertNotIn("OUTCOMES_BY_ITEM_ID", load_q)
         self.assertIn("OUTCOMES_BY_ITEM_ID[q.item_id]", confirm)
 
+    def test_data_loading_navigation_and_render_remain_separate(self) -> None:
+        loader = function_body(self.html, "loadStaticDemoPayload")
+        load_q = function_body(self.html, "loadQ")
+
+        self.assertIn("fetch(DATA_URL)", loader)
+        self.assertNotIn("fetch(", load_q)
+        self.assertNotIn("validatePayload(", load_q)
+
     def test_disclaimer_preserved(self) -> None:
         self.assertIn(DISCLAIMER, self.html)
+        self.assertIn("LABORATORIO PRIVADO", self.html)
+        self.assertIn("SIN AUTORIDAD EXAMINADORA", self.html)
 
     def test_no_external_dependencies(self) -> None:
         self.assertNotIn("<script src=", self.html.lower())

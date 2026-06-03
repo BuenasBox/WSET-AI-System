@@ -23,7 +23,6 @@ FORBIDDEN_OUTPUT_PATHS = (
     Path("knowledge/question-bank/diagnostic_sba/preguntas.json"),
     Path("knowledge/question-bank/diagnostic_sba/converted"),
     Path("knowledge/question-bank/diagnostic_sba/pilot_bank.json"),
-    Path("frontend/diagnostic-sba/preguntas.json"),
 )
 FORBIDDEN_AUTHORITY_PHRASES = (
     "official score",
@@ -130,7 +129,7 @@ class FirstFiveHumanReviewRecordsTests(unittest.TestCase):
     def test_no_preguntas_json_exists(self) -> None:
         self.assertFalse(Path("knowledge/question-bank/diagnostic_sba/preguntas.json").exists())
 
-    def test_no_approved_or_exported_frontend_file_exists(self) -> None:
+    def test_no_production_or_internal_export_file_exists(self) -> None:
         for path in FORBIDDEN_OUTPUT_PATHS:
             self.assertFalse(path.exists(), str(path))
 
