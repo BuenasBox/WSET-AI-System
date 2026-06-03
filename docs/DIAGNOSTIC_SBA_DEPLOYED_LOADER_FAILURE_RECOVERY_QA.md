@@ -134,6 +134,14 @@ Local loader failure/recovery QA: passed.
 Deployed loader failure/recovery QA: not approved because the deployed cockpit
 still uses an embedded question bank and does not fetch `preguntas.json`.
 
+## Follow-Up Resolution
+
+Phase 4A.3.7.24 published the canonical loader-enabled
+`frontend/diagnostic-sba/index.html` to the public deployment repository and
+repeated live verification. Phase 4A.3.7.23 remains recorded as
+local-approved/deploy-blocked evidence; its deployment blocker is resolved by
+the later phase.
+
 ## Next Recommended Phase
 
 Phase 4A.3.7.24 - Publish Loader-Enabled Diagnostic SBA Cockpit and Repeat
