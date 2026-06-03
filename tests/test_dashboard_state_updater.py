@@ -125,6 +125,12 @@ class TestGitLogParsers(unittest.TestCase):
         result = _extract_latest_phase_from_log([])
         self.assertEqual(result, "unknown")
 
+    def test_latest_phase_extracted_from_conventional_commit_tag(self):
+        result = _extract_latest_phase_from_log([
+            "abc1234 feat(phase-4a3.7.21): add private diagnostic SBA lab link"
+        ])
+        self.assertEqual(result, "Phase 4A.3.7.21")
+
     def test_completed_phases_ordered_oldest_first(self):
         result = _extract_completed_phases_from_log(self.SAMPLE_LOG)
         # reversed order: 3A.8 comes before 4A.3.6 before 4A.3.7
@@ -210,6 +216,43 @@ class TestBuildNewStateFields(unittest.TestCase):
         self.assertEqual(state["maturity"], 50)
         self.assertEqual(state["structured_question_count"], 616)
 
+    def test_newer_current_test_count_is_not_reduced_by_stale_docs(self):
+        current = {"tests": 1107}
+        with patch("tools.dashboard.update_architecture_dashboard_state._git_log", return_value=[]):
+            with patch("tools.dashboard.update_architecture_dashboard_state._latest_commit_hash", return_value="abc1234"):
+                with patch("tools.dashboard.update_architecture_dashboard_state._read_claude_md", return_value="Test count: **507**"):
+                    state = build_new_state(current)
+        self.assertEqual(state["tests"], 1107)
+
+    def test_unowned_status_fields_are_preserved(self):
+        current = {
+            "diagnostic_sba_json_loader_status": "available_in_v1_not_integrated_into_v2_2",
+            "static_demo_approved_count": 3,
+        }
+        state = self._build(current)
+        self.assertEqual(
+            state["diagnostic_sba_json_loader_status"],
+            "available_in_v1_not_integrated_into_v2_2",
+        )
+        self.assertEqual(state["static_demo_approved_count"], 3)
+
+    def test_descriptive_completed_phase_prevents_short_tag_duplicate(self):
+        current = {
+            "phases_completed": [
+                "Phase 4A.3.7.21 — Dashboard Lab Link Implementation",
+            ],
+        }
+        with patch(
+            "tools.dashboard.update_architecture_dashboard_state._git_log",
+            return_value=[
+                "abc1234 feat(phase-4a3.7.21): add private diagnostic SBA lab link",
+            ],
+        ):
+            with patch("tools.dashboard.update_architecture_dashboard_state._latest_commit_hash", return_value="abc1234"):
+                with patch("tools.dashboard.update_architecture_dashboard_state._read_claude_md", return_value=""):
+                    state = build_new_state(current)
+        self.assertEqual(state["phases_completed"], current["phases_completed"])
+
 
 # ---------------------------------------------------------------------------
 # 6. Dry-run does not modify file
@@ -289,6 +332,11 @@ class TestDiffSummary(unittest.TestCase):
         new = {"maturity": 50, "new_field": "hello"}
         diff = _diff_summary(old, new)
         self.assertTrue(any("new_field" in d for d in diff))
+
+    def test_diff_uses_ascii_arrow(self):
+        diff = _diff_summary({"maturity": 50}, {"maturity": 55})
+        self.assertIn("->", diff[0])
+        self.assertNotIn("→", diff[0])
 
 
 if __name__ == "__main__":

@@ -103,12 +103,10 @@ def _extract_latest_phase_from_log(log_lines: list[str]) -> str:
     Parse phase tags from git log messages.
     Looks for patterns like Phase 4A, Phase 3A.5, Phase 4A.3.7, etc.
     """
-    import re
-    pattern = re.compile(r"Phase\s+[\dA-Za-z]+(?:\.[\dA-Za-z]+)*", re.IGNORECASE)
     for line in log_lines:
-        m = pattern.search(line)
-        if m:
-            return m.group(0)
+        phase = _extract_phase_from_line(line)
+        if phase:
+            return phase
     return "unknown"
 
 
@@ -117,18 +115,40 @@ def _extract_completed_phases_from_log(log_lines: list[str]) -> list[str]:
     Build an ordered list of unique phase tags from git log (oldest → newest
     is reversed since git log is newest-first).
     """
-    import re
-    pattern = re.compile(r"Phase\s+[\dA-Za-z]+(?:\.[\dA-Za-z]+)*", re.IGNORECASE)
     seen = []
     seen_set = set()
     for line in reversed(log_lines):
-        m = pattern.search(line)
-        if m:
-            tag = m.group(0)
+        tag = _extract_phase_from_line(line)
+        if tag:
             if tag not in seen_set:
                 seen.append(tag)
                 seen_set.add(tag)
     return seen
+
+
+def _extract_phase_from_line(line: str) -> str | None:
+    """Normalize human-readable and conventional phase commit tags."""
+    import re
+
+    readable = re.search(
+        r"Phase\s+[\dA-Za-z]+(?:\.[\dA-Za-z]+)*",
+        line,
+        re.IGNORECASE,
+    )
+    if readable:
+        return readable.group(0)
+
+    conventional = re.search(
+        r"phase-(\d+[A-Za-z])(\d+(?:\.\d+)*)",
+        line,
+        re.IGNORECASE,
+    )
+    if conventional:
+        family = conventional.group(1).upper()
+        suffix = conventional.group(2)
+        return f"Phase {family}.{suffix}"
+
+    return None
 
 
 # ---------------------------------------------------------------------------
@@ -192,15 +212,21 @@ def build_new_state(current: dict) -> dict:
     )
 
     # Test / snapshot counts
-    tests = test_count_from_md or current.get("tests", 0)
+    tests = max(test_count_from_md or 0, current.get("tests", 0))
     snapshots = snapshot_count_from_md or current.get("snapshots", 35)
 
     # Completed phases: merge log evidence with existing list
     existing_completed = current.get("phases_completed", [])
     merged = list(existing_completed)
+    represented_phase_tags = {
+        phase
+        for item in existing_completed
+        if (phase := _extract_phase_from_line(item))
+    }
     for p in completed_phases_from_log:
-        if p not in merged:
+        if p not in represented_phase_tags:
             merged.append(p)
+            represented_phase_tags.add(p)
 
     # Latest event: derive from most recent git commit message
     latest_event = current.get("latest_event", "")
@@ -210,7 +236,10 @@ def build_new_state(current: dict) -> dict:
         if len(parts) == 2:
             latest_event = parts[1]
 
-    new_state = {
+    # Preserve status fields added by later dashboard phases unless this
+    # updater explicitly owns and replaces them.
+    new_state = dict(current)
+    new_state.update({
         # Core phase info
         "current_phase": current.get("current_phase", latest_phase),
         "latest_phase": latest_phase,
@@ -266,7 +295,7 @@ def build_new_state(current: dict) -> dict:
         "sba_strict_candidates": current.get("sba_strict_candidates", 0),
         "sba_clean_pilot_candidates": current.get("sba_clean_pilot_candidates", 0),
         "diagnostic_compatible_count": current.get("diagnostic_compatible_count", 0),
-    }
+    })
 
     return new_state
 
@@ -282,7 +311,7 @@ def _diff_summary(old: dict, new: dict) -> list[str]:
         ov = old.get(k)
         nv = new.get(k)
         if ov != nv:
-            lines.append(f"  {k}: {ov!r} → {nv!r}")
+            lines.append(f"  {k}: {ov!r} -> {nv!r}")
     return lines
 
 
