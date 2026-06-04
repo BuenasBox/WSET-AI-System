@@ -1,0 +1,252 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://wset-ai-system.local/schemas/diagnostic_open_response.schema.json",
+  "title": "Diagnostic Open Response Practice Item",
+  "description": "Training-only, source-grounded open response practice item schema for WSET-AI-System.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "source_question_id",
+    "question_type",
+    "stem",
+    "RA",
+    "topic",
+    "subtopic",
+    "difficulty",
+    "expected_concepts",
+    "optional_causal_chain",
+    "corpus_support",
+    "review_status",
+    "activation_status",
+    "feedback_rubric",
+    "governance_flags"
+  ],
+  "properties": {
+    "schema_version": {
+      "type": "string",
+      "const": "diagnostic_open_response_v1"
+    },
+    "source_question_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "question_type": {
+      "type": "string",
+      "const": "diagnostic_open_response"
+    },
+    "stem": {
+      "type": "string",
+      "minLength": 1
+    },
+    "RA": {
+      "type": "string",
+      "minLength": 1
+    },
+    "topic": {
+      "type": "string",
+      "minLength": 1
+    },
+    "subtopic": {
+      "type": "string",
+      "minLength": 1
+    },
+    "difficulty": {
+      "type": "string",
+      "enum": [
+        "foundational",
+        "intermediate",
+        "advanced",
+        "distinction",
+        "unknown"
+      ]
+    },
+    "expected_concepts": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "uniqueItems": true
+    },
+    "optional_causal_chain": {
+      "type": [
+        "null",
+        "string"
+      ],
+      "minLength": 1
+    },
+    "corpus_support": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "status",
+        "source_question_bank",
+        "source_type",
+        "support_terms",
+        "evidence_chunks"
+      ],
+      "properties": {
+        "status": {
+          "type": "string",
+          "enum": [
+            "source_metadata_only",
+            "supported",
+            "missing"
+          ]
+        },
+        "source_question_bank": {
+          "type": "string",
+          "minLength": 1
+        },
+        "source_type": {
+          "type": "string",
+          "minLength": 1
+        },
+        "support_terms": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "uniqueItems": true
+        },
+        "evidence_chunks": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "chunk_id",
+              "source_file",
+              "title",
+              "source_type",
+              "matched_terms"
+            ],
+            "properties": {
+              "chunk_id": {
+                "type": "string",
+                "minLength": 1
+              },
+              "source_file": {
+                "type": "string",
+                "minLength": 1
+              },
+              "title": {
+                "type": "string",
+                "minLength": 1
+              },
+              "source_type": {
+                "type": "string",
+                "minLength": 1
+              },
+              "matched_terms": {
+                "type": "array",
+                "minItems": 1,
+                "items": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "uniqueItems": true
+              }
+            }
+          }
+        }
+      }
+    },
+    "review_status": {
+      "type": "string",
+      "enum": [
+        "approved",
+        "requires_revision",
+        "rejected"
+      ]
+    },
+    "activation_status": {
+      "type": "string",
+      "const": "inactive"
+    },
+    "feedback_rubric": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "concept_coverage",
+        "causal_link",
+        "formative_feedback",
+        "needs_review"
+      ],
+      "properties": {
+        "concept_coverage": {
+          "type": "string",
+          "const": "expected_concept_presence"
+        },
+        "causal_link": {
+          "type": "string",
+          "const": "formative_causal_link_presence"
+        },
+        "formative_feedback": {
+          "type": "string",
+          "const": "training_guidance_only"
+        },
+        "needs_review": {
+          "type": "string",
+          "const": "derived_from_missing_or_partial_concepts"
+        }
+      }
+    },
+    "governance_flags": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "safe_for_examiner",
+        "examiner_scoring_allowed",
+        "official_wset_question",
+        "training_item_only",
+        "uses_llm",
+        "uses_api",
+        "uses_embeddings",
+        "uses_vector_db",
+        "cloud_services_active"
+      ],
+      "properties": {
+        "safe_for_examiner": {
+          "type": "boolean",
+          "const": false
+        },
+        "examiner_scoring_allowed": {
+          "type": "boolean",
+          "const": false
+        },
+        "official_wset_question": {
+          "type": "boolean",
+          "const": false
+        },
+        "training_item_only": {
+          "type": "boolean",
+          "const": true
+        },
+        "uses_llm": {
+          "type": "boolean",
+          "const": false
+        },
+        "uses_api": {
+          "type": "boolean",
+          "const": false
+        },
+        "uses_embeddings": {
+          "type": "boolean",
+          "const": false
+        },
+        "uses_vector_db": {
+          "type": "boolean",
+          "const": false
+        },
+        "cloud_services_active": {
+          "type": "boolean",
+          "const": false
+        }
+      }
+    }
+  }
+}
