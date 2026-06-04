@@ -207,7 +207,8 @@ class StructuredQuestionBankAdapterTests(unittest.TestCase):
         errors = validate_diagnostic_sba_item(skeleton)
 
         self.assertTrue(errors)
-        self.assertIn('question.question_type must equal "single_best_answer"', errors)
+        self.assertEqual(skeleton["question"]["question_type"], "single_best_answer")
+        self.assertNotIn('question.question_type must equal "single_best_answer"', errors)
         self.assertIn("source_support.source_ids must be a non-empty list", errors)
 
     def test_no_file_writes(self) -> None:

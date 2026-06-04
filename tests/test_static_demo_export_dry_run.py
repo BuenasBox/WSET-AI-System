@@ -17,6 +17,26 @@ REVIEWS_PATH = Path("knowledge/question-bank/diagnostic_sba/reviews/first_5_huma
 REPORT_PATH = Path("docs/STATIC_DEMO_EXPORT_DRY_RUN_REPORT.md")
 FRONTEND_INDEX_PATH = Path("frontend/diagnostic-sba/index.html")
 FRONTEND_PREGUNTAS_PATH = Path("frontend/diagnostic-sba/preguntas.json")
+EXPECTED_SOURCE_IDS = [
+    "2",
+    "4",
+    "5",
+    "12",
+    "15",
+    "17",
+    "20",
+    "30",
+    "44",
+    "50",
+    "78",
+    "83",
+    "87",
+    "108",
+    "247",
+    "253",
+    "386",
+    "510",
+]
 
 
 def load_drafts() -> list[dict]:
@@ -46,21 +66,20 @@ class StaticDemoExportDryRunTests(unittest.TestCase):
         self.assertTrue(REPORT_PATH.exists())
 
     def test_dry_run_loads_drafts_and_reviews(self) -> None:
-        self.assertEqual(len(self.drafts), 5)
-        self.assertEqual(len(self.reviews), 5)
+        self.assertEqual(len(self.drafts), 20)
+        self.assertEqual(len(self.reviews), 20)
 
-    def test_dry_run_builds_payload_with_exactly_four_items(self) -> None:
-        # Q1 approved in phase-4a3.7.31; Q13 still requires_revision
-        self.assertEqual(len(self.payload["items"]), 4)
+    def test_dry_run_builds_payload_with_exactly_eighteen_items(self) -> None:
+        # Q1 and Q13 still require revision; the remaining private baseline is eligible.
+        self.assertEqual(len(self.payload["items"]), 18)
 
-    def test_eligible_ids_are_1_2_12_17(self) -> None:
-        # Q1 approved in phase-4a3.7.31
-        self.assertEqual([item["source_question_id"] for item in self.payload["items"]], ["1", "2", "12", "17"])
+    def test_eligible_ids_match_private_batch_2_baseline(self) -> None:
+        self.assertEqual([item["source_question_id"] for item in self.payload["items"]], EXPECTED_SOURCE_IDS)
 
     def test_excluded_ids_are_absent(self) -> None:
-        # Q1 is now approved; only Q13 remains excluded from first_5
         selected_ids = {item["source_question_id"] for item in self.payload["items"]}
 
+        self.assertNotIn("1", selected_ids)
         self.assertNotIn("13", selected_ids)
 
     def test_payload_validates(self) -> None:
@@ -109,8 +128,7 @@ class StaticDemoExportDryRunTests(unittest.TestCase):
         reversed_payload = build_static_demo_export_payload(list(reversed(self.drafts)), list(reversed(self.reviews)))
 
         self.assertEqual(self.payload, reversed_payload)
-        # Q1 approved in phase-4a3.7.31
-        self.assertEqual(self.payload["export_metadata"]["source_question_ids"], ["1", "2", "12", "17"])
+        self.assertEqual(self.payload["export_metadata"]["source_question_ids"], EXPECTED_SOURCE_IDS)
 
     def test_dry_run_does_not_modify_frontend_preguntas_json(self) -> None:
         before = FRONTEND_PREGUNTAS_PATH.read_text(encoding="utf-8") if FRONTEND_PREGUNTAS_PATH.exists() else None

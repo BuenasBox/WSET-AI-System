@@ -10,7 +10,33 @@ from tools.question_generation.diagnostic_sba_validator import validate_diagnost
 
 DRAFTS_PATH = Path("knowledge/question-bank/diagnostic_sba/drafts/first_5_enrichment_drafts.json")
 SOURCE_BANK_PATH = Path("knowledge/question-bank/structured/wset3_questions.json")
-EXPECTED_SOURCE_IDS = ["1", "2", "12", "13", "17"]
+EXPECTED_SOURCE_IDS = [
+    "1",
+    "2",
+    "12",
+    "13",
+    "15",
+    "17",
+    "20",
+    "30",
+    "44",
+    "50",
+    "83",
+    "108",
+    "247",
+    "253",
+    "4",
+    "5",
+    "78",
+    "87",
+    "386",
+    "510",
+]
+EXPECTED_ENRICHMENT_VERSIONS = {
+    "first_5_enrichment_draft_v0",
+    "phase_4a3_7_27_batch_1_v0",
+    "phase_4a3_7_29_batch_2_v0",
+}
 SAFE_GOVERNANCE = {
     "safe_for_examiner": False,
     "examiner_scoring_allowed": False,
@@ -69,8 +95,8 @@ class FirstFiveEnrichmentDraftTests(unittest.TestCase):
     def test_file_exists(self) -> None:
         self.assertTrue(DRAFTS_PATH.exists())
 
-    def test_exactly_five_drafts(self) -> None:
-        self.assertEqual(len(self.drafts), 5)
+    def test_exactly_twenty_drafts(self) -> None:
+        self.assertEqual(len(self.drafts), 20)
 
     def test_source_question_ids_are_expected(self) -> None:
         ids = [draft["identity"]["source_question_id"] for draft in self.drafts]
@@ -83,7 +109,7 @@ class FirstFiveEnrichmentDraftTests(unittest.TestCase):
             self.assertEqual(lineage.get("source_question_id"), draft["identity"]["source_question_id"])
             self.assertEqual(lineage.get("source_bank_path"), SOURCE_BANK_PATH.as_posix())
             self.assertEqual(lineage.get("adapter_version"), "structured_adapter_v0")
-            self.assertEqual(lineage.get("enrichment_version"), "first_5_enrichment_draft_v0")
+            self.assertIn(lineage.get("enrichment_version"), EXPECTED_ENRICHMENT_VERSIONS)
             self.assertTrue(lineage.get("transformation_notes"))
 
     def test_every_draft_has_governance_safe_values(self) -> None:

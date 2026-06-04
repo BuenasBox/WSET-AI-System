@@ -245,10 +245,10 @@ class HumanReviewResolutionTests(unittest.TestCase):
 
         self.assertIs(builtins.open, original_open)
 
-    def test_existing_first_5_drafts_remain_defer_for_human_review(self) -> None:
+    def test_existing_private_baseline_drafts_remain_defer_for_human_review(self) -> None:
         drafts = load_all_drafts()
 
-        self.assertEqual(len(drafts), 5)
+        self.assertEqual(len(drafts), 20)
         for draft in drafts:
             self.assertEqual(draft["enrichment_status"], "defer_for_human_review")
             self.assertTrue(draft["human_review"]["required"])

@@ -20,6 +20,26 @@ DRAFTS_PATH = Path("knowledge/question-bank/diagnostic_sba/drafts/first_5_enrich
 REVIEWS_PATH = Path("knowledge/question-bank/diagnostic_sba/reviews/first_5_human_review_records.json")
 FRONTEND_INDEX_PATH = Path("frontend/diagnostic-sba/index.html")
 PREGUNTAS_PATH = Path("frontend/diagnostic-sba/preguntas.json")
+EXPECTED_ELIGIBLE_SOURCE_IDS = [
+    "2",
+    "4",
+    "5",
+    "12",
+    "15",
+    "17",
+    "20",
+    "30",
+    "44",
+    "50",
+    "78",
+    "83",
+    "87",
+    "108",
+    "247",
+    "253",
+    "386",
+    "510",
+]
 
 
 def load_drafts() -> list[dict]:
@@ -40,25 +60,22 @@ class StaticDemoExporterTests(unittest.TestCase):
         cls.drafts_by_source_id = {draft["identity"]["source_question_id"]: draft for draft in cls.drafts}
         cls.reviews_by_source_id = {record["source_question_id"]: record for record in cls.reviews}
 
-    def test_exactly_four_eligible_items_selected_from_first_five(self) -> None:
-        # Q1 approved in phase-4a3.7.31; Q13 still requires_revision
+    def test_exactly_eighteen_eligible_items_selected_from_private_baseline(self) -> None:
         eligible = select_static_demo_eligible_items(self.drafts, self.reviews)
 
-        self.assertEqual(len(eligible), 4)
+        self.assertEqual(len(eligible), 18)
 
-    def test_selected_ids_are_1_2_12_17(self) -> None:
-        # Q1 approved in phase-4a3.7.31
+    def test_selected_ids_match_private_batch_2_baseline(self) -> None:
         eligible = select_static_demo_eligible_items(self.drafts, self.reviews)
 
-        self.assertEqual([draft["identity"]["source_question_id"] for draft in eligible], ["1", "2", "12", "17"])
+        self.assertEqual([draft["identity"]["source_question_id"] for draft in eligible], EXPECTED_ELIGIBLE_SOURCE_IDS)
 
-    def test_draft_13_is_excluded_q1_now_included(self) -> None:
-        # Q1 approved in phase-4a3.7.31; Q13 still requires_revision
+    def test_drafts_1_and_13_are_excluded(self) -> None:
         eligible = select_static_demo_eligible_items(self.drafts, self.reviews)
         selected_ids = {draft["identity"]["source_question_id"] for draft in eligible}
 
+        self.assertNotIn("1", selected_ids)
         self.assertNotIn("13", selected_ids)
-        self.assertIn("1", selected_ids)
 
     def test_render_payload_does_not_expose_correct_answer(self) -> None:
         payload = self._render_payload_for("2")
@@ -101,7 +118,7 @@ class StaticDemoExporterTests(unittest.TestCase):
 
         self.assertIn("items", payload)
         self.assertIn("outcomes_by_item_id", payload)
-        self.assertEqual(len(payload["items"]), 4)  # Q1 approved in phase-4a3.7.31
+        self.assertEqual(len(payload["items"]), 18)
         self.assertEqual(set(payload["outcomes_by_item_id"]), {item["item_id"] for item in payload["items"]})
 
     def test_export_payload_is_deterministic(self) -> None:
@@ -118,7 +135,8 @@ class StaticDemoExporterTests(unittest.TestCase):
 
         eligible = select_static_demo_eligible_items(drafts, self.reviews)
 
-        self.assertEqual([draft["identity"]["source_question_id"] for draft in eligible], ["1", "12", "17"])  # Q1 also eligible
+        expected = [source_id for source_id in EXPECTED_ELIGIBLE_SOURCE_IDS if source_id != "2"]
+        self.assertEqual([draft["identity"]["source_question_id"] for draft in eligible], expected)
 
     def test_forbidden_scopes_excluded(self) -> None:
         reviews = copy.deepcopy(self.reviews)
@@ -128,14 +146,16 @@ class StaticDemoExporterTests(unittest.TestCase):
 
         eligible = select_static_demo_eligible_items(self.drafts, reviews)
 
-        self.assertEqual([draft["identity"]["source_question_id"] for draft in eligible], ["1", "12", "17"])  # Q1 also eligible
+        expected = [source_id for source_id in EXPECTED_ELIGIBLE_SOURCE_IDS if source_id != "2"]
+        self.assertEqual([draft["identity"]["source_question_id"] for draft in eligible], expected)
 
     def test_missing_review_excluded(self) -> None:
         reviews = [record for record in self.reviews if record["source_question_id"] != "2"]
 
         eligible = select_static_demo_eligible_items(self.drafts, reviews)
 
-        self.assertEqual([draft["identity"]["source_question_id"] for draft in eligible], ["1", "12", "17"])  # Q1 also eligible
+        expected = [source_id for source_id in EXPECTED_ELIGIBLE_SOURCE_IDS if source_id != "2"]
+        self.assertEqual([draft["identity"]["source_question_id"] for draft in eligible], expected)
 
     def test_output_validates(self) -> None:
         payload = build_static_demo_export_payload(self.drafts, self.reviews)
@@ -171,8 +191,7 @@ class StaticDemoExporterTests(unittest.TestCase):
     def test_review_statuses_remain_unchanged(self) -> None:
         statuses = {record["source_question_id"]: record["review_status"] for record in self.reviews}
 
-        # Q1 approved in phase-4a3.7.31
-        self.assertEqual(statuses["1"], ReviewStatus.APPROVED_FOR_STATIC_DEMO)
+        self.assertEqual(statuses["1"], ReviewStatus.REQUIRES_REVISION)
         self.assertEqual(statuses["13"], ReviewStatus.REQUIRES_REVISION)
 
     def _render_payload_for(self, source_question_id: str) -> dict:
