@@ -87,7 +87,7 @@
     "draft_id": "draft_diag_sba_structured_12",
     "reviewer": "phase_4a3_7_12_human_review_pass",
     "reviewed_at": "2026-06-02T00:00:00Z",
-    "review_status": "approved_for_static_demo",
+    "review_status": "preserve_only",
     "risk_before": "low",
     "risk_after": "low",
     "checklist": {
@@ -103,9 +103,11 @@
       "wording_safety_checked": true,
       "governance_checked": true
     },
-    "issues_found": [],
+    "issues_found": [
+      "Removed from active static-demo eligibility by Phase 4A.3.7.37 because it is not Gold-A or Gold-B."
+    ],
     "required_changes": [],
-    "approval_scope": "static_demo_only",
+    "approval_scope": "internal_review_only",
     "governance_confirmation": {
       "safe_for_examiner": false,
       "examiner_scoring_allowed": false,
@@ -117,7 +119,7 @@
       "uses_vector_db": false,
       "cloud_services_active": false
     },
-    "notes": "Approved only for a future static demo export phase. The frost-risk stem, slope/topography causal linkage, distractor handling, and remediation are sufficiently bounded for demo use."
+    "notes": "Approved only for a future static demo export phase. The frost-risk stem, slope/topography causal linkage, distractor handling, and remediation are sufficiently bounded for demo use. Phase 4A.3.7.37 preserves the record but removes static-demo eligibility because the Gold Bank replaces the historical active set."
   },
   {
     "review_id": "review_13_20260602_001",
@@ -171,7 +173,7 @@
     "draft_id": "draft_diag_sba_structured_15",
     "reviewer": "phase_4a3_7_27_structural_human_review_pass",
     "reviewed_at": "2026-06-03T00:00:00Z",
-    "review_status": "approved_for_static_demo",
+    "review_status": "preserve_only",
     "risk_before": "low",
     "risk_after": "low",
     "checklist": {
@@ -187,9 +189,11 @@
       "wording_safety_checked": true,
       "governance_checked": true
     },
-    "issues_found": [],
+    "issues_found": [
+      "Removed from active static-demo eligibility by Phase 4A.3.7.37 because it is not Gold-A or Gold-B."
+    ],
     "required_changes": [],
-    "approval_scope": "static_demo_only",
+    "approval_scope": "internal_review_only",
     "governance_confirmation": {
       "safe_for_examiner": false,
       "examiner_scoring_allowed": false,
@@ -201,7 +205,7 @@
       "uses_vector_db": false,
       "cloud_services_active": false
     },
-    "notes": "Approved for private static-demo payload only after structural review of stem clarity, single-best answer, distractor plausibility, causal rationale, metadata, and governance boundaries."
+    "notes": "Approved for private static-demo payload only after structural review of stem clarity, single-best answer, distractor plausibility, causal rationale, metadata, and governance boundaries. Phase 4A.3.7.37 preserves the record but removes static-demo eligibility because the Gold Bank replaces the historical active set."
   },
   {
     "review_id": "review_17_20260602_001",
@@ -209,7 +213,7 @@
     "draft_id": "draft_diag_sba_structured_17",
     "reviewer": "phase_4a3_7_12_human_review_pass",
     "reviewed_at": "2026-06-02T00:00:00Z",
-    "review_status": "approved_for_static_demo",
+    "review_status": "preserve_only",
     "risk_before": "low",
     "risk_after": "low",
     "checklist": {
@@ -225,9 +229,11 @@
       "wording_safety_checked": true,
       "governance_checked": true
     },
-    "issues_found": [],
+    "issues_found": [
+      "Removed from active static-demo eligibility by Phase 4A.3.7.37 because it is not Gold-A or Gold-B."
+    ],
     "required_changes": [],
-    "approval_scope": "static_demo_only",
+    "approval_scope": "internal_review_only",
     "governance_confirmation": {
       "safe_for_examiner": false,
       "examiner_scoring_allowed": false,
@@ -239,7 +245,7 @@
       "uses_vector_db": false,
       "cloud_services_active": false
     },
-    "notes": "Approved only for a future static demo export phase. The destemming purpose, tannin-structure linkage, option diagnostics, and remediation target are sufficiently bounded for demo use."
+    "notes": "Approved only for a future static demo export phase. The destemming purpose, tannin-structure linkage, option diagnostics, and remediation target are sufficiently bounded for demo use. Phase 4A.3.7.37 preserves the record but removes static-demo eligibility because the Gold Bank replaces the historical active set."
   },
   {
     "review_id": "review_20_20260603_001",
@@ -247,7 +253,7 @@
     "draft_id": "draft_diag_sba_structured_20",
     "reviewer": "phase_4a3_7_27_structural_human_review_pass",
     "reviewed_at": "2026-06-03T00:00:00Z",
-    "review_status": "approved_for_static_demo",
+    "review_status": "preserve_only",
     "risk_before": "low",
     "risk_after": "low",
     "checklist": {
@@ -263,9 +269,11 @@
       "wording_safety_checked": true,
       "governance_checked": true
     },
-    "issues_found": [],
+    "issues_found": [
+      "Removed from active static-demo eligibility by Phase 4A.3.7.37 because it is not Gold-A or Gold-B."
+    ],
     "required_changes": [],
-    "approval_scope": "static_demo_only",
+    "approval_scope": "internal_review_only",
     "governance_confirmation": {
       "safe_for_examiner": false,
       "examiner_scoring_allowed": false,
@@ -277,7 +285,7 @@
       "uses_vector_db": false,
       "cloud_services_active": false
     },
-    "notes": "Approved for private static-demo payload only after structural review of stem clarity, single-best answer, distractor plausibility, causal rationale, metadata, and governance boundaries."
+    "notes": "Approved for private static-demo payload only after structural review of stem clarity, single-best answer, distractor plausibility, causal rationale, metadata, and governance boundaries. Phase 4A.3.7.37 preserves the record but removes static-demo eligibility because the Gold Bank replaces the historical active set."
   },
   {
     "review_id": "review_30_20260603_001",
@@ -285,7 +293,7 @@
     "draft_id": "draft_diag_sba_structured_30",
     "reviewer": "phase_4a3_7_27_structural_human_review_pass",
     "reviewed_at": "2026-06-03T00:00:00Z",
-    "review_status": "approved_for_static_demo",
+    "review_status": "preserve_only",
     "risk_before": "low",
     "risk_after": "low",
     "checklist": {
@@ -301,9 +309,11 @@
       "wording_safety_checked": true,
       "governance_checked": true
     },
-    "issues_found": [],
+    "issues_found": [
+      "Removed from active static-demo eligibility by Phase 4A.3.7.37 because it is not Gold-A or Gold-B."
+    ],
     "required_changes": [],
-    "approval_scope": "static_demo_only",
+    "approval_scope": "internal_review_only",
     "governance_confirmation": {
       "safe_for_examiner": false,
       "examiner_scoring_allowed": false,
@@ -315,7 +325,7 @@
       "uses_vector_db": false,
       "cloud_services_active": false
     },
-    "notes": "Approved for private static-demo payload only after structural review of stem clarity, single-best answer, distractor plausibility, causal rationale, metadata, and governance boundaries."
+    "notes": "Approved for private static-demo payload only after structural review of stem clarity, single-best answer, distractor plausibility, causal rationale, metadata, and governance boundaries. Phase 4A.3.7.37 preserves the record but removes static-demo eligibility because the Gold Bank replaces the historical active set."
   },
   {
     "review_id": "review_44_20260603_001",
@@ -323,7 +333,7 @@
     "draft_id": "draft_diag_sba_structured_44",
     "reviewer": "phase_4a3_7_27_structural_human_review_pass",
     "reviewed_at": "2026-06-03T00:00:00Z",
-    "review_status": "approved_for_static_demo",
+    "review_status": "preserve_only",
     "risk_before": "medium",
     "risk_after": "medium",
     "checklist": {
@@ -339,9 +349,11 @@
       "wording_safety_checked": true,
       "governance_checked": true
     },
-    "issues_found": [],
+    "issues_found": [
+      "Removed from active static-demo eligibility by Phase 4A.3.7.37 because it is not Gold-A or Gold-B."
+    ],
     "required_changes": [],
-    "approval_scope": "static_demo_only",
+    "approval_scope": "internal_review_only",
     "governance_confirmation": {
       "safe_for_examiner": false,
       "examiner_scoring_allowed": false,
@@ -353,7 +365,7 @@
       "uses_vector_db": false,
       "cloud_services_active": false
     },
-    "notes": "Approved for private static-demo payload only after structural review of stem clarity, single-best answer, distractor plausibility, causal rationale, metadata, and governance boundaries."
+    "notes": "Approved for private static-demo payload only after structural review of stem clarity, single-best answer, distractor plausibility, causal rationale, metadata, and governance boundaries. Phase 4A.3.7.37 preserves the record but removes static-demo eligibility because the Gold Bank replaces the historical active set."
   },
   {
     "review_id": "review_50_20260603_001",
@@ -361,7 +373,7 @@
     "draft_id": "draft_diag_sba_structured_50",
     "reviewer": "phase_4a3_7_27_structural_human_review_pass",
     "reviewed_at": "2026-06-03T00:00:00Z",
-    "review_status": "approved_for_static_demo",
+    "review_status": "preserve_only",
     "risk_before": "low",
     "risk_after": "low",
     "checklist": {
@@ -377,9 +389,11 @@
       "wording_safety_checked": true,
       "governance_checked": true
     },
-    "issues_found": [],
+    "issues_found": [
+      "Removed from active static-demo eligibility by Phase 4A.3.7.37 because it is not Gold-A or Gold-B."
+    ],
     "required_changes": [],
-    "approval_scope": "static_demo_only",
+    "approval_scope": "internal_review_only",
     "governance_confirmation": {
       "safe_for_examiner": false,
       "examiner_scoring_allowed": false,
@@ -391,7 +405,7 @@
       "uses_vector_db": false,
       "cloud_services_active": false
     },
-    "notes": "Approved for private static-demo payload only after structural review of stem clarity, single-best answer, distractor plausibility, causal rationale, metadata, and governance boundaries."
+    "notes": "Approved for private static-demo payload only after structural review of stem clarity, single-best answer, distractor plausibility, causal rationale, metadata, and governance boundaries. Phase 4A.3.7.37 preserves the record but removes static-demo eligibility because the Gold Bank replaces the historical active set."
   },
   {
     "review_id": "review_83_20260603_001",
@@ -437,7 +451,7 @@
     "draft_id": "draft_diag_sba_structured_108",
     "reviewer": "phase_4a3_7_27_structural_human_review_pass",
     "reviewed_at": "2026-06-03T00:00:00Z",
-    "review_status": "approved_for_static_demo",
+    "review_status": "preserve_only",
     "risk_before": "low",
     "risk_after": "low",
     "checklist": {
@@ -453,9 +467,11 @@
       "wording_safety_checked": true,
       "governance_checked": true
     },
-    "issues_found": [],
+    "issues_found": [
+      "Removed from active static-demo eligibility by Phase 4A.3.7.37 because it is not Gold-A or Gold-B."
+    ],
     "required_changes": [],
-    "approval_scope": "static_demo_only",
+    "approval_scope": "internal_review_only",
     "governance_confirmation": {
       "safe_for_examiner": false,
       "examiner_scoring_allowed": false,
@@ -467,7 +483,7 @@
       "uses_vector_db": false,
       "cloud_services_active": false
     },
-    "notes": "Approved for private static-demo payload only after structural review of stem clarity, single-best answer, distractor plausibility, causal rationale, metadata, and governance boundaries."
+    "notes": "Approved for private static-demo payload only after structural review of stem clarity, single-best answer, distractor plausibility, causal rationale, metadata, and governance boundaries. Phase 4A.3.7.37 preserves the record but removes static-demo eligibility because the Gold Bank replaces the historical active set."
   },
   {
     "review_id": "review_247_20260603_001",
@@ -475,7 +491,7 @@
     "draft_id": "draft_diag_sba_structured_247",
     "reviewer": "phase_4a3_7_27_structural_human_review_pass",
     "reviewed_at": "2026-06-03T00:00:00Z",
-    "review_status": "approved_for_static_demo",
+    "review_status": "preserve_only",
     "risk_before": "low",
     "risk_after": "low",
     "checklist": {
@@ -491,9 +507,11 @@
       "wording_safety_checked": true,
       "governance_checked": true
     },
-    "issues_found": [],
+    "issues_found": [
+      "Removed from active static-demo eligibility by Phase 4A.3.7.37 because it is not Gold-A or Gold-B."
+    ],
     "required_changes": [],
-    "approval_scope": "static_demo_only",
+    "approval_scope": "internal_review_only",
     "governance_confirmation": {
       "safe_for_examiner": false,
       "examiner_scoring_allowed": false,
@@ -505,7 +523,7 @@
       "uses_vector_db": false,
       "cloud_services_active": false
     },
-    "notes": "Approved for private static-demo payload only after structural review of stem clarity, single-best answer, distractor plausibility, causal rationale, metadata, and governance boundaries."
+    "notes": "Approved for private static-demo payload only after structural review of stem clarity, single-best answer, distractor plausibility, causal rationale, metadata, and governance boundaries. Phase 4A.3.7.37 preserves the record but removes static-demo eligibility because the Gold Bank replaces the historical active set."
   },
   {
     "review_id": "review_253_20260603_001",
@@ -513,7 +531,7 @@
     "draft_id": "draft_diag_sba_structured_253",
     "reviewer": "phase_4a3_7_27_structural_human_review_pass",
     "reviewed_at": "2026-06-03T00:00:00Z",
-    "review_status": "approved_for_static_demo",
+    "review_status": "preserve_only",
     "risk_before": "low",
     "risk_after": "low",
     "checklist": {
@@ -529,9 +547,11 @@
       "wording_safety_checked": true,
       "governance_checked": true
     },
-    "issues_found": [],
+    "issues_found": [
+      "Removed from active static-demo eligibility by Phase 4A.3.7.37 because it is not Gold-A or Gold-B."
+    ],
     "required_changes": [],
-    "approval_scope": "static_demo_only",
+    "approval_scope": "internal_review_only",
     "governance_confirmation": {
       "safe_for_examiner": false,
       "examiner_scoring_allowed": false,
@@ -543,7 +563,7 @@
       "uses_vector_db": false,
       "cloud_services_active": false
     },
-    "notes": "Approved for private static-demo payload only after structural review of stem clarity, single-best answer, distractor plausibility, causal rationale, metadata, and governance boundaries."
+    "notes": "Approved for private static-demo payload only after structural review of stem clarity, single-best answer, distractor plausibility, causal rationale, metadata, and governance boundaries. Phase 4A.3.7.37 preserves the record but removes static-demo eligibility because the Gold Bank replaces the historical active set."
   },
   {
     "review_id": "review_4_20260603_001",
@@ -551,7 +571,7 @@
     "draft_id": "draft_diag_sba_structured_4",
     "reviewer": "phase_4a3_7_29_structural_human_review_pass",
     "reviewed_at": "2026-06-03T00:00:00Z",
-    "review_status": "approved_for_static_demo",
+    "review_status": "preserve_only",
     "risk_before": "low",
     "risk_after": "low",
     "checklist": {
@@ -567,9 +587,11 @@
       "wording_safety_checked": true,
       "governance_checked": true
     },
-    "issues_found": [],
+    "issues_found": [
+      "Removed from active static-demo eligibility by Phase 4A.3.7.37 because it is not Gold-A or Gold-B."
+    ],
     "required_changes": [],
-    "approval_scope": "static_demo_only",
+    "approval_scope": "internal_review_only",
     "governance_confirmation": {
       "safe_for_examiner": false,
       "examiner_scoring_allowed": false,
@@ -581,7 +603,7 @@
       "uses_vector_db": false,
       "cloud_services_active": false
     },
-    "notes": "Approved for private static-demo payload only. Inclusion reason: adds the only available foundational Batch 2 item and Sherry solera coverage. Pedagogical risk: low term-recognition risk mitigated by feedback linking solera to fractional blending and consistency. Review applied: source support, single-best answer, distractor plausibility, metadata completeness, answer-position impact, wording safety, and governance boundaries."
+    "notes": "Approved for private static-demo payload only. Inclusion reason: adds the only available foundational Batch 2 item and Sherry solera coverage. Pedagogical risk: low term-recognition risk mitigated by feedback linking solera to fractional blending and consistency. Review applied: source support, single-best answer, distractor plausibility, metadata completeness, answer-position impact, wording safety, and governance boundaries. Phase 4A.3.7.37 preserves the record but removes static-demo eligibility because the Gold Bank replaces the historical active set."
   },
   {
     "review_id": "review_5_20260603_001",
@@ -589,7 +611,7 @@
     "draft_id": "draft_diag_sba_structured_5",
     "reviewer": "phase_4a3_7_29_structural_human_review_pass",
     "reviewed_at": "2026-06-03T00:00:00Z",
-    "review_status": "approved_for_static_demo",
+    "review_status": "preserve_only",
     "risk_before": "medium",
     "risk_after": "medium",
     "checklist": {
@@ -605,9 +627,11 @@
       "wording_safety_checked": true,
       "governance_checked": true
     },
-    "issues_found": [],
+    "issues_found": [
+      "Removed from active static-demo eligibility by Phase 4A.3.7.37 because it is not Gold-A or Gold-B."
+    ],
     "required_changes": [],
-    "approval_scope": "static_demo_only",
+    "approval_scope": "internal_review_only",
     "governance_confirmation": {
       "safe_for_examiner": false,
       "examiner_scoring_allowed": false,
@@ -619,7 +643,7 @@
       "uses_vector_db": false,
       "cloud_services_active": false
     },
-    "notes": "Approved for private static-demo payload only. Inclusion reason: adds the only strong distinction candidate and tests Sherry biological versus oxidative ageing. Pedagogical risk: medium because Oloroso/Amontillado wording can overgeneralize; feedback is bounded to the option set. Review applied: source support, single-best answer, distractor plausibility, contrast framing, metadata completeness, answer-position impact, wording safety, and governance boundaries."
+    "notes": "Approved for private static-demo payload only. Inclusion reason: adds the only strong distinction candidate and tests Sherry biological versus oxidative ageing. Pedagogical risk: medium because Oloroso/Amontillado wording can overgeneralize; feedback is bounded to the option set. Review applied: source support, single-best answer, distractor plausibility, contrast framing, metadata completeness, answer-position impact, wording safety, and governance boundaries. Phase 4A.3.7.37 preserves the record but removes static-demo eligibility because the Gold Bank replaces the historical active set."
   },
   {
     "review_id": "review_78_20260603_001",
@@ -627,7 +651,7 @@
     "draft_id": "draft_diag_sba_structured_78",
     "reviewer": "phase_4a3_7_29_structural_human_review_pass",
     "reviewed_at": "2026-06-03T00:00:00Z",
-    "review_status": "approved_for_static_demo",
+    "review_status": "preserve_only",
     "risk_before": "low",
     "risk_after": "low",
     "checklist": {
@@ -643,9 +667,11 @@
       "wording_safety_checked": true,
       "governance_checked": true
     },
-    "issues_found": [],
+    "issues_found": [
+      "Removed from active static-demo eligibility by Phase 4A.3.7.37 because it is not Gold-A or Gold-B."
+    ],
     "required_changes": [],
-    "approval_scope": "static_demo_only",
+    "approval_scope": "internal_review_only",
     "governance_confirmation": {
       "safe_for_examiner": false,
       "examiner_scoring_allowed": false,
@@ -657,7 +683,7 @@
       "uses_vector_db": false,
       "cloud_services_active": false
     },
-    "notes": "Approved for private static-demo payload only. Inclusion reason: adds cork-orientation storage coverage and oxidation-risk reasoning. Pedagogical risk: low, bounded by natural-cork wording. Review applied: source support, single-best answer, distractor plausibility, closure scope, metadata completeness, answer-position impact, wording safety, and governance boundaries."
+    "notes": "Approved for private static-demo payload only. Inclusion reason: adds cork-orientation storage coverage and oxidation-risk reasoning. Pedagogical risk: low, bounded by natural-cork wording. Review applied: source support, single-best answer, distractor plausibility, closure scope, metadata completeness, answer-position impact, wording safety, and governance boundaries. Phase 4A.3.7.37 preserves the record but removes static-demo eligibility because the Gold Bank replaces the historical active set."
   },
   {
     "review_id": "review_87_20260603_001",
@@ -665,7 +691,7 @@
     "draft_id": "draft_diag_sba_structured_87",
     "reviewer": "phase_4a3_7_29_structural_human_review_pass",
     "reviewed_at": "2026-06-03T00:00:00Z",
-    "review_status": "approved_for_static_demo",
+    "review_status": "preserve_only",
     "risk_before": "low",
     "risk_after": "low",
     "checklist": {
@@ -681,9 +707,11 @@
       "wording_safety_checked": true,
       "governance_checked": true
     },
-    "issues_found": [],
+    "issues_found": [
+      "Removed from active static-demo eligibility by Phase 4A.3.7.37 because it is not Gold-A or Gold-B."
+    ],
     "required_changes": [],
-    "approval_scope": "static_demo_only",
+    "approval_scope": "internal_review_only",
     "governance_confirmation": {
       "safe_for_examiner": false,
       "examiner_scoring_allowed": false,
@@ -695,7 +723,7 @@
       "uses_vector_db": false,
       "cloud_services_active": false
     },
-    "notes": "Approved for private static-demo payload only. Inclusion reason: adds old-wine decanting and sediment-management signal. Pedagogical risk: low, with feedback explicitly separating sediment removal from broad aeration claims. Review applied: source support, single-best answer, distractor plausibility, causal-chain linkage, metadata completeness, answer-position impact, wording safety, and governance boundaries."
+    "notes": "Approved for private static-demo payload only. Inclusion reason: adds old-wine decanting and sediment-management signal. Pedagogical risk: low, with feedback explicitly separating sediment removal from broad aeration claims. Review applied: source support, single-best answer, distractor plausibility, causal-chain linkage, metadata completeness, answer-position impact, wording safety, and governance boundaries. Phase 4A.3.7.37 preserves the record but removes static-demo eligibility because the Gold Bank replaces the historical active set."
   },
   {
     "review_id": "review_386_20260603_001",
@@ -703,7 +731,7 @@
     "draft_id": "draft_diag_sba_structured_386",
     "reviewer": "phase_4a3_7_29_structural_human_review_pass",
     "reviewed_at": "2026-06-03T00:00:00Z",
-    "review_status": "approved_for_static_demo",
+    "review_status": "preserve_only",
     "risk_before": "medium",
     "risk_after": "medium",
     "checklist": {
@@ -719,9 +747,11 @@
       "wording_safety_checked": true,
       "governance_checked": true
     },
-    "issues_found": [],
+    "issues_found": [
+      "Removed from active static-demo eligibility by Phase 4A.3.7.37 because it is not Gold-A or Gold-B."
+    ],
     "required_changes": [],
-    "approval_scope": "static_demo_only",
+    "approval_scope": "internal_review_only",
     "governance_confirmation": {
       "safe_for_examiner": false,
       "examiner_scoring_allowed": false,
@@ -733,7 +763,7 @@
       "uses_vector_db": false,
       "cloud_services_active": false
     },
-    "notes": "Approved for private static-demo payload only. Inclusion reason: adds bounded Germany region-comparison signal beyond Mosel recognition. Pedagogical risk: medium because regional comparisons can overstate style; feedback is explicitly bounded to the option set. Review applied: source support, single-best answer, distractor plausibility, comparison wording, metadata completeness, answer-position impact, wording safety, and governance boundaries."
+    "notes": "Approved for private static-demo payload only. Inclusion reason: adds bounded Germany region-comparison signal beyond Mosel recognition. Pedagogical risk: medium because regional comparisons can overstate style; feedback is explicitly bounded to the option set. Review applied: source support, single-best answer, distractor plausibility, comparison wording, metadata completeness, answer-position impact, wording safety, and governance boundaries. Phase 4A.3.7.37 preserves the record but removes static-demo eligibility because the Gold Bank replaces the historical active set."
   },
   {
     "review_id": "review_510_20260603_001",
@@ -741,7 +771,7 @@
     "draft_id": "draft_diag_sba_structured_510",
     "reviewer": "phase_4a3_7_29_structural_human_review_pass",
     "reviewed_at": "2026-06-03T00:00:00Z",
-    "review_status": "approved_for_static_demo",
+    "review_status": "preserve_only",
     "risk_before": "medium",
     "risk_after": "medium",
     "checklist": {
@@ -757,9 +787,11 @@
       "wording_safety_checked": true,
       "governance_checked": true
     },
-    "issues_found": [],
+    "issues_found": [
+      "Removed from active static-demo eligibility by Phase 4A.3.7.37 because it is not Gold-A or Gold-B."
+    ],
     "required_changes": [],
-    "approval_scope": "static_demo_only",
+    "approval_scope": "internal_review_only",
     "governance_confirmation": {
       "safe_for_examiner": false,
       "examiner_scoring_allowed": false,
@@ -771,6 +803,6 @@
       "uses_vector_db": false,
       "cloud_services_active": false
     },
-    "notes": "Approved for private static-demo payload only. Inclusion reason: adds viticulture/noble-rot causal reasoning, a common-student-error misconception link, and a D-answer for balance. Pedagogical risk: medium because noble rot must remain conditional rather than broadly beneficial humidity; feedback contrasts noble and grey rot. Review applied: source support, single-best answer, distractor plausibility, misconception linkage, metadata completeness, answer-position impact, wording safety, and governance boundaries."
+    "notes": "Approved for private static-demo payload only. Inclusion reason: adds viticulture/noble-rot causal reasoning, a common-student-error misconception link, and a D-answer for balance. Pedagogical risk: medium because noble rot must remain conditional rather than broadly beneficial humidity; feedback contrasts noble and grey rot. Review applied: source support, single-best answer, distractor plausibility, misconception linkage, metadata completeness, answer-position impact, wording safety, and governance boundaries. Phase 4A.3.7.37 preserves the record but removes static-demo eligibility because the Gold Bank replaces the historical active set."
   }
 ]

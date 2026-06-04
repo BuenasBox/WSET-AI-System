@@ -47,10 +47,11 @@ class DiagnosticSbaCockpitJsonLoaderTests(unittest.TestCase):
     def test_payload_validation_covers_minimum_render_structure(self) -> None:
         validate_item = function_body(self.html, "validateItem")
 
-        for token in ("item.item_id", "item.stem", "item.options", "option.option_id", "option.option_text"):
+        for token in ("item.item_id", "item.stem", "item.options", "option.visual_option_id", "option.option_id", "option.option_text"):
             self.assertIn(token, self.html)
         self.assertIn("item.options.length !== 4", validate_item)
-        self.assertIn("optionIds.join(',') !== 'A,B,C,D'", validate_item)
+        self.assertIn("visualOptionIds.join(',') !== 'A,B,C,D'", validate_item)
+        self.assertIn("optionIds.slice().sort().join(',') !== 'A,B,C,D'", validate_item)
 
     def test_payload_validation_is_governance_fail_closed(self) -> None:
         safe_governance = function_body(self.html, "hasSafeGovernance")

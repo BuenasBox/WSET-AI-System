@@ -8,6 +8,7 @@ mutate draft/review inputs.
 from __future__ import annotations
 
 import copy
+import hashlib
 from collections.abc import Mapping
 from typing import Any
 
@@ -23,6 +24,8 @@ from tools.question_generation.human_review_resolution import (
 EXPORT_VERSION = "static_demo_export_v0"
 STATIC_DEMO_DISCLAIMER = "PROTOTIPO · ENTRENAMIENTO · NO EVALUACIÓN OFICIAL WSET"
 STATIC_DEMO_EXPORTED_AT = "not_written_in_skeleton"
+OPTION_IDS = ("A", "B", "C", "D")
+OPTION_SHUFFLE_STRATEGY = "stable_item_id_sha256_v1"
 SAFE_ITEM_GOVERNANCE = {
     "training_item_only": True,
     "official_wset_question": False,
@@ -162,6 +165,7 @@ def build_static_demo_export_payload(drafts: list[dict], reviews: list[dict]) ->
             "eligible_item_count": len(items),
             "source_question_ids": [item["source_question_id"] for item in items],
             "review_ids": [item["review_id"] for item in items],
+            "option_shuffle_strategy": OPTION_SHUFFLE_STRATEGY,
             "output_written": False,
             "target_path": "frontend/diagnostic-sba/preguntas.json",
         },
@@ -298,11 +302,21 @@ def _validate_render_item(item: dict) -> list[str]:
         errors.append("render item options must contain four entries")
     else:
         option_ids = [option.get("option_id") for option in options if isinstance(option, dict)]
-        if option_ids != ["A", "B", "C", "D"]:
-            errors.append("render item options must be ordered A-D")
+        visual_option_ids = [
+            option.get("visual_option_id")
+            for option in options
+            if isinstance(option, dict)
+        ]
+        if visual_option_ids != list(OPTION_IDS):
+            errors.append("render item visual_option_id values must be ordered A-D")
+        if sorted(option_ids) != list(OPTION_IDS) or len(set(option_ids)) != len(OPTION_IDS):
+            errors.append("render item option_id values must preserve canonical A-D ids exactly once")
         for option in options:
-            if not isinstance(option, dict) or set(option.keys()) != {"option_id", "option_text"}:
-                errors.append("render item options must contain option_id and option_text only")
+            if (
+                not isinstance(option, dict)
+                or set(option.keys()) != {"visual_option_id", "option_id", "option_text"}
+            ):
+                errors.append("render item options must contain visual_option_id, option_id, and option_text only")
                 break
     return errors
 
@@ -338,19 +352,21 @@ def _contains_forbidden_render_key(value: Any) -> bool:
 
 def _render_options(draft: dict) -> list[dict]:
     options = _mapping(draft.get("options"))
+    option_order = _stable_visual_option_order(draft)
     return [
         {
+            "visual_option_id": visual_option_id,
             "option_id": option_id,
             "option_text": _mapping(options.get(option_id)).get("option_text"),
         }
-        for option_id in ("A", "B", "C", "D")
+        for visual_option_id, option_id in zip(OPTION_IDS, option_order)
     ]
 
 
 def _option_diagnostics(draft: dict) -> dict[str, dict]:
     options = _mapping(draft.get("options"))
     diagnostics: dict[str, dict] = {}
-    for option_id in ("A", "B", "C", "D"):
+    for option_id in OPTION_IDS:
         option = _mapping(options.get(option_id))
         diagnostics[option_id] = {
             "is_correct": option.get("is_correct"),
@@ -366,6 +382,23 @@ def _correct_option_id(draft: dict) -> str | None:
         if _mapping(option).get("is_correct") is True:
             return str(option_id)
     return None
+
+
+def _stable_visual_option_order(draft: dict) -> tuple[str, ...]:
+    item_id = str(_mapping(draft.get("identity")).get("item_id", ""))
+    seed = f"{OPTION_SHUFFLE_STRATEGY}:{item_id}".encode("utf-8")
+    digest = hashlib.sha256(seed).digest()
+    option_ids = list(OPTION_IDS)
+
+    for index in range(len(option_ids) - 1, 0, -1):
+        swap_index = digest[len(option_ids) - 1 - index] % (index + 1)
+        option_ids[index], option_ids[swap_index] = option_ids[swap_index], option_ids[index]
+
+    if tuple(option_ids) == OPTION_IDS:
+        rotation = digest[-1] % (len(option_ids) - 1) + 1
+        option_ids = option_ids[rotation:] + option_ids[:rotation]
+
+    return tuple(option_ids)
 
 
 def _source_question_id(draft: dict) -> str:

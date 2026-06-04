@@ -6,6 +6,7 @@ import unittest
 from pathlib import Path
 
 from tools.question_generation.human_review_resolution import ReviewStatus
+from tools.question_generation.export_static_demo_questions import DEFAULT_DRAFTS_DIR, scan_and_merge
 from tools.question_generation.static_demo_exporter import (
     ApprovalScope,
     build_static_demo_export_payload,
@@ -22,34 +23,52 @@ FRONTEND_INDEX_PATH = Path("frontend/diagnostic-sba/index.html")
 PREGUNTAS_PATH = Path("frontend/diagnostic-sba/preguntas.json")
 EXPECTED_ELIGIBLE_SOURCE_IDS = [
     "2",
-    "4",
-    "5",
-    "12",
-    "15",
-    "17",
-    "20",
-    "30",
-    "44",
-    "50",
-    "78",
+    "21",
     "83",
-    "87",
-    "108",
-    "247",
-    "253",
-    "386",
-    "510",
+    "105",
+    "107",
+    "206",
+    "216",
+    "228",
+    "230",
+    "232",
+    "240",
+    "258",
+    "265",
+    "268",
+    "269",
+    "270",
+    "277",
+    "287",
+    "301",
+    "308",
+    "309",
+    "325",
+    "356",
+    "395",
+    "402",
+    "421",
+    "424",
+    "438",
+    "440",
+    "441",
+    "464",
+    "493",
+    "498",
+    "515",
+    "659",
+    "834",
 ]
 
 
 def load_drafts() -> list[dict]:
-    with DRAFTS_PATH.open("r", encoding="utf-8") as handle:
-        return json.load(handle)
+    drafts, _ = scan_and_merge(DEFAULT_DRAFTS_DIR)
+    return drafts
 
 
 def load_reviews() -> list[dict]:
-    with REVIEWS_PATH.open("r", encoding="utf-8") as handle:
-        return json.load(handle)
+    _, reviews = scan_and_merge(DEFAULT_DRAFTS_DIR)
+    return reviews
 
 
 class StaticDemoExporterTests(unittest.TestCase):
@@ -60,22 +79,22 @@ class StaticDemoExporterTests(unittest.TestCase):
         cls.drafts_by_source_id = {draft["identity"]["source_question_id"]: draft for draft in cls.drafts}
         cls.reviews_by_source_id = {record["source_question_id"]: record for record in cls.reviews}
 
-    def test_exactly_eighteen_eligible_items_selected_from_private_baseline(self) -> None:
+    def test_exactly_thirty_six_eligible_items_selected_from_gold_bank(self) -> None:
         eligible = select_static_demo_eligible_items(self.drafts, self.reviews)
 
-        self.assertEqual(len(eligible), 18)
+        self.assertEqual(len(eligible), 36)
 
-    def test_selected_ids_match_private_batch_2_baseline(self) -> None:
+    def test_selected_ids_match_gold_bank_target_set(self) -> None:
         eligible = select_static_demo_eligible_items(self.drafts, self.reviews)
 
         self.assertEqual([draft["identity"]["source_question_id"] for draft in eligible], EXPECTED_ELIGIBLE_SOURCE_IDS)
 
-    def test_drafts_1_and_13_are_excluded(self) -> None:
+    def test_historical_non_gold_active_ids_are_excluded(self) -> None:
         eligible = select_static_demo_eligible_items(self.drafts, self.reviews)
         selected_ids = {draft["identity"]["source_question_id"] for draft in eligible}
 
-        self.assertNotIn("1", selected_ids)
-        self.assertNotIn("13", selected_ids)
+        for source_id in ("1", "4", "5", "12", "13", "15", "17", "20", "30", "44", "50", "78", "87", "108", "247", "253", "386", "510"):
+            self.assertNotIn(source_id, selected_ids)
 
     def test_render_payload_does_not_expose_correct_answer(self) -> None:
         payload = self._render_payload_for("2")
@@ -118,7 +137,7 @@ class StaticDemoExporterTests(unittest.TestCase):
 
         self.assertIn("items", payload)
         self.assertIn("outcomes_by_item_id", payload)
-        self.assertEqual(len(payload["items"]), 18)
+        self.assertEqual(len(payload["items"]), 36)
         self.assertEqual(set(payload["outcomes_by_item_id"]), {item["item_id"] for item in payload["items"]})
 
     def test_export_payload_is_deterministic(self) -> None:
