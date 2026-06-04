@@ -789,7 +789,7 @@
     "schema_version": "diagnostic_open_response_v1",
     "source_question_id": "804",
     "question_type": "diagnostic_open_response",
-    "stem": "Analice el impacto del tipo de suelo en el estilo y la calidad del vino.",
+    "stem": "Explique cómo el drenaje del suelo puede influir en el vigor de la vid y en el estilo del vino.",
     "RA": "RA1",
     "topic": "suelo",
     "subtopic": "drenaje",
@@ -799,16 +799,12 @@
       "drenaje",
       "agua",
       "retención",
-      "nutrientes",
       "vigor",
+      "raíces",
       "rendimiento",
       "concentración",
       "maduración",
       "estilo",
-      "calidad",
-      "arcilla",
-      "grava",
-      "arena",
       "RA1"
     ],
     "optional_causal_chain": "suelo -> drenaje -> vigor",
@@ -821,35 +817,15 @@
         "drenaje",
         "agua",
         "retención",
-        "nutrientes",
         "vigor",
+        "raíces",
         "rendimiento",
         "concentración",
         "maduración",
         "estilo",
-        "calidad",
-        "arcilla",
-        "grava",
-        "arena",
         "RA1"
       ],
       "evidence_chunks": [
-        {
-          "chunk_id": "OFFICIAL_WSET_OF_W_5_2_5_THE_GROWING_ENVIRONMENT_001",
-          "source_file": "knowledge/official-wset/study-guide/wset_markdown/seccion_5_section_2_factors_affecting_the_style_quality_and_price_of_w/5-2_5_the_growing_environment.md",
-          "title": "5 The Growing Environment",
-          "source_type": "official_wset_extracted",
-          "matched_terms": [
-            "suelo",
-            "drenaje",
-            "agua",
-            "nutrientes",
-            "maduración",
-            "estilo",
-            "arcilla",
-            "arena"
-          ]
-        },
         {
           "chunk_id": "OFFICIAL_WSET_WINES_OF_THE_WORLD_8_1_43_SHERRY_001",
           "source_file": "knowledge/official-wset/study-guide/wset_markdown/seccion_8_section_5_fortified_wines_of_the_world/8-1_43_sherry.md",
@@ -860,7 +836,6 @@
             "drenaje",
             "agua",
             "retención",
-            "nutrientes",
             "rendimiento",
             "maduración",
             "estilo"
@@ -874,9 +849,21 @@
           "matched_terms": [
             "suelo",
             "agua",
-            "nutrientes",
             "rendimiento",
             "concentración",
+            "maduración",
+            "estilo"
+          ]
+        },
+        {
+          "chunk_id": "OFFICIAL_WSET_OF_W_5_2_5_THE_GROWING_ENVIRONMENT_001",
+          "source_file": "knowledge/official-wset/study-guide/wset_markdown/seccion_5_section_2_factors_affecting_the_style_quality_and_price_of_w/5-2_5_the_growing_environment.md",
+          "title": "5 The Growing Environment",
+          "source_type": "official_wset_extracted",
+          "matched_terms": [
+            "suelo",
+            "drenaje",
+            "agua",
             "maduración",
             "estilo"
           ]
@@ -1160,10 +1147,10 @@
     "schema_version": "diagnostic_open_response_v1",
     "source_question_id": "807",
     "question_type": "diagnostic_open_response",
-    "stem": "Describe cómo las decisiones humanas en la viña pueden compensar las condiciones climáticas extremas y así mantener la calidad del vino.",
+    "stem": "Explique cómo el riego y el manejo del dosel pueden reducir los efectos de la sequía o del calor extremo sobre la maduración de la uva.",
     "RA": "RA1",
     "topic": "decisiones humanas",
-    "subtopic": "clima extremo",
+    "subtopic": "sequía",
     "difficulty": "distinction",
     "expected_concepts": [
       "decisiones humanas",
@@ -1173,19 +1160,15 @@
       "riego",
       "estrés hídrico",
       "sequía",
+      "calor",
+      "calor extremo",
       "dosel",
+      "manejo del dosel",
       "exposición",
       "sombra",
-      "helada",
-      "granizo",
-      "vendimia",
-      "selección",
       "maduración",
       "equilibrio",
-      "calidad",
-      "clima extremo",
-      "RA1",
-      "gestión del viñedo"
+      "RA1"
     ],
     "optional_causal_chain": "riego -> estrés hídrico -> maduración",
     "corpus_support": {
@@ -1200,19 +1183,15 @@
         "riego",
         "estrés hídrico",
         "sequía",
+        "calor",
+        "calor extremo",
         "dosel",
+        "manejo del dosel",
         "exposición",
         "sombra",
-        "helada",
-        "granizo",
-        "vendimia",
-        "selección",
         "maduración",
         "equilibrio",
-        "calidad",
-        "clima extremo",
-        "RA1",
-        "gestión del viñedo"
+        "RA1"
       ],
       "evidence_chunks": [
         {
@@ -1224,10 +1203,8 @@
             "riego",
             "estrés hídrico",
             "sequía",
+            "calor",
             "exposición",
-            "helada",
-            "granizo",
-            "vendimia",
             "maduración"
           ]
         },
@@ -1238,11 +1215,9 @@
           "source_type": "official_wset_extracted",
           "matched_terms": [
             "riego",
+            "calor",
+            "manejo del dosel",
             "exposición",
-            "helada",
-            "granizo",
-            "vendimia",
-            "selección",
             "maduración",
             "equilibrio"
           ]
@@ -1254,9 +1229,8 @@
           "source_type": "official_wset_extracted",
           "matched_terms": [
             "estrés hídrico",
+            "calor",
             "exposición",
-            "helada",
-            "vendimia",
             "maduración",
             "equilibrio"
           ]
@@ -1408,12 +1382,14 @@
     "schema_version": "diagnostic_open_response_v1",
     "source_question_id": "809",
     "question_type": "diagnostic_open_response",
-    "stem": "Compara las ventajas y desventajas del uso de levaduras seleccionadas frente a levaduras autóctonas en la producción de vinos premium.",
+    "stem": "Compare el uso de levaduras seleccionadas y levaduras autóctonas en fermentación, considerando control, consistencia, complejidad potencial y riesgos.",
     "RA": "RA1",
     "topic": "levaduras seleccionadas",
     "subtopic": "levaduras autóctonas",
     "difficulty": "distinction",
     "expected_concepts": [
+      "levadura",
+      "levaduras",
       "levaduras seleccionadas",
       "seleccionadas",
       "levaduras autóctonas",
@@ -1425,13 +1401,11 @@
       "predecible",
       "variabilidad",
       "complejidad",
+      "aromas",
       "riesgo",
       "parada fermentativa",
       "aromas no deseados",
-      "calidad",
-      "premium",
-      "RA1",
-      "vino premium"
+      "RA1"
     ],
     "optional_causal_chain": "levaduras seleccionadas -> control -> consistencia",
     "corpus_support": {
@@ -1439,6 +1413,8 @@
       "source_question_bank": "knowledge/question-bank/structured/wset3_questions.json",
       "source_type": "WSET3_RA1_Banco_Preguntas_TOTAL.xlsx | Abiertas",
       "support_terms": [
+        "levadura",
+        "levaduras",
         "levaduras seleccionadas",
         "seleccionadas",
         "levaduras autóctonas",
@@ -1450,40 +1426,26 @@
         "predecible",
         "variabilidad",
         "complejidad",
+        "aromas",
         "riesgo",
         "parada fermentativa",
         "aromas no deseados",
-        "calidad",
-        "premium",
-        "RA1",
-        "vino premium"
+        "RA1"
       ],
       "evidence_chunks": [
-        {
-          "chunk_id": "OFFICIAL_WSET_PRICE_OF_W_5_3_6_VINEYARD_MANAGEMENT_001",
-          "source_file": "knowledge/official-wset/study-guide/wset_markdown/seccion_5_section_2_factors_affecting_the_style_quality_and_price_of_w/5-3_6_vineyard_management.md",
-          "title": "6 Vineyard Management",
-          "source_type": "official_wset_extracted",
-          "matched_terms": [
-            "autóctonas",
-            "salvajes",
-            "fermentación",
-            "control",
-            "riesgo",
-            "premium"
-          ]
-        },
         {
           "chunk_id": "OFFICIAL_WSET_4_7_COMMON_ELEMENTS_IN_WINEMAKING_AND_MATURATION_001",
           "source_file": "knowledge/official-wset/study-guide/wset_markdown/seccion_5_section_2_factors_affecting_the_style_quality_and_price_of_w/5-4_7_common_elements_in_winemaking_and_maturation.md",
           "title": "7 Common Elements in Winemaking and Maturation",
           "source_type": "official_wset_extracted",
           "matched_terms": [
+            "levadura",
+            "levaduras",
             "fermentación",
             "control",
             "complejidad",
-            "riesgo",
-            "premium"
+            "aromas",
+            "riesgo"
           ]
         },
         {
@@ -1492,11 +1454,28 @@
           "title": "8 White and Sweet Winemaking",
           "source_type": "official_wset_extracted",
           "matched_terms": [
+            "levadura",
+            "levaduras",
             "fermentación",
             "control",
             "complejidad",
-            "riesgo",
-            "premium"
+            "aromas",
+            "riesgo"
+          ]
+        },
+        {
+          "chunk_id": "OFFICIAL_WSET_W_5_6_9_RED_AND_ROSE_WINEMAKING_001",
+          "source_file": "knowledge/official-wset/study-guide/wset_markdown/seccion_5_section_2_factors_affecting_the_style_quality_and_price_of_w/5-6_9_red_and_rose_winemaking.md",
+          "title": "9 Red and Rosé Winemaking",
+          "source_type": "official_wset_extracted",
+          "matched_terms": [
+            "levadura",
+            "levaduras",
+            "fermentación",
+            "control",
+            "complejidad",
+            "aromas",
+            "riesgo"
           ]
         }
       ]
@@ -2335,7 +2314,7 @@
     "schema_version": "diagnostic_open_response_v1",
     "source_question_id": "817",
     "question_type": "diagnostic_open_response",
-    "stem": "Explica el impacto de diferentes tipos de suelos (arena, arcilla, grava) en el vigor de la vid y cómo esto puede influir en el estilo del vino.",
+    "stem": "Compare cómo suelos arenosos y arcillosos pueden afectar la disponibilidad de agua, el vigor de la vid y el estilo del vino.",
     "RA": "RA1",
     "topic": "suelo",
     "subtopic": "arena",
@@ -2344,16 +2323,13 @@
       "suelo",
       "arena",
       "arcilla",
-      "grava",
       "drenaje",
       "retención de agua",
       "agua",
-      "calor",
-      "retención de calor",
       "vigor",
-      "maduración",
       "rendimiento",
       "concentración",
+      "maduración",
       "estilo",
       "RA1"
     ],
@@ -2366,16 +2342,13 @@
         "suelo",
         "arena",
         "arcilla",
-        "grava",
         "drenaje",
         "retención de agua",
         "agua",
-        "calor",
-        "retención de calor",
         "vigor",
-        "maduración",
         "rendimiento",
         "concentración",
+        "maduración",
         "estilo",
         "RA1"
       ],
@@ -2391,7 +2364,6 @@
             "arcilla",
             "drenaje",
             "agua",
-            "calor",
             "maduración",
             "estilo"
           ]
@@ -2404,10 +2376,9 @@
           "matched_terms": [
             "suelo",
             "agua",
-            "calor",
-            "maduración",
             "rendimiento",
             "concentración",
+            "maduración",
             "estilo"
           ]
         },
@@ -2420,9 +2391,8 @@
             "suelo",
             "drenaje",
             "agua",
-            "calor",
-            "maduración",
             "rendimiento",
+            "maduración",
             "estilo"
           ]
         }
