@@ -19,7 +19,26 @@ EXPORT_PATH = Path("frontend/diagnostic-sba/preguntas.json")
 DRAFTS_PATH = Path("knowledge/question-bank/diagnostic_sba/drafts/first_5_enrichment_drafts.json")
 REVIEWS_PATH = Path("knowledge/question-bank/diagnostic_sba/reviews/first_5_human_review_records.json")
 FRONTEND_INDEX_PATH = Path("frontend/diagnostic-sba/index.html")
-EXPECTED_SOURCE_IDS = ["2", "12", "17"]
+EXPECTED_SOURCE_IDS = [
+    "2",
+    "4",
+    "5",
+    "12",
+    "15",
+    "17",
+    "20",
+    "30",
+    "44",
+    "50",
+    "78",
+    "83",
+    "87",
+    "108",
+    "247",
+    "253",
+    "386",
+    "510",
+]
 FORBIDDEN_AUTHORITY_PHRASES = (
     "approved_for_production",
     "official score",
@@ -56,10 +75,10 @@ class StaticDemoExportFileTests(unittest.TestCase):
     def test_payload_validates(self) -> None:
         self.assertEqual(validate_static_demo_export_payload(self.payload), [])
 
-    def test_contains_exactly_three_items(self) -> None:
-        self.assertEqual(len(self.payload["items"]), 3)
+    def test_contains_exactly_eighteen_items(self) -> None:
+        self.assertEqual(len(self.payload["items"]), 18)
 
-    def test_item_ids_are_2_12_17(self) -> None:
+    def test_item_ids_match_private_batch_2_baseline(self) -> None:
         self.assertEqual([item["source_question_id"] for item in self.payload["items"]], EXPECTED_SOURCE_IDS)
 
     def test_ids_1_and_13_absent(self) -> None:
@@ -155,8 +174,7 @@ class StaticDemoExportFileTests(unittest.TestCase):
             text=True,
         )
 
-        # exporter now scans all draft/review files (batch_2 included)
-        self.assertIn("eligible_item_count: 9", result.stdout)
+        self.assertIn("eligible_item_count: 18", result.stdout)
         self.assertEqual(EXPORT_PATH.read_text(encoding="utf-8"), before)
 
     def test_cli_rejects_output_path_outside_frontend_diagnostic_sba(self) -> None:

@@ -553,6 +553,140 @@
     "draft_notice": "Human-review draft only. Not a production item, not a pilot bank item, and not official assessment material.",
     "enrichment_status": "defer_for_human_review",
     "identity": {
+      "item_id": "draft_diag_sba_structured_15",
+      "item_version": "0.1.0-draft",
+      "created_by": "phase_4a3_7_27_controlled_diagnostic_sba_expansion_batch_1",
+      "generation_method": "manual_repo_local_enrichment_draft",
+      "training_item_only": true,
+      "source_question_id": "15"
+    },
+    "lineage": {
+      "source_question_id": "15",
+      "source_bank_path": "knowledge/question-bank/structured/wset3_questions.json",
+      "adapter_version": "structured_adapter_v0",
+      "enrichment_version": "phase_4a3_7_27_batch_1_v0",
+      "transformation_notes": [
+        "Preserves original structured-bank stem and options.",
+        "Adds controlled batch-1 diagnostic metadata, source support candidates, and human-review notes.",
+        "Requires human review before any broader training or production use."
+      ]
+    },
+    "curriculum": {
+      "ra_id": "RA5",
+      "topic": "price_factors",
+      "subtopic": "production_cost_mechanisation",
+      "difficulty": "intermediate",
+      "learning_objective": "Identify a human production factor that can directly affect wine production cost."
+    },
+    "question": {
+      "stem": "¿Cuál de los siguientes factores humanos tiene un impacto directo en el precio de producción del vino?",
+      "question_type": "single_best_answer",
+      "expected_reasoning_type": "cause_effect"
+    },
+    "options": {
+      "A": {
+        "option_id": "A",
+        "option_text": "Orientación del viñedo",
+        "is_correct": false,
+        "diagnostic_role": "scope_error",
+        "misconception_id": null,
+        "diagnostic_note": "Tests confusion between site orientation and production cost drivers."
+      },
+      "B": {
+        "option_id": "B",
+        "option_text": "Método de poda",
+        "is_correct": false,
+        "diagnostic_role": "near_neighbor_confusion",
+        "misconception_id": null,
+        "diagnostic_note": "Plausible vineyard operation, but pruning method is not the broad direct cost factor tested here."
+      },
+      "C": {
+        "option_id": "C",
+        "option_text": "Tipo de levadura",
+        "is_correct": false,
+        "diagnostic_role": "process_confusion",
+        "misconception_id": null,
+        "diagnostic_note": "Confuses fermentation input with production-cost structure."
+      },
+      "D": {
+        "option_id": "D",
+        "option_text": "Nivel de mecanización",
+        "is_correct": true,
+        "diagnostic_role": "correct",
+        "misconception_id": null,
+        "diagnostic_note": "Correctly identifies mechanisation as a direct human cost factor."
+      }
+    },
+    "source_support": {
+      "source_ids": [
+        "OFFICIAL_WSET_OF_W_5_7_10_FACTORS_THAT_AFFECT_THE_PRICE_OF_WINE_001",
+        "STRUCTURED_QBANK_15"
+      ],
+      "source_chunks": [
+        "knowledge/official-wset/study-guide/wset_markdown/seccion_5_section_2_factors_affecting_the_style_quality_and_price_of_w/5-7_10_factors_that_affect_the_price_of_wine.md",
+        "knowledge/question-bank/structured/wset3_questions.json#15"
+      ],
+      "support_rationale": "The price-factor source area supports the distinction between human production choices and site factors; mechanisation changes labour inputs and therefore production cost.",
+      "source_role": "repo_local_support",
+      "status": "draft_requires_human_review"
+    },
+    "causal_chain_linkage": {
+      "causal_chain_id": null,
+      "status": "not_attached"
+    },
+    "misconception_linkage": {
+      "status": "none_attached",
+      "notes": "No direct misconception node is attached; the diagnostic risk is confusing natural vineyard factors with cost-control decisions."
+    },
+    "sat_relevance": [],
+    "feedback": {
+      "correct_rationale": "Level of mechanisation is the best answer because it directly changes labour requirements and production cost, whereas the other options are site or process details.",
+      "why_other_options_are_wrong": {
+        "A": "Aspect can influence ripening but is not the direct human cost-control factor tested.",
+        "B": "Pruning can affect vine management, but the broader direct cost driver here is mechanisation.",
+        "C": "Yeast choice may affect fermentation style, not the main production-cost mechanism.",
+        "D": "This is the correct answer."
+      },
+      "remediation_recommendation": "Review factors that affect price and separate natural site variables from human production-cost decisions.",
+      "remediation_target": {
+        "target_type": "topic_review",
+        "target_id": "price_factors_production_cost"
+      }
+    },
+    "governance": {
+      "safe_for_examiner": false,
+      "examiner_scoring_allowed": false,
+      "official_wset_question": false,
+      "training_item_only": true,
+      "uses_llm": false,
+      "uses_api": false,
+      "uses_embeddings": false,
+      "uses_vector_db": false,
+      "cloud_services_active": false
+    },
+    "attempt_analytics_placeholders": {
+      "response_time": null,
+      "confidence": null,
+      "answer_changed": null,
+      "diagnosed_error_type": null,
+      "hesitation": null,
+      "recommended_next_action": null
+    },
+    "human_review": {
+      "required": true,
+      "reasons": [
+        "Confirm mechanisation is framed as a cost factor, not a quality or official pricing claim.",
+        "Confirm distractors remain plausible but do not compete as the single best answer."
+      ],
+      "risk_level": "low",
+      "reviewer_notes": ""
+    }
+  },
+  {
+    "schema_version": "diagnostic_sba_item_v1",
+    "draft_notice": "Human-review draft only. Not a production item, not a pilot bank item, and not official assessment material.",
+    "enrichment_status": "defer_for_human_review",
+    "identity": {
       "item_id": "draft_diag_sba_structured_17",
       "item_version": "0.1.0-draft",
       "created_by": "phase_4a3_7_9_first_5_enrichment_drafts",
@@ -690,6 +824,2000 @@
         "Confirm adjacent tannin misconception nodes should remain unattached."
       ],
       "risk_level": "low",
+      "reviewer_notes": ""
+    }
+  },
+  {
+    "schema_version": "diagnostic_sba_item_v1",
+    "draft_notice": "Human-review draft only. Not a production item, not a pilot bank item, and not official assessment material.",
+    "enrichment_status": "defer_for_human_review",
+    "identity": {
+      "item_id": "draft_diag_sba_structured_20",
+      "item_version": "0.1.0-draft",
+      "created_by": "phase_4a3_7_27_controlled_diagnostic_sba_expansion_batch_1",
+      "generation_method": "manual_repo_local_enrichment_draft",
+      "training_item_only": true,
+      "source_question_id": "20"
+    },
+    "lineage": {
+      "source_question_id": "20",
+      "source_bank_path": "knowledge/question-bank/structured/wset3_questions.json",
+      "adapter_version": "structured_adapter_v0",
+      "enrichment_version": "phase_4a3_7_27_batch_1_v0",
+      "transformation_notes": [
+        "Preserves original structured-bank stem and options.",
+        "Adds controlled batch-1 diagnostic metadata, source support candidates, and human-review notes.",
+        "Requires human review before any broader training or production use."
+      ]
+    },
+    "curriculum": {
+      "ra_id": "RA1",
+      "topic": "winemaking",
+      "subtopic": "extraction_and_body",
+      "difficulty": "intermediate",
+      "learning_objective": "Connect extraction level with body and structure as a training-only diagnostic item."
+    },
+    "question": {
+      "stem": "¿Qué variable de vinificación afecta más directamente el cuerpo del vino?",
+      "question_type": "single_best_answer",
+      "expected_reasoning_type": "cause_effect"
+    },
+    "options": {
+      "A": {
+        "option_id": "A",
+        "option_text": "Temperatura de fermentación",
+        "is_correct": false,
+        "diagnostic_role": "partial_reasoning",
+        "misconception_id": null,
+        "diagnostic_note": "Fermentation temperature can affect aroma and extraction context, but is less direct than extraction level for body."
+      },
+      "B": {
+        "option_id": "B",
+        "option_text": "Tiempo de prensado",
+        "is_correct": false,
+        "diagnostic_role": "process_confusion",
+        "misconception_id": null,
+        "diagnostic_note": "Pressing time is a handling detail and not the broad body variable tested."
+      },
+      "C": {
+        "option_id": "C",
+        "option_text": "Tipo de levadura",
+        "is_correct": false,
+        "diagnostic_role": "process_confusion",
+        "misconception_id": null,
+        "diagnostic_note": "Yeast type may affect fermentation profile but is not the direct body driver here."
+      },
+      "D": {
+        "option_id": "D",
+        "option_text": "Nivel de extracción",
+        "is_correct": true,
+        "diagnostic_role": "correct",
+        "misconception_id": null,
+        "diagnostic_note": "Correctly targets extraction as the body/structure variable."
+      }
+    },
+    "source_support": {
+      "source_ids": [
+        "CC_MACERATION_EXTRACTION",
+        "OFFICIAL_WSET_OF_W_5_6_9_RED_AND_ROSE_WINEMAKING_001"
+      ],
+      "source_chunks": [
+        "knowledge/knowledge-map/causal-chains/CC_MACERATION_EXTRACTION.json",
+        "knowledge/official-wset/study-guide/wset_markdown/seccion_5_section_2_factors_affecting_the_style_quality_and_price_of_w/5-6_9_red_and_rose_winemaking.md"
+      ],
+      "support_rationale": "The maceration/extraction chain links skin contact and cap management to colour, tannin, structure, and fuller palate impression.",
+      "source_role": "repo_local_support",
+      "status": "draft_requires_human_review"
+    },
+    "causal_chain_linkage": {
+      "causal_chain_id": "CC_MACERATION_EXTRACTION",
+      "status": "draft_supported_by_expected_causal_links"
+    },
+    "misconception_linkage": {
+      "status": "not_attached",
+      "candidate_misconception_ids": [
+        "MC_TANNIN_01"
+      ],
+      "notes": "Tannin confusion is adjacent, but this item primarily diagnoses extraction-to-body reasoning."
+    },
+    "sat_relevance": [
+      {
+        "parameter": "body",
+        "status": "supported",
+        "reason": "The item asks which vinification variable most directly affects body/structure."
+      }
+    ],
+    "feedback": {
+      "correct_rationale": "Extraction level is the best answer because more extraction from skins and solids increases tannin, colour, and the fuller structural impression of the wine.",
+      "why_other_options_are_wrong": {
+        "A": "Temperature can matter, but the direct variable named in the support is extraction.",
+        "B": "Pressing is narrower than the extraction level relationship tested.",
+        "C": "Yeast choice does not directly explain body in this item.",
+        "D": "This is the correct answer."
+      },
+      "remediation_recommendation": "Review maceration/extraction and then compare body, tannin, and colour as separate but related SAT signals.",
+      "remediation_target": {
+        "target_type": "causal_chain",
+        "target_id": "CC_MACERATION_EXTRACTION"
+      }
+    },
+    "governance": {
+      "safe_for_examiner": false,
+      "examiner_scoring_allowed": false,
+      "official_wset_question": false,
+      "training_item_only": true,
+      "uses_llm": false,
+      "uses_api": false,
+      "uses_embeddings": false,
+      "uses_vector_db": false,
+      "cloud_services_active": false
+    },
+    "attempt_analytics_placeholders": {
+      "response_time": null,
+      "confidence": null,
+      "answer_changed": null,
+      "diagnosed_error_type": null,
+      "hesitation": null,
+      "recommended_next_action": null
+    },
+    "human_review": {
+      "required": true,
+      "reasons": [
+        "Confirm the item remains about body/structure rather than implying one universal body rule.",
+        "Confirm SAT relevance is diagnostic and not examiner scoring."
+      ],
+      "risk_level": "low",
+      "reviewer_notes": ""
+    }
+  },
+  {
+    "schema_version": "diagnostic_sba_item_v1",
+    "draft_notice": "Human-review draft only. Not a production item, not a pilot bank item, and not official assessment material.",
+    "enrichment_status": "defer_for_human_review",
+    "identity": {
+      "item_id": "draft_diag_sba_structured_30",
+      "item_version": "0.1.0-draft",
+      "created_by": "phase_4a3_7_27_controlled_diagnostic_sba_expansion_batch_1",
+      "generation_method": "manual_repo_local_enrichment_draft",
+      "training_item_only": true,
+      "source_question_id": "30"
+    },
+    "lineage": {
+      "source_question_id": "30",
+      "source_bank_path": "knowledge/question-bank/structured/wset3_questions.json",
+      "adapter_version": "structured_adapter_v0",
+      "enrichment_version": "phase_4a3_7_27_batch_1_v0",
+      "transformation_notes": [
+        "Preserves original structured-bank stem and options.",
+        "Adds controlled batch-1 diagnostic metadata, source support candidates, and human-review notes.",
+        "Requires human review before any broader training or production use."
+      ]
+    },
+    "curriculum": {
+      "ra_id": "RA3",
+      "topic": "sparkling_wines",
+      "subtopic": "traditional_method_autolysis",
+      "difficulty": "intermediate",
+      "learning_objective": "Identify autolytic notes from extended lees ageing in traditional-method sparkling wine."
+    },
+    "question": {
+      "stem": "¿Qué característica es más probable encontrar en un espumoso elaborado con método tradicional y envejecido durante más de 24 meses?",
+      "question_type": "single_best_answer",
+      "expected_reasoning_type": "cause_effect"
+    },
+    "options": {
+      "A": {
+        "option_id": "A",
+        "option_text": "Taninos prominentes",
+        "is_correct": false,
+        "diagnostic_role": "sat_confusion",
+        "misconception_id": null,
+        "diagnostic_note": "Tannin prominence is implausible for the tested sparkling style but diagnoses red-wine structure transfer."
+      },
+      "B": {
+        "option_id": "B",
+        "option_text": "Notas a fruta roja",
+        "is_correct": false,
+        "diagnostic_role": "regional_confusion",
+        "misconception_id": null,
+        "diagnostic_note": "Fruit-red notes can occur in some wines but do not identify extended lees autolysis."
+      },
+      "C": {
+        "option_id": "C",
+        "option_text": "Notas de autólisis como pan y brioche",
+        "is_correct": true,
+        "diagnostic_role": "correct",
+        "misconception_id": null,
+        "diagnostic_note": "Correctly identifies autolytic bread/brioche character."
+      },
+      "D": {
+        "option_id": "D",
+        "option_text": "Color profundo",
+        "is_correct": false,
+        "diagnostic_role": "sat_confusion",
+        "misconception_id": null,
+        "diagnostic_note": "Deep colour is not the expected marker of traditional-method lees ageing."
+      }
+    },
+    "source_support": {
+      "source_ids": [
+        "CC_AUTOLYSIS_AROMA_TEXTURE",
+        "OFFICIAL_WSET_WINES_OF_THE_WORLD_7_1_41_SPARKLING_WINE_PRODUCTION_001"
+      ],
+      "source_chunks": [
+        "knowledge/knowledge-map/causal-chains/cc_autolysis_aroma_texture.json",
+        "knowledge/official-wset/study-guide/wset_markdown/seccion_7_section_4_sparkling_wines_of_the_world/7-1_41_sparkling_wine_production.md"
+      ],
+      "support_rationale": "The autolysis chain supports the link between extended lees contact and bread, brioche, toast, and biscuit notes in traditional-method sparkling wines.",
+      "source_role": "repo_local_support",
+      "status": "draft_requires_human_review"
+    },
+    "causal_chain_linkage": {
+      "causal_chain_id": "CC_AUTOLYSIS_AROMA_TEXTURE",
+      "status": "draft_supported_by_expected_causal_links"
+    },
+    "misconception_linkage": {
+      "status": "none_attached",
+      "notes": "No direct misconception node is attached; distractors test SAT/style confusion."
+    },
+    "sat_relevance": [
+      {
+        "parameter": "aroma_development",
+        "status": "supported",
+        "reason": "The item diagnoses recognition of autolytic aroma markers."
+      }
+    ],
+    "feedback": {
+      "correct_rationale": "Notes such as bread and brioche are the best answer because extended lees contact and yeast autolysis produce autolytic aroma complexity.",
+      "why_other_options_are_wrong": {
+        "A": "Prominent tannin is not the diagnostic marker of this sparkling-wine process.",
+        "B": "Red-fruit notes do not explain extended lees ageing.",
+        "C": "This is the correct answer.",
+        "D": "Deep colour is unrelated to the autolysis relationship tested."
+      },
+      "remediation_recommendation": "Review the autolysis causal chain and contrast autolytic aromas with primary fruit and red-wine structure terms.",
+      "remediation_target": {
+        "target_type": "causal_chain",
+        "target_id": "CC_AUTOLYSIS_AROMA_TEXTURE"
+      }
+    },
+    "governance": {
+      "safe_for_examiner": false,
+      "examiner_scoring_allowed": false,
+      "official_wset_question": false,
+      "training_item_only": true,
+      "uses_llm": false,
+      "uses_api": false,
+      "uses_embeddings": false,
+      "uses_vector_db": false,
+      "cloud_services_active": false
+    },
+    "attempt_analytics_placeholders": {
+      "response_time": null,
+      "confidence": null,
+      "answer_changed": null,
+      "diagnosed_error_type": null,
+      "hesitation": null,
+      "recommended_next_action": null
+    },
+    "human_review": {
+      "required": true,
+      "reasons": [
+        "Confirm wording remains paraphrased and source-grounded.",
+        "Confirm distractors do not become absurd despite testing cross-style transfer errors."
+      ],
+      "risk_level": "low",
+      "reviewer_notes": ""
+    }
+  },
+  {
+    "schema_version": "diagnostic_sba_item_v1",
+    "draft_notice": "Human-review draft only. Not a production item, not a pilot bank item, and not official assessment material.",
+    "enrichment_status": "defer_for_human_review",
+    "identity": {
+      "item_id": "draft_diag_sba_structured_44",
+      "item_version": "0.1.0-draft",
+      "created_by": "phase_4a3_7_27_controlled_diagnostic_sba_expansion_batch_1",
+      "generation_method": "manual_repo_local_enrichment_draft",
+      "training_item_only": true,
+      "source_question_id": "44"
+    },
+    "lineage": {
+      "source_question_id": "44",
+      "source_bank_path": "knowledge/question-bank/structured/wset3_questions.json",
+      "adapter_version": "structured_adapter_v0",
+      "enrichment_version": "phase_4a3_7_27_batch_1_v0",
+      "transformation_notes": [
+        "Preserves original structured-bank stem and options.",
+        "Adds controlled batch-1 diagnostic metadata, source support candidates, and human-review notes.",
+        "Requires human review before any broader training or production use."
+      ]
+    },
+    "curriculum": {
+      "ra_id": "RA1",
+      "topic": "wine_and_food",
+      "subtopic": "tannin_salt_fat_pairing",
+      "difficulty": "intermediate",
+      "learning_objective": "Diagnose a common food-pairing misconception about tannin perception."
+    },
+    "question": {
+      "stem": "¿Cuál de las siguientes afirmaciones sobre el maridaje es correcta?",
+      "question_type": "single_best_answer",
+      "expected_reasoning_type": "misconception_correction"
+    },
+    "options": {
+      "A": {
+        "option_id": "A",
+        "option_text": "Los taninos se suavizan con platos salados y grasos",
+        "is_correct": true,
+        "diagnostic_role": "correct",
+        "misconception_id": null,
+        "diagnostic_note": "Correctly links salty/fatty foods with softer perceived tannin."
+      },
+      "B": {
+        "option_id": "B",
+        "option_text": "Los alimentos dulces suavizan los taninos",
+        "is_correct": false,
+        "diagnostic_role": "misconception",
+        "misconception_id": null,
+        "diagnostic_note": "Tests the common error that sweetness solves tannin structure."
+      },
+      "C": {
+        "option_id": "C",
+        "option_text": "Los platos picantes reducen la acidez del vino",
+        "is_correct": false,
+        "diagnostic_role": "sat_confusion",
+        "misconception_id": null,
+        "diagnostic_note": "Confuses spice interaction with acidity reduction."
+      },
+      "D": {
+        "option_id": "D",
+        "option_text": "Los platos amargos aumentan la percepción del dulzor",
+        "is_correct": false,
+        "diagnostic_role": "misconception",
+        "misconception_id": null,
+        "diagnostic_note": "Confuses bitterness and sweetness effects."
+      }
+    },
+    "source_support": {
+      "source_ids": [
+        "MC_TANNIN_01",
+        "OFFICIAL_WSET_WINE_WITH_FOOD_4_2_2_001"
+      ],
+      "source_chunks": [
+        "knowledge/knowledge-map/misconceptions/mc_tannin_01.json",
+        "knowledge/official-wset/study-guide/wset_markdown/seccion_4_section_1_wine_and_the_consumer/4-2_2_wine_with_food.md"
+      ],
+      "support_rationale": "The misconception node separates tannin/astringency from bitterness, while the food-pairing source area supports how salty or fatty foods can soften perceived tannin.",
+      "source_role": "repo_local_support",
+      "status": "draft_requires_human_review"
+    },
+    "causal_chain_linkage": {
+      "causal_chain_id": null,
+      "status": "not_attached"
+    },
+    "misconception_linkage": {
+      "status": "attached",
+      "misconception_ids": [
+        "MC_TANNIN_01"
+      ],
+      "notes": "Distractors test common errors around tannin, sweetness, spice, bitterness, and acidity perception."
+    },
+    "sat_relevance": [
+      {
+        "parameter": "tannin",
+        "status": "supported",
+        "reason": "The item targets perceived tannin and food interaction."
+      }
+    ],
+    "feedback": {
+      "correct_rationale": "Salty and fatty foods can make tannins seem softer, so option A is the best diagnostic answer for this pairing relationship.",
+      "why_other_options_are_wrong": {
+        "A": "This is the correct answer.",
+        "B": "Sweet foods can make a dry wine seem harsher and do not directly soften tannin in the way tested.",
+        "C": "Spicy food does not reduce wine acidity; it can increase heat and imbalance.",
+        "D": "Bitterness does not increase perceived sweetness in this pairing relationship."
+      },
+      "remediation_recommendation": "Review tannin as a tactile sensation and then revisit food interactions with tannin, sweetness, acidity, and chilli heat.",
+      "remediation_target": {
+        "target_type": "misconception",
+        "target_id": "MC_TANNIN_01"
+      }
+    },
+    "governance": {
+      "safe_for_examiner": false,
+      "examiner_scoring_allowed": false,
+      "official_wset_question": false,
+      "training_item_only": true,
+      "uses_llm": false,
+      "uses_api": false,
+      "uses_embeddings": false,
+      "uses_vector_db": false,
+      "cloud_services_active": false
+    },
+    "attempt_analytics_placeholders": {
+      "response_time": null,
+      "confidence": null,
+      "answer_changed": null,
+      "diagnosed_error_type": null,
+      "hesitation": null,
+      "recommended_next_action": null
+    },
+    "human_review": {
+      "required": true,
+      "reasons": [
+        "Confirm the food-pairing claim remains training-only and not a universal rule.",
+        "Confirm misconception linkage is appropriate for the selected distractors."
+      ],
+      "risk_level": "medium",
+      "reviewer_notes": ""
+    }
+  },
+  {
+    "schema_version": "diagnostic_sba_item_v1",
+    "draft_notice": "Human-review draft only. Not a production item, not a pilot bank item, and not official assessment material.",
+    "enrichment_status": "defer_for_human_review",
+    "identity": {
+      "item_id": "draft_diag_sba_structured_50",
+      "item_version": "0.1.0-draft",
+      "created_by": "phase_4a3_7_27_controlled_diagnostic_sba_expansion_batch_1",
+      "generation_method": "manual_repo_local_enrichment_draft",
+      "training_item_only": true,
+      "source_question_id": "50"
+    },
+    "lineage": {
+      "source_question_id": "50",
+      "source_bank_path": "knowledge/question-bank/structured/wset3_questions.json",
+      "adapter_version": "structured_adapter_v0",
+      "enrichment_version": "phase_4a3_7_27_batch_1_v0",
+      "transformation_notes": [
+        "Preserves original structured-bank stem and options.",
+        "Adds controlled batch-1 diagnostic metadata, source support candidates, and human-review notes.",
+        "Requires human review before any broader training or production use."
+      ]
+    },
+    "curriculum": {
+      "ra_id": "RA1",
+      "topic": "storage_and_service",
+      "subtopic": "long_term_storage_conditions",
+      "difficulty": "intermediate",
+      "learning_objective": "Identify storage conditions that protect wine quality over time."
+    },
+    "question": {
+      "stem": "¿Qué medida es útil para proteger vinos de calidad durante su almacenamiento a largo plazo?",
+      "question_type": "single_best_answer",
+      "expected_reasoning_type": "diagnostic_review"
+    },
+    "options": {
+      "A": {
+        "option_id": "A",
+        "option_text": "Temperatura estable, oscuridad y humedad moderada",
+        "is_correct": true,
+        "diagnostic_role": "correct",
+        "misconception_id": null,
+        "diagnostic_note": "Correctly combines stable temperature, darkness, and moderate humidity."
+      },
+      "B": {
+        "option_id": "B",
+        "option_text": "Exposición solar diaria",
+        "is_correct": false,
+        "diagnostic_role": "unsupported_inference",
+        "misconception_id": null,
+        "diagnostic_note": "Tests the common error that sunlight is harmless or beneficial in storage."
+      },
+      "C": {
+        "option_id": "C",
+        "option_text": "Temperatura alta y constante ventilación",
+        "is_correct": false,
+        "diagnostic_role": "causal_confusion",
+        "misconception_id": null,
+        "diagnostic_note": "Confuses ventilation/heat with preservation."
+      },
+      "D": {
+        "option_id": "D",
+        "option_text": "Reposo vertical prolongado",
+        "is_correct": false,
+        "diagnostic_role": "partial_reasoning",
+        "misconception_id": null,
+        "diagnostic_note": "Vertical storage is incomplete and can be wrong for cork-finished bottles over time."
+      }
+    },
+    "source_support": {
+      "source_ids": [
+        "OFFICIAL_WSET_STORAGE_SERVICE_4_3_3_001",
+        "STRUCTURED_QBANK_50"
+      ],
+      "source_chunks": [
+        "knowledge/official-wset/study-guide/wset_markdown/seccion_4_section_1_wine_and_the_consumer/4-3_3_storage_and_service_of_wine.md",
+        "knowledge/question-bank/structured/wset3_questions.json#50"
+      ],
+      "support_rationale": "The storage/service source area supports stable temperature, darkness, and suitable humidity as protective storage conditions for wine quality.",
+      "source_role": "repo_local_support",
+      "status": "draft_requires_human_review"
+    },
+    "causal_chain_linkage": {
+      "causal_chain_id": null,
+      "status": "not_attached"
+    },
+    "misconception_linkage": {
+      "status": "none_attached",
+      "notes": "No misconception node is attached; distractors test common storage-service errors."
+    },
+    "sat_relevance": [],
+    "feedback": {
+      "correct_rationale": "Stable temperature, darkness, and moderate humidity are the best answer because they reduce premature development and storage damage risk.",
+      "why_other_options_are_wrong": {
+        "A": "This is the correct answer.",
+        "B": "Daily sun exposure can damage wine and accelerate deterioration.",
+        "C": "High temperature can cause premature development and loss of freshness.",
+        "D": "Prolonged vertical storage is not the protective long-term condition tested."
+      },
+      "remediation_recommendation": "Review storage risks: heat, light, humidity, and bottle position for cork-finished wines.",
+      "remediation_target": {
+        "target_type": "topic_review",
+        "target_id": "storage_and_service"
+      }
+    },
+    "governance": {
+      "safe_for_examiner": false,
+      "examiner_scoring_allowed": false,
+      "official_wset_question": false,
+      "training_item_only": true,
+      "uses_llm": false,
+      "uses_api": false,
+      "uses_embeddings": false,
+      "uses_vector_db": false,
+      "cloud_services_active": false
+    },
+    "attempt_analytics_placeholders": {
+      "response_time": null,
+      "confidence": null,
+      "answer_changed": null,
+      "diagnosed_error_type": null,
+      "hesitation": null,
+      "recommended_next_action": null
+    },
+    "human_review": {
+      "required": true,
+      "reasons": [
+        "Confirm the wording does not imply official service standards.",
+        "Confirm distractors remain common errors rather than trick-only options."
+      ],
+      "risk_level": "low",
+      "reviewer_notes": ""
+    }
+  },
+  {
+    "schema_version": "diagnostic_sba_item_v1",
+    "draft_notice": "Human-review draft only. Not a production item, not a pilot bank item, and not official assessment material.",
+    "enrichment_status": "defer_for_human_review",
+    "identity": {
+      "item_id": "draft_diag_sba_structured_83",
+      "item_version": "0.1.0-draft",
+      "created_by": "phase_4a3_7_27_controlled_diagnostic_sba_expansion_batch_1",
+      "generation_method": "manual_repo_local_enrichment_draft",
+      "training_item_only": true,
+      "source_question_id": "83"
+    },
+    "lineage": {
+      "source_question_id": "83",
+      "source_bank_path": "knowledge/question-bank/structured/wset3_questions.json",
+      "adapter_version": "structured_adapter_v0",
+      "enrichment_version": "phase_4a3_7_27_batch_1_v0",
+      "transformation_notes": [
+        "Preserves original structured-bank stem and options.",
+        "Adds controlled batch-1 diagnostic metadata, source support candidates, and human-review notes.",
+        "Requires human review before any broader training or production use."
+      ]
+    },
+    "curriculum": {
+      "ra_id": "RA1",
+      "topic": "quality_factors",
+      "subtopic": "ageability_structure_balance",
+      "difficulty": "intermediate",
+      "learning_objective": "Identify the structural combination that supports extended wine life in training diagnostics."
+    },
+    "question": {
+      "stem": "¿Qué combinación de factores maximiza la vida útil de un vino para guarda prolongada?",
+      "question_type": "single_best_answer",
+      "expected_reasoning_type": "cause_effect"
+    },
+    "options": {
+      "A": {
+        "option_id": "A",
+        "option_text": "Bajo alcohol, baja acidez, mucho dulzor",
+        "is_correct": false,
+        "diagnostic_role": "partial_reasoning",
+        "misconception_id": null,
+        "diagnostic_note": "Includes sweetness but misses the structural backbone and wrongly includes low acidity."
+      },
+      "B": {
+        "option_id": "B",
+        "option_text": "Alta acidez, taninos firmes y buen equilibrio",
+        "is_correct": true,
+        "diagnostic_role": "correct",
+        "misconception_id": null,
+        "diagnostic_note": "Correctly combines acidity, tannin, and balance."
+      },
+      "C": {
+        "option_id": "C",
+        "option_text": "Fermentación en frío y filtrado",
+        "is_correct": false,
+        "diagnostic_role": "process_confusion",
+        "misconception_id": null,
+        "diagnostic_note": "Confuses production operations with ageability structure."
+      },
+      "D": {
+        "option_id": "D",
+        "option_text": "Cosecha temprana y maceración mínima",
+        "is_correct": false,
+        "diagnostic_role": "causal_confusion",
+        "misconception_id": null,
+        "diagnostic_note": "Early harvest and minimal maceration do not provide the structural basis tested."
+      }
+    },
+    "source_support": {
+      "source_ids": [
+        "CC_TANNIN_AGEABILITY",
+        "CC_ACIDITY_AGEABILITY"
+      ],
+      "source_chunks": [
+        "knowledge/knowledge-map/causal-chains/cc_tannin_ageability.json",
+        "knowledge/knowledge-map/causal-chains/cc_acidity_ageability.json"
+      ],
+      "support_rationale": "The causal-chain support links tannin and acidity to ageability and emphasizes balance as the condition that makes structure protective rather than merely harsh.",
+      "source_role": "repo_local_support",
+      "status": "draft_requires_human_review"
+    },
+    "causal_chain_linkage": {
+      "causal_chain_id": "CC_TANNIN_AGEABILITY",
+      "status": "draft_supported_by_expected_causal_links"
+    },
+    "misconception_linkage": {
+      "status": "attached",
+      "misconception_ids": [
+        "MC_AGEING_IMPROVEMENT_01"
+      ],
+      "notes": "The item checks the error that any wine improves with age by focusing on structural preconditions."
+    },
+    "sat_relevance": [
+      {
+        "parameter": "quality_assessment",
+        "status": "supported",
+        "reason": "The item diagnoses structure/balance reasoning used in quality and ageing assessment."
+      }
+    ],
+    "feedback": {
+      "correct_rationale": "High acidity, firm tannins, and good balance are the best answer because acidity and tannin can protect and structure a wine during ageing when integrated in balance.",
+      "why_other_options_are_wrong": {
+        "A": "Low acidity weakens the preservation logic, and sweetness alone is not the structural combination tested.",
+        "B": "This is the correct answer.",
+        "C": "Fermentation and filtration steps do not by themselves define long ageing capacity.",
+        "D": "Early harvest and minimal extraction do not describe the tested ageability structure."
+      },
+      "remediation_recommendation": "Review ageability as a causal relationship among acidity, tannin, concentration, balance, and fruit condition.",
+      "remediation_target": {
+        "target_type": "causal_chain",
+        "target_id": "CC_TANNIN_AGEABILITY"
+      }
+    },
+    "governance": {
+      "safe_for_examiner": false,
+      "examiner_scoring_allowed": false,
+      "official_wset_question": false,
+      "training_item_only": true,
+      "uses_llm": false,
+      "uses_api": false,
+      "uses_embeddings": false,
+      "uses_vector_db": false,
+      "cloud_services_active": false
+    },
+    "attempt_analytics_placeholders": {
+      "response_time": null,
+      "confidence": null,
+      "answer_changed": null,
+      "diagnosed_error_type": null,
+      "hesitation": null,
+      "recommended_next_action": null
+    },
+    "human_review": {
+      "required": true,
+      "reasons": [
+        "Confirm the item does not overstate ageability as automatic quality.",
+        "Confirm the attached ageing misconception is appropriate and bounded."
+      ],
+      "risk_level": "medium",
+      "reviewer_notes": ""
+    }
+  },
+  {
+    "schema_version": "diagnostic_sba_item_v1",
+    "draft_notice": "Human-review draft only. Not a production item, not a pilot bank item, and not official assessment material.",
+    "enrichment_status": "defer_for_human_review",
+    "identity": {
+      "item_id": "draft_diag_sba_structured_108",
+      "item_version": "0.1.0-draft",
+      "created_by": "phase_4a3_7_27_controlled_diagnostic_sba_expansion_batch_1",
+      "generation_method": "manual_repo_local_enrichment_draft",
+      "training_item_only": true,
+      "source_question_id": "108"
+    },
+    "lineage": {
+      "source_question_id": "108",
+      "source_bank_path": "knowledge/question-bank/structured/wset3_questions.json",
+      "adapter_version": "structured_adapter_v0",
+      "enrichment_version": "phase_4a3_7_27_batch_1_v0",
+      "transformation_notes": [
+        "Preserves original structured-bank stem and options.",
+        "Adds controlled batch-1 diagnostic metadata, source support candidates, and human-review notes.",
+        "Requires human review before any broader training or production use."
+      ]
+    },
+    "curriculum": {
+      "ra_id": "RA3",
+      "topic": "sparkling_wines",
+      "subtopic": "charmat_primary_aroma_retention",
+      "difficulty": "intermediate",
+      "learning_objective": "Identify why tank-method sparkling can preserve primary aroma expression."
+    },
+    "question": {
+      "stem": "¿Cuál de las siguientes es una ventaja del método Charmat?",
+      "question_type": "single_best_answer",
+      "expected_reasoning_type": "process"
+    },
+    "options": {
+      "A": {
+        "option_id": "A",
+        "option_text": "Conserva mejor los aromas primarios",
+        "is_correct": true,
+        "diagnostic_role": "correct",
+        "misconception_id": null,
+        "diagnostic_note": "Correctly identifies primary aroma retention as the tank-method advantage."
+      },
+      "B": {
+        "option_id": "B",
+        "option_text": "Mayor complejidad de lías",
+        "is_correct": false,
+        "diagnostic_role": "near_neighbor_confusion",
+        "misconception_id": null,
+        "diagnostic_note": "Confuses Charmat with traditional-method lees complexity."
+      },
+      "C": {
+        "option_id": "C",
+        "option_text": "Ideal para vinos de guarda",
+        "is_correct": false,
+        "diagnostic_role": "overgeneralization",
+        "misconception_id": null,
+        "diagnostic_note": "Overgeneralizes ageing potential as the goal of the method."
+      },
+      "D": {
+        "option_id": "D",
+        "option_text": "Produce burbujas más pequeñas",
+        "is_correct": false,
+        "diagnostic_role": "sat_confusion",
+        "misconception_id": null,
+        "diagnostic_note": "Confuses production method with bubble-size quality shorthand."
+      }
+    },
+    "source_support": {
+      "source_ids": [
+        "OFFICIAL_WSET_WINES_OF_THE_WORLD_7_1_41_SPARKLING_WINE_PRODUCTION_001",
+        "STRUCTURED_QBANK_108"
+      ],
+      "source_chunks": [
+        "knowledge/official-wset/study-guide/wset_markdown/seccion_7_section_4_sparkling_wines_of_the_world/7-1_41_sparkling_wine_production.md",
+        "knowledge/question-bank/structured/wset3_questions.json#108"
+      ],
+      "support_rationale": "The sparkling production source area supports tank-method sparkling as a process suited to fresher, fruitier primary-aroma styles compared with extended lees-aged traditional method examples.",
+      "source_role": "repo_local_support",
+      "status": "draft_requires_human_review"
+    },
+    "causal_chain_linkage": {
+      "causal_chain_id": null,
+      "status": "not_attached"
+    },
+    "misconception_linkage": {
+      "status": "none_attached",
+      "notes": "No direct misconception node is attached; distractors test method-style confusion."
+    },
+    "sat_relevance": [
+      {
+        "parameter": "aroma",
+        "status": "supported",
+        "reason": "The item targets primary aroma retention in a sparkling production method."
+      }
+    ],
+    "feedback": {
+      "correct_rationale": "Conserving primary aromas is the best answer because tank-method sparkling is typically used for fresh, fruit-led styles rather than extended lees complexity.",
+      "why_other_options_are_wrong": {
+        "A": "This is the correct answer.",
+        "B": "Greater lees complexity is associated more strongly with extended traditional-method ageing.",
+        "C": "The method is not primarily chosen for long bottle ageing.",
+        "D": "Bubble size is not the controlled advantage tested here."
+      },
+      "remediation_recommendation": "Review sparkling production methods and contrast tank-method freshness with traditional-method autolysis.",
+      "remediation_target": {
+        "target_type": "topic_review",
+        "target_id": "sparkling_production_methods"
+      }
+    },
+    "governance": {
+      "safe_for_examiner": false,
+      "examiner_scoring_allowed": false,
+      "official_wset_question": false,
+      "training_item_only": true,
+      "uses_llm": false,
+      "uses_api": false,
+      "uses_embeddings": false,
+      "uses_vector_db": false,
+      "cloud_services_active": false
+    },
+    "attempt_analytics_placeholders": {
+      "response_time": null,
+      "confidence": null,
+      "answer_changed": null,
+      "diagnosed_error_type": null,
+      "hesitation": null,
+      "recommended_next_action": null
+    },
+    "human_review": {
+      "required": true,
+      "reasons": [
+        "Confirm the method/style contrast is sufficiently bounded.",
+        "Confirm the item does not imply a quality hierarchy between methods."
+      ],
+      "risk_level": "low",
+      "reviewer_notes": ""
+    }
+  },
+  {
+    "schema_version": "diagnostic_sba_item_v1",
+    "draft_notice": "Human-review draft only. Not a production item, not a pilot bank item, and not official assessment material.",
+    "enrichment_status": "defer_for_human_review",
+    "identity": {
+      "item_id": "draft_diag_sba_structured_247",
+      "item_version": "0.1.0-draft",
+      "created_by": "phase_4a3_7_27_controlled_diagnostic_sba_expansion_batch_1",
+      "generation_method": "manual_repo_local_enrichment_draft",
+      "training_item_only": true,
+      "source_question_id": "247"
+    },
+    "lineage": {
+      "source_question_id": "247",
+      "source_bank_path": "knowledge/question-bank/structured/wset3_questions.json",
+      "adapter_version": "structured_adapter_v0",
+      "enrichment_version": "phase_4a3_7_27_batch_1_v0",
+      "transformation_notes": [
+        "Preserves original structured-bank stem and options.",
+        "Adds controlled batch-1 diagnostic metadata, source support candidates, and human-review notes.",
+        "Requires human review before any broader training or production use."
+      ]
+    },
+    "curriculum": {
+      "ra_id": "RA2",
+      "topic": "still_wines",
+      "subtopic": "mosel_cool_climate_acidity",
+      "difficulty": "intermediate",
+      "learning_objective": "Connect Mosel site and climate factors with high acidity in still Riesling styles."
+    },
+    "question": {
+      "stem": "¿Qué factor climático principal influye en la alta acidez de los vinos del Mosel?",
+      "question_type": "single_best_answer",
+      "expected_reasoning_type": "regional_comparison"
+    },
+    "options": {
+      "A": {
+        "option_id": "A",
+        "option_text": "Altas temperaturas diurnas",
+        "is_correct": false,
+        "diagnostic_role": "causal_confusion",
+        "misconception_id": null,
+        "diagnostic_note": "Reverses the cool-climate mechanism by focusing on high heat."
+      },
+      "B": {
+        "option_id": "B",
+        "option_text": "Lluvias abundantes",
+        "is_correct": false,
+        "diagnostic_role": "scope_error",
+        "misconception_id": null,
+        "diagnostic_note": "Rainfall may matter viticulturally but is not the acidity mechanism tested."
+      },
+      "C": {
+        "option_id": "C",
+        "option_text": "Pendientes empinadas y clima fresco",
+        "is_correct": true,
+        "diagnostic_role": "correct",
+        "misconception_id": null,
+        "diagnostic_note": "Correctly links steep slopes/cool climate with high acidity."
+      },
+      "D": {
+        "option_id": "D",
+        "option_text": "Niebla marina",
+        "is_correct": false,
+        "diagnostic_role": "regional_confusion",
+        "misconception_id": null,
+        "diagnostic_note": "Confuses maritime fog with the Mosel acidity mechanism."
+      }
+    },
+    "source_support": {
+      "source_ids": [
+        "CC_COOL_CLIMATE_ACIDITY",
+        "OFFICIAL_WSET_WINES_OF_THE_WORLD_6_11_22_GERMANY_001"
+      ],
+      "source_chunks": [
+        "knowledge/knowledge-map/causal-chains/cc_cool_climate_acidity.json",
+        "knowledge/official-wset/study-guide/wset_markdown/seccion_6_section_3_still_wines_of_the_world/6-11_22_germany.md"
+      ],
+      "support_rationale": "The cool-climate acidity chain explicitly includes Mosel Riesling as an example and supports the mechanism of cool conditions preserving acidity.",
+      "source_role": "repo_local_support",
+      "status": "draft_requires_human_review"
+    },
+    "causal_chain_linkage": {
+      "causal_chain_id": "CC_COOL_CLIMATE_ACIDITY",
+      "status": "draft_supported_by_expected_causal_links"
+    },
+    "misconception_linkage": {
+      "status": "attached",
+      "misconception_ids": [
+        "MC_ACIDITY_01",
+        "MC_COOL_CLIMATE_02"
+      ],
+      "notes": "Distractors test climate/acidity misconceptions and regional mechanism gaps."
+    },
+    "sat_relevance": [
+      {
+        "parameter": "acidity",
+        "status": "supported",
+        "reason": "The item diagnoses acidity reasoning in a regional still-wine context."
+      }
+    ],
+    "feedback": {
+      "correct_rationale": "Steep slopes and a cool climate are the best answer because they support ripening in a cool region while preserving acidity in Mosel wines.",
+      "why_other_options_are_wrong": {
+        "A": "High daytime temperatures do not explain the high-acidity Mosel profile.",
+        "B": "Rainfall alone does not provide the acidity mechanism tested.",
+        "C": "This is the correct answer.",
+        "D": "Marine fog is not the regional mechanism tested here."
+      },
+      "remediation_recommendation": "Review cool-climate acidity and then apply the same mechanism to Mosel and other high-acid still-wine regions.",
+      "remediation_target": {
+        "target_type": "causal_chain",
+        "target_id": "CC_COOL_CLIMATE_ACIDITY"
+      }
+    },
+    "governance": {
+      "safe_for_examiner": false,
+      "examiner_scoring_allowed": false,
+      "official_wset_question": false,
+      "training_item_only": true,
+      "uses_llm": false,
+      "uses_api": false,
+      "uses_embeddings": false,
+      "uses_vector_db": false,
+      "cloud_services_active": false
+    },
+    "attempt_analytics_placeholders": {
+      "response_time": null,
+      "confidence": null,
+      "answer_changed": null,
+      "diagnosed_error_type": null,
+      "hesitation": null,
+      "recommended_next_action": null
+    },
+    "human_review": {
+      "required": true,
+      "reasons": [
+        "Confirm regional shorthand is accurate and not over-specific.",
+        "Confirm acidity is framed diagnostically, not as automatic quality."
+      ],
+      "risk_level": "low",
+      "reviewer_notes": ""
+    }
+  },
+  {
+    "schema_version": "diagnostic_sba_item_v1",
+    "draft_notice": "Human-review draft only. Not a production item, not a pilot bank item, and not official assessment material.",
+    "enrichment_status": "defer_for_human_review",
+    "identity": {
+      "item_id": "draft_diag_sba_structured_253",
+      "item_version": "0.1.0-draft",
+      "created_by": "phase_4a3_7_27_controlled_diagnostic_sba_expansion_batch_1",
+      "generation_method": "manual_repo_local_enrichment_draft",
+      "training_item_only": true,
+      "source_question_id": "253"
+    },
+    "lineage": {
+      "source_question_id": "253",
+      "source_bank_path": "knowledge/question-bank/structured/wset3_questions.json",
+      "adapter_version": "structured_adapter_v0",
+      "enrichment_version": "phase_4a3_7_27_batch_1_v0",
+      "transformation_notes": [
+        "Preserves original structured-bank stem and options.",
+        "Adds controlled batch-1 diagnostic metadata, source support candidates, and human-review notes.",
+        "Requires human review before any broader training or production use."
+      ]
+    },
+    "curriculum": {
+      "ra_id": "RA2",
+      "topic": "still_wines",
+      "subtopic": "barolo_nebbiolo_tannin_ageing",
+      "difficulty": "intermediate",
+      "learning_objective": "Identify the structural basis of Barolo style as a regional still-wine diagnostic."
+    },
+    "question": {
+      "stem": "¿Qué combinación de factores es esencial en el estilo de Barolo DOCG?",
+      "question_type": "single_best_answer",
+      "expected_reasoning_type": "regional_comparison"
+    },
+    "options": {
+      "A": {
+        "option_id": "A",
+        "option_text": "Suelos de basalto y clima tropical",
+        "is_correct": false,
+        "diagnostic_role": "regional_confusion",
+        "misconception_id": null,
+        "diagnostic_note": "Basalt/tropical framing is a regional and climate mismatch."
+      },
+      "B": {
+        "option_id": "B",
+        "option_text": "Variedad Nebbiolo, tanino alto y crianza prolongada",
+        "is_correct": true,
+        "diagnostic_role": "correct",
+        "misconception_id": null,
+        "diagnostic_note": "Correctly identifies Nebbiolo, tannin, and prolonged ageing."
+      },
+      "C": {
+        "option_id": "C",
+        "option_text": "Uvas blancas y fermentación carbónica",
+        "is_correct": false,
+        "diagnostic_role": "process_confusion",
+        "misconception_id": null,
+        "diagnostic_note": "Confuses white grapes and carbonic maceration with Barolo structure."
+      },
+      "D": {
+        "option_id": "D",
+        "option_text": "Estilo oxidativo y bajo en acidez",
+        "is_correct": false,
+        "diagnostic_role": "causal_confusion",
+        "misconception_id": null,
+        "diagnostic_note": "Confuses oxidative/low-acid style with Barolo structural profile."
+      }
+    },
+    "source_support": {
+      "source_ids": [
+        "CC_TANNIN_AGEABILITY",
+        "OFFICIAL_WSET_WINES_OF_THE_WORLD_6_16_27_NORTHERN_ITALY_001"
+      ],
+      "source_chunks": [
+        "knowledge/knowledge-map/causal-chains/cc_tannin_ageability.json",
+        "knowledge/official-wset/study-guide/wset_markdown/seccion_6_section_3_still_wines_of_the_world/6-16_27_northern_italy.md"
+      ],
+      "support_rationale": "The tannin-ageability chain uses Barolo/Nebbiolo as an example and supports the relationship between tannin, extended ageing, and structural evolution.",
+      "source_role": "repo_local_support",
+      "status": "draft_requires_human_review"
+    },
+    "causal_chain_linkage": {
+      "causal_chain_id": "CC_TANNIN_AGEABILITY",
+      "status": "draft_supported_by_expected_causal_links"
+    },
+    "misconception_linkage": {
+      "status": "attached",
+      "misconception_ids": [
+        "MC_TANNIN_QUALITY_02",
+        "MC_AGEING_IMPROVEMENT_01"
+      ],
+      "notes": "The item diagnoses confusion between grape/region/style structure and unrelated production or climate claims."
+    },
+    "sat_relevance": [
+      {
+        "parameter": "tannin",
+        "status": "supported",
+        "reason": "The item targets high-tannin regional style recognition."
+      }
+    ],
+    "feedback": {
+      "correct_rationale": "Nebbiolo, high tannin, and prolonged ageing are the best answer because Barolo is a still red style defined by Nebbiolo structure and ageing capacity.",
+      "why_other_options_are_wrong": {
+        "A": "This is a regional and climate mismatch for Barolo.",
+        "B": "This is the correct answer.",
+        "C": "White grapes and carbonic maceration do not define Barolo.",
+        "D": "An oxidative, low-acid style does not match the supported Barolo profile."
+      },
+      "remediation_recommendation": "Review Barolo/Nebbiolo as a regional still-wine style and connect tannin structure with ageing potential.",
+      "remediation_target": {
+        "target_type": "causal_chain",
+        "target_id": "CC_TANNIN_AGEABILITY"
+      }
+    },
+    "governance": {
+      "safe_for_examiner": false,
+      "examiner_scoring_allowed": false,
+      "official_wset_question": false,
+      "training_item_only": true,
+      "uses_llm": false,
+      "uses_api": false,
+      "uses_embeddings": false,
+      "uses_vector_db": false,
+      "cloud_services_active": false
+    },
+    "attempt_analytics_placeholders": {
+      "response_time": null,
+      "confidence": null,
+      "answer_changed": null,
+      "diagnosed_error_type": null,
+      "hesitation": null,
+      "recommended_next_action": null
+    },
+    "human_review": {
+      "required": true,
+      "reasons": [
+        "Confirm no official-appellation authority is implied beyond training recognition.",
+        "Confirm distractors remain broad diagnostic contrasts."
+      ],
+      "risk_level": "low",
+      "reviewer_notes": ""
+    }
+  },
+  {
+    "schema_version": "diagnostic_sba_item_v1",
+    "draft_notice": "Human-review draft only. Not a production item, not a pilot bank item, and not official assessment material.",
+    "enrichment_status": "defer_for_human_review",
+    "identity": {
+      "item_id": "draft_diag_sba_structured_4",
+      "item_version": "0.1.0-draft",
+      "created_by": "phase_4a3_7_29_controlled_diagnostic_sba_expansion_batch_2",
+      "generation_method": "manual_repo_local_enrichment_draft",
+      "training_item_only": true,
+      "source_question_id": "4"
+    },
+    "lineage": {
+      "source_question_id": "4",
+      "source_bank_path": "knowledge/question-bank/structured/wset3_questions.json",
+      "adapter_version": "structured_adapter_v0",
+      "enrichment_version": "phase_4a3_7_29_batch_2_v0",
+      "transformation_notes": [
+        "Preserves original structured-bank stem and options.",
+        "Adds controlled batch-2 diagnostic metadata, source support candidates, and human-review notes.",
+        "Requires human review before any broader training or production use."
+      ]
+    },
+    "curriculum": {
+      "ra_id": "RA4",
+      "topic": "fortified_wines",
+      "subtopic": "sherry_solera_fractional_blending",
+      "difficulty": "foundational",
+      "learning_objective": "Identify the solera and criaderas system as the traditional ageing structure used in Sherry."
+    },
+    "question": {
+      "stem": "¿Cuál es el sistema tradicional de envejecimiento utilizado en Jerez?",
+      "question_type": "single_best_answer",
+      "expected_reasoning_type": "process"
+    },
+    "options": {
+      "A": {
+        "option_id": "A",
+        "option_text": "Barrica nueva",
+        "is_correct": false,
+        "diagnostic_role": "process_confusion",
+        "misconception_id": null,
+        "diagnostic_note": "Confuses vessel choice with the fractional blending system."
+      },
+      "B": {
+        "option_id": "B",
+        "option_text": "Botas grandes nuevas",
+        "is_correct": false,
+        "diagnostic_role": "terminology_confusion",
+        "misconception_id": null,
+        "diagnostic_note": "Uses a plausible Sherry vessel term but misses the ageing-system logic."
+      },
+      "C": {
+        "option_id": "C",
+        "option_text": "Sistema de soleras y criaderas",
+        "is_correct": true,
+        "diagnostic_role": "correct",
+        "misconception_id": null,
+        "diagnostic_note": "Correctly identifies the system that supports fractional blending and consistency."
+      },
+      "D": {
+        "option_id": "D",
+        "option_text": "Oxigenación forzada",
+        "is_correct": false,
+        "diagnostic_role": "causal_confusion",
+        "misconception_id": null,
+        "diagnostic_note": "Confuses oxidative exposure with the structured solera replenishment process."
+      }
+    },
+    "source_support": {
+      "source_ids": [
+        "CC_FRACTIONAL_BLENDING_CONSISTENCY",
+        "OFFICIAL_WSET_WINES_OF_THE_WORLD_8_1_43_SHERRY_001",
+        "STRUCTURED_QBANK_4"
+      ],
+      "source_chunks": [
+        "knowledge/knowledge-map/causal-chains/cc_fractional_blending_consistency.json",
+        "knowledge/official-wset/study-guide/wset_markdown/seccion_8_section_5_fortified_wines_of_the_world/8-1_43_sherry.md",
+        "knowledge/question-bank/structured/wset3_questions.json#4"
+      ],
+      "support_rationale": "The solera causal chain and Sherry source area support solera/criaderas as a fractional blending system used to maintain style consistency.",
+      "source_role": "repo_local_support",
+      "status": "draft_requires_human_review"
+    },
+    "causal_chain_linkage": {
+      "causal_chain_id": "CC_FRACTIONAL_BLENDING_CONSISTENCY",
+      "status": "draft_supported_by_expected_causal_links"
+    },
+    "misconception_linkage": {
+      "status": "none_attached",
+      "notes": "No direct misconception node is attached; distractors test vessel/process confusion."
+    },
+    "sat_relevance": [
+      {
+        "parameter": "style_consistency",
+        "status": "supported",
+        "reason": "The item targets the production system behind consistent Sherry style."
+      }
+    ],
+    "feedback": {
+      "correct_rationale": "The solera and criaderas system is the best answer because Sherry ageing commonly uses fractional blending across levels of different average age to maintain a consistent style.",
+      "why_other_options_are_wrong": {
+        "A": "New oak is a vessel or maturation-choice idea, not the named Sherry ageing system.",
+        "B": "Large botas can be part of Sherry production, but the question asks for the system rather than a vessel.",
+        "C": "This is the correct answer.",
+        "D": "Forced oxygenation is not the controlled solera and criaderas system tested here."
+      },
+      "remediation_recommendation": "Review the solera fractional-blending chain and connect criaderas with style consistency.",
+      "remediation_target": {
+        "target_type": "causal_chain",
+        "target_id": "CC_FRACTIONAL_BLENDING_CONSISTENCY"
+      }
+    },
+    "governance": {
+      "safe_for_examiner": false,
+      "examiner_scoring_allowed": false,
+      "official_wset_question": false,
+      "training_item_only": true,
+      "uses_llm": false,
+      "uses_api": false,
+      "uses_embeddings": false,
+      "uses_vector_db": false,
+      "cloud_services_active": false
+    },
+    "attempt_analytics_placeholders": {
+      "response_time": null,
+      "confidence": null,
+      "answer_changed": null,
+      "diagnosed_error_type": null,
+      "hesitation": null,
+      "recommended_next_action": null
+    },
+    "human_review": {
+      "required": true,
+      "reasons": [
+        "Confirm foundational item is still diagnostically useful rather than pure term recall.",
+        "Confirm the feedback links solera to consistency without overextending the stem."
+      ],
+      "risk_level": "low",
+      "reviewer_notes": ""
+    }
+  },
+  {
+    "schema_version": "diagnostic_sba_item_v1",
+    "draft_notice": "Human-review draft only. Not a production item, not a pilot bank item, and not official assessment material.",
+    "enrichment_status": "defer_for_human_review",
+    "identity": {
+      "item_id": "draft_diag_sba_structured_5",
+      "item_version": "0.1.0-draft",
+      "created_by": "phase_4a3_7_29_controlled_diagnostic_sba_expansion_batch_2",
+      "generation_method": "manual_repo_local_enrichment_draft",
+      "training_item_only": true,
+      "source_question_id": "5"
+    },
+    "lineage": {
+      "source_question_id": "5",
+      "source_bank_path": "knowledge/question-bank/structured/wset3_questions.json",
+      "adapter_version": "structured_adapter_v0",
+      "enrichment_version": "phase_4a3_7_29_batch_2_v0",
+      "transformation_notes": [
+        "Preserves original structured-bank stem and options.",
+        "Adds controlled batch-2 diagnostic metadata, source support candidates, and human-review notes.",
+        "Requires human review before any broader training or production use."
+      ]
+    },
+    "curriculum": {
+      "ra_id": "RA4",
+      "topic": "fortified_wines",
+      "subtopic": "oloroso_amontillado_ageing_contrast",
+      "difficulty": "distinction",
+      "learning_objective": "Differentiate Oloroso from Amontillado through biological and oxidative ageing logic."
+    },
+    "question": {
+      "stem": "¿Qué diferencia al Oloroso del Amontillado en términos de crianza?",
+      "question_type": "single_best_answer",
+      "expected_reasoning_type": "contrast"
+    },
+    "options": {
+      "A": {
+        "option_id": "A",
+        "option_text": "Crianza biológica bajo flor",
+        "is_correct": false,
+        "diagnostic_role": "near_neighbor_confusion",
+        "misconception_id": null,
+        "diagnostic_note": "Confuses Oloroso with biological ageing under flor."
+      },
+      "B": {
+        "option_id": "B",
+        "option_text": "Mayor uso de sulfitos",
+        "is_correct": false,
+        "diagnostic_role": "scope_error",
+        "misconception_id": null,
+        "diagnostic_note": "Introduces an unsupported preservation variable rather than the ageing-mode contrast."
+      },
+      "C": {
+        "option_id": "C",
+        "option_text": "Envejecimiento exclusivamente oxidativo",
+        "is_correct": true,
+        "diagnostic_role": "correct",
+        "misconception_id": null,
+        "diagnostic_note": "Correctly identifies the Oloroso contrast in this option set."
+      },
+      "D": {
+        "option_id": "D",
+        "option_text": "Uso exclusivo de barricas pequeñas",
+        "is_correct": false,
+        "diagnostic_role": "process_confusion",
+        "misconception_id": null,
+        "diagnostic_note": "Confuses ageing mode with a barrel-size claim."
+      }
+    },
+    "source_support": {
+      "source_ids": [
+        "CC_FLOR_BIOLOGICAL_AGEING",
+        "OFFICIAL_WSET_WINES_OF_THE_WORLD_8_1_43_SHERRY_001",
+        "STRUCTURED_QBANK_5"
+      ],
+      "source_chunks": [
+        "knowledge/knowledge-map/causal-chains/cc_flor_biological_ageing.json",
+        "knowledge/official-wset/study-guide/wset_markdown/seccion_8_section_5_fortified_wines_of_the_world/8-1_43_sherry.md",
+        "knowledge/question-bank/structured/wset3_questions.json#5"
+      ],
+      "support_rationale": "The Sherry source area distinguishes biological ageing under flor from oxidative ageing; the flor causal chain supports the contrast that option C tests for Oloroso in this set.",
+      "source_role": "repo_local_support",
+      "status": "draft_requires_human_review"
+    },
+    "causal_chain_linkage": {
+      "causal_chain_id": "CC_FLOR_BIOLOGICAL_AGEING",
+      "status": "draft_supported_by_expected_causal_links"
+    },
+    "misconception_linkage": {
+      "status": "none_attached",
+      "notes": "No direct misconception node is attached; distractors test biological/oxidative ageing confusion."
+    },
+    "sat_relevance": [
+      {
+        "parameter": "development",
+        "status": "supported",
+        "reason": "The item diagnoses oxidative versus biological ageing character in fortified wines."
+      }
+    ],
+    "feedback": {
+      "correct_rationale": "Oloroso is best identified here by oxidative ageing without the flor-driven biological ageing that defines styles such as Fino and contributes to Amontillado before later oxidative development.",
+      "why_other_options_are_wrong": {
+        "A": "Biological ageing under flor is the contrast point, not the Oloroso answer in this item.",
+        "B": "Sulphite use is not the ageing distinction tested here.",
+        "C": "This is the correct answer.",
+        "D": "Barrel size does not explain the Oloroso versus Amontillado ageing contrast."
+      },
+      "remediation_recommendation": "Review Sherry biological ageing under flor, then contrast it with oxidative ageing in Oloroso.",
+      "remediation_target": {
+        "target_type": "causal_chain",
+        "target_id": "CC_FLOR_BIOLOGICAL_AGEING"
+      }
+    },
+    "governance": {
+      "safe_for_examiner": false,
+      "examiner_scoring_allowed": false,
+      "official_wset_question": false,
+      "training_item_only": true,
+      "uses_llm": false,
+      "uses_api": false,
+      "uses_embeddings": false,
+      "uses_vector_db": false,
+      "cloud_services_active": false
+    },
+    "attempt_analytics_placeholders": {
+      "response_time": null,
+      "confidence": null,
+      "answer_changed": null,
+      "diagnosed_error_type": null,
+      "hesitation": null,
+      "recommended_next_action": null
+    },
+    "human_review": {
+      "required": true,
+      "reasons": [
+        "Confirm Oloroso wording is bounded to the option set.",
+        "Confirm the Amontillado contrast does not collapse its biological-plus-oxidative pathway."
+      ],
+      "risk_level": "medium",
+      "reviewer_notes": ""
+    }
+  },
+  {
+    "schema_version": "diagnostic_sba_item_v1",
+    "draft_notice": "Human-review draft only. Not a production item, not a pilot bank item, and not official assessment material.",
+    "enrichment_status": "defer_for_human_review",
+    "identity": {
+      "item_id": "draft_diag_sba_structured_78",
+      "item_version": "0.1.0-draft",
+      "created_by": "phase_4a3_7_29_controlled_diagnostic_sba_expansion_batch_2",
+      "generation_method": "manual_repo_local_enrichment_draft",
+      "training_item_only": true,
+      "source_question_id": "78"
+    },
+    "lineage": {
+      "source_question_id": "78",
+      "source_bank_path": "knowledge/question-bank/structured/wset3_questions.json",
+      "adapter_version": "structured_adapter_v0",
+      "enrichment_version": "phase_4a3_7_29_batch_2_v0",
+      "transformation_notes": [
+        "Preserves original structured-bank stem and options.",
+        "Adds controlled batch-2 diagnostic metadata, source support candidates, and human-review notes.",
+        "Requires human review before any broader training or production use."
+      ]
+    },
+    "curriculum": {
+      "ra_id": "RA1",
+      "topic": "storage_and_service",
+      "subtopic": "cork_horizontal_storage",
+      "difficulty": "intermediate",
+      "learning_objective": "Connect bottle orientation for cork-sealed wine with cork condition and oxidation risk."
+    },
+    "question": {
+      "stem": "¿Cuál es la mejor práctica para almacenar botellas de vino tinto con corcho natural?",
+      "question_type": "single_best_answer",
+      "expected_reasoning_type": "cause_effect"
+    },
+    "options": {
+      "A": {
+        "option_id": "A",
+        "option_text": "En posición vertical y a temperatura ambiente",
+        "is_correct": false,
+        "diagnostic_role": "storage_confusion",
+        "misconception_id": null,
+        "diagnostic_note": "Misses both side storage for cork contact and cool stable conditions."
+      },
+      "B": {
+        "option_id": "B",
+        "option_text": "En posición horizontal y en ambiente fresco y oscuro",
+        "is_correct": true,
+        "diagnostic_role": "correct",
+        "misconception_id": null,
+        "diagnostic_note": "Correctly links cork contact and protective storage conditions."
+      },
+      "C": {
+        "option_id": "C",
+        "option_text": "En posición inclinada y refrigerado",
+        "is_correct": false,
+        "diagnostic_role": "partial_reasoning",
+        "misconception_id": null,
+        "diagnostic_note": "Includes cooling but does not state the supported side-storage and stable-cellar logic."
+      },
+      "D": {
+        "option_id": "D",
+        "option_text": "Con la cápsula retirada y bajo luz tenue",
+        "is_correct": false,
+        "diagnostic_role": "irrelevant_action",
+        "misconception_id": null,
+        "diagnostic_note": "Focuses on an irrelevant action and ignores cork moisture and oxidation risk."
+      }
+    },
+    "source_support": {
+      "source_ids": [
+        "OFFICIAL_WSET_WINE_CONSUMER_4_3_3_STORAGE_AND_SERVICE_001",
+        "STRUCTURED_QBANK_78"
+      ],
+      "source_chunks": [
+        "knowledge/official-wset/study-guide/wset_markdown/seccion_4_section_1_wine_and_the_consumer/4-3_3_storage_and_service_of_wine.md",
+        "knowledge/question-bank/structured/wset3_questions.json#78"
+      ],
+      "support_rationale": "The storage/service source states that cork-sealed wine should be stored on its side so the cork remains in contact with wine and does not dry out, and that storage should avoid heat and strong light.",
+      "source_role": "repo_local_support",
+      "status": "draft_requires_human_review"
+    },
+    "causal_chain_linkage": {
+      "causal_chain_id": null,
+      "status": "not_attached"
+    },
+    "misconception_linkage": {
+      "status": "none_attached",
+      "notes": "No direct misconception node is attached; distractors test storage-practice errors."
+    },
+    "sat_relevance": [],
+    "feedback": {
+      "correct_rationale": "Horizontal storage in a cool, dark environment is the best answer for cork-sealed bottles because the cork stays in contact with the wine and is less likely to dry out and admit air.",
+      "why_other_options_are_wrong": {
+        "A": "Vertical storage can let a natural cork dry out over time, and room temperature may be less stable.",
+        "B": "This is the correct answer.",
+        "C": "Refrigeration and an inclined position are not the supported long-term storage rule for natural cork.",
+        "D": "Removing the capsule and using low light does not address cork moisture or stable storage."
+      },
+      "remediation_recommendation": "Review storage conditions for cork-sealed bottles and connect cork drying with air ingress and oxidation.",
+      "remediation_target": {
+        "target_type": "topic_review",
+        "target_id": "storage_and_service_cork_storage"
+      }
+    },
+    "governance": {
+      "safe_for_examiner": false,
+      "examiner_scoring_allowed": false,
+      "official_wset_question": false,
+      "training_item_only": true,
+      "uses_llm": false,
+      "uses_api": false,
+      "uses_embeddings": false,
+      "uses_vector_db": false,
+      "cloud_services_active": false
+    },
+    "attempt_analytics_placeholders": {
+      "response_time": null,
+      "confidence": null,
+      "answer_changed": null,
+      "diagnosed_error_type": null,
+      "hesitation": null,
+      "recommended_next_action": null
+    },
+    "human_review": {
+      "required": true,
+      "reasons": [
+        "Confirm wording is limited to natural cork closures.",
+        "Confirm the item adds signal beyond existing long-term storage coverage."
+      ],
+      "risk_level": "low",
+      "reviewer_notes": ""
+    }
+  },
+  {
+    "schema_version": "diagnostic_sba_item_v1",
+    "draft_notice": "Human-review draft only. Not a production item, not a pilot bank item, and not official assessment material.",
+    "enrichment_status": "defer_for_human_review",
+    "identity": {
+      "item_id": "draft_diag_sba_structured_87",
+      "item_version": "0.1.0-draft",
+      "created_by": "phase_4a3_7_29_controlled_diagnostic_sba_expansion_batch_2",
+      "generation_method": "manual_repo_local_enrichment_draft",
+      "training_item_only": true,
+      "source_question_id": "87"
+    },
+    "lineage": {
+      "source_question_id": "87",
+      "source_bank_path": "knowledge/question-bank/structured/wset3_questions.json",
+      "adapter_version": "structured_adapter_v0",
+      "enrichment_version": "phase_4a3_7_29_batch_2_v0",
+      "transformation_notes": [
+        "Preserves original structured-bank stem and options.",
+        "Adds controlled batch-2 diagnostic metadata, source support candidates, and human-review notes.",
+        "Requires human review before any broader training or production use."
+      ]
+    },
+    "curriculum": {
+      "ra_id": "RA1",
+      "topic": "storage_and_service",
+      "subtopic": "old_wine_decanting_sediment",
+      "difficulty": "intermediate",
+      "learning_objective": "Identify careful decanting as a service response to sediment in older wines."
+    },
+    "question": {
+      "stem": "¿Qué práctica es adecuada para decantar un vino viejo?",
+      "question_type": "single_best_answer",
+      "expected_reasoning_type": "process"
+    },
+    "options": {
+      "A": {
+        "option_id": "A",
+        "option_text": "Agitar el vino antes de verter",
+        "is_correct": false,
+        "diagnostic_role": "process_confusion",
+        "misconception_id": null,
+        "diagnostic_note": "Would disturb sediment rather than separate it."
+      },
+      "B": {
+        "option_id": "B",
+        "option_text": "Verter rápidamente para mezclar",
+        "is_correct": false,
+        "diagnostic_role": "process_confusion",
+        "misconception_id": null,
+        "diagnostic_note": "Confuses decanting with mixing and increases sediment disturbance."
+      },
+      "C": {
+        "option_id": "C",
+        "option_text": "Verter lentamente para evitar sedimentos",
+        "is_correct": true,
+        "diagnostic_role": "correct",
+        "misconception_id": null,
+        "diagnostic_note": "Correctly targets careful separation of deposit."
+      },
+      "D": {
+        "option_id": "D",
+        "option_text": "Servir directamente desde la botella",
+        "is_correct": false,
+        "diagnostic_role": "omission_error",
+        "misconception_id": null,
+        "diagnostic_note": "Omits decanting where sediment separation is the service goal."
+      }
+    },
+    "source_support": {
+      "source_ids": [
+        "CC_BOTTLE_AGEING_SEDIMENT",
+        "OFFICIAL_WSET_WINE_CONSUMER_4_3_3_STORAGE_AND_SERVICE_001",
+        "STRUCTURED_QBANK_87"
+      ],
+      "source_chunks": [
+        "knowledge/knowledge-map/causal-chains/cc_bottle_ageing_sediment.json",
+        "knowledge/official-wset/study-guide/wset_markdown/seccion_4_section_1_wine_and_the_consumer/4-3_3_storage_and_service_of_wine.md",
+        "knowledge/question-bank/structured/wset3_questions.json#87"
+      ],
+      "support_rationale": "The storage/service source states that wines with heavy deposit need decanting and describes careful pouring; the sediment causal chain supports why older structured reds can form deposit.",
+      "source_role": "repo_local_support",
+      "status": "draft_requires_human_review"
+    },
+    "causal_chain_linkage": {
+      "causal_chain_id": "CC_BOTTLE_AGEING_SEDIMENT",
+      "status": "draft_supported_by_expected_causal_links"
+    },
+    "misconception_linkage": {
+      "status": "attached",
+      "misconception_ids": [
+        "MC_AGEING_IMPROVEMENT_01"
+      ],
+      "notes": "Attached only as adjacent context: the item concerns sediment management, not automatic quality improvement with age."
+    },
+    "sat_relevance": [
+      {
+        "parameter": "development",
+        "status": "supported",
+        "reason": "Sediment and decanting connect to bottle development and tertiary-age service handling."
+      }
+    ],
+    "feedback": {
+      "correct_rationale": "Pouring slowly is the best answer because decanting an older wine with deposit is intended to separate the clear wine from sediment without disturbing it.",
+      "why_other_options_are_wrong": {
+        "A": "Agitation would disturb the sediment.",
+        "B": "Fast pouring and mixing work against sediment separation.",
+        "C": "This is the correct answer.",
+        "D": "Serving directly may carry sediment into the glass when decanting is needed."
+      },
+      "remediation_recommendation": "Review decanting for sediment and connect bottle ageing with deposit formation.",
+      "remediation_target": {
+        "target_type": "causal_chain",
+        "target_id": "CC_BOTTLE_AGEING_SEDIMENT"
+      }
+    },
+    "governance": {
+      "safe_for_examiner": false,
+      "examiner_scoring_allowed": false,
+      "official_wset_question": false,
+      "training_item_only": true,
+      "uses_llm": false,
+      "uses_api": false,
+      "uses_embeddings": false,
+      "uses_vector_db": false,
+      "cloud_services_active": false
+    },
+    "attempt_analytics_placeholders": {
+      "response_time": null,
+      "confidence": null,
+      "answer_changed": null,
+      "diagnosed_error_type": null,
+      "hesitation": null,
+      "recommended_next_action": null
+    },
+    "human_review": {
+      "required": true,
+      "reasons": [
+        "Confirm feedback distinguishes sediment removal from broad aeration claims.",
+        "Confirm ageing misconception linkage remains bounded and optional."
+      ],
+      "risk_level": "low",
+      "reviewer_notes": ""
+    }
+  },
+  {
+    "schema_version": "diagnostic_sba_item_v1",
+    "draft_notice": "Human-review draft only. Not a production item, not a pilot bank item, and not official assessment material.",
+    "enrichment_status": "defer_for_human_review",
+    "identity": {
+      "item_id": "draft_diag_sba_structured_386",
+      "item_version": "0.1.0-draft",
+      "created_by": "phase_4a3_7_29_controlled_diagnostic_sba_expansion_batch_2",
+      "generation_method": "manual_repo_local_enrichment_draft",
+      "training_item_only": true,
+      "source_question_id": "386"
+    },
+    "lineage": {
+      "source_question_id": "386",
+      "source_bank_path": "knowledge/question-bank/structured/wset3_questions.json",
+      "adapter_version": "structured_adapter_v0",
+      "enrichment_version": "phase_4a3_7_29_batch_2_v0",
+      "transformation_notes": [
+        "Preserves original structured-bank stem and options.",
+        "Adds controlled batch-2 diagnostic metadata, source support candidates, and human-review notes.",
+        "Requires human review before any broader training or production use."
+      ]
+    },
+    "curriculum": {
+      "ra_id": "RA2",
+      "topic": "still_wines",
+      "subtopic": "mosel_pfalz_riesling_comparison",
+      "difficulty": "intermediate",
+      "learning_objective": "Compare Mosel and Pfalz Riesling through sweetness, alcohol, body, and climate cues."
+    },
+    "question": {
+      "stem": "¿Qué distingue al Riesling del Mosel frente al del Pfalz?",
+      "question_type": "single_best_answer",
+      "expected_reasoning_type": "regional_comparison"
+    },
+    "options": {
+      "A": {
+        "option_id": "A",
+        "option_text": "Más cuerpo y menor acidez",
+        "is_correct": false,
+        "diagnostic_role": "regional_reversal",
+        "misconception_id": null,
+        "diagnostic_note": "Reverses the lighter, high-acid Mosel profile tested here."
+      },
+      "B": {
+        "option_id": "B",
+        "option_text": "Menor intensidad aromática",
+        "is_correct": false,
+        "diagnostic_role": "unsupported_comparison",
+        "misconception_id": null,
+        "diagnostic_note": "Introduces an unsupported comparison not central to Mosel/Pfalz contrast."
+      },
+      "C": {
+        "option_id": "C",
+        "option_text": "Mayor dulzor residual y menor alcohol",
+        "is_correct": true,
+        "diagnostic_role": "correct",
+        "misconception_id": null,
+        "diagnostic_note": "Correctly targets residual sugar and lower alcohol as the Mosel contrast in this item."
+      },
+      "D": {
+        "option_id": "D",
+        "option_text": "Menor acidez y mayor cuerpo",
+        "is_correct": false,
+        "diagnostic_role": "regional_reversal",
+        "misconception_id": null,
+        "diagnostic_note": "Confuses the warmer fuller-bodied Pfalz direction with Mosel."
+      }
+    },
+    "source_support": {
+      "source_ids": [
+        "CC_COOL_CLIMATE_ALCOHOL",
+        "CC_COOL_CLIMATE_ACIDITY",
+        "OFFICIAL_WSET_WINES_OF_THE_WORLD_6_11_22_GERMANY_001",
+        "STRUCTURED_QBANK_386"
+      ],
+      "source_chunks": [
+        "knowledge/knowledge-map/causal-chains/cc_cool_climate_alcohol.json",
+        "knowledge/knowledge-map/causal-chains/cc_cool_climate_acidity.json",
+        "knowledge/official-wset/study-guide/wset_markdown/seccion_6_section_3_still_wines_of_the_world/6-11_22_germany.md",
+        "knowledge/question-bank/structured/wset3_questions.json#386"
+      ],
+      "support_rationale": "The Germany source area supports regional Riesling variation, residual sugar in Prädikatswein styles, lower alcohol in sweet styles, and Pfalz as warmer/fuller-bodied relative to cooler high-acid regions; cool-climate chains support the underlying sugar/alcohol and acidity mechanism.",
+      "source_role": "repo_local_support",
+      "status": "draft_requires_human_review"
+    },
+    "causal_chain_linkage": {
+      "causal_chain_id": "CC_COOL_CLIMATE_ALCOHOL",
+      "status": "draft_supported_by_expected_causal_links"
+    },
+    "misconception_linkage": {
+      "status": "attached",
+      "misconception_ids": [
+        "MC_COOL_CLIMATE_01",
+        "MC_ACIDITY_01"
+      ],
+      "notes": "The item diagnoses cool-climate alcohol/acidity reasoning in a bounded Germany comparison."
+    },
+    "sat_relevance": [
+      {
+        "parameter": "sweetness",
+        "status": "supported",
+        "reason": "The item targets residual sweetness in regional Riesling comparison."
+      },
+      {
+        "parameter": "alcohol",
+        "status": "supported",
+        "reason": "The item contrasts lower alcohol in sweet Mosel-type examples with fuller-bodied warmer-region examples."
+      }
+    ],
+    "feedback": {
+      "correct_rationale": "Greater residual sweetness with lower alcohol is the best answer in this option set because Mosel Riesling commonly sits in a cooler, high-acid context where sweet styles may retain sugar and lower alcohol, while Pfalz examples are often fuller and drier.",
+      "why_other_options_are_wrong": {
+        "A": "More body and lower acidity point away from the supported Mosel contrast.",
+        "B": "Lower aromatic intensity is not the supported diagnostic contrast here.",
+        "C": "This is the correct answer.",
+        "D": "Lower acidity and greater body reverse the Mosel comparison tested in this item."
+      },
+      "remediation_recommendation": "Review Germany regional Riesling differences and connect cool climate with acidity, residual sugar balance, and alcohol level.",
+      "remediation_target": {
+        "target_type": "causal_chain",
+        "target_id": "CC_COOL_CLIMATE_ALCOHOL"
+      }
+    },
+    "governance": {
+      "safe_for_examiner": false,
+      "examiner_scoring_allowed": false,
+      "official_wset_question": false,
+      "training_item_only": true,
+      "uses_llm": false,
+      "uses_api": false,
+      "uses_embeddings": false,
+      "uses_vector_db": false,
+      "cloud_services_active": false
+    },
+    "attempt_analytics_placeholders": {
+      "response_time": null,
+      "confidence": null,
+      "answer_changed": null,
+      "diagnosed_error_type": null,
+      "hesitation": null,
+      "recommended_next_action": null
+    },
+    "human_review": {
+      "required": true,
+      "reasons": [
+        "Confirm the comparison remains bounded and does not imply every Mosel or Pfalz Riesling follows one style.",
+        "Confirm source support is adequate despite OCR noise in the Germany extraction."
+      ],
+      "risk_level": "medium",
+      "reviewer_notes": ""
+    }
+  },
+  {
+    "schema_version": "diagnostic_sba_item_v1",
+    "draft_notice": "Human-review draft only. Not a production item, not a pilot bank item, and not official assessment material.",
+    "enrichment_status": "defer_for_human_review",
+    "identity": {
+      "item_id": "draft_diag_sba_structured_510",
+      "item_version": "0.1.0-draft",
+      "created_by": "phase_4a3_7_29_controlled_diagnostic_sba_expansion_batch_2",
+      "generation_method": "manual_repo_local_enrichment_draft",
+      "training_item_only": true,
+      "source_question_id": "510"
+    },
+    "lineage": {
+      "source_question_id": "510",
+      "source_bank_path": "knowledge/question-bank/structured/wset3_questions.json",
+      "adapter_version": "structured_adapter_v0",
+      "enrichment_version": "phase_4a3_7_29_batch_2_v0",
+      "transformation_notes": [
+        "Preserves original structured-bank stem and options.",
+        "Adds controlled batch-2 diagnostic metadata, source support candidates, and human-review notes.",
+        "Requires human review before any broader training or production use."
+      ]
+    },
+    "curriculum": {
+      "ra_id": "RA1",
+      "topic": "viticulture",
+      "subtopic": "noble_rot_humid_morning_mist",
+      "difficulty": "intermediate",
+      "learning_objective": "Identify the climatic pattern that favours noble rot rather than generic rot pressure."
+    },
+    "question": {
+      "stem": "¿Qué tipo de clima es más propenso a desarrollar podredumbre noble?",
+      "question_type": "single_best_answer",
+      "expected_reasoning_type": "cause_effect"
+    },
+    "options": {
+      "A": {
+        "option_id": "A",
+        "option_text": "Clima árido",
+        "is_correct": false,
+        "diagnostic_role": "condition_confusion",
+        "misconception_id": null,
+        "diagnostic_note": "Misses the moisture needed for botrytis infection."
+      },
+      "B": {
+        "option_id": "B",
+        "option_text": "Clima mediterráneo",
+        "is_correct": false,
+        "diagnostic_role": "overgeneralization",
+        "misconception_id": null,
+        "diagnostic_note": "Uses broad climate type rather than the alternating humidity/drying pattern."
+      },
+      "C": {
+        "option_id": "C",
+        "option_text": "Clima continental fresco",
+        "is_correct": false,
+        "diagnostic_role": "partial_reasoning",
+        "misconception_id": null,
+        "diagnostic_note": "May be regionally adjacent but does not state the humidity and morning-mist condition."
+      },
+      "D": {
+        "option_id": "D",
+        "option_text": "Clima húmedo con nieblas matinales",
+        "is_correct": true,
+        "diagnostic_role": "correct",
+        "misconception_id": "MC_BOTRYTIS_01",
+        "diagnostic_note": "Correctly identifies the humid morning condition associated with noble rot development."
+      }
+    },
+    "source_support": {
+      "source_ids": [
+        "CC_NOBLE_ROT_SUGAR_CONCENTRATION",
+        "MC_BOTRYTIS_01",
+        "OFFICIAL_WSET_OF_W_5_2_5_THE_GROWING_ENVIRONMENT_001",
+        "STRUCTURED_QBANK_510"
+      ],
+      "source_chunks": [
+        "knowledge/knowledge-map/causal-chains/cc_noble_rot_concentration.json",
+        "knowledge/knowledge-map/misconceptions/mc_botrytis_01.json",
+        "knowledge/official-wset/study-guide/wset_markdown/seccion_5_section_2_factors_affecting_the_style_quality_and_price_of_w/5-2_5_the_growing_environment.md",
+        "knowledge/question-bank/structured/wset3_questions.json#510"
+      ],
+      "support_rationale": "The noble-rot causal chain states that Botrytis cinerea develops as noble rot under alternating morning mist and dry sunny afternoons; the botrytis misconception node distinguishes noble rot from grey rot.",
+      "source_role": "repo_local_support",
+      "status": "draft_requires_human_review"
+    },
+    "causal_chain_linkage": {
+      "causal_chain_id": "CC_NOBLE_ROT_SUGAR_CONCENTRATION",
+      "status": "draft_supported_by_expected_causal_links"
+    },
+    "misconception_linkage": {
+      "status": "attached",
+      "misconception_ids": [
+        "MC_BOTRYTIS_01"
+      ],
+      "notes": "The item targets the common error that botrytis effects do not depend on specific climatic conditions."
+    },
+    "sat_relevance": [
+      {
+        "parameter": "sweetness",
+        "status": "supported",
+        "reason": "Noble rot links vineyard conditions with concentrated sweet-wine styles."
+      }
+    ],
+    "feedback": {
+      "correct_rationale": "A humid climate with morning mist is the best answer in this option set because noble rot needs moisture for infection, followed by drying conditions that allow concentration rather than destructive grey rot.",
+      "why_other_options_are_wrong": {
+        "A": "An arid climate lacks the moisture needed for botrytis infection.",
+        "B": "Mediterranean climate is too broad and does not identify the mist/drying pattern.",
+        "C": "Cool continental climate alone does not explain noble rot without the humidity pattern.",
+        "D": "This is the correct answer."
+      },
+      "remediation_recommendation": "Review noble rot as a conditional botrytis outcome and contrast it with grey rot under sustained wet conditions.",
+      "remediation_target": {
+        "target_type": "causal_chain",
+        "target_id": "CC_NOBLE_ROT_SUGAR_CONCENTRATION"
+      }
+    },
+    "governance": {
+      "safe_for_examiner": false,
+      "examiner_scoring_allowed": false,
+      "official_wset_question": false,
+      "training_item_only": true,
+      "uses_llm": false,
+      "uses_api": false,
+      "uses_embeddings": false,
+      "uses_vector_db": false,
+      "cloud_services_active": false
+    },
+    "attempt_analytics_placeholders": {
+      "response_time": null,
+      "confidence": null,
+      "answer_changed": null,
+      "diagnosed_error_type": null,
+      "hesitation": null,
+      "recommended_next_action": null
+    },
+    "human_review": {
+      "required": true,
+      "reasons": [
+        "Confirm this extra Batch 2 addition is justified by diagnostic value and D-answer balance.",
+        "Confirm the feedback keeps noble rot conditional and does not imply all humidity is beneficial."
+      ],
+      "risk_level": "medium",
       "reviewer_notes": ""
     }
   }

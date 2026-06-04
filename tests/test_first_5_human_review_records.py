@@ -18,7 +18,28 @@ from tools.question_generation.human_review_resolution import (
 
 DRAFTS_PATH = Path("knowledge/question-bank/diagnostic_sba/drafts/first_5_enrichment_drafts.json")
 REVIEWS_PATH = Path("knowledge/question-bank/diagnostic_sba/reviews/first_5_human_review_records.json")
-EXPECTED_SOURCE_IDS = ["1", "2", "12", "13", "17"]
+EXPECTED_SOURCE_IDS = [
+    "1",
+    "2",
+    "12",
+    "13",
+    "15",
+    "17",
+    "20",
+    "30",
+    "44",
+    "50",
+    "83",
+    "108",
+    "247",
+    "253",
+    "4",
+    "5",
+    "78",
+    "87",
+    "386",
+    "510",
+]
 FORBIDDEN_OUTPUT_PATHS = (
     Path("knowledge/question-bank/diagnostic_sba/preguntas.json"),
     Path("knowledge/question-bank/diagnostic_sba/converted"),
@@ -58,8 +79,8 @@ class FirstFiveHumanReviewRecordsTests(unittest.TestCase):
     def test_review_file_exists(self) -> None:
         self.assertTrue(REVIEWS_PATH.exists())
 
-    def test_exactly_five_review_records(self) -> None:
-        self.assertEqual(len(self.reviews), 5)
+    def test_exactly_twenty_review_records(self) -> None:
+        self.assertEqual(len(self.reviews), 20)
 
     def test_draft_ids_are_expected(self) -> None:
         ids = [record["source_question_id"] for record in self.reviews]
