@@ -13464,18 +13464,18 @@
   },
   {
     "question_id": "798",
-    "question_text": "Discute cómo el uso de prácticas sostenibles en el viñedo puede influir en el precio del vino y en su percepción comercial.",
+    "question_text": "Explique cómo prácticas sostenibles certificadas u orgánicas pueden aumentar los costes de producción y contribuir a la diferenciación comercial del vino.",
     "question_type": "short_answer",
     "expected_topics": [
       "RA1",
       "sostenibilidad",
       "precio",
       "coste de producción",
-      "percepción comercial"
+      "diferenciación comercial"
     ],
     "expected_causal_links": [
       "sostenibilidad -> coste -> precio",
-      "certificación -> diferenciación -> percepción"
+      "certificación -> diferenciación -> mercado"
     ],
     "expected_keywords": [
       "sostenibilidad",
@@ -13491,8 +13491,7 @@
       "diferenciación",
       "percepción",
       "consumidor",
-      "mercado",
-      "valor"
+      "mercado"
     ],
     "expected_reasoning_type": "cause_effect",
     "difficulty": "distinction",
@@ -13779,7 +13778,7 @@
   },
   {
     "question_id": "805",
-    "question_text": "Expón cómo la elección del tipo de roble (americano vs francés) puede afectar el perfil sensorial y la percepción de calidad en vinos tintos.",
+    "question_text": "Compare cómo la elección de roble americano o francés puede afectar los aromas, el tanino y la integración del roble en vinos tintos.",
     "question_type": "short_answer",
     "expected_topics": [
       "RA1",
@@ -13787,12 +13786,12 @@
       "roble americano",
       "roble francés",
       "perfil sensorial",
-      "calidad"
+      "integración"
     ],
     "expected_causal_links": [
       "roble americano -> vainilla -> perfil",
       "roble francés -> especias -> integración",
-      "roble nuevo -> coste -> calidad"
+      "roble nuevo -> tanino -> estructura"
     ],
     "expected_keywords": [
       "roble",
@@ -13807,9 +13806,7 @@
       "tanino",
       "integración",
       "perfil sensorial",
-      "coste",
-      "costo",
-      "calidad",
+      "estructura",
       "complejidad",
       "nuevo"
     ],
@@ -14014,19 +14011,19 @@
   },
   {
     "question_id": "810",
-    "question_text": "Evalúa las consecuencias del estrés hídrico moderado en viñedos de alta calidad y su impacto en el precio del vino.",
+    "question_text": "Analice cómo el estrés hídrico moderado puede reducir el rendimiento, concentrar las bayas e influir potencialmente en el coste y el precio del vino.",
     "question_type": "short_answer",
     "expected_topics": [
       "RA1",
       "estrés hídrico",
-      "calidad",
       "rendimiento",
+      "coste",
       "precio"
     ],
     "expected_causal_links": [
       "estrés hídrico -> baya -> concentración",
-      "rendimiento -> coste -> precio",
-      "concentración -> calidad -> valor"
+      "estrés hídrico -> rendimiento -> coste",
+      "rendimiento -> coste -> precio"
     ],
     "expected_keywords": [
       "estrés hídrico",
@@ -14040,11 +14037,8 @@
       "coste",
       "costo",
       "precio",
-      "calidad",
-      "valor",
       "maduración",
-      "azúcar",
-      "fenoles"
+      "azúcar"
     ],
     "expected_reasoning_type": "cause_effect",
     "difficulty": "distinction",
@@ -14106,18 +14100,18 @@
   },
   {
     "question_id": "812",
-    "question_text": "Explica cómo el estrés hídrico moderado puede influir en la calidad del vino.",
+    "question_text": "Explique cómo un estrés hídrico moderado, si no es excesivo, puede influir en el vigor de la vid, el tamaño de las bayas y la concentración del vino.",
     "question_type": "short_answer",
     "expected_topics": [
       "RA1",
       "estrés hídrico",
-      "calidad",
+      "vigor",
       "concentración",
       "maduración"
     ],
     "expected_causal_links": [
       "estrés hídrico -> vigor -> concentración",
-      "estrés hídrico -> baya -> calidad"
+      "estrés hídrico -> baya -> concentración"
     ],
     "expected_keywords": [
       "estrés hídrico",
@@ -14130,9 +14124,7 @@
       "concentración",
       "maduración",
       "rendimiento",
-      "calidad",
-      "azúcar",
-      "fenoles"
+      "azúcar"
     ],
     "expected_reasoning_type": "cause_effect",
     "difficulty": "intermediate",

@@ -53,7 +53,7 @@
     "schema_version": "diagnostic_open_response_v1",
     "source_question_id": "798",
     "question_type": "diagnostic_open_response",
-    "stem": "Discute cómo el uso de prácticas sostenibles en el viñedo puede influir en el precio del vino y en su percepción comercial.",
+    "stem": "Explique cómo prácticas sostenibles certificadas u orgánicas pueden aumentar los costes de producción y contribuir a la diferenciación comercial del vino.",
     "RA": "RA1",
     "topic": "sostenibilidad",
     "subtopic": "precio",
@@ -73,10 +73,9 @@
       "percepción",
       "consumidor",
       "mercado",
-      "valor",
       "RA1",
       "coste de producción",
-      "percepción comercial"
+      "diferenciación comercial"
     ],
     "optional_causal_chain": "sostenibilidad -> coste -> precio",
     "corpus_support": {
@@ -98,10 +97,9 @@
         "percepción",
         "consumidor",
         "mercado",
-        "valor",
         "RA1",
         "coste de producción",
-        "percepción comercial"
+        "diferenciación comercial"
       ],
       "evidence_chunks": [
         {
@@ -894,7 +892,7 @@
     "schema_version": "diagnostic_open_response_v1",
     "source_question_id": "805",
     "question_type": "diagnostic_open_response",
-    "stem": "Expón cómo la elección del tipo de roble (americano vs francés) puede afectar el perfil sensorial y la percepción de calidad en vinos tintos.",
+    "stem": "Compare cómo la elección de roble americano o francés puede afectar los aromas, el tanino y la integración del roble en vinos tintos.",
     "RA": "RA1",
     "topic": "roble",
     "subtopic": "roble americano",
@@ -912,9 +910,7 @@
       "tanino",
       "integración",
       "perfil sensorial",
-      "coste",
-      "costo",
-      "calidad",
+      "estructura",
       "complejidad",
       "nuevo",
       "RA1",
@@ -939,9 +935,7 @@
         "tanino",
         "integración",
         "perfil sensorial",
-        "coste",
-        "costo",
-        "calidad",
+        "estructura",
         "complejidad",
         "nuevo",
         "RA1",
@@ -961,8 +955,6 @@
             "especias",
             "tostado",
             "tanino",
-            "coste",
-            "costo",
             "complejidad"
           ]
         },
@@ -1504,10 +1496,10 @@
     "schema_version": "diagnostic_open_response_v1",
     "source_question_id": "810",
     "question_type": "diagnostic_open_response",
-    "stem": "Evalúa las consecuencias del estrés hídrico moderado en viñedos de alta calidad y su impacto en el precio del vino.",
+    "stem": "Analice cómo el estrés hídrico moderado puede reducir el rendimiento, concentrar las bayas e influir potencialmente en el coste y el precio del vino.",
     "RA": "RA1",
     "topic": "estrés hídrico",
-    "subtopic": "calidad",
+    "subtopic": "rendimiento",
     "difficulty": "distinction",
     "expected_concepts": [
       "estrés hídrico",
@@ -1521,11 +1513,8 @@
       "coste",
       "costo",
       "precio",
-      "calidad",
-      "valor",
       "maduración",
       "azúcar",
-      "fenoles",
       "RA1"
     ],
     "optional_causal_chain": "estrés hídrico -> baya -> concentración",
@@ -1545,11 +1534,8 @@
         "coste",
         "costo",
         "precio",
-        "calidad",
-        "valor",
         "maduración",
         "azúcar",
-        "fenoles",
         "RA1"
       ],
       "evidence_chunks": [
@@ -1749,10 +1735,10 @@
     "schema_version": "diagnostic_open_response_v1",
     "source_question_id": "812",
     "question_type": "diagnostic_open_response",
-    "stem": "Explica cómo el estrés hídrico moderado puede influir en la calidad del vino.",
+    "stem": "Explique cómo un estrés hídrico moderado, si no es excesivo, puede influir en el vigor de la vid, el tamaño de las bayas y la concentración del vino.",
     "RA": "RA1",
     "topic": "estrés hídrico",
-    "subtopic": "calidad",
+    "subtopic": "vigor",
     "difficulty": "intermediate",
     "expected_concepts": [
       "estrés hídrico",
@@ -1765,9 +1751,7 @@
       "concentración",
       "maduración",
       "rendimiento",
-      "calidad",
       "azúcar",
-      "fenoles",
       "RA1"
     ],
     "optional_causal_chain": "estrés hídrico -> vigor -> concentración",
@@ -1786,9 +1770,7 @@
         "concentración",
         "maduración",
         "rendimiento",
-        "calidad",
         "azúcar",
-        "fenoles",
         "RA1"
       ],
       "evidence_chunks": [
