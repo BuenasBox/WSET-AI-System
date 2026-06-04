@@ -21,23 +21,41 @@ REVIEWS_PATH = Path("knowledge/question-bank/diagnostic_sba/reviews/first_5_huma
 FRONTEND_INDEX_PATH = Path("frontend/diagnostic-sba/index.html")
 EXPECTED_SOURCE_IDS = [
     "2",
-    "4",
-    "5",
-    "12",
-    "15",
-    "17",
-    "20",
-    "30",
-    "44",
-    "50",
-    "78",
+    "21",
     "83",
-    "87",
-    "108",
-    "247",
-    "253",
-    "386",
-    "510",
+    "105",
+    "107",
+    "206",
+    "216",
+    "228",
+    "230",
+    "232",
+    "240",
+    "258",
+    "265",
+    "268",
+    "269",
+    "270",
+    "277",
+    "287",
+    "301",
+    "308",
+    "309",
+    "325",
+    "356",
+    "395",
+    "402",
+    "421",
+    "424",
+    "438",
+    "440",
+    "441",
+    "464",
+    "493",
+    "498",
+    "515",
+    "659",
+    "834",
 ]
 FORBIDDEN_AUTHORITY_PHRASES = (
     "approved_for_production",
@@ -75,17 +93,17 @@ class StaticDemoExportFileTests(unittest.TestCase):
     def test_payload_validates(self) -> None:
         self.assertEqual(validate_static_demo_export_payload(self.payload), [])
 
-    def test_contains_exactly_eighteen_items(self) -> None:
-        self.assertEqual(len(self.payload["items"]), 18)
+    def test_contains_exactly_thirty_six_items(self) -> None:
+        self.assertEqual(len(self.payload["items"]), 36)
 
-    def test_item_ids_match_private_batch_2_baseline(self) -> None:
+    def test_item_ids_match_gold_bank_target_set(self) -> None:
         self.assertEqual([item["source_question_id"] for item in self.payload["items"]], EXPECTED_SOURCE_IDS)
 
-    def test_ids_1_and_13_absent(self) -> None:
+    def test_historical_non_gold_ids_absent(self) -> None:
         selected_ids = {item["source_question_id"] for item in self.payload["items"]}
 
-        self.assertNotIn("1", selected_ids)
-        self.assertNotIn("13", selected_ids)
+        for source_id in ("1", "4", "5", "12", "13", "15", "17", "20", "30", "44", "50", "78", "87", "108", "247", "253", "386", "510"):
+            self.assertNotIn(source_id, selected_ids)
 
     def test_items_have_no_correctness_leakage(self) -> None:
         render_text = self._render_text()
@@ -174,7 +192,7 @@ class StaticDemoExportFileTests(unittest.TestCase):
             text=True,
         )
 
-        self.assertIn("eligible_item_count: 18", result.stdout)
+        self.assertIn("eligible_item_count: 36", result.stdout)
         self.assertEqual(EXPORT_PATH.read_text(encoding="utf-8"), before)
 
     def test_cli_rejects_output_path_outside_frontend_diagnostic_sba(self) -> None:

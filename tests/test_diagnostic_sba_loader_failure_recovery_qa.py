@@ -65,11 +65,14 @@ class DiagnosticSbaLoaderFailureRecoveryQaTests(unittest.TestCase):
 
         self.assertEqual(payload["items"], "not-a-list")
 
-    def test_missing_options_scenario_has_incomplete_a_to_d_options(self) -> None:
+    def test_missing_options_scenario_has_incomplete_visual_a_to_d_options(self) -> None:
         _, _, body = build_scenario_response("missing_options", self.payload)
         payload = json.loads(body.decode("utf-8"))
 
-        self.assertEqual([option["option_id"] for option in payload["items"][0]["options"]], ["A", "B", "C"])
+        self.assertEqual(
+            [option["visual_option_id"] for option in payload["items"][0]["options"]],
+            ["A", "B", "C"],
+        )
 
     def test_missing_outcome_scenario_removes_matching_outcome(self) -> None:
         _, _, body = build_scenario_response("missing_outcome", self.payload)

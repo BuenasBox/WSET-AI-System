@@ -5,6 +5,7 @@ import json
 import unittest
 from pathlib import Path
 
+from tools.question_generation.export_static_demo_questions import DEFAULT_DRAFTS_DIR, scan_and_merge
 from tools.question_generation.static_demo_exporter import (
     SAFE_ITEM_GOVERNANCE,
     build_static_demo_export_payload,
@@ -19,40 +20,52 @@ FRONTEND_INDEX_PATH = Path("frontend/diagnostic-sba/index.html")
 FRONTEND_PREGUNTAS_PATH = Path("frontend/diagnostic-sba/preguntas.json")
 EXPECTED_SOURCE_IDS = [
     "2",
-    "4",
-    "5",
-    "12",
-    "15",
-    "17",
-    "20",
-    "30",
-    "44",
-    "50",
-    "78",
+    "21",
     "83",
-    "87",
-    "108",
-    "247",
-    "253",
-    "386",
-    "510",
+    "105",
+    "107",
+    "206",
+    "216",
+    "228",
+    "230",
+    "232",
+    "240",
+    "258",
+    "265",
+    "268",
+    "269",
+    "270",
+    "277",
+    "287",
+    "301",
+    "308",
+    "309",
+    "325",
+    "356",
+    "395",
+    "402",
+    "421",
+    "424",
+    "438",
+    "440",
+    "441",
+    "464",
+    "493",
+    "498",
+    "515",
+    "659",
+    "834",
 ]
 
 
 def load_drafts() -> list[dict]:
-    with DRAFTS_PATH.open("r", encoding="utf-8") as handle:
-        data = json.load(handle)
-    if not isinstance(data, list):
-        raise AssertionError("drafts fixture must be a list")
-    return data
+    drafts, _ = scan_and_merge(DEFAULT_DRAFTS_DIR)
+    return drafts
 
 
 def load_reviews() -> list[dict]:
-    with REVIEWS_PATH.open("r", encoding="utf-8") as handle:
-        data = json.load(handle)
-    if not isinstance(data, list):
-        raise AssertionError("reviews fixture must be a list")
-    return data
+    _, reviews = scan_and_merge(DEFAULT_DRAFTS_DIR)
+    return reviews
 
 
 class StaticDemoExportDryRunTests(unittest.TestCase):
@@ -66,21 +79,20 @@ class StaticDemoExportDryRunTests(unittest.TestCase):
         self.assertTrue(REPORT_PATH.exists())
 
     def test_dry_run_loads_drafts_and_reviews(self) -> None:
-        self.assertEqual(len(self.drafts), 20)
-        self.assertEqual(len(self.reviews), 20)
+        self.assertEqual(len(self.drafts), 54)
+        self.assertEqual(len(self.reviews), 54)
 
-    def test_dry_run_builds_payload_with_exactly_eighteen_items(self) -> None:
-        # Q1 and Q13 still require revision; the remaining private baseline is eligible.
-        self.assertEqual(len(self.payload["items"]), 18)
+    def test_dry_run_builds_payload_with_exactly_thirty_six_items(self) -> None:
+        self.assertEqual(len(self.payload["items"]), 36)
 
-    def test_eligible_ids_match_private_batch_2_baseline(self) -> None:
+    def test_eligible_ids_match_gold_bank_target_set(self) -> None:
         self.assertEqual([item["source_question_id"] for item in self.payload["items"]], EXPECTED_SOURCE_IDS)
 
-    def test_excluded_ids_are_absent(self) -> None:
+    def test_historical_non_gold_ids_are_absent(self) -> None:
         selected_ids = {item["source_question_id"] for item in self.payload["items"]}
 
-        self.assertNotIn("1", selected_ids)
-        self.assertNotIn("13", selected_ids)
+        for source_id in ("1", "4", "5", "12", "13", "15", "17", "20", "30", "44", "50", "78", "87", "108", "247", "253", "386", "510"):
+            self.assertNotIn(source_id, selected_ids)
 
     def test_payload_validates(self) -> None:
         self.assertEqual(validate_static_demo_export_payload(self.payload), [])
