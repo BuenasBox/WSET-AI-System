@@ -1,0 +1,70 @@
+name: Dashboard Daily Sync
+
+on:
+  schedule:
+    - cron: "17 10 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  refresh-and-publish:
+    runs-on: ubuntu-latest
+    if: github.repository == 'BuenasBox/WSET-AI-System'
+    env:
+      DASHBOARD_PUBLIC_REPO: BuenasBox/epistemiclab-dashboard
+    steps:
+      - name: Check out source
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 50
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Refresh dashboard state
+        run: python tools/dashboard/update_architecture_dashboard_state.py --write
+
+      - name: Validate dashboard contracts
+        run: |
+          python -m json.tool frontend/architecture-dashboard/system_state.json > /dev/null
+          python -m unittest tests.test_dashboard_state_updater tests.test_dashboard_lab_link_implementation tests.test_dashboard_lab_link_contract -v
+
+      - name: Check public repo token
+        env:
+          TOKEN: ${{ secrets.EPISTEMICLAB_DASHBOARD_TOKEN }}
+        run: |
+          if [ -z "$TOKEN" ]; then
+            echo "Missing required secret: EPISTEMICLAB_DASHBOARD_TOKEN"
+            echo "Create a fine-grained token with Contents: Read and write for BuenasBox/epistemiclab-dashboard."
+            exit 1
+          fi
+
+      - name: Publish dashboard repo
+        env:
+          TOKEN: ${{ secrets.EPISTEMICLAB_DASHBOARD_TOKEN }}
+        run: |
+          set -euo pipefail
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          workdir="$(mktemp -d)"
+          git clone "https://x-access-token:${TOKEN}@github.com/${DASHBOARD_PUBLIC_REPO}.git" "$workdir/public"
+
+          rsync -a --delete \
+            --exclude ".git/" \
+            frontend/architecture-dashboard/ "$workdir/public/"
+
+          cd "$workdir/public"
+          git status --short
+          if [ -z "$(git status --short)" ]; then
+            echo "Dashboard already up to date."
+            exit 0
+          fi
+
+          git add -A
+          git commit -m "chore: daily dashboard sync"
+          git push origin HEAD:main
