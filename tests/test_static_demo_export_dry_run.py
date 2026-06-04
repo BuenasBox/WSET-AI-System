@@ -49,16 +49,18 @@ class StaticDemoExportDryRunTests(unittest.TestCase):
         self.assertEqual(len(self.drafts), 5)
         self.assertEqual(len(self.reviews), 5)
 
-    def test_dry_run_builds_payload_with_exactly_three_items(self) -> None:
-        self.assertEqual(len(self.payload["items"]), 3)
+    def test_dry_run_builds_payload_with_exactly_four_items(self) -> None:
+        # Q1 approved in phase-4a3.7.31; Q13 still requires_revision
+        self.assertEqual(len(self.payload["items"]), 4)
 
-    def test_eligible_ids_are_2_12_17(self) -> None:
-        self.assertEqual([item["source_question_id"] for item in self.payload["items"]], ["2", "12", "17"])
+    def test_eligible_ids_are_1_2_12_17(self) -> None:
+        # Q1 approved in phase-4a3.7.31
+        self.assertEqual([item["source_question_id"] for item in self.payload["items"]], ["1", "2", "12", "17"])
 
     def test_excluded_ids_are_absent(self) -> None:
+        # Q1 is now approved; only Q13 remains excluded from first_5
         selected_ids = {item["source_question_id"] for item in self.payload["items"]}
 
-        self.assertNotIn("1", selected_ids)
         self.assertNotIn("13", selected_ids)
 
     def test_payload_validates(self) -> None:
@@ -107,7 +109,8 @@ class StaticDemoExportDryRunTests(unittest.TestCase):
         reversed_payload = build_static_demo_export_payload(list(reversed(self.drafts)), list(reversed(self.reviews)))
 
         self.assertEqual(self.payload, reversed_payload)
-        self.assertEqual(self.payload["export_metadata"]["source_question_ids"], ["2", "12", "17"])
+        # Q1 approved in phase-4a3.7.31
+        self.assertEqual(self.payload["export_metadata"]["source_question_ids"], ["1", "2", "12", "17"])
 
     def test_dry_run_does_not_modify_frontend_preguntas_json(self) -> None:
         before = FRONTEND_PREGUNTAS_PATH.read_text(encoding="utf-8") if FRONTEND_PREGUNTAS_PATH.exists() else None

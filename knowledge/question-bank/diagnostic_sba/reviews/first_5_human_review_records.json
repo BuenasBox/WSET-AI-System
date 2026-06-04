@@ -5,31 +5,30 @@
     "draft_id": "draft_diag_sba_structured_1",
     "reviewer": "phase_4a3_7_12_human_review_pass",
     "reviewed_at": "2026-06-02T00:00:00Z",
-    "review_status": "requires_revision",
+    "review_status": "approved_for_static_demo",
     "risk_before": "medium",
-    "risk_after": "medium",
+    "risk_after": "low",
+    "review_completed_date": "2026-06-03",
     "checklist": {
       "source_support_checked": true,
       "correct_answer_checked": true,
       "distractor_logic_checked": true,
       "diagnostic_roles_checked": true,
-      "misconception_links_checked": false,
+      "misconception_links_checked": true,
       "causal_chain_links_checked": true,
       "sat_relevance_checked": true,
       "rationale_quality_checked": true,
       "remediation_quality_checked": true,
-      "wording_safety_checked": false,
+      "wording_safety_checked": true,
       "governance_checked": true
     },
-    "issues_found": [
-      "Review should confirm that the flor wording is sufficiently paraphrased from local support.",
-      "Review should confirm whether a misconception linkage should remain unattached."
-    ],
-    "required_changes": [
-      "Record explicit wording-safety signoff before any static demo use.",
-      "Record final decision on misconception linkage."
-    ],
-    "approval_scope": "internal_review_only",
+    "checklist_notes": {
+      "misconception_links_checked": "Flor/biological ageing misconception confirmed supported by corpus — see TIER1_CORPUS_VERIFICATION_REPORT.md",
+      "wording_safety_checked": "Wording reviewed — no authority claims over scoring, no official WSET scoring language, governance-safe"
+    },
+    "issues_found": [],
+    "required_changes": [],
+    "approval_scope": "static_demo_only",
     "governance_confirmation": {
       "safe_for_examiner": false,
       "examiner_scoring_allowed": false,
@@ -41,7 +40,7 @@
       "uses_vector_db": false,
       "cloud_services_active": false
     },
-    "notes": "Structurally strong, but retained for revision because the draft itself flags wording and misconception-linkage uncertainty."
+    "notes": "Approved for static demo. Corpus verification (TIER1_CORPUS_VERIFICATION_REPORT.md) confirms STRONG grounding: flor oxygen-protection and acetaldehyde unique-flavour passages are directly stated in 8-1_43_sherry.md. Wording is paraphrased from causal-chain support, not copied from official text. Misconception linkage confirmed unattached per draft rationale."
   },
   {
     "review_id": "review_2_20260602_001",

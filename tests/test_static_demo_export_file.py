@@ -155,7 +155,8 @@ class StaticDemoExportFileTests(unittest.TestCase):
             text=True,
         )
 
-        self.assertIn("eligible_item_count: 3", result.stdout)
+        # exporter now scans all draft/review files (batch_2 included)
+        self.assertIn("eligible_item_count: 9", result.stdout)
         self.assertEqual(EXPORT_PATH.read_text(encoding="utf-8"), before)
 
     def test_cli_rejects_output_path_outside_frontend_diagnostic_sba(self) -> None:

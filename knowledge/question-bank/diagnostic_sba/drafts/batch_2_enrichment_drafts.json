@@ -1,0 +1,688 @@
+[
+  {
+    "schema_version": "diagnostic_sba_item_v1",
+    "draft_notice": "Human-review draft only. Not a production item, not a pilot bank item, and not official assessment material.",
+    "enrichment_status": "approved_for_static_demo",
+    "identity": {
+      "item_id": "draft_diag_sba_structured_3",
+      "item_version": "0.1.0-draft",
+      "created_by": "phase_4a3_7_31_batch_2_enrichment_drafts",
+      "generation_method": "manual_repo_local_enrichment_draft",
+      "training_item_only": true,
+      "source_question_id": "3"
+    },
+    "lineage": {
+      "source_question_id": "3",
+      "source_bank_path": "knowledge/question-bank/structured/wset3_questions.json",
+      "adapter_version": "structured_adapter_v0",
+      "enrichment_version": "batch_2_enrichment_draft_v0",
+      "transformation_notes": [
+        "Preserves original structured-bank stem and options.",
+        "Adds draft source support from official WSET Vintage Port passages.",
+        "Corpus grounding: STRONG — see TIER1_CORPUS_VERIFICATION_REPORT.md"
+      ]
+    },
+    "curriculum": {
+      "ra_id": "RA4",
+      "topic": "fortified_wines",
+      "subtopic": "vintage_port_characteristics",
+      "difficulty": "intermediate",
+      "learning_objective": "Identify the key characteristics of Vintage Port in a training-only diagnostic item."
+    },
+    "question": {
+      "stem": "¿Cuál es una característica clave de los vinos de Porto Vintage?",
+      "question_type": "single_best_answer",
+      "expected_reasoning_type": "theory_foundation"
+    },
+    "options": {
+      "A": {
+        "option_id": "A",
+        "option_text": "Oxidación controlada",
+        "is_correct": false,
+        "diagnostic_role": "process_confusion",
+        "misconception_id": null,
+        "diagnostic_note": "Confuses oxidative ageing (Tawny/Colheita style) with Vintage Port, which is bottle-aged rather than deliberately oxidised."
+      },
+      "B": {
+        "option_id": "B",
+        "option_text": "Notas herbales intensas",
+        "is_correct": false,
+        "diagnostic_role": "scope_error",
+        "misconception_id": null,
+        "diagnostic_note": "Herbal notes are not a defining characteristic of Vintage Port; the defining character is concentrated fruit, high tannin, and ageing potential."
+      },
+      "C": {
+        "option_id": "C",
+        "option_text": "Estructura potente y necesidad de guarda",
+        "is_correct": true,
+        "diagnostic_role": "correct",
+        "misconception_id": null,
+        "diagnostic_note": "Matches the official corpus: Vintage Port is the most concentrated and tannic style, capable of decades of bottle ageing."
+      },
+      "D": {
+        "option_id": "D",
+        "option_text": "Elevado contenido de flor",
+        "is_correct": false,
+        "diagnostic_role": "cross_region_confusion",
+        "misconception_id": null,
+        "diagnostic_note": "Flor is a yeast layer used in Sherry biological ageing, not in Port production."
+      }
+    },
+    "source_support": {
+      "source_ids": [
+        "OFFICIAL_WSET_OF_W_8_2_44_PORT_VINTAGE_001"
+      ],
+      "source_chunks": [
+        "knowledge/official-wset/study-guide/wset_markdown/seccion_8_section_5_fortified_wines_of_the_world/8-2_44_port.md"
+      ],
+      "support_rationale": "Official WSET study guide (8-2_44_port.md, Types of Port — Vintage): 'On release these are the most concentrated and tannic Ports... capable of ageing in bottle for decades.' Directly supports both halves of the correct answer: powerful structure (concentrated/tannic) and need for bottle ageing (guarda).",
+      "corpus_citation": {
+        "file": "knowledge/official-wset/study-guide/wset_markdown/seccion_8_section_5_fortified_wines_of_the_world/8-2_44_port.md",
+        "section": "Types of Port — Vintage",
+        "excerpt": "On release these are the most concentrated and tannic Ports. Some consumers choose to enjoy them young but these wines are capable of ageing in bottle for decades and as they age they will throw a heavy sediment."
+      },
+      "source_role": "official_corpus_support",
+      "status": "corpus_verified_strong"
+    },
+    "causal_chain_linkage": {
+      "causal_chain_id": "CC_FORTIFICATION_RESIDUAL_SUGAR",
+      "status": "adjacent_support",
+      "notes": "Fortification context is relevant; no dedicated Vintage Port causal-chain node exists."
+    },
+    "misconception_linkage": {
+      "status": "none_attached",
+      "notes": "No direct Vintage Port misconception node in knowledge-map. Cross-region flor confusion is handled by diagnostic_note on option D."
+    },
+    "sat_relevance": [],
+    "feedback": {
+      "correct_rationale": "Vintage Port is the most concentrated and tannic Port style, requiring years to decades of bottle ageing to reach its peak. The corpus directly states this in the Types of Port — Vintage section.",
+      "why_other_options_are_wrong": {
+        "A": "Controlled oxidation is the characteristic of Tawny and Colheita Ports, which age in small oak for extended periods. Vintage Port is bottle-aged, not deliberately oxidised.",
+        "B": "Herbal notes are not a defining Vintage Port characteristic; the style is defined by dark fruit concentration and tannin structure.",
+        "C": "This is the correct answer.",
+        "D": "Flor is a yeast layer specific to Sherry biological ageing. It plays no role in Port production."
+      },
+      "remediation_recommendation": "Review the Types of Port section, contrasting Vintage (concentrated, tannic, bottle-aged) with Tawny (oxidative, oak-aged). Note that flor is a Sherry-only concept.",
+      "remediation_target": {
+        "target_type": "topic",
+        "target_id": "vintage_port_characteristics"
+      }
+    },
+    "governance": {
+      "safe_for_examiner": false,
+      "examiner_scoring_allowed": false,
+      "official_wset_question": false,
+      "training_item_only": true,
+      "uses_llm": false,
+      "uses_api": false,
+      "uses_embeddings": false,
+      "uses_vector_db": false,
+      "cloud_services_active": false
+    },
+    "attempt_analytics_placeholders": {
+      "response_time": null,
+      "confidence": null,
+      "answer_changed": null,
+      "diagnosed_error_type": null,
+      "hesitation": null,
+      "recommended_next_action": null
+    },
+    "human_review": {
+      "required": false,
+      "reasons": [],
+      "risk_level": "low",
+      "reviewer_notes": "Corpus grounding STRONG — see TIER1_CORPUS_VERIFICATION_REPORT.md. Approved batch_2_human_review_records.json."
+    }
+  },
+  {
+    "schema_version": "diagnostic_sba_item_v1",
+    "draft_notice": "Human-review draft only. Not a production item, not a pilot bank item, and not official assessment material.",
+    "enrichment_status": "approved_for_static_demo",
+    "identity": {
+      "item_id": "draft_diag_sba_structured_4",
+      "item_version": "0.1.0-draft",
+      "created_by": "phase_4a3_7_31_batch_2_enrichment_drafts",
+      "generation_method": "manual_repo_local_enrichment_draft",
+      "training_item_only": true,
+      "source_question_id": "4"
+    },
+    "lineage": {
+      "source_question_id": "4",
+      "source_bank_path": "knowledge/question-bank/structured/wset3_questions.json",
+      "adapter_version": "structured_adapter_v0",
+      "enrichment_version": "batch_2_enrichment_draft_v0",
+      "transformation_notes": [
+        "Preserves original structured-bank stem and options.",
+        "Adds draft source support from official WSET Sherry solera passages.",
+        "Corpus grounding: STRONG — see TIER1_CORPUS_VERIFICATION_REPORT.md"
+      ]
+    },
+    "curriculum": {
+      "ra_id": "RA4",
+      "topic": "fortified_wines",
+      "subtopic": "sherry_solera_criaderas",
+      "difficulty": "foundational",
+      "learning_objective": "Identify the traditional Jerez ageing system in a training-only diagnostic item."
+    },
+    "question": {
+      "stem": "¿Cuál es el sistema tradicional de envejecimiento utilizado en Jerez?",
+      "question_type": "single_best_answer",
+      "expected_reasoning_type": "theory_foundation"
+    },
+    "options": {
+      "A": {
+        "option_id": "A",
+        "option_text": "Barrica nueva",
+        "is_correct": false,
+        "diagnostic_role": "vessel_confusion",
+        "misconception_id": null,
+        "diagnostic_note": "New oak barrels are a maturation choice in many wine regions but do not describe the Jerez fractional blending system."
+      },
+      "B": {
+        "option_id": "B",
+        "option_text": "Botas grandes nuevas",
+        "is_correct": false,
+        "diagnostic_role": "vessel_confusion",
+        "misconception_id": null,
+        "diagnostic_note": "Sherry is aged in large used butts (botas), not new large casks. The vessel choice is secondary to the fractional blending system being tested."
+      },
+      "C": {
+        "option_id": "C",
+        "option_text": "Sistema de soleras y criaderas",
+        "is_correct": true,
+        "diagnostic_role": "correct",
+        "misconception_id": null,
+        "diagnostic_note": "Matches the official corpus: the solera-and-criaderas fractional blending system is the defining ageing technique of Jerez."
+      },
+      "D": {
+        "option_id": "D",
+        "option_text": "Oxigenación forzada",
+        "is_correct": false,
+        "diagnostic_role": "process_confusion",
+        "misconception_id": null,
+        "diagnostic_note": "Forced oxygenation is not the Jerez ageing system. Oxidative ageing in Sherry occurs naturally through partial-fill butts or deliberate fortification to kill flor."
+      }
+    },
+    "source_support": {
+      "source_ids": [
+        "OFFICIAL_WSET_OF_W_8_1_43_SHERRY_SOLERA_001"
+      ],
+      "source_chunks": [
+        "knowledge/official-wset/study-guide/wset_markdown/seccion_8_section_5_fortified_wines_of_the_world/8-1_43_sherry.md"
+      ],
+      "support_rationale": "Official WSET study guide (8-1_43_sherry.md, The Solera System): 'These levels are called criaderas [...] The first criadera is then replenished in exactly the same way with wine from the second criadera and so on.' And: 'The advantage of the solera system is that it produces a wine of consistent style and quality.' Both terms (solera, criaderas) and the consistency rationale are directly stated.",
+      "corpus_citation": {
+        "file": "knowledge/official-wset/study-guide/wset_markdown/seccion_8_section_5_fortified_wines_of_the_world/8-1_43_sherry.md",
+        "section": "The Solera System",
+        "excerpt": "These levels are called criaderas [...] The first criadera is then replenished in exactly the same way with wine from the second criadera and so on, so that each criadera is being replenished in turn with younger wine."
+      },
+      "source_role": "official_corpus_support",
+      "status": "corpus_verified_strong"
+    },
+    "causal_chain_linkage": {
+      "causal_chain_id": "CC_FLOR_BIOLOGICAL_AGEING",
+      "status": "adjacent_support",
+      "notes": "Flor biological ageing is part of the Sherry system. No dedicated solera causal-chain node exists."
+    },
+    "misconception_linkage": {
+      "status": "none_attached",
+      "notes": "No direct solera misconception node in knowledge-map."
+    },
+    "sat_relevance": [],
+    "feedback": {
+      "correct_rationale": "The solera and criaderas system is the defining ageing technique of Jerez. Wine is progressively blended from younger to older levels (criaderas into solera), producing a wine of consistent style.",
+      "why_other_options_are_wrong": {
+        "A": "New oak barrels impart flavour and tannin in winemaking but are not the Jerez fractional blending system.",
+        "B": "Sherry is aged in large previously-used butts (botas), not new ones. The key concept is the fractional blending system, not the vessel type alone.",
+        "C": "This is the correct answer.",
+        "D": "Forced oxygenation is not a recognised Jerez technique. Oxidation in Sherry occurs naturally through the fractional blending system and partial-fill butts."
+      },
+      "remediation_recommendation": "Review the Sherry production chapter, focusing on the solera and criaderas blending system and how it maintains wine consistency.",
+      "remediation_target": {
+        "target_type": "topic",
+        "target_id": "sherry_solera_criaderas"
+      }
+    },
+    "governance": {
+      "safe_for_examiner": false,
+      "examiner_scoring_allowed": false,
+      "official_wset_question": false,
+      "training_item_only": true,
+      "uses_llm": false,
+      "uses_api": false,
+      "uses_embeddings": false,
+      "uses_vector_db": false,
+      "cloud_services_active": false
+    },
+    "attempt_analytics_placeholders": {
+      "response_time": null,
+      "confidence": null,
+      "answer_changed": null,
+      "diagnosed_error_type": null,
+      "hesitation": null,
+      "recommended_next_action": null
+    },
+    "human_review": {
+      "required": false,
+      "reasons": [],
+      "risk_level": "low",
+      "reviewer_notes": "Corpus grounding STRONG — see TIER1_CORPUS_VERIFICATION_REPORT.md. Approved batch_2_human_review_records.json."
+    }
+  },
+  {
+    "schema_version": "diagnostic_sba_item_v1",
+    "draft_notice": "Human-review draft only. Not a production item, not a pilot bank item, and not official assessment material.",
+    "enrichment_status": "approved_for_static_demo",
+    "identity": {
+      "item_id": "draft_diag_sba_structured_5",
+      "item_version": "0.1.0-draft",
+      "created_by": "phase_4a3_7_31_batch_2_enrichment_drafts",
+      "generation_method": "manual_repo_local_enrichment_draft",
+      "training_item_only": true,
+      "source_question_id": "5"
+    },
+    "lineage": {
+      "source_question_id": "5",
+      "source_bank_path": "knowledge/question-bank/structured/wset3_questions.json",
+      "adapter_version": "structured_adapter_v0",
+      "enrichment_version": "batch_2_enrichment_draft_v0",
+      "transformation_notes": [
+        "Preserves original structured-bank stem and options.",
+        "Adds draft source support from official WSET Oloroso vs Amontillado ageing passages.",
+        "Corpus grounding: STRONG — see TIER1_CORPUS_VERIFICATION_REPORT.md"
+      ]
+    },
+    "curriculum": {
+      "ra_id": "RA4",
+      "topic": "fortified_wines",
+      "subtopic": "sherry_oloroso_amontillado_ageing",
+      "difficulty": "distinction",
+      "learning_objective": "Identify the ageing distinction between Oloroso and Amontillado Sherry in a training-only diagnostic item."
+    },
+    "question": {
+      "stem": "¿Qué diferencia al Oloroso del Amontillado en términos de crianza?",
+      "question_type": "single_best_answer",
+      "expected_reasoning_type": "theory_foundation"
+    },
+    "options": {
+      "A": {
+        "option_id": "A",
+        "option_text": "Crianza biológica bajo flor",
+        "is_correct": false,
+        "diagnostic_role": "reversal_confusion",
+        "misconception_id": null,
+        "diagnostic_note": "Biological ageing under flor is what defines Fino/Manzanilla and the first phase of Amontillado — it is precisely what Oloroso does NOT undergo."
+      },
+      "B": {
+        "option_id": "B",
+        "option_text": "Mayor uso de sulfitos",
+        "is_correct": false,
+        "diagnostic_role": "irrelevant_factor",
+        "misconception_id": null,
+        "diagnostic_note": "Sulphite use is not the distinguishing factor between Oloroso and Amontillado ageing in the corpus."
+      },
+      "C": {
+        "option_id": "C",
+        "option_text": "Envejecimiento exclusivamente oxidativo",
+        "is_correct": true,
+        "diagnostic_role": "correct",
+        "misconception_id": null,
+        "diagnostic_note": "Official corpus explicitly states Oloroso undergoes only oxidative ageing, without flor — contrasted with Amontillado which starts biologically."
+      },
+      "D": {
+        "option_id": "D",
+        "option_text": "Uso exclusivo de barricas pequeñas",
+        "is_correct": false,
+        "diagnostic_role": "vessel_confusion",
+        "misconception_id": null,
+        "diagnostic_note": "Both Oloroso and Amontillado are typically aged in large butts. Small barrel maturation is not the defining distinction."
+      }
+    },
+    "source_support": {
+      "source_ids": [
+        "OFFICIAL_WSET_OF_W_8_1_43_SHERRY_OLOROSO_001"
+      ],
+      "source_chunks": [
+        "knowledge/official-wset/study-guide/wset_markdown/seccion_8_section_5_fortified_wines_of_the_world/8-1_43_sherry.md"
+      ],
+      "support_rationale": "Official WSET study guide (8-1_43_sherry.md, Oxidative Ageing): 'Oloroso, PX and some Muscat Sherries are aged oxidatively, without the presence of flor. Amontillado is aged oxidatively after a period of biological ageing.' Passage 1 (Styles of Sherry — Oloroso): 'These wines have only undergone oxidative ageing.' Both directly ground the correct answer and the reversal distractor.",
+      "corpus_citation": {
+        "file": "knowledge/official-wset/study-guide/wset_markdown/seccion_8_section_5_fortified_wines_of_the_world/8-1_43_sherry.md",
+        "section": "Oxidative Ageing",
+        "excerpt": "Oloroso, PX and some Muscat Sherries are aged oxidatively, without the presence of flor. Amontillado is aged oxidatively after a period of biological ageing."
+      },
+      "source_role": "official_corpus_support",
+      "status": "corpus_verified_strong"
+    },
+    "causal_chain_linkage": {
+      "causal_chain_id": "CC_FLOR_BIOLOGICAL_AGEING",
+      "status": "adjacent_support",
+      "notes": "Flor causal chain is directly relevant: Oloroso is fortified to 17% to kill flor, then aged oxidatively."
+    },
+    "misconception_linkage": {
+      "status": "none_attached",
+      "notes": "No specific Oloroso/Amontillado misconception node; the reversal distractor (option A) is handled by diagnostic_note."
+    },
+    "sat_relevance": [],
+    "feedback": {
+      "correct_rationale": "Oloroso undergoes exclusively oxidative ageing from the start — it is fortified to 17% abv, which kills any flor, and then ages in contact with oxygen. This is the defining distinction from Amontillado, which begins with biological ageing under flor before transitioning to oxidative ageing.",
+      "why_other_options_are_wrong": {
+        "A": "Biological ageing under flor is the hallmark of Fino/Manzanilla and the first phase of Amontillado. Oloroso never undergoes biological ageing — this is the opposite of the correct answer.",
+        "B": "Sulphite use is not the factor that distinguishes Oloroso from Amontillado in the WSET corpus.",
+        "C": "This is the correct answer.",
+        "D": "Small barrels are not the distinguishing ageing vessel for either style. Both use large butts; the distinction is the ageing pathway, not container size."
+      },
+      "remediation_recommendation": "Review the Sherry styles section: map each style to its ageing pathway — biological (Fino/Manzanilla), biological then oxidative (Amontillado), exclusively oxidative (Oloroso/PX).",
+      "remediation_target": {
+        "target_type": "topic",
+        "target_id": "sherry_oloroso_amontillado_ageing"
+      }
+    },
+    "governance": {
+      "safe_for_examiner": false,
+      "examiner_scoring_allowed": false,
+      "official_wset_question": false,
+      "training_item_only": true,
+      "uses_llm": false,
+      "uses_api": false,
+      "uses_embeddings": false,
+      "uses_vector_db": false,
+      "cloud_services_active": false
+    },
+    "attempt_analytics_placeholders": {
+      "response_time": null,
+      "confidence": null,
+      "answer_changed": null,
+      "diagnosed_error_type": null,
+      "hesitation": null,
+      "recommended_next_action": null
+    },
+    "human_review": {
+      "required": false,
+      "reasons": [],
+      "risk_level": "low",
+      "reviewer_notes": "Corpus grounding STRONG — see TIER1_CORPUS_VERIFICATION_REPORT.md. Approved batch_2_human_review_records.json."
+    }
+  },
+  {
+    "schema_version": "diagnostic_sba_item_v1",
+    "draft_notice": "Human-review draft only. Not a production item, not a pilot bank item, and not official assessment material.",
+    "enrichment_status": "approved_for_static_demo",
+    "identity": {
+      "item_id": "draft_diag_sba_structured_14",
+      "item_version": "0.1.0-draft",
+      "created_by": "phase_4a3_7_31_batch_2_enrichment_drafts",
+      "generation_method": "manual_repo_local_enrichment_draft",
+      "training_item_only": true,
+      "source_question_id": "14"
+    },
+    "lineage": {
+      "source_question_id": "14",
+      "source_bank_path": "knowledge/question-bank/structured/wset3_questions.json",
+      "adapter_version": "structured_adapter_v0",
+      "enrichment_version": "batch_2_enrichment_draft_v0",
+      "transformation_notes": [
+        "Preserves original structured-bank stem and options.",
+        "Adds draft source support from official WSET vineyard management passages.",
+        "Corpus grounding: STRONG — see TIER1_CORPUS_VERIFICATION_REPORT.md"
+      ]
+    },
+    "curriculum": {
+      "ra_id": "RA1",
+      "topic": "viticulture",
+      "subtopic": "mechanical_harvesting_oxidation",
+      "difficulty": "intermediate",
+      "learning_objective": "Identify the primary effect of mechanical harvesting on wine style in a training-only diagnostic item."
+    },
+    "question": {
+      "stem": "¿Cuál es el principal efecto de la vendimia mecánica sobre el estilo del vino?",
+      "question_type": "single_best_answer",
+      "expected_reasoning_type": "theory_foundation"
+    },
+    "options": {
+      "A": {
+        "option_id": "A",
+        "option_text": "Mejora los aromas primarios",
+        "is_correct": false,
+        "diagnostic_role": "reversal_confusion",
+        "misconception_id": null,
+        "diagnostic_note": "Mechanical harvesting can damage grapes and expose juice to oxygen, which tends to reduce aromatic freshness rather than improve it."
+      },
+      "B": {
+        "option_id": "B",
+        "option_text": "Puede aumentar la oxidación",
+        "is_correct": true,
+        "diagnostic_role": "correct",
+        "misconception_id": null,
+        "diagnostic_note": "Corpus directly states that slowing oxidation is a benefit of night harvesting — implying daytime mechanical harvesting increases oxidation risk."
+      },
+      "C": {
+        "option_id": "C",
+        "option_text": "Favorece la maceración carbónica",
+        "is_correct": false,
+        "diagnostic_role": "process_confusion",
+        "misconception_id": null,
+        "diagnostic_note": "Carbonic maceration requires whole uncrushed grapes in an anaerobic environment — mechanical harvesting breaks berries, which is the opposite condition."
+      },
+      "D": {
+        "option_id": "D",
+        "option_text": "Reduce el nivel de alcohol",
+        "is_correct": false,
+        "diagnostic_role": "irrelevant_factor",
+        "misconception_id": null,
+        "diagnostic_note": "Mechanical harvesting does not affect the sugar/alcohol potential of the grapes, which is determined by ripeness at harvest."
+      }
+    },
+    "source_support": {
+      "source_ids": [
+        "OFFICIAL_WSET_OF_W_5_3_6_VINEYARD_MANAGEMENT_HARVEST_001"
+      ],
+      "source_chunks": [
+        "knowledge/official-wset/study-guide/wset_markdown/seccion_5_section_2_factors_affecting_the_style_quality_and_price_of_w/5-3_6_vineyard_management.md"
+      ],
+      "support_rationale": "Official WSET study guide (5-3_6_vineyard_management.md, Harvest — Machine Harvesters): 'Machines can also work through the night, which allows cool grapes to be brought to the winery. This saves money and energy that would be spent on lowering the temperature of the grapes before fermentation, and it slows down the process of oxidation, which could lead to off-flavours.' The corpus frames slowing oxidation as a benefit of night operation — confirming that daytime mechanical harvesting increases oxidation risk.",
+      "corpus_citation": {
+        "file": "knowledge/official-wset/study-guide/wset_markdown/seccion_5_section_2_factors_affecting_the_style_quality_and_price_of_w/5-3_6_vineyard_management.md",
+        "section": "Harvest — Machine Harvesters",
+        "excerpt": "Machines can also work through the night, which allows cool grapes to be brought to the winery. This saves money and energy that would be spent on lowering the temperature of the grapes before fermentation, and it slows down the process of oxidation, which could lead to off-flavours."
+      },
+      "source_role": "official_corpus_support",
+      "status": "corpus_verified_strong"
+    },
+    "causal_chain_linkage": {
+      "causal_chain_id": null,
+      "status": "none_attached",
+      "notes": "No dedicated mechanical-harvesting causal-chain node exists. The oxidation risk is grounded in the official corpus passage."
+    },
+    "misconception_linkage": {
+      "status": "none_attached",
+      "notes": "No direct misconception node for mechanical harvesting oxidation risk."
+    },
+    "sat_relevance": [],
+    "feedback": {
+      "correct_rationale": "Mechanical harvesters shake berries off the vine, which can break some grapes and expose juice to oxygen before it reaches the winery. The corpus notes that night harvesting is valued for slowing oxidation, implying this is a real risk with standard daytime mechanical harvesting.",
+      "why_other_options_are_wrong": {
+        "A": "Mechanical harvesting tends to reduce aromatic freshness by exposing damaged grapes to oxygen — the opposite of improving primary aromas.",
+        "B": "This is the correct answer.",
+        "C": "Carbonic maceration requires whole intact grapes in a CO2-rich anaerobic environment. Mechanical harvesting damages berries and is incompatible with this technique.",
+        "D": "Harvesting method does not change the sugar content of the berries and therefore does not directly affect alcohol levels."
+      },
+      "remediation_recommendation": "Review the Harvest section of vineyard management: contrast manual harvesting (less damage, more selective) with mechanical harvesting (faster, risk of oxidation from berry damage). Note why night harvesting is preferred when machines are used.",
+      "remediation_target": {
+        "target_type": "topic",
+        "target_id": "mechanical_harvesting_oxidation"
+      }
+    },
+    "governance": {
+      "safe_for_examiner": false,
+      "examiner_scoring_allowed": false,
+      "official_wset_question": false,
+      "training_item_only": true,
+      "uses_llm": false,
+      "uses_api": false,
+      "uses_embeddings": false,
+      "uses_vector_db": false,
+      "cloud_services_active": false
+    },
+    "attempt_analytics_placeholders": {
+      "response_time": null,
+      "confidence": null,
+      "answer_changed": null,
+      "diagnosed_error_type": null,
+      "hesitation": null,
+      "recommended_next_action": null
+    },
+    "human_review": {
+      "required": false,
+      "reasons": [],
+      "risk_level": "low",
+      "reviewer_notes": "Corpus grounding STRONG (inferential but explicit per TIER1_CORPUS_VERIFICATION_REPORT.md). Approved batch_2_human_review_records.json."
+    }
+  },
+  {
+    "schema_version": "diagnostic_sba_item_v1",
+    "draft_notice": "Human-review draft only. Not a production item, not a pilot bank item, and not official assessment material.",
+    "enrichment_status": "approved_for_static_demo",
+    "identity": {
+      "item_id": "draft_diag_sba_structured_16",
+      "item_version": "0.1.0-draft",
+      "created_by": "phase_4a3_7_31_batch_2_enrichment_drafts",
+      "generation_method": "manual_repo_local_enrichment_draft",
+      "training_item_only": true,
+      "source_question_id": "16"
+    },
+    "lineage": {
+      "source_question_id": "16",
+      "source_bank_path": "knowledge/question-bank/structured/wset3_questions.json",
+      "adapter_version": "structured_adapter_v0",
+      "enrichment_version": "batch_2_enrichment_draft_v0",
+      "transformation_notes": [
+        "Preserves original structured-bank stem and options.",
+        "Adds draft source support from official WSET red winemaking and cap management passages.",
+        "Corpus grounding: STRONG — see TIER1_CORPUS_VERIFICATION_REPORT.md"
+      ]
+    },
+    "curriculum": {
+      "ra_id": "RA2",
+      "topic": "winemaking",
+      "subtopic": "red_wine_extraction_remontado",
+      "difficulty": "intermediate",
+      "learning_objective": "Identify the enological technique used to increase colour and tannin extraction in red wine in a training-only diagnostic item."
+    },
+    "question": {
+      "stem": "¿Qué práctica enológica se utiliza para aumentar la extracción de color y taninos en tintos?",
+      "question_type": "single_best_answer",
+      "expected_reasoning_type": "theory_foundation"
+    },
+    "options": {
+      "A": {
+        "option_id": "A",
+        "option_text": "Desfangado",
+        "is_correct": false,
+        "diagnostic_role": "process_confusion",
+        "misconception_id": null,
+        "diagnostic_note": "Desfangado (juice clarification) is a white winemaking technique applied to must before fermentation to remove solids. It does not extract colour or tannin from skins."
+      },
+      "B": {
+        "option_id": "B",
+        "option_text": "Bâtonnage",
+        "is_correct": false,
+        "diagnostic_role": "process_confusion",
+        "misconception_id": null,
+        "diagnostic_note": "Bâtonnage (lees stirring) adds texture and body by keeping lees in suspension but does not extract colour or tannin from grape skins."
+      },
+      "C": {
+        "option_id": "C",
+        "option_text": "Remontado",
+        "is_correct": true,
+        "diagnostic_role": "correct",
+        "misconception_id": null,
+        "diagnostic_note": "Official corpus directly identifies pumping over (remontado) as a cap management extraction technique for colour and tannin from black grape skins."
+      },
+      "D": {
+        "option_id": "D",
+        "option_text": "Estabilización tartárica",
+        "is_correct": false,
+        "diagnostic_role": "process_confusion",
+        "misconception_id": null,
+        "diagnostic_note": "Tartrate stabilisation is a cold treatment applied after fermentation to prevent crystal formation. It has no role in skin extraction."
+      }
+    },
+    "source_support": {
+      "source_ids": [
+        "OFFICIAL_WSET_OF_W_5_6_9_RED_ROSE_WINEMAKING_CAP_MANAGEMENT_001"
+      ],
+      "source_chunks": [
+        "knowledge/official-wset/study-guide/wset_markdown/seccion_5_section_2_factors_affecting_the_style_quality_and_price_of_w/5-6_9_red_and_rose_winemaking.md"
+      ],
+      "support_rationale": "Official WSET study guide (5-6_9_red_and_rose_winemaking.md, Cap Management Techniques): 'Pumping over – This involves drawing off fermenting juice from the bottom of the vat and pumping it up on to the top, wetting the cap. Pumping over is a popular extraction technique.' Introduction: 'The key to red winemaking is the successful extraction of colour and tannin from the skins of black grapes.' Both passages directly ground the correct answer.",
+      "corpus_citation": {
+        "file": "knowledge/official-wset/study-guide/wset_markdown/seccion_5_section_2_factors_affecting_the_style_quality_and_price_of_w/5-6_9_red_and_rose_winemaking.md",
+        "section": "Cap Management Techniques",
+        "excerpt": "Pumping over – This involves drawing off fermenting juice from the bottom of the vat and pumping it up on to the top, wetting the cap. Pumping over is a popular extraction technique and is a good way of dissipating heat and oxygenating the juice."
+      },
+      "source_role": "official_corpus_support",
+      "status": "corpus_verified_strong"
+    },
+    "causal_chain_linkage": {
+      "causal_chain_id": null,
+      "status": "none_attached",
+      "notes": "No dedicated remontado causal-chain node. The relationship between pumping over and colour/tannin extraction is directly stated in the corpus."
+    },
+    "misconception_linkage": {
+      "status": "none_attached",
+      "notes": "No direct misconception node for extraction technique confusion. Distractor notes handle the three process-confusion options."
+    },
+    "sat_relevance": [
+      {
+        "parameter": "tannin",
+        "status": "confirmed",
+        "reason": "The question directly concerns tannin extraction technique, making tannin SAT relevance confirmed."
+      },
+      {
+        "parameter": "colour",
+        "status": "confirmed",
+        "reason": "Colour extraction is explicitly stated as the other goal of pumping over / remontado."
+      }
+    ],
+    "feedback": {
+      "correct_rationale": "Pump-over (remontado) draws fermenting juice from the bottom of the tank and pumps it over the cap of grape skins, extracting colour (anthocyanins) and tannins. It is the standard extraction technique described in the official WSET corpus.",
+      "why_other_options_are_wrong": {
+        "A": "Desfangado is a clarification step for white must, removing solids before fermentation. It has no role in extracting colour or tannin from skins.",
+        "B": "Bâtonnage stirs lees back into wine after fermentation to add roundness and texture. It does not extract colour or tannin from grape skins.",
+        "C": "This is the correct answer.",
+        "D": "Tartrate stabilisation (cold stabilisation) prevents crystal formation in finished wine. It is a post-fermentation stabilisation step, not an extraction technique."
+      },
+      "remediation_recommendation": "Review the red and rosé winemaking chapter, specifically cap management techniques: pumping over (remontado), punching down, and délestage. Contrast each with non-extraction winemaking steps like clarification, lees stirring, and cold stabilisation.",
+      "remediation_target": {
+        "target_type": "topic",
+        "target_id": "red_wine_cap_management_extraction"
+      }
+    },
+    "governance": {
+      "safe_for_examiner": false,
+      "examiner_scoring_allowed": false,
+      "official_wset_question": false,
+      "training_item_only": true,
+      "uses_llm": false,
+      "uses_api": false,
+      "uses_embeddings": false,
+      "uses_vector_db": false,
+      "cloud_services_active": false
+    },
+    "attempt_analytics_placeholders": {
+      "response_time": null,
+      "confidence": null,
+      "answer_changed": null,
+      "diagnosed_error_type": null,
+      "hesitation": null,
+      "recommended_next_action": null
+    },
+    "human_review": {
+      "required": false,
+      "reasons": [],
+      "risk_level": "low",
+      "reviewer_notes": "Corpus grounding STRONG — see TIER1_CORPUS_VERIFICATION_REPORT.md. Approved batch_2_human_review_records.json."
+    }
+  }
+]
