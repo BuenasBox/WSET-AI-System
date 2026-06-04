@@ -6,12 +6,16 @@ into the architecture dashboard. All assertions are deterministic file reads.
 """
 
 import os
+import json
+import hashlib
 import unittest
 
 REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DASHBOARD_HTML = os.path.join(REPO, "frontend", "architecture-dashboard", "index.html")
 LAB_HTML       = os.path.join(REPO, "frontend", "architecture-dashboard", "diagnostic-sba", "index.html")
 LAB_JSON       = os.path.join(REPO, "frontend", "architecture-dashboard", "diagnostic-sba", "preguntas.json")
+SOURCE_LAB_HTML = os.path.join(REPO, "frontend", "diagnostic-sba", "index.html")
+SOURCE_LAB_JSON = os.path.join(REPO, "frontend", "diagnostic-sba", "preguntas.json")
 ROBOTS_TXT     = os.path.join(REPO, "frontend", "architecture-dashboard", "robots.txt")
 
 FORBIDDEN_GOVERNANCE = [
@@ -53,6 +57,10 @@ class TestDashboardLabLinkImplementation(unittest.TestCase):
     def _read(self, path):
         with open(path, encoding="utf-8", errors="replace") as f:
             return f.read()
+
+    def _sha256(self, path):
+        with open(path, "rb") as f:
+            return hashlib.sha256(f.read()).hexdigest()
 
     # ------------------------------------------------------------------
     # 1. Dashboard links to the SBA lab
@@ -164,6 +172,46 @@ class TestDashboardLabLinkImplementation(unittest.TestCase):
                     content,
                     f"Forbidden analytics reference '{tracker}' found in {os.path.basename(path)}",
                 )
+
+    # ------------------------------------------------------------------
+    # 11. Deployed lab copy stays byte-for-byte aligned with source lab
+    # ------------------------------------------------------------------
+    def test_dashboard_lab_copy_matches_source_lab(self):
+        self.assertEqual(self._sha256(SOURCE_LAB_HTML), self._sha256(LAB_HTML))
+        self.assertEqual(self._sha256(SOURCE_LAB_JSON), self._sha256(LAB_JSON))
+
+    # ------------------------------------------------------------------
+    # 12. Deployed lab uses JSON loader, not an embedded mock bank
+    # ------------------------------------------------------------------
+    def test_dashboard_lab_copy_uses_loader(self):
+        content = self._read(LAB_HTML)
+        self.assertIn("var DATA_URL = './preguntas.json';", content)
+        self.assertIn("fetch(DATA_URL)", content)
+        self.assertIn("visualOptionId", content)
+        self.assertIn("optionIdForVisual", content)
+        self.assertNotIn("const QUESTIONS", content)
+
+    # ------------------------------------------------------------------
+    # 13. Deployed payload contains the gold-bank render shape
+    # ------------------------------------------------------------------
+    def test_dashboard_lab_payload_contains_gold_bank_render_shape(self):
+        with open(LAB_JSON, encoding="utf-8") as f:
+            payload = json.load(f)
+
+        self.assertEqual(36, len(payload["items"]))
+        self.assertEqual(
+            "stable_item_id_sha256_v1",
+            payload["export_metadata"]["option_shuffle_strategy"],
+        )
+        first_options = payload["items"][0]["options"]
+        self.assertEqual(
+            ["visual_option_id", "option_id", "option_text"],
+            list(first_options[0].keys()),
+        )
+        self.assertEqual(
+            ["A", "B", "C", "D"],
+            [option["visual_option_id"] for option in first_options],
+        )
 
 
 if __name__ == "__main__":
