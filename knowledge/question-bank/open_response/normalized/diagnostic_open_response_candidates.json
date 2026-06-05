@@ -1,0 +1,2403 @@
+[
+  {
+    "schema_version": "diagnostic_open_response_v1",
+    "source_question_id": "18",
+    "question_type": "diagnostic_open_response",
+    "stem": "¿Cuál es una consecuencia del uso excesivo de sulfitos?",
+    "RA": "unknown",
+    "topic": "sulfitos",
+    "subtopic": "SO₂",
+    "difficulty": "intermediate",
+    "expected_concepts": [
+      "sulfitos",
+      "SO₂",
+      "aromas reductivos",
+      "dióxido de azufre",
+      "carácter del vino"
+    ],
+    "optional_causal_chain": null,
+    "corpus_support": {
+      "status": "missing",
+      "source_question_bank": "knowledge/question-bank/structured/wset3_questions.json",
+      "source_type": "structured_question_bank",
+      "support_terms": [
+        "sulfitos",
+        "SO₂",
+        "aromas reductivos",
+        "dióxido de azufre",
+        "carácter del vino"
+      ],
+      "evidence_chunks": []
+    },
+    "review_status": "rejected",
+    "activation_status": "inactive",
+    "feedback_rubric": {
+      "concept_coverage": "expected_concept_presence",
+      "causal_link": "formative_causal_link_presence",
+      "formative_feedback": "training_guidance_only",
+      "needs_review": "derived_from_missing_or_partial_concepts"
+    },
+    "governance_flags": {
+      "safe_for_examiner": false,
+      "examiner_scoring_allowed": false,
+      "official_wset_question": false,
+      "training_item_only": true,
+      "uses_llm": false,
+      "uses_api": false,
+      "uses_embeddings": false,
+      "uses_vector_db": false,
+      "cloud_services_active": false
+    }
+  },
+  {
+    "schema_version": "diagnostic_open_response_v1",
+    "source_question_id": "798",
+    "question_type": "diagnostic_open_response",
+    "stem": "Explique cómo prácticas sostenibles certificadas u orgánicas pueden aumentar los costes de producción y contribuir a la diferenciación comercial del vino.",
+    "RA": "RA1",
+    "topic": "sostenibilidad",
+    "subtopic": "precio",
+    "difficulty": "distinction",
+    "expected_concepts": [
+      "sostenibilidad",
+      "sostenible",
+      "certificación",
+      "orgánico",
+      "biodinámico",
+      "coste",
+      "costo",
+      "precio",
+      "mano de obra",
+      "rendimiento",
+      "diferenciación",
+      "percepción",
+      "consumidor",
+      "mercado",
+      "RA1",
+      "coste de producción",
+      "diferenciación comercial"
+    ],
+    "optional_causal_chain": "sostenibilidad -> coste -> precio",
+    "corpus_support": {
+      "status": "supported",
+      "source_question_bank": "knowledge/question-bank/structured/wset3_questions.json",
+      "source_type": "WSET3_RA1_Banco_Preguntas_TOTAL.xlsx | Abiertas",
+      "support_terms": [
+        "sostenibilidad",
+        "sostenible",
+        "certificación",
+        "orgánico",
+        "biodinámico",
+        "coste",
+        "costo",
+        "precio",
+        "mano de obra",
+        "rendimiento",
+        "diferenciación",
+        "percepción",
+        "consumidor",
+        "mercado",
+        "RA1",
+        "coste de producción",
+        "diferenciación comercial"
+      ],
+      "evidence_chunks": [
+        {
+          "chunk_id": "OFFICIAL_WSET_PRICE_OF_W_5_3_6_VINEYARD_MANAGEMENT_001",
+          "source_file": "knowledge/official-wset/study-guide/wset_markdown/seccion_5_section_2_factors_affecting_the_style_quality_and_price_of_w/5-3_6_vineyard_management.md",
+          "title": "6 Vineyard Management",
+          "source_type": "official_wset_extracted",
+          "matched_terms": [
+            "sostenibilidad",
+            "sostenible",
+            "orgánico",
+            "biodinámico",
+            "coste",
+            "costo",
+            "precio",
+            "mano de obra",
+            "rendimiento"
+          ]
+        },
+        {
+          "chunk_id": "OFFICIAL_WSET_10_FACTORS_THAT_AFFECT_THE_PRICE_OF_WINE_001",
+          "source_file": "knowledge/official-wset/study-guide/wset_markdown/seccion_5_section_2_factors_affecting_the_style_quality_and_price_of_w/5-7_10_factors_that_affect_the_price_of_wine.md",
+          "title": "10 Factors that Affect the Price of Wine",
+          "source_type": "official_wset_extracted",
+          "matched_terms": [
+            "coste",
+            "costo",
+            "precio",
+            "mano de obra",
+            "percepción"
+          ]
+        },
+        {
+          "chunk_id": "OFFICIAL_WSET_4_7_COMMON_ELEMENTS_IN_WINEMAKING_AND_MATURATION_001",
+          "source_file": "knowledge/official-wset/study-guide/wset_markdown/seccion_5_section_2_factors_affecting_the_style_quality_and_price_of_w/5-4_7_common_elements_in_winemaking_and_maturation.md",
+          "title": "7 Common Elements in Winemaking and Maturation",
+          "source_type": "official_wset_extracted",
+          "matched_terms": [
+            "coste",
+            "costo",
+            "precio",
+            "percepción"
+          ]
+        }
+      ]
+    },
+    "review_status": "approved",
+    "activation_status": "inactive",
+    "feedback_rubric": {
+      "concept_coverage": "expected_concept_presence",
+      "causal_link": "formative_causal_link_presence",
+      "formative_feedback": "training_guidance_only",
+      "needs_review": "derived_from_missing_or_partial_concepts"
+    },
+    "governance_flags": {
+      "safe_for_examiner": false,
+      "examiner_scoring_allowed": false,
+      "official_wset_question": false,
+      "training_item_only": true,
+      "uses_llm": false,
+      "uses_api": false,
+      "uses_embeddings": false,
+      "uses_vector_db": false,
+      "cloud_services_active": false
+    }
+  },
+  {
+    "schema_version": "diagnostic_open_response_v1",
+    "source_question_id": "799",
+    "question_type": "diagnostic_open_response",
+    "stem": "Justifica el uso de la fermentación maloláctica en la producción de ciertos estilos de vino blanco y cómo contribuye a la calidad final.",
+    "RA": "RA1",
+    "topic": "fermentación maloláctica",
+    "subtopic": "vino blanco",
+    "difficulty": "distinction",
+    "expected_concepts": [
+      "fermentación maloláctica",
+      "maloláctica",
+      "ácido málico",
+      "ácido láctico",
+      "acidez",
+      "suave",
+      "suaviza",
+      "textura",
+      "cremosa",
+      "cremosidad",
+      "diacetilo",
+      "mantequilla",
+      "láctico",
+      "cuerpo",
+      "complejidad",
+      "calidad",
+      "estilo",
+      "RA1",
+      "vino blanco"
+    ],
+    "optional_causal_chain": "maloláctica -> acidez -> textura",
+    "corpus_support": {
+      "status": "supported",
+      "source_question_bank": "knowledge/question-bank/structured/wset3_questions.json",
+      "source_type": "WSET3_RA1_Banco_Preguntas_TOTAL.xlsx | Abiertas",
+      "support_terms": [
+        "fermentación maloláctica",
+        "maloláctica",
+        "ácido málico",
+        "ácido láctico",
+        "acidez",
+        "suave",
+        "suaviza",
+        "textura",
+        "cremosa",
+        "cremosidad",
+        "diacetilo",
+        "mantequilla",
+        "láctico",
+        "cuerpo",
+        "complejidad",
+        "calidad",
+        "estilo",
+        "RA1",
+        "vino blanco"
+      ],
+      "evidence_chunks": [
+        {
+          "chunk_id": "OFFICIAL_WSET_1_1_THE_SYSTEMATIC_APPROACH_TO_TASTING_WINE_001",
+          "source_file": "knowledge/official-wset/study-guide/wset_markdown/seccion_4_section_1_wine_and_the_consumer/4-1_1_the_systematic_approach_to_tasting_wine.md",
+          "title": "1 The Systematic Approach to Tasting Wine®",
+          "source_type": "official_wset_extracted",
+          "matched_terms": [
+            "fermentación maloláctica",
+            "maloláctica",
+            "ácido málico",
+            "acidez",
+            "textura",
+            "cuerpo",
+            "complejidad",
+            "estilo"
+          ]
+        },
+        {
+          "chunk_id": "OFFICIAL_WSET_4_7_COMMON_ELEMENTS_IN_WINEMAKING_AND_MATURATION_001",
+          "source_file": "knowledge/official-wset/study-guide/wset_markdown/seccion_5_section_2_factors_affecting_the_style_quality_and_price_of_w/5-4_7_common_elements_in_winemaking_and_maturation.md",
+          "title": "7 Common Elements in Winemaking and Maturation",
+          "source_type": "official_wset_extracted",
+          "matched_terms": [
+            "fermentación maloláctica",
+            "maloláctica",
+            "ácido láctico",
+            "acidez",
+            "textura",
+            "complejidad",
+            "estilo"
+          ]
+        },
+        {
+          "chunk_id": "OFFICIAL_WSET_THE_WORLD_7_1_41_SPARKLING_WINE_PRODUCTION_001",
+          "source_file": "knowledge/official-wset/study-guide/wset_markdown/seccion_7_section_4_sparkling_wines_of_the_world/7-1_41_sparkling_wine_production.md",
+          "title": "41 Sparkling Wine Production",
+          "source_type": "official_wset_extracted",
+          "matched_terms": [
+            "fermentación maloláctica",
+            "maloláctica",
+            "acidez",
+            "textura",
+            "cuerpo",
+            "complejidad",
+            "estilo"
+          ]
+        }
+      ]
+    },
+    "review_status": "approved",
+    "activation_status": "inactive",
+    "feedback_rubric": {
+      "concept_coverage": "expected_concept_presence",
+      "causal_link": "formative_causal_link_presence",
+      "formative_feedback": "training_guidance_only",
+      "needs_review": "derived_from_missing_or_partial_concepts"
+    },
+    "governance_flags": {
+      "safe_for_examiner": false,
+      "examiner_scoring_allowed": false,
+      "official_wset_question": false,
+      "training_item_only": true,
+      "uses_llm": false,
+      "uses_api": false,
+      "uses_embeddings": false,
+      "uses_vector_db": false,
+      "cloud_services_active": false
+    }
+  },
+  {
+    "schema_version": "diagnostic_open_response_v1",
+    "source_question_id": "800",
+    "question_type": "diagnostic_open_response",
+    "stem": "Explica cómo la altitud puede influir en el estilo de un vino tinto.",
+    "RA": "RA1",
+    "topic": "altitud",
+    "subtopic": "clima",
+    "difficulty": "intermediate",
+    "expected_concepts": [
+      "altitud",
+      "altura",
+      "temperatura",
+      "frío",
+      "fresco",
+      "rango diurno",
+      "oscilación térmica",
+      "maduración",
+      "madura",
+      "lenta",
+      "despacio",
+      "acidez",
+      "azúcar",
+      "alcohol",
+      "estilo",
+      "frescura",
+      "RA1",
+      "clima",
+      "estilo de vino tinto"
+    ],
+    "optional_causal_chain": "altitud -> temperatura -> maduración",
+    "corpus_support": {
+      "status": "supported",
+      "source_question_bank": "knowledge/question-bank/structured/wset3_questions.json",
+      "source_type": "WSET3_RA1_Banco_Preguntas_Bloque2.xlsx | Preguntas_Abiertas",
+      "support_terms": [
+        "altitud",
+        "altura",
+        "temperatura",
+        "frío",
+        "fresco",
+        "rango diurno",
+        "oscilación térmica",
+        "maduración",
+        "madura",
+        "lenta",
+        "despacio",
+        "acidez",
+        "azúcar",
+        "alcohol",
+        "estilo",
+        "frescura",
+        "RA1",
+        "clima",
+        "estilo de vino tinto"
+      ],
+      "evidence_chunks": [
+        {
+          "chunk_id": "OFFICIAL_WSET_OF_THE_WORLD_6_16_27_NORTHERN_ITALY_001",
+          "source_file": "knowledge/official-wset/study-guide/wset_markdown/seccion_6_section_3_still_wines_of_the_world/6-16_27_northern_italy.md",
+          "title": "27 Northern Italy",
+          "source_type": "official_wset_extracted",
+          "matched_terms": [
+            "altitud",
+            "altura",
+            "temperatura",
+            "maduración",
+            "acidez",
+            "azúcar",
+            "alcohol",
+            "estilo"
+          ]
+        },
+        {
+          "chunk_id": "OFFICIAL_WSET_OF_W_5_2_5_THE_GROWING_ENVIRONMENT_001",
+          "source_file": "knowledge/official-wset/study-guide/wset_markdown/seccion_5_section_2_factors_affecting_the_style_quality_and_price_of_w/5-2_5_the_growing_environment.md",
+          "title": "5 The Growing Environment",
+          "source_type": "official_wset_extracted",
+          "matched_terms": [
+            "altitud",
+            "altura",
+            "temperatura",
+            "maduración",
+            "acidez",
+            "azúcar",
+            "alcohol",
+            "estilo"
+          ]
+        },
+        {
+          "chunk_id": "OFFICIAL_WSET_WINES_OF_THE_WORLD_6_19_30_SPAIN_001",
+          "source_file": "knowledge/official-wset/study-guide/wset_markdown/seccion_6_section_3_still_wines_of_the_world/6-19_30_spain.md",
+          "title": "30 Spain",
+          "source_type": "official_wset_extracted",
+          "matched_terms": [
+            "altitud",
+            "altura",
+            "temperatura",
+            "maduración",
+            "acidez",
+            "azúcar",
+            "alcohol",
+            "estilo"
+          ]
+        }
+      ]
+    },
+    "review_status": "approved",
+    "activation_status": "inactive",
+    "feedback_rubric": {
+      "concept_coverage": "expected_concept_presence",
+      "causal_link": "formative_causal_link_presence",
+      "formative_feedback": "training_guidance_only",
+      "needs_review": "derived_from_missing_or_partial_concepts"
+    },
+    "governance_flags": {
+      "safe_for_examiner": false,
+      "examiner_scoring_allowed": false,
+      "official_wset_question": false,
+      "training_item_only": true,
+      "uses_llm": false,
+      "uses_api": false,
+      "uses_embeddings": false,
+      "uses_vector_db": false,
+      "cloud_services_active": false
+    }
+  },
+  {
+    "schema_version": "diagnostic_open_response_v1",
+    "source_question_id": "801",
+    "question_type": "diagnostic_open_response",
+    "stem": "Explique cómo la orientación y la pendiente del viñedo pueden afectar la maduración de la uva.",
+    "RA": "RA1",
+    "topic": "orientación",
+    "subtopic": "pendiente",
+    "difficulty": "intermediate",
+    "expected_concepts": [
+      "orientación",
+      "pendiente",
+      "ladera",
+      "exposición",
+      "sol",
+      "solar",
+      "insolación",
+      "drenaje",
+      "agua",
+      "maduración",
+      "madura",
+      "azúcar",
+      "acidez",
+      "sombra",
+      "temperatura",
+      "RA1",
+      "exposición solar"
+    ],
+    "optional_causal_chain": "orientación -> exposición -> maduración",
+    "corpus_support": {
+      "status": "supported",
+      "source_question_bank": "knowledge/question-bank/structured/wset3_questions.json",
+      "source_type": "WSET3_RA1_Banco_Preguntas_Bloque8.xlsx | Desarrollo",
+      "support_terms": [
+        "orientación",
+        "pendiente",
+        "ladera",
+        "exposición",
+        "sol",
+        "solar",
+        "insolación",
+        "drenaje",
+        "agua",
+        "maduración",
+        "madura",
+        "azúcar",
+        "acidez",
+        "sombra",
+        "temperatura",
+        "RA1",
+        "exposición solar"
+      ],
+      "evidence_chunks": [
+        {
+          "chunk_id": "OFFICIAL_WSET_OF_W_5_2_5_THE_GROWING_ENVIRONMENT_001",
+          "source_file": "knowledge/official-wset/study-guide/wset_markdown/seccion_5_section_2_factors_affecting_the_style_quality_and_price_of_w/5-2_5_the_growing_environment.md",
+          "title": "5 The Growing Environment",
+          "source_type": "official_wset_extracted",
+          "matched_terms": [
+            "orientación",
+            "pendiente",
+            "exposición",
+            "sol",
+            "drenaje",
+            "agua",
+            "maduración",
+            "azúcar",
+            "acidez",
+            "temperatura"
+          ]
+        },
+        {
+          "chunk_id": "OFFICIAL_WSET_WINES_OF_THE_WORLD_6_11_22_GERMANY_001",
+          "source_file": "knowledge/official-wset/study-guide/wset_markdown/seccion_6_section_3_still_wines_of_the_world/6-11_22_germany.md",
+          "title": "22 Germany",
+          "source_type": "official_wset_extracted",
+          "matched_terms": [
+            "orientación",
+            "pendiente",
+            "exposición",
+            "sol",
+            "agua",
+            "maduración",
+            "azúcar",
+            "acidez"
+          ]
+        },
+        {
+          "chunk_id": "OFFICIAL_WSET_WINES_OF_THE_WORLD_6_22_33_CALIFORNIA_001",
+          "source_file": "knowledge/official-wset/study-guide/wset_markdown/seccion_6_section_3_still_wines_of_the_world/6-22_33_california.md",
+          "title": "33 California",
+          "source_type": "official_wset_extracted",
+          "matched_terms": [
+            "orientación",
+            "exposición",
+            "agua",
+            "maduración",
+            "azúcar",
+            "acidez",
+            "temperatura"
+          ]
+        }
+      ]
+    },
+    "review_status": "approved",
+    "activation_status": "inactive",
+    "feedback_rubric": {
+      "concept_coverage": "expected_concept_presence",
+      "causal_link": "formative_causal_link_presence",
+      "formative_feedback": "training_guidance_only",
+      "needs_review": "derived_from_missing_or_partial_concepts"
+    },
+    "governance_flags": {
+      "safe_for_examiner": false,
+      "examiner_scoring_allowed": false,
+      "official_wset_question": false,
+      "training_item_only": true,
+      "uses_llm": false,
+      "uses_api": false,
+      "uses_embeddings": false,
+      "uses_vector_db": false,
+      "cloud_services_active": false
+    }
+  },
+  {
+    "schema_version": "diagnostic_open_response_v1",
+    "source_question_id": "802",
+    "question_type": "diagnostic_open_response",
+    "stem": "Describa cómo las prácticas de manejo en la bodega pueden reducir el riesgo de oxidación en vinos blancos.",
+    "RA": "RA1",
+    "topic": "oxidación",
+    "subtopic": "vino blanco",
+    "difficulty": "intermediate",
+    "expected_concepts": [
+      "oxidación",
+      "oxígeno",
+      "proteger",
+      "protección",
+      "sulfuroso",
+      "SO2",
+      "inerte",
+      "gas inerte",
+      "temperatura",
+      "frío",
+      "prensado",
+      "depósito",
+      "aromas",
+      "fruta",
+      "frescura",
+      "color",
+      "pardeamiento",
+      "RA1",
+      "vino blanco",
+      "bodega",
+      "manejo del oxígeno"
+    ],
+    "optional_causal_chain": "oxígeno -> oxidación -> aromas",
+    "corpus_support": {
+      "status": "supported",
+      "source_question_bank": "knowledge/question-bank/structured/wset3_questions.json",
+      "source_type": "WSET3_RA1_Banco_Preguntas_Bloque8.xlsx | Desarrollo",
+      "support_terms": [
+        "oxidación",
+        "oxígeno",
+        "proteger",
+        "protección",
+        "sulfuroso",
+        "SO2",
+        "inerte",
+        "gas inerte",
+        "temperatura",
+        "frío",
+        "prensado",
+        "depósito",
+        "aromas",
+        "fruta",
+        "frescura",
+        "color",
+        "pardeamiento",
+        "RA1",
+        "vino blanco",
+        "bodega",
+        "manejo del oxígeno"
+      ],
+      "evidence_chunks": [
+        {
+          "chunk_id": "OFFICIAL_WSET_4_7_COMMON_ELEMENTS_IN_WINEMAKING_AND_MATURATION_001",
+          "source_file": "knowledge/official-wset/study-guide/wset_markdown/seccion_5_section_2_factors_affecting_the_style_quality_and_price_of_w/5-4_7_common_elements_in_winemaking_and_maturation.md",
+          "title": "7 Common Elements in Winemaking and Maturation",
+          "source_type": "official_wset_extracted",
+          "matched_terms": [
+            "oxidación",
+            "oxígeno",
+            "sulfuroso",
+            "SO2",
+            "inerte",
+            "temperatura",
+            "aromas",
+            "color"
+          ]
+        },
+        {
+          "chunk_id": "OFFICIAL_WSET_1_1_THE_SYSTEMATIC_APPROACH_TO_TASTING_WINE_001",
+          "source_file": "knowledge/official-wset/study-guide/wset_markdown/seccion_4_section_1_wine_and_the_consumer/4-1_1_the_systematic_approach_to_tasting_wine.md",
+          "title": "1 The Systematic Approach to Tasting Wine®",
+          "source_type": "official_wset_extracted",
+          "matched_terms": [
+            "oxidación",
+            "oxígeno",
+            "sulfuroso",
+            "SO2",
+            "aromas",
+            "color"
+          ]
+        },
+        {
+          "chunk_id": "OFFICIAL_WSET_WINES_OF_THE_WORLD_8_1_43_SHERRY_001",
+          "source_file": "knowledge/official-wset/study-guide/wset_markdown/seccion_8_section_5_fortified_wines_of_the_world/8-1_43_sherry.md",
+          "title": "43 Sherry",
+          "source_type": "official_wset_extracted",
+          "matched_terms": [
+            "oxidación",
+            "oxígeno",
+            "temperatura",
+            "aromas",
+            "color",
+            "bodega"
+          ]
+        }
+      ]
+    },
+    "review_status": "approved",
+    "activation_status": "inactive",
+    "feedback_rubric": {
+      "concept_coverage": "expected_concept_presence",
+      "causal_link": "formative_causal_link_presence",
+      "formative_feedback": "training_guidance_only",
+      "needs_review": "derived_from_missing_or_partial_concepts"
+    },
+    "governance_flags": {
+      "safe_for_examiner": false,
+      "examiner_scoring_allowed": false,
+      "official_wset_question": false,
+      "training_item_only": true,
+      "uses_llm": false,
+      "uses_api": false,
+      "uses_embeddings": false,
+      "uses_vector_db": false,
+      "cloud_services_active": false
+    }
+  },
+  {
+    "schema_version": "diagnostic_open_response_v1",
+    "source_question_id": "803",
+    "question_type": "diagnostic_open_response",
+    "stem": "Explique la influencia de la elección de levaduras en el perfil sensorial del vino.",
+    "RA": "RA1",
+    "topic": "levaduras",
+    "subtopic": "fermentación",
+    "difficulty": "intermediate",
+    "expected_concepts": [
+      "levadura",
+      "levaduras",
+      "fermentación",
+      "aromas",
+      "ésteres",
+      "perfil sensorial",
+      "sensorial",
+      "levadura seleccionada",
+      "seleccionada",
+      "control",
+      "predecible",
+      "estilo",
+      "fruta",
+      "compuestos aromáticos",
+      "RA1"
+    ],
+    "optional_causal_chain": "levadura -> fermentación -> aromas",
+    "corpus_support": {
+      "status": "supported",
+      "source_question_bank": "knowledge/question-bank/structured/wset3_questions.json",
+      "source_type": "WSET3_RA1_Banco_Preguntas_Bloque8.xlsx | Desarrollo",
+      "support_terms": [
+        "levadura",
+        "levaduras",
+        "fermentación",
+        "aromas",
+        "ésteres",
+        "perfil sensorial",
+        "sensorial",
+        "levadura seleccionada",
+        "seleccionada",
+        "control",
+        "predecible",
+        "estilo",
+        "fruta",
+        "compuestos aromáticos",
+        "RA1"
+      ],
+      "evidence_chunks": [
+        {
+          "chunk_id": "OFFICIAL_WSET_4_7_COMMON_ELEMENTS_IN_WINEMAKING_AND_MATURATION_001",
+          "source_file": "knowledge/official-wset/study-guide/wset_markdown/seccion_5_section_2_factors_affecting_the_style_quality_and_price_of_w/5-4_7_common_elements_in_winemaking_and_maturation.md",
+          "title": "7 Common Elements in Winemaking and Maturation",
+          "source_type": "official_wset_extracted",
+          "matched_terms": [
+            "levadura",
+            "levaduras",
+            "fermentación",
+            "aromas",
+            "seleccionada",
+            "control",
+            "estilo"
+          ]
+        },
+        {
+          "chunk_id": "OFFICIAL_WSET_WINES_OF_THE_WORLD_6_11_22_GERMANY_001",
+          "source_file": "knowledge/official-wset/study-guide/wset_markdown/seccion_6_section_3_still_wines_of_the_world/6-11_22_germany.md",
+          "title": "22 Germany",
+          "source_type": "official_wset_extracted",
+          "matched_terms": [
+            "levadura",
+            "levaduras",
+            "fermentación",
+            "aromas",
+            "seleccionada",
+            "estilo"
+          ]
+        },
+        {
+          "chunk_id": "OFFICIAL_WSET_WINES_OF_THE_WORLD_8_1_43_SHERRY_001",
+          "source_file": "knowledge/official-wset/study-guide/wset_markdown/seccion_8_section_5_fortified_wines_of_the_world/8-1_43_sherry.md",
+          "title": "43 Sherry",
+          "source_type": "official_wset_extracted",
+          "matched_terms": [
+            "levadura",
+            "levaduras",
+            "fermentación",
+            "aromas",
+            "seleccionada",
+            "estilo"
+          ]
+        }
+      ]
+    },
+    "review_status": "approved",
+    "activation_status": "inactive",
+    "feedback_rubric": {
+      "concept_coverage": "expected_concept_presence",
+      "causal_link": "formative_causal_link_presence",
+      "formative_feedback": "training_guidance_only",
+      "needs_review": "derived_from_missing_or_partial_concepts"
+    },
+    "governance_flags": {
+      "safe_for_examiner": false,
+      "examiner_scoring_allowed": false,
+      "official_wset_question": false,
+      "training_item_only": true,
+      "uses_llm": false,
+      "uses_api": false,
+      "uses_embeddings": false,
+      "uses_vector_db": false,
+      "cloud_services_active": false
+    }
+  },
+  {
+    "schema_version": "diagnostic_open_response_v1",
+    "source_question_id": "804",
+    "question_type": "diagnostic_open_response",
+    "stem": "Explique cómo el drenaje del suelo puede influir en el vigor de la vid y en el estilo del vino.",
+    "RA": "RA1",
+    "topic": "suelo",
+    "subtopic": "drenaje",
+    "difficulty": "intermediate",
+    "expected_concepts": [
+      "suelo",
+      "drenaje",
+      "agua",
+      "retención",
+      "vigor",
+      "raíces",
+      "rendimiento",
+      "concentración",
+      "maduración",
+      "estilo",
+      "RA1"
+    ],
+    "optional_causal_chain": "suelo -> drenaje -> vigor",
+    "corpus_support": {
+      "status": "supported",
+      "source_question_bank": "knowledge/question-bank/structured/wset3_questions.json",
+      "source_type": "WSET3_RA1_Banco_Preguntas_Bloque8.xlsx | Desarrollo",
+      "support_terms": [
+        "suelo",
+        "drenaje",
+        "agua",
+        "retención",
+        "vigor",
+        "raíces",
+        "rendimiento",
+        "concentración",
+        "maduración",
+        "estilo",
+        "RA1"
+      ],
+      "evidence_chunks": [
+        {
+          "chunk_id": "OFFICIAL_WSET_WINES_OF_THE_WORLD_8_1_43_SHERRY_001",
+          "source_file": "knowledge/official-wset/study-guide/wset_markdown/seccion_8_section_5_fortified_wines_of_the_world/8-1_43_sherry.md",
+          "title": "43 Sherry",
+          "source_type": "official_wset_extracted",
+          "matched_terms": [
+            "suelo",
+            "drenaje",
+            "agua",
+            "retención",
+            "rendimiento",
+            "maduración",
+            "estilo"
+          ]
+        },
+        {
+          "chunk_id": "OFFICIAL_WSET_PRICE_OF_W_5_3_6_VINEYARD_MANAGEMENT_001",
+          "source_file": "knowledge/official-wset/study-guide/wset_markdown/seccion_5_section_2_factors_affecting_the_style_quality_and_price_of_w/5-3_6_vineyard_management.md",
+          "title": "6 Vineyard Management",
+          "source_type": "official_wset_extracted",
+          "matched_terms": [
+            "suelo",
+            "agua",
+            "rendimiento",
+            "concentración",
+            "maduración",
+            "estilo"
+          ]
+        },
+        {
+          "chunk_id": "OFFICIAL_WSET_OF_W_5_2_5_THE_GROWING_ENVIRONMENT_001",
+          "source_file": "knowledge/official-wset/study-guide/wset_markdown/seccion_5_section_2_factors_affecting_the_style_quality_and_price_of_w/5-2_5_the_growing_environment.md",
+          "title": "5 The Growing Environment",
+          "source_type": "official_wset_extracted",
+          "matched_terms": [
+            "suelo",
+            "drenaje",
+            "agua",
+            "maduración",
+            "estilo"
+          ]
+        }
+      ]
+    },
+    "review_status": "approved",
+    "activation_status": "inactive",
+    "feedback_rubric": {
+      "concept_coverage": "expected_concept_presence",
+      "causal_link": "formative_causal_link_presence",
+      "formative_feedback": "training_guidance_only",
+      "needs_review": "derived_from_missing_or_partial_concepts"
+    },
+    "governance_flags": {
+      "safe_for_examiner": false,
+      "examiner_scoring_allowed": false,
+      "official_wset_question": false,
+      "training_item_only": true,
+      "uses_llm": false,
+      "uses_api": false,
+      "uses_embeddings": false,
+      "uses_vector_db": false,
+      "cloud_services_active": false
+    }
+  },
+  {
+    "schema_version": "diagnostic_open_response_v1",
+    "source_question_id": "805",
+    "question_type": "diagnostic_open_response",
+    "stem": "Compare cómo la elección de roble americano o francés puede afectar los aromas, el tanino y la integración del roble en vinos tintos.",
+    "RA": "RA1",
+    "topic": "roble",
+    "subtopic": "roble americano",
+    "difficulty": "distinction",
+    "expected_concepts": [
+      "roble",
+      "americano",
+      "francés",
+      "vainilla",
+      "coco",
+      "dulce",
+      "especias",
+      "cedro",
+      "tostado",
+      "tanino",
+      "integración",
+      "perfil sensorial",
+      "estructura",
+      "complejidad",
+      "nuevo",
+      "RA1",
+      "roble americano",
+      "roble francés"
+    ],
+    "optional_causal_chain": "roble americano -> vainilla -> perfil",
+    "corpus_support": {
+      "status": "supported",
+      "source_question_bank": "knowledge/question-bank/structured/wset3_questions.json",
+      "source_type": "WSET3_RA1_Banco_Preguntas_TOTAL.xlsx | Abiertas",
+      "support_terms": [
+        "roble",
+        "americano",
+        "francés",
+        "vainilla",
+        "coco",
+        "dulce",
+        "especias",
+        "cedro",
+        "tostado",
+        "tanino",
+        "integración",
+        "perfil sensorial",
+        "estructura",
+        "complejidad",
+        "nuevo",
+        "RA1",
+        "roble americano",
+        "roble francés"
+      ],
+      "evidence_chunks": [
+        {
+          "chunk_id": "OFFICIAL_WSET_4_7_COMMON_ELEMENTS_IN_WINEMAKING_AND_MATURATION_001",
+          "source_file": "knowledge/official-wset/study-guide/wset_markdown/seccion_5_section_2_factors_affecting_the_style_quality_and_price_of_w/5-4_7_common_elements_in_winemaking_and_maturation.md",
+          "title": "7 Common Elements in Winemaking and Maturation",
+          "source_type": "official_wset_extracted",
+          "matched_terms": [
+            "roble",
+            "americano",
+            "vainilla",
+            "especias",
+            "tostado",
+            "tanino",
+            "complejidad"
+          ]
+        },
+        {
+          "chunk_id": "OFFICIAL_WSET_WINES_OF_THE_WORLD_6_19_30_SPAIN_001",
+          "source_file": "knowledge/official-wset/study-guide/wset_markdown/seccion_6_section_3_still_wines_of_the_world/6-19_30_spain.md",
+          "title": "30 Spain",
+          "source_type": "official_wset_extracted",
+          "matched_terms": [
+            "roble",
+            "americano",
+            "francés",
+            "vainilla",
+            "especias",
+            "tanino",
+            "complejidad"
+          ]
+        },
+        {
+          "chunk_id": "OFFICIAL_WSET_W_5_6_9_RED_AND_ROSE_WINEMAKING_001",
+          "source_file": "knowledge/official-wset/study-guide/wset_markdown/seccion_5_section_2_factors_affecting_the_style_quality_and_price_of_w/5-6_9_red_and_rose_winemaking.md",
+          "title": "9 Red and Rosé Winemaking",
+          "source_type": "official_wset_extracted",
+          "matched_terms": [
+            "roble",
+            "francés",
+            "vainilla",
+            "especias",
+            "tostado",
+            "tanino",
+            "complejidad"
+          ]
+        }
+      ]
+    },
+    "review_status": "approved",
+    "activation_status": "inactive",
+    "feedback_rubric": {
+      "concept_coverage": "expected_concept_presence",
+      "causal_link": "formative_causal_link_presence",
+      "formative_feedback": "training_guidance_only",
+      "needs_review": "derived_from_missing_or_partial_concepts"
+    },
+    "governance_flags": {
+      "safe_for_examiner": false,
+      "examiner_scoring_allowed": false,
+      "official_wset_question": false,
+      "training_item_only": true,
+      "uses_llm": false,
+      "uses_api": false,
+      "uses_embeddings": false,
+      "uses_vector_db": false,
+      "cloud_services_active": false
+    }
+  },
+  {
+    "schema_version": "diagnostic_open_response_v1",
+    "source_question_id": "806",
+    "question_type": "diagnostic_open_response",
+    "stem": "Describa dos técnicas de manejo del dosel (canopy management) y sus beneficios.",
+    "RA": "RA1",
+    "topic": "manejo del dosel",
+    "subtopic": "técnicas de viñedo",
+    "difficulty": "intermediate",
+    "expected_concepts": [
+      "manejo del dosel",
+      "dosel",
+      "canopy",
+      "deshojado",
+      "hojas",
+      "posicionamiento de brotes",
+      "brotes",
+      "exposición",
+      "sol",
+      "maduración",
+      "aireación",
+      "circulación de aire",
+      "enfermedad",
+      "hongos",
+      "sombra",
+      "racimos",
+      "RA1",
+      "técnicas de viñedo",
+      "sanidad de la uva"
+    ],
+    "optional_causal_chain": "deshojado -> exposición -> maduración",
+    "corpus_support": {
+      "status": "supported",
+      "source_question_bank": "knowledge/question-bank/structured/wset3_questions.json",
+      "source_type": "WSET3_RA1_Banco_Preguntas_TOTAL.xlsx | Abiertas",
+      "support_terms": [
+        "manejo del dosel",
+        "dosel",
+        "canopy",
+        "deshojado",
+        "hojas",
+        "posicionamiento de brotes",
+        "brotes",
+        "exposición",
+        "sol",
+        "maduración",
+        "aireación",
+        "circulación de aire",
+        "enfermedad",
+        "hongos",
+        "sombra",
+        "racimos",
+        "RA1",
+        "técnicas de viñedo",
+        "sanidad de la uva"
+      ],
+      "evidence_chunks": [
+        {
+          "chunk_id": "OFFICIAL_WSET_PRICE_OF_W_5_3_6_VINEYARD_MANAGEMENT_001",
+          "source_file": "knowledge/official-wset/study-guide/wset_markdown/seccion_5_section_2_factors_affecting_the_style_quality_and_price_of_w/5-3_6_vineyard_management.md",
+          "title": "6 Vineyard Management",
+          "source_type": "official_wset_extracted",
+          "matched_terms": [
+            "manejo del dosel",
+            "canopy",
+            "brotes",
+            "exposición",
+            "sol",
+            "maduración",
+            "aireación",
+            "enfermedad",
+            "hongos"
+          ]
+        },
+        {
+          "chunk_id": "OFFICIAL_WSET_OF_W_5_2_5_THE_GROWING_ENVIRONMENT_001",
+          "source_file": "knowledge/official-wset/study-guide/wset_markdown/seccion_5_section_2_factors_affecting_the_style_quality_and_price_of_w/5-2_5_the_growing_environment.md",
+          "title": "5 The Growing Environment",
+          "source_type": "official_wset_extracted",
+          "matched_terms": [
+            "canopy",
+            "brotes",
+            "exposición",
+            "sol",
+            "maduración",
+            "enfermedad",
+            "hongos"
+          ]
+        },
+        {
+          "chunk_id": "OFFICIAL_WSET_OF_THE_WORLD_6_29_40_NEW_ZEALAND_001",
+          "source_file": "knowledge/official-wset/study-guide/wset_markdown/seccion_6_section_3_still_wines_of_the_world/6-29_40_new_zealand.md",
+          "title": "40 New Zealand",
+          "source_type": "official_wset_extracted",
+          "matched_terms": [
+            "manejo del dosel",
+            "canopy",
+            "exposición",
+            "sol",
+            "maduración",
+            "hongos"
+          ]
+        }
+      ]
+    },
+    "review_status": "approved",
+    "activation_status": "inactive",
+    "feedback_rubric": {
+      "concept_coverage": "expected_concept_presence",
+      "causal_link": "formative_causal_link_presence",
+      "formative_feedback": "training_guidance_only",
+      "needs_review": "derived_from_missing_or_partial_concepts"
+    },
+    "governance_flags": {
+      "safe_for_examiner": false,
+      "examiner_scoring_allowed": false,
+      "official_wset_question": false,
+      "training_item_only": true,
+      "uses_llm": false,
+      "uses_api": false,
+      "uses_embeddings": false,
+      "uses_vector_db": false,
+      "cloud_services_active": false
+    }
+  },
+  {
+    "schema_version": "diagnostic_open_response_v1",
+    "source_question_id": "807",
+    "question_type": "diagnostic_open_response",
+    "stem": "Explique cómo el riego y el manejo del dosel pueden reducir los efectos de la sequía o del calor extremo sobre la maduración de la uva.",
+    "RA": "RA1",
+    "topic": "decisiones humanas",
+    "subtopic": "sequía",
+    "difficulty": "distinction",
+    "expected_concepts": [
+      "decisiones humanas",
+      "gestión",
+      "viña",
+      "viñedo",
+      "riego",
+      "estrés hídrico",
+      "sequía",
+      "calor",
+      "calor extremo",
+      "dosel",
+      "manejo del dosel",
+      "exposición",
+      "sombra",
+      "maduración",
+      "equilibrio",
+      "RA1"
+    ],
+    "optional_causal_chain": "riego -> estrés hídrico -> maduración",
+    "corpus_support": {
+      "status": "supported",
+      "source_question_bank": "knowledge/question-bank/structured/wset3_questions.json",
+      "source_type": "WSET3_RA1_Banco_Preguntas_TOTAL.xlsx | Abiertas",
+      "support_terms": [
+        "decisiones humanas",
+        "gestión",
+        "viña",
+        "viñedo",
+        "riego",
+        "estrés hídrico",
+        "sequía",
+        "calor",
+        "calor extremo",
+        "dosel",
+        "manejo del dosel",
+        "exposición",
+        "sombra",
+        "maduración",
+        "equilibrio",
+        "RA1"
+      ],
+      "evidence_chunks": [
+        {
+          "chunk_id": "OFFICIAL_WSET_OF_W_5_2_5_THE_GROWING_ENVIRONMENT_001",
+          "source_file": "knowledge/official-wset/study-guide/wset_markdown/seccion_5_section_2_factors_affecting_the_style_quality_and_price_of_w/5-2_5_the_growing_environment.md",
+          "title": "5 The Growing Environment",
+          "source_type": "official_wset_extracted",
+          "matched_terms": [
+            "riego",
+            "estrés hídrico",
+            "sequía",
+            "calor",
+            "exposición",
+            "maduración"
+          ]
+        },
+        {
+          "chunk_id": "OFFICIAL_WSET_PRICE_OF_W_5_3_6_VINEYARD_MANAGEMENT_001",
+          "source_file": "knowledge/official-wset/study-guide/wset_markdown/seccion_5_section_2_factors_affecting_the_style_quality_and_price_of_w/5-3_6_vineyard_management.md",
+          "title": "6 Vineyard Management",
+          "source_type": "official_wset_extracted",
+          "matched_terms": [
+            "riego",
+            "calor",
+            "manejo del dosel",
+            "exposición",
+            "maduración",
+            "equilibrio"
+          ]
+        },
+        {
+          "chunk_id": "OFFICIAL_WSET_WINES_OF_THE_WORLD_6_11_22_GERMANY_001",
+          "source_file": "knowledge/official-wset/study-guide/wset_markdown/seccion_6_section_3_still_wines_of_the_world/6-11_22_germany.md",
+          "title": "22 Germany",
+          "source_type": "official_wset_extracted",
+          "matched_terms": [
+            "estrés hídrico",
+            "calor",
+            "exposición",
+            "maduración",
+            "equilibrio"
+          ]
+        }
+      ]
+    },
+    "review_status": "approved",
+    "activation_status": "inactive",
+    "feedback_rubric": {
+      "concept_coverage": "expected_concept_presence",
+      "causal_link": "formative_causal_link_presence",
+      "formative_feedback": "training_guidance_only",
+      "needs_review": "derived_from_missing_or_partial_concepts"
+    },
+    "governance_flags": {
+      "safe_for_examiner": false,
+      "examiner_scoring_allowed": false,
+      "official_wset_question": false,
+      "training_item_only": true,
+      "uses_llm": false,
+      "uses_api": false,
+      "uses_embeddings": false,
+      "uses_vector_db": false,
+      "cloud_services_active": false
+    }
+  },
+  {
+    "schema_version": "diagnostic_open_response_v1",
+    "source_question_id": "808",
+    "question_type": "diagnostic_open_response",
+    "stem": "Explica por qué la densidad de plantación es un factor clave en la gestión del viñedo y cómo afecta el estilo y costo del vino producido.",
+    "RA": "RA1",
+    "topic": "densidad de plantación",
+    "subtopic": "competencia",
+    "difficulty": "distinction",
+    "expected_concepts": [
+      "densidad de plantación",
+      "densidad",
+      "plantación",
+      "competencia",
+      "vigor",
+      "rendimiento",
+      "producción",
+      "cosecha",
+      "concentración",
+      "uva",
+      "estilo",
+      "coste",
+      "costo",
+      "mano de obra",
+      "mecanización",
+      "precio",
+      "RA1"
+    ],
+    "optional_causal_chain": "densidad -> competencia -> vigor",
+    "corpus_support": {
+      "status": "supported",
+      "source_question_bank": "knowledge/question-bank/structured/wset3_questions.json",
+      "source_type": "WSET3_RA1_Banco_Preguntas_TOTAL.xlsx | Abiertas",
+      "support_terms": [
+        "densidad de plantación",
+        "densidad",
+        "plantación",
+        "competencia",
+        "vigor",
+        "rendimiento",
+        "producción",
+        "cosecha",
+        "concentración",
+        "uva",
+        "estilo",
+        "coste",
+        "costo",
+        "mano de obra",
+        "mecanización",
+        "precio",
+        "RA1"
+      ],
+      "evidence_chunks": [
+        {
+          "chunk_id": "OFFICIAL_WSET_PRICE_OF_W_5_3_6_VINEYARD_MANAGEMENT_001",
+          "source_file": "knowledge/official-wset/study-guide/wset_markdown/seccion_5_section_2_factors_affecting_the_style_quality_and_price_of_w/5-3_6_vineyard_management.md",
+          "title": "6 Vineyard Management",
+          "source_type": "official_wset_extracted",
+          "matched_terms": [
+            "densidad",
+            "plantación",
+            "competencia",
+            "rendimiento",
+            "concentración",
+            "estilo",
+            "coste",
+            "costo",
+            "mano de obra",
+            "mecanización",
+            "precio"
+          ]
+        },
+        {
+          "chunk_id": "OFFICIAL_WSET_10_FACTORS_THAT_AFFECT_THE_PRICE_OF_WINE_001",
+          "source_file": "knowledge/official-wset/study-guide/wset_markdown/seccion_5_section_2_factors_affecting_the_style_quality_and_price_of_w/5-7_10_factors_that_affect_the_price_of_wine.md",
+          "title": "10 Factors that Affect the Price of Wine",
+          "source_type": "official_wset_extracted",
+          "matched_terms": [
+            "estilo",
+            "coste",
+            "costo",
+            "mano de obra",
+            "mecanización",
+            "precio"
+          ]
+        },
+        {
+          "chunk_id": "OFFICIAL_WSET_4_7_COMMON_ELEMENTS_IN_WINEMAKING_AND_MATURATION_001",
+          "source_file": "knowledge/official-wset/study-guide/wset_markdown/seccion_5_section_2_factors_affecting_the_style_quality_and_price_of_w/5-4_7_common_elements_in_winemaking_and_maturation.md",
+          "title": "7 Common Elements in Winemaking and Maturation",
+          "source_type": "official_wset_extracted",
+          "matched_terms": [
+            "concentración",
+            "estilo",
+            "coste",
+            "costo",
+            "precio"
+          ]
+        }
+      ]
+    },
+    "review_status": "approved",
+    "activation_status": "inactive",
+    "feedback_rubric": {
+      "concept_coverage": "expected_concept_presence",
+      "causal_link": "formative_causal_link_presence",
+      "formative_feedback": "training_guidance_only",
+      "needs_review": "derived_from_missing_or_partial_concepts"
+    },
+    "governance_flags": {
+      "safe_for_examiner": false,
+      "examiner_scoring_allowed": false,
+      "official_wset_question": false,
+      "training_item_only": true,
+      "uses_llm": false,
+      "uses_api": false,
+      "uses_embeddings": false,
+      "uses_vector_db": false,
+      "cloud_services_active": false
+    }
+  },
+  {
+    "schema_version": "diagnostic_open_response_v1",
+    "source_question_id": "809",
+    "question_type": "diagnostic_open_response",
+    "stem": "Compare el uso de levaduras seleccionadas y levaduras autóctonas en fermentación, considerando control, consistencia, complejidad potencial y riesgos.",
+    "RA": "RA1",
+    "topic": "levaduras seleccionadas",
+    "subtopic": "levaduras autóctonas",
+    "difficulty": "distinction",
+    "expected_concepts": [
+      "levadura",
+      "levaduras",
+      "levaduras seleccionadas",
+      "seleccionadas",
+      "levaduras autóctonas",
+      "autóctonas",
+      "salvajes",
+      "fermentación",
+      "control",
+      "consistencia",
+      "predecible",
+      "variabilidad",
+      "complejidad",
+      "aromas",
+      "riesgo",
+      "parada fermentativa",
+      "aromas no deseados",
+      "RA1"
+    ],
+    "optional_causal_chain": "levaduras seleccionadas -> control -> consistencia",
+    "corpus_support": {
+      "status": "supported",
+      "source_question_bank": "knowledge/question-bank/structured/wset3_questions.json",
+      "source_type": "WSET3_RA1_Banco_Preguntas_TOTAL.xlsx | Abiertas",
+      "support_terms": [
+        "levadura",
+        "levaduras",
+        "levaduras seleccionadas",
+        "seleccionadas",
+        "levaduras autóctonas",
+        "autóctonas",
+        "salvajes",
+        "fermentación",
+        "control",
+        "consistencia",
+        "predecible",
+        "variabilidad",
+        "complejidad",
+        "aromas",
+        "riesgo",
+        "parada fermentativa",
+        "aromas no deseados",
+        "RA1"
+      ],
+      "evidence_chunks": [
+        {
+          "chunk_id": "OFFICIAL_WSET_4_7_COMMON_ELEMENTS_IN_WINEMAKING_AND_MATURATION_001",
+          "source_file": "knowledge/official-wset/study-guide/wset_markdown/seccion_5_section_2_factors_affecting_the_style_quality_and_price_of_w/5-4_7_common_elements_in_winemaking_and_maturation.md",
+          "title": "7 Common Elements in Winemaking and Maturation",
+          "source_type": "official_wset_extracted",
+          "matched_terms": [
+            "levadura",
+            "levaduras",
+            "fermentación",
+            "control",
+            "complejidad",
+            "aromas",
+            "riesgo"
+          ]
+        },
+        {
+          "chunk_id": "OFFICIAL_WSET_W_5_5_8_WHITE_AND_SWEET_WINEMAKING_001",
+          "source_file": "knowledge/official-wset/study-guide/wset_markdown/seccion_5_section_2_factors_affecting_the_style_quality_and_price_of_w/5-5_8_white_and_sweet_winemaking.md",
+          "title": "8 White and Sweet Winemaking",
+          "source_type": "official_wset_extracted",
+          "matched_terms": [
+            "levadura",
+            "levaduras",
+            "fermentación",
+            "control",
+            "complejidad",
+            "aromas",
+            "riesgo"
+          ]
+        },
+        {
+          "chunk_id": "OFFICIAL_WSET_W_5_6_9_RED_AND_ROSE_WINEMAKING_001",
+          "source_file": "knowledge/official-wset/study-guide/wset_markdown/seccion_5_section_2_factors_affecting_the_style_quality_and_price_of_w/5-6_9_red_and_rose_winemaking.md",
+          "title": "9 Red and Rosé Winemaking",
+          "source_type": "official_wset_extracted",
+          "matched_terms": [
+            "levadura",
+            "levaduras",
+            "fermentación",
+            "control",
+            "complejidad",
+            "aromas",
+            "riesgo"
+          ]
+        }
+      ]
+    },
+    "review_status": "approved",
+    "activation_status": "inactive",
+    "feedback_rubric": {
+      "concept_coverage": "expected_concept_presence",
+      "causal_link": "formative_causal_link_presence",
+      "formative_feedback": "training_guidance_only",
+      "needs_review": "derived_from_missing_or_partial_concepts"
+    },
+    "governance_flags": {
+      "safe_for_examiner": false,
+      "examiner_scoring_allowed": false,
+      "official_wset_question": false,
+      "training_item_only": true,
+      "uses_llm": false,
+      "uses_api": false,
+      "uses_embeddings": false,
+      "uses_vector_db": false,
+      "cloud_services_active": false
+    }
+  },
+  {
+    "schema_version": "diagnostic_open_response_v1",
+    "source_question_id": "810",
+    "question_type": "diagnostic_open_response",
+    "stem": "Analice cómo el estrés hídrico moderado puede reducir el rendimiento, concentrar las bayas e influir potencialmente en el coste y el precio del vino.",
+    "RA": "RA1",
+    "topic": "estrés hídrico",
+    "subtopic": "rendimiento",
+    "difficulty": "distinction",
+    "expected_concepts": [
+      "estrés hídrico",
+      "agua",
+      "moderado",
+      "baya",
+      "bayas pequeñas",
+      "concentración",
+      "piel",
+      "rendimiento",
+      "coste",
+      "costo",
+      "precio",
+      "maduración",
+      "azúcar",
+      "RA1"
+    ],
+    "optional_causal_chain": "estrés hídrico -> baya -> concentración",
+    "corpus_support": {
+      "status": "supported",
+      "source_question_bank": "knowledge/question-bank/structured/wset3_questions.json",
+      "source_type": "WSET3_RA1_Banco_Preguntas_TOTAL.xlsx | Abiertas",
+      "support_terms": [
+        "estrés hídrico",
+        "agua",
+        "moderado",
+        "baya",
+        "bayas pequeñas",
+        "concentración",
+        "piel",
+        "rendimiento",
+        "coste",
+        "costo",
+        "precio",
+        "maduración",
+        "azúcar",
+        "RA1"
+      ],
+      "evidence_chunks": [
+        {
+          "chunk_id": "OFFICIAL_WSET_PRICE_OF_W_5_3_6_VINEYARD_MANAGEMENT_001",
+          "source_file": "knowledge/official-wset/study-guide/wset_markdown/seccion_5_section_2_factors_affecting_the_style_quality_and_price_of_w/5-3_6_vineyard_management.md",
+          "title": "6 Vineyard Management",
+          "source_type": "official_wset_extracted",
+          "matched_terms": [
+            "agua",
+            "baya",
+            "concentración",
+            "rendimiento",
+            "coste",
+            "costo",
+            "precio",
+            "maduración",
+            "azúcar"
+          ]
+        },
+        {
+          "chunk_id": "OFFICIAL_WSET_W_5_5_8_WHITE_AND_SWEET_WINEMAKING_001",
+          "source_file": "knowledge/official-wset/study-guide/wset_markdown/seccion_5_section_2_factors_affecting_the_style_quality_and_price_of_w/5-5_8_white_and_sweet_winemaking.md",
+          "title": "8 White and Sweet Winemaking",
+          "source_type": "official_wset_extracted",
+          "matched_terms": [
+            "moderado",
+            "baya",
+            "bayas pequeñas",
+            "concentración",
+            "piel",
+            "precio",
+            "maduración",
+            "azúcar"
+          ]
+        },
+        {
+          "chunk_id": "OFFICIAL_WSET_4_7_COMMON_ELEMENTS_IN_WINEMAKING_AND_MATURATION_001",
+          "source_file": "knowledge/official-wset/study-guide/wset_markdown/seccion_5_section_2_factors_affecting_the_style_quality_and_price_of_w/5-4_7_common_elements_in_winemaking_and_maturation.md",
+          "title": "7 Common Elements in Winemaking and Maturation",
+          "source_type": "official_wset_extracted",
+          "matched_terms": [
+            "agua",
+            "concentración",
+            "coste",
+            "costo",
+            "precio",
+            "maduración",
+            "azúcar"
+          ]
+        }
+      ]
+    },
+    "review_status": "approved",
+    "activation_status": "inactive",
+    "feedback_rubric": {
+      "concept_coverage": "expected_concept_presence",
+      "causal_link": "formative_causal_link_presence",
+      "formative_feedback": "training_guidance_only",
+      "needs_review": "derived_from_missing_or_partial_concepts"
+    },
+    "governance_flags": {
+      "safe_for_examiner": false,
+      "examiner_scoring_allowed": false,
+      "official_wset_question": false,
+      "training_item_only": true,
+      "uses_llm": false,
+      "uses_api": false,
+      "uses_embeddings": false,
+      "uses_vector_db": false,
+      "cloud_services_active": false
+    }
+  },
+  {
+    "schema_version": "diagnostic_open_response_v1",
+    "source_question_id": "811",
+    "question_type": "diagnostic_open_response",
+    "stem": "Describe cómo la latitud y la altitud interactúan para influir en el estilo del vino en una región de clima cálido.",
+    "RA": "RA1",
+    "topic": "latitud",
+    "subtopic": "altitud",
+    "difficulty": "intermediate",
+    "expected_concepts": [
+      "latitud",
+      "altitud",
+      "altura",
+      "clima cálido",
+      "temperatura",
+      "calor",
+      "maduración",
+      "rápida",
+      "acidez",
+      "rango diurno",
+      "oscilación térmica",
+      "frescura",
+      "alcohol",
+      "estilo",
+      "RA1"
+    ],
+    "optional_causal_chain": "latitud -> temperatura -> maduración",
+    "corpus_support": {
+      "status": "supported",
+      "source_question_bank": "knowledge/question-bank/structured/wset3_questions.json",
+      "source_type": "WSET3_RA1_Banco_Preguntas_TOTAL.xlsx | Abiertas",
+      "support_terms": [
+        "latitud",
+        "altitud",
+        "altura",
+        "clima cálido",
+        "temperatura",
+        "calor",
+        "maduración",
+        "rápida",
+        "acidez",
+        "rango diurno",
+        "oscilación térmica",
+        "frescura",
+        "alcohol",
+        "estilo",
+        "RA1"
+      ],
+      "evidence_chunks": [
+        {
+          "chunk_id": "OFFICIAL_WSET_OF_W_5_2_5_THE_GROWING_ENVIRONMENT_001",
+          "source_file": "knowledge/official-wset/study-guide/wset_markdown/seccion_5_section_2_factors_affecting_the_style_quality_and_price_of_w/5-2_5_the_growing_environment.md",
+          "title": "5 The Growing Environment",
+          "source_type": "official_wset_extracted",
+          "matched_terms": [
+            "latitud",
+            "altitud",
+            "altura",
+            "clima cálido",
+            "temperatura",
+            "calor",
+            "maduración",
+            "acidez",
+            "alcohol",
+            "estilo"
+          ]
+        },
+        {
+          "chunk_id": "OFFICIAL_WSET_WINES_OF_THE_WORLD_6_28_39_AUSTRALIA_001",
+          "source_file": "knowledge/official-wset/study-guide/wset_markdown/seccion_6_section_3_still_wines_of_the_world/6-28_39_australia.md",
+          "title": "39 Australia",
+          "source_type": "official_wset_extracted",
+          "matched_terms": [
+            "latitud",
+            "altitud",
+            "altura",
+            "clima cálido",
+            "calor",
+            "maduración",
+            "acidez",
+            "alcohol",
+            "estilo"
+          ]
+        },
+        {
+          "chunk_id": "OFFICIAL_WSET_OF_THE_WORLD_6_16_27_NORTHERN_ITALY_001",
+          "source_file": "knowledge/official-wset/study-guide/wset_markdown/seccion_6_section_3_still_wines_of_the_world/6-16_27_northern_italy.md",
+          "title": "27 Northern Italy",
+          "source_type": "official_wset_extracted",
+          "matched_terms": [
+            "latitud",
+            "altitud",
+            "altura",
+            "temperatura",
+            "maduración",
+            "acidez",
+            "alcohol",
+            "estilo"
+          ]
+        }
+      ]
+    },
+    "review_status": "approved",
+    "activation_status": "inactive",
+    "feedback_rubric": {
+      "concept_coverage": "expected_concept_presence",
+      "causal_link": "formative_causal_link_presence",
+      "formative_feedback": "training_guidance_only",
+      "needs_review": "derived_from_missing_or_partial_concepts"
+    },
+    "governance_flags": {
+      "safe_for_examiner": false,
+      "examiner_scoring_allowed": false,
+      "official_wset_question": false,
+      "training_item_only": true,
+      "uses_llm": false,
+      "uses_api": false,
+      "uses_embeddings": false,
+      "uses_vector_db": false,
+      "cloud_services_active": false
+    }
+  },
+  {
+    "schema_version": "diagnostic_open_response_v1",
+    "source_question_id": "812",
+    "question_type": "diagnostic_open_response",
+    "stem": "Explique cómo un estrés hídrico moderado, si no es excesivo, puede influir en el vigor de la vid, el tamaño de las bayas y la concentración del vino.",
+    "RA": "RA1",
+    "topic": "estrés hídrico",
+    "subtopic": "vigor",
+    "difficulty": "intermediate",
+    "expected_concepts": [
+      "estrés hídrico",
+      "agua",
+      "moderado",
+      "vigor",
+      "crecimiento vegetativo",
+      "baya",
+      "bayas pequeñas",
+      "concentración",
+      "maduración",
+      "rendimiento",
+      "azúcar",
+      "RA1"
+    ],
+    "optional_causal_chain": "estrés hídrico -> vigor -> concentración",
+    "corpus_support": {
+      "status": "supported",
+      "source_question_bank": "knowledge/question-bank/structured/wset3_questions.json",
+      "source_type": "WSET3_RA1_Banco_Preguntas_TOTAL.xlsx | Abiertas",
+      "support_terms": [
+        "estrés hídrico",
+        "agua",
+        "moderado",
+        "vigor",
+        "crecimiento vegetativo",
+        "baya",
+        "bayas pequeñas",
+        "concentración",
+        "maduración",
+        "rendimiento",
+        "azúcar",
+        "RA1"
+      ],
+      "evidence_chunks": [
+        {
+          "chunk_id": "OFFICIAL_WSET_OF_W_5_2_5_THE_GROWING_ENVIRONMENT_001",
+          "source_file": "knowledge/official-wset/study-guide/wset_markdown/seccion_5_section_2_factors_affecting_the_style_quality_and_price_of_w/5-2_5_the_growing_environment.md",
+          "title": "5 The Growing Environment",
+          "source_type": "official_wset_extracted",
+          "matched_terms": [
+            "estrés hídrico",
+            "agua",
+            "moderado",
+            "baya",
+            "maduración",
+            "azúcar"
+          ]
+        },
+        {
+          "chunk_id": "OFFICIAL_WSET_PRICE_OF_W_5_3_6_VINEYARD_MANAGEMENT_001",
+          "source_file": "knowledge/official-wset/study-guide/wset_markdown/seccion_5_section_2_factors_affecting_the_style_quality_and_price_of_w/5-3_6_vineyard_management.md",
+          "title": "6 Vineyard Management",
+          "source_type": "official_wset_extracted",
+          "matched_terms": [
+            "agua",
+            "baya",
+            "concentración",
+            "maduración",
+            "rendimiento",
+            "azúcar"
+          ]
+        },
+        {
+          "chunk_id": "OFFICIAL_WSET_WINES_OF_THE_WORLD_6_22_33_CALIFORNIA_001",
+          "source_file": "knowledge/official-wset/study-guide/wset_markdown/seccion_6_section_3_still_wines_of_the_world/6-22_33_california.md",
+          "title": "33 California",
+          "source_type": "official_wset_extracted",
+          "matched_terms": [
+            "agua",
+            "moderado",
+            "baya",
+            "maduración",
+            "rendimiento",
+            "azúcar"
+          ]
+        }
+      ]
+    },
+    "review_status": "approved",
+    "activation_status": "inactive",
+    "feedback_rubric": {
+      "concept_coverage": "expected_concept_presence",
+      "causal_link": "formative_causal_link_presence",
+      "formative_feedback": "training_guidance_only",
+      "needs_review": "derived_from_missing_or_partial_concepts"
+    },
+    "governance_flags": {
+      "safe_for_examiner": false,
+      "examiner_scoring_allowed": false,
+      "official_wset_question": false,
+      "training_item_only": true,
+      "uses_llm": false,
+      "uses_api": false,
+      "uses_embeddings": false,
+      "uses_vector_db": false,
+      "cloud_services_active": false
+    }
+  },
+  {
+    "schema_version": "diagnostic_open_response_v1",
+    "source_question_id": "813",
+    "question_type": "diagnostic_open_response",
+    "stem": "Menciona un riesgo enológico del uso de levaduras autóctonas.",
+    "RA": "RA1",
+    "topic": "levaduras autóctonas",
+    "subtopic": "riesgo enológico",
+    "difficulty": "foundational",
+    "expected_concepts": [
+      "levaduras autóctonas",
+      "autóctonas",
+      "salvajes",
+      "fermentación",
+      "riesgo",
+      "parada fermentativa",
+      "lenta",
+      "impredecible",
+      "aromas no deseados",
+      "defectos",
+      "control",
+      "calidad",
+      "RA1",
+      "riesgo enológico"
+    ],
+    "optional_causal_chain": "levaduras autóctonas -> riesgo",
+    "corpus_support": {
+      "status": "supported",
+      "source_question_bank": "knowledge/question-bank/structured/wset3_questions.json",
+      "source_type": "WSET3_RA1_Banco_Preguntas_Bloque2.xlsx | Preguntas_Abiertas",
+      "support_terms": [
+        "levaduras autóctonas",
+        "autóctonas",
+        "salvajes",
+        "fermentación",
+        "riesgo",
+        "parada fermentativa",
+        "lenta",
+        "impredecible",
+        "aromas no deseados",
+        "defectos",
+        "control",
+        "calidad",
+        "RA1",
+        "riesgo enológico"
+      ],
+      "evidence_chunks": [
+        {
+          "chunk_id": "OFFICIAL_WSET_PRICE_OF_W_5_3_6_VINEYARD_MANAGEMENT_001",
+          "source_file": "knowledge/official-wset/study-guide/wset_markdown/seccion_5_section_2_factors_affecting_the_style_quality_and_price_of_w/5-3_6_vineyard_management.md",
+          "title": "6 Vineyard Management",
+          "source_type": "official_wset_extracted",
+          "matched_terms": [
+            "autóctonas",
+            "salvajes",
+            "fermentación",
+            "riesgo",
+            "control"
+          ]
+        },
+        {
+          "chunk_id": "OFFICIAL_WSET_4_7_COMMON_ELEMENTS_IN_WINEMAKING_AND_MATURATION_001",
+          "source_file": "knowledge/official-wset/study-guide/wset_markdown/seccion_5_section_2_factors_affecting_the_style_quality_and_price_of_w/5-4_7_common_elements_in_winemaking_and_maturation.md",
+          "title": "7 Common Elements in Winemaking and Maturation",
+          "source_type": "official_wset_extracted",
+          "matched_terms": [
+            "fermentación",
+            "riesgo",
+            "defectos",
+            "control"
+          ]
+        },
+        {
+          "chunk_id": "OFFICIAL_WSET_WINES_OF_THE_WORLD_6_6_17_ALSACE_001",
+          "source_file": "knowledge/official-wset/study-guide/wset_markdown/seccion_6_section_3_still_wines_of_the_world/6-6_17_alsace.md",
+          "title": "17 Alsace",
+          "source_type": "official_wset_extracted",
+          "matched_terms": [
+            "fermentación",
+            "riesgo",
+            "control"
+          ]
+        }
+      ]
+    },
+    "review_status": "approved",
+    "activation_status": "inactive",
+    "feedback_rubric": {
+      "concept_coverage": "expected_concept_presence",
+      "causal_link": "formative_causal_link_presence",
+      "formative_feedback": "training_guidance_only",
+      "needs_review": "derived_from_missing_or_partial_concepts"
+    },
+    "governance_flags": {
+      "safe_for_examiner": false,
+      "examiner_scoring_allowed": false,
+      "official_wset_question": false,
+      "training_item_only": true,
+      "uses_llm": false,
+      "uses_api": false,
+      "uses_embeddings": false,
+      "uses_vector_db": false,
+      "cloud_services_active": false
+    }
+  },
+  {
+    "schema_version": "diagnostic_open_response_v1",
+    "source_question_id": "814",
+    "question_type": "diagnostic_open_response",
+    "stem": "Justifica por qué un viticultor utilizaría poda en invierno.",
+    "RA": "RA1",
+    "topic": "poda de invierno",
+    "subtopic": "rendimiento",
+    "difficulty": "foundational",
+    "expected_concepts": [
+      "poda",
+      "poda de invierno",
+      "invierno",
+      "yemas",
+      "brotes",
+      "rendimiento",
+      "vigor",
+      "equilibrio",
+      "maduración",
+      "calidad",
+      "uva",
+      "vid",
+      "RA1",
+      "equilibrio de la vid"
+    ],
+    "optional_causal_chain": "poda -> yemas -> rendimiento",
+    "corpus_support": {
+      "status": "supported",
+      "source_question_bank": "knowledge/question-bank/structured/wset3_questions.json",
+      "source_type": "WSET3_RA1_Banco_Preguntas_Bloque2.xlsx | Preguntas_Abiertas",
+      "support_terms": [
+        "poda",
+        "poda de invierno",
+        "invierno",
+        "yemas",
+        "brotes",
+        "rendimiento",
+        "vigor",
+        "equilibrio",
+        "maduración",
+        "calidad",
+        "uva",
+        "vid",
+        "RA1",
+        "equilibrio de la vid"
+      ],
+      "evidence_chunks": [
+        {
+          "chunk_id": "OFFICIAL_WSET_PRICE_OF_W_5_3_6_VINEYARD_MANAGEMENT_001",
+          "source_file": "knowledge/official-wset/study-guide/wset_markdown/seccion_5_section_2_factors_affecting_the_style_quality_and_price_of_w/5-3_6_vineyard_management.md",
+          "title": "6 Vineyard Management",
+          "source_type": "official_wset_extracted",
+          "matched_terms": [
+            "poda",
+            "poda de invierno",
+            "invierno",
+            "yemas",
+            "brotes",
+            "rendimiento",
+            "equilibrio",
+            "maduración"
+          ]
+        },
+        {
+          "chunk_id": "OFFICIAL_WSET_PRICE_OF_W_5_1_4_THE_VINE_001",
+          "source_file": "knowledge/official-wset/study-guide/wset_markdown/seccion_5_section_2_factors_affecting_the_style_quality_and_price_of_w/5-1_4_the_vine.md",
+          "title": "4 The Vine",
+          "source_type": "official_wset_extracted",
+          "matched_terms": [
+            "poda",
+            "invierno",
+            "yemas",
+            "brotes",
+            "maduración"
+          ]
+        },
+        {
+          "chunk_id": "OFFICIAL_WSET_OF_W_5_2_5_THE_GROWING_ENVIRONMENT_001",
+          "source_file": "knowledge/official-wset/study-guide/wset_markdown/seccion_5_section_2_factors_affecting_the_style_quality_and_price_of_w/5-2_5_the_growing_environment.md",
+          "title": "5 The Growing Environment",
+          "source_type": "official_wset_extracted",
+          "matched_terms": [
+            "invierno",
+            "yemas",
+            "brotes",
+            "maduración"
+          ]
+        }
+      ]
+    },
+    "review_status": "approved",
+    "activation_status": "inactive",
+    "feedback_rubric": {
+      "concept_coverage": "expected_concept_presence",
+      "causal_link": "formative_causal_link_presence",
+      "formative_feedback": "training_guidance_only",
+      "needs_review": "derived_from_missing_or_partial_concepts"
+    },
+    "governance_flags": {
+      "safe_for_examiner": false,
+      "examiner_scoring_allowed": false,
+      "official_wset_question": false,
+      "training_item_only": true,
+      "uses_llm": false,
+      "uses_api": false,
+      "uses_embeddings": false,
+      "uses_vector_db": false,
+      "cloud_services_active": false
+    }
+  },
+  {
+    "schema_version": "diagnostic_open_response_v1",
+    "source_question_id": "815",
+    "question_type": "diagnostic_open_response",
+    "stem": "Describe un beneficio técnico de la fermentación en acero inoxidable.",
+    "RA": "RA1",
+    "topic": "acero inoxidable",
+    "subtopic": "fermentación",
+    "difficulty": "foundational",
+    "expected_concepts": [
+      "acero inoxidable",
+      "inoxidable",
+      "temperatura",
+      "control de temperatura",
+      "fermentación",
+      "inerte",
+      "aromas primarios",
+      "fruta",
+      "frescura",
+      "limpio",
+      "oxígeno",
+      "sabor",
+      "RA1",
+      "estilo fresco"
+    ],
+    "optional_causal_chain": "acero inoxidable -> temperatura -> aromas",
+    "corpus_support": {
+      "status": "supported",
+      "source_question_bank": "knowledge/question-bank/structured/wset3_questions.json",
+      "source_type": "WSET3_RA1_Banco_Preguntas_Bloque2.xlsx | Preguntas_Abiertas",
+      "support_terms": [
+        "acero inoxidable",
+        "inoxidable",
+        "temperatura",
+        "control de temperatura",
+        "fermentación",
+        "inerte",
+        "aromas primarios",
+        "fruta",
+        "frescura",
+        "limpio",
+        "oxígeno",
+        "sabor",
+        "RA1",
+        "estilo fresco"
+      ],
+      "evidence_chunks": [
+        {
+          "chunk_id": "OFFICIAL_WSET_W_5_6_9_RED_AND_ROSE_WINEMAKING_001",
+          "source_file": "knowledge/official-wset/study-guide/wset_markdown/seccion_5_section_2_factors_affecting_the_style_quality_and_price_of_w/5-6_9_red_and_rose_winemaking.md",
+          "title": "9 Red and Rosé Winemaking",
+          "source_type": "official_wset_extracted",
+          "matched_terms": [
+            "acero inoxidable",
+            "inoxidable",
+            "temperatura",
+            "control de temperatura",
+            "fermentación",
+            "inerte",
+            "aromas primarios",
+            "oxígeno"
+          ]
+        },
+        {
+          "chunk_id": "OFFICIAL_WSET_4_7_COMMON_ELEMENTS_IN_WINEMAKING_AND_MATURATION_001",
+          "source_file": "knowledge/official-wset/study-guide/wset_markdown/seccion_5_section_2_factors_affecting_the_style_quality_and_price_of_w/5-4_7_common_elements_in_winemaking_and_maturation.md",
+          "title": "7 Common Elements in Winemaking and Maturation",
+          "source_type": "official_wset_extracted",
+          "matched_terms": [
+            "acero inoxidable",
+            "inoxidable",
+            "temperatura",
+            "control de temperatura",
+            "fermentación",
+            "inerte",
+            "oxígeno"
+          ]
+        },
+        {
+          "chunk_id": "OFFICIAL_WSET_W_5_5_8_WHITE_AND_SWEET_WINEMAKING_001",
+          "source_file": "knowledge/official-wset/study-guide/wset_markdown/seccion_5_section_2_factors_affecting_the_style_quality_and_price_of_w/5-5_8_white_and_sweet_winemaking.md",
+          "title": "8 White and Sweet Winemaking",
+          "source_type": "official_wset_extracted",
+          "matched_terms": [
+            "acero inoxidable",
+            "inoxidable",
+            "temperatura",
+            "control de temperatura",
+            "fermentación",
+            "inerte",
+            "oxígeno"
+          ]
+        }
+      ]
+    },
+    "review_status": "approved",
+    "activation_status": "inactive",
+    "feedback_rubric": {
+      "concept_coverage": "expected_concept_presence",
+      "causal_link": "formative_causal_link_presence",
+      "formative_feedback": "training_guidance_only",
+      "needs_review": "derived_from_missing_or_partial_concepts"
+    },
+    "governance_flags": {
+      "safe_for_examiner": false,
+      "examiner_scoring_allowed": false,
+      "official_wset_question": false,
+      "training_item_only": true,
+      "uses_llm": false,
+      "uses_api": false,
+      "uses_embeddings": false,
+      "uses_vector_db": false,
+      "cloud_services_active": false
+    }
+  },
+  {
+    "schema_version": "diagnostic_open_response_v1",
+    "source_question_id": "816",
+    "question_type": "diagnostic_open_response",
+    "stem": "Analiza los efectos de la maceración prolongada en la vinificación de vinos tintos desde el punto de vista del estilo y calidad final.",
+    "RA": "RA1",
+    "topic": "maceración prolongada",
+    "subtopic": "vino tinto",
+    "difficulty": "distinction",
+    "expected_concepts": [
+      "maceración prolongada",
+      "maceración",
+      "extracción",
+      "color",
+      "tanino",
+      "antocianos",
+      "fenoles",
+      "estructura",
+      "cuerpo",
+      "envejecimiento",
+      "guarda",
+      "astringencia",
+      "amargor",
+      "equilibrio",
+      "calidad",
+      "RA1",
+      "vino tinto",
+      "estilo"
+    ],
+    "optional_causal_chain": "maceración -> extracción -> tanino",
+    "corpus_support": {
+      "status": "supported",
+      "source_question_bank": "knowledge/question-bank/structured/wset3_questions.json",
+      "source_type": "WSET3_RA1_Banco_Preguntas_TOTAL.xlsx | Abiertas",
+      "support_terms": [
+        "maceración prolongada",
+        "maceración",
+        "extracción",
+        "color",
+        "tanino",
+        "antocianos",
+        "fenoles",
+        "estructura",
+        "cuerpo",
+        "envejecimiento",
+        "guarda",
+        "astringencia",
+        "amargor",
+        "equilibrio",
+        "calidad",
+        "RA1",
+        "vino tinto",
+        "estilo"
+      ],
+      "evidence_chunks": [
+        {
+          "chunk_id": "OFFICIAL_WSET_1_1_THE_SYSTEMATIC_APPROACH_TO_TASTING_WINE_001",
+          "source_file": "knowledge/official-wset/study-guide/wset_markdown/seccion_4_section_1_wine_and_the_consumer/4-1_1_the_systematic_approach_to_tasting_wine.md",
+          "title": "1 The Systematic Approach to Tasting Wine®",
+          "source_type": "official_wset_extracted",
+          "matched_terms": [
+            "color",
+            "tanino",
+            "cuerpo",
+            "envejecimiento",
+            "astringencia",
+            "amargor",
+            "equilibrio",
+            "estilo"
+          ]
+        },
+        {
+          "chunk_id": "OFFICIAL_WSET_W_5_6_9_RED_AND_ROSE_WINEMAKING_001",
+          "source_file": "knowledge/official-wset/study-guide/wset_markdown/seccion_5_section_2_factors_affecting_the_style_quality_and_price_of_w/5-6_9_red_and_rose_winemaking.md",
+          "title": "9 Red and Rosé Winemaking",
+          "source_type": "official_wset_extracted",
+          "matched_terms": [
+            "maceración",
+            "extracción",
+            "color",
+            "tanino",
+            "cuerpo",
+            "envejecimiento",
+            "equilibrio",
+            "estilo"
+          ]
+        },
+        {
+          "chunk_id": "OFFICIAL_WSET_THE_WORLD_6_7_18_THE_LOIRE_VALLEY_001",
+          "source_file": "knowledge/official-wset/study-guide/wset_markdown/seccion_6_section_3_still_wines_of_the_world/6-7_18_the_loire_valley.md",
+          "title": "18 The Loire Valley",
+          "source_type": "official_wset_extracted",
+          "matched_terms": [
+            "maceración",
+            "color",
+            "tanino",
+            "cuerpo",
+            "envejecimiento",
+            "equilibrio",
+            "estilo"
+          ]
+        }
+      ]
+    },
+    "review_status": "approved",
+    "activation_status": "inactive",
+    "feedback_rubric": {
+      "concept_coverage": "expected_concept_presence",
+      "causal_link": "formative_causal_link_presence",
+      "formative_feedback": "training_guidance_only",
+      "needs_review": "derived_from_missing_or_partial_concepts"
+    },
+    "governance_flags": {
+      "safe_for_examiner": false,
+      "examiner_scoring_allowed": false,
+      "official_wset_question": false,
+      "training_item_only": true,
+      "uses_llm": false,
+      "uses_api": false,
+      "uses_embeddings": false,
+      "uses_vector_db": false,
+      "cloud_services_active": false
+    }
+  },
+  {
+    "schema_version": "diagnostic_open_response_v1",
+    "source_question_id": "817",
+    "question_type": "diagnostic_open_response",
+    "stem": "Compare cómo suelos arenosos y arcillosos pueden afectar la disponibilidad de agua, el vigor de la vid y el estilo del vino.",
+    "RA": "RA1",
+    "topic": "suelo",
+    "subtopic": "arena",
+    "difficulty": "intermediate",
+    "expected_concepts": [
+      "suelo",
+      "arena",
+      "arcilla",
+      "drenaje",
+      "retención de agua",
+      "agua",
+      "vigor",
+      "rendimiento",
+      "concentración",
+      "maduración",
+      "estilo",
+      "RA1"
+    ],
+    "optional_causal_chain": "arena -> drenaje -> vigor",
+    "corpus_support": {
+      "status": "supported",
+      "source_question_bank": "knowledge/question-bank/structured/wset3_questions.json",
+      "source_type": "WSET3_RA1_Banco_Preguntas_TOTAL.xlsx | Abiertas",
+      "support_terms": [
+        "suelo",
+        "arena",
+        "arcilla",
+        "drenaje",
+        "retención de agua",
+        "agua",
+        "vigor",
+        "rendimiento",
+        "concentración",
+        "maduración",
+        "estilo",
+        "RA1"
+      ],
+      "evidence_chunks": [
+        {
+          "chunk_id": "OFFICIAL_WSET_OF_W_5_2_5_THE_GROWING_ENVIRONMENT_001",
+          "source_file": "knowledge/official-wset/study-guide/wset_markdown/seccion_5_section_2_factors_affecting_the_style_quality_and_price_of_w/5-2_5_the_growing_environment.md",
+          "title": "5 The Growing Environment",
+          "source_type": "official_wset_extracted",
+          "matched_terms": [
+            "suelo",
+            "arena",
+            "arcilla",
+            "drenaje",
+            "agua",
+            "maduración",
+            "estilo"
+          ]
+        },
+        {
+          "chunk_id": "OFFICIAL_WSET_PRICE_OF_W_5_3_6_VINEYARD_MANAGEMENT_001",
+          "source_file": "knowledge/official-wset/study-guide/wset_markdown/seccion_5_section_2_factors_affecting_the_style_quality_and_price_of_w/5-3_6_vineyard_management.md",
+          "title": "6 Vineyard Management",
+          "source_type": "official_wset_extracted",
+          "matched_terms": [
+            "suelo",
+            "agua",
+            "rendimiento",
+            "concentración",
+            "maduración",
+            "estilo"
+          ]
+        },
+        {
+          "chunk_id": "OFFICIAL_WSET_WINES_OF_THE_WORLD_8_1_43_SHERRY_001",
+          "source_file": "knowledge/official-wset/study-guide/wset_markdown/seccion_8_section_5_fortified_wines_of_the_world/8-1_43_sherry.md",
+          "title": "43 Sherry",
+          "source_type": "official_wset_extracted",
+          "matched_terms": [
+            "suelo",
+            "drenaje",
+            "agua",
+            "rendimiento",
+            "maduración",
+            "estilo"
+          ]
+        }
+      ]
+    },
+    "review_status": "approved",
+    "activation_status": "inactive",
+    "feedback_rubric": {
+      "concept_coverage": "expected_concept_presence",
+      "causal_link": "formative_causal_link_presence",
+      "formative_feedback": "training_guidance_only",
+      "needs_review": "derived_from_missing_or_partial_concepts"
+    },
+    "governance_flags": {
+      "safe_for_examiner": false,
+      "examiner_scoring_allowed": false,
+      "official_wset_question": false,
+      "training_item_only": true,
+      "uses_llm": false,
+      "uses_api": false,
+      "uses_embeddings": false,
+      "uses_vector_db": false,
+      "cloud_services_active": false
+    }
+  }
+]

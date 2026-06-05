@@ -13464,18 +13464,18 @@
   },
   {
     "question_id": "798",
-    "question_text": "Discute cómo el uso de prácticas sostenibles en el viñedo puede influir en el precio del vino y en su percepción comercial.",
+    "question_text": "Explique cómo prácticas sostenibles certificadas u orgánicas pueden aumentar los costes de producción y contribuir a la diferenciación comercial del vino.",
     "question_type": "short_answer",
     "expected_topics": [
       "RA1",
       "sostenibilidad",
       "precio",
       "coste de producción",
-      "percepción comercial"
+      "diferenciación comercial"
     ],
     "expected_causal_links": [
       "sostenibilidad -> coste -> precio",
-      "certificación -> diferenciación -> percepción"
+      "certificación -> diferenciación -> mercado"
     ],
     "expected_keywords": [
       "sostenibilidad",
@@ -13491,8 +13491,7 @@
       "diferenciación",
       "percepción",
       "consumidor",
-      "mercado",
-      "valor"
+      "mercado"
     ],
     "expected_reasoning_type": "cause_effect",
     "difficulty": "distinction",
@@ -13739,15 +13738,14 @@
   },
   {
     "question_id": "804",
-    "question_text": "Analice el impacto del tipo de suelo en el estilo y la calidad del vino.",
+    "question_text": "Explique cómo el drenaje del suelo puede influir en el vigor de la vid y en el estilo del vino.",
     "question_type": "short_answer",
     "expected_topics": [
       "RA1",
       "suelo",
       "drenaje",
       "vigor",
-      "estilo",
-      "calidad"
+      "estilo"
     ],
     "expected_causal_links": [
       "suelo -> drenaje -> vigor",
@@ -13758,16 +13756,12 @@
       "drenaje",
       "agua",
       "retención",
-      "nutrientes",
       "vigor",
+      "raíces",
       "rendimiento",
       "concentración",
       "maduración",
-      "estilo",
-      "calidad",
-      "arcilla",
-      "grava",
-      "arena"
+      "estilo"
     ],
     "expected_reasoning_type": "cause_effect",
     "difficulty": "intermediate",
@@ -13784,7 +13778,7 @@
   },
   {
     "question_id": "805",
-    "question_text": "Expón cómo la elección del tipo de roble (americano vs francés) puede afectar el perfil sensorial y la percepción de calidad en vinos tintos.",
+    "question_text": "Compare cómo la elección de roble americano o francés puede afectar los aromas, el tanino y la integración del roble en vinos tintos.",
     "question_type": "short_answer",
     "expected_topics": [
       "RA1",
@@ -13792,12 +13786,12 @@
       "roble americano",
       "roble francés",
       "perfil sensorial",
-      "calidad"
+      "integración"
     ],
     "expected_causal_links": [
       "roble americano -> vainilla -> perfil",
       "roble francés -> especias -> integración",
-      "roble nuevo -> coste -> calidad"
+      "roble nuevo -> tanino -> estructura"
     ],
     "expected_keywords": [
       "roble",
@@ -13812,9 +13806,7 @@
       "tanino",
       "integración",
       "perfil sensorial",
-      "coste",
-      "costo",
-      "calidad",
+      "estructura",
       "complejidad",
       "nuevo"
     ],
@@ -13879,19 +13871,18 @@
   },
   {
     "question_id": "807",
-    "question_text": "Describe cómo las decisiones humanas en la viña pueden compensar las condiciones climáticas extremas y así mantener la calidad del vino.",
+    "question_text": "Explique cómo el riego y el manejo del dosel pueden reducir los efectos de la sequía o del calor extremo sobre la maduración de la uva.",
     "question_type": "short_answer",
     "expected_topics": [
       "RA1",
       "decisiones humanas",
-      "clima extremo",
-      "gestión del viñedo",
-      "calidad"
+      "sequía",
+      "manejo del dosel",
+      "maduración"
     ],
     "expected_causal_links": [
       "riego -> estrés hídrico -> maduración",
-      "dosel -> exposición -> equilibrio",
-      "vendimia -> selección -> calidad"
+      "manejo del dosel -> exposición -> maduración"
     ],
     "expected_keywords": [
       "decisiones humanas",
@@ -13901,17 +13892,14 @@
       "riego",
       "estrés hídrico",
       "sequía",
+      "calor",
+      "calor extremo",
       "dosel",
+      "manejo del dosel",
       "exposición",
       "sombra",
-      "helada",
-      "granizo",
-      "vendimia",
-      "selección",
       "maduración",
-      "equilibrio",
-      "calidad",
-      "clima extremo"
+      "equilibrio"
     ],
     "expected_reasoning_type": "cause_effect",
     "difficulty": "distinction",
@@ -13976,21 +13964,22 @@
   },
   {
     "question_id": "809",
-    "question_text": "Compara las ventajas y desventajas del uso de levaduras seleccionadas frente a levaduras autóctonas en la producción de vinos premium.",
+    "question_text": "Compare el uso de levaduras seleccionadas y levaduras autóctonas en fermentación, considerando control, consistencia, complejidad potencial y riesgos.",
     "question_type": "short_answer",
     "expected_topics": [
       "RA1",
       "levaduras seleccionadas",
       "levaduras autóctonas",
-      "vino premium",
+      "fermentación",
       "riesgo"
     ],
     "expected_causal_links": [
       "levaduras seleccionadas -> control -> consistencia",
-      "levaduras autóctonas -> variabilidad -> complejidad",
-      "variabilidad -> riesgo -> calidad"
+      "levaduras autóctonas -> variabilidad -> riesgo"
     ],
     "expected_keywords": [
+      "levadura",
+      "levaduras",
       "levaduras seleccionadas",
       "seleccionadas",
       "levaduras autóctonas",
@@ -14002,11 +13991,10 @@
       "predecible",
       "variabilidad",
       "complejidad",
+      "aromas",
       "riesgo",
       "parada fermentativa",
-      "aromas no deseados",
-      "calidad",
-      "premium"
+      "aromas no deseados"
     ],
     "expected_reasoning_type": "cause_effect",
     "difficulty": "distinction",
@@ -14023,19 +14011,19 @@
   },
   {
     "question_id": "810",
-    "question_text": "Evalúa las consecuencias del estrés hídrico moderado en viñedos de alta calidad y su impacto en el precio del vino.",
+    "question_text": "Analice cómo el estrés hídrico moderado puede reducir el rendimiento, concentrar las bayas e influir potencialmente en el coste y el precio del vino.",
     "question_type": "short_answer",
     "expected_topics": [
       "RA1",
       "estrés hídrico",
-      "calidad",
       "rendimiento",
+      "coste",
       "precio"
     ],
     "expected_causal_links": [
       "estrés hídrico -> baya -> concentración",
-      "rendimiento -> coste -> precio",
-      "concentración -> calidad -> valor"
+      "estrés hídrico -> rendimiento -> coste",
+      "rendimiento -> coste -> precio"
     ],
     "expected_keywords": [
       "estrés hídrico",
@@ -14049,11 +14037,8 @@
       "coste",
       "costo",
       "precio",
-      "calidad",
-      "valor",
       "maduración",
-      "azúcar",
-      "fenoles"
+      "azúcar"
     ],
     "expected_reasoning_type": "cause_effect",
     "difficulty": "distinction",
@@ -14115,18 +14100,18 @@
   },
   {
     "question_id": "812",
-    "question_text": "Explica cómo el estrés hídrico moderado puede influir en la calidad del vino.",
+    "question_text": "Explique cómo un estrés hídrico moderado, si no es excesivo, puede influir en el vigor de la vid, el tamaño de las bayas y la concentración del vino.",
     "question_type": "short_answer",
     "expected_topics": [
       "RA1",
       "estrés hídrico",
-      "calidad",
+      "vigor",
       "concentración",
       "maduración"
     ],
     "expected_causal_links": [
       "estrés hídrico -> vigor -> concentración",
-      "estrés hídrico -> baya -> calidad"
+      "estrés hídrico -> baya -> concentración"
     ],
     "expected_keywords": [
       "estrés hídrico",
@@ -14139,9 +14124,7 @@
       "concentración",
       "maduración",
       "rendimiento",
-      "calidad",
-      "azúcar",
-      "fenoles"
+      "azúcar"
     ],
     "expected_reasoning_type": "cause_effect",
     "difficulty": "intermediate",
@@ -14329,36 +14312,32 @@
   },
   {
     "question_id": "817",
-    "question_text": "Explica el impacto de diferentes tipos de suelos (arena, arcilla, grava) en el vigor de la vid y cómo esto puede influir en el estilo del vino.",
+    "question_text": "Compare cómo suelos arenosos y arcillosos pueden afectar la disponibilidad de agua, el vigor de la vid y el estilo del vino.",
     "question_type": "short_answer",
     "expected_topics": [
       "RA1",
       "suelo",
       "arena",
       "arcilla",
-      "grava",
+      "agua",
       "vigor",
       "estilo"
     ],
     "expected_causal_links": [
       "arena -> drenaje -> vigor",
-      "arcilla -> agua -> vigor",
-      "grava -> drenaje -> maduración"
+      "arcilla -> retención de agua -> vigor"
     ],
     "expected_keywords": [
       "suelo",
       "arena",
       "arcilla",
-      "grava",
       "drenaje",
       "retención de agua",
       "agua",
-      "calor",
-      "retención de calor",
       "vigor",
-      "maduración",
       "rendimiento",
       "concentración",
+      "maduración",
       "estilo"
     ],
     "expected_reasoning_type": "cause_effect",
