@@ -53,6 +53,7 @@ def process_sba_outcome(
     mc_id: str,
     outcome: str,
     session_id: str,
+    reference_date: str | None = None,
     signals_path: Path = MISCONCEPTION_SIGNALS_PATH,
 ) -> tuple[dict[str, Any], list[str]]:
     """Update in-memory LES for one SBA item linked to a misconception.
@@ -73,7 +74,7 @@ def process_sba_outcome(
 
     updated = deepcopy(les)
     emitted: list[str] = []
-    now = _utc_now()
+    now = reference_date or _utc_now()
 
     # --- Existing LES key: misconception_signals ---
     mc_signals: dict[str, Any] = updated.setdefault("misconception_signals", {})
