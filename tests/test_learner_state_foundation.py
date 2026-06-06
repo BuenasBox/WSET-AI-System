@@ -28,6 +28,7 @@ class LearnerStateSchemaCompatibilityTests(unittest.TestCase):
         self.assertEqual(DEFAULT_LES["misconception_signals"], {})
         self.assertEqual(DEFAULT_LES["causal_chain_signals"], {})
         self.assertEqual(DEFAULT_LES["question_exposure_log"], [])
+        self.assertEqual(DEFAULT_LES["question_exposure_signals"], {})
 
     def test_default_ra_signals_cover_ra1_through_ra5(self):
         self.assertEqual(tuple(DEFAULT_LES["RA_signals"]), RA_IDS)
@@ -99,6 +100,7 @@ class SignalContractTests(unittest.TestCase):
                 "correct_count": 2,
                 "incorrect_count": 1,
                 "confidence_level": "medium",
+                "weakness_level": "not_recorded",
                 "last_seen": "2026-06-06T12:00:00Z",
             },
         )
@@ -184,6 +186,8 @@ class SignalContractTests(unittest.TestCase):
     def test_unknown_confidence_and_trend_are_rejected(self):
         with self.assertRaises(ValueError):
             create_topic_signal("acid", confidence_level="expert")
+        with self.assertRaises(ValueError):
+            create_topic_signal("acid", weakness_level="severe")
         with self.assertRaises(ValueError):
             create_ra_signal("RA1", trend="mastered")
 

@@ -431,6 +431,9 @@ def _audit_retrieval(context_package: dict[str, Any], strictness: str) -> dict[s
     ]
     priority_text = " ".join(" ".join(item.get("why_retrieved", [])) + " " + str(item.get("retrieval_priority", "")) for item in contexts).lower()
     high_priority = priority_text.count("high") + priority_text.count("golden")
+    # Official WSET chunks are curated source-governed support even when the
+    # retrieval payload does not carry the legacy literal "high" marker.
+    high_priority += len(official)
     # Forced causal chains are high-priority curated content: count them toward
     # priority signal so that chain-injected answers are not penalised as shallow.
     forced_chains = [c for c in (context_package.get("forced_causal_chains") or []) if isinstance(c, dict)]

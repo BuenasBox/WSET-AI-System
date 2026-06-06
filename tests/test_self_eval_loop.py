@@ -220,6 +220,27 @@ class SelfEvalLoopTests(unittest.TestCase):
         self.assertIn("weak_context_support", comparison["failure_labels"])
         self.assertIn("shallow_retrieval", comparison["failure_labels"])
 
+    def test_official_context_is_not_mislabeled_as_shallow(self):
+        question = _question()
+        package = {
+            "retrieved_context": [
+                {
+                    "context_type": "retrieval_sandbox_chunk",
+                    "source_type": "official_wset_extracted",
+                    "why_retrieved": ["official WSET extracted Tutor support"],
+                }
+            ]
+        }
+
+        comparison = compare_answer(
+            question,
+            "Un clima fresco porque ralentiza la maduración y retiene acidity.",
+            package,
+            strictness="normal",
+        )
+
+        self.assertNotIn("shallow_retrieval", comparison["failure_labels"])
+
     def test_fragile_concept_accumulation(self):
         with tempfile.TemporaryDirectory() as tmp:
             root = Path(tmp)
