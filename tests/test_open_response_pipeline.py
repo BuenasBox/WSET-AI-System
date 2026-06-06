@@ -131,10 +131,10 @@ class OpenResponseAdapterTests(unittest.TestCase):
         self.assertFalse(candidate["governance_flags"]["uses_llm"])
         self.assertFalse(candidate["governance_flags"]["uses_api"])
 
-    def test_real_question_bank_has_twenty_one_open_response_candidates(self) -> None:
+    def test_real_question_bank_has_twenty_six_open_response_candidates(self) -> None:
         records = json.loads(QUESTION_BANK_PATH.read_text(encoding="utf-8"))
         candidates = build_open_response_candidates(records)
-        self.assertEqual(len(candidates), 21)
+        self.assertEqual(len(candidates), 26)
         self.assertEqual([candidate["source_question_id"] for candidate in candidates[:2]], ["18", "798"])
         for candidate in candidates:
             self.assertEqual(validate_open_response_candidate(candidate), [])

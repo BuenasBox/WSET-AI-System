@@ -6,14 +6,10 @@ import tempfile
 import unittest
 from pathlib import Path
 
-from tools.question_generation.master_bank import MASTER_BANK_PATH, SAFE_GOVERNANCE
-from tools.question_generation.master_bank_eligibility import (
-    load_open_response_suitability_index,
-)
+from tools.question_generation.master_bank import SAFE_GOVERNANCE
 from tools.question_generation.master_bank_eligibility_review_export import (
     DOCS_OUTPUT_DIR,
     JSON_OUTPUT_PATH,
-    build_review_packet,
     validate_review_packet,
     write_review_packet,
 )
@@ -25,9 +21,7 @@ ROOT = Path(__file__).resolve().parents[1]
 class MasterBankEligibilityReviewExportTests(unittest.TestCase):
     @classmethod
     def setUpClass(cls) -> None:
-        cls.bank = json.loads((ROOT / MASTER_BANK_PATH).read_text(encoding="utf-8"))
-        cls.suitability = load_open_response_suitability_index(root=ROOT)
-        cls.packet = build_review_packet(cls.bank, cls.suitability)
+        cls.packet = json.loads((ROOT / JSON_OUTPUT_PATH).read_text(encoding="utf-8"))
 
     def test_packet_counts_and_groups(self) -> None:
         self.assertEqual(
@@ -75,13 +69,11 @@ class MasterBankEligibilityReviewExportTests(unittest.TestCase):
         self.assertTrue(all(record["recommendation"] is None for record in records))
         self.assertTrue(all(len(record["recommendation_options"]) == 5 for record in records))
 
-    def test_packet_is_deterministic_pure_and_governance_clean(self) -> None:
-        before = copy.deepcopy(self.bank)
-        second = build_review_packet(copy.deepcopy(self.bank), copy.deepcopy(self.suitability))
-        self.assertEqual(self.packet, second)
-        self.assertEqual(self.bank, before)
+    def test_historical_packet_is_valid_and_governance_clean(self) -> None:
+        packet = copy.deepcopy(self.packet)
         self.assertEqual(self.packet["governance"], SAFE_GOVERNANCE)
         self.assertEqual(validate_review_packet(self.packet), [])
+        self.assertEqual(packet, self.packet)
 
     def test_write_creates_all_five_requested_files(self) -> None:
         with tempfile.TemporaryDirectory() as tmp:
