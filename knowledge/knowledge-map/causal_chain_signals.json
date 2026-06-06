@@ -1,0 +1,393 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "2026-06-06",
+  "total_nodes": 32,
+  "registered_in_manifest": 17,
+  "unregistered_in_manifest": 15,
+  "governance": {
+    "safe_for_examiner": false,
+    "uses_llm": false,
+    "uses_api": false,
+    "uses_embeddings": false,
+    "cloud_services_active": false,
+    "psl_active": false,
+    "document_type": "static_config",
+    "modifiable_by": "audit_phase_only"
+  },
+  "schema_families": {
+    "legacy": {
+      "id_field": "chain_id",
+      "count": 15,
+      "has_trigger_keywords": false,
+      "has_governance_fields": false
+    },
+    "governance": {
+      "id_field": "node_id",
+      "count": 16,
+      "has_trigger_keywords": true,
+      "has_governance_fields": true
+    },
+    "hybrid": {
+      "id_field": "chain_id + node_id",
+      "count": 1,
+      "has_trigger_keywords": true,
+      "has_governance_fields": true,
+      "note": "cc_cool_climate_acidity.json is the only hybrid node"
+    }
+  },
+  "notes": "zero_coverage=true marks nodes that are unregistered in the manifest and have not been validated for production retrieval or LES use. ENABLE_PLANNER_CAUSAL_CHAIN_INJECTION remains False. sba_distractors_linked=false for all nodes as of 2026-06-06.",
+  "causal_chains": [
+    {
+      "cc_id": "CC_ACIDITY_AGEABILITY",
+      "registration_status": "registered",
+      "schema_family": "legacy",
+      "cluster": "Tannin_Ageing",
+      "les_signal": "causal_gap_detected",
+      "reasoning_type": "mechanism_chain",
+      "evaluator_target": "tutor_retrieval",
+      "sba_distractors_linked": false,
+      "zero_coverage": false
+    },
+    {
+      "cc_id": "CC_AUTOLYSIS_AROMA_TEXTURE",
+      "registration_status": "registered",
+      "schema_family": "legacy",
+      "cluster": "Lees_Autolysis",
+      "les_signal": "causal_gap_detected",
+      "reasoning_type": "mechanism_chain",
+      "evaluator_target": "tutor_retrieval",
+      "sba_distractors_linked": false,
+      "zero_coverage": false
+    },
+    {
+      "cc_id": "CC_BARREL_AGEING_OAK_CHARACTER",
+      "registration_status": "unregistered",
+      "schema_family": "governance",
+      "cluster": "Oak",
+      "les_signal": "causal_gap_detected",
+      "reasoning_type": "mechanism_chain",
+      "evaluator_target": "open_response",
+      "sba_distractors_linked": false,
+      "zero_coverage": true
+    },
+    {
+      "cc_id": "CC_BOTRYTIS_ACIDITY_REDUCTION",
+      "registration_status": "registered",
+      "schema_family": "legacy",
+      "cluster": "Botrytis_Sweet",
+      "les_signal": "causal_gap_detected",
+      "reasoning_type": "mechanism_chain",
+      "evaluator_target": "tutor_retrieval",
+      "sba_distractors_linked": false,
+      "zero_coverage": false
+    },
+    {
+      "cc_id": "CC_BOTTLE_AGEING_SEDIMENT",
+      "registration_status": "unregistered",
+      "schema_family": "governance",
+      "cluster": "Fortified_Ageing",
+      "les_signal": "causal_gap_detected",
+      "reasoning_type": "mechanism_chain",
+      "evaluator_target": "open_response",
+      "sba_distractors_linked": false,
+      "zero_coverage": true
+    },
+    {
+      "cc_id": "CC_COOL_CLIMATE_ACIDITY",
+      "registration_status": "registered",
+      "schema_family": "hybrid",
+      "cluster": "Cool_Climate",
+      "les_signal": "causal_gap_detected",
+      "reasoning_type": "mechanism_chain",
+      "evaluator_target": "tutor_retrieval",
+      "sba_distractors_linked": false,
+      "zero_coverage": false
+    },
+    {
+      "cc_id": "CC_COOL_CLIMATE_ALCOHOL",
+      "registration_status": "registered",
+      "schema_family": "legacy",
+      "cluster": "Cool_Climate",
+      "les_signal": "causal_gap_detected",
+      "reasoning_type": "mechanism_chain",
+      "evaluator_target": "tutor_retrieval",
+      "sba_distractors_linked": false,
+      "zero_coverage": false
+    },
+    {
+      "cc_id": "CC_COOL_CLIMATE_AROMA",
+      "registration_status": "registered",
+      "schema_family": "legacy",
+      "cluster": "Cool_Climate",
+      "les_signal": "causal_gap_detected",
+      "reasoning_type": "mechanism_chain",
+      "evaluator_target": "tutor_retrieval",
+      "sba_distractors_linked": false,
+      "zero_coverage": false
+    },
+    {
+      "cc_id": "CC_DESTEMMING_TANNIN_STRUCTURE",
+      "registration_status": "unregistered",
+      "schema_family": "governance",
+      "cluster": "Tannin_Ageing",
+      "les_signal": "causal_gap_detected",
+      "reasoning_type": "mechanism_chain",
+      "evaluator_target": "open_response",
+      "sba_distractors_linked": false,
+      "zero_coverage": true
+    },
+    {
+      "cc_id": "CC_FLOR_BIOLOGICAL_AGEING",
+      "registration_status": "unregistered",
+      "schema_family": "governance",
+      "cluster": "Fortified_Ageing",
+      "les_signal": "causal_gap_detected",
+      "reasoning_type": "mechanism_chain",
+      "evaluator_target": "open_response",
+      "sba_distractors_linked": false,
+      "zero_coverage": true
+    },
+    {
+      "cc_id": "CC_FORTIFICATION_RESIDUAL_SUGAR",
+      "registration_status": "unregistered",
+      "schema_family": "governance",
+      "cluster": "Botrytis_Sweet",
+      "les_signal": "causal_gap_detected",
+      "reasoning_type": "mechanism_chain",
+      "evaluator_target": "open_response",
+      "sba_distractors_linked": false,
+      "zero_coverage": true
+    },
+    {
+      "cc_id": "CC_FRACTIONAL_BLENDING_CONSISTENCY",
+      "registration_status": "unregistered",
+      "schema_family": "governance",
+      "cluster": "Fortified_Ageing",
+      "les_signal": "causal_gap_detected",
+      "reasoning_type": "mechanism_chain",
+      "evaluator_target": "open_response",
+      "sba_distractors_linked": false,
+      "zero_coverage": true
+    },
+    {
+      "cc_id": "CC_LEES_AGEING_AUTOLYSIS",
+      "registration_status": "registered",
+      "schema_family": "legacy",
+      "cluster": "Lees_Autolysis",
+      "les_signal": "causal_gap_detected",
+      "reasoning_type": "mechanism_chain",
+      "evaluator_target": "tutor_retrieval",
+      "sba_distractors_linked": false,
+      "zero_coverage": false
+    },
+    {
+      "cc_id": "CC_MACERATION_EXTRACTION",
+      "registration_status": "unregistered",
+      "schema_family": "governance",
+      "cluster": "Winemaking",
+      "les_signal": "causal_gap_detected",
+      "reasoning_type": "mechanism_chain",
+      "evaluator_target": "open_response",
+      "sba_distractors_linked": false,
+      "zero_coverage": true
+    },
+    {
+      "cc_id": "CC_MECHANICAL_HARVEST_OXIDATION",
+      "registration_status": "unregistered",
+      "schema_family": "governance",
+      "cluster": "Viticulture",
+      "les_signal": "causal_gap_detected",
+      "reasoning_type": "mechanism_chain",
+      "evaluator_target": "open_response",
+      "sba_distractors_linked": false,
+      "zero_coverage": true
+    },
+    {
+      "cc_id": "CC_MLF_ACIDITY",
+      "registration_status": "registered",
+      "schema_family": "legacy",
+      "cluster": "MLF",
+      "les_signal": "causal_gap_detected",
+      "reasoning_type": "mechanism_chain",
+      "evaluator_target": "tutor_retrieval",
+      "sba_distractors_linked": false,
+      "zero_coverage": false
+    },
+    {
+      "cc_id": "CC_MLF_DIACETYL",
+      "registration_status": "registered",
+      "schema_family": "legacy",
+      "cluster": "MLF",
+      "les_signal": "causal_gap_detected",
+      "reasoning_type": "mechanism_chain",
+      "evaluator_target": "tutor_retrieval",
+      "sba_distractors_linked": false,
+      "zero_coverage": false
+    },
+    {
+      "cc_id": "CC_MLF_TEXTURE",
+      "registration_status": "registered",
+      "schema_family": "governance",
+      "cluster": "MLF",
+      "les_signal": "causal_gap_detected",
+      "reasoning_type": "mechanism_chain",
+      "evaluator_target": "tutor_retrieval",
+      "sba_distractors_linked": false,
+      "zero_coverage": false
+    },
+    {
+      "cc_id": "CC_NOBLE_ROT_SUGAR_CONCENTRATION",
+      "registration_status": "registered",
+      "schema_family": "legacy",
+      "cluster": "Botrytis_Sweet",
+      "les_signal": "causal_gap_detected",
+      "reasoning_type": "mechanism_chain",
+      "evaluator_target": "tutor_retrieval",
+      "sba_distractors_linked": false,
+      "zero_coverage": false
+    },
+    {
+      "cc_id": "CC_OAK_FLAVOUR",
+      "registration_status": "registered",
+      "schema_family": "legacy",
+      "cluster": "Oak",
+      "les_signal": "causal_gap_detected",
+      "reasoning_type": "mechanism_chain",
+      "evaluator_target": "tutor_retrieval",
+      "sba_distractors_linked": false,
+      "zero_coverage": false
+    },
+    {
+      "cc_id": "CC_OAK_MICROOX",
+      "registration_status": "registered",
+      "schema_family": "legacy",
+      "cluster": "Oak",
+      "les_signal": "causal_gap_detected",
+      "reasoning_type": "mechanism_chain",
+      "evaluator_target": "tutor_retrieval",
+      "sba_distractors_linked": false,
+      "zero_coverage": false
+    },
+    {
+      "cc_id": "CC_OAK_TANNIN",
+      "registration_status": "registered",
+      "schema_family": "legacy",
+      "cluster": "Oak",
+      "les_signal": "causal_gap_detected",
+      "reasoning_type": "mechanism_chain",
+      "evaluator_target": "tutor_retrieval",
+      "sba_distractors_linked": false,
+      "zero_coverage": false
+    },
+    {
+      "cc_id": "CC_SAT_QUALITY_HIGH",
+      "registration_status": "unregistered",
+      "schema_family": "governance",
+      "cluster": "SAT_Quality",
+      "les_signal": "causal_gap_detected",
+      "reasoning_type": "quality_evaluation",
+      "evaluator_target": "sat_assessment",
+      "sba_distractors_linked": false,
+      "zero_coverage": true
+    },
+    {
+      "cc_id": "CC_SAT_QUALITY_MEDIUM",
+      "registration_status": "unregistered",
+      "schema_family": "governance",
+      "cluster": "SAT_Quality",
+      "les_signal": "causal_gap_detected",
+      "reasoning_type": "quality_evaluation",
+      "evaluator_target": "sat_assessment",
+      "sba_distractors_linked": false,
+      "zero_coverage": true
+    },
+    {
+      "cc_id": "CC_SOIL_DRAINAGE_VINE_VIGOUR",
+      "registration_status": "unregistered",
+      "schema_family": "governance",
+      "cluster": "Viticulture",
+      "les_signal": "causal_gap_detected",
+      "reasoning_type": "mechanism_chain",
+      "evaluator_target": "open_response",
+      "sba_distractors_linked": false,
+      "zero_coverage": true
+    },
+    {
+      "cc_id": "CC_SPRING_FROST_TOPOGRAPHY",
+      "registration_status": "unregistered",
+      "schema_family": "governance",
+      "cluster": "Viticulture",
+      "les_signal": "causal_gap_detected",
+      "reasoning_type": "mechanism_chain",
+      "evaluator_target": "open_response",
+      "sba_distractors_linked": false,
+      "zero_coverage": true
+    },
+    {
+      "cc_id": "CC_SULPHITES_PRESERVATION",
+      "registration_status": "unregistered",
+      "schema_family": "governance",
+      "cluster": "Winemaking",
+      "les_signal": "causal_gap_detected",
+      "reasoning_type": "mechanism_chain",
+      "evaluator_target": "open_response",
+      "sba_distractors_linked": false,
+      "zero_coverage": true
+    },
+    {
+      "cc_id": "CC_TANNIN_AGEABILITY",
+      "registration_status": "registered",
+      "schema_family": "legacy",
+      "cluster": "Tannin_Ageing",
+      "les_signal": "causal_gap_detected",
+      "reasoning_type": "mechanism_chain",
+      "evaluator_target": "tutor_retrieval",
+      "sba_distractors_linked": false,
+      "zero_coverage": false
+    },
+    {
+      "cc_id": "CC_TANNIN_ASTRINGENCY",
+      "registration_status": "unregistered",
+      "schema_family": "governance",
+      "cluster": "Tannin_Ageing",
+      "les_signal": "causal_gap_detected",
+      "reasoning_type": "mechanism_chain",
+      "evaluator_target": "open_response",
+      "sba_distractors_linked": false,
+      "zero_coverage": true
+    },
+    {
+      "cc_id": "CC_WARM_CLIMATE_ALCOHOL",
+      "registration_status": "unregistered",
+      "schema_family": "governance",
+      "cluster": "Winemaking",
+      "les_signal": "causal_gap_detected",
+      "reasoning_type": "mechanism_chain",
+      "evaluator_target": "open_response",
+      "sba_distractors_linked": false,
+      "zero_coverage": true
+    },
+    {
+      "cc_id": "CC_WHOLE_BUNCH_PH",
+      "registration_status": "registered",
+      "schema_family": "legacy",
+      "cluster": "Whole_Bunch",
+      "les_signal": "causal_gap_detected",
+      "reasoning_type": "mechanism_chain",
+      "evaluator_target": "tutor_retrieval",
+      "sba_distractors_linked": false,
+      "zero_coverage": false
+    },
+    {
+      "cc_id": "CC_WHOLE_BUNCH_TANNIN",
+      "registration_status": "registered",
+      "schema_family": "legacy",
+      "cluster": "Whole_Bunch",
+      "les_signal": "causal_gap_detected",
+      "reasoning_type": "mechanism_chain",
+      "evaluator_target": "tutor_retrieval",
+      "sba_distractors_linked": false,
+      "zero_coverage": false
+    }
+  ]
+}

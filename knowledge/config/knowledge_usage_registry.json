@@ -1,0 +1,238 @@
+{
+  "registry_version": "1.0",
+  "audit_phase": "4A.3.8.2",
+  "generated_at": "2026-06-06",
+  "governance": {
+    "safe_for_examiner": false,
+    "uses_llm": false,
+    "uses_api": false,
+    "uses_embeddings": false,
+    "cloud_services_active": false,
+    "psl_active": false,
+    "document_type": "static_config",
+    "modifiable_by": "audit_phase_only"
+  },
+  "notes": "Derived from KNOWLEDGE_ASSET_INVENTORY_AND_AUDIT.md (Phase 4A.3.6.5) and direct consumer search. The KNOWLEDGE_UTILIZATION_COVERAGE_AUDIT (Phase 4A.3.8.2) was not found on disk; utilization_status is derived from active consumer search in tools/ and tests/.",
+  "assets": [
+    {
+      "asset_id": "official_wset_chunks",
+      "tier": 1,
+      "path": "knowledge/official-wset/study-guide/official-chunks/official_wset_chunks.jsonl",
+      "format": "jsonl",
+      "count": 52,
+      "utilization_status": "partial",
+      "feeds": ["grounding_layer", "retrieval_sandbox"],
+      "active_consumers": [
+        "tools/retrieval/tutor_retrieval_sandbox.py",
+        "tools/retrieval/official_wset_chunks.py",
+        "tests/test_official_corpus_retrieval.py"
+      ],
+      "les_signal_emitted": null,
+      "notes": "52 chunks; active in production retrieval; not yet wired into diagnostic SBA source support"
+    },
+    {
+      "asset_id": "official_wset_markdown",
+      "tier": 2,
+      "path": "knowledge/official-wset/study-guide/wset_markdown/",
+      "format": "markdown",
+      "count": 52,
+      "utilization_status": "partial",
+      "feeds": ["chunk_generation", "retrieval_sandbox"],
+      "active_consumers": [
+        "tools/retrieval/official_wset_chunks.py"
+      ],
+      "les_signal_emitted": null,
+      "notes": "52 MD files; source for chunk regeneration; high leakage risk — must not be used as generated item wording"
+    },
+    {
+      "asset_id": "learning_objectives",
+      "tier": 2,
+      "path": "knowledge/official-wset/study-guide/artifacts/study_guide_learning_objectives.jsonl",
+      "format": "jsonl",
+      "count": 38,
+      "utilization_status": "unused_in_runtime",
+      "feeds": [],
+      "active_consumers": [],
+      "les_signal_emitted": null,
+      "notes": "38 learning objectives for RA1; curriculum alignment asset; no active runtime consumer found; requires_human_review=True on all entries"
+    },
+    {
+      "asset_id": "wset3_questions_bank",
+      "tier": 1,
+      "path": "knowledge/question-bank/structured/wset3_questions.json",
+      "format": "json",
+      "count": 616,
+      "utilization_status": "partial",
+      "feeds": ["self_eval_pipeline"],
+      "active_consumers": [
+        "tools/self_eval/question_runner.py",
+        "tools/question_bank/convert_xlsx_to_json.py",
+        "tests/test_question_bank_converter.py"
+      ],
+      "les_signal_emitted": null,
+      "notes": "616 questions; 595 theory, 21 short_answer; used in self-eval pipeline; not yet migrated to diagnostic_sba_item_v1 schema"
+    },
+    {
+      "asset_id": "knowledge_map_concepts",
+      "tier": 1,
+      "path": "knowledge/knowledge-map/concepts/",
+      "format": "json",
+      "count": 8,
+      "utilization_status": "partial",
+      "feeds": ["retrieval_sandbox", "context_packages"],
+      "active_consumers": [
+        "tools/retrieval/tutor_retrieval_sandbox.py"
+      ],
+      "les_signal_emitted": null,
+      "notes": "8 concept nodes; all registered in manifest; strong for SBA diagnosis and remediation routing"
+    },
+    {
+      "asset_id": "knowledge_map_misconceptions",
+      "tier": 1,
+      "path": "knowledge/knowledge-map/misconceptions/",
+      "format": "json",
+      "count": 20,
+      "utilization_status": "partial",
+      "feeds": ["orchestrator_prepass", "context_packages"],
+      "active_consumers": [
+        "tools/orchestrator/misconception_prepass.py",
+        "tests/test_milestone_1_3.py"
+      ],
+      "les_signal_emitted": "misconception_triggered",
+      "notes": "20 nodes; 13 registered, 7 unregistered; 10 nodes have zero detection_keywords (functionally unreachable by keyword detection); no SBA distractor links active"
+    },
+    {
+      "asset_id": "knowledge_map_causal_chains",
+      "tier": 1,
+      "path": "knowledge/knowledge-map/causal-chains/",
+      "format": "json",
+      "count": 32,
+      "utilization_status": "partial",
+      "feeds": ["retrieval_sandbox", "tutor_rendering", "strategic_planner"],
+      "active_consumers": [
+        "tools/retrieval/tutor_retrieval_sandbox.py",
+        "tools/orchestrator/strategic_planner.py",
+        "tests/test_regression_r4a.py"
+      ],
+      "les_signal_emitted": "causal_gap_detected",
+      "notes": "32 nodes; 17 registered, 15 unregistered; split across legacy (chain_id) and governance (node_id) schemas; 1 hybrid node; planner causal-chain injection gated OFF"
+    },
+    {
+      "asset_id": "knowledge_map_relationships",
+      "tier": 1,
+      "path": "knowledge/knowledge-map/relationships/",
+      "format": "json",
+      "count": 10,
+      "utilization_status": "partial",
+      "feeds": ["retrieval_sandbox"],
+      "active_consumers": [
+        "tools/retrieval/tutor_retrieval_sandbox.py"
+      ],
+      "les_signal_emitted": null,
+      "notes": "10 relationship nodes; all registered; source/target concept refs all resolve"
+    },
+    {
+      "asset_id": "wwj_chunk_corpus",
+      "tier": 1,
+      "path": "knowledge/wine-with-jimmy/chunk-ready/",
+      "format": "jsonl",
+      "count": 333,
+      "utilization_status": "partial",
+      "feeds": ["retrieval_sandbox"],
+      "active_consumers": [
+        "tools/retrieval/tutor_retrieval_sandbox.py",
+        "tests/test_retrieval_planner_query_hints.py"
+      ],
+      "les_signal_emitted": null,
+      "notes": "333 chunks across 30 videos; active in production retrieval; not yet wired into remediation routing or LES signal emission"
+    },
+    {
+      "asset_id": "golden_tutor_chunk_candidates",
+      "tier": 2,
+      "path": "knowledge/wine-with-jimmy/manual-import/reports/golden_tutor_chunk_candidates.jsonl",
+      "format": "jsonl",
+      "count": 166,
+      "utilization_status": "partial",
+      "feeds": ["retrieval_sandbox"],
+      "active_consumers": [
+        "tools/retrieval/tutor_retrieval_sandbox.py"
+      ],
+      "les_signal_emitted": null,
+      "notes": "166 rows with quality scores and pedagogical roles; source quality ranking for tutor chunks"
+    },
+    {
+      "asset_id": "canonical_terms_master",
+      "tier": 1,
+      "path": "knowledge/enrichment/wset_master_dictionary/consolidated/canonical_terms_master.jsonl",
+      "format": "jsonl",
+      "count": 424,
+      "utilization_status": "partial",
+      "feeds": ["retrieval_sandbox", "term_normalization"],
+      "active_consumers": [
+        "tools/retrieval/tutor_retrieval_sandbox.py",
+        "tools/retrieval/official_wset_chunks.py"
+      ],
+      "les_signal_emitted": null,
+      "notes": "424 canonical terms; 680 raw terms; used for term normalization and alias detection"
+    },
+    {
+      "asset_id": "sat_observation_aliases",
+      "tier": 2,
+      "path": "knowledge/config/sat_observation_aliases.json",
+      "format": "json",
+      "count": null,
+      "utilization_status": "active",
+      "feeds": ["sat_reasoning_layer"],
+      "active_consumers": [
+        "tools/tutor/sat_reasoner.py",
+        "tools/tutor/answer_builder.py"
+      ],
+      "les_signal_emitted": null,
+      "notes": "SAT observation aliases and quality tier descriptors; active runtime use in SAT reasoner"
+    },
+    {
+      "asset_id": "domain_expansions",
+      "tier": 2,
+      "path": "knowledge/config/domain_expansions.json",
+      "format": "json",
+      "count": null,
+      "utilization_status": "active",
+      "feeds": ["retrieval_query_expansion"],
+      "active_consumers": [
+        "tools/retrieval/tutor_retrieval_sandbox.py"
+      ],
+      "les_signal_emitted": null,
+      "notes": "Query expansion config; active runtime use in retrieval sandbox"
+    },
+    {
+      "asset_id": "self_eval_config",
+      "tier": 2,
+      "path": "knowledge/self-eval/",
+      "format": "json",
+      "count": null,
+      "utilization_status": "partial",
+      "feeds": ["self_eval_pipeline", "learner_model"],
+      "active_consumers": [
+        "tools/self_eval/question_runner.py",
+        "tools/self_eval/evaluation_reporter.py",
+        "tools/learner_model/knowledge_tracing.py"
+      ],
+      "les_signal_emitted": null,
+      "notes": "Canonical config: sample_questions.json, question_expectations.json, golden_brutal_output.json. Runtime artifacts (reports/, attempts/) are machine-local and not canonical source."
+    },
+    {
+      "asset_id": "tutor_snapshots",
+      "tier": 2,
+      "path": "tests/fixtures/tutor_snapshots/",
+      "format": "json",
+      "count": 25,
+      "utilization_status": "active",
+      "feeds": ["regression_harness"],
+      "active_consumers": [
+        "tests/test_tutor_snapshot_regression.py"
+      ],
+      "les_signal_emitted": null,
+      "notes": "25 frozen tutor output snapshots; regression baseline; must not be excluded from git"
+    }
+  ]
+}

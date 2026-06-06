@@ -58,10 +58,10 @@ class MasterBankTests(unittest.TestCase):
         counts = self.generated["counts"]
 
         self.assertEqual(counts["total"], 616)
-        self.assertEqual(counts["single_best_answer"], 595)
-        self.assertEqual(counts["open_response"], 21)
+        self.assertEqual(counts["single_best_answer"], 590)
+        self.assertEqual(counts["open_response"], 26)
         self.assertEqual(counts["inactive"], 580)
-        self.assertEqual(counts["needs_review"], 560)
+        self.assertEqual(counts["needs_review"], 471)
         self.assertEqual(counts["gold"], 34)
         self.assertEqual(counts["public_lab"], 36)
 
@@ -70,11 +70,9 @@ class MasterBankTests(unittest.TestCase):
             self.generated["counts"]["review_states"],
             {
                 "approved_for_static_demo": 36,
-                "approved_open_response": 20,
-                "preserve_only": 16,
-                "rejected": 1,
-                "requires_revision": 2,
-                "unreviewed": 541,
+                "approved_open_response": 26,
+                "approved_private_sba": 83,
+                "unreviewed": 471,
             },
         )
 
@@ -124,7 +122,7 @@ class MasterBankTests(unittest.TestCase):
         self.assertEqual(len(source_ids), 36)
 
     def test_open_response_remains_inactive(self) -> None:
-        self.assertEqual(len(self.open_candidates), 21)
+        self.assertEqual(len(self.open_candidates), 26)
         self.assertTrue(
             all(item["activation_status"] == "inactive" for item in self.open_candidates)
         )
@@ -133,7 +131,7 @@ class MasterBankTests(unittest.TestCase):
             for item in self.generated["items"]
             if item["question_type"] == "open_response"
         ]
-        self.assertEqual(len(master_open), 21)
+        self.assertEqual(len(master_open), 26)
         self.assertTrue(
             all(item["status"]["activation_status"] == "inactive" for item in master_open)
         )

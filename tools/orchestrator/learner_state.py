@@ -26,8 +26,11 @@ DEFAULT_LES_PATH = NAZARETH_ROOT / "epistemic_state.json"
 DEFAULT_SESSION_STAGING_PATH = NAZARETH_ROOT / "session_staging.json"
 RA_IDS = ("RA1", "RA2", "RA3", "RA4", "RA5")
 CONFIDENCE_LEVELS = ("not_recorded", "low", "medium", "high")
+WEAKNESS_LEVELS = ("not_recorded", "observed", "persistent", "cleared")
 RA_TRENDS = ("not_observed", "improving", "stable", "declining")
 QUESTION_RESULTS = ("correct", "incorrect", "unanswered")
+MAX_QUESTION_RECENT_HISTORY = 20
+MAX_QUESTION_EXPOSURE_LOG = 500
 
 
 class TopicSignal(TypedDict):
@@ -36,6 +39,7 @@ class TopicSignal(TypedDict):
     correct_count: int
     incorrect_count: int
     confidence_level: Literal["not_recorded", "low", "medium", "high"]
+    weakness_level: Literal["not_recorded", "observed", "persistent", "cleared"]
     last_seen: str | None
 
 
@@ -70,6 +74,13 @@ class QuestionExposure(TypedDict):
     mode: str
     result: Literal["correct", "incorrect", "unanswered"]
 
+
+class QuestionExposureSignal(TypedDict):
+    question_id: str
+    exposure_count: int
+    last_seen: str | None
+    recent_history: list[QuestionExposure]
+
 DEFAULT_LES: dict[str, Any] = {
     "learner_id": "nazareth",
     "schema_version": "minimal_brain_v2",
@@ -91,6 +102,7 @@ DEFAULT_LES: dict[str, Any] = {
     "misconception_signals": {},
     "causal_chain_signals": {},
     "question_exposure_log": [],
+    "question_exposure_signals": {},
     "governance": {
         "safe_for_examiner": SAFE_FOR_EXAMINER,
         "examiner_scoring_allowed": EXAMINER_SCORING_ALLOWED,
@@ -157,18 +169,22 @@ def create_topic_signal(
     correct_count: int = 0,
     incorrect_count: int = 0,
     confidence_level: str = "not_recorded",
+    weakness_level: str = "not_recorded",
     last_seen: str | None = None,
 ) -> TopicSignal:
     """Build one observable topic signal without calculating confidence."""
     topic_id = _required_text(topic, "topic")
     if confidence_level not in CONFIDENCE_LEVELS:
         raise ValueError(f"Unsupported confidence_level: {confidence_level}")
+    if weakness_level not in WEAKNESS_LEVELS:
+        raise ValueError(f"Unsupported weakness_level: {weakness_level}")
     return {
         "topic": topic_id,
         "exposure_count": _non_negative_int(exposure_count, "exposure_count"),
         "correct_count": _non_negative_int(correct_count, "correct_count"),
         "incorrect_count": _non_negative_int(incorrect_count, "incorrect_count"),
         "confidence_level": confidence_level,
+        "weakness_level": weakness_level,
         "last_seen": _optional_text(last_seen, "last_seen"),
     }
 
@@ -261,6 +277,93 @@ def append_question_exposure(
         result=exposure.get("result", ""),
     )
     updated["question_exposure_log"].append(entry)
+    updated["question_exposure_log"] = updated["question_exposure_log"][
+        -MAX_QUESTION_EXPOSURE_LOG:
+    ]
+    question_id = entry["question_id"]
+    current = updated["question_exposure_signals"].get(question_id, {})
+    history = list(current.get("recent_history", []))
+    history.append(entry)
+    updated["question_exposure_signals"][question_id] = create_question_exposure_signal(
+        question_id,
+        exposure_count=int(current.get("exposure_count", 0) or 0) + 1,
+        last_seen=entry["timestamp"],
+        recent_history=history[-MAX_QUESTION_RECENT_HISTORY:],
+    )
+    return updated
+
+
+def create_question_exposure_signal(
+    question_id: str,
+    *,
+    exposure_count: int = 0,
+    last_seen: str | None = None,
+    recent_history: list[QuestionExposure] | None = None,
+) -> QuestionExposureSignal:
+    """Build aggregate exposure state for one canonical question."""
+    normalized_history = _normalize_question_exposure_log(recent_history or [])
+    normalized_id = _required_text(question_id, "question_id")
+    if any(entry["question_id"] != normalized_id for entry in normalized_history):
+        raise ValueError("recent_history question_id values must match question_id.")
+    return {
+        "question_id": normalized_id,
+        "exposure_count": _non_negative_int(exposure_count, "exposure_count"),
+        "last_seen": _optional_text(last_seen, "last_seen"),
+        "recent_history": normalized_history[-MAX_QUESTION_RECENT_HISTORY:],
+    }
+
+
+def record_session_observations(
+    state: dict[str, Any],
+    session: dict[str, Any],
+    *,
+    timestamp: str,
+    results: dict[str, str] | None = None,
+    topic_confidence: dict[str, str] | None = None,
+    topic_weakness: dict[str, str] | None = None,
+) -> dict[str, Any]:
+    """Capture session exposure, topic coverage, and RA indicators in LES."""
+    updated = _with_governance_defaults(state)
+    result_map = results if isinstance(results, dict) else {}
+    confidence_map = topic_confidence if isinstance(topic_confidence, dict) else {}
+    weakness_map = topic_weakness if isinstance(topic_weakness, dict) else {}
+    mode = _required_text(session.get("mode", ""), "mode")
+    items = session.get("items", [])
+    if not isinstance(items, list):
+        raise ValueError("session.items must be a list.")
+
+    for item in items:
+        if not isinstance(item, dict):
+            continue
+        question_id = _required_text(item.get("master_item_id", ""), "master_item_id")
+        result = result_map.get(question_id, "unanswered")
+        exposure = create_question_exposure(
+            question_id,
+            timestamp=timestamp,
+            mode=mode,
+            result=result,
+        )
+        updated = append_question_exposure(updated, exposure)
+        curriculum = item.get("curriculum", {})
+        if not isinstance(curriculum, dict):
+            curriculum = {}
+        topic = str(curriculum.get("topic") or "unknown").strip()
+        ra_id = str(curriculum.get("ra") or "").strip().upper()
+        updated["topic_signals"][topic] = _updated_topic_signal(
+            updated["topic_signals"].get(topic),
+            topic=topic,
+            result=result,
+            timestamp=timestamp,
+            confidence_level=confidence_map.get(topic),
+            weakness_level=weakness_map.get(topic),
+        )
+        if ra_id in RA_IDS:
+            updated["RA_signals"][ra_id] = _updated_ra_signal(
+                updated["RA_signals"].get(ra_id),
+                ra_id=ra_id,
+                result=result,
+                timestamp=timestamp,
+            )
     return updated
 
 
@@ -311,6 +414,9 @@ def _with_governance_defaults(state: dict[str, Any]) -> dict[str, Any]:
     )
     normalized["question_exposure_log"] = _normalize_question_exposure_log(
         state.get("question_exposure_log")
+    )
+    normalized["question_exposure_signals"] = _normalize_question_exposure_signals(
+        state.get("question_exposure_signals")
     )
     normalized["governance"] = _governance_false(state.get("governance", {}))
     return normalized
@@ -402,7 +508,81 @@ def _normalize_question_exposure_log(value: Any) -> list[QuestionExposure]:
             )
         except (TypeError, ValueError):
             continue
+    return normalized[-MAX_QUESTION_EXPOSURE_LOG:]
+
+
+def _normalize_question_exposure_signals(
+    value: Any,
+) -> dict[str, QuestionExposureSignal]:
+    if not isinstance(value, dict):
+        return {}
+    normalized: dict[str, QuestionExposureSignal] = {}
+    for key, signal in value.items():
+        if not isinstance(signal, dict):
+            continue
+        question_id = str(signal.get("question_id") or key or "").strip()
+        if not question_id:
+            continue
+        try:
+            normalized[question_id] = create_question_exposure_signal(
+                question_id,
+                exposure_count=signal.get("exposure_count", 0),
+                last_seen=signal.get("last_seen"),
+                recent_history=signal.get("recent_history", []),
+            )
+        except (TypeError, ValueError):
+            continue
     return normalized
+
+
+def _updated_topic_signal(
+    current: Any,
+    *,
+    topic: str,
+    result: str,
+    timestamp: str,
+    confidence_level: str | None,
+    weakness_level: str | None,
+) -> TopicSignal:
+    source = current if isinstance(current, dict) else {}
+    return create_topic_signal(
+        topic,
+        exposure_count=int(source.get("exposure_count", 0) or 0) + 1,
+        correct_count=int(source.get("correct_count", 0) or 0)
+        + (1 if result == "correct" else 0),
+        incorrect_count=int(source.get("incorrect_count", 0) or 0)
+        + (1 if result == "incorrect" else 0),
+        confidence_level=confidence_level or source.get(
+            "confidence_level", "not_recorded"
+        ),
+        weakness_level=weakness_level or source.get(
+            "weakness_level", "not_recorded"
+        ),
+        last_seen=timestamp,
+    )
+
+
+def _updated_ra_signal(
+    current: Any,
+    *,
+    ra_id: str,
+    result: str,
+    timestamp: str,
+) -> RASignal:
+    source = current if isinstance(current, dict) else {}
+    performance = source.get("performance", {})
+    if not isinstance(performance, dict):
+        performance = {}
+    return create_ra_signal(
+        ra_id,
+        exposure_count=int(source.get("exposure_count", 0) or 0) + 1,
+        correct_count=int(performance.get("correct_count", 0) or 0)
+        + (1 if result == "correct" else 0),
+        incorrect_count=int(performance.get("incorrect_count", 0) or 0)
+        + (1 if result == "incorrect" else 0),
+        trend=source.get("trend", "not_observed"),
+        last_seen=timestamp,
+    )
 
 
 def _non_negative_int(value: Any, field: str) -> int:

@@ -16,6 +16,12 @@ from pathlib import Path
 from typing import Any
 
 from tools.constants import PROJECT_ROOT
+from tools.question_generation.master_bank_resolution import (
+    RESOLUTION_PATH,
+    apply_source_resolution,
+    load_resolution_index,
+    resolution_destination,
+)
 
 
 MASTER_BANK_VERSION = "master_bank_v1"
@@ -74,6 +80,7 @@ def build_master_bank(root: str | Path = PROJECT_ROOT) -> dict[str, Any]:
     open_candidates = _load_list(root_path / OPEN_CANDIDATES_PATH)
     open_reviews = _load_list(root_path / OPEN_REVIEWS_PATH)
     public_payload = _load_mapping(root_path / PUBLIC_LAB_PATH)
+    resolution_by_source = load_resolution_index(root=root_path)
     public_items = [
         item for item in public_payload.get("items", []) if isinstance(item, Mapping)
     ]
@@ -98,6 +105,7 @@ def build_master_bank(root: str | Path = PROJECT_ROOT) -> dict[str, Any]:
             open_review_by_source=open_review_by_source,
             public_by_source=public_by_source,
             gold_source_ids=gold_source_ids,
+            resolution_by_source=resolution_by_source,
         )
         for record in source_records
     ]
@@ -269,8 +277,11 @@ def _build_master_item(
     open_review_by_source: Mapping[str, Mapping[str, Any]],
     public_by_source: Mapping[str, Mapping[str, Any]],
     gold_source_ids: set[str],
+    resolution_by_source: Mapping[str, Mapping[str, Any]],
 ) -> dict[str, Any]:
     source_id = str(record.get("question_id", "")).strip()
+    resolution = resolution_by_source.get(source_id, {})
+    record = apply_source_resolution(record, resolution)
     is_open = str(record.get("question_type", "")).strip().lower() in OPEN_RESPONSE_TYPES
     question_type = "open_response" if is_open else "single_best_answer"
     sba_draft = draft_by_source.get(source_id, {})
@@ -286,6 +297,13 @@ def _build_master_item(
         sba_review=sba_review,
         open_review=open_review,
     )
+    destination = resolution_destination(resolution)
+    if destination == "sba_operational" and not is_public:
+        review_state = "approved_private_sba"
+    elif destination == "open_response_candidate":
+        review_state = "approved_open_response"
+    elif destination == "quarantine":
+        review_state = "quarantine"
     collections = [question_type]
     if not is_public:
         collections.append("inactive")
@@ -346,6 +364,14 @@ def _build_master_item(
                 sba_review.get("review_id") if is_gold else None
             ),
             "public_lab_item_id": public_item.get("item_id"),
+            **(
+                {
+                    "resolution_artifact": RESOLUTION_PATH.as_posix(),
+                    "resolution_id": resolution.get("resolution_id"),
+                }
+                if resolution
+                else {}
+            ),
         },
         "governance": copy.deepcopy(SAFE_GOVERNANCE),
     }

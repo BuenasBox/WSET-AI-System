@@ -4,32 +4,45 @@
     "source_question_id": "18",
     "question_type": "diagnostic_open_response",
     "stem": "¿Cuál es una consecuencia del uso excesivo de sulfitos?",
-    "RA": "unknown",
-    "topic": "sulfitos",
-    "subtopic": "SO₂",
+    "RA": "RA1",
+    "topic": "winemaking",
+    "subtopic": "sulphur_dioxide_management",
     "difficulty": "intermediate",
     "expected_concepts": [
       "sulfitos",
-      "SO₂",
-      "aromas reductivos",
-      "dióxido de azufre",
-      "carácter del vino"
+      "SO2",
+      "inhibición de levaduras salvajes",
+      "protección antimicrobiana",
+      "RA1",
+      "winemaking",
+      "sulphur_dioxide_management"
     ],
-    "optional_causal_chain": null,
+    "optional_causal_chain": "dosis de SO2 -> inhibición microbiana -> menor actividad de levaduras salvajes",
     "corpus_support": {
-      "status": "missing",
+      "status": "supported",
       "source_question_bank": "knowledge/question-bank/structured/wset3_questions.json",
-      "source_type": "structured_question_bank",
+      "source_type": "repository_resolution_evidence",
       "support_terms": [
         "sulfitos",
-        "SO₂",
-        "aromas reductivos",
-        "dióxido de azufre",
-        "carácter del vino"
+        "SO2",
+        "inhibición de levaduras salvajes",
+        "protección antimicrobiana"
       ],
-      "evidence_chunks": []
+      "evidence_chunks": [
+        {
+          "chunk_id": "CC_SULPHITES_PRESERVATION",
+          "source_file": "knowledge/knowledge-map/causal-chains/CC_SULPHITES_PRESERVATION.json",
+          "title": "Sulphites preservation causal chain",
+          "source_type": "knowledge_map",
+          "matched_terms": [
+            "sulfitos",
+            "SO2",
+            "levaduras salvajes"
+          ]
+        }
+      ]
     },
-    "review_status": "rejected",
+    "review_status": "approved",
     "activation_status": "inactive",
     "feedback_rubric": {
       "concept_coverage": "expected_concept_presence",
@@ -2376,6 +2389,333 @@
             "rendimiento",
             "maduración",
             "estilo"
+          ]
+        }
+      ]
+    },
+    "review_status": "approved",
+    "activation_status": "inactive",
+    "feedback_rubric": {
+      "concept_coverage": "expected_concept_presence",
+      "causal_link": "formative_causal_link_presence",
+      "formative_feedback": "training_guidance_only",
+      "needs_review": "derived_from_missing_or_partial_concepts"
+    },
+    "governance_flags": {
+      "safe_for_examiner": false,
+      "examiner_scoring_allowed": false,
+      "official_wset_question": false,
+      "training_item_only": true,
+      "uses_llm": false,
+      "uses_api": false,
+      "uses_embeddings": false,
+      "uses_vector_db": false,
+      "cloud_services_active": false
+    }
+  },
+  {
+    "schema_version": "diagnostic_open_response_v1",
+    "source_question_id": "853",
+    "question_type": "diagnostic_open_response",
+    "stem": "Explique qué indica la añada (vintage) en una etiqueta de vino y por qué no corresponde al año de embotellado.",
+    "RA": "RA5",
+    "topic": "wine_law_and_labelling",
+    "subtopic": "vintage_labelling",
+    "difficulty": "intermediate",
+    "expected_concepts": [
+      "añada",
+      "año",
+      "uva",
+      "cosechada",
+      "vinificada",
+      "RA5",
+      "wine_law_and_labelling",
+      "vintage_labelling"
+    ],
+    "optional_causal_chain": "añada declarada -> año de cosecha de la uva -> no año de embotellado",
+    "corpus_support": {
+      "status": "supported",
+      "source_question_bank": "knowledge/question-bank/structured/wset3_questions.json",
+      "source_type": "repository_resolution_evidence",
+      "support_terms": [
+        "añada",
+        "año",
+        "uva",
+        "cosechada",
+        "vinificada"
+      ],
+      "evidence_chunks": [
+        {
+          "chunk_id": "structured_question_828",
+          "source_file": "knowledge/question-bank/structured/wset3_questions.json",
+          "title": "Existing SBA support for vintage labelling",
+          "source_type": "structured_question_bank",
+          "matched_terms": [
+            "añada",
+            "año",
+            "cosecha"
+          ]
+        }
+      ]
+    },
+    "review_status": "approved",
+    "activation_status": "inactive",
+    "feedback_rubric": {
+      "concept_coverage": "expected_concept_presence",
+      "causal_link": "formative_causal_link_presence",
+      "formative_feedback": "training_guidance_only",
+      "needs_review": "derived_from_missing_or_partial_concepts"
+    },
+    "governance_flags": {
+      "safe_for_examiner": false,
+      "examiner_scoring_allowed": false,
+      "official_wset_question": false,
+      "training_item_only": true,
+      "uses_llm": false,
+      "uses_api": false,
+      "uses_embeddings": false,
+      "uses_vector_db": false,
+      "cloud_services_active": false
+    }
+  },
+  {
+    "schema_version": "diagnostic_open_response_v1",
+    "source_question_id": "854",
+    "question_type": "diagnostic_open_response",
+    "stem": "Explique por qué los vinos DOP están sujetos a regulaciones más estrictas que los vinos IGP.",
+    "RA": "RA5",
+    "topic": "wine_law_and_labelling",
+    "subtopic": "dop_igp_hierarchy",
+    "difficulty": "intermediate",
+    "expected_concepts": [
+      "DOP",
+      "IGP",
+      "origen",
+      "producción",
+      "regulaciones",
+      "RA5",
+      "wine_law_and_labelling",
+      "dop_igp_hierarchy"
+    ],
+    "optional_causal_chain": "vínculo más estrecho con el origen -> normas de producción más restrictivas",
+    "corpus_support": {
+      "status": "supported",
+      "source_question_bank": "knowledge/question-bank/structured/wset3_questions.json",
+      "source_type": "repository_resolution_evidence",
+      "support_terms": [
+        "DOP",
+        "IGP",
+        "origen",
+        "producción",
+        "regulaciones"
+      ],
+      "evidence_chunks": [
+        {
+          "chunk_id": "structured_question_822",
+          "source_file": "knowledge/question-bank/structured/wset3_questions.json",
+          "title": "Existing SBA support for DOP and IGP",
+          "source_type": "structured_question_bank",
+          "matched_terms": [
+            "DOP",
+            "IGP",
+            "regulaciones"
+          ]
+        }
+      ]
+    },
+    "review_status": "approved",
+    "activation_status": "inactive",
+    "feedback_rubric": {
+      "concept_coverage": "expected_concept_presence",
+      "causal_link": "formative_causal_link_presence",
+      "formative_feedback": "training_guidance_only",
+      "needs_review": "derived_from_missing_or_partial_concepts"
+    },
+    "governance_flags": {
+      "safe_for_examiner": false,
+      "examiner_scoring_allowed": false,
+      "official_wset_question": false,
+      "training_item_only": true,
+      "uses_llm": false,
+      "uses_api": false,
+      "uses_embeddings": false,
+      "uses_vector_db": false,
+      "cloud_services_active": false
+    }
+  },
+  {
+    "schema_version": "diagnostic_open_response_v1",
+    "source_question_id": "855",
+    "question_type": "diagnostic_open_response",
+    "stem": "Explique los requisitos mínimos de crianza asociados al término Reserva en un vino tinto español.",
+    "RA": "RA5",
+    "topic": "wine_law_and_labelling",
+    "subtopic": "spanish_reserva_ageing",
+    "difficulty": "intermediate",
+    "expected_concepts": [
+      "Reserva",
+      "tres años",
+      "doce meses",
+      "barrica",
+      "botella",
+      "RA5",
+      "wine_law_and_labelling",
+      "spanish_reserva_ageing"
+    ],
+    "optional_causal_chain": "Reserva tinto -> mínimo tres años totales -> al menos doce meses en barrica",
+    "corpus_support": {
+      "status": "supported",
+      "source_question_bank": "knowledge/question-bank/structured/wset3_questions.json",
+      "source_type": "repository_resolution_evidence",
+      "support_terms": [
+        "Reserva",
+        "tres años",
+        "doce meses",
+        "barrica",
+        "botella"
+      ],
+      "evidence_chunks": [
+        {
+          "chunk_id": "structured_question_832",
+          "source_file": "knowledge/question-bank/structured/wset3_questions.json",
+          "title": "Existing SBA support for Spanish Reserva",
+          "source_type": "structured_question_bank",
+          "matched_terms": [
+            "Reserva",
+            "tres años",
+            "barrica"
+          ]
+        }
+      ]
+    },
+    "review_status": "approved",
+    "activation_status": "inactive",
+    "feedback_rubric": {
+      "concept_coverage": "expected_concept_presence",
+      "causal_link": "formative_causal_link_presence",
+      "formative_feedback": "training_guidance_only",
+      "needs_review": "derived_from_missing_or_partial_concepts"
+    },
+    "governance_flags": {
+      "safe_for_examiner": false,
+      "examiner_scoring_allowed": false,
+      "official_wset_question": false,
+      "training_item_only": true,
+      "uses_llm": false,
+      "uses_api": false,
+      "uses_embeddings": false,
+      "uses_vector_db": false,
+      "cloud_services_active": false
+    }
+  },
+  {
+    "schema_version": "diagnostic_open_response_v1",
+    "source_question_id": "856",
+    "question_type": "diagnostic_open_response",
+    "stem": "Compare Kabinett y Trockenbeerenauslese dentro del sistema Prädikat alemán en términos de madurez y concentración.",
+    "RA": "RA5",
+    "topic": "wine_law_and_labelling",
+    "subtopic": "german_pradikat",
+    "difficulty": "intermediate",
+    "expected_concepts": [
+      "Kabinett",
+      "Trockenbeerenauslese",
+      "ligero",
+      "concentrado",
+      "dulce",
+      "RA5",
+      "wine_law_and_labelling",
+      "german_pradikat"
+    ],
+    "optional_causal_chain": "mayor madurez de la uva -> mayor concentración -> categoría Prädikat superior",
+    "corpus_support": {
+      "status": "supported",
+      "source_question_bank": "knowledge/question-bank/structured/wset3_questions.json",
+      "source_type": "repository_resolution_evidence",
+      "support_terms": [
+        "Kabinett",
+        "Trockenbeerenauslese",
+        "ligero",
+        "concentrado",
+        "dulce"
+      ],
+      "evidence_chunks": [
+        {
+          "chunk_id": "official_wset_germany_kabinett",
+          "source_file": "knowledge/official-wset/study-guide/wset_markdown/seccion_6_section_3_still_wines_of_the_world/6-11_22_germany.md",
+          "title": "Germany Prädikat levels",
+          "source_type": "official_wset_markdown",
+          "matched_terms": [
+            "Kabinett",
+            "Trockenbeerenauslese",
+            "concentrated"
+          ]
+        }
+      ]
+    },
+    "review_status": "approved",
+    "activation_status": "inactive",
+    "feedback_rubric": {
+      "concept_coverage": "expected_concept_presence",
+      "causal_link": "formative_causal_link_presence",
+      "formative_feedback": "training_guidance_only",
+      "needs_review": "derived_from_missing_or_partial_concepts"
+    },
+    "governance_flags": {
+      "safe_for_examiner": false,
+      "examiner_scoring_allowed": false,
+      "official_wset_question": false,
+      "training_item_only": true,
+      "uses_llm": false,
+      "uses_api": false,
+      "uses_embeddings": false,
+      "uses_vector_db": false,
+      "cloud_services_active": false
+    }
+  },
+  {
+    "schema_version": "diagnostic_open_response_v1",
+    "source_question_id": "857",
+    "question_type": "diagnostic_open_response",
+    "stem": "Compare los canales on-trade y off-trade e indique dónde se consume el vino en cada caso.",
+    "RA": "RA5",
+    "topic": "wine_business",
+    "subtopic": "distribution_channels",
+    "difficulty": "intermediate",
+    "expected_concepts": [
+      "on-trade",
+      "off-trade",
+      "restaurantes",
+      "bares",
+      "supermercados",
+      "vinotecas",
+      "RA5",
+      "wine_business",
+      "distribution_channels"
+    ],
+    "optional_causal_chain": "on-trade -> consumo en el punto de venta; off-trade -> consumo posterior",
+    "corpus_support": {
+      "status": "supported",
+      "source_question_bank": "knowledge/question-bank/structured/wset3_questions.json",
+      "source_type": "repository_resolution_evidence",
+      "support_terms": [
+        "on-trade",
+        "off-trade",
+        "restaurantes",
+        "bares",
+        "supermercados",
+        "vinotecas"
+      ],
+      "evidence_chunks": [
+        {
+          "chunk_id": "structured_question_842",
+          "source_file": "knowledge/question-bank/structured/wset3_questions.json",
+          "title": "Existing SBA support for distribution channels",
+          "source_type": "structured_question_bank",
+          "matched_terms": [
+            "on-trade",
+            "off-trade",
+            "restaurantes"
           ]
         }
       ]

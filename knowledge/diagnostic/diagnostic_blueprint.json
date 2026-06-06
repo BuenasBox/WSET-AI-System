@@ -1,0 +1,160 @@
+{
+  "schema_version": "diagnostic_blueprint_v1",
+  "ra_ids": [
+    "RA1",
+    "RA2",
+    "RA3",
+    "RA4",
+    "RA5"
+  ],
+  "difficulty_ids": [
+    "foundational",
+    "intermediate",
+    "distinction"
+  ],
+  "selection_policy": {
+    "deterministic": true,
+    "prefer_unseen": true,
+    "prefer_lower_exposure": true,
+    "recent_history_limit": 50,
+    "topic_cap_is_soft": true,
+    "quota_shortfall_policy": "redistribute_within_active_pool"
+  },
+  "modes": {
+    "EXPRESS_10": {
+      "question_count": 10,
+      "ra_distribution": {
+        "RA1": 4,
+        "RA2": 3,
+        "RA3": 1,
+        "RA4": 1,
+        "RA5": 1
+      },
+      "difficulty_distribution": {
+        "foundational": 0.1,
+        "intermediate": 0.7,
+        "distinction": 0.2
+      },
+      "topic_distribution": {
+        "strategy": "broad_coverage",
+        "minimum_distinct_topics": 5,
+        "maximum_questions_per_topic": 3
+      },
+      "composition": {
+        "question_types": [
+          "single_best_answer"
+        ],
+        "allow_open_response_candidates": false
+      }
+    },
+    "QUICK_25": {
+      "question_count": 25,
+      "ra_distribution": {
+        "RA1": 9,
+        "RA2": 8,
+        "RA3": 3,
+        "RA4": 2,
+        "RA5": 3
+      },
+      "difficulty_distribution": {
+        "foundational": 0.16,
+        "intermediate": 0.64,
+        "distinction": 0.2
+      },
+      "topic_distribution": {
+        "strategy": "broad_coverage",
+        "minimum_distinct_topics": 10,
+        "maximum_questions_per_topic": 5
+      },
+      "composition": {
+        "question_types": [
+          "single_best_answer"
+        ],
+        "allow_open_response_candidates": false
+      }
+    },
+    "STANDARD_50": {
+      "question_count": 50,
+      "ra_distribution": {
+        "RA1": 20,
+        "RA2": 17,
+        "RA3": 5,
+        "RA4": 3,
+        "RA5": 5
+      },
+      "difficulty_distribution": {
+        "foundational": 0.2,
+        "intermediate": 0.5,
+        "distinction": 0.3
+      },
+      "topic_distribution": {
+        "strategy": "broad_coverage",
+        "minimum_distinct_topics": 15,
+        "maximum_questions_per_topic": 10
+      },
+      "composition": {
+        "question_types": [
+          "single_best_answer"
+        ],
+        "allow_open_response_candidates": false
+      }
+    },
+    "FULL_DIAGNOSTIC": {
+      "question_count": 100,
+      "ra_distribution": {
+        "RA1": 40,
+        "RA2": 34,
+        "RA3": 10,
+        "RA4": 7,
+        "RA5": 9
+      },
+      "difficulty_distribution": {
+        "foundational": 0.15,
+        "intermediate": 0.65,
+        "distinction": 0.2
+      },
+      "topic_distribution": {
+        "strategy": "maximum_available_coverage",
+        "minimum_distinct_topics": 25,
+        "maximum_questions_per_topic": 20
+      },
+      "composition": {
+        "question_types": [
+          "single_best_answer",
+          "open_response"
+        ],
+        "allow_open_response_candidates": true
+      }
+    },
+    "RA_FOCUS": {
+      "question_count": 25,
+      "requires_target_ra": true,
+      "difficulty_distribution": {
+        "foundational": 0.16,
+        "intermediate": 0.64,
+        "distinction": 0.2
+      },
+      "topic_distribution": {
+        "strategy": "target_ra_broad_coverage",
+        "minimum_distinct_topics": 5,
+        "maximum_questions_per_topic": 8
+      },
+      "composition": {
+        "question_types": [
+          "single_best_answer",
+          "open_response"
+        ],
+        "allow_open_response_candidates": true
+      }
+    }
+  },
+  "governance": {
+    "safe_for_examiner": false,
+    "examiner_scoring_allowed": false,
+    "uses_llm": false,
+    "uses_api": false,
+    "uses_embeddings": false,
+    "uses_vector_db": false,
+    "cloud_services_active": false
+  }
+}

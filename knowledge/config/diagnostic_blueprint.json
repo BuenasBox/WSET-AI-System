@@ -1,0 +1,78 @@
+{
+  "blueprint_version": "1.0",
+  "source": "Derived from wset3_questions.json RA field distribution (616 questions). RA labels extracted from expected_topics field; 11 questions have no RA label (unclassified). RA5 content observed to cover storage, commercial wine conservation, and mixed topics not fitting RA1-RA4.",
+  "master_bank_total": 616,
+  "master_bank_classified": 605,
+  "master_bank_unclassified": 11,
+  "generated_at": "2026-06-06",
+  "governance": {
+    "safe_for_examiner": false,
+    "uses_llm": false,
+    "uses_api": false,
+    "uses_embeddings": false,
+    "cloud_services_active": false,
+    "psl_active": false,
+    "document_type": "static_config",
+    "modifiable_by": "audit_phase_only"
+  },
+  "ra_targets": [
+    {
+      "ra_id": "RA1",
+      "name": "Factors affecting style and quality",
+      "description": "Climate, viticulture, soil, grape growing, winemaking processes, SAT, oak, fermentation, MLF, botrytis, ageing potential",
+      "target_proportion": 0.402,
+      "item_count_in_master_bank": 243,
+      "coverage_gap": "low",
+      "notes": "Largest block; covers RA1 theory foundation (climate, viticulture, winemaking). Coverage appears proportionate to exam scope."
+    },
+    {
+      "ra_id": "RA2",
+      "name": "Still wines of the world",
+      "description": "Regions — France, Germany, Spain, Portugal, Italy, New World (Argentina, Australia, Chile, USA, South Africa, New Zealand)",
+      "target_proportion": 0.377,
+      "item_count_in_master_bank": 228,
+      "coverage_gap": "low",
+      "notes": "Second largest block; good proportional coverage of regional wine knowledge."
+    },
+    {
+      "ra_id": "RA3",
+      "name": "Sparkling wines and fortified wines",
+      "description": "Champagne, Cava, Prosecco, Sekt, Crémant; Sherry, Port, Madeira, Marsala",
+      "target_proportion": 0.106,
+      "item_count_in_master_bank": 64,
+      "coverage_gap": "medium",
+      "notes": "Fortified and sparkling combined. Under-represented relative to the exam scope weight (~15% in typical WSET L3 exam). Flor, solera, tirage, dosage topics may have gaps."
+    },
+    {
+      "ra_id": "RA4",
+      "name": "Storage and service",
+      "description": "Wine storage, serving conditions, faults, labelling, food and wine pairing",
+      "target_proportion": 0.045,
+      "item_count_in_master_bank": 27,
+      "coverage_gap": "low",
+      "notes": "Service and storage topics. Proportionate to exam scope (~5-10%)."
+    },
+    {
+      "ra_id": "RA5",
+      "name": "RA5 (system-defined extended topics)",
+      "description": "Additional topics not fitting RA1-RA4; observed to include commercial wine conservation, mixed theory blocks 11-15",
+      "target_proportion": 0.071,
+      "item_count_in_master_bank": 43,
+      "coverage_gap": "unknown",
+      "notes": "Internal classification only; RA5 is not a standard WSET L3 result area designation. Topic scope derived from observed question content. Blocks 11-15 cover mixed topics."
+    }
+  ],
+  "session_composer_rules": {
+    "min_ra_coverage_per_session": 3,
+    "max_consecutive_same_ra": 3,
+    "gold_bank_coldstart_proportion": 0.5,
+    "notes": "Rules are targets for future Session Composer; not yet enforced by any runtime component. ENABLE_PEDAGOGICAL_STRATEGY_LAYER must remain False until explicitly authorized."
+  },
+  "coverage_notes": {
+    "unclassified_questions": 11,
+    "sba_schema_readiness": "not_ready",
+    "sba_schema_readiness_notes": "All 616 questions lack diagnostic_sba_item_v1 schema fields: distractor_role, source_chunks, misconception_id, attempt analytics placeholders, uses_llm=false flag",
+    "open_response_candidates": 21,
+    "open_response_notes": "21 short_answer type questions are open-response candidates; should be preserved separately from SBA migration"
+  }
+}

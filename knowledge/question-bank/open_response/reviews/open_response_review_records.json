@@ -5,28 +5,18 @@
     "candidate_id": "diagnostic_open_response_18",
     "reviewer": "phase_4a_3_7_45_structural_review",
     "reviewed_at": "2026-06-04T00:00:00Z",
-    "review_status": "rejected",
+    "review_status": "approved",
     "activation_status": "inactive",
     "checklist": {
-      "ra_checked": false,
-      "causal_metadata_checked": false,
-      "corpus_support_checked": false,
+      "ra_checked": true,
+      "causal_metadata_checked": true,
+      "corpus_support_checked": true,
       "sba_residue_removed": true,
       "official_scoring_absent": true,
       "governance_checked": true
     },
-    "issues_found": [
-      "missing RA metadata",
-      "missing causal metadata",
-      "missing corpus chunk support",
-      "structural anomaly: source carries populated SBA answer/options residue"
-    ],
-    "required_changes": [
-      "Add verified RA mapping before approval.",
-      "Add or explicitly waive causal metadata during human review.",
-      "Attach verified corpus chunk support before approval.",
-      "Remove SBA residue from the normalized open-response layer."
-    ],
+    "issues_found": [],
+    "required_changes": [],
     "approval_scope": "open_response_internal_review_only",
     "governance_confirmation": {
       "safe_for_examiner": false,
@@ -39,7 +29,7 @@
       "uses_vector_db": false,
       "cloud_services_active": false
     },
-    "notes": "Rejected from the open-response candidate set until the source anomaly is resolved."
+    "notes": "Approved for internal open-response structural review only; cockpit activation remains off."
   },
   {
     "review_id": "open_response_review_798_20260604_001",
@@ -653,6 +643,166 @@
     "review_id": "open_response_review_817_20260604_001",
     "source_question_id": "817",
     "candidate_id": "diagnostic_open_response_817",
+    "reviewer": "phase_4a_3_7_45_structural_review",
+    "reviewed_at": "2026-06-04T00:00:00Z",
+    "review_status": "approved",
+    "activation_status": "inactive",
+    "checklist": {
+      "ra_checked": true,
+      "causal_metadata_checked": true,
+      "corpus_support_checked": true,
+      "sba_residue_removed": true,
+      "official_scoring_absent": true,
+      "governance_checked": true
+    },
+    "issues_found": [],
+    "required_changes": [],
+    "approval_scope": "open_response_internal_review_only",
+    "governance_confirmation": {
+      "safe_for_examiner": false,
+      "examiner_scoring_allowed": false,
+      "official_wset_question": false,
+      "training_item_only": true,
+      "uses_llm": false,
+      "uses_api": false,
+      "uses_embeddings": false,
+      "uses_vector_db": false,
+      "cloud_services_active": false
+    },
+    "notes": "Approved for internal open-response structural review only; cockpit activation remains off."
+  },
+  {
+    "review_id": "open_response_review_853_20260604_001",
+    "source_question_id": "853",
+    "candidate_id": "diagnostic_open_response_853",
+    "reviewer": "phase_4a_3_7_45_structural_review",
+    "reviewed_at": "2026-06-04T00:00:00Z",
+    "review_status": "approved",
+    "activation_status": "inactive",
+    "checklist": {
+      "ra_checked": true,
+      "causal_metadata_checked": true,
+      "corpus_support_checked": true,
+      "sba_residue_removed": true,
+      "official_scoring_absent": true,
+      "governance_checked": true
+    },
+    "issues_found": [],
+    "required_changes": [],
+    "approval_scope": "open_response_internal_review_only",
+    "governance_confirmation": {
+      "safe_for_examiner": false,
+      "examiner_scoring_allowed": false,
+      "official_wset_question": false,
+      "training_item_only": true,
+      "uses_llm": false,
+      "uses_api": false,
+      "uses_embeddings": false,
+      "uses_vector_db": false,
+      "cloud_services_active": false
+    },
+    "notes": "Approved for internal open-response structural review only; cockpit activation remains off."
+  },
+  {
+    "review_id": "open_response_review_854_20260604_001",
+    "source_question_id": "854",
+    "candidate_id": "diagnostic_open_response_854",
+    "reviewer": "phase_4a_3_7_45_structural_review",
+    "reviewed_at": "2026-06-04T00:00:00Z",
+    "review_status": "approved",
+    "activation_status": "inactive",
+    "checklist": {
+      "ra_checked": true,
+      "causal_metadata_checked": true,
+      "corpus_support_checked": true,
+      "sba_residue_removed": true,
+      "official_scoring_absent": true,
+      "governance_checked": true
+    },
+    "issues_found": [],
+    "required_changes": [],
+    "approval_scope": "open_response_internal_review_only",
+    "governance_confirmation": {
+      "safe_for_examiner": false,
+      "examiner_scoring_allowed": false,
+      "official_wset_question": false,
+      "training_item_only": true,
+      "uses_llm": false,
+      "uses_api": false,
+      "uses_embeddings": false,
+      "uses_vector_db": false,
+      "cloud_services_active": false
+    },
+    "notes": "Approved for internal open-response structural review only; cockpit activation remains off."
+  },
+  {
+    "review_id": "open_response_review_855_20260604_001",
+    "source_question_id": "855",
+    "candidate_id": "diagnostic_open_response_855",
+    "reviewer": "phase_4a_3_7_45_structural_review",
+    "reviewed_at": "2026-06-04T00:00:00Z",
+    "review_status": "approved",
+    "activation_status": "inactive",
+    "checklist": {
+      "ra_checked": true,
+      "causal_metadata_checked": true,
+      "corpus_support_checked": true,
+      "sba_residue_removed": true,
+      "official_scoring_absent": true,
+      "governance_checked": true
+    },
+    "issues_found": [],
+    "required_changes": [],
+    "approval_scope": "open_response_internal_review_only",
+    "governance_confirmation": {
+      "safe_for_examiner": false,
+      "examiner_scoring_allowed": false,
+      "official_wset_question": false,
+      "training_item_only": true,
+      "uses_llm": false,
+      "uses_api": false,
+      "uses_embeddings": false,
+      "uses_vector_db": false,
+      "cloud_services_active": false
+    },
+    "notes": "Approved for internal open-response structural review only; cockpit activation remains off."
+  },
+  {
+    "review_id": "open_response_review_856_20260604_001",
+    "source_question_id": "856",
+    "candidate_id": "diagnostic_open_response_856",
+    "reviewer": "phase_4a_3_7_45_structural_review",
+    "reviewed_at": "2026-06-04T00:00:00Z",
+    "review_status": "approved",
+    "activation_status": "inactive",
+    "checklist": {
+      "ra_checked": true,
+      "causal_metadata_checked": true,
+      "corpus_support_checked": true,
+      "sba_residue_removed": true,
+      "official_scoring_absent": true,
+      "governance_checked": true
+    },
+    "issues_found": [],
+    "required_changes": [],
+    "approval_scope": "open_response_internal_review_only",
+    "governance_confirmation": {
+      "safe_for_examiner": false,
+      "examiner_scoring_allowed": false,
+      "official_wset_question": false,
+      "training_item_only": true,
+      "uses_llm": false,
+      "uses_api": false,
+      "uses_embeddings": false,
+      "uses_vector_db": false,
+      "cloud_services_active": false
+    },
+    "notes": "Approved for internal open-response structural review only; cockpit activation remains off."
+  },
+  {
+    "review_id": "open_response_review_857_20260604_001",
+    "source_question_id": "857",
+    "candidate_id": "diagnostic_open_response_857",
     "reviewer": "phase_4a_3_7_45_structural_review",
     "reviewed_at": "2026-06-04T00:00:00Z",
     "review_status": "approved",

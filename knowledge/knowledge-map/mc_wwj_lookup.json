@@ -1,0 +1,251 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "2026-06-06",
+  "notes": "Lookup table mapping MC node IDs to relevant WWJ chunk IDs for remediation routing. Chunk IDs are verified against knowledge/wine-with-jimmy/chunk-ready/ (333 chunks across 30 videos). video_ids are YouTube IDs where available; null for videos with empty video_id field in the chunk corpus. chunk_ids provided are the first 2-3 chunks of the most relevant video — consumers should load the full video (all chunks with the same video stem) for complete remediation context. availability=pending means no relevant WWJ video was found for this MC node.",
+  "governance": {
+    "safe_for_examiner": false,
+    "uses_llm": false,
+    "uses_api": false,
+    "uses_embeddings": false,
+    "cloud_services_active": false,
+    "psl_active": false,
+    "document_type": "static_config",
+    "modifiable_by": "audit_phase_only"
+  },
+  "lookup": [
+    {
+      "mc_id": "MC_ACIDITY_01",
+      "wwj_chunks": [
+        "How_to_Judge_Acidity_with_the_WSET_Level_3_Standard_Approach_to_Tasting-0000",
+        "How_to_Judge_Acidity_with_the_WSET_Level_3_Standard_Approach_to_Tasting-0001",
+        "How_to_assess_the_quality_of_a_wine_for_WSET_Level_3-0000"
+      ],
+      "video_ids": [null, null],
+      "availability": "available",
+      "content_type": "sat_explanation",
+      "notes": "Acidity as a positive structural element; how to judge acidity in SAT context; quality assessment with acidity"
+    },
+    {
+      "mc_id": "MC_ACIDITY_02",
+      "wwj_chunks": [
+        "WSET_Level_3_Wines_-_Understanding_the_Common_Elements_of_Winemaking_Part-0000",
+        "WSET_Level_3_Wines_-_Understanding_the_Common_Elements_of_Winemaking_Part-0001",
+        "WSET_Level_3_Wines_-_Understanding_the_Common_Elements_of_Winemaking_Part-0002"
+      ],
+      "video_ids": [null],
+      "availability": "available",
+      "content_type": "theory_explanation",
+      "notes": "MLF converts malic to lactic acid (reduces harshness, does not remove acidity); winemaking elements including fermentation and acid management"
+    },
+    {
+      "mc_id": "MC_AGEING_IMPROVEMENT_01",
+      "wwj_chunks": [
+        "How_to_assess_the_quality_of_a_wine_for_WSET_Level_3-0000",
+        "How_to_assess_the_quality_of_a_wine_for_WSET_Level_3-0001",
+        "WSET_Level_3_Wines_-_Understanding_the_Common_Elements_of_Winemaking_Part-0004"
+      ],
+      "video_ids": [null],
+      "availability": "available",
+      "content_type": "theory_explanation",
+      "notes": "Ageing potential depends on structure (acidity, tannin, sugar); not all wines benefit from ageing; quality assessment covers readiness to drink"
+    },
+    {
+      "mc_id": "MC_ALCOHOL_QUALITY_01",
+      "wwj_chunks": [
+        "How_to_assess_the_quality_of_a_wine_for_WSET_Level_3-0000",
+        "How_to_assess_the_quality_of_a_wine_for_WSET_Level_3-0002",
+        "WSET_Level_3_Wines_-_Understanding_the_Growing_Environment_-_Climate_Part_1-0000"
+      ],
+      "video_ids": [null],
+      "availability": "available",
+      "content_type": "theory_explanation",
+      "notes": "Alcohol contributes to body but balance is the quality determinant; high alcohol from warm climate not inherently higher quality"
+    },
+    {
+      "mc_id": "MC_BOTRYTIS_01",
+      "wwj_chunks": [
+        "Mastering_Sweet_Wine_Production_for_Level_3_Exams_Wine_with_Jimmy-0000",
+        "Mastering_Sweet_Wine_Production_for_Level_3_Exams_Wine_with_Jimmy-0001",
+        "Mastering_Sweet_Wine_Production_for_Level_3_Exams_Wine_with_Jimmy-0002"
+      ],
+      "video_ids": [null],
+      "availability": "available",
+      "content_type": "theory_explanation",
+      "notes": "Noble rot vs grey rot distinction; conditions required for noble rot formation; Sauternes and botrytised wine production"
+    },
+    {
+      "mc_id": "MC_COLD_STABILISATION_QUALITY_01",
+      "wwj_chunks": [
+        "Master_Winemaking_for_WSET_Level_3_Exam_Clarification_Techniques_Explained-0000",
+        "Master_Winemaking_for_WSET_Level_3_Exam_Clarification_Techniques_Explained-0001",
+        "Master_Winemaking_for_WSET_Level_3_Exam_Clarification_Techniques_Explained-0002"
+      ],
+      "video_ids": [null],
+      "availability": "available",
+      "content_type": "theory_explanation",
+      "notes": "Clarification and stabilisation techniques; tartrate crystals are a harmless natural precipitate, not a fault"
+    },
+    {
+      "mc_id": "MC_COMPLEXITY_LENGTH_01",
+      "wwj_chunks": [
+        "Introduction_to_the_WSET_Level_3_SAT-0000",
+        "Introduction_to_the_WSET_Level_3_SAT-0001",
+        "How_to_assess_the_quality_of_a_wine_for_WSET_Level_3-0003"
+      ],
+      "video_ids": [null],
+      "availability": "available",
+      "content_type": "sat_explanation",
+      "notes": "SAT definitions: complexity = range of different aromas and flavours; length = persistence of flavour after swallowing; distinct BICL criteria"
+    },
+    {
+      "mc_id": "MC_COOL_CLIMATE_01",
+      "wwj_chunks": [
+        "WSET_Level_3_Wines_-_Understanding_the_Growing_Environment_-_Climate_Part_1-0000",
+        "WSET_Level_3_Wines_-_Understanding_the_Growing_Environment_-_Climate_Part_1-0001",
+        "WSET_Level_3_Wines_-_Understanding_the_Growing_Environment_-_Climate_Part_1-0002"
+      ],
+      "video_ids": [null],
+      "availability": "available",
+      "content_type": "theory_explanation",
+      "notes": "Cool climate affects acidity and aroma retention; alcohol depends on sugar accumulation which varies by vintage and variety even in cool climates"
+    },
+    {
+      "mc_id": "MC_COOL_CLIMATE_02",
+      "wwj_chunks": [
+        "WSET_Level_3_Wines_-_Understanding_the_Growing_Environment_-_Climate_Part_1-0000",
+        "WSET_Level_3_Wines_-_Understanding_the_Growing_Environment_-_Climate_Part_1-0003",
+        "WSET_Level_3_Wines_-_Understanding_the_Growing_Environment_Sunlight-0000"
+      ],
+      "video_ids": [null],
+      "availability": "available",
+      "content_type": "theory_explanation",
+      "notes": "Cool climate can produce elegant primary fruit flavours, not necessarily green/unripe; ripe fruit is achievable in cool climates with good site selection and vintage conditions"
+    },
+    {
+      "mc_id": "MC_LEES_AGEING_01",
+      "wwj_chunks": [
+        "WSET_Level_3_Wines_-_Understanding_the_Common_Elements_of_Winemaking_Part-0003",
+        "WSET_Level_3_Wines_-_Understanding_the_Common_Elements_of_Winemaking_Part-0004"
+      ],
+      "video_ids": [null],
+      "availability": "partial",
+      "content_type": "theory_explanation",
+      "notes": "Winemaking elements video covers lees and autolysis; no dedicated Champagne-specific lees ageing video found in current corpus. Autolytic texture and mouthfeel benefits beyond flavour addition."
+    },
+    {
+      "mc_id": "MC_MLF_01",
+      "wwj_chunks": [
+        "WSET_Level_3_Wines_-_Understanding_the_Common_Elements_of_Winemaking_Part-0000",
+        "WSET_Level_3_Wines_-_Understanding_the_Common_Elements_of_Winemaking_Part-0001",
+        "WSET_Level_3_Wines_-_Understanding_the_Common_Elements_of_Winemaking_Part-0002"
+      ],
+      "video_ids": [null],
+      "availability": "available",
+      "content_type": "theory_explanation",
+      "notes": "MLF can produce diacetyl (buttery) but this is variable and depends on bacterial strain, wine style, and winemaker intent; not all MLF wines taste buttery"
+    },
+    {
+      "mc_id": "MC_MLF_02",
+      "wwj_chunks": [
+        "WSET_Level_3_Wines_-_Understanding_the_Common_Elements_of_Winemaking_Part-0000",
+        "WSET_Level_3_Wines_-_Understanding_the_Common_Elements_of_Winemaking_Part-0001",
+        "WSET_Level_3_Wines_-_Understanding_the_Common_Elements_of_Winemaking_Part-0002"
+      ],
+      "video_ids": [null],
+      "availability": "available",
+      "content_type": "theory_explanation",
+      "notes": "MLF converts malic acid to lactic acid — total acidity decreases moderately; wines retain acidity, they do not become flat; same video as MC_MLF_01"
+    },
+    {
+      "mc_id": "MC_OAK_01",
+      "wwj_chunks": [
+        "How_to_assess_the_quality_of_a_wine_for_WSET_Level_3-0000",
+        "WSET_Level_3_Wines_-_Understanding_the_Common_Elements_of_Winemaking_Part-0005",
+        "Red_Wine_Extraction_Techniques_Advanced_Version_useful_for_WSET_L3_and_L4-0000"
+      ],
+      "video_ids": [null],
+      "availability": "available",
+      "content_type": "theory_explanation",
+      "notes": "Oak is a deliberate winemaking choice; quality depends on integration and balance, not presence/absence of oak character; oaky wines can be Very Good"
+    },
+    {
+      "mc_id": "MC_OAK_02",
+      "wwj_chunks": [
+        "WSET_Level_3_Wines_-_Understanding_the_Common_Elements_of_Winemaking_Part-0005",
+        "WSET_Level_3_Wines_-_Understanding_the_Common_Elements_of_Winemaking_Part-0006"
+      ],
+      "video_ids": [null],
+      "availability": "available",
+      "content_type": "theory_explanation",
+      "notes": "New oak imparts tannin, vanilla, toast flavours; old oak provides micro-oxygenation without heavy flavour extraction; fundamentally different effects"
+    },
+    {
+      "mc_id": "MC_OAK_QUALITY_01",
+      "wwj_chunks": [
+        "How_to_assess_the_quality_of_a_wine_for_WSET_Level_3-0000",
+        "How_to_assess_the_quality_of_a_wine_for_WSET_Level_3-0004",
+        "WSET_Level_3_Wines_-_Understanding_the_Common_Elements_of_Winemaking_Part-0005"
+      ],
+      "video_ids": [null],
+      "availability": "available",
+      "content_type": "theory_explanation",
+      "notes": "Quality assessment based on BICL balance/complexity/intensity/length, not oak quantity; over-oaked wines can score lower quality"
+    },
+    {
+      "mc_id": "MC_RESIDUAL_SUGAR_SWEET_01",
+      "wwj_chunks": [
+        "Mastering_Sweet_Wine_Production_for_Level_3_Exams_Wine_with_Jimmy-0000",
+        "Mastering_Sweet_Wine_Production_for_Level_3_Exams_Wine_with_Jimmy-0003",
+        "-JEzspOn34o-0000"
+      ],
+      "video_ids": [null, "-JEzspOn34o"],
+      "availability": "available",
+      "content_type": "theory_explanation",
+      "notes": "Sweetness perception is modulated by acidity; high RS wine can taste dry if counterbalanced by high acidity (e.g. German Spätlese); sweet wine production covers this interaction"
+    },
+    {
+      "mc_id": "MC_TANNIN_01",
+      "wwj_chunks": [
+        "Red_Wine_Extraction_Techniques_Advanced_Version_useful_for_WSET_L3_and_L4-0000",
+        "Red_Wine_Extraction_Techniques_Advanced_Version_useful_for_WSET_L3_and_L4-0001",
+        "Understanding_Red_Wine_Making_for_WSET_Level_3-0000"
+      ],
+      "video_ids": [null],
+      "availability": "available",
+      "content_type": "theory_explanation",
+      "notes": "Tannin = polyphenols causing astringency/grip sensation; bitterness is a taste distinct from astringency; SAT differentiates tannin level and character"
+    },
+    {
+      "mc_id": "MC_TANNIN_02",
+      "wwj_chunks": [
+        "Red_Wine_Extraction_Techniques_Advanced_Version_useful_for_WSET_L3_and_L4-0000",
+        "How_to_Judge_Acidity_with_the_WSET_Level_3_Standard_Approach_to_Tasting-0000",
+        "Introduction_to_the_WSET_Level_3_SAT-0002"
+      ],
+      "video_ids": [null],
+      "availability": "available",
+      "content_type": "sat_explanation",
+      "notes": "Tannin = astringency felt on gums and cheeks; acidity = salivation-inducing sensation on sides of tongue; SAT assesses them separately"
+    },
+    {
+      "mc_id": "MC_TANNIN_QUALITY_02",
+      "wwj_chunks": [
+        "How_to_assess_the_quality_of_a_wine_for_WSET_Level_3-0000",
+        "How_to_assess_the_quality_of_a_wine_for_WSET_Level_3-0001",
+        "Red_Wine_Extraction_Techniques_Advanced_Version_useful_for_WSET_L3_and_L4-0003"
+      ],
+      "video_ids": [null],
+      "availability": "available",
+      "content_type": "theory_explanation",
+      "notes": "Ripe, integrated tannin supports quality and ageing; harsh or excessive tannin detracts from quality; balance and integration matter more than quantity"
+    },
+    {
+      "mc_id": "MC_WHOLE_BUNCH_01",
+      "wwj_chunks": null,
+      "video_ids": null,
+      "availability": "pending",
+      "content_type": null,
+      "notes": "No dedicated whole-bunch fermentation video found in current WWJ corpus. Semi-carbonic maceration video is adjacent but does not directly address the stalky character misconception. Remediation content pending."
+    }
+  ]
+}
