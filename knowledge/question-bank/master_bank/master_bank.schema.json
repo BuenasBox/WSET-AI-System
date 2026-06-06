@@ -1,0 +1,198 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://wset-ai-system.local/schemas/master_bank.schema.json",
+  "title": "WSET-AI-System Canonical Master Bank",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "importer_version",
+    "source_bank",
+    "schema_path",
+    "generated_at",
+    "counts",
+    "collections",
+    "items",
+    "governance"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "master_bank_v1"
+    },
+    "importer_version": {
+      "const": "master_bank_importer_v1"
+    },
+    "source_bank": {
+      "const": "knowledge/question-bank/structured/wset3_questions.json"
+    },
+    "schema_path": {
+      "const": "knowledge/question-bank/master_bank/master_bank.schema.json"
+    },
+    "generated_at": {
+      "type": "null"
+    },
+    "counts": {
+      "type": "object"
+    },
+    "collections": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "single_best_answer",
+        "open_response",
+        "inactive",
+        "needs_review",
+        "gold",
+        "public_lab"
+      ],
+      "properties": {
+        "single_best_answer": {
+          "$ref": "#/$defs/idList"
+        },
+        "open_response": {
+          "$ref": "#/$defs/idList"
+        },
+        "inactive": {
+          "$ref": "#/$defs/idList"
+        },
+        "needs_review": {
+          "$ref": "#/$defs/idList"
+        },
+        "gold": {
+          "$ref": "#/$defs/idList"
+        },
+        "public_lab": {
+          "$ref": "#/$defs/idList"
+        }
+      }
+    },
+    "items": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/masterItem"
+      }
+    },
+    "governance": {
+      "$ref": "#/$defs/governance"
+    }
+  },
+  "$defs": {
+    "idList": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^wset3_.+$"
+      },
+      "uniqueItems": true
+    },
+    "governance": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "safe_for_examiner",
+        "examiner_scoring_allowed",
+        "official_wset_question",
+        "training_item_only",
+        "uses_llm",
+        "uses_api",
+        "uses_embeddings",
+        "uses_vector_db",
+        "cloud_services_active"
+      ],
+      "properties": {
+        "safe_for_examiner": {
+          "const": false
+        },
+        "examiner_scoring_allowed": {
+          "const": false
+        },
+        "official_wset_question": {
+          "const": false
+        },
+        "training_item_only": {
+          "const": true
+        },
+        "uses_llm": {
+          "const": false
+        },
+        "uses_api": {
+          "const": false
+        },
+        "uses_embeddings": {
+          "const": false
+        },
+        "uses_vector_db": {
+          "const": false
+        },
+        "cloud_services_active": {
+          "const": false
+        }
+      }
+    },
+    "masterItem": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "master_item_id",
+        "source_question_id",
+        "question_type",
+        "stem",
+        "curriculum",
+        "source_content",
+        "status",
+        "collections",
+        "lineage",
+        "governance"
+      ],
+      "properties": {
+        "master_item_id": {
+          "type": "string",
+          "pattern": "^wset3_.+$"
+        },
+        "source_question_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "question_type": {
+          "enum": [
+            "single_best_answer",
+            "open_response"
+          ]
+        },
+        "stem": {
+          "type": "string",
+          "minLength": 1
+        },
+        "curriculum": {
+          "type": "object"
+        },
+        "source_content": {
+          "type": "object"
+        },
+        "status": {
+          "type": "object"
+        },
+        "collections": {
+          "type": "array",
+          "items": {
+            "enum": [
+              "single_best_answer",
+              "open_response",
+              "inactive",
+              "needs_review",
+              "gold",
+              "public_lab"
+            ]
+          },
+          "uniqueItems": true
+        },
+        "lineage": {
+          "type": "object"
+        },
+        "governance": {
+          "$ref": "#/$defs/governance"
+        }
+      }
+    }
+  }
+}
