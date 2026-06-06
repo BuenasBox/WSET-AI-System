@@ -45,10 +45,10 @@ class OpenResponseSuitabilityTests(unittest.TestCase):
         self.assertEqual(
             self.report["classification_counts"],
             {
-                "open_response_candidate": 21,
-                "human_review_required": 68,
-                "sba_only": 503,
-                "inactive": 24,
+                "open_response_candidate": 27,
+                "human_review_required": 0,
+                "sba_only": 589,
+                "inactive": 0,
             },
         )
 
@@ -58,7 +58,7 @@ class OpenResponseSuitabilityTests(unittest.TestCase):
             for item in self.bank["items"]
             if item["status"]["review_state"] == "approved_open_response"
         ]
-        self.assertEqual(len(approved), 20)
+        self.assertEqual(len(approved), 26)
         self.assertTrue(
             all(
                 self.result_by_source[item["source_question_id"]][
@@ -77,12 +77,12 @@ class OpenResponseSuitabilityTests(unittest.TestCase):
         self.assertTrue(result["signals"]["answer_boundary_support"])
         self.assertEqual(result["confidence"], "high")
 
-    def test_explanation_only_sba_requires_human_review(self) -> None:
+    def test_reviewed_explanation_sba_is_finalized_as_sba(self) -> None:
         result = self.result_by_source["19"]
-        self.assertEqual(result["classification"], "human_review_required")
+        self.assertEqual(result["classification"], "sba_only")
         self.assertTrue(result["signals"]["requires_explanation"])
         self.assertFalse(result["signals"]["answer_boundary_support"])
-        self.assertEqual(result["confidence"], "low")
+        self.assertEqual(result["confidence"], "high")
 
     def test_recognition_question_remains_sba_only(self) -> None:
         result = self.result_by_source["2"]
@@ -91,24 +91,23 @@ class OpenResponseSuitabilityTests(unittest.TestCase):
         self.assertTrue(result["sba_eligible"])
         self.assertTrue(result["signals"]["recognition_only_sufficient"])
 
-    def test_public_review_items_remain_explicitly_sba_eligible(self) -> None:
+    def test_public_review_exceptions_are_resolved_and_remain_sba_eligible(self) -> None:
         public_review = [
             self.result_by_source[source_id]
             for source_id in ("356", "421", "464")
         ]
         self.assertTrue(
-            all(record["classification"] == "human_review_required" for record in public_review)
+            all(record["classification"] == "sba_only" for record in public_review)
         )
         self.assertTrue(all(record["sba_eligible"] for record in public_review))
 
-    def test_inactive_master_bank_records_do_not_become_candidates(self) -> None:
+    def test_no_inactive_suitability_backlog_remains(self) -> None:
         inactive = [
             record
             for record in self.report["records"]
             if record["classification"] == "inactive"
         ]
-        self.assertEqual(len(inactive), 24)
-        self.assertTrue(all(not record["open_response_candidate"] for record in inactive))
+        self.assertEqual(inactive, [])
 
     def test_comparison_and_justification_signals_are_detected(self) -> None:
         comparison = self.result_by_source["805"]

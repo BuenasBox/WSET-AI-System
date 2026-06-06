@@ -6,19 +6,17 @@
   "generated_at": null,
   "counts": {
     "total": 616,
-    "single_best_answer": 595,
-    "open_response": 21,
+    "single_best_answer": 590,
+    "open_response": 26,
     "inactive": 580,
-    "needs_review": 560,
+    "needs_review": 471,
     "gold": 34,
     "public_lab": 36,
     "review_states": {
       "approved_for_static_demo": 36,
-      "approved_open_response": 20,
-      "preserve_only": 16,
-      "rejected": 1,
-      "requires_revision": 2,
-      "unreviewed": 541
+      "approved_open_response": 26,
+      "approved_private_sba": 83,
+      "unreviewed": 471
     }
   },
   "collections": {
@@ -612,12 +610,7 @@
       "wset3_849",
       "wset3_850",
       "wset3_851",
-      "wset3_852",
-      "wset3_853",
-      "wset3_854",
-      "wset3_855",
-      "wset3_856",
-      "wset3_857"
+      "wset3_852"
     ],
     "open_response": [
       "wset3_18",
@@ -640,7 +633,12 @@
       "wset3_814",
       "wset3_815",
       "wset3_816",
-      "wset3_817"
+      "wset3_817",
+      "wset3_853",
+      "wset3_854",
+      "wset3_855",
+      "wset3_856",
+      "wset3_857"
     ],
     "inactive": [
       "wset3_1",
@@ -1225,37 +1223,21 @@
       "wset3_857"
     ],
     "needs_review": [
-      "wset3_1",
       "wset3_3",
-      "wset3_4",
-      "wset3_5",
       "wset3_6",
-      "wset3_7",
       "wset3_8",
       "wset3_9",
       "wset3_10",
       "wset3_11",
-      "wset3_12",
-      "wset3_13",
       "wset3_14",
-      "wset3_15",
       "wset3_16",
-      "wset3_17",
-      "wset3_18",
-      "wset3_19",
-      "wset3_20",
       "wset3_22",
-      "wset3_23",
-      "wset3_24",
       "wset3_25",
       "wset3_26",
       "wset3_27",
       "wset3_28",
-      "wset3_29",
-      "wset3_30",
       "wset3_31",
       "wset3_32",
-      "wset3_33",
       "wset3_34",
       "wset3_35",
       "wset3_36",
@@ -1265,26 +1247,19 @@
       "wset3_40",
       "wset3_41",
       "wset3_42",
-      "wset3_43",
-      "wset3_44",
       "wset3_45",
       "wset3_46",
       "wset3_47",
       "wset3_48",
       "wset3_49",
-      "wset3_50",
       "wset3_51",
       "wset3_52",
       "wset3_53",
       "wset3_54",
       "wset3_55",
-      "wset3_56",
       "wset3_57",
       "wset3_58",
-      "wset3_59",
-      "wset3_60",
       "wset3_61",
-      "wset3_62",
       "wset3_63",
       "wset3_64",
       "wset3_65",
@@ -1297,18 +1272,13 @@
       "wset3_72",
       "wset3_73",
       "wset3_74",
-      "wset3_75",
       "wset3_76",
       "wset3_77",
-      "wset3_78",
       "wset3_79",
       "wset3_80",
-      "wset3_81",
       "wset3_82",
       "wset3_84",
-      "wset3_85",
       "wset3_86",
-      "wset3_87",
       "wset3_88",
       "wset3_89",
       "wset3_90",
@@ -1323,11 +1293,9 @@
       "wset3_99",
       "wset3_100",
       "wset3_101",
-      "wset3_102",
       "wset3_103",
       "wset3_104",
       "wset3_106",
-      "wset3_108",
       "wset3_109",
       "wset3_110",
       "wset3_111",
@@ -1335,7 +1303,6 @@
       "wset3_113",
       "wset3_114",
       "wset3_115",
-      "wset3_116",
       "wset3_121",
       "wset3_122",
       "wset3_123",
@@ -1343,7 +1310,6 @@
       "wset3_125",
       "wset3_126",
       "wset3_127",
-      "wset3_128",
       "wset3_129",
       "wset3_200",
       "wset3_201",
@@ -1361,14 +1327,12 @@
       "wset3_214",
       "wset3_215",
       "wset3_217",
-      "wset3_218",
       "wset3_219",
       "wset3_220",
       "wset3_221",
       "wset3_222",
       "wset3_223",
       "wset3_224",
-      "wset3_225",
       "wset3_226",
       "wset3_227",
       "wset3_229",
@@ -1386,13 +1350,11 @@
       "wset3_244",
       "wset3_245",
       "wset3_246",
-      "wset3_247",
       "wset3_248",
       "wset3_249",
       "wset3_250",
       "wset3_251",
       "wset3_252",
-      "wset3_253",
       "wset3_254",
       "wset3_255",
       "wset3_256",
@@ -1404,7 +1366,6 @@
       "wset3_263",
       "wset3_264",
       "wset3_266",
-      "wset3_267",
       "wset3_271",
       "wset3_272",
       "wset3_273",
@@ -1416,7 +1377,6 @@
       "wset3_281",
       "wset3_282",
       "wset3_283",
-      "wset3_284",
       "wset3_285",
       "wset3_286",
       "wset3_288",
@@ -1427,7 +1387,6 @@
       "wset3_293",
       "wset3_294",
       "wset3_295",
-      "wset3_296",
       "wset3_297",
       "wset3_298",
       "wset3_299",
@@ -1444,9 +1403,7 @@
       "wset3_313",
       "wset3_314",
       "wset3_315",
-      "wset3_316",
       "wset3_317",
-      "wset3_318",
       "wset3_319",
       "wset3_320",
       "wset3_321",
@@ -1462,21 +1419,16 @@
       "wset3_332",
       "wset3_333",
       "wset3_334",
-      "wset3_335",
       "wset3_336",
-      "wset3_337",
       "wset3_338",
       "wset3_339",
       "wset3_340",
-      "wset3_341",
       "wset3_342",
       "wset3_343",
       "wset3_344",
       "wset3_345",
-      "wset3_346",
       "wset3_347",
       "wset3_348",
-      "wset3_349",
       "wset3_350",
       "wset3_351",
       "wset3_352",
@@ -1488,17 +1440,12 @@
       "wset3_359",
       "wset3_360",
       "wset3_361",
-      "wset3_362",
       "wset3_363",
-      "wset3_364",
-      "wset3_365",
       "wset3_366",
       "wset3_367",
-      "wset3_368",
       "wset3_369",
       "wset3_370",
       "wset3_371",
-      "wset3_372",
       "wset3_373",
       "wset3_374",
       "wset3_375",
@@ -1510,17 +1457,12 @@
       "wset3_381",
       "wset3_382",
       "wset3_383",
-      "wset3_384",
       "wset3_385",
-      "wset3_386",
       "wset3_387",
-      "wset3_388",
       "wset3_389",
-      "wset3_390",
       "wset3_391",
       "wset3_392",
       "wset3_393",
-      "wset3_394",
       "wset3_396",
       "wset3_397",
       "wset3_398",
@@ -1548,7 +1490,6 @@
       "wset3_422",
       "wset3_423",
       "wset3_425",
-      "wset3_426",
       "wset3_427",
       "wset3_428",
       "wset3_429",
@@ -1557,22 +1498,18 @@
       "wset3_432",
       "wset3_433",
       "wset3_434",
-      "wset3_435",
       "wset3_436",
       "wset3_437",
       "wset3_439",
       "wset3_442",
       "wset3_443",
       "wset3_444",
-      "wset3_451",
       "wset3_452",
       "wset3_453",
-      "wset3_454",
       "wset3_455",
       "wset3_456",
       "wset3_457",
       "wset3_458",
-      "wset3_459",
       "wset3_460",
       "wset3_461",
       "wset3_462",
@@ -1585,14 +1522,11 @@
       "wset3_470",
       "wset3_471",
       "wset3_472",
-      "wset3_473",
       "wset3_474",
       "wset3_475",
       "wset3_476",
       "wset3_477",
       "wset3_478",
-      "wset3_479",
-      "wset3_480",
       "wset3_481",
       "wset3_482",
       "wset3_483",
@@ -1602,15 +1536,11 @@
       "wset3_487",
       "wset3_488",
       "wset3_489",
-      "wset3_490",
-      "wset3_491",
       "wset3_492",
       "wset3_494",
       "wset3_495",
-      "wset3_496",
       "wset3_497",
       "wset3_499",
-      "wset3_500",
       "wset3_501",
       "wset3_502",
       "wset3_503",
@@ -1619,9 +1549,6 @@
       "wset3_506",
       "wset3_507",
       "wset3_508",
-      "wset3_509",
-      "wset3_510",
-      "wset3_511",
       "wset3_512",
       "wset3_513",
       "wset3_514",
@@ -1642,7 +1569,6 @@
       "wset3_667",
       "wset3_668",
       "wset3_669",
-      "wset3_670",
       "wset3_671",
       "wset3_672",
       "wset3_673",
@@ -1684,8 +1610,6 @@
       "wset3_709",
       "wset3_710",
       "wset3_711",
-      "wset3_712",
-      "wset3_713",
       "wset3_714",
       "wset3_715",
       "wset3_716",
@@ -1696,14 +1620,11 @@
       "wset3_721",
       "wset3_722",
       "wset3_723",
-      "wset3_724",
       "wset3_725",
       "wset3_726",
-      "wset3_727",
       "wset3_728",
       "wset3_729",
       "wset3_730",
-      "wset3_731",
       "wset3_732",
       "wset3_733",
       "wset3_734",
@@ -1717,7 +1638,6 @@
       "wset3_743",
       "wset3_744",
       "wset3_745",
-      "wset3_746",
       "wset3_747",
       "wset3_748",
       "wset3_765",
@@ -1735,7 +1655,6 @@
       "wset3_782",
       "wset3_783",
       "wset3_784",
-      "wset3_785",
       "wset3_786",
       "wset3_787",
       "wset3_788",
@@ -1754,8 +1673,6 @@
       "wset3_823",
       "wset3_824",
       "wset3_825",
-      "wset3_826",
-      "wset3_827",
       "wset3_828",
       "wset3_829",
       "wset3_830",
@@ -1769,22 +1686,14 @@
       "wset3_839",
       "wset3_840",
       "wset3_841",
-      "wset3_842",
       "wset3_843",
       "wset3_844",
       "wset3_845",
-      "wset3_846",
-      "wset3_847",
       "wset3_848",
       "wset3_849",
       "wset3_850",
       "wset3_851",
-      "wset3_852",
-      "wset3_853",
-      "wset3_854",
-      "wset3_855",
-      "wset3_856",
-      "wset3_857"
+      "wset3_852"
     ],
     "gold": [
       "wset3_21",
@@ -1868,13 +1777,13 @@
       "question_type": "single_best_answer",
       "stem": "¿Qué rol juega la 'flor' en la crianza biológica del Jerez?",
       "curriculum": {
-        "ra": "unknown",
-        "topic": "flor",
-        "difficulty": "distinction",
+        "ra": "RA4",
+        "topic": "fortified_wines",
+        "difficulty": "intermediate",
         "expected_topics": [
-          "flor",
-          "jerez",
-          "biological ageing"
+          "RA4",
+          "fortified_wines",
+          "sherry_flor_biological_ageing"
         ],
         "expected_keywords": [
           "flor",
@@ -1898,15 +1807,14 @@
         "correct_answer_text": "Protege al vino del oxígeno y desarrolla sabores únicos"
       },
       "status": {
-        "review_state": "requires_revision",
+        "review_state": "approved_private_sba",
         "activation_status": "inactive",
         "gold": false,
         "public_lab": false
       },
       "collections": [
         "single_best_answer",
-        "inactive",
-        "needs_review"
+        "inactive"
       ],
       "lineage": {
         "structured_source": "knowledge/question-bank/structured/wset3_questions.json",
@@ -1916,7 +1824,9 @@
         "open_response_candidate_id": null,
         "open_response_review_id": null,
         "gold_review_id": null,
-        "public_lab_item_id": null
+        "public_lab_item_id": null,
+        "resolution_artifact": "knowledge/question-bank/reviews/master_bank_review_inactive_resolution.json",
+        "resolution_id": "phase_4a_3_8_5_7_1"
       },
       "governance": {
         "safe_for_examiner": false,
@@ -2070,12 +1980,13 @@
       "question_type": "single_best_answer",
       "stem": "¿Cuál es el sistema tradicional de envejecimiento utilizado en Jerez?",
       "curriculum": {
-        "ra": "unknown",
-        "topic": "jerez",
+        "ra": "RA4",
+        "topic": "fortified_wines",
         "difficulty": "foundational",
         "expected_topics": [
-          "jerez",
-          "solera"
+          "RA4",
+          "fortified_wines",
+          "sherry_solera_fractional_blending"
         ],
         "expected_keywords": [
           "solera",
@@ -2099,15 +2010,14 @@
         "correct_answer_text": "Sistema de soleras y criaderas"
       },
       "status": {
-        "review_state": "preserve_only",
+        "review_state": "approved_private_sba",
         "activation_status": "inactive",
         "gold": false,
         "public_lab": false
       },
       "collections": [
         "single_best_answer",
-        "inactive",
-        "needs_review"
+        "inactive"
       ],
       "lineage": {
         "structured_source": "knowledge/question-bank/structured/wset3_questions.json",
@@ -2117,7 +2027,9 @@
         "open_response_candidate_id": null,
         "open_response_review_id": null,
         "gold_review_id": null,
-        "public_lab_item_id": null
+        "public_lab_item_id": null,
+        "resolution_artifact": "knowledge/question-bank/reviews/master_bank_review_inactive_resolution.json",
+        "resolution_id": "phase_4a_3_8_5_7_4"
       },
       "governance": {
         "safe_for_examiner": false,
@@ -2137,13 +2049,13 @@
       "question_type": "single_best_answer",
       "stem": "¿Qué diferencia al Oloroso del Amontillado en términos de crianza?",
       "curriculum": {
-        "ra": "unknown",
-        "topic": "oloroso",
+        "ra": "RA4",
+        "topic": "fortified_wines",
         "difficulty": "distinction",
         "expected_topics": [
-          "oloroso",
-          "amontillado",
-          "sherry ageing"
+          "RA4",
+          "fortified_wines",
+          "oloroso_amontillado_ageing_contrast"
         ],
         "expected_keywords": [
           "flor",
@@ -2168,15 +2080,14 @@
         "correct_answer_text": "Envejecimiento exclusivamente oxidativo"
       },
       "status": {
-        "review_state": "preserve_only",
+        "review_state": "approved_private_sba",
         "activation_status": "inactive",
         "gold": false,
         "public_lab": false
       },
       "collections": [
         "single_best_answer",
-        "inactive",
-        "needs_review"
+        "inactive"
       ],
       "lineage": {
         "structured_source": "knowledge/question-bank/structured/wset3_questions.json",
@@ -2186,7 +2097,9 @@
         "open_response_candidate_id": null,
         "open_response_review_id": null,
         "gold_review_id": null,
-        "public_lab_item_id": null
+        "public_lab_item_id": null,
+        "resolution_artifact": "knowledge/question-bank/reviews/master_bank_review_inactive_resolution.json",
+        "resolution_id": "phase_4a_3_8_5_7_5"
       },
       "governance": {
         "safe_for_examiner": false,
@@ -2286,15 +2199,14 @@
         "correct_answer_text": "Desarrolla aromas a nuez, caramelo y umami"
       },
       "status": {
-        "review_state": "unreviewed",
+        "review_state": "approved_private_sba",
         "activation_status": "inactive",
         "gold": false,
         "public_lab": false
       },
       "collections": [
         "single_best_answer",
-        "inactive",
-        "needs_review"
+        "inactive"
       ],
       "lineage": {
         "structured_source": "knowledge/question-bank/structured/wset3_questions.json",
@@ -2304,7 +2216,9 @@
         "open_response_candidate_id": null,
         "open_response_review_id": null,
         "gold_review_id": null,
-        "public_lab_item_id": null
+        "public_lab_item_id": null,
+        "resolution_artifact": "knowledge/question-bank/reviews/master_bank_review_inactive_resolution.json",
+        "resolution_id": "phase_4a_3_8_5_7_7"
       },
       "governance": {
         "safe_for_examiner": false,
@@ -2560,13 +2474,13 @@
       "question_type": "single_best_answer",
       "stem": "¿Qué factor natural tiene mayor influencia en el riesgo de heladas primaverales?",
       "curriculum": {
-        "ra": "unknown",
-        "topic": "heladas primaverales",
+        "ra": "RA1",
+        "topic": "viticulture",
         "difficulty": "intermediate",
         "expected_topics": [
-          "heladas primaverales",
-          "topografía",
-          "viticultura"
+          "RA1",
+          "viticulture",
+          "spring_frost_topography"
         ],
         "expected_keywords": [
           "topografía",
@@ -2590,15 +2504,14 @@
         "correct_answer_text": "Pendiente del terreno"
       },
       "status": {
-        "review_state": "preserve_only",
+        "review_state": "approved_private_sba",
         "activation_status": "inactive",
         "gold": false,
         "public_lab": false
       },
       "collections": [
         "single_best_answer",
-        "inactive",
-        "needs_review"
+        "inactive"
       ],
       "lineage": {
         "structured_source": "knowledge/question-bank/structured/wset3_questions.json",
@@ -2608,7 +2521,9 @@
         "open_response_candidate_id": null,
         "open_response_review_id": null,
         "gold_review_id": null,
-        "public_lab_item_id": null
+        "public_lab_item_id": null,
+        "resolution_artifact": "knowledge/question-bank/reviews/master_bank_review_inactive_resolution.json",
+        "resolution_id": "phase_4a_3_8_5_7_12"
       },
       "governance": {
         "safe_for_examiner": false,
@@ -2628,13 +2543,13 @@
       "question_type": "single_best_answer",
       "stem": "¿Qué elemento del suelo influye más directamente en el drenaje del viñedo?",
       "curriculum": {
-        "ra": "unknown",
-        "topic": "textura del suelo",
+        "ra": "RA1",
+        "topic": "viticulture",
         "difficulty": "intermediate",
         "expected_topics": [
-          "textura del suelo",
-          "drenaje",
-          "vigor de la vid"
+          "RA1",
+          "viticulture",
+          "soil_texture_drainage"
         ],
         "expected_keywords": [
           "textura del suelo",
@@ -2658,15 +2573,14 @@
         "correct_answer_text": "Estructura arenosa"
       },
       "status": {
-        "review_state": "requires_revision",
+        "review_state": "approved_private_sba",
         "activation_status": "inactive",
         "gold": false,
         "public_lab": false
       },
       "collections": [
         "single_best_answer",
-        "inactive",
-        "needs_review"
+        "inactive"
       ],
       "lineage": {
         "structured_source": "knowledge/question-bank/structured/wset3_questions.json",
@@ -2676,7 +2590,9 @@
         "open_response_candidate_id": null,
         "open_response_review_id": null,
         "gold_review_id": null,
-        "public_lab_item_id": null
+        "public_lab_item_id": null,
+        "resolution_artifact": "knowledge/question-bank/reviews/master_bank_review_inactive_resolution.json",
+        "resolution_id": "phase_4a_3_8_5_7_13"
       },
       "governance": {
         "safe_for_examiner": false,
@@ -2764,11 +2680,13 @@
       "question_type": "single_best_answer",
       "stem": "¿Cuál de los siguientes factores humanos tiene un impacto directo en el precio de producción del vino?",
       "curriculum": {
-        "ra": "RA1",
-        "topic": "RA1",
+        "ra": "RA5",
+        "topic": "price_factors",
         "difficulty": "intermediate",
         "expected_topics": [
-          "RA1"
+          "RA5",
+          "price_factors",
+          "production_cost_mechanisation"
         ],
         "expected_keywords": [],
         "expected_causal_links": [],
@@ -2785,15 +2703,14 @@
         "correct_answer_text": "Nivel de mecanización"
       },
       "status": {
-        "review_state": "preserve_only",
+        "review_state": "approved_private_sba",
         "activation_status": "inactive",
         "gold": false,
         "public_lab": false
       },
       "collections": [
         "single_best_answer",
-        "inactive",
-        "needs_review"
+        "inactive"
       ],
       "lineage": {
         "structured_source": "knowledge/question-bank/structured/wset3_questions.json",
@@ -2803,7 +2720,9 @@
         "open_response_candidate_id": null,
         "open_response_review_id": null,
         "gold_review_id": null,
-        "public_lab_item_id": null
+        "public_lab_item_id": null,
+        "resolution_artifact": "knowledge/question-bank/reviews/master_bank_review_inactive_resolution.json",
+        "resolution_id": "phase_4a_3_8_5_7_15"
       },
       "governance": {
         "safe_for_examiner": false,
@@ -2888,13 +2807,13 @@
       "question_type": "single_best_answer",
       "stem": "¿Cuál es el propósito principal del despalillado antes de la fermentación?",
       "curriculum": {
-        "ra": "unknown",
-        "topic": "despalillado",
+        "ra": "RA1",
+        "topic": "winemaking",
         "difficulty": "intermediate",
         "expected_topics": [
-          "despalillado",
-          "fermentación",
-          "estructura tánica"
+          "RA1",
+          "winemaking",
+          "destemming_tannin_extraction"
         ],
         "expected_keywords": [
           "despalillado",
@@ -2918,15 +2837,14 @@
         "correct_answer_text": "Evitar la extracción de taninos verdes"
       },
       "status": {
-        "review_state": "preserve_only",
+        "review_state": "approved_private_sba",
         "activation_status": "inactive",
         "gold": false,
         "public_lab": false
       },
       "collections": [
         "single_best_answer",
-        "inactive",
-        "needs_review"
+        "inactive"
       ],
       "lineage": {
         "structured_source": "knowledge/question-bank/structured/wset3_questions.json",
@@ -2936,7 +2854,9 @@
         "open_response_candidate_id": null,
         "open_response_review_id": null,
         "gold_review_id": null,
-        "public_lab_item_id": null
+        "public_lab_item_id": null,
+        "resolution_artifact": "knowledge/question-bank/reviews/master_bank_review_inactive_resolution.json",
+        "resolution_id": "phase_4a_3_8_5_7_17"
       },
       "governance": {
         "safe_for_examiner": false,
@@ -2956,43 +2876,39 @@
       "question_type": "open_response",
       "stem": "¿Cuál es una consecuencia del uso excesivo de sulfitos?",
       "curriculum": {
-        "ra": "unknown",
-        "topic": "sulfitos",
+        "ra": "RA1",
+        "topic": "winemaking",
         "difficulty": "intermediate",
         "expected_topics": [
-          "sulfitos",
-          "SO₂",
-          "carácter del vino"
+          "RA1",
+          "winemaking",
+          "sulphur_dioxide_management"
         ],
         "expected_keywords": [
           "sulfitos",
-          "SO₂",
-          "aromas reductivos",
-          "dióxido de azufre"
+          "SO2",
+          "inhibición de levaduras salvajes",
+          "protección antimicrobiana"
         ],
-        "expected_causal_links": [],
+        "expected_causal_links": [
+          "dosis de SO2 -> inhibición microbiana -> menor actividad de levaduras salvajes"
+        ],
         "expected_reasoning_type": "theory_foundation"
       },
       "source_content": {
-        "options": {
-          "A": "Oxidación prematura",
-          "B": "Reducción de la vida útil",
-          "C": "Aparición de aromas a cebolla",
-          "D": "Inhibición de levaduras salvajes"
-        },
-        "correct_answer_letter": "D",
-        "correct_answer_text": "Inhibición de levaduras salvajes"
+        "options": {},
+        "correct_answer_letter": null,
+        "correct_answer_text": null
       },
       "status": {
-        "review_state": "rejected",
+        "review_state": "approved_open_response",
         "activation_status": "inactive",
         "gold": false,
         "public_lab": false
       },
       "collections": [
         "open_response",
-        "inactive",
-        "needs_review"
+        "inactive"
       ],
       "lineage": {
         "structured_source": "knowledge/question-bank/structured/wset3_questions.json",
@@ -3002,7 +2918,9 @@
         "open_response_candidate_id": "diagnostic_open_response_18",
         "open_response_review_id": "open_response_review_18_20260604_001",
         "gold_review_id": null,
-        "public_lab_item_id": null
+        "public_lab_item_id": null,
+        "resolution_artifact": "knowledge/question-bank/reviews/master_bank_review_inactive_resolution.json",
+        "resolution_id": "phase_4a_3_8_5_7_18"
       },
       "governance": {
         "safe_for_examiner": false,
@@ -3043,15 +2961,14 @@
         "correct_answer_text": "Mejora la concentración de fruta"
       },
       "status": {
-        "review_state": "unreviewed",
+        "review_state": "approved_private_sba",
         "activation_status": "inactive",
         "gold": false,
         "public_lab": false
       },
       "collections": [
         "single_best_answer",
-        "inactive",
-        "needs_review"
+        "inactive"
       ],
       "lineage": {
         "structured_source": "knowledge/question-bank/structured/wset3_questions.json",
@@ -3061,7 +2978,9 @@
         "open_response_candidate_id": null,
         "open_response_review_id": null,
         "gold_review_id": null,
-        "public_lab_item_id": null
+        "public_lab_item_id": null,
+        "resolution_artifact": "knowledge/question-bank/reviews/master_bank_review_inactive_resolution.json",
+        "resolution_id": "phase_4a_3_8_5_7_19"
       },
       "governance": {
         "safe_for_examiner": false,
@@ -3082,10 +3001,12 @@
       "stem": "¿Qué variable de vinificación afecta más directamente el cuerpo del vino?",
       "curriculum": {
         "ra": "RA1",
-        "topic": "RA1",
+        "topic": "winemaking",
         "difficulty": "intermediate",
         "expected_topics": [
-          "RA1"
+          "RA1",
+          "winemaking",
+          "extraction_and_body"
         ],
         "expected_keywords": [],
         "expected_causal_links": [],
@@ -3102,15 +3023,14 @@
         "correct_answer_text": "Nivel de extracción"
       },
       "status": {
-        "review_state": "preserve_only",
+        "review_state": "approved_private_sba",
         "activation_status": "inactive",
         "gold": false,
         "public_lab": false
       },
       "collections": [
         "single_best_answer",
-        "inactive",
-        "needs_review"
+        "inactive"
       ],
       "lineage": {
         "structured_source": "knowledge/question-bank/structured/wset3_questions.json",
@@ -3120,7 +3040,9 @@
         "open_response_candidate_id": null,
         "open_response_review_id": null,
         "gold_review_id": null,
-        "public_lab_item_id": null
+        "public_lab_item_id": null,
+        "resolution_artifact": "knowledge/question-bank/reviews/master_bank_review_inactive_resolution.json",
+        "resolution_id": "phase_4a_3_8_5_7_20"
       },
       "governance": {
         "safe_for_examiner": false,
@@ -3279,15 +3201,14 @@
         "correct_answer_text": "Burbuja más suave"
       },
       "status": {
-        "review_state": "unreviewed",
+        "review_state": "approved_private_sba",
         "activation_status": "inactive",
         "gold": false,
         "public_lab": false
       },
       "collections": [
         "single_best_answer",
-        "inactive",
-        "needs_review"
+        "inactive"
       ],
       "lineage": {
         "structured_source": "knowledge/question-bank/structured/wset3_questions.json",
@@ -3297,7 +3218,9 @@
         "open_response_candidate_id": null,
         "open_response_review_id": null,
         "gold_review_id": null,
-        "public_lab_item_id": null
+        "public_lab_item_id": null,
+        "resolution_artifact": "knowledge/question-bank/reviews/master_bank_review_inactive_resolution.json",
+        "resolution_id": "phase_4a_3_8_5_7_23"
       },
       "governance": {
         "safe_for_examiner": false,
@@ -3338,15 +3261,14 @@
         "correct_answer_text": "Champagne permite mezclas de múltiples añadas"
       },
       "status": {
-        "review_state": "unreviewed",
+        "review_state": "approved_private_sba",
         "activation_status": "inactive",
         "gold": false,
         "public_lab": false
       },
       "collections": [
         "single_best_answer",
-        "inactive",
-        "needs_review"
+        "inactive"
       ],
       "lineage": {
         "structured_source": "knowledge/question-bank/structured/wset3_questions.json",
@@ -3356,7 +3278,9 @@
         "open_response_candidate_id": null,
         "open_response_review_id": null,
         "gold_review_id": null,
-        "public_lab_item_id": null
+        "public_lab_item_id": null,
+        "resolution_artifact": "knowledge/question-bank/reviews/master_bank_review_inactive_resolution.json",
+        "resolution_id": "phase_4a_3_8_5_7_24"
       },
       "governance": {
         "safe_for_examiner": false,
@@ -3641,15 +3565,14 @@
         "correct_answer_text": "Se embotella con levadura natural sin degüelle"
       },
       "status": {
-        "review_state": "unreviewed",
+        "review_state": "approved_private_sba",
         "activation_status": "inactive",
         "gold": false,
         "public_lab": false
       },
       "collections": [
         "single_best_answer",
-        "inactive",
-        "needs_review"
+        "inactive"
       ],
       "lineage": {
         "structured_source": "knowledge/question-bank/structured/wset3_questions.json",
@@ -3659,7 +3582,9 @@
         "open_response_candidate_id": null,
         "open_response_review_id": null,
         "gold_review_id": null,
-        "public_lab_item_id": null
+        "public_lab_item_id": null,
+        "resolution_artifact": "knowledge/question-bank/reviews/master_bank_review_inactive_resolution.json",
+        "resolution_id": "phase_4a_3_8_5_7_29"
       },
       "governance": {
         "safe_for_examiner": false,
@@ -3680,10 +3605,12 @@
       "stem": "¿Qué característica es más probable encontrar en un espumoso elaborado con método tradicional y envejecido durante más de 24 meses?",
       "curriculum": {
         "ra": "RA3",
-        "topic": "RA3 / Bloque 9",
+        "topic": "sparkling_wines",
         "difficulty": "intermediate",
         "expected_topics": [
-          "RA3 / Bloque 9"
+          "RA3",
+          "sparkling_wines",
+          "traditional_method_autolysis"
         ],
         "expected_keywords": [
           "Notas de autólisis como pan y brioche"
@@ -3702,15 +3629,14 @@
         "correct_answer_text": "Notas de autólisis como pan y brioche"
       },
       "status": {
-        "review_state": "preserve_only",
+        "review_state": "approved_private_sba",
         "activation_status": "inactive",
         "gold": false,
         "public_lab": false
       },
       "collections": [
         "single_best_answer",
-        "inactive",
-        "needs_review"
+        "inactive"
       ],
       "lineage": {
         "structured_source": "knowledge/question-bank/structured/wset3_questions.json",
@@ -3720,7 +3646,9 @@
         "open_response_candidate_id": null,
         "open_response_review_id": null,
         "gold_review_id": null,
-        "public_lab_item_id": null
+        "public_lab_item_id": null,
+        "resolution_artifact": "knowledge/question-bank/reviews/master_bank_review_inactive_resolution.json",
+        "resolution_id": "phase_4a_3_8_5_7_30"
       },
       "governance": {
         "safe_for_examiner": false,
@@ -3885,15 +3813,14 @@
         "correct_answer_text": "Aumenta el rendimiento sin diluir calidad"
       },
       "status": {
-        "review_state": "unreviewed",
+        "review_state": "approved_private_sba",
         "activation_status": "inactive",
         "gold": false,
         "public_lab": false
       },
       "collections": [
         "single_best_answer",
-        "inactive",
-        "needs_review"
+        "inactive"
       ],
       "lineage": {
         "structured_source": "knowledge/question-bank/structured/wset3_questions.json",
@@ -3903,7 +3830,9 @@
         "open_response_candidate_id": null,
         "open_response_review_id": null,
         "gold_review_id": null,
-        "public_lab_item_id": null
+        "public_lab_item_id": null,
+        "resolution_artifact": "knowledge/question-bank/reviews/master_bank_review_inactive_resolution.json",
+        "resolution_id": "phase_4a_3_8_5_7_33"
       },
       "governance": {
         "safe_for_examiner": false,
@@ -4495,15 +4424,14 @@
         "correct_answer_text": "Puede hacer que el vino se perciba más amargo o ácido"
       },
       "status": {
-        "review_state": "unreviewed",
+        "review_state": "approved_private_sba",
         "activation_status": "inactive",
         "gold": false,
         "public_lab": false
       },
       "collections": [
         "single_best_answer",
-        "inactive",
-        "needs_review"
+        "inactive"
       ],
       "lineage": {
         "structured_source": "knowledge/question-bank/structured/wset3_questions.json",
@@ -4513,7 +4441,9 @@
         "open_response_candidate_id": null,
         "open_response_review_id": null,
         "gold_review_id": null,
-        "public_lab_item_id": null
+        "public_lab_item_id": null,
+        "resolution_artifact": "knowledge/question-bank/reviews/master_bank_review_inactive_resolution.json",
+        "resolution_id": "phase_4a_3_8_5_7_43"
       },
       "governance": {
         "safe_for_examiner": false,
@@ -4534,10 +4464,12 @@
       "stem": "¿Cuál de las siguientes afirmaciones sobre el maridaje es correcta?",
       "curriculum": {
         "ra": "RA1",
-        "topic": "RA1",
+        "topic": "wine_and_food",
         "difficulty": "intermediate",
         "expected_topics": [
-          "RA1"
+          "RA1",
+          "wine_and_food",
+          "tannin_salt_fat_pairing"
         ],
         "expected_keywords": [
           "Los taninos se suavizan con platos salados y grasos"
@@ -4556,15 +4488,14 @@
         "correct_answer_text": "Los taninos se suavizan con platos salados y grasos"
       },
       "status": {
-        "review_state": "preserve_only",
+        "review_state": "approved_private_sba",
         "activation_status": "inactive",
         "gold": false,
         "public_lab": false
       },
       "collections": [
         "single_best_answer",
-        "inactive",
-        "needs_review"
+        "inactive"
       ],
       "lineage": {
         "structured_source": "knowledge/question-bank/structured/wset3_questions.json",
@@ -4574,7 +4505,9 @@
         "open_response_candidate_id": null,
         "open_response_review_id": null,
         "gold_review_id": null,
-        "public_lab_item_id": null
+        "public_lab_item_id": null,
+        "resolution_artifact": "knowledge/question-bank/reviews/master_bank_review_inactive_resolution.json",
+        "resolution_id": "phase_4a_3_8_5_7_44"
       },
       "governance": {
         "safe_for_examiner": false,
@@ -4900,10 +4833,12 @@
       "stem": "¿Qué medida es útil para proteger vinos de calidad durante su almacenamiento a largo plazo?",
       "curriculum": {
         "ra": "RA1",
-        "topic": "RA1",
+        "topic": "storage_and_service",
         "difficulty": "intermediate",
         "expected_topics": [
-          "RA1"
+          "RA1",
+          "storage_and_service",
+          "long_term_storage_conditions"
         ],
         "expected_keywords": [
           "Temperatura estable, oscuridad y humedad moderada"
@@ -4922,15 +4857,14 @@
         "correct_answer_text": "Temperatura estable, oscuridad y humedad moderada"
       },
       "status": {
-        "review_state": "preserve_only",
+        "review_state": "approved_private_sba",
         "activation_status": "inactive",
         "gold": false,
         "public_lab": false
       },
       "collections": [
         "single_best_answer",
-        "inactive",
-        "needs_review"
+        "inactive"
       ],
       "lineage": {
         "structured_source": "knowledge/question-bank/structured/wset3_questions.json",
@@ -4940,7 +4874,9 @@
         "open_response_candidate_id": null,
         "open_response_review_id": null,
         "gold_review_id": null,
-        "public_lab_item_id": null
+        "public_lab_item_id": null,
+        "resolution_artifact": "knowledge/question-bank/reviews/master_bank_review_inactive_resolution.json",
+        "resolution_id": "phase_4a_3_8_5_7_50"
       },
       "governance": {
         "safe_for_examiner": false,
@@ -5288,15 +5224,14 @@
         "correct_answer_text": "Lo intensifica"
       },
       "status": {
-        "review_state": "unreviewed",
+        "review_state": "approved_private_sba",
         "activation_status": "inactive",
         "gold": false,
         "public_lab": false
       },
       "collections": [
         "single_best_answer",
-        "inactive",
-        "needs_review"
+        "inactive"
       ],
       "lineage": {
         "structured_source": "knowledge/question-bank/structured/wset3_questions.json",
@@ -5306,7 +5241,9 @@
         "open_response_candidate_id": null,
         "open_response_review_id": null,
         "gold_review_id": null,
-        "public_lab_item_id": null
+        "public_lab_item_id": null,
+        "resolution_artifact": "knowledge/question-bank/reviews/master_bank_review_inactive_resolution.json",
+        "resolution_id": "phase_4a_3_8_5_7_56"
       },
       "governance": {
         "safe_for_examiner": false,
@@ -5471,15 +5408,14 @@
         "correct_answer_text": "Separa los sedimentos"
       },
       "status": {
-        "review_state": "unreviewed",
+        "review_state": "approved_private_sba",
         "activation_status": "inactive",
         "gold": false,
         "public_lab": false
       },
       "collections": [
         "single_best_answer",
-        "inactive",
-        "needs_review"
+        "inactive"
       ],
       "lineage": {
         "structured_source": "knowledge/question-bank/structured/wset3_questions.json",
@@ -5489,7 +5425,9 @@
         "open_response_candidate_id": null,
         "open_response_review_id": null,
         "gold_review_id": null,
-        "public_lab_item_id": null
+        "public_lab_item_id": null,
+        "resolution_artifact": "knowledge/question-bank/reviews/master_bank_review_inactive_resolution.json",
+        "resolution_id": "phase_4a_3_8_5_7_59"
       },
       "governance": {
         "safe_for_examiner": false,
@@ -5532,15 +5470,14 @@
         "correct_answer_text": "Problemas hepáticos y dependencia"
       },
       "status": {
-        "review_state": "unreviewed",
+        "review_state": "approved_private_sba",
         "activation_status": "inactive",
         "gold": false,
         "public_lab": false
       },
       "collections": [
         "single_best_answer",
-        "inactive",
-        "needs_review"
+        "inactive"
       ],
       "lineage": {
         "structured_source": "knowledge/question-bank/structured/wset3_questions.json",
@@ -5550,7 +5487,9 @@
         "open_response_candidate_id": null,
         "open_response_review_id": null,
         "gold_review_id": null,
-        "public_lab_item_id": null
+        "public_lab_item_id": null,
+        "resolution_artifact": "knowledge/question-bank/reviews/master_bank_review_inactive_resolution.json",
+        "resolution_id": "phase_4a_3_8_5_7_60"
       },
       "governance": {
         "safe_for_examiner": false,
@@ -5654,15 +5593,14 @@
         "correct_answer_text": "Hace que el vino se perciba más amargo, ácido y menos frutal"
       },
       "status": {
-        "review_state": "unreviewed",
+        "review_state": "approved_private_sba",
         "activation_status": "inactive",
         "gold": false,
         "public_lab": false
       },
       "collections": [
         "single_best_answer",
-        "inactive",
-        "needs_review"
+        "inactive"
       ],
       "lineage": {
         "structured_source": "knowledge/question-bank/structured/wset3_questions.json",
@@ -5672,7 +5610,9 @@
         "open_response_candidate_id": null,
         "open_response_review_id": null,
         "gold_review_id": null,
-        "public_lab_item_id": null
+        "public_lab_item_id": null,
+        "resolution_artifact": "knowledge/question-bank/reviews/master_bank_review_inactive_resolution.json",
+        "resolution_id": "phase_4a_3_8_5_7_62"
       },
       "governance": {
         "safe_for_examiner": false,
@@ -6447,15 +6387,14 @@
         "correct_answer_text": "Aumento de riesgos para la salud"
       },
       "status": {
-        "review_state": "unreviewed",
+        "review_state": "approved_private_sba",
         "activation_status": "inactive",
         "gold": false,
         "public_lab": false
       },
       "collections": [
         "single_best_answer",
-        "inactive",
-        "needs_review"
+        "inactive"
       ],
       "lineage": {
         "structured_source": "knowledge/question-bank/structured/wset3_questions.json",
@@ -6465,7 +6404,9 @@
         "open_response_candidate_id": null,
         "open_response_review_id": null,
         "gold_review_id": null,
-        "public_lab_item_id": null
+        "public_lab_item_id": null,
+        "resolution_artifact": "knowledge/question-bank/reviews/master_bank_review_inactive_resolution.json",
+        "resolution_id": "phase_4a_3_8_5_7_75"
       },
       "governance": {
         "safe_for_examiner": false,
@@ -6608,10 +6549,12 @@
       "stem": "¿Cuál es la mejor práctica para almacenar botellas de vino tinto con corcho natural?",
       "curriculum": {
         "ra": "RA1",
-        "topic": "RA1",
+        "topic": "storage_and_service",
         "difficulty": "intermediate",
         "expected_topics": [
-          "RA1"
+          "RA1",
+          "storage_and_service",
+          "cork_horizontal_storage"
         ],
         "expected_keywords": [
           "En posición horizontal y en ambiente fresco y oscuro"
@@ -6630,15 +6573,14 @@
         "correct_answer_text": "En posición horizontal y en ambiente fresco y oscuro"
       },
       "status": {
-        "review_state": "preserve_only",
+        "review_state": "approved_private_sba",
         "activation_status": "inactive",
         "gold": false,
         "public_lab": false
       },
       "collections": [
         "single_best_answer",
-        "inactive",
-        "needs_review"
+        "inactive"
       ],
       "lineage": {
         "structured_source": "knowledge/question-bank/structured/wset3_questions.json",
@@ -6648,7 +6590,9 @@
         "open_response_candidate_id": null,
         "open_response_review_id": null,
         "gold_review_id": null,
-        "public_lab_item_id": null
+        "public_lab_item_id": null,
+        "resolution_artifact": "knowledge/question-bank/reviews/master_bank_review_inactive_resolution.json",
+        "resolution_id": "phase_4a_3_8_5_7_78"
       },
       "governance": {
         "safe_for_examiner": false,
@@ -6813,15 +6757,14 @@
         "correct_answer_text": "Evolución prematura y pérdida de frescura"
       },
       "status": {
-        "review_state": "unreviewed",
+        "review_state": "approved_private_sba",
         "activation_status": "inactive",
         "gold": false,
         "public_lab": false
       },
       "collections": [
         "single_best_answer",
-        "inactive",
-        "needs_review"
+        "inactive"
       ],
       "lineage": {
         "structured_source": "knowledge/question-bank/structured/wset3_questions.json",
@@ -6831,7 +6774,9 @@
         "open_response_candidate_id": null,
         "open_response_review_id": null,
         "gold_review_id": null,
-        "public_lab_item_id": null
+        "public_lab_item_id": null,
+        "resolution_artifact": "knowledge/question-bank/reviews/master_bank_review_inactive_resolution.json",
+        "resolution_id": "phase_4a_3_8_5_7_81"
       },
       "governance": {
         "safe_for_examiner": false,
@@ -7056,15 +7001,14 @@
         "correct_answer_text": "Suaviza los taninos y mejora el equilibrio"
       },
       "status": {
-        "review_state": "unreviewed",
+        "review_state": "approved_private_sba",
         "activation_status": "inactive",
         "gold": false,
         "public_lab": false
       },
       "collections": [
         "single_best_answer",
-        "inactive",
-        "needs_review"
+        "inactive"
       ],
       "lineage": {
         "structured_source": "knowledge/question-bank/structured/wset3_questions.json",
@@ -7074,7 +7018,9 @@
         "open_response_candidate_id": null,
         "open_response_review_id": null,
         "gold_review_id": null,
-        "public_lab_item_id": null
+        "public_lab_item_id": null,
+        "resolution_artifact": "knowledge/question-bank/reviews/master_bank_review_inactive_resolution.json",
+        "resolution_id": "phase_4a_3_8_5_7_85"
       },
       "governance": {
         "safe_for_examiner": false,
@@ -7156,10 +7102,12 @@
       "stem": "¿Qué práctica es adecuada para decantar un vino viejo?",
       "curriculum": {
         "ra": "RA1",
-        "topic": "RA1",
+        "topic": "storage_and_service",
         "difficulty": "intermediate",
         "expected_topics": [
-          "RA1"
+          "RA1",
+          "storage_and_service",
+          "old_wine_decanting_sediment"
         ],
         "expected_keywords": [
           "Verter lentamente para evitar sedimentos"
@@ -7178,15 +7126,14 @@
         "correct_answer_text": "Verter lentamente para evitar sedimentos"
       },
       "status": {
-        "review_state": "preserve_only",
+        "review_state": "approved_private_sba",
         "activation_status": "inactive",
         "gold": false,
         "public_lab": false
       },
       "collections": [
         "single_best_answer",
-        "inactive",
-        "needs_review"
+        "inactive"
       ],
       "lineage": {
         "structured_source": "knowledge/question-bank/structured/wset3_questions.json",
@@ -7196,7 +7143,9 @@
         "open_response_candidate_id": null,
         "open_response_review_id": null,
         "gold_review_id": null,
-        "public_lab_item_id": null
+        "public_lab_item_id": null,
+        "resolution_artifact": "knowledge/question-bank/reviews/master_bank_review_inactive_resolution.json",
+        "resolution_id": "phase_4a_3_8_5_7_87"
       },
       "governance": {
         "safe_for_examiner": false,
@@ -8093,15 +8042,14 @@
         "correct_answer_text": "La crianza biológica vs oxidativa"
       },
       "status": {
-        "review_state": "unreviewed",
+        "review_state": "approved_private_sba",
         "activation_status": "inactive",
         "gold": false,
         "public_lab": false
       },
       "collections": [
         "single_best_answer",
-        "inactive",
-        "needs_review"
+        "inactive"
       ],
       "lineage": {
         "structured_source": "knowledge/question-bank/structured/wset3_questions.json",
@@ -8111,7 +8059,9 @@
         "open_response_candidate_id": null,
         "open_response_review_id": null,
         "gold_review_id": null,
-        "public_lab_item_id": null
+        "public_lab_item_id": null,
+        "resolution_artifact": "knowledge/question-bank/reviews/master_bank_review_inactive_resolution.json",
+        "resolution_id": "phase_4a_3_8_5_7_102"
       },
       "governance": {
         "safe_for_examiner": false,
@@ -8437,10 +8387,12 @@
       "stem": "¿Cuál de las siguientes es una ventaja del método Charmat?",
       "curriculum": {
         "ra": "RA3",
-        "topic": "RA3",
+        "topic": "sparkling_wines",
         "difficulty": "intermediate",
         "expected_topics": [
-          "RA3"
+          "RA3",
+          "sparkling_wines",
+          "charmat_primary_aroma_retention"
         ],
         "expected_keywords": [
           "Conserva mejor los aromas primarios"
@@ -8459,15 +8411,14 @@
         "correct_answer_text": "Conserva mejor los aromas primarios"
       },
       "status": {
-        "review_state": "preserve_only",
+        "review_state": "approved_private_sba",
         "activation_status": "inactive",
         "gold": false,
         "public_lab": false
       },
       "collections": [
         "single_best_answer",
-        "inactive",
-        "needs_review"
+        "inactive"
       ],
       "lineage": {
         "structured_source": "knowledge/question-bank/structured/wset3_questions.json",
@@ -8477,7 +8428,9 @@
         "open_response_candidate_id": null,
         "open_response_review_id": null,
         "gold_review_id": null,
-        "public_lab_item_id": null
+        "public_lab_item_id": null,
+        "resolution_artifact": "knowledge/question-bank/reviews/master_bank_review_inactive_resolution.json",
+        "resolution_id": "phase_4a_3_8_5_7_108"
       },
       "governance": {
         "safe_for_examiner": false,
@@ -8947,15 +8900,14 @@
         "correct_answer_text": "Mayor complejidad, estructura y longevidad"
       },
       "status": {
-        "review_state": "unreviewed",
+        "review_state": "approved_private_sba",
         "activation_status": "inactive",
         "gold": false,
         "public_lab": false
       },
       "collections": [
         "single_best_answer",
-        "inactive",
-        "needs_review"
+        "inactive"
       ],
       "lineage": {
         "structured_source": "knowledge/question-bank/structured/wset3_questions.json",
@@ -8965,7 +8917,9 @@
         "open_response_candidate_id": null,
         "open_response_review_id": null,
         "gold_review_id": null,
-        "public_lab_item_id": null
+        "public_lab_item_id": null,
+        "resolution_artifact": "knowledge/question-bank/reviews/master_bank_review_inactive_resolution.json",
+        "resolution_id": "phase_4a_3_8_5_7_116"
       },
       "governance": {
         "safe_for_examiner": false,
@@ -9435,15 +9389,14 @@
         "correct_answer_text": "Aporta complejidad, textura cremosa y notas de levadura"
       },
       "status": {
-        "review_state": "unreviewed",
+        "review_state": "approved_private_sba",
         "activation_status": "inactive",
         "gold": false,
         "public_lab": false
       },
       "collections": [
         "single_best_answer",
-        "inactive",
-        "needs_review"
+        "inactive"
       ],
       "lineage": {
         "structured_source": "knowledge/question-bank/structured/wset3_questions.json",
@@ -9453,7 +9406,9 @@
         "open_response_candidate_id": null,
         "open_response_review_id": null,
         "gold_review_id": null,
-        "public_lab_item_id": null
+        "public_lab_item_id": null,
+        "resolution_artifact": "knowledge/question-bank/reviews/master_bank_review_inactive_resolution.json",
+        "resolution_id": "phase_4a_3_8_5_7_128"
       },
       "governance": {
         "safe_for_examiner": false,
@@ -10655,15 +10610,14 @@
         "correct_answer_text": "Cava usa variedades autóctonas españolas"
       },
       "status": {
-        "review_state": "unreviewed",
+        "review_state": "approved_private_sba",
         "activation_status": "inactive",
         "gold": false,
         "public_lab": false
       },
       "collections": [
         "single_best_answer",
-        "inactive",
-        "needs_review"
+        "inactive"
       ],
       "lineage": {
         "structured_source": "knowledge/question-bank/structured/wset3_questions.json",
@@ -10673,7 +10627,9 @@
         "open_response_candidate_id": null,
         "open_response_review_id": null,
         "gold_review_id": null,
-        "public_lab_item_id": null
+        "public_lab_item_id": null,
+        "resolution_artifact": "knowledge/question-bank/reviews/master_bank_review_inactive_resolution.json",
+        "resolution_id": "phase_4a_3_8_5_7_218"
       },
       "governance": {
         "safe_for_examiner": false,
@@ -11082,15 +11038,14 @@
         "correct_answer_text": "Franciacorta sigue el método tradicional"
       },
       "status": {
-        "review_state": "unreviewed",
+        "review_state": "approved_private_sba",
         "activation_status": "inactive",
         "gold": false,
         "public_lab": false
       },
       "collections": [
         "single_best_answer",
-        "inactive",
-        "needs_review"
+        "inactive"
       ],
       "lineage": {
         "structured_source": "knowledge/question-bank/structured/wset3_questions.json",
@@ -11100,7 +11055,9 @@
         "open_response_candidate_id": null,
         "open_response_review_id": null,
         "gold_review_id": null,
-        "public_lab_item_id": null
+        "public_lab_item_id": null,
+        "resolution_artifact": "knowledge/question-bank/reviews/master_bank_review_inactive_resolution.json",
+        "resolution_id": "phase_4a_3_8_5_7_225"
       },
       "governance": {
         "safe_for_examiner": false,
@@ -12402,10 +12359,12 @@
       "stem": "¿Qué factor climático principal influye en la alta acidez de los vinos del Mosel?",
       "curriculum": {
         "ra": "RA2",
-        "topic": "RA2",
+        "topic": "still_wines",
         "difficulty": "intermediate",
         "expected_topics": [
-          "RA2"
+          "RA2",
+          "still_wines",
+          "mosel_cool_climate_acidity"
         ],
         "expected_keywords": [
           "Pendientes empinadas y clima fresco"
@@ -12424,15 +12383,14 @@
         "correct_answer_text": "Pendientes empinadas y clima fresco"
       },
       "status": {
-        "review_state": "preserve_only",
+        "review_state": "approved_private_sba",
         "activation_status": "inactive",
         "gold": false,
         "public_lab": false
       },
       "collections": [
         "single_best_answer",
-        "inactive",
-        "needs_review"
+        "inactive"
       ],
       "lineage": {
         "structured_source": "knowledge/question-bank/structured/wset3_questions.json",
@@ -12442,7 +12400,9 @@
         "open_response_candidate_id": null,
         "open_response_review_id": null,
         "gold_review_id": null,
-        "public_lab_item_id": null
+        "public_lab_item_id": null,
+        "resolution_artifact": "knowledge/question-bank/reviews/master_bank_review_inactive_resolution.json",
+        "resolution_id": "phase_4a_3_8_5_7_247"
       },
       "governance": {
         "safe_for_examiner": false,
@@ -12768,10 +12728,12 @@
       "stem": "¿Qué combinación de factores es esencial en el estilo de Barolo DOCG?",
       "curriculum": {
         "ra": "RA2",
-        "topic": "RA2",
+        "topic": "still_wines",
         "difficulty": "intermediate",
         "expected_topics": [
-          "RA2"
+          "RA2",
+          "still_wines",
+          "barolo_nebbiolo_tannin_ageing"
         ],
         "expected_keywords": [
           "Variedad Nebbiolo, tanino alto y crianza prolongada"
@@ -12790,15 +12752,14 @@
         "correct_answer_text": "Variedad Nebbiolo, tanino alto y crianza prolongada"
       },
       "status": {
-        "review_state": "preserve_only",
+        "review_state": "approved_private_sba",
         "activation_status": "inactive",
         "gold": false,
         "public_lab": false
       },
       "collections": [
         "single_best_answer",
-        "inactive",
-        "needs_review"
+        "inactive"
       ],
       "lineage": {
         "structured_source": "knowledge/question-bank/structured/wset3_questions.json",
@@ -12808,7 +12769,9 @@
         "open_response_candidate_id": null,
         "open_response_review_id": null,
         "gold_review_id": null,
-        "public_lab_item_id": null
+        "public_lab_item_id": null,
+        "resolution_artifact": "knowledge/question-bank/reviews/master_bank_review_inactive_resolution.json",
+        "resolution_id": "phase_4a_3_8_5_7_253"
       },
       "governance": {
         "safe_for_examiner": false,
@@ -13644,15 +13607,14 @@
         "correct_answer_text": "Puede aumentar el valor percibido por garantías de origen y calidad"
       },
       "status": {
-        "review_state": "unreviewed",
+        "review_state": "approved_private_sba",
         "activation_status": "inactive",
         "gold": false,
         "public_lab": false
       },
       "collections": [
         "single_best_answer",
-        "inactive",
-        "needs_review"
+        "inactive"
       ],
       "lineage": {
         "structured_source": "knowledge/question-bank/structured/wset3_questions.json",
@@ -13662,7 +13624,9 @@
         "open_response_candidate_id": null,
         "open_response_review_id": null,
         "gold_review_id": null,
-        "public_lab_item_id": null
+        "public_lab_item_id": null,
+        "resolution_artifact": "knowledge/question-bank/reviews/master_bank_review_inactive_resolution.json",
+        "resolution_id": "phase_4a_3_8_5_7_267"
       },
       "governance": {
         "safe_for_examiner": false,
@@ -14620,15 +14584,14 @@
         "correct_answer_text": "Reduce la fotosíntesis excesiva y ayuda a mantener la acidez"
       },
       "status": {
-        "review_state": "unreviewed",
+        "review_state": "approved_private_sba",
         "activation_status": "inactive",
         "gold": false,
         "public_lab": false
       },
       "collections": [
         "single_best_answer",
-        "inactive",
-        "needs_review"
+        "inactive"
       ],
       "lineage": {
         "structured_source": "knowledge/question-bank/structured/wset3_questions.json",
@@ -14638,7 +14601,9 @@
         "open_response_candidate_id": null,
         "open_response_review_id": null,
         "gold_review_id": null,
-        "public_lab_item_id": null
+        "public_lab_item_id": null,
+        "resolution_artifact": "knowledge/question-bank/reviews/master_bank_review_inactive_resolution.json",
+        "resolution_id": "phase_4a_3_8_5_7_284"
       },
       "governance": {
         "safe_for_examiner": false,
@@ -15352,15 +15317,14 @@
         "correct_answer_text": "Casablanca"
       },
       "status": {
-        "review_state": "unreviewed",
+        "review_state": "approved_private_sba",
         "activation_status": "inactive",
         "gold": false,
         "public_lab": false
       },
       "collections": [
         "single_best_answer",
-        "inactive",
-        "needs_review"
+        "inactive"
       ],
       "lineage": {
         "structured_source": "knowledge/question-bank/structured/wset3_questions.json",
@@ -15370,7 +15334,9 @@
         "open_response_candidate_id": null,
         "open_response_review_id": null,
         "gold_review_id": null,
-        "public_lab_item_id": null
+        "public_lab_item_id": null,
+        "resolution_artifact": "knowledge/question-bank/reviews/master_bank_review_inactive_resolution.json",
+        "resolution_id": "phase_4a_3_8_5_7_296"
       },
       "governance": {
         "safe_for_examiner": false,
@@ -16572,15 +16538,14 @@
         "correct_answer_text": "Floración temprana y riesgo de heladas posteriores"
       },
       "status": {
-        "review_state": "unreviewed",
+        "review_state": "approved_private_sba",
         "activation_status": "inactive",
         "gold": false,
         "public_lab": false
       },
       "collections": [
         "single_best_answer",
-        "inactive",
-        "needs_review"
+        "inactive"
       ],
       "lineage": {
         "structured_source": "knowledge/question-bank/structured/wset3_questions.json",
@@ -16590,7 +16555,9 @@
         "open_response_candidate_id": null,
         "open_response_review_id": null,
         "gold_review_id": null,
-        "public_lab_item_id": null
+        "public_lab_item_id": null,
+        "resolution_artifact": "knowledge/question-bank/reviews/master_bank_review_inactive_resolution.json",
+        "resolution_id": "phase_4a_3_8_5_7_316"
       },
       "governance": {
         "safe_for_examiner": false,
@@ -16694,15 +16661,14 @@
         "correct_answer_text": "Reduce la ventilación y favorece enfermedades fúngicas"
       },
       "status": {
-        "review_state": "unreviewed",
+        "review_state": "approved_private_sba",
         "activation_status": "inactive",
         "gold": false,
         "public_lab": false
       },
       "collections": [
         "single_best_answer",
-        "inactive",
-        "needs_review"
+        "inactive"
       ],
       "lineage": {
         "structured_source": "knowledge/question-bank/structured/wset3_questions.json",
@@ -16712,7 +16678,9 @@
         "open_response_candidate_id": null,
         "open_response_review_id": null,
         "gold_review_id": null,
-        "public_lab_item_id": null
+        "public_lab_item_id": null,
+        "resolution_artifact": "knowledge/question-bank/reviews/master_bank_review_inactive_resolution.json",
+        "resolution_id": "phase_4a_3_8_5_7_318"
       },
       "governance": {
         "safe_for_examiner": false,
@@ -17731,15 +17699,14 @@
         "correct_answer_text": "Hace que el vino parezca más amargo y ácido"
       },
       "status": {
-        "review_state": "unreviewed",
+        "review_state": "approved_private_sba",
         "activation_status": "inactive",
         "gold": false,
         "public_lab": false
       },
       "collections": [
         "single_best_answer",
-        "inactive",
-        "needs_review"
+        "inactive"
       ],
       "lineage": {
         "structured_source": "knowledge/question-bank/structured/wset3_questions.json",
@@ -17749,7 +17716,9 @@
         "open_response_candidate_id": null,
         "open_response_review_id": null,
         "gold_review_id": null,
-        "public_lab_item_id": null
+        "public_lab_item_id": null,
+        "resolution_artifact": "knowledge/question-bank/reviews/master_bank_review_inactive_resolution.json",
+        "resolution_id": "phase_4a_3_8_5_7_335"
       },
       "governance": {
         "safe_for_examiner": false,
@@ -17853,15 +17822,14 @@
         "correct_answer_text": "Mayor concentración y complejidad en Premier Cru"
       },
       "status": {
-        "review_state": "unreviewed",
+        "review_state": "approved_private_sba",
         "activation_status": "inactive",
         "gold": false,
         "public_lab": false
       },
       "collections": [
         "single_best_answer",
-        "inactive",
-        "needs_review"
+        "inactive"
       ],
       "lineage": {
         "structured_source": "knowledge/question-bank/structured/wset3_questions.json",
@@ -17871,7 +17839,9 @@
         "open_response_candidate_id": null,
         "open_response_review_id": null,
         "gold_review_id": null,
-        "public_lab_item_id": null
+        "public_lab_item_id": null,
+        "resolution_artifact": "knowledge/question-bank/reviews/master_bank_review_inactive_resolution.json",
+        "resolution_id": "phase_4a_3_8_5_7_337"
       },
       "governance": {
         "safe_for_examiner": false,
@@ -18097,15 +18067,14 @@
         "correct_answer_text": "Altitud y clima fresco"
       },
       "status": {
-        "review_state": "unreviewed",
+        "review_state": "approved_private_sba",
         "activation_status": "inactive",
         "gold": false,
         "public_lab": false
       },
       "collections": [
         "single_best_answer",
-        "inactive",
-        "needs_review"
+        "inactive"
       ],
       "lineage": {
         "structured_source": "knowledge/question-bank/structured/wset3_questions.json",
@@ -18115,7 +18084,9 @@
         "open_response_candidate_id": null,
         "open_response_review_id": null,
         "gold_review_id": null,
-        "public_lab_item_id": null
+        "public_lab_item_id": null,
+        "resolution_artifact": "knowledge/question-bank/reviews/master_bank_review_inactive_resolution.json",
+        "resolution_id": "phase_4a_3_8_5_7_341"
       },
       "governance": {
         "safe_for_examiner": false,
@@ -18402,15 +18373,14 @@
         "correct_answer_text": "Aporta estructura, complejidad y notas especiadas"
       },
       "status": {
-        "review_state": "unreviewed",
+        "review_state": "approved_private_sba",
         "activation_status": "inactive",
         "gold": false,
         "public_lab": false
       },
       "collections": [
         "single_best_answer",
-        "inactive",
-        "needs_review"
+        "inactive"
       ],
       "lineage": {
         "structured_source": "knowledge/question-bank/structured/wset3_questions.json",
@@ -18420,7 +18390,9 @@
         "open_response_candidate_id": null,
         "open_response_review_id": null,
         "gold_review_id": null,
-        "public_lab_item_id": null
+        "public_lab_item_id": null,
+        "resolution_artifact": "knowledge/question-bank/reviews/master_bank_review_inactive_resolution.json",
+        "resolution_id": "phase_4a_3_8_5_7_346"
       },
       "governance": {
         "safe_for_examiner": false,
@@ -18585,15 +18557,14 @@
         "correct_answer_text": "Conserva frescura y compuestos aromáticos"
       },
       "status": {
-        "review_state": "unreviewed",
+        "review_state": "approved_private_sba",
         "activation_status": "inactive",
         "gold": false,
         "public_lab": false
       },
       "collections": [
         "single_best_answer",
-        "inactive",
-        "needs_review"
+        "inactive"
       ],
       "lineage": {
         "structured_source": "knowledge/question-bank/structured/wset3_questions.json",
@@ -18603,7 +18574,9 @@
         "open_response_candidate_id": null,
         "open_response_review_id": null,
         "gold_review_id": null,
-        "public_lab_item_id": null
+        "public_lab_item_id": null,
+        "resolution_artifact": "knowledge/question-bank/reviews/master_bank_review_inactive_resolution.json",
+        "resolution_id": "phase_4a_3_8_5_7_349"
       },
       "governance": {
         "safe_for_examiner": false,
@@ -19030,7 +19003,9 @@
         "open_response_candidate_id": null,
         "open_response_review_id": null,
         "gold_review_id": "review_356_20260604_gold_bank_001",
-        "public_lab_item_id": "draft_diag_sba_structured_356"
+        "public_lab_item_id": "draft_diag_sba_structured_356",
+        "resolution_artifact": "knowledge/question-bank/reviews/master_bank_review_inactive_resolution.json",
+        "resolution_id": "phase_4a_3_8_5_7_356"
       },
       "governance": {
         "safe_for_examiner": false,
@@ -19378,15 +19353,14 @@
         "correct_answer_text": "Mayor textura y complejidad"
       },
       "status": {
-        "review_state": "unreviewed",
+        "review_state": "approved_private_sba",
         "activation_status": "inactive",
         "gold": false,
         "public_lab": false
       },
       "collections": [
         "single_best_answer",
-        "inactive",
-        "needs_review"
+        "inactive"
       ],
       "lineage": {
         "structured_source": "knowledge/question-bank/structured/wset3_questions.json",
@@ -19396,7 +19370,9 @@
         "open_response_candidate_id": null,
         "open_response_review_id": null,
         "gold_review_id": null,
-        "public_lab_item_id": null
+        "public_lab_item_id": null,
+        "resolution_artifact": "knowledge/question-bank/reviews/master_bank_review_inactive_resolution.json",
+        "resolution_id": "phase_4a_3_8_5_7_362"
       },
       "governance": {
         "safe_for_examiner": false,
@@ -19500,15 +19476,14 @@
         "correct_answer_text": "Pouilly-Fumé muestra más mineralidad"
       },
       "status": {
-        "review_state": "unreviewed",
+        "review_state": "approved_private_sba",
         "activation_status": "inactive",
         "gold": false,
         "public_lab": false
       },
       "collections": [
         "single_best_answer",
-        "inactive",
-        "needs_review"
+        "inactive"
       ],
       "lineage": {
         "structured_source": "knowledge/question-bank/structured/wset3_questions.json",
@@ -19518,7 +19493,9 @@
         "open_response_candidate_id": null,
         "open_response_review_id": null,
         "gold_review_id": null,
-        "public_lab_item_id": null
+        "public_lab_item_id": null,
+        "resolution_artifact": "knowledge/question-bank/reviews/master_bank_review_inactive_resolution.json",
+        "resolution_id": "phase_4a_3_8_5_7_364"
       },
       "governance": {
         "safe_for_examiner": false,
@@ -19561,15 +19538,14 @@
         "correct_answer_text": "Aumenta la acidez y retención de aromas"
       },
       "status": {
-        "review_state": "unreviewed",
+        "review_state": "approved_private_sba",
         "activation_status": "inactive",
         "gold": false,
         "public_lab": false
       },
       "collections": [
         "single_best_answer",
-        "inactive",
-        "needs_review"
+        "inactive"
       ],
       "lineage": {
         "structured_source": "knowledge/question-bank/structured/wset3_questions.json",
@@ -19579,7 +19555,9 @@
         "open_response_candidate_id": null,
         "open_response_review_id": null,
         "gold_review_id": null,
-        "public_lab_item_id": null
+        "public_lab_item_id": null,
+        "resolution_artifact": "knowledge/question-bank/reviews/master_bank_review_inactive_resolution.json",
+        "resolution_id": "phase_4a_3_8_5_7_365"
       },
       "governance": {
         "safe_for_examiner": false,
@@ -19744,15 +19722,14 @@
         "correct_answer_text": "Mayor estructura y concentración"
       },
       "status": {
-        "review_state": "unreviewed",
+        "review_state": "approved_private_sba",
         "activation_status": "inactive",
         "gold": false,
         "public_lab": false
       },
       "collections": [
         "single_best_answer",
-        "inactive",
-        "needs_review"
+        "inactive"
       ],
       "lineage": {
         "structured_source": "knowledge/question-bank/structured/wset3_questions.json",
@@ -19762,7 +19739,9 @@
         "open_response_candidate_id": null,
         "open_response_review_id": null,
         "gold_review_id": null,
-        "public_lab_item_id": null
+        "public_lab_item_id": null,
+        "resolution_artifact": "knowledge/question-bank/reviews/master_bank_review_inactive_resolution.json",
+        "resolution_id": "phase_4a_3_8_5_7_368"
       },
       "governance": {
         "safe_for_examiner": false,
@@ -19988,15 +19967,14 @@
         "correct_answer_text": "Aumenta la concentración de azúcar y acidez"
       },
       "status": {
-        "review_state": "unreviewed",
+        "review_state": "approved_private_sba",
         "activation_status": "inactive",
         "gold": false,
         "public_lab": false
       },
       "collections": [
         "single_best_answer",
-        "inactive",
-        "needs_review"
+        "inactive"
       ],
       "lineage": {
         "structured_source": "knowledge/question-bank/structured/wset3_questions.json",
@@ -20006,7 +19984,9 @@
         "open_response_candidate_id": null,
         "open_response_review_id": null,
         "gold_review_id": null,
-        "public_lab_item_id": null
+        "public_lab_item_id": null,
+        "resolution_artifact": "knowledge/question-bank/reviews/master_bank_review_inactive_resolution.json",
+        "resolution_id": "phase_4a_3_8_5_7_372"
       },
       "governance": {
         "safe_for_examiner": false,
@@ -20720,15 +20700,14 @@
         "correct_answer_text": "Limarí"
       },
       "status": {
-        "review_state": "unreviewed",
+        "review_state": "approved_private_sba",
         "activation_status": "inactive",
         "gold": false,
         "public_lab": false
       },
       "collections": [
         "single_best_answer",
-        "inactive",
-        "needs_review"
+        "inactive"
       ],
       "lineage": {
         "structured_source": "knowledge/question-bank/structured/wset3_questions.json",
@@ -20738,7 +20717,9 @@
         "open_response_candidate_id": null,
         "open_response_review_id": null,
         "gold_review_id": null,
-        "public_lab_item_id": null
+        "public_lab_item_id": null,
+        "resolution_artifact": "knowledge/question-bank/reviews/master_bank_review_inactive_resolution.json",
+        "resolution_id": "phase_4a_3_8_5_7_384"
       },
       "governance": {
         "safe_for_examiner": false,
@@ -20820,10 +20801,12 @@
       "stem": "¿Qué distingue al Riesling del Mosel frente al del Pfalz?",
       "curriculum": {
         "ra": "RA2",
-        "topic": "RA2",
+        "topic": "still_wines",
         "difficulty": "intermediate",
         "expected_topics": [
-          "RA2"
+          "RA2",
+          "still_wines",
+          "mosel_pfalz_riesling_comparison"
         ],
         "expected_keywords": [
           "Mayor dulzor residual y menor alcohol"
@@ -20842,15 +20825,14 @@
         "correct_answer_text": "Mayor dulzor residual y menor alcohol"
       },
       "status": {
-        "review_state": "preserve_only",
+        "review_state": "approved_private_sba",
         "activation_status": "inactive",
         "gold": false,
         "public_lab": false
       },
       "collections": [
         "single_best_answer",
-        "inactive",
-        "needs_review"
+        "inactive"
       ],
       "lineage": {
         "structured_source": "knowledge/question-bank/structured/wset3_questions.json",
@@ -20860,7 +20842,9 @@
         "open_response_candidate_id": null,
         "open_response_review_id": null,
         "gold_review_id": null,
-        "public_lab_item_id": null
+        "public_lab_item_id": null,
+        "resolution_artifact": "knowledge/question-bank/reviews/master_bank_review_inactive_resolution.json",
+        "resolution_id": "phase_4a_3_8_5_7_386"
       },
       "governance": {
         "safe_for_examiner": false,
@@ -20964,15 +20948,14 @@
         "correct_answer_text": "Modera el clima y reduce el riesgo de heladas"
       },
       "status": {
-        "review_state": "unreviewed",
+        "review_state": "approved_private_sba",
         "activation_status": "inactive",
         "gold": false,
         "public_lab": false
       },
       "collections": [
         "single_best_answer",
-        "inactive",
-        "needs_review"
+        "inactive"
       ],
       "lineage": {
         "structured_source": "knowledge/question-bank/structured/wset3_questions.json",
@@ -20982,7 +20965,9 @@
         "open_response_candidate_id": null,
         "open_response_review_id": null,
         "gold_review_id": null,
-        "public_lab_item_id": null
+        "public_lab_item_id": null,
+        "resolution_artifact": "knowledge/question-bank/reviews/master_bank_review_inactive_resolution.json",
+        "resolution_id": "phase_4a_3_8_5_7_388"
       },
       "governance": {
         "safe_for_examiner": false,
@@ -21086,15 +21071,14 @@
         "correct_answer_text": "Napa tiene clima más cálido y vinos más potentes"
       },
       "status": {
-        "review_state": "unreviewed",
+        "review_state": "approved_private_sba",
         "activation_status": "inactive",
         "gold": false,
         "public_lab": false
       },
       "collections": [
         "single_best_answer",
-        "inactive",
-        "needs_review"
+        "inactive"
       ],
       "lineage": {
         "structured_source": "knowledge/question-bank/structured/wset3_questions.json",
@@ -21104,7 +21088,9 @@
         "open_response_candidate_id": null,
         "open_response_review_id": null,
         "gold_review_id": null,
-        "public_lab_item_id": null
+        "public_lab_item_id": null,
+        "resolution_artifact": "knowledge/question-bank/reviews/master_bank_review_inactive_resolution.json",
+        "resolution_id": "phase_4a_3_8_5_7_390"
       },
       "governance": {
         "safe_for_examiner": false,
@@ -21330,15 +21316,14 @@
         "correct_answer_text": "Pendiente y exposición solar"
       },
       "status": {
-        "review_state": "unreviewed",
+        "review_state": "approved_private_sba",
         "activation_status": "inactive",
         "gold": false,
         "public_lab": false
       },
       "collections": [
         "single_best_answer",
-        "inactive",
-        "needs_review"
+        "inactive"
       ],
       "lineage": {
         "structured_source": "knowledge/question-bank/structured/wset3_questions.json",
@@ -21348,7 +21333,9 @@
         "open_response_candidate_id": null,
         "open_response_review_id": null,
         "gold_review_id": null,
-        "public_lab_item_id": null
+        "public_lab_item_id": null,
+        "resolution_artifact": "knowledge/question-bank/reviews/master_bank_review_inactive_resolution.json",
+        "resolution_id": "phase_4a_3_8_5_7_394"
       },
       "governance": {
         "safe_for_examiner": false,
@@ -22995,7 +22982,9 @@
         "open_response_candidate_id": null,
         "open_response_review_id": null,
         "gold_review_id": "review_421_20260604_gold_bank_001",
-        "public_lab_item_id": "draft_diag_sba_structured_421"
+        "public_lab_item_id": "draft_diag_sba_structured_421",
+        "resolution_artifact": "knowledge/question-bank/reviews/master_bank_review_inactive_resolution.json",
+        "resolution_id": "phase_4a_3_8_5_7_421"
       },
       "governance": {
         "safe_for_examiner": false,
@@ -23282,15 +23271,14 @@
         "correct_answer_text": "Mayor concentración"
       },
       "status": {
-        "review_state": "unreviewed",
+        "review_state": "approved_private_sba",
         "activation_status": "inactive",
         "gold": false,
         "public_lab": false
       },
       "collections": [
         "single_best_answer",
-        "inactive",
-        "needs_review"
+        "inactive"
       ],
       "lineage": {
         "structured_source": "knowledge/question-bank/structured/wset3_questions.json",
@@ -23300,7 +23288,9 @@
         "open_response_candidate_id": null,
         "open_response_review_id": null,
         "gold_review_id": null,
-        "public_lab_item_id": null
+        "public_lab_item_id": null,
+        "resolution_artifact": "knowledge/question-bank/reviews/master_bank_review_inactive_resolution.json",
+        "resolution_id": "phase_4a_3_8_5_7_426"
       },
       "governance": {
         "safe_for_examiner": false,
@@ -23831,15 +23821,14 @@
         "correct_answer_text": "Mayor cuerpo"
       },
       "status": {
-        "review_state": "unreviewed",
+        "review_state": "approved_private_sba",
         "activation_status": "inactive",
         "gold": false,
         "public_lab": false
       },
       "collections": [
         "single_best_answer",
-        "inactive",
-        "needs_review"
+        "inactive"
       ],
       "lineage": {
         "structured_source": "knowledge/question-bank/structured/wset3_questions.json",
@@ -23849,7 +23838,9 @@
         "open_response_candidate_id": null,
         "open_response_review_id": null,
         "gold_review_id": null,
-        "public_lab_item_id": null
+        "public_lab_item_id": null,
+        "resolution_artifact": "knowledge/question-bank/reviews/master_bank_review_inactive_resolution.json",
+        "resolution_id": "phase_4a_3_8_5_7_435"
       },
       "governance": {
         "safe_for_examiner": false,
@@ -24441,15 +24432,14 @@
         "correct_answer_text": "Mayor exposición solar"
       },
       "status": {
-        "review_state": "unreviewed",
+        "review_state": "approved_private_sba",
         "activation_status": "inactive",
         "gold": false,
         "public_lab": false
       },
       "collections": [
         "single_best_answer",
-        "inactive",
-        "needs_review"
+        "inactive"
       ],
       "lineage": {
         "structured_source": "knowledge/question-bank/structured/wset3_questions.json",
@@ -24459,7 +24449,9 @@
         "open_response_candidate_id": null,
         "open_response_review_id": null,
         "gold_review_id": null,
-        "public_lab_item_id": null
+        "public_lab_item_id": null,
+        "resolution_artifact": "knowledge/question-bank/reviews/master_bank_review_inactive_resolution.json",
+        "resolution_id": "phase_4a_3_8_5_7_451"
       },
       "governance": {
         "safe_for_examiner": false,
@@ -24624,15 +24616,14 @@
         "correct_answer_text": "Dilución"
       },
       "status": {
-        "review_state": "unreviewed",
+        "review_state": "approved_private_sba",
         "activation_status": "inactive",
         "gold": false,
         "public_lab": false
       },
       "collections": [
         "single_best_answer",
-        "inactive",
-        "needs_review"
+        "inactive"
       ],
       "lineage": {
         "structured_source": "knowledge/question-bank/structured/wset3_questions.json",
@@ -24642,7 +24633,9 @@
         "open_response_candidate_id": null,
         "open_response_review_id": null,
         "gold_review_id": null,
-        "public_lab_item_id": null
+        "public_lab_item_id": null,
+        "resolution_artifact": "knowledge/question-bank/reviews/master_bank_review_inactive_resolution.json",
+        "resolution_id": "phase_4a_3_8_5_7_454"
       },
       "governance": {
         "safe_for_examiner": false,
@@ -24929,15 +24922,14 @@
         "correct_answer_text": "Aromas delicados"
       },
       "status": {
-        "review_state": "unreviewed",
+        "review_state": "approved_private_sba",
         "activation_status": "inactive",
         "gold": false,
         "public_lab": false
       },
       "collections": [
         "single_best_answer",
-        "inactive",
-        "needs_review"
+        "inactive"
       ],
       "lineage": {
         "structured_source": "knowledge/question-bank/structured/wset3_questions.json",
@@ -24947,7 +24939,9 @@
         "open_response_candidate_id": null,
         "open_response_review_id": null,
         "gold_review_id": null,
-        "public_lab_item_id": null
+        "public_lab_item_id": null,
+        "resolution_artifact": "knowledge/question-bank/reviews/master_bank_review_inactive_resolution.json",
+        "resolution_id": "phase_4a_3_8_5_7_459"
       },
       "governance": {
         "safe_for_examiner": false,
@@ -25252,7 +25246,9 @@
         "open_response_candidate_id": null,
         "open_response_review_id": null,
         "gold_review_id": "review_464_20260604_gold_bank_001",
-        "public_lab_item_id": "draft_diag_sba_structured_464"
+        "public_lab_item_id": "draft_diag_sba_structured_464",
+        "resolution_artifact": "knowledge/question-bank/reviews/master_bank_review_inactive_resolution.json",
+        "resolution_id": "phase_4a_3_8_5_7_464"
       },
       "governance": {
         "safe_for_examiner": false,
@@ -25783,15 +25779,14 @@
         "correct_answer_text": "Mayor superficie de contacto y aporte de roble"
       },
       "status": {
-        "review_state": "unreviewed",
+        "review_state": "approved_private_sba",
         "activation_status": "inactive",
         "gold": false,
         "public_lab": false
       },
       "collections": [
         "single_best_answer",
-        "inactive",
-        "needs_review"
+        "inactive"
       ],
       "lineage": {
         "structured_source": "knowledge/question-bank/structured/wset3_questions.json",
@@ -25801,7 +25796,9 @@
         "open_response_candidate_id": null,
         "open_response_review_id": null,
         "gold_review_id": null,
-        "public_lab_item_id": null
+        "public_lab_item_id": null,
+        "resolution_artifact": "knowledge/question-bank/reviews/master_bank_review_inactive_resolution.json",
+        "resolution_id": "phase_4a_3_8_5_7_473"
       },
       "governance": {
         "safe_for_examiner": false,
@@ -26149,15 +26146,14 @@
         "correct_answer_text": "Mejora la concentración de sabor en la uva"
       },
       "status": {
-        "review_state": "unreviewed",
+        "review_state": "approved_private_sba",
         "activation_status": "inactive",
         "gold": false,
         "public_lab": false
       },
       "collections": [
         "single_best_answer",
-        "inactive",
-        "needs_review"
+        "inactive"
       ],
       "lineage": {
         "structured_source": "knowledge/question-bank/structured/wset3_questions.json",
@@ -26167,7 +26163,9 @@
         "open_response_candidate_id": null,
         "open_response_review_id": null,
         "gold_review_id": null,
-        "public_lab_item_id": null
+        "public_lab_item_id": null,
+        "resolution_artifact": "knowledge/question-bank/reviews/master_bank_review_inactive_resolution.json",
+        "resolution_id": "phase_4a_3_8_5_7_479"
       },
       "governance": {
         "safe_for_examiner": false,
@@ -26210,15 +26208,14 @@
         "correct_answer_text": "Favorece la extracción de taninos y color"
       },
       "status": {
-        "review_state": "unreviewed",
+        "review_state": "approved_private_sba",
         "activation_status": "inactive",
         "gold": false,
         "public_lab": false
       },
       "collections": [
         "single_best_answer",
-        "inactive",
-        "needs_review"
+        "inactive"
       ],
       "lineage": {
         "structured_source": "knowledge/question-bank/structured/wset3_questions.json",
@@ -26228,7 +26225,9 @@
         "open_response_candidate_id": null,
         "open_response_review_id": null,
         "gold_review_id": null,
-        "public_lab_item_id": null
+        "public_lab_item_id": null,
+        "resolution_artifact": "knowledge/question-bank/reviews/master_bank_review_inactive_resolution.json",
+        "resolution_id": "phase_4a_3_8_5_7_480"
       },
       "governance": {
         "safe_for_examiner": false,
@@ -26820,15 +26819,14 @@
         "correct_answer_text": "Mayor exposición al oxígeno"
       },
       "status": {
-        "review_state": "unreviewed",
+        "review_state": "approved_private_sba",
         "activation_status": "inactive",
         "gold": false,
         "public_lab": false
       },
       "collections": [
         "single_best_answer",
-        "inactive",
-        "needs_review"
+        "inactive"
       ],
       "lineage": {
         "structured_source": "knowledge/question-bank/structured/wset3_questions.json",
@@ -26838,7 +26836,9 @@
         "open_response_candidate_id": null,
         "open_response_review_id": null,
         "gold_review_id": null,
-        "public_lab_item_id": null
+        "public_lab_item_id": null,
+        "resolution_artifact": "knowledge/question-bank/reviews/master_bank_review_inactive_resolution.json",
+        "resolution_id": "phase_4a_3_8_5_7_490"
       },
       "governance": {
         "safe_for_examiner": false,
@@ -26881,15 +26881,14 @@
         "correct_answer_text": "Aporta cremosidad y complejidad"
       },
       "status": {
-        "review_state": "unreviewed",
+        "review_state": "approved_private_sba",
         "activation_status": "inactive",
         "gold": false,
         "public_lab": false
       },
       "collections": [
         "single_best_answer",
-        "inactive",
-        "needs_review"
+        "inactive"
       ],
       "lineage": {
         "structured_source": "knowledge/question-bank/structured/wset3_questions.json",
@@ -26899,7 +26898,9 @@
         "open_response_candidate_id": null,
         "open_response_review_id": null,
         "gold_review_id": null,
-        "public_lab_item_id": null
+        "public_lab_item_id": null,
+        "resolution_artifact": "knowledge/question-bank/reviews/master_bank_review_inactive_resolution.json",
+        "resolution_id": "phase_4a_3_8_5_7_491"
       },
       "governance": {
         "safe_for_examiner": false,
@@ -27186,15 +27187,14 @@
         "correct_answer_text": "Mayor frescura y menor alcohol"
       },
       "status": {
-        "review_state": "unreviewed",
+        "review_state": "approved_private_sba",
         "activation_status": "inactive",
         "gold": false,
         "public_lab": false
       },
       "collections": [
         "single_best_answer",
-        "inactive",
-        "needs_review"
+        "inactive"
       ],
       "lineage": {
         "structured_source": "knowledge/question-bank/structured/wset3_questions.json",
@@ -27204,7 +27204,9 @@
         "open_response_candidate_id": null,
         "open_response_review_id": null,
         "gold_review_id": null,
-        "public_lab_item_id": null
+        "public_lab_item_id": null,
+        "resolution_artifact": "knowledge/question-bank/reviews/master_bank_review_inactive_resolution.json",
+        "resolution_id": "phase_4a_3_8_5_7_496"
       },
       "governance": {
         "safe_for_examiner": false,
@@ -27430,15 +27432,14 @@
         "correct_answer_text": "Incrementa la textura cremosa"
       },
       "status": {
-        "review_state": "unreviewed",
+        "review_state": "approved_private_sba",
         "activation_status": "inactive",
         "gold": false,
         "public_lab": false
       },
       "collections": [
         "single_best_answer",
-        "inactive",
-        "needs_review"
+        "inactive"
       ],
       "lineage": {
         "structured_source": "knowledge/question-bank/structured/wset3_questions.json",
@@ -27448,7 +27449,9 @@
         "open_response_candidate_id": null,
         "open_response_review_id": null,
         "gold_review_id": null,
-        "public_lab_item_id": null
+        "public_lab_item_id": null,
+        "resolution_artifact": "knowledge/question-bank/reviews/master_bank_review_inactive_resolution.json",
+        "resolution_id": "phase_4a_3_8_5_7_500"
       },
       "governance": {
         "safe_for_examiner": false,
@@ -27979,15 +27982,14 @@
         "correct_answer_text": "Aromas herbáceos"
       },
       "status": {
-        "review_state": "unreviewed",
+        "review_state": "approved_private_sba",
         "activation_status": "inactive",
         "gold": false,
         "public_lab": false
       },
       "collections": [
         "single_best_answer",
-        "inactive",
-        "needs_review"
+        "inactive"
       ],
       "lineage": {
         "structured_source": "knowledge/question-bank/structured/wset3_questions.json",
@@ -27997,7 +27999,9 @@
         "open_response_candidate_id": null,
         "open_response_review_id": null,
         "gold_review_id": null,
-        "public_lab_item_id": null
+        "public_lab_item_id": null,
+        "resolution_artifact": "knowledge/question-bank/reviews/master_bank_review_inactive_resolution.json",
+        "resolution_id": "phase_4a_3_8_5_7_509"
       },
       "governance": {
         "safe_for_examiner": false,
@@ -28017,11 +28021,13 @@
       "question_type": "single_best_answer",
       "stem": "¿Qué tipo de clima es más propenso a desarrollar podredumbre noble?",
       "curriculum": {
-        "ra": "RA2",
-        "topic": "RA2",
+        "ra": "RA1",
+        "topic": "viticulture",
         "difficulty": "intermediate",
         "expected_topics": [
-          "RA2"
+          "RA1",
+          "viticulture",
+          "noble_rot_humid_morning_mist"
         ],
         "expected_keywords": [
           "Clima húmedo con nieblas matinales"
@@ -28040,15 +28046,14 @@
         "correct_answer_text": "Clima húmedo con nieblas matinales"
       },
       "status": {
-        "review_state": "preserve_only",
+        "review_state": "approved_private_sba",
         "activation_status": "inactive",
         "gold": false,
         "public_lab": false
       },
       "collections": [
         "single_best_answer",
-        "inactive",
-        "needs_review"
+        "inactive"
       ],
       "lineage": {
         "structured_source": "knowledge/question-bank/structured/wset3_questions.json",
@@ -28058,7 +28063,9 @@
         "open_response_candidate_id": null,
         "open_response_review_id": null,
         "gold_review_id": null,
-        "public_lab_item_id": null
+        "public_lab_item_id": null,
+        "resolution_artifact": "knowledge/question-bank/reviews/master_bank_review_inactive_resolution.json",
+        "resolution_id": "phase_4a_3_8_5_7_510"
       },
       "governance": {
         "safe_for_examiner": false,
@@ -28101,15 +28108,14 @@
         "correct_answer_text": "Permite oxigenación sin aporte significativo de sabor"
       },
       "status": {
-        "review_state": "unreviewed",
+        "review_state": "approved_private_sba",
         "activation_status": "inactive",
         "gold": false,
         "public_lab": false
       },
       "collections": [
         "single_best_answer",
-        "inactive",
-        "needs_review"
+        "inactive"
       ],
       "lineage": {
         "structured_source": "knowledge/question-bank/structured/wset3_questions.json",
@@ -28119,7 +28125,9 @@
         "open_response_candidate_id": null,
         "open_response_review_id": null,
         "gold_review_id": null,
-        "public_lab_item_id": null
+        "public_lab_item_id": null,
+        "resolution_artifact": "knowledge/question-bank/reviews/master_bank_review_inactive_resolution.json",
+        "resolution_id": "phase_4a_3_8_5_7_511"
       },
       "governance": {
         "safe_for_examiner": false,
@@ -29504,15 +29512,14 @@
         "correct_answer_text": "Verdadero"
       },
       "status": {
-        "review_state": "unreviewed",
+        "review_state": "approved_private_sba",
         "activation_status": "inactive",
         "gold": false,
         "public_lab": false
       },
       "collections": [
         "single_best_answer",
-        "inactive",
-        "needs_review"
+        "inactive"
       ],
       "lineage": {
         "structured_source": "knowledge/question-bank/structured/wset3_questions.json",
@@ -29522,7 +29529,9 @@
         "open_response_candidate_id": null,
         "open_response_review_id": null,
         "gold_review_id": null,
-        "public_lab_item_id": null
+        "public_lab_item_id": null,
+        "resolution_artifact": "knowledge/question-bank/reviews/master_bank_review_inactive_resolution.json",
+        "resolution_id": "phase_4a_3_8_5_7_670"
       },
       "governance": {
         "safe_for_examiner": false,
@@ -32066,15 +32075,14 @@
         "correct_answer_text": "Distribución exclusiva, reputación y puntajes críticos"
       },
       "status": {
-        "review_state": "unreviewed",
+        "review_state": "approved_private_sba",
         "activation_status": "inactive",
         "gold": false,
         "public_lab": false
       },
       "collections": [
         "single_best_answer",
-        "inactive",
-        "needs_review"
+        "inactive"
       ],
       "lineage": {
         "structured_source": "knowledge/question-bank/structured/wset3_questions.json",
@@ -32084,7 +32092,9 @@
         "open_response_candidate_id": null,
         "open_response_review_id": null,
         "gold_review_id": null,
-        "public_lab_item_id": null
+        "public_lab_item_id": null,
+        "resolution_artifact": "knowledge/question-bank/reviews/master_bank_review_inactive_resolution.json",
+        "resolution_id": "phase_4a_3_8_5_7_712"
       },
       "governance": {
         "safe_for_examiner": false,
@@ -32127,15 +32137,14 @@
         "correct_answer_text": "Destaca los taninos y reduce la expresión aromática"
       },
       "status": {
-        "review_state": "unreviewed",
+        "review_state": "approved_private_sba",
         "activation_status": "inactive",
         "gold": false,
         "public_lab": false
       },
       "collections": [
         "single_best_answer",
-        "inactive",
-        "needs_review"
+        "inactive"
       ],
       "lineage": {
         "structured_source": "knowledge/question-bank/structured/wset3_questions.json",
@@ -32145,7 +32154,9 @@
         "open_response_candidate_id": null,
         "open_response_review_id": null,
         "gold_review_id": null,
-        "public_lab_item_id": null
+        "public_lab_item_id": null,
+        "resolution_artifact": "knowledge/question-bank/reviews/master_bank_review_inactive_resolution.json",
+        "resolution_id": "phase_4a_3_8_5_7_713"
       },
       "governance": {
         "safe_for_examiner": false,
@@ -32798,15 +32809,14 @@
         "correct_answer_text": "Hace que el vino se perciba más ácido y amargo"
       },
       "status": {
-        "review_state": "unreviewed",
+        "review_state": "approved_private_sba",
         "activation_status": "inactive",
         "gold": false,
         "public_lab": false
       },
       "collections": [
         "single_best_answer",
-        "inactive",
-        "needs_review"
+        "inactive"
       ],
       "lineage": {
         "structured_source": "knowledge/question-bank/structured/wset3_questions.json",
@@ -32816,7 +32826,9 @@
         "open_response_candidate_id": null,
         "open_response_review_id": null,
         "gold_review_id": null,
-        "public_lab_item_id": null
+        "public_lab_item_id": null,
+        "resolution_artifact": "knowledge/question-bank/reviews/master_bank_review_inactive_resolution.json",
+        "resolution_id": "phase_4a_3_8_5_7_724"
       },
       "governance": {
         "safe_for_examiner": false,
@@ -32981,15 +32993,14 @@
         "correct_answer_text": "Puede causar defectos como oxidación o cocción"
       },
       "status": {
-        "review_state": "unreviewed",
+        "review_state": "approved_private_sba",
         "activation_status": "inactive",
         "gold": false,
         "public_lab": false
       },
       "collections": [
         "single_best_answer",
-        "inactive",
-        "needs_review"
+        "inactive"
       ],
       "lineage": {
         "structured_source": "knowledge/question-bank/structured/wset3_questions.json",
@@ -32999,7 +33010,9 @@
         "open_response_candidate_id": null,
         "open_response_review_id": null,
         "gold_review_id": null,
-        "public_lab_item_id": null
+        "public_lab_item_id": null,
+        "resolution_artifact": "knowledge/question-bank/reviews/master_bank_review_inactive_resolution.json",
+        "resolution_id": "phase_4a_3_8_5_7_727"
       },
       "governance": {
         "safe_for_examiner": false,
@@ -33225,15 +33238,14 @@
         "correct_answer_text": "Lo intensifica"
       },
       "status": {
-        "review_state": "unreviewed",
+        "review_state": "approved_private_sba",
         "activation_status": "inactive",
         "gold": false,
         "public_lab": false
       },
       "collections": [
         "single_best_answer",
-        "inactive",
-        "needs_review"
+        "inactive"
       ],
       "lineage": {
         "structured_source": "knowledge/question-bank/structured/wset3_questions.json",
@@ -33243,7 +33255,9 @@
         "open_response_candidate_id": null,
         "open_response_review_id": null,
         "gold_review_id": null,
-        "public_lab_item_id": null
+        "public_lab_item_id": null,
+        "resolution_artifact": "knowledge/question-bank/reviews/master_bank_review_inactive_resolution.json",
+        "resolution_id": "phase_4a_3_8_5_7_731"
       },
       "governance": {
         "safe_for_examiner": false,
@@ -34079,15 +34093,14 @@
         "correct_answer_text": "Stellenbosch"
       },
       "status": {
-        "review_state": "unreviewed",
+        "review_state": "approved_private_sba",
         "activation_status": "inactive",
         "gold": false,
         "public_lab": false
       },
       "collections": [
         "single_best_answer",
-        "inactive",
-        "needs_review"
+        "inactive"
       ],
       "lineage": {
         "structured_source": "knowledge/question-bank/structured/wset3_questions.json",
@@ -34097,7 +34110,9 @@
         "open_response_candidate_id": null,
         "open_response_review_id": null,
         "gold_review_id": null,
-        "public_lab_item_id": null
+        "public_lab_item_id": null,
+        "resolution_artifact": "knowledge/question-bank/reviews/master_bank_review_inactive_resolution.json",
+        "resolution_id": "phase_4a_3_8_5_7_746"
       },
       "governance": {
         "safe_for_examiner": false,
@@ -35177,15 +35192,14 @@
         "correct_answer_text": "Falso"
       },
       "status": {
-        "review_state": "unreviewed",
+        "review_state": "approved_private_sba",
         "activation_status": "inactive",
         "gold": false,
         "public_lab": false
       },
       "collections": [
         "single_best_answer",
-        "inactive",
-        "needs_review"
+        "inactive"
       ],
       "lineage": {
         "structured_source": "knowledge/question-bank/structured/wset3_questions.json",
@@ -35195,7 +35209,9 @@
         "open_response_candidate_id": null,
         "open_response_review_id": null,
         "gold_review_id": null,
-        "public_lab_item_id": null
+        "public_lab_item_id": null,
+        "resolution_artifact": "knowledge/question-bank/reviews/master_bank_review_inactive_resolution.json",
+        "resolution_id": "phase_4a_3_8_5_7_785"
       },
       "governance": {
         "safe_for_examiner": false,
@@ -37947,15 +37963,14 @@
         "correct_answer_text": "La DOCa tiene requisitos de calidad más exigentes y solo la poseen Rioja y Priorat"
       },
       "status": {
-        "review_state": "unreviewed",
+        "review_state": "approved_private_sba",
         "activation_status": "inactive",
         "gold": false,
         "public_lab": false
       },
       "collections": [
         "single_best_answer",
-        "inactive",
-        "needs_review"
+        "inactive"
       ],
       "lineage": {
         "structured_source": "knowledge/question-bank/structured/wset3_questions.json",
@@ -37965,7 +37980,9 @@
         "open_response_candidate_id": null,
         "open_response_review_id": null,
         "gold_review_id": null,
-        "public_lab_item_id": null
+        "public_lab_item_id": null,
+        "resolution_artifact": "knowledge/question-bank/reviews/master_bank_review_inactive_resolution.json",
+        "resolution_id": "phase_4a_3_8_5_7_826"
       },
       "governance": {
         "safe_for_examiner": false,
@@ -38008,15 +38025,14 @@
         "correct_answer_text": "Porque la UE exige declarar alérgenos potenciales cuando los sulfitos superan 10 mg/L"
       },
       "status": {
-        "review_state": "unreviewed",
+        "review_state": "approved_private_sba",
         "activation_status": "inactive",
         "gold": false,
         "public_lab": false
       },
       "collections": [
         "single_best_answer",
-        "inactive",
-        "needs_review"
+        "inactive"
       ],
       "lineage": {
         "structured_source": "knowledge/question-bank/structured/wset3_questions.json",
@@ -38026,7 +38042,9 @@
         "open_response_candidate_id": null,
         "open_response_review_id": null,
         "gold_review_id": null,
-        "public_lab_item_id": null
+        "public_lab_item_id": null,
+        "resolution_artifact": "knowledge/question-bank/reviews/master_bank_review_inactive_resolution.json",
+        "resolution_id": "phase_4a_3_8_5_7_827"
       },
       "governance": {
         "safe_for_examiner": false,
@@ -38923,15 +38941,14 @@
         "correct_answer_text": "On-trade es consumo en el punto de venta (restaurantes, bares, hostelería); off-trade es venta para consumo posterior (supermercados, vinotecas)"
       },
       "status": {
-        "review_state": "unreviewed",
+        "review_state": "approved_private_sba",
         "activation_status": "inactive",
         "gold": false,
         "public_lab": false
       },
       "collections": [
         "single_best_answer",
-        "inactive",
-        "needs_review"
+        "inactive"
       ],
       "lineage": {
         "structured_source": "knowledge/question-bank/structured/wset3_questions.json",
@@ -38941,7 +38958,9 @@
         "open_response_candidate_id": null,
         "open_response_review_id": null,
         "gold_review_id": null,
-        "public_lab_item_id": null
+        "public_lab_item_id": null,
+        "resolution_artifact": "knowledge/question-bank/reviews/master_bank_review_inactive_resolution.json",
+        "resolution_id": "phase_4a_3_8_5_7_842"
       },
       "governance": {
         "safe_for_examiner": false,
@@ -39167,15 +39186,14 @@
         "correct_answer_text": "Porque el distribuidor aporta conocimiento del mercado local, red de clientes y gestión logística y legal"
       },
       "status": {
-        "review_state": "unreviewed",
+        "review_state": "approved_private_sba",
         "activation_status": "inactive",
         "gold": false,
         "public_lab": false
       },
       "collections": [
         "single_best_answer",
-        "inactive",
-        "needs_review"
+        "inactive"
       ],
       "lineage": {
         "structured_source": "knowledge/question-bank/structured/wset3_questions.json",
@@ -39185,7 +39203,9 @@
         "open_response_candidate_id": null,
         "open_response_review_id": null,
         "gold_review_id": null,
-        "public_lab_item_id": null
+        "public_lab_item_id": null,
+        "resolution_artifact": "knowledge/question-bank/reviews/master_bank_review_inactive_resolution.json",
+        "resolution_id": "phase_4a_3_8_5_7_846"
       },
       "governance": {
         "safe_for_examiner": false,
@@ -39228,15 +39248,14 @@
         "correct_answer_text": "Porque la superficie total de los Grand Cru es muy limitada y la demanda global supera ampliamente la oferta"
       },
       "status": {
-        "review_state": "unreviewed",
+        "review_state": "approved_private_sba",
         "activation_status": "inactive",
         "gold": false,
         "public_lab": false
       },
       "collections": [
         "single_best_answer",
-        "inactive",
-        "needs_review"
+        "inactive"
       ],
       "lineage": {
         "structured_source": "knowledge/question-bank/structured/wset3_questions.json",
@@ -39246,7 +39265,9 @@
         "open_response_candidate_id": null,
         "open_response_review_id": null,
         "gold_review_id": null,
-        "public_lab_item_id": null
+        "public_lab_item_id": null,
+        "resolution_artifact": "knowledge/question-bank/reviews/master_bank_review_inactive_resolution.json",
+        "resolution_id": "phase_4a_3_8_5_7_847"
       },
       "governance": {
         "safe_for_examiner": false,
@@ -39568,51 +39589,55 @@
     {
       "master_item_id": "wset3_853",
       "source_question_id": "853",
-      "question_type": "single_best_answer",
-      "stem": "La añada en una etiqueta de vino indica el año en que el vino fue embotellado.",
+      "question_type": "open_response",
+      "stem": "Explique qué indica la añada (vintage) en una etiqueta de vino y por qué no corresponde al año de embotellado.",
       "curriculum": {
         "ra": "RA5",
-        "topic": "RA5 / Bloque 11",
+        "topic": "wine_law_and_labelling",
         "difficulty": "intermediate",
         "expected_topics": [
-          "RA5 / Bloque 11"
+          "RA5",
+          "wine_law_and_labelling",
+          "vintage_labelling"
         ],
         "expected_keywords": [
-          "Falso — indica el año en que la uva fue cosechada y vinificada, no el año de embotellado"
+          "añada",
+          "año",
+          "uva",
+          "cosechada",
+          "vinificada"
         ],
-        "expected_causal_links": [],
+        "expected_causal_links": [
+          "añada declarada -> año de cosecha de la uva -> no año de embotellado"
+        ],
         "expected_reasoning_type": "theory_foundation"
       },
       "source_content": {
-        "options": {
-          "A": "",
-          "B": "",
-          "C": "",
-          "D": ""
-        },
-        "correct_answer_letter": "Falso",
-        "correct_answer_text": "Falso — indica el año en que la uva fue cosechada y vinificada, no el año de embotellado"
+        "options": {},
+        "correct_answer_letter": null,
+        "correct_answer_text": null
       },
       "status": {
-        "review_state": "unreviewed",
+        "review_state": "approved_open_response",
         "activation_status": "inactive",
         "gold": false,
         "public_lab": false
       },
       "collections": [
-        "single_best_answer",
-        "inactive",
-        "needs_review"
+        "open_response",
+        "inactive"
       ],
       "lineage": {
         "structured_source": "knowledge/question-bank/structured/wset3_questions.json",
         "raw_source": "Elaboración propia WSET3 | RA5",
         "sba_draft_id": null,
         "sba_review_id": null,
-        "open_response_candidate_id": null,
-        "open_response_review_id": null,
+        "open_response_candidate_id": "diagnostic_open_response_853",
+        "open_response_review_id": "open_response_review_853_20260604_001",
         "gold_review_id": null,
-        "public_lab_item_id": null
+        "public_lab_item_id": null,
+        "resolution_artifact": "knowledge/question-bank/reviews/master_bank_review_inactive_resolution.json",
+        "resolution_id": "phase_4a_3_8_5_7_853"
       },
       "governance": {
         "safe_for_examiner": false,
@@ -39629,51 +39654,55 @@
     {
       "master_item_id": "wset3_854",
       "source_question_id": "854",
-      "question_type": "single_best_answer",
-      "stem": "En la jerarquía de calidad de la UE, los vinos DOP están sujetos a regulaciones más estrictas que los vinos IGP.",
+      "question_type": "open_response",
+      "stem": "Explique por qué los vinos DOP están sujetos a regulaciones más estrictas que los vinos IGP.",
       "curriculum": {
         "ra": "RA5",
-        "topic": "RA5 / Bloque 11",
+        "topic": "wine_law_and_labelling",
         "difficulty": "intermediate",
         "expected_topics": [
-          "RA5 / Bloque 11"
+          "RA5",
+          "wine_law_and_labelling",
+          "dop_igp_hierarchy"
         ],
         "expected_keywords": [
-          "Verdadero — la DOP requiere un vínculo más estrecho con el origen y normas de producción más restrictivas que la IGP"
+          "DOP",
+          "IGP",
+          "origen",
+          "producción",
+          "regulaciones"
         ],
-        "expected_causal_links": [],
+        "expected_causal_links": [
+          "vínculo más estrecho con el origen -> normas de producción más restrictivas"
+        ],
         "expected_reasoning_type": "theory_foundation"
       },
       "source_content": {
-        "options": {
-          "A": "",
-          "B": "",
-          "C": "",
-          "D": ""
-        },
-        "correct_answer_letter": "Verdadero",
-        "correct_answer_text": "Verdadero — la DOP requiere un vínculo más estrecho con el origen y normas de producción más restrictivas que la IGP"
+        "options": {},
+        "correct_answer_letter": null,
+        "correct_answer_text": null
       },
       "status": {
-        "review_state": "unreviewed",
+        "review_state": "approved_open_response",
         "activation_status": "inactive",
         "gold": false,
         "public_lab": false
       },
       "collections": [
-        "single_best_answer",
-        "inactive",
-        "needs_review"
+        "open_response",
+        "inactive"
       ],
       "lineage": {
         "structured_source": "knowledge/question-bank/structured/wset3_questions.json",
         "raw_source": "Elaboración propia WSET3 | RA5",
         "sba_draft_id": null,
         "sba_review_id": null,
-        "open_response_candidate_id": null,
-        "open_response_review_id": null,
+        "open_response_candidate_id": "diagnostic_open_response_854",
+        "open_response_review_id": "open_response_review_854_20260604_001",
         "gold_review_id": null,
-        "public_lab_item_id": null
+        "public_lab_item_id": null,
+        "resolution_artifact": "knowledge/question-bank/reviews/master_bank_review_inactive_resolution.json",
+        "resolution_id": "phase_4a_3_8_5_7_854"
       },
       "governance": {
         "safe_for_examiner": false,
@@ -39690,51 +39719,55 @@
     {
       "master_item_id": "wset3_855",
       "source_question_id": "855",
-      "question_type": "single_best_answer",
-      "stem": "El término 'Reserva' en un vino tinto español garantiza una crianza mínima total de 3 años, con al menos 1 año en barrica.",
+      "question_type": "open_response",
+      "stem": "Explique los requisitos mínimos de crianza asociados al término Reserva en un vino tinto español.",
       "curriculum": {
         "ra": "RA5",
-        "topic": "RA5 / Bloque 12",
+        "topic": "wine_law_and_labelling",
         "difficulty": "intermediate",
         "expected_topics": [
-          "RA5 / Bloque 12"
+          "RA5",
+          "wine_law_and_labelling",
+          "spanish_reserva_ageing"
         ],
         "expected_keywords": [
-          "Verdadero — Reserva tinto: mínimo 3 años totales, al menos 12 meses en barrica de roble y el resto en botella"
+          "Reserva",
+          "tres años",
+          "doce meses",
+          "barrica",
+          "botella"
         ],
-        "expected_causal_links": [],
+        "expected_causal_links": [
+          "Reserva tinto -> mínimo tres años totales -> al menos doce meses en barrica"
+        ],
         "expected_reasoning_type": "theory_foundation"
       },
       "source_content": {
-        "options": {
-          "A": "",
-          "B": "",
-          "C": "",
-          "D": ""
-        },
-        "correct_answer_letter": "Verdadero",
-        "correct_answer_text": "Verdadero — Reserva tinto: mínimo 3 años totales, al menos 12 meses en barrica de roble y el resto en botella"
+        "options": {},
+        "correct_answer_letter": null,
+        "correct_answer_text": null
       },
       "status": {
-        "review_state": "unreviewed",
+        "review_state": "approved_open_response",
         "activation_status": "inactive",
         "gold": false,
         "public_lab": false
       },
       "collections": [
-        "single_best_answer",
-        "inactive",
-        "needs_review"
+        "open_response",
+        "inactive"
       ],
       "lineage": {
         "structured_source": "knowledge/question-bank/structured/wset3_questions.json",
         "raw_source": "Elaboración propia WSET3 | RA5",
         "sba_draft_id": null,
         "sba_review_id": null,
-        "open_response_candidate_id": null,
-        "open_response_review_id": null,
+        "open_response_candidate_id": "diagnostic_open_response_855",
+        "open_response_review_id": "open_response_review_855_20260604_001",
         "gold_review_id": null,
-        "public_lab_item_id": null
+        "public_lab_item_id": null,
+        "resolution_artifact": "knowledge/question-bank/reviews/master_bank_review_inactive_resolution.json",
+        "resolution_id": "phase_4a_3_8_5_7_855"
       },
       "governance": {
         "safe_for_examiner": false,
@@ -39751,51 +39784,55 @@
     {
       "master_item_id": "wset3_856",
       "source_question_id": "856",
-      "question_type": "single_best_answer",
-      "stem": "En el sistema Prädikat alemán, el Kabinett es el nivel más maduro y concentrado de todos los estilos.",
+      "question_type": "open_response",
+      "stem": "Compare Kabinett y Trockenbeerenauslese dentro del sistema Prädikat alemán en términos de madurez y concentración.",
       "curriculum": {
         "ra": "RA5",
-        "topic": "RA5 / Bloque 13",
+        "topic": "wine_law_and_labelling",
         "difficulty": "intermediate",
         "expected_topics": [
-          "RA5 / Bloque 13"
+          "RA5",
+          "wine_law_and_labelling",
+          "german_pradikat"
         ],
         "expected_keywords": [
-          "Falso — Kabinett es el nivel más ligero del Prädikat; el TBA (Trockenbeerenauslese) es el más concentrado y dulce"
+          "Kabinett",
+          "Trockenbeerenauslese",
+          "ligero",
+          "concentrado",
+          "dulce"
         ],
-        "expected_causal_links": [],
+        "expected_causal_links": [
+          "mayor madurez de la uva -> mayor concentración -> categoría Prädikat superior"
+        ],
         "expected_reasoning_type": "theory_foundation"
       },
       "source_content": {
-        "options": {
-          "A": "",
-          "B": "",
-          "C": "",
-          "D": ""
-        },
-        "correct_answer_letter": "Falso",
-        "correct_answer_text": "Falso — Kabinett es el nivel más ligero del Prädikat; el TBA (Trockenbeerenauslese) es el más concentrado y dulce"
+        "options": {},
+        "correct_answer_letter": null,
+        "correct_answer_text": null
       },
       "status": {
-        "review_state": "unreviewed",
+        "review_state": "approved_open_response",
         "activation_status": "inactive",
         "gold": false,
         "public_lab": false
       },
       "collections": [
-        "single_best_answer",
-        "inactive",
-        "needs_review"
+        "open_response",
+        "inactive"
       ],
       "lineage": {
         "structured_source": "knowledge/question-bank/structured/wset3_questions.json",
         "raw_source": "Elaboración propia WSET3 | RA5",
         "sba_draft_id": null,
         "sba_review_id": null,
-        "open_response_candidate_id": null,
-        "open_response_review_id": null,
+        "open_response_candidate_id": "diagnostic_open_response_856",
+        "open_response_review_id": "open_response_review_856_20260604_001",
         "gold_review_id": null,
-        "public_lab_item_id": null
+        "public_lab_item_id": null,
+        "resolution_artifact": "knowledge/question-bank/reviews/master_bank_review_inactive_resolution.json",
+        "resolution_id": "phase_4a_3_8_5_7_856"
       },
       "governance": {
         "safe_for_examiner": false,
@@ -39812,51 +39849,56 @@
     {
       "master_item_id": "wset3_857",
       "source_question_id": "857",
-      "question_type": "single_best_answer",
-      "stem": "En la distribución del vino, el canal 'off-trade' incluye las ventas en restaurantes, bares y hoteles.",
+      "question_type": "open_response",
+      "stem": "Compare los canales on-trade y off-trade e indique dónde se consume el vino en cada caso.",
       "curriculum": {
         "ra": "RA5",
-        "topic": "RA5 / Bloque 14",
+        "topic": "wine_business",
         "difficulty": "intermediate",
         "expected_topics": [
-          "RA5 / Bloque 14"
+          "RA5",
+          "wine_business",
+          "distribution_channels"
         ],
         "expected_keywords": [
-          "Falso — el canal off-trade son ventas para consumo fuera del punto de venta (supermercados, vinotecas); on-trade incluye restaurantes y bares"
+          "on-trade",
+          "off-trade",
+          "restaurantes",
+          "bares",
+          "supermercados",
+          "vinotecas"
         ],
-        "expected_causal_links": [],
+        "expected_causal_links": [
+          "on-trade -> consumo en el punto de venta; off-trade -> consumo posterior"
+        ],
         "expected_reasoning_type": "theory_foundation"
       },
       "source_content": {
-        "options": {
-          "A": "",
-          "B": "",
-          "C": "",
-          "D": ""
-        },
-        "correct_answer_letter": "Falso",
-        "correct_answer_text": "Falso — el canal off-trade son ventas para consumo fuera del punto de venta (supermercados, vinotecas); on-trade incluye restaurantes y bares"
+        "options": {},
+        "correct_answer_letter": null,
+        "correct_answer_text": null
       },
       "status": {
-        "review_state": "unreviewed",
+        "review_state": "approved_open_response",
         "activation_status": "inactive",
         "gold": false,
         "public_lab": false
       },
       "collections": [
-        "single_best_answer",
-        "inactive",
-        "needs_review"
+        "open_response",
+        "inactive"
       ],
       "lineage": {
         "structured_source": "knowledge/question-bank/structured/wset3_questions.json",
         "raw_source": "Elaboración propia WSET3 | RA5",
         "sba_draft_id": null,
         "sba_review_id": null,
-        "open_response_candidate_id": null,
-        "open_response_review_id": null,
+        "open_response_candidate_id": "diagnostic_open_response_857",
+        "open_response_review_id": "open_response_review_857_20260604_001",
         "gold_review_id": null,
-        "public_lab_item_id": null
+        "public_lab_item_id": null,
+        "resolution_artifact": "knowledge/question-bank/reviews/master_bank_review_inactive_resolution.json",
+        "resolution_id": "phase_4a_3_8_5_7_857"
       },
       "governance": {
         "safe_for_examiner": false,

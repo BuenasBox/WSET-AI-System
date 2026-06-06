@@ -26,6 +26,10 @@ from tools.constants import (
     USES_VECTOR_DB,
     tokenize_term,
 )
+from tools.question_generation.master_bank_resolution import (
+    apply_source_resolution,
+    load_resolution_index,
+)
 
 
 OPEN_RESPONSE_TYPES: frozenset[str] = frozenset(
@@ -268,7 +272,19 @@ def is_open_response_record(record: Any) -> bool:
 
 def find_open_response_records(records: Sequence[Mapping[str, Any]]) -> list[dict[str, Any]]:
     """Return deep-copied open response records in source order."""
-    return [copy.deepcopy(dict(record)) for record in records if is_open_response_record(record)]
+    resolution_index = load_resolution_index()
+    resolved_records = [
+        apply_source_resolution(
+            record,
+            resolution_index.get(str(record.get("question_id", "")).strip()),
+        )
+        for record in records
+    ]
+    return [
+        copy.deepcopy(dict(record))
+        for record in resolved_records
+        if is_open_response_record(record)
+    ]
 
 
 def build_open_response_candidate(
@@ -329,6 +345,12 @@ def build_grounded_open_response_candidate(
         candidate,
         corpus_chunks if corpus_chunks is not None else load_official_corpus_chunks(),
     )
+    resolution = load_resolution_index().get(
+        str(candidate.get("source_question_id", "")).strip(), {}
+    )
+    support_override = resolution.get("corpus_support")
+    if isinstance(support_override, Mapping):
+        candidate["corpus_support"] = copy.deepcopy(dict(support_override))
     candidate["review_status"] = _review_status_for_candidate(candidate, record)
     candidate["activation_status"] = ACTIVATION_INACTIVE
     return candidate

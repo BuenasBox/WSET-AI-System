@@ -1,0 +1,2518 @@
+{
+  "schema_version": "master_bank_review_inactive_resolution_v1",
+  "phase": "4A.3.8.5.7",
+  "strategy": "recovery_first",
+  "source_review_packet": "knowledge/question-bank/review_packets/master_bank_eligibility_review_packet.json",
+  "record_count": 92,
+  "initial_counts": {
+    "review": 68,
+    "inactive": 24
+  },
+  "transitions": {
+    "review_to_sba": 68,
+    "review_to_open_response": 0,
+    "review_to_quarantine": 0,
+    "inactive_to_sba": 18,
+    "inactive_to_open_response": 6,
+    "inactive_to_quarantine": 0
+  },
+  "final_backlog": {
+    "review": 0,
+    "inactive": 0,
+    "quarantine": 0
+  },
+  "records": [
+    {
+      "resolution_id": "phase_4a_3_8_5_7_1",
+      "source_question_id": "1",
+      "source_pool": "inactive",
+      "destination": "sba_operational",
+      "resolution_reason": "The existing structured SBA is valid and an internal enrichment draft supplies reviewed curriculum metadata. Prior inactivity was an activation/review state, not unrecoverable corruption.",
+      "repairs": [
+        "restored private SBA eligibility",
+        "applied existing draft curriculum metadata"
+      ],
+      "evidence_reviewed": [
+        "knowledge/question-bank/structured/wset3_questions.json",
+        "knowledge/question-bank/review_packets/master_bank_eligibility_review_packet.json",
+        "knowledge/question-bank/diagnostic_sba/drafts/first_5_enrichment_drafts.json"
+      ],
+      "prior_review_reason": null,
+      "prior_recommendation": null,
+      "source_overrides": {
+        "expected_topics": [
+          "RA4",
+          "fortified_wines",
+          "sherry_flor_biological_ageing"
+        ],
+        "difficulty": "intermediate"
+      },
+      "quarantine_analysis": {
+        "required": false,
+        "why_sba_not_possible": null,
+        "why_open_response_not_possible": null
+      }
+    },
+    {
+      "resolution_id": "phase_4a_3_8_5_7_4",
+      "source_question_id": "4",
+      "source_pool": "inactive",
+      "destination": "sba_operational",
+      "resolution_reason": "The existing structured SBA is valid and an internal enrichment draft supplies reviewed curriculum metadata. Prior inactivity was an activation/review state, not unrecoverable corruption.",
+      "repairs": [
+        "restored private SBA eligibility",
+        "applied existing draft curriculum metadata"
+      ],
+      "evidence_reviewed": [
+        "knowledge/question-bank/structured/wset3_questions.json",
+        "knowledge/question-bank/review_packets/master_bank_eligibility_review_packet.json",
+        "knowledge/question-bank/diagnostic_sba/drafts/first_5_enrichment_drafts.json"
+      ],
+      "prior_review_reason": null,
+      "prior_recommendation": null,
+      "source_overrides": {
+        "expected_topics": [
+          "RA4",
+          "fortified_wines",
+          "sherry_solera_fractional_blending"
+        ],
+        "difficulty": "foundational"
+      },
+      "quarantine_analysis": {
+        "required": false,
+        "why_sba_not_possible": null,
+        "why_open_response_not_possible": null
+      }
+    },
+    {
+      "resolution_id": "phase_4a_3_8_5_7_5",
+      "source_question_id": "5",
+      "source_pool": "inactive",
+      "destination": "sba_operational",
+      "resolution_reason": "The existing structured SBA is valid and an internal enrichment draft supplies reviewed curriculum metadata. Prior inactivity was an activation/review state, not unrecoverable corruption.",
+      "repairs": [
+        "restored private SBA eligibility",
+        "applied existing draft curriculum metadata"
+      ],
+      "evidence_reviewed": [
+        "knowledge/question-bank/structured/wset3_questions.json",
+        "knowledge/question-bank/review_packets/master_bank_eligibility_review_packet.json",
+        "knowledge/question-bank/diagnostic_sba/drafts/first_5_enrichment_drafts.json"
+      ],
+      "prior_review_reason": null,
+      "prior_recommendation": null,
+      "source_overrides": {
+        "expected_topics": [
+          "RA4",
+          "fortified_wines",
+          "oloroso_amontillado_ageing_contrast"
+        ],
+        "difficulty": "distinction"
+      },
+      "quarantine_analysis": {
+        "required": false,
+        "why_sba_not_possible": null,
+        "why_open_response_not_possible": null
+      }
+    },
+    {
+      "resolution_id": "phase_4a_3_8_5_7_7",
+      "source_question_id": "7",
+      "source_pool": "open_response_review_pool",
+      "destination": "sba_operational",
+      "resolution_reason": "Valid four-option SBA with a traceable answer. Open-response signals are insufficient because the existing metadata does not define a supported free-response answer boundary.",
+      "repairs": [
+        "finalized eligibility as private SBA"
+      ],
+      "evidence_reviewed": [
+        "knowledge/question-bank/structured/wset3_questions.json",
+        "knowledge/question-bank/review_packets/master_bank_eligibility_review_packet.json"
+      ],
+      "prior_review_reason": null,
+      "prior_recommendation": null,
+      "source_overrides": {},
+      "quarantine_analysis": {
+        "required": false,
+        "why_sba_not_possible": null,
+        "why_open_response_not_possible": null
+      }
+    },
+    {
+      "resolution_id": "phase_4a_3_8_5_7_12",
+      "source_question_id": "12",
+      "source_pool": "inactive",
+      "destination": "sba_operational",
+      "resolution_reason": "The existing structured SBA is valid and an internal enrichment draft supplies reviewed curriculum metadata. Prior inactivity was an activation/review state, not unrecoverable corruption.",
+      "repairs": [
+        "restored private SBA eligibility",
+        "applied existing draft curriculum metadata"
+      ],
+      "evidence_reviewed": [
+        "knowledge/question-bank/structured/wset3_questions.json",
+        "knowledge/question-bank/review_packets/master_bank_eligibility_review_packet.json",
+        "knowledge/question-bank/diagnostic_sba/drafts/first_5_enrichment_drafts.json"
+      ],
+      "prior_review_reason": null,
+      "prior_recommendation": null,
+      "source_overrides": {
+        "expected_topics": [
+          "RA1",
+          "viticulture",
+          "spring_frost_topography"
+        ],
+        "difficulty": "intermediate"
+      },
+      "quarantine_analysis": {
+        "required": false,
+        "why_sba_not_possible": null,
+        "why_open_response_not_possible": null
+      }
+    },
+    {
+      "resolution_id": "phase_4a_3_8_5_7_13",
+      "source_question_id": "13",
+      "source_pool": "inactive",
+      "destination": "sba_operational",
+      "resolution_reason": "The existing structured SBA is valid and an internal enrichment draft supplies reviewed curriculum metadata. Prior inactivity was an activation/review state, not unrecoverable corruption.",
+      "repairs": [
+        "restored private SBA eligibility",
+        "applied existing draft curriculum metadata"
+      ],
+      "evidence_reviewed": [
+        "knowledge/question-bank/structured/wset3_questions.json",
+        "knowledge/question-bank/review_packets/master_bank_eligibility_review_packet.json",
+        "knowledge/question-bank/diagnostic_sba/drafts/first_5_enrichment_drafts.json"
+      ],
+      "prior_review_reason": null,
+      "prior_recommendation": null,
+      "source_overrides": {
+        "expected_topics": [
+          "RA1",
+          "viticulture",
+          "soil_texture_drainage"
+        ],
+        "difficulty": "intermediate"
+      },
+      "quarantine_analysis": {
+        "required": false,
+        "why_sba_not_possible": null,
+        "why_open_response_not_possible": null
+      }
+    },
+    {
+      "resolution_id": "phase_4a_3_8_5_7_15",
+      "source_question_id": "15",
+      "source_pool": "inactive",
+      "destination": "sba_operational",
+      "resolution_reason": "The existing structured SBA is valid and an internal enrichment draft supplies reviewed curriculum metadata. Prior inactivity was an activation/review state, not unrecoverable corruption.",
+      "repairs": [
+        "restored private SBA eligibility",
+        "applied existing draft curriculum metadata"
+      ],
+      "evidence_reviewed": [
+        "knowledge/question-bank/structured/wset3_questions.json",
+        "knowledge/question-bank/review_packets/master_bank_eligibility_review_packet.json",
+        "knowledge/question-bank/diagnostic_sba/drafts/first_5_enrichment_drafts.json"
+      ],
+      "prior_review_reason": null,
+      "prior_recommendation": null,
+      "source_overrides": {
+        "expected_topics": [
+          "RA5",
+          "price_factors",
+          "production_cost_mechanisation"
+        ],
+        "difficulty": "intermediate"
+      },
+      "quarantine_analysis": {
+        "required": false,
+        "why_sba_not_possible": null,
+        "why_open_response_not_possible": null
+      }
+    },
+    {
+      "resolution_id": "phase_4a_3_8_5_7_17",
+      "source_question_id": "17",
+      "source_pool": "inactive",
+      "destination": "sba_operational",
+      "resolution_reason": "The existing structured SBA is valid and an internal enrichment draft supplies reviewed curriculum metadata. Prior inactivity was an activation/review state, not unrecoverable corruption.",
+      "repairs": [
+        "restored private SBA eligibility",
+        "applied existing draft curriculum metadata"
+      ],
+      "evidence_reviewed": [
+        "knowledge/question-bank/structured/wset3_questions.json",
+        "knowledge/question-bank/review_packets/master_bank_eligibility_review_packet.json",
+        "knowledge/question-bank/diagnostic_sba/drafts/first_5_enrichment_drafts.json"
+      ],
+      "prior_review_reason": null,
+      "prior_recommendation": null,
+      "source_overrides": {
+        "expected_topics": [
+          "RA1",
+          "winemaking",
+          "destemming_tannin_extraction"
+        ],
+        "difficulty": "intermediate"
+      },
+      "quarantine_analysis": {
+        "required": false,
+        "why_sba_not_possible": null,
+        "why_open_response_not_possible": null
+      }
+    },
+    {
+      "resolution_id": "phase_4a_3_8_5_7_18",
+      "source_question_id": "18",
+      "source_pool": "inactive",
+      "destination": "open_response_candidate",
+      "resolution_reason": "The repository contains a traceable explanatory answer boundary. The item is more safely recovered as open response than rebuilt as a four-option SBA.",
+      "repairs": [
+        "converted source view to short_answer",
+        "removed SBA/True-False residue from normalized candidate",
+        "added existing repository support and curriculum metadata"
+      ],
+      "evidence_reviewed": [
+        "knowledge/question-bank/structured/wset3_questions.json",
+        "knowledge/question-bank/review_packets/master_bank_eligibility_review_packet.json",
+        "knowledge/knowledge-map/causal-chains/CC_SULPHITES_PRESERVATION.json"
+      ],
+      "prior_review_reason": null,
+      "prior_recommendation": null,
+      "source_overrides": {
+        "question_type": "short_answer",
+        "expected_topics": [
+          "RA1",
+          "winemaking",
+          "sulphur_dioxide_management"
+        ],
+        "expected_keywords": [
+          "sulfitos",
+          "SO2",
+          "inhibición de levaduras salvajes",
+          "protección antimicrobiana"
+        ],
+        "expected_causal_links": [
+          "dosis de SO2 -> inhibición microbiana -> menor actividad de levaduras salvajes"
+        ],
+        "options": {},
+        "correct_answer_letter": null,
+        "correct_answer": null,
+        "correct_answer_text": null
+      },
+      "quarantine_analysis": {
+        "required": false,
+        "why_sba_not_possible": null,
+        "why_open_response_not_possible": null
+      },
+      "corpus_support": {
+        "status": "supported",
+        "source_question_bank": "knowledge/question-bank/structured/wset3_questions.json",
+        "source_type": "repository_resolution_evidence",
+        "support_terms": [
+          "sulfitos",
+          "SO2",
+          "inhibición de levaduras salvajes",
+          "protección antimicrobiana"
+        ],
+        "evidence_chunks": [
+          {
+            "chunk_id": "CC_SULPHITES_PRESERVATION",
+            "source_file": "knowledge/knowledge-map/causal-chains/CC_SULPHITES_PRESERVATION.json",
+            "title": "Sulphites preservation causal chain",
+            "source_type": "knowledge_map",
+            "matched_terms": [
+              "sulfitos",
+              "SO2",
+              "levaduras salvajes"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "resolution_id": "phase_4a_3_8_5_7_19",
+      "source_question_id": "19",
+      "source_pool": "open_response_review_pool",
+      "destination": "sba_operational",
+      "resolution_reason": "Valid four-option SBA with a traceable answer. Open-response signals are insufficient because the existing metadata does not define a supported free-response answer boundary.",
+      "repairs": [
+        "finalized eligibility as private SBA"
+      ],
+      "evidence_reviewed": [
+        "knowledge/question-bank/structured/wset3_questions.json",
+        "knowledge/question-bank/review_packets/master_bank_eligibility_review_packet.json"
+      ],
+      "prior_review_reason": null,
+      "prior_recommendation": null,
+      "source_overrides": {},
+      "quarantine_analysis": {
+        "required": false,
+        "why_sba_not_possible": null,
+        "why_open_response_not_possible": null
+      }
+    },
+    {
+      "resolution_id": "phase_4a_3_8_5_7_20",
+      "source_question_id": "20",
+      "source_pool": "inactive",
+      "destination": "sba_operational",
+      "resolution_reason": "The existing structured SBA is valid and an internal enrichment draft supplies reviewed curriculum metadata. Prior inactivity was an activation/review state, not unrecoverable corruption.",
+      "repairs": [
+        "restored private SBA eligibility",
+        "applied existing draft curriculum metadata"
+      ],
+      "evidence_reviewed": [
+        "knowledge/question-bank/structured/wset3_questions.json",
+        "knowledge/question-bank/review_packets/master_bank_eligibility_review_packet.json",
+        "knowledge/question-bank/diagnostic_sba/drafts/first_5_enrichment_drafts.json"
+      ],
+      "prior_review_reason": null,
+      "prior_recommendation": null,
+      "source_overrides": {
+        "expected_topics": [
+          "RA1",
+          "winemaking",
+          "extraction_and_body"
+        ],
+        "difficulty": "intermediate"
+      },
+      "quarantine_analysis": {
+        "required": false,
+        "why_sba_not_possible": null,
+        "why_open_response_not_possible": null
+      }
+    },
+    {
+      "resolution_id": "phase_4a_3_8_5_7_23",
+      "source_question_id": "23",
+      "source_pool": "open_response_review_pool",
+      "destination": "sba_operational",
+      "resolution_reason": "Valid four-option SBA with a traceable answer. Open-response signals are insufficient because the existing metadata does not define a supported free-response answer boundary.",
+      "repairs": [
+        "finalized eligibility as private SBA"
+      ],
+      "evidence_reviewed": [
+        "knowledge/question-bank/structured/wset3_questions.json",
+        "knowledge/question-bank/review_packets/master_bank_eligibility_review_packet.json"
+      ],
+      "prior_review_reason": null,
+      "prior_recommendation": null,
+      "source_overrides": {},
+      "quarantine_analysis": {
+        "required": false,
+        "why_sba_not_possible": null,
+        "why_open_response_not_possible": null
+      }
+    },
+    {
+      "resolution_id": "phase_4a_3_8_5_7_24",
+      "source_question_id": "24",
+      "source_pool": "open_response_review_pool",
+      "destination": "sba_operational",
+      "resolution_reason": "Valid four-option SBA with a traceable answer. Open-response signals are insufficient because the existing metadata does not define a supported free-response answer boundary.",
+      "repairs": [
+        "finalized eligibility as private SBA"
+      ],
+      "evidence_reviewed": [
+        "knowledge/question-bank/structured/wset3_questions.json",
+        "knowledge/question-bank/review_packets/master_bank_eligibility_review_packet.json"
+      ],
+      "prior_review_reason": null,
+      "prior_recommendation": null,
+      "source_overrides": {},
+      "quarantine_analysis": {
+        "required": false,
+        "why_sba_not_possible": null,
+        "why_open_response_not_possible": null
+      }
+    },
+    {
+      "resolution_id": "phase_4a_3_8_5_7_29",
+      "source_question_id": "29",
+      "source_pool": "open_response_review_pool",
+      "destination": "sba_operational",
+      "resolution_reason": "Valid four-option SBA with a traceable answer. Open-response signals are insufficient because the existing metadata does not define a supported free-response answer boundary.",
+      "repairs": [
+        "finalized eligibility as private SBA"
+      ],
+      "evidence_reviewed": [
+        "knowledge/question-bank/structured/wset3_questions.json",
+        "knowledge/question-bank/review_packets/master_bank_eligibility_review_packet.json"
+      ],
+      "prior_review_reason": null,
+      "prior_recommendation": null,
+      "source_overrides": {},
+      "quarantine_analysis": {
+        "required": false,
+        "why_sba_not_possible": null,
+        "why_open_response_not_possible": null
+      }
+    },
+    {
+      "resolution_id": "phase_4a_3_8_5_7_30",
+      "source_question_id": "30",
+      "source_pool": "inactive",
+      "destination": "sba_operational",
+      "resolution_reason": "The existing structured SBA is valid and an internal enrichment draft supplies reviewed curriculum metadata. Prior inactivity was an activation/review state, not unrecoverable corruption.",
+      "repairs": [
+        "restored private SBA eligibility",
+        "applied existing draft curriculum metadata"
+      ],
+      "evidence_reviewed": [
+        "knowledge/question-bank/structured/wset3_questions.json",
+        "knowledge/question-bank/review_packets/master_bank_eligibility_review_packet.json",
+        "knowledge/question-bank/diagnostic_sba/drafts/first_5_enrichment_drafts.json"
+      ],
+      "prior_review_reason": null,
+      "prior_recommendation": null,
+      "source_overrides": {
+        "expected_topics": [
+          "RA3",
+          "sparkling_wines",
+          "traditional_method_autolysis"
+        ],
+        "difficulty": "intermediate"
+      },
+      "quarantine_analysis": {
+        "required": false,
+        "why_sba_not_possible": null,
+        "why_open_response_not_possible": null
+      }
+    },
+    {
+      "resolution_id": "phase_4a_3_8_5_7_33",
+      "source_question_id": "33",
+      "source_pool": "open_response_review_pool",
+      "destination": "sba_operational",
+      "resolution_reason": "Valid four-option SBA with a traceable answer. Open-response signals are insufficient because the existing metadata does not define a supported free-response answer boundary.",
+      "repairs": [
+        "finalized eligibility as private SBA"
+      ],
+      "evidence_reviewed": [
+        "knowledge/question-bank/structured/wset3_questions.json",
+        "knowledge/question-bank/review_packets/master_bank_eligibility_review_packet.json"
+      ],
+      "prior_review_reason": null,
+      "prior_recommendation": null,
+      "source_overrides": {},
+      "quarantine_analysis": {
+        "required": false,
+        "why_sba_not_possible": null,
+        "why_open_response_not_possible": null
+      }
+    },
+    {
+      "resolution_id": "phase_4a_3_8_5_7_43",
+      "source_question_id": "43",
+      "source_pool": "open_response_review_pool",
+      "destination": "sba_operational",
+      "resolution_reason": "Valid four-option SBA with a traceable answer. Open-response signals are insufficient because the existing metadata does not define a supported free-response answer boundary.",
+      "repairs": [
+        "finalized eligibility as private SBA"
+      ],
+      "evidence_reviewed": [
+        "knowledge/question-bank/structured/wset3_questions.json",
+        "knowledge/question-bank/review_packets/master_bank_eligibility_review_packet.json"
+      ],
+      "prior_review_reason": null,
+      "prior_recommendation": null,
+      "source_overrides": {},
+      "quarantine_analysis": {
+        "required": false,
+        "why_sba_not_possible": null,
+        "why_open_response_not_possible": null
+      }
+    },
+    {
+      "resolution_id": "phase_4a_3_8_5_7_44",
+      "source_question_id": "44",
+      "source_pool": "inactive",
+      "destination": "sba_operational",
+      "resolution_reason": "The existing structured SBA is valid and an internal enrichment draft supplies reviewed curriculum metadata. Prior inactivity was an activation/review state, not unrecoverable corruption.",
+      "repairs": [
+        "restored private SBA eligibility",
+        "applied existing draft curriculum metadata"
+      ],
+      "evidence_reviewed": [
+        "knowledge/question-bank/structured/wset3_questions.json",
+        "knowledge/question-bank/review_packets/master_bank_eligibility_review_packet.json",
+        "knowledge/question-bank/diagnostic_sba/drafts/first_5_enrichment_drafts.json"
+      ],
+      "prior_review_reason": null,
+      "prior_recommendation": null,
+      "source_overrides": {
+        "expected_topics": [
+          "RA1",
+          "wine_and_food",
+          "tannin_salt_fat_pairing"
+        ],
+        "difficulty": "intermediate"
+      },
+      "quarantine_analysis": {
+        "required": false,
+        "why_sba_not_possible": null,
+        "why_open_response_not_possible": null
+      }
+    },
+    {
+      "resolution_id": "phase_4a_3_8_5_7_50",
+      "source_question_id": "50",
+      "source_pool": "inactive",
+      "destination": "sba_operational",
+      "resolution_reason": "The existing structured SBA is valid and an internal enrichment draft supplies reviewed curriculum metadata. Prior inactivity was an activation/review state, not unrecoverable corruption.",
+      "repairs": [
+        "restored private SBA eligibility",
+        "applied existing draft curriculum metadata"
+      ],
+      "evidence_reviewed": [
+        "knowledge/question-bank/structured/wset3_questions.json",
+        "knowledge/question-bank/review_packets/master_bank_eligibility_review_packet.json",
+        "knowledge/question-bank/diagnostic_sba/drafts/first_5_enrichment_drafts.json"
+      ],
+      "prior_review_reason": null,
+      "prior_recommendation": null,
+      "source_overrides": {
+        "expected_topics": [
+          "RA1",
+          "storage_and_service",
+          "long_term_storage_conditions"
+        ],
+        "difficulty": "intermediate"
+      },
+      "quarantine_analysis": {
+        "required": false,
+        "why_sba_not_possible": null,
+        "why_open_response_not_possible": null
+      }
+    },
+    {
+      "resolution_id": "phase_4a_3_8_5_7_56",
+      "source_question_id": "56",
+      "source_pool": "open_response_review_pool",
+      "destination": "sba_operational",
+      "resolution_reason": "Valid four-option SBA with a traceable answer. Open-response signals are insufficient because the existing metadata does not define a supported free-response answer boundary.",
+      "repairs": [
+        "finalized eligibility as private SBA"
+      ],
+      "evidence_reviewed": [
+        "knowledge/question-bank/structured/wset3_questions.json",
+        "knowledge/question-bank/review_packets/master_bank_eligibility_review_packet.json"
+      ],
+      "prior_review_reason": null,
+      "prior_recommendation": null,
+      "source_overrides": {},
+      "quarantine_analysis": {
+        "required": false,
+        "why_sba_not_possible": null,
+        "why_open_response_not_possible": null
+      }
+    },
+    {
+      "resolution_id": "phase_4a_3_8_5_7_59",
+      "source_question_id": "59",
+      "source_pool": "open_response_review_pool",
+      "destination": "sba_operational",
+      "resolution_reason": "Valid four-option SBA with a traceable answer. Open-response signals are insufficient because the existing metadata does not define a supported free-response answer boundary.",
+      "repairs": [
+        "finalized eligibility as private SBA"
+      ],
+      "evidence_reviewed": [
+        "knowledge/question-bank/structured/wset3_questions.json",
+        "knowledge/question-bank/review_packets/master_bank_eligibility_review_packet.json"
+      ],
+      "prior_review_reason": null,
+      "prior_recommendation": null,
+      "source_overrides": {},
+      "quarantine_analysis": {
+        "required": false,
+        "why_sba_not_possible": null,
+        "why_open_response_not_possible": null
+      }
+    },
+    {
+      "resolution_id": "phase_4a_3_8_5_7_60",
+      "source_question_id": "60",
+      "source_pool": "open_response_review_pool",
+      "destination": "sba_operational",
+      "resolution_reason": "Valid four-option SBA with a traceable answer. Open-response signals are insufficient because the existing metadata does not define a supported free-response answer boundary.",
+      "repairs": [
+        "finalized eligibility as private SBA"
+      ],
+      "evidence_reviewed": [
+        "knowledge/question-bank/structured/wset3_questions.json",
+        "knowledge/question-bank/review_packets/master_bank_eligibility_review_packet.json"
+      ],
+      "prior_review_reason": null,
+      "prior_recommendation": null,
+      "source_overrides": {},
+      "quarantine_analysis": {
+        "required": false,
+        "why_sba_not_possible": null,
+        "why_open_response_not_possible": null
+      }
+    },
+    {
+      "resolution_id": "phase_4a_3_8_5_7_62",
+      "source_question_id": "62",
+      "source_pool": "open_response_review_pool",
+      "destination": "sba_operational",
+      "resolution_reason": "Valid four-option SBA with a traceable answer. Open-response signals are insufficient because the existing metadata does not define a supported free-response answer boundary.",
+      "repairs": [
+        "finalized eligibility as private SBA"
+      ],
+      "evidence_reviewed": [
+        "knowledge/question-bank/structured/wset3_questions.json",
+        "knowledge/question-bank/review_packets/master_bank_eligibility_review_packet.json"
+      ],
+      "prior_review_reason": null,
+      "prior_recommendation": null,
+      "source_overrides": {},
+      "quarantine_analysis": {
+        "required": false,
+        "why_sba_not_possible": null,
+        "why_open_response_not_possible": null
+      }
+    },
+    {
+      "resolution_id": "phase_4a_3_8_5_7_75",
+      "source_question_id": "75",
+      "source_pool": "open_response_review_pool",
+      "destination": "sba_operational",
+      "resolution_reason": "Valid four-option SBA with a traceable answer. Open-response signals are insufficient because the existing metadata does not define a supported free-response answer boundary.",
+      "repairs": [
+        "finalized eligibility as private SBA"
+      ],
+      "evidence_reviewed": [
+        "knowledge/question-bank/structured/wset3_questions.json",
+        "knowledge/question-bank/review_packets/master_bank_eligibility_review_packet.json"
+      ],
+      "prior_review_reason": null,
+      "prior_recommendation": null,
+      "source_overrides": {},
+      "quarantine_analysis": {
+        "required": false,
+        "why_sba_not_possible": null,
+        "why_open_response_not_possible": null
+      }
+    },
+    {
+      "resolution_id": "phase_4a_3_8_5_7_78",
+      "source_question_id": "78",
+      "source_pool": "inactive",
+      "destination": "sba_operational",
+      "resolution_reason": "The existing structured SBA is valid and an internal enrichment draft supplies reviewed curriculum metadata. Prior inactivity was an activation/review state, not unrecoverable corruption.",
+      "repairs": [
+        "restored private SBA eligibility",
+        "applied existing draft curriculum metadata"
+      ],
+      "evidence_reviewed": [
+        "knowledge/question-bank/structured/wset3_questions.json",
+        "knowledge/question-bank/review_packets/master_bank_eligibility_review_packet.json",
+        "knowledge/question-bank/diagnostic_sba/drafts/first_5_enrichment_drafts.json"
+      ],
+      "prior_review_reason": null,
+      "prior_recommendation": null,
+      "source_overrides": {
+        "expected_topics": [
+          "RA1",
+          "storage_and_service",
+          "cork_horizontal_storage"
+        ],
+        "difficulty": "intermediate"
+      },
+      "quarantine_analysis": {
+        "required": false,
+        "why_sba_not_possible": null,
+        "why_open_response_not_possible": null
+      }
+    },
+    {
+      "resolution_id": "phase_4a_3_8_5_7_81",
+      "source_question_id": "81",
+      "source_pool": "open_response_review_pool",
+      "destination": "sba_operational",
+      "resolution_reason": "Valid four-option SBA with a traceable answer. Open-response signals are insufficient because the existing metadata does not define a supported free-response answer boundary.",
+      "repairs": [
+        "finalized eligibility as private SBA"
+      ],
+      "evidence_reviewed": [
+        "knowledge/question-bank/structured/wset3_questions.json",
+        "knowledge/question-bank/review_packets/master_bank_eligibility_review_packet.json"
+      ],
+      "prior_review_reason": null,
+      "prior_recommendation": null,
+      "source_overrides": {},
+      "quarantine_analysis": {
+        "required": false,
+        "why_sba_not_possible": null,
+        "why_open_response_not_possible": null
+      }
+    },
+    {
+      "resolution_id": "phase_4a_3_8_5_7_85",
+      "source_question_id": "85",
+      "source_pool": "open_response_review_pool",
+      "destination": "sba_operational",
+      "resolution_reason": "Valid four-option SBA with a traceable answer. Open-response signals are insufficient because the existing metadata does not define a supported free-response answer boundary.",
+      "repairs": [
+        "finalized eligibility as private SBA"
+      ],
+      "evidence_reviewed": [
+        "knowledge/question-bank/structured/wset3_questions.json",
+        "knowledge/question-bank/review_packets/master_bank_eligibility_review_packet.json"
+      ],
+      "prior_review_reason": null,
+      "prior_recommendation": null,
+      "source_overrides": {},
+      "quarantine_analysis": {
+        "required": false,
+        "why_sba_not_possible": null,
+        "why_open_response_not_possible": null
+      }
+    },
+    {
+      "resolution_id": "phase_4a_3_8_5_7_87",
+      "source_question_id": "87",
+      "source_pool": "inactive",
+      "destination": "sba_operational",
+      "resolution_reason": "The existing structured SBA is valid and an internal enrichment draft supplies reviewed curriculum metadata. Prior inactivity was an activation/review state, not unrecoverable corruption.",
+      "repairs": [
+        "restored private SBA eligibility",
+        "applied existing draft curriculum metadata"
+      ],
+      "evidence_reviewed": [
+        "knowledge/question-bank/structured/wset3_questions.json",
+        "knowledge/question-bank/review_packets/master_bank_eligibility_review_packet.json",
+        "knowledge/question-bank/diagnostic_sba/drafts/first_5_enrichment_drafts.json"
+      ],
+      "prior_review_reason": null,
+      "prior_recommendation": null,
+      "source_overrides": {
+        "expected_topics": [
+          "RA1",
+          "storage_and_service",
+          "old_wine_decanting_sediment"
+        ],
+        "difficulty": "intermediate"
+      },
+      "quarantine_analysis": {
+        "required": false,
+        "why_sba_not_possible": null,
+        "why_open_response_not_possible": null
+      }
+    },
+    {
+      "resolution_id": "phase_4a_3_8_5_7_102",
+      "source_question_id": "102",
+      "source_pool": "open_response_review_pool",
+      "destination": "sba_operational",
+      "resolution_reason": "Valid four-option SBA with a traceable answer. Open-response signals are insufficient because the existing metadata does not define a supported free-response answer boundary.",
+      "repairs": [
+        "finalized eligibility as private SBA"
+      ],
+      "evidence_reviewed": [
+        "knowledge/question-bank/structured/wset3_questions.json",
+        "knowledge/question-bank/review_packets/master_bank_eligibility_review_packet.json"
+      ],
+      "prior_review_reason": null,
+      "prior_recommendation": null,
+      "source_overrides": {},
+      "quarantine_analysis": {
+        "required": false,
+        "why_sba_not_possible": null,
+        "why_open_response_not_possible": null
+      }
+    },
+    {
+      "resolution_id": "phase_4a_3_8_5_7_108",
+      "source_question_id": "108",
+      "source_pool": "inactive",
+      "destination": "sba_operational",
+      "resolution_reason": "The existing structured SBA is valid and an internal enrichment draft supplies reviewed curriculum metadata. Prior inactivity was an activation/review state, not unrecoverable corruption.",
+      "repairs": [
+        "restored private SBA eligibility",
+        "applied existing draft curriculum metadata"
+      ],
+      "evidence_reviewed": [
+        "knowledge/question-bank/structured/wset3_questions.json",
+        "knowledge/question-bank/review_packets/master_bank_eligibility_review_packet.json",
+        "knowledge/question-bank/diagnostic_sba/drafts/first_5_enrichment_drafts.json"
+      ],
+      "prior_review_reason": null,
+      "prior_recommendation": null,
+      "source_overrides": {
+        "expected_topics": [
+          "RA3",
+          "sparkling_wines",
+          "charmat_primary_aroma_retention"
+        ],
+        "difficulty": "intermediate"
+      },
+      "quarantine_analysis": {
+        "required": false,
+        "why_sba_not_possible": null,
+        "why_open_response_not_possible": null
+      }
+    },
+    {
+      "resolution_id": "phase_4a_3_8_5_7_116",
+      "source_question_id": "116",
+      "source_pool": "open_response_review_pool",
+      "destination": "sba_operational",
+      "resolution_reason": "Valid four-option SBA with a traceable answer. Open-response signals are insufficient because the existing metadata does not define a supported free-response answer boundary.",
+      "repairs": [
+        "finalized eligibility as private SBA"
+      ],
+      "evidence_reviewed": [
+        "knowledge/question-bank/structured/wset3_questions.json",
+        "knowledge/question-bank/review_packets/master_bank_eligibility_review_packet.json"
+      ],
+      "prior_review_reason": null,
+      "prior_recommendation": null,
+      "source_overrides": {},
+      "quarantine_analysis": {
+        "required": false,
+        "why_sba_not_possible": null,
+        "why_open_response_not_possible": null
+      }
+    },
+    {
+      "resolution_id": "phase_4a_3_8_5_7_128",
+      "source_question_id": "128",
+      "source_pool": "open_response_review_pool",
+      "destination": "sba_operational",
+      "resolution_reason": "Valid four-option SBA with a traceable answer. Open-response signals are insufficient because the existing metadata does not define a supported free-response answer boundary.",
+      "repairs": [
+        "finalized eligibility as private SBA"
+      ],
+      "evidence_reviewed": [
+        "knowledge/question-bank/structured/wset3_questions.json",
+        "knowledge/question-bank/review_packets/master_bank_eligibility_review_packet.json"
+      ],
+      "prior_review_reason": null,
+      "prior_recommendation": null,
+      "source_overrides": {},
+      "quarantine_analysis": {
+        "required": false,
+        "why_sba_not_possible": null,
+        "why_open_response_not_possible": null
+      }
+    },
+    {
+      "resolution_id": "phase_4a_3_8_5_7_218",
+      "source_question_id": "218",
+      "source_pool": "open_response_review_pool",
+      "destination": "sba_operational",
+      "resolution_reason": "Valid four-option SBA with a traceable answer. Open-response signals are insufficient because the existing metadata does not define a supported free-response answer boundary.",
+      "repairs": [
+        "finalized eligibility as private SBA"
+      ],
+      "evidence_reviewed": [
+        "knowledge/question-bank/structured/wset3_questions.json",
+        "knowledge/question-bank/review_packets/master_bank_eligibility_review_packet.json"
+      ],
+      "prior_review_reason": null,
+      "prior_recommendation": null,
+      "source_overrides": {},
+      "quarantine_analysis": {
+        "required": false,
+        "why_sba_not_possible": null,
+        "why_open_response_not_possible": null
+      }
+    },
+    {
+      "resolution_id": "phase_4a_3_8_5_7_225",
+      "source_question_id": "225",
+      "source_pool": "open_response_review_pool",
+      "destination": "sba_operational",
+      "resolution_reason": "Valid four-option SBA with a traceable answer. Open-response signals are insufficient because the existing metadata does not define a supported free-response answer boundary.",
+      "repairs": [
+        "finalized eligibility as private SBA"
+      ],
+      "evidence_reviewed": [
+        "knowledge/question-bank/structured/wset3_questions.json",
+        "knowledge/question-bank/review_packets/master_bank_eligibility_review_packet.json"
+      ],
+      "prior_review_reason": null,
+      "prior_recommendation": null,
+      "source_overrides": {},
+      "quarantine_analysis": {
+        "required": false,
+        "why_sba_not_possible": null,
+        "why_open_response_not_possible": null
+      }
+    },
+    {
+      "resolution_id": "phase_4a_3_8_5_7_247",
+      "source_question_id": "247",
+      "source_pool": "inactive",
+      "destination": "sba_operational",
+      "resolution_reason": "The existing structured SBA is valid and an internal enrichment draft supplies reviewed curriculum metadata. Prior inactivity was an activation/review state, not unrecoverable corruption.",
+      "repairs": [
+        "restored private SBA eligibility",
+        "applied existing draft curriculum metadata"
+      ],
+      "evidence_reviewed": [
+        "knowledge/question-bank/structured/wset3_questions.json",
+        "knowledge/question-bank/review_packets/master_bank_eligibility_review_packet.json",
+        "knowledge/question-bank/diagnostic_sba/drafts/first_5_enrichment_drafts.json"
+      ],
+      "prior_review_reason": null,
+      "prior_recommendation": null,
+      "source_overrides": {
+        "expected_topics": [
+          "RA2",
+          "still_wines",
+          "mosel_cool_climate_acidity"
+        ],
+        "difficulty": "intermediate"
+      },
+      "quarantine_analysis": {
+        "required": false,
+        "why_sba_not_possible": null,
+        "why_open_response_not_possible": null
+      }
+    },
+    {
+      "resolution_id": "phase_4a_3_8_5_7_253",
+      "source_question_id": "253",
+      "source_pool": "inactive",
+      "destination": "sba_operational",
+      "resolution_reason": "The existing structured SBA is valid and an internal enrichment draft supplies reviewed curriculum metadata. Prior inactivity was an activation/review state, not unrecoverable corruption.",
+      "repairs": [
+        "restored private SBA eligibility",
+        "applied existing draft curriculum metadata"
+      ],
+      "evidence_reviewed": [
+        "knowledge/question-bank/structured/wset3_questions.json",
+        "knowledge/question-bank/review_packets/master_bank_eligibility_review_packet.json",
+        "knowledge/question-bank/diagnostic_sba/drafts/first_5_enrichment_drafts.json"
+      ],
+      "prior_review_reason": null,
+      "prior_recommendation": null,
+      "source_overrides": {
+        "expected_topics": [
+          "RA2",
+          "still_wines",
+          "barolo_nebbiolo_tannin_ageing"
+        ],
+        "difficulty": "intermediate"
+      },
+      "quarantine_analysis": {
+        "required": false,
+        "why_sba_not_possible": null,
+        "why_open_response_not_possible": null
+      }
+    },
+    {
+      "resolution_id": "phase_4a_3_8_5_7_267",
+      "source_question_id": "267",
+      "source_pool": "open_response_review_pool",
+      "destination": "sba_operational",
+      "resolution_reason": "Valid four-option SBA with a traceable answer. Open-response signals are insufficient because the existing metadata does not define a supported free-response answer boundary.",
+      "repairs": [
+        "finalized eligibility as private SBA"
+      ],
+      "evidence_reviewed": [
+        "knowledge/question-bank/structured/wset3_questions.json",
+        "knowledge/question-bank/review_packets/master_bank_eligibility_review_packet.json"
+      ],
+      "prior_review_reason": null,
+      "prior_recommendation": null,
+      "source_overrides": {},
+      "quarantine_analysis": {
+        "required": false,
+        "why_sba_not_possible": null,
+        "why_open_response_not_possible": null
+      }
+    },
+    {
+      "resolution_id": "phase_4a_3_8_5_7_284",
+      "source_question_id": "284",
+      "source_pool": "open_response_review_pool",
+      "destination": "sba_operational",
+      "resolution_reason": "Valid four-option SBA with a traceable answer. Open-response signals are insufficient because the existing metadata does not define a supported free-response answer boundary.",
+      "repairs": [
+        "finalized eligibility as private SBA"
+      ],
+      "evidence_reviewed": [
+        "knowledge/question-bank/structured/wset3_questions.json",
+        "knowledge/question-bank/review_packets/master_bank_eligibility_review_packet.json"
+      ],
+      "prior_review_reason": null,
+      "prior_recommendation": null,
+      "source_overrides": {},
+      "quarantine_analysis": {
+        "required": false,
+        "why_sba_not_possible": null,
+        "why_open_response_not_possible": null
+      }
+    },
+    {
+      "resolution_id": "phase_4a_3_8_5_7_296",
+      "source_question_id": "296",
+      "source_pool": "open_response_review_pool",
+      "destination": "sba_operational",
+      "resolution_reason": "Valid four-option SBA with a traceable answer. Open-response signals are insufficient because the existing metadata does not define a supported free-response answer boundary.",
+      "repairs": [
+        "finalized eligibility as private SBA"
+      ],
+      "evidence_reviewed": [
+        "knowledge/question-bank/structured/wset3_questions.json",
+        "knowledge/question-bank/review_packets/master_bank_eligibility_review_packet.json"
+      ],
+      "prior_review_reason": null,
+      "prior_recommendation": null,
+      "source_overrides": {},
+      "quarantine_analysis": {
+        "required": false,
+        "why_sba_not_possible": null,
+        "why_open_response_not_possible": null
+      }
+    },
+    {
+      "resolution_id": "phase_4a_3_8_5_7_316",
+      "source_question_id": "316",
+      "source_pool": "open_response_review_pool",
+      "destination": "sba_operational",
+      "resolution_reason": "Valid four-option SBA with a traceable answer. Open-response signals are insufficient because the existing metadata does not define a supported free-response answer boundary.",
+      "repairs": [
+        "finalized eligibility as private SBA"
+      ],
+      "evidence_reviewed": [
+        "knowledge/question-bank/structured/wset3_questions.json",
+        "knowledge/question-bank/review_packets/master_bank_eligibility_review_packet.json"
+      ],
+      "prior_review_reason": null,
+      "prior_recommendation": null,
+      "source_overrides": {},
+      "quarantine_analysis": {
+        "required": false,
+        "why_sba_not_possible": null,
+        "why_open_response_not_possible": null
+      }
+    },
+    {
+      "resolution_id": "phase_4a_3_8_5_7_318",
+      "source_question_id": "318",
+      "source_pool": "open_response_review_pool",
+      "destination": "sba_operational",
+      "resolution_reason": "Valid four-option SBA with a traceable answer. Open-response signals are insufficient because the existing metadata does not define a supported free-response answer boundary.",
+      "repairs": [
+        "finalized eligibility as private SBA"
+      ],
+      "evidence_reviewed": [
+        "knowledge/question-bank/structured/wset3_questions.json",
+        "knowledge/question-bank/review_packets/master_bank_eligibility_review_packet.json"
+      ],
+      "prior_review_reason": null,
+      "prior_recommendation": null,
+      "source_overrides": {},
+      "quarantine_analysis": {
+        "required": false,
+        "why_sba_not_possible": null,
+        "why_open_response_not_possible": null
+      }
+    },
+    {
+      "resolution_id": "phase_4a_3_8_5_7_335",
+      "source_question_id": "335",
+      "source_pool": "open_response_review_pool",
+      "destination": "sba_operational",
+      "resolution_reason": "Valid four-option SBA with a traceable answer. Open-response signals are insufficient because the existing metadata does not define a supported free-response answer boundary.",
+      "repairs": [
+        "finalized eligibility as private SBA"
+      ],
+      "evidence_reviewed": [
+        "knowledge/question-bank/structured/wset3_questions.json",
+        "knowledge/question-bank/review_packets/master_bank_eligibility_review_packet.json"
+      ],
+      "prior_review_reason": null,
+      "prior_recommendation": null,
+      "source_overrides": {},
+      "quarantine_analysis": {
+        "required": false,
+        "why_sba_not_possible": null,
+        "why_open_response_not_possible": null
+      }
+    },
+    {
+      "resolution_id": "phase_4a_3_8_5_7_337",
+      "source_question_id": "337",
+      "source_pool": "open_response_review_pool",
+      "destination": "sba_operational",
+      "resolution_reason": "Valid four-option SBA with a traceable answer. Open-response signals are insufficient because the existing metadata does not define a supported free-response answer boundary.",
+      "repairs": [
+        "finalized eligibility as private SBA"
+      ],
+      "evidence_reviewed": [
+        "knowledge/question-bank/structured/wset3_questions.json",
+        "knowledge/question-bank/review_packets/master_bank_eligibility_review_packet.json"
+      ],
+      "prior_review_reason": null,
+      "prior_recommendation": null,
+      "source_overrides": {},
+      "quarantine_analysis": {
+        "required": false,
+        "why_sba_not_possible": null,
+        "why_open_response_not_possible": null
+      }
+    },
+    {
+      "resolution_id": "phase_4a_3_8_5_7_341",
+      "source_question_id": "341",
+      "source_pool": "open_response_review_pool",
+      "destination": "sba_operational",
+      "resolution_reason": "Valid four-option SBA with a traceable answer. Open-response signals are insufficient because the existing metadata does not define a supported free-response answer boundary.",
+      "repairs": [
+        "finalized eligibility as private SBA"
+      ],
+      "evidence_reviewed": [
+        "knowledge/question-bank/structured/wset3_questions.json",
+        "knowledge/question-bank/review_packets/master_bank_eligibility_review_packet.json"
+      ],
+      "prior_review_reason": null,
+      "prior_recommendation": null,
+      "source_overrides": {},
+      "quarantine_analysis": {
+        "required": false,
+        "why_sba_not_possible": null,
+        "why_open_response_not_possible": null
+      }
+    },
+    {
+      "resolution_id": "phase_4a_3_8_5_7_346",
+      "source_question_id": "346",
+      "source_pool": "open_response_review_pool",
+      "destination": "sba_operational",
+      "resolution_reason": "Valid four-option SBA with a traceable answer. Open-response signals are insufficient because the existing metadata does not define a supported free-response answer boundary.",
+      "repairs": [
+        "finalized eligibility as private SBA"
+      ],
+      "evidence_reviewed": [
+        "knowledge/question-bank/structured/wset3_questions.json",
+        "knowledge/question-bank/review_packets/master_bank_eligibility_review_packet.json"
+      ],
+      "prior_review_reason": null,
+      "prior_recommendation": null,
+      "source_overrides": {},
+      "quarantine_analysis": {
+        "required": false,
+        "why_sba_not_possible": null,
+        "why_open_response_not_possible": null
+      }
+    },
+    {
+      "resolution_id": "phase_4a_3_8_5_7_349",
+      "source_question_id": "349",
+      "source_pool": "open_response_review_pool",
+      "destination": "sba_operational",
+      "resolution_reason": "Valid four-option SBA with a traceable answer. Open-response signals are insufficient because the existing metadata does not define a supported free-response answer boundary.",
+      "repairs": [
+        "finalized eligibility as private SBA"
+      ],
+      "evidence_reviewed": [
+        "knowledge/question-bank/structured/wset3_questions.json",
+        "knowledge/question-bank/review_packets/master_bank_eligibility_review_packet.json"
+      ],
+      "prior_review_reason": null,
+      "prior_recommendation": null,
+      "source_overrides": {},
+      "quarantine_analysis": {
+        "required": false,
+        "why_sba_not_possible": null,
+        "why_open_response_not_possible": null
+      }
+    },
+    {
+      "resolution_id": "phase_4a_3_8_5_7_356",
+      "source_question_id": "356",
+      "source_pool": "open_response_review_pool",
+      "destination": "sba_operational",
+      "resolution_reason": "Valid four-option SBA with a traceable answer. Open-response signals are insufficient because the existing metadata does not define a supported free-response answer boundary.",
+      "repairs": [
+        "finalized eligibility as private SBA"
+      ],
+      "evidence_reviewed": [
+        "knowledge/question-bank/structured/wset3_questions.json",
+        "knowledge/question-bank/review_packets/master_bank_eligibility_review_packet.json"
+      ],
+      "prior_review_reason": null,
+      "prior_recommendation": null,
+      "source_overrides": {},
+      "quarantine_analysis": {
+        "required": false,
+        "why_sba_not_possible": null,
+        "why_open_response_not_possible": null
+      }
+    },
+    {
+      "resolution_id": "phase_4a_3_8_5_7_362",
+      "source_question_id": "362",
+      "source_pool": "open_response_review_pool",
+      "destination": "sba_operational",
+      "resolution_reason": "Valid four-option SBA with a traceable answer. Open-response signals are insufficient because the existing metadata does not define a supported free-response answer boundary.",
+      "repairs": [
+        "finalized eligibility as private SBA"
+      ],
+      "evidence_reviewed": [
+        "knowledge/question-bank/structured/wset3_questions.json",
+        "knowledge/question-bank/review_packets/master_bank_eligibility_review_packet.json"
+      ],
+      "prior_review_reason": null,
+      "prior_recommendation": null,
+      "source_overrides": {},
+      "quarantine_analysis": {
+        "required": false,
+        "why_sba_not_possible": null,
+        "why_open_response_not_possible": null
+      }
+    },
+    {
+      "resolution_id": "phase_4a_3_8_5_7_364",
+      "source_question_id": "364",
+      "source_pool": "open_response_review_pool",
+      "destination": "sba_operational",
+      "resolution_reason": "Valid four-option SBA with a traceable answer. Open-response signals are insufficient because the existing metadata does not define a supported free-response answer boundary.",
+      "repairs": [
+        "finalized eligibility as private SBA"
+      ],
+      "evidence_reviewed": [
+        "knowledge/question-bank/structured/wset3_questions.json",
+        "knowledge/question-bank/review_packets/master_bank_eligibility_review_packet.json"
+      ],
+      "prior_review_reason": null,
+      "prior_recommendation": null,
+      "source_overrides": {},
+      "quarantine_analysis": {
+        "required": false,
+        "why_sba_not_possible": null,
+        "why_open_response_not_possible": null
+      }
+    },
+    {
+      "resolution_id": "phase_4a_3_8_5_7_365",
+      "source_question_id": "365",
+      "source_pool": "open_response_review_pool",
+      "destination": "sba_operational",
+      "resolution_reason": "Valid four-option SBA with a traceable answer. Open-response signals are insufficient because the existing metadata does not define a supported free-response answer boundary.",
+      "repairs": [
+        "finalized eligibility as private SBA"
+      ],
+      "evidence_reviewed": [
+        "knowledge/question-bank/structured/wset3_questions.json",
+        "knowledge/question-bank/review_packets/master_bank_eligibility_review_packet.json"
+      ],
+      "prior_review_reason": null,
+      "prior_recommendation": null,
+      "source_overrides": {},
+      "quarantine_analysis": {
+        "required": false,
+        "why_sba_not_possible": null,
+        "why_open_response_not_possible": null
+      }
+    },
+    {
+      "resolution_id": "phase_4a_3_8_5_7_368",
+      "source_question_id": "368",
+      "source_pool": "open_response_review_pool",
+      "destination": "sba_operational",
+      "resolution_reason": "Valid four-option SBA with a traceable answer. Open-response signals are insufficient because the existing metadata does not define a supported free-response answer boundary.",
+      "repairs": [
+        "finalized eligibility as private SBA"
+      ],
+      "evidence_reviewed": [
+        "knowledge/question-bank/structured/wset3_questions.json",
+        "knowledge/question-bank/review_packets/master_bank_eligibility_review_packet.json"
+      ],
+      "prior_review_reason": null,
+      "prior_recommendation": null,
+      "source_overrides": {},
+      "quarantine_analysis": {
+        "required": false,
+        "why_sba_not_possible": null,
+        "why_open_response_not_possible": null
+      }
+    },
+    {
+      "resolution_id": "phase_4a_3_8_5_7_372",
+      "source_question_id": "372",
+      "source_pool": "open_response_review_pool",
+      "destination": "sba_operational",
+      "resolution_reason": "Valid four-option SBA with a traceable answer. Open-response signals are insufficient because the existing metadata does not define a supported free-response answer boundary.",
+      "repairs": [
+        "finalized eligibility as private SBA"
+      ],
+      "evidence_reviewed": [
+        "knowledge/question-bank/structured/wset3_questions.json",
+        "knowledge/question-bank/review_packets/master_bank_eligibility_review_packet.json"
+      ],
+      "prior_review_reason": null,
+      "prior_recommendation": null,
+      "source_overrides": {},
+      "quarantine_analysis": {
+        "required": false,
+        "why_sba_not_possible": null,
+        "why_open_response_not_possible": null
+      }
+    },
+    {
+      "resolution_id": "phase_4a_3_8_5_7_384",
+      "source_question_id": "384",
+      "source_pool": "open_response_review_pool",
+      "destination": "sba_operational",
+      "resolution_reason": "Valid four-option SBA with a traceable answer. Open-response signals are insufficient because the existing metadata does not define a supported free-response answer boundary.",
+      "repairs": [
+        "finalized eligibility as private SBA"
+      ],
+      "evidence_reviewed": [
+        "knowledge/question-bank/structured/wset3_questions.json",
+        "knowledge/question-bank/review_packets/master_bank_eligibility_review_packet.json"
+      ],
+      "prior_review_reason": null,
+      "prior_recommendation": null,
+      "source_overrides": {},
+      "quarantine_analysis": {
+        "required": false,
+        "why_sba_not_possible": null,
+        "why_open_response_not_possible": null
+      }
+    },
+    {
+      "resolution_id": "phase_4a_3_8_5_7_386",
+      "source_question_id": "386",
+      "source_pool": "inactive",
+      "destination": "sba_operational",
+      "resolution_reason": "The existing structured SBA is valid and an internal enrichment draft supplies reviewed curriculum metadata. Prior inactivity was an activation/review state, not unrecoverable corruption.",
+      "repairs": [
+        "restored private SBA eligibility",
+        "applied existing draft curriculum metadata"
+      ],
+      "evidence_reviewed": [
+        "knowledge/question-bank/structured/wset3_questions.json",
+        "knowledge/question-bank/review_packets/master_bank_eligibility_review_packet.json",
+        "knowledge/question-bank/diagnostic_sba/drafts/first_5_enrichment_drafts.json"
+      ],
+      "prior_review_reason": null,
+      "prior_recommendation": null,
+      "source_overrides": {
+        "expected_topics": [
+          "RA2",
+          "still_wines",
+          "mosel_pfalz_riesling_comparison"
+        ],
+        "difficulty": "intermediate"
+      },
+      "quarantine_analysis": {
+        "required": false,
+        "why_sba_not_possible": null,
+        "why_open_response_not_possible": null
+      }
+    },
+    {
+      "resolution_id": "phase_4a_3_8_5_7_388",
+      "source_question_id": "388",
+      "source_pool": "open_response_review_pool",
+      "destination": "sba_operational",
+      "resolution_reason": "Valid four-option SBA with a traceable answer. Open-response signals are insufficient because the existing metadata does not define a supported free-response answer boundary.",
+      "repairs": [
+        "finalized eligibility as private SBA"
+      ],
+      "evidence_reviewed": [
+        "knowledge/question-bank/structured/wset3_questions.json",
+        "knowledge/question-bank/review_packets/master_bank_eligibility_review_packet.json"
+      ],
+      "prior_review_reason": null,
+      "prior_recommendation": null,
+      "source_overrides": {},
+      "quarantine_analysis": {
+        "required": false,
+        "why_sba_not_possible": null,
+        "why_open_response_not_possible": null
+      }
+    },
+    {
+      "resolution_id": "phase_4a_3_8_5_7_390",
+      "source_question_id": "390",
+      "source_pool": "open_response_review_pool",
+      "destination": "sba_operational",
+      "resolution_reason": "Valid four-option SBA with a traceable answer. Open-response signals are insufficient because the existing metadata does not define a supported free-response answer boundary.",
+      "repairs": [
+        "finalized eligibility as private SBA"
+      ],
+      "evidence_reviewed": [
+        "knowledge/question-bank/structured/wset3_questions.json",
+        "knowledge/question-bank/review_packets/master_bank_eligibility_review_packet.json"
+      ],
+      "prior_review_reason": null,
+      "prior_recommendation": null,
+      "source_overrides": {},
+      "quarantine_analysis": {
+        "required": false,
+        "why_sba_not_possible": null,
+        "why_open_response_not_possible": null
+      }
+    },
+    {
+      "resolution_id": "phase_4a_3_8_5_7_394",
+      "source_question_id": "394",
+      "source_pool": "open_response_review_pool",
+      "destination": "sba_operational",
+      "resolution_reason": "Valid four-option SBA with a traceable answer. Open-response signals are insufficient because the existing metadata does not define a supported free-response answer boundary.",
+      "repairs": [
+        "finalized eligibility as private SBA"
+      ],
+      "evidence_reviewed": [
+        "knowledge/question-bank/structured/wset3_questions.json",
+        "knowledge/question-bank/review_packets/master_bank_eligibility_review_packet.json"
+      ],
+      "prior_review_reason": null,
+      "prior_recommendation": null,
+      "source_overrides": {},
+      "quarantine_analysis": {
+        "required": false,
+        "why_sba_not_possible": null,
+        "why_open_response_not_possible": null
+      }
+    },
+    {
+      "resolution_id": "phase_4a_3_8_5_7_421",
+      "source_question_id": "421",
+      "source_pool": "open_response_review_pool",
+      "destination": "sba_operational",
+      "resolution_reason": "Valid four-option SBA with a traceable answer. Open-response signals are insufficient because the existing metadata does not define a supported free-response answer boundary.",
+      "repairs": [
+        "finalized eligibility as private SBA"
+      ],
+      "evidence_reviewed": [
+        "knowledge/question-bank/structured/wset3_questions.json",
+        "knowledge/question-bank/review_packets/master_bank_eligibility_review_packet.json"
+      ],
+      "prior_review_reason": null,
+      "prior_recommendation": null,
+      "source_overrides": {},
+      "quarantine_analysis": {
+        "required": false,
+        "why_sba_not_possible": null,
+        "why_open_response_not_possible": null
+      }
+    },
+    {
+      "resolution_id": "phase_4a_3_8_5_7_426",
+      "source_question_id": "426",
+      "source_pool": "open_response_review_pool",
+      "destination": "sba_operational",
+      "resolution_reason": "Valid four-option SBA with a traceable answer. Open-response signals are insufficient because the existing metadata does not define a supported free-response answer boundary.",
+      "repairs": [
+        "finalized eligibility as private SBA"
+      ],
+      "evidence_reviewed": [
+        "knowledge/question-bank/structured/wset3_questions.json",
+        "knowledge/question-bank/review_packets/master_bank_eligibility_review_packet.json"
+      ],
+      "prior_review_reason": null,
+      "prior_recommendation": null,
+      "source_overrides": {},
+      "quarantine_analysis": {
+        "required": false,
+        "why_sba_not_possible": null,
+        "why_open_response_not_possible": null
+      }
+    },
+    {
+      "resolution_id": "phase_4a_3_8_5_7_435",
+      "source_question_id": "435",
+      "source_pool": "open_response_review_pool",
+      "destination": "sba_operational",
+      "resolution_reason": "Valid four-option SBA with a traceable answer. Open-response signals are insufficient because the existing metadata does not define a supported free-response answer boundary.",
+      "repairs": [
+        "finalized eligibility as private SBA"
+      ],
+      "evidence_reviewed": [
+        "knowledge/question-bank/structured/wset3_questions.json",
+        "knowledge/question-bank/review_packets/master_bank_eligibility_review_packet.json"
+      ],
+      "prior_review_reason": null,
+      "prior_recommendation": null,
+      "source_overrides": {},
+      "quarantine_analysis": {
+        "required": false,
+        "why_sba_not_possible": null,
+        "why_open_response_not_possible": null
+      }
+    },
+    {
+      "resolution_id": "phase_4a_3_8_5_7_451",
+      "source_question_id": "451",
+      "source_pool": "open_response_review_pool",
+      "destination": "sba_operational",
+      "resolution_reason": "Valid four-option SBA with a traceable answer. Open-response signals are insufficient because the existing metadata does not define a supported free-response answer boundary.",
+      "repairs": [
+        "finalized eligibility as private SBA"
+      ],
+      "evidence_reviewed": [
+        "knowledge/question-bank/structured/wset3_questions.json",
+        "knowledge/question-bank/review_packets/master_bank_eligibility_review_packet.json"
+      ],
+      "prior_review_reason": null,
+      "prior_recommendation": null,
+      "source_overrides": {},
+      "quarantine_analysis": {
+        "required": false,
+        "why_sba_not_possible": null,
+        "why_open_response_not_possible": null
+      }
+    },
+    {
+      "resolution_id": "phase_4a_3_8_5_7_454",
+      "source_question_id": "454",
+      "source_pool": "open_response_review_pool",
+      "destination": "sba_operational",
+      "resolution_reason": "Valid four-option SBA with a traceable answer. Open-response signals are insufficient because the existing metadata does not define a supported free-response answer boundary.",
+      "repairs": [
+        "finalized eligibility as private SBA"
+      ],
+      "evidence_reviewed": [
+        "knowledge/question-bank/structured/wset3_questions.json",
+        "knowledge/question-bank/review_packets/master_bank_eligibility_review_packet.json"
+      ],
+      "prior_review_reason": null,
+      "prior_recommendation": null,
+      "source_overrides": {},
+      "quarantine_analysis": {
+        "required": false,
+        "why_sba_not_possible": null,
+        "why_open_response_not_possible": null
+      }
+    },
+    {
+      "resolution_id": "phase_4a_3_8_5_7_459",
+      "source_question_id": "459",
+      "source_pool": "open_response_review_pool",
+      "destination": "sba_operational",
+      "resolution_reason": "Valid four-option SBA with a traceable answer. Open-response signals are insufficient because the existing metadata does not define a supported free-response answer boundary.",
+      "repairs": [
+        "finalized eligibility as private SBA"
+      ],
+      "evidence_reviewed": [
+        "knowledge/question-bank/structured/wset3_questions.json",
+        "knowledge/question-bank/review_packets/master_bank_eligibility_review_packet.json"
+      ],
+      "prior_review_reason": null,
+      "prior_recommendation": null,
+      "source_overrides": {},
+      "quarantine_analysis": {
+        "required": false,
+        "why_sba_not_possible": null,
+        "why_open_response_not_possible": null
+      }
+    },
+    {
+      "resolution_id": "phase_4a_3_8_5_7_464",
+      "source_question_id": "464",
+      "source_pool": "open_response_review_pool",
+      "destination": "sba_operational",
+      "resolution_reason": "Valid four-option SBA with a traceable answer. Open-response signals are insufficient because the existing metadata does not define a supported free-response answer boundary.",
+      "repairs": [
+        "finalized eligibility as private SBA"
+      ],
+      "evidence_reviewed": [
+        "knowledge/question-bank/structured/wset3_questions.json",
+        "knowledge/question-bank/review_packets/master_bank_eligibility_review_packet.json"
+      ],
+      "prior_review_reason": null,
+      "prior_recommendation": null,
+      "source_overrides": {},
+      "quarantine_analysis": {
+        "required": false,
+        "why_sba_not_possible": null,
+        "why_open_response_not_possible": null
+      }
+    },
+    {
+      "resolution_id": "phase_4a_3_8_5_7_473",
+      "source_question_id": "473",
+      "source_pool": "open_response_review_pool",
+      "destination": "sba_operational",
+      "resolution_reason": "Valid four-option SBA with a traceable answer. Open-response signals are insufficient because the existing metadata does not define a supported free-response answer boundary.",
+      "repairs": [
+        "finalized eligibility as private SBA"
+      ],
+      "evidence_reviewed": [
+        "knowledge/question-bank/structured/wset3_questions.json",
+        "knowledge/question-bank/review_packets/master_bank_eligibility_review_packet.json"
+      ],
+      "prior_review_reason": null,
+      "prior_recommendation": null,
+      "source_overrides": {},
+      "quarantine_analysis": {
+        "required": false,
+        "why_sba_not_possible": null,
+        "why_open_response_not_possible": null
+      }
+    },
+    {
+      "resolution_id": "phase_4a_3_8_5_7_479",
+      "source_question_id": "479",
+      "source_pool": "open_response_review_pool",
+      "destination": "sba_operational",
+      "resolution_reason": "Valid four-option SBA with a traceable answer. Open-response signals are insufficient because the existing metadata does not define a supported free-response answer boundary.",
+      "repairs": [
+        "finalized eligibility as private SBA"
+      ],
+      "evidence_reviewed": [
+        "knowledge/question-bank/structured/wset3_questions.json",
+        "knowledge/question-bank/review_packets/master_bank_eligibility_review_packet.json"
+      ],
+      "prior_review_reason": null,
+      "prior_recommendation": null,
+      "source_overrides": {},
+      "quarantine_analysis": {
+        "required": false,
+        "why_sba_not_possible": null,
+        "why_open_response_not_possible": null
+      }
+    },
+    {
+      "resolution_id": "phase_4a_3_8_5_7_480",
+      "source_question_id": "480",
+      "source_pool": "open_response_review_pool",
+      "destination": "sba_operational",
+      "resolution_reason": "Valid four-option SBA with a traceable answer. Open-response signals are insufficient because the existing metadata does not define a supported free-response answer boundary.",
+      "repairs": [
+        "finalized eligibility as private SBA"
+      ],
+      "evidence_reviewed": [
+        "knowledge/question-bank/structured/wset3_questions.json",
+        "knowledge/question-bank/review_packets/master_bank_eligibility_review_packet.json"
+      ],
+      "prior_review_reason": null,
+      "prior_recommendation": null,
+      "source_overrides": {},
+      "quarantine_analysis": {
+        "required": false,
+        "why_sba_not_possible": null,
+        "why_open_response_not_possible": null
+      }
+    },
+    {
+      "resolution_id": "phase_4a_3_8_5_7_490",
+      "source_question_id": "490",
+      "source_pool": "open_response_review_pool",
+      "destination": "sba_operational",
+      "resolution_reason": "Valid four-option SBA with a traceable answer. Open-response signals are insufficient because the existing metadata does not define a supported free-response answer boundary.",
+      "repairs": [
+        "finalized eligibility as private SBA"
+      ],
+      "evidence_reviewed": [
+        "knowledge/question-bank/structured/wset3_questions.json",
+        "knowledge/question-bank/review_packets/master_bank_eligibility_review_packet.json"
+      ],
+      "prior_review_reason": null,
+      "prior_recommendation": null,
+      "source_overrides": {},
+      "quarantine_analysis": {
+        "required": false,
+        "why_sba_not_possible": null,
+        "why_open_response_not_possible": null
+      }
+    },
+    {
+      "resolution_id": "phase_4a_3_8_5_7_491",
+      "source_question_id": "491",
+      "source_pool": "open_response_review_pool",
+      "destination": "sba_operational",
+      "resolution_reason": "Valid four-option SBA with a traceable answer. Open-response signals are insufficient because the existing metadata does not define a supported free-response answer boundary.",
+      "repairs": [
+        "finalized eligibility as private SBA"
+      ],
+      "evidence_reviewed": [
+        "knowledge/question-bank/structured/wset3_questions.json",
+        "knowledge/question-bank/review_packets/master_bank_eligibility_review_packet.json"
+      ],
+      "prior_review_reason": null,
+      "prior_recommendation": null,
+      "source_overrides": {},
+      "quarantine_analysis": {
+        "required": false,
+        "why_sba_not_possible": null,
+        "why_open_response_not_possible": null
+      }
+    },
+    {
+      "resolution_id": "phase_4a_3_8_5_7_496",
+      "source_question_id": "496",
+      "source_pool": "open_response_review_pool",
+      "destination": "sba_operational",
+      "resolution_reason": "Valid four-option SBA with a traceable answer. Open-response signals are insufficient because the existing metadata does not define a supported free-response answer boundary.",
+      "repairs": [
+        "finalized eligibility as private SBA"
+      ],
+      "evidence_reviewed": [
+        "knowledge/question-bank/structured/wset3_questions.json",
+        "knowledge/question-bank/review_packets/master_bank_eligibility_review_packet.json"
+      ],
+      "prior_review_reason": null,
+      "prior_recommendation": null,
+      "source_overrides": {},
+      "quarantine_analysis": {
+        "required": false,
+        "why_sba_not_possible": null,
+        "why_open_response_not_possible": null
+      }
+    },
+    {
+      "resolution_id": "phase_4a_3_8_5_7_500",
+      "source_question_id": "500",
+      "source_pool": "open_response_review_pool",
+      "destination": "sba_operational",
+      "resolution_reason": "Valid four-option SBA with a traceable answer. Open-response signals are insufficient because the existing metadata does not define a supported free-response answer boundary.",
+      "repairs": [
+        "finalized eligibility as private SBA"
+      ],
+      "evidence_reviewed": [
+        "knowledge/question-bank/structured/wset3_questions.json",
+        "knowledge/question-bank/review_packets/master_bank_eligibility_review_packet.json"
+      ],
+      "prior_review_reason": null,
+      "prior_recommendation": null,
+      "source_overrides": {},
+      "quarantine_analysis": {
+        "required": false,
+        "why_sba_not_possible": null,
+        "why_open_response_not_possible": null
+      }
+    },
+    {
+      "resolution_id": "phase_4a_3_8_5_7_509",
+      "source_question_id": "509",
+      "source_pool": "open_response_review_pool",
+      "destination": "sba_operational",
+      "resolution_reason": "Valid four-option SBA with a traceable answer. Open-response signals are insufficient because the existing metadata does not define a supported free-response answer boundary.",
+      "repairs": [
+        "finalized eligibility as private SBA"
+      ],
+      "evidence_reviewed": [
+        "knowledge/question-bank/structured/wset3_questions.json",
+        "knowledge/question-bank/review_packets/master_bank_eligibility_review_packet.json"
+      ],
+      "prior_review_reason": null,
+      "prior_recommendation": null,
+      "source_overrides": {},
+      "quarantine_analysis": {
+        "required": false,
+        "why_sba_not_possible": null,
+        "why_open_response_not_possible": null
+      }
+    },
+    {
+      "resolution_id": "phase_4a_3_8_5_7_510",
+      "source_question_id": "510",
+      "source_pool": "inactive",
+      "destination": "sba_operational",
+      "resolution_reason": "The existing structured SBA is valid and an internal enrichment draft supplies reviewed curriculum metadata. Prior inactivity was an activation/review state, not unrecoverable corruption.",
+      "repairs": [
+        "restored private SBA eligibility",
+        "applied existing draft curriculum metadata"
+      ],
+      "evidence_reviewed": [
+        "knowledge/question-bank/structured/wset3_questions.json",
+        "knowledge/question-bank/review_packets/master_bank_eligibility_review_packet.json",
+        "knowledge/question-bank/diagnostic_sba/drafts/first_5_enrichment_drafts.json"
+      ],
+      "prior_review_reason": null,
+      "prior_recommendation": null,
+      "source_overrides": {
+        "expected_topics": [
+          "RA1",
+          "viticulture",
+          "noble_rot_humid_morning_mist"
+        ],
+        "difficulty": "intermediate"
+      },
+      "quarantine_analysis": {
+        "required": false,
+        "why_sba_not_possible": null,
+        "why_open_response_not_possible": null
+      }
+    },
+    {
+      "resolution_id": "phase_4a_3_8_5_7_511",
+      "source_question_id": "511",
+      "source_pool": "open_response_review_pool",
+      "destination": "sba_operational",
+      "resolution_reason": "Valid four-option SBA with a traceable answer. Open-response signals are insufficient because the existing metadata does not define a supported free-response answer boundary.",
+      "repairs": [
+        "finalized eligibility as private SBA"
+      ],
+      "evidence_reviewed": [
+        "knowledge/question-bank/structured/wset3_questions.json",
+        "knowledge/question-bank/review_packets/master_bank_eligibility_review_packet.json"
+      ],
+      "prior_review_reason": null,
+      "prior_recommendation": null,
+      "source_overrides": {},
+      "quarantine_analysis": {
+        "required": false,
+        "why_sba_not_possible": null,
+        "why_open_response_not_possible": null
+      }
+    },
+    {
+      "resolution_id": "phase_4a_3_8_5_7_670",
+      "source_question_id": "670",
+      "source_pool": "open_response_review_pool",
+      "destination": "sba_operational",
+      "resolution_reason": "Valid four-option SBA with a traceable answer. Open-response signals are insufficient because the existing metadata does not define a supported free-response answer boundary.",
+      "repairs": [
+        "finalized eligibility as private SBA"
+      ],
+      "evidence_reviewed": [
+        "knowledge/question-bank/structured/wset3_questions.json",
+        "knowledge/question-bank/review_packets/master_bank_eligibility_review_packet.json"
+      ],
+      "prior_review_reason": null,
+      "prior_recommendation": null,
+      "source_overrides": {},
+      "quarantine_analysis": {
+        "required": false,
+        "why_sba_not_possible": null,
+        "why_open_response_not_possible": null
+      }
+    },
+    {
+      "resolution_id": "phase_4a_3_8_5_7_712",
+      "source_question_id": "712",
+      "source_pool": "open_response_review_pool",
+      "destination": "sba_operational",
+      "resolution_reason": "Valid four-option SBA with a traceable answer. Open-response signals are insufficient because the existing metadata does not define a supported free-response answer boundary.",
+      "repairs": [
+        "finalized eligibility as private SBA"
+      ],
+      "evidence_reviewed": [
+        "knowledge/question-bank/structured/wset3_questions.json",
+        "knowledge/question-bank/review_packets/master_bank_eligibility_review_packet.json"
+      ],
+      "prior_review_reason": null,
+      "prior_recommendation": null,
+      "source_overrides": {},
+      "quarantine_analysis": {
+        "required": false,
+        "why_sba_not_possible": null,
+        "why_open_response_not_possible": null
+      }
+    },
+    {
+      "resolution_id": "phase_4a_3_8_5_7_713",
+      "source_question_id": "713",
+      "source_pool": "open_response_review_pool",
+      "destination": "sba_operational",
+      "resolution_reason": "Valid four-option SBA with a traceable answer. Open-response signals are insufficient because the existing metadata does not define a supported free-response answer boundary.",
+      "repairs": [
+        "finalized eligibility as private SBA"
+      ],
+      "evidence_reviewed": [
+        "knowledge/question-bank/structured/wset3_questions.json",
+        "knowledge/question-bank/review_packets/master_bank_eligibility_review_packet.json"
+      ],
+      "prior_review_reason": null,
+      "prior_recommendation": null,
+      "source_overrides": {},
+      "quarantine_analysis": {
+        "required": false,
+        "why_sba_not_possible": null,
+        "why_open_response_not_possible": null
+      }
+    },
+    {
+      "resolution_id": "phase_4a_3_8_5_7_724",
+      "source_question_id": "724",
+      "source_pool": "open_response_review_pool",
+      "destination": "sba_operational",
+      "resolution_reason": "Valid four-option SBA with a traceable answer. Open-response signals are insufficient because the existing metadata does not define a supported free-response answer boundary.",
+      "repairs": [
+        "finalized eligibility as private SBA"
+      ],
+      "evidence_reviewed": [
+        "knowledge/question-bank/structured/wset3_questions.json",
+        "knowledge/question-bank/review_packets/master_bank_eligibility_review_packet.json"
+      ],
+      "prior_review_reason": null,
+      "prior_recommendation": null,
+      "source_overrides": {},
+      "quarantine_analysis": {
+        "required": false,
+        "why_sba_not_possible": null,
+        "why_open_response_not_possible": null
+      }
+    },
+    {
+      "resolution_id": "phase_4a_3_8_5_7_727",
+      "source_question_id": "727",
+      "source_pool": "open_response_review_pool",
+      "destination": "sba_operational",
+      "resolution_reason": "Valid four-option SBA with a traceable answer. Open-response signals are insufficient because the existing metadata does not define a supported free-response answer boundary.",
+      "repairs": [
+        "finalized eligibility as private SBA"
+      ],
+      "evidence_reviewed": [
+        "knowledge/question-bank/structured/wset3_questions.json",
+        "knowledge/question-bank/review_packets/master_bank_eligibility_review_packet.json"
+      ],
+      "prior_review_reason": null,
+      "prior_recommendation": null,
+      "source_overrides": {},
+      "quarantine_analysis": {
+        "required": false,
+        "why_sba_not_possible": null,
+        "why_open_response_not_possible": null
+      }
+    },
+    {
+      "resolution_id": "phase_4a_3_8_5_7_731",
+      "source_question_id": "731",
+      "source_pool": "open_response_review_pool",
+      "destination": "sba_operational",
+      "resolution_reason": "Valid four-option SBA with a traceable answer. Open-response signals are insufficient because the existing metadata does not define a supported free-response answer boundary.",
+      "repairs": [
+        "finalized eligibility as private SBA"
+      ],
+      "evidence_reviewed": [
+        "knowledge/question-bank/structured/wset3_questions.json",
+        "knowledge/question-bank/review_packets/master_bank_eligibility_review_packet.json"
+      ],
+      "prior_review_reason": null,
+      "prior_recommendation": null,
+      "source_overrides": {},
+      "quarantine_analysis": {
+        "required": false,
+        "why_sba_not_possible": null,
+        "why_open_response_not_possible": null
+      }
+    },
+    {
+      "resolution_id": "phase_4a_3_8_5_7_746",
+      "source_question_id": "746",
+      "source_pool": "open_response_review_pool",
+      "destination": "sba_operational",
+      "resolution_reason": "Valid four-option SBA with a traceable answer. Open-response signals are insufficient because the existing metadata does not define a supported free-response answer boundary.",
+      "repairs": [
+        "finalized eligibility as private SBA"
+      ],
+      "evidence_reviewed": [
+        "knowledge/question-bank/structured/wset3_questions.json",
+        "knowledge/question-bank/review_packets/master_bank_eligibility_review_packet.json"
+      ],
+      "prior_review_reason": null,
+      "prior_recommendation": null,
+      "source_overrides": {},
+      "quarantine_analysis": {
+        "required": false,
+        "why_sba_not_possible": null,
+        "why_open_response_not_possible": null
+      }
+    },
+    {
+      "resolution_id": "phase_4a_3_8_5_7_785",
+      "source_question_id": "785",
+      "source_pool": "open_response_review_pool",
+      "destination": "sba_operational",
+      "resolution_reason": "Valid four-option SBA with a traceable answer. Open-response signals are insufficient because the existing metadata does not define a supported free-response answer boundary.",
+      "repairs": [
+        "finalized eligibility as private SBA"
+      ],
+      "evidence_reviewed": [
+        "knowledge/question-bank/structured/wset3_questions.json",
+        "knowledge/question-bank/review_packets/master_bank_eligibility_review_packet.json"
+      ],
+      "prior_review_reason": null,
+      "prior_recommendation": null,
+      "source_overrides": {},
+      "quarantine_analysis": {
+        "required": false,
+        "why_sba_not_possible": null,
+        "why_open_response_not_possible": null
+      }
+    },
+    {
+      "resolution_id": "phase_4a_3_8_5_7_826",
+      "source_question_id": "826",
+      "source_pool": "open_response_review_pool",
+      "destination": "sba_operational",
+      "resolution_reason": "Valid four-option SBA with a traceable answer. Open-response signals are insufficient because the existing metadata does not define a supported free-response answer boundary.",
+      "repairs": [
+        "finalized eligibility as private SBA"
+      ],
+      "evidence_reviewed": [
+        "knowledge/question-bank/structured/wset3_questions.json",
+        "knowledge/question-bank/review_packets/master_bank_eligibility_review_packet.json"
+      ],
+      "prior_review_reason": null,
+      "prior_recommendation": null,
+      "source_overrides": {},
+      "quarantine_analysis": {
+        "required": false,
+        "why_sba_not_possible": null,
+        "why_open_response_not_possible": null
+      }
+    },
+    {
+      "resolution_id": "phase_4a_3_8_5_7_827",
+      "source_question_id": "827",
+      "source_pool": "open_response_review_pool",
+      "destination": "sba_operational",
+      "resolution_reason": "Valid four-option SBA with a traceable answer. Open-response signals are insufficient because the existing metadata does not define a supported free-response answer boundary.",
+      "repairs": [
+        "finalized eligibility as private SBA"
+      ],
+      "evidence_reviewed": [
+        "knowledge/question-bank/structured/wset3_questions.json",
+        "knowledge/question-bank/review_packets/master_bank_eligibility_review_packet.json"
+      ],
+      "prior_review_reason": null,
+      "prior_recommendation": null,
+      "source_overrides": {},
+      "quarantine_analysis": {
+        "required": false,
+        "why_sba_not_possible": null,
+        "why_open_response_not_possible": null
+      }
+    },
+    {
+      "resolution_id": "phase_4a_3_8_5_7_842",
+      "source_question_id": "842",
+      "source_pool": "open_response_review_pool",
+      "destination": "sba_operational",
+      "resolution_reason": "Valid four-option SBA with a traceable answer. Open-response signals are insufficient because the existing metadata does not define a supported free-response answer boundary.",
+      "repairs": [
+        "finalized eligibility as private SBA"
+      ],
+      "evidence_reviewed": [
+        "knowledge/question-bank/structured/wset3_questions.json",
+        "knowledge/question-bank/review_packets/master_bank_eligibility_review_packet.json"
+      ],
+      "prior_review_reason": null,
+      "prior_recommendation": null,
+      "source_overrides": {},
+      "quarantine_analysis": {
+        "required": false,
+        "why_sba_not_possible": null,
+        "why_open_response_not_possible": null
+      }
+    },
+    {
+      "resolution_id": "phase_4a_3_8_5_7_846",
+      "source_question_id": "846",
+      "source_pool": "open_response_review_pool",
+      "destination": "sba_operational",
+      "resolution_reason": "Valid four-option SBA with a traceable answer. Open-response signals are insufficient because the existing metadata does not define a supported free-response answer boundary.",
+      "repairs": [
+        "finalized eligibility as private SBA"
+      ],
+      "evidence_reviewed": [
+        "knowledge/question-bank/structured/wset3_questions.json",
+        "knowledge/question-bank/review_packets/master_bank_eligibility_review_packet.json"
+      ],
+      "prior_review_reason": null,
+      "prior_recommendation": null,
+      "source_overrides": {},
+      "quarantine_analysis": {
+        "required": false,
+        "why_sba_not_possible": null,
+        "why_open_response_not_possible": null
+      }
+    },
+    {
+      "resolution_id": "phase_4a_3_8_5_7_847",
+      "source_question_id": "847",
+      "source_pool": "open_response_review_pool",
+      "destination": "sba_operational",
+      "resolution_reason": "Valid four-option SBA with a traceable answer. Open-response signals are insufficient because the existing metadata does not define a supported free-response answer boundary.",
+      "repairs": [
+        "finalized eligibility as private SBA"
+      ],
+      "evidence_reviewed": [
+        "knowledge/question-bank/structured/wset3_questions.json",
+        "knowledge/question-bank/review_packets/master_bank_eligibility_review_packet.json"
+      ],
+      "prior_review_reason": null,
+      "prior_recommendation": null,
+      "source_overrides": {},
+      "quarantine_analysis": {
+        "required": false,
+        "why_sba_not_possible": null,
+        "why_open_response_not_possible": null
+      }
+    },
+    {
+      "resolution_id": "phase_4a_3_8_5_7_853",
+      "source_question_id": "853",
+      "source_pool": "inactive",
+      "destination": "open_response_candidate",
+      "resolution_reason": "The repository contains a traceable explanatory answer boundary. The item is more safely recovered as open response than rebuilt as a four-option SBA.",
+      "repairs": [
+        "converted source view to short_answer",
+        "removed SBA/True-False residue from normalized candidate",
+        "added existing repository support and curriculum metadata"
+      ],
+      "evidence_reviewed": [
+        "knowledge/question-bank/structured/wset3_questions.json",
+        "knowledge/question-bank/review_packets/master_bank_eligibility_review_packet.json"
+      ],
+      "prior_review_reason": null,
+      "prior_recommendation": null,
+      "source_overrides": {
+        "question_text": "Explique qué indica la añada (vintage) en una etiqueta de vino y por qué no corresponde al año de embotellado.",
+        "question_type": "short_answer",
+        "expected_topics": [
+          "RA5",
+          "wine_law_and_labelling",
+          "vintage_labelling"
+        ],
+        "expected_keywords": [
+          "añada",
+          "año",
+          "uva",
+          "cosechada",
+          "vinificada"
+        ],
+        "expected_causal_links": [
+          "añada declarada -> año de cosecha de la uva -> no año de embotellado"
+        ],
+        "options": {},
+        "correct_answer_letter": null,
+        "correct_answer": null,
+        "correct_answer_text": null
+      },
+      "quarantine_analysis": {
+        "required": false,
+        "why_sba_not_possible": null,
+        "why_open_response_not_possible": null
+      },
+      "corpus_support": {
+        "status": "supported",
+        "source_question_bank": "knowledge/question-bank/structured/wset3_questions.json",
+        "source_type": "repository_resolution_evidence",
+        "support_terms": [
+          "añada",
+          "año",
+          "uva",
+          "cosechada",
+          "vinificada"
+        ],
+        "evidence_chunks": [
+          {
+            "chunk_id": "structured_question_828",
+            "source_file": "knowledge/question-bank/structured/wset3_questions.json",
+            "title": "Existing SBA support for vintage labelling",
+            "source_type": "structured_question_bank",
+            "matched_terms": [
+              "añada",
+              "año",
+              "cosecha"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "resolution_id": "phase_4a_3_8_5_7_854",
+      "source_question_id": "854",
+      "source_pool": "inactive",
+      "destination": "open_response_candidate",
+      "resolution_reason": "The repository contains a traceable explanatory answer boundary. The item is more safely recovered as open response than rebuilt as a four-option SBA.",
+      "repairs": [
+        "converted source view to short_answer",
+        "removed SBA/True-False residue from normalized candidate",
+        "added existing repository support and curriculum metadata"
+      ],
+      "evidence_reviewed": [
+        "knowledge/question-bank/structured/wset3_questions.json",
+        "knowledge/question-bank/review_packets/master_bank_eligibility_review_packet.json"
+      ],
+      "prior_review_reason": null,
+      "prior_recommendation": null,
+      "source_overrides": {
+        "question_text": "Explique por qué los vinos DOP están sujetos a regulaciones más estrictas que los vinos IGP.",
+        "question_type": "short_answer",
+        "expected_topics": [
+          "RA5",
+          "wine_law_and_labelling",
+          "dop_igp_hierarchy"
+        ],
+        "expected_keywords": [
+          "DOP",
+          "IGP",
+          "origen",
+          "producción",
+          "regulaciones"
+        ],
+        "expected_causal_links": [
+          "vínculo más estrecho con el origen -> normas de producción más restrictivas"
+        ],
+        "options": {},
+        "correct_answer_letter": null,
+        "correct_answer": null,
+        "correct_answer_text": null
+      },
+      "quarantine_analysis": {
+        "required": false,
+        "why_sba_not_possible": null,
+        "why_open_response_not_possible": null
+      },
+      "corpus_support": {
+        "status": "supported",
+        "source_question_bank": "knowledge/question-bank/structured/wset3_questions.json",
+        "source_type": "repository_resolution_evidence",
+        "support_terms": [
+          "DOP",
+          "IGP",
+          "origen",
+          "producción",
+          "regulaciones"
+        ],
+        "evidence_chunks": [
+          {
+            "chunk_id": "structured_question_822",
+            "source_file": "knowledge/question-bank/structured/wset3_questions.json",
+            "title": "Existing SBA support for DOP and IGP",
+            "source_type": "structured_question_bank",
+            "matched_terms": [
+              "DOP",
+              "IGP",
+              "regulaciones"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "resolution_id": "phase_4a_3_8_5_7_855",
+      "source_question_id": "855",
+      "source_pool": "inactive",
+      "destination": "open_response_candidate",
+      "resolution_reason": "The repository contains a traceable explanatory answer boundary. The item is more safely recovered as open response than rebuilt as a four-option SBA.",
+      "repairs": [
+        "converted source view to short_answer",
+        "removed SBA/True-False residue from normalized candidate",
+        "added existing repository support and curriculum metadata"
+      ],
+      "evidence_reviewed": [
+        "knowledge/question-bank/structured/wset3_questions.json",
+        "knowledge/question-bank/review_packets/master_bank_eligibility_review_packet.json"
+      ],
+      "prior_review_reason": null,
+      "prior_recommendation": null,
+      "source_overrides": {
+        "question_text": "Explique los requisitos mínimos de crianza asociados al término Reserva en un vino tinto español.",
+        "question_type": "short_answer",
+        "expected_topics": [
+          "RA5",
+          "wine_law_and_labelling",
+          "spanish_reserva_ageing"
+        ],
+        "expected_keywords": [
+          "Reserva",
+          "tres años",
+          "doce meses",
+          "barrica",
+          "botella"
+        ],
+        "expected_causal_links": [
+          "Reserva tinto -> mínimo tres años totales -> al menos doce meses en barrica"
+        ],
+        "options": {},
+        "correct_answer_letter": null,
+        "correct_answer": null,
+        "correct_answer_text": null
+      },
+      "quarantine_analysis": {
+        "required": false,
+        "why_sba_not_possible": null,
+        "why_open_response_not_possible": null
+      },
+      "corpus_support": {
+        "status": "supported",
+        "source_question_bank": "knowledge/question-bank/structured/wset3_questions.json",
+        "source_type": "repository_resolution_evidence",
+        "support_terms": [
+          "Reserva",
+          "tres años",
+          "doce meses",
+          "barrica",
+          "botella"
+        ],
+        "evidence_chunks": [
+          {
+            "chunk_id": "structured_question_832",
+            "source_file": "knowledge/question-bank/structured/wset3_questions.json",
+            "title": "Existing SBA support for Spanish Reserva",
+            "source_type": "structured_question_bank",
+            "matched_terms": [
+              "Reserva",
+              "tres años",
+              "barrica"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "resolution_id": "phase_4a_3_8_5_7_856",
+      "source_question_id": "856",
+      "source_pool": "inactive",
+      "destination": "open_response_candidate",
+      "resolution_reason": "The repository contains a traceable explanatory answer boundary. The item is more safely recovered as open response than rebuilt as a four-option SBA.",
+      "repairs": [
+        "converted source view to short_answer",
+        "removed SBA/True-False residue from normalized candidate",
+        "added existing repository support and curriculum metadata"
+      ],
+      "evidence_reviewed": [
+        "knowledge/question-bank/structured/wset3_questions.json",
+        "knowledge/question-bank/review_packets/master_bank_eligibility_review_packet.json",
+        "knowledge/official-wset/study-guide/wset_markdown/seccion_6_section_3_still_wines_of_the_world/6-11_22_germany.md"
+      ],
+      "prior_review_reason": null,
+      "prior_recommendation": null,
+      "source_overrides": {
+        "question_text": "Compare Kabinett y Trockenbeerenauslese dentro del sistema Prädikat alemán en términos de madurez y concentración.",
+        "question_type": "short_answer",
+        "expected_topics": [
+          "RA5",
+          "wine_law_and_labelling",
+          "german_pradikat"
+        ],
+        "expected_keywords": [
+          "Kabinett",
+          "Trockenbeerenauslese",
+          "ligero",
+          "concentrado",
+          "dulce"
+        ],
+        "expected_causal_links": [
+          "mayor madurez de la uva -> mayor concentración -> categoría Prädikat superior"
+        ],
+        "options": {},
+        "correct_answer_letter": null,
+        "correct_answer": null,
+        "correct_answer_text": null
+      },
+      "quarantine_analysis": {
+        "required": false,
+        "why_sba_not_possible": null,
+        "why_open_response_not_possible": null
+      },
+      "corpus_support": {
+        "status": "supported",
+        "source_question_bank": "knowledge/question-bank/structured/wset3_questions.json",
+        "source_type": "repository_resolution_evidence",
+        "support_terms": [
+          "Kabinett",
+          "Trockenbeerenauslese",
+          "ligero",
+          "concentrado",
+          "dulce"
+        ],
+        "evidence_chunks": [
+          {
+            "chunk_id": "official_wset_germany_kabinett",
+            "source_file": "knowledge/official-wset/study-guide/wset_markdown/seccion_6_section_3_still_wines_of_the_world/6-11_22_germany.md",
+            "title": "Germany Prädikat levels",
+            "source_type": "official_wset_markdown",
+            "matched_terms": [
+              "Kabinett",
+              "Trockenbeerenauslese",
+              "concentrated"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "resolution_id": "phase_4a_3_8_5_7_857",
+      "source_question_id": "857",
+      "source_pool": "inactive",
+      "destination": "open_response_candidate",
+      "resolution_reason": "The repository contains a traceable explanatory answer boundary. The item is more safely recovered as open response than rebuilt as a four-option SBA.",
+      "repairs": [
+        "converted source view to short_answer",
+        "removed SBA/True-False residue from normalized candidate",
+        "added existing repository support and curriculum metadata"
+      ],
+      "evidence_reviewed": [
+        "knowledge/question-bank/structured/wset3_questions.json",
+        "knowledge/question-bank/review_packets/master_bank_eligibility_review_packet.json"
+      ],
+      "prior_review_reason": null,
+      "prior_recommendation": null,
+      "source_overrides": {
+        "question_text": "Compare los canales on-trade y off-trade e indique dónde se consume el vino en cada caso.",
+        "question_type": "short_answer",
+        "expected_topics": [
+          "RA5",
+          "wine_business",
+          "distribution_channels"
+        ],
+        "expected_keywords": [
+          "on-trade",
+          "off-trade",
+          "restaurantes",
+          "bares",
+          "supermercados",
+          "vinotecas"
+        ],
+        "expected_causal_links": [
+          "on-trade -> consumo en el punto de venta; off-trade -> consumo posterior"
+        ],
+        "options": {},
+        "correct_answer_letter": null,
+        "correct_answer": null,
+        "correct_answer_text": null
+      },
+      "quarantine_analysis": {
+        "required": false,
+        "why_sba_not_possible": null,
+        "why_open_response_not_possible": null
+      },
+      "corpus_support": {
+        "status": "supported",
+        "source_question_bank": "knowledge/question-bank/structured/wset3_questions.json",
+        "source_type": "repository_resolution_evidence",
+        "support_terms": [
+          "on-trade",
+          "off-trade",
+          "restaurantes",
+          "bares",
+          "supermercados",
+          "vinotecas"
+        ],
+        "evidence_chunks": [
+          {
+            "chunk_id": "structured_question_842",
+            "source_file": "knowledge/question-bank/structured/wset3_questions.json",
+            "title": "Existing SBA support for distribution channels",
+            "source_type": "structured_question_bank",
+            "matched_terms": [
+              "on-trade",
+              "off-trade",
+              "restaurantes"
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "governance": {
+    "safe_for_examiner": false,
+    "examiner_scoring_allowed": false,
+    "official_wset_question": false,
+    "training_item_only": true,
+    "uses_llm": false,
+    "uses_api": false,
+    "uses_embeddings": false,
+    "uses_vector_db": false,
+    "cloud_services_active": false
+  }
+}

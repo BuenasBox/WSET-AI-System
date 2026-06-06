@@ -14,6 +14,10 @@ from typing import Any
 
 from tools.constants import PROJECT_ROOT
 from tools.question_generation.master_bank import MASTER_BANK_PATH, SAFE_GOVERNANCE
+from tools.question_generation.master_bank_resolution import (
+    load_resolution_index,
+    resolution_destination,
+)
 
 
 OUTPUT_PATH = Path(
@@ -92,8 +96,21 @@ def classify_open_response_suitability(item: Mapping[str, Any]) -> dict[str, Any
         )
     )
     inactive = _is_inactive_master_item(item)
+    resolution = load_resolution_index().get(
+        str(item.get("source_question_id", "")).strip(), {}
+    )
+    destination = resolution_destination(resolution)
 
-    if inactive:
+    if destination == "sba_operational":
+        classification = "sba_only"
+        confidence = "high"
+    elif destination == "open_response_candidate":
+        classification = "open_response_candidate"
+        confidence = "high"
+    elif destination == "quarantine":
+        classification = "inactive"
+        confidence = "high"
+    elif inactive:
         classification = "inactive"
         confidence = "high"
     elif question_type == "open_response" and review_state == "approved_open_response":
@@ -130,6 +147,8 @@ def classify_open_response_suitability(item: Mapping[str, Any]) -> dict[str, Any
         answer_boundary_support=answer_boundary_support,
         causal_link_count=len(causal_links),
     )
+    if resolution:
+        evidence.insert(0, f"resolution:{resolution.get('resolution_id')}")
     return {
         "schema_version": CLASSIFIER_VERSION,
         "master_item_id": str(item.get("master_item_id", "")).strip(),

@@ -10,7 +10,6 @@ from jsonschema import Draft202012Validator
 from tools.question_generation.export_static_demo_questions import build_payload
 from tools.question_generation.open_response_pipeline import (
     REVIEW_APPROVED,
-    REVIEW_REJECTED,
     build_grounded_open_response_candidates,
     build_open_response_review_records,
     validate_open_response_candidate,
@@ -56,20 +55,21 @@ class OpenResponseGroundingReviewTests(unittest.TestCase):
         cls.by_id = {candidate["source_question_id"]: candidate for candidate in cls.candidates}
         cls.review_by_id = {record["source_question_id"]: record for record in cls.reviews}
 
-    def test_normalized_artifacts_have_twenty_one_records(self) -> None:
-        self.assertEqual(len(self.candidates), 21)
-        self.assertEqual(len(self.reviews), 21)
+    def test_normalized_artifacts_have_twenty_six_records(self) -> None:
+        self.assertEqual(len(self.candidates), 26)
+        self.assertEqual(len(self.reviews), 26)
 
-    def test_id_18_is_blocked_by_structural_anomaly(self) -> None:
+    def test_id_18_is_recovered_with_traceable_support(self) -> None:
         candidate = self.by_id["18"]
         review = self.review_by_id["18"]
-        self.assertEqual(candidate["review_status"], REVIEW_REJECTED)
-        self.assertEqual(review["review_status"], REVIEW_REJECTED)
+        self.assertEqual(candidate["review_status"], REVIEW_APPROVED)
+        self.assertEqual(review["review_status"], REVIEW_APPROVED)
         self.assertEqual(candidate["activation_status"], "inactive")
-        self.assertIn("missing RA metadata", review["issues_found"])
-        self.assertIn(
-            "structural anomaly: source carries populated SBA answer/options residue",
-            review["issues_found"],
+        self.assertEqual(candidate["RA"], "RA1")
+        self.assertEqual(review["issues_found"], [])
+        self.assertEqual(
+            candidate["corpus_support"]["evidence_chunks"][0]["chunk_id"],
+            "CC_SULPHITES_PRESERVATION",
         )
 
     def test_approved_candidates_require_ra(self) -> None:
@@ -117,7 +117,7 @@ class OpenResponseGroundingReviewTests(unittest.TestCase):
 
     def test_approved_candidates_have_chunk_grounding(self) -> None:
         approved = [candidate for candidate in self.candidates if candidate["review_status"] == REVIEW_APPROVED]
-        self.assertEqual(len(approved), 20)
+        self.assertEqual(len(approved), 26)
         for candidate in approved:
             support = candidate["corpus_support"]
             self.assertEqual(support["status"], "supported", candidate["source_question_id"])
