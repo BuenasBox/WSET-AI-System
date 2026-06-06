@@ -21,6 +21,8 @@ from tools.learner_model.learning_event_runtime import (
     update_les_from_learning_event,
 )
 from tools.orchestrator.learner_state import DEFAULT_LES
+from tools.question_generation.master_bank import MASTER_BANK_PATH
+from tools.question_generation.master_bank_eligibility import build_eligibility_index
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -326,6 +328,21 @@ class NextSessionSignalTests(unittest.TestCase):
 
 
 class BoundaryTests(unittest.TestCase):
+    def test_runtime_environment_uses_canonical_operational_eligibility(self) -> None:
+        bank = json.loads((ROOT / MASTER_BANK_PATH).read_text(encoding="utf-8"))
+        counts = build_eligibility_index(bank)["operational_counts"]
+        self.assertEqual(
+            counts,
+            {
+                "total_master_bank": 616,
+                "sba_operational_pool": 589,
+                "open_response_candidate_pool": 27,
+                "open_response_review_pool": 0,
+                "inactive": 0,
+                "public_lab": 36,
+            },
+        )
+
     def test_end_to_end_is_deterministic_and_governance_clean(self) -> None:
         kwargs = {
             "attempt": _attempt(),

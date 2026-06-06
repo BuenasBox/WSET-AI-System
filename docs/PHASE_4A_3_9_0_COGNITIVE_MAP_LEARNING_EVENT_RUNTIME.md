@@ -23,6 +23,31 @@ exam-readiness claim, or examiner authority.
 
 No second cognitive map or replacement LES was created.
 
+## Canonical Eligibility Integration
+
+The phase branch now includes commit `8738ca0`, which supplies the versioned
+Master Bank review/inactive resolution layer. The operational eligibility
+loader continues to derive its index from
+`master_bank_open_response_suitability.json`; that artifact is now generated
+from the canonical resolution decisions instead of the earlier unresolved
+review snapshot.
+
+The prior 506 SBA / 21 Open Response result came from a branch based on the
+pre-resolution suitability artifact. It was not produced by the Learning Event
+Runtime itself. Integrating the resolution commit aligns the Session Composer,
+utilization reporting, Dashboard backend data, and phase tests on:
+
+- Master Bank: 616
+- SBA operational: 589
+- Open Response candidates: 27
+- Review: 0
+- Inactive eligibility backlog: 0
+- Quarantine: 0
+- Public Lab: 36
+
+No classification was reopened and no manual eligibility or suitability
+decision was introduced by this phase.
+
 ## New Runtime
 
 `tools/learner_model/learning_event_runtime.py` implements:
@@ -154,6 +179,7 @@ when present and otherwise records topic/RA evidence without inventing IDs.
 - schema compatibility;
 - append-only trace logs;
 - deterministic reproduction;
+- canonical 589/27 operational eligibility integration;
 - governance and prohibited-field absence;
 - unchanged public lab and Open Response evaluator files.
 
@@ -177,15 +203,15 @@ $env:RUN_SLOW_TESTS='1'; python -m unittest tests.test_golden_self_eval -v
 
 Results:
 
-- full suite: 1627 tests, 9 skipped, 0 failures;
-- focused learning-event runtime: 25/25;
+- full suite: 1633 tests, 9 skipped, 0 failures;
+- focused learning-event runtime: 26/26;
 - SBA export: 36 eligible items, 0 validation errors;
 - Slow Golden: 7/7;
 - snapshots: unchanged;
 - public and Open Response frontend files: unchanged.
-
-The integrated branch used for this phase classifies 506 records in the SBA
-operational pool and 21 in the Open Response candidate pool. Those executable
-counts differ from the 589/27 planning context supplied for the phase. The
-runtime does not encode either count and remains compatible with later
-eligibility-data reconciliation.
+- canonical operational counts: 616 total, 589 SBA, 27 Open Response,
+  0 Review, 0 Inactive, 0 Quarantine;
+- Public Lab: 36, unchanged;
+- Open Response evaluator: unchanged;
+- governance: unchanged and fail-safe;
+- deployment: not performed.
