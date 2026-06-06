@@ -1,0 +1,861 @@
+{
+  "schema_version": "open_response_bank_v1",
+  "generated_at": "2026-06-06",
+  "phase": "4A.3.8.7",
+  "source": "knowledge/question-bank/master_bank/master_bank.json (question_type=open_response, review_state=approved_open_response)",
+  "pool_constraints": {
+    "this_file": "20 approved open_response items only",
+    "sba_pool": "595 single_best_answer items — remain in master_bank.json, do not mix",
+    "held_items": [
+      "wset3_18"
+    ],
+    "held_reason": "wset3_18 (src=18, sulfitos) is rejected in master_bank: ra=unknown, missing corpus support, SBA-residue anomaly. Excluded from MVP bank."
+  },
+  "governance": {
+    "safe_for_examiner": false,
+    "examiner_scoring_allowed": false,
+    "official_wset_question": false,
+    "training_item_only": true,
+    "uses_llm": false,
+    "uses_api": false,
+    "uses_embeddings": false,
+    "uses_vector_db": false,
+    "cloud_services_active": false
+  },
+  "items": [
+    {
+      "item_id": "OR_001",
+      "source_item_id": "wset3_798",
+      "source_question_id": "798",
+      "question_text": "Explique cómo prácticas sostenibles certificadas u orgánicas pueden aumentar los costes de producción y contribuir a la diferenciación comercial del vino.",
+      "ra_id": "RA1",
+      "topic": "sostenibilidad",
+      "expected_concepts": [
+        "certificación orgánica o sostenible",
+        "aumento de costes de producción",
+        "mano de obra intensiva",
+        "rendimientos más bajos",
+        "diferenciación en el mercado",
+        "valor percibido por el consumidor",
+        "precio premium"
+      ],
+      "causal_chain_target": [],
+      "response_depth_target": "strong",
+      "feedback_profile": {
+        "FOUNDATIONAL_RESPONSE": "Tu respuesta menciona la sostenibilidad pero no explica el mecanismo económico. Necesitas conectar las prácticas específicas (mayor mano de obra, menores rendimientos) con el aumento de costes, y luego explicar cómo esos costes se recuperan mediante diferenciación comercial y precios premium.",
+        "DEVELOPING_RESPONSE": "Buen intento. Identificas el vínculo entre prácticas sostenibles y coste, pero la explicación del mecanismo de diferenciación comercial necesita más detalle. Considera cómo la certificación funciona como señal de valor para el consumidor y justifica un precio mayor.",
+        "STRONG_RESPONSE": "Respuesta sólida que conecta las prácticas sostenibles con sus implicaciones económicas y de posicionamiento comercial."
+      },
+      "remediation_path": {
+        "concepts_to_reinforce": [
+          "mecanismos de aumento de coste en agricultura orgánica",
+          "certificación como herramienta de diferenciación",
+          "relación entre coste de producción y precio de venta"
+        ],
+        "causality_to_reinforce": []
+      },
+      "wwj_remediation": null,
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "official_wset_question": false,
+        "training_item_only": true
+      }
+    },
+    {
+      "item_id": "OR_002",
+      "source_item_id": "wset3_799",
+      "source_question_id": "799",
+      "question_text": "Justifica el uso de la fermentación maloláctica en la producción de ciertos estilos de vino blanco y cómo contribuye al estilo y la calidad.",
+      "ra_id": "RA1",
+      "topic": "fermentación maloláctica",
+      "expected_concepts": [
+        "conversión de ácido málico a ácido láctico",
+        "reducción de la acidez total",
+        "perfil de acidez más suave",
+        "mayor textura y cuerpo",
+        "notas cremosas o mantecosas (diacetilo)",
+        "adecuación para estilos con crianza en roble",
+        "inapropiada para estilos frescos y aromáticos"
+      ],
+      "causal_chain_target": [
+        "CC_MLF_ACIDITY",
+        "CC_MLF_TEXTURE",
+        "CC_MLF_DIACETYL"
+      ],
+      "response_depth_target": "strong",
+      "feedback_profile": {
+        "FOUNDATIONAL_RESPONSE": "Identificas la FML pero no explicas el mecanismo. Una respuesta completa debe explicar la conversión de ácido málico a láctico, el cambio en el perfil de acidez, y por qué eso es deseable en ciertos estilos de vino blanco (como Chardonnay con crianza en roble) pero no en otros.",
+        "DEVELOPING_RESPONSE": "Buen fundamento. Mencionas la reducción de acidez, pero profundiza en la textura y el diacetilo como aspectos adicionales, y en los estilos para los que la FML es apropiada o inapropiada.",
+        "STRONG_RESPONSE": "Respuesta completa: cubre el mecanismo causal, el impacto en acidez y textura, y la lógica de estilo que justifica su uso selectivo."
+      },
+      "remediation_path": {
+        "concepts_to_reinforce": [
+          "mecanismo de conversión ácido málico → láctico",
+          "efecto sobre acidez total y pH",
+          "diacetilo y textura",
+          "cuándo bloquear vs permitir FML"
+        ],
+        "causality_to_reinforce": [
+          "CC_MLF_ACIDITY",
+          "CC_MLF_TEXTURE",
+          "CC_MLF_DIACETYL"
+        ]
+      },
+      "wwj_remediation": [
+        "WSET_Level_3_Wines_-_Understanding_the_Common_Elements_of_Winemaking_Part-0000",
+        "WSET_Level_3_Wines_-_Understanding_the_Common_Elements_of_Winemaking_Part-0001",
+        "WSET_Level_3_Wines_-_Understanding_the_Common_Elements_of_Winemaking_Part-0002"
+      ],
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "official_wset_question": false,
+        "training_item_only": true
+      }
+    },
+    {
+      "item_id": "OR_003",
+      "source_item_id": "wset3_800",
+      "source_question_id": "800",
+      "question_text": "Explica cómo la altitud puede influir en el estilo de un vino tinto.",
+      "ra_id": "RA1",
+      "topic": "altitud",
+      "expected_concepts": [
+        "temperaturas más bajas a mayor altitud",
+        "maduración más lenta",
+        "mayor retención de acidez",
+        "menor contenido alcohólico",
+        "aromas más frescos y primarios",
+        "mayor variación diurna de temperatura"
+      ],
+      "causal_chain_target": [
+        "CC_COOL_CLIMATE_ACIDITY",
+        "CC_COOL_CLIMATE_ALCOHOL",
+        "CC_COOL_CLIMATE_AROMA"
+      ],
+      "response_depth_target": "developing",
+      "feedback_profile": {
+        "FOUNDATIONAL_RESPONSE": "Mencionas que la altitud afecta el clima, pero necesitas explicar el mecanismo: temperaturas más bajas → maduración más lenta → mayor retención de acidez y menor alcohol. Incluye cómo esto afecta el estilo del vino tinto.",
+        "DEVELOPING_RESPONSE": "Buen enfoque. Conectas la altitud con el clima y el estilo. Para profundizar, explica la variación diurna de temperatura como factor adicional que preserva aromas frescos en regiones cálidas.",
+        "STRONG_RESPONSE": "Respuesta completa: cubre el mecanismo temperatura → maduración → acidez/alcohol/aroma, con referencia a la variación diurna como efecto adicional."
+      },
+      "remediation_path": {
+        "concepts_to_reinforce": [
+          "relación altitud–temperatura",
+          "retención de acidez en maduración lenta",
+          "variación diurna de temperatura"
+        ],
+        "causality_to_reinforce": [
+          "CC_COOL_CLIMATE_ACIDITY",
+          "CC_COOL_CLIMATE_ALCOHOL"
+        ]
+      },
+      "wwj_remediation": [
+        "WSET_Level_3_Wines_-_Understanding_the_Growing_Environment_-_Climate_Part_1-0000",
+        "WSET_Level_3_Wines_-_Understanding_the_Growing_Environment_-_Climate_Part_1-0001",
+        "WSET_Level_3_Wines_-_Understanding_the_Growing_Environment_-_Climate_Part_1-0002",
+        "WSET_Level_3_Wines_-_Understanding_the_Growing_Environment_-_Climate_Part_1-0003",
+        "WSET_Level_3_Wines_-_Understanding_the_Growing_Environment_Sunlight-0000"
+      ],
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "official_wset_question": false,
+        "training_item_only": true
+      }
+    },
+    {
+      "item_id": "OR_004",
+      "source_item_id": "wset3_801",
+      "source_question_id": "801",
+      "question_text": "Explique cómo la orientación y la pendiente del viñedo pueden afectar la maduración de la uva.",
+      "ra_id": "RA1",
+      "topic": "orientación y pendiente",
+      "expected_concepts": [
+        "orientación sur (hemisferio norte) maximiza exposición solar",
+        "mayor ángulo de incidencia de la luz",
+        "mayor acumulación de calor en la uva",
+        "pendiente favorece el drenaje",
+        "pendiente reduce el riesgo de heladas (aire frío drena)",
+        "efecto sobre ritmo de maduración"
+      ],
+      "causal_chain_target": [],
+      "response_depth_target": "developing",
+      "feedback_profile": {
+        "FOUNDATIONAL_RESPONSE": "Mencionas la orientación pero no explicas el mecanismo. Necesitas conectar: orientación sur → mayor exposición solar → mayor calor → maduración más rápida. La pendiente tiene un efecto adicional sobre el drenaje del aire frío y la reducción de heladas.",
+        "DEVELOPING_RESPONSE": "Buen enfoque sobre la exposición solar. Para completar la respuesta, añade el efecto de la pendiente sobre el drenaje del aire frío (reducción del riesgo de heladas) y el drenaje del agua.",
+        "STRONG_RESPONSE": "Respuesta completa: cubre exposición solar, acumulación de calor, drenaje del aire y del agua como factores que la orientación y pendiente controlan."
+      },
+      "remediation_path": {
+        "concepts_to_reinforce": [
+          "incidencia solar según orientación",
+          "drenaje del aire frío en pendientes",
+          "relación orientación–temperatura–maduración"
+        ],
+        "causality_to_reinforce": []
+      },
+      "wwj_remediation": null,
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "official_wset_question": false,
+        "training_item_only": true
+      }
+    },
+    {
+      "item_id": "OR_005",
+      "source_item_id": "wset3_802",
+      "source_question_id": "802",
+      "question_text": "Describa cómo las prácticas de manejo en la bodega pueden reducir el riesgo de oxidación en vinos blancos.",
+      "ra_id": "RA1",
+      "topic": "oxidación en bodega",
+      "expected_concepts": [
+        "uso de sulfitos (SO₂) como antioxidante",
+        "protección con gas inerte (nitrógeno, CO₂ argón)",
+        "control de temperatura en fermentación y almacenamiento",
+        "uso de depósitos de acero inoxidable",
+        "manipulación cuidadosa para evitar contacto con oxígeno",
+        "llenado completo de depósitos"
+      ],
+      "causal_chain_target": [],
+      "response_depth_target": "developing",
+      "feedback_profile": {
+        "FOUNDATIONAL_RESPONSE": "Mencionas el control de oxígeno pero sin especificar prácticas. Una respuesta completa incluye: uso de sulfitos, gases inertes, temperatura baja, minimización del contacto con el aire durante trasiegos y llenado.",
+        "DEVELOPING_RESPONSE": "Buen intento. Cubre la protección con SO₂ o gases inertes. Para completar, añade cómo el control de temperatura y el llenado completo de depósitos minimizan el riesgo residual.",
+        "STRONG_RESPONSE": "Respuesta completa que identifica múltiples mecanismos de protección antioxidante y su lógica."
+      },
+      "remediation_path": {
+        "concepts_to_reinforce": [
+          "función antioxidante del SO₂",
+          "uso de gases inertes en enología",
+          "temperatura como factor de oxidación"
+        ],
+        "causality_to_reinforce": []
+      },
+      "wwj_remediation": null,
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "official_wset_question": false,
+        "training_item_only": true
+      }
+    },
+    {
+      "item_id": "OR_006",
+      "source_item_id": "wset3_803",
+      "source_question_id": "803",
+      "question_text": "Explique la influencia de la elección de levaduras en el perfil sensorial del vino.",
+      "ra_id": "RA1",
+      "topic": "levaduras y perfil sensorial",
+      "expected_concepts": [
+        "levaduras producen compuestos aromáticos secundarios",
+        "ésteres y alcoholes superiores según cepa",
+        "producción de diacetilo en algunas cepas",
+        "levaduras neutras vs levaduras aromáticas",
+        "efecto sobre intensidad y complejidad aromática",
+        "influencia sobre carácter frutal o floral"
+      ],
+      "causal_chain_target": [],
+      "response_depth_target": "developing",
+      "feedback_profile": {
+        "FOUNDATIONAL_RESPONSE": "Mencionas que las levaduras afectan el aroma, pero necesitas especificar qué compuestos producen y cómo distintas cepas generan perfiles diferentes (ésteres vs diacetilo vs carácter neutro).",
+        "DEVELOPING_RESPONSE": "Buen enfoque. Identificas el vínculo levaduras–aromas. Para profundizar, menciona compuestos específicos (ésteres, alcoholes superiores) y la diferencia entre levaduras neutras y aromáticas.",
+        "STRONG_RESPONSE": "Respuesta completa: identifica compuestos aromáticos específicos, distingue entre tipos de levaduras y conecta la elección con el estilo final del vino."
+      },
+      "remediation_path": {
+        "concepts_to_reinforce": [
+          "compuestos aromáticos secundarios en fermentación",
+          "diferencia entre levaduras neutras y aromáticas",
+          "ésteres y su origen en fermentación"
+        ],
+        "causality_to_reinforce": []
+      },
+      "wwj_remediation": null,
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "official_wset_question": false,
+        "training_item_only": true
+      }
+    },
+    {
+      "item_id": "OR_007",
+      "source_item_id": "wset3_804",
+      "source_question_id": "804",
+      "question_text": "Explique cómo el drenaje del suelo puede influir en el vigor de la vid y en el estilo del vino.",
+      "ra_id": "RA1",
+      "topic": "drenaje de suelo y vigor",
+      "expected_concepts": [
+        "buen drenaje restringe disponibilidad de agua",
+        "estrés hídrico moderado reduce vigor vegetativo",
+        "menor vigor concentra energía en el fruto",
+        "bayas más pequeñas y concentradas",
+        "vinos con mayor concentración de compuestos",
+        "suelos con mal drenaje favorecen vigor excesivo"
+      ],
+      "causal_chain_target": [
+        "CC_SOIL_DRAINAGE_VINE_VIGOUR"
+      ],
+      "response_depth_target": "developing",
+      "feedback_profile": {
+        "FOUNDATIONAL_RESPONSE": "Mencionas el drenaje del suelo pero no explicas el mecanismo causal completo: drenaje → disponibilidad de agua → vigor de la vid → concentración de bayas → estilo del vino. Necesitas conectar estos eslabones.",
+        "DEVELOPING_RESPONSE": "Buen intento. Conectas el drenaje con el vigor. Para completar, explica cómo el menor vigor concentra la energía de la vid en el fruto y qué efectos tiene en el estilo del vino.",
+        "STRONG_RESPONSE": "Respuesta completa que articula la cadena causal drenaje → agua → vigor → concentración → estilo."
+      },
+      "remediation_path": {
+        "concepts_to_reinforce": [
+          "relación drenaje–disponibilidad hídrica",
+          "estrés hídrico moderado y vigor",
+          "relación vigor–concentración–estilo"
+        ],
+        "causality_to_reinforce": [
+          "CC_SOIL_DRAINAGE_VINE_VIGOUR"
+        ]
+      },
+      "wwj_remediation": null,
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "official_wset_question": false,
+        "training_item_only": true
+      }
+    },
+    {
+      "item_id": "OR_008",
+      "source_item_id": "wset3_805",
+      "source_question_id": "805",
+      "question_text": "Compare cómo la elección de roble americano o francés puede afectar los aromas, el tanino y la integración del roble en el vino.",
+      "ra_id": "RA1",
+      "topic": "roble americano vs francés",
+      "expected_concepts": [
+        "roble americano: grano más abierto, mayor extracción de aromas",
+        "roble americano: notas de coco, vainilla, eneldo más pronunciadas",
+        "roble francés: grano más fino, extracción más sutil",
+        "roble francés: notas especiadas y tostadas más elegantes",
+        "tanino de roble americano más duro inicialmente",
+        "micro-oxigenación diferente según porosidad del grano",
+        "integración más rápida del roble americano en algunos estilos"
+      ],
+      "causal_chain_target": [
+        "CC_OAK_FLAVOUR",
+        "CC_OAK_TANNIN",
+        "CC_OAK_MICROOX"
+      ],
+      "response_depth_target": "strong",
+      "feedback_profile": {
+        "FOUNDATIONAL_RESPONSE": "Mencionas diferencias entre roble americano y francés, pero necesitas especificar el mecanismo (grano abierto vs fino), los compuestos aromáticos distintos (coco y vainilla vs especias) y el impacto diferente en el tanino y la micro-oxigenación.",
+        "DEVELOPING_RESPONSE": "Buen enfoque comparativo. Para llegar a strong, profundiza en cómo la estructura del grano determina la tasa de extracción y cómo esto afecta la integración del roble según el estilo de vino.",
+        "STRONG_RESPONSE": "Respuesta completa: compara los mecanismos de extracción, los perfiles aromáticos y el impacto en tanino y micro-oxigenación de cada tipo de roble."
+      },
+      "remediation_path": {
+        "concepts_to_reinforce": [
+          "estructura del grano de roble y extracción",
+          "compuestos aromáticos del roble americano vs francés",
+          "taninos de roble y micro-oxigenación"
+        ],
+        "causality_to_reinforce": [
+          "CC_OAK_FLAVOUR",
+          "CC_OAK_TANNIN",
+          "CC_OAK_MICROOX"
+        ]
+      },
+      "wwj_remediation": [
+        "WSET_Level_3_Wines_-_Understanding_the_Common_Elements_of_Winemaking_Part-0005",
+        "WSET_Level_3_Wines_-_Understanding_the_Common_Elements_of_Winemaking_Part-0006",
+        "How_to_assess_the_quality_of_a_wine_for_WSET_Level_3-0000",
+        "How_to_assess_the_quality_of_a_wine_for_WSET_Level_3-0004",
+        "Red_Wine_Extraction_Techniques_Advanced_Version_useful_for_WSET_L3_and_L4-0000"
+      ],
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "official_wset_question": false,
+        "training_item_only": true
+      }
+    },
+    {
+      "item_id": "OR_009",
+      "source_item_id": "wset3_806",
+      "source_question_id": "806",
+      "question_text": "Describa dos técnicas de manejo del dosel (canopy management) y sus beneficios.",
+      "ra_id": "RA1",
+      "topic": "manejo del dosel",
+      "expected_concepts": [
+        "deshojar (leaf removal): mayor exposición solar y aireación de racimos",
+        "deshojado reduce humedad y riesgo de enfermedades fúngicas",
+        "poda en verde (green harvest): reducción de carga de fruta",
+        "poda en verde concentra compuestos en las bayas restantes",
+        "levantamiento de pámpanos (shoot positioning)",
+        "mejora de madurez y sanidad de la uva"
+      ],
+      "causal_chain_target": [],
+      "response_depth_target": "developing",
+      "feedback_profile": {
+        "FOUNDATIONAL_RESPONSE": "Mencionas técnicas de dosel pero sin explicar el beneficio. Necesitas describir la técnica específica (qué se hace) y el resultado (por qué beneficia la maduración o la sanidad).",
+        "DEVELOPING_RESPONSE": "Describes las técnicas correctamente. Para completar, conecta cada técnica con su mecanismo: cómo el deshojado reduce la humedad y mejora la exposición, o cómo la poda en verde concentra compuestos.",
+        "STRONG_RESPONSE": "Respuesta completa: describe dos técnicas con su mecanismo causal y el beneficio concreto sobre madurez, sanidad o concentración."
+      },
+      "remediation_path": {
+        "concepts_to_reinforce": [
+          "deshojado: exposición solar y reducción de enfermedades",
+          "poda en verde: concentración de compuestos",
+          "relación dosel–microclima–sanidad"
+        ],
+        "causality_to_reinforce": []
+      },
+      "wwj_remediation": null,
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "official_wset_question": false,
+        "training_item_only": true
+      }
+    },
+    {
+      "item_id": "OR_010",
+      "source_item_id": "wset3_807",
+      "source_question_id": "807",
+      "question_text": "Explique cómo el riego y el manejo del dosel pueden reducir los efectos de la sequía o del calor extremo sobre la maduración.",
+      "ra_id": "RA1",
+      "topic": "riego y dosel ante estrés climático",
+      "expected_concepts": [
+        "riego de precisión evita estrés hídrico excesivo",
+        "mantenimiento de la función fotosintética en calor extremo",
+        "deshojado en la cara este reduce exposición al calor de la tarde",
+        "dosel proporciona sombra que modera la temperatura del racimo",
+        "balance entre madurez y preservación de acidez",
+        "riego excesivo puede causar vigor y dilución"
+      ],
+      "causal_chain_target": [],
+      "response_depth_target": "strong",
+      "feedback_profile": {
+        "FOUNDATIONAL_RESPONSE": "Mencionas el riego y el dosel pero sin explicar cómo cada uno actúa sobre el problema del calor o la sequía. Necesitas conectar cada práctica con su mecanismo de protección (riego → hidratación → función fotosintética; dosel → sombra → temperatura del racimo).",
+        "DEVELOPING_RESPONSE": "Buen enfoque. Cubre uno de los dos mecanismos. Para una respuesta strong, explica ambos (riego y dosel) con sus mecanismos específicos y menciona el riesgo de exceso de riego (dilución).",
+        "STRONG_RESPONSE": "Respuesta completa que explica riego y dosel como complementos, con el mecanismo de cada uno y las limitaciones del exceso."
+      },
+      "remediation_path": {
+        "concepts_to_reinforce": [
+          "riego de precisión vs estrés hídrico",
+          "gestión del dosel para moderar temperatura del racimo",
+          "balance acidez-madurez en climas cálidos"
+        ],
+        "causality_to_reinforce": []
+      },
+      "wwj_remediation": null,
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "official_wset_question": false,
+        "training_item_only": true
+      }
+    },
+    {
+      "item_id": "OR_011",
+      "source_item_id": "wset3_808",
+      "source_question_id": "808",
+      "question_text": "Explica por qué la densidad de plantación es un factor clave en la gestión del viñedo y cómo afecta el estilo y costo de producción.",
+      "ra_id": "RA1",
+      "topic": "densidad de plantación",
+      "expected_concepts": [
+        "alta densidad: competencia por agua y nutrientes entre vides",
+        "competencia induce estrés hídrico moderado y mayor concentración",
+        "raíces más profundas en alta densidad",
+        "alta densidad aumenta costo (más plantas, más labores)",
+        "baja densidad: mecanización más fácil, menor costo",
+        "relación densidad–rendimiento–concentración–precio del vino"
+      ],
+      "causal_chain_target": [],
+      "response_depth_target": "strong",
+      "feedback_profile": {
+        "FOUNDATIONAL_RESPONSE": "Mencionas la densidad pero sin explicar el mecanismo económico o el efecto sobre el estilo. Necesitas articular: alta densidad → competencia → estrés → concentración → calidad potencial; y: más plantas → mayor costo de establecimiento y labor.",
+        "DEVELOPING_RESPONSE": "Buena base. Conectas la densidad con la competencia o el costo. Para strong, integra ambas dimensiones: el efecto de la competencia en el estilo del vino Y el impacto económico de mayor vs menor densidad.",
+        "STRONG_RESPONSE": "Respuesta completa que articula el mecanismo de competencia, el efecto sobre el estilo del vino y la implicación económica de cada elección."
+      },
+      "remediation_path": {
+        "concepts_to_reinforce": [
+          "competencia entre vides por recursos",
+          "relación densidad–profundidad de raíces–concentración",
+          "costes de establecimiento y labor según densidad"
+        ],
+        "causality_to_reinforce": []
+      },
+      "wwj_remediation": null,
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "official_wset_question": false,
+        "training_item_only": true
+      }
+    },
+    {
+      "item_id": "OR_012",
+      "source_item_id": "wset3_809",
+      "source_question_id": "809",
+      "question_text": "Compare el uso de levaduras seleccionadas y levaduras autóctonas en fermentación, considerando control, consistencia, complejidad y riesgo.",
+      "ra_id": "RA1",
+      "topic": "levaduras seleccionadas vs autóctonas",
+      "expected_concepts": [
+        "levaduras seleccionadas: mayor control y consistencia de resultado",
+        "levaduras seleccionadas: perfil aromático predecible",
+        "levaduras autóctonas: mayor complejidad y carácter de terroir",
+        "levaduras autóctonas: mayor riesgo de fermentación atascada",
+        "levaduras autóctonas: producción de compuestos no deseados",
+        "elección condicionada por el estilo objetivo del viticultor"
+      ],
+      "causal_chain_target": [],
+      "response_depth_target": "strong",
+      "feedback_profile": {
+        "FOUNDATIONAL_RESPONSE": "Mencionas los dos tipos de levaduras pero sin comparar sus características en detalle. Una respuesta completa requiere: control vs complejidad, consistencia vs riesgo, y los casos en que cada tipo es preferible.",
+        "DEVELOPING_RESPONSE": "Buena comparación parcial. Cubre control y riesgo. Para strong, añade la dimensión de complejidad aromática vs terroir que ofrecen las autóctonas, y la lógica comercial detrás de cada elección.",
+        "STRONG_RESPONSE": "Respuesta completa que compara los cuatro ejes (control, consistencia, complejidad, riesgo) con ejemplos o contextos de aplicación."
+      },
+      "remediation_path": {
+        "concepts_to_reinforce": [
+          "control de fermentación con levaduras seleccionadas",
+          "carácter de terroir y complejidad en levaduras autóctonas",
+          "riesgos microbiológicos en fermentación espontánea"
+        ],
+        "causality_to_reinforce": []
+      },
+      "wwj_remediation": null,
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "official_wset_question": false,
+        "training_item_only": true
+      }
+    },
+    {
+      "item_id": "OR_013",
+      "source_item_id": "wset3_810",
+      "source_question_id": "810",
+      "question_text": "Analice cómo el estrés hídrico moderado puede reducir el rendimiento, concentrar las bayas e influir potencialmente en el precio del vino.",
+      "ra_id": "RA1",
+      "topic": "estrés hídrico y precio",
+      "expected_concepts": [
+        "estrés hídrico moderado reduce tamaño de bayas",
+        "mayor proporción de piel respecto al volumen total",
+        "concentración de compuestos (color, tanino, azúcar)",
+        "menor rendimiento por hectárea",
+        "menor rendimiento aumenta coste de producción",
+        "mayor concentración puede justificar precio más alto",
+        "límite: estrés severo daña la vid y reduce calidad"
+      ],
+      "causal_chain_target": [],
+      "response_depth_target": "strong",
+      "feedback_profile": {
+        "FOUNDATIONAL_RESPONSE": "Mencionas el estrés hídrico y la concentración pero sin articular la cadena completa. Necesitas conectar: estrés → bayas pequeñas → mayor piel/volumen → concentración → menor rendimiento → mayor coste → precio potencialmente más alto.",
+        "DEVELOPING_RESPONSE": "Buen análisis de la concentración. Para strong, añade el vínculo económico: cómo el menor rendimiento afecta el coste y cómo la mayor concentración puede (pero no automáticamente) justificar un precio premium.",
+        "STRONG_RESPONSE": "Análisis completo: mecanismo físico de concentración, impacto en rendimiento y coste, y lógica de precio premium con la advertencia del estrés excesivo."
+      },
+      "remediation_path": {
+        "concepts_to_reinforce": [
+          "relación tamaño de baya–concentración de compuestos",
+          "rendimiento y coste de producción",
+          "umbrales de estrés hídrico útil vs dañino"
+        ],
+        "causality_to_reinforce": []
+      },
+      "wwj_remediation": null,
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "official_wset_question": false,
+        "training_item_only": true
+      }
+    },
+    {
+      "item_id": "OR_014",
+      "source_item_id": "wset3_811",
+      "source_question_id": "811",
+      "question_text": "Describe cómo la latitud y la altitud interactúan para influir en el estilo del vino en una región de clima cálido.",
+      "ra_id": "RA1",
+      "topic": "latitud y altitud en clima cálido",
+      "expected_concepts": [
+        "latitud baja: mayor irradiación solar y temperaturas cálidas",
+        "altitud compensa el calor mediante temperaturas más bajas",
+        "variación diurna de temperatura en viñedos de altitud",
+        "retención de acidez a mayor altitud",
+        "menor acumulación de azúcar y menor alcohol potencial",
+        "aromas más frescos en vinos de altitud en clima cálido"
+      ],
+      "causal_chain_target": [
+        "CC_COOL_CLIMATE_ACIDITY",
+        "CC_COOL_CLIMATE_ALCOHOL"
+      ],
+      "response_depth_target": "developing",
+      "feedback_profile": {
+        "FOUNDATIONAL_RESPONSE": "Mencionas latitud y altitud, pero sin explicar cómo interactúan. En un clima cálido, la altitud puede compensar el calor de la latitud baja. Necesitas explicar el mecanismo: altitud → menor temperatura → maduración más lenta → acidez y aromas frescos.",
+        "DEVELOPING_RESPONSE": "Buen enfoque sobre la compensación altitudinal. Para profundizar, añade la variación diurna de temperatura como factor adicional que preserva acidez y aromas en climas cálidos a altitud.",
+        "STRONG_RESPONSE": "Respuesta completa: articula la interacción latitud–altitud con sus efectos sobre temperatura, acidez, alcohol y carácter aromático."
+      },
+      "remediation_path": {
+        "concepts_to_reinforce": [
+          "altitud como moderador de temperatura en climas cálidos",
+          "variación diurna y preservación de acidez",
+          "relación altitud–alcohol–acidez–aromas"
+        ],
+        "causality_to_reinforce": [
+          "CC_COOL_CLIMATE_ACIDITY",
+          "CC_COOL_CLIMATE_ALCOHOL"
+        ]
+      },
+      "wwj_remediation": [
+        "WSET_Level_3_Wines_-_Understanding_the_Growing_Environment_-_Climate_Part_1-0000",
+        "WSET_Level_3_Wines_-_Understanding_the_Growing_Environment_-_Climate_Part_1-0001",
+        "WSET_Level_3_Wines_-_Understanding_the_Growing_Environment_-_Climate_Part_1-0002"
+      ],
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "official_wset_question": false,
+        "training_item_only": true
+      }
+    },
+    {
+      "item_id": "OR_015",
+      "source_item_id": "wset3_812",
+      "source_question_id": "812",
+      "question_text": "Explique cómo un estrés hídrico moderado, si no es excesivo, puede influir en el vigor de la vid, el tamaño de las bayas y la concentración de compuestos.",
+      "ra_id": "RA1",
+      "topic": "estrés hídrico moderado y concentración",
+      "expected_concepts": [
+        "estrés hídrico moderado reduce crecimiento vegetativo",
+        "menor vigor concentra energía en el fruto",
+        "bayas más pequeñas con menor contenido de agua",
+        "mayor relación piel/pulpa",
+        "mayor concentración de antocianos, taninos y azúcares",
+        "distinción entre estrés moderado (beneficioso) y severo (dañino)"
+      ],
+      "causal_chain_target": [
+        "CC_SOIL_DRAINAGE_VINE_VIGOUR"
+      ],
+      "response_depth_target": "developing",
+      "feedback_profile": {
+        "FOUNDATIONAL_RESPONSE": "Mencionas el estrés hídrico pero sin articular el mecanismo. Necesitas explicar: estrés moderado → menor crecimiento vegetativo → energía hacia el fruto → bayas más pequeñas → mayor concentración. Y distinguir esto del estrés severo.",
+        "DEVELOPING_RESPONSE": "Buena explicación del mecanismo de concentración. Para profundizar, añade la distinción entre estrés moderado (beneficioso) y severo (daña la fotosíntesis y la maduración).",
+        "STRONG_RESPONSE": "Respuesta completa: articula el mecanismo causal y distingue claramente entre los efectos del estrés moderado y del severo."
+      },
+      "remediation_path": {
+        "concepts_to_reinforce": [
+          "relación vigor–concentración en condiciones de estrés moderado",
+          "relación piel/pulpa y compuestos fenólicos",
+          "umbrales de estrés hídrico en viticultura"
+        ],
+        "causality_to_reinforce": [
+          "CC_SOIL_DRAINAGE_VINE_VIGOUR"
+        ]
+      },
+      "wwj_remediation": null,
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "official_wset_question": false,
+        "training_item_only": true
+      }
+    },
+    {
+      "item_id": "OR_016",
+      "source_item_id": "wset3_813",
+      "source_question_id": "813",
+      "question_text": "Menciona un riesgo enológico del uso de levaduras autóctonas.",
+      "ra_id": "RA1",
+      "topic": "riesgos de levaduras autóctonas",
+      "expected_concepts": [
+        "fermentación atascada (stuck fermentation)",
+        "producción de compuestos no deseados (ácido acético, etil acetato)",
+        "inconsistencia entre cosechas",
+        "menor tolerancia al alcohol de algunas cepas autóctonas"
+      ],
+      "causal_chain_target": [],
+      "response_depth_target": "foundational",
+      "feedback_profile": {
+        "FOUNDATIONAL_RESPONSE": "Menciona un riesgo válido, pero sin explicar por qué ocurre. Por ejemplo: la fermentación atascada ocurre porque las levaduras autóctonas pueden no tolerar altos niveles de alcohol o no ser competitivas frente a otras.",
+        "DEVELOPING_RESPONSE": "Identificas el riesgo y su causa. Para profundizar, añade una consecuencia práctica para el vino resultante.",
+        "STRONG_RESPONSE": "Respuesta completa: identifica el riesgo, explica el mecanismo y la consecuencia sobre el vino."
+      },
+      "remediation_path": {
+        "concepts_to_reinforce": [
+          "tolerancia al alcohol en levaduras",
+          "compuestos producidos en fermentaciones problemáticas",
+          "gestión del riesgo en fermentación espontánea"
+        ],
+        "causality_to_reinforce": []
+      },
+      "wwj_remediation": null,
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "official_wset_question": false,
+        "training_item_only": true
+      }
+    },
+    {
+      "item_id": "OR_017",
+      "source_item_id": "wset3_814",
+      "source_question_id": "814",
+      "question_text": "Justifica por qué un viticultor utilizaría poda en invierno.",
+      "ra_id": "RA1",
+      "topic": "poda de invierno",
+      "expected_concepts": [
+        "control del rendimiento de la vid",
+        "gestión del vigor vegetativo",
+        "determinación del número de yemas productivas",
+        "equilibrio entre producción y calidad",
+        "eliminación de madera vieja o enferma",
+        "preparación de la estructura de la vid para la temporada"
+      ],
+      "causal_chain_target": [],
+      "response_depth_target": "foundational",
+      "feedback_profile": {
+        "FOUNDATIONAL_RESPONSE": "Mencionas la poda pero sin explicar la justificación específica. Necesitas conectar: poda en invierno → control de yemas → control del rendimiento → equilibrio calidad/cantidad.",
+        "DEVELOPING_RESPONSE": "Buen enfoque sobre el control del rendimiento. Para completar, añade el objetivo de la poda sobre la estructura de la vid y la eliminación de madera vieja.",
+        "STRONG_RESPONSE": "Justificación completa: control de rendimiento, gestión del vigor, preparación estructural de la vid para la temporada siguiente."
+      },
+      "remediation_path": {
+        "concepts_to_reinforce": [
+          "relación número de yemas–rendimiento",
+          "equilibrio vegetativo–productivo en la vid",
+          "ciclo de crecimiento anual de la vid"
+        ],
+        "causality_to_reinforce": []
+      },
+      "wwj_remediation": null,
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "official_wset_question": false,
+        "training_item_only": true
+      }
+    },
+    {
+      "item_id": "OR_018",
+      "source_item_id": "wset3_815",
+      "source_question_id": "815",
+      "question_text": "Describe un beneficio técnico de la fermentación en acero inoxidable.",
+      "ra_id": "RA1",
+      "topic": "fermentación en acero inoxidable",
+      "expected_concepts": [
+        "control preciso de temperatura",
+        "fermentación a temperatura baja preserva aromas primarios",
+        "material neutro: no añade aromas al vino",
+        "facilidad de limpieza y control de higiene",
+        "preservación de la frescura y el carácter frutal"
+      ],
+      "causal_chain_target": [],
+      "response_depth_target": "foundational",
+      "feedback_profile": {
+        "FOUNDATIONAL_RESPONSE": "Mencionas un beneficio, pero sin explicar el mecanismo. Por ejemplo: el control de temperatura → fermentación lenta y fría → preservación de aromas volátiles primarios → vino más fresco y frutal.",
+        "DEVELOPING_RESPONSE": "Identificas el beneficio y la causa. Para completar, añade el efecto específico sobre el estilo del vino.",
+        "STRONG_RESPONSE": "Respuesta completa: beneficio técnico identificado, mecanismo explicado y efecto sobre el estilo del vino."
+      },
+      "remediation_path": {
+        "concepts_to_reinforce": [
+          "control de temperatura en fermentación",
+          "aromas primarios y su preservación",
+          "comparación acero inoxidable vs madera como recipiente"
+        ],
+        "causality_to_reinforce": []
+      },
+      "wwj_remediation": null,
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "official_wset_question": false,
+        "training_item_only": true
+      }
+    },
+    {
+      "item_id": "OR_019",
+      "source_item_id": "wset3_816",
+      "source_question_id": "816",
+      "question_text": "Analiza los efectos de la maceración prolongada en la vinificación de vinos tintos desde el punto de vista del estilo y la calidad.",
+      "ra_id": "RA1",
+      "topic": "maceración prolongada",
+      "expected_concepts": [
+        "mayor extracción de antocianos (color)",
+        "mayor extracción de taninos de pepitas y hollejo",
+        "taninos pueden volverse más duros si la extracción es excesiva",
+        "mayor estructura y potencial de envejecimiento",
+        "riesgo de amargor o astringencia excesiva",
+        "adecuación para estilos de guarda, no para vinos de consumo temprano"
+      ],
+      "causal_chain_target": [
+        "CC_MACERATION_EXTRACTION"
+      ],
+      "response_depth_target": "strong",
+      "feedback_profile": {
+        "FOUNDATIONAL_RESPONSE": "Mencionas más color y tanino, pero necesitas analizar los efectos positivos y negativos: mayor extracción puede dar estructura y potencial de envejecimiento, pero el exceso produce amargor o astringencia. La adecuación depende del estilo objetivo.",
+        "DEVELOPING_RESPONSE": "Buen análisis de la extracción. Para strong, añade la distinción entre extracción adecuada (estructura, color) y excesiva (astringencia, amargor), y cómo el tiempo de maceración se usa como herramienta de estilo.",
+        "STRONG_RESPONSE": "Análisis completo: mecanismo de extracción, efectos positivos y negativos, y lógica de estilo que determina la duración de la maceración."
+      },
+      "remediation_path": {
+        "concepts_to_reinforce": [
+          "extracción de antocianos y taninos en maceración",
+          "relación tiempo de maceración–astringencia",
+          "maceración como herramienta de estilo en vinos tintos"
+        ],
+        "causality_to_reinforce": [
+          "CC_MACERATION_EXTRACTION"
+        ]
+      },
+      "wwj_remediation": [
+        "Red_Wine_Extraction_Techniques_Advanced_Version_useful_for_WSET_L3_and_L4-0000",
+        "Red_Wine_Extraction_Techniques_Advanced_Version_useful_for_WSET_L3_and_L4-0001",
+        "Understanding_Red_Wine_Making_for_WSET_Level_3-0000",
+        "How_to_assess_the_quality_of_a_wine_for_WSET_Level_3-0000",
+        "How_to_assess_the_quality_of_a_wine_for_WSET_Level_3-0001",
+        "Red_Wine_Extraction_Techniques_Advanced_Version_useful_for_WSET_L3_and_L4-0003"
+      ],
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "official_wset_question": false,
+        "training_item_only": true
+      }
+    },
+    {
+      "item_id": "OR_020",
+      "source_item_id": "wset3_817",
+      "source_question_id": "817",
+      "question_text": "Compare cómo suelos arenosos y arcillosos pueden afectar la disponibilidad de agua, el vigor de la vid y el estilo del vino.",
+      "ra_id": "RA1",
+      "topic": "suelos arenosos vs arcillosos",
+      "expected_concepts": [
+        "suelo arenoso: buen drenaje, baja retención de agua",
+        "suelo arenoso: estrés hídrico moderado, bayas concentradas",
+        "suelo arcilloso: alta retención de agua",
+        "suelo arcilloso: mayor disponibilidad hídrica, mayor vigor potencial",
+        "mayor vigor puede diluir compuestos y reducir concentración",
+        "suelo arenoso: barrera contra Phylloxera (histórico)"
+      ],
+      "causal_chain_target": [
+        "CC_SOIL_DRAINAGE_VINE_VIGOUR"
+      ],
+      "response_depth_target": "developing",
+      "feedback_profile": {
+        "FOUNDATIONAL_RESPONSE": "Mencionas los tipos de suelo pero sin comparar sus efectos de manera estructurada. Necesitas contrastar: arena (drenaje → estrés → concentración) vs arcilla (retención → vigor → dilución potencial) y el efecto de cada uno en el estilo del vino.",
+        "DEVELOPING_RESPONSE": "Buena comparación sobre drenaje y vigor. Para profundizar, añade cómo el diferente vigor en cada suelo se traduce en características distintas del vino (estructura, concentración, alcohol).",
+        "STRONG_RESPONSE": "Comparación completa: mecanismo de drenaje y retención, efecto sobre vigor, y consecuencias en el estilo del vino para cada tipo de suelo."
+      },
+      "remediation_path": {
+        "concepts_to_reinforce": [
+          "propiedades de drenaje de suelos arenosos vs arcillosos",
+          "relación retención hídrica–vigor–concentración",
+          "efecto del tipo de suelo en el estilo del vino"
+        ],
+        "causality_to_reinforce": [
+          "CC_SOIL_DRAINAGE_VINE_VIGOUR"
+        ]
+      },
+      "wwj_remediation": null,
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "official_wset_question": false,
+        "training_item_only": true
+      }
+    }
+  ]
+}
