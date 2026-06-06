@@ -71,6 +71,7 @@ class OpenResponseSuitabilityTests(unittest.TestCase):
     def test_q14_is_new_strong_candidate_from_cognitive_signals(self) -> None:
         result = self.result_by_source["14"]
         self.assertEqual(result["classification"], "open_response_candidate")
+        self.assertFalse(result["sba_eligible"])
         self.assertTrue(result["signals"]["requires_explanation"])
         self.assertTrue(result["signals"]["requires_causal_chain"])
         self.assertTrue(result["signals"]["answer_boundary_support"])
@@ -87,7 +88,18 @@ class OpenResponseSuitabilityTests(unittest.TestCase):
         result = self.result_by_source["2"]
         self.assertEqual(result["classification"], "sba_only")
         self.assertTrue(result["sba_only"])
+        self.assertTrue(result["sba_eligible"])
         self.assertTrue(result["signals"]["recognition_only_sufficient"])
+
+    def test_public_review_items_remain_explicitly_sba_eligible(self) -> None:
+        public_review = [
+            self.result_by_source[source_id]
+            for source_id in ("356", "421", "464")
+        ]
+        self.assertTrue(
+            all(record["classification"] == "human_review_required" for record in public_review)
+        )
+        self.assertTrue(all(record["sba_eligible"] for record in public_review))
 
     def test_inactive_master_bank_records_do_not_become_candidates(self) -> None:
         inactive = [

@@ -18,11 +18,8 @@ def build_master_bank_utilization_data(
 ) -> dict[str, Any]:
     """Expose aggregate metrics without writing dashboard or learner files."""
     eligibility = build_eligibility_index(master_bank)
-    active_pool = (
-        eligibility["primary_counts"]["public_lab"]
-        + eligibility["primary_counts"]["private_practice"]
-        + eligibility["primary_counts"]["open_response_candidate"]
-    )
+    operational_counts = eligibility["operational_counts"]
+    active_pool = operational_counts["sba_operational_pool"]
     ra_signals = les.get("RA_signals", {})
     topic_signals = les.get("topic_signals", {})
     exposure_signals = les.get("question_exposure_signals", {})
@@ -40,6 +37,16 @@ def build_master_bank_utilization_data(
         "bank": {
             "total_bank_size": len(master_bank.get("items", [])),
             "active_pool": active_pool,
+            "total_master_bank": operational_counts["total_master_bank"],
+            "sba_operational_pool": operational_counts["sba_operational_pool"],
+            "open_response_candidate_pool": operational_counts[
+                "open_response_candidate_pool"
+            ],
+            "open_response_review_pool": operational_counts[
+                "open_response_review_pool"
+            ],
+            "inactive": operational_counts["inactive"],
+            "public_lab": operational_counts["public_lab"],
             "eligibility_primary": copy.deepcopy(eligibility["primary_counts"]),
             "eligibility_categories": copy.deepcopy(eligibility["category_counts"]),
         },

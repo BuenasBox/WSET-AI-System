@@ -16,6 +16,7 @@ from tools.question_generation.master_bank import MASTER_BANK_PATH, SAFE_GOVERNA
 from tools.question_generation.master_bank_eligibility import (
     build_eligibility_index,
     is_session_eligible,
+    load_open_response_suitability_index,
 )
 from tools.question_generation.sba_session_composer import load_master_bank
 
@@ -116,12 +117,17 @@ def compose_master_bank_session(
         include_open_response
         and config.get("composition", {}).get("allow_open_response_candidates", False)
     )
+    suitability_index = load_open_response_suitability_index()
 
     candidates = [
         dict(item)
         for item in bank.get("items", [])
         if isinstance(item, Mapping)
-        and is_session_eligible(item, include_open_response=allow_open)
+        and is_session_eligible(
+            item,
+            include_open_response=allow_open,
+            suitability=suitability_index.get(str(item.get("master_item_id", ""))),
+        )
         and (resolved_ra is None or _curriculum(item).get("ra") == resolved_ra)
     ]
     exposure = _question_exposure_map(learner_state)
@@ -155,7 +161,7 @@ def compose_master_bank_session(
     )
     item_ids = [item["master_item_id"] for item in selected]
     session_id = _session_id(normalized_mode, resolved_ra, item_ids)
-    eligibility = build_eligibility_index(bank)
+    eligibility = build_eligibility_index(bank, suitability_index)
 
     return {
         "schema_version": "full_master_bank_session_v1",
@@ -167,6 +173,7 @@ def compose_master_bank_session(
         "master_bank_size": len(bank.get("items", [])),
         "active_pool_size": len(candidates),
         "eligibility_counts": eligibility["primary_counts"],
+        "operational_pool_counts": eligibility["operational_counts"],
         "selection_policy": copy.deepcopy(diagnostic_blueprint["selection_policy"]),
         "requested_composition": {
             "ra": ra_targets,

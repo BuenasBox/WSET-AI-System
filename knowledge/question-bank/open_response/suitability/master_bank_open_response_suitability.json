@@ -35,6 +35,7 @@
       "classification": "inactive",
       "open_response_candidate": false,
       "sba_only": false,
+      "sba_eligible": false,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -73,6 +74,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -112,6 +114,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -150,6 +153,7 @@
       "classification": "inactive",
       "open_response_candidate": false,
       "sba_only": false,
+      "sba_eligible": false,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -188,6 +192,7 @@
       "classification": "inactive",
       "open_response_candidate": false,
       "sba_only": false,
+      "sba_eligible": false,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -228,6 +233,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -264,6 +270,7 @@
       "classification": "human_review_required",
       "open_response_candidate": false,
       "sba_only": false,
+      "sba_eligible": false,
       "human_review_required": true,
       "signals": {
         "requires_explanation": true,
@@ -301,6 +308,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -337,6 +345,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -374,6 +383,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -411,6 +421,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -448,6 +459,7 @@
       "classification": "inactive",
       "open_response_candidate": false,
       "sba_only": false,
+      "sba_eligible": false,
       "human_review_required": false,
       "signals": {
         "requires_explanation": true,
@@ -489,6 +501,7 @@
       "classification": "inactive",
       "open_response_candidate": false,
       "sba_only": false,
+      "sba_eligible": false,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -527,6 +540,7 @@
       "classification": "open_response_candidate",
       "open_response_candidate": true,
       "sba_only": false,
+      "sba_eligible": false,
       "human_review_required": false,
       "signals": {
         "requires_explanation": true,
@@ -567,6 +581,7 @@
       "classification": "inactive",
       "open_response_candidate": false,
       "sba_only": false,
+      "sba_eligible": false,
       "human_review_required": false,
       "signals": {
         "requires_explanation": true,
@@ -605,6 +620,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -642,6 +658,7 @@
       "classification": "inactive",
       "open_response_candidate": false,
       "sba_only": false,
+      "sba_eligible": false,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -680,6 +697,7 @@
       "classification": "inactive",
       "open_response_candidate": false,
       "sba_only": false,
+      "sba_eligible": false,
       "human_review_required": false,
       "signals": {
         "requires_explanation": true,
@@ -718,6 +736,7 @@
       "classification": "human_review_required",
       "open_response_candidate": false,
       "sba_only": false,
+      "sba_eligible": false,
       "human_review_required": true,
       "signals": {
         "requires_explanation": true,
@@ -755,6 +774,7 @@
       "classification": "inactive",
       "open_response_candidate": false,
       "sba_only": false,
+      "sba_eligible": false,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -791,6 +811,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -827,6 +848,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -864,6 +886,7 @@
       "classification": "human_review_required",
       "open_response_candidate": false,
       "sba_only": false,
+      "sba_eligible": false,
       "human_review_required": true,
       "signals": {
         "requires_explanation": true,
@@ -901,6 +924,7 @@
       "classification": "human_review_required",
       "open_response_candidate": false,
       "sba_only": false,
+      "sba_eligible": false,
       "human_review_required": true,
       "signals": {
         "requires_explanation": false,
@@ -938,6 +962,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -974,6 +999,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -1010,6 +1036,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -1047,6 +1074,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -1083,6 +1111,7 @@
       "classification": "human_review_required",
       "open_response_candidate": false,
       "sba_only": false,
+      "sba_eligible": false,
       "human_review_required": true,
       "signals": {
         "requires_explanation": false,
@@ -1120,6 +1149,7 @@
       "classification": "inactive",
       "open_response_candidate": false,
       "sba_only": false,
+      "sba_eligible": false,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -1156,6 +1186,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -1192,6 +1223,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -1228,6 +1260,7 @@
       "classification": "human_review_required",
       "open_response_candidate": false,
       "sba_only": false,
+      "sba_eligible": false,
       "human_review_required": true,
       "signals": {
         "requires_explanation": true,
@@ -1265,6 +1298,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -1301,6 +1335,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -1337,6 +1372,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -1373,6 +1409,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -1409,6 +1446,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -1445,6 +1483,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -1481,6 +1520,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -1518,6 +1558,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -1554,6 +1595,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -1590,6 +1632,7 @@
       "classification": "human_review_required",
       "open_response_candidate": false,
       "sba_only": false,
+      "sba_eligible": false,
       "human_review_required": true,
       "signals": {
         "requires_explanation": true,
@@ -1627,6 +1670,7 @@
       "classification": "inactive",
       "open_response_candidate": false,
       "sba_only": false,
+      "sba_eligible": false,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -1664,6 +1708,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -1700,6 +1745,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -1736,6 +1782,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -1772,6 +1819,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -1808,6 +1856,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -1844,6 +1893,7 @@
       "classification": "inactive",
       "open_response_candidate": false,
       "sba_only": false,
+      "sba_eligible": false,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -1880,6 +1930,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -1916,6 +1967,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -1952,6 +2004,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -1988,6 +2041,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -2024,6 +2078,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -2060,6 +2115,7 @@
       "classification": "human_review_required",
       "open_response_candidate": false,
       "sba_only": false,
+      "sba_eligible": false,
       "human_review_required": true,
       "signals": {
         "requires_explanation": true,
@@ -2097,6 +2153,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -2133,6 +2190,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -2169,6 +2227,7 @@
       "classification": "human_review_required",
       "open_response_candidate": false,
       "sba_only": false,
+      "sba_eligible": false,
       "human_review_required": true,
       "signals": {
         "requires_explanation": true,
@@ -2207,6 +2266,7 @@
       "classification": "human_review_required",
       "open_response_candidate": false,
       "sba_only": false,
+      "sba_eligible": false,
       "human_review_required": true,
       "signals": {
         "requires_explanation": true,
@@ -2244,6 +2304,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -2280,6 +2341,7 @@
       "classification": "human_review_required",
       "open_response_candidate": false,
       "sba_only": false,
+      "sba_eligible": false,
       "human_review_required": true,
       "signals": {
         "requires_explanation": true,
@@ -2317,6 +2379,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -2353,6 +2416,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -2389,6 +2453,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -2425,6 +2490,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -2461,6 +2527,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -2497,6 +2564,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -2533,6 +2601,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -2569,6 +2638,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -2605,6 +2675,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -2641,6 +2712,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -2677,6 +2749,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -2713,6 +2786,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -2749,6 +2823,7 @@
       "classification": "human_review_required",
       "open_response_candidate": false,
       "sba_only": false,
+      "sba_eligible": false,
       "human_review_required": true,
       "signals": {
         "requires_explanation": true,
@@ -2786,6 +2861,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -2822,6 +2898,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -2859,6 +2936,7 @@
       "classification": "inactive",
       "open_response_candidate": false,
       "sba_only": false,
+      "sba_eligible": false,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -2895,6 +2973,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -2931,6 +3010,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -2967,6 +3047,7 @@
       "classification": "human_review_required",
       "open_response_candidate": false,
       "sba_only": false,
+      "sba_eligible": false,
       "human_review_required": true,
       "signals": {
         "requires_explanation": true,
@@ -3004,6 +3085,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -3040,6 +3122,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -3076,6 +3159,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -3112,6 +3196,7 @@
       "classification": "human_review_required",
       "open_response_candidate": false,
       "sba_only": false,
+      "sba_eligible": false,
       "human_review_required": true,
       "signals": {
         "requires_explanation": true,
@@ -3149,6 +3234,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -3185,6 +3271,7 @@
       "classification": "inactive",
       "open_response_candidate": false,
       "sba_only": false,
+      "sba_eligible": false,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -3221,6 +3308,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -3257,6 +3345,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -3293,6 +3382,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -3329,6 +3419,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -3365,6 +3456,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -3401,6 +3493,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -3437,6 +3530,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -3474,6 +3568,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -3510,6 +3605,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -3546,6 +3642,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -3583,6 +3680,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -3619,6 +3717,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -3655,6 +3754,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -3691,6 +3791,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -3727,6 +3828,7 @@
       "classification": "human_review_required",
       "open_response_candidate": false,
       "sba_only": false,
+      "sba_eligible": false,
       "human_review_required": true,
       "signals": {
         "requires_explanation": false,
@@ -3764,6 +3866,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -3800,6 +3903,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -3836,6 +3940,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -3872,6 +3977,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -3908,6 +4014,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -3944,6 +4051,7 @@
       "classification": "inactive",
       "open_response_candidate": false,
       "sba_only": false,
+      "sba_eligible": false,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -3981,6 +4089,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -4017,6 +4126,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -4053,6 +4163,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -4089,6 +4200,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -4126,6 +4238,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -4163,6 +4276,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -4200,6 +4314,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -4236,6 +4351,7 @@
       "classification": "human_review_required",
       "open_response_candidate": false,
       "sba_only": false,
+      "sba_eligible": false,
       "human_review_required": true,
       "signals": {
         "requires_explanation": false,
@@ -4273,6 +4389,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -4310,6 +4427,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -4346,6 +4464,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -4383,6 +4502,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -4419,6 +4539,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -4455,6 +4576,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -4491,6 +4613,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -4527,6 +4650,7 @@
       "classification": "human_review_required",
       "open_response_candidate": false,
       "sba_only": false,
+      "sba_eligible": false,
       "human_review_required": true,
       "signals": {
         "requires_explanation": true,
@@ -4564,6 +4688,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -4600,6 +4725,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -4636,6 +4762,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -4672,6 +4799,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -4708,6 +4836,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -4745,6 +4874,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -4782,6 +4912,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -4818,6 +4949,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -4855,6 +4987,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -4891,6 +5024,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -4927,6 +5061,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -4963,6 +5098,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -4999,6 +5135,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -5036,6 +5173,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -5072,6 +5210,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -5108,6 +5247,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -5144,6 +5284,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -5180,6 +5321,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -5217,6 +5359,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -5253,6 +5396,7 @@
       "classification": "human_review_required",
       "open_response_candidate": false,
       "sba_only": false,
+      "sba_eligible": false,
       "human_review_required": true,
       "signals": {
         "requires_explanation": false,
@@ -5290,6 +5434,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -5326,6 +5471,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -5362,6 +5508,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -5398,6 +5545,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -5434,6 +5582,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -5470,6 +5619,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -5506,6 +5656,7 @@
       "classification": "human_review_required",
       "open_response_candidate": false,
       "sba_only": false,
+      "sba_eligible": false,
       "human_review_required": true,
       "signals": {
         "requires_explanation": false,
@@ -5544,6 +5695,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -5581,6 +5733,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -5617,6 +5770,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -5654,6 +5808,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -5690,6 +5845,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -5726,6 +5882,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -5762,6 +5919,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -5799,6 +5957,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -5835,6 +5994,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -5872,6 +6032,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -5908,6 +6069,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -5944,6 +6106,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -5981,6 +6144,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -6017,6 +6181,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -6054,6 +6219,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -6090,6 +6256,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -6126,6 +6293,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -6162,6 +6330,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -6199,6 +6368,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -6236,6 +6406,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -6273,6 +6444,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -6309,6 +6481,7 @@
       "classification": "inactive",
       "open_response_candidate": false,
       "sba_only": false,
+      "sba_eligible": false,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -6346,6 +6519,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -6383,6 +6557,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -6419,6 +6594,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -6455,6 +6631,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -6491,6 +6668,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -6528,6 +6706,7 @@
       "classification": "inactive",
       "open_response_candidate": false,
       "sba_only": false,
+      "sba_eligible": false,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -6564,6 +6743,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -6601,6 +6781,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -6637,6 +6818,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -6673,6 +6855,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -6710,6 +6893,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -6747,6 +6931,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -6783,6 +6968,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -6819,6 +7005,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -6855,6 +7042,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -6891,6 +7079,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -6928,6 +7117,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -6964,6 +7154,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -7001,6 +7192,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -7037,6 +7229,7 @@
       "classification": "human_review_required",
       "open_response_candidate": false,
       "sba_only": false,
+      "sba_eligible": false,
       "human_review_required": true,
       "signals": {
         "requires_explanation": true,
@@ -7074,6 +7267,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -7110,6 +7304,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -7147,6 +7342,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -7184,6 +7380,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -7220,6 +7417,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -7256,6 +7454,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -7292,6 +7491,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -7328,6 +7528,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -7364,6 +7565,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -7401,6 +7603,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -7438,6 +7641,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -7475,6 +7679,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -7511,6 +7716,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -7547,6 +7753,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -7583,6 +7790,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -7619,6 +7827,7 @@
       "classification": "human_review_required",
       "open_response_candidate": false,
       "sba_only": false,
+      "sba_eligible": false,
       "human_review_required": true,
       "signals": {
         "requires_explanation": true,
@@ -7656,6 +7865,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -7692,6 +7902,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -7729,6 +7940,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -7765,6 +7977,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -7802,6 +8015,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -7839,6 +8053,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -7875,6 +8090,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -7912,6 +8128,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -7948,6 +8165,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -7984,6 +8202,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -8021,6 +8240,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -8057,6 +8277,7 @@
       "classification": "human_review_required",
       "open_response_candidate": false,
       "sba_only": false,
+      "sba_eligible": false,
       "human_review_required": true,
       "signals": {
         "requires_explanation": true,
@@ -8095,6 +8316,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -8131,6 +8353,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -8168,6 +8391,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -8204,6 +8428,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -8240,6 +8465,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -8277,6 +8503,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -8313,6 +8540,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -8350,6 +8578,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -8386,6 +8615,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -8422,6 +8652,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -8459,6 +8690,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -8495,6 +8727,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -8532,6 +8765,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -8569,6 +8803,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -8605,6 +8840,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -8642,6 +8878,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -8679,6 +8916,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -8715,6 +8953,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -8751,6 +8990,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -8787,6 +9027,7 @@
       "classification": "human_review_required",
       "open_response_candidate": false,
       "sba_only": false,
+      "sba_eligible": false,
       "human_review_required": true,
       "signals": {
         "requires_explanation": true,
@@ -8824,6 +9065,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -8861,6 +9103,7 @@
       "classification": "human_review_required",
       "open_response_candidate": false,
       "sba_only": false,
+      "sba_eligible": false,
       "human_review_required": true,
       "signals": {
         "requires_explanation": true,
@@ -8898,6 +9141,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -8934,6 +9178,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -8970,6 +9215,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -9006,6 +9252,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -9042,6 +9289,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -9078,6 +9326,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -9115,6 +9364,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -9152,6 +9402,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -9188,6 +9439,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -9225,6 +9477,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -9261,6 +9514,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -9297,6 +9551,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -9333,6 +9588,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -9369,6 +9625,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -9405,6 +9662,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -9441,6 +9699,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -9477,6 +9736,7 @@
       "classification": "human_review_required",
       "open_response_candidate": false,
       "sba_only": false,
+      "sba_eligible": false,
       "human_review_required": true,
       "signals": {
         "requires_explanation": true,
@@ -9515,6 +9775,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -9551,6 +9812,7 @@
       "classification": "human_review_required",
       "open_response_candidate": false,
       "sba_only": false,
+      "sba_eligible": false,
       "human_review_required": true,
       "signals": {
         "requires_explanation": false,
@@ -9588,6 +9850,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -9625,6 +9888,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -9661,6 +9925,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -9697,6 +9962,7 @@
       "classification": "human_review_required",
       "open_response_candidate": false,
       "sba_only": false,
+      "sba_eligible": false,
       "human_review_required": true,
       "signals": {
         "requires_explanation": true,
@@ -9735,6 +10001,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -9771,6 +10038,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -9807,6 +10075,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -9844,6 +10113,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -9880,6 +10150,7 @@
       "classification": "human_review_required",
       "open_response_candidate": false,
       "sba_only": false,
+      "sba_eligible": false,
       "human_review_required": true,
       "signals": {
         "requires_explanation": true,
@@ -9917,6 +10188,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -9953,6 +10225,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -9989,6 +10262,7 @@
       "classification": "human_review_required",
       "open_response_candidate": false,
       "sba_only": false,
+      "sba_eligible": false,
       "human_review_required": true,
       "signals": {
         "requires_explanation": true,
@@ -10026,6 +10300,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -10063,6 +10338,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -10099,6 +10375,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -10135,6 +10412,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -10171,6 +10449,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -10208,6 +10487,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -10244,6 +10524,7 @@
       "classification": "human_review_required",
       "open_response_candidate": false,
       "sba_only": false,
+      "sba_eligible": true,
       "human_review_required": true,
       "signals": {
         "requires_explanation": true,
@@ -10282,6 +10563,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -10318,6 +10600,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -10354,6 +10637,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -10390,6 +10674,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -10426,6 +10711,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -10463,6 +10749,7 @@
       "classification": "human_review_required",
       "open_response_candidate": false,
       "sba_only": false,
+      "sba_eligible": false,
       "human_review_required": true,
       "signals": {
         "requires_explanation": true,
@@ -10500,6 +10787,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -10537,6 +10825,7 @@
       "classification": "human_review_required",
       "open_response_candidate": false,
       "sba_only": false,
+      "sba_eligible": false,
       "human_review_required": true,
       "signals": {
         "requires_explanation": false,
@@ -10574,6 +10863,7 @@
       "classification": "human_review_required",
       "open_response_candidate": false,
       "sba_only": false,
+      "sba_eligible": false,
       "human_review_required": true,
       "signals": {
         "requires_explanation": true,
@@ -10611,6 +10901,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -10647,6 +10938,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -10684,6 +10976,7 @@
       "classification": "human_review_required",
       "open_response_candidate": false,
       "sba_only": false,
+      "sba_eligible": false,
       "human_review_required": true,
       "signals": {
         "requires_explanation": false,
@@ -10721,6 +11014,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -10757,6 +11051,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -10794,6 +11089,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -10831,6 +11127,7 @@
       "classification": "human_review_required",
       "open_response_candidate": false,
       "sba_only": false,
+      "sba_eligible": false,
       "human_review_required": true,
       "signals": {
         "requires_explanation": true,
@@ -10868,6 +11165,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -10904,6 +11202,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -10941,6 +11240,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -10977,6 +11277,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -11013,6 +11314,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -11049,6 +11351,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -11085,6 +11388,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -11122,6 +11426,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -11158,6 +11463,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -11195,6 +11501,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -11231,6 +11538,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -11267,6 +11575,7 @@
       "classification": "human_review_required",
       "open_response_candidate": false,
       "sba_only": false,
+      "sba_eligible": false,
       "human_review_required": true,
       "signals": {
         "requires_explanation": true,
@@ -11305,6 +11614,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -11341,6 +11651,7 @@
       "classification": "inactive",
       "open_response_candidate": false,
       "sba_only": false,
+      "sba_eligible": false,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -11377,6 +11688,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -11414,6 +11726,7 @@
       "classification": "human_review_required",
       "open_response_candidate": false,
       "sba_only": false,
+      "sba_eligible": false,
       "human_review_required": true,
       "signals": {
         "requires_explanation": true,
@@ -11451,6 +11764,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -11488,6 +11802,7 @@
       "classification": "human_review_required",
       "open_response_candidate": false,
       "sba_only": false,
+      "sba_eligible": false,
       "human_review_required": true,
       "signals": {
         "requires_explanation": false,
@@ -11525,6 +11840,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -11562,6 +11878,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -11598,6 +11915,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -11635,6 +11953,7 @@
       "classification": "human_review_required",
       "open_response_candidate": false,
       "sba_only": false,
+      "sba_eligible": false,
       "human_review_required": true,
       "signals": {
         "requires_explanation": true,
@@ -11673,6 +11992,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -11709,6 +12029,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -11746,6 +12067,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -11783,6 +12105,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -11819,6 +12142,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -11855,6 +12179,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -11892,6 +12217,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -11928,6 +12254,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -11965,6 +12292,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -12001,6 +12329,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -12037,6 +12366,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -12073,6 +12403,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -12110,6 +12441,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -12146,6 +12478,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -12182,6 +12515,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -12219,6 +12553,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -12256,6 +12591,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -12293,6 +12629,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -12330,6 +12667,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -12366,6 +12704,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -12403,6 +12742,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -12439,6 +12779,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -12476,6 +12817,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -12512,6 +12854,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -12548,6 +12891,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -12584,6 +12928,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -12620,6 +12965,7 @@
       "classification": "human_review_required",
       "open_response_candidate": false,
       "sba_only": false,
+      "sba_eligible": true,
       "human_review_required": true,
       "signals": {
         "requires_explanation": true,
@@ -12657,6 +13003,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -12693,6 +13040,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -12730,6 +13078,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -12767,6 +13116,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -12803,6 +13153,7 @@
       "classification": "human_review_required",
       "open_response_candidate": false,
       "sba_only": false,
+      "sba_eligible": false,
       "human_review_required": true,
       "signals": {
         "requires_explanation": true,
@@ -12840,6 +13191,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -12876,6 +13228,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -12912,6 +13265,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -12949,6 +13303,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -12985,6 +13340,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -13021,6 +13377,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -13057,6 +13414,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -13093,6 +13451,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -13129,6 +13488,7 @@
       "classification": "human_review_required",
       "open_response_candidate": false,
       "sba_only": false,
+      "sba_eligible": false,
       "human_review_required": true,
       "signals": {
         "requires_explanation": true,
@@ -13166,6 +13526,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -13202,6 +13563,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -13238,6 +13600,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -13275,6 +13638,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -13312,6 +13676,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -13348,6 +13713,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -13384,6 +13750,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -13420,6 +13787,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -13456,6 +13824,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -13492,6 +13861,7 @@
       "classification": "human_review_required",
       "open_response_candidate": false,
       "sba_only": false,
+      "sba_eligible": false,
       "human_review_required": true,
       "signals": {
         "requires_explanation": true,
@@ -13529,6 +13899,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -13565,6 +13936,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -13601,6 +13973,7 @@
       "classification": "human_review_required",
       "open_response_candidate": false,
       "sba_only": false,
+      "sba_eligible": false,
       "human_review_required": true,
       "signals": {
         "requires_explanation": true,
@@ -13638,6 +14011,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -13675,6 +14049,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -13711,6 +14086,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -13747,6 +14123,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -13784,6 +14161,7 @@
       "classification": "human_review_required",
       "open_response_candidate": false,
       "sba_only": false,
+      "sba_eligible": false,
       "human_review_required": true,
       "signals": {
         "requires_explanation": true,
@@ -13821,6 +14199,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -13857,6 +14236,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -13893,6 +14273,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -13929,6 +14310,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -13965,6 +14347,7 @@
       "classification": "human_review_required",
       "open_response_candidate": false,
       "sba_only": false,
+      "sba_eligible": true,
       "human_review_required": true,
       "signals": {
         "requires_explanation": true,
@@ -14002,6 +14385,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -14039,6 +14423,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -14075,6 +14460,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -14111,6 +14497,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -14147,6 +14534,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -14183,6 +14571,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -14219,6 +14608,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -14255,6 +14645,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -14291,6 +14682,7 @@
       "classification": "human_review_required",
       "open_response_candidate": false,
       "sba_only": false,
+      "sba_eligible": false,
       "human_review_required": true,
       "signals": {
         "requires_explanation": true,
@@ -14328,6 +14720,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -14364,6 +14757,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -14400,6 +14794,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -14436,6 +14831,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -14472,6 +14868,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -14509,6 +14906,7 @@
       "classification": "human_review_required",
       "open_response_candidate": false,
       "sba_only": false,
+      "sba_eligible": false,
       "human_review_required": true,
       "signals": {
         "requires_explanation": true,
@@ -14546,6 +14944,7 @@
       "classification": "human_review_required",
       "open_response_candidate": false,
       "sba_only": false,
+      "sba_eligible": false,
       "human_review_required": true,
       "signals": {
         "requires_explanation": true,
@@ -14583,6 +14982,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -14619,6 +15019,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -14655,6 +15056,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -14692,6 +15094,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -14728,6 +15131,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -14764,6 +15168,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -14800,6 +15205,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -14836,6 +15242,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -14873,6 +15280,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -14910,6 +15318,7 @@
       "classification": "human_review_required",
       "open_response_candidate": false,
       "sba_only": false,
+      "sba_eligible": false,
       "human_review_required": true,
       "signals": {
         "requires_explanation": true,
@@ -14947,6 +15356,7 @@
       "classification": "human_review_required",
       "open_response_candidate": false,
       "sba_only": false,
+      "sba_eligible": false,
       "human_review_required": true,
       "signals": {
         "requires_explanation": true,
@@ -14984,6 +15394,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -15020,6 +15431,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -15056,6 +15468,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -15092,6 +15505,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -15128,6 +15542,7 @@
       "classification": "human_review_required",
       "open_response_candidate": false,
       "sba_only": false,
+      "sba_eligible": false,
       "human_review_required": true,
       "signals": {
         "requires_explanation": true,
@@ -15165,6 +15580,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -15202,6 +15618,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -15238,6 +15655,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -15275,6 +15693,7 @@
       "classification": "human_review_required",
       "open_response_candidate": false,
       "sba_only": false,
+      "sba_eligible": false,
       "human_review_required": true,
       "signals": {
         "requires_explanation": true,
@@ -15312,6 +15731,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -15348,6 +15768,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -15384,6 +15805,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -15420,6 +15842,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -15456,6 +15879,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -15492,6 +15916,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -15528,6 +15953,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -15564,6 +15990,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -15600,6 +16027,7 @@
       "classification": "human_review_required",
       "open_response_candidate": false,
       "sba_only": false,
+      "sba_eligible": false,
       "human_review_required": true,
       "signals": {
         "requires_explanation": true,
@@ -15637,6 +16065,7 @@
       "classification": "inactive",
       "open_response_candidate": false,
       "sba_only": false,
+      "sba_eligible": false,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -15673,6 +16102,7 @@
       "classification": "human_review_required",
       "open_response_candidate": false,
       "sba_only": false,
+      "sba_eligible": false,
       "human_review_required": true,
       "signals": {
         "requires_explanation": true,
@@ -15710,6 +16140,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -15746,6 +16177,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -15782,6 +16214,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -15818,6 +16251,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -15854,6 +16288,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -15890,6 +16325,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -15926,6 +16362,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -15963,6 +16400,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -15999,6 +16437,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -16036,6 +16475,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -16072,6 +16512,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -16109,6 +16550,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -16145,6 +16587,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -16182,6 +16625,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -16219,6 +16663,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -16256,6 +16701,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -16292,6 +16738,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -16329,6 +16776,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -16366,6 +16814,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -16403,6 +16852,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -16439,6 +16889,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -16475,6 +16926,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -16511,6 +16963,7 @@
       "classification": "human_review_required",
       "open_response_candidate": false,
       "sba_only": false,
+      "sba_eligible": false,
       "human_review_required": true,
       "signals": {
         "requires_explanation": true,
@@ -16548,6 +17001,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -16584,6 +17038,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -16620,6 +17075,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -16656,6 +17112,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -16692,6 +17149,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -16728,6 +17186,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -16764,6 +17223,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -16800,6 +17260,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -16836,6 +17297,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -16872,6 +17334,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -16908,6 +17371,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -16944,6 +17408,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -16980,6 +17445,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -17016,6 +17482,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -17052,6 +17519,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -17088,6 +17556,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -17124,6 +17593,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -17160,6 +17630,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -17197,6 +17668,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -17234,6 +17706,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -17271,6 +17744,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -17308,6 +17782,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -17345,6 +17820,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -17382,6 +17858,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -17418,6 +17895,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -17455,6 +17933,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -17492,6 +17971,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -17529,6 +18009,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -17566,6 +18047,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -17603,6 +18085,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -17639,6 +18122,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -17675,6 +18159,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -17711,6 +18196,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -17747,6 +18233,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -17783,6 +18270,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -17819,6 +18307,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -17855,6 +18344,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -17891,6 +18381,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -17927,6 +18418,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -17963,6 +18455,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -17999,6 +18492,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -18035,6 +18529,7 @@
       "classification": "human_review_required",
       "open_response_candidate": false,
       "sba_only": false,
+      "sba_eligible": false,
       "human_review_required": true,
       "signals": {
         "requires_explanation": true,
@@ -18073,6 +18568,7 @@
       "classification": "human_review_required",
       "open_response_candidate": false,
       "sba_only": false,
+      "sba_eligible": false,
       "human_review_required": true,
       "signals": {
         "requires_explanation": true,
@@ -18110,6 +18606,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -18146,6 +18643,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -18182,6 +18680,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -18219,6 +18718,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -18255,6 +18755,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -18291,6 +18792,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -18327,6 +18829,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -18363,6 +18866,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -18399,6 +18903,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -18435,6 +18940,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -18471,6 +18977,7 @@
       "classification": "human_review_required",
       "open_response_candidate": false,
       "sba_only": false,
+      "sba_eligible": false,
       "human_review_required": true,
       "signals": {
         "requires_explanation": true,
@@ -18508,6 +19015,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -18544,6 +19052,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -18580,6 +19089,7 @@
       "classification": "human_review_required",
       "open_response_candidate": false,
       "sba_only": false,
+      "sba_eligible": false,
       "human_review_required": true,
       "signals": {
         "requires_explanation": true,
@@ -18617,6 +19127,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -18653,6 +19164,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -18689,6 +19201,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -18725,6 +19238,7 @@
       "classification": "human_review_required",
       "open_response_candidate": false,
       "sba_only": false,
+      "sba_eligible": false,
       "human_review_required": true,
       "signals": {
         "requires_explanation": true,
@@ -18762,6 +19276,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -18798,6 +19313,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -18834,6 +19350,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -18870,6 +19387,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -18906,6 +19424,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -18942,6 +19461,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -18978,6 +19498,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -19014,6 +19535,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -19051,6 +19573,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -19088,6 +19611,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -19124,6 +19648,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -19160,6 +19685,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -19196,6 +19722,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -19232,6 +19759,7 @@
       "classification": "human_review_required",
       "open_response_candidate": false,
       "sba_only": false,
+      "sba_eligible": false,
       "human_review_required": true,
       "signals": {
         "requires_explanation": true,
@@ -19269,6 +19797,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -19305,6 +19834,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -19341,6 +19871,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -19377,6 +19908,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -19413,6 +19945,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -19449,6 +19982,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -19485,6 +20019,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -19521,6 +20056,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -19557,6 +20093,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -19593,6 +20130,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -19629,6 +20167,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -19665,6 +20204,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -19701,6 +20241,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -19737,6 +20278,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -19773,6 +20315,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -19809,6 +20352,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -19845,6 +20389,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -19881,6 +20426,7 @@
       "classification": "human_review_required",
       "open_response_candidate": false,
       "sba_only": false,
+      "sba_eligible": false,
       "human_review_required": true,
       "signals": {
         "requires_explanation": true,
@@ -19918,6 +20464,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -19954,6 +20501,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -19990,6 +20538,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -20026,6 +20575,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -20062,6 +20612,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -20098,6 +20649,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -20134,6 +20686,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -20170,6 +20723,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -20206,6 +20760,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -20242,6 +20797,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -20278,6 +20834,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -20314,6 +20871,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -20350,6 +20908,7 @@
       "classification": "open_response_candidate",
       "open_response_candidate": true,
       "sba_only": false,
+      "sba_eligible": false,
       "human_review_required": false,
       "signals": {
         "requires_explanation": true,
@@ -20390,6 +20949,7 @@
       "classification": "open_response_candidate",
       "open_response_candidate": true,
       "sba_only": false,
+      "sba_eligible": false,
       "human_review_required": false,
       "signals": {
         "requires_explanation": true,
@@ -20431,6 +20991,7 @@
       "classification": "open_response_candidate",
       "open_response_candidate": true,
       "sba_only": false,
+      "sba_eligible": false,
       "human_review_required": false,
       "signals": {
         "requires_explanation": true,
@@ -20471,6 +21032,7 @@
       "classification": "open_response_candidate",
       "open_response_candidate": true,
       "sba_only": false,
+      "sba_eligible": false,
       "human_review_required": false,
       "signals": {
         "requires_explanation": true,
@@ -20511,6 +21073,7 @@
       "classification": "open_response_candidate",
       "open_response_candidate": true,
       "sba_only": false,
+      "sba_eligible": false,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -20549,6 +21112,7 @@
       "classification": "open_response_candidate",
       "open_response_candidate": true,
       "sba_only": false,
+      "sba_eligible": false,
       "human_review_required": false,
       "signals": {
         "requires_explanation": true,
@@ -20589,6 +21153,7 @@
       "classification": "open_response_candidate",
       "open_response_candidate": true,
       "sba_only": false,
+      "sba_eligible": false,
       "human_review_required": false,
       "signals": {
         "requires_explanation": true,
@@ -20629,6 +21194,7 @@
       "classification": "open_response_candidate",
       "open_response_candidate": true,
       "sba_only": false,
+      "sba_eligible": false,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -20669,6 +21235,7 @@
       "classification": "open_response_candidate",
       "open_response_candidate": true,
       "sba_only": false,
+      "sba_eligible": false,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -20707,6 +21274,7 @@
       "classification": "open_response_candidate",
       "open_response_candidate": true,
       "sba_only": false,
+      "sba_eligible": false,
       "human_review_required": false,
       "signals": {
         "requires_explanation": true,
@@ -20747,6 +21315,7 @@
       "classification": "open_response_candidate",
       "open_response_candidate": true,
       "sba_only": false,
+      "sba_eligible": false,
       "human_review_required": false,
       "signals": {
         "requires_explanation": true,
@@ -20788,6 +21357,7 @@
       "classification": "open_response_candidate",
       "open_response_candidate": true,
       "sba_only": false,
+      "sba_eligible": false,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -20828,6 +21398,7 @@
       "classification": "open_response_candidate",
       "open_response_candidate": true,
       "sba_only": false,
+      "sba_eligible": false,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -20866,6 +21437,7 @@
       "classification": "open_response_candidate",
       "open_response_candidate": true,
       "sba_only": false,
+      "sba_eligible": false,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -20904,6 +21476,7 @@
       "classification": "open_response_candidate",
       "open_response_candidate": true,
       "sba_only": false,
+      "sba_eligible": false,
       "human_review_required": false,
       "signals": {
         "requires_explanation": true,
@@ -20944,6 +21517,7 @@
       "classification": "open_response_candidate",
       "open_response_candidate": true,
       "sba_only": false,
+      "sba_eligible": false,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -20982,6 +21556,7 @@
       "classification": "open_response_candidate",
       "open_response_candidate": true,
       "sba_only": false,
+      "sba_eligible": false,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -21022,6 +21597,7 @@
       "classification": "open_response_candidate",
       "open_response_candidate": true,
       "sba_only": false,
+      "sba_eligible": false,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -21060,6 +21636,7 @@
       "classification": "open_response_candidate",
       "open_response_candidate": true,
       "sba_only": false,
+      "sba_eligible": false,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -21098,6 +21675,7 @@
       "classification": "open_response_candidate",
       "open_response_candidate": true,
       "sba_only": false,
+      "sba_eligible": false,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -21138,6 +21716,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -21174,6 +21753,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -21210,6 +21790,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -21247,6 +21828,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -21283,6 +21865,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -21319,6 +21902,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -21355,6 +21939,7 @@
       "classification": "human_review_required",
       "open_response_candidate": false,
       "sba_only": false,
+      "sba_eligible": false,
       "human_review_required": true,
       "signals": {
         "requires_explanation": false,
@@ -21392,6 +21977,7 @@
       "classification": "human_review_required",
       "open_response_candidate": false,
       "sba_only": false,
+      "sba_eligible": false,
       "human_review_required": true,
       "signals": {
         "requires_explanation": false,
@@ -21429,6 +22015,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -21465,6 +22052,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -21501,6 +22089,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -21537,6 +22126,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -21573,6 +22163,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -21609,6 +22200,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -21645,6 +22237,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -21682,6 +22275,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -21718,6 +22312,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -21755,6 +22350,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -21791,6 +22387,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -21827,6 +22424,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -21863,6 +22461,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -21899,6 +22498,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -21935,6 +22535,7 @@
       "classification": "human_review_required",
       "open_response_candidate": false,
       "sba_only": false,
+      "sba_eligible": false,
       "human_review_required": true,
       "signals": {
         "requires_explanation": false,
@@ -21972,6 +22573,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -22008,6 +22610,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -22044,6 +22647,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -22080,6 +22684,7 @@
       "classification": "human_review_required",
       "open_response_candidate": false,
       "sba_only": false,
+      "sba_eligible": false,
       "human_review_required": true,
       "signals": {
         "requires_explanation": false,
@@ -22117,6 +22722,7 @@
       "classification": "human_review_required",
       "open_response_candidate": false,
       "sba_only": false,
+      "sba_eligible": false,
       "human_review_required": true,
       "signals": {
         "requires_explanation": false,
@@ -22154,6 +22760,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -22191,6 +22798,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -22227,6 +22835,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -22263,6 +22872,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -22299,6 +22909,7 @@
       "classification": "sba_only",
       "open_response_candidate": false,
       "sba_only": true,
+      "sba_eligible": true,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -22335,6 +22946,7 @@
       "classification": "inactive",
       "open_response_candidate": false,
       "sba_only": false,
+      "sba_eligible": false,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -22371,6 +22983,7 @@
       "classification": "inactive",
       "open_response_candidate": false,
       "sba_only": false,
+      "sba_eligible": false,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -22407,6 +23020,7 @@
       "classification": "inactive",
       "open_response_candidate": false,
       "sba_only": false,
+      "sba_eligible": false,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -22443,6 +23057,7 @@
       "classification": "inactive",
       "open_response_candidate": false,
       "sba_only": false,
+      "sba_eligible": false,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
@@ -22479,6 +23094,7 @@
       "classification": "inactive",
       "open_response_candidate": false,
       "sba_only": false,
+      "sba_eligible": false,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,

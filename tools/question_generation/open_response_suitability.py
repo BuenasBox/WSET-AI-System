@@ -14,7 +14,6 @@ from typing import Any
 
 from tools.constants import PROJECT_ROOT
 from tools.question_generation.master_bank import MASTER_BANK_PATH, SAFE_GOVERNANCE
-from tools.question_generation.master_bank_eligibility import classify_master_item
 
 
 OUTPUT_PATH = Path(
@@ -92,8 +91,7 @@ def classify_open_response_suitability(item: Mapping[str, Any]) -> dict[str, Any
             requires_justification,
         )
     )
-    eligibility = classify_master_item(item)
-    inactive = eligibility["primary_category"] == "inactive"
+    inactive = _is_inactive_master_item(item)
 
     if inactive:
         classification = "inactive"
@@ -120,6 +118,7 @@ def classify_open_response_suitability(item: Mapping[str, Any]) -> dict[str, Any
         confidence = "high" if cognitive_demand_count == 0 else "medium"
 
     recognition_only_sufficient = classification == "sba_only"
+    sba_eligible = classification == "sba_only" or bool(status.get("public_lab"))
     evidence = _evidence(
         question_type=question_type,
         review_state=review_state,
@@ -138,6 +137,7 @@ def classify_open_response_suitability(item: Mapping[str, Any]) -> dict[str, Any
         "classification": classification,
         "open_response_candidate": classification == "open_response_candidate",
         "sba_only": classification == "sba_only",
+        "sba_eligible": sba_eligible,
         "human_review_required": classification == "human_review_required",
         "signals": {
             "requires_explanation": requires_explanation,
@@ -233,6 +233,8 @@ def validate_open_response_suitability_report(payload: Any) -> list[str]:
             errors.append(f"{item_id}: candidate flag mismatch")
         if bool(record.get("sba_only")) != (classification == "sba_only"):
             errors.append(f"{item_id}: sba_only flag mismatch")
+        if not isinstance(record.get("sba_eligible"), bool):
+            errors.append(f"{item_id}: sba_eligible must be boolean")
     if len(ids) != len(set(ids)):
         errors.append("master_item_id values must be unique")
     expected_counts = payload.get("classification_counts")
@@ -331,6 +333,28 @@ def _string_list(value: Any) -> list[str]:
 
 def _mapping(value: Any) -> Mapping[str, Any]:
     return value if isinstance(value, Mapping) else {}
+
+
+def _is_inactive_master_item(item: Mapping[str, Any]) -> bool:
+    status = _mapping(item.get("status"))
+    review_state = str(status.get("review_state", "")).strip()
+    if review_state in INACTIVE_REVIEW_STATES:
+        return True
+    if item.get("governance") != SAFE_GOVERNANCE:
+        return True
+    if not str(item.get("master_item_id", "")).strip():
+        return True
+    if not str(item.get("stem", "")).strip():
+        return True
+    question_type = item.get("question_type")
+    if question_type == "open_response":
+        return False
+    if question_type != "single_best_answer":
+        return True
+    source_content = _mapping(item.get("source_content"))
+    options = _mapping(source_content.get("options"))
+    answer = str(source_content.get("correct_answer_letter", "")).strip().upper()
+    return set(options) != {"A", "B", "C", "D"} or answer not in options
 
 
 def _load_master_bank(root: Path) -> dict[str, Any]:
