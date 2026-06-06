@@ -149,6 +149,27 @@ class SelfEvalLoopTests(unittest.TestCase):
 
         self.assertIn("missing_causal_link", comparison["failure_labels"])
 
+    def test_viticulture_competition_chain_is_recognized(self):
+        question = {
+            **_question(),
+            "question_type": "theory",
+            "expected_keywords": [],
+            "expected_causal_links": [],
+        }
+        comparison = compare_answer(
+            question,
+            (
+                "Una densidad alta aumenta la competencia entre cepas por agua y nutrientes; "
+                "porque cada vid dispone de menos recursos, disminuye su vigor y por tanto "
+                "aumenta la concentración de la fruta."
+            ),
+            {"retrieved_context": [{"context_type": "retrieval_sandbox_chunk"}]},
+            strictness="hard",
+        )
+
+        self.assertNotIn("missing_causal_link", comparison["failure_labels"])
+        self.assertNotIn("shallow_reasoning", comparison["failure_labels"])
+
     def test_sat_weakness_detection(self):
         question = {
             **_question(),

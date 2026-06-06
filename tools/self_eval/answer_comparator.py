@@ -460,8 +460,8 @@ def _has_cause_mechanism_effect(normalized: str, strictness: str) -> bool:
         return True
     connectors = ("because", "therefore", "leads to", "results in", "causes", "increases", "decreases", "porque", "por eso", "por tanto", "conduce", "provoca", "aumenta", "disminuye", "→")
     connector_count = sum(1 for term in connectors if term in normalized)
-    mechanism_terms = ("mechanism", "mecanismo", "maduración", "retención", "fermentación", "oxidación", "flor", "extracción", "phenolic", "fenólico", "ácido", "astringencia")
-    effect_terms = ("therefore", "por tanto", "results", "resultado", "frescura", "quality", "calidad", "estructura", "length", "complexity", "alcohol", "sweetness")
+    mechanism_terms = ("mechanism", "mecanismo", "maduración", "retención", "fermentación", "oxidación", "flor", "extracción", "phenolic", "fenólico", "ácido", "astringencia", "competencia", "vigor")
+    effect_terms = ("therefore", "por tanto", "results", "resultado", "frescura", "quality", "calidad", "estructura", "length", "complexity", "alcohol", "sweetness", "concentración")
     required_connectors = 2 if strictness == "brutal" else 1
     return connector_count >= required_connectors and any(term in normalized for term in mechanism_terms) and any(term in normalized for term in effect_terms)
 
