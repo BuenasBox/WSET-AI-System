@@ -40,6 +40,20 @@ This system is deterministic. All outputs must be reproducible.
 
 ## CURRENT ARCHITECTURE
 
+### Production dashboard source of truth
+
+```
+Production dashboard source = BuenasBox/epistemiclab-dashboard
+Operational domain = epistemiclab.dpdns.org
+Do not audit origin/gh-pages as production source unless explicitly reactivated.
+```
+
+`WSET-AI-System/frontend/architecture-dashboard/` is the canonical development
+source. Production is published from the `main` branch of the separate public
+repository `BuenasBox/epistemiclab-dashboard`. The `origin/gh-pages` branch in
+`WSET-AI-System` is not an active production source and must be treated as a
+historical deployment artifact unless a later, explicit decision reactivates it.
+
 ### Retrieval layer
 `tools/retrieval/tutor_retrieval_sandbox.py` — active deterministic retrieval engine. Loads Wine With Jimmy chunks, official WSET extracted chunks, golden tutor chunks, consolidated dictionary terms, and knowledge-map nodes. Performs query classification, domain expansion, SAT observation expansion, scoring, source diversity selection, governance filtering, and matched causal-chain extraction. Config: `knowledge/config/domain_expansions.json`, `knowledge/config/retrieval_config.json`. Official chunk creation: `tools/retrieval/official_wset_chunks.py`.
 

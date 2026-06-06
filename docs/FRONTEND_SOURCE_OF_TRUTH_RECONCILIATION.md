@@ -31,6 +31,25 @@ https://epistemiclab.dpdns.org/diagnostic-sba/        ← PRODUCCIÓN
 **El único repo que alimenta la publicación es `BuenasBox/epistemiclab-dashboard`.**  
 `WSET-AI-System` es el repositorio de desarrollo; `epistemiclab-dashboard` es el artefacto de publicación.
 
+### Regla operativa prevalente
+
+```text
+Production dashboard source = BuenasBox/epistemiclab-dashboard
+Operational domain = epistemiclab.dpdns.org
+Do not audit origin/gh-pages as production source unless explicitly reactivated.
+```
+
+Esta regla prevalece sobre planes de staging, reportes o contratos históricos
+que describan `origin/gh-pages` como rama de publicación. Para una auditoría de
+producción, la evidencia válida debe proceder de:
+
+1. `BuenasBox/epistemiclab-dashboard`, rama `main`;
+2. la configuración GitHub Pages de ese repositorio;
+3. el contenido servido por `https://epistemiclab.dpdns.org/`.
+
+La existencia o actualización de `WSET-AI-System/origin/gh-pages` no demuestra
+que producción haya sido actualizada.
+
 ---
 
 ## 2. Verificación de sincronización por SHA
@@ -115,7 +134,7 @@ El documento `docs/FRONTEND_STATE_AUDIT.md` (generado el mismo día) reportó tr
 
 ## 6. Definición de fuente única para futuras auditorías
 
-> **Regla:** Toda auditoría de frontend que reporte una brecha de producción debe demostrar que el archivo en cuestión existe en `epistemiclab-dashboard/` (o en `frontend/architecture-dashboard/` con SHA verificable de sync reciente). Archivos en `frontend/diagnostic-sba-v2*/`, `frontend/diagnostic-sba-v*/`, o `frontend/open-response-lab/` son EXPERIMENTAL o LEGACY y no constituyen brechas de producción.
+> **Regla:** Toda auditoría de frontend que reporte una brecha de producción debe demostrar que el archivo en cuestión existe en `epistemiclab-dashboard/` (o en `frontend/architecture-dashboard/` con SHA verificable de sync reciente). `origin/gh-pages` no es evidencia de producción salvo reactivación explícita. Archivos en `frontend/diagnostic-sba-v2*/`, `frontend/diagnostic-sba-v*/`, o `frontend/open-response-lab/` son EXPERIMENTAL o LEGACY y no constituyen brechas de producción.
 
 ### Fuentes canónicas por componente
 

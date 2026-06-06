@@ -41,7 +41,9 @@ No mergeadas según la topología Git:
 - `origin/codex/phase-4a3-7-33-remediation-artifacts`
 - `origin/gh-pages`
 
-`origin/gh-pages` es una rama de publicación, no una rama de desarrollo pendiente de fusionar.
+`origin/gh-pages` es un artefacto histórico de publicación, no una rama de
+desarrollo pendiente de fusionar ni la fuente activa de producción. La fuente
+activa es `BuenasBox/epistemiclab-dashboard`, rama `main`.
 
 La rama `phase-4a3-7-33-remediation-artifacts` contiene dos commits que Git no considera mergeados. Sus tres documentos de remediación ya existen en `main`, aparentemente incorporados por otra línea de commits. Queda una diferencia real de tres líneas en `tests/test_structured_question_bank_adapter.py`, donde cambia la expectativa de validación de `question_type`. Debe resolverse explícitamente antes de eliminar la rama.
 
@@ -333,7 +335,11 @@ Resultado real actual:
 
 ### Publicado
 
-`origin/gh-pages`, commit `fae6ad5274e58c038cd638a014afbb6daa5b6cfd`:
+Fuente de producción: `BuenasBox/epistemiclab-dashboard`, rama `main`.
+Dominio operativo: `https://epistemiclab.dpdns.org/`.
+
+No usar `WSET-AI-System/origin/gh-pages` para determinar el estado publicado,
+salvo que exista una decisión posterior que lo reactive explícitamente.
 
 - Cockpit/dashboard raíz: `https://epistemiclab.dpdns.org/` — HTTP 200.
 - Diagnostic SBA: `https://epistemiclab.dpdns.org/diagnostic-sba/` — HTTP 200.
