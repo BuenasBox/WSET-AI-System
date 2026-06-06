@@ -1,0 +1,74 @@
+PHASE 4A.3.9.2 - ADAPTIVE LOOP FINAL IMPLEMENTATION
+Informe de resultado
+======================================================
+
+ESTADO FINAL
+Suite: 1653 OK, 9 skipped
+SBA export dry-run: Public Lab = 36, 0 errores
+Slow Golden: 7/7
+Governance: todos los invariantes intactos
+Snapshots: 35 (sin drift)
+
+ARCHIVOS CREADOS
+1. tools/learner_model/adaptive_signal_consumer.py
+   Consolida señales LES/memory en:
+   reinforcement_targets, progression_targets,
+   review_targets, challenge_targets, avoid_repetition_ids
+
+2. tools/learner_model/adaptive_composer.py
+   compose_adaptive_session_plan() con 5 session modes,
+   priority scoring ordinal (no score), WWJ remediation paths
+
+3. tests/test_adaptive_loop_phase4a392.py
+   59 tests - todos los 18 casos requeridos cubiertos
+
+4. docs/PHASE_4A_3_9_2_ADAPTIVE_LOOP_FINAL_IMPLEMENTATION.md
+   Documentacion completa de la fase
+
+ARCHIVOS MODIFICADOS
+- tools/learner_model/learning_event_runtime.py
+  Añadido persist_learning_event_result()
+  Persistencia con ordenamiento memory-first (atomicidad minima)
+
+TESTS: 59 NUEVOS, TODOS VERDES
+- weak topic genera reinforcement_targets con prioridad alta
+- strong topic genera progression_targets
+- misconception persistente (persistence=True, resolved=False) maxima prioridad
+- causal gap (gap_priority=high) genera causal reinforcement
+- WWJ remediation aparece cuando mc tiene availability=available
+- avoid_repetition_ids excluye items en question_priorities
+- Adaptive Composer modifica orden respecto al pool original
+- Session Composer recibe adaptive_session_plan sin romperse
+- EXPRESS_10: 10 items correctos
+- QUICK_25: 25 items correctos
+- STANDARD_50: 50 items correctos
+- FULL_DIAGNOSTIC: tamaño correcto
+- RA_FOCUS: tamaño correcto
+- process_open_response_attempt retorna shape compatible con SBA
+- Ningun output contiene score, porcentaje, pass/fail,
+  WSET_PASS, WSET_MERIT, WSET_DISTINCTION
+- governance: safe_for_examiner=False, examiner_scoring_allowed=False
+- Public Lab: 36
+- Slow Golden: 7/7
+
+FLUJO COMPLETO IMPLEMENTADO
+LER -> LES/Memory -> Next Session Signals
+-> Adaptive Signal Consumer -> Adaptive Composer v1
+-> Session Composer -> Nueva sesion -> Nuevo evento formativo
+
+RIESGOS PENDIENTES (3)
+1. Session Composer wire-up: question_priorities no se pasa aun
+   al Session Composer. Punto de integracion documentado:
+   ordenar pool por priority_score antes de llamar
+   select_sba_session_items.
+2. FULL_DIAGNOSTIC = STANDARD_50 = 50: diferenciacion pendiente.
+3. Dashboard: conteos de señales adaptativas omitidos.
+   Requiere pipeline basado en ledger, no en LES privado.
+
+CONTEOS CANONICOS CONFIRMADOS
+Master Bank: 616
+SBA operativo: 589
+Open Response: 27
+Review / Inactive / Quarantine: 0
+Public Lab: 36
+======================================================
