@@ -1,0 +1,77 @@
+CI: verde. Run #2 succeeded en 18s. Suite completa, adaptive loop wireup, SBA export: todos green.
+
+======================================================================
+1. CAPACIDADES QUE EL SISTEMA YA TIENE HOY
+======================================================================
+
+Seleccion de sesion adaptativa real. select_sba_session_items() recibe question_priorities y ordena el pool antes de seleccionar. Items debiles llegan primero.
+
+Adaptive Signal Consumer. Lee LES completo (topic_signals, RA_signals, misconception_signals, causal_strength, question_exposure_log) y produce reinforcement_targets, progression_targets, review_targets, challenge_targets, avoid_repetition_ids.
+
+Adaptive Composer. Asigna scores ordinales: MAX=100 misconception persistente no resuelta, URGENT=80 tema muy debil, HIGH=60 causal gap superficial, CHALLENGE=20 item distinction para tema fuerte. Ordena el pool antes de pasarlo al Session Composer.
+
+Loop cerrado en codigo. LER → LES → next_session_signals → consume_adaptive_signals → compose_adaptive_session_plan → question_priorities → select_sba_session_items.
+
+Tracking de LES. Misconceptions con persistencia cross-session y resolution_status. Causal_strength por nodo (superficial/developing/strong). Exposure avoidance evita items vistos 2 o mas veces.
+
+WWJ remediation conectada. Cuando un SBA incorrecto activa un misconception_id, get_remediation_path() devuelve chunk_ids de WWJ al output de remediacion.
+
+Open Response evaluator funcional. evaluate_open_response() produce FOUNDATIONAL_RESPONSE / DEVELOPING_RESPONSE / STRONG_RESPONSE, concept_coverage, causal_coverage. process_open_response_attempt() conecta OR al pipeline LES/cognitive_map con el mismo shape que SBA.
+
+Tutor deterministico operativo. Retrieval + answer_builder para contenido WSET L3.
+
+589 SBA items y 27 OR items disponibles. Public Lab: 36. Dashboard en produccion: epistemiclab.dpdns.org.
+
+======================================================================
+2. CAPACIDADES QUE EL SISTEMA NO TIENE TODAVIA
+======================================================================
+
+No hay UI de sesion adaptativa. El Dashboard muestra las 36 preguntas del Public Lab de forma estatica. No existe un flujo: iniciar sesion adaptativa, ver preguntas ordenadas por LES, registrar respuestas, actualizar LES, sesion siguiente.
+
+No hay recording de intentos desde la UI. Aunque el LER puede procesar intentos, la UI no los captura ni los envia al pipeline.
+
+Un solo learner configurado. El LES esta bajo knowledge/nazareth/. No hay multi-learner, no hay login, no hay LES por estudiante.
+
+FULL_DIAGNOSTIC igual a STANDARD_50. Ambos son 50 items sin diferenciacion. Un diagnostico real deberia samplear por RA.
+
+Strategic Planner inerte. ENABLE_PLANNER_QUERY_EXPANSION = False. ENABLE_PLANNER_CAUSAL_CHAIN_INJECTION = False. Las senales de planned_next_topics no influyen en retrieval.
+
+No hay feedback visible post-sesion. next_session_signals existe en el backend pero no se muestra en ninguna UI.
+
+No hay UI para Open Response. evaluate_open_response() existe pero el estudiante no puede escribir una respuesta y recibirla.
+
+======================================================================
+3. QUE IMPEDIRIA USAR EL SISTEMA HOY CON UN ESTUDIANTE REAL
+======================================================================
+
+Un solo bloqueante real: no hay UI de sesion adaptativa conectada al LES.
+
+El loop adaptativo esta cerrado en codigo pero inaccesible para el estudiante. El estudiante no puede iniciar una sesion de 25 items, responder, y que la siguiente sesion sea diferente por su rendimiento. Todo lo que puede hacer hoy es ver las 36 preguntas estaticas del Public Lab.
+
+Sin eso, el Adaptive Loop es una pieza de ingenieria invisible.
+
+======================================================================
+4. EL CUELLO DE BOTELLA REAL
+======================================================================
+
+No es FULL_DIAGNOSTIC (diferencia marginal).
+No es Dashboard adaptativo (metrica, no flujo).
+No es Open Response end-to-end (util, pero secundario).
+
+El cuello de botella real es la UI Session Flow conectada al LES.
+
+El backend puede producir una sesion adaptativa de 10/25/50 items personalizados en milisegundos. Pero no hay ningun punto de entrada para que un estudiante lo use.
+
+======================================================================
+5. LA UNICA FASE QUE IMPLEMENTARIA AHORA
+======================================================================
+
+Adaptive Session Flow en el Dashboard.
+
+Especificamente: un endpoint o pagina que llame a compose_adaptive_session_plan() con el LES actual del estudiante, muestre la sesion resultante (10 o 25 items) en el Dashboard, registre cada respuesta pasandola al LER para actualizar el LES, y al terminar muestre un resumen de next_session_signals.
+
+Por que: es el unico cambio que convierte el sistema de "loop cerrado en codigo" a "loop cerrado pedagogicamente". Todo lo demas (FULL_DIAGNOSTIC, OR UI, dashboard de metricas) es incremental. Esto es habilitador: sin ello, el resto del trabajo adaptativo no tiene efecto en ningun estudiante real.
+
+El riesgo tecnico es bajo porque todos los componentes existen. Solo falta el cable entre la UI y el pipeline backend.
+
+======================================================================
