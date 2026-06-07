@@ -1,0 +1,30 @@
+name: Test Suite
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: |
+          pip install pydantic python-slugify tenacity tqdm orjson rich openpyxl
+
+      - name: Run full test suite (excluding slow)
+        run: python -m unittest discover -s tests -v 2>&1 | tail -20
+
+      - name: Run adaptive loop wireup tests
+        run: python -m unittest tests.test_adaptive_loop_wireup -v
+
+      - name: SBA export dry-run
+        run: python -m unittest tests.test_static_demo_export_contract -v
