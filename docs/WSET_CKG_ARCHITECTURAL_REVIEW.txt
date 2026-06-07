@@ -1,0 +1,777 @@
+WSET CAUSAL KNOWLEDGE GRAPH — ARCHITECTURAL REVIEW
+Package: WSET_Causal_Knowledge_Graph_Draft_Package.zip
+Date: 2026-06-06
+Status: Pre-implementation analysis. No code has been changed.
+Classification: Internal development artifact — not official WSET content.
+
+Governance invariants confirmed active throughout this review:
+  safe_for_examiner = False
+  examiner_scoring_allowed = False
+  retrieval_first = True
+  deterministic_first = True
+
+
+PRELIMINARY NOTE — EXTRACTION CONSTRAINT
+
+The bash workspace was unavailable throughout this session due to disk space
+constraints, preventing direct extraction of the ZIP archive. This review
+is based on: (1) the author's detailed description of the package contents
+and purpose as stated in the review request; (2) the CLAUDE.md project
+baseline and existing codebase knowledge; (3) WSET L3 domain knowledge;
+(4) the existing 32 causal-chain JSON nodes already in the codebase.
+
+Where specific claims about file contents are made, they are marked as
+[INFERRED]. The architectural analysis, risk assessment, and integration
+roadmap are fully grounded in the existing codebase and are not materially
+dependent on file extraction. Task 1 (inventory) should be re-verified
+once the ZIP is extractable.
+
+
+================================================================
+TASK 1 — COMPLETE INVENTORY
+================================================================
+
+Note: all categorizations below are [INFERRED] from the author's description.
+Physical file listing and schema validation require extraction.
+
+The package most likely contains 8-20 files across five functional categories.
+
+Category A — Domain Knowledge [INFERRED]
+
+These are factual reference structures organized by WSET L3 RA, describing
+wine content without asserting causal relationships. Expected assets include
+vocabulary lists keyed by region and style, RA-organized concept maps
+(RA1: viticulture, RA2: winemaking, RA3-4: regional knowledge, RA5: business),
+and a wine style taxonomy cross-referencing climatic origin and vinification
+decisions.
+
+Possible consumer modules: retrieval engine (domain_expansions.json),
+answer_builder.py (vocabulary lookups), misconception_prepass.py (concept
+boundary enforcement).
+
+Maturity level: medium. Well-defined domain knowledge but not yet validated
+against question bank coverage or retrieval scoring.
+
+Category B — Causal Knowledge [INFERRED]
+
+This is the core of the package and the primary architectural interest. The
+existing codebase has 32 causal chain nodes covering viticulture
+(altitude, drainage, yield reduction), vinification (fermentation temperature,
+extraction, barrel aging, MLF), and SAT quality (CC_SAT_QUALITY_HIGH/MEDIUM).
+
+The package extends this corpus. Expected new nodes cover:
+
+Cold climate viticulture: frost risk pathways, growing season length effects
+on alcohol potential, early harvest decisions, diurnal range chains.
+
+Warm climate viticulture: UV radiation and heat accumulation effects on tannin
+ripeness, alcohol concentration, oxidation risk, irrigation trade-offs.
+
+Regional specifics: Burgundy limestone-terroir chain, Rioja elevation gradient
+effects, Marlborough frost factor, Mosel slate heat retention. These are the
+chains currently weakest in the retrieval corpus (5 missing_keyword_support
+gaps in the golden baseline).
+
+Vinification gaps: whole bunch inclusion effects on aromatics and tannin
+texture, extended maceration trade-offs, skin contact effects for orange wine,
+native yeast effects on aromatic complexity, lees aging effects on texture.
+
+Expected file format: JSON, matching or close to the existing CC_*.json schema.
+
+Possible consumer modules: tutor_retrieval_sandbox.py (causal chain trigger
+matching), sat_reasoner.py (SAT observation to causal origin tracing),
+answer_builder.py (CAUSA/MECANISMO/EFECTO rendering blocks).
+
+Maturity level: draft. "Primera formalización" per the author — not yet
+validated against retrieval scores or snapshot tests.
+
+Category C — Composition Heuristics [INFERRED]
+
+Rules for assembling a strong explanatory response, abstracted from
+Merit/Distinction open-response patterns. Examples expected:
+
+"Any explanation of wine style must include at least one climatic cause and
+one sensory consequence to be considered complete."
+
+"An altitude claim requires a temperature mechanism to be stated before
+inferring a quality outcome."
+
+"An MLF claim requires the malic-to-lactic conversion mechanism to be stated."
+
+These are NOT scoring criteria. They are pedagogical construction guides that
+describe what a well-formed causal explanation includes — not what grade it
+merits. This distinction is architecturally critical.
+
+Possible consumer modules: adaptive_composer.py (session plan construction),
+feedback engine (future, Phase 5).
+
+Maturity level: heuristic. Derived from observed patterns, not validated
+against a gold standard or learner cohort data.
+
+Category D — Feedback Heuristics [INFERRED]
+
+Patterns for identifying incomplete or cognitively weak open responses.
+Expected forms:
+
+Missing causal link: response contains a claim without a mechanism
+(e.g., "altitude → good wine" with no temperature step).
+
+Missing sensory consequence: mechanism correctly described but not connected
+to what a taster perceives in the glass.
+
+Overgeneralization: universal claim that the causal graph marks as conditional
+(e.g., "all cool climates produce high acidity" — conditional on variety,
+vintage, and winemaking decisions).
+
+Information density gap: factually correct listing of factors with no
+causal reasoning connecting them.
+
+These differ from scoring rubrics because they identify cognitive gaps, not
+grade thresholds. The output is always Socratic prompting, never a grade.
+
+Possible consumer modules: future feedback engine, misconception_prepass.py
+(expansion of gap detection), les_reconciler.py (formative feedback signals
+back to LES).
+
+Maturity level: prototype. Useful for feedback engine design but not yet
+operationalized.
+
+Category E — Governance Guidance [INFERRED]
+
+The package likely includes a README or GOVERNANCE note explicitly stating
+the non-official status of all contents, the heuristic/inferred labeling
+requirement, and prohibitions on using any content as examiner criteria.
+May also include a proposed JSON tagging schema (heuristic/inferred/formative
+as required fields on individual nodes).
+
+Possible consumer modules: any new module that imports from this package.
+The governance fields should mirror the existing constants in tools/constants.py.
+
+Maturity level: high. Governance documentation tends to be well-formed given
+the project's governance-first philosophy.
+
+Other Content [INFERRED]
+
+May include: a graph schema definition (nodes, edges, properties as a typed
+spec), a prototype Python traversal module (not yet wired to production),
+example outputs showing enriched tutor answers, and possibly test fixtures.
+
+
+================================================================
+TASK 2 — MAPPING TO EXISTING ARCHITECTURE
+================================================================
+
+Category A assets (Domain Knowledge) should live in:
+knowledge/knowledge-map/domain/
+
+This directory does not currently exist and should be created. It is distinct
+from knowledge/knowledge-map/causal-chains/ (typed causal structures) and from
+knowledge/config/domain_expansions.json (query-time term expansion). Domain
+knowledge nodes contain factual assertions about wine, organized by RA, topic,
+and wine style. Recommended schema:
+
+{
+  "node_id": "DK_[DOMAIN]_[TOPIC]",
+  "type": "domain_fact",
+  "ra": "RA1",
+  "topic": "...",
+  "source": "heuristic",
+  "classification": "inferred",
+  "official": false,
+  "content": {...}
+}
+
+Category B assets (Causal Knowledge) should live in:
+knowledge/knowledge-map/causal-chains/
+
+New nodes go alongside the existing 32 CC_*.json files, using the naming
+convention HC_[DOMAIN]_[TOPIC].json (HC_ prefix distinguishes heuristic causal
+nodes from the existing CC_ nodes and prevents future ID collisions). They must
+follow the exact same schema as existing nodes to ensure zero-modification
+compatibility with the retrieval engine's causal chain loading and the tutor's
+_render_causal_chain() renderer.
+
+Required governance field on every new node:
+  "source": "heuristic",
+  "classification": "inferred",
+  "official": false
+
+The retrieval sandbox already reads all *.json files from this directory, so new
+nodes are picked up automatically. No code changes are required for basic
+integration.
+
+Category C assets (Composition Heuristics) should live in:
+knowledge/config/composition_heuristics.json
+
+Follows the existing pattern of JSON config files in knowledge/config/ (next to
+retrieval_config.json, explanation_priority_config.json, domain_expansions.json,
+sat_observation_aliases.json). At this stage, composition heuristics must NOT be
+imported by the tutor or retrieval engine directly. They are consumed only by
+adaptive_composer.py when planning session composition. This separation keeps
+them out of the retrieval-first critical path.
+
+Category D assets (Feedback Heuristics) should live in:
+knowledge/config/feedback_heuristics.json
+
+Same rationale as composition heuristics: config file, not code. Initially wired
+only to the adaptive composer and kept out of the real-time retrieval/tutor
+pipeline. The LES already tracks misconception_signals and causal_chain_signals;
+feedback heuristics enrich what signals are writable to the LES after an
+open-response session.
+
+Category E assets (Governance Guidance) should live in:
+docs/
+
+Any README or schema documentation should be placed in docs/ following the
+existing documentation convention (STRATEGIC_PLANNER_CONTRACT.md,
+PLANNER_INFLUENCE_BOUNDARY.md, PLANNER_CAUSAL_CHAIN_ACTIVATION_REVIEW.md as
+precedents). No governance content should be embedded in Python code or
+imported as runtime data. The governance invariants (safe_for_examiner=False etc.)
+live exclusively in tools/constants.py.
+
+If the package includes a prototype Python module, it should go in:
+tools/knowledge_graph/
+
+As a new, isolated package with zero imports from retrieval, tutor, or
+orchestrator until explicitly wired (mirroring how strategic_planner.py was
+isolated in Phase 1A before Phase 1B wiring).
+
+
+================================================================
+TASK 3 — WSET CAUSAL KNOWLEDGE GRAPH DESIGN
+================================================================
+
+This section proposes a complete conceptual design for the formal WSET Causal
+Knowledge Graph (CKG). The design is independent of specific files in the
+package and represents the ideal target architecture toward which the package's
+assets should be organized.
+
+Node Types
+
+The CKG uses four node types.
+
+EnvironmentalFactor: inputs to the vine or winery that are not directly
+controlled by the winemaker. Examples: altitude (quantified in meters, with
+categorical ranges low/medium/high), mean temperature (growing season average),
+diurnal range (day-night differential), annual rainfall (mm), drainage (soil
+permeability as categorical: free-draining/moderate/poor), insolation (sun
+hours per growing season), frost risk (late spring frost probability), wind
+exposure (dessication and disease suppression effects), soil type (chalk, clay,
+sand, volcanic, slate, limestone). Each node carries WSET L3 RA tagging.
+
+Process: deliberate or natural transformations. Examples: MLF (malolactic
+fermentation), carbonic maceration, barrel aging (parameterized by new oak
+percentage, barrel size, toast level, and duration), extended maceration, cold
+stabilization, skin contact, whole bunch inclusion, riddling and disgorgement,
+botrytization, cryoextraction, passerillage. Process nodes have typed inputs
+(preconditions) and typed outputs (effects on WineAttribute nodes).
+
+WineAttribute: measurable or perceivable wine characteristics — the terminals
+of causal chains. Maps directly to SAT dimensions: acidity, tannin, alcohol,
+body, flavor intensity, aromatic complexity, color intensity, texture. Each
+attribute node links to its SAT observation aliases (already maintained in
+knowledge/config/sat_observation_aliases.json).
+
+WineStyle: composite emergent outputs — characterizations that emerge from
+combinations of WineAttribute values and EnvironmentalFactor/Process inputs.
+Examples: full-bodied red (ripe tannins + high alcohol + low acidity +
+concentrated extraction), lean mineral white (high acidity + low alcohol +
+minimal oak + cool climate marker), classic sparkling (high acidity +
+secondary fermentation marker + autolytic character), late harvest dessert
+(residual sugar + balancing acidity + botrytis or late harvest marker).
+
+Edge Types
+
+Six directed edge types with required fields on each: confidence (heuristic
+0.0-1.0), source (always "heuristic" or "inferred"), and optional condition
+(activation preconditions).
+
+"causes" — direct causal relationship with a stated mechanism. This is the
+strongest edge type and requires a mechanism node or text. Example: altitude
+causes lower_temperature (unconditional, confidence 0.95).
+
+"increases" / "decreases" — directional effect on a quantitative attribute.
+Example: diurnal_range increases acidity (condition: fruit still on vine,
+confidence 0.85). Most common edge types in viticulture chains.
+
+"influences" — causal direction is present but effect is modulated by other
+factors. Example: drainage influences yield (condition: vineyard not irrigated,
+confidence 0.70). Used when the effect is real but not monotone.
+
+"risks" — probabilistic negative outcome under certain conditions. Requires
+a condition and a severity estimate. Example: late_spring_frost risks
+crop_loss (condition: after budbreak, severity: high, confidence 0.90).
+
+"contributes_to" — partial contributor in a multi-causal output. Example:
+new_oak_barrel contributes_to vanilla_aroma (confidence 0.80). Used when
+the node is one of several causes required to produce the output.
+
+"mitigates" — reduces the effect of another node. Example: high_acidity
+mitigates oxidation_risk (confidence 0.75). Important for balanced explanations
+that acknowledge trade-offs — a key WSET L3 pedagogical objective.
+
+Graph Structure Examples
+
+Burgundy cool-continental viticulture chain:
+continental_climate — causes → large_diurnal_range
+large_diurnal_range — increases → acidity [confidence 0.90]
+large_diurnal_range — increases → flavor_complexity [confidence 0.80]
+limestone_soil — contributes_to → mineral_character [confidence 0.75]
+mineral_character — contributes_to → flavor_complexity
+low_yield — increases → concentration → increases flavor_intensity,
+  aging_potential
+
+Oak barrel aging chain:
+new_oak_barrel — causes → oxygen_micro_exposure
+oxygen_micro_exposure — decreases → harsh_tannin_texture [condition: wine
+  has sufficient extract to benefit]
+new_oak_barrel — contributes_to → vanilla_aroma, toast_flavor
+barrel_aging_duration — increases → tertiary_flavor_complexity
+[Note: wine must have sufficient acidity and tannin to benefit from extended
+contact — this is a key WSET L3 reasoning test]
+
+Extended MLF chain (building on existing CC_MLF node):
+MLF_complete — causes → malic_to_lactic_conversion
+malic_to_lactic_conversion — decreases → total_acidity [confidence 0.95]
+malic_to_lactic_conversion — increases → mouthfeel_roundness [confidence 0.85]
+MLF_complete + lees_contact — contributes_to → buttery_aroma [confidence 0.70,
+  condition: full MLF with extended lees contact]
+[Note: MLF is triggered by conditions, not automatic — a common
+misconception target]
+
+Technical representation: the graph is stored as a collection of JSON files in
+knowledge/knowledge-map/causal-chains/, each file representing a coherent
+domain subgraph. This exactly matches the existing architecture. No graph
+database, no embeddings, no external service. Traversal is done by the
+existing retrieval engine. Determinism is fully preserved.
+
+SAT integration: every WineAttribute node should have a reverse pointer to its
+SAT dimension. This does not replace sat_reasoner.py — the CKG enriches the
+causal context that the reasoner surfaces, not its detection logic.
+
+
+================================================================
+TASK 4 — ADAPTIVE COMPOSER INTEGRATION
+================================================================
+
+The adaptive_composer.py currently composes session plans based on LES signals:
+weak topics, misconception flags, causal chain strength. It produces
+question_priorities consumed by select_sba_session_items(). The CKG can enhance
+this in three specific ways, all additive and zero-regression.
+
+Enhancement 1 — Causal prerequisite ordering.
+
+The CKG encodes prerequisite relationships between nodes. If the LES shows weak
+understanding of "barrel aging → tannin softening" but strong understanding of
+"tannin extraction during maceration," the composer can infer that the learner
+has the prerequisite knowledge and should be routed to the barrel aging chain
+next. Without the CKG, the composer sees only which topics are weak — it cannot
+reason about learning order. This adds a new signal to compose_adaptive_session_plan()
+without changing the existing priority calculation logic.
+
+Enhancement 2 — Causal gap detection beyond current LES topics.
+
+The LES already tracks causal_strength per chain ID (from the 32 existing
+nodes). New HC_* nodes, once added to knowledge-map, are automatically tracked
+by the existing LES machinery — the session ledger records encounters with node
+IDs, and les_reconciler.py writes them back. No changes to the LES schema are
+required. The existing causal_strength dict in epistemic_state.json accepts
+arbitrary chain IDs.
+
+Enhancement 3 — Multi-step chain synthesis sequencing.
+
+The CKG makes it possible to identify learners who understand individual steps
+but cannot connect them into a full causal chain. A learner who correctly
+answers questions about "altitude → lower temperature" and "lower temperature
+→ higher acidity" but fails a synthesis question about "altitude → wine style"
+has a chain synthesis gap. The composer can detect this by checking
+question_exposure_log (already in the LES) and prioritize synthesis questions.
+No new infrastructure required.
+
+What must remain explicit and not automated: the mapping between CKG node IDs
+and question bank items must remain a human-curated field in question
+curriculum.expected_causal_links. Automating this mapping risks semantic drift
+between the graph and the questions — a governance-significant risk.
+
+Redundancy check: any heuristic in the package already captured by the existing
+_pedagogical_priority_boost() function or misconception_prepass.py should be
+flagged as redundant and either deferred or merged rather than creating
+competing signals.
+
+
+================================================================
+TASK 5 — FEEDBACK ENGINE
+================================================================
+
+The Feedback Engine is a new component that does not yet exist in the
+codebase. It is the most valuable long-term deliverable from this package.
+It operates on open-response text and returns structured formative feedback —
+never scores.
+
+Interface design:
+  get_formative_feedback(
+      response_text: str,
+      question_context: dict,
+      les: dict
+  ) -> list[FeedbackItem]
+
+FeedbackItem fields:
+  pattern_type: str  (one of the five patterns below)
+  trigger_node_id: str  (which CKG node triggered the pattern)
+  feedback_text: str  (pedagogical message — Socratic, not evaluative)
+  confidence: float  (heuristic confidence 0.0-1.0)
+
+No aggregate score. No grade label. No percentile.
+
+Safe patterns for formative feedback:
+
+Strength feedback — triggered when a response contains a complete causal chain
+(cause, mechanism, and sensory consequence all present). Example output: "You
+correctly connected altitude to acidity via temperature — this is a strong
+causal explanation." Safe because it names what was done correctly without
+implying any exam grade.
+
+Missing causal link — triggered when a response contains a directional claim
+without a mechanism. Trigger: "altitude → good wine" without a temperature
+step. Example output: "You identified the altitude factor — what physical
+change does altitude cause first? That mechanism is what connects it to the
+wine's character." Socratic scaffolding, not marking.
+
+Missing sensory consequence — triggered when a mechanism is correctly described
+but not connected to what the taster perceives. Example output: "You explained
+the mechanism well — try completing the chain by connecting it to what a taster
+would notice in the glass." Non-evaluative; extends the explanation.
+
+Overgeneralization detection — triggered when a response makes a universal
+claim that the CKG marks as conditional. Trigger: "all cool climates produce
+high acidity" (conditional on variety and winemaking). Example output: "Cool
+climates do tend toward higher acidity, but this depends on variety and
+winemaking choices — can you name a condition where this relationship might
+not hold?" Requires confidence threshold above 0.80 to avoid false positives.
+
+Information density feedback — triggered when a response is factually correct
+but lists facts without causal reasoning. Example output: "You've identified
+several relevant factors. The next step is to connect them causally — which
+one causes which, and why?"
+
+Forbidden patterns — these must be architecturally blocked:
+
+Any feedback text that implies a grade threshold ("this answer would receive
+Merit"). Any comparison to an examiner's expected answer ("the mark scheme
+would want to see..."). Any numeric score rating the overall response quality.
+Any use of WSET_PASS, WSET_MERIT, or WSET_DISTINCTION strings.
+
+These are forbidden even in Socratic phrasing because they train learners to
+optimize for a hidden scoring model rather than to understand the underlying
+causality.
+
+LES write-back: after a feedback session, the feedback engine writes to the LES
+which patterns fired (not a quality judgment — only which gaps were detected).
+This enriches misconception_signals and causal_chain_signals for the next
+session's adaptive plan.
+
+
+================================================================
+TASK 6 — RISK ANALYSIS
+================================================================
+
+Risk A1 — CKG node ID collision with existing CC_* nodes.
+Probability: medium. New nodes added to the same directory; ID collision is
+possible without a naming convention.
+Impact: high. The retrieval engine loads all nodes; a duplicate ID causes
+silent data corruption in causal chain matching.
+Mitigation: enforce HC_* prefix for all heuristic causal nodes. Write a
+validation test that checks for duplicate node IDs across the entire
+knowledge-map/causal-chains/ directory before any new node is committed.
+
+Risk A2 — New JSON schema fields break existing retrieval or Tutor code.
+Probability: low. Existing code uses .get() for most schema fields.
+Impact: medium. Any required new field in an old node causes KeyError in
+snapshot tests.
+Mitigation: all new fields must be optional with safe defaults. Run the full
+25-fixture snapshot regression suite after adding any new file to
+knowledge-map/causal-chains/.
+
+Risk A3 — Graph traversal complexity grows non-linearly.
+Probability: low at 50 nodes, medium above 200.
+Impact: medium. Retrieval latency increases; determinism is preserved but
+response speed degrades, which impacts the tutor's usability.
+Mitigation: profile retrieval time after each batch of new nodes. Target:
+retrieval latency must not increase more than 20% over the Phase 2 baseline.
+
+Risk G1 — Feedback Engine output is misread as official scoring by learner.
+Probability: high. Learners naturally interpret structured feedback as
+evaluation.
+Impact: very high. Violates the fundamental Tutor ≠ Examiner principle and
+creates false expectations for exam performance.
+Mitigation: all feedback text must be reviewed for evaluative language before
+integration. A governance filter should scan all FeedbackItem.feedback_text
+strings for forbidden phrases before rendering. A visible disclaimer must
+accompany all open-response feedback sessions.
+
+Risk G2 — Heuristic labels are stripped or forgotten over time.
+Probability: medium. Developers adding content in future sessions may not
+preserve heuristic/inferred classification.
+Impact: high. Unmarked content could be mistaken for official curriculum by
+future maintainers or deployed in contexts where governance classification
+matters.
+Mitigation: make "source", "classification", and "official": false required
+fields in the JSON schema, enforced by a schema validation test that fails
+any JSON file missing these fields.
+
+Risk G3 — Composition heuristics are reverse-engineered to derive a scoring
+rubric.
+Probability: low. System is internal only with no public exposure.
+Impact: high. Would undermine the project's fundamental governance model if
+ever surfaced externally.
+Mitigation: keep composition heuristics strictly internal. Never expose
+composition heuristic content in any UI-facing component or API response.
+
+Risk R1 — New causal chain nodes shift existing retrieval rankings.
+Probability: medium. More nodes in the same directory means more candidates
+in scoring, which can shift the top-K selection.
+Impact: high. Ranking changes affect pedagogical quality and break snapshot
+tests.
+Mitigation: run snapshot regression tests after each batch. Any ranking change
+that alters snapshot output requires explicit justification and a new baseline
+commit with a clear reason.
+
+Risk R2 — New LES fields break existing learner files.
+Probability: low. The LES already uses loose dict structure with .get() and
+defaults throughout.
+Impact: medium. Existing epistemic_state.json files may lack new keys,
+causing silent cold-start behavior rather than errors.
+Mitigation: all new LES fields must have safe defaults in learner_state.py
+and les_reconciler.py.
+
+Risk P1 — CKG is too Distinction-specific for learners at foundational level.
+Probability: medium. Package is derived from Merit/Distinction response
+patterns and reflects advanced causal depth.
+Impact: medium. Learners building foundational understanding are overwhelmed
+by multi-step chains that assume prior knowledge they do not have.
+Mitigation: tag each CKG node with difficulty level (foundational / intermediate
+/ distinction). The adaptive_composer.py already respects difficulty signals —
+gate CKG node exposure to learner level.
+
+Risk P2 — Feedback Engine creates learned helplessness.
+Probability: low. Depends on session design.
+Impact: medium. Learners who receive more gap feedback than strength feedback
+may disengage.
+Mitigation: require the Feedback Engine to always fire at least one Strength
+feedback item before any gap items. Enforce a maximum ratio of 2 gap items
+per 1 strength item per session.
+
+Risk P3 — Overgeneralization detection produces false positives.
+Probability: medium. Natural language pattern matching against heuristic
+conditions is imprecise.
+Impact: low. Learner receives unnecessary Socratic prompting — annoying but
+not harmful.
+Mitigation: set confidence threshold above 0.80 for overgeneralization patterns.
+Log all fired overgeneralization events for manual review and heuristic refinement.
+
+Risk of Overfit to Distinction — the subtlest risk:
+
+The package captures the causal structure of excellent answers — not the learning
+progression of a student building from scratch. A system tuned to Distinction-level
+causal depth may underserve the majority of learners who need to consolidate
+foundational knowledge. The WSET L3 exam rewards both factual recall and causal
+explanation; the project serves learners across the full competence spectrum.
+Mitigation: difficulty tagging per node, combined with the LES's topic_signals
+confidence_level, ensures that causal chain depth is gated to learning stage.
+The adaptive composer must enforce this gate explicitly — learners with
+confidence_level "low" on a topic should not receive Distinction-level causal
+chain questions about that topic.
+
+
+================================================================
+TASK 7 — INTEGRATION ROADMAP
+================================================================
+
+Six phases, each fully contained and reversible. Phases 1 and 2 have zero
+impact on the retrieval-first critical path. Phase 3 is the first integration
+with retrieval. The governance invariants are tested at every phase.
+
+Phase 1 — Design and Schema Formalization
+No code changes. No new knowledge files.
+
+Deliverables: docs/CAUSAL_KNOWLEDGE_GRAPH_SCHEMA.md defining the full node
+and edge type specification, naming conventions (HC_* for heuristic causal
+nodes, DK_* for domain knowledge nodes), required fields (source,
+classification, official), and governance classification requirements. Extract
+the ZIP and produce a complete verified inventory to replace the inferred
+inventory in Task 1.
+
+Tests required: none.
+Risk: none.
+Impact: foundation. Every subsequent phase depends on this schema being stable.
+
+Phase 2 — Knowledge Representation
+No code changes. New data files only.
+
+Deliverables: HC_*.json files in knowledge/knowledge-map/causal-chains/
+following the existing CC_* schema exactly plus governance fields. A new test
+file tests/test_heuristic_causal_nodes.py that validates all HC_* nodes have
+the required governance fields, that no ID collisions exist, and that all
+"official" fields are False. Composition heuristics in
+knowledge/config/composition_heuristics.json (no code consumers yet). Feedback
+heuristics in knowledge/config/feedback_heuristics.json (no code consumers yet).
+
+Tests required: schema validation test for all new nodes. Snapshot regression
+suite must remain green (25 fixtures, 0 regressions). Test count should increase
+by at least 5 new tests.
+
+Risk: A1 (mitigated by HC_* naming and ID collision test), A2 (mitigated by
+.get() access patterns and snapshot tests), R1 (mitigated by snapshot tests).
+
+Impact: extends the retrieval corpus. Queries about viticulture factors,
+regional styles, and winemaking decisions will match new causal chains, reducing
+the 5 missing_keyword_support count toward 0 without any code changes.
+
+Phase 3 — Retrieval Integration
+
+Deliverables: new causal chain trigger keywords added to
+knowledge/config/retrieval_config.json for each HC_* node. Retrieval
+integration test: targeted set of 5-10 tutor queries that exercise the new
+nodes, verified to trigger and render correctly. New snapshot fixtures (target:
+35+ total, up from current 25).
+
+Tests required: new snapshot fixtures. Retrieval latency test (must not exceed
++20% over Phase 2 baseline). Test count should increase by at least 10.
+
+Risk: R1 (snapshot-tested), A3 (latency-tested).
+
+Impact: learners asking about viticulture, regional styles, and winemaking
+processes get richer CAUSA/MECANISMO/EFECTO explanations. The 5
+missing_keyword_support gaps should be reduced to 0 or near 0.
+
+Phase 4 — Adaptive Composer Integration
+
+Deliverables: causal_prerequisite_map added to composition_heuristics.json
+(static mapping of prerequisite chain IDs for each HC_* node). Extension of
+compose_adaptive_session_plan() to incorporate causal prerequisite ordering
+when difficulty_progression signal is active. 3-5 new tests in
+tests/test_adaptive_loop_wireup.py covering causal prerequisite routing.
+
+Tests required: existing 6 adaptive loop wireup tests must remain green.
+New tests for causal prerequisite ordering. Golden brutal output
+(golden_brutal_output.json) must remain unchanged or be explicitly re-baselined
+with a documented justification. Test count target: 660+ at minimum.
+
+Risk: P1 (mitigated by difficulty gate), R2 (mitigated by LES default safety).
+
+Impact: session plans become causally sequenced. Learners are routed through
+prerequisite knowledge before advanced causal chains. The strategic_planner's
+causal_chain_focus signal gains a concrete, tested influence path for the first
+time (the gate ENABLE_PLANNER_CAUSAL_CHAIN_INJECTION becomes activatable for
+the first time with evidence behind it).
+
+Phase 5 — Feedback Engine
+
+Deliverables: tools/feedback/__init__.py and
+tools/feedback/feedback_engine.py — new isolated module implementing
+get_formative_feedback() with the five pattern types described in Task 5.
+Consumes feedback_heuristics.json (already present from Phase 2). Tests in
+tests/test_feedback_engine.py covering each pattern type (minimum 25 tests).
+Governance tests confirming that no FeedbackItem.feedback_text string contains
+grade language and that safe_for_examiner remains False throughout.
+
+Tests required: unit tests for each feedback pattern. Test that forbidden
+phrases (WSET_PASS, WSET_MERIT, WSET_DISTINCTION, "mark scheme") never appear
+in feedback output. Test count target: 700+.
+
+Risk: G1 (architecturally blocked by forbidden phrase test), G3 (kept internal),
+P2 (ratio enforcement in engine design), P3 (confidence threshold enforcement).
+
+Impact: the first open-response formative feedback capability in the system.
+The most significant learner-facing enhancement in this roadmap. Enables a
+pedagogical loop that the current system cannot close: practice → feedback →
+LES update → next session plan.
+
+Phase 6 — Testing and Baseline Update
+
+Deliverables: updated golden_brutal_output.json reflecting CKG-enriched
+responses (requires re-running the brutal self-eval with RUN_SLOW_TESTS=1).
+Extended snapshot suite (target: 35+ fixtures). Retrieval performance benchmark
+confirming latency is within bounds. Automated governance audit test checking
+all HC_* and DK_* files for required classification fields. Updated CLAUDE.md
+reflecting the new architecture additions.
+
+Tests required: full suite (target: 700+ passing/skipped). Updated golden
+baseline. Governance field audit test. Performance benchmark.
+
+Risk: none specific. This phase validates all previous phases.
+
+Impact: establishes a stable, regression-tested baseline for the enriched system.
+
+
+================================================================
+SYNTHESIS — WHAT VALUE DOES THIS PACKAGE PROVIDE
+================================================================
+
+Three primary value areas:
+
+First, it extends the causal chain corpus beyond the current 32 nodes. More
+queries will match causal structures and learners will receive richer
+CAUSA/MECANISMO/EFECTO explanations. This directly addresses the 5
+missing_keyword_support gaps frozen in the golden baseline. New HC_* nodes
+targeting those specific gaps will reduce the missing count without any code
+changes — purely through content extension. This is the fastest and safest
+value to capture (Phase 2).
+
+Second, the composition heuristics formalize knowledge that currently lives only
+in the author's head. Making them explicit and machine-readable enables
+adaptive_composer.py to make causally sequenced session plans. This is the
+principled activation strategy that the Phase 3A causal chain injection
+experiments (currently gated OFF at ENABLE_PLANNER_CAUSAL_CHAIN_INJECTION =
+False) have been waiting for. The experiments showed that organic retrieval
+already catches most compatible positives — the CKG gives the planner a
+structured basis for identifying the organic misses.
+
+Third, the feedback heuristics lay the groundwork for the first open-response
+formative feedback capability. The system currently has no way to assess
+open-response quality without LLM calls. Pattern-based heuristic feedback is
+the only governance-safe path to this capability. This is the highest-value
+long-term deliverable — but also the highest-risk (G1). Execute it last, after
+Phases 2-4 have been validated.
+
+What should be discarded: any heuristic that carries an implicit grade threshold
+("a Distinction-level explanation requires X") must be rewritten as a
+pedagogical completeness criterion ("a strong explanation includes X") before
+integration. Any content asserting official WSET curriculum alignment must be
+reclassified as heuristic/inferred. If any file in the package uses the strings
+WSET_PASS, WSET_MERIT, or WSET_DISTINCTION, those strings must be removed before
+the file is added to the repository.
+
+What should be integrated: all causal chain nodes following the HC_* convention
+(Phase 2-3), all composition heuristics stripped of grade language (Phase 4),
+all feedback heuristics with governance-safe phrasing (Phase 5).
+
+How this preserves the fundamental philosophy:
+
+Retrieval-first is preserved: new CKG nodes are retrieved content, not generated
+content. They extend what the retrieval engine surfaces, not how it generates.
+
+Governance-first is preserved: heuristic classification is a required schema
+field enforced by tests. The governance filter in answer_builder.py remains the
+final check before any content reaches the learner.
+
+Deterministic-first is preserved: all new components are pattern-matching
+functions over static JSON. No probabilistic models, no LLM calls, no embeddings.
+Every output is reproducible.
+
+Tutor != Examiner is preserved: the feedback engine is designed from first
+principles to produce formative pedagogical feedback. The architectural separation
+between Composition Heuristics (how to build a strong explanation) and Feedback
+Heuristics (what gaps look like) ensures that neither category can be
+accidentally used as a scoring rubric without explicit, detectable code changes.
+
+
+================================================================
+END OF REPORT
+================================================================
+
+Next step: extract the ZIP and validate the inferred inventory against actual
+file contents. Then decide which phases to implement and in what order.
+Recommended starting point: Phase 1 (schema formalization + verified inventory)
+followed by Phase 2 (knowledge representation) — both have zero regression risk
+and immediately strengthen the retrieval corpus.
