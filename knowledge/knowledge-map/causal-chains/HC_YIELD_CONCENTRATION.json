@@ -1,0 +1,74 @@
+{
+  "node_type": "causal_chain",
+  "node_id": "HC_YIELD_CONCENTRATION",
+  "topic": "low yield, grape concentration, and flavour intensity",
+  "trigger_keywords": [
+    "rendimiento",
+    "yield",
+    "low yield",
+    "bajo rendimiento",
+    "concentracion",
+    "concentration",
+    "flavour intensity",
+    "intensidad de sabor",
+    "intensidad aromatica",
+    "aromatic intensity",
+    "green harvest",
+    "vendimia verde",
+    "cluster thinning",
+    "aclareo de racimos",
+    "overproduction",
+    "sobreproduccion"
+  ],
+  "steps": [
+    {
+      "step": 1,
+      "label": "cause",
+      "text": "When a vine produces fewer grape clusters - either naturally through site conditions, variety, or through deliberate yield-reduction techniques such as green harvest - each remaining cluster receives a greater share of the vine's available resources."
+    },
+    {
+      "step": 2,
+      "label": "mechanism",
+      "text": "With fewer clusters competing for the vine's photosynthetic output, each grape berry accumulates more sugars, flavour compounds, and structural components such as anthocyanins and phenolics per unit volume. The ratio of skin to juice is often higher in smaller berries, further intensifying the flavour and structural potential."
+    },
+    {
+      "step": 3,
+      "label": "effect",
+      "text": "Wines produced from low-yielding vines typically show higher aromatic intensity, greater flavour concentration, more pronounced colour (in reds), and more structured tannins. These qualities are associated with higher quality potential, provided other factors such as site and winemaking are favourable."
+    },
+    {
+      "step": 4,
+      "label": "exam_formulation",
+      "text": "Low yield concentrates vine resources into fewer grapes, increasing flavour intensity and structural concentration. In formative tasting terms, this can explain pronounced intensity and depth of flavour as contributing factors to a higher complexity or intensity assessment."
+    }
+  ],
+  "sat_relevance": "Supports explanation of pronounced aromatic and flavour intensity in SAT. Yield is a viticultural cause that connects to intensity observations in the BICL framework.",
+  "linked_topics": [
+    "CC_SOIL_DRAINAGE_VINE_VIGOUR"
+  ],
+  "agent_corpus": "tutor",
+  "safe_for_examiner": false,
+  "examiner_scoring_allowed": false,
+  "requires_human_review": true,
+  "source": "heuristic",
+  "classification": "inferred",
+  "official": false,
+  "formative_only": true,
+  "official_mark_scheme": false,
+  "governance": {
+    "safe_for_examiner": false,
+    "examiner_scoring_allowed": false,
+    "agent_corpus": "tutor",
+    "source": "heuristic",
+    "classification": "inferred",
+    "official": false,
+    "formative_only": true
+  },
+  "_meta": {
+    "schema_version": "causal_chain_v1",
+    "heuristic_extension": "HC_v1",
+    "created_date": "2026-06-06",
+    "ingestion_status": "draft",
+    "source_note": "Inferred formative model - not derived from official WSET mark scheme or syllabus document"
+  }
+}

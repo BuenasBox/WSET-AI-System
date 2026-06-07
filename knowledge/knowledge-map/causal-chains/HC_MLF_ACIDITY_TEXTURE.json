@@ -1,0 +1,75 @@
+{
+  "node_type": "causal_chain",
+  "node_id": "HC_MLF_ACIDITY_TEXTURE",
+  "topic": "malolactic fermentation, acidity reduction, and texture",
+  "trigger_keywords": [
+    "mlf",
+    "malolactic",
+    "fermentacion malolactic",
+    "malolactic fermentation",
+    "fermentacion secundaria",
+    "acido malico",
+    "malic acid",
+    "acido lactico",
+    "lactic acid",
+    "conversion acida",
+    "textura cremosa",
+    "creamy texture",
+    "acidez suave",
+    "softer acidity",
+    "butter",
+    "mantequilla",
+    "secondary fermentation acidity"
+  ],
+  "steps": [
+    {
+      "step": 1,
+      "label": "cause",
+      "text": "After primary fermentation, lactic acid bacteria can convert malic acid (sharp, green-apple-like) into lactic acid (softer, milky) in a process called malolactic fermentation (MLF)."
+    },
+    {
+      "step": 2,
+      "label": "mechanism",
+      "text": "Malic acid has two acidic protons per molecule while lactic acid has one, so the overall acidity of the wine decreases. Simultaneously, the bacteria produce diacetyl and other by-products that contribute buttery, creamy aromatic characteristics."
+    },
+    {
+      "step": 3,
+      "label": "effect",
+      "text": "Wines that have undergone full MLF show lower perceived acidity, a rounder and creamier palate texture, and may display buttery or dairy-derived aromatic notes. These wines feel softer and more voluminous on the palate."
+    },
+    {
+      "step": 4,
+      "label": "exam_formulation",
+      "text": "Malolactic fermentation converts sharper malic acid into softer lactic acid, therefore reducing perceived acidity and adding a creamy or buttery texture. In SAT tasting terms, this manifests as medium-minus or medium acidity and a rounded, creamy mouthfeel rather than crisp freshness."
+    }
+  ],
+  "sat_relevance": "Important for SAT when assessing acidity level and texture in Chardonnay or other white wines. MLF explains the move from high/crisp to medium/rounded acidity and creamy mouthfeel.",
+  "linked_topics": [
+    "HC_OAK_AGEING_COMPLEXITY"
+  ],
+  "agent_corpus": "tutor",
+  "safe_for_examiner": false,
+  "examiner_scoring_allowed": false,
+  "requires_human_review": true,
+  "source": "heuristic",
+  "classification": "inferred",
+  "official": false,
+  "formative_only": true,
+  "official_mark_scheme": false,
+  "governance": {
+    "safe_for_examiner": false,
+    "examiner_scoring_allowed": false,
+    "agent_corpus": "tutor",
+    "source": "heuristic",
+    "classification": "inferred",
+    "official": false,
+    "formative_only": true
+  },
+  "_meta": {
+    "schema_version": "causal_chain_v1",
+    "heuristic_extension": "HC_v1",
+    "created_date": "2026-06-06",
+    "ingestion_status": "draft",
+    "source_note": "Inferred formative model - not derived from official WSET mark scheme or syllabus document"
+  }
+}

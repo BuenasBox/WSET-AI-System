@@ -1,0 +1,81 @@
+{
+  "node_type": "causal_chain",
+  "node_id": "HC_OAK_AGEING_COMPLEXITY",
+  "topic": "oak barrel ageing, oxygen exposure, and wine complexity",
+  "trigger_keywords": [
+    "roble",
+    "barrica",
+    "oak",
+    "barrel",
+    "new oak",
+    "roble nuevo",
+    "crianza",
+    "wood ageing",
+    "envejecimiento en madera",
+    "vainilla",
+    "vanilla",
+    "tostado",
+    "toast",
+    "cedro",
+    "cedar",
+    "tanino de madera",
+    "wood tannin",
+    "micro-oxidation",
+    "micro-oxidacion",
+    "spice oak",
+    "oak influence",
+    "influencia del roble"
+  ],
+  "steps": [
+    {
+      "step": 1,
+      "label": "cause",
+      "text": "Wine aged in oak barrels is exposed to small but continuous amounts of oxygen through the pores of the wood, and also absorbs compounds directly from the wood itself - including vanillin, lactones, and toasty or smoky phenols."
+    },
+    {
+      "step": 2,
+      "label": "mechanism",
+      "text": "The slow micro-oxygenation softens tannins through polymerisation and rounds the wine's structure. Simultaneously, wood-derived compounds - vanilla from vanillin, spice from eugenol, toast and smoke from charring - integrate into the aromatic and flavour profile."
+    },
+    {
+      "step": 3,
+      "label": "effect",
+      "text": "Wines aged in new oak barrels typically show softer tannins, increased complexity, and secondary aromatic characteristics such as vanilla, toast, cedar, and spice layered over the primary fruit. Excessive new oak can dominate and mask primary fruit character."
+    },
+    {
+      "step": 4,
+      "label": "exam_formulation",
+      "text": "Oak barrel ageing introduces complexity via two pathways: micro-oxygenation softens tannin structure, and wood compounds add secondary flavour characteristics (vanilla, toast, cedar). In SAT terms, this contributes to increased complexity and contributes to the overall quality assessment when these elements are well-integrated."
+    }
+  ],
+  "sat_relevance": "Relevant when identifying secondary oak-derived characteristics in SAT. Integration of wood-derived complexity supports a higher complexity score in the BICL framework.",
+  "linked_topics": [
+    "HC_MLF_ACIDITY_TEXTURE",
+    "CC_MACERATION_EXTRACTION"
+  ],
+  "agent_corpus": "tutor",
+  "safe_for_examiner": false,
+  "examiner_scoring_allowed": false,
+  "requires_human_review": true,
+  "source": "heuristic",
+  "classification": "inferred",
+  "official": false,
+  "formative_only": true,
+  "official_mark_scheme": false,
+  "governance": {
+    "safe_for_examiner": false,
+    "examiner_scoring_allowed": false,
+    "agent_corpus": "tutor",
+    "source": "heuristic",
+    "classification": "inferred",
+    "official": false,
+    "formative_only": true
+  },
+  "_meta": {
+    "schema_version": "causal_chain_v1",
+    "heuristic_extension": "HC_v1",
+    "created_date": "2026-06-06",
+    "ingestion_status": "draft",
+    "source_note": "Inferred formative model - not derived from official WSET mark scheme or syllabus document"
+  }
+}

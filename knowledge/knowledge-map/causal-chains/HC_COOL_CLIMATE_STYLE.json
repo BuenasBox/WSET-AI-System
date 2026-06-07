@@ -1,0 +1,77 @@
+{
+  "node_type": "causal_chain",
+  "node_id": "HC_COOL_CLIMATE_STYLE",
+  "topic": "cool climate conditions and wine style - acidity, alcohol, and aromatic character",
+  "trigger_keywords": [
+    "cool climate",
+    "clima fresco",
+    "clima frio",
+    "cold climate",
+    "high acidity cool",
+    "alta acidez clima",
+    "lower alcohol",
+    "menor alcohol",
+    "green notes",
+    "notas verdes",
+    "herbaceous",
+    "herbaceo",
+    "freshness cool",
+    "frescura clima fresco",
+    "cool region style",
+    "estilo region fria",
+    "slow ripening cool",
+    "maduracion lenta fria"
+  ],
+  "steps": [
+    {
+      "step": 1,
+      "label": "cause",
+      "text": "In cool climate regions, average growing season temperatures are low enough that grapes ripen slowly, often incompletely, and the growing season is shorter with risk of harvest interruption by autumn cold or rain."
+    },
+    {
+      "step": 2,
+      "label": "mechanism",
+      "text": "Slow, cool ripening preserves the grape's natural malic and tartaric acid content because overnight temperatures do not sufficiently accelerate acid respiration. Sugar accumulation is limited, so potential alcohol levels remain lower. Aromatic compounds associated with underripeness - green apple, citrus, grass, herb - remain present alongside any ripe fruit that develops during warm spells."
+    },
+    {
+      "step": 3,
+      "label": "effect",
+      "text": "Wines from cool climates typically display high acidity, lower alcohol, lighter body, and primary fruit characteristics that lean toward green apple, citrus, and herbaceous notes. Tannins in reds may be more angular and astringent if grapes do not fully ripen."
+    },
+    {
+      "step": 4,
+      "label": "exam_formulation",
+      "text": "Cool climate explains high acidity, lower alcohol, and lighter body in the wine because slow ripening preserves natural acids and limits sugar accumulation. In SAT tasting terms, observing crisp acidity, low-medium alcohol, and citrus or herbaceous notes points toward a cool or marginal climate origin."
+    }
+  ],
+  "sat_relevance": "Directly relevant to SAT climate inference. Cool climate markers (high acidity, lower alcohol, citrus/herbaceous notes) form a coherent cluster that supports a cool-region conclusion.",
+  "linked_topics": [
+    "HC_ALTITUDE_TEMPERATURE",
+    "HC_DIURNAL_RANGE_FRESHNESS"
+  ],
+  "agent_corpus": "tutor",
+  "safe_for_examiner": false,
+  "examiner_scoring_allowed": false,
+  "requires_human_review": true,
+  "source": "heuristic",
+  "classification": "inferred",
+  "official": false,
+  "formative_only": true,
+  "official_mark_scheme": false,
+  "governance": {
+    "safe_for_examiner": false,
+    "examiner_scoring_allowed": false,
+    "agent_corpus": "tutor",
+    "source": "heuristic",
+    "classification": "inferred",
+    "official": false,
+    "formative_only": true
+  },
+  "_meta": {
+    "schema_version": "causal_chain_v1",
+    "heuristic_extension": "HC_v1",
+    "created_date": "2026-06-06",
+    "ingestion_status": "draft",
+    "source_note": "Inferred formative model - not derived from official WSET mark scheme or syllabus document"
+  }
+}

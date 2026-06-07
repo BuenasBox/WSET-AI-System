@@ -1,0 +1,75 @@
+{
+  "node_type": "causal_chain",
+  "node_id": "HC_DIURNAL_RANGE_FRESHNESS",
+  "topic": "diurnal temperature range, slow ripening, and aromatic freshness",
+  "trigger_keywords": [
+    "diurnal",
+    "diurno",
+    "oscilacion termica",
+    "temperature range",
+    "diferencia termica",
+    "thermal variation",
+    "warm days cold nights",
+    "dias calidos noches frias",
+    "aromatic freshness",
+    "frescura aromatica",
+    "slow ripening",
+    "maduracion lenta",
+    "acidity retention",
+    "retencion de acidez",
+    "continental climate",
+    "clima continental"
+  ],
+  "steps": [
+    {
+      "step": 1,
+      "label": "cause",
+      "text": "Regions with a large diurnal temperature range - where warm days promote sugar accumulation but cool nights slow respiration - create a distinctive ripening pattern."
+    },
+    {
+      "step": 2,
+      "label": "mechanism",
+      "text": "The warm daytime temperatures allow photosynthesis and sugar development to proceed at pace, while cool overnight temperatures slow the respiratory breakdown of tartaric and malic acid. This preserves natural grape acidity and allows aromatic compounds to develop and persist in the grape skins without heat degradation."
+    },
+    {
+      "step": 3,
+      "label": "effect",
+      "text": "Wines from high-diurnal-range sites retain higher acidity, show pronounced and precise aromatic character, and often display a freshness or vibrancy that distinguishes them from wines of similar sugar ripeness grown in uniformly warm climates."
+    },
+    {
+      "step": 4,
+      "label": "exam_formulation",
+      "text": "A large diurnal range acts as a quality-supporting factor: warm days develop flavour and sugar while cool nights preserve acidity and aromatic compounds. Wines from these sites therefore tend to show higher acidity and more defined, fresh aromatics than wines from isothermal warm climates at the same ripeness level."
+    }
+  ],
+  "sat_relevance": "Useful in SAT when explaining high acidity combined with ripe fruit or good aromatic definition. Diurnal range supports the coexistence of ripeness and freshness in the same wine.",
+  "linked_topics": [
+    "HC_ALTITUDE_TEMPERATURE",
+    "HC_COOL_CLIMATE_STYLE"
+  ],
+  "agent_corpus": "tutor",
+  "safe_for_examiner": false,
+  "examiner_scoring_allowed": false,
+  "requires_human_review": true,
+  "source": "heuristic",
+  "classification": "inferred",
+  "official": false,
+  "formative_only": true,
+  "official_mark_scheme": false,
+  "governance": {
+    "safe_for_examiner": false,
+    "examiner_scoring_allowed": false,
+    "agent_corpus": "tutor",
+    "source": "heuristic",
+    "classification": "inferred",
+    "official": false,
+    "formative_only": true
+  },
+  "_meta": {
+    "schema_version": "causal_chain_v1",
+    "heuristic_extension": "HC_v1",
+    "created_date": "2026-06-06",
+    "ingestion_status": "draft",
+    "source_note": "Inferred formative model - not derived from official WSET mark scheme or syllabus document"
+  }
+}

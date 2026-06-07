@@ -1,0 +1,73 @@
+{
+  "node_type": "causal_chain",
+  "node_id": "HC_ALTITUDE_TEMPERATURE",
+  "topic": "altitude, temperature, and acidity in cool high-elevation vineyards",
+  "trigger_keywords": [
+    "altitud",
+    "altitude",
+    "elevación",
+    "elevation",
+    "temperatura nocturna",
+    "night temperature",
+    "climate altitude",
+    "high altitude vineyard",
+    "viñedo de altura",
+    "frescura altitud",
+    "cool nights",
+    "noches frías",
+    "acidity altitude",
+    "acidez altitud"
+  ],
+  "steps": [
+    {
+      "step": 1,
+      "label": "cause",
+      "text": "Vineyards at higher altitudes experience lower ambient temperatures, especially at night, compared to lower-elevation sites in the same region."
+    },
+    {
+      "step": 2,
+      "label": "mechanism",
+      "text": "Lower temperatures slow the rate of grape ripening and reduce the overnight respiration that would otherwise consume malic acid. This preserves natural grape acidity even as sugars accumulate during warm daytime hours."
+    },
+    {
+      "step": 3,
+      "label": "effect",
+      "text": "Wines from high-altitude sites typically show higher total acidity, greater freshness, and more aromatic precision. Alcohol may be lower if ripening is incomplete, and the flavour profile tends toward the more restrained end of the regional spectrum."
+    },
+    {
+      "step": 4,
+      "label": "exam_formulation",
+      "text": "Altitude acts as a natural moderating factor: cooler temperatures slow ripening and preserve acidity, so a wine from a high-altitude site will therefore tend to show higher acidity and greater freshness than a comparable wine from a lower-elevation site in the same region."
+    }
+  ],
+  "sat_relevance": "Relevant when discussing acidity, freshness, or regional style in SAT. Altitude supports freshness observations by explaining the retention of natural acidity.",
+  "linked_topics": [
+    "HC_DIURNAL_RANGE_FRESHNESS",
+    "HC_COOL_CLIMATE_STYLE"
+  ],
+  "agent_corpus": "tutor",
+  "safe_for_examiner": false,
+  "examiner_scoring_allowed": false,
+  "requires_human_review": true,
+  "source": "heuristic",
+  "classification": "inferred",
+  "official": false,
+  "formative_only": true,
+  "official_mark_scheme": false,
+  "governance": {
+    "safe_for_examiner": false,
+    "examiner_scoring_allowed": false,
+    "agent_corpus": "tutor",
+    "source": "heuristic",
+    "classification": "inferred",
+    "official": false,
+    "formative_only": true
+  },
+  "_meta": {
+    "schema_version": "causal_chain_v1",
+    "heuristic_extension": "HC_v1",
+    "created_date": "2026-06-06",
+    "ingestion_status": "draft",
+    "source_note": "Inferred formative model - not derived from official WSET mark scheme or syllabus document"
+  }
+}
