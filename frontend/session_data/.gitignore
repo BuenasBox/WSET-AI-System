@@ -1,0 +1,3 @@
+# Session payloads are machine-local cognitive artifacts — never commit.
+# Run: python tools/question_generation/generate_session_payload.py
+*.json
