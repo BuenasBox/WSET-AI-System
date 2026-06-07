@@ -6,23 +6,23 @@
   "fragile_concepts": [
     {
       "concept": "missing_keyword_support",
-      "weakness_count": 10,
-      "severity": "high"
+      "weakness_count": 3,
+      "severity": "medium"
     }
   ],
   "weakness_counters": {
     "causal_chains": {},
     "misconceptions": {},
     "retrieval": {
-      "missing_keyword_support": 10
+      "missing_keyword_support": 3
     },
     "failure_labels": {}
   },
   "suggested_misconception_investigations": [],
   "orchestrator_recommendations": [
-    "Improve retrieval plan for 'missing_keyword_support' (weighted failures=10)."
+    "Improve retrieval plan for 'missing_keyword_support' (weighted failures=3)."
   ],
   "retrieval_gap_question_ids": [],
   "note": "Self-eval feedback artifact; real LES is updated by les_reconciler.reconcile_les_from_feedback().",
-  "questions_attempted": 25
+  "questions_attempted": 1
 }

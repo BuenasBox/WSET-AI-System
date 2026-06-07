@@ -84,12 +84,13 @@ Questions loaded from `knowledge/question-bank/structured/` → raw XLSX if avai
 
 ## CURRENT TESTING STATUS
 
-- Test count: **771** via `python -m unittest discover -s tests -v` (763 regular + 8 skipped by default)
+- Test count: **~1,186** via `python -m unittest discover -s tests -v` (~1,175 pass, 8 skipped, 3 errors)
+- The 3 errors are local Windows permission errors (rename/write blocked on `knowledge/config/domain_expansions.json` and `knowledge/retrieval-sandbox/`), NOT assertion failures. Fix: add Windows Defender exclusion for `C:\Dev\WSET-AI-System-push\knowledge`.
+- Last known fully-green baseline: **1,107 tests** at the Phase 4A frontend/state audit point.
 - (`pytest` not installed in active venv — use `python -m unittest`)
 - Slow golden baseline: `RUN_SLOW_TESTS=1 python -m unittest tests.test_golden_self_eval -v` → 7/7 OK
 - Brutal self-eval: 25 questions, no failure labels, no retrieval gaps, no SAT weaknesses.
-- Known retrieval weakness: `missing_keyword_support` count = 5 (frozen in golden baseline — HC_* nodes address these gaps; re-run self-eval after git pull to verify improvement).
-- Snapshots: green for all 25 fixtures (HC_* nodes have zero snapshot impact — retrieval-only addition).
+- Snapshots: 35 green.
 
 ---
 
@@ -224,11 +225,14 @@ Workflow: Claude plans/reviews/writes prompts → Codex implements → Claude ve
 
 **None from remediation plan.** All items in `docs/backend_stability_remediation_plan.md` are complete or deferred.
 
-**Next phases:**
-- **Phase 3A activation readiness** — Keep causal-chain planner influence gated OFF until additional evidence shows value beyond organic retrieval without adversarial regressions.
-- **HC_* self-eval validation** — After git pull, re-run brutal self-eval to verify HC_* nodes reduce missing_keyword_support below 5. If count drops, update golden_brutal_output.json baseline.
-- **Adaptive Composer** — Not started. Do not implement until HC_* self-eval validation is complete and Phase 3A activation criteria are met.
-- **Feedback Engine** — Not started. No changes made in this phase.
+**Phase 4A — Diagnostic SBA workstream (see `docs/ROADMAP_PHASE_4A.md`):**
+All phases through 4A.3.7.19 are complete. Current planning artifact is Phase 4A.3.7.33B (Active Set Reconciliation Plan). Read `docs/ACTIVE_SET_RECONCILIATION_PLAN.md` and `docs/CORPUS_GROUNDED_GOLD_BANK.md` before implementing any question-bank changes.
+
+**Next implementation task:** Replace non-Gold active items in the static demo set with Gold-A/B items per the reconciliation plan. Only Q2 and Q83 are currently Gold-A in the active set of 18.
+
+**PSL (Pedagogical Strategy Layer):** Implemented at `tools/tutor/pedagogical_strategy/` with `ENABLE_PEDAGOGICAL_STRATEGY_LAYER = False`. Completely disconnected from `answer_builder.py`. Do not activate without explicit authorization and connection tests.
+
+**Phase 3A gates:** `ENABLE_PLANNER_CAUSAL_CHAIN_INJECTION = False` and `ENABLE_PLANNER_QUERY_EXPANSION = False` remain off.
 
 **Semantic contract:** `docs/STRATEGIC_PLANNER_CONTRACT.md` — defines authority model, signal ownership, depth semantics, and migration path between `strategic_planner` and `_pedagogical_priority_boost()`. Read before touching either component.
 
@@ -298,19 +302,23 @@ The following are **machine-local cognitive objects** and must NEVER be committe
 
 ## REPO STATUS (as of last session)
 
-Latest commits (session 2026-06-07):
-- `docs(claude-md): update test count 731→771, add Phase 3B entry, update repo status` ← HEAD
+⚠️ **CLAUDE.md was significantly out of date as of 2026-06-07. The project has progressed through Phase 4A (21+ sub-phases) since Phase 3B. See `docs/PROJECT_CURRENT_STATE.md` and `docs/ROADMAP_PHASE_4A.md` for authoritative status.**
+
+Latest known commits:
+- `docs+feat: update CLAUDE.md and strategic_planner Phase 3B local changes` ← HEAD (6b7c782)
+- `Depuración` (e72f827)
+- `feat(adaptive-loop): close session composer wire-up` (36dc875)
+- `feat(phase-4a3-9-2): wire learning event runtime` (5e668ee)
+- `docs(adaptive-composer): add Adaptive Composer design document` (4664f76)
 - `feat(phase-3b): add WSET L3 topic sequence; wire into strategic planner; add 40 tests` (bb6644a)
 - `feat(phase-2-ckg): add HC_* heuristic causal nodes; add governance language + schema tests` (ae6716c)
-- `feat(phase-3a2): parse planner causal-chain query hints safely`
-- `feat(question-bank): add Excel→JSON converter; protect Abierta questions; declare openpyxl`
-- `feat(phase-3a1): wire planner query expansion gate; add gate tests`
-- `docs(phase-3a0): add PLANNER_INFLUENCE_BOUNDARY.md; governance contract`
-- `feat(phase-2c): add ledger summary CLI; complete observability loop`
-- `feat(phase-2b): add ledger summary layer; pure reporting function`
-- `feat(phase-2a): add session cognitive ledger; write-only telemetry`
-- `feat(phase-1c): persist strategic_plan to session_staging; add persistence tests`
-- `docs(phase-1b5): add STRATEGIC_PLANNER_CONTRACT.md; semantic contract hardening`
+
+New architecture components added since Phase 3B (not reflected in earlier CLAUDE.md):
+- `tools/tutor/pedagogical_strategy/` — PSL: mode_selector, profiles, strategy_layer, character_resolver, avatar_stub, psl_profile_validator, strategy_selector
+- `tools/question_generation/` — human_review_resolution.py, diagnostic_sba_validator.py, static_demo_exporter.py, structured_question_bank_adapter.py, and others
+- `frontend/diagnostic-sba/` — static SBA cockpit prototype with `preguntas.json` (18 active items)
+- `docs/CORPUS_GROUNDED_GOLD_BANK.md` — Gold-A/B/C classification of 524 SBA items
+- `docs/ACTIVE_SET_RECONCILIATION_PLAN.md` — Phase 4A.3.7.33B replacement plan
 
 Dirty worktree (not committed — runtime / local only):
 - `knowledge/nazareth/epistemic_state.json`, `session_staging.json` — modified locally (machine-local cognitive objects, never commit)

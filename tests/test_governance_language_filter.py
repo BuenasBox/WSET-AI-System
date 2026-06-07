@@ -34,7 +34,7 @@ FORBIDDEN_PATTERNS: list[tuple[str, str]] = [
     ("WSET examiner would", r"\bwset\s+examiner\s+would\b"),
     ("examiner score", r"\bexaminer\s+scor(e|ing|ed?)\b"),
     ("el examinador daria", r"\bel\s+examinador\s+dar[ii]a\b"),
-    ("guaranteed distinction", r"\bguaranteed?\s+distinction\b"),
+    ("guaranteed distinction", r"\bguaranteed?\s+(?:a\s+)?distinction\b"),
     ("garantizado distinction", r"\bgarantizad[ao]\s+distinction\b"),
     ("this would pass", r"\bthis\s+would\s+pass\b"),
     ("esto aprobaria", r"\besto\s+aprobari[ae]\b"),

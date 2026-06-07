@@ -35,7 +35,7 @@ ID_PATTERNS = {
     "concept_id": re.compile(r"^C_[A-Z0-9_]+$"),
     "misconception_id": re.compile(r"^MC_[A-Z0-9_]+$"),
     "chain_id": re.compile(r"^CC_[A-Z0-9_]+$"),
-    "node_id": re.compile(r"^CC_[A-Z0-9_]+$"),
+    "node_id": re.compile(r"^(?:CC|HC)_[A-Z0-9_]+$"),
     "relationship_id": re.compile(r"^R_[A-Z0-9_]+__[A-Z_]+__[A-Z0-9_]+$"),
 }
 
