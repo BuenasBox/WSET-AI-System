@@ -396,6 +396,54 @@ def process_open_response_attempt(
 
 
 # ---------------------------------------------------------------------------
+# Persistence helper (minimal atomicity — memory first, then LES)
+# ---------------------------------------------------------------------------
+
+def persist_learning_event_result(
+    result: dict[str, Any],
+    *,
+    memory_path: "Path | None" = None,
+    les_path: "Path | None" = None,
+) -> dict[str, Any]:
+    """Persist the LES and memory from a process_question_attempt / process_open_response_attempt result.
+
+    Write order: memory first, then LES. If memory write fails, LES is not written.
+    If LES write fails, memory has already been written — callers should handle
+    the resulting inconsistency (e.g. retry or alert).
+
+    Args:
+        result:      Output dict from process_question_attempt or process_open_response_attempt.
+        memory_path: Override for pedagogical_memory path. Defaults to DEFAULT_PEDAGOGICAL_MEMORY_PATH.
+        les_path:    Override for epistemic_state path. Defaults to DEFAULT_LES_PATH.
+
+    Returns:
+        Dict with keys: memory_path (str), les_path (str), success (bool).
+    """
+    from pathlib import Path as _Path
+
+    from tools.learner_model.knowledge_tracing import (
+        DEFAULT_PEDAGOGICAL_MEMORY_PATH,
+        save_pedagogical_memory,
+    )
+    from tools.orchestrator.learner_state import DEFAULT_LES_PATH, write_learner_state
+
+    mem_path = _Path(memory_path) if memory_path else DEFAULT_PEDAGOGICAL_MEMORY_PATH
+    ls_path = _Path(les_path) if les_path else DEFAULT_LES_PATH
+
+    updated_memory = result.get("cognitive_map") or {}
+    updated_les = result.get("les") or {}
+
+    save_pedagogical_memory(updated_memory, mem_path)
+    write_learner_state(updated_les, ls_path)
+
+    return {
+        "memory_path": str(mem_path),
+        "les_path": str(ls_path),
+        "success": True,
+    }
+
+
+# ---------------------------------------------------------------------------
 # Helpers
 # ---------------------------------------------------------------------------
 

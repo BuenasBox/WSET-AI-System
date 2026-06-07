@@ -40,8 +40,14 @@ def select_sba_session_items(
     difficulty: str | None = None,
     session_size: str | int = "standard",
     collection: str = "public_lab",
+    question_priorities: list[dict[str, Any]] | None = None,
 ) -> list[dict[str, Any]]:
-    """Select reproducible SBA items with conceptual duplicate deferral."""
+    """Select reproducible SBA items with conceptual duplicate deferral.
+
+    When question_priorities is provided (output of compose_adaptive_session_plan()),
+    candidates are sorted by descending priority_score before deduplication and
+    selection, so higher-priority items are chosen first.
+    """
     bank = master_bank if master_bank is not None else load_master_bank()
     target_size = _resolve_session_size(session_size)
     collection_ids = set(_mapping(bank.get("collections")).get(collection, []))
@@ -55,6 +61,14 @@ def select_sba_session_items(
         and _matches(_curriculum(item).get("topic"), topic, contains=True)
         and _matches(_curriculum(item).get("difficulty"), difficulty)
     ]
+
+    if question_priorities:
+        pmap: dict[str, int] = {
+            str(p.get("question_id") or ""): int(p.get("priority_score", 0))
+            for p in question_priorities
+            if p.get("question_id")
+        }
+        candidates.sort(key=lambda item: -pmap.get(str(item.get("master_item_id") or ""), 0))
 
     selected: list[dict[str, Any]] = []
     deferred: list[dict[str, Any]] = []
@@ -85,6 +99,7 @@ def compose_sba_session(
     difficulty: str | None = None,
     session_size: str | int = "standard",
     collection: str = "public_lab",
+    question_priorities: list[dict[str, Any]] | None = None,
 ) -> dict[str, Any]:
     """Return a static, training-only session descriptor without file writes."""
     items = select_sba_session_items(
@@ -94,6 +109,7 @@ def compose_sba_session(
         difficulty=difficulty,
         session_size=session_size,
         collection=collection,
+        question_priorities=question_priorities,
     )
     return {
         "schema_version": "sba_session_v1",
