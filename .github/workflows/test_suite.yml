@@ -21,10 +21,12 @@ jobs:
           pip install pydantic python-slugify tenacity tqdm orjson rich openpyxl
 
       - name: Run full test suite (excluding slow)
-        run: python -m unittest discover -s tests -v 2>&1 | tail -20
+        run: |
+          python -m unittest discover -s tests -v 2>&1 | tee /tmp/suite_output.txt
+          tail -5 /tmp/suite_output.txt
 
       - name: Run adaptive loop wireup tests
-        run: python -m unittest tests.test_adaptive_loop_wireup -v
+        run: python -m unittest discover -s tests -p "test_adaptive_loop_wireup.py" -v
 
       - name: SBA export dry-run
-        run: python -m unittest tests.test_static_demo_export_contract -v
+        run: python -m unittest discover -s tests -p "test_static_demo_export_contract.py" -v
