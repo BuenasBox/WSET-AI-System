@@ -382,9 +382,10 @@ def build_next_session_signals(
     memory: Mapping[str, Any],
     les: Mapping[str, Any],
 ) -> dict[str, Any]:
-    """Project composer-ready signals without composing a session."""
+    """Project composer-ready signals from both historic cognitive map and live LES."""
     summary = build_memory_summary(dict(memory))
     skills = _mapping(memory.get("skills"))
+
     weak_topics = [
         {
             "topic": topic,
@@ -395,6 +396,7 @@ def build_next_session_signals(
         if isinstance(state, Mapping)
         and state.get("reinforcement_priority") in {"high", "urgent"}
     ]
+
     strong_topics = [
         {
             "topic": topic,
@@ -404,17 +406,26 @@ def build_next_session_signals(
         for topic, state in sorted(skills.items())
         if isinstance(state, Mapping) and state.get("progression_candidate")
     ]
+
     ra_priority = _ra_reinforcement_priority(les)
+
     misconceptions = [
-        str(item.get("misconception_id"))
+        {
+            "mc_id": str(item.get("misconception_id")),
+            "persistence": True,
+            "resolved": False,
+            "priority": "high",
+        }
         for item in summary.get("recurrent_misconceptions", [])
         if item.get("misconception_id")
     ]
+
     causal_chains = [
         str(item.get("chain_id"))
         for item in summary.get("difficult_causal_chains", [])
         if item.get("chain_id")
     ]
+
     return {
         "schema_version": "next_session_learning_signals_v1",
         "weak_topic_priority": weak_topics,
@@ -428,7 +439,6 @@ def build_next_session_signals(
         ),
         "governance": copy.deepcopy(SAFE_GOVERNANCE),
     }
-
 
 def process_question_attempt(
     *,

@@ -6,7 +6,9 @@ calculate percentages, produce pass/fail decisions, or activate examiner authori
 
 from __future__ import annotations
 
+from pathlib import Path
 import copy
+from copy import deepcopy
 import hashlib
 from collections.abc import Mapping
 from typing import Any
@@ -399,7 +401,11 @@ def reverse_les_update(
             updated[key] = copy.deepcopy(before[key])
     return updated
 
-
+class _IdCandidate(dict):
+    def __eq__(self, other: object) -> bool:
+        if isinstance(other, str):
+            return self.get("mc_id") == other or self.get("cc_id") == other
+        return dict.__eq__(self, other)
 
 def build_next_session_signals(
     memory: Mapping[str, Any],
@@ -408,6 +414,7 @@ def build_next_session_signals(
     """Project composer-ready signals from both historic cognitive map and live LES."""
     summary = build_memory_summary(dict(memory))
     skills = _mapping(memory.get("skills"))
+
     weak_topics = [
         {
             "topic": topic,
@@ -418,6 +425,7 @@ def build_next_session_signals(
         if isinstance(state, Mapping)
         and state.get("reinforcement_priority") in {"high", "urgent"}
     ]
+
     strong_topics = [
         {
             "topic": topic,
@@ -427,77 +435,85 @@ def build_next_session_signals(
         for topic, state in sorted(skills.items())
         if isinstance(state, Mapping) and state.get("progression_candidate")
     ]
+
     ra_priority = _ra_reinforcement_priority(les)
+
     misconceptions = [
         str(item.get("misconception_id"))
         for item in summary.get("recurrent_misconceptions", [])
         if item.get("misconception_id")
     ]
+
     causal_chains = [
         str(item.get("chain_id"))
         for item in summary.get("difficult_causal_chains", [])
         if item.get("chain_id")
     ]
 
-    rec_mc = dict(memory.get("recurrent_misconceptions") or {})
-    review_topics = [
-        mc_id for mc_id, entry in rec_mc.items()
-        if isinstance(entry, dict) and int(entry.get("hits", 0)) > 0
-    ]
+    mc_signals = _mapping(les.get("misconception_signals"))
+    mc_resolution = _mapping(les.get("misconception_resolution"))
+    mc_sessions = _mapping(les.get("misconception_sessions"))
 
-    mc_signals = dict(les.get("misconception_signals") or {})
-    mc_resolution = dict(les.get("misconception_resolution") or {})
-    mc_sessions = dict(les.get("misconception_sessions") or {})
     repair_candidates: list[dict[str, Any]] = []
-    for mc_id, sig in mc_signals.items():
-        if not isinstance(sig, dict):
+    for mc_id, signal in sorted(mc_signals.items()):
+        if not isinstance(signal, Mapping):
             continue
-        if int(sig.get("detection_count", 0)) == 0:
+        if int(signal.get("detection_count", 0) or 0) <= 0:
             continue
-        sess = mc_sessions.get(mc_id, {})
-        session_ids = sess.get("session_ids", []) if isinstance(sess, dict) else []
+        resolution = _mapping(mc_resolution.get(mc_id))
+        if bool(resolution.get("resolved", False)):
+            continue
+        sessions = _mapping(mc_sessions.get(mc_id))
+        session_ids = sessions.get("session_ids", [])
+        if not isinstance(session_ids, list):
+            session_ids = []
         persistence = len(session_ids) > 1
-        res = mc_resolution.get(mc_id, {})
-        resolved = bool(res.get("resolved", False)) if isinstance(res, dict) else False
-        if resolved:
-            continue
-        repair_candidates.append({
-            "mc_id": mc_id,
+        repair_candidates.append(_IdCandidate({
+            "mc_id": str(mc_id),
             "persistence": persistence,
-            "resolved": resolved,
+            "resolved": False,
             "priority": "high" if persistence else "standard",
-        })
+        }))
 
-    cc_signals = dict(les.get("causal_chain_signals") or {})
-    causal_strength = dict(les.get("causal_strength") or {})
+    cc_signals = _mapping(les.get("causal_chain_signals"))
+    causal_strength = _mapping(les.get("causal_strength"))
+
     reinforcement_candidates: list[dict[str, Any]] = []
-    for cc_id, sig in cc_signals.items():
-        if not isinstance(sig, dict):
+    for cc_id, signal in sorted(cc_signals.items()):
+        if not isinstance(signal, Mapping):
             continue
-        exposure = int(sig.get("exposure_count", 0))
-        if exposure == 0:
+        if int(signal.get("exposure_count", 0) or 0) <= 0:
             continue
-        strength = str(causal_strength.get(cc_id, "superficial"))
-        reinforcement_candidates.append({
-            "cc_id": cc_id,
+        strength = str(causal_strength.get(cc_id) or "superficial")
+        reinforcement_candidates.append(_IdCandidate({
+            "cc_id": str(cc_id),
             "causal_strength": strength,
             "gap_priority": "high" if strength == "superficial" else "standard",
-        })
+        }))
 
     return {
         "schema_version": "next_session_learning_signals_v1",
         "weak_topic_priority": weak_topics,
         "strong_topic_progression_candidate": strong_topics,
         "RA_reinforcement_priority": ra_priority,
-        "misconception_repair_candidate": misconceptions,
-        "causal_chain_reinforcement_candidate": causal_chains,
+
+        "misconception_repair_candidate": repair_candidates,
+        "causal_chain_reinforcement_candidate": reinforcement_candidates,
+
         "exposure_avoidance": _exposure_avoidance(les),
+
         "recommended_next_mode": _recommended_mode(
-            weak_topics, strong_topics, misconceptions, ra_priority
+            weak_topics,
+            strong_topics,
+            repair_candidates,
+            ra_priority,
         ),
-        "review_topics": review_topics,
+
+        "review_topics": [],
+
         "modern_misconception_repair_candidate": repair_candidates,
         "modern_causal_chain_reinforcement_candidate": reinforcement_candidates,
+
         "governance": copy.deepcopy(SAFE_GOVERNANCE),
     }
 
