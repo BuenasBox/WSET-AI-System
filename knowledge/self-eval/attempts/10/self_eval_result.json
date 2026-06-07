@@ -2,15 +2,17 @@
   "question_id": "10",
   "question_type": "theory",
   "question_text": "\u00bfCu\u00e1l de los siguientes es un vino generoso portugu\u00e9s reconocido?",
-  "expected_topics": [],
+  "expected_topics": [
+    "RA4 / Bloque 8"
+  ],
   "expected_causal_links": [],
   "expected_keywords": [],
   "expected_reasoning_type": "theory_foundation",
   "difficulty": "intermediate",
-  "source_type": "structured_question_bank",
+  "source_type": "WSET3_RA4_Banco_Preguntas_TOTAL_REVISADO.xlsx | Sheet1",
   "safe_for_examiner": false,
-  "tutor_attempt_path": "C:/Users/esand/OneDrive/Documents/WSET-AI-System/knowledge/self-eval/attempts/10/tutor_attempt.md",
-  "tutor_context_package_path": "C:/Users/esand/OneDrive/Documents/WSET-AI-System/knowledge/self-eval/attempts/10/tutor_context_package.json",
+  "tutor_attempt_path": "C:/Dev/WSET-AI-System-push/knowledge/self-eval/attempts/10/tutor_attempt.md",
+  "tutor_context_package_path": "C:/Dev/WSET-AI-System-push/knowledge/self-eval/attempts/10/tutor_context_package.json",
   "comparison": {
     "question_id": "10",
     "question_type": "theory",
@@ -22,7 +24,9 @@
     "present_causal_links": [],
     "missing_causal_links": [],
     "present_topics": [],
-    "missing_official_concepts": [],
+    "missing_official_concepts": [
+      "RA4 / Bloque 8"
+    ],
     "expected_reasoning_type_present": true,
     "failure_labels": [],
     "strictness": "hard",

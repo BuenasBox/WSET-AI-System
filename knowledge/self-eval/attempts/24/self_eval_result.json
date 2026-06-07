@@ -1,27 +1,32 @@
 {
   "question_id": "24",
-  "question_type": "short_answer",
+  "question_type": "theory",
   "question_text": "\u00bfCu\u00e1l es una diferencia t\u00e9cnica entre Cava y Champagne?",
-  "expected_topics": [],
+  "expected_topics": [
+    "RA3 / Bloque 10"
+  ],
   "expected_causal_links": [],
   "expected_keywords": [],
   "expected_reasoning_type": "theory_foundation",
   "difficulty": "intermediate",
-  "source_type": "structured_question_bank",
+  "source_type": "WSET3_RA3_Banco_Preguntas_TOTAL_REVISADO.xlsx | Sheet1",
   "safe_for_examiner": false,
-  "tutor_attempt_path": "C:/Users/esand/OneDrive/Documents/WSET-AI-System/knowledge/self-eval/attempts/24/tutor_attempt.md",
-  "tutor_context_package_path": "C:/Users/esand/OneDrive/Documents/WSET-AI-System/knowledge/self-eval/attempts/24/tutor_context_package.json",
+  "tutor_attempt_path": "C:/Dev/WSET-AI-System-push/knowledge/self-eval/attempts/24/tutor_attempt.md",
+  "tutor_context_package_path": "C:/Dev/WSET-AI-System-push/knowledge/self-eval/attempts/24/tutor_context_package.json",
   "comparison": {
     "question_id": "24",
-    "question_type": "short_answer",
+    "question_type": "theory",
     "strengths": [
+      "expected_topics_present",
       "exam_language_present"
     ],
     "present_keywords": [],
     "missing_keywords": [],
     "present_causal_links": [],
     "missing_causal_links": [],
-    "present_topics": [],
+    "present_topics": [
+      "RA3 / Bloque 10"
+    ],
     "missing_official_concepts": [],
     "expected_reasoning_type_present": true,
     "failure_labels": [],

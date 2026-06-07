@@ -4,7 +4,7 @@ This is a local Tutor-development simulation. It is not official Examiner gradin
 
 Strictness: hard
 Questions attempted: 25
-Strongest domains: [('theory', 20), ('short_answer', 5)]
+Strongest domains: [('theory', 24), ('short_answer', 1)]
 Weakest domains: none
 Strongest reasoning domains: [('theory_foundation', 25)]
 Weakest reasoning domains: none

@@ -20,8 +20,8 @@
   "difficulty": "intermediate",
   "source_type": "structured_question_bank",
   "safe_for_examiner": false,
-  "tutor_attempt_path": "C:/Users/esand/OneDrive/Documents/WSET-AI-System/knowledge/self-eval/attempts/17/tutor_attempt.md",
-  "tutor_context_package_path": "C:/Users/esand/OneDrive/Documents/WSET-AI-System/knowledge/self-eval/attempts/17/tutor_context_package.json",
+  "tutor_attempt_path": "C:/Dev/WSET-AI-System-push/knowledge/self-eval/attempts/17/tutor_attempt.md",
+  "tutor_context_package_path": "C:/Dev/WSET-AI-System-push/knowledge/self-eval/attempts/17/tutor_context_package.json",
   "comparison": {
     "question_id": "17",
     "question_type": "theory",
