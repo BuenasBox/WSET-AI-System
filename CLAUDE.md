@@ -310,6 +310,7 @@ Latest commits (session 2026-06-07):
 - `feat(phase-2b): add ledger summary layer; pure reporting function`
 - `feat(phase-2a): add session cognitive ledger; write-only telemetry`
 - `feat(phase-1c): persist strategic_plan to session_staging; add persistence tests`
+- `docs(phase-1b5): add STRATEGIC_PLANNER_CONTRACT.md; semantic contract hardening`
 
 Dirty worktree (not committed — runtime / local only):
 - `knowledge/nazareth/epistemic_state.json`, `session_staging.json` — modified locally (machine-local cognitive objects, never commit)
