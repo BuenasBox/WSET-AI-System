@@ -1,0 +1,378 @@
+{
+  "_meta": {
+    "schema_version": "wset3_topic_seq_v1",
+    "description": "Pedagogical topic sequence for WSET Level 3 Award in Wines — formative learning order used by the strategic planner to populate recommended_next_topics.",
+    "source": "pedagogical",
+    "classification": "inferred",
+    "official": false,
+    "formative_only": true,
+    "safe_for_examiner": false,
+    "examiner_scoring_allowed": false,
+    "source_note": "Inferred pedagogical ordering — not derived from official WSET syllabus document. For formative tutoring use only.",
+    "created_date": "2026-06-07"
+  },
+  "topics": [
+    {
+      "topic_id": "sat_appearance",
+      "topic_name": "SAT: Appearance assessment",
+      "domain": "tasting_sat",
+      "sequence_position": 1,
+      "difficulty_level": 1,
+      "prerequisite_topic_ids": [],
+      "keywords": [
+        "sat", "appearance", "clarity", "intensity", "colour", "color", "tasting",
+        "apariencia", "limpidez", "cata", "visual", "hue", "tono", "rim"
+      ]
+    },
+    {
+      "topic_id": "sat_nose",
+      "topic_name": "SAT: Nose — condition, intensity, and aroma characteristics",
+      "domain": "tasting_sat",
+      "sequence_position": 2,
+      "difficulty_level": 1,
+      "prerequisite_topic_ids": ["sat_appearance"],
+      "keywords": [
+        "nose", "aroma", "bouquet", "olfactory", "condition", "aroma intensity",
+        "nariz", "aroma caracteristicas", "off aromas", "clean", "limpio"
+      ]
+    },
+    {
+      "topic_id": "sat_palate_structure",
+      "topic_name": "SAT: Palate — structural components (sweetness, acidity, tannin, alcohol, body)",
+      "domain": "tasting_sat",
+      "sequence_position": 3,
+      "difficulty_level": 1,
+      "prerequisite_topic_ids": ["sat_nose"],
+      "keywords": [
+        "palate", "sweetness", "acidity", "tannin", "alcohol", "body",
+        "paladar", "dulzor", "acidez", "tanino", "cuerpo", "estructura",
+        "structure", "finish", "length"
+      ]
+    },
+    {
+      "topic_id": "sat_bicl_quality",
+      "topic_name": "SAT: BICL quality assessment — balance, intensity, complexity, length",
+      "domain": "tasting_sat",
+      "sequence_position": 4,
+      "difficulty_level": 2,
+      "prerequisite_topic_ids": ["sat_palate_structure"],
+      "keywords": [
+        "bicl", "balance", "intensity", "complexity", "length", "quality",
+        "calidad", "balance", "intensidad", "complejidad", "longitud", "finish",
+        "outstanding", "very good", "good", "acceptable", "poor"
+      ]
+    },
+    {
+      "topic_id": "sat_conclusions_quality",
+      "topic_name": "SAT: Conclusions — quality level and readiness to drink",
+      "domain": "tasting_sat",
+      "sequence_position": 5,
+      "difficulty_level": 2,
+      "prerequisite_topic_ids": ["sat_bicl_quality"],
+      "keywords": [
+        "conclusions", "quality level", "readiness", "drink now", "potential",
+        "conclusiones", "nivel de calidad", "listo para beber", "potencial",
+        "food pairing", "maridaje", "assessment", "evaluacion"
+      ]
+    },
+    {
+      "topic_id": "viticulture_climate_types",
+      "topic_name": "Viticulture: Climate types — cool, moderate, warm, hot",
+      "domain": "viticulture",
+      "sequence_position": 6,
+      "difficulty_level": 1,
+      "prerequisite_topic_ids": [],
+      "keywords": [
+        "climate", "cool climate", "warm climate", "continental", "maritime",
+        "clima", "clima fresco", "clima calido", "temperatura", "growing season",
+        "temperate", "Mediterranean"
+      ]
+    },
+    {
+      "topic_id": "viticulture_climate_factors",
+      "topic_name": "Viticulture: Climate-modifying factors — altitude, aspect, proximity to water, diurnal range",
+      "domain": "viticulture",
+      "sequence_position": 7,
+      "difficulty_level": 2,
+      "prerequisite_topic_ids": ["viticulture_climate_types"],
+      "keywords": [
+        "altitude", "altitud", "elevation", "aspect", "orientacion", "slope",
+        "diurnal", "temperature range", "ocean", "river", "lake", "fog",
+        "mesoclimate", "microclimate", "microclima"
+      ]
+    },
+    {
+      "topic_id": "viticulture_soil_drainage",
+      "topic_name": "Viticulture: Soil types — drainage, heat retention, and vine vigour",
+      "domain": "viticulture",
+      "sequence_position": 8,
+      "difficulty_level": 2,
+      "prerequisite_topic_ids": ["viticulture_climate_types"],
+      "keywords": [
+        "soil", "suelo", "drainage", "drenaje", "clay", "arcilla", "gravel",
+        "grava", "limestone", "caliza", "heat retention", "vine vigour", "vigor",
+        "root", "raiz", "nutrients"
+      ]
+    },
+    {
+      "topic_id": "viticulture_vine_growing_cycle",
+      "topic_name": "Viticulture: Vine growing cycle — dormancy, budburst, flowering, fruit set, ripening, harvest",
+      "domain": "viticulture",
+      "sequence_position": 9,
+      "difficulty_level": 2,
+      "prerequisite_topic_ids": ["viticulture_climate_types"],
+      "keywords": [
+        "vine cycle", "ciclo vid", "budburst", "brotacion", "flowering", "floracion",
+        "fruit set", "cuajado", "ripening", "maduracion", "harvest", "vendimia",
+        "veraison", "envero", "dormancy", "letargo"
+      ]
+    },
+    {
+      "topic_id": "viticulture_hazards_disease",
+      "topic_name": "Viticulture: Hazards and disease — frost, hail, powdery and downy mildew, botrytis",
+      "domain": "viticulture",
+      "sequence_position": 10,
+      "difficulty_level": 2,
+      "prerequisite_topic_ids": ["viticulture_vine_growing_cycle"],
+      "keywords": [
+        "frost", "helada", "hail", "granizo", "mildew", "mildiu", "botrytis",
+        "oidium", "powdery mildew", "downy mildew", "disease", "enfermedad",
+        "phylloxera", "filoxera", "pests", "plagas"
+      ]
+    },
+    {
+      "topic_id": "viticulture_low_yield_concentration",
+      "topic_name": "Viticulture: Yield and quality — low yield, concentration, green harvest",
+      "domain": "viticulture",
+      "sequence_position": 11,
+      "difficulty_level": 2,
+      "prerequisite_topic_ids": ["viticulture_vine_growing_cycle"],
+      "keywords": [
+        "yield", "rendimiento", "low yield", "bajo rendimiento", "concentration",
+        "concentracion", "green harvest", "vendimia verde", "cluster thinning",
+        "canopy", "dosel", "pruning", "poda"
+      ]
+    },
+    {
+      "topic_id": "vinification_white_basic",
+      "topic_name": "Vinification: White wine — crushing, pressing, temperature-controlled fermentation",
+      "domain": "vinification_white",
+      "sequence_position": 12,
+      "difficulty_level": 1,
+      "prerequisite_topic_ids": [],
+      "keywords": [
+        "white wine", "vino blanco", "crushing", "pressing", "prensado",
+        "fermentation", "fermentacion", "yeast", "levadura", "temperature control",
+        "stainless steel", "acero inoxidable", "skin contact", "maceración"
+      ]
+    },
+    {
+      "topic_id": "vinification_white_oak_maturation",
+      "topic_name": "Vinification: White wine oak maturation — barrel fermentation, micro-oxygenation, oak character",
+      "domain": "vinification_white",
+      "sequence_position": 13,
+      "difficulty_level": 2,
+      "prerequisite_topic_ids": ["vinification_white_basic"],
+      "keywords": [
+        "oak", "roble", "barrel", "barrica", "barrel fermentation", "micro-oxygenation",
+        "micro-oxidacion", "vanilla", "toast", "cedar", "cedro", "oxidative",
+        "white oak maturation", "chardonnay oak"
+      ]
+    },
+    {
+      "topic_id": "vinification_white_lees_ageing",
+      "topic_name": "Vinification: White wine lees ageing — sur lie, autolysis, biscuit and bread character",
+      "domain": "vinification_white",
+      "sequence_position": 14,
+      "difficulty_level": 2,
+      "prerequisite_topic_ids": ["vinification_white_basic"],
+      "keywords": [
+        "lees", "lias", "sur lie", "autolysis", "autolisis", "biscuit", "bread",
+        "creamy texture", "textura cremosa", "batonnage", "batonnage", "yeast",
+        "aged on lees", "envejecido sobre lias"
+      ]
+    },
+    {
+      "topic_id": "vinification_red_extraction_tannin",
+      "topic_name": "Vinification: Red wine extraction — colour, tannin, maceration techniques",
+      "domain": "vinification_red",
+      "sequence_position": 15,
+      "difficulty_level": 2,
+      "prerequisite_topic_ids": ["vinification_white_basic"],
+      "keywords": [
+        "red wine", "vino tinto", "maceration", "maceracion", "extraction", "extraccion",
+        "tannin", "tanino", "colour extraction", "cap", "sombrero", "pumping over",
+        "punching down", "pigaggio", "pigmentacion"
+      ]
+    },
+    {
+      "topic_id": "vinification_red_mlf",
+      "topic_name": "Vinification: Malolactic fermentation — malic to lactic acid, texture and acidity",
+      "domain": "vinification_red",
+      "sequence_position": 16,
+      "difficulty_level": 2,
+      "prerequisite_topic_ids": ["vinification_red_extraction_tannin"],
+      "keywords": [
+        "mlf", "malolactic", "malolactico", "malic acid", "acido malico", "lactic acid",
+        "acido lactico", "texture", "textura", "softening", "butter", "mantequilla",
+        "creamy", "second fermentation"
+      ]
+    },
+    {
+      "topic_id": "vinification_red_oak_ageing",
+      "topic_name": "Vinification: Red wine oak ageing — new vs used oak, toasting, flavour and structure",
+      "domain": "vinification_red",
+      "sequence_position": 17,
+      "difficulty_level": 2,
+      "prerequisite_topic_ids": ["vinification_red_extraction_tannin"],
+      "keywords": [
+        "oak ageing", "envejecimiento en roble", "new oak", "roble nuevo", "used oak",
+        "toasting", "tostado", "vanilla", "spice", "tannin integration",
+        "integracion de taninos", "barrel ageing", "crianza en barrica"
+      ]
+    },
+    {
+      "topic_id": "vinification_red_bottle_maturation",
+      "topic_name": "Vinification: Red wine bottle maturation — tertiary aromas, tannin softening, sediment",
+      "domain": "vinification_red",
+      "sequence_position": 18,
+      "difficulty_level": 3,
+      "prerequisite_topic_ids": ["vinification_red_oak_ageing"],
+      "keywords": [
+        "bottle ageing", "envejecimiento en botella", "tertiary", "terciario",
+        "leather", "cuero", "tobacco", "tabaco", "mushroom", "seta", "sediment",
+        "sedimento", "decanting", "decantacion", "tannin softening"
+      ]
+    },
+    {
+      "topic_id": "sparkling_traditional_method",
+      "topic_name": "Sparkling wine: Traditional method — second fermentation in bottle, autolysis, disgorgement",
+      "domain": "vinification_sparkling",
+      "sequence_position": 19,
+      "difficulty_level": 2,
+      "prerequisite_topic_ids": ["vinification_white_basic"],
+      "keywords": [
+        "traditional method", "metodo tradicional", "champagne method", "second fermentation",
+        "segunda fermentacion", "autolysis", "autolisis", "disgorgement", "degüelle",
+        "riddling", "remuage", "yeast autolysis", "biscuit", "brioche"
+      ]
+    },
+    {
+      "topic_id": "sparkling_tank_method",
+      "topic_name": "Sparkling wine: Tank method (Charmat) — pressure tank, fresh fruit character",
+      "domain": "vinification_sparkling",
+      "sequence_position": 20,
+      "difficulty_level": 2,
+      "prerequisite_topic_ids": ["sparkling_traditional_method"],
+      "keywords": [
+        "tank method", "metodo charmat", "charmat", "prosecco", "cava tank",
+        "pressure tank", "tanque a presion", "fresh fruit", "fruta fresca",
+        "low cost sparkling", "fruity sparkling"
+      ]
+    },
+    {
+      "topic_id": "sparkling_sweetness_levels",
+      "topic_name": "Sparkling wine: Sweetness levels — brut nature, extra brut, brut, demi-sec, dosage",
+      "domain": "vinification_sparkling",
+      "sequence_position": 21,
+      "difficulty_level": 2,
+      "prerequisite_topic_ids": ["sparkling_traditional_method"],
+      "keywords": [
+        "dosage", "brut", "brut nature", "extra brut", "demi-sec", "doux",
+        "sweetness level", "nivel de dulzor", "residual sugar", "azucar residual",
+        "liqueur d'expedition", "expedition liqueur"
+      ]
+    },
+    {
+      "topic_id": "sweet_noble_rot_botrytis",
+      "topic_name": "Sweet wines: Noble rot (botrytis cinerea) — concentration, glycerol, honeyed character",
+      "domain": "vinification_sweet",
+      "sequence_position": 22,
+      "difficulty_level": 3,
+      "prerequisite_topic_ids": ["vinification_white_basic"],
+      "keywords": [
+        "botrytis", "noble rot", "podredumbre noble", "sauternes", "trockenbeerenauslese",
+        "honeyed", "miel", "glycerol", "glicerol", "concentration", "concentrated",
+        "sweet wine", "vino dulce"
+      ]
+    },
+    {
+      "topic_id": "sweet_late_harvest_concentration",
+      "topic_name": "Sweet wines: Appassimento and late harvest — drying grapes, ice wine, frozen concentration",
+      "domain": "vinification_sweet",
+      "sequence_position": 23,
+      "difficulty_level": 3,
+      "prerequisite_topic_ids": ["sweet_noble_rot_botrytis"],
+      "keywords": [
+        "appassimento", "passito", "late harvest", "vendimia tardia", "ice wine",
+        "eiswein", "frozen", "helado", "drying", "secado", "raisin", "pasa",
+        "amarone", "recioto", "dried grape"
+      ]
+    },
+    {
+      "topic_id": "fortified_port_styles",
+      "topic_name": "Fortified wines: Port — styles (ruby, tawny, vintage, LBV, colheita), production",
+      "domain": "vinification_fortified",
+      "sequence_position": 24,
+      "difficulty_level": 3,
+      "prerequisite_topic_ids": ["vinification_red_extraction_tannin"],
+      "keywords": [
+        "port", "porto", "oporto", "ruby", "tawny", "vintage port", "LBV",
+        "late bottled vintage", "colheita", "fortification", "aguardiente",
+        "grape spirit", "douro", "quinta"
+      ]
+    },
+    {
+      "topic_id": "fortified_sherry_styles",
+      "topic_name": "Fortified wines: Sherry — styles (fino, manzanilla, amontillado, oloroso, PX), flor, solera",
+      "domain": "vinification_fortified",
+      "sequence_position": 25,
+      "difficulty_level": 3,
+      "prerequisite_topic_ids": ["vinification_white_basic"],
+      "keywords": [
+        "sherry", "jerez", "fino", "manzanilla", "amontillado", "oloroso",
+        "pedro ximenez", "PX", "flor", "biological ageing", "oxidative ageing",
+        "solera", "solera system", "sanlucar", "palomino"
+      ]
+    },
+    {
+      "topic_id": "regional_france_bordeaux",
+      "topic_name": "Regional: Bordeaux — Left Bank, Right Bank, varieties, styles, classifications",
+      "domain": "regional_france",
+      "sequence_position": 26,
+      "difficulty_level": 3,
+      "prerequisite_topic_ids": ["vinification_red_oak_ageing"],
+      "keywords": [
+        "bordeaux", "burdeos", "left bank", "right bank", "cabernet sauvignon",
+        "merlot", "medoc", "saint-emilion", "pomerol", "cabernet franc",
+        "bordeaux blend", "grand cru classe"
+      ]
+    },
+    {
+      "topic_id": "regional_france_burgundy",
+      "topic_name": "Regional: Burgundy — Pinot Noir, Chardonnay, appellations, terroir",
+      "domain": "regional_france",
+      "sequence_position": 27,
+      "difficulty_level": 3,
+      "prerequisite_topic_ids": ["vinification_white_oak_maturation"],
+      "keywords": [
+        "burgundy", "borgoña", "pinot noir", "chardonnay", "cote de nuits",
+        "cote de beaune", "village", "premier cru", "grand cru", "terroir",
+        "bourgogne", "climat"
+      ]
+    },
+    {
+      "topic_id": "regional_france_champagne",
+      "topic_name": "Regional: Champagne — varieties, NV and vintage styles, houses and growers",
+      "domain": "regional_france",
+      "sequence_position": 28,
+      "difficulty_level": 3,
+      "prerequisite_topic_ids": ["sparkling_traditional_method"],
+      "keywords": [
+        "champagne", "champan", "pinot noir champagne", "chardonnay champagne",
+        "pinot meunier", "non-vintage", "NV", "blanc de blancs", "blanc de noirs",
+        "rose champagne", "grande marque", "recoltant manipulant"
+      ]
+    }
+  ]
+}

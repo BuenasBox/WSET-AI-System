@@ -32,8 +32,27 @@ The planner MUST NOT:
 
 from __future__ import annotations
 
+import json
 from datetime import datetime, timezone
+from pathlib import Path
 from typing import Any
+
+from tools.constants import KNOWLEDGE_DIR
+
+# ---------------------------------------------------------------------------
+# WSET L3 topic sequence — loaded once at import time, never re-read at call time.
+# Governance: source="pedagogical", official=False, formative_only=True.
+# Graceful degradation: empty list when file is absent or malformed.
+# ---------------------------------------------------------------------------
+
+_TOPIC_SEQUENCE_PATH: Path = KNOWLEDGE_DIR / "config" / "wset3_topic_sequence.json"
+_TOPIC_SEQUENCE: list[dict] = []
+
+try:
+    _raw = json.loads(_TOPIC_SEQUENCE_PATH.read_text(encoding="utf-8"))
+    _TOPIC_SEQUENCE = _raw.get("topics", [])
+except (FileNotFoundError, json.JSONDecodeError, AttributeError):
+    pass  # graceful degradation — empty list means no recommendations
 
 
 # ---------------------------------------------------------------------------
@@ -69,6 +88,9 @@ PLANNING_CONFIDENCE_SCALE: float = 20.0
 
 # Prefixes in known_weak_areas that encode actionable topic slugs
 ACTIONABLE_WEAK_AREA_PREFIXES: tuple[str, ...] = ("causal_chain:", "fragile:")
+
+# Maximum number of topics returned by _compute_recommended_next_topics
+RECOMMENDED_TOPICS_MAX: int = 3
 
 # SAT domain keywords — any review topic containing these triggers sat_drill_needed
 SAT_TOPIC_KEYWORDS: frozenset[str] = frozenset({
@@ -133,7 +155,7 @@ def run_strategic_planner(
 
     review_topics = _compute_review_topics(mem, les)
     avoid_topics = _compute_avoid_topics(mem)
-    recommended_next_topics: list[str] = []  # Phase 3: driven by WSET L3 topic sequence
+    recommended_next_topics = _compute_recommended_next_topics(mem)
     misconception_focus = _compute_misconception_focus(mem, prepass_result)
     causal_chain_focus = _compute_causal_chain_focus(mem)
     sat_drill_needed = _compute_sat_drill_needed(mem, review_topics)
@@ -248,6 +270,39 @@ def _compute_review_topics(
 def _compute_avoid_topics(mem: dict[str, Any]) -> list[str]:
     """Return concepts with confirmed mastery — no revisiting needed."""
     return list(mem.get("mastered_concepts") or [])
+
+
+def _compute_recommended_next_topics(
+    mem: dict[str, Any],
+    sequence: list[dict] | None = None,
+) -> list[str]:
+    """Return topic_ids that are next in the WSET L3 sequence given learner state.
+
+    Selection criteria (evaluated in sequence_position order):
+      1. Topic is not yet mastered (topic_id not in mastered_concepts set)
+      2. All prerequisite_topic_ids are satisfied (present in mastered_concepts set)
+
+    Returns up to RECOMMENDED_TOPICS_MAX topic_ids, ordered by sequence_position.
+    Returns [] gracefully if the sequence file is unavailable.
+
+    Note: mastery is checked by topic_id only. Keyword cross-referencing is
+    reserved for a future enhancement. This keeps Phase 3B deterministic and
+    testable without assuming any particular LES concept slug format.
+    """
+    seq: list[dict] = sequence if sequence is not None else _TOPIC_SEQUENCE
+    if not seq:
+        return []
+
+    mastered: set[str] = set(mem.get("mastered_concepts") or [])
+
+    eligible: list[dict] = [
+        t for t in seq
+        if t.get("topic_id") not in mastered
+        and all(prereq in mastered for prereq in t.get("prerequisite_topic_ids") or [])
+    ]
+
+    eligible.sort(key=lambda t: t.get("sequence_position", 9999))
+    return [t["topic_id"] for t in eligible[:RECOMMENDED_TOPICS_MAX]]
 
 
 def _compute_misconception_focus(
