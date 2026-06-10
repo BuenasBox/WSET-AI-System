@@ -306,10 +306,16 @@ The following are **machine-local cognitive objects** and must NEVER be committe
 
 ## REPO STATUS (as of 2026-06-10)
 
-Latest commits:
-- `feat(phase-x5): SAT response structure validator` ← HEAD (pending push)
+Latest commits (WSET-AI-System):
+- `fix(orl-payload): correct item_id format and add evaluation_by_item_id` (d45a3a1) ← HEAD
+- `feat(phase-x5): SAT response structure validator` (3a889ab)
 - `feat(phase-x4): SAT readiness validator` (8af568f)
-- `docs(claude-md): update repo status to Phase X.3; accurate test counts; architecture inventory` (633cbe0)
+
+Latest commits (epistemiclab-dashboard):
+- `feat(full-simulation): Part E — Full WSET Simulation (SBA 50 + OR 4 + SAT 2, timers, 3-phase flow)` ← HEAD
+- `fix(adaptive): escapeHtml → escTxt in renderSAT`
+- `fix(adaptive): correct showScreen double-prefix bug for SAT modes` (ebf1508)
+- `fix(orl): correct payload format and session key defaults` (0cc1c53)
 
 ### Architecture components present (post-Phase 3B, authoritative)
 - `tools/tutor/sat_validator.py` — Phase X.3/X.4/X.5: 8 components; `safe_for_examiner=False`; `formative_only=True`
@@ -320,6 +326,13 @@ Latest commits:
 - `tools/tutor/pedagogical_strategy/` — PSL: mode_selector, profiles, strategy_layer, character_resolver, avatar_stub, psl_profile_validator, strategy_selector. `ENABLE_PEDAGOGICAL_STRATEGY_LAYER = False`. Disconnected from answer_builder.
 - `tools/question_generation/` — human_review_resolution.py, diagnostic_sba_validator.py, static_demo_exporter.py, structured_question_bank_adapter.py
 - `frontend/diagnostic-sba/` — static SBA cockpit with `preguntas.json` (18 active items, only Q2+Q83 are Gold-A)
+
+### epistemiclab-dashboard experiences (live at epistemiclab.dpdns.org)
+- `diagnostic-sba/` — SBA Cockpit: 119 items, 4 modes (Quick Drill 5 / Express 10 / Estándar 25 / Mock Theory Parte 1 50 RA-preserving)
+- `open-response-lab/` — Open Response Lab: 20 items, 4 modes (Short 1 / Standard 2 / Extended 4 / Mock Theory Part 2 4)
+- `adaptive-session/` — Adaptive Session: 119 SBA + 6 SAT prompts, 6 modes (Express 10 / Estándar 25 / Mock Theory 50 / SAT Sprint / SAT Practice / SAT Mock Exam 30min)
+- `full-simulation/` — Full WSET Simulation (Part E): SBA 50 (75min) → Open Response 4 (30min) → SAT 2 wines (30min); single continuous flow; bridge screens; formative only; safe_for_examiner: false
+- All experiences: global nav (4 links), governance bar, session randomization (localStorage + seeded Fisher-Yates)
 - `knowledge/sat-framework/` — sat_structure.json, sat_scales.json, sat_observation_aliases.json (FROZEN)
 - `knowledge/evaluator-framework/` — mark_allocation_rules.json, quality_reasoning_patterns.json (FROZEN)
 - `knowledge/distinction-patterns/` — descriptor_patterns.json, quality_reasoning_patterns.json, readiness_reasoning_patterns.json, response_structures.json (ALL consumed as of Phase X.5)
@@ -339,6 +352,11 @@ Latest commits:
 - Phase 3A gates remain off: `ENABLE_PLANNER_CAUSAL_CHAIN_INJECTION = False`, `ENABLE_PLANNER_QUERY_EXPANSION = False`
 - PSL remains disconnected: `ENABLE_PEDAGOGICAL_STRATEGY_LAYER = False`
 - See `docs/PROJECT_CURRENT_STATE.md` and `docs/ROADMAP_PHASE_4A.md` for full Phase 4A history
+
+### Frontend production status (epistemiclab.dpdns.org) — ALL VERIFIED LIVE
+- Parts B/C/D/F/G: verified 2026-06-10 (all 10 modes across 3 experiences)
+- Part E (full-simulation): implemented 2026-06-10, pending first production verification
+- Task 48 (Full WSET Simulation): COMPLETE
 
 ### Dirty worktree (runtime / local only — never commit)
 - `knowledge/nazareth/epistemic_state.json`, `session_staging.json` — machine-local cognitive objects
