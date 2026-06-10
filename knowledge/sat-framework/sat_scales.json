@@ -1,0 +1,53 @@
+{
+  "schema_version": "assessment_intelligence_v1",
+  "source": "WSET SAT Level 3 – official scale values",
+  "governance": {"safe_for_examiner": false, "examiner_scoring_allowed": false, "uses_llm": false, "uses_api": false},
+  "scales": {
+    "appearance": {
+      "clarity": {"values": ["claro", "turbio"], "ordinal": true, "ascending": false},
+      "intensity": {"values": ["pálida", "media", "profunda"], "ordinal": true},
+      "colour_white": {"values": ["verde limón", "amarillo limón", "dorado", "ámbar", "marrón"], "ordinal": true, "note": "progression indicates age/oxidation"},
+      "colour_rose": {"values": ["rosado", "salmón", "naranja"], "ordinal": true},
+      "colour_red": {"values": ["púrpura", "rubí", "granate", "teja", "marrón"], "ordinal": true, "note": "purple=young, brown=old"}
+    },
+    "nose": {
+      "condition": {"values": ["limpia", "no limpia"], "ordinal": false},
+      "intensity": {"values": ["ligera", "media(-)", "media", "media(+)", "pronunciada"], "ordinal": true, "steps": 5},
+      "development": {"values": ["joven", "en evolución", "evolucionado", "cansado/pasó su mejor momento"], "ordinal": true}
+    },
+    "palate": {
+      "sweetness": {"values": ["seco", "casi seco", "semiseco", "semidulce", "dulce", "muy dulce"], "ordinal": true, "steps": 6},
+      "acidity": {"values": ["baja", "media(-)", "media", "media(+)", "alta"], "ordinal": true, "steps": 5},
+      "tannin": {"values": ["bajo", "medio(-)", "medio", "medio(+)", "alto"], "ordinal": true, "steps": 5, "applies_to_reds": true},
+      "alcohol": {"values": ["bajo", "medio", "alto"], "ordinal": true, "steps": 3},
+      "body": {"values": ["poco", "medio(-)", "medio", "medio(+)", "mucho"], "ordinal": true, "steps": 5},
+      "mousse": {"values": ["delicada", "cremosa", "agresiva"], "ordinal": false, "applies_to_sparkling": true},
+      "flavour_intensity": {"values": ["ligera", "media(-)", "media", "media(+)", "pronunciada"], "ordinal": true, "steps": 5},
+      "finish": {"values": ["corto", "medio(-)", "medio", "medio(+)", "largo"], "ordinal": true, "steps": 5}
+    },
+    "conclusions": {
+      "quality_level": {
+        "values": ["defectuoso", "pobre", "aceptable", "bueno", "muy bueno", "excelente"],
+        "ordinal": true,
+        "steps": 6,
+        "note": "Must be justified by tasting observations"
+      },
+      "readiness_for_drinking": {
+        "values": [
+          "demasiado joven",
+          "se puede beber ahora, pero tiene potencial para el envejecimiento",
+          "beber ahora: no adecuado para el envejecimiento o para un mayor envejecimiento",
+          "demasiado viejo"
+        ],
+        "ordinal": true,
+        "steps": 4
+      }
+    }
+  },
+  "scale_usage_notes": {
+    "minus_plus_notation": "media(-) = just below midpoint; media(+) = just above midpoint",
+    "single_selection_required": "Only ONE value per scale element",
+    "relationship_acidity_climate": "High acidity often signals cool climate or deliberate acid retention",
+    "relationship_colour_age": "For reds: purple/ruby = young; garnet/brick = maturing; brown = old. For whites: pale = young; gold/amber = age or oak"
+  }
+}

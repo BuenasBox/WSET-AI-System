@@ -1,0 +1,158 @@
+{
+  "schema_version": "assessment_intelligence_v1",
+  "source": "WSET L3 Wines Specification – Issue 2.0.1 (August 2023 Spanish translation)",
+  "source_file": "knowledge/official-wset/specification/wset_l3wines_specification_es_highres_aug2023_issue201.md",
+  "extraction_date": "2026-06-09",
+  "governance": {
+    "safe_for_examiner": false,
+    "examiner_scoring_allowed": false,
+    "uses_llm": false,
+    "uses_api": false,
+    "official_wset_content": true,
+    "formative_use_only": true
+  },
+  "qualification": "WSET Level 3 Award in Wines",
+  "units": [
+    {
+      "unit_id": "unit_1",
+      "unit_name": "La Teoría de los Vinos del Mundo",
+      "unit_name_en": "The Theory of Wines of the World",
+      "exam_format": "Written theory exam: 50 MCQ (Part 1) + 4 short-answer questions (Part 2)",
+      "time_limit_minutes": 120,
+      "pass_mark_percent": 55,
+      "learning_outcomes": [
+        {
+          "ra_id": "RA1",
+          "ra_number": 1,
+          "title": "Viticulture and Vinification (Natural and Human Factors)",
+          "title_es": "Identificar los principales factores naturales y humanos en la viña y en la bodega que intervienen en la producción de los vinos tranquilos del mundo y explicar cómo estos factores pueden influir en el estilo, la calidad y el precio de estos vinos.",
+          "assessment_criteria": [
+            "Identificar los principales factores naturales en la viña y explicar en detalle cómo estos factores influyen en el estilo, la calidad y el precio del vino.",
+            "Identificar los principales factores humanos en la viña y explicar en detalle cómo estos factores influyen en el estilo, la calidad y el precio del vino.",
+            "Identificar los principales factores humanos en la bodega y explicar en detalle cómo estos factores influyen en el estilo, la calidad y el precio del vino."
+          ],
+          "content_blocks": [
+            "Bloque 1: Factores naturales en la viña (vid, necesidades, ciclo, componentes de la uva, clima, suelo, tiempo)",
+            "Bloque 2: Factores humanos en la viña (manejo de la vid, gestión de riesgos, control de plagas/enfermedades, concentración de azúcares, enfoques de gestión)",
+            "Bloque 3: Factores humanos en la bodega (elementos comunes, correcciones, elaboración blanco/tinto/rosado/dulce, crianza, clarificación, estabilización, envasado)"
+          ],
+          "key_topics": [
+            "varieties", "clones", "climate_types", "diurnal_range", "altitude", "soils",
+            "canopy_management", "harvest_timing", "yields", "fermentation", "mlf",
+            "oak_ageing", "so2", "lees_contact", "clarification", "stabilisation"
+          ],
+          "mcq_allocation": 8,
+          "short_answer_allocation": "Tested in all 4 short-answer questions as foundational knowledge"
+        },
+        {
+          "ra_id": "RA2",
+          "ra_number": 2,
+          "title": "Still Wines of the World (Regions, Styles, Legislation)",
+          "title_es": "Identificar y describir las características de los vinos tranquilos producidos en las principales regiones productoras de vino del mundo y explicar cómo los principales factores naturales y humanos en la viña, la bodega, la legislación y el comercio pueden influir en el estilo, la calidad y el precio de estos vinos.",
+          "assessment_criteria": [
+            "Identificar y localizar las principales regiones productoras de vino del mundo y describir el estilo y la calidad de los vinos tranquilos en ellas producidos.",
+            "Identificar los principales factores en la viña, la bodega, la legislación y el comercio que intervienen en la producción de los vinos tranquilos.",
+            "Aplicar el conocimiento adquirido en RA1 para explicar cómo los factores en la viña y la bodega explican el estilo y la calidad del vino."
+          ],
+          "content_blocks": [
+            "Bloque 1: Principales regiones productoras – Francia, Alemania, Austria, Hungría, Grecia, Italia, España, Portugal, EE.UU., Canadá, Chile, Argentina, Sudáfrica, Australia, Nueva Zelanda",
+            "Bloque 2: Principales factores – variedades de uva por país/región, factores naturales, factores humanos, legislación, comercio"
+          ],
+          "key_topics": [
+            "bordeaux", "burgundy", "rhone", "loire", "alsace", "germany", "italy_north_south",
+            "spain_rioja_ribera", "portugal", "california", "chile", "argentina", "south_africa",
+            "australia", "new_zealand", "wine_law_appellations", "ageing_categories"
+          ],
+          "mcq_allocation": 28,
+          "short_answer_allocation": "Questions 1 and 2 (each 25 pts) + parts of Q3/Q4"
+        },
+        {
+          "ra_id": "RA3",
+          "ra_number": 3,
+          "title": "Sparkling Wines of the World",
+          "title_es": "Identificar y describir las características de los principales vinos espumosos del mundo y explicar cómo los principales factores naturales y humanos en la viña, la bodega, la legislación y el comercio pueden influir en el estilo, la calidad y el precio de estos vinos.",
+          "assessment_criteria": [
+            "Identificar y localizar los principales vinos espumosos del mundo y describir el estilo y la calidad.",
+            "Identificar los principales factores en la viña, la bodega, la legislación y el comercio que intervienen en la producción de los vinos espumosos."
+          ],
+          "content_blocks": [
+            "Bloque 1: Champagne, Crémant, Cava, Asti, Prosecco, Sekt, sparkling from Australia/NZ/SA/USA",
+            "Bloque 2: Traditional Method, Transfer Method, Ancestral Method, Tank Method, Asti Method, Carbonation + legislation"
+          ],
+          "key_topics": [
+            "champagne", "traditional_method", "cava", "prosecco", "asti", "dosage",
+            "riddling", "disgorgement", "tirage", "autolysis"
+          ],
+          "mcq_allocation": 5,
+          "short_answer_allocation": "Question 4 (parts)"
+        },
+        {
+          "ra_id": "RA4",
+          "ra_number": 4,
+          "title": "Fortified Wines of the World",
+          "title_es": "Identificar y describir las características de los principales vinos generosos del mundo y explicar cómo los principales factores naturales y humanos en la viña, la bodega y la legislación pueden influir en el estilo, la calidad y el precio de estos vinos.",
+          "assessment_criteria": [
+            "Identificar y localizar los principales vinos generosos del mundo y describir el estilo y la calidad.",
+            "Identificar los principales factores en la viña, la bodega y la legislación que intervienen en la producción de los vinos generosos."
+          ],
+          "content_blocks": [
+            "Bloque 1: Port (Oporto), Sherry (Jerez), Fortified Muscats (Beaumes-de-Venise, Rutherglen)",
+            "Bloque 2: Fortification process, biological ageing, oxidative ageing, solera, legislation"
+          ],
+          "key_topics": [
+            "port", "sherry", "fino", "oloroso", "flor", "solera", "ruby", "tawny",
+            "lbv", "vintage_port", "rutherglen_muscat"
+          ],
+          "mcq_allocation": 5,
+          "short_answer_allocation": "Question 4 (parts)"
+        },
+        {
+          "ra_id": "RA5",
+          "ra_number": 5,
+          "title": "Wine Service, Storage, Faults and Food Pairing",
+          "title_es": "Demostrar la capacidad de informar y asesorar a clientes y personal en materia de vinos.",
+          "assessment_criteria": [
+            "Recomendar vinos y explicar las razones de las elecciones realizadas.",
+            "Describir los procedimientos correctos para el almacenamiento y servicio del vino.",
+            "Identificar los defectos más comunes que se pueden encontrar en los vinos.",
+            "Identificar las consideraciones clave a tener en cuenta a la hora de recomendar armonías entre vino y comida.",
+            "Exponer las cuestiones sociales y de salud derivadas del consumo excesivo de vino."
+          ],
+          "content_blocks": [
+            "Bloque 1: Criterios de elección, almacenamiento, servicio",
+            "Bloque 2: Defectos comunes (corcho, oxidación, reducción, acidez volátil, Brett, SO2 elevado)",
+            "Bloque 3: Principios de armonización vino-comida",
+            "Bloque 4: Cuestiones sociales y de salud"
+          ],
+          "key_topics": [
+            "wine_faults", "cork_taint", "oxidation", "reduction", "volatile_acidity",
+            "brettanomyces", "service_temperature", "decanting", "food_pairing", "storage_conditions"
+          ],
+          "mcq_allocation": 4,
+          "short_answer_allocation": "Questions 3 and 4 (Block 1 only, 10 pts total)"
+        }
+      ]
+    },
+    {
+      "unit_id": "unit_2",
+      "unit_name": "La Cata Analítica de Vino",
+      "unit_name_en": "Analytical Wine Tasting",
+      "exam_format": "Blind tasting of 2 still wines (1 white 20pts, 1 red 21pts)",
+      "time_limit_minutes": 30,
+      "pass_mark_percent": 55,
+      "learning_outcomes": [
+        {
+          "ra_id": "SAT",
+          "ra_number": 1,
+          "title": "Systematic Approach to Tasting (SAT)",
+          "title_es": "Describir de forma correcta y precisa las características clave de los principales vinos tranquilos del mundo y utilizar esa descripción para hacer una evaluación de la calidad y una evaluación del estado para el consumo del vino.",
+          "assessment_criteria": [
+            "Describir de forma correcta y precisa las características clave de cualquiera de los principales vinos tranquilos del mundo utilizando la Técnica Sistemática de Cata de Vino WSET – Nivel 3.",
+            "Hacer una evaluación de la calidad y una evaluación del estado para el consumo de cualquiera de los principales vinos tranquilos del mundo utilizando la Técnica Sistemática de Cata de Vino WSET – Nivel 3."
+          ],
+          "sat_sections": ["appearance", "nose", "palate", "conclusions"]
+        }
+      ]
+    }
+  ]
+}

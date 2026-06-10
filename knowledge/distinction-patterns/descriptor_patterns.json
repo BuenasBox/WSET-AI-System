@@ -1,0 +1,42 @@
+{
+  "schema_version": "assessment_intelligence_v1",
+  "source": "Model answers for 6 official WSET L3 wines",
+  "governance": {"safe_for_examiner": false, "examiner_scoring_allowed": false, "uses_llm": false, "uses_api": false},
+  "descriptor_usage_patterns": {
+    "primary_descriptors": {
+      "white_fruity_primary": ["lemon", "peach", "melon", "pineapple", "honeysuckle", "apricot", "mango", "pear", "green apple", "white peach"],
+      "red_fruity_primary": ["red cherry", "redcurrant", "raspberry", "red plum", "violet", "black cherry", "blackcurrant", "black plum", "green bell pepper", "mint"],
+      "specificity_rule": "Use specific fruit names (e.g., 'red cherry') not generic terms ('fruity')",
+      "quantity_rule": "3-5 primary descriptors is optimal; listing too many reduces impact; too few loses marks"
+    },
+    "secondary_descriptors": {
+      "oak_signals": ["vanilla", "cedar", "smoke", "cloves", "toast", "butterscotch"],
+      "mlf_signals": ["butter", "cream", "biscuit", "bread", "pastry"],
+      "yeast_lees_signals": ["biscuit", "bread", "toast", "brioche"],
+      "attribution_optional": "Can state 'oak influence gives notes of vanilla, cedar' (as in Bordeaux model answer) or just list without attribution",
+      "rule": "For complex wines, at least one secondary descriptor is required for full marks"
+    },
+    "tertiary_descriptors": {
+      "bottle_ageing_white": ["honey", "nutty", "petrol", "kerosene", "marmalade", "dried apricot"],
+      "bottle_ageing_red": ["leather", "tobacco", "forest floor", "earth", "mushroom", "dried cranberry", "prune", "cooked plums"],
+      "oxidative_ageing": ["almond", "hazelnut", "walnut", "toffee", "caramel"],
+      "rule": "For premium/aged wines, minimum 1 tertiary descriptor required. Missing tertiary is the #1 mark loss for distinction candidates"
+    },
+    "descriptor_precision_examples": {
+      "good": ["red cherry", "red plum", "black cherry", "pear drop", "vanilla", "cedar", "leather", "forest floor"],
+      "too_generic": ["fruity", "nice fruit", "complex", "pleasant", "good aromas"],
+      "wrong_category": ["using 'honey' as primary when it is tertiary", "using 'vanilla' as primary when it is secondary (oak)"]
+    }
+  },
+  "category_assignment_rules": {
+    "primary": "From the grape itself or alcoholic fermentation: fresh fruit, flowers, herbs, spices from grape",
+    "secondary": "From winemaking choices post-AF: oak ageing (vanilla/cedar/smoke), MLF (butter/cream), lees contact (biscuit/bread/brioche)",
+    "tertiary": "From bottle or oxidative ageing: honey, petrol, leather, tobacco, forest floor, dried fruit",
+    "common_confusion_pairs": [
+      {"descriptor": "toast/biscuit", "note": "Can be secondary (oak/lees) or tertiary (bottle); context determines"},
+      {"descriptor": "honey", "note": "Tertiary (bottle ageing) for whites; NOT primary"},
+      {"descriptor": "vanilla", "note": "Secondary (oak); NOT primary"},
+      {"descriptor": "dried fruit", "note": "Primary if fresh dried fruit (e.g., raisins from grape); tertiary if aged fruit character"}
+    ]
+  }
+}

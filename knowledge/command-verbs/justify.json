@@ -1,0 +1,20 @@
+{
+  "schema_version": "assessment_intelligence_v1",
+  "verb": "justify",
+  "source": "WSET L3 Specification + marking keys",
+  "governance": {"safe_for_examiner": false, "examiner_scoring_allowed": false, "uses_llm": false, "uses_api": false},
+  "cognitive_level": "reasoning + defence of position",
+  "definition": "Give reasons or evidence in support of a stated position or choice. The position is given; you must defend it.",
+  "used_in_ras": ["RA2", "RA5"],
+  "expected_response": {
+    "format": "Evidence chain that directly supports the stated position; counter-arguments not required",
+    "do": ["Select the strongest, most specific supporting evidence", "Link evidence directly to the position", "Use WSET vocabulary"],
+    "do_not": ["Argue against the position", "Give generic descriptions unrelated to the claim"]
+  },
+  "mark_expectation": "1 mark per valid reason or piece of evidence that directly supports the position",
+  "question_stem_examples": [
+    "Justify why Riesling is well suited to the cool climate of the Mosel.",
+    "Justify the use of small oak barrels for ageing premium red Burgundy."
+  ],
+  "mentor_hint": "Start by restating the position in one line, then give 3+ specific reasons. Each reason should connect directly to the claim."
+}

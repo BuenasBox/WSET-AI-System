@@ -1,0 +1,51 @@
+{
+  "schema_version": "assessment_intelligence_v1",
+  "source": "Model answers + marking key quality conclusions",
+  "governance": {"safe_for_examiner": false, "examiner_scoring_allowed": false, "uses_llm": false, "uses_api": false},
+  "quality_justification_framework": {
+    "principle": "Quality level must be justified by specific tasting observations. It is NOT an opinion — it must follow from evidence.",
+    "evidence_to_quality_mapping": {
+      "excelente": {
+        "required_evidence": ["pronounced nose/palate intensity", "all three aroma categories present", "clear balance across structural elements", "long finish", "clear development"],
+        "example_wine": "Ata Rangi McCrone Pinot Noir 2020",
+        "example_reasoning": "Outstanding quality: pronounced intensity, complex layered aromas across primary (red cherry, raspberry), secondary (vanilla, cedar), and tertiary (earth, leather, forest floor); high acid and medium tannin in balance; long finish; clearly developing."
+      },
+      "muy_bueno": {
+        "required_evidence": ["medium(+) intensity", "secondary AND tertiary aromas present", "good balance", "medium(+) finish"],
+        "example_wine": "Rustenberg Chardonnay 2023",
+        "example_reasoning": "Very good quality: medium(+) intensity, complexity from primary fruit, secondary oak/MLF (biscuit, vanilla), and tertiary development (honey, nutty); full body; medium(+) finish; clear regional style expression."
+      },
+      "bueno": {
+        "required_evidence": ["medium intensity", "some secondary complexity", "reasonable balance", "medium finish"],
+        "example_reasoning": "Good quality: well-expressed primary character; some secondary complexity; balanced palate; medium finish."
+      },
+      "aceptable": {
+        "required_evidence": ["simple stated", "primary aromas only", "no secondary or tertiary", "short to medium finish"],
+        "example_wine": "Ca di Alte Pinot Grigio / 16 Stops Shiraz",
+        "example_reasoning": "Acceptable quality: simple; primary fruit aromas; clean; straightforward palate; short-medium finish; no secondary or tertiary complexity."
+      }
+    }
+  },
+  "reasoning_patterns_observed_in_model_answers": [
+    {
+      "pattern": "State quality level + immediate justification",
+      "example": "Very good quality. [implicit justification from preceding tasting notes]",
+      "note": "In model answers quality level is stated as conclusion; justification is implied by the complete tasting notes above"
+    },
+    {
+      "pattern": "Prose integration (Bordeaux model answer style)",
+      "example": "The wine is of a very good quality.",
+      "note": "Brief, declarative; marks awarded for correct level selection"
+    },
+    {
+      "pattern": "Single-word/phrase conclusion",
+      "example": "Outstanding quality / Outstanding"
+    }
+  ],
+  "common_quality_errors": [
+    "Selecting 'excelente' for a simple wine because it is personally enjoyed",
+    "Not recognising 'simple' as a valid and mark-earning descriptor for basic wines",
+    "Selecting 'muy bueno' for a wine with only primary aromas (should be 'bueno' or 'aceptable')",
+    "Selecting 'bueno' when wine clearly shows all three aroma categories and long finish (should be 'muy bueno' or 'excelente')"
+  ]
+}

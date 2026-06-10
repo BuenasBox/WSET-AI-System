@@ -1,0 +1,20 @@
+{
+  "schema_version": "assessment_intelligence_v1",
+  "source": "WSET L3 Specification + marking key analysis",
+  "governance": {"safe_for_examiner": false, "examiner_scoring_allowed": false, "uses_llm": false, "uses_api": false},
+  "exam_preparation_guidance": {
+    "understanding_mark_allocation": "Every mark corresponds to one correct fact, observation, or causal link. The mark scheme is additive, not holistic. Length does not earn marks; correctness does.",
+    "using_command_verbs": "Read the command verb before answering. 'Describe' = list features. 'Explain' = give causes. 'Compare' = link two items on shared dimensions. Misreading the verb is the single largest source of avoidable mark loss.",
+    "SAT_exam_approach": "For Unit 2, use the full SAT structure every time, even for simple wines. The marking grid rewards completeness. Skipping a section loses available marks even if your other observations are excellent.",
+    "topic_priority_by_RA": {
+      "RA2": "Highest short-answer mark allocation (70 pts). Covers viticulture, vinification, wine styles, storage, service. Prioritise this area.",
+      "RA3_RA4": "20 pts combined. Covers major regions (France, rest of world). Focus on climate, key grapes, and appellation rules.",
+      "RA5": "10 pts. Covers sparkling, sweet, and fortified. Know the production method differences (traditional vs. tank vs. transfer)."
+    }
+  },
+  "tasting_preparation_guidance": {
+    "vocabulary_practice": "Practise matching WSET Lexicon descriptors to wine types. Primary aromas must be wine-type appropriate (red wine does not have 'citrus' as a primary descriptor).",
+    "structure_recognition": "Identify tannin and acidity as structural indicators, not flavour descriptors. High acidity = refreshing/crisp; high tannin = grippy/drying.",
+    "quality_calibration": "Outstanding wines have complexity (all three aroma categories), balance, length, and clear development. Practise articulating why — not just labelling."
+  }
+}

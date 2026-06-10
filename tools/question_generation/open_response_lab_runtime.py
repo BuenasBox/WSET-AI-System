@@ -1,9 +1,9 @@
 """Private Open Response Lab runtime helpers.
 
-This layer is intentionally local and inactive. It adapts the existing
-open-response Session Engine and formative pipeline into a browser-safe payload
-for the private lab runtime without adding backend, Tutor, Retrieval, Self-Eval,
-Golden, snapshot, or Dashboard dependencies.
+Phase X.2: Lab is now active_private_lab. All 20 approved OR items are included.
+Assessment intelligence (Phase X.1) is embedded as a runtime resource.
+Governance flags remain unchanged -- open_response_lab_active stays False because
+that flag governs examiner-authority scope, not UI activation.
 """
 
 from __future__ import annotations
@@ -29,7 +29,19 @@ LAB_PAYLOAD_JS_PATH = FRONTEND_LAB_DIR / "lab_payload.js"
 LAB_PAYLOAD_GLOBAL = "OPEN_RESPONSE_LAB_PAYLOAD"
 LAB_STORAGE_KEY = "wset_open_response_lab_private_v1"
 LAB_CONTRACT = "private_open_response_lab_runtime_mvp"
-LAB_ACTIVATION_STATUS = "inactive"
+LAB_ACTIVATION_STATUS = "active_private_lab"
+
+# Phase X.1 assessment intelligence source paths
+_KNOWLEDGE_ROOT = Path("knowledge")
+_COMMAND_VERB_PATHS = [
+    _KNOWLEDGE_ROOT / "command-verbs" / f"{v}.json"
+    for v in ("describe", "explain", "compare", "assess", "evaluate", "justify")
+]
+_SAT_QUALITY_PATH = _KNOWLEDGE_ROOT / "sat-framework" / "sat_quality_framework.json"
+_EVIDENCE_REQ_PATH = _KNOWLEDGE_ROOT / "evaluator-framework" / "evidence_requirements.json"
+_CRF_PATH = _KNOWLEDGE_ROOT / "mentor-framework" / "common_response_failures.json"
+_IMPROVEMENT_PATH = _KNOWLEDGE_ROOT / "mentor-framework" / "improvement_patterns.json"
+_MENTOR_HINTS_PATH = _KNOWLEDGE_ROOT / "mentor-framework" / "mentor_hints.json"
 
 VISIBLE_QUESTION_FIELDS: tuple[str, ...] = (
     "item_id",
@@ -50,26 +62,27 @@ FEEDBACK_FIELD_MAP: dict[str, str] = {
 def build_lab_runtime_payload(
     candidates: Sequence[Mapping[str, Any]] | None = None,
 ) -> dict[str, Any]:
-    """Build the static private-lab payload from existing engine outputs."""
+    """Build the static private-lab payload from existing engine outputs.
+
+    Phase X.2: includes all candidates (not just session-union), embeds
+    assessment_intelligence from Phase X.1 knowledge assets.
+    """
     records = [dict(candidate) for candidate in (candidates or load_open_response_candidates())]
     candidates_by_id = {
         str(candidate.get("source_question_id", "")).strip(): copy.deepcopy(dict(candidate))
         for candidate in records
     }
+    all_source_ids = list(candidates_by_id.keys())
 
     sessions = {
         session_name: compose_session(records, session_size=session_name)
         for session_name in SESSION_SIZES
     }
-    selected_ids: list[str] = []
-    for session in sessions.values():
-        for source_id in session["source_question_ids"]:
-            if source_id not in selected_ids:
-                selected_ids.append(source_id)
 
     return {
         "lab_contract": LAB_CONTRACT,
         "activation_status": LAB_ACTIVATION_STATUS,
+        "pool_size": len(all_source_ids),
         "storage_key": LAB_STORAGE_KEY,
         "session_options": copy.deepcopy(SESSION_SIZES),
         "sessions": {
@@ -82,16 +95,15 @@ def build_lab_runtime_payload(
         },
         "items": [
             _render_item(candidates_by_id[source_id])
-            for source_id in selected_ids
-            if source_id in candidates_by_id
+            for source_id in all_source_ids
         ],
         "evaluation_by_item_id": {
             _item_id(source_id): _evaluation_item(candidates_by_id[source_id])
-            for source_id in selected_ids
-            if source_id in candidates_by_id
+            for source_id in all_source_ids
         },
         "feedback_fields": copy.deepcopy(FEEDBACK_FIELD_MAP),
         "feedback_prohibited": list(FEEDBACK_PROHIBITED),
+        "assessment_intelligence": _build_assessment_intelligence(),
         "governance_flags": copy.deepcopy(LAB_GOVERNANCE_FLAGS),
     }
 
@@ -120,7 +132,7 @@ def validate_lab_runtime_payload(payload: Any) -> list[str]:
     if payload.get("lab_contract") != LAB_CONTRACT:
         errors.append(f"lab_contract must be {LAB_CONTRACT}")
     if payload.get("activation_status") != LAB_ACTIVATION_STATUS:
-        errors.append("activation_status must remain inactive")
+        errors.append(f"activation_status must be {LAB_ACTIVATION_STATUS!r}")
     if payload.get("governance_flags") != LAB_GOVERNANCE_FLAGS:
         errors.append("governance_flags must match private lab defaults")
     if payload.get("session_options") != SESSION_SIZES:
@@ -175,6 +187,81 @@ def write_lab_payload_js(
         encoding="utf-8",
     )
     return target
+
+
+def _build_assessment_intelligence() -> dict[str, Any]:
+    """Load Phase X.1 assessment intelligence assets for runtime embedding.
+
+    Returns an empty dict if any source file is missing (graceful degradation).
+    """
+    try:
+        def _load(p: Path) -> dict[str, Any]:
+            return json.loads(p.read_text(encoding="utf-8"))
+
+        command_verbs: dict[str, Any] = {}
+        for p in _COMMAND_VERB_PATHS:
+            d = _load(p)
+            verb = d.get("verb", p.stem)
+            command_verbs[verb] = {
+                "cognitive_level": d["cognitive_level"],
+                "definition": d["definition"],
+                "do": d["expected_response"]["do"],
+                "do_not": d["expected_response"]["do_not"],
+            }
+
+        sat_quality = _load(_SAT_QUALITY_PATH)
+        sat_quality_levels: dict[str, Any] = {}
+        for lvl in sat_quality.get("quality_levels", []):
+            sat_quality_levels[lvl["level"]] = {
+                "level_en": lvl["level_en"],
+                "description": lvl["description"],
+                "signal_observations": lvl["signal_observations"],
+            }
+
+        ev_req = _load(_EVIDENCE_REQ_PATH)
+        crf_data = _load(_CRF_PATH)
+        ip_data = _load(_IMPROVEMENT_PATH)
+        hints_data = _load(_MENTOR_HINTS_PATH)
+
+        return {
+            "schema_version": "assessment_intelligence_v1",
+            "phase": "X.1",
+            "activation_status": LAB_ACTIVATION_STATUS,
+            "governance": {
+                "safe_for_examiner": False,
+                "examiner_scoring_allowed": False,
+                "training_use_only": True,
+            },
+            "command_verbs": command_verbs,
+            "sat_quality_levels": sat_quality_levels,
+            "evidence_requirements": {
+                "principles": ev_req["principles"],
+                "strong_patterns": ev_req["strong_evidence_patterns"],
+            },
+            "common_response_failures": [
+                {
+                    "id": fail["id"],
+                    "failure": fail["failure"],
+                    "description": fail["description"],
+                    "example": fail.get("example"),
+                    "correction": fail["correction"],
+                }
+                for fail in crf_data["failures"]
+            ],
+            "improvement_patterns": [
+                {
+                    "id": ip["id"],
+                    "from": ip["from"],
+                    "to": ip["to"],
+                    "example_before": ip["example_before"],
+                    "example_after": ip["example_after"],
+                }
+                for ip in ip_data["improvement_patterns"]
+            ],
+            "mentor_hints_by_topic": hints_data["hints_by_topic"],
+        }
+    except (FileNotFoundError, KeyError, json.JSONDecodeError):
+        return {}
 
 
 def _render_item(candidate: Mapping[str, Any]) -> dict[str, str]:

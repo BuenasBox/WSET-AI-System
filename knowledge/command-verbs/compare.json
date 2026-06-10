@@ -1,0 +1,20 @@
+{
+  "schema_version": "assessment_intelligence_v1",
+  "verb": "compare",
+  "source": "WSET L3 Specification + marking keys",
+  "governance": {"safe_for_examiner": false, "examiner_scoring_allowed": false, "uses_llm": false, "uses_api": false},
+  "cognitive_level": "analysis + synthesis",
+  "definition": "Identify similarities and differences between two or more items. Both similarities AND differences are expected unless otherwise stated.",
+  "used_in_ras": ["RA2", "RA3"],
+  "expected_response": {
+    "format": "Point-by-point comparison across shared dimensions (climate, viticulture, wine style, etc.)",
+    "do": ["Address both similarities and differences", "Use parallel structure for clarity", "Cover multiple dimensions"],
+    "do_not": ["Describe each item separately without linking them", "Cover only one item in detail"]
+  },
+  "mark_expectation": "1 mark per valid comparative point; points must name BOTH items to earn the mark",
+  "question_stem_examples": [
+    "Compare the climate and wine styles of Chablis and Meursault.",
+    "Compare the vinification of fino and oloroso Sherry."
+  ],
+  "mentor_hint": "Organise by dimension: 'In terms of climate, X is [cool/warm] whereas Y is [cool/warm]...' — do not write an essay on X then an essay on Y."
+}

@@ -1,0 +1,55 @@
+{
+  "schema_version": "assessment_intelligence_v1",
+  "source": "Marking key analysis + model answer gap patterns",
+  "governance": {"safe_for_examiner": false, "examiner_scoring_allowed": false, "uses_llm": false, "uses_api": false},
+  "failures": [
+    {
+      "id": "CRF_01",
+      "failure": "Describing when explaining is required",
+      "trigger_verbs": ["explain", "evaluate", "justify"],
+      "description": "Candidate lists facts without providing causal links",
+      "example": "Warm climates have riper fruit. (for an explain question)",
+      "correction": "State the mechanism: 'Higher temperatures accelerate sugar accumulation and phenolic ripening, producing wines with higher alcohol and riper fruit character.'"
+    },
+    {
+      "id": "CRF_02",
+      "failure": "Insufficient breadth for mark allocation",
+      "description": "Candidate gives one detailed point for a 4-mark question",
+      "example": "MLF softens wine acidity. (1 point only for 4-mark question)",
+      "correction": "MLF converts malic to lactic acid (1); reducing overall acidity (1); adding creamy/buttery texture (1); used for full-bodied white wines requiring less sharp acidity (1)"
+    },
+    {
+      "id": "CRF_03",
+      "failure": "Non-SAT vocabulary in tasting",
+      "description": "Candidate uses sensory language outside the WSET SAT scale",
+      "example": "The wine tastes elegant and complex",
+      "correction": "Use scale terms: 'medium(+) intensity, clear secondary and tertiary complexity, well-balanced, long finish'"
+    },
+    {
+      "id": "CRF_04",
+      "failure": "Quality level inconsistent with tasting notes",
+      "description": "Candidate selects Outstanding after noting simple/primary character",
+      "example": "Primary fruit only, short finish → 'Outstanding quality'",
+      "correction": "Simple wine with short finish = Acceptable quality"
+    },
+    {
+      "id": "CRF_05",
+      "failure": "Omitting readiness conclusion",
+      "description": "Candidate completes quality but forgets readiness scale",
+      "correction": "Always conclude with both quality level AND readiness level for Unit 2"
+    },
+    {
+      "id": "CRF_06",
+      "failure": "Mixing descriptors across categories",
+      "description": "Candidate assigns tertiary descriptors as primary (e.g. honey listed as primary aroma)",
+      "example": "Primary: honey, citrus, vanilla",
+      "correction": "Honey is tertiary (bottle ageing); vanilla is secondary (oak); citrus is primary. Assign correctly to earn marks."
+    },
+    {
+      "id": "CRF_07",
+      "failure": "Ignoring the simple wine exception",
+      "description": "Candidate attempts to identify tertiary aromas for a simple wine and loses time/marks on non-existent complexity",
+      "correction": "For simple wines: state 'simple' (1 mark) + 4–5 primary descriptors. Do not invent secondary or tertiary aromas."
+    }
+  ]
+}

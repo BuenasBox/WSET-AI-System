@@ -1,0 +1,395 @@
+{
+  "schema_version": "master_bank_v1",
+  "remediation_version": "v4.1",
+  "generated_at": "2026-06-10T01:09:34.606628Z",
+  "patch_count": 5,
+  "description": "Grounding remediations from V4.2 audit. Patches 5 items for corpus alignment.",
+  "parent_patch": "MASTER_BANK_PATCH_V4.json",
+  "governance": {
+    "safe_for_examiner": false,
+    "examiner_scoring_allowed": false,
+    "uses_llm": false,
+    "uses_api": false,
+    "uses_embeddings": false,
+    "uses_vector_db": false,
+    "cloud_services_active": false
+  },
+  "items": [
+    {
+      "master_item_id": "wset3_678",
+      "source_question_id": "678",
+      "question_type": "single_best_answer",
+      "stem": "¿Cuál es el principal beneficio agronómico del uso de cubiertas vegetales entre las hileras del viñedo?",
+      "curriculum": {
+        "ra": "RA1",
+        "topic": "viticulture_vineyard_management",
+        "difficulty": "foundation",
+        "expected_topics": [
+          "RA1",
+          "viticulture",
+          "vineyard_management"
+        ],
+        "expected_keywords": [
+          "cubiertas vegetales",
+          "salud del suelo",
+          "estructura",
+          "erosión",
+          "cover crops"
+        ],
+        "expected_causal_links": [
+          "cover crops -> soil health and structure -> reduced erosion and compaction"
+        ],
+        "expected_reasoning_type": "theory_foundation"
+      },
+      "source_content": {
+        "options": {
+          "A": "Incrementar la evapotranspiración del suelo en climas secos",
+          "B": "Mejorar la salud del suelo y su estructura, reduciendo la erosión y la compactación",
+          "C": "Aumentar el riesgo de heladas primaverales por retención de humedad",
+          "D": "Disminuir la absorción de nutrientes por parte de la vid"
+        },
+        "correct_answer_letter": "B",
+        "correct_answer_text": "Mejorar la salud del suelo y su estructura, reduciendo la erosión y la compactación"
+      },
+      "status": {
+        "review_state": "needs_human_review",
+        "activation_status": "inactive",
+        "gold": false,
+        "public_lab": false
+      },
+      "collections": [
+        "single_best_answer",
+        "inactive",
+        "remediated_v4"
+      ],
+      "lineage": {
+        "structured_source": "knowledge/question-bank/structured/wset3_questions.json",
+        "raw_source": "WSET3_RA1_Banco_Preguntas_Consolidado.xlsx | Verdadero_Falso",
+        "sba_draft_id": null,
+        "sba_review_id": null,
+        "open_response_candidate_id": null,
+        "open_response_review_id": null,
+        "gold_review_id": null,
+        "public_lab_item_id": null,
+        "remediation_action": "REWRITE",
+        "remediation_version": "v4.1",
+        "remediation_original_format": "True/False",
+        "remediation_date": "2026-06-09",
+        "grounding_remediation": "V4.2: broadened from 'compactación' to 'salud del suelo y estructura' for corpus alignment (Level C→B)"
+      },
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "official_wset_question": false,
+        "training_item_only": true,
+        "uses_llm": false,
+        "uses_api": false,
+        "uses_embeddings": false,
+        "uses_vector_db": false,
+        "cloud_services_active": false
+      }
+    },
+    {
+      "master_item_id": "wset3_775",
+      "source_question_id": "775",
+      "question_type": "single_best_answer",
+      "stem": "¿Qué factor de emplazamiento permite maximizar la exposición solar de la vid en viñedos de pendiente?",
+      "curriculum": {
+        "ra": "RA1",
+        "topic": "viticulture_site_selection",
+        "difficulty": "foundation",
+        "expected_topics": [
+          "RA1",
+          "viticulture",
+          "site_selection",
+          "sun_exposure"
+        ],
+        "expected_keywords": [
+          "orientación",
+          "ladera",
+          "ecuador",
+          "exposición solar",
+          "aspect",
+          "sunlight"
+        ],
+        "expected_causal_links": [
+          "equator-facing slope -> maximum solar interception -> better ripening"
+        ],
+        "expected_reasoning_type": "theory_foundation"
+      },
+      "source_content": {
+        "options": {
+          "A": "La altitud del viñedo, ya que reduce la presión atmosférica y aumenta la intensidad lumínica",
+          "B": "La orientación de la ladera hacia el ecuador, que maximiza la intercepción de luz solar directa",
+          "C": "La profundidad del suelo, que regula la temperatura de las raíces",
+          "D": "La proximidad a masas de agua, que suaviza las temperaturas nocturnas"
+        },
+        "correct_answer_letter": "B",
+        "correct_answer_text": "La orientación de la ladera hacia el ecuador, que maximiza la intercepción de luz solar directa"
+      },
+      "status": {
+        "review_state": "needs_human_review",
+        "activation_status": "inactive",
+        "gold": false,
+        "public_lab": false
+      },
+      "collections": [
+        "single_best_answer",
+        "inactive",
+        "remediated_v4"
+      ],
+      "lineage": {
+        "structured_source": "knowledge/question-bank/structured/wset3_questions.json",
+        "raw_source": "WSET3_RA1_Banco_Preguntas_Bloque2.xlsx | Verdadero_Falso",
+        "sba_draft_id": null,
+        "sba_review_id": null,
+        "open_response_candidate_id": null,
+        "open_response_review_id": null,
+        "gold_review_id": null,
+        "public_lab_item_id": null,
+        "remediation_action": "REWRITE",
+        "remediation_version": "v4.1",
+        "remediation_original_format": "True/False",
+        "remediation_date": "2026-06-09",
+        "grounding_remediation": "V4.2: replaced N-S row orientation (not in corpus) with equator-facing aspect (corpus-supported)"
+      },
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "official_wset_question": false,
+        "training_item_only": true,
+        "uses_llm": false,
+        "uses_api": false,
+        "uses_embeddings": false,
+        "uses_vector_db": false,
+        "cloud_services_active": false
+      }
+    },
+    {
+      "master_item_id": "wset3_742",
+      "source_question_id": "742",
+      "question_type": "single_best_answer",
+      "stem": "¿Qué variedad de uva y estilo de vino es característico de la región de Barossa Valley en Australia?",
+      "curriculum": {
+        "ra": "RA2",
+        "topic": "new_world_regions_australia",
+        "difficulty": "foundation",
+        "expected_topics": [
+          "RA2",
+          "australia",
+          "barossa_valley",
+          "syrah_shiraz"
+        ],
+        "expected_keywords": [
+          "Barossa",
+          "Syrah",
+          "Shiraz",
+          "fruta negra madura",
+          "taninos suaves",
+          "especiado"
+        ],
+        "expected_causal_links": [
+          "Barossa warm climate -> full-bodied Shiraz -> ripe spiced style"
+        ],
+        "expected_reasoning_type": "regional_knowledge"
+      },
+      "source_content": {
+        "options": {
+          "A": "Pinot Noir de cuerpo ligero y alta acidez, con aromas de cereza fresca",
+          "B": "Riesling de perfil mineral con alta acidez y notas petrolinas en su evolución",
+          "C": "Sauvignon Blanc de perfil herbáceo con notas de hierba cortada",
+          "D": "Shiraz (Syrah) de cuerpo pleno, taninos suaves y sabores de fruta negra madura con notas especiadas"
+        },
+        "correct_answer_letter": "D",
+        "correct_answer_text": "Shiraz (Syrah) de cuerpo pleno, taninos suaves y sabores de fruta negra madura con notas especiadas"
+      },
+      "status": {
+        "review_state": "needs_human_review",
+        "activation_status": "inactive",
+        "gold": false,
+        "public_lab": false
+      },
+      "collections": [
+        "single_best_answer",
+        "inactive",
+        "remediated_v4"
+      ],
+      "lineage": {
+        "structured_source": "knowledge/question-bank/structured/wset3_questions.json",
+        "raw_source": "WSET3_RA2_Banco_Preguntas_Bloque2.xlsx | Emparejamiento",
+        "sba_draft_id": null,
+        "sba_review_id": null,
+        "open_response_candidate_id": null,
+        "open_response_review_id": null,
+        "gold_review_id": null,
+        "public_lab_item_id": null,
+        "remediation_action": "REWRITE",
+        "remediation_version": "v4.1",
+        "remediation_original_format": "Matching",
+        "remediation_date": "2026-06-09",
+        "grounding_remediation": "V4.2: removed 'pimienta negra' (Clare Valley descriptor) and 'taninos maduros'; aligned to corpus: 'soft tannins' + 'ripe black fruit' + 'spice'"
+      },
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "official_wset_question": false,
+        "training_item_only": true,
+        "uses_llm": false,
+        "uses_api": false,
+        "uses_embeddings": false,
+        "uses_vector_db": false,
+        "cloud_services_active": false
+      }
+    },
+    {
+      "master_item_id": "wset3_716",
+      "source_question_id": "716",
+      "question_type": "single_best_answer",
+      "stem": "¿De qué manera influye la altitud elevada en el perfil de los vinos de montaña?",
+      "curriculum": {
+        "ra": "RA1",
+        "topic": "viticulture_altitude_aromatic",
+        "difficulty": "intermediate",
+        "expected_topics": [
+          "RA1",
+          "viticulture",
+          "altitude",
+          "cool_climate"
+        ],
+        "expected_keywords": [
+          "altitud",
+          "temperaturas frescas",
+          "maduración lenta",
+          "acidez",
+          "aromas primarios"
+        ],
+        "expected_causal_links": [
+          "altitude -> lower temperatures -> slower ripening -> retained acidity + preserved primary aromas"
+        ],
+        "expected_reasoning_type": "causal_mechanism"
+      },
+      "source_content": {
+        "options": {
+          "A": "La altitud eleva las temperaturas, acelerando la maduración y produciendo vinos de alta graduación alcohólica",
+          "B": "La altitud reduce el dióxido de carbono disponible, limitando la fotosíntesis y retrasando la maduración",
+          "C": "La altitud no tiene influencia relevante sobre el estilo del vino en regiones templadas",
+          "D": "Las temperaturas más frescas en altitud ralentizan la maduración, conservando la acidez y los aromas primarios de la fruta"
+        },
+        "correct_answer_letter": "D",
+        "correct_answer_text": "Las temperaturas más frescas en altitud ralentizan la maduración, conservando la acidez y los aromas primarios de la fruta"
+      },
+      "status": {
+        "review_state": "needs_human_review",
+        "activation_status": "inactive",
+        "gold": false,
+        "public_lab": false
+      },
+      "collections": [
+        "single_best_answer",
+        "inactive",
+        "remediated_v4"
+      ],
+      "lineage": {
+        "structured_source": "knowledge/question-bank/structured/wset3_questions.json",
+        "raw_source": "WSET3_Banco_1000_Preguntas_Ordenado.xlsx | Sheet1",
+        "sba_draft_id": null,
+        "sba_review_id": null,
+        "open_response_candidate_id": null,
+        "open_response_review_id": null,
+        "gold_review_id": null,
+        "public_lab_item_id": null,
+        "remediation_action": "REPLACE",
+        "remediation_version": "v4.1",
+        "remediation_original_format": "out_of_scope",
+        "remediation_date": "2026-06-09",
+        "retire_reason": "Out-of-scope health risk topic; not a WSET L3 learning objective; governance/examiner-authority risk",
+        "grounding_remediation": "V4.2: removed UV radiation / aromatic synthesis mechanism (not in WSET corpus); rewrote around corpus-grounded temperature / ripening / acidity chain"
+      },
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "official_wset_question": false,
+        "training_item_only": true,
+        "uses_llm": false,
+        "uses_api": false,
+        "uses_embeddings": false,
+        "uses_vector_db": false,
+        "cloud_services_active": false
+      }
+    },
+    {
+      "master_item_id": "wset3_686",
+      "source_question_id": "686",
+      "question_type": "single_best_answer",
+      "stem": "¿Cuál es el principal beneficio del uso de levaduras comerciales seleccionadas en la vinificación?",
+      "curriculum": {
+        "ra": "RA1",
+        "topic": "vinification_fermentation",
+        "difficulty": "foundation",
+        "expected_topics": [
+          "RA1",
+          "vinification",
+          "yeasts",
+          "fermentation"
+        ],
+        "expected_keywords": [
+          "levaduras seleccionadas",
+          "fermentación",
+          "predecible",
+          "selected yeasts"
+        ],
+        "expected_causal_links": [
+          "selected yeasts -> predictable fermentation -> reliable style"
+        ],
+        "expected_reasoning_type": "theory_foundation"
+      },
+      "source_content": {
+        "options": {
+          "A": "Eliminan completamente la necesidad de sulfitos durante toda la elaboración",
+          "B": "Producen vinos con mayor complejidad y expresión de terroir",
+          "C": "Garantizan una fermentación más fiable, predecible y con menor riesgo de parada",
+          "D": "Aumentan automáticamente el potencial alcohólico del mosto"
+        },
+        "correct_answer_letter": "C",
+        "correct_answer_text": "Garantizan una fermentación más fiable, predecible y con menor riesgo de parada"
+      },
+      "status": {
+        "review_state": "needs_human_review",
+        "activation_status": "inactive",
+        "gold": false,
+        "public_lab": false
+      },
+      "collections": [
+        "single_best_answer",
+        "inactive",
+        "remediated_v4"
+      ],
+      "lineage": {
+        "structured_source": "knowledge/question-bank/structured/wset3_questions.json",
+        "raw_source": "WSET3_RA1_Banco_Preguntas_Consolidado.xlsx | Verdadero_Falso",
+        "sba_draft_id": null,
+        "sba_review_id": null,
+        "open_response_candidate_id": null,
+        "open_response_review_id": null,
+        "gold_review_id": null,
+        "public_lab_item_id": null,
+        "remediation_action": "REWRITE",
+        "remediation_version": "v4.1",
+        "remediation_original_format": "True/False",
+        "remediation_date": "2026-06-09",
+        "grounding_remediation": "V4.2: replaced 'más rápida' with 'más fiable' to match WSET wording ('reliable and predictable fermentation')"
+      },
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "official_wset_question": false,
+        "training_item_only": true,
+        "uses_llm": false,
+        "uses_api": false,
+        "uses_embeddings": false,
+        "uses_vector_db": false,
+        "cloud_services_active": false
+      }
+    }
+  ]
+}

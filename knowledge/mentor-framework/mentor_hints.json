@@ -1,0 +1,35 @@
+{
+  "schema_version": "assessment_intelligence_v1",
+  "source": "WSET L3 marking keys + model answers — formative interpretation",
+  "governance": {"safe_for_examiner": false, "examiner_scoring_allowed": false, "uses_llm": false, "uses_api": false},
+  "hints_by_topic": {
+    "SAT_appearance": {
+      "common_errors": ["Forgetting to assess clarity", "Using non-SAT vocabulary (e.g. 'pretty', 'dark')"],
+      "hint": "Work through Appearance in order: clarity → intensity → colour. Each element has its own scale. Colour must match the wine type (white, rosé, red)."
+    },
+    "SAT_nose": {
+      "common_errors": ["Mixing primary/secondary/tertiary without assigning categories", "Listing generic 'fruit' without specifics"],
+      "hint": "After stating condition (clean/faulty) and intensity, identify aromas by category: primary (fruit, floral, vegetal), secondary (oak, MLF, yeast), tertiary (bottle ageing, oxidation). At least one specific descriptor per category earns the mark."
+    },
+    "SAT_palate": {
+      "common_errors": ["Omitting acidity or tannin assessment", "Treating 'body' as a flavour rather than a structural element", "Confusing finish length scales"],
+      "hint": "For palate, cover all nine elements in order: sweetness, acidity, tannin (red only), alcohol, body, flavour intensity, flavour characteristics, finish. Body and finish are structural conclusions, not flavours."
+    },
+    "SAT_quality": {
+      "common_errors": ["Selecting quality level without justification from tasting notes", "Using 'excelente' for wines with no tertiary complexity"],
+      "hint": "Quality level must be consistent with your tasting notes. Outstanding requires: pronounced intensity + all three aroma categories + balance + long finish. Simple wines cannot be outstanding."
+    },
+    "SAT_readiness": {
+      "common_errors": ["Mismatching readiness with development stage", "Selecting 'demasiado joven' for a developing wine"],
+      "hint": "'Can drink now but has potential' is the correct answer for most premium wines with developing complexity. Only select 'too young' if the wine is clearly unresolved (high unintegrated tannin, no development)."
+    },
+    "short_answer_structure": {
+      "common_errors": ["Giving only one reason for a multi-mark question", "Explaining without specifying the cause"],
+      "hint": "Count the marks. A 4-mark explain question needs 4 distinct causal links. One thorough sentence per link is the target. Do not repeat the same point in different words."
+    },
+    "MCQ_strategy": {
+      "common_errors": ["Overthinking distractors", "Selecting partially correct answers"],
+      "hint": "For MCQ, eliminate clearly wrong options first. The correct answer will be fully accurate, not partially. WSET uses precise vocabulary — 'dry' is not the same as 'off-dry'."
+    }
+  }
+}

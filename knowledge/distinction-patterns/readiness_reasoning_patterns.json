@@ -1,0 +1,48 @@
+{
+  "schema_version": "assessment_intelligence_v1",
+  "source": "Model answers (6 wines) + SAT readiness scale",
+  "governance": {"safe_for_examiner": false, "examiner_scoring_allowed": false, "uses_llm": false, "uses_api": false},
+  "readiness_reasoning_framework": {
+    "principle": "Readiness assessment must be consistent with development stage (nose) and structural characteristics (palate). Tannin, acidity, and presence of tertiary aromas are key signals.",
+    "scale_values": [
+      "demasiado joven",
+      "se puede beber ahora, pero tiene potencial para el envejecimiento",
+      "beber ahora: no adecuado para el envejecimiento o para un mayor envejecimiento",
+      "demasiado viejo"
+    ],
+    "signal_mapping": {
+      "demasiado_joven": {
+        "signals": ["young development stage", "high unintegrated tannin", "high sharp acidity", "primary aromas dominant", "no tertiary development"],
+        "mentor_note": "Use when wine needs more time; not just 'young' development"
+      },
+      "drink_now_has_potential": {
+        "signals": ["developing or developed stage", "secondary and tertiary complexity", "balanced structure", "medium(+) to long finish", "still fresh primary fruit"],
+        "observed_in": "Rustenberg Chardonnay, Ata Rangi Pinot Noir, Château Dutruch Bordeaux, Château Doisy-Daëne Barsac",
+        "mentor_note": "The most common answer for premium wines in WSET L3 context"
+      },
+      "drink_now_no_ageing": {
+        "signals": ["young but ready", "simple primary character", "no ageing structure", "light body", "no tertiary aromas"],
+        "observed_in": "Ca di Alte Pinot Grigio (simple wine)",
+        "mentor_note": "Use for straightforward wines without ageing potential"
+      },
+      "demasiado_viejo": {
+        "signals": ["colour: amber/brown (white) or brick/brown (red)", "tired/pasado aroma stage", "loss of fruit", "oxidised characters"],
+        "mentor_note": "Rare in WSET exam wines as these are selected to demonstrate identifiable styles"
+      }
+    }
+  },
+  "consistency_rules": [
+    "Development 'joven' → NOT 'demasiado viejo'",
+    "Development 'evolucionado/cansado' → unlikely 'demasiado joven'",
+    "Quality 'excelente' + development 'evolucionado' → likely 'drink now but has potential' (still has life)",
+    "Quality 'aceptable' + young → 'drink now, no ageing'"
+  ],
+  "observed_model_answer_conclusions": [
+    {"wine": "Rustenberg Chardonnay 2023", "quality": "muy bueno", "readiness": "drink now but has potential for ageing"},
+    {"wine": "Ata Rangi Pinot Noir 2020", "quality": "excelente", "readiness": "drink now but has potential for ageing"},
+    {"wine": "Château Dutruch Bordeaux 2018", "quality": "muy bueno", "readiness": "drink now but has potential for ageing"},
+    {"wine": "Château Doisy-Daëne Barsac 2016", "quality": "excelente", "readiness": "drink now but has potential for ageing"},
+    {"wine": "Ca di Alte Pinot Grigio", "quality": "aceptable", "readiness": "drink now, no ageing"},
+    {"wine": "16 Stops Shiraz", "quality": "aceptable", "readiness": "drink now, no ageing"}
+  ]
+}

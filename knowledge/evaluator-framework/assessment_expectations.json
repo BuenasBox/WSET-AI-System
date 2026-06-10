@@ -1,0 +1,75 @@
+{
+  "schema_version": "assessment_intelligence_v1",
+  "source": "WSET L3 Specification exam guidance + official marking key structure",
+  "governance": {"safe_for_examiner": false, "examiner_scoring_allowed": false, "uses_llm": false, "uses_api": false},
+  "short_answer_expectations": {
+    "general_principles": [
+      "All questions based on published learning outcomes; no material outside specification",
+      "Marks indicated on exam paper per question/part",
+      "No negative marking",
+      "Answers written in space provided"
+    ],
+    "question_structure_patterns": {
+      "Q1_Q2_pattern": "Dual RA1+RA2 questions; typically: (a) identify/describe a natural factor [RA1], (b) explain viticultural/vinification implication [RA1], (c) apply to a specific wine/region [RA2], (d) service/recommendation scenario [RA5 minor]",
+      "Q3_Q4_pattern": "Cross-RA questions covering RA3 (sparkling) or RA4 (fortified) with RA1 application; include RA5 block 1 component (service/recommendation)"
+    },
+    "mark_earning_principles": {
+      "identification_mark": "Name/state the item – 1 mark",
+      "description_mark": "Give characteristic – 1 mark per valid characteristic",
+      "explanation_mark": "Give cause-and-effect reasoning – typically worth 1-2 marks per valid causal link",
+      "application_mark": "Apply RA1 knowledge to RA2 context – requires both fact AND regional link"
+    },
+    "sample_question_analysis": {
+      "question_stem": "La espaldera es un sistema de conducción con empalizamiento que se utiliza a menudo para el cultivo de la Chardonnay en los climas frescos. Explique por qué un productor de uva optaría por utilizar este sistema.",
+      "command_verb": "Explique",
+      "expected_response_elements": [
+        "VSP system exposes leaves and grapes to sunlight (identification)",
+        "Maximises photosynthesis in limited-sun cool climate (explanation)",
+        "Promotes even ripening (effect)",
+        "Improves canopy ventilation reducing disease risk (additional benefit)"
+      ],
+      "marks_available": 4,
+      "note": "Each causal link earns a mark; naming the system alone earns nothing"
+    }
+  },
+  "mcq_expectations": {
+    "format": "4-option, single best answer",
+    "question_types": ["factual recall", "comprehension (apply concept)", "regional identification"],
+    "example_analysis": [
+      {
+        "stem": "¿Cuál es la principal variedad de uva en el vino de mezcla Rosé d'Anjou?",
+        "correct": "Grolleau",
+        "cognitive_level": "recall",
+        "ra": "RA2"
+      },
+      {
+        "stem": "¿Cuál de los siguientes garantizará la estabilidad microbiológica de un vino?",
+        "correct": "Filtración esterilizante",
+        "cognitive_level": "comprehension/application",
+        "ra": "RA1"
+      }
+    ],
+    "distractor_patterns": [
+      "Other varieties from same region (plausible regional alternatives)",
+      "Correct process for different wine type",
+      "Process name confusion (racking vs. filtration)",
+      "True fact but not the best answer"
+    ]
+  },
+  "performance_benchmarks_from_model_answers": {
+    "20_out_of_20_white": {
+      "wine": "Rustenberg Chardonnay 2023",
+      "appearance_markers": ["pale lemon intensity correct", "colour correct"],
+      "nose_markers": ["medium+ intensity", "primary: lemon/peach/melon/pineapple", "secondary: biscuit/bread/vanilla/cloves", "tertiary: honey/nutty", "developing"],
+      "palate_markers": ["dry", "medium+ acid", "medium alcohol", "full body", "medium+ intensity", "medium+ finish"],
+      "conclusion_markers": ["very good quality", "drink now but has potential"]
+    },
+    "21_out_of_21_red": {
+      "wine": "Ata Rangi McCrone Pinot Noir 2020",
+      "appearance_markers": ["pale garnet"],
+      "nose_markers": ["pronounced intensity", "primary: red cherry/redcurrant/raspberry/red plum/violet/black cherry", "secondary: vanilla/cedar/smoke/cloves", "tertiary: earth/forest floor/dried cranberry/mushroom", "developing"],
+      "palate_markers": ["dry", "high acid", "medium tannin", "high alcohol", "medium+ body", "pronounced intensity", "long finish"],
+      "conclusion_markers": ["outstanding quality", "drink now but has potential for ageing"]
+    }
+  }
+}

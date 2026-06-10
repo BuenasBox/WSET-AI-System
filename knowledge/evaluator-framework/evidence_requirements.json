@@ -1,0 +1,69 @@
+{
+  "schema_version": "assessment_intelligence_v1",
+  "source": "Official marking keys + model answers (6 wines)",
+  "governance": {"safe_for_examiner": false, "examiner_scoring_allowed": false, "uses_llm": false, "uses_api": false},
+  "principles": {
+    "descriptor_validity": "Aroma/flavour descriptors must be accurate and correct for the wine",
+    "flexibility": "Examiners accept descriptors beyond the WSET Lexicon if accurate",
+    "primary_secondary_tertiary_required": "For complex wines, marks require evidence from ALL THREE aroma categories",
+    "simple_wine_exception": "For demonstrably simple wines, 'simple' can substitute tertiary requirement; remaining marks from primary only",
+    "flavour_mirrors_aroma": "Palate flavour descriptors should mirror nose aroma descriptors",
+    "conclusion_must_be_supported": "Quality and readiness conclusions must flow from tasting observations"
+  },
+  "strong_evidence_patterns": {
+    "distinction_level_response": [
+      "Clear intensity statement for nose and palate",
+      "Primary descriptors: specific (e.g., 'lemon, peach, melon, pineapple') not generic ('fruity')",
+      "Secondary: MLF (butter/cream/cheese) or oak (vanilla/cedar/smoke/toast) identified and attributed",
+      "Tertiary: bottle-age (honey/nutty/petroleum/leather/tobacco/forest floor) identified and attributed",
+      "Development stage correctly identified (joven/en evolución/evolucionado)",
+      "All palate scale elements addressed: sweetness, acidity, [tannin for reds], alcohol, body, intensity, finish",
+      "Quality level matches wine complexity evidenced (e.g., very good = secondary+tertiary noted)",
+      "Readiness conclusion is logical given development stage observed"
+    ]
+  },
+  "weak_evidence_patterns": {
+    "common_mark_losses": [
+      "Generic descriptors: 'fruity', 'complex', 'nice' instead of specific terms",
+      "Missing aroma category: only primary noted, no secondary or tertiary",
+      "Omitting development/evolution stage",
+      "Missing palate elements: forgetting alcohol, body, or finish",
+      "Quality level inconsistent with observed characteristics",
+      "Stating 'excelente' without tertiary complexity or long finish",
+      "Stating 'demasiado joven' for a developed wine showing bottle-age characters",
+      "Confusing secondary (MLF/oak) with tertiary (bottle ageing)"
+    ]
+  },
+  "required_observations_by_section": {
+    "appearance": ["clarity statement only if not clear", "intensity (pálida/media/profunda)", "colour (specific hue)"],
+    "nose": ["intensity", "at least 1 primary descriptor", "development stage", "secondary for complex wine", "tertiary for aged wine"],
+    "palate": {
+      "white": ["sweetness", "acidity", "alcohol", "body", "flavour intensity", "flavour descriptors (primary req.)", "finish"],
+      "red": ["sweetness", "acidity", "tannin", "alcohol", "body", "flavour intensity", "flavour descriptors (primary req.)", "finish"]
+    },
+    "conclusions": ["quality level from official scale", "readiness/drinking window assessment"]
+  },
+  "evidence_by_wine_complexity": {
+    "simple_wine": {
+      "example": "Ca di Alte Pinot Grigio (basic Veneto)",
+      "nose_strategy": "Note as 'simple'; list primary aromas; do NOT attempt to invent tertiary",
+      "palate_strategy": "Note as 'simple'; primary flavours only",
+      "quality_expected": "aceptable",
+      "readiness_expected": "drink now, no ageing potential"
+    },
+    "premium_wine": {
+      "example": "Rustenberg Chardonnay (Stellenbosch), Château Dutruch Bordeaux",
+      "nose_strategy": "Must identify primary, secondary (oak/MLF), AND tertiary (bottle age) to earn all marks",
+      "palate_strategy": "Full structured response across all elements; complexity acknowledged",
+      "quality_expected": "muy bueno",
+      "readiness_expected": "drink now but has potential"
+    },
+    "outstanding_wine": {
+      "example": "Ata Rangi McCrone Pinot Noir, Château Doisy-Daëne Barsac",
+      "nose_strategy": "Rich tertiary development; pronounced intensity; complex layered aromas",
+      "palate_strategy": "High structure; long finish; excellent balance",
+      "quality_expected": "excelente",
+      "readiness_expected": "drink now but has potential for ageing"
+    }
+  }
+}

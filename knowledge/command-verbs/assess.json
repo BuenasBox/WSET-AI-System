@@ -1,0 +1,20 @@
+{
+  "schema_version": "assessment_intelligence_v1",
+  "verb": "assess",
+  "source": "WSET L3 Specification + marking keys",
+  "governance": {"safe_for_examiner": false, "examiner_scoring_allowed": false, "uses_llm": false, "uses_api": false},
+  "cognitive_level": "evaluation + evidence-based judgement",
+  "definition": "Make an informed judgement about the value, quality, or significance of something, based on stated criteria.",
+  "used_in_ras": ["RA2", "RA5"],
+  "expected_response": {
+    "format": "Judgement statement + supporting evidence from specific observations",
+    "do": ["State a clear judgement", "Support with specific tasting or regional evidence", "Use appropriate WSET criteria"],
+    "do_not": ["Give unsupported opinion", "List observations without a conclusion"]
+  },
+  "mark_expectation": "Marks split between judgement (quality/readiness level) and supporting evidence",
+  "question_stem_examples": [
+    "Assess the quality of the wine based on your tasting notes.",
+    "Assess the potential for ageing of this wine."
+  ],
+  "mentor_hint": "Lead with your judgement ('This wine is of outstanding quality'), then immediately provide 3 or more specific observations that support it. Do not build up to the conclusion."
+}

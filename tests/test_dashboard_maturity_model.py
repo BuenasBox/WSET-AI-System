@@ -44,7 +44,7 @@ class TestDashboardMaturityModel(unittest.TestCase):
         self.assertEqual(self.state["master_bank_open_response"], 21)
 
     def test_activation_and_governance_are_not_overstated(self):
-        self.assertEqual(self.state["open_response_status"], "implemented_inactive")
+        self.assertEqual(self.state["open_response_status"], "active_private_lab")
         self.assertEqual(
             self.state["adaptive_engine_status"],
             "pedagogical_contract_only",

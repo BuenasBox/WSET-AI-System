@@ -1,0 +1,20 @@
+{
+  "schema_version": "assessment_intelligence_v1",
+  "verb": "describe",
+  "source": "WSET L3 Specification + marking keys",
+  "governance": {"safe_for_examiner": false, "examiner_scoring_allowed": false, "uses_llm": false, "uses_api": false},
+  "cognitive_level": "recall + observation",
+  "definition": "State the characteristics, features, or appearance of something. Do not explain causes or reasons.",
+  "used_in_ras": ["RA1", "RA2", "RA3", "RA4"],
+  "expected_response": {
+    "format": "List of relevant characteristics using appropriate WSET vocabulary",
+    "do": ["Name features", "Use SAT vocabulary (for tasting questions)", "Be specific", "Cover all relevant dimensions"],
+    "do_not": ["Explain why", "Give opinions", "Compare to other examples", "Add causes or mechanisms"]
+  },
+  "mark_expectation": "1 mark per correct feature identified; no marks for explanation or reasoning",
+  "question_stem_examples": [
+    "Describe the main characteristics of the Médoc appellation.",
+    "Describe the typical appearance of a Sauternes."
+  ],
+  "mentor_hint": "Answer 'what' questions only. If you catch yourself writing 'because' or 'this means', you are explaining, not describing."
+}

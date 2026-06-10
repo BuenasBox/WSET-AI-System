@@ -1,0 +1,189 @@
+{
+  "schema_version": "assessment_intelligence_v1",
+  "source": "WSET Systematic Approach to Tasting Wine® Level 3 – Issue 2 (May 2022), Spanish translation",
+  "source_file": "knowledge/official-wset/sat/wset_l3wines_sat_es_may2022_issue2.md",
+  "governance": {"safe_for_examiner": false, "examiner_scoring_allowed": false, "uses_llm": false, "uses_api": false, "official_wset_content": true},
+  "sat_version": "WSET SAT Level 3",
+  "sections": [
+    {
+      "section": "appearance",
+      "section_es": "aspecto",
+      "elements": [
+        {
+          "element": "clarity",
+          "element_es": "claridad",
+          "type": "scale",
+          "select_one": true,
+          "values": ["claro", "turbio (¿defectuoso?)"]
+        },
+        {
+          "element": "intensity",
+          "element_es": "intensidad",
+          "type": "scale",
+          "select_one": true,
+          "values": ["pálida", "media", "profunda"]
+        },
+        {
+          "element": "colour",
+          "element_es": "color",
+          "type": "scale_by_wine_type",
+          "select_one": true,
+          "values": {
+            "white": ["verde limón", "amarillo limón", "dorado", "ámbar", "marrón"],
+            "rosé": ["rosado", "salmón", "naranja"],
+            "red": ["púrpura", "rubí", "granate", "teja", "marrón"]
+          }
+        },
+        {
+          "element": "other_observations",
+          "element_es": "otras observaciones",
+          "type": "open_list",
+          "select_one": false,
+          "examples": ["lágrimas/piernas", "sedimento", "efervescencia", "burbujas"],
+          "note": "Optional; comment only when relevant"
+        }
+      ]
+    },
+    {
+      "section": "nose",
+      "section_es": "nariz",
+      "elements": [
+        {
+          "element": "condition",
+          "element_es": "condición",
+          "type": "scale",
+          "select_one": true,
+          "values": ["limpia", "no limpia (¿defectuosa?)"]
+        },
+        {
+          "element": "intensity",
+          "element_es": "intensidad",
+          "type": "scale",
+          "select_one": true,
+          "values": ["ligera", "media(-)", "media", "media(+)", "pronunciada"]
+        },
+        {
+          "element": "aroma_characteristics",
+          "element_es": "características del aroma",
+          "type": "open_descriptive",
+          "select_one": false,
+          "framework": "primary_secondary_tertiary",
+          "note": "Use the WSET Lexicon as a guide. Not limited to Lexicon terms."
+        },
+        {
+          "element": "development",
+          "element_es": "evolución",
+          "type": "scale",
+          "select_one": true,
+          "values": ["joven", "en evolución", "evolucionado", "cansado/pasó su mejor momento"]
+        }
+      ]
+    },
+    {
+      "section": "palate",
+      "section_es": "boca",
+      "elements": [
+        {
+          "element": "sweetness",
+          "element_es": "dulzor",
+          "type": "scale",
+          "select_one": true,
+          "values": ["seco", "casi seco", "semiseco", "semidulce", "dulce", "muy dulce"]
+        },
+        {
+          "element": "acidity",
+          "element_es": "acidez",
+          "type": "scale",
+          "select_one": true,
+          "values": ["baja", "media(-)", "media", "media(+)", "alta"]
+        },
+        {
+          "element": "tannin",
+          "element_es": "tanino",
+          "type": "scale",
+          "select_one": true,
+          "applies_to": ["red wine", "structured white with tannin"],
+          "values": ["bajo", "medio(-)", "medio", "medio(+)", "alto"]
+        },
+        {
+          "element": "alcohol",
+          "element_es": "alcohol",
+          "type": "scale",
+          "select_one": true,
+          "values": ["bajo", "medio", "alto"],
+          "fortified_values": ["bajo", "medio", "alto"]
+        },
+        {
+          "element": "body",
+          "element_es": "cuerpo",
+          "type": "scale",
+          "select_one": true,
+          "values": ["poco", "medio(-)", "medio", "medio(+)", "mucho"]
+        },
+        {
+          "element": "mousse",
+          "element_es": "burbuja",
+          "type": "scale",
+          "select_one": true,
+          "applies_to": ["sparkling wine"],
+          "values": ["delicada", "cremosa", "agresiva"]
+        },
+        {
+          "element": "flavour_intensity",
+          "element_es": "intensidad del sabor",
+          "type": "scale",
+          "select_one": true,
+          "values": ["ligera", "media(-)", "media", "media(+)", "pronunciada"]
+        },
+        {
+          "element": "flavour_characteristics",
+          "element_es": "características del sabor",
+          "type": "open_descriptive",
+          "select_one": false,
+          "framework": "primary_secondary_tertiary",
+          "note": "Same descriptor framework as nose"
+        },
+        {
+          "element": "finish",
+          "element_es": "final",
+          "type": "scale",
+          "select_one": true,
+          "values": ["corto", "medio(-)", "medio", "medio(+)", "largo"]
+        }
+      ]
+    },
+    {
+      "section": "conclusions",
+      "section_es": "conclusiones",
+      "elements": [
+        {
+          "element": "quality_level",
+          "element_es": "nivel de calidad",
+          "type": "scale",
+          "select_one": true,
+          "values": ["defectuoso", "pobre", "aceptable", "bueno", "muy bueno", "excelente"],
+          "note": "Must be justified by observations in nose and palate"
+        },
+        {
+          "element": "readiness_for_drinking",
+          "element_es": "estado para el consumo/potencial para el envejecimiento",
+          "type": "scale",
+          "select_one": true,
+          "values": [
+            "demasiado joven",
+            "se puede beber ahora, pero tiene potencial para el envejecimiento",
+            "beber ahora: no adecuado para el envejecimiento o para un mayor envejecimiento",
+            "demasiado viejo"
+          ]
+        }
+      ]
+    }
+  ],
+  "usage_rules": {
+    "scale_items": "Select ONE option from lines separated by dashes",
+    "open_items": "Lines beginning with 'e.g.' are guides; comment only as relevant",
+    "lexicon_status": "A guide and aide-mémoire, not mandatory to memorise",
+    "non_lexicon_descriptors_accepted": true,
+    "condition": "Descriptors must be accurate and correct"
+  }
+}

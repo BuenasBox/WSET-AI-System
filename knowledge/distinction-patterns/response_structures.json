@@ -1,0 +1,73 @@
+{
+  "schema_version": "assessment_intelligence_v1",
+  "source": "Model answers for 6 wines: Rustenberg Chardonnay, Ata Rangi Pinot Noir, Ca di Alte Pinot Grigio, Château Dutruch Bordeaux, Château Doisy-Daëne Barsac, 16 Stops Shiraz",
+  "governance": {"safe_for_examiner": false, "examiner_scoring_allowed": false, "uses_llm": false, "uses_api": false, "official_wset_content": true},
+  "sat_response_structures": {
+    "standard_complex_white": {
+      "wine_example": "Rustenberg Chardonnay 2023",
+      "appearance": {
+        "format": "[intensity] [colour]",
+        "example": "pale lemon",
+        "marks": 2
+      },
+      "nose": {
+        "structure": "1. Intensity statement. 2. Primary aromas (list). 3. Secondary aromas (list with source implicit or explicit). 4. Tertiary aromas (list with source implicit or explicit). 5. Development stage.",
+        "example": "Medium(+) intensity. [Primary] lemon, peach, melon, pineapple. [Secondary] biscuit, bread, vanilla, cloves. [Tertiary] honey, nutty. Developing.",
+        "ordering_principle": "Primary first, then secondary, then tertiary; development last",
+        "marks": 7
+      },
+      "palate": {
+        "structure": "1. Sweetness–acidity–[tannin]–alcohol–body scale values. 2. Intensity value. 3. Flavour descriptors (primary/secondary/tertiary). 4. Finish length.",
+        "example": "Dry. Medium(+) acid. Medium alcohol. Full body. Medium(+) intensity. [Primary] lemon, peach, melon, pineapple. [Secondary] biscuit, bread, vanilla, cloves. [Tertiary] honey, nutty. Medium(+) finish.",
+        "marks": 9
+      },
+      "conclusions": {
+        "structure": "Quality level + readiness statement (1 mark each)",
+        "example": "Very good quality. Drink now but has potential for ageing.",
+        "marks": 2
+      }
+    },
+    "outstanding_red": {
+      "wine_example": "Ata Rangi McCrone Pinot Noir 2020",
+      "nose": {
+        "structure": "Intensity. Primary (specific). Secondary (identified source: oak/MLF). Tertiary (bottle age). Development.",
+        "example": "Pronounced intensity. Red cherry, redcurrant, raspberry, red plum, violet, black cherry. Vanilla, cedar, smoke, cloves. Earth, forest floor, dried cranberry, mushroom. Developing.",
+        "marks": 7
+      },
+      "palate": {
+        "structure": "Dry – high acid – medium tannin – high alcohol – medium(+) body – pronounced intensity – [primary/secondary/tertiary flavours] – long finish.",
+        "marks": 10
+      },
+      "conclusions": "Outstanding quality. Drink now but has potential for ageing."
+    },
+    "simple_wine": {
+      "wine_example": "Ca di Alte Pinot Grigio 2024 / 16 Stops Shiraz",
+      "key_difference": "Explicitly state the wine is SIMPLE in nose and palate sections",
+      "nose": {
+        "strategy": "Intensity. State: simple. List primary aromas. Development.",
+        "example": "Medium(-) intensity. Simple. Pear, green apple, white peach. Young.",
+        "note": "1 mark for 'simple' + 4 marks for valid primary aromas; no secondary/tertiary expected"
+      },
+      "palate": {
+        "strategy": "Scale values. State: simple. List primary flavours. Finish.",
+        "note": "1 mark for 'simple' + 2 marks for primary flavours"
+      },
+      "conclusions": "Quality: aceptable. Readiness: drink now, no ageing."
+    },
+    "aged_sweet_white": {
+      "wine_example": "Château Doisy-Daëne Barsac 2016",
+      "appearance": "Deep gold",
+      "nose": "Pronounced intensity. Developing. [Primary] honeysuckle, peach, apricot, pineapple, mango. Baked/stewed fruits, raisin. [Secondary] vanilla, cloves, cedar. [Tertiary] honey, almond, marmalade, dried apricot.",
+      "palate": "Sweet. High acidity. High alcohol. Full body. Pronounced intensity. [same descriptors as nose]. Long finish.",
+      "conclusions": "Outstanding. Drink now but has potential for ageing.",
+      "key_insight": "Sweet wines require 'sweet' as sweetness scale value; high acidity despite sweetness is key structural signal"
+    }
+  },
+  "information_ordering_principles": [
+    "SAT order is mandatory: Appearance → Nose → Palate → Conclusions",
+    "Within nose: intensity first, aroma categories in primary/secondary/tertiary order, development last",
+    "Within palate: structural elements (sweetness, acidity, tannin, alcohol, body) before flavour descriptors, finish last",
+    "Conclusions: quality level before readiness",
+    "Development stage and quality level must be consistent with each other"
+  ]
+}

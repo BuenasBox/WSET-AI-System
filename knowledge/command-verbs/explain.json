@@ -1,0 +1,20 @@
+{
+  "schema_version": "assessment_intelligence_v1",
+  "verb": "explain",
+  "source": "WSET L3 Specification + marking keys",
+  "governance": {"safe_for_examiner": false, "examiner_scoring_allowed": false, "uses_llm": false, "uses_api": false},
+  "cognitive_level": "comprehension + causal reasoning",
+  "definition": "Give reasons for, or account for, a fact, phenomenon, or outcome. Must include a cause-and-effect relationship.",
+  "used_in_ras": ["RA2", "RA3", "RA4", "RA5"],
+  "expected_response": {
+    "format": "Cause → mechanism → effect chain. Can be brief (1-2 sentences) or extended depending on mark allocation.",
+    "do": ["State the cause", "State the mechanism or process", "State the outcome or effect", "Use WSET technical vocabulary"],
+    "do_not": ["Merely name or list (that is describing, not explaining)", "Give unsupported assertions"]
+  },
+  "mark_expectation": "1 mark per causal link correctly identified; full marks for complete chain",
+  "question_stem_examples": [
+    "Explain why grapes grown in cool climates tend to have higher acidity.",
+    "Explain how malolactic fermentation affects the style of white wine."
+  ],
+  "mentor_hint": "Use the structure: [Factor] → [mechanism] → [result in the wine]. For example: 'Cool temperatures slow ripening → less sugar accumulation, more malic acid retained → higher acidity in finished wine.'"
+}

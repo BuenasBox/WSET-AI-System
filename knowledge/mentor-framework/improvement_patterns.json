@@ -1,0 +1,55 @@
+{
+  "schema_version": "assessment_intelligence_v1",
+  "source": "Derived from marking key model answer gap analysis",
+  "governance": {"safe_for_examiner": false, "examiner_scoring_allowed": false, "uses_llm": false, "uses_api": false},
+  "improvement_patterns": [
+    {
+      "id": "IP_01",
+      "from": "Vague descriptor",
+      "to": "Specific WSET descriptor",
+      "example_before": "smells fruity",
+      "example_after": "primary aromas of ripe black cherry, plum, and cassis",
+      "applies_to": "SAT nose + palate flavour characteristics"
+    },
+    {
+      "id": "IP_02",
+      "from": "Opinion-based quality",
+      "to": "Evidence-grounded quality",
+      "example_before": "I think this is a very good wine",
+      "example_after": "Very good quality: medium(+) intensity, secondary oak complexity (vanilla, cedar), balanced structure, medium(+) finish",
+      "applies_to": "SAT conclusions quality"
+    },
+    {
+      "id": "IP_03",
+      "from": "Description when explanation required",
+      "to": "Causal chain",
+      "example_before": "Cool climates have high acidity",
+      "example_after": "In cool climates, lower temperatures slow sugar accumulation and preserve malic acid, resulting in higher acidity in the finished wine",
+      "applies_to": "Short-answer explain questions"
+    },
+    {
+      "id": "IP_04",
+      "from": "Single-sided comparison",
+      "to": "Linked comparison",
+      "example_before": "Chablis is cool. Meursault uses oak.",
+      "example_after": "Chablis is cool and unoaked, producing lean mineral Chardonnay; Meursault has a slightly warmer mesoclimate and typically uses oak ageing, producing fuller, richer wines",
+      "applies_to": "Compare questions"
+    },
+    {
+      "id": "IP_05",
+      "from": "Missing structural elements in SAT",
+      "to": "Complete palate coverage",
+      "example_before": "The palate has red fruit and oak flavours",
+      "example_after": "Dry; high acidity; medium tannin; medium(+) alcohol; medium(+) body; medium(+) intensity; primary red cherry, secondary vanilla and cedar; medium(+) finish",
+      "applies_to": "SAT palate"
+    },
+    {
+      "id": "IP_06",
+      "from": "Tertiary aromas omitted for complex wine",
+      "to": "All three aroma categories covered",
+      "example_before": "Aromas of red cherry, vanilla, and toast",
+      "example_after": "Primary: red cherry, raspberry. Secondary: vanilla, cedar (oak), buttery (MLF). Tertiary: leather, earth, forest floor (bottle development)",
+      "applies_to": "SAT nose + quality assessment for outstanding wines"
+    }
+  ]
+}

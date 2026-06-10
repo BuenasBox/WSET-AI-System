@@ -1,0 +1,64 @@
+{
+  "schema_version": "assessment_intelligence_v1",
+  "source": "WSET SAT Level 3 + Marking Key patterns from official marking keys",
+  "governance": {"safe_for_examiner": false, "examiner_scoring_allowed": false, "uses_llm": false, "uses_api": false},
+  "quality_levels": [
+    {
+      "level": "defectuoso",
+      "level_en": "faulty",
+      "description": "Wine has identifiable faults that make it unpleasant or undrinkable",
+      "signal_observations": ["turbio", "no limpia (nariz)", "Brett", "corcho", "oxidado", "reducido", "acidez volátil alta"],
+      "mentor_note": "Only use if you have clearly identified a specific fault. Do not use vaguely."
+    },
+    {
+      "level": "pobre",
+      "level_en": "poor",
+      "description": "Significant flaws or imbalances; lacks quality without being outright faulty",
+      "signal_observations": ["intensidad ligera sin complejidad", "final corto", "desequilibrio de acidez/alcohol/tanino"],
+      "mentor_note": "Rare in a WSET exam context as wines are selected to demonstrate identifiable styles"
+    },
+    {
+      "level": "aceptable",
+      "level_en": "acceptable",
+      "description": "Straightforward wine with limited complexity; no obvious faults",
+      "signal_observations": ["aromas simples", "fruta primaria solo", "final corto a medio", "poco cuerpo"],
+      "mentor_note": "Appropriate for simple, entry-level wines (e.g., basic Pinot Grigio from Veneto)"
+    },
+    {
+      "level": "bueno",
+      "level_en": "good",
+      "description": "Good expression of variety and/or region; some complexity",
+      "signal_observations": ["fruta primaria bien definida", "algo de complejidad secundaria", "final medio", "equilibrio correcto"],
+      "mentor_note": "Solid regional wine at mid-quality level"
+    },
+    {
+      "level": "muy bueno",
+      "level_en": "very good",
+      "description": "Clearly expressive, well-structured, some complexity; could improve with ageing",
+      "signal_observations": ["aromas secundarios y terciarios presentes", "final medio(+) a largo", "equilibrio claro", "complejidad"],
+      "mentor_note": "Model answer for Rustenberg Chardonnay (premium Stellenbosch) = Muy Bueno"
+    },
+    {
+      "level": "excelente",
+      "level_en": "outstanding",
+      "description": "Exceptional complexity, length, balance and expression; will develop further",
+      "signal_observations": ["aromas terciarios pronunciados", "final largo", "equilibrio perfecto", "carácter varietal y regional muy definido", "potencial de envejecimiento claro"],
+      "mentor_note": "Model answer for Ata Rangi McCrone Pinot Noir = Excelente. Reserve for wines of clear distinction."
+    }
+  ],
+  "quality_justification_requirements": {
+    "principle": "Quality conclusion must be supported by specific observations from nose and palate",
+    "required_evidence_for_high_quality": ["complexity across primary/secondary/tertiary", "balance", "length of finish", "clear varietal/regional expression"],
+    "common_errors": [
+      "Stating quality level without linking to observed characteristics",
+      "Claiming 'excelente' without tertiary complexity or long finish",
+      "Using 'defectuoso' without identifying specific fault"
+    ]
+  },
+  "readiness_guidelines": {
+    "demasiado_joven": "Wine has high tannins/acidity not yet integrated; primary fruit dominant; little tertiary development",
+    "drink_now_potential": "Ready but will benefit from further cellaring; balanced; shows some development",
+    "drink_now_no_ageing": "Ready to drink; primary/secondary; limited ageing potential",
+    "demasiado_viejo": "Loss of fruit; oxidised; past peak; brown/brick colour; tired aromas"
+  }
+}

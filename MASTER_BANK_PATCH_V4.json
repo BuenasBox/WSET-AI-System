@@ -1,0 +1,2520 @@
+{
+  "schema_version": "master_bank_patch_v1",
+  "remediation_version": "v4",
+  "generated_at": "2026-06-09T00:00:00Z",
+  "patch_count": 34,
+  "rewrite_count": 31,
+  "replace_count": 3,
+  "governance": {
+    "safe_for_examiner": false,
+    "examiner_scoring_allowed": false,
+    "official_wset_question": false,
+    "training_item_only": true,
+    "uses_llm": false,
+    "uses_api": false,
+    "uses_embeddings": false,
+    "uses_vector_db": false,
+    "cloud_services_active": false
+  },
+  "items": [
+    {
+      "master_item_id": "wset3_678",
+      "source_question_id": "678",
+      "question_type": "single_best_answer",
+      "stem": "¿Cuál es el principal beneficio agronómico del uso de cubiertas vegetales entre las hileras del viñedo?",
+      "curriculum": {
+        "ra": "RA1",
+        "topic": "viticulture_vineyard_management",
+        "difficulty": "foundation",
+        "expected_topics": [
+          "RA1",
+          "viticulture",
+          "vineyard_management"
+        ],
+        "expected_keywords": [
+          "cubiertas vegetales",
+          "compactación",
+          "suelo",
+          "cover crops"
+        ],
+        "expected_causal_links": [
+          "cover crops -> soil structure -> reduced compaction"
+        ],
+        "expected_reasoning_type": "theory_foundation"
+      },
+      "source_content": {
+        "options": {
+          "A": "Incrementar la evapotranspiración del suelo en climas secos",
+          "B": "Reducir la compactación del suelo y mejorar su estructura",
+          "C": "Aumentar el riesgo de heladas primaverales por retención de humedad",
+          "D": "Disminuir la absorción de nutrientes por parte de la vid"
+        },
+        "correct_answer_letter": "B",
+        "correct_answer_text": "Reducir la compactación del suelo y mejorar su estructura"
+      },
+      "status": {
+        "review_state": "needs_human_review",
+        "activation_status": "inactive",
+        "gold": false,
+        "public_lab": false
+      },
+      "collections": [
+        "single_best_answer",
+        "inactive",
+        "remediated_v4"
+      ],
+      "lineage": {
+        "structured_source": "knowledge/question-bank/structured/wset3_questions.json",
+        "raw_source": "WSET3_RA1_Banco_Preguntas_Consolidado.xlsx | Verdadero_Falso",
+        "sba_draft_id": null,
+        "sba_review_id": null,
+        "open_response_candidate_id": null,
+        "open_response_review_id": null,
+        "gold_review_id": null,
+        "public_lab_item_id": null,
+        "remediation_action": "REWRITE",
+        "remediation_version": "v4",
+        "remediation_original_format": "True/False",
+        "remediation_date": "2026-06-09"
+      },
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "official_wset_question": false,
+        "training_item_only": true,
+        "uses_llm": false,
+        "uses_api": false,
+        "uses_embeddings": false,
+        "uses_vector_db": false,
+        "cloud_services_active": false
+      }
+    },
+    {
+      "master_item_id": "wset3_679",
+      "source_question_id": "679",
+      "question_type": "single_best_answer",
+      "stem": "¿Cuál es el objetivo principal de la selección clonal en viticultura?",
+      "curriculum": {
+        "ra": "RA1",
+        "topic": "viticulture_clonal_selection",
+        "difficulty": "foundation",
+        "expected_topics": [
+          "RA1",
+          "viticulture",
+          "clonal_selection"
+        ],
+        "expected_keywords": [
+          "selección clonal",
+          "clones",
+          "vigor",
+          "rendimiento",
+          "aromas"
+        ],
+        "expected_causal_links": [
+          "clonal selection -> controlled varietal traits -> wine style"
+        ],
+        "expected_reasoning_type": "theory_foundation"
+      },
+      "source_content": {
+        "options": {
+          "A": "Aumentar uniformemente los rendimientos sin considerar la calidad de la fruta",
+          "B": "Eliminar la necesidad de técnicas de poda adaptadas a cada parcela",
+          "C": "Seleccionar clones con características deseadas de vigor, rendimiento y perfil aromático",
+          "D": "Garantizar la resistencia total a todas las enfermedades fúngicas"
+        },
+        "correct_answer_letter": "C",
+        "correct_answer_text": "Seleccionar clones con características deseadas de vigor, rendimiento y perfil aromático"
+      },
+      "status": {
+        "review_state": "needs_human_review",
+        "activation_status": "inactive",
+        "gold": false,
+        "public_lab": false
+      },
+      "collections": [
+        "single_best_answer",
+        "inactive",
+        "remediated_v4"
+      ],
+      "lineage": {
+        "structured_source": "knowledge/question-bank/structured/wset3_questions.json",
+        "raw_source": "WSET3_RA1_Banco_Preguntas_Consolidado.xlsx | Verdadero_Falso",
+        "sba_draft_id": null,
+        "sba_review_id": null,
+        "open_response_candidate_id": null,
+        "open_response_review_id": null,
+        "gold_review_id": null,
+        "public_lab_item_id": null,
+        "remediation_action": "REWRITE",
+        "remediation_version": "v4",
+        "remediation_original_format": "True/False",
+        "remediation_date": "2026-06-09"
+      },
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "official_wset_question": false,
+        "training_item_only": true,
+        "uses_llm": false,
+        "uses_api": false,
+        "uses_embeddings": false,
+        "uses_vector_db": false,
+        "cloud_services_active": false
+      }
+    },
+    {
+      "master_item_id": "wset3_680",
+      "source_question_id": "680",
+      "question_type": "single_best_answer",
+      "stem": "¿Por qué se realiza la cosecha nocturna en regiones de clima cálido?",
+      "curriculum": {
+        "ra": "RA1",
+        "topic": "viticulture_harvest",
+        "difficulty": "foundation",
+        "expected_topics": [
+          "RA1",
+          "viticulture",
+          "harvest_methods"
+        ],
+        "expected_keywords": [
+          "cosecha nocturna",
+          "temperatura",
+          "oxidación",
+          "night harvest"
+        ],
+        "expected_causal_links": [
+          "night harvest -> low temperature -> reduced oxidation risk"
+        ],
+        "expected_reasoning_type": "theory_foundation"
+      },
+      "source_content": {
+        "options": {
+          "A": "Para aprovechar la mayor disponibilidad de mano de obra durante las horas nocturnas",
+          "B": "Para recoger la uva a temperaturas más bajas y reducir el riesgo de oxidación",
+          "C": "Para evitar la acción de insectos polinizadores activos durante el día",
+          "D": "Para maximizar la acumulación de azúcares en las últimas horas del día"
+        },
+        "correct_answer_letter": "B",
+        "correct_answer_text": "Para recoger la uva a temperaturas más bajas y reducir el riesgo de oxidación"
+      },
+      "status": {
+        "review_state": "needs_human_review",
+        "activation_status": "inactive",
+        "gold": false,
+        "public_lab": false
+      },
+      "collections": [
+        "single_best_answer",
+        "inactive",
+        "remediated_v4"
+      ],
+      "lineage": {
+        "structured_source": "knowledge/question-bank/structured/wset3_questions.json",
+        "raw_source": "WSET3_RA1_Banco_Preguntas_Consolidado.xlsx | Verdadero_Falso",
+        "sba_draft_id": null,
+        "sba_review_id": null,
+        "open_response_candidate_id": null,
+        "open_response_review_id": null,
+        "gold_review_id": null,
+        "public_lab_item_id": null,
+        "remediation_action": "REWRITE",
+        "remediation_version": "v4",
+        "remediation_original_format": "True/False",
+        "remediation_date": "2026-06-09"
+      },
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "official_wset_question": false,
+        "training_item_only": true,
+        "uses_llm": false,
+        "uses_api": false,
+        "uses_embeddings": false,
+        "uses_vector_db": false,
+        "cloud_services_active": false
+      }
+    },
+    {
+      "master_item_id": "wset3_681",
+      "source_question_id": "681",
+      "question_type": "single_best_answer",
+      "stem": "¿En qué momento del proceso de vinificación en blanco se realiza el desfangado (clarificación del mosto)?",
+      "curriculum": {
+        "ra": "RA1",
+        "topic": "vinification_white",
+        "difficulty": "foundation",
+        "expected_topics": [
+          "RA1",
+          "vinification_white",
+          "must_clarification"
+        ],
+        "expected_keywords": [
+          "desfangado",
+          "clarificación",
+          "mosto",
+          "fermentación",
+          "settling"
+        ],
+        "expected_causal_links": [
+          "settling/desfangado -> clean must -> cleaner fermentation aromas"
+        ],
+        "expected_reasoning_type": "process_sequence"
+      },
+      "source_content": {
+        "options": {
+          "A": "Después de la fermentación alcohólica, para eliminar las lías gruesas",
+          "B": "Durante la fermentación maloláctica, para estabilizar el vino",
+          "C": "Antes de la fermentación alcohólica, para eliminar sólidos en suspensión del mosto",
+          "D": "Al finalizar el periodo de crianza en barrica, antes del embotellado"
+        },
+        "correct_answer_letter": "C",
+        "correct_answer_text": "Antes de la fermentación alcohólica, para eliminar sólidos en suspensión del mosto"
+      },
+      "status": {
+        "review_state": "needs_human_review",
+        "activation_status": "inactive",
+        "gold": false,
+        "public_lab": false
+      },
+      "collections": [
+        "single_best_answer",
+        "inactive",
+        "remediated_v4"
+      ],
+      "lineage": {
+        "structured_source": "knowledge/question-bank/structured/wset3_questions.json",
+        "raw_source": "WSET3_RA1_Banco_Preguntas_Consolidado.xlsx | Verdadero_Falso",
+        "sba_draft_id": null,
+        "sba_review_id": null,
+        "open_response_candidate_id": null,
+        "open_response_review_id": null,
+        "gold_review_id": null,
+        "public_lab_item_id": null,
+        "remediation_action": "REWRITE",
+        "remediation_version": "v4",
+        "remediation_original_format": "True/False",
+        "remediation_date": "2026-06-09"
+      },
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "official_wset_question": false,
+        "training_item_only": true,
+        "uses_llm": false,
+        "uses_api": false,
+        "uses_embeddings": false,
+        "uses_vector_db": false,
+        "cloud_services_active": false
+      }
+    },
+    {
+      "master_item_id": "wset3_682",
+      "source_question_id": "682",
+      "question_type": "single_best_answer",
+      "stem": "¿Cuál es la función principal del dióxido de azufre (SO₂) en la elaboración del vino?",
+      "curriculum": {
+        "ra": "RA1",
+        "topic": "vinification_sulphur_dioxide",
+        "difficulty": "foundation",
+        "expected_topics": [
+          "RA1",
+          "vinification",
+          "SO2",
+          "sulphur_dioxide"
+        ],
+        "expected_keywords": [
+          "SO2",
+          "dióxido de azufre",
+          "antioxidante",
+          "levaduras",
+          "bacterias"
+        ],
+        "expected_causal_links": [
+          "SO2 -> antimicrobial + antioxidant -> controlled fermentation"
+        ],
+        "expected_reasoning_type": "theory_foundation"
+      },
+      "source_content": {
+        "options": {
+          "A": "Acelerar la fermentación alcohólica al activar las enzimas de la levadura",
+          "B": "Aumentar el contenido en glicerol y suavizar la textura del vino",
+          "C": "Actuar como antioxidante e inhibir el crecimiento de levaduras y bacterias no deseadas",
+          "D": "Elevar el pH del mosto para suavizar la acidez percibida"
+        },
+        "correct_answer_letter": "C",
+        "correct_answer_text": "Actuar como antioxidante e inhibir el crecimiento de levaduras y bacterias no deseadas"
+      },
+      "status": {
+        "review_state": "needs_human_review",
+        "activation_status": "inactive",
+        "gold": false,
+        "public_lab": false
+      },
+      "collections": [
+        "single_best_answer",
+        "inactive",
+        "remediated_v4"
+      ],
+      "lineage": {
+        "structured_source": "knowledge/question-bank/structured/wset3_questions.json",
+        "raw_source": "WSET3_RA1_Banco_Preguntas_Consolidado.xlsx | Verdadero_Falso",
+        "sba_draft_id": null,
+        "sba_review_id": null,
+        "open_response_candidate_id": null,
+        "open_response_review_id": null,
+        "gold_review_id": null,
+        "public_lab_item_id": null,
+        "remediation_action": "REWRITE",
+        "remediation_version": "v4",
+        "remediation_original_format": "True/False",
+        "remediation_date": "2026-06-09"
+      },
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "official_wset_question": false,
+        "training_item_only": true,
+        "uses_llm": false,
+        "uses_api": false,
+        "uses_embeddings": false,
+        "uses_vector_db": false,
+        "cloud_services_active": false
+      }
+    },
+    {
+      "master_item_id": "wset3_683",
+      "source_question_id": "683",
+      "question_type": "single_best_answer",
+      "stem": "¿Qué efecto tiene la fermentación o crianza de un vino blanco en barrica nueva sobre su perfil sensorial?",
+      "curriculum": {
+        "ra": "RA1",
+        "topic": "vinification_oak_ageing",
+        "difficulty": "intermediate",
+        "expected_topics": [
+          "RA1",
+          "vinification_white",
+          "oak_ageing",
+          "new_oak"
+        ],
+        "expected_keywords": [
+          "barrica nueva",
+          "tanino",
+          "vainilla",
+          "tostado",
+          "new oak"
+        ],
+        "expected_causal_links": [
+          "new oak -> tannin + vanilla/toast extraction -> white wine body"
+        ],
+        "expected_reasoning_type": "theory_foundation"
+      },
+      "source_content": {
+        "options": {
+          "A": "Preserva íntegramente los aromas varietales primarios sin modificarlos",
+          "B": "Reduce el contenido alcohólico mediante la evaporación a través de la madera",
+          "C": "Incrementa la percepción de tanino y aporta aromas secundarios de vainilla y tostado",
+          "D": "Aumenta significativamente la acidez y la sensación de frescura del vino"
+        },
+        "correct_answer_letter": "C",
+        "correct_answer_text": "Incrementa la percepción de tanino y aporta aromas secundarios de vainilla y tostado"
+      },
+      "status": {
+        "review_state": "needs_human_review",
+        "activation_status": "inactive",
+        "gold": false,
+        "public_lab": false
+      },
+      "collections": [
+        "single_best_answer",
+        "inactive",
+        "remediated_v4"
+      ],
+      "lineage": {
+        "structured_source": "knowledge/question-bank/structured/wset3_questions.json",
+        "raw_source": "WSET3_RA1_Banco_Preguntas_Consolidado.xlsx | Verdadero_Falso",
+        "sba_draft_id": null,
+        "sba_review_id": null,
+        "open_response_candidate_id": null,
+        "open_response_review_id": null,
+        "gold_review_id": null,
+        "public_lab_item_id": null,
+        "remediation_action": "REWRITE",
+        "remediation_version": "v4",
+        "remediation_original_format": "True/False",
+        "remediation_date": "2026-06-09"
+      },
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "official_wset_question": false,
+        "training_item_only": true,
+        "uses_llm": false,
+        "uses_api": false,
+        "uses_embeddings": false,
+        "uses_vector_db": false,
+        "cloud_services_active": false
+      }
+    },
+    {
+      "master_item_id": "wset3_684",
+      "source_question_id": "684",
+      "question_type": "single_best_answer",
+      "stem": "¿Qué característica diferencia principalmente a los vinos blancos fermentados en acero inoxidable frente a los fermentados en barrica?",
+      "curriculum": {
+        "ra": "RA1",
+        "topic": "vinification_vessels",
+        "difficulty": "foundation",
+        "expected_topics": [
+          "RA1",
+          "vinification_white",
+          "stainless_steel",
+          "fruit_expression"
+        ],
+        "expected_keywords": [
+          "acero inoxidable",
+          "aromas frutales",
+          "fruta fresca",
+          "stainless steel"
+        ],
+        "expected_causal_links": [
+          "stainless steel -> no oxygen ingress -> primary fruit preservation"
+        ],
+        "expected_reasoning_type": "theory_foundation"
+      },
+      "source_content": {
+        "options": {
+          "A": "Mayor contenido en taninos y estructura más robusta en boca",
+          "B": "Aromas predominantes de vainilla, mantequilla y especias tostadas",
+          "C": "Mayor expresión de aromas frutales frescos y características varietales",
+          "D": "Color más intenso y amarillo dorado profundo"
+        },
+        "correct_answer_letter": "C",
+        "correct_answer_text": "Mayor expresión de aromas frutales frescos y características varietales"
+      },
+      "status": {
+        "review_state": "needs_human_review",
+        "activation_status": "inactive",
+        "gold": false,
+        "public_lab": false
+      },
+      "collections": [
+        "single_best_answer",
+        "inactive",
+        "remediated_v4"
+      ],
+      "lineage": {
+        "structured_source": "knowledge/question-bank/structured/wset3_questions.json",
+        "raw_source": "WSET3_RA1_Banco_Preguntas_Consolidado.xlsx | Verdadero_Falso",
+        "sba_draft_id": null,
+        "sba_review_id": null,
+        "open_response_candidate_id": null,
+        "open_response_review_id": null,
+        "gold_review_id": null,
+        "public_lab_item_id": null,
+        "remediation_action": "REWRITE",
+        "remediation_version": "v4",
+        "remediation_original_format": "True/False",
+        "remediation_date": "2026-06-09"
+      },
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "official_wset_question": false,
+        "training_item_only": true,
+        "uses_llm": false,
+        "uses_api": false,
+        "uses_embeddings": false,
+        "uses_vector_db": false,
+        "cloud_services_active": false
+      }
+    },
+    {
+      "master_item_id": "wset3_685",
+      "source_question_id": "685",
+      "question_type": "single_best_answer",
+      "stem": "¿Cuál es la principal ventaja de la vendimia manual frente a la mecanizada?",
+      "curriculum": {
+        "ra": "RA1",
+        "topic": "viticulture_harvest",
+        "difficulty": "foundation",
+        "expected_topics": [
+          "RA1",
+          "viticulture",
+          "harvest_methods",
+          "hand_harvesting"
+        ],
+        "expected_keywords": [
+          "vendimia manual",
+          "selección",
+          "racimos",
+          "hand harvest"
+        ],
+        "expected_causal_links": [
+          "hand harvest -> selective picking -> better quality control"
+        ],
+        "expected_reasoning_type": "theory_foundation"
+      },
+      "source_content": {
+        "options": {
+          "A": "Mayor velocidad de recolección y menor coste por hectárea",
+          "B": "Permite una mayor selección de la uva y menor daño en los racimos durante la cosecha",
+          "C": "Garantiza una madurez fenólica uniforme en toda la parcela",
+          "D": "Elimina la necesidad de clasificación posterior en la bodega"
+        },
+        "correct_answer_letter": "B",
+        "correct_answer_text": "Permite una mayor selección de la uva y menor daño en los racimos durante la cosecha"
+      },
+      "status": {
+        "review_state": "needs_human_review",
+        "activation_status": "inactive",
+        "gold": false,
+        "public_lab": false
+      },
+      "collections": [
+        "single_best_answer",
+        "inactive",
+        "remediated_v4"
+      ],
+      "lineage": {
+        "structured_source": "knowledge/question-bank/structured/wset3_questions.json",
+        "raw_source": "WSET3_RA1_Banco_Preguntas_Consolidado.xlsx | Verdadero_Falso",
+        "sba_draft_id": null,
+        "sba_review_id": null,
+        "open_response_candidate_id": null,
+        "open_response_review_id": null,
+        "gold_review_id": null,
+        "public_lab_item_id": null,
+        "remediation_action": "REWRITE",
+        "remediation_version": "v4",
+        "remediation_original_format": "True/False",
+        "remediation_date": "2026-06-09"
+      },
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "official_wset_question": false,
+        "training_item_only": true,
+        "uses_llm": false,
+        "uses_api": false,
+        "uses_embeddings": false,
+        "uses_vector_db": false,
+        "cloud_services_active": false
+      }
+    },
+    {
+      "master_item_id": "wset3_686",
+      "source_question_id": "686",
+      "question_type": "single_best_answer",
+      "stem": "¿Cuál es el principal beneficio del uso de levaduras comerciales seleccionadas en la vinificación?",
+      "curriculum": {
+        "ra": "RA1",
+        "topic": "vinification_fermentation",
+        "difficulty": "foundation",
+        "expected_topics": [
+          "RA1",
+          "vinification",
+          "yeasts",
+          "fermentation"
+        ],
+        "expected_keywords": [
+          "levaduras seleccionadas",
+          "fermentación",
+          "predecible",
+          "selected yeasts"
+        ],
+        "expected_causal_links": [
+          "selected yeasts -> predictable fermentation -> reliable style"
+        ],
+        "expected_reasoning_type": "theory_foundation"
+      },
+      "source_content": {
+        "options": {
+          "A": "Eliminan completamente la necesidad de sulfitos durante toda la elaboración",
+          "B": "Producen vinos con mayor complejidad y expresión de terroir",
+          "C": "Garantizan una fermentación más rápida, predecible y con menor riesgo de parada",
+          "D": "Aumentan automáticamente el potencial alcohólico del mosto"
+        },
+        "correct_answer_letter": "C",
+        "correct_answer_text": "Garantizan una fermentación más rápida, predecible y con menor riesgo de parada"
+      },
+      "status": {
+        "review_state": "needs_human_review",
+        "activation_status": "inactive",
+        "gold": false,
+        "public_lab": false
+      },
+      "collections": [
+        "single_best_answer",
+        "inactive",
+        "remediated_v4"
+      ],
+      "lineage": {
+        "structured_source": "knowledge/question-bank/structured/wset3_questions.json",
+        "raw_source": "WSET3_RA1_Banco_Preguntas_Consolidado.xlsx | Verdadero_Falso",
+        "sba_draft_id": null,
+        "sba_review_id": null,
+        "open_response_candidate_id": null,
+        "open_response_review_id": null,
+        "gold_review_id": null,
+        "public_lab_item_id": null,
+        "remediation_action": "REWRITE",
+        "remediation_version": "v4",
+        "remediation_original_format": "True/False",
+        "remediation_date": "2026-06-09"
+      },
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "official_wset_question": false,
+        "training_item_only": true,
+        "uses_llm": false,
+        "uses_api": false,
+        "uses_embeddings": false,
+        "uses_vector_db": false,
+        "cloud_services_active": false
+      }
+    },
+    {
+      "master_item_id": "wset3_687",
+      "source_question_id": "687",
+      "question_type": "single_best_answer",
+      "stem": "¿Por qué son preferibles las variedades de ciclo corto (maduración temprana) en regiones de clima frío?",
+      "curriculum": {
+        "ra": "RA1",
+        "topic": "viticulture_climate_varieties",
+        "difficulty": "foundation",
+        "expected_topics": [
+          "RA1",
+          "viticulture",
+          "climate_cool",
+          "variety_selection"
+        ],
+        "expected_keywords": [
+          "ciclo corto",
+          "climas fríos",
+          "maduración",
+          "heladas otoñales"
+        ],
+        "expected_causal_links": [
+          "early-ripening variety -> completes maturity before autumn frost -> cool climate suitability"
+        ],
+        "expected_reasoning_type": "theory_foundation"
+      },
+      "source_content": {
+        "options": {
+          "A": "Porque producen racimos de mayor tamaño con mayor rendimiento por cepa",
+          "B": "Porque toleran mejor las altas temperaturas del verano que las variedades tardías",
+          "C": "Porque completan la maduración antes de las heladas otoñales, asegurando la cosecha",
+          "D": "Porque requieren menor cantidad de agua durante el ciclo vegetativo"
+        },
+        "correct_answer_letter": "C",
+        "correct_answer_text": "Porque completan la maduración antes de las heladas otoñales, asegurando la cosecha"
+      },
+      "status": {
+        "review_state": "needs_human_review",
+        "activation_status": "inactive",
+        "gold": false,
+        "public_lab": false
+      },
+      "collections": [
+        "single_best_answer",
+        "inactive",
+        "remediated_v4"
+      ],
+      "lineage": {
+        "structured_source": "knowledge/question-bank/structured/wset3_questions.json",
+        "raw_source": "WSET3_RA1_Banco_Preguntas_Consolidado.xlsx | Verdadero_Falso",
+        "sba_draft_id": null,
+        "sba_review_id": null,
+        "open_response_candidate_id": null,
+        "open_response_review_id": null,
+        "gold_review_id": null,
+        "public_lab_item_id": null,
+        "remediation_action": "REWRITE",
+        "remediation_version": "v4",
+        "remediation_original_format": "True/False",
+        "remediation_date": "2026-06-09"
+      },
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "official_wset_question": false,
+        "training_item_only": true,
+        "uses_llm": false,
+        "uses_api": false,
+        "uses_embeddings": false,
+        "uses_vector_db": false,
+        "cloud_services_active": false
+      }
+    },
+    {
+      "master_item_id": "wset3_775",
+      "source_question_id": "775",
+      "question_type": "single_best_answer",
+      "stem": "¿Qué orientación de las filas del viñedo maximiza generalmente la exposición solar uniforme en el hemisferio norte?",
+      "curriculum": {
+        "ra": "RA1",
+        "topic": "viticulture_site_selection",
+        "difficulty": "foundation",
+        "expected_topics": [
+          "RA1",
+          "viticulture",
+          "site_selection",
+          "sun_exposure"
+        ],
+        "expected_keywords": [
+          "orientación",
+          "norte-sur",
+          "exposición solar",
+          "filas",
+          "row orientation"
+        ],
+        "expected_causal_links": [
+          "row orientation N-S -> uniform solar exposure -> even ripening"
+        ],
+        "expected_reasoning_type": "theory_foundation"
+      },
+      "source_content": {
+        "options": {
+          "A": "Este-Oeste, para aprovechar al máximo el sol del mediodía en la cara sur",
+          "B": "Norte-Sur, ya que permite mayor exposición solar uniforme a ambos lados de la fila durante el día",
+          "C": "Noreste-Suroeste, principalmente para protegerse de los vientos dominantes",
+          "D": "La orientación de las filas no influye significativamente en la exposición solar"
+        },
+        "correct_answer_letter": "B",
+        "correct_answer_text": "Norte-Sur, ya que permite mayor exposición solar uniforme a ambos lados de la fila durante el día"
+      },
+      "status": {
+        "review_state": "needs_human_review",
+        "activation_status": "inactive",
+        "gold": false,
+        "public_lab": false
+      },
+      "collections": [
+        "single_best_answer",
+        "inactive",
+        "remediated_v4"
+      ],
+      "lineage": {
+        "structured_source": "knowledge/question-bank/structured/wset3_questions.json",
+        "raw_source": "WSET3_RA1_Banco_Preguntas_Bloque2.xlsx | Verdadero_Falso",
+        "sba_draft_id": null,
+        "sba_review_id": null,
+        "open_response_candidate_id": null,
+        "open_response_review_id": null,
+        "gold_review_id": null,
+        "public_lab_item_id": null,
+        "remediation_action": "REWRITE",
+        "remediation_version": "v4",
+        "remediation_original_format": "True/False",
+        "remediation_date": "2026-06-09"
+      },
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "official_wset_question": false,
+        "training_item_only": true,
+        "uses_llm": false,
+        "uses_api": false,
+        "uses_embeddings": false,
+        "uses_vector_db": false,
+        "cloud_services_active": false
+      }
+    },
+    {
+      "master_item_id": "wset3_776",
+      "source_question_id": "776",
+      "question_type": "single_best_answer",
+      "stem": "¿Para qué se emplea principalmente el battonage (removido de lías) en la elaboración del vino?",
+      "curriculum": {
+        "ra": "RA1",
+        "topic": "vinification_white_lees",
+        "difficulty": "intermediate",
+        "expected_topics": [
+          "RA1",
+          "vinification_white",
+          "lees_ageing",
+          "battonage"
+        ],
+        "expected_keywords": [
+          "battonage",
+          "lías",
+          "blancos",
+          "cremoso",
+          "sur lie"
+        ],
+        "expected_causal_links": [
+          "battonage -> lees contact -> texture + complexity white wine"
+        ],
+        "expected_reasoning_type": "theory_foundation"
+      },
+      "source_content": {
+        "options": {
+          "A": "Para aumentar la extracción de antocianos y estabilizar el color en vinos tintos",
+          "B": "Para clarificar el vino mediante la sedimentación de partículas sólidas",
+          "C": "Para añadir complejidad y textura cremosa en vinos blancos mediante el contacto con lías",
+          "D": "Para reducir el nivel de SO₂ libre tras la fermentación"
+        },
+        "correct_answer_letter": "C",
+        "correct_answer_text": "Para añadir complejidad y textura cremosa en vinos blancos mediante el contacto con lías"
+      },
+      "status": {
+        "review_state": "needs_human_review",
+        "activation_status": "inactive",
+        "gold": false,
+        "public_lab": false
+      },
+      "collections": [
+        "single_best_answer",
+        "inactive",
+        "remediated_v4"
+      ],
+      "lineage": {
+        "structured_source": "knowledge/question-bank/structured/wset3_questions.json",
+        "raw_source": "WSET3_RA1_Banco_Preguntas_Bloque2.xlsx | Verdadero_Falso",
+        "sba_draft_id": null,
+        "sba_review_id": null,
+        "open_response_candidate_id": null,
+        "open_response_review_id": null,
+        "gold_review_id": null,
+        "public_lab_item_id": null,
+        "remediation_action": "REWRITE",
+        "remediation_version": "v4",
+        "remediation_original_format": "True/False",
+        "remediation_date": "2026-06-09"
+      },
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "official_wset_question": false,
+        "training_item_only": true,
+        "uses_llm": false,
+        "uses_api": false,
+        "uses_embeddings": false,
+        "uses_vector_db": false,
+        "cloud_services_active": false
+      }
+    },
+    {
+      "master_item_id": "wset3_777",
+      "source_question_id": "777",
+      "question_type": "single_best_answer",
+      "stem": "¿Cuál de las siguientes características describe correctamente el clima mediterráneo en viticultura?",
+      "curriculum": {
+        "ra": "RA1",
+        "topic": "viticulture_climate_types",
+        "difficulty": "foundation",
+        "expected_topics": [
+          "RA1",
+          "viticulture",
+          "climate_mediterranean",
+          "fungal_disease"
+        ],
+        "expected_keywords": [
+          "clima mediterráneo",
+          "enfermedades fúngicas",
+          "verano seco"
+        ],
+        "expected_causal_links": [
+          "Mediterranean climate -> dry summers -> low fungal disease risk"
+        ],
+        "expected_reasoning_type": "theory_foundation"
+      },
+      "source_content": {
+        "options": {
+          "A": "Veranos húmedos con alto riesgo de enfermedades fúngicas y lluvias frecuentes",
+          "B": "Lluvias abundantes durante la época de maduración, favoreciendo la botrytis",
+          "C": "Veranos cálidos y secos con bajo riesgo de enfermedades fúngicas",
+          "D": "Primaveras secas con elevado riesgo de heladas tardías"
+        },
+        "correct_answer_letter": "C",
+        "correct_answer_text": "Veranos cálidos y secos con bajo riesgo de enfermedades fúngicas"
+      },
+      "status": {
+        "review_state": "needs_human_review",
+        "activation_status": "inactive",
+        "gold": false,
+        "public_lab": false
+      },
+      "collections": [
+        "single_best_answer",
+        "inactive",
+        "remediated_v4"
+      ],
+      "lineage": {
+        "structured_source": "knowledge/question-bank/structured/wset3_questions.json",
+        "raw_source": "WSET3_RA1_Banco_Preguntas_Bloque2.xlsx | Verdadero_Falso",
+        "sba_draft_id": null,
+        "sba_review_id": null,
+        "open_response_candidate_id": null,
+        "open_response_review_id": null,
+        "gold_review_id": null,
+        "public_lab_item_id": null,
+        "remediation_action": "REWRITE",
+        "remediation_version": "v4",
+        "remediation_original_format": "True/False",
+        "remediation_date": "2026-06-09"
+      },
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "official_wset_question": false,
+        "training_item_only": true,
+        "uses_llm": false,
+        "uses_api": false,
+        "uses_embeddings": false,
+        "uses_vector_db": false,
+        "cloud_services_active": false
+      }
+    },
+    {
+      "master_item_id": "wset3_778",
+      "source_question_id": "778",
+      "question_type": "single_best_answer",
+      "stem": "¿Cuál es el efecto de la fermentación maloláctica (FML) sobre la acidez total de un vino?",
+      "curriculum": {
+        "ra": "RA1",
+        "topic": "vinification_mlf",
+        "difficulty": "foundation",
+        "expected_topics": [
+          "RA1",
+          "vinification",
+          "malolactic_fermentation",
+          "acidity"
+        ],
+        "expected_keywords": [
+          "fermentación maloláctica",
+          "ácido málico",
+          "ácido láctico",
+          "acidez"
+        ],
+        "expected_causal_links": [
+          "MLF -> malic to lactic acid conversion -> reduced acidity + softer texture"
+        ],
+        "expected_reasoning_type": "causal_mechanism"
+      },
+      "source_content": {
+        "options": {
+          "A": "Aumenta la acidez total al convertir el ácido láctico en ácido málico más fuerte",
+          "B": "No tiene ningún efecto sobre la acidez total del vino",
+          "C": "Reduce la acidez al convertir el ácido málico (más duro) en ácido láctico (más suave)",
+          "D": "Transforma el ácido tartárico en ácido acético, aumentando la acidez volátil"
+        },
+        "correct_answer_letter": "C",
+        "correct_answer_text": "Reduce la acidez al convertir el ácido málico (más duro) en ácido láctico (más suave)"
+      },
+      "status": {
+        "review_state": "needs_human_review",
+        "activation_status": "inactive",
+        "gold": false,
+        "public_lab": false
+      },
+      "collections": [
+        "single_best_answer",
+        "inactive",
+        "remediated_v4"
+      ],
+      "lineage": {
+        "structured_source": "knowledge/question-bank/structured/wset3_questions.json",
+        "raw_source": "WSET3_RA1_Banco_Preguntas_Bloque2.xlsx | Verdadero_Falso",
+        "sba_draft_id": null,
+        "sba_review_id": null,
+        "open_response_candidate_id": null,
+        "open_response_review_id": null,
+        "gold_review_id": null,
+        "public_lab_item_id": null,
+        "remediation_action": "REWRITE",
+        "remediation_version": "v4",
+        "remediation_original_format": "True/False",
+        "remediation_date": "2026-06-09"
+      },
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "official_wset_question": false,
+        "training_item_only": true,
+        "uses_llm": false,
+        "uses_api": false,
+        "uses_embeddings": false,
+        "uses_vector_db": false,
+        "cloud_services_active": false
+      }
+    },
+    {
+      "master_item_id": "wset3_779",
+      "source_question_id": "779",
+      "question_type": "single_best_answer",
+      "stem": "¿Cómo afectan los suelos arcillosos al cultivo de la vid en regiones con precipitaciones abundantes?",
+      "curriculum": {
+        "ra": "RA1",
+        "topic": "viticulture_soils",
+        "difficulty": "foundation",
+        "expected_topics": [
+          "RA1",
+          "viticulture",
+          "soils_clay",
+          "drainage"
+        ],
+        "expected_keywords": [
+          "arcilla",
+          "drenaje",
+          "retención hídrica",
+          "clay",
+          "waterlogging"
+        ],
+        "expected_causal_links": [
+          "clay soil -> poor drainage -> waterlogging risk -> vine stress"
+        ],
+        "expected_reasoning_type": "theory_foundation"
+      },
+      "source_content": {
+        "options": {
+          "A": "Proporcionan un drenaje excelente y evitan cualquier riesgo de encharcamiento",
+          "B": "Retienen mucha humedad y pueden causar encharcamiento que estresa las raíces de la vid",
+          "C": "Son los suelos que producen invariablemente los vinos de mayor calidad en toda región",
+          "D": "Permiten que las raíces penetren con facilidad en profundidad para buscar agua"
+        },
+        "correct_answer_letter": "B",
+        "correct_answer_text": "Retienen mucha humedad y pueden causar encharcamiento que estresa las raíces de la vid"
+      },
+      "status": {
+        "review_state": "needs_human_review",
+        "activation_status": "inactive",
+        "gold": false,
+        "public_lab": false
+      },
+      "collections": [
+        "single_best_answer",
+        "inactive",
+        "remediated_v4"
+      ],
+      "lineage": {
+        "structured_source": "knowledge/question-bank/structured/wset3_questions.json",
+        "raw_source": "WSET3_RA1_Banco_Preguntas_Bloque2.xlsx | Verdadero_Falso",
+        "sba_draft_id": null,
+        "sba_review_id": null,
+        "open_response_candidate_id": null,
+        "open_response_review_id": null,
+        "gold_review_id": null,
+        "public_lab_item_id": null,
+        "remediation_action": "REWRITE",
+        "remediation_version": "v4",
+        "remediation_original_format": "True/False",
+        "remediation_date": "2026-06-09"
+      },
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "official_wset_question": false,
+        "training_item_only": true,
+        "uses_llm": false,
+        "uses_api": false,
+        "uses_embeddings": false,
+        "uses_vector_db": false,
+        "cloud_services_active": false
+      }
+    },
+    {
+      "master_item_id": "wset3_780",
+      "source_question_id": "780",
+      "question_type": "single_best_answer",
+      "stem": "¿Cuál es el objetivo principal del trasiego en la elaboración del vino?",
+      "curriculum": {
+        "ra": "RA1",
+        "topic": "vinification_racking",
+        "difficulty": "foundation",
+        "expected_topics": [
+          "RA1",
+          "vinification",
+          "racking",
+          "lees_management"
+        ],
+        "expected_keywords": [
+          "trasiego",
+          "lías",
+          "sedimentos",
+          "racking"
+        ],
+        "expected_causal_links": [
+          "racking -> lees separation -> prevents off-flavours from lees decomposition"
+        ],
+        "expected_reasoning_type": "theory_foundation"
+      },
+      "source_content": {
+        "options": {
+          "A": "Aumentar la extracción de taninos mediante el movimiento del vino sobre los hollejos",
+          "B": "Promover la oxidación controlada del vino al exponerlo intencionalmente al aire",
+          "C": "Separar el vino limpio de los sedimentos (lías) para evitar aromas no deseados",
+          "D": "Incrementar el grado alcohólico mediante la concentración del vino por evaporación"
+        },
+        "correct_answer_letter": "C",
+        "correct_answer_text": "Separar el vino limpio de los sedimentos (lías) para evitar aromas no deseados"
+      },
+      "status": {
+        "review_state": "needs_human_review",
+        "activation_status": "inactive",
+        "gold": false,
+        "public_lab": false
+      },
+      "collections": [
+        "single_best_answer",
+        "inactive",
+        "remediated_v4"
+      ],
+      "lineage": {
+        "structured_source": "knowledge/question-bank/structured/wset3_questions.json",
+        "raw_source": "WSET3_RA1_Banco_Preguntas_Bloque2.xlsx | Verdadero_Falso",
+        "sba_draft_id": null,
+        "sba_review_id": null,
+        "open_response_candidate_id": null,
+        "open_response_review_id": null,
+        "gold_review_id": null,
+        "public_lab_item_id": null,
+        "remediation_action": "REWRITE",
+        "remediation_version": "v4",
+        "remediation_original_format": "True/False",
+        "remediation_date": "2026-06-09"
+      },
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "official_wset_question": false,
+        "training_item_only": true,
+        "uses_llm": false,
+        "uses_api": false,
+        "uses_embeddings": false,
+        "uses_vector_db": false,
+        "cloud_services_active": false
+      }
+    },
+    {
+      "master_item_id": "wset3_781",
+      "source_question_id": "781",
+      "question_type": "single_best_answer",
+      "stem": "¿Cuál de las siguientes afirmaciones describe correctamente el efecto de la altitud sobre la viticultura?",
+      "curriculum": {
+        "ra": "RA1",
+        "topic": "viticulture_altitude",
+        "difficulty": "intermediate",
+        "expected_topics": [
+          "RA1",
+          "viticulture",
+          "altitude",
+          "temperature",
+          "acidity"
+        ],
+        "expected_keywords": [
+          "altitud",
+          "temperatura",
+          "acidez",
+          "maduración"
+        ],
+        "expected_causal_links": [
+          "altitude -> lower temperatures -> slower ripening -> higher acidity preservation"
+        ],
+        "expected_reasoning_type": "causal_mechanism"
+      },
+      "source_content": {
+        "options": {
+          "A": "La altitud aumenta las temperaturas nocturnas, acelerando la maduración de la uva",
+          "B": "La altitud favorece una mayor acumulación de azúcar en la uva al intensificar la radiación solar",
+          "C": "La altitud reduce las temperaturas medias y ralentiza el ciclo de maduración, preservando la acidez",
+          "D": "La altitud elimina el riesgo de heladas primaverales en las parcelas"
+        },
+        "correct_answer_letter": "C",
+        "correct_answer_text": "La altitud reduce las temperaturas medias y ralentiza el ciclo de maduración, preservando la acidez"
+      },
+      "status": {
+        "review_state": "needs_human_review",
+        "activation_status": "inactive",
+        "gold": false,
+        "public_lab": false
+      },
+      "collections": [
+        "single_best_answer",
+        "inactive",
+        "remediated_v4"
+      ],
+      "lineage": {
+        "structured_source": "knowledge/question-bank/structured/wset3_questions.json",
+        "raw_source": "WSET3_RA1_Banco_Preguntas_Bloque2.xlsx | Verdadero_Falso",
+        "sba_draft_id": null,
+        "sba_review_id": null,
+        "open_response_candidate_id": null,
+        "open_response_review_id": null,
+        "gold_review_id": null,
+        "public_lab_item_id": null,
+        "remediation_action": "REWRITE",
+        "remediation_version": "v4",
+        "remediation_original_format": "True/False",
+        "remediation_date": "2026-06-09"
+      },
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "official_wset_question": false,
+        "training_item_only": true,
+        "uses_llm": false,
+        "uses_api": false,
+        "uses_embeddings": false,
+        "uses_vector_db": false,
+        "cloud_services_active": false
+      }
+    },
+    {
+      "master_item_id": "wset3_788",
+      "source_question_id": "788",
+      "question_type": "single_best_answer",
+      "stem": "¿Cuál es la relación más precisa entre el rendimiento por hectárea y la calidad del vino?",
+      "curriculum": {
+        "ra": "RA1",
+        "topic": "viticulture_yield",
+        "difficulty": "intermediate",
+        "expected_topics": [
+          "RA1",
+          "viticulture",
+          "yield",
+          "quality_concentration"
+        ],
+        "expected_keywords": [
+          "rendimiento",
+          "calidad",
+          "concentración",
+          "yield"
+        ],
+        "expected_causal_links": [
+          "yield -> dilution of flavour compounds -> concentration impact on quality"
+        ],
+        "expected_reasoning_type": "critical_thinking"
+      },
+      "source_content": {
+        "options": {
+          "A": "A mayor rendimiento siempre mayor calidad, gracias a la mayor cantidad de fruta disponible",
+          "B": "El rendimiento por hectárea no tiene ninguna influencia sobre la calidad del vino",
+          "C": "Un mayor rendimiento puede diluir la concentración de sabores, aunque la calidad también depende de variedad, suelo y clima",
+          "D": "La relación entre rendimiento y calidad es siempre inversamente proporcional y determinista"
+        },
+        "correct_answer_letter": "C",
+        "correct_answer_text": "Un mayor rendimiento puede diluir la concentración de sabores, aunque la calidad también depende de variedad, suelo y clima"
+      },
+      "status": {
+        "review_state": "needs_human_review",
+        "activation_status": "inactive",
+        "gold": false,
+        "public_lab": false
+      },
+      "collections": [
+        "single_best_answer",
+        "inactive",
+        "remediated_v4"
+      ],
+      "lineage": {
+        "structured_source": "knowledge/question-bank/structured/wset3_questions.json",
+        "raw_source": "WSET3_RA1_Banco_Preguntas_Bloque5.xlsx | Verdadero_Falso",
+        "sba_draft_id": null,
+        "sba_review_id": null,
+        "open_response_candidate_id": null,
+        "open_response_review_id": null,
+        "gold_review_id": null,
+        "public_lab_item_id": null,
+        "remediation_action": "REWRITE",
+        "remediation_version": "v4",
+        "remediation_original_format": "True/False",
+        "remediation_date": "2026-06-09"
+      },
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "official_wset_question": false,
+        "training_item_only": true,
+        "uses_llm": false,
+        "uses_api": false,
+        "uses_embeddings": false,
+        "uses_vector_db": false,
+        "cloud_services_active": false
+      }
+    },
+    {
+      "master_item_id": "wset3_789",
+      "source_question_id": "789",
+      "question_type": "single_best_answer",
+      "stem": "¿Qué determina el uso de barricas nuevas frente a barricas usadas en la producción de un vino?",
+      "curriculum": {
+        "ra": "RA1",
+        "topic": "vinification_oak_ageing",
+        "difficulty": "intermediate",
+        "expected_topics": [
+          "RA1",
+          "vinification",
+          "oak_ageing",
+          "new_oak"
+        ],
+        "expected_keywords": [
+          "barricas nuevas",
+          "premium",
+          "obligatorio",
+          "estilo"
+        ],
+        "expected_causal_links": [
+          "new oak -> specific flavour/texture impact -> stylistic choice not mandatory"
+        ],
+        "expected_reasoning_type": "critical_thinking"
+      },
+      "source_content": {
+        "options": {
+          "A": "Es obligatorio el uso de barricas nuevas para cualquier vino con denominación de origen",
+          "B": "Las barricas usadas producen invariablemente vinos de menor calidad que las nuevas",
+          "C": "Las barricas nuevas son exclusivas para vinos tintos y no se emplean en la elaboración de blancos",
+          "D": "Las barricas nuevas aportan más taninos y aromas maderosos; su uso responde al estilo deseado, no es obligatorio"
+        },
+        "correct_answer_letter": "D",
+        "correct_answer_text": "Las barricas nuevas aportan más taninos y aromas maderosos; su uso responde al estilo deseado, no es obligatorio"
+      },
+      "status": {
+        "review_state": "needs_human_review",
+        "activation_status": "inactive",
+        "gold": false,
+        "public_lab": false
+      },
+      "collections": [
+        "single_best_answer",
+        "inactive",
+        "remediated_v4"
+      ],
+      "lineage": {
+        "structured_source": "knowledge/question-bank/structured/wset3_questions.json",
+        "raw_source": "WSET3_RA1_Banco_Preguntas_Bloque5.xlsx | Verdadero_Falso",
+        "sba_draft_id": null,
+        "sba_review_id": null,
+        "open_response_candidate_id": null,
+        "open_response_review_id": null,
+        "gold_review_id": null,
+        "public_lab_item_id": null,
+        "remediation_action": "REWRITE",
+        "remediation_version": "v4",
+        "remediation_original_format": "True/False",
+        "remediation_date": "2026-06-09"
+      },
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "official_wset_question": false,
+        "training_item_only": true,
+        "uses_llm": false,
+        "uses_api": false,
+        "uses_embeddings": false,
+        "uses_vector_db": false,
+        "cloud_services_active": false
+      }
+    },
+    {
+      "master_item_id": "wset3_790",
+      "source_question_id": "790",
+      "question_type": "single_best_answer",
+      "stem": "¿Cómo influye el clima fresco sobre el nivel de acidez natural de los vinos?",
+      "curriculum": {
+        "ra": "RA1",
+        "topic": "viticulture_climate_cool",
+        "difficulty": "foundation",
+        "expected_topics": [
+          "RA1",
+          "viticulture",
+          "climate_cool",
+          "acidity"
+        ],
+        "expected_keywords": [
+          "clima fresco",
+          "acidez",
+          "ácido málico",
+          "freshness"
+        ],
+        "expected_causal_links": [
+          "cool climate -> slow ripening -> malic acid retention -> higher acidity"
+        ],
+        "expected_reasoning_type": "causal_mechanism"
+      },
+      "source_content": {
+        "options": {
+          "A": "El clima fresco reduce la acidez al ralentizar la fotosíntesis y disminuir la producción de ácidos",
+          "B": "En climas frescos, la acidez es igual que en climas cálidos pero con mayor contenido alcohólico",
+          "C": "El clima fresco favorece una alta acidez al ralentizar la degradación del ácido málico durante la maduración",
+          "D": "El clima fresco elimina la necesidad de desacidificación en la bodega"
+        },
+        "correct_answer_letter": "C",
+        "correct_answer_text": "El clima fresco favorece una alta acidez al ralentizar la degradación del ácido málico durante la maduración"
+      },
+      "status": {
+        "review_state": "needs_human_review",
+        "activation_status": "inactive",
+        "gold": false,
+        "public_lab": false
+      },
+      "collections": [
+        "single_best_answer",
+        "inactive",
+        "remediated_v4"
+      ],
+      "lineage": {
+        "structured_source": "knowledge/question-bank/structured/wset3_questions.json",
+        "raw_source": "WSET3_RA1_Banco_Preguntas_Bloque5.xlsx | Verdadero_Falso",
+        "sba_draft_id": null,
+        "sba_review_id": null,
+        "open_response_candidate_id": null,
+        "open_response_review_id": null,
+        "gold_review_id": null,
+        "public_lab_item_id": null,
+        "remediation_action": "REWRITE",
+        "remediation_version": "v4",
+        "remediation_original_format": "True/False",
+        "remediation_date": "2026-06-09"
+      },
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "official_wset_question": false,
+        "training_item_only": true,
+        "uses_llm": false,
+        "uses_api": false,
+        "uses_embeddings": false,
+        "uses_vector_db": false,
+        "cloud_services_active": false
+      }
+    },
+    {
+      "master_item_id": "wset3_742",
+      "source_question_id": "742",
+      "question_type": "single_best_answer",
+      "stem": "¿Qué variedad de uva y estilo de vino es característico de la región de Barossa Valley en Australia?",
+      "curriculum": {
+        "ra": "RA2",
+        "topic": "new_world_regions_australia",
+        "difficulty": "foundation",
+        "expected_topics": [
+          "RA2",
+          "australia",
+          "barossa_valley",
+          "syrah_shiraz"
+        ],
+        "expected_keywords": [
+          "Barossa",
+          "Syrah",
+          "Shiraz",
+          "especiado",
+          "Australia"
+        ],
+        "expected_causal_links": [
+          "Barossa warm climate -> full-bodied Shiraz -> ripe spiced style"
+        ],
+        "expected_reasoning_type": "regional_knowledge"
+      },
+      "source_content": {
+        "options": {
+          "A": "Pinot Noir de cuerpo ligero y alta acidez, con aromas de cereza fresca",
+          "B": "Riesling de perfil mineral con alta acidez y notas petrolinas en su evolución",
+          "C": "Sauvignon Blanc de perfil herbáceo con notas de hierba cortada",
+          "D": "Shiraz (Syrah) de cuerpo pleno, taninos maduros y notas especiadas de pimienta negra"
+        },
+        "correct_answer_letter": "D",
+        "correct_answer_text": "Shiraz (Syrah) de cuerpo pleno, taninos maduros y notas especiadas de pimienta negra"
+      },
+      "status": {
+        "review_state": "needs_human_review",
+        "activation_status": "inactive",
+        "gold": false,
+        "public_lab": false
+      },
+      "collections": [
+        "single_best_answer",
+        "inactive",
+        "remediated_v4"
+      ],
+      "lineage": {
+        "structured_source": "knowledge/question-bank/structured/wset3_questions.json",
+        "raw_source": "WSET3_RA2_Banco_Preguntas_Bloque2.xlsx | Emparejamiento",
+        "sba_draft_id": null,
+        "sba_review_id": null,
+        "open_response_candidate_id": null,
+        "open_response_review_id": null,
+        "gold_review_id": null,
+        "public_lab_item_id": null,
+        "remediation_action": "REWRITE",
+        "remediation_version": "v4",
+        "remediation_original_format": "Matching",
+        "remediation_date": "2026-06-09"
+      },
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "official_wset_question": false,
+        "training_item_only": true,
+        "uses_llm": false,
+        "uses_api": false,
+        "uses_embeddings": false,
+        "uses_vector_db": false,
+        "cloud_services_active": false
+      }
+    },
+    {
+      "master_item_id": "wset3_743",
+      "source_question_id": "743",
+      "question_type": "single_best_answer",
+      "stem": "¿Qué sistema de clasificación vinícola caracteriza a la región de Borgoña (Bourgogne) en Francia?",
+      "curriculum": {
+        "ra": "RA2",
+        "topic": "france_burgundy_classification",
+        "difficulty": "intermediate",
+        "expected_topics": [
+          "RA2",
+          "france_burgundy",
+          "classification_crus"
+        ],
+        "expected_keywords": [
+          "Borgoña",
+          "crus",
+          "Grand Cru",
+          "Premier Cru",
+          "Burgundy"
+        ],
+        "expected_causal_links": [
+          "Burgundy classification -> terroir-based cru hierarchy"
+        ],
+        "expected_reasoning_type": "regional_knowledge"
+      },
+      "source_content": {
+        "options": {
+          "A": "Una clasificación por châteaux individuales, similar al sistema de Burdeos de 1855",
+          "B": "Un sistema de clasificación por crus (parcelas) que incluye Grand Cru, Premier Cru, Village y Regional",
+          "C": "Una denominación única para toda la región sin subdivisiones oficiales de calidad",
+          "D": "Un sistema basado en el tiempo mínimo de crianza en barrica, como en La Rioja"
+        },
+        "correct_answer_letter": "B",
+        "correct_answer_text": "Un sistema de clasificación por crus (parcelas) que incluye Grand Cru, Premier Cru, Village y Regional"
+      },
+      "status": {
+        "review_state": "needs_human_review",
+        "activation_status": "inactive",
+        "gold": false,
+        "public_lab": false
+      },
+      "collections": [
+        "single_best_answer",
+        "inactive",
+        "remediated_v4"
+      ],
+      "lineage": {
+        "structured_source": "knowledge/question-bank/structured/wset3_questions.json",
+        "raw_source": "WSET3_RA2_Banco_Preguntas_Bloque2.xlsx | Emparejamiento",
+        "sba_draft_id": null,
+        "sba_review_id": null,
+        "open_response_candidate_id": null,
+        "open_response_review_id": null,
+        "gold_review_id": null,
+        "public_lab_item_id": null,
+        "remediation_action": "REWRITE",
+        "remediation_version": "v4",
+        "remediation_original_format": "Matching",
+        "remediation_date": "2026-06-09"
+      },
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "official_wset_question": false,
+        "training_item_only": true,
+        "uses_llm": false,
+        "uses_api": false,
+        "uses_embeddings": false,
+        "uses_vector_db": false,
+        "cloud_services_active": false
+      }
+    },
+    {
+      "master_item_id": "wset3_744",
+      "source_question_id": "744",
+      "question_type": "single_best_answer",
+      "stem": "¿Qué caracteriza a la categoría 'Gran Reserva' en la DO Ribera del Duero?",
+      "curriculum": {
+        "ra": "RA2",
+        "topic": "spain_ribera_del_duero",
+        "difficulty": "intermediate",
+        "expected_topics": [
+          "RA2",
+          "spain",
+          "ribera_del_duero",
+          "gran_reserva"
+        ],
+        "expected_keywords": [
+          "Gran Reserva",
+          "Ribera del Duero",
+          "crianza"
+        ],
+        "expected_causal_links": [
+          "Gran Reserva legislation -> minimum ageing requirements -> quality tier signal"
+        ],
+        "expected_reasoning_type": "regional_knowledge"
+      },
+      "source_content": {
+        "options": {
+          "A": "Es un término exclusivo de La Rioja sin equivalente legal en otras denominaciones españolas",
+          "B": "Requiere únicamente 6 meses de crianza en recipiente de madera, sin requisito de botella",
+          "C": "Exige un periodo mínimo de crianza en madera y botella, reservada para cosechas excepcionales",
+          "D": "Se aplica a todos los vinos sin crianza en barrica elaborados con uvas de gran madurez"
+        },
+        "correct_answer_letter": "C",
+        "correct_answer_text": "Exige un periodo mínimo de crianza en madera y botella, reservada para cosechas excepcionales"
+      },
+      "status": {
+        "review_state": "needs_human_review",
+        "activation_status": "inactive",
+        "gold": false,
+        "public_lab": false
+      },
+      "collections": [
+        "single_best_answer",
+        "inactive",
+        "remediated_v4"
+      ],
+      "lineage": {
+        "structured_source": "knowledge/question-bank/structured/wset3_questions.json",
+        "raw_source": "WSET3_RA2_Banco_Preguntas_Bloque2.xlsx | Emparejamiento",
+        "sba_draft_id": null,
+        "sba_review_id": null,
+        "open_response_candidate_id": null,
+        "open_response_review_id": null,
+        "gold_review_id": null,
+        "public_lab_item_id": null,
+        "remediation_action": "REWRITE",
+        "remediation_version": "v4",
+        "remediation_original_format": "Matching",
+        "remediation_date": "2026-06-09"
+      },
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "official_wset_question": false,
+        "training_item_only": true,
+        "uses_llm": false,
+        "uses_api": false,
+        "uses_embeddings": false,
+        "uses_vector_db": false,
+        "cloud_services_active": false
+      }
+    },
+    {
+      "master_item_id": "wset3_745",
+      "source_question_id": "745",
+      "question_type": "single_best_answer",
+      "stem": "¿Cuál es el requisito de crianza mínimo para un vino tinto con la categoría 'Reserva' en la DOCa La Rioja?",
+      "curriculum": {
+        "ra": "RA2",
+        "topic": "spain_rioja_ageing",
+        "difficulty": "intermediate",
+        "expected_topics": [
+          "RA2",
+          "spain_rioja",
+          "reserva",
+          "ageing_requirements"
+        ],
+        "expected_keywords": [
+          "Rioja",
+          "Reserva",
+          "3 años",
+          "barrica"
+        ],
+        "expected_causal_links": [
+          "Rioja Reserva -> 3 years minimum total + 1 year oak -> quality tier"
+        ],
+        "expected_reasoning_type": "regional_knowledge"
+      },
+      "source_content": {
+        "options": {
+          "A": "Un mínimo de 6 meses en barrica y ningún requisito adicional de crianza en botella",
+          "B": "Un mínimo de 3 años en total, con al menos 1 año en barrica de roble",
+          "C": "Un mínimo de 5 años en total, con al menos 2 años en barrica de roble nueva",
+          "D": "No existe un periodo de crianza mínimo fijo; depende del criterio del elaborador"
+        },
+        "correct_answer_letter": "B",
+        "correct_answer_text": "Un mínimo de 3 años en total, con al menos 1 año en barrica de roble"
+      },
+      "status": {
+        "review_state": "needs_human_review",
+        "activation_status": "inactive",
+        "gold": false,
+        "public_lab": false
+      },
+      "collections": [
+        "single_best_answer",
+        "inactive",
+        "remediated_v4"
+      ],
+      "lineage": {
+        "structured_source": "knowledge/question-bank/structured/wset3_questions.json",
+        "raw_source": "WSET3_RA2_Banco_Preguntas_Bloque2.xlsx | Emparejamiento",
+        "sba_draft_id": null,
+        "sba_review_id": null,
+        "open_response_candidate_id": null,
+        "open_response_review_id": null,
+        "gold_review_id": null,
+        "public_lab_item_id": null,
+        "remediation_action": "REWRITE",
+        "remediation_version": "v4",
+        "remediation_original_format": "Matching",
+        "remediation_date": "2026-06-09"
+      },
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "official_wset_question": false,
+        "training_item_only": true,
+        "uses_llm": false,
+        "uses_api": false,
+        "uses_embeddings": false,
+        "uses_vector_db": false,
+        "cloud_services_active": false
+      }
+    },
+    {
+      "master_item_id": "wset3_746",
+      "source_question_id": "746",
+      "question_type": "single_best_answer",
+      "stem": "¿Qué tipo de clima predomina en la región vinícola de Stellenbosch (Sudáfrica)?",
+      "curriculum": {
+        "ra": "RA2",
+        "topic": "south_africa_stellenbosch",
+        "difficulty": "foundation",
+        "expected_topics": [
+          "RA2",
+          "south_africa",
+          "stellenbosch",
+          "climate_mediterranean"
+        ],
+        "expected_keywords": [
+          "Stellenbosch",
+          "clima mediterráneo",
+          "influencia marítima"
+        ],
+        "expected_causal_links": [
+          "Mediterranean + maritime influence -> moderate temperatures -> balanced style"
+        ],
+        "expected_reasoning_type": "regional_knowledge"
+      },
+      "source_content": {
+        "options": {
+          "A": "Clima continental con inviernos muy fríos, veranos cortos y riesgo de heladas tardías",
+          "B": "Clima mediterráneo con influencia marítima de los océanos Atlántico e Índico",
+          "C": "Clima tropical húmedo con lluvias frecuentes durante la época de maduración",
+          "D": "Clima oceánico fresco con alta humedad y temperaturas uniformes todo el año"
+        },
+        "correct_answer_letter": "B",
+        "correct_answer_text": "Clima mediterráneo con influencia marítima de los océanos Atlántico e Índico"
+      },
+      "status": {
+        "review_state": "needs_human_review",
+        "activation_status": "inactive",
+        "gold": false,
+        "public_lab": false
+      },
+      "collections": [
+        "single_best_answer",
+        "inactive",
+        "remediated_v4"
+      ],
+      "lineage": {
+        "structured_source": "knowledge/question-bank/structured/wset3_questions.json",
+        "raw_source": "WSET3_RA2_Banco_Preguntas_Bloque2.xlsx | Emparejamiento",
+        "sba_draft_id": null,
+        "sba_review_id": null,
+        "open_response_candidate_id": null,
+        "open_response_review_id": null,
+        "gold_review_id": null,
+        "public_lab_item_id": null,
+        "resolution_artifact": "knowledge/question-bank/reviews/master_bank_review_inactive_resolution.json",
+        "resolution_id": "phase_4a_3_8_5_7_746",
+        "remediation_action": "REWRITE",
+        "remediation_version": "v4",
+        "remediation_original_format": "Matching",
+        "remediation_date": "2026-06-09"
+      },
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "official_wset_question": false,
+        "training_item_only": true,
+        "uses_llm": false,
+        "uses_api": false,
+        "uses_embeddings": false,
+        "uses_vector_db": false,
+        "cloud_services_active": false
+      }
+    },
+    {
+      "master_item_id": "wset3_747",
+      "source_question_id": "747",
+      "question_type": "single_best_answer",
+      "stem": "¿Qué variedad de uva es la base del vino Barolo en el Piamonte italiano y cuál es su perfil característico?",
+      "curriculum": {
+        "ra": "RA2",
+        "topic": "italy_barolo_nebbiolo",
+        "difficulty": "foundation",
+        "expected_topics": [
+          "RA2",
+          "italy_piedmont",
+          "barolo",
+          "nebbiolo"
+        ],
+        "expected_keywords": [
+          "Barolo",
+          "Nebbiolo",
+          "Piamonte",
+          "alta acidez",
+          "taninos"
+        ],
+        "expected_causal_links": [
+          "Nebbiolo -> high tannin + high acidity -> long ageing potential"
+        ],
+        "expected_reasoning_type": "regional_knowledge"
+      },
+      "source_content": {
+        "options": {
+          "A": "Sangiovese, con alta acidez, taninos firmes y aromas de cereza y hierbas aromáticas",
+          "B": "Barbera, con baja acidez natural, color intenso y aromas de frutas negras",
+          "C": "Dolcetto, con taninos suaves, acidez moderada y carácter afrutado accesible en juventud",
+          "D": "Nebbiolo, con alta acidez, taninos potentes y aromas de rosa, alquitrán y frutas rojas"
+        },
+        "correct_answer_letter": "D",
+        "correct_answer_text": "Nebbiolo, con alta acidez, taninos potentes y aromas de rosa, alquitrán y frutas rojas"
+      },
+      "status": {
+        "review_state": "needs_human_review",
+        "activation_status": "inactive",
+        "gold": false,
+        "public_lab": false
+      },
+      "collections": [
+        "single_best_answer",
+        "inactive",
+        "remediated_v4"
+      ],
+      "lineage": {
+        "structured_source": "knowledge/question-bank/structured/wset3_questions.json",
+        "raw_source": "WSET3_RA2_Banco_Preguntas_Bloque2.xlsx | Emparejamiento",
+        "sba_draft_id": null,
+        "sba_review_id": null,
+        "open_response_candidate_id": null,
+        "open_response_review_id": null,
+        "gold_review_id": null,
+        "public_lab_item_id": null,
+        "remediation_action": "REWRITE",
+        "remediation_version": "v4",
+        "remediation_original_format": "Matching",
+        "remediation_date": "2026-06-09"
+      },
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "official_wset_question": false,
+        "training_item_only": true,
+        "uses_llm": false,
+        "uses_api": false,
+        "uses_embeddings": false,
+        "uses_vector_db": false,
+        "cloud_services_active": false
+      }
+    },
+    {
+      "master_item_id": "wset3_748",
+      "source_question_id": "748",
+      "question_type": "single_best_answer",
+      "stem": "¿Con qué variedad de uva y perfil aromático es mundialmente reconocida la región de Marlborough en Nueva Zelanda?",
+      "curriculum": {
+        "ra": "RA2",
+        "topic": "new_zealand_marlborough",
+        "difficulty": "foundation",
+        "expected_topics": [
+          "RA2",
+          "new_zealand",
+          "marlborough",
+          "sauvignon_blanc"
+        ],
+        "expected_keywords": [
+          "Marlborough",
+          "Sauvignon Blanc",
+          "pomelo",
+          "maracuyá"
+        ],
+        "expected_causal_links": [
+          "Marlborough cool climate -> aromatic thiols -> intense herbaceous/tropical SB style"
+        ],
+        "expected_reasoning_type": "regional_knowledge"
+      },
+      "source_content": {
+        "options": {
+          "A": "Pinot Noir de color pálido y elegante, con aromas de fresas y especias dulces",
+          "B": "Chardonnay con crianza en barrica nueva y notas de mantequilla y tostado",
+          "C": "Sauvignon Blanc intensamente aromático, con notas de hierba, pomelo y maracuyá",
+          "D": "Riesling semiseco de alta acidez con aromas florales y carácter petrolino"
+        },
+        "correct_answer_letter": "C",
+        "correct_answer_text": "Sauvignon Blanc intensamente aromático, con notas de hierba, pomelo y maracuyá"
+      },
+      "status": {
+        "review_state": "needs_human_review",
+        "activation_status": "inactive",
+        "gold": false,
+        "public_lab": false
+      },
+      "collections": [
+        "single_best_answer",
+        "inactive",
+        "remediated_v4"
+      ],
+      "lineage": {
+        "structured_source": "knowledge/question-bank/structured/wset3_questions.json",
+        "raw_source": "WSET3_RA2_Banco_Preguntas_Bloque2.xlsx | Emparejamiento",
+        "sba_draft_id": null,
+        "sba_review_id": null,
+        "open_response_candidate_id": null,
+        "open_response_review_id": null,
+        "gold_review_id": null,
+        "public_lab_item_id": null,
+        "remediation_action": "REWRITE",
+        "remediation_version": "v4",
+        "remediation_original_format": "Matching",
+        "remediation_date": "2026-06-09"
+      },
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "official_wset_question": false,
+        "training_item_only": true,
+        "uses_llm": false,
+        "uses_api": false,
+        "uses_embeddings": false,
+        "uses_vector_db": false,
+        "cloud_services_active": false
+      }
+    },
+    {
+      "master_item_id": "wset3_765",
+      "source_question_id": "765",
+      "question_type": "single_best_answer",
+      "stem": "¿Cuál es la definición correcta de 'despalillado' en el proceso de elaboración del vino?",
+      "curriculum": {
+        "ra": "RA1",
+        "topic": "vinification_destemming",
+        "difficulty": "foundation",
+        "expected_topics": [
+          "RA1",
+          "vinification",
+          "destemming"
+        ],
+        "expected_keywords": [
+          "despalillado",
+          "raspón",
+          "bayas",
+          "destemming"
+        ],
+        "expected_causal_links": [
+          "destemming -> removal of stems -> reduces harsh green tannins in red wine"
+        ],
+        "expected_reasoning_type": "theory_foundation"
+      },
+      "source_content": {
+        "options": {
+          "A": "La separación de los hollejos del mosto al finalizar la maceración en vinos tintos",
+          "B": "El proceso de clarificación del mosto mediante agentes enológicos como la bentonita",
+          "C": "La separación de las bayas del raspón (escobajo) antes de la fermentación",
+          "D": "La adición de dióxido de azufre al mosto para inhibir fermentaciones no deseadas"
+        },
+        "correct_answer_letter": "C",
+        "correct_answer_text": "La separación de las bayas del raspón (escobajo) antes de la fermentación"
+      },
+      "status": {
+        "review_state": "needs_human_review",
+        "activation_status": "inactive",
+        "gold": false,
+        "public_lab": false
+      },
+      "collections": [
+        "single_best_answer",
+        "inactive",
+        "remediated_v4"
+      ],
+      "lineage": {
+        "structured_source": "knowledge/question-bank/structured/wset3_questions.json",
+        "raw_source": "WSET3_RA1_Banco_Preguntas_TOTAL.xlsx | Emparejamiento",
+        "sba_draft_id": null,
+        "sba_review_id": null,
+        "open_response_candidate_id": null,
+        "open_response_review_id": null,
+        "gold_review_id": null,
+        "public_lab_item_id": null,
+        "remediation_action": "REWRITE",
+        "remediation_version": "v4",
+        "remediation_original_format": "Matching",
+        "remediation_date": "2026-06-09"
+      },
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "official_wset_question": false,
+        "training_item_only": true,
+        "uses_llm": false,
+        "uses_api": false,
+        "uses_embeddings": false,
+        "uses_vector_db": false,
+        "cloud_services_active": false
+      }
+    },
+    {
+      "master_item_id": "wset3_795",
+      "source_question_id": "795",
+      "question_type": "single_best_answer",
+      "stem": "¿Cuál de las siguientes regiones vinícolas es reconocida por sus suelos volcánicos de origen basáltico?",
+      "curriculum": {
+        "ra": "RA2",
+        "topic": "italy_sicily_etna",
+        "difficulty": "intermediate",
+        "expected_topics": [
+          "RA2",
+          "italy_sicily",
+          "etna",
+          "volcanic_soils"
+        ],
+        "expected_keywords": [
+          "Etna",
+          "volcánico",
+          "basáltico",
+          "Sicilia"
+        ],
+        "expected_causal_links": [
+          "Etna volcanic soils -> mineral wine character -> distinctive style"
+        ],
+        "expected_reasoning_type": "regional_knowledge"
+      },
+      "source_content": {
+        "options": {
+          "A": "Rioja (España), con suelos predominantemente de arcilla calcárea y aluviones",
+          "B": "Barossa Valley (Australia), con suelos arcillosos y arenosos en un clima cálido",
+          "C": "Etna (Sicilia, Italia), situado en las laderas del volcán con suelos volcánicos de origen basáltico",
+          "D": "Champagne (Francia), con subsuelo de creta (chalk) que aporta minerosidad"
+        },
+        "correct_answer_letter": "C",
+        "correct_answer_text": "Etna (Sicilia, Italia), situado en las laderas del volcán con suelos volcánicos de origen basáltico"
+      },
+      "status": {
+        "review_state": "needs_human_review",
+        "activation_status": "inactive",
+        "gold": false,
+        "public_lab": false
+      },
+      "collections": [
+        "single_best_answer",
+        "inactive",
+        "remediated_v4"
+      ],
+      "lineage": {
+        "structured_source": "knowledge/question-bank/structured/wset3_questions.json",
+        "raw_source": "WSET3_RA2_Banco_Preguntas_Bloque2.xlsx | Emparejamiento",
+        "sba_draft_id": null,
+        "sba_review_id": null,
+        "open_response_candidate_id": null,
+        "open_response_review_id": null,
+        "gold_review_id": null,
+        "public_lab_item_id": null,
+        "remediation_action": "REWRITE",
+        "remediation_version": "v4",
+        "remediation_original_format": "Matching",
+        "remediation_date": "2026-06-09"
+      },
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "official_wset_question": false,
+        "training_item_only": true,
+        "uses_llm": false,
+        "uses_api": false,
+        "uses_embeddings": false,
+        "uses_vector_db": false,
+        "cloud_services_active": false
+      }
+    },
+    {
+      "master_item_id": "wset3_796",
+      "source_question_id": "796",
+      "question_type": "single_best_answer",
+      "stem": "¿Cuál de las siguientes regiones vitivinícolas argentinas es conocida por sus viñedos a mayor altitud?",
+      "curriculum": {
+        "ra": "RA2",
+        "topic": "argentina_salta_altitude",
+        "difficulty": "intermediate",
+        "expected_topics": [
+          "RA2",
+          "argentina",
+          "salta",
+          "altitude_viticulture"
+        ],
+        "expected_keywords": [
+          "Salta",
+          "Cafayate",
+          "altitud"
+        ],
+        "expected_causal_links": [
+          "Salta high altitude -> cool temperatures + UV -> freshness + concentration"
+        ],
+        "expected_reasoning_type": "regional_knowledge"
+      },
+      "source_content": {
+        "options": {
+          "A": "Mendoza, principal región productora de Argentina a una altitud moderada",
+          "B": "Patagonia, en el extremo sur del país con clima frío y vientos constantes",
+          "C": "San Juan, región cálida y seca al norte de Mendoza con baja altitud relativa",
+          "D": "Salta (Cafayate), con viñedos entre los de mayor altitud del mundo, por encima de 1.700 m"
+        },
+        "correct_answer_letter": "D",
+        "correct_answer_text": "Salta (Cafayate), con viñedos entre los de mayor altitud del mundo, por encima de 1.700 m"
+      },
+      "status": {
+        "review_state": "needs_human_review",
+        "activation_status": "inactive",
+        "gold": false,
+        "public_lab": false
+      },
+      "collections": [
+        "single_best_answer",
+        "inactive",
+        "remediated_v4"
+      ],
+      "lineage": {
+        "structured_source": "knowledge/question-bank/structured/wset3_questions.json",
+        "raw_source": "WSET3_RA2_Banco_Preguntas_Bloque2.xlsx | Emparejamiento",
+        "sba_draft_id": null,
+        "sba_review_id": null,
+        "open_response_candidate_id": null,
+        "open_response_review_id": null,
+        "gold_review_id": null,
+        "public_lab_item_id": null,
+        "remediation_action": "REWRITE",
+        "remediation_version": "v4",
+        "remediation_original_format": "Matching",
+        "remediation_date": "2026-06-09"
+      },
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "official_wset_question": false,
+        "training_item_only": true,
+        "uses_llm": false,
+        "uses_api": false,
+        "uses_embeddings": false,
+        "uses_vector_db": false,
+        "cloud_services_active": false
+      }
+    },
+    {
+      "master_item_id": "wset3_797",
+      "source_question_id": "797",
+      "question_type": "single_best_answer",
+      "stem": "¿Qué región es reconocida mundialmente por la producción de vinos dulces elaborados con uvas afectadas por Botrytis cinerea (podredumbre noble)?",
+      "curriculum": {
+        "ra": "RA2",
+        "topic": "hungary_tokaj_botrytis",
+        "difficulty": "intermediate",
+        "expected_topics": [
+          "RA2",
+          "hungary_tokaj",
+          "botrytis",
+          "sweet_wine"
+        ],
+        "expected_keywords": [
+          "Tokaj",
+          "botrytis",
+          "Aszú",
+          "Furmint"
+        ],
+        "expected_causal_links": [
+          "Tokaj climate -> Botrytis cinerea -> aszú berries -> concentrated sweet wine"
+        ],
+        "expected_reasoning_type": "regional_knowledge"
+      },
+      "source_content": {
+        "options": {
+          "A": "Barossa Valley (Australia), conocida por su Shiraz de cuerpo pleno y estilo especiado",
+          "B": "Marlborough (Nueva Zelanda), conocida por su Sauvignon Blanc seco e intensamente aromático",
+          "C": "Stellenbosch (Sudáfrica), conocida por sus tintos de estructura equilibrada",
+          "D": "Tokaj (Hungría), productora del Aszú y otros vinos de podredumbre noble de reconocida historia"
+        },
+        "correct_answer_letter": "D",
+        "correct_answer_text": "Tokaj (Hungría), productora del Aszú y otros vinos de podredumbre noble de reconocida historia"
+      },
+      "status": {
+        "review_state": "needs_human_review",
+        "activation_status": "inactive",
+        "gold": false,
+        "public_lab": false
+      },
+      "collections": [
+        "single_best_answer",
+        "inactive",
+        "remediated_v4"
+      ],
+      "lineage": {
+        "structured_source": "knowledge/question-bank/structured/wset3_questions.json",
+        "raw_source": "WSET3_RA2_Banco_Preguntas_Bloque2.xlsx | Emparejamiento",
+        "sba_draft_id": null,
+        "sba_review_id": null,
+        "open_response_candidate_id": null,
+        "open_response_review_id": null,
+        "gold_review_id": null,
+        "public_lab_item_id": null,
+        "remediation_action": "REWRITE",
+        "remediation_version": "v4",
+        "remediation_original_format": "Matching",
+        "remediation_date": "2026-06-09"
+      },
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "official_wset_question": false,
+        "training_item_only": true,
+        "uses_llm": false,
+        "uses_api": false,
+        "uses_embeddings": false,
+        "uses_vector_db": false,
+        "cloud_services_active": false
+      }
+    },
+    {
+      "master_item_id": "wset3_60",
+      "source_question_id": "60",
+      "question_type": "single_best_answer",
+      "stem": "¿Cuál es el efecto principal de una gran amplitud térmica diurna (diferencia entre temperatura máxima y mínima diaria) sobre la uva durante el periodo de maduración?",
+      "curriculum": {
+        "ra": "RA1",
+        "topic": "viticulture_climate_diurnal",
+        "difficulty": "intermediate",
+        "expected_topics": [
+          "RA1",
+          "viticulture",
+          "climate_diurnal_range",
+          "acidity",
+          "freshness"
+        ],
+        "expected_keywords": [
+          "amplitud térmica",
+          "diurnal range",
+          "acidez",
+          "frescura",
+          "temperatura nocturna"
+        ],
+        "expected_causal_links": [
+          "diurnal range -> slowed respiration -> acid retention -> fresh aromatic profile"
+        ],
+        "expected_reasoning_type": "causal_mechanism",
+        "causal_chain_source": "HC_DIURNAL_RANGE_FRESHNESS"
+      },
+      "source_content": {
+        "options": {
+          "A": "Favorece la degradación rápida de los ácidos málico y tartárico, reduciendo la acidez final del vino",
+          "B": "Preserva la acidez natural y la frescura aromática al reducir la respiración nocturna de la vid",
+          "C": "Aumenta la velocidad de maduración al elevar la temperatura media acumulada del ciclo",
+          "D": "Provoca una acumulación excesiva de azúcares que dificulta el arranque de la fermentación"
+        },
+        "correct_answer_letter": "B",
+        "correct_answer_text": "Preserva la acidez natural y la frescura aromática al reducir la respiración nocturna de la vid"
+      },
+      "status": {
+        "review_state": "needs_human_review",
+        "activation_status": "inactive",
+        "gold": false,
+        "public_lab": false
+      },
+      "collections": [
+        "single_best_answer",
+        "inactive",
+        "remediated_v4"
+      ],
+      "lineage": {
+        "structured_source": "knowledge/question-bank/structured/wset3_questions.json",
+        "raw_source": "WSET3_Banco_500_Preguntas_RA1_RA5 (3).xlsx | Selección",
+        "sba_draft_id": null,
+        "sba_review_id": null,
+        "open_response_candidate_id": null,
+        "open_response_review_id": null,
+        "gold_review_id": null,
+        "public_lab_item_id": null,
+        "resolution_artifact": "knowledge/question-bank/reviews/master_bank_review_inactive_resolution.json",
+        "resolution_id": "phase_4a_3_8_5_7_60",
+        "remediation_action": "REPLACE",
+        "remediation_version": "v4",
+        "remediation_original_format": "out_of_scope",
+        "remediation_date": "2026-06-09",
+        "retire_reason": "Out-of-scope health topic; not covered in WSET L3 Study Guide; health advice not appropriate for formative bank"
+      },
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "official_wset_question": false,
+        "training_item_only": true,
+        "uses_llm": false,
+        "uses_api": false,
+        "uses_embeddings": false,
+        "uses_vector_db": false,
+        "cloud_services_active": false
+      }
+    },
+    {
+      "master_item_id": "wset3_315",
+      "source_question_id": "315",
+      "question_type": "single_best_answer",
+      "stem": "¿Qué cambio sensorial produce la fermentación maloláctica (FML) sobre la textura de un vino blanco con crianza?",
+      "curriculum": {
+        "ra": "RA1",
+        "topic": "vinification_mlf_texture",
+        "difficulty": "intermediate",
+        "expected_topics": [
+          "RA1",
+          "vinification",
+          "malolactic_fermentation",
+          "texture",
+          "acidity"
+        ],
+        "expected_keywords": [
+          "fermentación maloláctica",
+          "textura",
+          "cremoso",
+          "ácido láctico",
+          "MLF"
+        ],
+        "expected_causal_links": [
+          "MLF -> malic to lactic acid -> reduced acidity + creamy texture + buttery aroma"
+        ],
+        "expected_reasoning_type": "causal_mechanism",
+        "causal_chain_source": "HC_MLF_ACIDITY_TEXTURE"
+      },
+      "source_content": {
+        "options": {
+          "A": "Incrementa la astringencia del vino por extracción de taninos polifenólicos de las lías",
+          "B": "Eleva la acidez total, aportando una sensación de frescura más viva y cortante",
+          "C": "Aporta una textura más suave y cremosa al transformar el ácido málico duro en ácido láctico más suave",
+          "D": "Reduce el contenido alcohólico del vino al metabolizar el etanol como fuente de carbono"
+        },
+        "correct_answer_letter": "C",
+        "correct_answer_text": "Aporta una textura más suave y cremosa al transformar el ácido málico duro en ácido láctico más suave"
+      },
+      "status": {
+        "review_state": "needs_human_review",
+        "activation_status": "inactive",
+        "gold": false,
+        "public_lab": false
+      },
+      "collections": [
+        "single_best_answer",
+        "inactive",
+        "remediated_v4"
+      ],
+      "lineage": {
+        "structured_source": "knowledge/question-bank/structured/wset3_questions.json",
+        "raw_source": "WSET3_Banco_500_Preguntas_RA1_RA5 (3).xlsx | Selección",
+        "sba_draft_id": null,
+        "sba_review_id": null,
+        "open_response_candidate_id": null,
+        "open_response_review_id": null,
+        "gold_review_id": null,
+        "public_lab_item_id": null,
+        "remediation_action": "REPLACE",
+        "remediation_version": "v4",
+        "remediation_original_format": "out_of_scope",
+        "remediation_date": "2026-06-09",
+        "retire_reason": "Out-of-scope public health advice; prescriptive health recommendations outside WSET L3 curriculum"
+      },
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "official_wset_question": false,
+        "training_item_only": true,
+        "uses_llm": false,
+        "uses_api": false,
+        "uses_embeddings": false,
+        "uses_vector_db": false,
+        "cloud_services_active": false
+      }
+    },
+    {
+      "master_item_id": "wset3_716",
+      "source_question_id": "716",
+      "question_type": "single_best_answer",
+      "stem": "¿Cómo contribuye la altitud elevada al perfil aromático de los vinos producidos en regiones de montaña?",
+      "curriculum": {
+        "ra": "RA1",
+        "topic": "viticulture_altitude_aromatic",
+        "difficulty": "intermediate",
+        "expected_topics": [
+          "RA1",
+          "viticulture",
+          "altitude",
+          "aromatic_profile",
+          "UV_radiation"
+        ],
+        "expected_keywords": [
+          "altitud",
+          "perfil aromático",
+          "radiación UV",
+          "temperatura",
+          "complejidad"
+        ],
+        "expected_causal_links": [
+          "altitude -> lower temperature + higher UV -> slower maturation + compound synthesis -> fresh + complex aromatic wines"
+        ],
+        "expected_reasoning_type": "causal_mechanism",
+        "causal_chain_source": "HC_ALTITUDE_TEMPERATURE"
+      },
+      "source_content": {
+        "options": {
+          "A": "La mayor altitud eleva las temperaturas medias, favoreciendo aromas de fruta madura y mermelada",
+          "B": "A mayor altitud, el mayor contenido en oxígeno acelera la oxidación y potencia los aromas terciarios",
+          "C": "La altitud no tiene ningún efecto demostrado sobre el perfil aromático de los vinos",
+          "D": "Las temperaturas más frescas y la mayor radiación UV en altitud favorecen la síntesis de compuestos aromáticos, produciendo vinos frescos y complejos"
+        },
+        "correct_answer_letter": "D",
+        "correct_answer_text": "Las temperaturas más frescas y la mayor radiación UV en altitud favorecen la síntesis de compuestos aromáticos, produciendo vinos frescos y complejos"
+      },
+      "status": {
+        "review_state": "needs_human_review",
+        "activation_status": "inactive",
+        "gold": false,
+        "public_lab": false
+      },
+      "collections": [
+        "single_best_answer",
+        "inactive",
+        "remediated_v4"
+      ],
+      "lineage": {
+        "structured_source": "knowledge/question-bank/structured/wset3_questions.json",
+        "raw_source": "WSET3_Banco_1000_Preguntas_Ordenado.xlsx | Sheet1",
+        "sba_draft_id": null,
+        "sba_review_id": null,
+        "open_response_candidate_id": null,
+        "open_response_review_id": null,
+        "gold_review_id": null,
+        "public_lab_item_id": null,
+        "remediation_action": "REPLACE",
+        "remediation_version": "v4",
+        "remediation_original_format": "out_of_scope",
+        "remediation_date": "2026-06-09",
+        "retire_reason": "Out-of-scope health risk topic; not a WSET L3 learning objective; governance/examiner-authority risk"
+      },
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "official_wset_question": false,
+        "training_item_only": true,
+        "uses_llm": false,
+        "uses_api": false,
+        "uses_embeddings": false,
+        "uses_vector_db": false,
+        "cloud_services_active": false
+      }
+    }
+  ]
+}

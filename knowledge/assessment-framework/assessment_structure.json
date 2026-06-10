@@ -1,0 +1,76 @@
+{
+  "schema_version": "assessment_intelligence_v1",
+  "source": "WSET L3 Wines Specification – Issue 2.0.1 (August 2023 Spanish translation)",
+  "governance": {"safe_for_examiner": false, "examiner_scoring_allowed": false, "uses_llm": false, "uses_api": false},
+  "qualification_time": {
+    "total_qualification_time_hours": 84,
+    "guided_learning_hours": 32.5,
+    "self_study_hours": 51.5,
+    "exam_hours_included_in_glh": 2.5
+  },
+  "units": {
+    "unit_1": {
+      "name": "Theory of Wines of the World",
+      "exam_duration_minutes": 120,
+      "pass_mark_percent": 55,
+      "parts": {
+        "part_1_mcq": {
+          "description": "50 multiple-choice questions, 1 correct answer each",
+          "total_marks": 50,
+          "marks_per_question": 1,
+          "negative_marking": false,
+          "answer_format": "computer-readable answer sheet",
+          "ra_allocation": {
+            "RA1": 8,
+            "RA2": 28,
+            "RA3": 5,
+            "RA4": 5,
+            "RA5": 4
+          }
+        },
+        "part_2_short_answer": {
+          "description": "4 short-answer questions, 25 marks each",
+          "total_marks": 100,
+          "questions": 4,
+          "marks_per_question": 25,
+          "negative_marking": false,
+          "answer_format": "written on exam paper in provided space",
+          "question_ra_mapping": {
+            "Q1": ["RA1", "RA2"],
+            "Q2": ["RA1", "RA2"],
+            "Q3": ["RA1", "RA2", "RA5_block1"],
+            "Q4": ["RA1", "RA3", "RA4", "RA5_block1"]
+          },
+          "ra_short_answer_allocation": {
+            "RA2": 70,
+            "RA3_and_RA4": 20,
+            "RA5": 10
+          },
+          "note": "RA1 is assessed as part of all four questions as foundational knowledge"
+        }
+      }
+    },
+    "unit_2": {
+      "name": "Analytical Wine Tasting",
+      "exam_duration_minutes": 30,
+      "pass_mark_percent": 55,
+      "format": "Blind tasting of 2 still wines",
+      "wines": {
+        "white_wine": {"max_marks": 20},
+        "red_wine": {"max_marks": 21}
+      },
+      "note": "Can be any wine from the recommended tasting list"
+    }
+  },
+  "grade_boundaries": {
+    "pass_with_distinction": {"minimum_average_percent": 80, "no_unit_below_percent": 65},
+    "pass_with_merit": {"average_percent_range": "65-79"},
+    "pass": {"average_percent_range": "55-64"},
+    "fail": {"average_percent_range": "45-54"},
+    "fail_unclassified": {"maximum_average_percent": 44}
+  },
+  "progression": {
+    "prerequisite": "WSET L2 Award in Wines or equivalent experience",
+    "next_level": "WSET Diploma in Wines – Level 4"
+  }
+}

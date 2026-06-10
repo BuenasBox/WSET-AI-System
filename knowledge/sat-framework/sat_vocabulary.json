@@ -1,0 +1,57 @@
+{
+  "schema_version": "assessment_intelligence_v1",
+  "source": "WSET Wine Lexicon Level 3 – supporting the WSET SAT® Level 3",
+  "source_file": "knowledge/official-wset/sat/wset_l3wines_sat_es_may2022_issue2.md",
+  "governance": {"safe_for_examiner": false, "examiner_scoring_allowed": false, "uses_llm": false, "uses_api": false, "official_wset_content": true},
+  "lexicon_note": "Designed as a guide and aide-mémoire. Not necessary to memorise. Examiners accept other accurate descriptors.",
+  "aroma_flavour_categories": {
+    "primary": {
+      "description": "Aromas and flavours from the grape and alcoholic fermentation",
+      "key_questions": [
+        "¿Los sabores son delicados o intensos?",
+        "¿Simples o complejos?",
+        "¿Genéricos o bien definidos?",
+        "¿Frescos o cocidos?",
+        "¿No maduros, maduros o sobremaduros?"
+      ],
+      "groups": {
+        "floral": ["acacia", "madreselva", "manzanilla", "flor de sauco", "geranio", "árbol en flor", "rosa", "violeta"],
+        "green_fruit": ["manzana", "grosella espinosa", "pera", "pear drop", "membrillo", "uva"],
+        "citrus_fruit": ["pomelo", "limón", "lima (zumo o ralladura)", "cáscara de naranja", "cáscara de limón"],
+        "stone_fruit": ["melocotón", "albaricoque", "nectarina"],
+        "tropical_fruit": ["plátano", "lichi", "mango", "melón", "fruta de la pasión", "piña"],
+        "red_fruit": ["grosella roja", "arándano rojo", "frambuesa", "fresa", "cereza roja", "ciruela roja"],
+        "black_fruit": ["grosella negra", "zarzamora", "zarza", "arándano azul", "cereza negra", "ciruela negra"],
+        "dried_cooked_fruit": ["higo", "ciruela pasa", "uva pasa", "sultana", "kirsch", "en mermelada", "frutas al horno/en compota", "frutas en conserva"],
+        "herbaceous": ["pimiento verde", "hierba", "hoja de tomate", "espárrago", "hoja de grosella negra"],
+        "herbal": ["eucalipto", "menta", "medicinal", "lavanda", "hinojo", "eneldo"],
+        "spicy": ["pimienta negra/blanca", "regaliz"],
+        "other_primary": ["sílex", "piedras mojadas", "lana mojada"]
+      }
+    },
+    "secondary": {
+      "description": "Aromas and flavours from post-fermentation winemaking choices",
+      "key_questions": [
+        "¿Los sabores provienen de las levaduras, de la conversión maloláctica o del roble?"
+      ],
+      "groups": {
+        "yeast_lees_autolysis": ["galleta", "pan", "pan tostado", "pastelería", "brioche", "masa de pan", "queso"],
+        "malolactic_conversion": ["mantequilla", "queso", "nata"],
+        "oak": ["vainilla", "clavo", "nuez moscada", "coco", "butterscotch", "pan tostado", "cedro", "madera carbonizada", "humo", "chocolate", "café", "resinoso"]
+      }
+    },
+    "tertiary": {
+      "description": "Aromas and flavours from ageing",
+      "key_questions": [
+        "¿Los sabores muestran oxidación deliberada, evolución de la fruta o envejecimiento en botella?"
+      ],
+      "groups": {
+        "deliberate_oxidation": ["almendra", "mazapán", "avellana", "nuez", "chocolate", "café", "toffee", "caramelo"],
+        "fruit_development_white": ["albaricoque seco", "mermelada de cítricos", "manzana seca", "plátano seco"],
+        "fruit_development_red": ["higo", "ciruela pasa", "alquitrán", "zarzamora seca", "arándano rojo seco", "zarzamora cocida", "ciruela roja cocida"],
+        "bottle_ageing_white": ["petróleo", "queroseno", "canela", "jengibre", "nuez moscada", "pan tostado", "frutos secos", "champiñón", "heno", "miel"],
+        "bottle_ageing_red": ["cuero", "piso forestal", "tierra", "champiñón", "caza", "tabaco", "vegetal", "hojas mojadas", "cárnico", "corral"]
+      }
+    }
+  }
+}

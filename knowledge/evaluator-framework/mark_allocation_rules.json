@@ -1,0 +1,74 @@
+{
+  "schema_version": "assessment_intelligence_v1",
+  "source": "WSET L3 Official Marking Keys (6 wines: Rustenberg Chardonnay, Ata Rangi Pinot Noir, Ca di Alte Pinot Grigio, Château Dutruch Bordeaux, Château Doisy-Daëne Barsac, 16 Stops Shiraz)",
+  "governance": {"safe_for_examiner": false, "examiner_scoring_allowed": false, "uses_llm": false, "uses_api": false, "official_wset_content": true},
+  "sat_mark_allocation": {
+    "white_wine_total": 20,
+    "red_wine_total": 21,
+    "sections": {
+      "appearance": {
+        "total_marks": 2,
+        "breakdown": {
+          "intensity": 1,
+          "colour": 1
+        },
+        "note": "Clarity is assessed but clarity 'clear' is expected in healthy wines; turbidity earns a fault note rather than a separate mark"
+      },
+      "nose": {
+        "total_marks": 7,
+        "breakdown": {
+          "intensity": 1,
+          "aroma_characteristics": 5,
+          "development": 1
+        },
+        "aroma_characteristics_rules": {
+          "required_categories": {
+            "standard_wine": "1 mark each for primary, secondary, and tertiary. Remaining 2 marks from any category.",
+            "simple_wine_exception": "For simple wines (e.g., basic Pinot Grigio, entry-level Shiraz): 1 mark for stating the wine is SIMPLE, remaining 4 marks for any valid primary aromas."
+          },
+          "total_aroma_marks": 5
+        }
+      },
+      "palate": {
+        "white_wine_total": 9,
+        "red_wine_total": 10,
+        "breakdown_white": {
+          "sweetness": 1,
+          "acidity": 1,
+          "alcohol": 1,
+          "body": 1,
+          "flavour_intensity": 1,
+          "flavour_characteristics": 3,
+          "finish": 1
+        },
+        "breakdown_red": {
+          "sweetness": 1,
+          "acidity": 1,
+          "tannin": 1,
+          "alcohol": 1,
+          "body": 1,
+          "flavour_intensity": 1,
+          "flavour_characteristics": 3,
+          "finish": 1
+        },
+        "flavour_characteristics_rules": {
+          "standard_wine": "1 mark for primary, 1 for secondary, 1 for tertiary flavour characteristic",
+          "simple_wine_exception": "1 mark for stating wine is SIMPLE, remaining 2 marks for any valid primary flavours"
+        },
+        "note": "Red wine has 1 extra mark for tannin = 10 palate marks vs 9 for white"
+      },
+      "conclusions": {
+        "total_marks": 2,
+        "breakdown": {
+          "quality_level": 1,
+          "readiness_for_drinking": 1
+        }
+      }
+    }
+  },
+  "observed_mark_totals": {
+    "white_wine": {"appearance": 2, "nose": 7, "palate": 9, "conclusions": 2, "total": 20},
+    "red_wine": {"appearance": 2, "nose": 7, "palate": 10, "conclusions": 2, "total": 21}
+  },
+  "alcohol_percentage_note": "Each marking key includes the wine's actual alcohol % – used by assessor to calibrate alcohol scale assessment"
+}

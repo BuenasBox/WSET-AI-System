@@ -1,0 +1,72 @@
+{
+  "schema_version": "assessment_intelligence_v1",
+  "source": "WSET L3 Specification – Learning Outcomes, Assessment Criteria, Example Questions",
+  "governance": {"safe_for_examiner": false, "examiner_scoring_allowed": false, "uses_llm": false, "uses_api": false},
+  "note": "Command verbs extracted from specification learning outcomes, assessment criteria, and example exam questions. Detailed per-verb files are in knowledge/command-verbs/.",
+  "verbs": [
+    {
+      "verb": "identify",
+      "es_equivalent": "identificar",
+      "cognitive_level": "recall/recognition",
+      "used_in_ras": ["RA1", "RA2", "RA3", "RA4", "RA5"],
+      "expected_response": "Name or list the item(s) without necessarily explaining",
+      "mark_expectation": "1 mark per correct identification; no elaboration required",
+      "common_in": "MCQ questions; first part of multi-part short-answer questions"
+    },
+    {
+      "verb": "describe",
+      "es_equivalent": "describir",
+      "cognitive_level": "comprehension",
+      "used_in_ras": ["RA2", "SAT"],
+      "expected_response": "Give characteristics, properties, or features with appropriate detail",
+      "mark_expectation": "Multiple marks; each correct characteristic earns marks",
+      "common_in": "SAT wine descriptions; regional wine style questions"
+    },
+    {
+      "verb": "explain",
+      "es_equivalent": "explicar",
+      "cognitive_level": "analysis/application",
+      "used_in_ras": ["RA1", "RA2", "RA3", "RA4", "RA5"],
+      "expected_response": "Give reasons or mechanisms; show cause-and-effect understanding",
+      "mark_expectation": "Higher marks; requires causal reasoning not just naming",
+      "common_in": "Short-answer Part 2; 'explain why/how' questions",
+      "example": "Explique por qué un productor optaría por utilizar el sistema de espaldera."
+    },
+    {
+      "verb": "identify and describe",
+      "es_equivalent": "identificar y describir",
+      "cognitive_level": "comprehension",
+      "used_in_ras": ["RA2", "RA3", "RA4"],
+      "expected_response": "Name the item AND give its characteristics",
+      "mark_expectation": "Split marks: some for identification, more for descriptive detail",
+      "common_in": "Regional questions requiring both location and style description"
+    },
+    {
+      "verb": "assess / evaluate quality",
+      "es_equivalent": "evaluar la calidad",
+      "cognitive_level": "evaluation",
+      "used_in_ras": ["SAT"],
+      "expected_response": "Give a quality level (defective/poor/acceptable/good/very good/excellent) with justification from tasting observations",
+      "mark_expectation": "1 mark; must select correct level from the SAT scale",
+      "common_in": "SAT conclusions section"
+    },
+    {
+      "verb": "recommend",
+      "es_equivalent": "recomendar",
+      "cognitive_level": "application",
+      "used_in_ras": ["RA5"],
+      "expected_response": "Name a specific wine or wine type and justify the choice based on given criteria",
+      "mark_expectation": "Marks for specific wine name AND justification reason",
+      "common_in": "Part 2 short-answer Q3/Q4 service and recommendation scenarios"
+    },
+    {
+      "verb": "apply",
+      "es_equivalent": "aplicar",
+      "cognitive_level": "application",
+      "used_in_ras": ["RA2"],
+      "expected_response": "Use RA1 knowledge (viticulture/vinification) to explain the style/quality of a specific regional wine",
+      "mark_expectation": "Marks for correctly connecting general principles to specific region/wine",
+      "common_in": "RA2 assessment criteria explicitly require applying RA1 knowledge to regional wines"
+    }
+  ]
+}

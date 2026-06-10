@@ -1,0 +1,20 @@
+{
+  "schema_version": "assessment_intelligence_v1",
+  "verb": "evaluate",
+  "source": "WSET L3 Specification + marking keys",
+  "governance": {"safe_for_examiner": false, "examiner_scoring_allowed": false, "uses_llm": false, "uses_api": false},
+  "cognitive_level": "critical thinking + synthesis",
+  "definition": "Make a substantiated judgement, weighing the significance of evidence. Often implies a broader or more nuanced consideration than 'assess'.",
+  "used_in_ras": ["RA2", "RA3", "RA4", "RA5"],
+  "expected_response": {
+    "format": "Balanced judgement incorporating multiple factors; may include consideration of limitations",
+    "do": ["Weigh multiple pieces of evidence", "State a clear conclusion", "Acknowledge complexity where relevant"],
+    "do_not": ["Simply list facts (that is describing)", "Give opinion without evidence"]
+  },
+  "mark_expectation": "Higher-mark questions; evidence synthesis across multiple dimensions required",
+  "question_stem_examples": [
+    "Evaluate the factors that contribute to the high price of Grand Cru Burgundy.",
+    "Evaluate the impact of climate change on wine production in a region of your choice."
+  ],
+  "mentor_hint": "Think of 'evaluate' as 'explain + judge': explain the key factors, then state which you consider most significant and why."
+}

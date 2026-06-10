@@ -1,0 +1,60 @@
+{
+  "schema_version": "assessment_intelligence_v1",
+  "source": "WSET L3 Wines Specification – Issue 2.0.1, Section: Exam Regulations",
+  "governance": {"safe_for_examiner": false, "examiner_scoring_allowed": false, "uses_llm": false, "uses_api": false},
+  "rules": {
+    "pass_requirement": "Must pass BOTH units (Unit 1 AND Unit 2) to obtain the qualification",
+    "minimum_pass_mark": "55% in EACH PART of Unit 1 (Part 1 MCQ AND Part 2 Short Answer) AND Unit 2",
+    "resit_policy": {
+      "resit_allowed": true,
+      "max_attempts": "No limit",
+      "grade_cap_on_resit": "Pass with merit maximum (cannot achieve Distinction on resit)",
+      "partial_resit": "May resit only the failed unit if one unit was passed"
+    },
+    "timing_rules": {
+      "unit_1_max_minutes": 120,
+      "unit_2_max_minutes": 30,
+      "minimum_time_before_leaving_minutes": 15,
+      "late_arrival_maximum_grace_minutes": 30,
+      "no_re-entry_after_leaving": true
+    },
+    "exam_conduct": [
+      "Closed book – no materials permitted",
+      "Photo ID required",
+      "No electronic devices",
+      "No dictionaries",
+      "No communication between candidates once exam conditions are declared",
+      "No perfume/fragrance for tasting exam",
+      "Exam papers are WSET property and must not be removed"
+    ],
+    "assessment_preparation_rules": {
+      "all_questions_based_on": "Published learning outcomes in specification",
+      "recommended_study_material": "Contains all information needed to answer questions correctly",
+      "exam_language": "Both units must be completed in same language"
+    },
+    "unit_1_mcq_specific": {
+      "each_question_value": "1 point",
+      "negative_marking": false,
+      "single_correct_answer": true
+    },
+    "unit_1_short_answer_specific": {
+      "marks_per_question": 25,
+      "mark_allocation_shown_on_paper": true,
+      "negative_marking": false
+    },
+    "unit_2_specific": {
+      "wines_assessed": 2,
+      "exam_prepared_by": "WSET-approved Level 3 Internal Assessor",
+      "results_verified_by": "WSET",
+      "any_wine_from_recommended_list": true
+    }
+  },
+  "grade_classification_rules": {
+    "final_grade": "Average of both units",
+    "distinction": "Average ≥ 80% AND no unit below 65%",
+    "merit": "Average 65–79%",
+    "pass": "Average 55–64%",
+    "fail": "Average 45–54%",
+    "fail_unclassified": "Average ≤ 44%"
+  }
+}
