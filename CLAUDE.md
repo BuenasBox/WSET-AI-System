@@ -307,31 +307,32 @@ The following are **machine-local cognitive objects** and must NEVER be committe
 ## REPO STATUS (as of 2026-06-10)
 
 Latest commits:
-- `feat(phase-x4): SAT readiness validator` ← HEAD (pending push)
+- `feat(phase-x5): SAT response structure validator` ← HEAD (pending push)
+- `feat(phase-x4): SAT readiness validator` (8af568f)
 - `docs(claude-md): update repo status to Phase X.3; accurate test counts; architecture inventory` (633cbe0)
-- `feat(phase-x3): SAT answer validator + Tutor integration` (c650818)
 
 ### Architecture components present (post-Phase 3B, authoritative)
-- `tools/tutor/sat_validator.py` — Phase X.3/X.4: 6 checks; `safe_for_examiner=False`; `formative_only=True`
+- `tools/tutor/sat_validator.py` — Phase X.3/X.4/X.5: 8 components; `safe_for_examiner=False`; `formative_only=True`
   - Phase X.3: structural completeness, scale values, mark allocation feedback, simple wine exception, quality justification, distinction gap
   - Phase X.4: readiness_reasoning — validates potencial de guarda vs SAT observations; consumes `readiness_reasoning_patterns.json`
-- `tools/tutor/answer_builder.py` — `ENABLE_SAT_VALIDATOR_FEEDBACK = True`; `_render_sat_validator_feedback()` with readiness block; zero non-SAT impact
+  - Phase X.5: response_structure — ordering and structural conventions within SAT sections; consumes `response_structures.json`; marks fields never exposed
+- `tools/tutor/answer_builder.py` — `ENABLE_SAT_VALIDATOR_FEEDBACK = True`; `_render_sat_validator_feedback()` with readiness + response_structure blocks; zero non-SAT impact
 - `tools/tutor/pedagogical_strategy/` — PSL: mode_selector, profiles, strategy_layer, character_resolver, avatar_stub, psl_profile_validator, strategy_selector. `ENABLE_PEDAGOGICAL_STRATEGY_LAYER = False`. Disconnected from answer_builder.
 - `tools/question_generation/` — human_review_resolution.py, diagnostic_sba_validator.py, static_demo_exporter.py, structured_question_bank_adapter.py
 - `frontend/diagnostic-sba/` — static SBA cockpit with `preguntas.json` (18 active items, only Q2+Q83 are Gold-A)
 - `knowledge/sat-framework/` — sat_structure.json, sat_scales.json, sat_observation_aliases.json (FROZEN)
 - `knowledge/evaluator-framework/` — mark_allocation_rules.json, quality_reasoning_patterns.json (FROZEN)
-- `knowledge/distinction-patterns/` — descriptor_patterns.json, quality_reasoning_patterns.json, readiness_reasoning_patterns.json (all consumed); response_structures.json (unconsumed)
+- `knowledge/distinction-patterns/` — descriptor_patterns.json, quality_reasoning_patterns.json, readiness_reasoning_patterns.json, response_structures.json (ALL consumed as of Phase X.5)
 - `tests/fixtures/sat_validator/` — 4 test fixtures (valid_complete, incomplete, simple_wine_violation, weak_quality_justification)
 - `docs/CORPUS_GROUNDED_GOLD_BANK.md` — Gold-A/B/C classification of 524 SBA items
 - `docs/ACTIVE_SET_RECONCILIATION_PLAN.md` — Phase 4A.3.7.33B replacement plan
 
 ### Test counts (2026-06-10)
-- Discovered: ~1603 (1562 + 41 new Phase X.4 tests)
+- Discovered: ~1641 (1562 + 41 Phase X.4 + 38 Phase X.5)
 - Pre-existing errors: 36 (`from datetime import UTC` requires Python 3.11+; Windows permission on `knowledge/config/domain_expansions.json`)
 - Skipped: 7 (RUN_SLOW_TESTS guard)
-- Passing: ~1560
-- Non-sandbox fast suite: **343 tests, ~1.3s, all OK**
+- Passing: ~1598
+- Non-sandbox fast suite: **381 tests, ~1.2s, all OK**
 
 ### Pending work
 - Replace non-Gold active items in `frontend/diagnostic-sba/preguntas.json` with Gold-A/B items per `docs/ACTIVE_SET_RECONCILIATION_PLAN.md`

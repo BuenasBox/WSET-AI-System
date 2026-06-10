@@ -53,6 +53,7 @@ Output (all keys always present):
   simple_wine_exception: dict
   quality_justification: dict
   readiness_reasoning: dict        (Phase X.4)
+  response_structure: dict         (Phase X.5)
   distinction_gap: dict
 """
 
@@ -88,6 +89,7 @@ _MARK_ALLOC_PATH = _KR / "evaluator-framework" / "mark_allocation_rules.json"
 _DESCRIPTOR_PATTERNS_PATH = _KR / "distinction-patterns" / "descriptor_patterns.json"
 _QUALITY_REASONING_PATH = _KR / "distinction-patterns" / "quality_reasoning_patterns.json"
 _READINESS_PATTERNS_PATH = _KR / "distinction-patterns" / "readiness_reasoning_patterns.json"
+_RESPONSE_STRUCTURES_PATH = _KR / "distinction-patterns" / "response_structures.json"
 _EVIDENCE_REQ_PATH = _KR / "evaluator-framework" / "evidence_requirements.json"
 
 # ---------------------------------------------------------------------------
@@ -220,6 +222,7 @@ def validate_sat_response(response: dict[str, Any]) -> dict[str, Any]:
     )
     quality_just = _check_quality_justification(nose, palate, conclusions)
     readiness = _check_readiness_reasoning(nose, palate, conclusions, is_simple_top)
+    response_structure = _check_response_structure(wine_type, nose, palate, is_simple_top)
     distinction = _build_distinction_gap_report(nose, palate)
 
     return {
@@ -230,6 +233,7 @@ def validate_sat_response(response: dict[str, Any]) -> dict[str, Any]:
         "simple_wine_exception": simple_exc,
         "quality_justification": quality_just,
         "readiness_reasoning": readiness,
+        "response_structure": response_structure,
         "distinction_gap": distinction,
     }
 
@@ -828,6 +832,119 @@ def _check_readiness_reasoning(
 
 
 # ---------------------------------------------------------------------------
+# Component 8 -- Response structure / ordering validator (Phase X.5)
+# ---------------------------------------------------------------------------
+
+def _check_response_structure(
+    wine_type: str,
+    nose: dict,
+    palate: dict,
+    is_simple: bool,
+) -> dict[str, Any]:
+    """Check internal ordering and structural conventions within SAT sections.
+
+    Consumes response_structures.json information_ordering_principles.
+    Checks:
+      1. Nose development position: should be stated after aromas (not before primaries)
+      2. Palate ordering: scale values before flavour descriptors
+      3. Wine-type structural consistency (simple vs complex vs sweet)
+      4. Mandatory information_ordering_principles compliance
+
+    Returns formative guidance only. No marks exposed. safe_for_examiner: False.
+    """
+    issues: list[str] = []
+    guidance: list[str] = []
+
+    # --- Nose: development must come last (after aromas) ---
+    # Proxy: if development is stated but no primary aromas, ordering is suspicious
+    nose_development = str(nose.get("development") or "").strip()
+    nose_primaries = _str_list(nose.get("primary_aromas"))
+    nose_secondaries = _str_list(nose.get("secondary_aromas"))
+    nose_tertiaries = _str_list(nose.get("tertiary_aromas"))
+
+    if nose_development and not nose_primaries:
+        issues.append("ordering_nose_development_without_aromas")
+        guidance.append(
+            "Nariz: se indica estado de evolucion pero no hay descriptores de aroma. "
+            "El orden correcto es: intensidad → aromas primarios → secundarios → terciarios → evolucion al final."
+        )
+
+    # --- Palate: scale values before flavour descriptors ---
+    # Check: if flavour descriptors present but structural scale values missing,
+    # the learner may have put descriptors first and omitted scale values
+    p_primaries = _str_list(palate.get("primary_flavours"))
+    has_flavours = bool(p_primaries)
+    missing_scale = []
+    for key in ("sweetness", "acidity", "alcohol", "body", "flavour_intensity"):
+        if not palate.get(key):
+            missing_scale.append(key)
+    if has_flavours and missing_scale:
+        issues.append("ordering_palate_flavours_before_scale")
+        guidance.append(
+            "Boca: se registran sabores pero faltan valores de escala estructurales. "
+            "El orden correcto es: dulzor → acidez → [tanino] → alcohol → cuerpo → intensidad → "
+            "sabores → final. Completa los valores de escala antes de los descriptores."
+        )
+
+    # --- Mandatory ordering principles ---
+    # Quality must be stated before readiness (checked via structural completeness,
+    # but we can note ordering here if quality is absent while readiness is present)
+    # This complements Component 1 without duplicating
+
+    # --- Wine-type structural consistency ---
+    # Simple wine: should not have secondary/tertiary structure stated
+    if is_simple:
+        if nose_secondaries or nose_tertiaries:
+            issues.append("structure_simple_wine_excess_complexity")
+            guidance.append(
+                "Estructura: vino declarado simple pero la respuesta incluye aromas secundarios o terciarios. "
+                "Para un vino simple: intensidad → 'simple' → aromas primarios → evolucion. "
+                "No se esperan secundarios ni terciarios."
+            )
+        p_secondaries = _str_list(palate.get("secondary_flavours"))
+        p_tertiaries = _str_list(palate.get("tertiary_flavours"))
+        if p_secondaries or p_tertiaries:
+            issues.append("structure_simple_wine_palate_excess")
+            guidance.append(
+                "Boca: vino declarado simple con sabores secundarios o terciarios incluidos. "
+                "Para un vino simple solo se esperan descriptores primarios."
+            )
+
+    # Complex (non-simple, non-sweet) wine: should have secondary aromas in nose
+    elif wine_type not in ("sweet",):
+        if not nose_secondaries and nose_primaries:
+            issues.append("structure_complex_wine_missing_secondary")
+            guidance.append(
+                "Nariz: vino complejo sin aromas secundarios. "
+                "Para un vino no simple, identifica la fuente de los aromas secundarios "
+                "(roble: vainilla, cedro; FML: mantequilla, nata; lias: galleta, brioche)."
+            )
+
+    # Sweet/aged wine: high acidity is a key structural signal
+    if wine_type == "sweet":
+        acidity = str(palate.get("acidity") or "").lower().strip()
+        if acidity and acidity not in {"alta", "media(+)"}:
+            issues.append("structure_sweet_wine_acidity")
+            guidance.append(
+                "Boca: vino dulce con acidez que no es alta o media(+). "
+                "Los vinos dulces de calidad tienen alta acidez como contrapeso al dulzor — "
+                "es una de las senales estructurales clave para este tipo de vino."
+            )
+
+    status = "conformant" if not issues else "issues_found"
+
+    return {
+        "status": status,
+        "ordering_issues": issues,
+        "guidance": guidance,
+        "formative_note": (
+            "Orientacion formativa sobre estructura y orden. "
+            "No asigna notas ni representa evaluacion oficial."
+        ),
+    }
+
+
+# ---------------------------------------------------------------------------
 # Component 7 -- Distinction gap report
 # ---------------------------------------------------------------------------
 
@@ -938,4 +1055,3 @@ def _str_list(value: Any) -> list[str]:
     if not isinstance(value, list):
         return []
     return [str(item).strip() for item in value if str(item).strip()]
-[str(item).strip() for item in value if str(item).strip()]

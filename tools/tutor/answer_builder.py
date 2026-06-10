@@ -1145,7 +1145,20 @@ def _render_sat_validator_feedback(validation_result: dict[str, Any], language: 
             lines.append(rr_guidance)
         lines.append("")
 
-    # --- Simple wine exception ---
+    # --- Response structure / ordering (Phase X.5) ---
+    rstructure = validation_result.get("response_structure") or {}
+    rstructure_guidance = rstructure.get("guidance") or []
+    if rstructure_guidance:
+        section_title = (
+            "### Estructura y ordenacion" if is_es
+            else "### Structure & Ordering"
+        )
+        lines.append(section_title)
+        for item in rstructure_guidance:
+            lines.append(f"- {item}")
+        lines.append("")
+
+        # --- Simple wine exception ---
     sw = validation_result.get("simple_wine_exception") or {}
     if sw.get("is_applicable") and sw.get("violation"):
         section_title = "### ⚠ Excepción de vino simple" if is_es else "### ⚠ Simple Wine Exception"
