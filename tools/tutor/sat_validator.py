@@ -1,4 +1,4 @@
-"""SAT Answer Validator — Phase X.3 runtime consumer.
+"""SAT Answer Validator — Phase X.3/X.4 runtime consumer.
 
 Deterministic, formative-only validator for WSET Level 3 SAT responses.
 Consumes Phase X.1 knowledge assets from:
@@ -52,6 +52,7 @@ Output (all keys always present):
   mark_allocation_feedback: dict
   simple_wine_exception: dict
   quality_justification: dict
+  readiness_reasoning: dict        (Phase X.4)
   distinction_gap: dict
 """
 
@@ -86,6 +87,7 @@ _SAT_QUALITY_PATH = _KR / "sat-framework" / "sat_quality_framework.json"
 _MARK_ALLOC_PATH = _KR / "evaluator-framework" / "mark_allocation_rules.json"
 _DESCRIPTOR_PATTERNS_PATH = _KR / "distinction-patterns" / "descriptor_patterns.json"
 _QUALITY_REASONING_PATH = _KR / "distinction-patterns" / "quality_reasoning_patterns.json"
+_READINESS_PATTERNS_PATH = _KR / "distinction-patterns" / "readiness_reasoning_patterns.json"
 _EVIDENCE_REQ_PATH = _KR / "evaluator-framework" / "evidence_requirements.json"
 
 # ---------------------------------------------------------------------------
@@ -134,6 +136,18 @@ _QUALITY_VALID: frozenset[str] = _SCALE_SETS.get(
     "quality_level",
     frozenset(["defectuoso", "pobre", "aceptable", "bueno", "muy bueno", "excelente"])
 )
+
+# Readiness valid values — from readiness_reasoning_patterns.json
+_READINESS_HAS_POTENTIAL = "se puede beber ahora, pero tiene potencial para el envejecimiento"
+_READINESS_DRINK_NOW = "beber ahora: no adecuado para el envejecimiento o para un mayor envejecimiento"
+_READINESS_TOO_YOUNG = "demasiado joven"
+_READINESS_TOO_OLD = "demasiado viejo"
+_READINESS_VALID: frozenset[str] = frozenset([
+    _READINESS_HAS_POTENTIAL,
+    _READINESS_DRINK_NOW,
+    _READINESS_TOO_YOUNG,
+    _READINESS_TOO_OLD,
+])
 
 # Tertiary descriptor keywords — for simple-wine violation detection
 _TERTIARY_KEYWORDS: frozenset[str] = frozenset([
@@ -205,6 +219,7 @@ def validate_sat_response(response: dict[str, Any]) -> dict[str, Any]:
         nose, palate, nose_simple, palate_simple
     )
     quality_just = _check_quality_justification(nose, palate, conclusions)
+    readiness = _check_readiness_reasoning(nose, palate, conclusions, is_simple_top)
     distinction = _build_distinction_gap_report(nose, palate)
 
     return {
@@ -214,6 +229,7 @@ def validate_sat_response(response: dict[str, Any]) -> dict[str, Any]:
         "mark_allocation_feedback": mark_feedback,
         "simple_wine_exception": simple_exc,
         "quality_justification": quality_just,
+        "readiness_reasoning": readiness,
         "distinction_gap": distinction,
     }
 
@@ -670,7 +686,149 @@ def _check_quality_justification(
 
 
 # ---------------------------------------------------------------------------
-# Component 6 — Distinction gap report
+# Component 6 — Readiness reasoning checker (Phase X.4)
+# ---------------------------------------------------------------------------
+
+def _check_readiness_reasoning(
+    nose: dict,
+    palate: dict,
+    conclusions: dict,
+    is_simple: bool,
+) -> dict[str, Any]:
+    """Verify the readiness/drinking-window claim is consistent with SAT observations.
+
+    Consumes readiness_reasoning_patterns.json signal mapping.
+    Returns formative guidance only. No marks assigned. safe_for_examiner: False.
+
+    Alignment values:
+      aligned | overclaimed | inconsistent | partially_supported |
+      missing | invalid_scale_value
+    """
+    readiness = str(conclusions.get("readiness") or "").lower().strip()
+
+    if not readiness:
+        return {
+            "readiness_stated": None,
+            "alignment": "missing",
+            "consistency_issues": [],
+            "guidance": (
+                "No se indicó estado para el consumo. "
+                "Añade el readiness usando uno de los valores oficiales de la escala."
+            ),
+        }
+
+    if readiness not in _READINESS_VALID:
+        return {
+            "readiness_stated": readiness,
+            "alignment": "invalid_scale_value",
+            "consistency_issues": [
+                f"«{readiness}» no es un valor oficial de readiness."
+            ],
+            "guidance": (
+                "Usa exactamente uno de los valores de escala oficiales: "
+                f"{sorted(_READINESS_VALID)}"
+            ),
+        }
+
+    # Gather observation signals
+    nose_development = str(nose.get("development") or "").lower().strip()
+    nose_secondaries = _str_list(nose.get("secondary_aromas"))
+    nose_tertiaries = _str_list(nose.get("tertiary_aromas"))
+    palate_finish = str(palate.get("finish") or "").lower().strip()
+    p_secondaries = _str_list(palate.get("secondary_flavours"))
+    p_tertiaries = _str_list(palate.get("tertiary_flavours"))
+
+    has_secondary = bool(nose_secondaries) or bool(p_secondaries)
+    has_tertiary = bool(nose_tertiaries) or bool(p_tertiaries)
+    has_long_finish = palate_finish in {"largo", "medio(+)"}
+    is_developed = nose_development in {"en evolución", "evolucionado"}
+    is_young_development = nose_development == "joven"
+
+    issues: list[str] = []
+    alignment = "aligned"
+
+    if readiness == _READINESS_HAS_POTENTIAL:
+        # Overclaim: simple wine cannot have ageing potential
+        if is_simple:
+            issues.append(
+                "Vino declarado simple: afirmar 'potencial de guarda' no es coherente. "
+                "Un vino simple no tiene la estructura para el envejecimiento."
+            )
+            alignment = "overclaimed"
+        # Overclaim: no secondary or tertiary development to support ageing
+        elif not has_secondary and not has_tertiary:
+            issues.append(
+                "Se afirma potencial de guarda pero no se detectaron aromas/sabores "
+                "secundarios ni terciarios. El potencial de envejecimiento se apoya en "
+                "complejidad de desarrollo — justifica qué estructura lo sustenta."
+            )
+            alignment = "overclaimed"
+        # Weak support: young development, no finish evidence
+        elif is_young_development and not has_long_finish:
+            issues.append(
+                "Desarrollo 'joven' sin final medio(+) o largo: el potencial de guarda "
+                           "puede estar poco sustentado. Menciona qué característica justifica el envejecimiento."
+            )
+            alignment = "partially_supported"
+
+    elif readiness == _READINESS_DRINK_NOW:
+        # Inconsistent: tertiary aromas suggest some development and potential
+        if has_tertiary and not is_simple:
+            issues.append(
+                "Se detectan aromas/sabores terciarios pero se declara sin potencial de guarda. "
+                "Los terciarios indican cierto desarrollo — considera si el vino aún tiene algo de potencial."
+            )
+            alignment = "partially_supported"
+        # Inconsistent: long finish without ageing potential is unusual
+        elif has_long_finish and has_secondary and not is_simple:
+            issues.append(
+                "Final largo y complejidad secundaria con 'sin potencial de guarda': "
+                "si el vino tiene final largo y aromas secundarios, "
+                "considera si 'se puede beber ahora, pero tiene potencial' sería mas adecuado."
+            )
+            alignment = "partially_supported"
+
+    elif readiness == _READINESS_TOO_YOUNG:
+        # Inconsistent: developed nose contradicts "too young"
+        if is_developed:
+            issues.append(
+                f"Evolucion '{nose_development}' es inconsistente con 'demasiado joven'. "
+                "Un vino en evolucion o evolucionado ya ha superado la fase de cierre."
+            )
+            alignment = "inconsistent"
+        # Weak signal: tertiary aromas contradict "too young"
+        elif has_tertiary:
+            issues.append(
+                "Aromas terciarios presentes pero se declara 'demasiado joven'. "
+                "Los terciarios indican desarrollo avanzado -- revisa la coherencia."
+            )
+            alignment = "partially_supported"
+
+    elif readiness == _READINESS_TOO_OLD:
+        # Inconsistent: young development contradicts "too old"
+        if is_young_development:
+            issues.append(
+                "Desarrollo 'joven' es inconsistente con 'demasiado viejo'. "
+                "Un vino con desarrollo joven raramente esta pasado."
+            )
+            alignment = "inconsistent"
+
+    guidance = (
+        "Readiness justificado y coherente con las observaciones de cata."
+        if not issues
+        else " | ".join(issues)
+    )
+
+    return {
+        "readiness_stated": readiness,
+        "alignment": alignment,
+        "consistency_issues": issues,
+        "guidance": guidance,
+    }
+
+
+# ---------------------------------------------------------------------------
+# Component 7 -- Distinction gap report
 # ---------------------------------------------------------------------------
 
 def _build_distinction_gap_report(
@@ -703,9 +861,9 @@ def _build_distinction_gap_report(
     for d in nose_primaries + p_primaries:
         dn = d.lower().strip()
         if dn in _SECONDARY_DESCRIPTORS:
-            wrong_category.append(f"«{d}» es secundario (roble/FML) — no primario")
+            wrong_category.append(f"'{d}' es secundario (roble/FML) -- no primario")
         elif dn in _TERTIARY_ONLY_DESCRIPTORS:
-            wrong_category.append(f"«{d}» es terciario — no primario")
+            wrong_category.append(f"'{d}' es terciario -- no primario")
 
     # Tertiary / secondary presence
     has_tertiary = bool(
@@ -725,28 +883,28 @@ def _build_distinction_gap_report(
     guidance: list[str] = []
     if generic_found:
         guidance.append(
-            f"Descriptores genéricos detectados: {generic_found}. "
-            "Reemplaza por términos específicos (p.ej. «cereza roja» en vez de «frutal»)."
+            f"Descriptores genericos detectados: {generic_found}. "
+            "Reemplaza por terminos especificos (p.ej. 'cereza roja' en vez de 'frutal')."
         )
     if wrong_category:
         guidance.append(
-            "Errores de categoría: " + " | ".join(wrong_category) + ". "
+            "Errores de categoria: " + " | ".join(wrong_category) + ". "
             "Clasifica correctamente en primario/secundario/terciario."
         )
     if not has_secondary and not bool(nose.get("is_simple")):
         guidance.append(
-            "No se detectaron descriptores secundarios (roble, FML, lías). "
-            "Para nivel distinción, identifica la fuente de los aromas secundarios."
+            "No se detectaron descriptores secundarios (roble, FML, lias). "
+            "Para nivel distincion, identifica la fuente de los aromas secundarios."
         )
     if not has_tertiary and not bool(nose.get("is_simple")):
         guidance.append(
-            "No se detectaron descriptores terciarios (crianza en botella: miel, cuero, tabaco…). "
-            "Omitirlos es la causa #1 de pérdida de puntos para candidatos a distinción."
+            "No se detectaron descriptores terciarios (crianza en botella: miel, cuero, tabaco...). "
+            "Omitirlos es la causa #1 de perdida de puntos para candidatos a distincion."
         )
     if 0 < primary_count < 3 and not bool(nose.get("is_simple")):
         guidance.append(
             f"Solo {primary_count} descriptor(es) primario(s) en total. "
-            "Para nivel distinción se recomiendan 3-5 descriptores primarios específicos."
+            "Para nivel distincion se recomiendan 3-5 descriptores primarios especificos."
         )
 
     level = (
@@ -766,8 +924,8 @@ def _build_distinction_gap_report(
         "primary_descriptor_count": primary_count,
         "guidance": guidance,
         "formative_note": (
-            "Este informe es orientación formativa. "
-            "La evaluación oficial requiere un examinador WSET acreditado."
+            "Este informe es orientacion formativa. "
+            "La evaluacion oficial requiere un examinador WSET acreditado."
         ),
     }
 
@@ -780,3 +938,4 @@ def _str_list(value: Any) -> list[str]:
     if not isinstance(value, list):
         return []
     return [str(item).strip() for item in value if str(item).strip()]
+[str(item).strip() for item in value if str(item).strip()]

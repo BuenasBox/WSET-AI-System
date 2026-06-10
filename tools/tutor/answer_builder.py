@@ -1131,6 +1131,20 @@ def _render_sat_validator_feedback(validation_result: dict[str, Any], language: 
                 lines.append(f"- {prefix}: {item}")
         lines.append("")
 
+    # --- Readiness reasoning (Phase X.4) ---
+    rr = validation_result.get("readiness_reasoning") or {}
+    rr_alignment = rr.get("alignment") or ""
+    if rr_alignment and rr_alignment not in ("aligned", "missing"):
+        section_title = (
+            "### Potencial de guarda / Readiness" if is_es
+            else "### Readiness / Drinking Window"
+        )
+        lines.append(section_title)
+        rr_guidance = rr.get("guidance") or ""
+        if rr_guidance:
+            lines.append(rr_guidance)
+        lines.append("")
+
     # --- Simple wine exception ---
     sw = validation_result.get("simple_wine_exception") or {}
     if sw.get("is_applicable") and sw.get("violation"):
