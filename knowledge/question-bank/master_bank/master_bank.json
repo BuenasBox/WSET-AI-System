@@ -6,17 +6,17 @@
   "generated_at": null,
   "counts": {
     "total": 616,
-    "single_best_answer": 590,
-    "open_response": 26,
+    "single_best_answer": 579,
+    "open_response": 37,
     "inactive": 580,
-    "needs_review": 471,
+    "needs_review": 461,
     "gold": 34,
     "public_lab": 36,
     "review_states": {
       "approved_for_static_demo": 36,
-      "approved_open_response": 26,
-      "approved_private_sba": 83,
-      "unreviewed": 471
+      "approved_open_response": 37,
+      "approved_private_sba": 82,
+      "unreviewed": 461
     }
   },
   "collections": {
@@ -543,14 +543,6 @@
       "wset3_738",
       "wset3_739",
       "wset3_740",
-      "wset3_742",
-      "wset3_743",
-      "wset3_744",
-      "wset3_745",
-      "wset3_746",
-      "wset3_747",
-      "wset3_748",
-      "wset3_765",
       "wset3_771",
       "wset3_772",
       "wset3_773",
@@ -575,9 +567,6 @@
       "wset3_792",
       "wset3_793",
       "wset3_794",
-      "wset3_795",
-      "wset3_796",
-      "wset3_797",
       "wset3_820",
       "wset3_821",
       "wset3_822",
@@ -614,6 +603,17 @@
     ],
     "open_response": [
       "wset3_18",
+      "wset3_742",
+      "wset3_743",
+      "wset3_744",
+      "wset3_745",
+      "wset3_746",
+      "wset3_747",
+      "wset3_748",
+      "wset3_765",
+      "wset3_795",
+      "wset3_796",
+      "wset3_797",
       "wset3_798",
       "wset3_799",
       "wset3_800",
@@ -1634,13 +1634,6 @@
       "wset3_738",
       "wset3_739",
       "wset3_740",
-      "wset3_742",
-      "wset3_743",
-      "wset3_744",
-      "wset3_745",
-      "wset3_747",
-      "wset3_748",
-      "wset3_765",
       "wset3_771",
       "wset3_772",
       "wset3_773",
@@ -1664,9 +1657,6 @@
       "wset3_792",
       "wset3_793",
       "wset3_794",
-      "wset3_795",
-      "wset3_796",
-      "wset3_797",
       "wset3_820",
       "wset3_821",
       "wset3_822",
@@ -28694,7 +28684,7 @@
       "master_item_id": "wset3_657",
       "source_question_id": "657",
       "question_type": "single_best_answer",
-      "stem": "La región de Barossa Valley es conocida por producir Shiraz con gran concentración y notas especiadas.",
+      "stem": "¿Cuál de las siguientes afirmaciones sobre el Barossa Valley es CORRECTA?",
       "curriculum": {
         "ra": "RA2",
         "topic": "RA2",
@@ -28703,20 +28693,23 @@
           "RA2"
         ],
         "expected_keywords": [
-          "Verdadero"
+          "Barossa Valley",
+          "Shiraz",
+          "concentración",
+          "Australia"
         ],
         "expected_causal_links": [],
         "expected_reasoning_type": "theory_foundation"
       },
       "source_content": {
         "options": {
-          "A": "Verdadero",
-          "B": "Falso",
-          "C": "",
-          "D": ""
+          "A": "La región es reconocida por Shiraz de gran concentración y notas especiadas.",
+          "B": "El Barossa Valley es principalmente conocido por su Pinot Noir fresco y elegante.",
+          "C": "El estilo predominante del Barossa Valley es ligero y de baja extracción.",
+          "D": "El Barossa Valley se caracteriza por un clima fresco y continental."
         },
         "correct_answer_letter": "A",
-        "correct_answer_text": "Verdadero"
+        "correct_answer_text": "La región es reconocida por Shiraz de gran concentración y notas especiadas."
       },
       "status": {
         "review_state": "unreviewed",
@@ -29365,7 +29358,7 @@
       "master_item_id": "wset3_668",
       "source_question_id": "668",
       "question_type": "single_best_answer",
-      "stem": "La altitud en Mendoza ayuda a preservar la acidez en los vinos.",
+      "stem": "¿Cuál de las siguientes afirmaciones sobre la influencia de la altitud en Mendoza es CORRECTA?",
       "curriculum": {
         "ra": "RA2",
         "topic": "RA2",
@@ -29374,20 +29367,23 @@
           "RA2"
         ],
         "expected_keywords": [
-          "Verdadero"
+          "Mendoza",
+          "altitud",
+          "acidez",
+          "Argentina"
         ],
         "expected_causal_links": [],
         "expected_reasoning_type": "theory_foundation"
       },
       "source_content": {
         "options": {
-          "A": "Verdadero",
-          "B": "Falso",
-          "C": "",
-          "D": ""
+          "A": "La altitud contribuye a preservar la acidez natural en los vinos de Mendoza.",
+          "B": "La altitud en Mendoza reduce la acidez de las uvas al acelerar la maduración.",
+          "C": "En Mendoza, la altitud favorece temperaturas más cálidas durante la noche.",
+          "D": "A mayor altitud en Mendoza, mayor es el contenido de azúcar en la uva."
         },
         "correct_answer_letter": "A",
-        "correct_answer_text": "Verdadero"
+        "correct_answer_text": "La altitud contribuye a preservar la acidez natural en los vinos de Mendoza."
       },
       "status": {
         "review_state": "unreviewed",
@@ -29426,7 +29422,7 @@
       "master_item_id": "wset3_669",
       "source_question_id": "669",
       "question_type": "single_best_answer",
-      "stem": "El clima continental de Piemonte favorece la producción de vinos con taninos altos.",
+      "stem": "¿Cuál de las siguientes afirmaciones sobre el clima de Piemonte es CORRECTA?",
       "curriculum": {
         "ra": "RA2",
         "topic": "RA2",
@@ -29435,20 +29431,23 @@
           "RA2"
         ],
         "expected_keywords": [
-          "Verdadero"
+          "Piemonte",
+          "clima continental",
+          "taninos",
+          "acidez"
         ],
         "expected_causal_links": [],
         "expected_reasoning_type": "theory_foundation"
       },
       "source_content": {
         "options": {
-          "A": "Verdadero",
-          "B": "Falso",
-          "C": "",
-          "D": ""
+          "A": "El clima continental de Piemonte favorece vinos con taninos altos y buena acidez.",
+          "B": "El clima oceánico de Piemonte produce vinos ligeros y de baja acidez.",
+          "C": "Piemonte tiene un clima cálido y uniforme que reduce la acidez de las uvas.",
+          "D": "El clima mediterráneo de Piemonte garantiza veranos secos sin variación térmica."
         },
         "correct_answer_letter": "A",
-        "correct_answer_text": "Verdadero"
+        "correct_answer_text": "El clima continental de Piemonte favorece vinos con taninos altos y buena acidez."
       },
       "status": {
         "review_state": "unreviewed",
@@ -29487,7 +29486,7 @@
       "master_item_id": "wset3_670",
       "source_question_id": "670",
       "question_type": "single_best_answer",
-      "stem": "La región de Chablis produce Chardonnay generalmente sin influencia de madera.",
+      "stem": "¿Cuál de las siguientes afirmaciones sobre el estilo del Chablis es CORRECTA?",
       "curriculum": {
         "ra": "RA2",
         "topic": "RA2",
@@ -29496,20 +29495,23 @@
           "RA2"
         ],
         "expected_keywords": [
-          "Verdadero"
+          "Chablis",
+          "Chardonnay",
+          "roble",
+          "acero inoxidable"
         ],
         "expected_causal_links": [],
         "expected_reasoning_type": "theory_foundation"
       },
       "source_content": {
         "options": {
-          "A": "Verdadero",
-          "B": "Falso",
-          "C": "",
-          "D": ""
+          "A": "El estilo predominante del Chablis es Chardonnay sin crianza en roble.",
+          "B": "Los vinos de Chablis se elaboran principalmente con fermentación en barricas nuevas.",
+          "C": "El Chablis es conocido por sus vinos tintos de gran potencia y taninos marcados.",
+          "D": "La influencia del roble es una característica definitoria del estilo de Chablis."
         },
         "correct_answer_letter": "A",
-        "correct_answer_text": "Verdadero"
+        "correct_answer_text": "El estilo predominante del Chablis es Chardonnay sin crianza en roble."
       },
       "status": {
         "review_state": "approved_private_sba",
@@ -29549,7 +29551,7 @@
       "master_item_id": "wset3_671",
       "source_question_id": "671",
       "question_type": "single_best_answer",
-      "stem": "En el Mosel, las pendientes pronunciadas favorecen la maduración de la uva Riesling.",
+      "stem": "¿Cuál de las siguientes afirmaciones sobre los viñedos del Mosel es CORRECTA?",
       "curriculum": {
         "ra": "RA2",
         "topic": "RA2",
@@ -29558,20 +29560,23 @@
           "RA2"
         ],
         "expected_keywords": [
-          "Verdadero"
+          "Mosel",
+          "Riesling",
+          "pendientes",
+          "insolación"
         ],
         "expected_causal_links": [],
         "expected_reasoning_type": "theory_foundation"
       },
       "source_content": {
         "options": {
-          "A": "Verdadero",
-          "B": "Falso",
-          "C": "",
-          "D": ""
+          "A": "Las pendientes pronunciadas del Mosel favorecen la maduración del Riesling al maximizar la insolación.",
+          "B": "El Mosel es una región llana donde los viñedos se cultivan en terreno horizontal.",
+          "C": "Las pendientes del Mosel no tienen influencia en la calidad de la uva Riesling.",
+          "D": "Los viñedos del Mosel se sitúan en zonas de baja altitud sin aprovechamiento de laderas."
         },
         "correct_answer_letter": "A",
-        "correct_answer_text": "Verdadero"
+        "correct_answer_text": "Las pendientes pronunciadas del Mosel favorecen la maduración del Riesling al maximizar la insolación."
       },
       "status": {
         "review_state": "unreviewed",
@@ -29610,7 +29615,7 @@
       "master_item_id": "wset3_672",
       "source_question_id": "672",
       "question_type": "single_best_answer",
-      "stem": "Los injertos de portainjertos resistentes ayudan a combatir la filoxera.",
+      "stem": "¿Cuál de las siguientes afirmaciones sobre el control de la filoxera es CORRECTA?",
       "curriculum": {
         "ra": "RA1",
         "topic": "RA1",
@@ -29619,20 +29624,23 @@
           "RA1"
         ],
         "expected_keywords": [
-          "Verdadero"
+          "filoxera",
+          "portainjertos",
+          "injerto",
+          "plagas"
         ],
         "expected_causal_links": [],
         "expected_reasoning_type": "theory_foundation"
       },
       "source_content": {
         "options": {
-          "A": "Verdadero",
-          "B": "Falso",
-          "C": "",
-          "D": ""
+          "A": "Injertar la vid en portainjertos resistentes es el método principal para combatir la filoxera.",
+          "B": "La filoxera puede controlarse mediante el uso de fungicidas sistémicos.",
+          "C": "Los portainjertos se usan únicamente para mejorar la productividad, no para combatir plagas.",
+          "D": "La replantación con vides europeas no injertadas es el método más eficaz contra la filoxera."
         },
         "correct_answer_letter": "A",
-        "correct_answer_text": "Verdadero"
+        "correct_answer_text": "Injertar la vid en portainjertos resistentes es el método principal para combatir la filoxera."
       },
       "status": {
         "review_state": "unreviewed",
@@ -29671,7 +29679,7 @@
       "master_item_id": "wset3_673",
       "source_question_id": "673",
       "question_type": "single_best_answer",
-      "stem": "El roble francés aporta sabores más sutiles que el roble americano.",
+      "stem": "¿Cuál de las siguientes afirmaciones sobre los tipos de roble es CORRECTA?",
       "curriculum": {
         "ra": "RA1",
         "topic": "RA1",
@@ -29680,20 +29688,23 @@
           "RA1"
         ],
         "expected_keywords": [
-          "Verdadero"
+          "roble francés",
+          "roble americano",
+          "aromas",
+          "crianza"
         ],
         "expected_causal_links": [],
         "expected_reasoning_type": "theory_foundation"
       },
       "source_content": {
         "options": {
-          "A": "Verdadero",
-          "B": "Falso",
-          "C": "",
-          "D": ""
+          "A": "El roble francés tiende a aportar sabores más sutiles y elegantes que el roble americano.",
+          "B": "El roble americano es más sutil en aroma que el roble francés.",
+          "C": "El roble americano y el francés aportan perfiles aromáticos idénticos al vino.",
+          "D": "El roble americano se caracteriza por notas de cedro y mineral, sin vainilla ni coco."
         },
         "correct_answer_letter": "A",
-        "correct_answer_text": "Verdadero"
+        "correct_answer_text": "El roble francés tiende a aportar sabores más sutiles y elegantes que el roble americano."
       },
       "status": {
         "review_state": "unreviewed",
@@ -29732,7 +29743,7 @@
       "master_item_id": "wset3_674",
       "source_question_id": "674",
       "question_type": "single_best_answer",
-      "stem": "La fermentación en acero inoxidable permite controlar la temperatura.",
+      "stem": "¿Cuál de las siguientes afirmaciones sobre la fermentación en acero inoxidable es CORRECTA?",
       "curriculum": {
         "ra": "RA1",
         "topic": "RA1",
@@ -29741,20 +29752,23 @@
           "RA1"
         ],
         "expected_keywords": [
-          "Verdadero"
+          "acero inoxidable",
+          "temperatura",
+          "fermentación",
+          "control"
         ],
         "expected_causal_links": [],
         "expected_reasoning_type": "theory_foundation"
       },
       "source_content": {
         "options": {
-          "A": "Verdadero",
-          "B": "Falso",
-          "C": "",
-          "D": ""
+          "A": "El acero inoxidable permite un control preciso de la temperatura durante la fermentación.",
+          "B": "Los depósitos de acero inoxidable no permiten la regulación de temperatura.",
+          "C": "La fermentación en acero se usa exclusivamente para vinos tintos de alta extracción.",
+          "D": "El acero inoxidable aporta aromas de vainilla y especias al vino durante la fermentación."
         },
         "correct_answer_letter": "A",
-        "correct_answer_text": "Verdadero"
+        "correct_answer_text": "El acero inoxidable permite un control preciso de la temperatura durante la fermentación."
       },
       "status": {
         "review_state": "unreviewed",
@@ -29793,7 +29807,7 @@
       "master_item_id": "wset3_675",
       "source_question_id": "675",
       "question_type": "single_best_answer",
-      "stem": "Los suelos arenosos ofrecen buen drenaje.",
+      "stem": "¿Cuál de las siguientes afirmaciones sobre los suelos arenosos en viticultura es CORRECTA?",
       "curriculum": {
         "ra": "RA1",
         "topic": "RA1",
@@ -29802,20 +29816,23 @@
           "RA1"
         ],
         "expected_keywords": [
-          "Verdadero"
+          "suelos arenosos",
+          "drenaje",
+          "retención hídrica",
+          "nutrientes"
         ],
         "expected_causal_links": [],
         "expected_reasoning_type": "theory_foundation"
       },
       "source_content": {
         "options": {
-          "A": "Verdadero",
-          "B": "Falso",
-          "C": "",
-          "D": ""
+          "A": "Los suelos arenosos se caracterizan por su buen drenaje y baja retención hídrica.",
+          "B": "Los suelos arenosos retienen el agua con gran eficacia y reducen el estrés hídrico.",
+          "C": "Los suelos arenosos son ricos en nutrientes y favorecen el vigor de la vid.",
+          "D": "La arena en el suelo mejora la capacidad de almacenamiento de agua disponible para la vid."
         },
         "correct_answer_letter": "A",
-        "correct_answer_text": "Verdadero"
+        "correct_answer_text": "Los suelos arenosos se caracterizan por su buen drenaje y baja retención hídrica."
       },
       "status": {
         "review_state": "unreviewed",
@@ -29854,7 +29871,7 @@
       "master_item_id": "wset3_676",
       "source_question_id": "676",
       "question_type": "single_best_answer",
-      "stem": "La poda temprana puede inducir brotación precoz.",
+      "stem": "¿Cuál de las siguientes afirmaciones sobre la poda temprana es CORRECTA?",
       "curriculum": {
         "ra": "RA1",
         "topic": "RA1",
@@ -29863,20 +29880,23 @@
           "RA1"
         ],
         "expected_keywords": [
-          "Verdadero"
+          "poda temprana",
+          "brotación",
+          "heladas primaverales",
+          "viticultura"
         ],
         "expected_causal_links": [],
         "expected_reasoning_type": "theory_foundation"
       },
       "source_content": {
         "options": {
-          "A": "Verdadero",
-          "B": "Falso",
-          "C": "",
-          "D": ""
+          "A": "La poda temprana puede adelantar la brotación y aumentar el riesgo de heladas primaverales.",
+          "B": "La poda temprana retrasa la brotación, reduciendo el riesgo de heladas.",
+          "C": "El momento de la poda no tiene influencia sobre la fecha de brotación.",
+          "D": "La poda tardía es la que induce una brotación más precoz en la vid."
         },
         "correct_answer_letter": "A",
-        "correct_answer_text": "Verdadero"
+        "correct_answer_text": "La poda temprana puede adelantar la brotación y aumentar el riesgo de heladas primaverales."
       },
       "status": {
         "review_state": "unreviewed",
@@ -29915,7 +29935,7 @@
       "master_item_id": "wset3_677",
       "source_question_id": "677",
       "question_type": "single_best_answer",
-      "stem": "El deshoje puede reducir la incidencia de enfermedades fúngicas.",
+      "stem": "¿Cuál de las siguientes afirmaciones sobre el deshoje en viticultura es CORRECTA?",
       "curriculum": {
         "ra": "RA1",
         "topic": "RA1",
@@ -29924,20 +29944,23 @@
           "RA1"
         ],
         "expected_keywords": [
-          "Verdadero"
+          "deshoje",
+          "ventilación",
+          "enfermedades fúngicas",
+          "racimo"
         ],
         "expected_causal_links": [],
         "expected_reasoning_type": "theory_foundation"
       },
       "source_content": {
         "options": {
-          "A": "Verdadero",
-          "B": "Falso",
-          "C": "",
-          "D": ""
+          "A": "El deshoje mejora la ventilación del racimo y puede reducir las enfermedades fúngicas.",
+          "B": "El deshoje no tiene efecto sobre la incidencia de enfermedades fúngicas en el viñedo.",
+          "C": "Eliminar hojas aumenta la humedad alrededor del racimo, favoreciendo la podredumbre.",
+          "D": "El deshoje se practica únicamente para reducir el rendimiento, sin efecto sanitario."
         },
         "correct_answer_letter": "A",
-        "correct_answer_text": "Verdadero"
+        "correct_answer_text": "El deshoje mejora la ventilación del racimo y puede reducir las enfermedades fúngicas."
       },
       "status": {
         "review_state": "unreviewed",
@@ -29976,7 +29999,7 @@
       "master_item_id": "wset3_678",
       "source_question_id": "678",
       "question_type": "single_best_answer",
-      "stem": "Las cubiertas vegetales pueden reducir la compactación del suelo. (Verdadero/Falso)",
+      "stem": "¿Cuál de las siguientes afirmaciones sobre el uso de cubiertas vegetales es CORRECTA?",
       "curriculum": {
         "ra": "RA1",
         "topic": "RA1",
@@ -29985,20 +30008,23 @@
           "RA1"
         ],
         "expected_keywords": [
-          "Verdadero"
+          "cubiertas vegetales",
+          "compactación",
+          "suelo",
+          "viticultura sostenible"
         ],
         "expected_causal_links": [],
         "expected_reasoning_type": "theory_foundation"
       },
       "source_content": {
         "options": {
-          "A": "Verdadero",
-          "B": "Falso",
-          "C": "",
-          "D": ""
+          "A": "Las cubiertas vegetales entre hileras pueden reducir la compactación del suelo.",
+          "B": "Las cubiertas vegetales aumentan la compactación del suelo por el peso de la biomasa.",
+          "C": "Las cubiertas vegetales no tienen efecto sobre la estructura física del suelo.",
+          "D": "El uso de cubiertas vegetales es exclusivo de la viticultura biodinámica."
         },
         "correct_answer_letter": "A",
-        "correct_answer_text": "Verdadero"
+        "correct_answer_text": "Las cubiertas vegetales entre hileras pueden reducir la compactación del suelo."
       },
       "status": {
         "review_state": "unreviewed",
@@ -30037,7 +30063,7 @@
       "master_item_id": "wset3_679",
       "source_question_id": "679",
       "question_type": "single_best_answer",
-      "stem": "La selección clonal permite controlar las características del vino. (Verdadero/Falso)",
+      "stem": "¿Cuál de las siguientes afirmaciones sobre la selección clonal es CORRECTA?",
       "curriculum": {
         "ra": "RA1",
         "topic": "RA1",
@@ -30046,20 +30072,23 @@
           "RA1"
         ],
         "expected_keywords": [
-          "Verdadero"
+          "selección clonal",
+          "variedad",
+          "estilo",
+          "calidad"
         ],
         "expected_causal_links": [],
         "expected_reasoning_type": "theory_foundation"
       },
       "source_content": {
         "options": {
-          "A": "Verdadero",
-          "B": "Falso",
-          "C": "",
-          "D": ""
+          "A": "La selección clonal permite elegir plantas con características específicas para influir en el estilo del vino.",
+          "B": "Todos los clones de una misma variedad producen exactamente el mismo vino.",
+          "C": "La selección clonal solo afecta al rendimiento, no a las características aromáticas.",
+          "D": "La selección clonal es irrelevante para el estilo final del vino."
         },
         "correct_answer_letter": "A",
-        "correct_answer_text": "Verdadero"
+        "correct_answer_text": "La selección clonal permite elegir plantas con características específicas para influir en el estilo del vino."
       },
       "status": {
         "review_state": "unreviewed",
@@ -30098,7 +30127,7 @@
       "master_item_id": "wset3_680",
       "source_question_id": "680",
       "question_type": "single_best_answer",
-      "stem": "La cosecha nocturna reduce el riesgo de oxidación. (Verdadero/Falso)",
+      "stem": "¿Cuál de las siguientes afirmaciones sobre la cosecha nocturna es CORRECTA?",
       "curriculum": {
         "ra": "RA1",
         "topic": "RA1",
@@ -30107,20 +30136,23 @@
           "RA1"
         ],
         "expected_keywords": [
-          "Verdadero"
+          "cosecha nocturna",
+          "temperatura",
+          "oxidación",
+          "aromas"
         ],
         "expected_causal_links": [],
         "expected_reasoning_type": "theory_foundation"
       },
       "source_content": {
         "options": {
-          "A": "Verdadero",
-          "B": "Falso",
-          "C": "",
-          "D": ""
+          "A": "Cosechar de noche reduce la temperatura de la uva y disminuye el riesgo de oxidación.",
+          "B": "La cosecha nocturna aumenta la oxidación al exponerse la uva al frío nocturno.",
+          "C": "La cosecha nocturna solo se practica para reducir costes laborales, sin efecto en calidad.",
+          "D": "La temperatura nocturna no tiene efecto sobre la preservación de aromas en la uva cosechada."
         },
         "correct_answer_letter": "A",
-        "correct_answer_text": "Verdadero"
+        "correct_answer_text": "Cosechar de noche reduce la temperatura de la uva y disminuye el riesgo de oxidación."
       },
       "status": {
         "review_state": "unreviewed",
@@ -30159,7 +30191,7 @@
       "master_item_id": "wset3_681",
       "source_question_id": "681",
       "question_type": "single_best_answer",
-      "stem": "El desfangado se realiza antes de la fermentación en vinos blancos. (Verdadero/Falso)",
+      "stem": "¿Cuál de las siguientes afirmaciones sobre el desfangado es CORRECTA?",
       "curriculum": {
         "ra": "RA1",
         "topic": "RA1",
@@ -30168,20 +30200,23 @@
           "RA1"
         ],
         "expected_keywords": [
-          "Verdadero"
+          "desfangado",
+          "clarificación",
+          "mosto",
+          "fermentación"
         ],
         "expected_causal_links": [],
         "expected_reasoning_type": "theory_foundation"
       },
       "source_content": {
         "options": {
-          "A": "Verdadero",
-          "B": "Falso",
-          "C": "",
-          "D": ""
+          "A": "El desfangado es una etapa de clarificación del mosto que se realiza antes de la fermentación.",
+          "B": "El desfangado se realiza después de la fermentación alcohólica en los vinos blancos.",
+          "C": "El desfangado consiste en eliminar el alcohol residual antes de embotellar.",
+          "D": "El desfangado es exclusivo de la elaboración de vinos tintos."
         },
         "correct_answer_letter": "A",
-        "correct_answer_text": "Verdadero"
+        "correct_answer_text": "El desfangado es una etapa de clarificación del mosto que se realiza antes de la fermentación."
       },
       "status": {
         "review_state": "unreviewed",
@@ -30220,7 +30255,7 @@
       "master_item_id": "wset3_682",
       "source_question_id": "682",
       "question_type": "single_best_answer",
-      "stem": "El SO₂ inhibe tanto levaduras como bacterias. (Verdadero/Falso)",
+      "stem": "¿Cuál de las siguientes afirmaciones sobre el dióxido de azufre (SO₂) es CORRECTA?",
       "curriculum": {
         "ra": "RA1",
         "topic": "RA1",
@@ -30229,20 +30264,24 @@
           "RA1"
         ],
         "expected_keywords": [
-          "Verdadero"
+          "SO2",
+          "sulfitos",
+          "levaduras",
+          "bacterias",
+          "antimicrobiano"
         ],
         "expected_causal_links": [],
         "expected_reasoning_type": "theory_foundation"
       },
       "source_content": {
         "options": {
-          "A": "Verdadero",
-          "B": "Falso",
-          "C": "",
-          "D": ""
+          "A": "El SO₂ actúa como inhibidor tanto de levaduras no deseadas como de bacterias.",
+          "B": "El SO₂ solo actúa sobre bacterias y no tiene efecto sobre las levaduras.",
+          "C": "El SO₂ favorece el crecimiento de levaduras beneficiosas sin inhibir las bacterias.",
+          "D": "El SO₂ se usa exclusivamente como antioxidante y no tiene propiedades antimicrobianas."
         },
         "correct_answer_letter": "A",
-        "correct_answer_text": "Verdadero"
+        "correct_answer_text": "El SO₂ actúa como inhibidor tanto de levaduras no deseadas como de bacterias."
       },
       "status": {
         "review_state": "unreviewed",
@@ -30281,7 +30320,7 @@
       "master_item_id": "wset3_683",
       "source_question_id": "683",
       "question_type": "single_best_answer",
-      "stem": "El uso de barrica nueva incrementa la percepción de tanino en blancos. (Verdadero/Falso)",
+      "stem": "¿Cuál de las siguientes afirmaciones sobre la crianza en barrica nueva es CORRECTA?",
       "curriculum": {
         "ra": "RA1",
         "topic": "RA1",
@@ -30290,20 +30329,23 @@
           "RA1"
         ],
         "expected_keywords": [
-          "Verdadero"
+          "barrica nueva",
+          "taninos",
+          "vinos blancos",
+          "aromas"
         ],
         "expected_causal_links": [],
         "expected_reasoning_type": "theory_foundation"
       },
       "source_content": {
         "options": {
-          "A": "Verdadero",
-          "B": "Falso",
-          "C": "",
-          "D": ""
+          "A": "Las barricas nuevas pueden aportar taninos adicionales a los vinos blancos.",
+          "B": "Las barricas nuevas no aportan taninos a los vinos blancos, solo aromas.",
+          "C": "El uso de barrica nueva en blancos reduce siempre la complejidad aromática.",
+          "D": "El impacto de la barrica nueva en blancos se limita a aportar color al vino."
         },
         "correct_answer_letter": "A",
-        "correct_answer_text": "Verdadero"
+        "correct_answer_text": "Las barricas nuevas pueden aportar taninos adicionales a los vinos blancos."
       },
       "status": {
         "review_state": "unreviewed",
@@ -30342,7 +30384,7 @@
       "master_item_id": "wset3_684",
       "source_question_id": "684",
       "question_type": "single_best_answer",
-      "stem": "Los vinos elaborados en acero inoxidable suelen mostrar mayor expresión frutal. (Verdadero/Falso)",
+      "stem": "¿Cuál de las siguientes afirmaciones sobre los vinos fermentados en acero inoxidable es CORRECTA?",
       "curriculum": {
         "ra": "RA1",
         "topic": "RA1",
@@ -30351,20 +30393,23 @@
           "RA1"
         ],
         "expected_keywords": [
-          "Verdadero"
+          "acero inoxidable",
+          "aromas frutales",
+          "primarios",
+          "fermentación"
         ],
         "expected_causal_links": [],
         "expected_reasoning_type": "theory_foundation"
       },
       "source_content": {
         "options": {
-          "A": "Verdadero",
-          "B": "Falso",
-          "C": "",
-          "D": ""
+          "A": "La fermentación en acero inoxidable preserva mejor los aromas frutales primarios.",
+          "B": "El acero inoxidable aporta aromas de vainilla y coco que realzan la fruta.",
+          "C": "Los vinos en acero inoxidable tienen menor expresión frutal que los criados en roble.",
+          "D": "El acero inoxidable favorece la oxidación y reduce el perfil frutal del vino."
         },
         "correct_answer_letter": "A",
-        "correct_answer_text": "Verdadero"
+        "correct_answer_text": "La fermentación en acero inoxidable preserva mejor los aromas frutales primarios."
       },
       "status": {
         "review_state": "unreviewed",
@@ -30403,7 +30448,7 @@
       "master_item_id": "wset3_685",
       "source_question_id": "685",
       "question_type": "single_best_answer",
-      "stem": "La vendimia manual permite mayor selección de la uva. (Verdadero/Falso)",
+      "stem": "¿Cuál de las siguientes afirmaciones sobre la vendimia manual es CORRECTA?",
       "curriculum": {
         "ra": "RA1",
         "topic": "RA1",
@@ -30412,20 +30457,23 @@
           "RA1"
         ],
         "expected_keywords": [
-          "Verdadero"
+          "vendimia manual",
+          "selección",
+          "calidad",
+          "racimos"
         ],
         "expected_causal_links": [],
         "expected_reasoning_type": "theory_foundation"
       },
       "source_content": {
         "options": {
-          "A": "Verdadero",
-          "B": "Falso",
-          "C": "",
-          "D": ""
+          "A": "La vendimia manual permite seleccionar racimos individualmente y mejora la calidad.",
+          "B": "La vendimia manual y la mecánica ofrecen idéntica capacidad de selección de uva.",
+          "C": "La vendimia mecánica permite una mayor selección de uva que la manual.",
+          "D": "La vendimia manual solo es viable en viñedos en pendiente, no en terreno llano."
         },
         "correct_answer_letter": "A",
-        "correct_answer_text": "Verdadero"
+        "correct_answer_text": "La vendimia manual permite seleccionar racimos individualmente y mejora la calidad."
       },
       "status": {
         "review_state": "unreviewed",
@@ -30464,7 +30512,7 @@
       "master_item_id": "wset3_686",
       "source_question_id": "686",
       "question_type": "single_best_answer",
-      "stem": "El uso de levaduras seleccionadas garantiza una fermentación más rápida. (Verdadero/Falso)",
+      "stem": "¿Cuál de las siguientes afirmaciones sobre las levaduras seleccionadas es CORRECTA?",
       "curriculum": {
         "ra": "RA1",
         "topic": "RA1",
@@ -30473,20 +30521,23 @@
           "RA1"
         ],
         "expected_keywords": [
-          "Verdadero"
+          "levaduras seleccionadas",
+          "fermentación",
+          "velocidad",
+          "control"
         ],
         "expected_causal_links": [],
         "expected_reasoning_type": "theory_foundation"
       },
       "source_content": {
         "options": {
-          "A": "Verdadero",
-          "B": "Falso",
-          "C": "",
-          "D": ""
+          "A": "Las levaduras seleccionadas tienden a producir fermentaciones más rápidas y predecibles.",
+          "B": "Las levaduras seleccionadas fermentan siempre más lentamente que las indígenas.",
+          "C": "El uso de levaduras seleccionadas no tiene efecto sobre la velocidad de fermentación.",
+          "D": "Las levaduras seleccionadas se usan únicamente para aportar complejidad aromática."
         },
         "correct_answer_letter": "A",
-        "correct_answer_text": "Verdadero"
+        "correct_answer_text": "Las levaduras seleccionadas tienden a producir fermentaciones más rápidas y predecibles."
       },
       "status": {
         "review_state": "unreviewed",
@@ -30525,7 +30576,7 @@
       "master_item_id": "wset3_687",
       "source_question_id": "687",
       "question_type": "single_best_answer",
-      "stem": "Las variedades de ciclo corto son más adecuadas para climas fríos. (Verdadero/Falso)",
+      "stem": "¿Cuál de las siguientes afirmaciones sobre las variedades de ciclo corto es CORRECTA?",
       "curriculum": {
         "ra": "RA1",
         "topic": "RA1",
@@ -30534,20 +30585,23 @@
           "RA1"
         ],
         "expected_keywords": [
-          "Verdadero"
+          "ciclo corto",
+          "variedades",
+          "clima frío",
+          "maduración"
         ],
         "expected_causal_links": [],
         "expected_reasoning_type": "theory_foundation"
       },
       "source_content": {
         "options": {
-          "A": "Verdadero",
-          "B": "Falso",
-          "C": "",
-          "D": ""
+          "A": "Las variedades de ciclo corto son más adecuadas para regiones con estaciones de crecimiento cortas o frías.",
+          "B": "Las variedades de ciclo corto solo se usan en regiones de clima cálido.",
+          "C": "El ciclo de maduración de la variedad no tiene relación con la adecuación al clima.",
+          "D": "Las variedades de ciclo largo son las más apropiadas para climas frescos y marginales."
         },
         "correct_answer_letter": "A",
-        "correct_answer_text": "Verdadero"
+        "correct_answer_text": "Las variedades de ciclo corto son más adecuadas para regiones con estaciones de crecimiento cortas o frías."
       },
       "status": {
         "review_state": "unreviewed",
@@ -31440,7 +31494,7 @@
       "master_item_id": "wset3_702",
       "source_question_id": "702",
       "question_type": "single_best_answer",
-      "stem": "El enfriamiento de la vendimia puede preservar los aromas primarios.",
+      "stem": "¿Cuál de las siguientes afirmaciones sobre el enfriamiento de la vendimia es CORRECTA?",
       "curriculum": {
         "ra": "RA1",
         "topic": "RA1",
@@ -31449,20 +31503,23 @@
           "RA1"
         ],
         "expected_keywords": [
-          "Verdadero"
+          "enfriamiento",
+          "vendimia",
+          "aromas primarios",
+          "temperatura"
         ],
         "expected_causal_links": [],
         "expected_reasoning_type": "theory_foundation"
       },
       "source_content": {
         "options": {
-          "A": "Verdadero",
-          "B": "Falso",
-          "C": "",
-          "D": ""
+          "A": "Enfriar la uva tras la cosecha ayuda a conservar los aromas primarios volátiles.",
+          "B": "El enfriamiento de la vendimia elimina los aromas primarios del vino.",
+          "C": "La temperatura de la uva cosechada no tiene efecto sobre los aromas primarios.",
+          "D": "El enfriamiento se utiliza únicamente para retrasar la fermentación, sin efecto aromático."
         },
         "correct_answer_letter": "A",
-        "correct_answer_text": "Verdadero"
+        "correct_answer_text": "Enfriar la uva tras la cosecha ayuda a conservar los aromas primarios volátiles."
       },
       "status": {
         "review_state": "unreviewed",
@@ -31501,7 +31558,7 @@
       "master_item_id": "wset3_703",
       "source_question_id": "703",
       "question_type": "single_best_answer",
-      "stem": "El batonage aumenta la complejidad aromática en vinos blancos.",
+      "stem": "¿Cuál de las siguientes afirmaciones sobre el batonnage en vinos blancos es CORRECTA?",
       "curriculum": {
         "ra": "RA1",
         "topic": "RA1",
@@ -31510,20 +31567,23 @@
           "RA1"
         ],
         "expected_keywords": [
-          "Verdadero"
+          "batonnage",
+          "lías",
+          "complejidad",
+          "vinos blancos"
         ],
         "expected_causal_links": [],
         "expected_reasoning_type": "theory_foundation"
       },
       "source_content": {
         "options": {
-          "A": "Verdadero",
-          "B": "Falso",
-          "C": "",
-          "D": ""
+          "A": "El batonnage puede aumentar la complejidad aromática y aportar textura al vino blanco.",
+          "B": "El batonnage reduce la complejidad aromática al eliminar las lías del vino.",
+          "C": "El batonnage solo se practica en vinos tintos para estabilizar el color.",
+          "D": "El batonnage no tiene efecto sobre el perfil aromático de los vinos blancos."
         },
         "correct_answer_letter": "A",
-        "correct_answer_text": "Verdadero"
+        "correct_answer_text": "El batonnage puede aumentar la complejidad aromática y aportar textura al vino blanco."
       },
       "status": {
         "review_state": "unreviewed",
@@ -31562,7 +31622,7 @@
       "master_item_id": "wset3_704",
       "source_question_id": "704",
       "question_type": "single_best_answer",
-      "stem": "La fermentación maloláctica disminuye la acidez del vino.",
+      "stem": "¿Cuál de las siguientes afirmaciones sobre la fermentación maloláctica es CORRECTA?",
       "curriculum": {
         "ra": "RA1",
         "topic": "RA1",
@@ -31571,20 +31631,23 @@
           "RA1"
         ],
         "expected_keywords": [
-          "Verdadero"
+          "FML",
+          "ácido málico",
+          "ácido láctico",
+          "acidez"
         ],
         "expected_causal_links": [],
         "expected_reasoning_type": "theory_foundation"
       },
       "source_content": {
         "options": {
-          "A": "Verdadero",
-          "B": "Falso",
-          "C": "",
-          "D": ""
+          "A": "La fermentación maloláctica convierte el ácido málico en láctico, disminuyendo la acidez.",
+          "B": "La FML aumenta la acidez total al producir ácido láctico más fuerte que el málico.",
+          "C": "La FML no tiene efecto sobre la acidez, solo modifica los aromas del vino.",
+          "D": "La FML convierte el ácido tartárico en láctico, reduciendo la astringencia."
         },
         "correct_answer_letter": "A",
-        "correct_answer_text": "Verdadero"
+        "correct_answer_text": "La fermentación maloláctica convierte el ácido málico en láctico, disminuyendo la acidez."
       },
       "status": {
         "review_state": "unreviewed",
@@ -31623,7 +31686,7 @@
       "master_item_id": "wset3_705",
       "source_question_id": "705",
       "question_type": "single_best_answer",
-      "stem": "El roble americano imparte sabores más dulces y vainillosos que el francés.",
+      "stem": "¿Cuál de las siguientes afirmaciones sobre el roble americano es CORRECTA?",
       "curriculum": {
         "ra": "RA1",
         "topic": "RA1",
@@ -31632,20 +31695,23 @@
           "RA1"
         ],
         "expected_keywords": [
-          "Verdadero"
+          "roble americano",
+          "vainilla",
+          "coco",
+          "aromas"
         ],
         "expected_causal_links": [],
         "expected_reasoning_type": "theory_foundation"
       },
       "source_content": {
         "options": {
-          "A": "Verdadero",
-          "B": "Falso",
-          "C": "",
-          "D": ""
+          "A": "El roble americano tiende a aportar notas más pronunciadas de vainilla y coco que el francés.",
+          "B": "El roble americano aporta sabores más sutiles y especiados que el francés.",
+          "C": "El roble americano y el francés aportan perfiles aromáticos idénticos al vino.",
+          "D": "El roble americano se caracteriza por notas de cedro y mineral, sin vainilla ni coco."
         },
         "correct_answer_letter": "A",
-        "correct_answer_text": "Verdadero"
+        "correct_answer_text": "El roble americano tiende a aportar notas más pronunciadas de vainilla y coco que el francés."
       },
       "status": {
         "review_state": "unreviewed",
@@ -31684,7 +31750,7 @@
       "master_item_id": "wset3_706",
       "source_question_id": "706",
       "question_type": "single_best_answer",
-      "stem": "El estrés hídrico leve puede concentrar compuestos fenólicos.",
+      "stem": "¿Cuál de las siguientes afirmaciones sobre el estrés hídrico leve es CORRECTA?",
       "curriculum": {
         "ra": "RA1",
         "topic": "RA1",
@@ -31693,20 +31759,23 @@
           "RA1"
         ],
         "expected_keywords": [
-          "Verdadero"
+          "estrés hídrico",
+          "moderado",
+          "concentración",
+          "compuestos fenólicos"
         ],
         "expected_causal_links": [],
         "expected_reasoning_type": "theory_foundation"
       },
       "source_content": {
         "options": {
-          "A": "Verdadero",
-          "B": "Falso",
-          "C": "",
-          "D": ""
+          "A": "Un nivel moderado de estrés hídrico puede contribuir a concentrar los compuestos de la baya.",
+          "B": "El estrés hídrico, incluso leve, siempre daña la calidad de la uva.",
+          "C": "El estrés hídrico leve no tiene ningún efecto sobre la concentración de la baya.",
+          "D": "Solo el estrés hídrico severo puede concentrar los compuestos fenólicos en la uva."
         },
         "correct_answer_letter": "A",
-        "correct_answer_text": "Verdadero"
+        "correct_answer_text": "Un nivel moderado de estrés hídrico puede contribuir a concentrar los compuestos de la baya."
       },
       "status": {
         "review_state": "unreviewed",
@@ -31745,7 +31814,7 @@
       "master_item_id": "wset3_707",
       "source_question_id": "707",
       "question_type": "single_best_answer",
-      "stem": "El riego por goteo permite un control preciso del suministro de agua.",
+      "stem": "¿Cuál de las siguientes afirmaciones sobre el riego por goteo es CORRECTA?",
       "curriculum": {
         "ra": "RA1",
         "topic": "RA1",
@@ -31754,20 +31823,23 @@
           "RA1"
         ],
         "expected_keywords": [
-          "Verdadero"
+          "riego por goteo",
+          "zona radicular",
+          "control",
+          "agua"
         ],
         "expected_causal_links": [],
         "expected_reasoning_type": "theory_foundation"
       },
       "source_content": {
         "options": {
-          "A": "Verdadero",
-          "B": "Falso",
-          "C": "",
-          "D": ""
+          "A": "El riego por goteo permite suministrar agua de forma controlada directamente a la zona radicular.",
+          "B": "El riego por goteo distribuye el agua de forma uniforme por todo el viñedo sin control preciso.",
+          "C": "El riego por goteo está diseñado para regar las hojas y mejorar la fotosíntesis.",
+          "D": "El riego por goteo es exclusivo de cultivos distintos a la vid y no se usa en viticultura."
         },
         "correct_answer_letter": "A",
-        "correct_answer_text": "Verdadero"
+        "correct_answer_text": "El riego por goteo permite suministrar agua de forma controlada directamente a la zona radicular."
       },
       "status": {
         "review_state": "unreviewed",
@@ -31806,7 +31878,7 @@
       "master_item_id": "wset3_708",
       "source_question_id": "708",
       "question_type": "single_best_answer",
-      "stem": "Las heladas de primavera pueden reducir el rendimiento.",
+      "stem": "¿Cuál de las siguientes afirmaciones sobre las heladas primaverales es CORRECTA?",
       "curriculum": {
         "ra": "RA1",
         "topic": "RA1",
@@ -31815,20 +31887,23 @@
           "RA1"
         ],
         "expected_keywords": [
-          "Verdadero"
+          "heladas primaverales",
+          "brotes",
+          "rendimiento",
+          "brotación"
         ],
         "expected_causal_links": [],
         "expected_reasoning_type": "theory_foundation"
       },
       "source_content": {
         "options": {
-          "A": "Verdadero",
-          "B": "Falso",
-          "C": "",
-          "D": ""
+          "A": "Las heladas primaverales pueden dañar los brotes tiernos y reducir significativamente el rendimiento.",
+          "B": "Las heladas primaverales benefician a la vid al eliminar plagas sin afectar al rendimiento.",
+          "C": "Las heladas solo son un riesgo en otoño, no durante la brotación primaveral.",
+          "D": "Las heladas primaverales no afectan al rendimiento si el viñedo está en terreno llano."
         },
         "correct_answer_letter": "A",
-        "correct_answer_text": "Verdadero"
+        "correct_answer_text": "Las heladas primaverales pueden dañar los brotes tiernos y reducir significativamente el rendimiento."
       },
       "status": {
         "review_state": "unreviewed",
@@ -31867,7 +31942,7 @@
       "master_item_id": "wset3_709",
       "source_question_id": "709",
       "question_type": "single_best_answer",
-      "stem": "El deshoje mejora la ventilación del racimo.",
+      "stem": "¿Cuál de las siguientes afirmaciones sobre el deshoje es CORRECTA?",
       "curriculum": {
         "ra": "RA1",
         "topic": "RA1",
@@ -31876,20 +31951,23 @@
           "RA1"
         ],
         "expected_keywords": [
-          "Verdadero"
+          "deshoje",
+          "ventilación",
+          "racimo",
+          "sanidad"
         ],
         "expected_causal_links": [],
         "expected_reasoning_type": "theory_foundation"
       },
       "source_content": {
         "options": {
-          "A": "Verdadero",
-          "B": "Falso",
-          "C": "",
-          "D": ""
+          "A": "El deshoje mejora la circulación de aire alrededor del racimo.",
+          "B": "El deshoje reduce la ventilación del racimo al eliminar hojas protectoras.",
+          "C": "El deshoje no tiene efecto sobre la ventilación ni la sanidad del racimo.",
+          "D": "El deshoje se realiza exclusivamente para aumentar el rendimiento, no para mejorar la sanidad."
         },
         "correct_answer_letter": "A",
-        "correct_answer_text": "Verdadero"
+        "correct_answer_text": "El deshoje mejora la circulación de aire alrededor del racimo."
       },
       "status": {
         "review_state": "unreviewed",
@@ -31928,7 +32006,7 @@
       "master_item_id": "wset3_710",
       "source_question_id": "710",
       "question_type": "single_best_answer",
-      "stem": "El entrenamiento de la vid afecta la exposición al sol.",
+      "stem": "¿Cuál de las siguientes afirmaciones sobre el sistema de conducción de la vid es CORRECTA?",
       "curriculum": {
         "ra": "RA1",
         "topic": "RA1",
@@ -31937,20 +32015,23 @@
           "RA1"
         ],
         "expected_keywords": [
-          "Verdadero"
+          "conducción",
+          "exposición solar",
+          "vid",
+          "calidad"
         ],
         "expected_causal_links": [],
         "expected_reasoning_type": "theory_foundation"
       },
       "source_content": {
         "options": {
-          "A": "Verdadero",
-          "B": "Falso",
-          "C": "",
-          "D": ""
+          "A": "El sistema de conducción de la vid influye directamente en la exposición solar del racimo.",
+          "B": "El entrenamiento de la vid no tiene efecto sobre la exposición solar de la planta.",
+          "C": "Todos los sistemas de conducción producen idéntica exposición solar.",
+          "D": "El sistema de conducción solo afecta a la facilidad de mecanización, no a la calidad del vino."
         },
         "correct_answer_letter": "A",
-        "correct_answer_text": "Verdadero"
+        "correct_answer_text": "El sistema de conducción de la vid influye directamente en la exposición solar del racimo."
       },
       "status": {
         "review_state": "unreviewed",
@@ -31989,7 +32070,7 @@
       "master_item_id": "wset3_711",
       "source_question_id": "711",
       "question_type": "single_best_answer",
-      "stem": "Los suelos bien drenados tienden a producir vinos de mayor calidad.",
+      "stem": "¿Cuál de las siguientes afirmaciones sobre el drenaje del suelo en viticultura es CORRECTA?",
       "curriculum": {
         "ra": "RA1",
         "topic": "RA1",
@@ -31998,20 +32079,23 @@
           "RA1"
         ],
         "expected_keywords": [
-          "Verdadero"
+          "drenaje",
+          "suelo",
+          "desarrollo radicular",
+          "calidad"
         ],
         "expected_causal_links": [],
         "expected_reasoning_type": "theory_foundation"
       },
       "source_content": {
         "options": {
-          "A": "Verdadero",
-          "B": "Falso",
-          "C": "",
-          "D": ""
+          "A": "Los suelos con buen drenaje favorecen el desarrollo radicular y se asocian a vinos de mayor calidad.",
+          "B": "Los suelos mal drenados son preferibles para la viticultura de calidad.",
+          "C": "El drenaje del suelo no influye en la calidad del vino.",
+          "D": "Los suelos con exceso de agua favorecen la concentración de compuestos en la baya."
         },
         "correct_answer_letter": "A",
-        "correct_answer_text": "Verdadero"
+        "correct_answer_text": "Los suelos con buen drenaje favorecen el desarrollo radicular y se asocian a vinos de mayor calidad."
       },
       "status": {
         "review_state": "unreviewed",
@@ -33823,8 +33907,8 @@
     {
       "master_item_id": "wset3_742",
       "source_question_id": "742",
-      "question_type": "single_best_answer",
-      "stem": "Emparejar: Zona vinícola reconocida por Syrah especiado",
+      "question_type": "open_response",
+      "stem": "Identifica la región vinícola australiana reconocida por producir Shiraz especiado y de gran concentración.",
       "curriculum": {
         "ra": "RA2",
         "topic": "RA2",
@@ -33833,31 +33917,27 @@
           "RA2"
         ],
         "expected_keywords": [
-          "Barossa"
+          "Barossa Valley",
+          "Shiraz",
+          "concentración"
         ],
         "expected_causal_links": [],
         "expected_reasoning_type": "theory_foundation"
       },
       "source_content": {
-        "options": {
-          "A": "Barossa",
-          "B": "",
-          "C": "",
-          "D": ""
-        },
-        "correct_answer_letter": "A",
-        "correct_answer_text": "Barossa"
+        "options": {},
+        "correct_answer_letter": null,
+        "correct_answer_text": null
       },
       "status": {
-        "review_state": "unreviewed",
+        "review_state": "approved_open_response",
         "activation_status": "inactive",
         "gold": false,
         "public_lab": false
       },
       "collections": [
-        "single_best_answer",
-        "inactive",
-        "needs_review"
+        "open_response",
+        "inactive"
       ],
       "lineage": {
         "structured_source": "knowledge/question-bank/structured/wset3_questions.json",
@@ -33867,7 +33947,9 @@
         "open_response_candidate_id": null,
         "open_response_review_id": null,
         "gold_review_id": null,
-        "public_lab_item_id": null
+        "public_lab_item_id": null,
+        "resolution_artifact": "knowledge/question-bank/reviews/master_bank_review_inactive_resolution.json",
+        "resolution_id": "phase_y0_remediation_b_742"
       },
       "governance": {
         "safe_for_examiner": false,
@@ -33884,8 +33966,8 @@
     {
       "master_item_id": "wset3_743",
       "source_question_id": "743",
-      "question_type": "single_best_answer",
-      "stem": "Emparejar: Zona con sistema de clasificación por crus",
+      "question_type": "open_response",
+      "stem": "Describe el sistema de clasificación por crus en viticultura y menciona una región donde se aplica.",
       "curriculum": {
         "ra": "RA2",
         "topic": "RA2",
@@ -33894,31 +33976,28 @@
           "RA2"
         ],
         "expected_keywords": [
-          "Borgoña"
+          "crus",
+          "Borgoña",
+          "terroir",
+          "Grand Cru"
         ],
         "expected_causal_links": [],
         "expected_reasoning_type": "theory_foundation"
       },
       "source_content": {
-        "options": {
-          "A": "Borgoña",
-          "B": "",
-          "C": "",
-          "D": ""
-        },
-        "correct_answer_letter": "A",
-        "correct_answer_text": "Borgoña"
+        "options": {},
+        "correct_answer_letter": null,
+        "correct_answer_text": null
       },
       "status": {
-        "review_state": "unreviewed",
+        "review_state": "approved_open_response",
         "activation_status": "inactive",
         "gold": false,
         "public_lab": false
       },
       "collections": [
-        "single_best_answer",
-        "inactive",
-        "needs_review"
+        "open_response",
+        "inactive"
       ],
       "lineage": {
         "structured_source": "knowledge/question-bank/structured/wset3_questions.json",
@@ -33928,7 +34007,9 @@
         "open_response_candidate_id": null,
         "open_response_review_id": null,
         "gold_review_id": null,
-        "public_lab_item_id": null
+        "public_lab_item_id": null,
+        "resolution_artifact": "knowledge/question-bank/reviews/master_bank_review_inactive_resolution.json",
+        "resolution_id": "phase_y0_remediation_b_743"
       },
       "governance": {
         "safe_for_examiner": false,
@@ -33945,8 +34026,8 @@
     {
       "master_item_id": "wset3_744",
       "source_question_id": "744",
-      "question_type": "single_best_answer",
-      "stem": "Emparejar: Región con legislación de 'Gran Reserva'",
+      "question_type": "open_response",
+      "stem": "Explica qué significa la categoría 'Gran Reserva' en los vinos tintos españoles y menciona una región que la regule.",
       "curriculum": {
         "ra": "RA2",
         "topic": "RA2",
@@ -33955,31 +34036,28 @@
           "RA2"
         ],
         "expected_keywords": [
+          "Gran Reserva",
+          "crianza",
+          "Rioja",
           "Ribera del Duero"
         ],
         "expected_causal_links": [],
         "expected_reasoning_type": "theory_foundation"
       },
       "source_content": {
-        "options": {
-          "A": "Ribera del Duero",
-          "B": "",
-          "C": "",
-          "D": ""
-        },
-        "correct_answer_letter": "A",
-        "correct_answer_text": "Ribera del Duero"
+        "options": {},
+        "correct_answer_letter": null,
+        "correct_answer_text": null
       },
       "status": {
-        "review_state": "unreviewed",
+        "review_state": "approved_open_response",
         "activation_status": "inactive",
         "gold": false,
         "public_lab": false
       },
       "collections": [
-        "single_best_answer",
-        "inactive",
-        "needs_review"
+        "open_response",
+        "inactive"
       ],
       "lineage": {
         "structured_source": "knowledge/question-bank/structured/wset3_questions.json",
@@ -33989,7 +34067,9 @@
         "open_response_candidate_id": null,
         "open_response_review_id": null,
         "gold_review_id": null,
-        "public_lab_item_id": null
+        "public_lab_item_id": null,
+        "resolution_artifact": "knowledge/question-bank/reviews/master_bank_review_inactive_resolution.json",
+        "resolution_id": "phase_y0_remediation_b_744"
       },
       "governance": {
         "safe_for_examiner": false,
@@ -34006,8 +34086,8 @@
     {
       "master_item_id": "wset3_745",
       "source_question_id": "745",
-      "question_type": "single_best_answer",
-      "stem": "Emparejar: Vino tinto con crianza mínima de 3 años",
+      "question_type": "open_response",
+      "stem": "Identifica una categoría de vino tinto español que exige un mínimo de 3 años de crianza total y explica brevemente sus requisitos.",
       "curriculum": {
         "ra": "RA2",
         "topic": "RA2",
@@ -34016,31 +34096,28 @@
           "RA2"
         ],
         "expected_keywords": [
-          "Rioja Reserva"
+          "Reserva",
+          "Rioja",
+          "barrica",
+          "3 años"
         ],
         "expected_causal_links": [],
         "expected_reasoning_type": "theory_foundation"
       },
       "source_content": {
-        "options": {
-          "A": "Rioja Reserva",
-          "B": "",
-          "C": "",
-          "D": ""
-        },
-        "correct_answer_letter": "A",
-        "correct_answer_text": "Rioja Reserva"
+        "options": {},
+        "correct_answer_letter": null,
+        "correct_answer_text": null
       },
       "status": {
-        "review_state": "unreviewed",
+        "review_state": "approved_open_response",
         "activation_status": "inactive",
         "gold": false,
         "public_lab": false
       },
       "collections": [
-        "single_best_answer",
-        "inactive",
-        "needs_review"
+        "open_response",
+        "inactive"
       ],
       "lineage": {
         "structured_source": "knowledge/question-bank/structured/wset3_questions.json",
@@ -34050,7 +34127,9 @@
         "open_response_candidate_id": null,
         "open_response_review_id": null,
         "gold_review_id": null,
-        "public_lab_item_id": null
+        "public_lab_item_id": null,
+        "resolution_artifact": "knowledge/question-bank/reviews/master_bank_review_inactive_resolution.json",
+        "resolution_id": "phase_y0_remediation_b_745"
       },
       "governance": {
         "safe_for_examiner": false,
@@ -34067,8 +34146,8 @@
     {
       "master_item_id": "wset3_746",
       "source_question_id": "746",
-      "question_type": "single_best_answer",
-      "stem": "Emparejar: Clima mediterráneo con influencia marítima",
+      "question_type": "open_response",
+      "stem": "Identifica una región vinícola con clima mediterráneo de influencia marítima y explica cómo este clima afecta al estilo de sus vinos.",
       "curriculum": {
         "ra": "RA2",
         "topic": "RA2",
@@ -34077,29 +34156,27 @@
           "RA2"
         ],
         "expected_keywords": [
-          "Stellenbosch"
+          "Stellenbosch",
+          "mediterráneo",
+          "marítimo",
+          "acidez"
         ],
         "expected_causal_links": [],
         "expected_reasoning_type": "theory_foundation"
       },
       "source_content": {
-        "options": {
-          "A": "Stellenbosch",
-          "B": "",
-          "C": "",
-          "D": ""
-        },
-        "correct_answer_letter": "A",
-        "correct_answer_text": "Stellenbosch"
+        "options": {},
+        "correct_answer_letter": null,
+        "correct_answer_text": null
       },
       "status": {
-        "review_state": "approved_private_sba",
+        "review_state": "approved_open_response",
         "activation_status": "inactive",
         "gold": false,
         "public_lab": false
       },
       "collections": [
-        "single_best_answer",
+        "open_response",
         "inactive"
       ],
       "lineage": {
@@ -34129,8 +34206,8 @@
     {
       "master_item_id": "wset3_747",
       "source_question_id": "747",
-      "question_type": "single_best_answer",
-      "stem": "Emparejar: Región productora de Nebbiolo",
+      "question_type": "open_response",
+      "stem": "Nombra dos regiones italianas conocidas por producir vinos elaborados con Nebbiolo.",
       "curriculum": {
         "ra": "RA2",
         "topic": "RA2",
@@ -34139,31 +34216,28 @@
           "RA2"
         ],
         "expected_keywords": [
-          "Barolo"
+          "Barolo",
+          "Barbaresco",
+          "Piemonte",
+          "Nebbiolo"
         ],
         "expected_causal_links": [],
         "expected_reasoning_type": "theory_foundation"
       },
       "source_content": {
-        "options": {
-          "A": "Barolo",
-          "B": "",
-          "C": "",
-          "D": ""
-        },
-        "correct_answer_letter": "A",
-        "correct_answer_text": "Barolo"
+        "options": {},
+        "correct_answer_letter": null,
+        "correct_answer_text": null
       },
       "status": {
-        "review_state": "unreviewed",
+        "review_state": "approved_open_response",
         "activation_status": "inactive",
         "gold": false,
         "public_lab": false
       },
       "collections": [
-        "single_best_answer",
-        "inactive",
-        "needs_review"
+        "open_response",
+        "inactive"
       ],
       "lineage": {
         "structured_source": "knowledge/question-bank/structured/wset3_questions.json",
@@ -34173,7 +34247,9 @@
         "open_response_candidate_id": null,
         "open_response_review_id": null,
         "gold_review_id": null,
-        "public_lab_item_id": null
+        "public_lab_item_id": null,
+        "resolution_artifact": "knowledge/question-bank/reviews/master_bank_review_inactive_resolution.json",
+        "resolution_id": "phase_y0_remediation_b_747"
       },
       "governance": {
         "safe_for_examiner": false,
@@ -34190,8 +34266,8 @@
     {
       "master_item_id": "wset3_748",
       "source_question_id": "748",
-      "question_type": "single_best_answer",
-      "stem": "Emparejar: Región famosa por Sauvignon Blanc",
+      "question_type": "open_response",
+      "stem": "Identifica dos regiones conocidas por su Sauvignon Blanc y describe brevemente el estilo característico de cada una.",
       "curriculum": {
         "ra": "RA2",
         "topic": "RA2",
@@ -34200,31 +34276,28 @@
           "RA2"
         ],
         "expected_keywords": [
-          "Marlborough"
+          "Marlborough",
+          "Loire",
+          "Sancerre",
+          "acidez"
         ],
         "expected_causal_links": [],
         "expected_reasoning_type": "theory_foundation"
       },
       "source_content": {
-        "options": {
-          "A": "Marlborough",
-          "B": "",
-          "C": "",
-          "D": ""
-        },
-        "correct_answer_letter": "A",
-        "correct_answer_text": "Marlborough"
+        "options": {},
+        "correct_answer_letter": null,
+        "correct_answer_text": null
       },
       "status": {
-        "review_state": "unreviewed",
+        "review_state": "approved_open_response",
         "activation_status": "inactive",
         "gold": false,
         "public_lab": false
       },
       "collections": [
-        "single_best_answer",
-        "inactive",
-        "needs_review"
+        "open_response",
+        "inactive"
       ],
       "lineage": {
         "structured_source": "knowledge/question-bank/structured/wset3_questions.json",
@@ -34234,7 +34307,9 @@
         "open_response_candidate_id": null,
         "open_response_review_id": null,
         "gold_review_id": null,
-        "public_lab_item_id": null
+        "public_lab_item_id": null,
+        "resolution_artifact": "knowledge/question-bank/reviews/master_bank_review_inactive_resolution.json",
+        "resolution_id": "phase_y0_remediation_b_748"
       },
       "governance": {
         "safe_for_examiner": false,
@@ -34251,8 +34326,8 @@
     {
       "master_item_id": "wset3_765",
       "source_question_id": "765",
-      "question_type": "single_best_answer",
-      "stem": "Emparejar: Despalillado",
+      "question_type": "open_response",
+      "stem": "Explica qué es el despalillado y por qué se realiza durante la vinificación de vinos tintos.",
       "curriculum": {
         "ra": "RA1",
         "topic": "RA1",
@@ -34261,31 +34336,28 @@
           "RA1"
         ],
         "expected_keywords": [
-          "Separación de bayas del raspón antes de la vinificación"
+          "despalillado",
+          "raspón",
+          "taninos vegetales",
+          "vinificación"
         ],
         "expected_causal_links": [],
         "expected_reasoning_type": "theory_foundation"
       },
       "source_content": {
-        "options": {
-          "A": "Separación de bayas del raspón antes de la vinificación",
-          "B": "",
-          "C": "",
-          "D": ""
-        },
-        "correct_answer_letter": "A",
-        "correct_answer_text": "Separación de bayas del raspón antes de la vinificación"
+        "options": {},
+        "correct_answer_letter": null,
+        "correct_answer_text": null
       },
       "status": {
-        "review_state": "unreviewed",
+        "review_state": "approved_open_response",
         "activation_status": "inactive",
         "gold": false,
         "public_lab": false
       },
       "collections": [
-        "single_best_answer",
-        "inactive",
-        "needs_review"
+        "open_response",
+        "inactive"
       ],
       "lineage": {
         "structured_source": "knowledge/question-bank/structured/wset3_questions.json",
@@ -34295,7 +34367,9 @@
         "open_response_candidate_id": null,
         "open_response_review_id": null,
         "gold_review_id": null,
-        "public_lab_item_id": null
+        "public_lab_item_id": null,
+        "resolution_artifact": "knowledge/question-bank/reviews/master_bank_review_inactive_resolution.json",
+        "resolution_id": "phase_y0_remediation_b_765"
       },
       "governance": {
         "safe_for_examiner": false,
@@ -34313,7 +34387,7 @@
       "master_item_id": "wset3_771",
       "source_question_id": "771",
       "question_type": "single_best_answer",
-      "stem": "El uso de roble nuevo en Rioja Reserva es obligatorio por ley.",
+      "stem": "¿Cuál de las siguientes afirmaciones sobre la crianza en Rioja es INCORRECTA?",
       "curriculum": {
         "ra": "RA2",
         "topic": "RA2",
@@ -34322,20 +34396,23 @@
           "RA2"
         ],
         "expected_keywords": [
-          "Falso"
+          "roble nuevo",
+          "Reserva",
+          "Rioja",
+          "crianza"
         ],
         "expected_causal_links": [],
         "expected_reasoning_type": "theory_foundation"
       },
       "source_content": {
         "options": {
-          "A": "Verdadero",
-          "B": "Falso",
-          "C": "",
-          "D": ""
+          "A": "El uso de roble nuevo es obligatorio para la categoría Reserva.",
+          "B": "La categoría Reserva exige un mínimo de 3 años de crianza total.",
+          "C": "Al menos 1 año de crianza debe realizarse en barrica de roble para Reserva.",
+          "D": "La categoría Gran Reserva exige mayor tiempo de crianza que la Reserva."
         },
-        "correct_answer_letter": "B",
-        "correct_answer_text": "Falso"
+        "correct_answer_letter": "A",
+        "correct_answer_text": "El uso de roble nuevo es obligatorio para la categoría Reserva."
       },
       "status": {
         "review_state": "unreviewed",
@@ -34374,7 +34451,7 @@
       "master_item_id": "wset3_772",
       "source_question_id": "772",
       "question_type": "single_best_answer",
-      "stem": "Las condiciones climáticas del Valle Central de Chile son ideales para la viticultura sin riego.",
+      "stem": "¿Cuál de las siguientes afirmaciones sobre el Valle Central de Chile es INCORRECTA?",
       "curriculum": {
         "ra": "RA1",
         "topic": "RA1",
@@ -34383,20 +34460,23 @@
           "RA1"
         ],
         "expected_keywords": [
-          "Falso"
+          "Valle Central",
+          "Chile",
+          "riego",
+          "clima"
         ],
         "expected_causal_links": [],
         "expected_reasoning_type": "theory_foundation"
       },
       "source_content": {
         "options": {
-          "A": "Verdadero",
-          "B": "Falso",
-          "C": "",
-          "D": ""
+          "A": "Sus condiciones permiten cultivar la vid sin necesidad de riego.",
+          "B": "El Valle Central tiene veranos cálidos y secos con escasas precipitaciones estivales.",
+          "C": "El riego por goteo se utiliza ampliamente para compensar la falta de lluvia estival.",
+          "D": "Produce variedades como Cabernet Sauvignon, Merlot y Carmenère."
         },
-        "correct_answer_letter": "B",
-        "correct_answer_text": "Falso"
+        "correct_answer_letter": "A",
+        "correct_answer_text": "Sus condiciones permiten cultivar la vid sin necesidad de riego."
       },
       "status": {
         "review_state": "unreviewed",
@@ -34435,7 +34515,7 @@
       "master_item_id": "wset3_773",
       "source_question_id": "773",
       "question_type": "single_best_answer",
-      "stem": "Los vinos del Médoc se basan principalmente en la variedad Merlot.",
+      "stem": "¿Cuál de las siguientes afirmaciones sobre los vinos del Médoc es INCORRECTA?",
       "curriculum": {
         "ra": "RA2",
         "topic": "RA2",
@@ -34444,20 +34524,23 @@
           "RA2"
         ],
         "expected_keywords": [
-          "Falso"
+          "Médoc",
+          "Cabernet Sauvignon",
+          "Merlot",
+          "Burdeos"
         ],
         "expected_causal_links": [],
         "expected_reasoning_type": "theory_foundation"
       },
       "source_content": {
         "options": {
-          "A": "Verdadero",
-          "B": "Falso",
-          "C": "",
-          "D": ""
+          "A": "La variedad predominante en el Médoc es el Merlot.",
+          "B": "El Cabernet Sauvignon es la variedad dominante en el Médoc.",
+          "C": "Los vinos del Médoc suelen presentar taninos firmes y potencial de guarda.",
+          "D": "El Médoc incluye subapelaciones como Pauillac, Margaux y Saint-Julien."
         },
-        "correct_answer_letter": "B",
-        "correct_answer_text": "Falso"
+        "correct_answer_letter": "A",
+        "correct_answer_text": "La variedad predominante en el Médoc es el Merlot."
       },
       "status": {
         "review_state": "unreviewed",
@@ -34496,7 +34579,7 @@
       "master_item_id": "wset3_774",
       "source_question_id": "774",
       "question_type": "single_best_answer",
-      "stem": "En la Borgoña, la legislación permite el uso de variedades híbridas.",
+      "stem": "¿Cuál de las siguientes afirmaciones sobre las variedades en la Borgoña es INCORRECTA?",
       "curriculum": {
         "ra": "RA2",
         "topic": "RA2",
@@ -34505,20 +34588,23 @@
           "RA2"
         ],
         "expected_keywords": [
-          "Falso"
+          "Borgoña",
+          "variedades híbridas",
+          "Pinot Noir",
+          "Chardonnay"
         ],
         "expected_causal_links": [],
         "expected_reasoning_type": "theory_foundation"
       },
       "source_content": {
         "options": {
-          "A": "Verdadero",
-          "B": "Falso",
-          "C": "",
-          "D": ""
+          "A": "La legislación borgoñona permite el uso de variedades híbridas.",
+          "B": "Los vinos tintos de la Borgoña se elaboran principalmente con Pinot Noir.",
+          "C": "El Chardonnay es la variedad blanca dominante en la Borgoña.",
+          "D": "Los Grand Cru representan los viñedos de mayor clasificación en la Borgoña."
         },
-        "correct_answer_letter": "B",
-        "correct_answer_text": "Falso"
+        "correct_answer_letter": "A",
+        "correct_answer_text": "La legislación borgoñona permite el uso de variedades híbridas."
       },
       "status": {
         "review_state": "unreviewed",
@@ -34557,7 +34643,7 @@
       "master_item_id": "wset3_775",
       "source_question_id": "775",
       "question_type": "single_best_answer",
-      "stem": "La orientación este-oeste del viñedo maximiza la exposición solar. (Verdadero/Falso)",
+      "stem": "¿Cuál de las siguientes afirmaciones sobre la orientación del viñedo es INCORRECTA?",
       "curriculum": {
         "ra": "RA1",
         "topic": "RA1",
@@ -34566,20 +34652,23 @@
           "RA1"
         ],
         "expected_keywords": [
-          "Falso"
+          "orientación",
+          "exposición solar",
+          "hemisferio norte",
+          "maduración"
         ],
         "expected_causal_links": [],
         "expected_reasoning_type": "theory_foundation"
       },
       "source_content": {
         "options": {
-          "A": "Verdadero",
-          "B": "Falso",
-          "C": "",
-          "D": ""
+          "A": "La orientación este-oeste del viñedo maximiza la exposición solar.",
+          "B": "La orientación norte-sur favorece una exposición solar más uniforme durante el día.",
+          "C": "En el hemisferio norte, las laderas orientadas al sur reciben más horas de sol directo.",
+          "D": "La orientación del viñedo influye en la temperatura media y la maduración de la uva."
         },
-        "correct_answer_letter": "B",
-        "correct_answer_text": "Falso"
+        "correct_answer_letter": "A",
+        "correct_answer_text": "La orientación este-oeste del viñedo maximiza la exposición solar."
       },
       "status": {
         "review_state": "unreviewed",
@@ -34618,7 +34707,7 @@
       "master_item_id": "wset3_776",
       "source_question_id": "776",
       "question_type": "single_best_answer",
-      "stem": "El battonage es una técnica usada en tintos para estabilizar el color. (Verdadero/Falso)",
+      "stem": "¿Cuál de las siguientes afirmaciones sobre el batonnage es INCORRECTA?",
       "curriculum": {
         "ra": "RA1",
         "topic": "RA1",
@@ -34627,20 +34716,23 @@
           "RA1"
         ],
         "expected_keywords": [
-          "Falso"
+          "batonnage",
+          "lías",
+          "vinos blancos",
+          "complejidad"
         ],
         "expected_causal_links": [],
         "expected_reasoning_type": "theory_foundation"
       },
       "source_content": {
         "options": {
-          "A": "Verdadero",
-          "B": "Falso",
-          "C": "",
-          "D": ""
+          "A": "El batonnage se utiliza principalmente en tintos para estabilizar el color.",
+          "B": "El batonnage consiste en remover las lías finas en contacto con el vino.",
+          "C": "Esta técnica se usa principalmente en vinos blancos para añadir cuerpo y complejidad.",
+          "D": "El batonnage puede aportar notas cremosas y de pan tostado al vino."
         },
-        "correct_answer_letter": "B",
-        "correct_answer_text": "Falso"
+        "correct_answer_letter": "A",
+        "correct_answer_text": "El batonnage se utiliza principalmente en tintos para estabilizar el color."
       },
       "status": {
         "review_state": "unreviewed",
@@ -34679,7 +34771,7 @@
       "master_item_id": "wset3_777",
       "source_question_id": "777",
       "question_type": "single_best_answer",
-      "stem": "El clima mediterráneo presenta alto riesgo de enfermedades fúngicas. (Verdadero/Falso)",
+      "stem": "¿Cuál de las siguientes afirmaciones sobre el clima mediterráneo es INCORRECTA?",
       "curriculum": {
         "ra": "RA1",
         "topic": "RA1",
@@ -34688,20 +34780,23 @@
           "RA1"
         ],
         "expected_keywords": [
-          "Falso"
+          "clima mediterráneo",
+          "enfermedades fúngicas",
+          "veranos secos",
+          "precipitaciones"
         ],
         "expected_causal_links": [],
         "expected_reasoning_type": "theory_foundation"
       },
       "source_content": {
         "options": {
-          "A": "Verdadero",
-          "B": "Falso",
-          "C": "",
-          "D": ""
+          "A": "El clima mediterráneo presenta alto riesgo de enfermedades fúngicas.",
+          "B": "El clima mediterráneo se caracteriza por veranos cálidos y secos.",
+          "C": "Las precipitaciones en climas mediterráneos se concentran principalmente en invierno.",
+          "D": "La sequía estival reduce el riesgo de enfermedades fúngicas en el viñedo."
         },
-        "correct_answer_letter": "B",
-        "correct_answer_text": "Falso"
+        "correct_answer_letter": "A",
+        "correct_answer_text": "El clima mediterráneo presenta alto riesgo de enfermedades fúngicas."
       },
       "status": {
         "review_state": "unreviewed",
@@ -34740,7 +34835,7 @@
       "master_item_id": "wset3_778",
       "source_question_id": "778",
       "question_type": "single_best_answer",
-      "stem": "La fermentación maloláctica aumenta la acidez del vino. (Verdadero/Falso)",
+      "stem": "¿Cuál de las siguientes afirmaciones sobre la fermentación maloláctica es INCORRECTA?",
       "curriculum": {
         "ra": "RA1",
         "topic": "RA1",
@@ -34749,20 +34844,23 @@
           "RA1"
         ],
         "expected_keywords": [
-          "Falso"
+          "fermentación maloláctica",
+          "FML",
+          "acidez",
+          "ácido láctico"
         ],
         "expected_causal_links": [],
         "expected_reasoning_type": "theory_foundation"
       },
       "source_content": {
         "options": {
-          "A": "Verdadero",
-          "B": "Falso",
-          "C": "",
-          "D": ""
+          "A": "La fermentación maloláctica aumenta la acidez total del vino.",
+          "B": "La FML convierte el ácido málico en ácido láctico.",
+          "C": "La FML reduce la acidez y aporta una textura más suave al vino.",
+          "D": "La FML es habitual en la elaboración de vinos tintos con crianza."
         },
-        "correct_answer_letter": "B",
-        "correct_answer_text": "Falso"
+        "correct_answer_letter": "A",
+        "correct_answer_text": "La fermentación maloláctica aumenta la acidez total del vino."
       },
       "status": {
         "review_state": "unreviewed",
@@ -34801,7 +34899,7 @@
       "master_item_id": "wset3_779",
       "source_question_id": "779",
       "question_type": "single_best_answer",
-      "stem": "La arcilla proporciona un drenaje excelente en suelos de viñedo. (Verdadero/Falso)",
+      "stem": "¿Cuál de las siguientes afirmaciones sobre los suelos arcillosos en viticultura es INCORRECTA?",
       "curriculum": {
         "ra": "RA1",
         "topic": "RA1",
@@ -34810,20 +34908,23 @@
           "RA1"
         ],
         "expected_keywords": [
-          "Falso"
+          "suelos arcillosos",
+          "drenaje",
+          "retención hídrica",
+          "temperatura"
         ],
         "expected_causal_links": [],
         "expected_reasoning_type": "theory_foundation"
       },
       "source_content": {
         "options": {
-          "A": "Verdadero",
-          "B": "Falso",
-          "C": "",
-          "D": ""
+          "A": "Los suelos arcillosos proporcionan un drenaje excelente.",
+          "B": "Los suelos arcillosos retienen bien la humedad y los nutrientes.",
+          "C": "La arcilla puede endurecerse en condiciones secas, dificultando el desarrollo radicular.",
+          "D": "Los suelos con alta proporción de arcilla tienden a calentarse más lentamente."
         },
-        "correct_answer_letter": "B",
-        "correct_answer_text": "Falso"
+        "correct_answer_letter": "A",
+        "correct_answer_text": "Los suelos arcillosos proporcionan un drenaje excelente."
       },
       "status": {
         "review_state": "unreviewed",
@@ -34862,7 +34963,7 @@
       "master_item_id": "wset3_780",
       "source_question_id": "780",
       "question_type": "single_best_answer",
-      "stem": "El trasiego se utiliza para promover la oxidación del vino. (Verdadero/Falso)",
+      "stem": "¿Cuál de las siguientes afirmaciones sobre el trasiego es INCORRECTA?",
       "curriculum": {
         "ra": "RA1",
         "topic": "RA1",
@@ -34871,20 +34972,23 @@
           "RA1"
         ],
         "expected_keywords": [
-          "Falso"
+          "trasiego",
+          "sedimentos",
+          "clarificación",
+          "crianza"
         ],
         "expected_causal_links": [],
         "expected_reasoning_type": "theory_foundation"
       },
       "source_content": {
         "options": {
-          "A": "Verdadero",
-          "B": "Falso",
-          "C": "",
-          "D": ""
+          "A": "El trasiego se realiza principalmente para promover la oxidación del vino.",
+          "B": "El trasiego consiste en trasladar el vino a otro recipiente para separarlo de los sedimentos.",
+          "C": "El trasiego puede realizarse para airear ligeramente el vino durante la crianza.",
+          "D": "Esta técnica ayuda a clarificar el vino al eliminar restos sólidos."
         },
-        "correct_answer_letter": "B",
-        "correct_answer_text": "Falso"
+        "correct_answer_letter": "A",
+        "correct_answer_text": "El trasiego se realiza principalmente para promover la oxidación del vino."
       },
       "status": {
         "review_state": "unreviewed",
@@ -34923,7 +35027,7 @@
       "master_item_id": "wset3_781",
       "source_question_id": "781",
       "question_type": "single_best_answer",
-      "stem": "La altitud incrementa la acumulación de azúcar en la uva. (Verdadero/Falso)",
+      "stem": "¿Cuál de las siguientes afirmaciones sobre el efecto de la altitud en los viñedos es INCORRECTA?",
       "curriculum": {
         "ra": "RA1",
         "topic": "RA1",
@@ -34932,20 +35036,23 @@
           "RA1"
         ],
         "expected_keywords": [
-          "Falso"
+          "altitud",
+          "azúcar",
+          "amplitud térmica",
+          "acidez"
         ],
         "expected_causal_links": [],
         "expected_reasoning_type": "theory_foundation"
       },
       "source_content": {
         "options": {
-          "A": "Verdadero",
-          "B": "Falso",
-          "C": "",
-          "D": ""
+          "A": "La altitud incrementa la acumulación de azúcar en la uva.",
+          "B": "La altitud eleva la amplitud térmica entre temperaturas diurnas y nocturnas.",
+          "C": "A mayor altitud, la menor temperatura ralentiza la maduración y preserva la acidez.",
+          "D": "La altitud puede reducir la presión atmosférica, afectando la maduración."
         },
-        "correct_answer_letter": "B",
-        "correct_answer_text": "Falso"
+        "correct_answer_letter": "A",
+        "correct_answer_text": "La altitud incrementa la acumulación de azúcar en la uva."
       },
       "status": {
         "review_state": "unreviewed",
@@ -34984,7 +35091,7 @@
       "master_item_id": "wset3_782",
       "source_question_id": "782",
       "question_type": "single_best_answer",
-      "stem": "La altitud generalmente disminuye la acidez de las uvas.",
+      "stem": "¿Cuál de las siguientes afirmaciones sobre altitud y acidez en viticultura es INCORRECTA?",
       "curriculum": {
         "ra": "RA1",
         "topic": "RA1",
@@ -34993,20 +35100,23 @@
           "RA1"
         ],
         "expected_keywords": [
-          "Falso"
+          "altitud",
+          "acidez",
+          "temperatura",
+          "preservación"
         ],
         "expected_causal_links": [],
         "expected_reasoning_type": "theory_foundation"
       },
       "source_content": {
         "options": {
-          "A": "Verdadero",
-          "B": "Falso",
-          "C": "",
-          "D": ""
+          "A": "La altitud generalmente disminuye la acidez natural de las uvas.",
+          "B": "Las temperaturas más frescas en altitud ralentizan la pérdida de ácidos.",
+          "C": "Los viñedos en altitud suelen producir vinos con mayor acidez que los de llanura.",
+          "D": "La gran amplitud térmica en altitud contribuye a preservar la acidez en la uva."
         },
-        "correct_answer_letter": "B",
-        "correct_answer_text": "Falso"
+        "correct_answer_letter": "A",
+        "correct_answer_text": "La altitud generalmente disminuye la acidez natural de las uvas."
       },
       "status": {
         "review_state": "unreviewed",
@@ -35045,7 +35155,7 @@
       "master_item_id": "wset3_783",
       "source_question_id": "783",
       "question_type": "single_best_answer",
-      "stem": "La botrytis cinerea siempre arruina la cosecha.",
+      "stem": "¿Cuál de las siguientes afirmaciones sobre la Botrytis cinerea es INCORRECTA?",
       "curriculum": {
         "ra": "RA1",
         "topic": "RA1",
@@ -35054,20 +35164,23 @@
           "RA1"
         ],
         "expected_keywords": [
-          "Falso"
+          "botrytis",
+          "podredumbre noble",
+          "Sauternes",
+          "Tokaji"
         ],
         "expected_causal_links": [],
         "expected_reasoning_type": "theory_foundation"
       },
       "source_content": {
         "options": {
-          "A": "Verdadero",
-          "B": "Falso",
-          "C": "",
-          "D": ""
+          "A": "La Botrytis cinerea siempre arruina la cosecha y no puede aprovecharse positivamente.",
+          "B": "En condiciones húmedas sin alternancia seca puede manifestarse como podredumbre gris.",
+          "C": "En condiciones de alternancia húmedo-seco puede producirse podredumbre noble.",
+          "D": "Vinos como Sauternes y Tokaji se elaboran a partir de uvas con podredumbre noble."
         },
-        "correct_answer_letter": "B",
-        "correct_answer_text": "Falso"
+        "correct_answer_letter": "A",
+        "correct_answer_text": "La Botrytis cinerea siempre arruina la cosecha y no puede aprovecharse positivamente."
       },
       "status": {
         "review_state": "unreviewed",
@@ -35106,7 +35219,7 @@
       "master_item_id": "wset3_784",
       "source_question_id": "784",
       "question_type": "single_best_answer",
-      "stem": "El clima cálido de Marlborough limita el desarrollo de la acidez en el Sauvignon Blanc.",
+      "stem": "¿Cuál de las siguientes afirmaciones sobre el Sauvignon Blanc de Marlborough es INCORRECTA?",
       "curriculum": {
         "ra": "RA2",
         "topic": "RA2",
@@ -35115,20 +35228,23 @@
           "RA2"
         ],
         "expected_keywords": [
-          "Falso"
+          "Marlborough",
+          "Sauvignon Blanc",
+          "acidez",
+          "Nueva Zelanda"
         ],
         "expected_causal_links": [],
         "expected_reasoning_type": "theory_foundation"
       },
       "source_content": {
         "options": {
-          "A": "Verdadero",
-          "B": "Falso",
-          "C": "",
-          "D": ""
+          "A": "El clima cálido de Marlborough limita el desarrollo de la acidez en el Sauvignon Blanc.",
+          "B": "Marlborough es conocido por producir Sauvignon Blanc de alta acidez y aromas intensos.",
+          "C": "Las notas de maracuyá, hierba y grosella son características del Sauvignon Blanc de Marlborough.",
+          "D": "Las noches frescas de Marlborough contribuyen a preservar la acidez del vino."
         },
-        "correct_answer_letter": "B",
-        "correct_answer_text": "Falso"
+        "correct_answer_letter": "A",
+        "correct_answer_text": "El clima cálido de Marlborough limita el desarrollo de la acidez en el Sauvignon Blanc."
       },
       "status": {
         "review_state": "unreviewed",
@@ -35167,7 +35283,7 @@
       "master_item_id": "wset3_785",
       "source_question_id": "785",
       "question_type": "single_best_answer",
-      "stem": "Los fertilizantes orgánicos no tienen efecto sobre el crecimiento vegetativo.",
+      "stem": "¿Cuál de las siguientes afirmaciones sobre los fertilizantes orgánicos en viticultura es INCORRECTA?",
       "curriculum": {
         "ra": "RA1",
         "topic": "RA1",
@@ -35176,20 +35292,23 @@
           "RA1"
         ],
         "expected_keywords": [
-          "Falso"
+          "fertilizantes orgánicos",
+          "crecimiento vegetativo",
+          "suelo",
+          "viticultura ecológica"
         ],
         "expected_causal_links": [],
         "expected_reasoning_type": "theory_foundation"
       },
       "source_content": {
         "options": {
-          "A": "Verdadero",
-          "B": "Falso",
-          "C": "",
-          "D": ""
+          "A": "Los fertilizantes orgánicos no tienen ningún efecto sobre el crecimiento vegetativo de la vid.",
+          "B": "Los fertilizantes orgánicos mejoran la estructura del suelo y la actividad microbiana.",
+          "C": "Un exceso de fertilización puede estimular el crecimiento vegetativo en detrimento de la fruta.",
+          "D": "La viticultura ecológica regula el uso de fertilizantes de origen sintético."
         },
-        "correct_answer_letter": "B",
-        "correct_answer_text": "Falso"
+        "correct_answer_letter": "A",
+        "correct_answer_text": "Los fertilizantes orgánicos no tienen ningún efecto sobre el crecimiento vegetativo de la vid."
       },
       "status": {
         "review_state": "approved_private_sba",
@@ -35229,7 +35348,7 @@
       "master_item_id": "wset3_786",
       "source_question_id": "786",
       "question_type": "single_best_answer",
-      "stem": "La orientación norte en el hemisferio norte favorece la maduración.",
+      "stem": "¿Cuál de las siguientes afirmaciones sobre la orientación del viñedo en el hemisferio norte es INCORRECTA?",
       "curriculum": {
         "ra": "RA1",
         "topic": "RA1",
@@ -35238,20 +35357,23 @@
           "RA1"
         ],
         "expected_keywords": [
-          "Falso"
+          "orientación norte",
+          "hemisferio norte",
+          "exposición sur",
+          "maduración"
         ],
         "expected_causal_links": [],
         "expected_reasoning_type": "theory_foundation"
       },
       "source_content": {
         "options": {
-          "A": "Verdadero",
-          "B": "Falso",
-          "C": "",
-          "D": ""
+          "A": "La orientación norte favorece la maduración de la uva en el hemisferio norte.",
+          "B": "Las laderas orientadas al sur reciben más horas de sol directo en el hemisferio norte.",
+          "C": "La exposición sur maximiza la insolación y favorece la maduración en climas fríos.",
+          "D": "La orientación del viñedo es especialmente relevante en regiones marginales o frescas."
         },
-        "correct_answer_letter": "B",
-        "correct_answer_text": "Falso"
+        "correct_answer_letter": "A",
+        "correct_answer_text": "La orientación norte favorece la maduración de la uva en el hemisferio norte."
       },
       "status": {
         "review_state": "unreviewed",
@@ -35290,7 +35412,7 @@
       "master_item_id": "wset3_787",
       "source_question_id": "787",
       "question_type": "single_best_answer",
-      "stem": "Las levaduras indígenas suelen generar fermentaciones más controladas.",
+      "stem": "¿Cuál de las siguientes afirmaciones sobre las levaduras indígenas es INCORRECTA?",
       "curriculum": {
         "ra": "RA1",
         "topic": "RA1",
@@ -35299,20 +35421,23 @@
           "RA1"
         ],
         "expected_keywords": [
-          "Falso"
+          "levaduras indígenas",
+          "fermentación",
+          "terroir",
+          "levaduras seleccionadas"
         ],
         "expected_causal_links": [],
         "expected_reasoning_type": "theory_foundation"
       },
       "source_content": {
         "options": {
-          "A": "Verdadero",
-          "B": "Falso",
-          "C": "",
-          "D": ""
+          "A": "Las levaduras indígenas suelen generar fermentaciones más controladas y predecibles.",
+          "B": "Las levaduras indígenas pueden aportar mayor complejidad y carácter terroir al vino.",
+          "C": "Las fermentaciones con levaduras indígenas pueden ser más lentas e impredecibles.",
+          "D": "Las levaduras seleccionadas ofrecen mayor control sobre la velocidad y resultado de la fermentación."
         },
-        "correct_answer_letter": "B",
-        "correct_answer_text": "Falso"
+        "correct_answer_letter": "A",
+        "correct_answer_text": "Las levaduras indígenas suelen generar fermentaciones más controladas y predecibles."
       },
       "status": {
         "review_state": "unreviewed",
@@ -35351,7 +35476,7 @@
       "master_item_id": "wset3_788",
       "source_question_id": "788",
       "question_type": "single_best_answer",
-      "stem": "Un mayor rendimiento por hectárea siempre resulta en vinos de menor calidad. (Verdadero/Falso)",
+      "stem": "¿Cuál de las siguientes afirmaciones sobre el rendimiento vitícola es INCORRECTA?",
       "curriculum": {
         "ra": "RA1",
         "topic": "RA1",
@@ -35360,20 +35485,23 @@
           "RA1"
         ],
         "expected_keywords": [
-          "Falso"
+          "rendimiento",
+          "calidad",
+          "concentración",
+          "denominación de origen"
         ],
         "expected_causal_links": [],
         "expected_reasoning_type": "theory_foundation"
       },
       "source_content": {
         "options": {
-          "A": "Verdadero",
-          "B": "Falso",
-          "C": "",
-          "D": ""
+          "A": "Un mayor rendimiento por hectárea siempre resulta en vinos de menor calidad.",
+          "B": "En general, limitar el rendimiento concentra los sabores en las bayas.",
+          "C": "Algunas variedades y regiones pueden producir vinos de calidad con rendimientos moderados.",
+          "D": "Las denominaciones de origen suelen establecer rendimientos máximos por hectárea."
         },
-        "correct_answer_letter": "B",
-        "correct_answer_text": "Falso"
+        "correct_answer_letter": "A",
+        "correct_answer_text": "Un mayor rendimiento por hectárea siempre resulta en vinos de menor calidad."
       },
       "status": {
         "review_state": "unreviewed",
@@ -35412,7 +35540,7 @@
       "master_item_id": "wset3_789",
       "source_question_id": "789",
       "question_type": "single_best_answer",
-      "stem": "El uso de barricas nuevas es obligatorio para la producción de vinos premium. (Verdadero/Falso)",
+      "stem": "¿Cuál de las siguientes afirmaciones sobre el uso de barricas nuevas es INCORRECTA?",
       "curriculum": {
         "ra": "RA1",
         "topic": "RA1",
@@ -35421,20 +35549,23 @@
           "RA1"
         ],
         "expected_keywords": [
-          "Falso"
+          "barricas nuevas",
+          "premium",
+          "vainilla",
+          "taninos"
         ],
         "expected_causal_links": [],
         "expected_reasoning_type": "theory_foundation"
       },
       "source_content": {
         "options": {
-          "A": "Verdadero",
-          "B": "Falso",
-          "C": "",
-          "D": ""
+          "A": "El uso de barricas nuevas es obligatorio para producir vinos de categoría premium.",
+          "B": "Las barricas nuevas aportan taninos y aromas de vainilla, cedro y tostado.",
+          "C": "Muchos productores de calidad optan por barricas usadas para preservar la fruta.",
+          "D": "La proporción de barrica nueva depende del estilo del productor y la variedad."
         },
-        "correct_answer_letter": "B",
-        "correct_answer_text": "Falso"
+        "correct_answer_letter": "A",
+        "correct_answer_text": "El uso de barricas nuevas es obligatorio para producir vinos de categoría premium."
       },
       "status": {
         "review_state": "unreviewed",
@@ -35473,7 +35604,7 @@
       "master_item_id": "wset3_790",
       "source_question_id": "790",
       "question_type": "single_best_answer",
-      "stem": "Los vinos elaborados en regiones de clima fresco tienden a mostrar menor acidez. (Verdadero/Falso)",
+      "stem": "¿Cuál de las siguientes afirmaciones sobre los vinos de clima fresco es INCORRECTA?",
       "curriculum": {
         "ra": "RA1",
         "topic": "RA1",
@@ -35482,20 +35613,23 @@
           "RA1"
         ],
         "expected_keywords": [
-          "Falso"
+          "clima fresco",
+          "acidez",
+          "clima cálido",
+          "grado alcohólico"
         ],
         "expected_causal_links": [],
         "expected_reasoning_type": "theory_foundation"
       },
       "source_content": {
         "options": {
-          "A": "Verdadero",
-          "B": "Falso",
-          "C": "",
-          "D": ""
+          "A": "Los vinos de clima fresco tienden a mostrar menor acidez que los de clima cálido.",
+          "B": "Los climas frescos favorecen la retención de acidez natural en la uva.",
+          "C": "Las regiones frescas suelen producir vinos con mayor acidez y menor grado alcohólico.",
+          "D": "El Riesling del Mosel y el Chablis son ejemplos de vinos de alta acidez en climas frescos."
         },
-        "correct_answer_letter": "B",
-        "correct_answer_text": "Falso"
+        "correct_answer_letter": "A",
+        "correct_answer_text": "Los vinos de clima fresco tienden a mostrar menor acidez que los de clima cálido."
       },
       "status": {
         "review_state": "unreviewed",
@@ -35534,7 +35668,7 @@
       "master_item_id": "wset3_791",
       "source_question_id": "791",
       "question_type": "single_best_answer",
-      "stem": "El estrés hídrico severo mejora la calidad del vino.",
+      "stem": "¿Cuál de las siguientes afirmaciones sobre el estrés hídrico en la vid es INCORRECTA?",
       "curriculum": {
         "ra": "RA1",
         "topic": "RA1",
@@ -35543,20 +35677,23 @@
           "RA1"
         ],
         "expected_keywords": [
-          "Falso"
+          "estrés hídrico",
+          "calidad",
+          "maduración",
+          "riego controlado"
         ],
         "expected_causal_links": [],
         "expected_reasoning_type": "theory_foundation"
       },
       "source_content": {
         "options": {
-          "A": "Verdadero",
-          "B": "Falso",
-          "C": "",
-          "D": ""
+          "A": "El estrés hídrico severo mejora la calidad del vino en todas las circunstancias.",
+          "B": "Un estrés hídrico moderado puede concentrar los compuestos de la baya.",
+          "C": "El estrés hídrico severo puede detener la maduración y dañar la calidad de la uva.",
+          "D": "El riego controlado busca mantener un nivel de estrés hídrico moderado y favorable."
         },
-        "correct_answer_letter": "B",
-        "correct_answer_text": "Falso"
+        "correct_answer_letter": "A",
+        "correct_answer_text": "El estrés hídrico severo mejora la calidad del vino en todas las circunstancias."
       },
       "status": {
         "review_state": "unreviewed",
@@ -35595,7 +35732,7 @@
       "master_item_id": "wset3_792",
       "source_question_id": "792",
       "question_type": "single_best_answer",
-      "stem": "El clima marítimo se caracteriza por inviernos secos y calurosos.",
+      "stem": "¿Cuál de las siguientes afirmaciones sobre el clima marítimo es INCORRECTA?",
       "curriculum": {
         "ra": "RA1",
         "topic": "RA1",
@@ -35604,20 +35741,23 @@
           "RA1"
         ],
         "expected_keywords": [
-          "Falso"
+          "clima marítimo",
+          "inviernos",
+          "temperatura",
+          "influencia oceánica"
         ],
         "expected_causal_links": [],
         "expected_reasoning_type": "theory_foundation"
       },
       "source_content": {
         "options": {
-          "A": "Verdadero",
-          "B": "Falso",
-          "C": "",
-          "D": ""
+          "A": "El clima marítimo se caracteriza por inviernos secos y calurosos.",
+          "B": "El clima marítimo está moderado por la proximidad al mar, con temperaturas suaves.",
+          "C": "Los inviernos en climas marítimos suelen ser frescos y húmedos.",
+          "D": "La influencia oceánica reduce la amplitud térmica entre estaciones."
         },
-        "correct_answer_letter": "B",
-        "correct_answer_text": "Falso"
+        "correct_answer_letter": "A",
+        "correct_answer_text": "El clima marítimo se caracteriza por inviernos secos y calurosos."
       },
       "status": {
         "review_state": "unreviewed",
@@ -35656,7 +35796,7 @@
       "master_item_id": "wset3_793",
       "source_question_id": "793",
       "question_type": "single_best_answer",
-      "stem": "El uso de fertilizantes orgánicos está restringido en viticultura ecológica.",
+      "stem": "¿Cuál de las siguientes afirmaciones sobre la viticultura ecológica es INCORRECTA?",
       "curriculum": {
         "ra": "RA1",
         "topic": "RA1",
@@ -35665,20 +35805,23 @@
           "RA1"
         ],
         "expected_keywords": [
-          "Falso"
+          "viticultura ecológica",
+          "fertilizantes orgánicos",
+          "pesticidas sintéticos",
+          "certificación"
         ],
         "expected_causal_links": [],
         "expected_reasoning_type": "theory_foundation"
       },
       "source_content": {
         "options": {
-          "A": "Verdadero",
-          "B": "Falso",
-          "C": "",
-          "D": ""
+          "A": "La viticultura ecológica restringe el uso de fertilizantes orgánicos.",
+          "B": "La viticultura ecológica prohíbe el uso de pesticidas y herbicidas sintéticos.",
+          "C": "Los fertilizantes orgánicos y el compost son compatibles con la viticultura ecológica.",
+          "D": "La certificación ecológica requiere la ausencia de insumos sintéticos en el viñedo."
         },
-        "correct_answer_letter": "B",
-        "correct_answer_text": "Falso"
+        "correct_answer_letter": "A",
+        "correct_answer_text": "La viticultura ecológica restringe el uso de fertilizantes orgánicos."
       },
       "status": {
         "review_state": "unreviewed",
@@ -35717,7 +35860,7 @@
       "master_item_id": "wset3_794",
       "source_question_id": "794",
       "question_type": "single_best_answer",
-      "stem": "El riego por goteo está prohibido en todas las regiones vinícolas europeas.",
+      "stem": "¿Cuál de las siguientes afirmaciones sobre el riego en viticultura europea es INCORRECTA?",
       "curriculum": {
         "ra": "RA1",
         "topic": "RA1",
@@ -35726,20 +35869,23 @@
           "RA1"
         ],
         "expected_keywords": [
-          "Falso"
+          "riego",
+          "Europa",
+          "denominaciones",
+          "España"
         ],
         "expected_causal_links": [],
         "expected_reasoning_type": "theory_foundation"
       },
       "source_content": {
         "options": {
-          "A": "Verdadero",
-          "B": "Falso",
-          "C": "",
-          "D": ""
+          "A": "El riego por goteo está prohibido en todas las regiones vinícolas europeas.",
+          "B": "Algunas denominaciones europeas permiten el riego bajo condiciones específicas.",
+          "C": "El riego está más regulado en Europa que en regiones como Chile o Australia.",
+          "D": "En zonas áridas de España, el riego puede estar autorizado por la normativa vigente."
         },
-        "correct_answer_letter": "B",
-        "correct_answer_text": "Falso"
+        "correct_answer_letter": "A",
+        "correct_answer_text": "El riego por goteo está prohibido en todas las regiones vinícolas europeas."
       },
       "status": {
         "review_state": "unreviewed",
@@ -35777,8 +35923,8 @@
     {
       "master_item_id": "wset3_795",
       "source_question_id": "795",
-      "question_type": "single_best_answer",
-      "stem": "Emparejar: Área con suelos volcánicos ricos en hierro",
+      "question_type": "open_response",
+      "stem": "Identifica una región vinícola conocida por sus suelos volcánicos y explica cómo pueden influir en el estilo del vino.",
       "curriculum": {
         "ra": "RA2",
         "topic": "RA2",
@@ -35787,31 +35933,28 @@
           "RA2"
         ],
         "expected_keywords": [
-          "Etna"
+          "Etna",
+          "suelos volcánicos",
+          "mineralidad",
+          "acidez"
         ],
         "expected_causal_links": [],
         "expected_reasoning_type": "theory_foundation"
       },
       "source_content": {
-        "options": {
-          "A": "Etna",
-          "B": "",
-          "C": "",
-          "D": ""
-        },
-        "correct_answer_letter": "A",
-        "correct_answer_text": "Etna"
+        "options": {},
+        "correct_answer_letter": null,
+        "correct_answer_text": null
       },
       "status": {
-        "review_state": "unreviewed",
+        "review_state": "approved_open_response",
         "activation_status": "inactive",
         "gold": false,
         "public_lab": false
       },
       "collections": [
-        "single_best_answer",
-        "inactive",
-        "needs_review"
+        "open_response",
+        "inactive"
       ],
       "lineage": {
         "structured_source": "knowledge/question-bank/structured/wset3_questions.json",
@@ -35821,7 +35964,9 @@
         "open_response_candidate_id": null,
         "open_response_review_id": null,
         "gold_review_id": null,
-        "public_lab_item_id": null
+        "public_lab_item_id": null,
+        "resolution_artifact": "knowledge/question-bank/reviews/master_bank_review_inactive_resolution.json",
+        "resolution_id": "phase_y0_remediation_b_795"
       },
       "governance": {
         "safe_for_examiner": false,
@@ -35838,8 +35983,8 @@
     {
       "master_item_id": "wset3_796",
       "source_question_id": "796",
-      "question_type": "single_best_answer",
-      "stem": "Emparejar: Área argentina de mayor altitud",
+      "question_type": "open_response",
+      "stem": "Identifica la región argentina conocida por sus viñedos de mayor altitud y describe las condiciones climáticas que los caracterizan.",
       "curriculum": {
         "ra": "RA2",
         "topic": "RA2",
@@ -35848,31 +35993,28 @@
           "RA2"
         ],
         "expected_keywords": [
-          "Salta"
+          "Salta",
+          "altitud",
+          "amplitud térmica",
+          "acidez"
         ],
         "expected_causal_links": [],
         "expected_reasoning_type": "theory_foundation"
       },
       "source_content": {
-        "options": {
-          "A": "Salta",
-          "B": "",
-          "C": "",
-          "D": ""
-        },
-        "correct_answer_letter": "A",
-        "correct_answer_text": "Salta"
+        "options": {},
+        "correct_answer_letter": null,
+        "correct_answer_text": null
       },
       "status": {
-        "review_state": "unreviewed",
+        "review_state": "approved_open_response",
         "activation_status": "inactive",
         "gold": false,
         "public_lab": false
       },
       "collections": [
-        "single_best_answer",
-        "inactive",
-        "needs_review"
+        "open_response",
+        "inactive"
       ],
       "lineage": {
         "structured_source": "knowledge/question-bank/structured/wset3_questions.json",
@@ -35882,7 +36024,9 @@
         "open_response_candidate_id": null,
         "open_response_review_id": null,
         "gold_review_id": null,
-        "public_lab_item_id": null
+        "public_lab_item_id": null,
+        "resolution_artifact": "knowledge/question-bank/reviews/master_bank_review_inactive_resolution.json",
+        "resolution_id": "phase_y0_remediation_b_796"
       },
       "governance": {
         "safe_for_examiner": false,
@@ -35899,8 +36043,8 @@
     {
       "master_item_id": "wset3_797",
       "source_question_id": "797",
-      "question_type": "single_best_answer",
-      "stem": "Emparejar: Productor notable de vinos con botrytis",
+      "question_type": "open_response",
+      "stem": "Nombra dos regiones reconocidas por elaborar vinos afectados por podredumbre noble (Botrytis cinerea) y explica brevemente el proceso.",
       "curriculum": {
         "ra": "RA2",
         "topic": "RA2",
@@ -35909,31 +36053,28 @@
           "RA2"
         ],
         "expected_keywords": [
-          "Tokaj"
+          "Sauternes",
+          "Tokaj",
+          "botrytis",
+          "podredumbre noble"
         ],
         "expected_causal_links": [],
         "expected_reasoning_type": "theory_foundation"
       },
       "source_content": {
-        "options": {
-          "A": "Tokaj",
-          "B": "",
-          "C": "",
-          "D": ""
-        },
-        "correct_answer_letter": "A",
-        "correct_answer_text": "Tokaj"
+        "options": {},
+        "correct_answer_letter": null,
+        "correct_answer_text": null
       },
       "status": {
-        "review_state": "unreviewed",
+        "review_state": "approved_open_response",
         "activation_status": "inactive",
         "gold": false,
         "public_lab": false
       },
       "collections": [
-        "single_best_answer",
-        "inactive",
-        "needs_review"
+        "open_response",
+        "inactive"
       ],
       "lineage": {
         "structured_source": "knowledge/question-bank/structured/wset3_questions.json",
@@ -35943,7 +36084,9 @@
         "open_response_candidate_id": null,
         "open_response_review_id": null,
         "gold_review_id": null,
-        "public_lab_item_id": null
+        "public_lab_item_id": null,
+        "resolution_artifact": "knowledge/question-bank/reviews/master_bank_review_inactive_resolution.json",
+        "resolution_id": "phase_y0_remediation_b_797"
       },
       "governance": {
         "safe_for_examiner": false,

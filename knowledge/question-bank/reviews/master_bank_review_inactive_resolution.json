@@ -3,7 +3,7 @@
   "phase": "4A.3.8.5.7",
   "strategy": "recovery_first",
   "source_review_packet": "knowledge/question-bank/review_packets/master_bank_eligibility_review_packet.json",
-  "record_count": 92,
+  "record_count": 102,
   "initial_counts": {
     "review": 68,
     "inactive": 24
@@ -1995,10 +1995,11 @@
       "resolution_id": "phase_4a_3_8_5_7_746",
       "source_question_id": "746",
       "source_pool": "open_response_review_pool",
-      "destination": "sba_operational",
-      "resolution_reason": "Valid four-option SBA with a traceable answer. Open-response signals are insufficient because the existing metadata does not define a supported free-response answer boundary.",
+      "destination": "open_response_candidate",
+      "resolution_reason": "Valid four-option SBA with a traceable answer. Open-response signals are insufficient because the existing metadata does not define a supported free-response answer boundary. [Updated: Phase Y.0 remediation — matching stub converted to open-response; original sba_operational destination overridden.]",
       "repairs": [
-        "finalized eligibility as private SBA"
+        "finalized eligibility as private SBA",
+        "destination updated to open_response_candidate after OR conversion"
       ],
       "evidence_reviewed": [
         "knowledge/question-bank/structured/wset3_questions.json",
@@ -2501,6 +2502,236 @@
             ]
           }
         ]
+      }
+    },
+    {
+      "resolution_id": "phase_y0_remediation_b_742",
+      "source_question_id": "742",
+      "source_pool": "inactive",
+      "destination": "open_response_candidate",
+      "resolution_reason": "Matching stub (single option only) converted to open-response item during Phase Y.0 structural remediation. Source item was non-functional as SBA.",
+      "repairs": [
+        "converted to short_answer type",
+        "rewrote stem as open-response command",
+        "cleared SBA option residue"
+      ],
+      "evidence_reviewed": [
+        "knowledge/question-bank/structured/wset3_questions.json"
+      ],
+      "prior_review_reason": null,
+      "prior_recommendation": null,
+      "source_overrides": {},
+      "quarantine_analysis": {
+        "required": false,
+        "why_sba_not_possible": "Matching stub with single option — cannot form valid 4-choice SBA",
+        "why_open_response_not_possible": null
+      }
+    },
+    {
+      "resolution_id": "phase_y0_remediation_b_743",
+      "source_question_id": "743",
+      "source_pool": "inactive",
+      "destination": "open_response_candidate",
+      "resolution_reason": "Matching stub (single option only) converted to open-response item during Phase Y.0 structural remediation. Source item was non-functional as SBA.",
+      "repairs": [
+        "converted to short_answer type",
+        "rewrote stem as open-response command",
+        "cleared SBA option residue"
+      ],
+      "evidence_reviewed": [
+        "knowledge/question-bank/structured/wset3_questions.json"
+      ],
+      "prior_review_reason": null,
+      "prior_recommendation": null,
+      "source_overrides": {},
+      "quarantine_analysis": {
+        "required": false,
+        "why_sba_not_possible": "Matching stub with single option — cannot form valid 4-choice SBA",
+        "why_open_response_not_possible": null
+      }
+    },
+    {
+      "resolution_id": "phase_y0_remediation_b_744",
+      "source_question_id": "744",
+      "source_pool": "inactive",
+      "destination": "open_response_candidate",
+      "resolution_reason": "Matching stub (single option only) converted to open-response item during Phase Y.0 structural remediation. Source item was non-functional as SBA.",
+      "repairs": [
+        "converted to short_answer type",
+        "rewrote stem as open-response command",
+        "cleared SBA option residue"
+      ],
+      "evidence_reviewed": [
+        "knowledge/question-bank/structured/wset3_questions.json"
+      ],
+      "prior_review_reason": null,
+      "prior_recommendation": null,
+      "source_overrides": {},
+      "quarantine_analysis": {
+        "required": false,
+        "why_sba_not_possible": "Matching stub with single option — cannot form valid 4-choice SBA",
+        "why_open_response_not_possible": null
+      }
+    },
+    {
+      "resolution_id": "phase_y0_remediation_b_745",
+      "source_question_id": "745",
+      "source_pool": "inactive",
+      "destination": "open_response_candidate",
+      "resolution_reason": "Matching stub (single option only) converted to open-response item during Phase Y.0 structural remediation. Source item was non-functional as SBA.",
+      "repairs": [
+        "converted to short_answer type",
+        "rewrote stem as open-response command",
+        "cleared SBA option residue"
+      ],
+      "evidence_reviewed": [
+        "knowledge/question-bank/structured/wset3_questions.json"
+      ],
+      "prior_review_reason": null,
+      "prior_recommendation": null,
+      "source_overrides": {},
+      "quarantine_analysis": {
+        "required": false,
+        "why_sba_not_possible": "Matching stub with single option — cannot form valid 4-choice SBA",
+        "why_open_response_not_possible": null
+      }
+    },
+    {
+      "resolution_id": "phase_y0_remediation_b_747",
+      "source_question_id": "747",
+      "source_pool": "inactive",
+      "destination": "open_response_candidate",
+      "resolution_reason": "Matching stub (single option only) converted to open-response item during Phase Y.0 structural remediation. Source item was non-functional as SBA.",
+      "repairs": [
+        "converted to short_answer type",
+        "rewrote stem as open-response command",
+        "cleared SBA option residue"
+      ],
+      "evidence_reviewed": [
+        "knowledge/question-bank/structured/wset3_questions.json"
+      ],
+      "prior_review_reason": null,
+      "prior_recommendation": null,
+      "source_overrides": {},
+      "quarantine_analysis": {
+        "required": false,
+        "why_sba_not_possible": "Matching stub with single option — cannot form valid 4-choice SBA",
+        "why_open_response_not_possible": null
+      }
+    },
+    {
+      "resolution_id": "phase_y0_remediation_b_748",
+      "source_question_id": "748",
+      "source_pool": "inactive",
+      "destination": "open_response_candidate",
+      "resolution_reason": "Matching stub (single option only) converted to open-response item during Phase Y.0 structural remediation. Source item was non-functional as SBA.",
+      "repairs": [
+        "converted to short_answer type",
+        "rewrote stem as open-response command",
+        "cleared SBA option residue"
+      ],
+      "evidence_reviewed": [
+        "knowledge/question-bank/structured/wset3_questions.json"
+      ],
+      "prior_review_reason": null,
+      "prior_recommendation": null,
+      "source_overrides": {},
+      "quarantine_analysis": {
+        "required": false,
+        "why_sba_not_possible": "Matching stub with single option — cannot form valid 4-choice SBA",
+        "why_open_response_not_possible": null
+      }
+    },
+    {
+      "resolution_id": "phase_y0_remediation_b_765",
+      "source_question_id": "765",
+      "source_pool": "inactive",
+      "destination": "open_response_candidate",
+      "resolution_reason": "Matching stub (single option only) converted to open-response item during Phase Y.0 structural remediation. Source item was non-functional as SBA.",
+      "repairs": [
+        "converted to short_answer type",
+        "rewrote stem as open-response command",
+        "cleared SBA option residue"
+      ],
+      "evidence_reviewed": [
+        "knowledge/question-bank/structured/wset3_questions.json"
+      ],
+      "prior_review_reason": null,
+      "prior_recommendation": null,
+      "source_overrides": {},
+      "quarantine_analysis": {
+        "required": false,
+        "why_sba_not_possible": "Matching stub with single option — cannot form valid 4-choice SBA",
+        "why_open_response_not_possible": null
+      }
+    },
+    {
+      "resolution_id": "phase_y0_remediation_b_795",
+      "source_question_id": "795",
+      "source_pool": "inactive",
+      "destination": "open_response_candidate",
+      "resolution_reason": "Matching stub (single option only) converted to open-response item during Phase Y.0 structural remediation. Source item was non-functional as SBA.",
+      "repairs": [
+        "converted to short_answer type",
+        "rewrote stem as open-response command",
+        "cleared SBA option residue"
+      ],
+      "evidence_reviewed": [
+        "knowledge/question-bank/structured/wset3_questions.json"
+      ],
+      "prior_review_reason": null,
+      "prior_recommendation": null,
+      "source_overrides": {},
+      "quarantine_analysis": {
+        "required": false,
+        "why_sba_not_possible": "Matching stub with single option — cannot form valid 4-choice SBA",
+        "why_open_response_not_possible": null
+      }
+    },
+    {
+      "resolution_id": "phase_y0_remediation_b_796",
+      "source_question_id": "796",
+      "source_pool": "inactive",
+      "destination": "open_response_candidate",
+      "resolution_reason": "Matching stub (single option only) converted to open-response item during Phase Y.0 structural remediation. Source item was non-functional as SBA.",
+      "repairs": [
+        "converted to short_answer type",
+        "rewrote stem as open-response command",
+        "cleared SBA option residue"
+      ],
+      "evidence_reviewed": [
+        "knowledge/question-bank/structured/wset3_questions.json"
+      ],
+      "prior_review_reason": null,
+      "prior_recommendation": null,
+      "source_overrides": {},
+      "quarantine_analysis": {
+        "required": false,
+        "why_sba_not_possible": "Matching stub with single option — cannot form valid 4-choice SBA",
+        "why_open_response_not_possible": null
+      }
+    },
+    {
+      "resolution_id": "phase_y0_remediation_b_797",
+      "source_question_id": "797",
+      "source_pool": "inactive",
+      "destination": "open_response_candidate",
+      "resolution_reason": "Matching stub (single option only) converted to open-response item during Phase Y.0 structural remediation. Source item was non-functional as SBA.",
+      "repairs": [
+        "converted to short_answer type",
+        "rewrote stem as open-response command",
+        "cleared SBA option residue"
+      ],
+      "evidence_reviewed": [
+        "knowledge/question-bank/structured/wset3_questions.json"
+      ],
+      "prior_review_reason": null,
+      "prior_recommendation": null,
+      "source_overrides": {},
+      "quarantine_analysis": {
+        "required": false,
+        "why_sba_not_possible": "Matching stub with single option — cannot form valid 4-choice SBA",
+        "why_open_response_not_possible": null
       }
     }
   ],

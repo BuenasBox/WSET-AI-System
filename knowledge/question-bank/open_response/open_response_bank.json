@@ -1,6 +1,6 @@
 {
   "schema_version": "open_response_bank_v1",
-  "generated_at": "2026-06-06",
+  "generated_at": "2026-06-10T15:01:26Z",
   "phase": "4A.3.8.7",
   "source": "knowledge/question-bank/master_bank/master_bank.json (question_type=open_response, review_state=approved_open_response)",
   "pool_constraints": {
@@ -848,6 +848,396 @@
         "causality_to_reinforce": [
           "CC_SOIL_DRAINAGE_VINE_VIGOUR"
         ]
+      },
+      "wwj_remediation": null,
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "official_wset_question": false,
+        "training_item_only": true
+      }
+    },
+    {
+      "item_id": "OR_021",
+      "source_item_id": "wset3_742",
+      "source_question_id": "742",
+      "question_text": "Identifica la región vinícola australiana reconocida por producir Shiraz especiado y de gran concentración.",
+      "ra_id": "RA2",
+      "topic": "regiones_mundiales",
+      "expected_concepts": [
+        "Barossa Valley",
+        "Shiraz/Syrah",
+        "clima cálido",
+        "gran concentración",
+        "notas especiadas y de fruta madura"
+      ],
+      "causal_chain_target": [],
+      "response_depth_target": "foundational",
+      "feedback_profile": {
+        "FOUNDATIONAL_RESPONSE": "Correcto al identificar Barossa Valley. Añade que su clima cálido produce Shiraz de gran concentración y notas de fruta madura y especias.",
+        "DEVELOPING_RESPONSE": "Buena identificación. Incorpora el vínculo entre el clima cálido continental del Barossa y el perfil del Shiraz para completar la explicación.",
+        "STRONG_RESPONSE": "Respuesta sólida: identifica Barossa Valley, vincula el clima cálido con el estilo del Shiraz y describe sus características de concentración y perfil especiado."
+      },
+      "remediation_path": {
+        "concepts_to_reinforce": [
+          "clima cálido y perfil varietal Shiraz",
+          "regiones vitivinícolas australianas"
+        ],
+        "causality_to_reinforce": []
+      },
+      "wwj_remediation": null,
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "official_wset_question": false,
+        "training_item_only": true
+      }
+    },
+    {
+      "item_id": "OR_022",
+      "source_item_id": "wset3_743",
+      "source_question_id": "743",
+      "question_text": "Describe el sistema de clasificación por crus en viticultura y menciona una región donde se aplica.",
+      "ra_id": "RA2",
+      "topic": "regiones_mundiales",
+      "expected_concepts": [
+        "crus como viñedos clasificados",
+        "clasificación por calidad del terroir",
+        "Borgoña",
+        "Premier Cru / Grand Cru"
+      ],
+      "causal_chain_target": [],
+      "response_depth_target": "foundational",
+      "feedback_profile": {
+        "FOUNDATIONAL_RESPONSE": "Mencionas los crus pero no explicas su significado. Los crus son viñedos clasificados según la calidad del terroir; en la Borgoña se distinguen Premier Cru y Grand Cru.",
+        "DEVELOPING_RESPONSE": "Buen comienzo. Añade que los crus representan una jerarquía de calidad basada en el terroir y que la Borgoña es la región más conocida por este sistema.",
+        "STRONG_RESPONSE": "Respuesta sólida: explica el concepto de cru como viñedo clasificado por calidad de terroir, menciona la Borgoña y distingue los niveles Premier Cru y Grand Cru."
+      },
+      "remediation_path": {
+        "concepts_to_reinforce": [
+          "sistema de clasificación de viñedos Borgoña",
+          "concepto de terroir y cru"
+        ],
+        "causality_to_reinforce": []
+      },
+      "wwj_remediation": null,
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "official_wset_question": false,
+        "training_item_only": true
+      }
+    },
+    {
+      "item_id": "OR_023",
+      "source_item_id": "wset3_744",
+      "source_question_id": "744",
+      "question_text": "Explica qué significa la categoría 'Gran Reserva' en los vinos tintos españoles y menciona una región que la regule.",
+      "ra_id": "RA2",
+      "topic": "regiones_mundiales",
+      "expected_concepts": [
+        "Gran Reserva como categoría de crianza prolongada",
+        "mínimo 5 años totales",
+        "al menos 18 meses en barrica",
+        "Ribera del Duero o Rioja"
+      ],
+      "causal_chain_target": [],
+      "response_depth_target": "foundational",
+      "feedback_profile": {
+        "FOUNDATIONAL_RESPONSE": "Identificas Gran Reserva como categoría de larga crianza, pero necesitas especificar los requisitos mínimos de tiempo y mencionar una denominación.",
+        "DEVELOPING_RESPONSE": "Buen intento. Añade los tiempos mínimos de crianza y menciona Rioja o Ribera del Duero como denominación que aplica esta categoría.",
+        "STRONG_RESPONSE": "Respuesta completa: define Gran Reserva con sus tiempos mínimos de crianza y menciona una región española que regula esta categoría."
+      },
+      "remediation_path": {
+        "concepts_to_reinforce": [
+          "categorías de crianza en España",
+          "requisitos Gran Reserva",
+          "Rioja y Ribera del Duero"
+        ],
+        "causality_to_reinforce": []
+      },
+      "wwj_remediation": null,
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "official_wset_question": false,
+        "training_item_only": true
+      }
+    },
+    {
+      "item_id": "OR_024",
+      "source_item_id": "wset3_745",
+      "source_question_id": "745",
+      "question_text": "Identifica una categoría de vino tinto español que exige un mínimo de 3 años de crianza total y explica brevemente sus requisitos.",
+      "ra_id": "RA2",
+      "topic": "regiones_mundiales",
+      "expected_concepts": [
+        "Rioja Reserva",
+        "mínimo 3 años de crianza total",
+        "al menos 1 año en barrica de roble",
+        "combinación de crianza en madera y botella"
+      ],
+      "causal_chain_target": [],
+      "response_depth_target": "foundational",
+      "feedback_profile": {
+        "FOUNDATIONAL_RESPONSE": "Identificas Reserva pero no detallas los requisitos. Para Rioja Reserva: mínimo 3 años en total, con al menos 1 año en barrica de roble.",
+        "DEVELOPING_RESPONSE": "Buen intento. Especifica que Rioja Reserva requiere al menos 1 año en barrica y el resto en botella, sumando un mínimo de 3 años.",
+        "STRONG_RESPONSE": "Respuesta completa: identifica Rioja Reserva, describe el requisito mínimo de 3 años con al menos 1 año en barrica de roble."
+      },
+      "remediation_path": {
+        "concepts_to_reinforce": [
+          "categorías de crianza Rioja",
+          "requisitos Reserva"
+        ],
+        "causality_to_reinforce": []
+      },
+      "wwj_remediation": null,
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "official_wset_question": false,
+        "training_item_only": true
+      }
+    },
+    {
+      "item_id": "OR_025",
+      "source_item_id": "wset3_746",
+      "source_question_id": "746",
+      "question_text": "Identifica una región vinícola con clima mediterráneo de influencia marítima y explica cómo este clima afecta al estilo de sus vinos.",
+      "ra_id": "RA2",
+      "topic": "regiones_mundiales",
+      "expected_concepts": [
+        "Stellenbosch",
+        "clima mediterráneo",
+        "influencia marítima de la Corriente de Benguela",
+        "veranos cálidos moderados",
+        "vinos con buena estructura y acidez"
+      ],
+      "causal_chain_target": [],
+      "response_depth_target": "foundational",
+      "feedback_profile": {
+        "FOUNDATIONAL_RESPONSE": "Identificas la región pero no explicas el mecanismo climático. En Stellenbosch, la influencia marítima modera los veranos cálidos, preservando acidez y aportando frescura.",
+        "DEVELOPING_RESPONSE": "Buen comienzo. Añade el rol de la corriente marítima en moderar la temperatura y su impacto en la acidez y frescura de los vinos.",
+        "STRONG_RESPONSE": "Respuesta sólida: identifica Stellenbosch, vincula el clima mediterráneo-marítimo con el perfil equilibrado de sus vinos: buena estructura y acidez moderada."
+      },
+      "remediation_path": {
+        "concepts_to_reinforce": [
+          "clima de Sudáfrica/Stellenbosch",
+          "influencia marítima en viticultura"
+        ],
+        "causality_to_reinforce": []
+      },
+      "wwj_remediation": null,
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "official_wset_question": false,
+        "training_item_only": true
+      }
+    },
+    {
+      "item_id": "OR_026",
+      "source_item_id": "wset3_747",
+      "source_question_id": "747",
+      "question_text": "Nombra dos regiones italianas conocidas por producir vinos elaborados con Nebbiolo.",
+      "ra_id": "RA2",
+      "topic": "regiones_mundiales",
+      "expected_concepts": [
+        "Barolo",
+        "Barbaresco",
+        "Piemonte",
+        "Nebbiolo como variedad de alta acidez y taninos firmes"
+      ],
+      "causal_chain_target": [],
+      "response_depth_target": "foundational",
+      "feedback_profile": {
+        "FOUNDATIONAL_RESPONSE": "Solo mencionas una región. Barolo y Barbaresco son las dos denominaciones principales del Piemonte basadas en Nebbiolo.",
+        "DEVELOPING_RESPONSE": "Bien identificadas las dos regiones. Añade que ambas pertenecen al Piemonte y que el Nebbiolo se caracteriza por alta acidez y taninos firmes.",
+        "STRONG_RESPONSE": "Respuesta completa: menciona Barolo y Barbaresco, sitúa ambas en el Piemonte y describe el perfil del Nebbiolo."
+      },
+      "remediation_path": {
+        "concepts_to_reinforce": [
+          "Piemonte y sus denominaciones",
+          "Nebbiolo perfil varietal"
+        ],
+        "causality_to_reinforce": []
+      },
+      "wwj_remediation": null,
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "official_wset_question": false,
+        "training_item_only": true
+      }
+    },
+    {
+      "item_id": "OR_027",
+      "source_item_id": "wset3_748",
+      "source_question_id": "748",
+      "question_text": "Identifica dos regiones conocidas por su Sauvignon Blanc y describe brevemente el estilo característico de cada una.",
+      "ra_id": "RA2",
+      "topic": "regiones_mundiales",
+      "expected_concepts": [
+        "Marlborough (Nueva Zelanda) — aromas intensos de maracuyá y hierba, alta acidez",
+        "Loire (Sancerre/Pouilly-Fumé) — estilo más mineral y herbáceo, acidez viva"
+      ],
+      "causal_chain_target": [],
+      "response_depth_target": "developing",
+      "feedback_profile": {
+        "FOUNDATIONAL_RESPONSE": "Solo describes una región. Para completar, compara Marlborough (frutosidad tropical, alta acidez) con una región del Loire como Sancerre (mineralidad, herbáceo).",
+        "DEVELOPING_RESPONSE": "Buen intento. Añade más detalle sobre el contraste de estilos: Marlborough más exuberante y frutal; Sancerre más mineral y contenido.",
+        "STRONG_RESPONSE": "Respuesta completa: contrasta Marlborough (frutas tropicales, acidez alta) con Loire/Sancerre (mineral, herbáceo, más austero)."
+      },
+      "remediation_path": {
+        "concepts_to_reinforce": [
+          "perfiles regionales Sauvignon Blanc",
+          "Marlborough vs Loire"
+        ],
+        "causality_to_reinforce": []
+      },
+      "wwj_remediation": null,
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "official_wset_question": false,
+        "training_item_only": true
+      }
+    },
+    {
+      "item_id": "OR_028",
+      "source_item_id": "wset3_765",
+      "source_question_id": "765",
+      "question_text": "Explica qué es el despalillado y por qué se realiza durante la vinificación de vinos tintos.",
+      "ra_id": "RA1",
+      "topic": "vinificacion_tinto",
+      "expected_concepts": [
+        "separación de bayas del raspón",
+        "eliminar los tallos verdes",
+        "reducir taninos vegetales",
+        "mejorar la calidad de los taninos"
+      ],
+      "causal_chain_target": [],
+      "response_depth_target": "foundational",
+      "feedback_profile": {
+        "FOUNDATIONAL_RESPONSE": "Defines el despalillado como separación de bayas, pero no explicas por qué. Se hace para eliminar los raspones y reducir los taninos vegetales que aportan amargor.",
+        "DEVELOPING_RESPONSE": "Buen intento. Añade que el raspón contiene taninos verdes y astringentes que aportarían amargor y dureza si se incluyen en la fermentación.",
+        "STRONG_RESPONSE": "Respuesta completa: el despalillado separa las bayas del raspón para evitar la extracción de taninos vegetales que aportarían amargor y astringencia al vino tinto."
+      },
+      "remediation_path": {
+        "concepts_to_reinforce": [
+          "etapas de vinificación de tintos",
+          "rol del despalillado"
+        ],
+        "causality_to_reinforce": []
+      },
+      "wwj_remediation": null,
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "official_wset_question": false,
+        "training_item_only": true
+      }
+    },
+    {
+      "item_id": "OR_029",
+      "source_item_id": "wset3_795",
+      "source_question_id": "795",
+      "question_text": "Identifica una región vinícola conocida por sus suelos volcánicos y explica cómo pueden influir en el estilo del vino.",
+      "ra_id": "RA2",
+      "topic": "regiones_mundiales",
+      "expected_concepts": [
+        "Etna (Sicilia)",
+        "suelos volcánicos basálticos",
+        "mineralidad",
+        "buen drenaje",
+        "acidez elevada"
+      ],
+      "causal_chain_target": [],
+      "response_depth_target": "foundational",
+      "feedback_profile": {
+        "FOUNDATIONAL_RESPONSE": "Identificas la región pero no explicas la influencia de los suelos. Los suelos volcánicos aportan mineralidad y buen drenaje, favoreciendo vinos de alta acidez.",
+        "DEVELOPING_RESPONSE": "Buen intento. Añade que los suelos volcánicos basálticos del Etna son pobres en nutrientes, con buen drenaje, lo que se traduce en vinos con perfil mineral y acidez marcada.",
+        "STRONG_RESPONSE": "Respuesta sólida: identifica el Etna, describe los suelos volcánicos basálticos y vincula sus propiedades (drenaje, mineralidad) con el perfil del vino."
+      },
+      "remediation_path": {
+        "concepts_to_reinforce": [
+          "tipos de suelo en viticultura",
+          "influencia suelos volcánicos",
+          "Etna/Sicilia"
+        ],
+        "causality_to_reinforce": []
+      },
+      "wwj_remediation": null,
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "official_wset_question": false,
+        "training_item_only": true
+      }
+    },
+    {
+      "item_id": "OR_030",
+      "source_item_id": "wset3_796",
+      "source_question_id": "796",
+      "question_text": "Identifica la región argentina conocida por sus viñedos de mayor altitud y describe las condiciones climáticas que los caracterizan.",
+      "ra_id": "RA2",
+      "topic": "regiones_mundiales",
+      "expected_concepts": [
+        "Salta (Cafayate)",
+        "viñedos a gran altitud",
+        "alta amplitud térmica",
+        "radiación UV intensa",
+        "acidez preservada por temperaturas nocturnas frescas"
+      ],
+      "causal_chain_target": [],
+      "response_depth_target": "foundational",
+      "feedback_profile": {
+        "FOUNDATIONAL_RESPONSE": "Identificas Salta, pero no detallas las condiciones. Salta tiene viñedos de hasta 3000 m, con gran amplitud térmica que preserva la acidez y concentra los aromas.",
+        "DEVELOPING_RESPONSE": "Buen intento. Añade el impacto de la altitud extrema: radiación UV alta, temperaturas nocturnas frescas y gran diferencia térmica diurna/nocturna.",
+        "STRONG_RESPONSE": "Respuesta completa: identifica Salta/Cafayate, menciona la gran altitud, describe la amplitud térmica, la radiación UV y la preservación de acidez."
+      },
+      "remediation_path": {
+        "concepts_to_reinforce": [
+          "viticultura de altitud en Argentina",
+          "Salta y Mendoza"
+        ],
+        "causality_to_reinforce": []
+      },
+      "wwj_remediation": null,
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "official_wset_question": false,
+        "training_item_only": true
+      }
+    },
+    {
+      "item_id": "OR_031",
+      "source_item_id": "wset3_797",
+      "source_question_id": "797",
+      "question_text": "Nombra dos regiones reconocidas por elaborar vinos afectados por podredumbre noble (Botrytis cinerea) y explica brevemente el proceso.",
+      "ra_id": "RA2",
+      "topic": "vinificacion_dulces",
+      "expected_concepts": [
+        "Sauternes (Francia)",
+        "Tokaj (Hungría)",
+        "condiciones de humedad alternada con periodos secos",
+        "concentración de azúcares y aromas",
+        "podredumbre noble"
+      ],
+      "causal_chain_target": [],
+      "response_depth_target": "developing",
+      "feedback_profile": {
+        "FOUNDATIONAL_RESPONSE": "Solo menciona una región. Añade la segunda (Sauternes o Tokaj) y explica que la botrytis deshidrata la baya concentrando azúcares y aromas complejos.",
+        "DEVELOPING_RESPONSE": "Buen intento. Detalla el mecanismo: la botrytis perfora la piel, permitiendo la evaporación del agua y la concentración de azúcares, ácidos y aromas.",
+        "STRONG_RESPONSE": "Respuesta completa: menciona Sauternes y Tokaj, describe la alternancia húmedo-seco que activa la botrytis noble y el mecanismo de concentración en la baya."
+      },
+      "remediation_path": {
+        "concepts_to_reinforce": [
+          "vinificación de vinos dulces botrytizados",
+          "Sauternes y Tokaj"
+        ],
+        "causality_to_reinforce": []
       },
       "wwj_remediation": null,
       "governance": {

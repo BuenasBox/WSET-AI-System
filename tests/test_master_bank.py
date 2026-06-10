@@ -58,10 +58,10 @@ class MasterBankTests(unittest.TestCase):
         counts = self.generated["counts"]
 
         self.assertEqual(counts["total"], 616)
-        self.assertEqual(counts["single_best_answer"], 590)
-        self.assertEqual(counts["open_response"], 26)
+        self.assertEqual(counts["single_best_answer"], 579)  # 590 - 11 T/F→OR conversions (Phase Y.0)
+        self.assertEqual(counts["open_response"], 37)         # 26 + 11 matching-stub→OR conversions (Phase Y.0)
         self.assertEqual(counts["inactive"], 580)
-        self.assertEqual(counts["needs_review"], 471)
+        self.assertEqual(counts["needs_review"], 461)         # 471 - 10 new OR resolution records (Phase Y.0)
         self.assertEqual(counts["gold"], 34)
         self.assertEqual(counts["public_lab"], 36)
 
@@ -70,9 +70,9 @@ class MasterBankTests(unittest.TestCase):
             self.generated["counts"]["review_states"],
             {
                 "approved_for_static_demo": 36,
-                "approved_open_response": 26,
-                "approved_private_sba": 83,
-                "unreviewed": 471,
+                "approved_open_response": 37,   # +11 matching-stub→OR conversions (Phase Y.0)
+                "approved_private_sba": 82,      # -1 (wset3_746 moved to OR, Phase Y.0)
+                "unreviewed": 461,               # -10 (new OR resolution records, Phase Y.0)
             },
         )
 
@@ -131,7 +131,7 @@ class MasterBankTests(unittest.TestCase):
             for item in self.generated["items"]
             if item["question_type"] == "open_response"
         ]
-        self.assertEqual(len(master_open), 26)
+        self.assertEqual(len(master_open), 37)
         self.assertTrue(
             all(item["status"]["activation_status"] == "inactive" for item in master_open)
         )

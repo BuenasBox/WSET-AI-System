@@ -2,9 +2,17 @@
 generate_production_payloads.py — Production frontend data generator.
 
 Produces three JS data files for the epistemiclab-dashboard static site:
-  1. frontend/diagnostic-sba/preguntas_data.js        (119 SBA items, full bank)
+  1. frontend/diagnostic-sba/preguntas_data.js        (523 SBA items, full eligible bank)
   2. frontend/open-response-lab/lab_payload.js         (26 OR items, 4 modes)
-  3. frontend/adaptive-session/session_bank.js         (119 SBA + SAT prompts)
+  3. frontend/adaptive-session/session_bank.js         (523 SBA + SAT prompts)
+
+Bank filter (Phase Y.0):
+  Uses the eligibility engine (master_bank_eligibility.classify_master_item) as the
+  authority for SBA pool membership, replacing the stale review_state filter.
+  The eligibility engine applies the full resolution layer (Phase 4A.3.8.5.7) and
+  suitability classification, yielding 589 private_practice-eligible SBA items.
+  A structural completeness gate (stem + 4 non-empty options + correct_answer_letter)
+  further reduces this to 523 deployable items.
 
 Usage:
   python tools/frontend/generate_production_payloads.py
@@ -150,19 +158,67 @@ def load_or_bank():
     return data["items"]
 
 
+def _is_structurally_complete_sba(item):
+    """Return True only if item has stem, 4 non-empty options, and a valid answer letter."""
+    stem = item.get("stem", "").strip()
+    sc = item.get("source_content", {})
+    opts = sc.get("options", {})
+    has_4_opts = all(opts.get(k, "").strip() for k in ("A", "B", "C", "D"))
+    has_answer = sc.get("correct_answer_letter", "").strip() in ("A", "B", "C", "D")
+    return bool(stem) and has_4_opts and has_answer
+
+
 def sba_eligible(items):
-    """Return all SBA items eligible for production training use."""
-    return [
-        i for i in items
-        if i["question_type"] == "single_best_answer"
-        and (
-            i["status"].get("gold")
-            or i["status"].get("review_state") in (
-                "approved_private_sba",
-                "approved_for_static_demo",
-            )
+    """Return all SBA items eligible for production training use.
+
+    Uses the master_bank eligibility engine (Phase 4A.3.8.5.7 resolution layer +
+    suitability classification) as the authority.  A structural completeness gate
+    further ensures every emitted item has stem, 4 non-empty options, and a valid
+    correct_answer_letter.  Governance flags are verified clean (safe_for_examiner
+    and examiner_scoring_allowed must be False).
+    """
+    try:
+        import sys as _sys
+        _sys.path.insert(0, str(REPO))
+        from tools.question_generation.master_bank_eligibility import (
+            classify_master_item,
+            load_open_response_suitability_index,
         )
-    ]
+        suitability_index = load_open_response_suitability_index()
+        use_engine = True
+    except Exception as _e:
+        print(f"  WARNING: eligibility engine unavailable ({_e}); falling back to review_state filter", file=sys.stderr)
+        use_engine = False
+
+    result = []
+    for i in items:
+        if i.get("question_type") != "single_best_answer":
+            continue
+        # Governance hard-gate — never True
+        gov = i.get("governance", {})
+        if gov.get("safe_for_examiner") or gov.get("examiner_scoring_allowed"):
+            continue
+        # Eligibility check
+        if use_engine:
+            suit = suitability_index.get(i.get("master_item_id", ""))
+            classification = classify_master_item(i, suit)
+            if "private_practice" not in classification.get("categories", []):
+                continue
+        else:
+            # Fallback: stale review_state filter
+            if not (
+                i["status"].get("gold")
+                or i["status"].get("review_state") in (
+                    "approved_private_sba",
+                    "approved_for_static_demo",
+                )
+            ):
+                continue
+        # Structural completeness gate
+        if not _is_structurally_complete_sba(i):
+            continue
+        result.append(i)
+    return result
 
 
 def or_eligible(items):
