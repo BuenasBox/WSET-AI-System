@@ -242,8 +242,12 @@ All phases through 4A.3.7.19 are complete. Current planning artifact is Phase 4A
 
 After every code change:
 ```
-python -m unittest discover -s tests -v   → must stay at 771+ passing/skipped
+python -m unittest discover -s tests -v   → must stay at 1519+ passing (1562 discovered, 36 pre-existing errors from datetime.UTC Python 3.11+ requirement, 7 skipped)
 brutal self-eval                          → must stay {}
+```
+Non-sandbox fast suite (302 tests, ~1.3s):
+```
+python -m unittest tests.test_sat_validator tests.test_sat_validator_integration tests.test_answer_builder_sat_integration tests.test_tutor_answer_builder tests.test_tutor_snapshot_regression tests.test_strategic_planner tests.test_open_response_lab_runtime_mvp tests.test_dashboard_maturity_model tests.test_phase_x1_assessment_intelligence tests.test_master_bank tests.test_constants tests.test_answer_patterns_schema
 ```
 Slow golden suite (only when touching self-eval pipeline):
 ```
@@ -300,29 +304,43 @@ The following are **machine-local cognitive objects** and must NEVER be committe
 
 ---
 
-## REPO STATUS (as of last session)
+## REPO STATUS (as of 2026-06-09)
 
-⚠️ **CLAUDE.md was significantly out of date as of 2026-06-07. The project has progressed through Phase 4A (21+ sub-phases) since Phase 3B. See `docs/PROJECT_CURRENT_STATE.md` and `docs/ROADMAP_PHASE_4A.md` for authoritative status.**
+Latest commits:
+- `feat(phase-x3): SAT answer validator + Tutor integration` ← HEAD (c650818)
+- `f2` (1ab9863) — Phase X.2 dashboard/state changes
+- `f1` (b4fe59e)
+- `Sesion important: 2024-06-01 12:00:00` (9f48ddf)
 
-Latest known commits:
-- `docs+feat: update CLAUDE.md and strategic_planner Phase 3B local changes` ← HEAD (6b7c782)
-- `Depuración` (e72f827)
-- `feat(adaptive-loop): close session composer wire-up` (36dc875)
-- `feat(phase-4a3-9-2): wire learning event runtime` (5e668ee)
-- `docs(adaptive-composer): add Adaptive Composer design document` (4664f76)
-- `feat(phase-3b): add WSET L3 topic sequence; wire into strategic planner; add 40 tests` (bb6644a)
-- `feat(phase-2-ckg): add HC_* heuristic causal nodes; add governance language + schema tests` (ae6716c)
-
-New architecture components added since Phase 3B (not reflected in earlier CLAUDE.md):
-- `tools/tutor/pedagogical_strategy/` — PSL: mode_selector, profiles, strategy_layer, character_resolver, avatar_stub, psl_profile_validator, strategy_selector
-- `tools/question_generation/` — human_review_resolution.py, diagnostic_sba_validator.py, static_demo_exporter.py, structured_question_bank_adapter.py, and others
-- `frontend/diagnostic-sba/` — static SBA cockpit prototype with `preguntas.json` (18 active items)
+### Architecture components present (post-Phase 3B, authoritative)
+- `tools/tutor/sat_validator.py` — Phase X.3: deterministic SAT answer validator; 5 checks; governance-clean; `VALIDATOR_GOVERNANCE.safe_for_examiner=False`; `formative_only=True`
+- `tools/tutor/answer_builder.py` — now includes `ENABLE_SAT_VALIDATOR_FEEDBACK = True` and `_render_sat_validator_feedback()`; activates on `package["sat_submission"]` dict; zero impact on non-SAT paths
+- `tools/tutor/pedagogical_strategy/` — PSL: mode_selector, profiles, strategy_layer, character_resolver, avatar_stub, psl_profile_validator, strategy_selector. `ENABLE_PEDAGOGICAL_STRATEGY_LAYER = False`. Disconnected from answer_builder.
+- `tools/question_generation/` — human_review_resolution.py, diagnostic_sba_validator.py, static_demo_exporter.py, structured_question_bank_adapter.py
+- `frontend/diagnostic-sba/` — static SBA cockpit with `preguntas.json` (18 active items, only Q2+Q83 are Gold-A)
+- `knowledge/sat-framework/` — sat_structure.json, sat_scales.json, sat_observation_aliases.json (FROZEN)
+- `knowledge/evaluator-framework/` — mark_allocation_rules.json, quality_reasoning_patterns.json (FROZEN)
+- `knowledge/distinction-patterns/` — descriptor_patterns.json, distinction_gap_markers.json (FROZEN)
+- `tests/fixtures/sat_validator/` — 4 test fixtures (valid_complete, incomplete, simple_wine_violation, weak_quality_justification)
 - `docs/CORPUS_GROUNDED_GOLD_BANK.md` — Gold-A/B/C classification of 524 SBA items
 - `docs/ACTIVE_SET_RECONCILIATION_PLAN.md` — Phase 4A.3.7.33B replacement plan
 
-Dirty worktree (not committed — runtime / local only):
-- `knowledge/nazareth/epistemic_state.json`, `session_staging.json` — modified locally (machine-local cognitive objects, never commit)
-- `knowledge/self-eval/attempts/` — runtime self-eval outputs (gitignored)
+### Test counts (2026-06-09)
+- Discovered: 1562 (via `python -m unittest discover`)
+- Pre-existing errors: 36 (`from datetime import UTC` requires Python 3.11+; Windows permission on `knowledge/config/domain_expansions.json`)
+- Skipped: 7 (RUN_SLOW_TESTS guard)
+- Passing: ~1519
+- Non-sandbox fast suite: **302 tests, ~1.3s, all OK**
+
+### Pending work
+- Replace non-Gold active items in `frontend/diagnostic-sba/preguntas.json` with Gold-A/B items per `docs/ACTIVE_SET_RECONCILIATION_PLAN.md`
+- Phase 3A gates remain off: `ENABLE_PLANNER_CAUSAL_CHAIN_INJECTION = False`, `ENABLE_PLANNER_QUERY_EXPANSION = False`
+- PSL remains disconnected: `ENABLE_PEDAGOGICAL_STRATEGY_LAYER = False`
+- See `docs/PROJECT_CURRENT_STATE.md` and `docs/ROADMAP_PHASE_4A.md` for full Phase 4A history
+
+### Dirty worktree (runtime / local only — never commit)
+- `knowledge/nazareth/epistemic_state.json`, `session_staging.json` — machine-local cognitive objects
+- `knowledge/self-eval/attempts/` — gitignored runtime outputs
 
 ---
 
