@@ -1,0 +1,36 @@
+{
+  "_fixture_note": "Simple wine (Ca di Alte Pinot Grigio style) BUT learner incorrectly invents tertiary aromas — the #1 structural error for simple wines.",
+  "wine_type": "white",
+  "is_simple": true,
+  "appearance": {
+    "clarity": "claro",
+    "intensity": "pálida",
+    "colour": "verde limón"
+  },
+  "nose": {
+    "intensity": "media(-)",
+    "primary_aromas": ["pera", "manzana verde", "melocotón blanco"],
+    "secondary_aromas": [],
+    "tertiary_aromas": ["miel", "nuez"],
+    "development": "joven",
+    "is_simple": true
+  },
+  "palate": {
+    "sweetness": "seco",
+    "acidity": "media",
+    "tannin": null,
+    "alcohol": "bajo",
+    "body": "poco",
+    "mousse": null,
+    "flavour_intensity": "media(-)",
+    "primary_flavours": ["pera", "manzana verde"],
+    "secondary_flavours": [],
+    "tertiary_flavours": ["miel"],
+    "finish": "corto",
+    "is_simple": true
+  },
+  "conclusions": {
+    "quality_level": "aceptable",
+    "readiness": "beber ahora: no adecuado para el envejecimiento o para un mayor envejecimiento"
+  }
+}

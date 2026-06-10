@@ -1,0 +1,36 @@
+{
+  "_fixture_note": "Learner claims 'excelente' but only primary aromas, short finish — classic overclaim. No secondary or tertiary complexity.",
+  "wine_type": "red",
+  "is_simple": false,
+  "appearance": {
+    "clarity": "claro",
+    "intensity": "profunda",
+    "colour": "rubí"
+  },
+  "nose": {
+    "intensity": "media",
+    "primary_aromas": ["cereza roja", "ciruela"],
+    "secondary_aromas": [],
+    "tertiary_aromas": [],
+    "development": "joven",
+    "is_simple": false
+  },
+  "palate": {
+    "sweetness": "seco",
+    "acidity": "media",
+    "tannin": "medio",
+    "alcohol": "medio",
+    "body": "medio",
+    "mousse": null,
+    "flavour_intensity": "media",
+    "primary_flavours": ["cereza roja", "ciruela"],
+    "secondary_flavours": [],
+    "tertiary_flavours": [],
+    "finish": "corto",
+    "is_simple": false
+  },
+  "conclusions": {
+    "quality_level": "excelente",
+    "readiness": "se puede beber ahora, pero tiene potencial para el envejecimiento"
+  }
+}

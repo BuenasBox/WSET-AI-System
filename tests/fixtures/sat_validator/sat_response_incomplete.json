@@ -1,0 +1,36 @@
+{
+  "_fixture_note": "Incomplete SAT — missing finish, development, tertiary aromas, and readiness conclusion.",
+  "wine_type": "white",
+  "is_simple": false,
+  "appearance": {
+    "clarity": "claro",
+    "intensity": "pálida",
+    "colour": "amarillo limón"
+  },
+  "nose": {
+    "intensity": "media",
+    "primary_aromas": ["manzana", "pera"],
+    "secondary_aromas": [],
+    "tertiary_aromas": [],
+    "development": null,
+    "is_simple": false
+  },
+  "palate": {
+    "sweetness": "seco",
+    "acidity": "media",
+    "tannin": null,
+    "alcohol": null,
+    "body": null,
+    "mousse": null,
+    "flavour_intensity": "media",
+    "primary_flavours": ["manzana"],
+    "secondary_flavours": [],
+    "tertiary_flavours": [],
+    "finish": null,
+    "is_simple": false
+  },
+  "conclusions": {
+    "quality_level": "bueno",
+    "readiness": null
+  }
+}

@@ -38,6 +38,18 @@ try:
 except ImportError:
     _SAT_REASONER_AVAILABLE = False
 
+try:
+    from tools.tutor.sat_validator import validate_sat_response as _validate_sat_response
+
+    _SAT_VALIDATOR_AVAILABLE = True
+except ImportError:
+    _SAT_VALIDATOR_AVAILABLE = False
+
+# Phase X.3 — feature flag for SAT validator formative feedback integration.
+# Set to False to disable entirely; True enables when sat_submission key is
+# present in the context package. Non-SAT paths are unaffected regardless.
+ENABLE_SAT_VALIDATOR_FEEDBACK: bool = True
+
 
 DEFAULT_CONTEXT_PACKAGE_PATH = CONTEXT_PACKAGES_DIR / "latest_context_package.json"
 DEFAULT_TUTOR_OUTPUT_DIR = NAZARETH_DIR / "tutor_outputs"
@@ -284,6 +296,24 @@ def _render_normal_answer(
                 language,
                 causal_chains=causal_chains,
             )
+
+    # Phase X.3 — SAT validator formative feedback block.
+    # Only activates when:
+    #   (a) ENABLE_SAT_VALIDATOR_FEEDBACK is True, AND
+    #   (b) package["sat_submission"] is a non-empty dict.
+    # Non-SAT context packages never have sat_submission → zero impact on them.
+    sat_validator_block: str | None = None
+    if (
+        ENABLE_SAT_VALIDATOR_FEEDBACK
+        and _SAT_VALIDATOR_AVAILABLE
+        and isinstance(package.get("sat_submission"), dict)
+        and package["sat_submission"]
+    ):
+        sat_validator_block = _render_sat_validator_feedback(
+            _validate_sat_response(package["sat_submission"]),
+            language,
+        )
+
     if depth == "minimal":
         support = _compress_explanation(support, depth)
         framing = _compress_explanation(framing, depth)
@@ -305,6 +335,11 @@ def _render_normal_answer(
             lines.extend([
                 f"## {TUTOR_SAT_MARKDOWN_LABELS['en']}",
                 sat_block,
+                "",
+            ])
+        if sat_validator_block is not None:
+            lines.extend([
+                sat_validator_block,
                 "",
             ])
         lines.extend([
@@ -338,6 +373,11 @@ def _render_normal_answer(
             lines.extend([
                 f"## {TUTOR_SAT_MARKDOWN_LABELS['es']}",
                 sat_block,
+                "",
+            ])
+        if sat_validator_block is not None:
+            lines.extend([
+                sat_validator_block,
                 "",
             ])
         lines.extend([
@@ -1014,3 +1054,112 @@ def _spanish_paraphrase(text: str) -> str:
     if "acidity" in lowered:
         return "La acidity aporta frescura y estructura; su valor depende del balance con fruta, sweetness, alcohol, body y estilo."
     return text
+
+
+def _render_sat_validator_feedback(validation_result: dict[str, Any], language: str) -> str:
+    """Render SAT validator output as a formative Markdown section.
+
+    Phase X.3 — consumes the output of sat_validator.validate_sat_response().
+    Always labelled formative guidance only. Never assigns marks.
+    safe_for_examiner remains False throughout.
+    """
+    is_es = language == "es"
+
+    heading = "## Orientación formativa SAT" if is_es else "## SAT Formative Guidance"
+    disclaimer = (
+        "> *Esta orientación es solo formativa. No es una evaluación oficial ni asigna notas.*"
+        if is_es
+        else "> *This guidance is formative only. It is not an official assessment and assigns no marks.*"
+    )
+
+    lines: list[str] = [heading, "", disclaimer, ""]
+
+    # --- Structural issues ---
+    issues = validation_result.get("structural_issues") or []
+    if issues:
+        section_title = "### Elementos faltantes" if is_es else "### Missing Elements"
+        lines.append(section_title)
+        for issue in issues:
+            lines.append(f"- {issue}")
+        lines.append("")
+    else:
+        ok_msg = "### Estructura completa ✓" if is_es else "### Structure Complete ✓"
+        lines.append(ok_msg)
+        lines.append("")
+
+    # --- Scale errors ---
+    scale_errors = validation_result.get("scale_errors") or []
+    if scale_errors:
+        section_title = "### Errores de escala" if is_es else "### Scale Errors"
+        lines.append(section_title)
+        for err in scale_errors:
+            lines.append(f"- {err}")
+        lines.append("")
+
+    # --- Mark allocation feedback (coverage summary only) ---
+    maf = validation_result.get("mark_allocation_feedback") or {}
+    if maf:
+        section_title = "### Cobertura por sección" if is_es else "### Section Coverage"
+        lines.append(section_title)
+        coverage_labels = {
+            "appearance": ("Aspecto", "Appearance"),
+            "nose": ("Nariz", "Nose"),
+            "palate": ("Boca", "Palate"),
+            "conclusions": ("Conclusiones", "Conclusions"),
+        }
+        for key, (label_es, label_en) in coverage_labels.items():
+            section = maf.get(key) or {}
+            coverage = section.get("coverage", "—")
+            guidance = section.get("guidance", "")
+            label = label_es if is_es else label_en
+            icon = {"complete": "✓", "partial": "△", "missing": "✗"}.get(coverage, "—")
+            lines.append(f"- **{label}** {icon}: {guidance}")
+        lines.append("")
+
+    # --- Quality justification ---
+    qj = validation_result.get("quality_justification") or {}
+    if qj and qj.get("quality_stated"):
+        section_title = "### Justificación de calidad" if is_es else "### Quality Justification"
+        lines.append(section_title)
+        guidance = qj.get("guidance") or ""
+        if guidance:
+            lines.append(guidance)
+        missing = qj.get("missing_evidence") or []
+        if missing:
+            prefix = "Evidencia que falta" if is_es else "Missing evidence"
+            for item in missing:
+                lines.append(f"- {prefix}: {item}")
+        lines.append("")
+
+    # --- Simple wine exception ---
+    sw = validation_result.get("simple_wine_exception") or {}
+    if sw.get("is_applicable") and sw.get("violation"):
+        section_title = "### ⚠ Excepción de vino simple" if is_es else "### ⚠ Simple Wine Exception"
+        lines.append(section_title)
+        for msg in (sw.get("messages") or []):
+            lines.append(f"- {msg}")
+        lines.append("")
+
+    # --- Distinction gap ---
+    dg = validation_result.get("distinction_gap") or {}
+    dg_guidance = dg.get("guidance") or []
+    dg_errors = dg.get("category_errors") or []
+    dg_generic = dg.get("generic_descriptors_found") or []
+    if dg_guidance or dg_errors or dg_generic:
+        section_title = "### Hacia la distinción" if is_es else "### Towards Distinction"
+        lines.append(section_title)
+        for item in dg_guidance:
+            lines.append(f"- {item}")
+        for item in dg_errors:
+            lines.append(f"- {item}")
+        lines.append("")
+
+    # Always append formative note
+    note = dg.get("formative_note") or (
+        "Esta orientación es formativa. La evaluación oficial requiere un Examiner WSET acreditado."
+        if is_es
+        else "This guidance is formative. Official assessment requires an accredited WSET Examiner."
+    )
+    lines.append(f"*{note}*")
+
+    return "\n".join(lines)

@@ -1,0 +1,36 @@
+{
+  "_fixture_note": "Full distinction-level white wine SAT response (Rustenberg Chardonnay style). All sections complete, all three aroma categories, quality justified.",
+  "wine_type": "white",
+  "is_simple": false,
+  "appearance": {
+    "clarity": "claro",
+    "intensity": "pálida",
+    "colour": "verde limón"
+  },
+  "nose": {
+    "intensity": "media(+)",
+    "primary_aromas": ["limón", "melocotón", "melón", "piña"],
+    "secondary_aromas": ["vainilla", "galleta", "pan"],
+    "tertiary_aromas": ["miel", "nuez"],
+    "development": "en evolución",
+    "is_simple": false
+  },
+  "palate": {
+    "sweetness": "seco",
+    "acidity": "media(+)",
+    "tannin": null,
+    "alcohol": "medio",
+    "body": "mucho",
+    "mousse": null,
+    "flavour_intensity": "media(+)",
+    "primary_flavours": ["limón", "melocotón", "melón"],
+    "secondary_flavours": ["vainilla", "galleta"],
+    "tertiary_flavours": ["miel", "nuez"],
+    "finish": "medio(+)",
+    "is_simple": false
+  },
+  "conclusions": {
+    "quality_level": "muy bueno",
+    "readiness": "se puede beber ahora, pero tiene potencial para el envejecimiento"
+  }
+}
