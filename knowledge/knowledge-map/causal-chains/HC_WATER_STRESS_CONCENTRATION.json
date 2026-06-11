@@ -1,0 +1,65 @@
+{
+  "node_type": "causal_chain",
+  "node_id": "HC_WATER_STRESS_CONCENTRATION",
+  "classification": "inferred",
+  "source": "heuristic",
+  "official": false,
+  "formative_only": true,
+  "official_mark_scheme": false,
+  "requires_human_review": true,
+  "safe_for_examiner": false,
+  "examiner_scoring_allowed": false,
+  "sat_relevance": "Relevant when SAT concentration or intensity is explained by water regulation.",
+  "topic": "mild water stress, vine regulation, and grape concentration",
+  "trigger_keywords": [
+    "estres hidrico",
+    "water stress",
+    "estres hidrico leve",
+    "estres hidrico moderado",
+    "mild water stress",
+    "deficit hidrico",
+    "water deficit",
+    "riego por goteo",
+    "drip irrigation",
+    "disponibilidad de agua",
+    "water availability"
+  ],
+  "steps": [
+    {
+      "step": 1,
+      "label": "cause",
+      "text": "Mild water stress occurs when a vine has limited but not critically scarce access to water during the ripening period, often on free-draining soils or under controlled (e.g. drip) irrigation in dry climates."
+    },
+    {
+      "step": 2,
+      "label": "mechanism",
+      "text": "Limited water causes the vine to slow shoot and canopy growth and divert resources to the berries; berry size stays small, raising the skin-to-juice ratio, while sugar, anthocyanin and flavour compounds concentrate. Severe stress, by contrast, shuts ripening down."
+    },
+    {
+      "step": 3,
+      "label": "effect",
+      "text": "Mild water stress tends to produce smaller berries with greater concentration of flavour, colour and tannin and higher quality potential; excessive irrigation or rainfall dilutes these and can reduce quality."
+    }
+  ],
+  "linked_topics": [
+    "HC_YIELD_CONCENTRATION",
+    "CC_SOIL_DRAINAGE_VINE_VIGOUR"
+  ],
+  "agent_corpus": "tutor",
+  "governance": {
+    "safe_for_examiner": false,
+    "examiner_scoring_allowed": false,
+    "agent_corpus": "tutor",
+    "source": "heuristic",
+    "classification": "inferred",
+    "official": false,
+    "formative_only": true
+  },
+  "_meta": {
+    "schema_version": "causal_chain_v1",
+    "heuristic_extension": "HC_v1",
+    "created_date": "2026-06-11",
+    "ingestion_status": "draft",
+    "source_note": "Inferred formative model — Phase P.2 batch-2 knowledge expansion. Not from official WSET mark scheme."
+  }
+}

@@ -80,6 +80,16 @@ IDENTIFICATION_PATTERNS = (
     r"\bque\s+es\s+(un|una|el|la)\b", r"\bque\s+indica\b", r"\bque\s+significa\b",
 )
 
+# Negative-polarity stems: the "correct answer" is a deliberately FALSE statement
+# (identify the incorrect/false/except option). Enriching these would feed the
+# micro-drill a false statement as a true option — teaching the wrong thing.
+# Excluded entirely (precision guard, added after batch-2 audit).
+NEGATIVE_POLARITY_PATTERNS = (
+    r"\bincorrect[ao]\b", r"\bfals[ao]\b", r"\bno\s+es\s+correct[ao]\b",
+    r"\bexcepto\b", r"\bno\s+corresponde\b", r"\bmenos\s+probable\b",
+    r"\bno\s+influye\b", r"\bno\s+es\s+cierto\b",
+)
+
 GOVERNANCE = {
     "safe_for_examiner": False,
     "examiner_scoring_allowed": False,
@@ -159,6 +169,60 @@ NODE_ES: dict[str, dict[str, str]] = {
 
 _RA_TOPIC_RE = re.compile(r"^RA\d")
 
+# --- Phase P.2 batch-2 knowledge expansion: ES layer for climate/site nodes ---
+# Mechanism nodes only (explain the WHY). Attribute nodes (tannin sensation,
+# generic warm->alcohol) intentionally excluded: high false-positive risk.
+NODE_ES.update({
+    "HC_ALTITUDE_TEMPERATURE": {
+        "subject": "la altitud y su efecto sobre la temperatura y la acidez",
+        "causa": "Los viñedos a mayor altitud experimentan temperaturas más bajas, sobre todo de noche, que los situados a menor elevación en la misma región.",
+        "mecanismo": "Las temperaturas más bajas ralentizan la maduración y reducen la respiración nocturna que, de otro modo, consumiría ácido málico; así se conserva la acidez natural mientras el azúcar se acumula durante el día.",
+        "efecto": "Los vinos de altura suelen mostrar mayor acidez total, más frescura y mayor precisión aromática; el alcohol puede ser más bajo si la maduración es incompleta.",
+    },
+    "HC_COOL_CLIMATE_STYLE": {
+        "subject": "el clima fresco y su estilo de vino",
+        "causa": "En las regiones de clima fresco, las temperaturas medias del periodo de maduración son lo bastante bajas como para que la uva madure despacio, a veces de forma incompleta, en una temporada más corta.",
+        "mecanismo": "La maduración lenta y fresca preserva el ácido málico y tartárico de la uva, porque las noches no aceleran lo suficiente la respiración de los ácidos, y la acumulación de azúcar es más limitada.",
+        "efecto": "Los vinos de clima fresco suelen presentar acidez alta, menor alcohol, cuerpo más ligero y aromas primarios que tienden a manzana verde, cítricos y notas herbáceas.",
+    },
+    "HC_DIURNAL_RANGE_FRESHNESS": {
+        "subject": "la amplitud térmica entre el día y la noche",
+        "causa": "Las regiones con gran amplitud térmica —donde los días cálidos favorecen la acumulación de azúcar pero las noches frescas frenan la respiración— generan un patrón de maduración característico.",
+        "mecanismo": "El calor diurno permite que la fotosíntesis y el desarrollo de azúcar avancen, mientras que las noches frescas frenan la degradación respiratoria del ácido tartárico y málico, conservando la acidez.",
+        "efecto": "Los vinos de gran amplitud térmica retienen más acidez, muestran un carácter aromático marcado y preciso, y suelen exhibir una frescura o vibración que los distingue de los de clima más cálido y uniforme.",
+    },
+    "HC_YIELD_CONCENTRATION": {
+        "subject": "el bajo rendimiento y la concentración de la uva",
+        "causa": "Cuando una vid produce menos racimos —por las condiciones del sitio, la variedad o técnicas como la vendimia verde— cada baya recibe una mayor proporción de los recursos de la planta.",
+        "mecanismo": "Con menos racimos compitiendo por la producción fotosintética de la vid, cada baya acumula más azúcar, compuestos de sabor y componentes estructurales como antocianos y taninos.",
+        "efecto": "Los vinos de vides de bajo rendimiento suelen mostrar mayor intensidad aromática, más concentración de sabor, color más pronunciado en tintos y taninos más estructurados.",
+    },
+    "CC_COOL_CLIMATE_ACIDITY": {
+        "subject": "el clima fresco y la retención de acidez",
+        "causa": "Un entorno de cultivo fresco (temperaturas más bajas, gran altitud o latitud alta) marca el ritmo de maduración de la uva.",
+        "mecanismo": "La maduración lenta retrasa la acumulación de azúcar y preserva los ácidos naturales de la uva (málico y tartárico), reduciendo la velocidad a la que se metaboliza el málico antes de la vendimia.",
+        "efecto": "Los vinos conservan mayor acidez, muestran frescura y nervio, y suelen tener niveles de alcohol más bajos.",
+    },
+    "HC_CONTINENTALITY_STYLE": {
+        "subject": "el clima continental",
+        "causa": "Un clima continental se da en regiones alejadas de la influencia moderadora de grandes masas de agua, con veranos cálidos pero inviernos fríos y una gran diferencia de temperatura entre estaciones y entre el día y la noche.",
+        "mecanismo": "La temporada de cultivo corta y definida, con fuertes oscilaciones térmicas, hace que la uva madure en días cálidos mientras las noches frescas frenan la respiración del ácido málico y tartárico, conservando la acidez; el final abrupto de la temporada limita la sobremaduración.",
+        "efecto": "Los vinos de clima continental suelen mostrar acidez alta, estructura tánica firme en tintos y una marcada variación entre añadas, porque la temporada ajustada hace que la madurez dependa mucho del clima del año.",
+    },
+    "HC_MARITIME_MODERATION": {
+        "subject": "la influencia marítima u oceánica",
+        "causa": "Un clima marítimo u oceánico se da en regiones próximas al mar o al océano, cuya gran masa térmica se calienta y se enfría lentamente a lo largo del año.",
+        "mecanismo": "El agua cercana modera los extremos de temperatura: mantiene veranos más frescos e inviernos más suaves que los sitios de interior a la misma latitud, reduce el riesgo de heladas y de calor excesivo y alarga la temporada, aunque puede traer lluvia y humedad.",
+        "efecto": "Los vinos de clima marítimo tienden a una maduración moderada y uniforme, con acidez conservada y elegancia; la temporada más larga y suave favorece estilos equilibrados, siendo la lluvia de la añada un riesgo clave.",
+    },
+    "HC_WATER_STRESS_CONCENTRATION": {
+        "subject": "el estrés hídrico leve y la concentración de la uva",
+        "causa": "El estrés hídrico leve ocurre cuando la vid dispone de un acceso al agua limitado pero no críticamente escaso durante la maduración, a menudo en suelos de buen drenaje o bajo riego controlado (por goteo) en climas secos.",
+        "mecanismo": "El agua limitada hace que la vid frene el crecimiento de brotes y follaje y derive recursos a las bayas; el tamaño de la baya se mantiene pequeño, aumentando la proporción de piel respecto al jugo, mientras se concentran azúcar, antocianos y compuestos de sabor. Un estrés severo, en cambio, detiene la maduración.",
+        "efecto": "El estrés hídrico leve tiende a producir bayas más pequeñas con mayor concentración de sabor, color y tanino y mayor potencial de calidad; el riego excesivo o la lluvia los diluyen y pueden reducir la calidad.",
+    },
+})
+
 
 def _norm(text: str) -> str:
     """Lowercase + strip accents for robust word-boundary matching."""
@@ -181,6 +245,11 @@ def _has_word(trigger_norm: str, text_norm: str) -> bool:
 def _is_identification_stem(stem: str) -> bool:
     stem_n = _norm(stem)
     return any(re.search(pat, stem_n) for pat in IDENTIFICATION_PATTERNS)
+
+
+def _is_negative_polarity_stem(stem: str) -> bool:
+    stem_n = _norm(stem)
+    return any(re.search(pat, stem_n) for pat in NEGATIVE_POLARITY_PATTERNS)
 
 
 def load_chain_nodes() -> list[dict]:
@@ -218,6 +287,8 @@ def match_item(item: dict, nodes: list[dict]):
     stem = item.get("text", "")
     if _is_identification_stem(stem):
         return None, "identification_stem"
+    if _is_negative_polarity_stem(stem):
+        return None, "negative_polarity_stem"
     ci = item.get("correct_index", 0)
     correct = (item.get("options") or [""])[ci]
     stem_n = _norm(stem)

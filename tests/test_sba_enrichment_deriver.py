@@ -49,6 +49,17 @@ class FalsePositiveRegressionTests(unittest.TestCase):
         for qid in ("wset3_101", "wset3_103"):
             self.assertNotIn(qid, self.enriched_ids)
 
+    def test_negative_polarity_stems_rejected(self):
+        # Batch-2 guard: "¿Cuál afirmación es INCORRECTA?" — the correct answer is
+        # a deliberately false statement; enriching it would teach the falsehood.
+        # wset3_792 (maritime INCORRECTA) and wset3_788 (yield INCORRECTA).
+        for qid in ("wset3_792", "wset3_788"):
+            self.assertNotIn(qid, self.enriched_ids)
+            if qid in self.items:
+                match, reason = match_item(self.items[qid], self.nodes)
+                self.assertIsNone(match)
+                self.assertEqual(reason, "negative_polarity_stem")
+
     def test_no_generic_trigger_in_any_match(self):
         for rec in self.payload["items_by_source_question_id"].values():
             prov = rec["_provenance"]["causal_chain"]

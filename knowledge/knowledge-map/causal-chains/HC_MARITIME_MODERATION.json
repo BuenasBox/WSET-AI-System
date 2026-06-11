@@ -1,0 +1,64 @@
+{
+  "node_type": "causal_chain",
+  "node_id": "HC_MARITIME_MODERATION",
+  "classification": "inferred",
+  "source": "heuristic",
+  "official": false,
+  "formative_only": true,
+  "official_mark_scheme": false,
+  "requires_human_review": true,
+  "safe_for_examiner": false,
+  "examiner_scoring_allowed": false,
+  "sat_relevance": "Relevant when SAT style or balance is explained by maritime temperature moderation.",
+  "topic": "maritime / oceanic influence and temperature moderation",
+  "trigger_keywords": [
+    "clima maritimo",
+    "maritime climate",
+    "influencia maritima",
+    "maritime influence",
+    "influencias oceanicas",
+    "oceanic influence",
+    "influencia oceanica",
+    "clima oceanico",
+    "oceanic climate",
+    "moderacion maritima",
+    "sea moderation"
+  ],
+  "steps": [
+    {
+      "step": 1,
+      "label": "cause",
+      "text": "A maritime or oceanic climate occurs in regions close to the sea or ocean, whose large thermal mass warms and cools slowly across the year."
+    },
+    {
+      "step": 2,
+      "label": "mechanism",
+      "text": "The nearby water moderates temperature extremes: it keeps summers cooler and winters milder than inland sites at the same latitude, reduces the risk of frost and excessive heat, and lengthens the growing season, though it can also bring rainfall and humidity."
+    },
+    {
+      "step": 3,
+      "label": "effect",
+      "text": "Wines from maritime climates tend to show a moderate, even ripeness with retained acidity and elegance; the longer, gentler season favours balanced styles, while vintage rainfall around flowering or harvest is a key risk."
+    }
+  ],
+  "linked_topics": [
+    "HC_CONTINENTALITY_STYLE"
+  ],
+  "agent_corpus": "tutor",
+  "governance": {
+    "safe_for_examiner": false,
+    "examiner_scoring_allowed": false,
+    "agent_corpus": "tutor",
+    "source": "heuristic",
+    "classification": "inferred",
+    "official": false,
+    "formative_only": true
+  },
+  "_meta": {
+    "schema_version": "causal_chain_v1",
+    "heuristic_extension": "HC_v1",
+    "created_date": "2026-06-11",
+    "ingestion_status": "draft",
+    "source_note": "Inferred formative model — Phase P.2 batch-2 knowledge expansion. Not from official WSET mark scheme."
+  }
+}

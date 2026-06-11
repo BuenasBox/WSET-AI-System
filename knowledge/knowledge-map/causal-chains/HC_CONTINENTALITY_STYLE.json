@@ -1,0 +1,63 @@
+{
+  "node_type": "causal_chain",
+  "node_id": "HC_CONTINENTALITY_STYLE",
+  "classification": "inferred",
+  "source": "heuristic",
+  "official": false,
+  "formative_only": true,
+  "official_mark_scheme": false,
+  "requires_human_review": true,
+  "safe_for_examiner": false,
+  "examiner_scoring_allowed": false,
+  "sat_relevance": "Relevant to SAT acidity, structure and style observations explained by continental temperature regime.",
+  "topic": "continental climate and wine style — high acidity, firm structure, vintage variation",
+  "trigger_keywords": [
+    "clima continental",
+    "continental climate",
+    "continental fresco",
+    "continental frio",
+    "cool continental",
+    "amplitud termica continental",
+    "estaciones marcadas",
+    "large temperature difference",
+    "interior continental"
+  ],
+  "steps": [
+    {
+      "step": 1,
+      "label": "cause",
+      "text": "A continental climate occurs in regions far from the moderating influence of large bodies of water, where summers are warm or hot but winters are cold and the temperature difference between seasons (and between day and night) is large."
+    },
+    {
+      "step": 2,
+      "label": "mechanism",
+      "text": "The short, defined growing season and wide temperature swings mean grapes ripen during warm days while cool nights slow the respiration of malic and tartaric acid, preserving natural acidity; the abrupt end of the season limits over-ripening."
+    },
+    {
+      "step": 3,
+      "label": "effect",
+      "text": "Wines from continental climates typically show high acidity, firm tannic structure in reds, and pronounced vintage-to-vintage variation because the marginal season makes ripeness sensitive to the year's weather."
+    }
+  ],
+  "linked_topics": [
+    "HC_DIURNAL_RANGE_FRESHNESS",
+    "HC_COOL_CLIMATE_STYLE"
+  ],
+  "agent_corpus": "tutor",
+  "governance": {
+    "safe_for_examiner": false,
+    "examiner_scoring_allowed": false,
+    "agent_corpus": "tutor",
+    "source": "heuristic",
+    "classification": "inferred",
+    "official": false,
+    "formative_only": true
+  },
+  "_meta": {
+    "schema_version": "causal_chain_v1",
+    "heuristic_extension": "HC_v1",
+    "created_date": "2026-06-11",
+    "ingestion_status": "draft",
+    "source_note": "Inferred formative model — Phase P.2 batch-2 knowledge expansion. Not from official WSET mark scheme."
+  }
+}
