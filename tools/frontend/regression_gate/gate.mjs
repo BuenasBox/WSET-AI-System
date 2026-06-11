@@ -179,6 +179,67 @@ if(want('G8'))try{
   hits.length?fail('G8',hits.join(' | ')):pass('G8','no English learner-facing labels');
 }catch(e){fail('G8',String(e).slice(0,120));}
 
+/* G9 — enrichment integrity (Phase P.1): enriched items activate real panels;
+   non-enriched items keep them hidden (no placebo) */
+if(want('G9'))try{
+  await fresh(p,'/diagnostic-sba/');
+  let ok=true,msg=[];
+  // --- enriched item (batch 1) ---
+  await p.evaluate(()=>{
+    const it=PREGUNTAS_BANK.items.find(i=>i.id==='wset3_17');
+    QUESTIONS=[bankToQ(it)]; STATE.questionIndex=0; STATE.stage='prepare'; render();
+  });
+  await p.evaluate(()=>{goToRead();goToCommit();selectOption(0);selectConf('seguro');commitAnswer();});
+  await p.waitForFunction(()=>STATE.stage==='cross',{timeout:4000});   // wait out commitAnswer's timer
+  await p.evaluate(()=>confirmCross());
+  await p.waitForFunction(()=>STATE.stage==='reveal'&&document.querySelector('.feedback-block'),{timeout:4000});
+  await sleep(150);
+  const r=await p.evaluate(()=>({
+    selectorVisible: document.getElementById('mentorMode').offsetParent!==null,
+    causal:[...document.querySelectorAll('.causal-node-text')].map(x=>x.textContent.trim()),
+    mentorTitle:[...document.querySelectorAll('.feedback-block-title')].map(x=>x.textContent).pop(),
+  }));
+  if(!r.selectorVisible){ok=false;msg.push('selector hidden on enriched item');}
+  if(r.causal.length!==3||r.causal.some(t=>!t||t==='—')){ok=false;msg.push('causal panel incomplete: '+JSON.stringify(r.causal).slice(0,60));}
+  // mentor switching changes body
+  const bodies=[];
+  for(const m of ['mentor','trainer','reviewer']){
+    await p.evaluate(mm=>{document.getElementById('mentorMode').value=mm;updateMentorMode();STATE.stage='reveal';render();},m);
+    await sleep(120);
+    bodies.push(await p.evaluate(()=>[...document.querySelectorAll('.feedback-block')].pop().querySelector('p').textContent.trim()));
+  }
+  if(new Set(bodies).size!==3){ok=false;msg.push('mentor modes not distinct ('+new Set(bodies).size+'/3)');}
+  // drill renders + submits
+  await p.evaluate(()=>goToTrain()); await sleep(250);
+  const d=await p.evaluate(()=>({drill:!!document.querySelector('.drill-section'),opts:document.querySelectorAll('.drill-opt-btn').length}));
+  if(!d.drill||d.opts!==4){ok=false;msg.push('drill missing on enriched item');}
+  await p.evaluate(()=>{selectDrillOption(0);submitDrill();}); await sleep(150);
+  const ex=await p.evaluate(()=>document.getElementById('drillExplanation').textContent.length>5);
+  if(!ex){ok=false;msg.push('drill explanation empty');}
+  // ES copy check on rendered learner text
+  const es=await p.evaluate(()=>/\b(?:de el|a el)\b/.test(document.getElementById('mainContent').textContent));
+  if(es){ok=false;msg.push('contraction artifact rendered');}
+  // --- non-enriched item: no placebo ---
+  await p.evaluate(()=>{
+    const it=PREGUNTAS_BANK.items.find(i=>!i.causal_chain&&!i.feedback_by_mode);
+    QUESTIONS=[bankToQ(it)]; STATE.questionIndex=0; STATE.stage='prepare'; render();
+  });
+  await p.evaluate(()=>{goToRead();goToCommit();selectOption(0);selectConf('seguro');commitAnswer();});
+  await p.waitForFunction(()=>STATE.stage==='cross',{timeout:4000});
+  await p.evaluate(()=>confirmCross());
+  await p.waitForFunction(()=>STATE.stage==='reveal'&&document.querySelector('.feedback-block'),{timeout:4000});
+  await sleep(150);
+  const n=await p.evaluate(()=>({
+    selectorVisible: document.getElementById('mentorMode').offsetParent!==null,
+    causalPanel: !!document.querySelector('.causal-chain'),
+  }));
+  if(n.selectorVisible){ok=false;msg.push('selector visible on non-enriched item');}
+  if(n.causalPanel){ok=false;msg.push('causal panel on non-enriched item');}
+  if(p._errs.length){ok=false;msg.push(p._errs[0].slice(0,80));}
+  ok?pass('G9','enriched item: selector+3 mentores distintos+cadena+drill; non-enriched: hidden')
+    :fail('G9',msg.join(' | '));
+}catch(e){fail('G9',String(e).slice(0,140));}
+
 await browser.close(); server.close();
 let allPass=true;
 for(const r of results){ console.log((r.pass?'PASS':'FAIL')+'  '+r.gate+'  '+r.msg); if(!r.pass)allPass=false; }

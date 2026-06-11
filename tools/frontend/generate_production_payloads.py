@@ -304,10 +304,44 @@ def avoid_recent(items, recent_ids, max_avoid=25):
 # Generator: Diagnostic SBA preguntas_data.js
 # ---------------------------------------------------------------------------
 
+ENRICHMENT_SIDECAR = REPO / "knowledge" / "question-bank" / "enrichment" / "sba_enrichment_v1.json"
+ENRICHMENT_FIELDS = ("causal_chain", "feedback_by_mode", "micro_drill")
+
+
+def apply_enrichment(frontend_items):
+    """Phase P.1: attach derived pedagogical fields from the enrichment sidecar.
+
+    The sidecar (produced by tools/question_generation/sba_enrichment_deriver.py)
+    is the ONLY source of causal_chain / feedback_by_mode / micro_drill. Items
+    without an entry keep the fields absent and the UI keeps panels hidden.
+    Provenance keys (underscore-prefixed) are never shipped to the frontend.
+    """
+    if not ENRICHMENT_SIDECAR.is_file():
+        print("  Enrichment: sidecar not found — no items enriched")
+        return frontend_items
+    sidecar = json.loads(ENRICHMENT_SIDECAR.read_text(encoding="utf-8"))
+    gov = sidecar.get("governance", {})
+    if gov.get("safe_for_examiner") is not False:
+        raise ValueError("Enrichment sidecar governance violation")
+    by_sqid = sidecar.get("items_by_source_question_id", {})
+    count = 0
+    for item in frontend_items:
+        record = by_sqid.get(str(item.get("source_question_id", "")))
+        if not record:
+            continue
+        for field in ENRICHMENT_FIELDS:
+            if field in record:
+                item[field] = record[field]
+        count += 1
+    print(f"  Enrichment: {count} items enriched from {ENRICHMENT_SIDECAR.name}")
+    return frontend_items
+
+
 def generate_sba_data():
     items = load_master_bank()
     eligible = sba_eligible(items)
     frontend_items = [master_to_sba_item(i) for i in eligible]
+    apply_enrichment(frontend_items)
 
     # Sort for stability: gold first, then by ra, then by source_question_id
     frontend_items.sort(
