@@ -47,7 +47,7 @@ class OpenResponseLabRuntimeMVPTests(unittest.TestCase):
         self.assertEqual(self.payload, build_lab_runtime_payload(self.candidates))
 
     def test_session_selection_uses_existing_session_engine_outputs(self) -> None:
-        for session_name, expected_size in (("short", 3), ("standard", 5), ("long", 10)):
+        for session_name, expected_size in (("short_practice", 1), ("standard_practice", 2), ("extended_practice", 4), ("mock_theory_2", 4)):
             expected = compose_session(self.candidates, session_size=session_name)
             actual = self.payload["sessions"][session_name]
             self.assertEqual(actual["session_size"], expected_size)

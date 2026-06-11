@@ -62,30 +62,44 @@ class OpenResponseSessionEngineTests(unittest.TestCase):
         self.assertEqual(EXCLUDED_SOURCE_IDS, ("807", "809"))
 
     def test_selection_is_deterministic(self) -> None:
-        first = select_session_question_ids(self.candidates, session_size="standard")
-        second = select_session_question_ids(copy.deepcopy(self.candidates), session_size="standard")
+        first = select_session_question_ids(self.candidates, session_size="standard_practice")
+        second = select_session_question_ids(copy.deepcopy(self.candidates), session_size="standard_practice")
 
         self.assertEqual(first, second)
 
     def test_selection_preserves_reproducible_pool_order(self) -> None:
-        selected = select_session_question_ids(self.candidates, session_size="short")
+        selected = select_session_question_ids(self.candidates, session_size="extended_practice")
 
-        self.assertEqual(selected, ["798", "799", "800"])
+        self.assertEqual(selected, ["798", "799", "800", "801"])
 
-    def test_short_session_has_three_questions(self) -> None:
-        selected = select_session_question_ids(self.candidates, session_size="short")
+    def test_short_practice_session_has_one_question(self) -> None:
+        selected = select_session_question_ids(self.candidates, session_size="short_practice")
 
-        self.assertEqual(len(selected), 3)
+        self.assertEqual(len(selected), 1)
 
-    def test_standard_session_has_five_questions(self) -> None:
-        selected = select_session_question_ids(self.candidates, session_size="standard")
+    def test_standard_practice_session_has_two_questions(self) -> None:
+        selected = select_session_question_ids(self.candidates, session_size="standard_practice")
 
-        self.assertEqual(len(selected), 5)
+        self.assertEqual(len(selected), 2)
 
-    def test_long_session_has_ten_questions(self) -> None:
-        selected = select_session_question_ids(self.candidates, session_size="long")
+    def test_extended_practice_session_has_four_questions(self) -> None:
+        selected = select_session_question_ids(self.candidates, session_size="extended_practice")
 
-        self.assertEqual(len(selected), 10)
+        self.assertEqual(len(selected), 4)
+
+    def test_mock_theory_2_composition_is_3_ra1_plus_1_ra5(self) -> None:
+        selected = select_session_question_ids(self.candidates, session_size="mock_theory_2")
+
+        self.assertEqual(selected, ["798", "799", "800", "853"])
+        by_id = {str(c.get("source_question_id")): c for c in self.candidates}
+        ras = [by_id[i]["RA"] for i in selected]
+        self.assertEqual(ras, ["RA1", "RA1", "RA1", "RA5"])
+
+    def test_mock_theory_2_is_deterministic(self) -> None:
+        first = select_session_question_ids(self.candidates, session_size="mock_theory_2")
+        second = select_session_question_ids(copy.deepcopy(self.candidates), session_size="mock_theory_2")
+
+        self.assertEqual(first, second)
 
     def test_integer_session_size_supported(self) -> None:
         selected = select_session_question_ids(self.candidates, session_size=7)
@@ -93,7 +107,7 @@ class OpenResponseSessionEngineTests(unittest.TestCase):
         self.assertEqual(len(selected), 7)
 
     def test_ra_filter_selects_ra1_pool(self) -> None:
-        selected = select_session_question_ids(self.candidates, ra="RA1", session_size="long")
+        selected = select_session_question_ids(self.candidates, ra="RA1", session_size=10)
 
         self.assertEqual(len(selected), 10)
         self.assertTrue(set(selected).issubset(set(ACTIVE_POOL_IDS)))
@@ -117,13 +131,13 @@ class OpenResponseSessionEngineTests(unittest.TestCase):
         self.assertNotIn("812", selected)
 
     def test_compose_session_is_inactive(self) -> None:
-        session = compose_session(self.candidates, session_size="standard")
+        session = compose_session(self.candidates, session_size="standard_practice")
 
         self.assertEqual(session["activation_status"], "inactive")
-        self.assertEqual(session["source_question_ids"], ["798", "799", "800", "801", "802"])
+        self.assertEqual(session["source_question_ids"], ["798", "799"])
 
     def test_compose_session_governance_is_safe(self) -> None:
-        session = compose_session(self.candidates, session_size="standard")
+        session = compose_session(self.candidates, session_size="standard_practice")
 
         self.assertEqual(session["governance_flags"], LAB_GOVERNANCE_FLAGS)
         self.assertFalse(session["governance_flags"]["safe_for_examiner"])
@@ -167,7 +181,7 @@ class OpenResponseSessionEngineTests(unittest.TestCase):
     def test_engine_does_not_mutate_candidates(self) -> None:
         before = copy.deepcopy(self.candidates)
 
-        select_session_question_ids(self.candidates, session_size="long")
+        select_session_question_ids(self.candidates, session_size="extended_practice")
 
         self.assertEqual(self.candidates, before)
 

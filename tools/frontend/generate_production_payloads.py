@@ -355,99 +355,22 @@ def generate_sba_data():
 # ---------------------------------------------------------------------------
 
 def generate_or_payload():
-    items = load_master_bank()
-    eligible = or_eligible(items)
-    frontend_items = [master_to_or_item(i) for i in eligible]
+    """Delegate to the authoritative ORL generator (Phase Z.2 reconciliation).
 
-    # Sort by ra then source_question_id
-    frontend_items.sort(
-        key=lambda x: (
-            x["ra"],
-            int(x["source_question_id"]) if x["source_question_id"].isdigit() else 9999,
-        )
-    )
+    The Open Response Lab payload contract (session keys short_practice /
+    standard_practice / extended_practice / mock_theory_2 with sizes 1/2/4/4,
+    plus evaluation_by_item_id) is owned by
+    tools/question_generation/open_response_lab_runtime.py. This module used to
+    emit a parallel, incompatible schema (short/standard/long, no evaluation
+    data) — that drift broke production ORL on 2026-06-10 (see
+    docs/FRONTEND_STABILIZATION_AUDIT.md, Issues #9-#11). Never reintroduce a
+    second lab_payload.js writer here.
+    """
+    from tools.question_generation.open_response_lab_runtime import write_lab_payload_js
 
-    from collections import Counter
-    ra_dist = Counter(i["ra"] for i in frontend_items)
-    all_ids = [i["source_question_id"] for i in frontend_items]
-
-    # Build mode sessions (best RA approximation with available items)
-    # Mock Theory Part 2 official: Q1(RA1+RA2), Q2(RA1+RA2), Q3(RA1+RA2+RA5), Q4(RA1+RA3+RA4+RA5)
-    # Available: RA1=21, RA5=5 — no RA2/RA3/RA4 open response items
-    ra1 = [i["source_question_id"] for i in frontend_items if i["ra"] == "RA1"]
-    ra5 = [i["source_question_id"] for i in frontend_items if i["ra"] == "RA5"]
-
-    def build_mode_ids(n):
-        """Return n IDs from the full pool."""
-        pool = all_ids[:]
-        random.shuffle(pool)
-        return pool[:n]
-
-    def build_mock_theory_2_ids():
-        """4 questions approximating official distribution: pick 3 from RA1, 1 from RA5."""
-        q1 = ra1[0] if len(ra1) > 0 else all_ids[0]
-        q2 = ra1[1] if len(ra1) > 1 else all_ids[1]
-        q3 = ra1[2] if len(ra1) > 2 else all_ids[2]
-        q4 = ra5[0] if len(ra5) > 0 else all_ids[3]
-        return [q1, q2, q3, q4]
-
-    short_ids = [i["source_question_id"] for i in frontend_items[:1]]
-    standard_ids = [i["source_question_id"] for i in frontend_items[:2]]
-    extended_ids = [i["source_question_id"] for i in frontend_items[:4]]
-    mock_ids = build_mock_theory_2_ids()
-
-    payload = {
-        "lab_contract": "private_open_response_lab_runtime_v2",
-        "schema_version": "lab_payload_v2",
-        "generated_at": datetime.now().isoformat(),
-        "activation_status": "active_private_lab",
-        "pool_size": len(frontend_items),
-        "ra_distribution": dict(sorted(ra_dist.items())),
-        "storage_key": "wset_open_response_lab_v2",
-        "session_options": {
-            "short_practice": 1,
-            "standard_practice": 2,
-            "extended_practice": 4,
-            "mock_theory_2": 4,
-        },
-        "sessions": {
-            "short_practice": {
-                "label": "Short Practice · 1",
-                "session_size": 1,
-                "item_ids": [f"open_response_{i}" for i in short_ids],
-                "source_question_ids": short_ids,
-            },
-            "standard_practice": {
-                "label": "Standard Practice · 2",
-                "session_size": 2,
-                "item_ids": [f"open_response_{i}" for i in standard_ids],
-                "source_question_ids": standard_ids,
-            },
-            "extended_practice": {
-                "label": "Extended Practice · 4",
-                "session_size": 4,
-                "item_ids": [f"open_response_{i}" for i in extended_ids],
-                "source_question_ids": extended_ids,
-            },
-            "mock_theory_2": {
-                "label": "Mock Theory Part 2 · 4",
-                "session_size": 4,
-                "item_ids": [f"open_response_{i}" for i in mock_ids],
-                "source_question_ids": mock_ids,
-                "distribution_note": (
-                    "Aproximación con RA disponibles (RA1+RA5). "
-                    "Distribución oficial: Q1/Q2=RA1+RA2, Q3=RA1+RA2+RA5, Q4=RA1+RA3+RA4+RA5."
-                ),
-            },
-        },
-        "governance": GOVERNANCE,
-        "items": frontend_items,
-    }
-
-    js = f"window.OPEN_RESPONSE_LAB_PAYLOAD = {json.dumps(payload, ensure_ascii=False, indent=2)};\n"
-    OR_OUT.write_text(js, encoding="utf-8")
-    print(f"  OR data: {len(frontend_items)} items, {len(payload['sessions'])} modes → {OR_OUT.name}")
-    return frontend_items
+    target = write_lab_payload_js(path=OR_OUT)
+    print(f"  OR data: delegated to open_response_lab_runtime → {target.name}")
+    return target
 
 
 # ---------------------------------------------------------------------------

@@ -25,11 +25,21 @@ from tools.constants import (
 
 CANDIDATES_PATH = Path("knowledge/question-bank/open_response/normalized/diagnostic_open_response_candidates.json")
 
+# Phase Z.2 upstream reconciliation: session keys and sizes are the UI contract
+# for open-response-lab/index.html (button data-session values). Changing these
+# keys breaks production -- the regression gate (tools/frontend/regression_gate)
+# must pass before any change here ships.
 SESSION_SIZES: dict[str, int] = {
-    "short": 3,
-    "standard": 5,
-    "long": 10,
+    "short_practice": 1,
+    "standard_practice": 2,
+    "extended_practice": 4,
+    "mock_theory_2": 4,
 }
+
+# Mock Theory Part 2 approximation with available RAs (official distribution:
+# Q1/Q2=RA1+RA2, Q3=RA1+RA2+RA5, Q4=RA1+RA3+RA4+RA5). With the current OR bank
+# (RA1 + RA5 only): 3 questions from RA1, 1 from RA5.
+MOCK_THEORY_2_RA_PLAN: tuple[tuple[str, int], ...] = (("RA1", 3), ("RA5", 1))
 
 READY_IDS: tuple[str, ...] = (
     "800",
@@ -137,11 +147,19 @@ def select_session_question_ids(
     ra: str | None = None,
     topic: str | None = None,
     difficulty: str | None = None,
-    session_size: str | int = "standard",
+    session_size: str | int = "standard_practice",
 ) -> list[str]:
     """Return deterministic source_question_id values for one private lab session."""
     records = list(candidates) if candidates is not None else load_open_response_candidates()
     target_size = _resolve_session_size(session_size)
+
+    # Mock Theory Part 2: RA-aware deterministic composition (no learner filters).
+    if (
+        str(session_size).strip().lower() == "mock_theory_2"
+        and ra is None and topic is None and difficulty is None
+    ):
+        return _select_mock_theory_2_ids(records, target_size)
+
     filtered = [
         candidate
         for candidate in _active_pool_candidates(records)
@@ -175,7 +193,7 @@ def compose_session(
     ra: str | None = None,
     topic: str | None = None,
     difficulty: str | None = None,
-    session_size: str | int = "standard",
+    session_size: str | int = "standard_practice",
 ) -> dict[str, Any]:
     """Return an inactive, governance-bounded private lab session descriptor."""
     selected_ids = select_session_question_ids(
@@ -206,6 +224,47 @@ def active_pool_manifest() -> list[dict[str, str]]:
     ]
 
 
+def _select_mock_theory_2_ids(
+    records: Sequence[Mapping[str, Any]], target_size: int
+) -> list[str]:
+    """Deterministic Mock Theory Part 2 composition: 3xRA1 (active pool first) + 1xRA5.
+
+    RA5 items live outside the legacy active pool, so the RA5 slot draws from the
+    full candidate list (minus excluded ids) in source order. Falls back to plain
+    pool order if an RA bucket cannot be filled.
+    """
+    excluded = set(EXCLUDED_SOURCE_IDS)
+    pool = list(_active_pool_candidates(records))
+    pool_ids = {_source_id(c) for c in pool}
+    extended = pool + [
+        c for c in records
+        if _source_id(c) not in pool_ids and _source_id(c) not in excluded
+    ]
+
+    selected: list[str] = []
+    for ra_value, count in MOCK_THEORY_2_RA_PLAN:
+        taken = 0
+        for candidate in extended:
+            if taken >= count or len(selected) >= target_size:
+                break
+            source_id = _source_id(candidate)
+            if source_id in selected:
+                continue
+            if str(candidate.get("RA", "")).strip() == ra_value:
+                selected.append(source_id)
+                taken += 1
+
+    # Fallback fill (bank without enough RA coverage): plain deterministic order.
+    for candidate in extended:
+        if len(selected) >= target_size:
+            break
+        source_id = _source_id(candidate)
+        if source_id not in selected:
+            selected.append(source_id)
+
+    return selected[:target_size]
+
+
 def _active_pool_candidates(candidates: Sequence[Mapping[str, Any]]) -> list[Mapping[str, Any]]:
     by_id = {_source_id(candidate): candidate for candidate in candidates}
     return [by_id[source_id] for source_id in ACTIVE_POOL_IDS if source_id in by_id]
@@ -218,7 +277,11 @@ def _resolve_session_size(session_size: str | int) -> int:
         return session_size
     key = str(session_size).strip().lower()
     if key not in SESSION_SIZES:
-        raise ValueError("session_size must be short, standard, long, or a positive integer")
+        raise ValueError(
+            "session_size must be one of "
+            + ", ".join(SESSION_SIZES)
+            + ", or a positive integer"
+        )
     return SESSION_SIZES[key]
 
 

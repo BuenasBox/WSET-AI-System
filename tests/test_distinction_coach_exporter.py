@@ -124,5 +124,85 @@ class RenderAndExportTests(unittest.TestCase):
             self.assertIn("safe_for_examiner", content)
 
 
+class SpanishLocalizationGuardTests(unittest.TestCase):
+    """Phase Z.2: coach_data.js learner-facing strings must be Spanish.
+
+    These tests prevent a regeneration from reintroducing English into the
+    deployed coach payload (the regression that motivated upstream
+    reconciliation on 2026-06-10).
+    """
+
+    @classmethod
+    def setUpClass(cls):
+        cls.payload = build_coach_payload()
+
+    # Distinctive English markers from the original (English) knowledge assets.
+    ENGLISH_MARKERS = (
+        "Work through",
+        "For MCQ",
+        "Make an informed judgement",
+        "Give reasons for",
+        "State the cause",
+        "the correct answer",
+        "must be justified by specific tasting observations",
+        "Count the marks",
+        "Overthinking distractors",
+    )
+
+    def _learner_strings(self):
+        out = []
+        for spec in self.payload["command_verbs"].values():
+            out.append(spec["definition"])
+            out.extend(spec["do"])
+            out.extend(spec["do_not"])
+            out.append(spec["mentor_hint"])
+        for hint in self.payload["mentor_hints"].values():
+            out.append(hint["hint"])
+            out.extend(hint.get("common_errors", []))
+        out.append(self.payload["quality_principle"])
+        out.extend(self.payload["common_quality_errors"])
+        out.append(self.payload["simple_wine_note"])
+        return out
+
+    def test_no_english_markers_in_learner_strings(self):
+        joined = " | ".join(self._learner_strings())
+        for marker in self.ENGLISH_MARKERS:
+            self.assertNotIn(marker, joined, f"English marker leaked: {marker!r}")
+
+    def test_every_command_verb_has_spanish_override(self):
+        from tools.question_generation.distinction_coach_exporter import (
+            COMMAND_VERBS,
+            ES_COMMAND_VERBS,
+        )
+        for verb in COMMAND_VERBS:
+            self.assertIn(verb, ES_COMMAND_VERBS)
+            for field in ("definition", "do", "do_not", "mentor_hint"):
+                self.assertTrue(ES_COMMAND_VERBS[verb][field], f"{verb}.{field} empty")
+
+    def test_every_mentor_hint_topic_has_spanish_override(self):
+        import json
+        from tools.question_generation.distinction_coach_exporter import (
+            ES_MENTOR_HINTS,
+            MENTOR_HINTS_PATH,
+        )
+        topics = json.loads(MENTOR_HINTS_PATH.read_text(encoding="utf-8"))["hints_by_topic"]
+        for topic in topics:
+            self.assertIn(topic, ES_MENTOR_HINTS)
+            self.assertTrue(ES_MENTOR_HINTS[topic]["hint"], f"{topic}.hint empty")
+
+    def test_export_fails_when_translation_missing(self):
+        import tools.question_generation.distinction_coach_exporter as exporter
+        removed = exporter.ES_COMMAND_VERBS.pop("explain")
+        try:
+            with self.assertRaises(ValueError):
+                exporter.build_coach_payload()
+        finally:
+            exporter.ES_COMMAND_VERBS["explain"] = removed
+
+    def test_rendered_js_declares_spanish_contract(self):
+        js = render_coach_js(self.payload)
+        self.assertIn("Spanish by contract", js)
+
+
 if __name__ == "__main__":
     unittest.main()
