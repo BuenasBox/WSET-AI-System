@@ -1,6 +1,6 @@
 window.PREGUNTAS_BANK = {
   "schema_version": "sba_bank_v1",
-  "generated_at": "2026-06-10T15:02:37.419597",
+  "generated_at": "2026-06-11T17:36:11.178587",
   "total_items": 578,
   "ra_distribution": {
     "RA1": 225,
@@ -4975,7 +4975,10 @@ window.PREGUNTAS_BANK = {
       "correct_index": 0,
       "correct_letter": "A",
       "keywords": [
-        "Verdadero"
+        "filoxera",
+        "portainjertos",
+        "injerto",
+        "plagas"
       ],
       "gold": false,
       "governance": {
@@ -5002,7 +5005,10 @@ window.PREGUNTAS_BANK = {
       "correct_index": 0,
       "correct_letter": "A",
       "keywords": [
-        "Verdadero"
+        "roble francés",
+        "roble americano",
+        "aromas",
+        "crianza"
       ],
       "gold": false,
       "governance": {
@@ -5029,7 +5035,10 @@ window.PREGUNTAS_BANK = {
       "correct_index": 0,
       "correct_letter": "A",
       "keywords": [
-        "Verdadero"
+        "acero inoxidable",
+        "temperatura",
+        "fermentación",
+        "control"
       ],
       "gold": false,
       "governance": {
@@ -5056,7 +5065,10 @@ window.PREGUNTAS_BANK = {
       "correct_index": 0,
       "correct_letter": "A",
       "keywords": [
-        "Verdadero"
+        "suelos arenosos",
+        "drenaje",
+        "retención hídrica",
+        "nutrientes"
       ],
       "gold": false,
       "governance": {
@@ -5083,7 +5095,10 @@ window.PREGUNTAS_BANK = {
       "correct_index": 0,
       "correct_letter": "A",
       "keywords": [
-        "Verdadero"
+        "poda temprana",
+        "brotación",
+        "heladas primaverales",
+        "viticultura"
       ],
       "gold": false,
       "governance": {
@@ -5110,7 +5125,10 @@ window.PREGUNTAS_BANK = {
       "correct_index": 0,
       "correct_letter": "A",
       "keywords": [
-        "Verdadero"
+        "deshoje",
+        "ventilación",
+        "enfermedades fúngicas",
+        "racimo"
       ],
       "gold": false,
       "governance": {
@@ -5137,7 +5155,10 @@ window.PREGUNTAS_BANK = {
       "correct_index": 0,
       "correct_letter": "A",
       "keywords": [
-        "Verdadero"
+        "cubiertas vegetales",
+        "compactación",
+        "suelo",
+        "viticultura sostenible"
       ],
       "gold": false,
       "governance": {
@@ -5164,7 +5185,10 @@ window.PREGUNTAS_BANK = {
       "correct_index": 0,
       "correct_letter": "A",
       "keywords": [
-        "Verdadero"
+        "selección clonal",
+        "variedad",
+        "estilo",
+        "calidad"
       ],
       "gold": false,
       "governance": {
@@ -5191,7 +5215,10 @@ window.PREGUNTAS_BANK = {
       "correct_index": 0,
       "correct_letter": "A",
       "keywords": [
-        "Verdadero"
+        "cosecha nocturna",
+        "temperatura",
+        "oxidación",
+        "aromas"
       ],
       "gold": false,
       "governance": {
@@ -5218,7 +5245,10 @@ window.PREGUNTAS_BANK = {
       "correct_index": 0,
       "correct_letter": "A",
       "keywords": [
-        "Verdadero"
+        "desfangado",
+        "clarificación",
+        "mosto",
+        "fermentación"
       ],
       "gold": false,
       "governance": {
@@ -5245,7 +5275,11 @@ window.PREGUNTAS_BANK = {
       "correct_index": 0,
       "correct_letter": "A",
       "keywords": [
-        "Verdadero"
+        "SO2",
+        "sulfitos",
+        "levaduras",
+        "bacterias",
+        "antimicrobiano"
       ],
       "gold": false,
       "governance": {
@@ -5272,7 +5306,10 @@ window.PREGUNTAS_BANK = {
       "correct_index": 0,
       "correct_letter": "A",
       "keywords": [
-        "Verdadero"
+        "barrica nueva",
+        "taninos",
+        "vinos blancos",
+        "aromas"
       ],
       "gold": false,
       "governance": {
@@ -5299,7 +5336,10 @@ window.PREGUNTAS_BANK = {
       "correct_index": 0,
       "correct_letter": "A",
       "keywords": [
-        "Verdadero"
+        "acero inoxidable",
+        "aromas frutales",
+        "primarios",
+        "fermentación"
       ],
       "gold": false,
       "governance": {
@@ -5326,7 +5366,10 @@ window.PREGUNTAS_BANK = {
       "correct_index": 0,
       "correct_letter": "A",
       "keywords": [
-        "Verdadero"
+        "vendimia manual",
+        "selección",
+        "calidad",
+        "racimos"
       ],
       "gold": false,
       "governance": {
@@ -5353,7 +5396,10 @@ window.PREGUNTAS_BANK = {
       "correct_index": 0,
       "correct_letter": "A",
       "keywords": [
-        "Verdadero"
+        "levaduras seleccionadas",
+        "fermentación",
+        "velocidad",
+        "control"
       ],
       "gold": false,
       "governance": {
@@ -5380,7 +5426,10 @@ window.PREGUNTAS_BANK = {
       "correct_index": 0,
       "correct_letter": "A",
       "keywords": [
-        "Verdadero"
+        "ciclo corto",
+        "variedades",
+        "clima frío",
+        "maduración"
       ],
       "gold": false,
       "governance": {
@@ -5461,7 +5510,10 @@ window.PREGUNTAS_BANK = {
       "correct_index": 0,
       "correct_letter": "A",
       "keywords": [
-        "Verdadero"
+        "enfriamiento",
+        "vendimia",
+        "aromas primarios",
+        "temperatura"
       ],
       "gold": false,
       "governance": {
@@ -5488,7 +5540,10 @@ window.PREGUNTAS_BANK = {
       "correct_index": 0,
       "correct_letter": "A",
       "keywords": [
-        "Verdadero"
+        "batonnage",
+        "lías",
+        "complejidad",
+        "vinos blancos"
       ],
       "gold": false,
       "governance": {
@@ -5515,7 +5570,10 @@ window.PREGUNTAS_BANK = {
       "correct_index": 0,
       "correct_letter": "A",
       "keywords": [
-        "Verdadero"
+        "FML",
+        "ácido málico",
+        "ácido láctico",
+        "acidez"
       ],
       "gold": false,
       "governance": {
@@ -5542,7 +5600,10 @@ window.PREGUNTAS_BANK = {
       "correct_index": 0,
       "correct_letter": "A",
       "keywords": [
-        "Verdadero"
+        "roble americano",
+        "vainilla",
+        "coco",
+        "aromas"
       ],
       "gold": false,
       "governance": {
@@ -5569,7 +5630,10 @@ window.PREGUNTAS_BANK = {
       "correct_index": 0,
       "correct_letter": "A",
       "keywords": [
-        "Verdadero"
+        "estrés hídrico",
+        "moderado",
+        "concentración",
+        "compuestos fenólicos"
       ],
       "gold": false,
       "governance": {
@@ -5596,7 +5660,10 @@ window.PREGUNTAS_BANK = {
       "correct_index": 0,
       "correct_letter": "A",
       "keywords": [
-        "Verdadero"
+        "riego por goteo",
+        "zona radicular",
+        "control",
+        "agua"
       ],
       "gold": false,
       "governance": {
@@ -5623,7 +5690,10 @@ window.PREGUNTAS_BANK = {
       "correct_index": 0,
       "correct_letter": "A",
       "keywords": [
-        "Verdadero"
+        "heladas primaverales",
+        "brotes",
+        "rendimiento",
+        "brotación"
       ],
       "gold": false,
       "governance": {
@@ -5650,7 +5720,10 @@ window.PREGUNTAS_BANK = {
       "correct_index": 0,
       "correct_letter": "A",
       "keywords": [
-        "Verdadero"
+        "deshoje",
+        "ventilación",
+        "racimo",
+        "sanidad"
       ],
       "gold": false,
       "governance": {
@@ -5677,7 +5750,10 @@ window.PREGUNTAS_BANK = {
       "correct_index": 0,
       "correct_letter": "A",
       "keywords": [
-        "Verdadero"
+        "conducción",
+        "exposición solar",
+        "vid",
+        "calidad"
       ],
       "gold": false,
       "governance": {
@@ -5704,7 +5780,10 @@ window.PREGUNTAS_BANK = {
       "correct_index": 0,
       "correct_letter": "A",
       "keywords": [
-        "Verdadero"
+        "drenaje",
+        "suelo",
+        "desarrollo radicular",
+        "calidad"
       ],
       "gold": false,
       "governance": {
@@ -6406,7 +6485,10 @@ window.PREGUNTAS_BANK = {
       "correct_index": 0,
       "correct_letter": "A",
       "keywords": [
-        "Falso"
+        "Valle Central",
+        "Chile",
+        "riego",
+        "clima"
       ],
       "gold": false,
       "governance": {
@@ -6433,7 +6515,10 @@ window.PREGUNTAS_BANK = {
       "correct_index": 0,
       "correct_letter": "A",
       "keywords": [
-        "Falso"
+        "orientación",
+        "exposición solar",
+        "hemisferio norte",
+        "maduración"
       ],
       "gold": false,
       "governance": {
@@ -6460,7 +6545,10 @@ window.PREGUNTAS_BANK = {
       "correct_index": 0,
       "correct_letter": "A",
       "keywords": [
-        "Falso"
+        "batonnage",
+        "lías",
+        "vinos blancos",
+        "complejidad"
       ],
       "gold": false,
       "governance": {
@@ -6487,7 +6575,10 @@ window.PREGUNTAS_BANK = {
       "correct_index": 0,
       "correct_letter": "A",
       "keywords": [
-        "Falso"
+        "clima mediterráneo",
+        "enfermedades fúngicas",
+        "veranos secos",
+        "precipitaciones"
       ],
       "gold": false,
       "governance": {
@@ -6514,7 +6605,10 @@ window.PREGUNTAS_BANK = {
       "correct_index": 0,
       "correct_letter": "A",
       "keywords": [
-        "Falso"
+        "fermentación maloláctica",
+        "FML",
+        "acidez",
+        "ácido láctico"
       ],
       "gold": false,
       "governance": {
@@ -6541,7 +6635,10 @@ window.PREGUNTAS_BANK = {
       "correct_index": 0,
       "correct_letter": "A",
       "keywords": [
-        "Falso"
+        "suelos arcillosos",
+        "drenaje",
+        "retención hídrica",
+        "temperatura"
       ],
       "gold": false,
       "governance": {
@@ -6568,7 +6665,10 @@ window.PREGUNTAS_BANK = {
       "correct_index": 0,
       "correct_letter": "A",
       "keywords": [
-        "Falso"
+        "trasiego",
+        "sedimentos",
+        "clarificación",
+        "crianza"
       ],
       "gold": false,
       "governance": {
@@ -6595,7 +6695,10 @@ window.PREGUNTAS_BANK = {
       "correct_index": 0,
       "correct_letter": "A",
       "keywords": [
-        "Falso"
+        "altitud",
+        "azúcar",
+        "amplitud térmica",
+        "acidez"
       ],
       "gold": false,
       "governance": {
@@ -6622,7 +6725,10 @@ window.PREGUNTAS_BANK = {
       "correct_index": 0,
       "correct_letter": "A",
       "keywords": [
-        "Falso"
+        "altitud",
+        "acidez",
+        "temperatura",
+        "preservación"
       ],
       "gold": false,
       "governance": {
@@ -6649,7 +6755,10 @@ window.PREGUNTAS_BANK = {
       "correct_index": 0,
       "correct_letter": "A",
       "keywords": [
-        "Falso"
+        "botrytis",
+        "podredumbre noble",
+        "Sauternes",
+        "Tokaji"
       ],
       "gold": false,
       "governance": {
@@ -6676,7 +6785,10 @@ window.PREGUNTAS_BANK = {
       "correct_index": 0,
       "correct_letter": "A",
       "keywords": [
-        "Falso"
+        "fertilizantes orgánicos",
+        "crecimiento vegetativo",
+        "suelo",
+        "viticultura ecológica"
       ],
       "gold": false,
       "governance": {
@@ -6703,7 +6815,10 @@ window.PREGUNTAS_BANK = {
       "correct_index": 0,
       "correct_letter": "A",
       "keywords": [
-        "Falso"
+        "orientación norte",
+        "hemisferio norte",
+        "exposición sur",
+        "maduración"
       ],
       "gold": false,
       "governance": {
@@ -6730,7 +6845,10 @@ window.PREGUNTAS_BANK = {
       "correct_index": 0,
       "correct_letter": "A",
       "keywords": [
-        "Falso"
+        "levaduras indígenas",
+        "fermentación",
+        "terroir",
+        "levaduras seleccionadas"
       ],
       "gold": false,
       "governance": {
@@ -6757,7 +6875,10 @@ window.PREGUNTAS_BANK = {
       "correct_index": 0,
       "correct_letter": "A",
       "keywords": [
-        "Falso"
+        "rendimiento",
+        "calidad",
+        "concentración",
+        "denominación de origen"
       ],
       "gold": false,
       "governance": {
@@ -6784,7 +6905,10 @@ window.PREGUNTAS_BANK = {
       "correct_index": 0,
       "correct_letter": "A",
       "keywords": [
-        "Falso"
+        "barricas nuevas",
+        "premium",
+        "vainilla",
+        "taninos"
       ],
       "gold": false,
       "governance": {
@@ -6811,7 +6935,10 @@ window.PREGUNTAS_BANK = {
       "correct_index": 0,
       "correct_letter": "A",
       "keywords": [
-        "Falso"
+        "clima fresco",
+        "acidez",
+        "clima cálido",
+        "grado alcohólico"
       ],
       "gold": false,
       "governance": {
@@ -6838,7 +6965,10 @@ window.PREGUNTAS_BANK = {
       "correct_index": 0,
       "correct_letter": "A",
       "keywords": [
-        "Falso"
+        "estrés hídrico",
+        "calidad",
+        "maduración",
+        "riego controlado"
       ],
       "gold": false,
       "governance": {
@@ -6865,7 +6995,10 @@ window.PREGUNTAS_BANK = {
       "correct_index": 0,
       "correct_letter": "A",
       "keywords": [
-        "Falso"
+        "clima marítimo",
+        "inviernos",
+        "temperatura",
+        "influencia oceánica"
       ],
       "gold": false,
       "governance": {
@@ -6892,7 +7025,10 @@ window.PREGUNTAS_BANK = {
       "correct_index": 0,
       "correct_letter": "A",
       "keywords": [
-        "Falso"
+        "viticultura ecológica",
+        "fertilizantes orgánicos",
+        "pesticidas sintéticos",
+        "certificación"
       ],
       "gold": false,
       "governance": {
@@ -6919,7 +7055,10 @@ window.PREGUNTAS_BANK = {
       "correct_index": 0,
       "correct_letter": "A",
       "keywords": [
-        "Falso"
+        "riego",
+        "Europa",
+        "denominaciones",
+        "España"
       ],
       "gold": false,
       "governance": {
@@ -11480,7 +11619,10 @@ window.PREGUNTAS_BANK = {
       "correct_index": 0,
       "correct_letter": "A",
       "keywords": [
-        "Verdadero"
+        "Barossa Valley",
+        "Shiraz",
+        "concentración",
+        "Australia"
       ],
       "gold": false,
       "governance": {
@@ -11696,7 +11838,10 @@ window.PREGUNTAS_BANK = {
       "correct_index": 0,
       "correct_letter": "A",
       "keywords": [
-        "Verdadero"
+        "Mendoza",
+        "altitud",
+        "acidez",
+        "Argentina"
       ],
       "gold": false,
       "governance": {
@@ -11723,7 +11868,10 @@ window.PREGUNTAS_BANK = {
       "correct_index": 0,
       "correct_letter": "A",
       "keywords": [
-        "Verdadero"
+        "Piemonte",
+        "clima continental",
+        "taninos",
+        "acidez"
       ],
       "gold": false,
       "governance": {
@@ -11750,7 +11898,10 @@ window.PREGUNTAS_BANK = {
       "correct_index": 0,
       "correct_letter": "A",
       "keywords": [
-        "Verdadero"
+        "Chablis",
+        "Chardonnay",
+        "roble",
+        "acero inoxidable"
       ],
       "gold": false,
       "governance": {
@@ -11777,7 +11928,10 @@ window.PREGUNTAS_BANK = {
       "correct_index": 0,
       "correct_letter": "A",
       "keywords": [
-        "Verdadero"
+        "Mosel",
+        "Riesling",
+        "pendientes",
+        "insolación"
       ],
       "gold": false,
       "governance": {
@@ -12101,7 +12255,10 @@ window.PREGUNTAS_BANK = {
       "correct_index": 0,
       "correct_letter": "A",
       "keywords": [
-        "Falso"
+        "roble nuevo",
+        "Reserva",
+        "Rioja",
+        "crianza"
       ],
       "gold": false,
       "governance": {
@@ -12128,7 +12285,10 @@ window.PREGUNTAS_BANK = {
       "correct_index": 0,
       "correct_letter": "A",
       "keywords": [
-        "Falso"
+        "Médoc",
+        "Cabernet Sauvignon",
+        "Merlot",
+        "Burdeos"
       ],
       "gold": false,
       "governance": {
@@ -12155,7 +12315,10 @@ window.PREGUNTAS_BANK = {
       "correct_index": 0,
       "correct_letter": "A",
       "keywords": [
-        "Falso"
+        "Borgoña",
+        "variedades híbridas",
+        "Pinot Noir",
+        "Chardonnay"
       ],
       "gold": false,
       "governance": {
@@ -12182,7 +12345,10 @@ window.PREGUNTAS_BANK = {
       "correct_index": 0,
       "correct_letter": "A",
       "keywords": [
-        "Falso"
+        "Marlborough",
+        "Sauvignon Blanc",
+        "acidez",
+        "Nueva Zelanda"
       ],
       "gold": false,
       "governance": {
