@@ -1,0 +1,7 @@
+{
+  "name": "regression-gate",
+  "private": true,
+  "type": "module",
+  "scripts": { "gate": "node gate.mjs" },
+  "dependencies": { "@sparticuz/chromium": "^141.0.0", "puppeteer-core": "^24.0.0" }
+}
