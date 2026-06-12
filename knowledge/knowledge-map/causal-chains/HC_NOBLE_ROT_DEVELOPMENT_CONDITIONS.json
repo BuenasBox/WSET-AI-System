@@ -1,0 +1,70 @@
+{
+  "node_type": "causal_chain",
+  "node_id": "HC_NOBLE_ROT_DEVELOPMENT_CONDITIONS",
+  "topic": "climatic conditions for noble rot",
+  "trigger_keywords": [
+    "podredumbre noble",
+    "noble rot",
+    "clima húmedo",
+    "clima humedo",
+    "nieblas matinales",
+    "morning mist",
+    "morning fog",
+    "humid climate",
+    "humid conditions",
+    "dry afternoons",
+    "tardes secas"
+  ],
+  "classification": "inferred",
+  "source": "heuristic",
+  "official": false,
+  "formative_only": true,
+  "official_mark_scheme": false,
+  "safe_for_examiner": false,
+  "examiner_scoring_allowed": false,
+  "requires_human_review": true,
+  "sat_relevance": "Relevant when noble-rot style is explained by alternating humid mornings and dry afternoons.",
+  "steps": [
+    {
+      "step": 1,
+      "label": "cause",
+      "text": "Noble rot develops when ripe grapes experience humid or misty mornings followed by warmer, drier afternoons."
+    },
+    {
+      "step": 2,
+      "label": "mechanism",
+      "text": "Morning humidity allows Botrytis cinerea to establish on the berries, while dry afternoons limit destructive grey rot and promote controlled evaporation through the perforated skins."
+    },
+    {
+      "step": 3,
+      "label": "effect",
+      "text": "The alternating conditions favour beneficial noble rot, producing shrivelled grapes with concentrated sugar, flavour and characteristic botrytised aromas."
+    },
+    {
+      "step": 4,
+      "label": "exam_formulation",
+      "text": "Humid mornings initiate Botrytis infection and dry afternoons convert that infection into beneficial noble rot rather than destructive grey rot."
+    }
+  ],
+  "linked_topics": [
+    "CC_NOBLE_ROT_SUGAR_CONCENTRATION",
+    "HC_BOTRYTIS_CONCENTRATION"
+  ],
+  "agent_corpus": "tutor",
+  "governance": {
+    "safe_for_examiner": false,
+    "examiner_scoring_allowed": false,
+    "agent_corpus": "tutor",
+    "source": "heuristic",
+    "classification": "inferred",
+    "official": false,
+    "formative_only": true
+  },
+  "_meta": {
+    "schema_version": "causal_chain_v1",
+    "heuristic_extension": "HC_v1",
+    "created_date": "2026-06-12",
+    "ingestion_status": "draft",
+    "source_note": "Inferred formative model - Phase P.3 Botrytis candidate expansion. Not from official WSET mark scheme."
+  }
+}

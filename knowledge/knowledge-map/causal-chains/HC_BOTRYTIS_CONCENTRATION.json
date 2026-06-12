@@ -1,0 +1,70 @@
+{
+  "node_type": "causal_chain",
+  "node_id": "HC_BOTRYTIS_CONCENTRATION",
+  "topic": "noble rot and grape concentration",
+  "trigger_keywords": [
+    "botrytis",
+    "botrytis cinerea",
+    "podredumbre noble",
+    "noble rot",
+    "mayor concentración",
+    "mayor concentracion",
+    "concentración de azúcar",
+    "concentracion de azucar",
+    "aumenta la concentración",
+    "aumenta la concentracion",
+    "sugar concentration"
+  ],
+  "classification": "inferred",
+  "source": "heuristic",
+  "official": false,
+  "formative_only": true,
+  "official_mark_scheme": false,
+  "safe_for_examiner": false,
+  "examiner_scoring_allowed": false,
+  "requires_human_review": true,
+  "sat_relevance": "Relevant when sweetness, concentration, texture or botrytised aroma is explained by noble rot.",
+  "steps": [
+    {
+      "step": 1,
+      "label": "cause",
+      "text": "Beneficial Botrytis cinerea infects ripe grapes when humid or misty periods are followed by warm, dry conditions."
+    },
+    {
+      "step": 2,
+      "label": "mechanism",
+      "text": "The fungus perforates the grape skin, allowing water to evaporate during dry periods and concentrating sugars, remaining acids, flavour compounds and glycerol precursors in the shrinking berry. Botrytis also metabolises some grape acids, so net acidity is lower than simple concentration alone would produce."
+    },
+    {
+      "step": 3,
+      "label": "effect",
+      "text": "The fruit develops greater sugar, remaining-acid and flavour concentration, a rich texture and characteristic noble-rot aromas suitable for intensely sweet wines, with acidity lower than the concentration effect alone would predict."
+    },
+    {
+      "step": 4,
+      "label": "exam_formulation",
+      "text": "Noble rot increases concentration because perforated grape skins permit water loss, while Botrytis acid metabolism means net acidity remains lower than simple concentration alone would predict."
+    }
+  ],
+  "linked_topics": [
+    "CC_NOBLE_ROT_SUGAR_CONCENTRATION",
+    "CC_BOTRYTIS_ACIDITY_REDUCTION"
+  ],
+  "agent_corpus": "tutor",
+  "governance": {
+    "safe_for_examiner": false,
+    "examiner_scoring_allowed": false,
+    "agent_corpus": "tutor",
+    "source": "heuristic",
+    "classification": "inferred",
+    "official": false,
+    "formative_only": true
+  },
+  "_meta": {
+    "schema_version": "causal_chain_v1",
+    "heuristic_extension": "HC_v1",
+    "created_date": "2026-06-12",
+    "ingestion_status": "draft",
+    "source_note": "Inferred formative model - Phase P.3 Botrytis candidate expansion. Not from official WSET mark scheme."
+  }
+}

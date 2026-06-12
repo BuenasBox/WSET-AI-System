@@ -1,4 +1,15 @@
 {
+  "candidate_domain": "botrytis_concentration",
+  "candidate_item_count": 3,
+  "candidate_item_ids": [
+    "wset3_372",
+    "wset3_426",
+    "wset3_510"
+  ],
+  "candidate_node_ids": [
+    "HC_BOTRYTIS_CONCENTRATION",
+    "HC_NOBLE_ROT_DEVELOPMENT_CONDITIONS"
+  ],
   "derivation": {
     "batch_size": 50,
     "generic_triggers_banned": [
@@ -738,7 +749,7 @@
       }
     }
   },
-  "phase": "P.1-batch1-v2-precision",
+  "phase": "P.3-botrytis-candidate",
   "rejection_stats": {
     "below_threshold": 138,
     "identification_stem": 112,

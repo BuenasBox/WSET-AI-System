@@ -221,6 +221,18 @@ NODE_ES.update({
         "mecanismo": "El agua limitada hace que la vid frene el crecimiento de brotes y follaje y derive recursos a las bayas; el tamaño de la baya se mantiene pequeño, aumentando la proporción de piel respecto al jugo, mientras se concentran azúcar, antocianos y compuestos de sabor. Un estrés severo, en cambio, detiene la maduración.",
         "efecto": "El estrés hídrico leve tiende a producir bayas más pequeñas con mayor concentración de sabor, color y tanino y mayor potencial de calidad; el riego excesivo o la lluvia los diluyen y pueden reducir la calidad.",
     },
+    "HC_BOTRYTIS_CONCENTRATION": {
+        "subject": "la podredumbre noble y la concentración de la uva",
+        "causa": "La Botrytis cinerea beneficiosa infecta uvas maduras cuando periodos húmedos o con niebla van seguidos de condiciones cálidas y secas.",
+        "mecanismo": "El hongo perfora la piel de la baya y permite que el agua se evapore durante los periodos secos. Esta pérdida de agua concentra directamente los azúcares y los compuestos de sabor; al mismo tiempo, la Botrytis metaboliza parte de los ácidos de la uva.",
+        "efecto": "La fruta adquiere mayor concentración de azúcar y sabor, una textura rica y aromas característicos de podredumbre noble. La acidez neta depende del equilibrio entre concentración y metabolismo de ácidos, por lo que no debe interpretarse como una regla simple de aumento de acidez.",
+    },
+    "HC_NOBLE_ROT_DEVELOPMENT_CONDITIONS": {
+        "subject": "las condiciones climáticas para el desarrollo de la podredumbre noble",
+        "causa": "La podredumbre noble se desarrolla cuando las uvas maduras reciben mañanas húmedas o con niebla seguidas de tardes más cálidas y secas.",
+        "mecanismo": "La humedad o niebla matinal permite que Botrytis cinerea se establezca en las bayas; después, las tardes secas limitan la podredumbre gris destructiva y favorecen una evaporación controlada a través de las pieles perforadas. La humedad por sí sola no es suficiente.",
+        "efecto": "La secuencia de mañanas húmedas o con niebla seguidas de tardes secas favorece la podredumbre noble beneficiosa y produce uvas pasificadas con azúcar, sabor y aromas botritizados concentrados.",
+    },
 })
 
 

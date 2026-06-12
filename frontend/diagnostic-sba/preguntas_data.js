@@ -1,6 +1,6 @@
 window.PREGUNTAS_BANK = {
   "schema_version": "sba_bank_v1",
-  "generated_at": "2026-06-11T20:21:21.570772",
+  "generated_at": "2026-06-12T00:43:03.340157",
   "total_items": 578,
   "ra_distribution": {
     "RA1": 225,
@@ -3462,6 +3462,16 @@ window.PREGUNTAS_BANK = {
         "training_item_only": true,
         "official_wset_question": false,
         "disclaimer": "PROTOTIPO · ENTRENAMIENTO · NO EVALUACIÓN OFICIAL WSET"
+      },
+      "causal_chain": {
+        "causa": "La Botrytis cinerea beneficiosa infecta uvas maduras cuando periodos húmedos o con niebla van seguidos de condiciones cálidas y secas.",
+        "efecto": "La fruta adquiere mayor concentración de azúcar y sabor, una textura rica y aromas característicos de podredumbre noble. La acidez neta depende del equilibrio entre concentración y metabolismo de ácidos, por lo que no debe interpretarse como una regla simple de aumento de acidez.",
+        "mecanismo": "El hongo perfora la piel de la baya y permite que el agua se evapore durante los periodos secos. Esta pérdida de agua concentra directamente los azúcares y los compuestos de sabor; al mismo tiempo, la Botrytis metaboliza parte de los ácidos de la uva."
+      },
+      "feedback_by_mode": {
+        "mentor": "La respuesta correcta es C: «Mayor concentración». La clave está en la podredumbre noble y la concentración de la uva: El hongo perfora la piel de la baya y permite que el agua se evapore durante los periodos secos. Esta pérdida de agua concentra directamente los azúcares y los compuestos de sabor; al mismo tiempo, la Botrytis metaboliza parte de los ácidos de la uva. Por eso, la fruta adquiere mayor concentración de azúcar y sabor, una textura rica y aromas característicos de podredumbre noble. La acidez neta depende del equilibrio entre concentración y metabolismo de ácidos, por lo que no debe interpretarse como una regla simple de aumento de acidez.",
+        "reviewer": "Exigencia de repaso (RA1): debes poder justificar por qué «Mayor concentración» es correcta y por qué las otras tres opciones no lo son, citando el mecanismo de la podredumbre noble y la concentración de la uva. Si no puedes reconstruir la cadena completa sin ver las opciones, repasa este concepto en tu material WSET L3.",
+        "trainer": "Concepto técnico (RA1): Fija el mecanismo de la podredumbre noble y la concentración de la uva: La Botrytis cinerea beneficiosa infecta uvas maduras cuando periodos húmedos o con niebla van seguidos de condiciones cálidas y secas. → El hongo perfora la piel de la baya y permite que el agua se evapore durante los periodos secos. Esta pérdida de agua concentra directamente los azúcares y los compuestos de sabor; al mismo tiempo, la Botrytis metaboliza parte de los ácidos de la uva. En el examen, identifica este patrón causa→mecanismo→efecto antes de mirar las opciones."
       }
     },
     {
@@ -4915,6 +4925,28 @@ window.PREGUNTAS_BANK = {
         "training_item_only": true,
         "official_wset_question": false,
         "disclaimer": "PROTOTIPO · ENTRENAMIENTO · NO EVALUACIÓN OFICIAL WSET"
+      },
+      "causal_chain": {
+        "causa": "La podredumbre noble se desarrolla cuando las uvas maduras reciben mañanas húmedas o con niebla seguidas de tardes más cálidas y secas.",
+        "efecto": "La secuencia de mañanas húmedas o con niebla seguidas de tardes secas favorece la podredumbre noble beneficiosa y produce uvas pasificadas con azúcar, sabor y aromas botritizados concentrados.",
+        "mecanismo": "La humedad o niebla matinal permite que Botrytis cinerea se establezca en las bayas; después, las tardes secas limitan la podredumbre gris destructiva y favorecen una evaporación controlada a través de las pieles perforadas. La humedad por sí sola no es suficiente."
+      },
+      "feedback_by_mode": {
+        "mentor": "La respuesta correcta es D: «Clima húmedo con nieblas matinales». La clave está en las condiciones climáticas para el desarrollo de la podredumbre noble: La humedad o niebla matinal permite que Botrytis cinerea se establezca en las bayas; después, las tardes secas limitan la podredumbre gris destructiva y favorecen una evaporación controlada a través de las pieles perforadas. La humedad por sí sola no es suficiente. Por eso, la secuencia de mañanas húmedas o con niebla seguidas de tardes secas favorece la podredumbre noble beneficiosa y produce uvas pasificadas con azúcar, sabor y aromas botritizados concentrados.",
+        "reviewer": "Exigencia de repaso (RA1): debes poder justificar por qué «Clima húmedo con nieblas matinales» es correcta y por qué las otras tres opciones no lo son, citando el mecanismo de las condiciones climáticas para el desarrollo de la podredumbre noble. Si no puedes reconstruir la cadena completa sin ver las opciones, repasa este concepto en tu material WSET L3.",
+        "trainer": "Concepto técnico (RA1): Tema: viticulture. Fija el mecanismo de las condiciones climáticas para el desarrollo de la podredumbre noble: La podredumbre noble se desarrolla cuando las uvas maduras reciben mañanas húmedas o con niebla seguidas de tardes más cálidas y secas. → La humedad o niebla matinal permite que Botrytis cinerea se establezca en las bayas; después, las tardes secas limitan la podredumbre gris destructiva y favorecen una evaporación controlada a través de las pieles perforadas. La humedad por sí sola no es suficiente. En el examen, identifica este patrón causa→mecanismo→efecto antes de mirar las opciones."
+      },
+      "micro_drill": {
+        "correct_index": 2,
+        "explanation": "«Clima húmedo con nieblas matinales» corresponde a las condiciones climáticas para el desarrollo de la podredumbre noble. Las demás afirmaciones son correctas, pero describen otros mecanismos.",
+        "options": [
+          "Adición de aguardiente vínico",
+          "Sistema de soleras y criaderas",
+          "Clima húmedo con nieblas matinales",
+          "Evitar la extracción de taninos verdes"
+        ],
+        "prompt": "Consolidación: ¿cuál de estas afirmaciones corresponde a las condiciones climáticas para el desarrollo de la podredumbre noble?",
+        "remediation_signal": "Revisa la cadena causal de las condiciones climáticas para el desarrollo de la podredumbre noble"
       }
     },
     {
@@ -9875,6 +9907,28 @@ window.PREGUNTAS_BANK = {
         "training_item_only": true,
         "official_wset_question": false,
         "disclaimer": "PROTOTIPO · ENTRENAMIENTO · NO EVALUACIÓN OFICIAL WSET"
+      },
+      "causal_chain": {
+        "causa": "La Botrytis cinerea beneficiosa infecta uvas maduras cuando periodos húmedos o con niebla van seguidos de condiciones cálidas y secas.",
+        "efecto": "La fruta adquiere mayor concentración de azúcar y sabor, una textura rica y aromas característicos de podredumbre noble. La acidez neta depende del equilibrio entre concentración y metabolismo de ácidos, por lo que no debe interpretarse como una regla simple de aumento de acidez.",
+        "mecanismo": "El hongo perfora la piel de la baya y permite que el agua se evapore durante los periodos secos. Esta pérdida de agua concentra directamente los azúcares y los compuestos de sabor; al mismo tiempo, la Botrytis metaboliza parte de los ácidos de la uva."
+      },
+      "feedback_by_mode": {
+        "mentor": "La respuesta correcta es C: «Aumenta la concentración de azúcar y acidez». La clave está en la podredumbre noble y la concentración de la uva: El hongo perfora la piel de la baya y permite que el agua se evapore durante los periodos secos. Esta pérdida de agua concentra directamente los azúcares y los compuestos de sabor; al mismo tiempo, la Botrytis metaboliza parte de los ácidos de la uva. Por eso, la fruta adquiere mayor concentración de azúcar y sabor, una textura rica y aromas característicos de podredumbre noble. La acidez neta depende del equilibrio entre concentración y metabolismo de ácidos, por lo que no debe interpretarse como una regla simple de aumento de acidez.",
+        "reviewer": "Exigencia de repaso (RA2): debes poder justificar por qué «Aumenta la concentración de azúcar y acidez» es correcta y por qué las otras tres opciones no lo son, citando el mecanismo de la podredumbre noble y la concentración de la uva. Si no puedes reconstruir la cadena completa sin ver las opciones, repasa este concepto en tu material WSET L3.",
+        "trainer": "Concepto técnico (RA2): Fija el mecanismo de la podredumbre noble y la concentración de la uva: La Botrytis cinerea beneficiosa infecta uvas maduras cuando periodos húmedos o con niebla van seguidos de condiciones cálidas y secas. → El hongo perfora la piel de la baya y permite que el agua se evapore durante los periodos secos. Esta pérdida de agua concentra directamente los azúcares y los compuestos de sabor; al mismo tiempo, la Botrytis metaboliza parte de los ácidos de la uva. En el examen, identifica este patrón causa→mecanismo→efecto antes de mirar las opciones."
+      },
+      "micro_drill": {
+        "correct_index": 0,
+        "explanation": "«Aumenta la concentración de azúcar y acidez» corresponde a la podredumbre noble y la concentración de la uva. Las demás afirmaciones son correctas, pero describen otros mecanismos.",
+        "options": [
+          "Aumenta la concentración de azúcar y acidez",
+          "Adición de aguardiente vínico",
+          "Sistema de soleras y criaderas",
+          "Evitar la extracción de taninos verdes"
+        ],
+        "prompt": "Consolidación: ¿cuál de estas afirmaciones corresponde a la podredumbre noble y la concentración de la uva?",
+        "remediation_signal": "Revisa la cadena causal de la podredumbre noble y la concentración de la uva"
       }
     },
     {
