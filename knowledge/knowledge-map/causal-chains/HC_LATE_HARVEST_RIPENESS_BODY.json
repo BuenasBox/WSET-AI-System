@@ -1,36 +1,35 @@
 {
   "node_type": "causal_chain",
-  "node_id": "HC_FORTIFICATION_STOPS_FERMENTATION",
-  "topic": "fortification, fermentation arrest, and alcohol increase",
+  "node_id": "HC_LATE_HARVEST_RIPENESS_BODY",
+  "topic": "later harvest, grape ripeness, and wine body",
   "trigger_keywords": [
-    "propósito de fortificar un vino generoso",
-    "detener la fermentación y aumentar el alcohol",
-    "principal factor que detiene la fermentación en un vino tipo Porto Ruby",
-    "adición de aguardiente vínico",
-    "fortification stops fermentation alcohol",
-    "schema metadata trigger HC_FORTIFICATION_STOPS_FERMENTATION 3",
-    "schema metadata trigger HC_FORTIFICATION_STOPS_FERMENTATION 4"
+    "vino tinto elaborado con vendimia tardía",
+    "vendimia tardía",
+    "cuerpo alto y sabores maduros",
+    "later harvest ripe flavour",
+    "extended hang time sugar maturity",
+    "late-harvest red wine body"
   ],
   "steps": [
     {
       "step": 1,
       "label": "cause",
-      "text": "Grape spirit is added to a fermenting wine."
+      "text": "Healthy red grapes remain on the vine longer before harvest under conditions that still permit ripening."
     },
     {
       "step": 2,
       "label": "mechanism",
-      "text": "The spirit raises alcohol to a level at which yeast activity stops or becomes impossible."
+      "text": "Additional hang time usually allows further sugar accumulation and flavour development and may reduce berry water, while acidity tends to decline."
     },
     {
       "step": 3,
       "label": "effect",
-      "text": "Fermentation ends, alcohol increases, and residual sugar remains if fortification occurs before all sugar is consumed."
+      "text": "After fermentation, the wine may show riper fruit flavours, higher alcohol and fuller body, but the result depends on fruit health, weather, yield, extraction, and winemaking."
     },
     {
       "step": 4,
       "label": "exam_formulation",
-      "text": "Formative causal formulation: Fermentation ends, alcohol increases, and residual sugar remains if fortification occurs before all sugar is consumed."
+      "text": "Formative causal formulation: Later harvesting can produce riper flavours and fuller body through greater sugar and flavour maturity; it does not guarantee concentration or quality."
     }
   ],
   "agent_corpus": "tutor",
@@ -54,7 +53,7 @@
   "_meta": {
     "schema_version": "causal_chain_v1",
     "heuristic_extension": "HC_v1",
-    "created_date": "2026-06-12",
+    "created_date": "2026-06-13",
     "ingestion_status": "draft",
     "source_note": "Inferred formative model - not official WSET assessment or mark-scheme content"
   }

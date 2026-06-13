@@ -198,6 +198,72 @@ EXTRACTION_OXYGEN_INTERVENTION_NODE_IDS = {
     "HC_RED_FERMENTATION_EXTRACTION",
 }
 
+UNDERRIPE_HARVEST_NODE_IDS = {
+    "HC_UNDERRIPE_HARVEST_GREEN_AROMAS",
+}
+
+ALCOHOL_BITTERNESS_NODE_IDS = {
+    "HC_ALCOHOL_BITTERNESS_PERCEPTION",
+}
+
+FLOR_BIOLOGICAL_AGEING_NODE_IDS = {
+    "CC_FLOR_BIOLOGICAL_AGEING",
+}
+
+HUMBOLDT_COASTAL_COOLING_NODE_IDS = {
+    "HC_HUMBOLDT_CURRENT_FRESHNESS",
+}
+
+AGEABILITY_STRUCTURE_NODE_IDS = {
+    "HC_RED_WINE_AGEABILITY_STRUCTURE",
+}
+
+PRODUCTION_ECONOMICS_NODE_IDS = {
+    "HC_COOPERATIVE_SHARED_RESOURCES",
+    "HC_MECHANIZATION_PRODUCTION_COST",
+}
+
+WINE_BALANCE_NODE_IDS = {
+    "HC_LOW_ACID_STRUCTURE_FLATNESS",
+}
+
+MARKET_ECONOMICS_NODE_IDS = {
+    "HC_EXCLUSIVE_DISTRIBUTOR_MARKET_ACCESS",
+    "HC_SCARCITY_DEMAND_PRICE_PRESSURE",
+}
+
+ALSACE_RIPENING_NODE_IDS = {
+    "HC_ALSACE_SUN_DRY_RIPENING",
+}
+
+SO2_MICROBIAL_CONTROL_NODE_IDS = {
+    "HC_SO2_MICROBIAL_INHIBITION",
+}
+
+MARITIME_MODERATION_NODE_IDS = {
+    "HC_MARITIME_MODERATION",
+}
+
+CLONAL_SELECTION_NODE_IDS = {
+    "HC_CLONAL_SELECTION_STYLE_INFLUENCE",
+}
+
+STEEP_SLOPE_SOLAR_RIPENING_NODE_IDS = {
+    "HC_STEEP_SLOPE_SOLAR_RIPENING",
+}
+
+SHORT_CYCLE_VARIETY_NODE_IDS = {
+    "HC_SHORT_CYCLE_VARIETY_COOL_SEASON_FIT",
+}
+
+LATE_HARVEST_RIPENESS_NODE_IDS = {
+    "HC_LATE_HARVEST_RIPENESS_BODY",
+}
+
+OLOROSO_AMONTILLADO_PATH_NODE_IDS = {
+    "HC_OLOROSO_AMONTILLADO_AGEING_PATH",
+}
+
 
 class FrozenMatcherContractTests(unittest.TestCase):
     def test_matcher_v2_controls_remain_frozen(self):
@@ -335,6 +401,7 @@ class BottleAgeingExpansionTests(unittest.TestCase):
             "wset3_50": "HC_BOTTLE_STORAGE_STABILITY",
             "wset3_53": "HC_BOTTLE_STORAGE_STABILITY",
             "wset3_78": "HC_BOTTLE_STORAGE_STABILITY",
+            "wset3_83": "HC_RED_WINE_AGEABILITY_STRUCTURE",
             "wset3_81": "HC_HEAT_PREMATURE_BOTTLE_AGEING",
             "wset3_86": "HC_BOTTLE_STORAGE_STABILITY",
             "wset3_87": "HC_OLD_RED_SEDIMENT_SERVICE",
@@ -464,6 +531,7 @@ class ViticultureHazardExpansionTests(unittest.TestCase):
             "wset3_688": "HC_DRIP_IRRIGATION_PRECISION",
             "wset3_707": "HC_DRIP_IRRIGATION_PRECISION",
             "wset3_708": "HC_FROST_SHOOT_YIELD_DAMAGE",
+            "wset3_709": "HC_CANOPY_AIRFLOW_FUNGAL_RISK",
         }
         actual = {
             item_id: record["_provenance"]["causal_chain"]["derived_from"]
@@ -509,6 +577,7 @@ class CellarControlExpansionTests(unittest.TestCase):
 
     def test_exact_cellar_control_assignments(self):
         expected = {
+            "wset3_16": "HC_RED_FERMENTATION_EXTRACTION",
             "wset3_37": "HC_RED_FERMENTATION_EXTRACTION",
             "wset3_64": "HC_CELLAR_HYGIENE_MICROBIAL_CONTROL",
             "wset3_74": "HC_STERILE_FILTRATION_MICROBIAL_STABILITY",
@@ -607,6 +676,8 @@ class OakAndOxygenExpansionTests(unittest.TestCase):
 
     def test_exact_oak_oxygen_assignments(self):
         expected = {
+            "wset3_7": "HC_OXIDATIVE_AGEING_TERTIARY",
+            "wset3_207": "HC_OXIDATIVE_AGEING_TERTIARY",
             "wset3_346": "HC_NEW_OAK_STRUCTURE_SPICE",
             "wset3_461": "HC_NEW_OAK_STRUCTURE_SPICE",
             "wset3_473": "HC_BARREL_SIZE_OAK_CONTACT",
@@ -767,6 +838,7 @@ class FaultAndStabilityExpansionTests(unittest.TestCase):
         expected = {
             "wset3_38": "HC_SO2_OXIDATION_PROTECTION",
             "wset3_45": "HC_BRETTANOMYCES_ANIMAL_ODOR",
+            "wset3_48": "HC_TCA_MUSTY_CARDBOARD",
             "wset3_51": "HC_PERFUMED_DETERGENT_GLASS_CONTAMINATION",
             "wset3_58": "HC_OPEN_BOTTLE_OXYGEN_CONTROL",
             "wset3_68": "HC_TCA_MUSTY_CARDBOARD",
@@ -831,8 +903,10 @@ class StyleMechanismExpansionTests(unittest.TestCase):
             "wset3_92": "HC_FORTIFICATION_STOPS_FERMENTATION",
             "wset3_112": "HC_COOL_SPARKLING_BASE_ACIDITY",
             "wset3_123": "HC_COOL_SPARKLING_BASE_ACIDITY",
+            "wset3_205": "HC_FORTIFICATION_STOPS_FERMENTATION",
             "wset3_222": "HC_COOL_SPARKLING_BASE_ACIDITY",
             "wset3_319": "HC_CANOPY_VIGOUR_EXPOSURE",
+            "wset3_304": "HC_HUMBOLDT_CURRENT_FRESHNESS",
             "wset3_354": "HC_HUMBOLDT_CURRENT_FRESHNESS",
             "wset3_417": "HC_CANOPY_VIGOUR_EXPOSURE",
             "wset3_436": "HC_CANOPY_VIGOUR_EXPOSURE",
@@ -841,6 +915,8 @@ class StyleMechanismExpansionTests(unittest.TestCase):
             "wset3_486": "HC_SOLAR_EXPOSURE_RED_COLOR",
             "wset3_495": "HC_WARM_CLIMATE_ACID_LOSS",
             "wset3_518": "HC_ALTITUDE_GRAPE_ACIDITY",
+            "wset3_668": "HC_ALTITUDE_GRAPE_ACIDITY",
+            "wset3_710": "HC_CANOPY_VIGOUR_EXPOSURE",
         }
         actual = {
             item_id: record["_provenance"]["causal_chain"]["derived_from"]
@@ -860,7 +936,17 @@ class StyleMechanismExpansionTests(unittest.TestCase):
             self.assertGreaterEqual(provenance["match_score"], MIN_KEYWORD_HITS)
 
     def test_regional_and_categorical_style_claims_remain_excluded(self):
-        for item_id in ("wset3_421", "wset3_442"):
+        for item_id in (
+            "wset3_91",
+            "wset3_106",
+            "wset3_210",
+            "wset3_247",
+            "wset3_322",
+            "wset3_341",
+            "wset3_374",
+            "wset3_421",
+            "wset3_442",
+        ):
             record = self.records.get(item_id)
             if record is not None:
                 self.assertNotIn(
@@ -1204,6 +1290,7 @@ class VineyardManagementExpansionTests(unittest.TestCase):
             "wset3_496": "HC_EARLY_HARVEST_FRESHNESS_ALCOHOL",
             "wset3_497": "HC_YIELD_CONCENTRATION",
             "wset3_685": "HC_SELECTIVE_HAND_HARVEST_QUALITY",
+            "wset3_710": "HC_CANOPY_VIGOUR_EXPOSURE",
         }
         actual = {
             item_id: record["_provenance"]["causal_chain"]["derived_from"]
@@ -1230,6 +1317,8 @@ class VineyardManagementExpansionTests(unittest.TestCase):
             "wset3_452",
             "wset3_458",
             "wset3_462",
+            "wset3_471",
+            "wset3_519",
             "wset3_516",
             "wset3_788",
         ):
@@ -1258,6 +1347,7 @@ class WineFaultCausationExpansionTests(unittest.TestCase):
 
     def test_exact_wine_fault_causation_assignments(self):
         expected = {
+            "wset3_48": "HC_TCA_MUSTY_CARDBOARD",
             "wset3_68": "HC_TCA_MUSTY_CARDBOARD",
             "wset3_73": "HC_REDUCTION_SULFUR_ODORS",
             "wset3_330": "HC_TCA_MUSTY_CARDBOARD",
@@ -1309,6 +1399,7 @@ class ExtractionOxygenInterventionExpansionTests(unittest.TestCase):
 
     def test_exact_extraction_oxygen_intervention_assignments(self):
         expected = {
+            "wset3_16": "HC_RED_FERMENTATION_EXTRACTION",
             "wset3_37": "HC_RED_FERMENTATION_EXTRACTION",
             "wset3_444": "HC_MICROOXYGENATION_TANNIN_SOFTENING",
             "wset3_480": "HC_RED_FERMENTATION_EXTRACTION",
@@ -1331,12 +1422,801 @@ class ExtractionOxygenInterventionExpansionTests(unittest.TestCase):
             self.assertGreaterEqual(provenance["match_score"], MIN_KEYWORD_HITS)
 
     def test_related_but_distinct_processes_remain_excluded(self):
-        for item_id in ("wset3_14", "wset3_16", "wset3_443", "wset3_515", "wset3_816"):
+        for item_id in ("wset3_14", "wset3_443", "wset3_515", "wset3_816"):
             record = self.records.get(item_id)
             if record is not None:
                 self.assertNotIn(
                     record["_provenance"]["causal_chain"]["derived_from"],
                     EXTRACTION_OXYGEN_INTERVENTION_NODE_IDS,
+                )
+
+
+class UnderripeHarvestExpansionTests(unittest.TestCase):
+    @classmethod
+    def setUpClass(cls):
+        cls.nodes = {node["node_id"]: node for node in load_chain_nodes()}
+        payload = derive()
+        cls.records = {
+            record["item_id"]: record
+            for record in payload["items_by_source_question_id"].values()
+        }
+
+    def test_underripe_harvest_node_is_matcher_compatible_and_localized(self):
+        for node_id in UNDERRIPE_HARVEST_NODE_IDS:
+            self.assertIn(node_id, self.nodes)
+            self.assertIn(node_id, NODE_ES)
+
+    def test_exact_underripe_harvest_assignments(self):
+        expected = {
+            "wset3_428": "HC_UNDERRIPE_HARVEST_GREEN_AROMAS",
+        }
+        actual = {
+            item_id: record["_provenance"]["causal_chain"]["derived_from"]
+            for item_id, record in self.records.items()
+            if record["_provenance"]["causal_chain"]["derived_from"]
+            in UNDERRIPE_HARVEST_NODE_IDS
+        }
+        self.assertEqual(actual, expected)
+
+    def test_underripe_harvest_matches_have_dual_evidence(self):
+        record = self.records["wset3_428"]
+        provenance = record["_provenance"]["causal_chain"]
+        self.assertTrue(provenance["stem_hits"])
+        self.assertTrue(provenance["correct_option_hits"])
+        self.assertGreaterEqual(provenance["match_score"], MIN_KEYWORD_HITS)
+
+    def test_deliberate_early_harvest_claims_remain_distinct(self):
+        for item_id in ("wset3_351", "wset3_458", "wset3_496"):
+            record = self.records.get(item_id)
+            if record is not None:
+                self.assertNotIn(
+                    record["_provenance"]["causal_chain"]["derived_from"],
+                    UNDERRIPE_HARVEST_NODE_IDS,
+                )
+
+
+class AlcoholBitternessExpansionTests(unittest.TestCase):
+    @classmethod
+    def setUpClass(cls):
+        cls.nodes = {node["node_id"]: node for node in load_chain_nodes()}
+        payload = derive()
+        cls.records = {
+            record["item_id"]: record
+            for record in payload["items_by_source_question_id"].values()
+        }
+
+    def test_alcohol_bitterness_node_is_matcher_compatible_and_localized(self):
+        for node_id in ALCOHOL_BITTERNESS_NODE_IDS:
+            self.assertIn(node_id, self.nodes)
+            self.assertIn(node_id, NODE_ES)
+
+    def test_exact_alcohol_bitterness_assignments(self):
+        expected = {
+            "wset3_731": "HC_ALCOHOL_BITTERNESS_PERCEPTION",
+        }
+        actual = {
+            item_id: record["_provenance"]["causal_chain"]["derived_from"]
+            for item_id, record in self.records.items()
+            if record["_provenance"]["causal_chain"]["derived_from"]
+            in ALCOHOL_BITTERNESS_NODE_IDS
+        }
+        self.assertEqual(actual, expected)
+
+    def test_alcohol_bitterness_match_has_specific_dual_evidence(self):
+        record = self.records["wset3_731"]
+        provenance = record["_provenance"]["causal_chain"]
+        self.assertIn(
+            "alcohol en la percepcion de amargor del vino",
+            provenance["stem_hits"],
+        )
+        self.assertEqual(provenance["correct_option_hits"], ["lo intensifica"])
+        self.assertGreaterEqual(provenance["match_score"], MIN_KEYWORD_HITS)
+
+    def test_chili_and_health_items_remain_distinct(self):
+        for item_id in ("wset3_49", "wset3_60", "wset3_75", "wset3_716"):
+            record = self.records.get(item_id)
+            if record is not None:
+                self.assertNotIn(
+                    record["_provenance"]["causal_chain"]["derived_from"],
+                    ALCOHOL_BITTERNESS_NODE_IDS,
+                )
+
+
+class FlorBiologicalAgeingExpansionTests(unittest.TestCase):
+    @classmethod
+    def setUpClass(cls):
+        cls.nodes = {node["node_id"]: node for node in load_chain_nodes()}
+        payload = derive()
+        cls.records = {
+            record["item_id"]: record
+            for record in payload["items_by_source_question_id"].values()
+        }
+
+    def test_flor_node_is_matcher_compatible_and_localized(self):
+        for node_id in FLOR_BIOLOGICAL_AGEING_NODE_IDS:
+            self.assertIn(node_id, self.nodes)
+            self.assertIn(node_id, NODE_ES)
+
+    def test_exact_flor_biological_ageing_assignments(self):
+        expected = {
+            "wset3_1": "CC_FLOR_BIOLOGICAL_AGEING",
+            "wset3_102": "CC_FLOR_BIOLOGICAL_AGEING",
+        }
+        actual = {
+            item_id: record["_provenance"]["causal_chain"]["derived_from"]
+            for item_id, record in self.records.items()
+            if record["_provenance"]["causal_chain"]["derived_from"]
+            in FLOR_BIOLOGICAL_AGEING_NODE_IDS
+        }
+        self.assertEqual(actual, expected)
+
+    def test_flor_matches_have_dual_evidence(self):
+        for item_id, record in self.records.items():
+            provenance = record["_provenance"]["causal_chain"]
+            if provenance["derived_from"] not in FLOR_BIOLOGICAL_AGEING_NODE_IDS:
+                continue
+            self.assertTrue(provenance["stem_hits"], item_id)
+            self.assertTrue(provenance["correct_option_hits"], item_id)
+            self.assertGreaterEqual(provenance["match_score"], MIN_KEYWORD_HITS)
+
+    def test_direct_salinity_attribution_remains_excluded(self):
+        record = self.records.get("wset3_208")
+        if record is not None:
+            self.assertNotIn(
+                record["_provenance"]["causal_chain"]["derived_from"],
+                FLOR_BIOLOGICAL_AGEING_NODE_IDS,
+            )
+
+
+class HumboldtCoastalCoolingExpansionTests(unittest.TestCase):
+    @classmethod
+    def setUpClass(cls):
+        cls.nodes = {node["node_id"]: node for node in load_chain_nodes()}
+        payload = derive()
+        cls.records = {
+            record["item_id"]: record
+            for record in payload["items_by_source_question_id"].values()
+        }
+
+    def test_humboldt_node_is_matcher_compatible_and_localized(self):
+        for node_id in HUMBOLDT_COASTAL_COOLING_NODE_IDS:
+            self.assertIn(node_id, self.nodes)
+            self.assertIn(node_id, NODE_ES)
+
+    def test_exact_humboldt_assignments(self):
+        expected = {
+            "wset3_304": "HC_HUMBOLDT_CURRENT_FRESHNESS",
+            "wset3_354": "HC_HUMBOLDT_CURRENT_FRESHNESS",
+        }
+        actual = {
+            item_id: record["_provenance"]["causal_chain"]["derived_from"]
+            for item_id, record in self.records.items()
+            if record["_provenance"]["causal_chain"]["derived_from"]
+            in HUMBOLDT_COASTAL_COOLING_NODE_IDS
+        }
+        self.assertEqual(actual, expected)
+
+    def test_humboldt_matches_have_dual_evidence(self):
+        for item_id, record in self.records.items():
+            provenance = record["_provenance"]["causal_chain"]
+            if provenance["derived_from"] not in HUMBOLDT_COASTAL_COOLING_NODE_IDS:
+                continue
+            self.assertTrue(provenance["stem_hits"], item_id)
+            self.assertTrue(provenance["correct_option_hits"], item_id)
+            self.assertGreaterEqual(provenance["match_score"], MIN_KEYWORD_HITS)
+
+    def test_generic_coastal_region_claims_remain_excluded(self):
+        for item_id in ("wset3_251", "wset3_728"):
+            record = self.records.get(item_id)
+            if record is not None:
+                self.assertNotIn(
+                    record["_provenance"]["causal_chain"]["derived_from"],
+                    HUMBOLDT_COASTAL_COOLING_NODE_IDS,
+                )
+
+
+class AgeabilityStructureExpansionTests(unittest.TestCase):
+    @classmethod
+    def setUpClass(cls):
+        cls.nodes = {node["node_id"]: node for node in load_chain_nodes()}
+        payload = derive()
+        cls.records = {
+            record["item_id"]: record
+            for record in payload["items_by_source_question_id"].values()
+        }
+
+    def test_ageability_node_is_matcher_compatible_and_localized(self):
+        for node_id in AGEABILITY_STRUCTURE_NODE_IDS:
+            self.assertIn(node_id, self.nodes)
+            self.assertIn(node_id, NODE_ES)
+
+    def test_exact_ageability_structure_assignments(self):
+        expected = {
+            "wset3_3": "HC_RED_WINE_AGEABILITY_STRUCTURE",
+            "wset3_83": "HC_RED_WINE_AGEABILITY_STRUCTURE",
+            "wset3_385": "HC_RED_WINE_AGEABILITY_STRUCTURE",
+        }
+        actual = {
+            item_id: record["_provenance"]["causal_chain"]["derived_from"]
+            for item_id, record in self.records.items()
+            if record["_provenance"]["causal_chain"]["derived_from"]
+            in AGEABILITY_STRUCTURE_NODE_IDS
+        }
+        self.assertEqual(actual, expected)
+
+    def test_ageability_matches_have_dual_evidence(self):
+        for item_id, record in self.records.items():
+            provenance = record["_provenance"]["causal_chain"]
+            if provenance["derived_from"] not in AGEABILITY_STRUCTURE_NODE_IDS:
+                continue
+            self.assertTrue(provenance["stem_hits"], item_id)
+            self.assertTrue(provenance["correct_option_hits"], item_id)
+            self.assertGreaterEqual(provenance["match_score"], MIN_KEYWORD_HITS)
+
+    def test_regional_ageing_shortcuts_remain_excluded(self):
+        for item_id in ("wset3_253", "wset3_324"):
+            record = self.records.get(item_id)
+            if record is not None:
+                self.assertNotIn(
+                    record["_provenance"]["causal_chain"]["derived_from"],
+                    AGEABILITY_STRUCTURE_NODE_IDS,
+                )
+
+
+class ProductionEconomicsExpansionTests(unittest.TestCase):
+    @classmethod
+    def setUpClass(cls):
+        cls.nodes = {node["node_id"]: node for node in load_chain_nodes()}
+        payload = derive()
+        cls.records = {
+            record["item_id"]: record
+            for record in payload["items_by_source_question_id"].values()
+        }
+
+    def test_economics_nodes_are_matcher_compatible_and_localized(self):
+        for node_id in PRODUCTION_ECONOMICS_NODE_IDS:
+            self.assertIn(node_id, self.nodes)
+            self.assertIn(node_id, NODE_ES)
+
+    def test_exact_production_economics_assignments(self):
+        expected = {
+            "wset3_15": "HC_MECHANIZATION_PRODUCTION_COST",
+            "wset3_841": "HC_COOPERATIVE_SHARED_RESOURCES",
+        }
+        actual = {
+            item_id: record["_provenance"]["causal_chain"]["derived_from"]
+            for item_id, record in self.records.items()
+            if record["_provenance"]["causal_chain"]["derived_from"]
+            in PRODUCTION_ECONOMICS_NODE_IDS
+        }
+        self.assertEqual(actual, expected)
+
+    def test_economics_matches_have_dual_evidence(self):
+        for item_id, record in self.records.items():
+            provenance = record["_provenance"]["causal_chain"]
+            if provenance["derived_from"] not in PRODUCTION_ECONOMICS_NODE_IDS:
+                continue
+            self.assertTrue(provenance["stem_hits"], item_id)
+            self.assertTrue(provenance["correct_option_hits"], item_id)
+            self.assertGreaterEqual(provenance["match_score"], MIN_KEYWORD_HITS)
+
+    def test_price_placeholders_and_intermediary_definitions_remain_excluded(self):
+        for item_id in ("wset3_348", "wset3_412", "wset3_712", "wset3_840", "wset3_844"):
+            record = self.records.get(item_id)
+            if record is not None:
+                self.assertNotIn(
+                    record["_provenance"]["causal_chain"]["derived_from"],
+                    PRODUCTION_ECONOMICS_NODE_IDS,
+                )
+
+
+class WineBalanceExpansionTests(unittest.TestCase):
+    @classmethod
+    def setUpClass(cls):
+        cls.nodes = {node["node_id"]: node for node in load_chain_nodes()}
+        payload = derive()
+        cls.records = {
+            record["item_id"]: record
+            for record in payload["items_by_source_question_id"].values()
+        }
+
+    def test_wine_balance_node_is_matcher_compatible_and_localized(self):
+        for node_id in WINE_BALANCE_NODE_IDS:
+            self.assertIn(node_id, self.nodes)
+            self.assertIn(node_id, NODE_ES)
+
+    def test_exact_wine_balance_assignments(self):
+        expected = {
+            "wset3_54": "HC_LOW_ACID_STRUCTURE_FLATNESS",
+        }
+        actual = {
+            item_id: record["_provenance"]["causal_chain"]["derived_from"]
+            for item_id, record in self.records.items()
+            if record["_provenance"]["causal_chain"]["derived_from"]
+            in WINE_BALANCE_NODE_IDS
+        }
+        self.assertEqual(actual, expected)
+
+    def test_wine_balance_match_has_dual_evidence(self):
+        record = self.records["wset3_54"]
+        provenance = record["_provenance"]["causal_chain"]
+        self.assertEqual(
+            provenance["derived_from"],
+            "HC_LOW_ACID_STRUCTURE_FLATNESS",
+        )
+        self.assertTrue(provenance["stem_hits"])
+        self.assertTrue(provenance["correct_option_hits"])
+        self.assertGreaterEqual(provenance["match_score"], MIN_KEYWORD_HITS)
+
+    def test_fault_and_storage_flatness_items_remain_distinct(self):
+        for item_id in ("wset3_48", "wset3_65", "wset3_733"):
+            record = self.records.get(item_id)
+            if record is not None:
+                self.assertNotIn(
+                    record["_provenance"]["causal_chain"]["derived_from"],
+                    WINE_BALANCE_NODE_IDS,
+                )
+
+
+class MarketEconomicsExpansionTests(unittest.TestCase):
+    @classmethod
+    def setUpClass(cls):
+        cls.nodes = {node["node_id"]: node for node in load_chain_nodes()}
+        payload = derive()
+        cls.records = {
+            record["item_id"]: record
+            for record in payload["items_by_source_question_id"].values()
+        }
+
+    def test_market_economics_nodes_are_matcher_compatible_and_localized(self):
+        for node_id in MARKET_ECONOMICS_NODE_IDS:
+            self.assertIn(node_id, self.nodes)
+            self.assertIn(node_id, NODE_ES)
+
+    def test_exact_market_economics_assignments(self):
+        expected = {
+            "wset3_846": "HC_EXCLUSIVE_DISTRIBUTOR_MARKET_ACCESS",
+            "wset3_847": "HC_SCARCITY_DEMAND_PRICE_PRESSURE",
+        }
+        actual = {
+            item_id: record["_provenance"]["causal_chain"]["derived_from"]
+            for item_id, record in self.records.items()
+            if record["_provenance"]["causal_chain"]["derived_from"]
+            in MARKET_ECONOMICS_NODE_IDS
+        }
+        self.assertEqual(actual, expected)
+
+    def test_market_economics_matches_have_dual_evidence(self):
+        for item_id, record in self.records.items():
+            provenance = record["_provenance"]["causal_chain"]
+            if provenance["derived_from"] not in MARKET_ECONOMICS_NODE_IDS:
+                continue
+            self.assertTrue(provenance["stem_hits"], item_id)
+            self.assertTrue(provenance["correct_option_hits"], item_id)
+            self.assertGreaterEqual(provenance["match_score"], MIN_KEYWORD_HITS)
+
+    def test_definitions_placeholders_and_vague_price_claims_remain_excluded(self):
+        for item_id in (
+            "wset3_267",
+            "wset3_348",
+            "wset3_412",
+            "wset3_712",
+            "wset3_840",
+            "wset3_844",
+        ):
+            record = self.records.get(item_id)
+            if record is not None:
+                self.assertNotIn(
+                    record["_provenance"]["causal_chain"]["derived_from"],
+                    MARKET_ECONOMICS_NODE_IDS,
+                )
+
+
+class AlsaceRipeningExpansionTests(unittest.TestCase):
+    @classmethod
+    def setUpClass(cls):
+        cls.nodes = {node["node_id"]: node for node in load_chain_nodes()}
+        payload = derive()
+        cls.records = {
+            record["item_id"]: record
+            for record in payload["items_by_source_question_id"].values()
+        }
+
+    def test_alsace_node_is_matcher_compatible_and_localized(self):
+        for node_id in ALSACE_RIPENING_NODE_IDS:
+            self.assertIn(node_id, self.nodes)
+            self.assertIn(node_id, NODE_ES)
+
+    def test_exact_alsace_ripening_assignments(self):
+        expected = {
+            "wset3_408": "HC_ALSACE_SUN_DRY_RIPENING",
+        }
+        actual = {
+            item_id: record["_provenance"]["causal_chain"]["derived_from"]
+            for item_id, record in self.records.items()
+            if record["_provenance"]["causal_chain"]["derived_from"]
+            in ALSACE_RIPENING_NODE_IDS
+        }
+        self.assertEqual(actual, expected)
+
+    def test_alsace_match_has_dual_evidence(self):
+        record = self.records["wset3_408"]
+        provenance = record["_provenance"]["causal_chain"]
+        self.assertEqual(
+            provenance["derived_from"],
+            "HC_ALSACE_SUN_DRY_RIPENING",
+        )
+        self.assertTrue(provenance["stem_hits"])
+        self.assertTrue(provenance["correct_option_hits"])
+        self.assertGreaterEqual(provenance["match_score"], MIN_KEYWORD_HITS)
+
+    def test_other_regional_and_unsupported_concentration_claims_remain_excluded(self):
+        for item_id in (
+            "wset3_251",
+            "wset3_374",
+            "wset3_421",
+            "wset3_454",
+            "wset3_479",
+        ):
+            record = self.records.get(item_id)
+            if record is not None:
+                self.assertNotIn(
+                    record["_provenance"]["causal_chain"]["derived_from"],
+                    ALSACE_RIPENING_NODE_IDS,
+                )
+
+
+class So2MicrobialControlExpansionTests(unittest.TestCase):
+    @classmethod
+    def setUpClass(cls):
+        cls.nodes = {node["node_id"]: node for node in load_chain_nodes()}
+        payload = derive()
+        cls.records = {
+            record["item_id"]: record
+            for record in payload["items_by_source_question_id"].values()
+        }
+
+    def test_so2_microbial_node_is_matcher_compatible_and_localized(self):
+        for node_id in SO2_MICROBIAL_CONTROL_NODE_IDS:
+            self.assertIn(node_id, self.nodes)
+            self.assertIn(node_id, NODE_ES)
+
+    def test_exact_so2_microbial_control_assignments(self):
+        expected = {
+            "wset3_682": "HC_SO2_MICROBIAL_INHIBITION",
+        }
+        actual = {
+            item_id: record["_provenance"]["causal_chain"]["derived_from"]
+            for item_id, record in self.records.items()
+            if record["_provenance"]["causal_chain"]["derived_from"]
+            in SO2_MICROBIAL_CONTROL_NODE_IDS
+        }
+        self.assertEqual(actual, expected)
+
+    def test_so2_microbial_match_has_dual_evidence(self):
+        record = self.records["wset3_682"]
+        provenance = record["_provenance"]["causal_chain"]
+        self.assertEqual(
+            provenance["derived_from"],
+            "HC_SO2_MICROBIAL_INHIBITION",
+        )
+        self.assertTrue(provenance["stem_hits"])
+        self.assertTrue(provenance["correct_option_hits"])
+        self.assertGreaterEqual(provenance["match_score"], MIN_KEYWORD_HITS)
+
+    def test_definition_absolute_identification_and_label_items_remain_excluded(self):
+        for item_id in ("wset3_88", "wset3_514", "wset3_517", "wset3_827"):
+            record = self.records.get(item_id)
+            if record is not None:
+                self.assertNotIn(
+                    record["_provenance"]["causal_chain"]["derived_from"],
+                    SO2_MICROBIAL_CONTROL_NODE_IDS,
+                )
+
+
+class MaritimeModerationExpansionTests(unittest.TestCase):
+    @classmethod
+    def setUpClass(cls):
+        cls.nodes = {node["node_id"]: node for node in load_chain_nodes()}
+        payload = derive()
+        cls.records = {
+            record["item_id"]: record
+            for record in payload["items_by_source_question_id"].values()
+        }
+
+    def test_maritime_node_is_matcher_compatible_and_localized(self):
+        for node_id in MARITIME_MODERATION_NODE_IDS:
+            self.assertIn(node_id, self.nodes)
+            self.assertIn(node_id, NODE_ES)
+
+    def test_exact_maritime_moderation_assignments(self):
+        expected = {
+            "wset3_388": "HC_MARITIME_MODERATION",
+        }
+        actual = {
+            item_id: record["_provenance"]["causal_chain"]["derived_from"]
+            for item_id, record in self.records.items()
+            if record["_provenance"]["causal_chain"]["derived_from"]
+            in MARITIME_MODERATION_NODE_IDS
+        }
+        self.assertEqual(actual, expected)
+
+    def test_maritime_match_has_dual_evidence(self):
+        record = self.records["wset3_388"]
+        provenance = record["_provenance"]["causal_chain"]
+        self.assertTrue(provenance["stem_hits"])
+        self.assertTrue(provenance["correct_option_hits"])
+        self.assertGreaterEqual(provenance["match_score"], MIN_KEYWORD_HITS)
+
+    def test_regional_profiles_and_negative_claim_remain_excluded(self):
+        for item_id in (
+            "wset3_251",
+            "wset3_288",
+            "wset3_345",
+            "wset3_396",
+            "wset3_728",
+            "wset3_792",
+        ):
+            record = self.records.get(item_id)
+            if record is not None:
+                self.assertNotIn(
+                    record["_provenance"]["causal_chain"]["derived_from"],
+                    MARITIME_MODERATION_NODE_IDS,
+                )
+
+
+class ClonalSelectionExpansionTests(unittest.TestCase):
+    @classmethod
+    def setUpClass(cls):
+        cls.nodes = {node["node_id"]: node for node in load_chain_nodes()}
+        payload = derive()
+        cls.records = {
+            record["item_id"]: record
+            for record in payload["items_by_source_question_id"].values()
+        }
+
+    def test_clonal_selection_node_is_matcher_compatible_and_localized(self):
+        for node_id in CLONAL_SELECTION_NODE_IDS:
+            self.assertIn(node_id, self.nodes)
+            self.assertIn(node_id, NODE_ES)
+
+    def test_exact_clonal_selection_assignments(self):
+        expected = {
+            "wset3_679": "HC_CLONAL_SELECTION_STYLE_INFLUENCE",
+        }
+        actual = {
+            item_id: record["_provenance"]["causal_chain"]["derived_from"]
+            for item_id, record in self.records.items()
+            if record["_provenance"]["causal_chain"]["derived_from"]
+            in CLONAL_SELECTION_NODE_IDS
+        }
+        self.assertEqual(actual, expected)
+
+    def test_clonal_selection_match_has_dual_evidence(self):
+        record = self.records["wset3_679"]
+        provenance = record["_provenance"]["causal_chain"]
+        self.assertTrue(provenance["stem_hits"])
+        self.assertTrue(provenance["correct_option_hits"])
+        self.assertGreaterEqual(provenance["match_score"], MIN_KEYWORD_HITS)
+
+    def test_rootstock_and_hybrid_items_remain_excluded(self):
+        for item_id in ("wset3_437", "wset3_477", "wset3_672"):
+            record = self.records.get(item_id)
+            if record is not None:
+                self.assertNotIn(
+                    record["_provenance"]["causal_chain"]["derived_from"],
+                    CLONAL_SELECTION_NODE_IDS,
+                )
+
+
+class SteepSlopeSolarRipeningExpansionTests(unittest.TestCase):
+    @classmethod
+    def setUpClass(cls):
+        cls.nodes = {node["node_id"]: node for node in load_chain_nodes()}
+        payload = derive()
+        cls.records = {
+            record["item_id"]: record
+            for record in payload["items_by_source_question_id"].values()
+        }
+
+    def test_steep_slope_node_is_matcher_compatible_and_localized(self):
+        for node_id in STEEP_SLOPE_SOLAR_RIPENING_NODE_IDS:
+            self.assertIn(node_id, self.nodes)
+            self.assertIn(node_id, NODE_ES)
+
+    def test_exact_steep_slope_solar_ripening_assignments(self):
+        expected = {
+            "wset3_671": "HC_STEEP_SLOPE_SOLAR_RIPENING",
+        }
+        actual = {
+            item_id: record["_provenance"]["causal_chain"]["derived_from"]
+            for item_id, record in self.records.items()
+            if record["_provenance"]["causal_chain"]["derived_from"]
+            in STEEP_SLOPE_SOLAR_RIPENING_NODE_IDS
+        }
+        self.assertEqual(actual, expected)
+
+    def test_steep_slope_match_has_dual_evidence(self):
+        record = self.records["wset3_671"]
+        provenance = record["_provenance"]["causal_chain"]
+        self.assertTrue(provenance["stem_hits"])
+        self.assertTrue(provenance["correct_option_hits"])
+        self.assertGreaterEqual(provenance["match_score"], MIN_KEYWORD_HITS)
+
+    def test_vague_slope_frost_and_identification_items_remain_excluded(self):
+        for item_id in (
+            "wset3_12",
+            "wset3_247",
+            "wset3_299",
+            "wset3_322",
+            "wset3_376",
+            "wset3_394",
+            "wset3_439",
+            "wset3_695",
+            "wset3_775",
+            "wset3_786",
+        ):
+            record = self.records.get(item_id)
+            if record is not None:
+                self.assertNotIn(
+                    record["_provenance"]["causal_chain"]["derived_from"],
+                    STEEP_SLOPE_SOLAR_RIPENING_NODE_IDS,
+                )
+
+
+class ShortCycleVarietyExpansionTests(unittest.TestCase):
+    @classmethod
+    def setUpClass(cls):
+        cls.nodes = {node["node_id"]: node for node in load_chain_nodes()}
+        payload = derive()
+        cls.records = {
+            record["item_id"]: record
+            for record in payload["items_by_source_question_id"].values()
+        }
+
+    def test_short_cycle_node_is_matcher_compatible_and_localized(self):
+        for node_id in SHORT_CYCLE_VARIETY_NODE_IDS:
+            self.assertIn(node_id, self.nodes)
+            self.assertIn(node_id, NODE_ES)
+
+    def test_exact_short_cycle_variety_assignments(self):
+        expected = {
+            "wset3_687": "HC_SHORT_CYCLE_VARIETY_COOL_SEASON_FIT",
+        }
+        actual = {
+            item_id: record["_provenance"]["causal_chain"]["derived_from"]
+            for item_id, record in self.records.items()
+            if record["_provenance"]["causal_chain"]["derived_from"]
+            in SHORT_CYCLE_VARIETY_NODE_IDS
+        }
+        self.assertEqual(actual, expected)
+
+    def test_short_cycle_match_has_dual_evidence(self):
+        record = self.records["wset3_687"]
+        provenance = record["_provenance"]["causal_chain"]
+        self.assertTrue(provenance["stem_hits"])
+        self.assertTrue(provenance["correct_option_hits"])
+        self.assertGreaterEqual(provenance["match_score"], MIN_KEYWORD_HITS)
+
+    def test_climate_profiles_and_harvest_timing_remain_excluded(self):
+        for item_id in (
+            "wset3_11",
+            "wset3_247",
+            "wset3_322",
+            "wset3_351",
+            "wset3_374",
+            "wset3_458",
+            "wset3_496",
+            "wset3_790",
+        ):
+            record = self.records.get(item_id)
+            if record is not None:
+                self.assertNotIn(
+                    record["_provenance"]["causal_chain"]["derived_from"],
+                    SHORT_CYCLE_VARIETY_NODE_IDS,
+                )
+
+
+class LateHarvestRipenessExpansionTests(unittest.TestCase):
+    @classmethod
+    def setUpClass(cls):
+        cls.nodes = {node["node_id"]: node for node in load_chain_nodes()}
+        payload = derive()
+        cls.records = {
+            record["item_id"]: record
+            for record in payload["items_by_source_question_id"].values()
+        }
+
+    def test_late_harvest_ripeness_node_is_matcher_compatible_and_localized(self):
+        for node_id in LATE_HARVEST_RIPENESS_NODE_IDS:
+            self.assertIn(node_id, self.nodes)
+            self.assertIn(node_id, NODE_ES)
+
+    def test_exact_late_harvest_ripeness_assignments(self):
+        expected = {
+            "wset3_513": "HC_LATE_HARVEST_RIPENESS_BODY",
+        }
+        actual = {
+            item_id: record["_provenance"]["causal_chain"]["derived_from"]
+            for item_id, record in self.records.items()
+            if record["_provenance"]["causal_chain"]["derived_from"]
+            in LATE_HARVEST_RIPENESS_NODE_IDS
+        }
+        self.assertEqual(actual, expected)
+
+    def test_late_harvest_ripeness_match_has_dual_evidence(self):
+        record = self.records["wset3_513"]
+        provenance = record["_provenance"]["causal_chain"]
+        self.assertTrue(provenance["stem_hits"])
+        self.assertTrue(provenance["correct_option_hits"])
+        self.assertGreaterEqual(provenance["match_score"], MIN_KEYWORD_HITS)
+
+    def test_early_dried_overripe_and_frost_items_remain_excluded(self):
+        for item_id in (
+            "wset3_35",
+            "wset3_339",
+            "wset3_351",
+            "wset3_428",
+            "wset3_458",
+            "wset3_493",
+            "wset3_496",
+        ):
+            record = self.records.get(item_id)
+            if record is not None:
+                self.assertNotIn(
+                    record["_provenance"]["causal_chain"]["derived_from"],
+                    LATE_HARVEST_RIPENESS_NODE_IDS,
+                )
+
+
+class OlorosoAmontilladoAgeingPathExpansionTests(unittest.TestCase):
+    @classmethod
+    def setUpClass(cls):
+        cls.nodes = {node["node_id"]: node for node in load_chain_nodes()}
+        payload = derive()
+        cls.records = {
+            record["item_id"]: record
+            for record in payload["items_by_source_question_id"].values()
+        }
+
+    def test_ageing_path_node_is_matcher_compatible_and_localized(self):
+        for node_id in OLOROSO_AMONTILLADO_PATH_NODE_IDS:
+            self.assertIn(node_id, self.nodes)
+            self.assertIn(node_id, NODE_ES)
+
+    def test_exact_oloroso_amontillado_path_assignments(self):
+        expected = {
+            "wset3_5": "HC_OLOROSO_AMONTILLADO_AGEING_PATH",
+        }
+        actual = {
+            item_id: record["_provenance"]["causal_chain"]["derived_from"]
+            for item_id, record in self.records.items()
+            if record["_provenance"]["causal_chain"]["derived_from"]
+            in OLOROSO_AMONTILLADO_PATH_NODE_IDS
+        }
+        self.assertEqual(actual, expected)
+
+    def test_ageing_path_match_has_dual_evidence(self):
+        record = self.records["wset3_5"]
+        provenance = record["_provenance"]["causal_chain"]
+        self.assertTrue(provenance["stem_hits"])
+        self.assertTrue(provenance["correct_option_hits"])
+        self.assertGreaterEqual(provenance["match_score"], MIN_KEYWORD_HITS)
+
+    def test_related_fortified_wine_items_remain_excluded(self):
+        for item_id in (
+            "wset3_93",
+            "wset3_97",
+            "wset3_102",
+            "wset3_207",
+            "wset3_208",
+            "wset3_210",
+        ):
+            record = self.records.get(item_id)
+            if record is not None:
+                self.assertNotIn(
+                    record["_provenance"]["causal_chain"]["derived_from"],
+                    OLOROSO_AMONTILLADO_PATH_NODE_IDS,
                 )
 
 

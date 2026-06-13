@@ -1,0 +1,60 @@
+{
+  "node_type": "causal_chain",
+  "node_id": "HC_SHORT_CYCLE_VARIETY_COOL_SEASON_FIT",
+  "topic": "short-cycle grape varieties and cool-season suitability",
+  "trigger_keywords": [
+    "afirmaciones sobre las variedades de ciclo corto",
+    "variedades de ciclo corto",
+    "más adecuadas para regiones con estaciones de crecimiento cortas o frías",
+    "short-cycle grape variety",
+    "early-ripening variety cool climate",
+    "short growing season variety fit"
+  ],
+  "steps": [
+    {
+      "step": 1,
+      "label": "cause",
+      "text": "A grape variety needs comparatively fewer heat and time resources to progress from budbreak to physiological and flavour maturity."
+    },
+    {
+      "step": 2,
+      "label": "mechanism",
+      "text": "Its shorter phenological cycle allows ripening to finish within a shorter or cooler growing season before autumn temperatures fall or weather risks increase."
+    },
+    {
+      "step": 3,
+      "label": "effect",
+      "text": "The variety is more likely to reach suitable maturity in cool or short-season regions than a later-ripening variety, although site and vintage conditions still matter."
+    },
+    {
+      "step": 4,
+      "label": "exam_formulation",
+      "text": "Formative causal formulation: A short-cycle variety can complete ripening with fewer heat and time resources, making it better suited to short or cool growing seasons; this does not guarantee quality by itself."
+    }
+  ],
+  "agent_corpus": "tutor",
+  "safe_for_examiner": false,
+  "examiner_scoring_allowed": false,
+  "requires_human_review": true,
+  "source": "heuristic",
+  "classification": "inferred",
+  "official": false,
+  "formative_only": true,
+  "official_mark_scheme": false,
+  "governance": {
+    "safe_for_examiner": false,
+    "examiner_scoring_allowed": false,
+    "agent_corpus": "tutor",
+    "source": "heuristic",
+    "classification": "inferred",
+    "official": false,
+    "formative_only": true
+  },
+  "_meta": {
+    "schema_version": "causal_chain_v1",
+    "heuristic_extension": "HC_v1",
+    "created_date": "2026-06-13",
+    "ingestion_status": "draft",
+    "source_note": "Inferred formative model - not official WSET assessment or mark-scheme content"
+  }
+}

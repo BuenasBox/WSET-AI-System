@@ -1,0 +1,59 @@
+{
+  "node_type": "causal_chain",
+  "node_id": "HC_EXCLUSIVE_DISTRIBUTOR_MARKET_ACCESS",
+  "topic": "exclusive distributor and foreign market access",
+  "trigger_keywords": [
+    "productores de vino prefieren trabajar con un distribuidor exclusivo",
+    "conocimiento del mercado local, red de clientes y gestión logística y legal",
+    "exclusive wine distributor market access",
+    "local customer network and logistics",
+    "foreign market distributor expertise"
+  ],
+  "steps": [
+    {
+      "step": 1,
+      "label": "cause",
+      "text": "A producer appoints an exclusive distributor with established capabilities in a foreign market."
+    },
+    {
+      "step": 2,
+      "label": "mechanism",
+      "text": "The distributor supplies local market knowledge, customer relationships, logistics, and legal or customs administration that the producer may not possess directly."
+    },
+    {
+      "step": 3,
+      "label": "effect",
+      "text": "The producer can enter and serve that market with less duplicated commercial infrastructure, although exclusivity does not guarantee sales or suitable representation."
+    },
+    {
+      "step": 4,
+      "label": "exam_formulation",
+      "text": "Formative causal formulation: A capable distributor can improve foreign market access through local knowledge, customer networks, logistics, and regulatory administration."
+    }
+  ],
+  "agent_corpus": "tutor",
+  "safe_for_examiner": false,
+  "examiner_scoring_allowed": false,
+  "requires_human_review": true,
+  "source": "heuristic",
+  "classification": "inferred",
+  "official": false,
+  "formative_only": true,
+  "official_mark_scheme": false,
+  "governance": {
+    "safe_for_examiner": false,
+    "examiner_scoring_allowed": false,
+    "agent_corpus": "tutor",
+    "source": "heuristic",
+    "classification": "inferred",
+    "official": false,
+    "formative_only": true
+  },
+  "_meta": {
+    "schema_version": "causal_chain_v1",
+    "heuristic_extension": "HC_v1",
+    "created_date": "2026-06-12",
+    "ingestion_status": "draft",
+    "source_note": "Inferred formative model - not official WSET assessment or mark-scheme content"
+  }
+}

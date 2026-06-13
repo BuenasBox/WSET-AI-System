@@ -1,0 +1,60 @@
+{
+  "node_type": "causal_chain",
+  "node_id": "HC_CLONAL_SELECTION_STYLE_INFLUENCE",
+  "topic": "clonal selection and influence on wine style",
+  "trigger_keywords": [
+    "afirmaciones sobre la selección clonal",
+    "selección clonal",
+    "selección clonal permite elegir plantas con características específicas",
+    "influir en el estilo del vino",
+    "clonal selection vine traits",
+    "selected clone style influence"
+  ],
+  "steps": [
+    {
+      "step": 1,
+      "label": "cause",
+      "text": "A grower propagates a selected vine clone that has shown particular inherited characteristics."
+    },
+    {
+      "step": 2,
+      "label": "mechanism",
+      "text": "Vegetative propagation preserves the selected clone's genetic traits, which may influence yield, bunch or berry size, ripening timing, disease susceptibility, and grape composition."
+    },
+    {
+      "step": 3,
+      "label": "effect",
+      "text": "Choosing among suitable clones can help orient grape composition and therefore wine style, although site, season, viticulture, and winemaking remain important."
+    },
+    {
+      "step": 4,
+      "label": "exam_formulation",
+      "text": "Formative causal formulation: Clonal selection can influence wine style by propagating vines with chosen inherited traits; it does not determine the final style by itself."
+    }
+  ],
+  "agent_corpus": "tutor",
+  "safe_for_examiner": false,
+  "examiner_scoring_allowed": false,
+  "requires_human_review": true,
+  "source": "heuristic",
+  "classification": "inferred",
+  "official": false,
+  "formative_only": true,
+  "official_mark_scheme": false,
+  "governance": {
+    "safe_for_examiner": false,
+    "examiner_scoring_allowed": false,
+    "agent_corpus": "tutor",
+    "source": "heuristic",
+    "classification": "inferred",
+    "official": false,
+    "formative_only": true
+  },
+  "_meta": {
+    "schema_version": "causal_chain_v1",
+    "heuristic_extension": "HC_v1",
+    "created_date": "2026-06-13",
+    "ingestion_status": "draft",
+    "source_note": "Inferred formative model - not official WSET assessment or mark-scheme content"
+  }
+}

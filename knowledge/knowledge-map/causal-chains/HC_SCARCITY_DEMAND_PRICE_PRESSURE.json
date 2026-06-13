@@ -1,40 +1,34 @@
 {
   "node_type": "causal_chain",
-  "node_id": "HC_CANOPY_AIRFLOW_FUNGAL_RISK",
-  "topic": "canopy airflow and fungal disease risk",
+  "node_id": "HC_SCARCITY_DEMAND_PRICE_PRESSURE",
+  "topic": "limited supply, strong demand, and wine price pressure",
   "trigger_keywords": [
-    "enfermedades fungicas en climas humedos",
-    "canopy management",
-    "dosel excesivamente denso",
-    "reduce la ventilacion",
-    "canopy abierto",
-    "reduce el riesgo de botrytis",
-    "deshoje",
-    "mejora la ventilacion del racimo",
-    "afirmaciones sobre el deshoje",
-    "deshoje mejora la circulación de aire alrededor del racimo",
-    "fungal disease canopy"
+    "precios de los vinos de Borgoña Grand Cru",
+    "superficie total de los Grand Cru es muy limitada",
+    "demanda global supera ampliamente la oferta",
+    "limited wine supply strong demand",
+    "scarcity demand price pressure"
   ],
   "steps": [
     {
       "step": 1,
       "label": "cause",
-      "text": "Dense foliage around grape bunches restricts airflow and retains humidity after rain or dew."
+      "text": "Production is structurally limited while demand from buyers is substantially greater than the available supply."
     },
     {
       "step": 2,
       "label": "mechanism",
-      "text": "Opening the canopy through shoot positioning or leaf removal improves ventilation and speeds the drying of bunches."
+      "text": "More buyers compete for a small quantity of wine, increasing willingness to pay and strengthening producers' and intermediaries' pricing power."
     },
     {
       "step": 3,
       "label": "effect",
-      "text": "Conditions become less favourable for Botrytis and other fungal diseases, while an excessively dense canopy increases disease pressure."
+      "text": "Scarcity combined with strong demand places upward pressure on market prices, alongside other influences such as reputation, vintage, and distribution."
     },
     {
       "step": 4,
       "label": "exam_formulation",
-      "text": "Formative causal formulation: Conditions become less favourable for Botrytis and other fungal diseases, while an excessively dense canopy increases disease pressure."
+      "text": "Formative causal formulation: When a fixed, limited supply faces demand that greatly exceeds it, competition for the wine tends to raise its market price."
     }
   ],
   "agent_corpus": "tutor",

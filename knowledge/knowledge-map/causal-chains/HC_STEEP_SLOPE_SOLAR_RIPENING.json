@@ -1,0 +1,60 @@
+{
+  "node_type": "causal_chain",
+  "node_id": "HC_STEEP_SLOPE_SOLAR_RIPENING",
+  "topic": "steep well-oriented slopes, solar interception, and ripening",
+  "trigger_keywords": [
+    "afirmaciones sobre los viñedos del Mosel",
+    "pendientes pronunciadas del Mosel favorecen la maduración del Riesling",
+    "maximizar la insolación",
+    "steep slope solar interception",
+    "well-oriented slope cool-climate ripening",
+    "Mosel slope Riesling ripening"
+  ],
+  "steps": [
+    {
+      "step": 1,
+      "label": "cause",
+      "text": "Vines grow on a steep slope whose aspect is favourably oriented toward the sun in a cool region."
+    },
+    {
+      "step": 2,
+      "label": "mechanism",
+      "text": "The slope angle and aspect improve interception of direct sunlight, raising canopy and bunch temperatures and supporting photosynthesis in otherwise marginal ripening conditions."
+    },
+    {
+      "step": 3,
+      "label": "effect",
+      "text": "Grapes can ripen more reliably and develop greater flavour and sugar maturity than on a poorly exposed site; steepness alone does not guarantee this effect."
+    },
+    {
+      "step": 4,
+      "label": "exam_formulation",
+      "text": "Formative causal formulation: A steep, well-oriented slope can improve solar interception and support ripening in a cool region, but aspect and local conditions remain essential."
+    }
+  ],
+  "agent_corpus": "tutor",
+  "safe_for_examiner": false,
+  "examiner_scoring_allowed": false,
+  "requires_human_review": true,
+  "source": "heuristic",
+  "classification": "inferred",
+  "official": false,
+  "formative_only": true,
+  "official_mark_scheme": false,
+  "governance": {
+    "safe_for_examiner": false,
+    "examiner_scoring_allowed": false,
+    "agent_corpus": "tutor",
+    "source": "heuristic",
+    "classification": "inferred",
+    "official": false,
+    "formative_only": true
+  },
+  "_meta": {
+    "schema_version": "causal_chain_v1",
+    "heuristic_extension": "HC_v1",
+    "created_date": "2026-06-13",
+    "ingestion_status": "draft",
+    "source_note": "Inferred formative model - not official WSET assessment or mark-scheme content"
+  }
+}

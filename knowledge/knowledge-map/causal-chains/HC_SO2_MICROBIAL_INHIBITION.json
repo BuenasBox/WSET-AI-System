@@ -1,36 +1,34 @@
 {
   "node_type": "causal_chain",
-  "node_id": "HC_FORTIFICATION_STOPS_FERMENTATION",
-  "topic": "fortification, fermentation arrest, and alcohol increase",
+  "node_id": "HC_SO2_MICROBIAL_INHIBITION",
+  "topic": "sulphur dioxide and microbial inhibition",
   "trigger_keywords": [
-    "propósito de fortificar un vino generoso",
-    "detener la fermentación y aumentar el alcohol",
-    "principal factor que detiene la fermentación en un vino tipo Porto Ruby",
-    "adición de aguardiente vínico",
-    "fortification stops fermentation alcohol",
-    "schema metadata trigger HC_FORTIFICATION_STOPS_FERMENTATION 3",
-    "schema metadata trigger HC_FORTIFICATION_STOPS_FERMENTATION 4"
+    "afirmaciones sobre el dióxido de azufre",
+    "inhibidor tanto de levaduras no deseadas como de bacterias",
+    "levaduras no deseadas",
+    "sulphur dioxide microbial inhibition",
+    "SO2 inhibits unwanted yeast and bacteria"
   ],
   "steps": [
     {
       "step": 1,
       "label": "cause",
-      "text": "Grape spirit is added to a fermenting wine."
+      "text": "A winemaker adds an appropriate dose of sulphur dioxide to must or wine."
     },
     {
       "step": 2,
       "label": "mechanism",
-      "text": "The spirit raises alcohol to a level at which yeast activity stops or becomes impossible."
+      "text": "The antimicrobial fraction of SO₂ interferes with microbial metabolism; its effectiveness depends especially on pH, dose, binding, and the susceptibility of each organism."
     },
     {
       "step": 3,
       "label": "effect",
-      "text": "Fermentation ends, alcohol increases, and residual sugar remains if fortification occurs before all sugar is consumed."
+      "text": "Unwanted yeasts and bacteria are inhibited, helping the producer control microbial activity without implying that every organism is eliminated."
     },
     {
       "step": 4,
       "label": "exam_formulation",
-      "text": "Formative causal formulation: Fermentation ends, alcohol increases, and residual sugar remains if fortification occurs before all sugar is consumed."
+      "text": "Formative causal formulation: Correctly dosed SO₂ can inhibit unwanted yeasts and bacteria, with effectiveness governed by pH, available molecular SO₂, and microbial susceptibility."
     }
   ],
   "agent_corpus": "tutor",
@@ -54,7 +52,7 @@
   "_meta": {
     "schema_version": "causal_chain_v1",
     "heuristic_extension": "HC_v1",
-    "created_date": "2026-06-12",
+    "created_date": "2026-06-13",
     "ingestion_status": "draft",
     "source_note": "Inferred formative model - not official WSET assessment or mark-scheme content"
   }

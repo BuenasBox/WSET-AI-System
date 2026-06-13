@@ -1,0 +1,60 @@
+{
+  "node_type": "causal_chain",
+  "node_id": "HC_OLOROSO_AMONTILLADO_AGEING_PATH",
+  "topic": "Oloroso and Amontillado ageing-path distinction",
+  "trigger_keywords": [
+    "diferencia al Oloroso del Amontillado en términos de crianza",
+    "Oloroso del Amontillado",
+    "envejecimiento exclusivamente oxidativo",
+    "Oloroso oxidative from outset",
+    "Amontillado biological then oxidative",
+    "Sherry ageing path distinction"
+  ],
+  "steps": [
+    {
+      "step": 1,
+      "label": "cause",
+      "text": "Oloroso is fortified to a level that prevents a stable flor layer, whereas Amontillado begins as a biologically aged wine under flor before that protection ends."
+    },
+    {
+      "step": 2,
+      "label": "mechanism",
+      "text": "Without flor protection, Oloroso remains exposed to controlled oxygen throughout maturation; Amontillado first develops biological character and only later undergoes oxidative ageing."
+    },
+    {
+      "step": 3,
+      "label": "effect",
+      "text": "Oloroso follows an exclusively oxidative ageing path, while Amontillado combines biological and subsequent oxidative development."
+    },
+    {
+      "step": 4,
+      "label": "exam_formulation",
+      "text": "Formative causal formulation: Oloroso is oxidatively aged from the outset because flor is not maintained; Amontillado begins under flor and becomes oxidative later."
+    }
+  ],
+  "agent_corpus": "tutor",
+  "safe_for_examiner": false,
+  "examiner_scoring_allowed": false,
+  "requires_human_review": true,
+  "source": "heuristic",
+  "classification": "inferred",
+  "official": false,
+  "formative_only": true,
+  "official_mark_scheme": false,
+  "governance": {
+    "safe_for_examiner": false,
+    "examiner_scoring_allowed": false,
+    "agent_corpus": "tutor",
+    "source": "heuristic",
+    "classification": "inferred",
+    "official": false,
+    "formative_only": true
+  },
+  "_meta": {
+    "schema_version": "causal_chain_v1",
+    "heuristic_extension": "HC_v1",
+    "created_date": "2026-06-13",
+    "ingestion_status": "draft",
+    "source_note": "Inferred formative model - not official WSET assessment or mark-scheme content"
+  }
+}

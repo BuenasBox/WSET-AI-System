@@ -2,7 +2,21 @@
   "node_type": "causal_chain",
   "node_id": "CC_FLOR_BIOLOGICAL_AGEING",
   "topic": "flor yeast and biological ageing in sherry",
-  "trigger_keywords": ["flor", "biological ageing", "fino", "manzanilla", "sherry", "oxygen protection", "acetaldehyde", "yeast autolysis", "crianza biologica", "jerez", "crianza"],
+  "trigger_keywords": [
+    "flor",
+    "rol juega la flor en la crianza biológica del Jerez",
+    "protege al vino del oxígeno y desarrolla sabores únicos",
+    "biological ageing",
+    "fino",
+    "manzanilla",
+    "sherry",
+    "oxygen protection",
+    "acetaldehyde",
+    "yeast autolysis",
+    "crianza biologica",
+    "jerez",
+    "crianza"
+  ],
   "steps": [
     {
       "step": 1,

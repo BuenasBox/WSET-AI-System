@@ -1,6 +1,6 @@
 window.SESSION_BANK = {
   "schema_version": "session_bank_v1",
-  "generated_at": "2026-06-12T19:48:40.892341",
+  "generated_at": "2026-06-13T09:18:34.757150",
   "total_sba": 578,
   "total_sat_prompts": 6,
   "modes": {
@@ -118,9 +118,9 @@ window.SESSION_BANK = {
         "correct_index": 3,
         "explanation": "«Evitar la fermentación maloláctica» corresponde al bloqueo de la fermentación maloláctica para conservar frescura. Las demás afirmaciones son correctas, pero describen otros mecanismos.",
         "options": [
+          "Protege al vino del oxígeno y desarrolla sabores únicos",
           "Adición de aguardiente vínico",
           "Estructura potente y necesidad de guarda",
-          "Sistema de soleras y criaderas",
           "Evitar la fermentación maloláctica"
         ],
         "prompt": "Consolidación: ¿cuál de estas afirmaciones corresponde al bloqueo de la fermentación maloláctica para conservar frescura?",
@@ -167,9 +167,9 @@ window.SESSION_BANK = {
         "correct_index": 3,
         "explanation": "«Exposición a heladas» corresponde a la vendimia muy tardía y la exposición a heladas. Las demás afirmaciones son correctas, pero describen otros mecanismos.",
         "options": [
+          "Protege al vino del oxígeno y desarrolla sabores únicos",
           "Adición de aguardiente vínico",
           "Estructura potente y necesidad de guarda",
-          "Sistema de soleras y criaderas",
           "Exposición a heladas"
         ],
         "prompt": "Consolidación: ¿cuál de estas afirmaciones corresponde a la vendimia muy tardía y la exposición a heladas?",
@@ -460,9 +460,9 @@ window.SESSION_BANK = {
         "explanation": "«Taninos altos, acidez alta y notas terciarias con la edad» corresponde a la evolución en botella del Barolo. Las demás afirmaciones son correctas, pero describen otros mecanismos.",
         "options": [
           "Taninos altos, acidez alta y notas terciarias con la edad",
+          "Protege al vino del oxígeno y desarrolla sabores únicos",
           "Adición de aguardiente vínico",
-          "Estructura potente y necesidad de guarda",
-          "Sistema de soleras y criaderas"
+          "Estructura potente y necesidad de guarda"
         ],
         "prompt": "Consolidación: ¿cuál de estas afirmaciones corresponde a la evolución en botella del Barolo?",
         "remediation_signal": "Revisa la cadena causal de la evolución en botella del Barolo"
@@ -805,10 +805,10 @@ window.SESSION_BANK = {
         "correct_index": 2,
         "explanation": "«Reduce el tanino verde» corresponde al despalillado previo a la fermentación. Las demás afirmaciones son correctas, pero describen otros mecanismos.",
         "options": [
+          "Protege al vino del oxígeno y desarrolla sabores únicos",
           "Adición de aguardiente vínico",
-          "Estructura potente y necesidad de guarda",
           "Reduce el tanino verde",
-          "Sistema de soleras y criaderas"
+          "Estructura potente y necesidad de guarda"
         ],
         "prompt": "Consolidación: ¿cuál de estas afirmaciones corresponde al despalillado previo a la fermentación?",
         "remediation_signal": "Revisa la cadena causal del despalillado previo a la fermentación"
@@ -970,10 +970,10 @@ window.SESSION_BANK = {
         "correct_index": 1,
         "explanation": "«Fermentación en tanques presurizados» corresponde al método de tanque y la conservación de la fruta primaria. Las demás afirmaciones son correctas, pero describen otros mecanismos.",
         "options": [
-          "Adición de aguardiente vínico",
+          "Protege al vino del oxígeno y desarrolla sabores únicos",
           "Fermentación en tanques presurizados",
-          "Estructura potente y necesidad de guarda",
-          "Sistema de soleras y criaderas"
+          "Adición de aguardiente vínico",
+          "Estructura potente y necesidad de guarda"
         ],
         "prompt": "Consolidación: ¿cuál de estas afirmaciones corresponde al método de tanque y la conservación de la fruta primaria?",
         "remediation_signal": "Revisa la cadena causal del método de tanque y la conservación de la fruta primaria"
@@ -1155,10 +1155,10 @@ window.SESSION_BANK = {
         "correct_index": 2,
         "explanation": "«Pendiente del terreno» corresponde a la pendiente, el drenaje de aire frío y el riesgo de helada. Las demás afirmaciones son correctas, pero describen otros mecanismos.",
         "options": [
+          "Protege al vino del oxígeno y desarrolla sabores únicos",
           "Adición de aguardiente vínico",
-          "Estructura potente y necesidad de guarda",
           "Pendiente del terreno",
-          "Sistema de soleras y criaderas"
+          "Estructura potente y necesidad de guarda"
         ],
         "prompt": "Consolidación: ¿cuál de estas afirmaciones corresponde a la pendiente, el drenaje de aire frío y el riesgo de helada?",
         "remediation_signal": "Revisa la cadena causal de la pendiente, el drenaje de aire frío y el riesgo de helada"
@@ -1247,10 +1247,10 @@ window.SESSION_BANK = {
         "correct_index": 1,
         "explanation": "«Evitar la extracción de taninos verdes» corresponde al despalillado antes de la fermentación. Las demás afirmaciones son correctas, pero describen otros mecanismos.",
         "options": [
-          "Adición de aguardiente vínico",
+          "Protege al vino del oxígeno y desarrolla sabores únicos",
           "Evitar la extracción de taninos verdes",
-          "Estructura potente y necesidad de guarda",
-          "Sistema de soleras y criaderas"
+          "Adición de aguardiente vínico",
+          "Estructura potente y necesidad de guarda"
         ],
         "prompt": "Consolidación: ¿cuál de estas afirmaciones corresponde al despalillado antes de la fermentación?",
         "remediation_signal": "Revisa la cadena causal del despalillado antes de la fermentación"
@@ -1356,9 +1356,9 @@ window.SESSION_BANK = {
         "correct_index": 3,
         "explanation": "«Envejecimiento en botella» corresponde a la suavización de taninos durante la crianza en botella. Las demás afirmaciones son correctas, pero describen otros mecanismos.",
         "options": [
+          "Protege al vino del oxígeno y desarrolla sabores únicos",
           "Adición de aguardiente vínico",
           "Estructura potente y necesidad de guarda",
-          "Sistema de soleras y criaderas",
           "Envejecimiento en botella"
         ],
         "prompt": "Consolidación: ¿cuál de estas afirmaciones corresponde a la suavización de taninos durante la crianza en botella?",
@@ -1661,10 +1661,10 @@ window.SESSION_BANK = {
         "correct_index": 1,
         "explanation": "«Exposición sur en el hemisferio norte» corresponde a la exposición sur en el hemisferio norte. Las demás afirmaciones son correctas, pero describen otros mecanismos.",
         "options": [
-          "Adición de aguardiente vínico",
+          "Protege al vino del oxígeno y desarrolla sabores únicos",
           "Exposición sur en el hemisferio norte",
-          "Estructura potente y necesidad de guarda",
-          "Sistema de soleras y criaderas"
+          "Adición de aguardiente vínico",
+          "Estructura potente y necesidad de guarda"
         ],
         "prompt": "Consolidación: ¿cuál de estas afirmaciones corresponde a la exposición sur en el hemisferio norte?",
         "remediation_signal": "Revisa la cadena causal de la exposición sur en el hemisferio norte"
@@ -1747,9 +1747,9 @@ window.SESSION_BANK = {
         "correct_index": 3,
         "explanation": "«Temperatura de fermentación demasiado alta» corresponde a una temperatura de fermentación excesivamente alta. Las demás afirmaciones son correctas, pero describen otros mecanismos.",
         "options": [
+          "Protege al vino del oxígeno y desarrolla sabores únicos",
           "Adición de aguardiente vínico",
           "Estructura potente y necesidad de guarda",
-          "Sistema de soleras y criaderas",
           "Temperatura de fermentación demasiado alta"
         ],
         "prompt": "Consolidación: ¿cuál de estas afirmaciones corresponde a una temperatura de fermentación excesivamente alta?",
@@ -1797,9 +1797,9 @@ window.SESSION_BANK = {
         "explanation": "«Puede hacer que el vino se perciba más amargo o ácido» corresponde al efecto del umami sobre la percepción del vino. Las demás afirmaciones son correctas, pero describen otros mecanismos.",
         "options": [
           "Puede hacer que el vino se perciba más amargo o ácido",
+          "Protege al vino del oxígeno y desarrolla sabores únicos",
           "Adición de aguardiente vínico",
-          "Estructura potente y necesidad de guarda",
-          "Sistema de soleras y criaderas"
+          "Estructura potente y necesidad de guarda"
         ],
         "prompt": "Consolidación: ¿cuál de estas afirmaciones corresponde al efecto del umami sobre la percepción del vino?",
         "remediation_signal": "Revisa la cadena causal del efecto del umami sobre la percepción del vino"
@@ -1872,10 +1872,10 @@ window.SESSION_BANK = {
         "correct_index": 1,
         "explanation": "«Contaminación por Brettanomyces» corresponde a la contaminación por Brettanomyces. Las demás afirmaciones son correctas, pero describen otros mecanismos.",
         "options": [
-          "Adición de aguardiente vínico",
+          "Protege al vino del oxígeno y desarrolla sabores únicos",
           "Contaminación por Brettanomyces",
-          "Estructura potente y necesidad de guarda",
-          "Sistema de soleras y criaderas"
+          "Adición de aguardiente vínico",
+          "Estructura potente y necesidad de guarda"
         ],
         "prompt": "Consolidación: ¿cuál de estas afirmaciones corresponde a la contaminación por Brettanomyces?",
         "remediation_signal": "Revisa la cadena causal de la contaminación por Brettanomyces"
@@ -1921,10 +1921,10 @@ window.SESSION_BANK = {
         "correct_index": 2,
         "explanation": "«Enfriador de botellas con hielo y agua» corresponde al enfriamiento rápido de una botella con hielo y agua. Las demás afirmaciones son correctas, pero describen otros mecanismos.",
         "options": [
+          "Protege al vino del oxígeno y desarrolla sabores únicos",
           "Adición de aguardiente vínico",
-          "Estructura potente y necesidad de guarda",
           "Enfriador de botellas con hielo y agua",
-          "Sistema de soleras y criaderas"
+          "Estructura potente y necesidad de guarda"
         ],
         "prompt": "Consolidación: ¿cuál de estas afirmaciones corresponde al enfriamiento rápido de una botella con hielo y agua?",
         "remediation_signal": "Revisa la cadena causal del enfriamiento rápido de una botella con hielo y agua"
@@ -1970,9 +1970,9 @@ window.SESSION_BANK = {
         "correct_index": 3,
         "explanation": "«Maridarlo con alimentos grasos o proteicos» corresponde a los alimentos proteicos o grasos con un vino tánico. Las demás afirmaciones son correctas, pero describen otros mecanismos.",
         "options": [
+          "Protege al vino del oxígeno y desarrolla sabores únicos",
           "Adición de aguardiente vínico",
           "Estructura potente y necesidad de guarda",
-          "Sistema de soleras y criaderas",
           "Maridarlo con alimentos grasos o proteicos"
         ],
         "prompt": "Consolidación: ¿cuál de estas afirmaciones corresponde a los alimentos proteicos o grasos con un vino tánico?",
@@ -2004,6 +2004,28 @@ window.SESSION_BANK = {
         "training_item_only": true,
         "official_wset_question": false,
         "disclaimer": "PROTOTIPO · ENTRENAMIENTO · NO EVALUACIÓN OFICIAL WSET"
+      },
+      "causal_chain": {
+        "causa": "El vino se contamina con TCA, a menudo mediante corcho o materiales de bodega afectados.",
+        "efecto": "El vino parece apagado y huele a moho, sótano húmedo o cartón mojado.",
+        "mecanismo": "El TCA se percibe a concentraciones muy bajas, suprime la fruta y aporta olores húmedos."
+      },
+      "feedback_by_mode": {
+        "mentor": "La respuesta correcta es B: «Aroma a cartón mojado y sabor apagado». La clave está en la contaminación por TCA: El TCA se percibe a concentraciones muy bajas, suprime la fruta y aporta olores húmedos. Por eso, el vino parece apagado y huele a moho, sótano húmedo o cartón mojado.",
+        "reviewer": "Exigencia de repaso (RA1): debes poder justificar por qué «Aroma a cartón mojado y sabor apagado» es correcta y por qué las otras tres opciones no lo son, citando el mecanismo de la contaminación por TCA. Si no puedes reconstruir la cadena completa sin ver las opciones, repasa este concepto en tu material WSET L3.",
+        "trainer": "Concepto técnico (RA1): Fija el mecanismo de la contaminación por TCA: El vino se contamina con TCA, a menudo mediante corcho o materiales de bodega afectados. → El TCA se percibe a concentraciones muy bajas, suprime la fruta y aporta olores húmedos. En el examen, identifica este patrón causa→mecanismo→efecto antes de mirar las opciones."
+      },
+      "micro_drill": {
+        "correct_index": 1,
+        "explanation": "«Aroma a cartón mojado y sabor apagado» corresponde a la contaminación por TCA. Las demás afirmaciones son correctas, pero describen otros mecanismos.",
+        "options": [
+          "Protege al vino del oxígeno y desarrolla sabores únicos",
+          "Aroma a cartón mojado y sabor apagado",
+          "Adición de aguardiente vínico",
+          "Estructura potente y necesidad de guarda"
+        ],
+        "prompt": "Consolidación: ¿cuál de estas afirmaciones corresponde a la contaminación por TCA?",
+        "remediation_signal": "Revisa la cadena causal de la contaminación por TCA"
       }
     },
     {
@@ -2073,9 +2095,9 @@ window.SESSION_BANK = {
         "correct_index": 3,
         "explanation": "«Temperatura estable, oscuridad y humedad moderada» corresponde a las condiciones estables para la guarda en botella. Las demás afirmaciones son correctas, pero describen otros mecanismos.",
         "options": [
+          "Protege al vino del oxígeno y desarrolla sabores únicos",
           "Adición de aguardiente vínico",
           "Estructura potente y necesidad de guarda",
-          "Sistema de soleras y criaderas",
           "Temperatura estable, oscuridad y humedad moderada"
         ],
         "prompt": "Consolidación: ¿cuál de estas afirmaciones corresponde a las condiciones estables para la guarda en botella?",
@@ -2123,9 +2145,9 @@ window.SESSION_BANK = {
         "explanation": "«Limpiar las copas con detergentes perfumados» corresponde a los residuos de detergente perfumado en las copas. Las demás afirmaciones son correctas, pero describen otros mecanismos.",
         "options": [
           "Limpiar las copas con detergentes perfumados",
+          "Protege al vino del oxígeno y desarrolla sabores únicos",
           "Adición de aguardiente vínico",
-          "Estructura potente y necesidad de guarda",
-          "Sistema de soleras y criaderas"
+          "Estructura potente y necesidad de guarda"
         ],
         "prompt": "Consolidación: ¿cuál de estas afirmaciones corresponde a los residuos de detergente perfumado en las copas?",
         "remediation_signal": "Revisa la cadena causal de los residuos de detergente perfumado en las copas"
@@ -2172,9 +2194,9 @@ window.SESSION_BANK = {
         "explanation": "«Mayor expresión aromática» corresponde a la aireación de un vino joven y estructurado. Las demás afirmaciones son correctas, pero describen otros mecanismos.",
         "options": [
           "Mayor expresión aromática",
+          "Protege al vino del oxígeno y desarrolla sabores únicos",
           "Adición de aguardiente vínico",
-          "Estructura potente y necesidad de guarda",
-          "Sistema de soleras y criaderas"
+          "Estructura potente y necesidad de guarda"
         ],
         "prompt": "Consolidación: ¿cuál de estas afirmaciones corresponde a la aireación de un vino joven y estructurado?",
         "remediation_signal": "Revisa la cadena causal de la aireación de un vino joven y estructurado"
@@ -2205,6 +2227,28 @@ window.SESSION_BANK = {
         "training_item_only": true,
         "official_wset_question": false,
         "disclaimer": "PROTOTIPO · ENTRENAMIENTO · NO EVALUACIÓN OFICIAL WSET"
+      },
+      "causal_chain": {
+        "causa": "El vino presenta acidez insuficiente o poca definición estructural en relación con su fruta, alcohol, dulzor y cuerpo.",
+        "efecto": "Si estos elementos de equilibrio son insuficientes, el vino puede parecer plano, apagado o poco definido en vez de fresco y persistente.",
+        "mecanismo": "La acidez aporta frescura y tensión, mientras componentes estructurales como acidez, tanino y cuerpo dan forma y progresión al paladar."
+      },
+      "feedback_by_mode": {
+        "mentor": "La respuesta correcta es B: «Falta de acidez o estructura». La clave está en la falta de acidez o estructura y la percepción de un vino plano: La acidez aporta frescura y tensión, mientras componentes estructurales como acidez, tanino y cuerpo dan forma y progresión al paladar. Por eso, si estos elementos de equilibrio son insuficientes, el vino puede parecer plano, apagado o poco definido en vez de fresco y persistente.",
+        "reviewer": "Exigencia de repaso (RA1): debes poder justificar por qué «Falta de acidez o estructura» es correcta y por qué las otras tres opciones no lo son, citando el mecanismo de la falta de acidez o estructura y la percepción de un vino plano. Si no puedes reconstruir la cadena completa sin ver las opciones, repasa este concepto en tu material WSET L3.",
+        "trainer": "Concepto técnico (RA1): Fija el mecanismo de la falta de acidez o estructura y la percepción de un vino plano: El vino presenta acidez insuficiente o poca definición estructural en relación con su fruta, alcohol, dulzor y cuerpo. → La acidez aporta frescura y tensión, mientras componentes estructurales como acidez, tanino y cuerpo dan forma y progresión al paladar. En el examen, identifica este patrón causa→mecanismo→efecto antes de mirar las opciones."
+      },
+      "micro_drill": {
+        "correct_index": 1,
+        "explanation": "«Falta de acidez o estructura» corresponde a la falta de acidez o estructura y la percepción de un vino plano. Las demás afirmaciones son correctas, pero describen otros mecanismos.",
+        "options": [
+          "Protege al vino del oxígeno y desarrolla sabores únicos",
+          "Falta de acidez o estructura",
+          "Adición de aguardiente vínico",
+          "Estructura potente y necesidad de guarda"
+        ],
+        "prompt": "Consolidación: ¿cuál de estas afirmaciones corresponde a la falta de acidez o estructura y la percepción de un vino plano?",
+        "remediation_signal": "Revisa la cadena causal de la falta de acidez o estructura y la percepción de un vino plano"
       }
     },
     {
@@ -2349,9 +2393,9 @@ window.SESSION_BANK = {
         "explanation": "«Separa los sedimentos» corresponde al sedimento de los tintos añejos y su servicio cuidadoso. Las demás afirmaciones son correctas, pero describen otros mecanismos.",
         "options": [
           "Separa los sedimentos",
+          "Protege al vino del oxígeno y desarrolla sabores únicos",
           "Adición de aguardiente vínico",
-          "Estructura potente y necesidad de guarda",
-          "Sistema de soleras y criaderas"
+          "Estructura potente y necesidad de guarda"
         ],
         "prompt": "Consolidación: ¿cuál de estas afirmaciones corresponde al sedimento de los tintos añejos y su servicio cuidadoso?",
         "remediation_signal": "Revisa la cadena causal del sedimento de los tintos añejos y su servicio cuidadoso"
@@ -2451,9 +2495,9 @@ window.SESSION_BANK = {
         "correct_index": 3,
         "explanation": "«Hace que el vino se perciba más amargo, ácido y menos frutal» corresponde al contraste entre un alimento dulce y el vino. Las demás afirmaciones son correctas, pero describen otros mecanismos.",
         "options": [
+          "Protege al vino del oxígeno y desarrolla sabores únicos",
           "Adición de aguardiente vínico",
           "Estructura potente y necesidad de guarda",
-          "Sistema de soleras y criaderas",
           "Hace que el vino se perciba más amargo, ácido y menos frutal"
         ],
         "prompt": "Consolidación: ¿cuál de estas afirmaciones corresponde al contraste entre un alimento dulce y el vino?",
@@ -2527,10 +2571,10 @@ window.SESSION_BANK = {
         "correct_index": 2,
         "explanation": "«Higiene estricta y limpieza de equipos» corresponde a la higiene de bodega y el control microbiano. Las demás afirmaciones son correctas, pero describen otros mecanismos.",
         "options": [
+          "Protege al vino del oxígeno y desarrolla sabores únicos",
           "Adición de aguardiente vínico",
-          "Estructura potente y necesidad de guarda",
           "Higiene estricta y limpieza de equipos",
-          "Sistema de soleras y criaderas"
+          "Estructura potente y necesidad de guarda"
         ],
         "prompt": "Consolidación: ¿cuál de estas afirmaciones corresponde a la higiene de bodega y el control microbiano?",
         "remediation_signal": "Revisa la cadena causal de la higiene de bodega y el control microbiano"
@@ -2731,10 +2775,10 @@ window.SESSION_BANK = {
         "correct_index": 2,
         "explanation": "«Cerrar herméticamente y refrigerar» corresponde a la conservación de una botella abierta. Las demás afirmaciones son correctas, pero describen otros mecanismos.",
         "options": [
+          "Protege al vino del oxígeno y desarrolla sabores únicos",
           "Adición de aguardiente vínico",
-          "Estructura potente y necesidad de guarda",
           "Cerrar herméticamente y refrigerar",
-          "Sistema de soleras y criaderas"
+          "Estructura potente y necesidad de guarda"
         ],
         "prompt": "Consolidación: ¿cuál de estas afirmaciones corresponde a la conservación de una botella abierta?",
         "remediation_signal": "Revisa la cadena causal de la conservación de una botella abierta"
@@ -2854,9 +2898,9 @@ window.SESSION_BANK = {
         "correct_index": 3,
         "explanation": "«Filtrado estéril antes del embotellado» corresponde a la filtración estéril y la estabilidad microbiológica. Las demás afirmaciones son correctas, pero describen otros mecanismos.",
         "options": [
+          "Protege al vino del oxígeno y desarrolla sabores únicos",
           "Adición de aguardiente vínico",
           "Estructura potente y necesidad de guarda",
-          "Sistema de soleras y criaderas",
           "Filtrado estéril antes del embotellado"
         ],
         "prompt": "Consolidación: ¿cuál de estas afirmaciones corresponde a la filtración estéril y la estabilidad microbiológica?",
@@ -2984,10 +3028,10 @@ window.SESSION_BANK = {
         "correct_index": 2,
         "explanation": "«En posición horizontal y en ambiente fresco y oscuro» corresponde a las condiciones estables para la guarda en botella. Las demás afirmaciones son correctas, pero describen otros mecanismos.",
         "options": [
+          "Protege al vino del oxígeno y desarrolla sabores únicos",
           "Adición de aguardiente vínico",
-          "Estructura potente y necesidad de guarda",
           "En posición horizontal y en ambiente fresco y oscuro",
-          "Sistema de soleras y criaderas"
+          "Estructura potente y necesidad de guarda"
         ],
         "prompt": "Consolidación: ¿cuál de estas afirmaciones corresponde a las condiciones estables para la guarda en botella?",
         "remediation_signal": "Revisa la cadena causal de las condiciones estables para la guarda en botella"
@@ -3061,9 +3105,9 @@ window.SESSION_BANK = {
         "explanation": "«Color marrón dorado y aromas a frutos secos» corresponde a la oxidación excesiva de un vino blanco. Las demás afirmaciones son correctas, pero describen otros mecanismos.",
         "options": [
           "Color marrón dorado y aromas a frutos secos",
+          "Protege al vino del oxígeno y desarrolla sabores únicos",
           "Adición de aguardiente vínico",
-          "Estructura potente y necesidad de guarda",
-          "Sistema de soleras y criaderas"
+          "Estructura potente y necesidad de guarda"
         ],
         "prompt": "Consolidación: ¿cuál de estas afirmaciones corresponde a la oxidación excesiva de un vino blanco?",
         "remediation_signal": "Revisa la cadena causal de la oxidación excesiva de un vino blanco"
@@ -3109,10 +3153,10 @@ window.SESSION_BANK = {
         "correct_index": 2,
         "explanation": "«Evolución prematura y pérdida de frescura» corresponde al efecto del calor excesivo sobre el vino embotellado. Las demás afirmaciones son correctas, pero describen otros mecanismos.",
         "options": [
+          "Protege al vino del oxígeno y desarrolla sabores únicos",
           "Adición de aguardiente vínico",
-          "Estructura potente y necesidad de guarda",
           "Evolución prematura y pérdida de frescura",
-          "Sistema de soleras y criaderas"
+          "Estructura potente y necesidad de guarda"
         ],
         "prompt": "Consolidación: ¿cuál de estas afirmaciones corresponde al efecto del calor excesivo sobre el vino embotellado?",
         "remediation_signal": "Revisa la cadena causal del efecto del calor excesivo sobre el vino embotellado"
@@ -3170,6 +3214,28 @@ window.SESSION_BANK = {
         "training_item_only": true,
         "official_wset_question": false,
         "disclaimer": "PROTOTIPO · ENTRENAMIENTO · NO EVALUACIÓN OFICIAL WSET"
+      },
+      "causal_chain": {
+        "causa": "Un tinto concentrado parte de taninos, acidez y fruta abundantes y, en estilos fortificados, también de alcohol y azúcar.",
+        "efecto": "El vino tiene capacidad estructural para una guarda prolongada, durante la cual los taninos pueden integrarse y surgir complejidad terciaria; esa estructura permite la evolución, pero no garantiza mejora si el almacenamiento es deficiente.",
+        "mecanismo": "La acidez y otros componentes estables ralentizan el deterioro, mientras los taninos se polimerizan y el perfil concentrado evoluciona con el tiempo."
+      },
+      "feedback_by_mode": {
+        "mentor": "La respuesta correcta es B: «Alta acidez, taninos firmes y buen equilibrio». La clave está en la estructura que permite la guarda prolongada de un vino tinto: La acidez y otros componentes estables ralentizan el deterioro, mientras los taninos se polimerizan y el perfil concentrado evoluciona con el tiempo. Por eso, el vino tiene capacidad estructural para una guarda prolongada, durante la cual los taninos pueden integrarse y surgir complejidad terciaria; esa estructura permite la evolución, pero no garantiza mejora si el almacenamiento es deficiente.",
+        "reviewer": "Exigencia de repaso (RA1): debes poder justificar por qué «Alta acidez, taninos firmes y buen equilibrio» es correcta y por qué las otras tres opciones no lo son, citando el mecanismo de la estructura que permite la guarda prolongada de un vino tinto. Si no puedes reconstruir la cadena completa sin ver las opciones, repasa este concepto en tu material WSET L3.",
+        "trainer": "Concepto técnico (RA1): Tema: quality factors. Fija el mecanismo de la estructura que permite la guarda prolongada de un vino tinto: Un tinto concentrado parte de taninos, acidez y fruta abundantes y, en estilos fortificados, también de alcohol y azúcar. → La acidez y otros componentes estables ralentizan el deterioro, mientras los taninos se polimerizan y el perfil concentrado evoluciona con el tiempo. En el examen, identifica este patrón causa→mecanismo→efecto antes de mirar las opciones."
+      },
+      "micro_drill": {
+        "correct_index": 2,
+        "explanation": "«Alta acidez, taninos firmes y buen equilibrio» corresponde a la estructura que permite la guarda prolongada de un vino tinto. Las demás afirmaciones son correctas, pero describen otros mecanismos.",
+        "options": [
+          "Protege al vino del oxígeno y desarrolla sabores únicos",
+          "Adición de aguardiente vínico",
+          "Alta acidez, taninos firmes y buen equilibrio",
+          "Sistema de soleras y criaderas"
+        ],
+        "prompt": "Consolidación: ¿cuál de estas afirmaciones corresponde a la estructura que permite la guarda prolongada de un vino tinto?",
+        "remediation_signal": "Revisa la cadena causal de la estructura que permite la guarda prolongada de un vino tinto"
       }
     },
     {
@@ -3212,10 +3278,10 @@ window.SESSION_BANK = {
         "correct_index": 1,
         "explanation": "«Mantener la botella a 45° y sujetar el corcho firmemente» corresponde a la apertura segura de un espumoso con corcho. Las demás afirmaciones son correctas, pero describen otros mecanismos.",
         "options": [
-          "Adición de aguardiente vínico",
+          "Protege al vino del oxígeno y desarrolla sabores únicos",
           "Mantener la botella a 45° y sujetar el corcho firmemente",
-          "Estructura potente y necesidad de guarda",
-          "Sistema de soleras y criaderas"
+          "Adición de aguardiente vínico",
+          "Estructura potente y necesidad de guarda"
         ],
         "prompt": "Consolidación: ¿cuál de estas afirmaciones corresponde a la apertura segura de un espumoso con corcho?",
         "remediation_signal": "Revisa la cadena causal de la apertura segura de un espumoso con corcho"
@@ -3261,9 +3327,9 @@ window.SESSION_BANK = {
         "correct_index": 3,
         "explanation": "«Suaviza los taninos y mejora el equilibrio» corresponde a la sal de la comida y la percepción de los taninos. Las demás afirmaciones son correctas, pero describen otros mecanismos.",
         "options": [
+          "Protege al vino del oxígeno y desarrolla sabores únicos",
           "Adición de aguardiente vínico",
           "Estructura potente y necesidad de guarda",
-          "Sistema de soleras y criaderas",
           "Suaviza los taninos y mejora el equilibrio"
         ],
         "prompt": "Consolidación: ¿cuál de estas afirmaciones corresponde a la sal de la comida y la percepción de los taninos?",
@@ -3347,10 +3413,10 @@ window.SESSION_BANK = {
         "correct_index": 1,
         "explanation": "«Verter lentamente para evitar sedimentos» corresponde al sedimento de los tintos añejos y su servicio cuidadoso. Las demás afirmaciones son correctas, pero describen otros mecanismos.",
         "options": [
-          "Adición de aguardiente vínico",
+          "Protege al vino del oxígeno y desarrolla sabores únicos",
           "Verter lentamente para evitar sedimentos",
-          "Estructura potente y necesidad de guarda",
-          "Sistema de soleras y criaderas"
+          "Adición de aguardiente vínico",
+          "Estructura potente y necesidad de guarda"
         ],
         "prompt": "Consolidación: ¿cuál de estas afirmaciones corresponde al sedimento de los tintos añejos y su servicio cuidadoso?",
         "remediation_signal": "Revisa la cadena causal del sedimento de los tintos añejos y su servicio cuidadoso"
@@ -3532,9 +3598,9 @@ window.SESSION_BANK = {
         "explanation": "«Mayor acidez, fruta menos madura, alcohol moderado» corresponde al clima fresco y su estilo de vino. Las demás afirmaciones son correctas, pero describen otros mecanismos.",
         "options": [
           "Mayor acidez, fruta menos madura, alcohol moderado",
+          "Protege al vino del oxígeno y desarrolla sabores únicos",
           "Adición de aguardiente vínico",
-          "Estructura potente y necesidad de guarda",
-          "Sistema de soleras y criaderas"
+          "Estructura potente y necesidad de guarda"
         ],
         "prompt": "Consolidación: ¿cuál de estas afirmaciones corresponde al clima fresco y su estilo de vino?",
         "remediation_signal": "Revisa la cadena causal del clima fresco y su estilo de vino"
@@ -3565,6 +3631,28 @@ window.SESSION_BANK = {
         "training_item_only": true,
         "official_wset_question": false,
         "disclaimer": "PROTOTIPO · ENTRENAMIENTO · NO EVALUACIÓN OFICIAL WSET"
+      },
+      "causal_chain": {
+        "causa": "La corriente fría de Humboldt enfría el Pacífico cercano y favorece aire fresco y nieblas en el Valle de Casablanca.",
+        "efecto": "La uva conserva acidez elevada y frescura aromática a pesar de la latitud chilena.",
+        "mecanismo": "Las temperaturas de cultivo más bajas ralentizan la maduración y reducen la pérdida respiratoria de ácidos."
+      },
+      "feedback_by_mode": {
+        "mentor": "La respuesta correcta es C: «Refresca las temperaturas costeras». La clave está en la corriente de Humboldt y la frescura del Valle de Casablanca: Las temperaturas de cultivo más bajas ralentizan la maduración y reducen la pérdida respiratoria de ácidos. Por eso, la uva conserva acidez elevada y frescura aromática a pesar de la latitud chilena.",
+        "reviewer": "Exigencia de repaso (RA1): debes poder justificar por qué «Refresca las temperaturas costeras» es correcta y por qué las otras tres opciones no lo son, citando el mecanismo de la corriente de Humboldt y la frescura del Valle de Casablanca. Si no puedes reconstruir la cadena completa sin ver las opciones, repasa este concepto en tu material WSET L3.",
+        "trainer": "Concepto técnico (RA1): Fija el mecanismo de la corriente de Humboldt y la frescura del Valle de Casablanca: La corriente fría de Humboldt enfría el Pacífico cercano y favorece aire fresco y nieblas en el Valle de Casablanca. → Las temperaturas de cultivo más bajas ralentizan la maduración y reducen la pérdida respiratoria de ácidos. En el examen, identifica este patrón causa→mecanismo→efecto antes de mirar las opciones."
+      },
+      "micro_drill": {
+        "correct_index": 0,
+        "explanation": "«Refresca las temperaturas costeras» corresponde a la corriente de Humboldt y la frescura del Valle de Casablanca. Las demás afirmaciones son correctas, pero describen otros mecanismos.",
+        "options": [
+          "Refresca las temperaturas costeras",
+          "Protege al vino del oxígeno y desarrolla sabores únicos",
+          "Adición de aguardiente vínico",
+          "Estructura potente y necesidad de guarda"
+        ],
+        "prompt": "Consolidación: ¿cuál de estas afirmaciones corresponde a la corriente de Humboldt y la frescura del Valle de Casablanca?",
+        "remediation_signal": "Revisa la cadena causal de la corriente de Humboldt y la frescura del Valle de Casablanca"
       }
     },
     {
@@ -3661,10 +3749,10 @@ window.SESSION_BANK = {
         "correct_index": 2,
         "explanation": "«Floración temprana y riesgo de heladas posteriores» corresponde al crecimiento temprano y la exposición a heladas primaverales. Las demás afirmaciones son correctas, pero describen otros mecanismos.",
         "options": [
+          "Protege al vino del oxígeno y desarrolla sabores únicos",
           "Adición de aguardiente vínico",
-          "Estructura potente y necesidad de guarda",
           "Floración temprana y riesgo de heladas posteriores",
-          "Sistema de soleras y criaderas"
+          "Estructura potente y necesidad de guarda"
         ],
         "prompt": "Consolidación: ¿cuál de estas afirmaciones corresponde al crecimiento temprano y la exposición a heladas primaverales?",
         "remediation_signal": "Revisa la cadena causal del crecimiento temprano y la exposición a heladas primaverales"
@@ -3711,9 +3799,9 @@ window.SESSION_BANK = {
         "explanation": "«Enfriamiento controlado» corresponde a la estabilización tartárica por frío. Las demás afirmaciones son correctas, pero describen otros mecanismos.",
         "options": [
           "Enfriamiento controlado",
+          "Protege al vino del oxígeno y desarrolla sabores únicos",
           "Adición de aguardiente vínico",
-          "Estructura potente y necesidad de guarda",
-          "Sistema de soleras y criaderas"
+          "Estructura potente y necesidad de guarda"
         ],
         "prompt": "Consolidación: ¿cuál de estas afirmaciones corresponde a la estabilización tartárica por frío?",
         "remediation_signal": "Revisa la cadena causal de la estabilización tartárica por frío"
@@ -3759,10 +3847,10 @@ window.SESSION_BANK = {
         "correct_index": 1,
         "explanation": "«Reduce la ventilación y favorece enfermedades fúngicas» corresponde a la ventilación del dosel y el riesgo de enfermedades fúngicas. Las demás afirmaciones son correctas, pero describen otros mecanismos.",
         "options": [
-          "Adición de aguardiente vínico",
+          "Protege al vino del oxígeno y desarrolla sabores únicos",
           "Reduce la ventilación y favorece enfermedades fúngicas",
-          "Estructura potente y necesidad de guarda",
-          "Sistema de soleras y criaderas"
+          "Adición de aguardiente vínico",
+          "Estructura potente y necesidad de guarda"
         ],
         "prompt": "Consolidación: ¿cuál de estas afirmaciones corresponde a la ventilación del dosel y el riesgo de enfermedades fúngicas?",
         "remediation_signal": "Revisa la cadena causal de la ventilación del dosel y el riesgo de enfermedades fúngicas"
@@ -3808,10 +3896,10 @@ window.SESSION_BANK = {
         "correct_index": 1,
         "explanation": "«Controlar el vigor y mejorar la exposición de los racimos» corresponde al manejo del dosel, el vigor y la exposición de los racimos. Las demás afirmaciones son correctas, pero describen otros mecanismos.",
         "options": [
-          "Adición de aguardiente vínico",
+          "Protege al vino del oxígeno y desarrolla sabores únicos",
           "Controlar el vigor y mejorar la exposición de los racimos",
-          "Estructura potente y necesidad de guarda",
-          "Sistema de soleras y criaderas"
+          "Adición de aguardiente vínico",
+          "Estructura potente y necesidad de guarda"
         ],
         "prompt": "Consolidación: ¿cuál de estas afirmaciones corresponde al manejo del dosel, el vigor y la exposición de los racimos?",
         "remediation_signal": "Revisa la cadena causal del manejo del dosel, el vigor y la exposición de los racimos"
@@ -3885,9 +3973,9 @@ window.SESSION_BANK = {
         "explanation": "«Contaminación por TCA» corresponde a la contaminación por TCA. Las demás afirmaciones son correctas, pero describen otros mecanismos.",
         "options": [
           "Contaminación por TCA",
+          "Protege al vino del oxígeno y desarrolla sabores únicos",
           "Adición de aguardiente vínico",
-          "Estructura potente y necesidad de guarda",
-          "Sistema de soleras y criaderas"
+          "Estructura potente y necesidad de guarda"
         ],
         "prompt": "Consolidación: ¿cuál de estas afirmaciones corresponde a la contaminación por TCA?",
         "remediation_signal": "Revisa la cadena causal de la contaminación por TCA"
@@ -3933,10 +4021,10 @@ window.SESSION_BANK = {
         "correct_index": 1,
         "explanation": "«Ambiente oscuro y fresco con humedad controlada» corresponde a las condiciones estables para la guarda en botella. Las demás afirmaciones son correctas, pero describen otros mecanismos.",
         "options": [
-          "Adición de aguardiente vínico",
+          "Protege al vino del oxígeno y desarrolla sabores únicos",
           "Ambiente oscuro y fresco con humedad controlada",
-          "Estructura potente y necesidad de guarda",
-          "Sistema de soleras y criaderas"
+          "Adición de aguardiente vínico",
+          "Estructura potente y necesidad de guarda"
         ],
         "prompt": "Consolidación: ¿cuál de estas afirmaciones corresponde a las condiciones estables para la guarda en botella?",
         "remediation_signal": "Revisa la cadena causal de las condiciones estables para la guarda en botella"
@@ -4063,9 +4151,9 @@ window.SESSION_BANK = {
         "correct_index": 3,
         "explanation": "«Hace que el vino parezca más amargo y ácido» corresponde al contraste entre un alimento dulce y el vino. Las demás afirmaciones son correctas, pero describen otros mecanismos.",
         "options": [
+          "Protege al vino del oxígeno y desarrolla sabores únicos",
           "Adición de aguardiente vínico",
           "Estructura potente y necesidad de guarda",
-          "Sistema de soleras y criaderas",
           "Hace que el vino parezca más amargo y ácido"
         ],
         "prompt": "Consolidación: ¿cuál de estas afirmaciones corresponde al contraste entre un alimento dulce y el vino?",
@@ -4112,10 +4200,10 @@ window.SESSION_BANK = {
         "correct_index": 2,
         "explanation": "«Copas grandes con forma de balón» corresponde a una copa amplia para un tinto corpulento y complejo. Las demás afirmaciones son correctas, pero describen otros mecanismos.",
         "options": [
+          "Protege al vino del oxígeno y desarrolla sabores únicos",
           "Adición de aguardiente vínico",
-          "Estructura potente y necesidad de guarda",
           "Copas grandes con forma de balón",
-          "Sistema de soleras y criaderas"
+          "Estructura potente y necesidad de guarda"
         ],
         "prompt": "Consolidación: ¿cuál de estas afirmaciones corresponde a una copa amplia para un tinto corpulento y complejo?",
         "remediation_signal": "Revisa la cadena causal de una copa amplia para un tinto corpulento y complejo"
@@ -4161,10 +4249,10 @@ window.SESSION_BANK = {
         "correct_index": 1,
         "explanation": "«Dilución de azúcares y acidez» corresponde a la lluvia o humedad persistente cerca de la vendimia. Las demás afirmaciones son correctas, pero describen otros mecanismos.",
         "options": [
-          "Adición de aguardiente vínico",
+          "Protege al vino del oxígeno y desarrolla sabores únicos",
           "Dilución de azúcares y acidez",
-          "Estructura potente y necesidad de guarda",
-          "Sistema de soleras y criaderas"
+          "Adición de aguardiente vínico",
+          "Estructura potente y necesidad de guarda"
         ],
         "prompt": "Consolidación: ¿cuál de estas afirmaciones corresponde a la lluvia o humedad persistente cerca de la vendimia?",
         "remediation_signal": "Revisa la cadena causal de la lluvia o humedad persistente cerca de la vendimia"
@@ -4210,10 +4298,10 @@ window.SESSION_BANK = {
         "correct_index": 2,
         "explanation": "«Aporta estructura, complejidad y notas especiadas» corresponde a las barricas nuevas y su aporte de estructura y especias. Las demás afirmaciones son correctas, pero describen otros mecanismos.",
         "options": [
+          "Protege al vino del oxígeno y desarrolla sabores únicos",
           "Adición de aguardiente vínico",
-          "Estructura potente y necesidad de guarda",
           "Aporta estructura, complejidad y notas especiadas",
-          "Sistema de soleras y criaderas"
+          "Estructura potente y necesidad de guarda"
         ],
         "prompt": "Consolidación: ¿cuál de estas afirmaciones corresponde a las barricas nuevas y su aporte de estructura y especias?",
         "remediation_signal": "Revisa la cadena causal de las barricas nuevas y su aporte de estructura y especias"
@@ -4260,9 +4348,9 @@ window.SESSION_BANK = {
         "explanation": "«Conserva frescura y compuestos aromáticos» corresponde a la vendimia nocturna en climas cálidos. Las demás afirmaciones son correctas, pero describen otros mecanismos.",
         "options": [
           "Conserva frescura y compuestos aromáticos",
+          "Protege al vino del oxígeno y desarrolla sabores únicos",
           "Adición de aguardiente vínico",
-          "Estructura potente y necesidad de guarda",
-          "Sistema de soleras y criaderas"
+          "Estructura potente y necesidad de guarda"
         ],
         "prompt": "Consolidación: ¿cuál de estas afirmaciones corresponde a la vendimia nocturna en climas cálidos?",
         "remediation_signal": "Revisa la cadena causal de la vendimia nocturna en climas cálidos"
@@ -4346,9 +4434,9 @@ window.SESSION_BANK = {
         "explanation": "«Altitud elevada y noches frescas» corresponde a la altitud elevada, la maduración lenta y la frescura. Las demás afirmaciones son correctas, pero describen otros mecanismos.",
         "options": [
           "Altitud elevada y noches frescas",
+          "Protege al vino del oxígeno y desarrolla sabores únicos",
           "Adición de aguardiente vínico",
-          "Estructura potente y necesidad de guarda",
-          "Sistema de soleras y criaderas"
+          "Estructura potente y necesidad de guarda"
         ],
         "prompt": "Consolidación: ¿cuál de estas afirmaciones corresponde a la altitud elevada, la maduración lenta y la frescura?",
         "remediation_signal": "Revisa la cadena causal de la altitud elevada, la maduración lenta y la frescura"
@@ -4394,10 +4482,10 @@ window.SESSION_BANK = {
         "correct_index": 2,
         "explanation": "«Mayor textura y complejidad» corresponde a la crianza sobre lías de vinos blancos. Las demás afirmaciones son correctas, pero describen otros mecanismos.",
         "options": [
+          "Protege al vino del oxígeno y desarrolla sabores únicos",
           "Adición de aguardiente vínico",
-          "Estructura potente y necesidad de guarda",
           "Mayor textura y complejidad",
-          "Sistema de soleras y criaderas"
+          "Estructura potente y necesidad de guarda"
         ],
         "prompt": "Consolidación: ¿cuál de estas afirmaciones corresponde a la crianza sobre lías de vinos blancos?",
         "remediation_signal": "Revisa la cadena causal de la crianza sobre lías de vinos blancos"
@@ -4443,10 +4531,10 @@ window.SESSION_BANK = {
         "correct_index": 1,
         "explanation": "«Maceración prolongada y delestage» corresponde a la maceración y la gestión del sombrero en tintos. Las demás afirmaciones son correctas, pero describen otros mecanismos.",
         "options": [
-          "Adición de aguardiente vínico",
+          "Protege al vino del oxígeno y desarrolla sabores únicos",
           "Maceración prolongada y delestage",
-          "Estructura potente y necesidad de guarda",
-          "Sistema de soleras y criaderas"
+          "Adición de aguardiente vínico",
+          "Estructura potente y necesidad de guarda"
         ],
         "prompt": "Consolidación: ¿cuál de estas afirmaciones corresponde a la maceración y la gestión del sombrero en tintos?",
         "remediation_signal": "Revisa la cadena causal de la maceración y la gestión del sombrero en tintos"
@@ -4529,10 +4617,10 @@ window.SESSION_BANK = {
         "correct_index": 1,
         "explanation": "«Preservar aromas y acidez» corresponde a la vendimia nocturna en climas cálidos. Las demás afirmaciones son correctas, pero describen otros mecanismos.",
         "options": [
-          "Adición de aguardiente vínico",
+          "Protege al vino del oxígeno y desarrolla sabores únicos",
           "Preservar aromas y acidez",
-          "Estructura potente y necesidad de guarda",
-          "Sistema de soleras y criaderas"
+          "Adición de aguardiente vínico",
+          "Estructura potente y necesidad de guarda"
         ],
         "prompt": "Consolidación: ¿cuál de estas afirmaciones corresponde a la vendimia nocturna en climas cálidos?",
         "remediation_signal": "Revisa la cadena causal de la vendimia nocturna en climas cálidos"
@@ -4615,10 +4703,10 @@ window.SESSION_BANK = {
         "correct_index": 2,
         "explanation": "«Estabilización proteica» corresponde a la bentonita y la estabilidad proteica. Las demás afirmaciones son correctas, pero describen otros mecanismos.",
         "options": [
+          "Protege al vino del oxígeno y desarrolla sabores únicos",
           "Adición de aguardiente vínico",
-          "Estructura potente y necesidad de guarda",
           "Estabilización proteica",
-          "Sistema de soleras y criaderas"
+          "Estructura potente y necesidad de guarda"
         ],
         "prompt": "Consolidación: ¿cuál de estas afirmaciones corresponde a la bentonita y la estabilidad proteica?",
         "remediation_signal": "Revisa la cadena causal de la bentonita y la estabilidad proteica"
@@ -4664,9 +4752,9 @@ window.SESSION_BANK = {
         "correct_index": 3,
         "explanation": "«Alta acidez y bajo alcohol» corresponde al clima fresco y su estilo de vino. Las demás afirmaciones son correctas, pero describen otros mecanismos.",
         "options": [
+          "Protege al vino del oxígeno y desarrolla sabores únicos",
           "Adición de aguardiente vínico",
           "Estructura potente y necesidad de guarda",
-          "Sistema de soleras y criaderas",
           "Alta acidez y bajo alcohol"
         ],
         "prompt": "Consolidación: ¿cuál de estas afirmaciones corresponde al clima fresco y su estilo de vino?",
@@ -4713,10 +4801,10 @@ window.SESSION_BANK = {
         "correct_index": 1,
         "explanation": "«Control de temperatura» corresponde al control térmico en depósitos de acero inoxidable. Las demás afirmaciones son correctas, pero describen otros mecanismos.",
         "options": [
-          "Adición de aguardiente vínico",
+          "Protege al vino del oxígeno y desarrolla sabores únicos",
           "Control de temperatura",
-          "Estructura potente y necesidad de guarda",
-          "Sistema de soleras y criaderas"
+          "Adición de aguardiente vínico",
+          "Estructura potente y necesidad de guarda"
         ],
         "prompt": "Consolidación: ¿cuál de estas afirmaciones corresponde al control térmico en depósitos de acero inoxidable?",
         "remediation_signal": "Revisa la cadena causal del control térmico en depósitos de acero inoxidable"
@@ -4799,10 +4887,10 @@ window.SESSION_BANK = {
         "correct_index": 2,
         "explanation": "«Riesgo de enfermedades» corresponde al exceso de nitrógeno y el riesgo de enfermedad. Las demás afirmaciones son correctas, pero describen otros mecanismos.",
         "options": [
+          "Protege al vino del oxígeno y desarrolla sabores únicos",
           "Adición de aguardiente vínico",
-          "Estructura potente y necesidad de guarda",
           "Riesgo de enfermedades",
-          "Sistema de soleras y criaderas"
+          "Estructura potente y necesidad de guarda"
         ],
         "prompt": "Consolidación: ¿cuál de estas afirmaciones corresponde al exceso de nitrógeno y el riesgo de enfermedad?",
         "remediation_signal": "Revisa la cadena causal del exceso de nitrógeno y el riesgo de enfermedad"
@@ -4950,9 +5038,9 @@ window.SESSION_BANK = {
         "explanation": "«Mayor exposición solar» corresponde a la exposición sur en el hemisferio norte. Las demás afirmaciones son correctas, pero describen otros mecanismos.",
         "options": [
           "Mayor exposición solar",
+          "Protege al vino del oxígeno y desarrolla sabores únicos",
           "Adición de aguardiente vínico",
-          "Estructura potente y necesidad de guarda",
-          "Sistema de soleras y criaderas"
+          "Estructura potente y necesidad de guarda"
         ],
         "prompt": "Consolidación: ¿cuál de estas afirmaciones corresponde a la exposición sur en el hemisferio norte?",
         "remediation_signal": "Revisa la cadena causal de la exposición sur en el hemisferio norte"
@@ -5332,9 +5420,9 @@ window.SESSION_BANK = {
         "correct_index": 3,
         "explanation": "«Más frescura y fruta» corresponde a la fermentación a baja temperatura y la retención aromática. Las demás afirmaciones son correctas, pero describen otros mecanismos.",
         "options": [
+          "Protege al vino del oxígeno y desarrolla sabores únicos",
           "Adición de aguardiente vínico",
           "Estructura potente y necesidad de guarda",
-          "Sistema de soleras y criaderas",
           "Más frescura y fruta"
         ],
         "prompt": "Consolidación: ¿cuál de estas afirmaciones corresponde a la fermentación a baja temperatura y la retención aromática?",
@@ -5409,9 +5497,9 @@ window.SESSION_BANK = {
         "explanation": "«Eliminar microorganismos y sedimentos» corresponde a la filtración previa al embotellado. Las demás afirmaciones son correctas, pero describen otros mecanismos.",
         "options": [
           "Eliminar microorganismos y sedimentos",
+          "Protege al vino del oxígeno y desarrolla sabores únicos",
           "Adición de aguardiente vínico",
-          "Estructura potente y necesidad de guarda",
-          "Sistema de soleras y criaderas"
+          "Estructura potente y necesidad de guarda"
         ],
         "prompt": "Consolidación: ¿cuál de estas afirmaciones corresponde a la filtración previa al embotellado?",
         "remediation_signal": "Revisa la cadena causal de la filtración previa al embotellado"
@@ -5457,10 +5545,10 @@ window.SESSION_BANK = {
         "correct_index": 1,
         "explanation": "«Mayor superficie de contacto y aporte de roble» corresponde al tamaño de la barrica y la proporción de contacto con el roble. Las demás afirmaciones son correctas, pero describen otros mecanismos.",
         "options": [
-          "Adición de aguardiente vínico",
+          "Protege al vino del oxígeno y desarrolla sabores únicos",
           "Mayor superficie de contacto y aporte de roble",
-          "Estructura potente y necesidad de guarda",
-          "Sistema de soleras y criaderas"
+          "Adición de aguardiente vínico",
+          "Estructura potente y necesidad de guarda"
         ],
         "prompt": "Consolidación: ¿cuál de estas afirmaciones corresponde al tamaño de la barrica y la proporción de contacto con el roble?",
         "remediation_signal": "Revisa la cadena causal del tamaño de la barrica y la proporción de contacto con el roble"
@@ -5543,10 +5631,10 @@ window.SESSION_BANK = {
         "correct_index": 1,
         "explanation": "«Puede inducirse o bloquearse» corresponde a la decisión de inducir o bloquear la fermentación maloláctica. Las demás afirmaciones son correctas, pero describen otros mecanismos.",
         "options": [
-          "Adición de aguardiente vínico",
+          "Protege al vino del oxígeno y desarrolla sabores únicos",
           "Puede inducirse o bloquearse",
-          "Estructura potente y necesidad de guarda",
-          "Sistema de soleras y criaderas"
+          "Adición de aguardiente vínico",
+          "Estructura potente y necesidad de guarda"
         ],
         "prompt": "Consolidación: ¿cuál de estas afirmaciones corresponde a la decisión de inducir o bloquear la fermentación maloláctica?",
         "remediation_signal": "Revisa la cadena causal de la decisión de inducir o bloquear la fermentación maloláctica"
@@ -5629,9 +5717,9 @@ window.SESSION_BANK = {
         "correct_index": 3,
         "explanation": "«Uso de portainjertos de bajo vigor» corresponde a los portainjertos de bajo vigor. Las demás afirmaciones son correctas, pero describen otros mecanismos.",
         "options": [
+          "Protege al vino del oxígeno y desarrolla sabores únicos",
           "Adición de aguardiente vínico",
           "Estructura potente y necesidad de guarda",
-          "Sistema de soleras y criaderas",
           "Uso de portainjertos de bajo vigor"
         ],
         "prompt": "Consolidación: ¿cuál de estas afirmaciones corresponde a los portainjertos de bajo vigor?",
@@ -5715,10 +5803,10 @@ window.SESSION_BANK = {
         "correct_index": 2,
         "explanation": "«Favorece la extracción de taninos y color» corresponde a la extracción durante la fermentación de tintos. Las demás afirmaciones son correctas, pero describen otros mecanismos.",
         "options": [
+          "Protege al vino del oxígeno y desarrolla sabores únicos",
           "Adición de aguardiente vínico",
-          "Estructura potente y necesidad de guarda",
           "Favorece la extracción de taninos y color",
-          "Sistema de soleras y criaderas"
+          "Estructura potente y necesidad de guarda"
         ],
         "prompt": "Consolidación: ¿cuál de estas afirmaciones corresponde a la extracción durante la fermentación de tintos?",
         "remediation_signal": "Revisa la cadena causal de la extracción durante la fermentación de tintos"
@@ -5764,10 +5852,10 @@ window.SESSION_BANK = {
         "correct_index": 2,
         "explanation": "«Reduce el riesgo microbiológico» corresponde a la fermentación maloláctica controlada y la estabilidad microbiológica. Las demás afirmaciones son correctas, pero describen otros mecanismos.",
         "options": [
+          "Protege al vino del oxígeno y desarrolla sabores únicos",
           "Adición de aguardiente vínico",
-          "Estructura potente y necesidad de guarda",
           "Reduce el riesgo microbiológico",
-          "Sistema de soleras y criaderas"
+          "Estructura potente y necesidad de guarda"
         ],
         "prompt": "Consolidación: ¿cuál de estas afirmaciones corresponde a la fermentación maloláctica controlada y la estabilidad microbiológica?",
         "remediation_signal": "Revisa la cadena causal de la fermentación maloláctica controlada y la estabilidad microbiológica"
@@ -5813,10 +5901,10 @@ window.SESSION_BANK = {
         "correct_index": 2,
         "explanation": "«Uso de barrica y contacto con lías» corresponde al uso combinado de barrica y contacto con lías en vinos blancos. Las demás afirmaciones son correctas, pero describen otros mecanismos.",
         "options": [
+          "Protege al vino del oxígeno y desarrolla sabores únicos",
           "Adición de aguardiente vínico",
-          "Estructura potente y necesidad de guarda",
           "Uso de barrica y contacto con lías",
-          "Sistema de soleras y criaderas"
+          "Estructura potente y necesidad de guarda"
         ],
         "prompt": "Consolidación: ¿cuál de estas afirmaciones corresponde al uso combinado de barrica y contacto con lías en vinos blancos?",
         "remediation_signal": "Revisa la cadena causal del uso combinado de barrica y contacto con lías en vinos blancos"
@@ -5964,9 +6052,9 @@ window.SESSION_BANK = {
         "explanation": "«Cobertura vegetal alta» corresponde a la sombra del dosel como protección frente al calor. Las demás afirmaciones son correctas, pero describen otros mecanismos.",
         "options": [
           "Cobertura vegetal alta",
+          "Protege al vino del oxígeno y desarrolla sabores únicos",
           "Adición de aguardiente vínico",
-          "Estructura potente y necesidad de guarda",
-          "Sistema de soleras y criaderas"
+          "Estructura potente y necesidad de guarda"
         ],
         "prompt": "Consolidación: ¿cuál de estas afirmaciones corresponde a la sombra del dosel como protección frente al calor?",
         "remediation_signal": "Revisa la cadena causal de la sombra del dosel como protección frente al calor"
@@ -6012,10 +6100,10 @@ window.SESSION_BANK = {
         "correct_index": 1,
         "explanation": "«Mayor exposición al oxígeno» corresponde al trasiego frecuente durante la crianza. Las demás afirmaciones son correctas, pero describen otros mecanismos.",
         "options": [
-          "Adición de aguardiente vínico",
+          "Protege al vino del oxígeno y desarrolla sabores únicos",
           "Mayor exposición al oxígeno",
-          "Estructura potente y necesidad de guarda",
-          "Sistema de soleras y criaderas"
+          "Adición de aguardiente vínico",
+          "Estructura potente y necesidad de guarda"
         ],
         "prompt": "Consolidación: ¿cuál de estas afirmaciones corresponde al trasiego frecuente durante la crianza?",
         "remediation_signal": "Revisa la cadena causal del trasiego frecuente durante la crianza"
@@ -6061,9 +6149,9 @@ window.SESSION_BANK = {
         "correct_index": 3,
         "explanation": "«Aporta cremosidad y complejidad» corresponde a la crianza sobre lías de vinos blancos. Las demás afirmaciones son correctas, pero describen otros mecanismos.",
         "options": [
+          "Protege al vino del oxígeno y desarrolla sabores únicos",
           "Adición de aguardiente vínico",
           "Estructura potente y necesidad de guarda",
-          "Sistema de soleras y criaderas",
           "Aporta cremosidad y complejidad"
         ],
         "prompt": "Consolidación: ¿cuál de estas afirmaciones corresponde a la crianza sobre lías de vinos blancos?",
@@ -6111,9 +6199,9 @@ window.SESSION_BANK = {
         "explanation": "«Desarrolla notas terciarias» corresponde al envejecimiento oxidativo y el desarrollo de aromas terciarios. Las demás afirmaciones son correctas, pero describen otros mecanismos.",
         "options": [
           "Desarrolla notas terciarias",
+          "Protege al vino del oxígeno y desarrolla sabores únicos",
           "Adición de aguardiente vínico",
-          "Estructura potente y necesidad de guarda",
-          "Sistema de soleras y criaderas"
+          "Estructura potente y necesidad de guarda"
         ],
         "prompt": "Consolidación: ¿cuál de estas afirmaciones corresponde al envejecimiento oxidativo y el desarrollo de aromas terciarios?",
         "remediation_signal": "Revisa la cadena causal del envejecimiento oxidativo y el desarrollo de aromas terciarios"
@@ -6159,10 +6247,10 @@ window.SESSION_BANK = {
         "correct_index": 1,
         "explanation": "«Permitir una fermentación controlada» corresponde al enfriamiento del mosto antes de fermentar. Las demás afirmaciones son correctas, pero describen otros mecanismos.",
         "options": [
-          "Adición de aguardiente vínico",
+          "Protege al vino del oxígeno y desarrolla sabores únicos",
           "Permitir una fermentación controlada",
-          "Estructura potente y necesidad de guarda",
-          "Sistema de soleras y criaderas"
+          "Adición de aguardiente vínico",
+          "Estructura potente y necesidad de guarda"
         ],
         "prompt": "Consolidación: ¿cuál de estas afirmaciones corresponde al enfriamiento del mosto antes de fermentar?",
         "remediation_signal": "Revisa la cadena causal del enfriamiento del mosto antes de fermentar"
@@ -6208,9 +6296,9 @@ window.SESSION_BANK = {
         "correct_index": 3,
         "explanation": "«Mayor frescura y menor alcohol» corresponde a la vendimia anticipada y el equilibrio entre frescura y alcohol. Las demás afirmaciones son correctas, pero describen otros mecanismos.",
         "options": [
+          "Protege al vino del oxígeno y desarrolla sabores únicos",
           "Adición de aguardiente vínico",
           "Estructura potente y necesidad de guarda",
-          "Sistema de soleras y criaderas",
           "Mayor frescura y menor alcohol"
         ],
         "prompt": "Consolidación: ¿cuál de estas afirmaciones corresponde a la vendimia anticipada y el equilibrio entre frescura y alcohol?",
@@ -6257,9 +6345,9 @@ window.SESSION_BANK = {
         "correct_index": 3,
         "explanation": "«Rendimiento por hectárea» corresponde al bajo rendimiento y la concentración de la uva. Las demás afirmaciones son correctas, pero describen otros mecanismos.",
         "options": [
+          "Protege al vino del oxígeno y desarrolla sabores únicos",
           "Adición de aguardiente vínico",
           "Estructura potente y necesidad de guarda",
-          "Sistema de soleras y criaderas",
           "Rendimiento por hectárea"
         ],
         "prompt": "Consolidación: ¿cuál de estas afirmaciones corresponde al bajo rendimiento y la concentración de la uva?",
@@ -6306,10 +6394,10 @@ window.SESSION_BANK = {
         "correct_index": 1,
         "explanation": "«Incrementa la textura cremosa» corresponde a la crianza sobre lías de vinos blancos. Las demás afirmaciones son correctas, pero describen otros mecanismos.",
         "options": [
-          "Adición de aguardiente vínico",
+          "Protege al vino del oxígeno y desarrolla sabores únicos",
           "Incrementa la textura cremosa",
-          "Estructura potente y necesidad de guarda",
-          "Sistema de soleras y criaderas"
+          "Adición de aguardiente vínico",
+          "Estructura potente y necesidad de guarda"
         ],
         "prompt": "Consolidación: ¿cuál de estas afirmaciones corresponde a la crianza sobre lías de vinos blancos?",
         "remediation_signal": "Revisa la cadena causal de la crianza sobre lías de vinos blancos"
@@ -6355,9 +6443,9 @@ window.SESSION_BANK = {
         "correct_index": 3,
         "explanation": "«Oxigenar y remover sedimentos» corresponde al trasiego durante la crianza. Las demás afirmaciones son correctas, pero describen otros mecanismos.",
         "options": [
+          "Protege al vino del oxígeno y desarrolla sabores únicos",
           "Adición de aguardiente vínico",
           "Estructura potente y necesidad de guarda",
-          "Sistema de soleras y criaderas",
           "Oxigenar y remover sedimentos"
         ],
         "prompt": "Consolidación: ¿cuál de estas afirmaciones corresponde al trasiego durante la crianza?",
@@ -6404,10 +6492,10 @@ window.SESSION_BANK = {
         "correct_index": 1,
         "explanation": "«Deficiencia de nitrógeno» corresponde a la reducción y los aromas azufrados. Las demás afirmaciones son correctas, pero describen otros mecanismos.",
         "options": [
-          "Adición de aguardiente vínico",
+          "Protege al vino del oxígeno y desarrolla sabores únicos",
           "Deficiencia de nitrógeno",
-          "Estructura potente y necesidad de guarda",
-          "Sistema de soleras y criaderas"
+          "Adición de aguardiente vínico",
+          "Estructura potente y necesidad de guarda"
         ],
         "prompt": "Consolidación: ¿cuál de estas afirmaciones corresponde a la reducción y los aromas azufrados?",
         "remediation_signal": "Revisa la cadena causal de la reducción y los aromas azufrados"
@@ -6655,10 +6743,10 @@ window.SESSION_BANK = {
         "correct_index": 2,
         "explanation": "«Clima húmedo con nieblas matinales» corresponde a las condiciones climáticas para el desarrollo de la podredumbre noble. Las demás afirmaciones son correctas, pero describen otros mecanismos.",
         "options": [
+          "Protege al vino del oxígeno y desarrolla sabores únicos",
           "Adición de aguardiente vínico",
-          "Estructura potente y necesidad de guarda",
           "Clima húmedo con nieblas matinales",
-          "Sistema de soleras y criaderas"
+          "Estructura potente y necesidad de guarda"
         ],
         "prompt": "Consolidación: ¿cuál de estas afirmaciones corresponde a las condiciones climáticas para el desarrollo de la podredumbre noble?",
         "remediation_signal": "Revisa la cadena causal de las condiciones climáticas para el desarrollo de la podredumbre noble"
@@ -6704,9 +6792,9 @@ window.SESSION_BANK = {
         "correct_index": 3,
         "explanation": "«Permite oxigenación sin aporte significativo de sabor» corresponde a las barricas usadas y la oxigenación con poco sabor de roble. Las demás afirmaciones son correctas, pero describen otros mecanismos.",
         "options": [
+          "Protege al vino del oxígeno y desarrolla sabores únicos",
           "Adición de aguardiente vínico",
           "Estructura potente y necesidad de guarda",
-          "Sistema de soleras y criaderas",
           "Permite oxigenación sin aporte significativo de sabor"
         ],
         "prompt": "Consolidación: ¿cuál de estas afirmaciones corresponde a las barricas usadas y la oxigenación con poco sabor de roble?",
@@ -6838,9 +6926,9 @@ window.SESSION_BANK = {
         "explanation": "«Injertar la vid en portainjertos resistentes es el método principal para combatir la filoxera.» corresponde al control de la filoxera mediante portainjertos resistentes. Las demás afirmaciones son correctas, pero describen otros mecanismos.",
         "options": [
           "Injertar la vid en portainjertos resistentes es el método principal para combatir la filoxera.",
+          "Protege al vino del oxígeno y desarrolla sabores únicos",
           "Adición de aguardiente vínico",
-          "Estructura potente y necesidad de guarda",
-          "Sistema de soleras y criaderas"
+          "Estructura potente y necesidad de guarda"
         ],
         "prompt": "Consolidación: ¿cuál de estas afirmaciones corresponde al control de la filoxera mediante portainjertos resistentes?",
         "remediation_signal": "Revisa la cadena causal del control de la filoxera mediante portainjertos resistentes"
@@ -6919,10 +7007,10 @@ window.SESSION_BANK = {
         "correct_index": 2,
         "explanation": "«El acero inoxidable permite un control preciso de la temperatura durante la fermentación.» corresponde al control térmico en depósitos de acero inoxidable. Las demás afirmaciones son correctas, pero describen otros mecanismos.",
         "options": [
+          "Protege al vino del oxígeno y desarrolla sabores únicos",
           "Adición de aguardiente vínico",
-          "Estructura potente y necesidad de guarda",
           "El acero inoxidable permite un control preciso de la temperatura durante la fermentación.",
-          "Sistema de soleras y criaderas"
+          "Estructura potente y necesidad de guarda"
         ],
         "prompt": "Consolidación: ¿cuál de estas afirmaciones corresponde al control térmico en depósitos de acero inoxidable?",
         "remediation_signal": "Revisa la cadena causal del control térmico en depósitos de acero inoxidable"
@@ -6971,9 +7059,9 @@ window.SESSION_BANK = {
         "correct_index": 3,
         "explanation": "«Los suelos arenosos se caracterizan por su buen drenaje y baja retención hídrica.» corresponde a la estructura arenosa del suelo y el drenaje. Las demás afirmaciones son correctas, pero describen otros mecanismos.",
         "options": [
+          "Protege al vino del oxígeno y desarrolla sabores únicos",
           "Adición de aguardiente vínico",
           "Estructura potente y necesidad de guarda",
-          "Sistema de soleras y criaderas",
           "Los suelos arenosos se caracterizan por su buen drenaje y baja retención hídrica."
         ],
         "prompt": "Consolidación: ¿cuál de estas afirmaciones corresponde a la estructura arenosa del suelo y el drenaje?",
@@ -7024,9 +7112,9 @@ window.SESSION_BANK = {
         "explanation": "«La poda temprana puede adelantar la brotación y aumentar el riesgo de heladas primaverales.» corresponde al crecimiento temprano y la exposición a heladas primaverales. Las demás afirmaciones son correctas, pero describen otros mecanismos.",
         "options": [
           "La poda temprana puede adelantar la brotación y aumentar el riesgo de heladas primaverales.",
+          "Protege al vino del oxígeno y desarrolla sabores únicos",
           "Adición de aguardiente vínico",
-          "Estructura potente y necesidad de guarda",
-          "Sistema de soleras y criaderas"
+          "Estructura potente y necesidad de guarda"
         ],
         "prompt": "Consolidación: ¿cuál de estas afirmaciones corresponde al crecimiento temprano y la exposición a heladas primaverales?",
         "remediation_signal": "Revisa la cadena causal del crecimiento temprano y la exposición a heladas primaverales"
@@ -7076,9 +7164,9 @@ window.SESSION_BANK = {
         "explanation": "«El deshoje mejora la ventilación del racimo y puede reducir las enfermedades fúngicas.» corresponde a la ventilación del dosel y el riesgo de enfermedades fúngicas. Las demás afirmaciones son correctas, pero describen otros mecanismos.",
         "options": [
           "El deshoje mejora la ventilación del racimo y puede reducir las enfermedades fúngicas.",
+          "Protege al vino del oxígeno y desarrolla sabores únicos",
           "Adición de aguardiente vínico",
-          "Estructura potente y necesidad de guarda",
-          "Sistema de soleras y criaderas"
+          "Estructura potente y necesidad de guarda"
         ],
         "prompt": "Consolidación: ¿cuál de estas afirmaciones corresponde a la ventilación del dosel y el riesgo de enfermedades fúngicas?",
         "remediation_signal": "Revisa la cadena causal de la ventilación del dosel y el riesgo de enfermedades fúngicas"
@@ -7127,10 +7215,10 @@ window.SESSION_BANK = {
         "correct_index": 1,
         "explanation": "«Las cubiertas vegetales entre hileras pueden reducir la compactación del suelo.» corresponde a las cubiertas vegetales y la estructura del suelo. Las demás afirmaciones son correctas, pero describen otros mecanismos.",
         "options": [
-          "Adición de aguardiente vínico",
+          "Protege al vino del oxígeno y desarrolla sabores únicos",
           "Las cubiertas vegetales entre hileras pueden reducir la compactación del suelo.",
-          "Estructura potente y necesidad de guarda",
-          "Sistema de soleras y criaderas"
+          "Adición de aguardiente vínico",
+          "Estructura potente y necesidad de guarda"
         ],
         "prompt": "Consolidación: ¿cuál de estas afirmaciones corresponde a las cubiertas vegetales y la estructura del suelo?",
         "remediation_signal": "Revisa la cadena causal de las cubiertas vegetales y la estructura del suelo"
@@ -7164,6 +7252,28 @@ window.SESSION_BANK = {
         "training_item_only": true,
         "official_wset_question": false,
         "disclaimer": "PROTOTIPO · ENTRENAMIENTO · NO EVALUACIÓN OFICIAL WSET"
+      },
+      "causal_chain": {
+        "causa": "El viticultor propaga un clon de vid seleccionado por características heredables concretas.",
+        "efecto": "Elegir clones adecuados puede orientar la composición de la uva y, por tanto, el estilo del vino, aunque el sitio, la añada, la viticultura y la vinificación siguen siendo determinantes.",
+        "mecanismo": "La propagación vegetativa conserva los rasgos genéticos del clon, que pueden influir en el rendimiento, el tamaño de racimos o bayas, el momento de maduración, la susceptibilidad a enfermedades y la composición de la uva."
+      },
+      "feedback_by_mode": {
+        "mentor": "La respuesta correcta es A: «La selección clonal permite elegir plantas con características específicas para influir en el estilo del vino.». La clave está en la selección clonal y su influencia en el estilo: La propagación vegetativa conserva los rasgos genéticos del clon, que pueden influir en el rendimiento, el tamaño de racimos o bayas, el momento de maduración, la susceptibilidad a enfermedades y la composición de la uva. Por eso, elegir clones adecuados puede orientar la composición de la uva y, por tanto, el estilo del vino, aunque el sitio, la añada, la viticultura y la vinificación siguen siendo determinantes.",
+        "reviewer": "Exigencia de repaso (RA1): debes poder justificar por qué «La selección clonal permite elegir plantas con características específicas para influir en el estilo del vino.» es correcta y por qué las otras tres opciones no lo son, citando el mecanismo de la selección clonal y su influencia en el estilo. Si no puedes reconstruir la cadena completa sin ver las opciones, repasa este concepto en tu material WSET L3.",
+        "trainer": "Concepto técnico (RA1): Fija el mecanismo de la selección clonal y su influencia en el estilo: El viticultor propaga un clon de vid seleccionado por características heredables concretas. → La propagación vegetativa conserva los rasgos genéticos del clon, que pueden influir en el rendimiento, el tamaño de racimos o bayas, el momento de maduración, la susceptibilidad a enfermedades y la composición de la uva. En el examen, identifica este patrón causa→mecanismo→efecto antes de mirar las opciones."
+      },
+      "micro_drill": {
+        "correct_index": 3,
+        "explanation": "«La selección clonal permite elegir plantas con características específicas para influir en el estilo del vino.» corresponde a la selección clonal y su influencia en el estilo. Las demás afirmaciones son correctas, pero describen otros mecanismos.",
+        "options": [
+          "Protege al vino del oxígeno y desarrolla sabores únicos",
+          "Adición de aguardiente vínico",
+          "Estructura potente y necesidad de guarda",
+          "La selección clonal permite elegir plantas con características específicas para influir en el estilo del vino."
+        ],
+        "prompt": "Consolidación: ¿cuál de estas afirmaciones corresponde a la selección clonal y su influencia en el estilo?",
+        "remediation_signal": "Revisa la cadena causal de la selección clonal y su influencia en el estilo"
       }
     },
     {
@@ -7210,9 +7320,9 @@ window.SESSION_BANK = {
         "explanation": "«Cosechar de noche reduce la temperatura de la uva y disminuye el riesgo de oxidación.» corresponde a la vendimia nocturna en climas cálidos. Las demás afirmaciones son correctas, pero describen otros mecanismos.",
         "options": [
           "Cosechar de noche reduce la temperatura de la uva y disminuye el riesgo de oxidación.",
+          "Protege al vino del oxígeno y desarrolla sabores únicos",
           "Adición de aguardiente vínico",
-          "Estructura potente y necesidad de guarda",
-          "Sistema de soleras y criaderas"
+          "Estructura potente y necesidad de guarda"
         ],
         "prompt": "Consolidación: ¿cuál de estas afirmaciones corresponde a la vendimia nocturna en climas cálidos?",
         "remediation_signal": "Revisa la cadena causal de la vendimia nocturna en climas cálidos"
@@ -7261,9 +7371,9 @@ window.SESSION_BANK = {
         "correct_index": 3,
         "explanation": "«El desfangado es una etapa de clarificación del mosto que se realiza antes de la fermentación.» corresponde al desfangado del mosto antes de fermentar. Las demás afirmaciones son correctas, pero describen otros mecanismos.",
         "options": [
+          "Protege al vino del oxígeno y desarrolla sabores únicos",
           "Adición de aguardiente vínico",
           "Estructura potente y necesidad de guarda",
-          "Sistema de soleras y criaderas",
           "El desfangado es una etapa de clarificación del mosto que se realiza antes de la fermentación."
         ],
         "prompt": "Consolidación: ¿cuál de estas afirmaciones corresponde al desfangado del mosto antes de fermentar?",
@@ -7299,6 +7409,28 @@ window.SESSION_BANK = {
         "training_item_only": true,
         "official_wset_question": false,
         "disclaimer": "PROTOTIPO · ENTRENAMIENTO · NO EVALUACIÓN OFICIAL WSET"
+      },
+      "causal_chain": {
+        "causa": "El productor añade una dosis apropiada de dióxido de azufre al mosto o al vino.",
+        "efecto": "Se inhiben levaduras no deseadas y bacterias, ayudando a controlar la actividad microbiana sin implicar que se eliminen todos los microorganismos.",
+        "mecanismo": "La fracción antimicrobiana del SO₂ interfiere con el metabolismo microbiano; su eficacia depende especialmente del pH, la dosis, la fijación y la sensibilidad de cada organismo."
+      },
+      "feedback_by_mode": {
+        "mentor": "La respuesta correcta es A: «El SO₂ actúa como inhibidor tanto de levaduras no deseadas como de bacterias.». La clave está en el SO₂ y la inhibición microbiana: La fracción antimicrobiana del SO₂ interfiere con el metabolismo microbiano; su eficacia depende especialmente del pH, la dosis, la fijación y la sensibilidad de cada organismo. Por eso, se inhiben levaduras no deseadas y bacterias, ayudando a controlar la actividad microbiana sin implicar que se eliminen todos los microorganismos.",
+        "reviewer": "Exigencia de repaso (RA1): debes poder justificar por qué «El SO₂ actúa como inhibidor tanto de levaduras no deseadas como de bacterias.» es correcta y por qué las otras tres opciones no lo son, citando el mecanismo del SO₂ y la inhibición microbiana. Si no puedes reconstruir la cadena completa sin ver las opciones, repasa este concepto en tu material WSET L3.",
+        "trainer": "Concepto técnico (RA1): Fija el mecanismo del SO₂ y la inhibición microbiana: El productor añade una dosis apropiada de dióxido de azufre al mosto o al vino. → La fracción antimicrobiana del SO₂ interfiere con el metabolismo microbiano; su eficacia depende especialmente del pH, la dosis, la fijación y la sensibilidad de cada organismo. En el examen, identifica este patrón causa→mecanismo→efecto antes de mirar las opciones."
+      },
+      "micro_drill": {
+        "correct_index": 1,
+        "explanation": "«El SO₂ actúa como inhibidor tanto de levaduras no deseadas como de bacterias.» corresponde al SO₂ y la inhibición microbiana. Las demás afirmaciones son correctas, pero describen otros mecanismos.",
+        "options": [
+          "Protege al vino del oxígeno y desarrolla sabores únicos",
+          "El SO₂ actúa como inhibidor tanto de levaduras no deseadas como de bacterias.",
+          "Adición de aguardiente vínico",
+          "Estructura potente y necesidad de guarda"
+        ],
+        "prompt": "Consolidación: ¿cuál de estas afirmaciones corresponde al SO₂ y la inhibición microbiana?",
+        "remediation_signal": "Revisa la cadena causal del SO₂ y la inhibición microbiana"
       }
     },
     {
@@ -7344,10 +7476,10 @@ window.SESSION_BANK = {
         "correct_index": 1,
         "explanation": "«Las barricas nuevas pueden aportar taninos adicionales a los vinos blancos.» corresponde al aporte de tanino de barrica nueva a un vino blanco. Las demás afirmaciones son correctas, pero describen otros mecanismos.",
         "options": [
-          "Adición de aguardiente vínico",
+          "Protege al vino del oxígeno y desarrolla sabores únicos",
           "Las barricas nuevas pueden aportar taninos adicionales a los vinos blancos.",
-          "Estructura potente y necesidad de guarda",
-          "Sistema de soleras y criaderas"
+          "Adición de aguardiente vínico",
+          "Estructura potente y necesidad de guarda"
         ],
         "prompt": "Consolidación: ¿cuál de estas afirmaciones corresponde al aporte de tanino de barrica nueva a un vino blanco?",
         "remediation_signal": "Revisa la cadena causal del aporte de tanino de barrica nueva a un vino blanco"
@@ -7397,9 +7529,9 @@ window.SESSION_BANK = {
         "explanation": "«La fermentación en acero inoxidable preserva mejor los aromas frutales primarios.» corresponde al acero inoxidable y la conservación de aromas primarios. Las demás afirmaciones son correctas, pero describen otros mecanismos.",
         "options": [
           "La fermentación en acero inoxidable preserva mejor los aromas frutales primarios.",
+          "Protege al vino del oxígeno y desarrolla sabores únicos",
           "Adición de aguardiente vínico",
-          "Estructura potente y necesidad de guarda",
-          "Sistema de soleras y criaderas"
+          "Estructura potente y necesidad de guarda"
         ],
         "prompt": "Consolidación: ¿cuál de estas afirmaciones corresponde al acero inoxidable y la conservación de aromas primarios?",
         "remediation_signal": "Revisa la cadena causal del acero inoxidable y la conservación de aromas primarios"
@@ -7448,10 +7580,10 @@ window.SESSION_BANK = {
         "correct_index": 2,
         "explanation": "«La vendimia manual permite seleccionar racimos individualmente y mejora la calidad.» corresponde a la vendimia manual selectiva. Las demás afirmaciones son correctas, pero describen otros mecanismos.",
         "options": [
+          "Protege al vino del oxígeno y desarrolla sabores únicos",
           "Adición de aguardiente vínico",
-          "Estructura potente y necesidad de guarda",
           "La vendimia manual permite seleccionar racimos individualmente y mejora la calidad.",
-          "Sistema de soleras y criaderas"
+          "Estructura potente y necesidad de guarda"
         ],
         "prompt": "Consolidación: ¿cuál de estas afirmaciones corresponde a la vendimia manual selectiva?",
         "remediation_signal": "Revisa la cadena causal de la vendimia manual selectiva"
@@ -7501,9 +7633,9 @@ window.SESSION_BANK = {
         "explanation": "«Las levaduras seleccionadas tienden a producir fermentaciones más rápidas y predecibles.» corresponde a las levaduras seleccionadas y la predictibilidad de la fermentación. Las demás afirmaciones son correctas, pero describen otros mecanismos.",
         "options": [
           "Las levaduras seleccionadas tienden a producir fermentaciones más rápidas y predecibles.",
+          "Protege al vino del oxígeno y desarrolla sabores únicos",
           "Adición de aguardiente vínico",
-          "Estructura potente y necesidad de guarda",
-          "Sistema de soleras y criaderas"
+          "Estructura potente y necesidad de guarda"
         ],
         "prompt": "Consolidación: ¿cuál de estas afirmaciones corresponde a las levaduras seleccionadas y la predictibilidad de la fermentación?",
         "remediation_signal": "Revisa la cadena causal de las levaduras seleccionadas y la predictibilidad de la fermentación"
@@ -7537,6 +7669,28 @@ window.SESSION_BANK = {
         "training_item_only": true,
         "official_wset_question": false,
         "disclaimer": "PROTOTIPO · ENTRENAMIENTO · NO EVALUACIÓN OFICIAL WSET"
+      },
+      "causal_chain": {
+        "causa": "La variedad necesita relativamente menos tiempo y acumulación térmica para avanzar desde la brotación hasta la madurez fisiológica y aromática.",
+        "efecto": "Tiene mayor probabilidad de alcanzar una madurez adecuada en regiones frescas o de estación corta que una variedad tardía, aunque el sitio y la añada siguen siendo importantes.",
+        "mecanismo": "Su ciclo fenológico más corto permite completar la maduración dentro de una estación breve o fresca antes de que bajen las temperaturas otoñales o aumenten los riesgos meteorológicos."
+      },
+      "feedback_by_mode": {
+        "mentor": "La respuesta correcta es A: «Las variedades de ciclo corto son más adecuadas para regiones con estaciones de crecimiento cortas o frías.». La clave está en las variedades de ciclo corto en estaciones frescas o breves: Su ciclo fenológico más corto permite completar la maduración dentro de una estación breve o fresca antes de que bajen las temperaturas otoñales o aumenten los riesgos meteorológicos. Por eso, tiene mayor probabilidad de alcanzar una madurez adecuada en regiones frescas o de estación corta que una variedad tardía, aunque el sitio y la añada siguen siendo importantes.",
+        "reviewer": "Exigencia de repaso (RA1): debes poder justificar por qué «Las variedades de ciclo corto son más adecuadas para regiones con estaciones de crecimiento cortas o frías.» es correcta y por qué las otras tres opciones no lo son, citando el mecanismo de las variedades de ciclo corto en estaciones frescas o breves. Si no puedes reconstruir la cadena completa sin ver las opciones, repasa este concepto en tu material WSET L3.",
+        "trainer": "Concepto técnico (RA1): Fija el mecanismo de las variedades de ciclo corto en estaciones frescas o breves: La variedad necesita relativamente menos tiempo y acumulación térmica para avanzar desde la brotación hasta la madurez fisiológica y aromática. → Su ciclo fenológico más corto permite completar la maduración dentro de una estación breve o fresca antes de que bajen las temperaturas otoñales o aumenten los riesgos meteorológicos. En el examen, identifica este patrón causa→mecanismo→efecto antes de mirar las opciones."
+      },
+      "micro_drill": {
+        "correct_index": 2,
+        "explanation": "«Las variedades de ciclo corto son más adecuadas para regiones con estaciones de crecimiento cortas o frías.» corresponde a las variedades de ciclo corto en estaciones frescas o breves. Las demás afirmaciones son correctas, pero describen otros mecanismos.",
+        "options": [
+          "Protege al vino del oxígeno y desarrolla sabores únicos",
+          "Adición de aguardiente vínico",
+          "Las variedades de ciclo corto son más adecuadas para regiones con estaciones de crecimiento cortas o frías.",
+          "Estructura potente y necesidad de guarda"
+        ],
+        "prompt": "Consolidación: ¿cuál de estas afirmaciones corresponde a las variedades de ciclo corto en estaciones frescas o breves?",
+        "remediation_signal": "Revisa la cadena causal de las variedades de ciclo corto en estaciones frescas o breves"
       }
     },
     {
@@ -7646,10 +7800,10 @@ window.SESSION_BANK = {
         "correct_index": 1,
         "explanation": "«Enfriar la uva tras la cosecha ayuda a conservar los aromas primarios volátiles.» corresponde al enfriamiento de la vendimia y la protección aromática. Las demás afirmaciones son correctas, pero describen otros mecanismos.",
         "options": [
-          "Adición de aguardiente vínico",
+          "Protege al vino del oxígeno y desarrolla sabores únicos",
           "Enfriar la uva tras la cosecha ayuda a conservar los aromas primarios volátiles.",
-          "Estructura potente y necesidad de guarda",
-          "Sistema de soleras y criaderas"
+          "Adición de aguardiente vínico",
+          "Estructura potente y necesidad de guarda"
         ],
         "prompt": "Consolidación: ¿cuál de estas afirmaciones corresponde al enfriamiento de la vendimia y la protección aromática?",
         "remediation_signal": "Revisa la cadena causal del enfriamiento de la vendimia y la protección aromática"
@@ -7698,10 +7852,10 @@ window.SESSION_BANK = {
         "correct_index": 2,
         "explanation": "«El batonnage puede aumentar la complejidad aromática y aportar textura al vino blanco.» corresponde al bâtonnage y el contacto con las lías finas. Las demás afirmaciones son correctas, pero describen otros mecanismos.",
         "options": [
+          "Protege al vino del oxígeno y desarrolla sabores únicos",
           "Adición de aguardiente vínico",
-          "Estructura potente y necesidad de guarda",
           "El batonnage puede aumentar la complejidad aromática y aportar textura al vino blanco.",
-          "Sistema de soleras y criaderas"
+          "Estructura potente y necesidad de guarda"
         ],
         "prompt": "Consolidación: ¿cuál de estas afirmaciones corresponde al bâtonnage y el contacto con las lías finas?",
         "remediation_signal": "Revisa la cadena causal del bâtonnage y el contacto con las lías finas"
@@ -7750,9 +7904,9 @@ window.SESSION_BANK = {
         "correct_index": 3,
         "explanation": "«La fermentación maloláctica convierte el ácido málico en láctico, disminuyendo la acidez.» corresponde a la conversión de ácido málico en ácido láctico durante la FML. Las demás afirmaciones son correctas, pero describen otros mecanismos.",
         "options": [
+          "Protege al vino del oxígeno y desarrolla sabores únicos",
           "Adición de aguardiente vínico",
           "Estructura potente y necesidad de guarda",
-          "Sistema de soleras y criaderas",
           "La fermentación maloláctica convierte el ácido málico en láctico, disminuyendo la acidez."
         ],
         "prompt": "Consolidación: ¿cuál de estas afirmaciones corresponde a la conversión de ácido málico en ácido láctico durante la FML?",
@@ -7802,10 +7956,10 @@ window.SESSION_BANK = {
         "correct_index": 2,
         "explanation": "«El roble americano tiende a aportar notas más pronunciadas de vainilla y coco que el francés.» corresponde a la crianza en barrica de roble. Las demás afirmaciones son correctas, pero describen otros mecanismos.",
         "options": [
+          "Protege al vino del oxígeno y desarrolla sabores únicos",
           "Adición de aguardiente vínico",
-          "Estructura potente y necesidad de guarda",
           "El roble americano tiende a aportar notas más pronunciadas de vainilla y coco que el francés.",
-          "Sistema de soleras y criaderas"
+          "Estructura potente y necesidad de guarda"
         ],
         "prompt": "Consolidación: ¿cuál de estas afirmaciones corresponde a la crianza en barrica de roble?",
         "remediation_signal": "Revisa la cadena causal de la crianza en barrica de roble"
@@ -7855,9 +8009,9 @@ window.SESSION_BANK = {
         "explanation": "«Un nivel moderado de estrés hídrico puede contribuir a concentrar los compuestos de la baya.» corresponde al estrés hídrico leve y la concentración de la uva. Las demás afirmaciones son correctas, pero describen otros mecanismos.",
         "options": [
           "Un nivel moderado de estrés hídrico puede contribuir a concentrar los compuestos de la baya.",
+          "Protege al vino del oxígeno y desarrolla sabores únicos",
           "Adición de aguardiente vínico",
-          "Estructura potente y necesidad de guarda",
-          "Sistema de soleras y criaderas"
+          "Estructura potente y necesidad de guarda"
         ],
         "prompt": "Consolidación: ¿cuál de estas afirmaciones corresponde al estrés hídrico leve y la concentración de la uva?",
         "remediation_signal": "Revisa la cadena causal del estrés hídrico leve y la concentración de la uva"
@@ -7907,9 +8061,9 @@ window.SESSION_BANK = {
         "explanation": "«El riego por goteo permite suministrar agua de forma controlada directamente a la zona radicular.» corresponde a la precisión del riego por goteo. Las demás afirmaciones son correctas, pero describen otros mecanismos.",
         "options": [
           "El riego por goteo permite suministrar agua de forma controlada directamente a la zona radicular.",
+          "Protege al vino del oxígeno y desarrolla sabores únicos",
           "Adición de aguardiente vínico",
-          "Estructura potente y necesidad de guarda",
-          "Sistema de soleras y criaderas"
+          "Estructura potente y necesidad de guarda"
         ],
         "prompt": "Consolidación: ¿cuál de estas afirmaciones corresponde a la precisión del riego por goteo?",
         "remediation_signal": "Revisa la cadena causal de la precisión del riego por goteo"
@@ -7959,9 +8113,9 @@ window.SESSION_BANK = {
         "explanation": "«Las heladas primaverales pueden dañar los brotes tiernos y reducir significativamente el rendimiento.» corresponde al daño de las heladas primaverales sobre brotes y rendimiento. Las demás afirmaciones son correctas, pero describen otros mecanismos.",
         "options": [
           "Las heladas primaverales pueden dañar los brotes tiernos y reducir significativamente el rendimiento.",
+          "Protege al vino del oxígeno y desarrolla sabores únicos",
           "Adición de aguardiente vínico",
-          "Estructura potente y necesidad de guarda",
-          "Sistema de soleras y criaderas"
+          "Estructura potente y necesidad de guarda"
         ],
         "prompt": "Consolidación: ¿cuál de estas afirmaciones corresponde al daño de las heladas primaverales sobre brotes y rendimiento?",
         "remediation_signal": "Revisa la cadena causal del daño de las heladas primaverales sobre brotes y rendimiento"
@@ -7995,6 +8149,28 @@ window.SESSION_BANK = {
         "training_item_only": true,
         "official_wset_question": false,
         "disclaimer": "PROTOTIPO · ENTRENAMIENTO · NO EVALUACIÓN OFICIAL WSET"
+      },
+      "causal_chain": {
+        "causa": "Un follaje denso alrededor de los racimos restringe el flujo de aire y conserva humedad después de la lluvia o el rocío.",
+        "efecto": "Las condiciones son menos favorables para Botrytis y otros hongos; un dosel excesivamente denso aumenta la presión de enfermedad.",
+        "mecanismo": "Abrir el dosel mediante posicionamiento de brotes o deshoje mejora la ventilación y acelera el secado de los racimos."
+      },
+      "feedback_by_mode": {
+        "mentor": "La respuesta correcta es A: «El deshoje mejora la circulación de aire alrededor del racimo.». La clave está en la ventilación del dosel y el riesgo de enfermedades fúngicas: Abrir el dosel mediante posicionamiento de brotes o deshoje mejora la ventilación y acelera el secado de los racimos. Por eso, las condiciones son menos favorables para Botrytis y otros hongos; un dosel excesivamente denso aumenta la presión de enfermedad.",
+        "reviewer": "Exigencia de repaso (RA1): debes poder justificar por qué «El deshoje mejora la circulación de aire alrededor del racimo.» es correcta y por qué las otras tres opciones no lo son, citando el mecanismo de la ventilación del dosel y el riesgo de enfermedades fúngicas. Si no puedes reconstruir la cadena completa sin ver las opciones, repasa este concepto en tu material WSET L3.",
+        "trainer": "Concepto técnico (RA1): Fija el mecanismo de la ventilación del dosel y el riesgo de enfermedades fúngicas: Un follaje denso alrededor de los racimos restringe el flujo de aire y conserva humedad después de la lluvia o el rocío. → Abrir el dosel mediante posicionamiento de brotes o deshoje mejora la ventilación y acelera el secado de los racimos. En el examen, identifica este patrón causa→mecanismo→efecto antes de mirar las opciones."
+      },
+      "micro_drill": {
+        "correct_index": 0,
+        "explanation": "«El deshoje mejora la circulación de aire alrededor del racimo.» corresponde a la ventilación del dosel y el riesgo de enfermedades fúngicas. Las demás afirmaciones son correctas, pero describen otros mecanismos.",
+        "options": [
+          "El deshoje mejora la circulación de aire alrededor del racimo.",
+          "Protege al vino del oxígeno y desarrolla sabores únicos",
+          "Adición de aguardiente vínico",
+          "Estructura potente y necesidad de guarda"
+        ],
+        "prompt": "Consolidación: ¿cuál de estas afirmaciones corresponde a la ventilación del dosel y el riesgo de enfermedades fúngicas?",
+        "remediation_signal": "Revisa la cadena causal de la ventilación del dosel y el riesgo de enfermedades fúngicas"
       }
     },
     {
@@ -8025,6 +8201,28 @@ window.SESSION_BANK = {
         "training_item_only": true,
         "official_wset_question": false,
         "disclaimer": "PROTOTIPO · ENTRENAMIENTO · NO EVALUACIÓN OFICIAL WSET"
+      },
+      "causal_chain": {
+        "causa": "Se gestionan brotes y hojas durante la temporada mediante poda en verde y otras operaciones de dosel.",
+        "efecto": "Se controla el vigor y se equilibran la exposición de los racimos y sus condiciones de maduración.",
+        "mecanismo": "Retirar o posicionar crecimiento limita la densidad vegetal y mejora la entrada de luz y la ventilación alrededor de los racimos."
+      },
+      "feedback_by_mode": {
+        "mentor": "La respuesta correcta es A: «El sistema de conducción de la vid influye directamente en la exposición solar del racimo.». La clave está en el manejo del dosel, el vigor y la exposición de los racimos: Retirar o posicionar crecimiento limita la densidad vegetal y mejora la entrada de luz y la ventilación alrededor de los racimos. Por eso, se controla el vigor y se equilibran la exposición de los racimos y sus condiciones de maduración.",
+        "reviewer": "Exigencia de repaso (RA1): debes poder justificar por qué «El sistema de conducción de la vid influye directamente en la exposición solar del racimo.» es correcta y por qué las otras tres opciones no lo son, citando el mecanismo del manejo del dosel, el vigor y la exposición de los racimos. Si no puedes reconstruir la cadena completa sin ver las opciones, repasa este concepto en tu material WSET L3.",
+        "trainer": "Concepto técnico (RA1): Fija el mecanismo del manejo del dosel, el vigor y la exposición de los racimos: Se gestionan brotes y hojas durante la temporada mediante poda en verde y otras operaciones de dosel. → Retirar o posicionar crecimiento limita la densidad vegetal y mejora la entrada de luz y la ventilación alrededor de los racimos. En el examen, identifica este patrón causa→mecanismo→efecto antes de mirar las opciones."
+      },
+      "micro_drill": {
+        "correct_index": 1,
+        "explanation": "«El sistema de conducción de la vid influye directamente en la exposición solar del racimo.» corresponde al manejo del dosel, el vigor y la exposición de los racimos. Las demás afirmaciones son correctas, pero describen otros mecanismos.",
+        "options": [
+          "Protege al vino del oxígeno y desarrolla sabores únicos",
+          "El sistema de conducción de la vid influye directamente en la exposición solar del racimo.",
+          "Adición de aguardiente vínico",
+          "Estructura potente y necesidad de guarda"
+        ],
+        "prompt": "Consolidación: ¿cuál de estas afirmaciones corresponde al manejo del dosel, el vigor y la exposición de los racimos?",
+        "remediation_signal": "Revisa la cadena causal del manejo del dosel, el vigor y la exposición de los racimos"
       }
     },
     {
@@ -8070,10 +8268,10 @@ window.SESSION_BANK = {
         "correct_index": 2,
         "explanation": "«Los suelos con buen drenaje favorecen el desarrollo radicular y se asocian a vinos de mayor calidad.» corresponde al buen drenaje y el desarrollo radicular. Las demás afirmaciones son correctas, pero describen otros mecanismos.",
         "options": [
+          "Protege al vino del oxígeno y desarrolla sabores únicos",
           "Adición de aguardiente vínico",
-          "Estructura potente y necesidad de guarda",
           "Los suelos con buen drenaje favorecen el desarrollo radicular y se asocian a vinos de mayor calidad.",
-          "Sistema de soleras y criaderas"
+          "Estructura potente y necesidad de guarda"
         ],
         "prompt": "Consolidación: ¿cuál de estas afirmaciones corresponde al buen drenaje y el desarrollo radicular?",
         "remediation_signal": "Revisa la cadena causal del buen drenaje y el desarrollo radicular"
@@ -8119,10 +8317,10 @@ window.SESSION_BANK = {
         "correct_index": 2,
         "explanation": "«Destaca los taninos y reduce la expresión aromática» corresponde a una temperatura de servicio demasiado baja en un tinto estructurado. Las demás afirmaciones son correctas, pero describen otros mecanismos.",
         "options": [
+          "Protege al vino del oxígeno y desarrolla sabores únicos",
           "Adición de aguardiente vínico",
-          "Estructura potente y necesidad de guarda",
           "Destaca los taninos y reduce la expresión aromática",
-          "Sistema de soleras y criaderas"
+          "Estructura potente y necesidad de guarda"
         ],
         "prompt": "Consolidación: ¿cuál de estas afirmaciones corresponde a una temperatura de servicio demasiado baja en un tinto estructurado?",
         "remediation_signal": "Revisa la cadena causal de una temperatura de servicio demasiado baja en un tinto estructurado"
@@ -8350,10 +8548,10 @@ window.SESSION_BANK = {
         "correct_index": 1,
         "explanation": "«Almacenamiento horizontal a temperatura constante» corresponde a las condiciones estables para la guarda en botella. Las demás afirmaciones son correctas, pero describen otros mecanismos.",
         "options": [
-          "Adición de aguardiente vínico",
+          "Protege al vino del oxígeno y desarrolla sabores únicos",
           "Almacenamiento horizontal a temperatura constante",
-          "Estructura potente y necesidad de guarda",
-          "Sistema de soleras y criaderas"
+          "Adición de aguardiente vínico",
+          "Estructura potente y necesidad de guarda"
         ],
         "prompt": "Consolidación: ¿cuál de estas afirmaciones corresponde a las condiciones estables para la guarda en botella?",
         "remediation_signal": "Revisa la cadena causal de las condiciones estables para la guarda en botella"
@@ -8426,9 +8624,9 @@ window.SESSION_BANK = {
         "correct_index": 3,
         "explanation": "«Decantar cuidadosamente» corresponde al sedimento de los tintos añejos y su servicio cuidadoso. Las demás afirmaciones son correctas, pero describen otros mecanismos.",
         "options": [
+          "Protege al vino del oxígeno y desarrolla sabores únicos",
           "Adición de aguardiente vínico",
           "Estructura potente y necesidad de guarda",
-          "Sistema de soleras y criaderas",
           "Decantar cuidadosamente"
         ],
         "prompt": "Consolidación: ¿cuál de estas afirmaciones corresponde al sedimento de los tintos añejos y su servicio cuidadoso?",
@@ -8502,10 +8700,10 @@ window.SESSION_BANK = {
         "correct_index": 2,
         "explanation": "«Hace que el vino se perciba más ácido y amargo» corresponde al contraste entre un alimento dulce y el vino. Las demás afirmaciones son correctas, pero describen otros mecanismos.",
         "options": [
+          "Protege al vino del oxígeno y desarrolla sabores únicos",
           "Adición de aguardiente vínico",
-          "Estructura potente y necesidad de guarda",
           "Hace que el vino se perciba más ácido y amargo",
-          "Sistema de soleras y criaderas"
+          "Estructura potente y necesidad de guarda"
         ],
         "prompt": "Consolidación: ¿cuál de estas afirmaciones corresponde al contraste entre un alimento dulce y el vino?",
         "remediation_signal": "Revisa la cadena causal del contraste entre un alimento dulce y el vino"
@@ -8578,10 +8776,10 @@ window.SESSION_BANK = {
         "correct_index": 2,
         "explanation": "«Puede causar defectos como oxidación o cocción» corresponde al calor excesivo durante el transporte del vino. Las demás afirmaciones son correctas, pero describen otros mecanismos.",
         "options": [
+          "Protege al vino del oxígeno y desarrolla sabores únicos",
           "Adición de aguardiente vínico",
-          "Estructura potente y necesidad de guarda",
           "Puede causar defectos como oxidación o cocción",
-          "Sistema de soleras y criaderas"
+          "Estructura potente y necesidad de guarda"
         ],
         "prompt": "Consolidación: ¿cuál de estas afirmaciones corresponde al calor excesivo durante el transporte del vino?",
         "remediation_signal": "Revisa la cadena causal del calor excesivo durante el transporte del vino"
@@ -8666,6 +8864,16 @@ window.SESSION_BANK = {
         "training_item_only": true,
         "official_wset_question": false,
         "disclaimer": "PROTOTIPO · ENTRENAMIENTO · NO EVALUACIÓN OFICIAL WSET"
+      },
+      "causal_chain": {
+        "causa": "Un vino contiene alcohol perceptible junto con compuestos de sabor amargo.",
+        "efecto": "El amargor puede percibirse más intenso, sobre todo cuando el alcohol parece elevado o desequilibrado.",
+        "mecanismo": "El etanol aporta calor y puede reforzar el impacto sensorial del amargor en vez de ocultarlo."
+      },
+      "feedback_by_mode": {
+        "mentor": "La respuesta correcta es C: «Lo intensifica». La clave está en el alcohol y la percepción de amargor: El etanol aporta calor y puede reforzar el impacto sensorial del amargor en vez de ocultarlo. Por eso, el amargor puede percibirse más intenso, sobre todo cuando el alcohol parece elevado o desequilibrado.",
+        "reviewer": "Exigencia de repaso (RA1): debes poder justificar por qué «Lo intensifica» es correcta y por qué las otras tres opciones no lo son, citando el mecanismo del alcohol y la percepción de amargor. Si no puedes reconstruir la cadena completa sin ver las opciones, repasa este concepto en tu material WSET L3.",
+        "trainer": "Concepto técnico (RA1): Fija el mecanismo del alcohol y la percepción de amargor: Un vino contiene alcohol perceptible junto con compuestos de sabor amargo. → El etanol aporta calor y puede reforzar el impacto sensorial del amargor en vez de ocultarlo. En el examen, identifica este patrón causa→mecanismo→efecto antes de mirar las opciones."
       }
     },
     {
@@ -8708,10 +8916,10 @@ window.SESSION_BANK = {
         "correct_index": 2,
         "explanation": "«Evitar agitación y servir lentamente» corresponde al servicio suave de un vino con gas carbónico residual. Las demás afirmaciones son correctas, pero describen otros mecanismos.",
         "options": [
+          "Protege al vino del oxígeno y desarrolla sabores únicos",
           "Adición de aguardiente vínico",
-          "Estructura potente y necesidad de guarda",
           "Evitar agitación y servir lentamente",
-          "Sistema de soleras y criaderas"
+          "Estructura potente y necesidad de guarda"
         ],
         "prompt": "Consolidación: ¿cuál de estas afirmaciones corresponde al servicio suave de un vino con gas carbónico residual?",
         "remediation_signal": "Revisa la cadena causal del servicio suave de un vino con gas carbónico residual"
@@ -8757,9 +8965,9 @@ window.SESSION_BANK = {
         "correct_index": 3,
         "explanation": "«Pérdida de aromas primarios y color apagado» corresponde a las condiciones estables para la guarda en botella. Las demás afirmaciones son correctas, pero describen otros mecanismos.",
         "options": [
+          "Protege al vino del oxígeno y desarrolla sabores únicos",
           "Adición de aguardiente vínico",
           "Estructura potente y necesidad de guarda",
-          "Sistema de soleras y criaderas",
           "Pérdida de aromas primarios y color apagado"
         ],
         "prompt": "Consolidación: ¿cuál de estas afirmaciones corresponde a las condiciones estables para la guarda en botella?",
@@ -8834,9 +9042,9 @@ window.SESSION_BANK = {
         "explanation": "«Contaminación microbiológica» corresponde a la refermentación microbiana en un vino tranquilo. Las demás afirmaciones son correctas, pero describen otros mecanismos.",
         "options": [
           "Contaminación microbiológica",
+          "Protege al vino del oxígeno y desarrolla sabores únicos",
           "Adición de aguardiente vínico",
-          "Estructura potente y necesidad de guarda",
-          "Sistema de soleras y criaderas"
+          "Estructura potente y necesidad de guarda"
         ],
         "prompt": "Consolidación: ¿cuál de estas afirmaciones corresponde a la refermentación microbiana en un vino tranquilo?",
         "remediation_signal": "Revisa la cadena causal de la refermentación microbiana en un vino tranquilo"
@@ -11856,10 +12064,10 @@ window.SESSION_BANK = {
         "correct_index": 1,
         "explanation": "«Corriente de Humboldt» corresponde a la corriente de Humboldt y la frescura del Valle de Casablanca. Las demás afirmaciones son correctas, pero describen otros mecanismos.",
         "options": [
-          "Adición de aguardiente vínico",
+          "Protege al vino del oxígeno y desarrolla sabores únicos",
           "Corriente de Humboldt",
-          "Estructura potente y necesidad de guarda",
-          "Sistema de soleras y criaderas"
+          "Adición de aguardiente vínico",
+          "Estructura potente y necesidad de guarda"
         ],
         "prompt": "Consolidación: ¿cuál de estas afirmaciones corresponde a la corriente de Humboldt y la frescura del Valle de Casablanca?",
         "remediation_signal": "Revisa la cadena causal de la corriente de Humboldt y la frescura del Valle de Casablanca"
@@ -12121,10 +12329,10 @@ window.SESSION_BANK = {
         "correct_index": 2,
         "explanation": "«Aumenta la acidez y retención de aromas» corresponde a la altitud elevada, la maduración lenta y la frescura. Las demás afirmaciones son correctas, pero describen otros mecanismos.",
         "options": [
+          "Protege al vino del oxígeno y desarrolla sabores únicos",
           "Adición de aguardiente vínico",
-          "Estructura potente y necesidad de guarda",
           "Aumenta la acidez y retención de aromas",
-          "Sistema de soleras y criaderas"
+          "Estructura potente y necesidad de guarda"
         ],
         "prompt": "Consolidación: ¿cuál de estas afirmaciones corresponde a la altitud elevada, la maduración lenta y la frescura?",
         "remediation_signal": "Revisa la cadena causal de la altitud elevada, la maduración lenta y la frescura"
@@ -12306,9 +12514,9 @@ window.SESSION_BANK = {
         "explanation": "«Aumenta la concentración de azúcar y acidez» corresponde a la podredumbre noble y la concentración de la uva. Las demás afirmaciones son correctas, pero describen otros mecanismos.",
         "options": [
           "Aumenta la concentración de azúcar y acidez",
+          "Protege al vino del oxígeno y desarrolla sabores únicos",
           "Adición de aguardiente vínico",
-          "Estructura potente y necesidad de guarda",
-          "Sistema de soleras y criaderas"
+          "Estructura potente y necesidad de guarda"
         ],
         "prompt": "Consolidación: ¿cuál de estas afirmaciones corresponde a la podredumbre noble y la concentración de la uva?",
         "remediation_signal": "Revisa la cadena causal de la podredumbre noble y la concentración de la uva"
@@ -12489,9 +12697,9 @@ window.SESSION_BANK = {
         "correct_index": 3,
         "explanation": "«Alta oscilación térmica y concentración» corresponde a la amplitud térmica entre el día y la noche. Las demás afirmaciones son correctas, pero describen otros mecanismos.",
         "options": [
+          "Protege al vino del oxígeno y desarrolla sabores únicos",
           "Adición de aguardiente vínico",
           "Estructura potente y necesidad de guarda",
-          "Sistema de soleras y criaderas",
           "Alta oscilación térmica y concentración"
         ],
         "prompt": "Consolidación: ¿cuál de estas afirmaciones corresponde a la amplitud térmica entre el día y la noche?",
@@ -12647,9 +12855,9 @@ window.SESSION_BANK = {
         "explanation": "«Alta intensidad, taninos firmes y capacidad de envejecimiento» corresponde a la estructura que permite la guarda prolongada de un vino tinto. Las demás afirmaciones son correctas, pero describen otros mecanismos.",
         "options": [
           "Alta intensidad, taninos firmes y capacidad de envejecimiento",
+          "Protege al vino del oxígeno y desarrolla sabores únicos",
           "Adición de aguardiente vínico",
-          "Sistema de soleras y criaderas",
-          "Pendiente del terreno"
+          "Sistema de soleras y criaderas"
         ],
         "prompt": "Consolidación: ¿cuál de estas afirmaciones corresponde a la estructura que permite la guarda prolongada de un vino tinto?",
         "remediation_signal": "Revisa la cadena causal de la estructura que permite la guarda prolongada de un vino tinto"
@@ -12734,6 +12942,28 @@ window.SESSION_BANK = {
         "training_item_only": true,
         "official_wset_question": false,
         "disclaimer": "PROTOTIPO · ENTRENAMIENTO · NO EVALUACIÓN OFICIAL WSET"
+      },
+      "causal_chain": {
+        "causa": "Un clima marítimo u oceánico se da en regiones próximas al mar o al océano, cuya gran masa térmica se calienta y se enfría lentamente a lo largo del año.",
+        "efecto": "Los vinos de clima marítimo tienden a una maduración moderada y uniforme, con acidez conservada y elegancia; la temporada más larga y suave favorece estilos equilibrados, siendo la lluvia de la añada un riesgo clave.",
+        "mecanismo": "El agua cercana modera los extremos de temperatura: mantiene veranos más frescos e inviernos más suaves que los sitios de interior a la misma latitud, reduce el riesgo de heladas y de calor excesivo y alarga la temporada, aunque puede traer lluvia y humedad."
+      },
+      "feedback_by_mode": {
+        "mentor": "La respuesta correcta es C: «Modera el clima y reduce el riesgo de heladas». La clave está en la influencia marítima u oceánica: El agua cercana modera los extremos de temperatura: mantiene veranos más frescos e inviernos más suaves que los sitios de interior a la misma latitud, reduce el riesgo de heladas y de calor excesivo y alarga la temporada, aunque puede traer lluvia y humedad. Por eso, los vinos de clima marítimo tienden a una maduración moderada y uniforme, con acidez conservada y elegancia; la temporada más larga y suave favorece estilos equilibrados, siendo la lluvia de la añada un riesgo clave.",
+        "reviewer": "Exigencia de repaso (RA2): debes poder justificar por qué «Modera el clima y reduce el riesgo de heladas» es correcta y por qué las otras tres opciones no lo son, citando el mecanismo de la influencia marítima u oceánica. Si no puedes reconstruir la cadena completa sin ver las opciones, repasa este concepto en tu material WSET L3.",
+        "trainer": "Concepto técnico (RA2): Fija el mecanismo de la influencia marítima u oceánica: Un clima marítimo u oceánico se da en regiones próximas al mar o al océano, cuya gran masa térmica se calienta y se enfría lentamente a lo largo del año. → El agua cercana modera los extremos de temperatura: mantiene veranos más frescos e inviernos más suaves que los sitios de interior a la misma latitud, reduce el riesgo de heladas y de calor excesivo y alarga la temporada, aunque puede traer lluvia y humedad. En el examen, identifica este patrón causa→mecanismo→efecto antes de mirar las opciones."
+      },
+      "micro_drill": {
+        "correct_index": 1,
+        "explanation": "«Modera el clima y reduce el riesgo de heladas» corresponde a la influencia marítima u oceánica. Las demás afirmaciones son correctas, pero describen otros mecanismos.",
+        "options": [
+          "Protege al vino del oxígeno y desarrolla sabores únicos",
+          "Modera el clima y reduce el riesgo de heladas",
+          "Adición de aguardiente vínico",
+          "Estructura potente y necesidad de guarda"
+        ],
+        "prompt": "Consolidación: ¿cuál de estas afirmaciones corresponde a la influencia marítima u oceánica?",
+        "remediation_signal": "Revisa la cadena causal de la influencia marítima u oceánica"
       }
     },
     {
@@ -13203,6 +13433,28 @@ window.SESSION_BANK = {
         "training_item_only": true,
         "official_wset_question": false,
         "disclaimer": "PROTOTIPO · ENTRENAMIENTO · NO EVALUACIÓN OFICIAL WSET"
+      },
+      "causal_chain": {
+        "causa": "Alsacia recibe abundante insolación y lluvia relativamente escasa por el efecto de sombra pluviométrica de los Vosgos.",
+        "efecto": "La uva puede alcanzar alta madurez de azúcares y concentración de sabor; un estrés hídrico severo, en cambio, frenaría la fotosíntesis y la maduración.",
+        "mecanismo": "Cuando la vid dispone de agua suficiente, las condiciones soleadas y relativamente secas sostienen la fotosíntesis y una maduración larga y sana, y limitan la dilución causada por lluvia."
+      },
+      "feedback_by_mode": {
+        "mentor": "La respuesta correcta es C: «Sol intenso y escasa lluvia». La clave está en el sol, la escasa lluvia y la maduración de azúcares en Alsacia: Cuando la vid dispone de agua suficiente, las condiciones soleadas y relativamente secas sostienen la fotosíntesis y una maduración larga y sana, y limitan la dilución causada por lluvia. Por eso, la uva puede alcanzar alta madurez de azúcares y concentración de sabor; un estrés hídrico severo, en cambio, frenaría la fotosíntesis y la maduración.",
+        "reviewer": "Exigencia de repaso (RA2): debes poder justificar por qué «Sol intenso y escasa lluvia» es correcta y por qué las otras tres opciones no lo son, citando el mecanismo del sol, la escasa lluvia y la maduración de azúcares en Alsacia. Si no puedes reconstruir la cadena completa sin ver las opciones, repasa este concepto en tu material WSET L3.",
+        "trainer": "Concepto técnico (RA2): Fija el mecanismo del sol, la escasa lluvia y la maduración de azúcares en Alsacia: Alsacia recibe abundante insolación y lluvia relativamente escasa por el efecto de sombra pluviométrica de los Vosgos. → Cuando la vid dispone de agua suficiente, las condiciones soleadas y relativamente secas sostienen la fotosíntesis y una maduración larga y sana, y limitan la dilución causada por lluvia. En el examen, identifica este patrón causa→mecanismo→efecto antes de mirar las opciones."
+      },
+      "micro_drill": {
+        "correct_index": 2,
+        "explanation": "«Sol intenso y escasa lluvia» corresponde al sol, la escasa lluvia y la maduración de azúcares en Alsacia. Las demás afirmaciones son correctas, pero describen otros mecanismos.",
+        "options": [
+          "Protege al vino del oxígeno y desarrolla sabores únicos",
+          "Adición de aguardiente vínico",
+          "Sol intenso y escasa lluvia",
+          "Estructura potente y necesidad de guarda"
+        ],
+        "prompt": "Consolidación: ¿cuál de estas afirmaciones corresponde al sol, la escasa lluvia y la maduración de azúcares en Alsacia?",
+        "remediation_signal": "Revisa la cadena causal del sol, la escasa lluvia y la maduración de azúcares en Alsacia"
       }
     },
     {
@@ -13645,6 +13897,16 @@ window.SESSION_BANK = {
         "training_item_only": true,
         "official_wset_question": false,
         "disclaimer": "PROTOTIPO · ENTRENAMIENTO · NO EVALUACIÓN OFICIAL WSET"
+      },
+      "causal_chain": {
+        "causa": "Las uvas se cosechan demasiado pronto, antes de alcanzar una madurez aromática y fenólica adecuada.",
+        "efecto": "El vino puede mostrar aromas herbáceos o inmaduros, acidez más marcada y menor expresión de fruta madura.",
+        "mecanismo": "Los compuestos verdes y herbáceos siguen siendo prominentes porque la maduración no los ha reducido ni equilibrado con caracteres de fruta madura."
+      },
+      "feedback_by_mode": {
+        "mentor": "La respuesta correcta es B: «Aromas herbáceos». La clave está en la vendimia antes de la madurez aromática suficiente: Los compuestos verdes y herbáceos siguen siendo prominentes porque la maduración no los ha reducido ni equilibrado con caracteres de fruta madura. Por eso, el vino puede mostrar aromas herbáceos o inmaduros, acidez más marcada y menor expresión de fruta madura.",
+        "reviewer": "Exigencia de repaso (RA2): debes poder justificar por qué «Aromas herbáceos» es correcta y por qué las otras tres opciones no lo son, citando el mecanismo de la vendimia antes de la madurez aromática suficiente. Si no puedes reconstruir la cadena completa sin ver las opciones, repasa este concepto en tu material WSET L3.",
+        "trainer": "Concepto técnico (RA2): Fija el mecanismo de la vendimia antes de la madurez aromática suficiente: Las uvas se cosechan demasiado pronto, antes de alcanzar una madurez aromática y fenólica adecuada. → Los compuestos verdes y herbáceos siguen siendo prominentes porque la maduración no los ha reducido ni equilibrado con caracteres de fruta madura. En el examen, identifica este patrón causa→mecanismo→efecto antes de mirar las opciones."
       }
     },
     {
@@ -13742,9 +14004,9 @@ window.SESSION_BANK = {
         "explanation": "«Incrementar la exposición solar» corresponde al manejo del dosel, el vigor y la exposición de los racimos. Las demás afirmaciones son correctas, pero describen otros mecanismos.",
         "options": [
           "Incrementar la exposición solar",
+          "Protege al vino del oxígeno y desarrolla sabores únicos",
           "Adición de aguardiente vínico",
-          "Estructura potente y necesidad de guarda",
-          "Sistema de soleras y criaderas"
+          "Estructura potente y necesidad de guarda"
         ],
         "prompt": "Consolidación: ¿cuál de estas afirmaciones corresponde al manejo del dosel, el vigor y la exposición de los racimos?",
         "remediation_signal": "Revisa la cadena causal del manejo del dosel, el vigor y la exposición de los racimos"
@@ -13908,10 +14170,10 @@ window.SESSION_BANK = {
         "correct_index": 1,
         "explanation": "«Eliminar racimos dañados» corresponde a la vendimia manual selectiva. Las demás afirmaciones son correctas, pero describen otros mecanismos.",
         "options": [
-          "Adición de aguardiente vínico",
+          "Protege al vino del oxígeno y desarrolla sabores únicos",
           "Eliminar racimos dañados",
-          "Estructura potente y necesidad de guarda",
-          "Sistema de soleras y criaderas"
+          "Adición de aguardiente vínico",
+          "Estructura potente y necesidad de guarda"
         ],
         "prompt": "Consolidación: ¿cuál de estas afirmaciones corresponde a la vendimia manual selectiva?",
         "remediation_signal": "Revisa la cadena causal de la vendimia manual selectiva"
@@ -13994,9 +14256,9 @@ window.SESSION_BANK = {
         "correct_index": 3,
         "explanation": "«Aromas de frutas frescas y poco tanino» corresponde a la maceración carbónica en tintos jóvenes. Las demás afirmaciones son correctas, pero describen otros mecanismos.",
         "options": [
+          "Protege al vino del oxígeno y desarrolla sabores únicos",
           "Adición de aguardiente vínico",
           "Estructura potente y necesidad de guarda",
-          "Sistema de soleras y criaderas",
           "Aromas de frutas frescas y poco tanino"
         ],
         "prompt": "Consolidación: ¿cuál de estas afirmaciones corresponde a la maceración carbónica en tintos jóvenes?",
@@ -14043,9 +14305,9 @@ window.SESSION_BANK = {
         "correct_index": 3,
         "explanation": "«Mantiene temperatura de forma natural» corresponde a la inercia térmica de los fermentadores de hormigón. Las demás afirmaciones son correctas, pero describen otros mecanismos.",
         "options": [
+          "Protege al vino del oxígeno y desarrolla sabores únicos",
           "Adición de aguardiente vínico",
           "Estructura potente y necesidad de guarda",
-          "Sistema de soleras y criaderas",
           "Mantiene temperatura de forma natural"
         ],
         "prompt": "Consolidación: ¿cuál de estas afirmaciones corresponde a la inercia térmica de los fermentadores de hormigón?",
@@ -14119,9 +14381,9 @@ window.SESSION_BANK = {
         "correct_index": 3,
         "explanation": "«Estrés hídrico moderado» corresponde al estrés hídrico moderado y la concentración fenólica. Las demás afirmaciones son correctas, pero describen otros mecanismos.",
         "options": [
+          "Protege al vino del oxígeno y desarrolla sabores únicos",
           "Adición de aguardiente vínico",
           "Estructura potente y necesidad de guarda",
-          "Sistema de soleras y criaderas",
           "Estrés hídrico moderado"
         ],
         "prompt": "Consolidación: ¿cuál de estas afirmaciones corresponde al estrés hídrico moderado y la concentración fenólica?",
@@ -14281,6 +14543,28 @@ window.SESSION_BANK = {
         "training_item_only": true,
         "official_wset_question": false,
         "disclaimer": "PROTOTIPO · ENTRENAMIENTO · NO EVALUACIÓN OFICIAL WSET"
+      },
+      "causal_chain": {
+        "causa": "Uvas tintas sanas permanecen más tiempo en la vid antes de cosecharse mientras las condiciones todavía permiten madurar.",
+        "efecto": "Tras la fermentación, el vino puede mostrar fruta más madura, alcohol más alto y mayor cuerpo, pero el resultado depende de la sanidad, el clima, el rendimiento, la extracción y la vinificación.",
+        "mecanismo": "El tiempo adicional suele permitir más acumulación de azúcar y desarrollo de sabores y puede reducir el agua de la baya, mientras la acidez tiende a disminuir."
+      },
+      "feedback_by_mode": {
+        "mentor": "La respuesta correcta es D: «Cuerpo alto y sabores maduros». La clave está en la vendimia tardía, la madurez y el cuerpo del vino: El tiempo adicional suele permitir más acumulación de azúcar y desarrollo de sabores y puede reducir el agua de la baya, mientras la acidez tiende a disminuir. Por eso, tras la fermentación, el vino puede mostrar fruta más madura, alcohol más alto y mayor cuerpo, pero el resultado depende de la sanidad, el clima, el rendimiento, la extracción y la vinificación.",
+        "reviewer": "Exigencia de repaso (RA2): debes poder justificar por qué «Cuerpo alto y sabores maduros» es correcta y por qué las otras tres opciones no lo son, citando el mecanismo de la vendimia tardía, la madurez y el cuerpo del vino. Si no puedes reconstruir la cadena completa sin ver las opciones, repasa este concepto en tu material WSET L3.",
+        "trainer": "Concepto técnico (RA2): Fija el mecanismo de la vendimia tardía, la madurez y el cuerpo del vino: Uvas tintas sanas permanecen más tiempo en la vid antes de cosecharse mientras las condiciones todavía permiten madurar. → El tiempo adicional suele permitir más acumulación de azúcar y desarrollo de sabores y puede reducir el agua de la baya, mientras la acidez tiende a disminuir. En el examen, identifica este patrón causa→mecanismo→efecto antes de mirar las opciones."
+      },
+      "micro_drill": {
+        "correct_index": 3,
+        "explanation": "«Cuerpo alto y sabores maduros» corresponde a la vendimia tardía, la madurez y el cuerpo del vino. Las demás afirmaciones son correctas, pero describen otros mecanismos.",
+        "options": [
+          "Protege al vino del oxígeno y desarrolla sabores únicos",
+          "Adición de aguardiente vínico",
+          "Estructura potente y necesidad de guarda",
+          "Cuerpo alto y sabores maduros"
+        ],
+        "prompt": "Consolidación: ¿cuál de estas afirmaciones corresponde a la vendimia tardía, la madurez y el cuerpo del vino?",
+        "remediation_signal": "Revisa la cadena causal de la vendimia tardía, la madurez y el cuerpo del vino"
       }
     },
     {
@@ -14621,6 +14905,28 @@ window.SESSION_BANK = {
         "training_item_only": true,
         "official_wset_question": false,
         "disclaimer": "PROTOTIPO · ENTRENAMIENTO · NO EVALUACIÓN OFICIAL WSET"
+      },
+      "causal_chain": {
+        "causa": "El viñedo se sitúa a mayor altitud, donde las temperaturas suelen ser más bajas, sobre todo de noche.",
+        "efecto": "La fruta tiende a conservar más acidez natural que fruta comparable de una cota inferior y más cálida.",
+        "mecanismo": "La maduración más fresca ralentiza la respiración y reduce la pérdida de ácidos de la uva."
+      },
+      "feedback_by_mode": {
+        "mentor": "La respuesta correcta es A: «La altitud contribuye a preservar la acidez natural en los vinos de Mendoza.». La clave está en la altitud y la retención de acidez en la uva: La maduración más fresca ralentiza la respiración y reduce la pérdida de ácidos de la uva. Por eso, la fruta tiende a conservar más acidez natural que fruta comparable de una cota inferior y más cálida.",
+        "reviewer": "Exigencia de repaso (RA2): debes poder justificar por qué «La altitud contribuye a preservar la acidez natural en los vinos de Mendoza.» es correcta y por qué las otras tres opciones no lo son, citando el mecanismo de la altitud y la retención de acidez en la uva. Si no puedes reconstruir la cadena completa sin ver las opciones, repasa este concepto en tu material WSET L3.",
+        "trainer": "Concepto técnico (RA2): Fija el mecanismo de la altitud y la retención de acidez en la uva: El viñedo se sitúa a mayor altitud, donde las temperaturas suelen ser más bajas, sobre todo de noche. → La maduración más fresca ralentiza la respiración y reduce la pérdida de ácidos de la uva. En el examen, identifica este patrón causa→mecanismo→efecto antes de mirar las opciones."
+      },
+      "micro_drill": {
+        "correct_index": 3,
+        "explanation": "«La altitud contribuye a preservar la acidez natural en los vinos de Mendoza.» corresponde a la altitud y la retención de acidez en la uva. Las demás afirmaciones son correctas, pero describen otros mecanismos.",
+        "options": [
+          "Protege al vino del oxígeno y desarrolla sabores únicos",
+          "Adición de aguardiente vínico",
+          "Estructura potente y necesidad de guarda",
+          "La altitud contribuye a preservar la acidez natural en los vinos de Mendoza."
+        ],
+        "prompt": "Consolidación: ¿cuál de estas afirmaciones corresponde a la altitud y la retención de acidez en la uva?",
+        "remediation_signal": "Revisa la cadena causal de la altitud y la retención de acidez en la uva"
       }
     },
     {
@@ -14711,6 +15017,28 @@ window.SESSION_BANK = {
         "training_item_only": true,
         "official_wset_question": false,
         "disclaimer": "PROTOTIPO · ENTRENAMIENTO · NO EVALUACIÓN OFICIAL WSET"
+      },
+      "causal_chain": {
+        "causa": "Las vides crecen en una pendiente pronunciada cuya orientación recibe sol favorable en una región fresca.",
+        "efecto": "La uva puede madurar con mayor fiabilidad y alcanzar más desarrollo de sabor y azúcar que en un sitio mal expuesto; la pendiente por sí sola no garantiza ese efecto.",
+        "mecanismo": "El ángulo y la orientación de la ladera mejoran la intercepción de radiación directa, elevan la temperatura del dosel y de los racimos y sostienen la fotosíntesis en condiciones de maduración marginales."
+      },
+      "feedback_by_mode": {
+        "mentor": "La respuesta correcta es A: «Las pendientes pronunciadas del Mosel favorecen la maduración del Riesling al maximizar la insolación.». La clave está en las pendientes bien orientadas y la maduración en clima fresco: El ángulo y la orientación de la ladera mejoran la intercepción de radiación directa, elevan la temperatura del dosel y de los racimos y sostienen la fotosíntesis en condiciones de maduración marginales. Por eso, la uva puede madurar con mayor fiabilidad y alcanzar más desarrollo de sabor y azúcar que en un sitio mal expuesto; la pendiente por sí sola no garantiza ese efecto.",
+        "reviewer": "Exigencia de repaso (RA2): debes poder justificar por qué «Las pendientes pronunciadas del Mosel favorecen la maduración del Riesling al maximizar la insolación.» es correcta y por qué las otras tres opciones no lo son, citando el mecanismo de las pendientes bien orientadas y la maduración en clima fresco. Si no puedes reconstruir la cadena completa sin ver las opciones, repasa este concepto en tu material WSET L3.",
+        "trainer": "Concepto técnico (RA2): Fija el mecanismo de las pendientes bien orientadas y la maduración en clima fresco: Las vides crecen en una pendiente pronunciada cuya orientación recibe sol favorable en una región fresca. → El ángulo y la orientación de la ladera mejoran la intercepción de radiación directa, elevan la temperatura del dosel y de los racimos y sostienen la fotosíntesis en condiciones de maduración marginales. En el examen, identifica este patrón causa→mecanismo→efecto antes de mirar las opciones."
+      },
+      "micro_drill": {
+        "correct_index": 0,
+        "explanation": "«Las pendientes pronunciadas del Mosel favorecen la maduración del Riesling al maximizar la insolación.» corresponde a las pendientes bien orientadas y la maduración en clima fresco. Las demás afirmaciones son correctas, pero describen otros mecanismos.",
+        "options": [
+          "Las pendientes pronunciadas del Mosel favorecen la maduración del Riesling al maximizar la insolación.",
+          "Protege al vino del oxígeno y desarrolla sabores únicos",
+          "Adición de aguardiente vínico",
+          "Estructura potente y necesidad de guarda"
+        ],
+        "prompt": "Consolidación: ¿cuál de estas afirmaciones corresponde a las pendientes bien orientadas y la maduración en clima fresco?",
+        "remediation_signal": "Revisa la cadena causal de las pendientes bien orientadas y la maduración en clima fresco"
       }
     },
     {
@@ -15254,9 +15582,9 @@ window.SESSION_BANK = {
         "explanation": "«Iniciar segunda fermentación» corresponde al licor de tiraje y la segunda fermentación. Las demás afirmaciones son correctas, pero describen otros mecanismos.",
         "options": [
           "Iniciar segunda fermentación",
+          "Protege al vino del oxígeno y desarrolla sabores únicos",
           "Adición de aguardiente vínico",
-          "Estructura potente y necesidad de guarda",
-          "Sistema de soleras y criaderas"
+          "Estructura potente y necesidad de guarda"
         ],
         "prompt": "Consolidación: ¿cuál de estas afirmaciones corresponde al licor de tiraje y la segunda fermentación?",
         "remediation_signal": "Revisa la cadena causal del licor de tiraje y la segunda fermentación"
@@ -15330,9 +15658,9 @@ window.SESSION_BANK = {
         "explanation": "«Oxidación del vino base» corresponde a la oxidación del vino base para espumosos. Las demás afirmaciones son correctas, pero describen otros mecanismos.",
         "options": [
           "Oxidación del vino base",
+          "Protege al vino del oxígeno y desarrolla sabores únicos",
           "Adición de aguardiente vínico",
-          "Estructura potente y necesidad de guarda",
-          "Sistema de soleras y criaderas"
+          "Estructura potente y necesidad de guarda"
         ],
         "prompt": "Consolidación: ¿cuál de estas afirmaciones corresponde a la oxidación del vino base para espumosos?",
         "remediation_signal": "Revisa la cadena causal de la oxidación del vino base para espumosos"
@@ -15405,10 +15733,10 @@ window.SESSION_BANK = {
         "correct_index": 1,
         "explanation": "«Se embotella con levadura natural sin degüelle» corresponde al método ancestral y su fermentación única. Las demás afirmaciones son correctas, pero describen otros mecanismos.",
         "options": [
-          "Adición de aguardiente vínico",
+          "Protege al vino del oxígeno y desarrolla sabores únicos",
           "Se embotella con levadura natural sin degüelle",
-          "Estructura potente y necesidad de guarda",
-          "Sistema de soleras y criaderas"
+          "Adición de aguardiente vínico",
+          "Estructura potente y necesidad de guarda"
         ],
         "prompt": "Consolidación: ¿cuál de estas afirmaciones corresponde al método ancestral y su fermentación única?",
         "remediation_signal": "Revisa la cadena causal del método ancestral y su fermentación única"
@@ -15454,10 +15782,10 @@ window.SESSION_BANK = {
         "correct_index": 2,
         "explanation": "«Notas de autólisis como pan y brioche» corresponde a la autólisis durante la crianza sobre lías de un espumoso. Las demás afirmaciones son correctas, pero describen otros mecanismos.",
         "options": [
+          "Protege al vino del oxígeno y desarrolla sabores únicos",
           "Adición de aguardiente vínico",
-          "Estructura potente y necesidad de guarda",
           "Notas de autólisis como pan y brioche",
-          "Sistema de soleras y criaderas"
+          "Estructura potente y necesidad de guarda"
         ],
         "prompt": "Consolidación: ¿cuál de estas afirmaciones corresponde a la autólisis durante la crianza sobre lías de un espumoso?",
         "remediation_signal": "Revisa la cadena causal de la autólisis durante la crianza sobre lías de un espumoso"
@@ -15530,10 +15858,10 @@ window.SESSION_BANK = {
         "correct_index": 1,
         "explanation": "«Conserva mejor los aromas primarios» corresponde al método de tanque y la conservación de la fruta primaria. Las demás afirmaciones son correctas, pero describen otros mecanismos.",
         "options": [
-          "Adición de aguardiente vínico",
+          "Protege al vino del oxígeno y desarrolla sabores únicos",
           "Conserva mejor los aromas primarios",
-          "Estructura potente y necesidad de guarda",
-          "Sistema de soleras y criaderas"
+          "Adición de aguardiente vínico",
+          "Estructura potente y necesidad de guarda"
         ],
         "prompt": "Consolidación: ¿cuál de estas afirmaciones corresponde al método de tanque y la conservación de la fruta primaria?",
         "remediation_signal": "Revisa la cadena causal del método de tanque y la conservación de la fruta primaria"
@@ -15606,9 +15934,9 @@ window.SESSION_BANK = {
         "correct_index": 3,
         "explanation": "«Retención de frescura y expresión frutal» corresponde al método de tanque y la conservación de la fruta primaria. Las demás afirmaciones son correctas, pero describen otros mecanismos.",
         "options": [
+          "Protege al vino del oxígeno y desarrolla sabores únicos",
           "Adición de aguardiente vínico",
           "Estructura potente y necesidad de guarda",
-          "Sistema de soleras y criaderas",
           "Retención de frescura y expresión frutal"
         ],
         "prompt": "Consolidación: ¿cuál de estas afirmaciones corresponde al método de tanque y la conservación de la fruta primaria?",
@@ -15682,9 +16010,9 @@ window.SESSION_BANK = {
         "correct_index": 3,
         "explanation": "«Alta acidez y lenta maduración» corresponde al clima fresco y la calidad del vino base para espumosos. Las demás afirmaciones son correctas, pero describen otros mecanismos.",
         "options": [
+          "Protege al vino del oxígeno y desarrolla sabores únicos",
           "Adición de aguardiente vínico",
           "Estructura potente y necesidad de guarda",
-          "Sistema de soleras y criaderas",
           "Alta acidez y lenta maduración"
         ],
         "prompt": "Consolidación: ¿cuál de estas afirmaciones corresponde al clima fresco y la calidad del vino base para espumosos?",
@@ -15893,10 +16221,10 @@ window.SESSION_BANK = {
         "correct_index": 1,
         "explanation": "«Altitud y clima fresco» corresponde al clima fresco y la calidad del vino base para espumosos. Las demás afirmaciones son correctas, pero describen otros mecanismos.",
         "options": [
-          "Adición de aguardiente vínico",
+          "Protege al vino del oxígeno y desarrolla sabores únicos",
           "Altitud y clima fresco",
-          "Estructura potente y necesidad de guarda",
-          "Sistema de soleras y criaderas"
+          "Adición de aguardiente vínico",
+          "Estructura potente y necesidad de guarda"
         ],
         "prompt": "Consolidación: ¿cuál de estas afirmaciones corresponde al clima fresco y la calidad del vino base para espumosos?",
         "remediation_signal": "Revisa la cadena causal del clima fresco y la calidad del vino base para espumosos"
@@ -15969,9 +16297,9 @@ window.SESSION_BANK = {
         "correct_index": 3,
         "explanation": "«Segunda fermentación en botella» corresponde a la segunda fermentación en botella del método tradicional. Las demás afirmaciones son correctas, pero describen otros mecanismos.",
         "options": [
+          "Protege al vino del oxígeno y desarrolla sabores únicos",
           "Adición de aguardiente vínico",
           "Estructura potente y necesidad de guarda",
-          "Sistema de soleras y criaderas",
           "Segunda fermentación en botella"
         ],
         "prompt": "Consolidación: ¿cuál de estas afirmaciones corresponde a la segunda fermentación en botella del método tradicional?",
@@ -16045,10 +16373,10 @@ window.SESSION_BANK = {
         "correct_index": 1,
         "explanation": "«Aporta complejidad con aromas de levadura» corresponde a la autólisis durante la crianza sobre lías de un espumoso. Las demás afirmaciones son correctas, pero describen otros mecanismos.",
         "options": [
-          "Adición de aguardiente vínico",
+          "Protege al vino del oxígeno y desarrolla sabores únicos",
           "Aporta complejidad con aromas de levadura",
-          "Estructura potente y necesidad de guarda",
-          "Sistema de soleras y criaderas"
+          "Adición de aguardiente vínico",
+          "Estructura potente y necesidad de guarda"
         ],
         "prompt": "Consolidación: ¿cuál de estas afirmaciones corresponde a la autólisis durante la crianza sobre lías de un espumoso?",
         "remediation_signal": "Revisa la cadena causal de la autólisis durante la crianza sobre lías de un espumoso"
@@ -16094,9 +16422,9 @@ window.SESSION_BANK = {
         "correct_index": 3,
         "explanation": "«Aporta complejidad, textura cremosa y notas de levadura» corresponde a la crianza prolongada sobre lías en vinos espumosos. Las demás afirmaciones son correctas, pero describen otros mecanismos.",
         "options": [
+          "Protege al vino del oxígeno y desarrolla sabores únicos",
           "Adición de aguardiente vínico",
           "Estructura potente y necesidad de guarda",
-          "Sistema de soleras y criaderas",
           "Aporta complejidad, textura cremosa y notas de levadura"
         ],
         "prompt": "Consolidación: ¿cuál de estas afirmaciones corresponde a la crianza prolongada sobre lías en vinos espumosos?",
@@ -16143,9 +16471,9 @@ window.SESSION_BANK = {
         "correct_index": 3,
         "explanation": "«Eliminar los sedimentos de la botella» corresponde al degüelle y la eliminación del sedimento. Las demás afirmaciones son correctas, pero describen otros mecanismos.",
         "options": [
+          "Protege al vino del oxígeno y desarrolla sabores únicos",
           "Adición de aguardiente vínico",
           "Estructura potente y necesidad de guarda",
-          "Sistema de soleras y criaderas",
           "Eliminar los sedimentos de la botella"
         ],
         "prompt": "Consolidación: ¿cuál de estas afirmaciones corresponde al degüelle y la eliminación del sedimento?",
@@ -16401,10 +16729,10 @@ window.SESSION_BANK = {
         "correct_index": 2,
         "explanation": "«Degüelle (dégorgement)» corresponde al degüelle y la eliminación del sedimento. Las demás afirmaciones son correctas, pero describen otros mecanismos.",
         "options": [
+          "Protege al vino del oxígeno y desarrolla sabores únicos",
           "Adición de aguardiente vínico",
-          "Estructura potente y necesidad de guarda",
           "Degüelle (dégorgement)",
-          "Sistema de soleras y criaderas"
+          "Estructura potente y necesidad de guarda"
         ],
         "prompt": "Consolidación: ¿cuál de estas afirmaciones corresponde al degüelle y la eliminación del sedimento?",
         "remediation_signal": "Revisa la cadena causal del degüelle y la eliminación del sedimento"
@@ -16477,10 +16805,10 @@ window.SESSION_BANK = {
         "correct_index": 1,
         "explanation": "«Sin adición de licor de expedición» corresponde a la ausencia de dosificación en un Brut Nature. Las demás afirmaciones son correctas, pero describen otros mecanismos.",
         "options": [
-          "Adición de aguardiente vínico",
+          "Protege al vino del oxígeno y desarrolla sabores únicos",
           "Sin adición de licor de expedición",
-          "Estructura potente y necesidad de guarda",
-          "Sistema de soleras y criaderas"
+          "Adición de aguardiente vínico",
+          "Estructura potente y necesidad de guarda"
         ],
         "prompt": "Consolidación: ¿cuál de estas afirmaciones corresponde a la ausencia de dosificación en un Brut Nature?",
         "remediation_signal": "Revisa la cadena causal de la ausencia de dosificación en un Brut Nature"
@@ -16634,10 +16962,10 @@ window.SESSION_BANK = {
         "correct_index": 1,
         "explanation": "«Fresco y continental» corresponde al clima fresco y la calidad del vino base para espumosos. Las demás afirmaciones son correctas, pero describen otros mecanismos.",
         "options": [
-          "Adición de aguardiente vínico",
+          "Protege al vino del oxígeno y desarrolla sabores únicos",
           "Fresco y continental",
-          "Estructura potente y necesidad de guarda",
-          "Sistema de soleras y criaderas"
+          "Adición de aguardiente vínico",
+          "Estructura potente y necesidad de guarda"
         ],
         "prompt": "Consolidación: ¿cuál de estas afirmaciones corresponde al clima fresco y la calidad del vino base para espumosos?",
         "remediation_signal": "Revisa la cadena causal del clima fresco y la calidad del vino base para espumosos"
@@ -17103,6 +17431,28 @@ window.SESSION_BANK = {
         "training_item_only": true,
         "official_wset_question": false,
         "disclaimer": "PROTOTIPO · ENTRENAMIENTO · NO EVALUACIÓN OFICIAL WSET"
+      },
+      "causal_chain": {
+        "causa": "La levadura de flor (un velo de cepas de Saccharomyces cerevisiae) se forma en la superficie del vino en botas parcialmente llenas.",
+        "efecto": "El vino desarrolla carácter de crianza biológica: notas de almendra, masa de pan y levadura, color pálido, tanino bajo y protección frente a la oxidación pese a la crianza en bota.",
+        "mecanismo": "El velo protege al vino del oxígeno; la levadura metaboliza etanol y glicerol produciendo acetaldehído, y su autólisis aporta aminoácidos."
+      },
+      "feedback_by_mode": {
+        "mentor": "La respuesta correcta es C: «Protege al vino del oxígeno y desarrolla sabores únicos». La clave está en la crianza biológica bajo velo de flor: El velo protege al vino del oxígeno; la levadura metaboliza etanol y glicerol produciendo acetaldehído, y su autólisis aporta aminoácidos. Por eso, el vino desarrolla carácter de crianza biológica: notas de almendra, masa de pan y levadura, color pálido, tanino bajo y protección frente a la oxidación pese a la crianza en bota.",
+        "reviewer": "Exigencia de repaso (RA4): debes poder justificar por qué «Protege al vino del oxígeno y desarrolla sabores únicos» es correcta y por qué las otras tres opciones no lo son, citando el mecanismo de la crianza biológica bajo velo de flor. Si no puedes reconstruir la cadena completa sin ver las opciones, repasa este concepto en tu material WSET L3.",
+        "trainer": "Concepto técnico (RA4): Tema: fortified wines. Fija el mecanismo de la crianza biológica bajo velo de flor: La levadura de flor (un velo de cepas de Saccharomyces cerevisiae) se forma en la superficie del vino en botas parcialmente llenas. → El velo protege al vino del oxígeno; la levadura metaboliza etanol y glicerol produciendo acetaldehído, y su autólisis aporta aminoácidos. En el examen, identifica este patrón causa→mecanismo→efecto antes de mirar las opciones."
+      },
+      "micro_drill": {
+        "correct_index": 0,
+        "explanation": "«Protege al vino del oxígeno y desarrolla sabores únicos» corresponde a la crianza biológica bajo velo de flor. Las demás afirmaciones son correctas, pero describen otros mecanismos.",
+        "options": [
+          "Protege al vino del oxígeno y desarrolla sabores únicos",
+          "Adición de aguardiente vínico",
+          "Estructura potente y necesidad de guarda",
+          "Sistema de soleras y criaderas"
+        ],
+        "prompt": "Consolidación: ¿cuál de estas afirmaciones corresponde a la crianza biológica bajo velo de flor?",
+        "remediation_signal": "Revisa la cadena causal de la crianza biológica bajo velo de flor"
       }
     },
     {
@@ -17148,10 +17498,10 @@ window.SESSION_BANK = {
         "correct_index": 1,
         "explanation": "«Adición de aguardiente vínico» corresponde a la fortificación durante la fermentación. Las demás afirmaciones son correctas, pero describen otros mecanismos.",
         "options": [
-          "Estructura potente y necesidad de guarda",
+          "Protege al vino del oxígeno y desarrolla sabores únicos",
           "Adición de aguardiente vínico",
-          "Sistema de soleras y criaderas",
-          "Pendiente del terreno"
+          "Estructura potente y necesidad de guarda",
+          "Sistema de soleras y criaderas"
         ],
         "prompt": "Consolidación: ¿cuál de estas afirmaciones corresponde a la fortificación durante la fermentación?",
         "remediation_signal": "Revisa la cadena causal de la fortificación durante la fermentación"
@@ -17200,10 +17550,10 @@ window.SESSION_BANK = {
         "correct_index": 2,
         "explanation": "«Sistema de soleras y criaderas» corresponde al sistema de solera y criaderas. Las demás afirmaciones son correctas, pero describen otros mecanismos.",
         "options": [
+          "Protege al vino del oxígeno y desarrolla sabores únicos",
           "Adición de aguardiente vínico",
-          "Estructura potente y necesidad de guarda",
           "Sistema de soleras y criaderas",
-          "Pendiente del terreno"
+          "Estructura potente y necesidad de guarda"
         ],
         "prompt": "Consolidación: ¿cuál de estas afirmaciones corresponde al sistema de solera y criaderas?",
         "remediation_signal": "Revisa la cadena causal del sistema de solera y criaderas"
@@ -17237,6 +17587,28 @@ window.SESSION_BANK = {
         "training_item_only": true,
         "official_wset_question": false,
         "disclaimer": "PROTOTIPO · ENTRENAMIENTO · NO EVALUACIÓN OFICIAL WSET"
+      },
+      "causal_chain": {
+        "causa": "El Oloroso se fortifica a un nivel que impide mantener un velo de flor estable, mientras el Amontillado comienza como vino de crianza biológica bajo flor antes de perder esa protección.",
+        "efecto": "El Oloroso sigue una ruta de crianza exclusivamente oxidativa, mientras el Amontillado combina una fase biológica inicial con desarrollo oxidativo posterior.",
+        "mecanismo": "Sin la protección de la flor, el Oloroso permanece expuesto de forma controlada al oxígeno durante toda la maduración; el Amontillado primero desarrolla carácter biológico y después pasa a crianza oxidativa."
+      },
+      "feedback_by_mode": {
+        "mentor": "La respuesta correcta es C: «Envejecimiento exclusivamente oxidativo». La clave está en las rutas de crianza de Oloroso y Amontillado: Sin la protección de la flor, el Oloroso permanece expuesto de forma controlada al oxígeno durante toda la maduración; el Amontillado primero desarrolla carácter biológico y después pasa a crianza oxidativa. Por eso, el Oloroso sigue una ruta de crianza exclusivamente oxidativa, mientras el Amontillado combina una fase biológica inicial con desarrollo oxidativo posterior.",
+        "reviewer": "Exigencia de repaso (RA4): debes poder justificar por qué «Envejecimiento exclusivamente oxidativo» es correcta y por qué las otras tres opciones no lo son, citando el mecanismo de las rutas de crianza de Oloroso y Amontillado. Si no puedes reconstruir la cadena completa sin ver las opciones, repasa este concepto en tu material WSET L3.",
+        "trainer": "Concepto técnico (RA4): Tema: fortified wines. Fija el mecanismo de las rutas de crianza de Oloroso y Amontillado: El Oloroso se fortifica a un nivel que impide mantener un velo de flor estable, mientras el Amontillado comienza como vino de crianza biológica bajo flor antes de perder esa protección. → Sin la protección de la flor, el Oloroso permanece expuesto de forma controlada al oxígeno durante toda la maduración; el Amontillado primero desarrolla carácter biológico y después pasa a crianza oxidativa. En el examen, identifica este patrón causa→mecanismo→efecto antes de mirar las opciones."
+      },
+      "micro_drill": {
+        "correct_index": 2,
+        "explanation": "«Envejecimiento exclusivamente oxidativo» corresponde a las rutas de crianza de Oloroso y Amontillado. Las demás afirmaciones son correctas, pero describen otros mecanismos.",
+        "options": [
+          "Protege al vino del oxígeno y desarrolla sabores únicos",
+          "Adición de aguardiente vínico",
+          "Envejecimiento exclusivamente oxidativo",
+          "Estructura potente y necesidad de guarda"
+        ],
+        "prompt": "Consolidación: ¿cuál de estas afirmaciones corresponde a las rutas de crianza de Oloroso y Amontillado?",
+        "remediation_signal": "Revisa la cadena causal de las rutas de crianza de Oloroso y Amontillado"
       }
     },
     {
@@ -17287,6 +17659,28 @@ window.SESSION_BANK = {
         "training_item_only": true,
         "official_wset_question": false,
         "disclaimer": "PROTOTIPO · ENTRENAMIENTO · NO EVALUACIÓN OFICIAL WSET"
+      },
+      "causal_chain": {
+        "causa": "El vino madura deliberadamente con un acceso controlado al oxígeno.",
+        "efecto": "La fruta fresca pierde protagonismo y pueden desarrollarse notas terciarias de frutos secos, fruta desecada, caramelo o matices sabrosos, según el estilo.",
+        "mecanismo": "Las reacciones impulsadas por el oxígeno transforman los compuestos de fruta primaria y favorecen la aparición de aromas y sabores de evolución."
+      },
+      "feedback_by_mode": {
+        "mentor": "La respuesta correcta es C: «Desarrolla aromas a nuez, caramelo y umami». La clave está en el envejecimiento oxidativo y el desarrollo de aromas terciarios: Las reacciones impulsadas por el oxígeno transforman los compuestos de fruta primaria y favorecen la aparición de aromas y sabores de evolución. Por eso, la fruta fresca pierde protagonismo y pueden desarrollarse notas terciarias de frutos secos, fruta desecada, caramelo o matices sabrosos, según el estilo.",
+        "reviewer": "Exigencia de repaso (RA4): debes poder justificar por qué «Desarrolla aromas a nuez, caramelo y umami» es correcta y por qué las otras tres opciones no lo son, citando el mecanismo del envejecimiento oxidativo y el desarrollo de aromas terciarios. Si no puedes reconstruir la cadena completa sin ver las opciones, repasa este concepto en tu material WSET L3.",
+        "trainer": "Concepto técnico (RA4): Fija el mecanismo del envejecimiento oxidativo y el desarrollo de aromas terciarios: El vino madura deliberadamente con un acceso controlado al oxígeno. → Las reacciones impulsadas por el oxígeno transforman los compuestos de fruta primaria y favorecen la aparición de aromas y sabores de evolución. En el examen, identifica este patrón causa→mecanismo→efecto antes de mirar las opciones."
+      },
+      "micro_drill": {
+        "correct_index": 3,
+        "explanation": "«Desarrolla aromas a nuez, caramelo y umami» corresponde al envejecimiento oxidativo y el desarrollo de aromas terciarios. Las demás afirmaciones son correctas, pero describen otros mecanismos.",
+        "options": [
+          "Protege al vino del oxígeno y desarrolla sabores únicos",
+          "Adición de aguardiente vínico",
+          "Estructura potente y necesidad de guarda",
+          "Desarrolla aromas a nuez, caramelo y umami"
+        ],
+        "prompt": "Consolidación: ¿cuál de estas afirmaciones corresponde al envejecimiento oxidativo y el desarrollo de aromas terciarios?",
+        "remediation_signal": "Revisa la cadena causal del envejecimiento oxidativo y el desarrollo de aromas terciarios"
       }
     },
     {
@@ -17406,10 +17800,10 @@ window.SESSION_BANK = {
         "correct_index": 2,
         "explanation": "«Detener la fermentación y aumentar el alcohol» corresponde a la fortificación para detener la fermentación. Las demás afirmaciones son correctas, pero describen otros mecanismos.",
         "options": [
+          "Protege al vino del oxígeno y desarrolla sabores únicos",
           "Adición de aguardiente vínico",
-          "Estructura potente y necesidad de guarda",
           "Detener la fermentación y aumentar el alcohol",
-          "Sistema de soleras y criaderas"
+          "Estructura potente y necesidad de guarda"
         ],
         "prompt": "Consolidación: ¿cuál de estas afirmaciones corresponde a la fortificación para detener la fermentación?",
         "remediation_signal": "Revisa la cadena causal de la fortificación para detener la fermentación"
@@ -17617,10 +18011,10 @@ window.SESSION_BANK = {
         "correct_index": 1,
         "explanation": "«Crianza prolongada en botella después de corta crianza en barrica» corresponde a la crianza prolongada en botella de tintos estructurados. Las demás afirmaciones son correctas, pero describen otros mecanismos.",
         "options": [
-          "Adición de aguardiente vínico",
+          "Protege al vino del oxígeno y desarrolla sabores únicos",
           "Crianza prolongada en botella después de corta crianza en barrica",
-          "Estructura potente y necesidad de guarda",
-          "Sistema de soleras y criaderas"
+          "Adición de aguardiente vínico",
+          "Estructura potente y necesidad de guarda"
         ],
         "prompt": "Consolidación: ¿cuál de estas afirmaciones corresponde a la crianza prolongada en botella de tintos estructurados?",
         "remediation_signal": "Revisa la cadena causal de la crianza prolongada en botella de tintos estructurados"
@@ -17835,6 +18229,28 @@ window.SESSION_BANK = {
         "training_item_only": true,
         "official_wset_question": false,
         "disclaimer": "PROTOTIPO · ENTRENAMIENTO · NO EVALUACIÓN OFICIAL WSET"
+      },
+      "causal_chain": {
+        "causa": "Se añade aguardiente vínico a un vino que está fermentando.",
+        "efecto": "La fermentación termina, aumenta el alcohol y queda azúcar residual si la fortificación se realiza antes de consumir todo el azúcar.",
+        "mecanismo": "El aguardiente eleva el alcohol hasta un nivel en el que la actividad de la levadura se detiene o resulta imposible."
+      },
+      "feedback_by_mode": {
+        "mentor": "La respuesta correcta es C: «Adición de aguardiente vínico». La clave está en la fortificación para detener la fermentación: El aguardiente eleva el alcohol hasta un nivel en el que la actividad de la levadura se detiene o resulta imposible. Por eso, la fermentación termina, aumenta el alcohol y queda azúcar residual si la fortificación se realiza antes de consumir todo el azúcar.",
+        "reviewer": "Exigencia de repaso (RA4): debes poder justificar por qué «Adición de aguardiente vínico» es correcta y por qué las otras tres opciones no lo son, citando el mecanismo de la fortificación para detener la fermentación. Si no puedes reconstruir la cadena completa sin ver las opciones, repasa este concepto en tu material WSET L3.",
+        "trainer": "Concepto técnico (RA4): Fija el mecanismo de la fortificación para detener la fermentación: Se añade aguardiente vínico a un vino que está fermentando. → El aguardiente eleva el alcohol hasta un nivel en el que la actividad de la levadura se detiene o resulta imposible. En el examen, identifica este patrón causa→mecanismo→efecto antes de mirar las opciones."
+      },
+      "micro_drill": {
+        "correct_index": 2,
+        "explanation": "«Adición de aguardiente vínico» corresponde a la fortificación para detener la fermentación. Las demás afirmaciones son correctas, pero describen otros mecanismos.",
+        "options": [
+          "Protege al vino del oxígeno y desarrolla sabores únicos",
+          "Estructura potente y necesidad de guarda",
+          "Adición de aguardiente vínico",
+          "Sistema de soleras y criaderas"
+        ],
+        "prompt": "Consolidación: ¿cuál de estas afirmaciones corresponde a la fortificación para detener la fermentación?",
+        "remediation_signal": "Revisa la cadena causal de la fortificación para detener la fermentación"
       }
     },
     {
@@ -17862,6 +18278,28 @@ window.SESSION_BANK = {
         "training_item_only": true,
         "official_wset_question": false,
         "disclaimer": "PROTOTIPO · ENTRENAMIENTO · NO EVALUACIÓN OFICIAL WSET"
+      },
+      "causal_chain": {
+        "causa": "El vino madura deliberadamente con un acceso controlado al oxígeno.",
+        "efecto": "La fruta fresca pierde protagonismo y pueden desarrollarse notas terciarias de frutos secos, fruta desecada, caramelo o matices sabrosos, según el estilo.",
+        "mecanismo": "Las reacciones impulsadas por el oxígeno transforman los compuestos de fruta primaria y favorecen la aparición de aromas y sabores de evolución."
+      },
+      "feedback_by_mode": {
+        "mentor": "La respuesta correcta es C: «Notas de frutos secos y color oscuro». La clave está en el envejecimiento oxidativo y el desarrollo de aromas terciarios: Las reacciones impulsadas por el oxígeno transforman los compuestos de fruta primaria y favorecen la aparición de aromas y sabores de evolución. Por eso, la fruta fresca pierde protagonismo y pueden desarrollarse notas terciarias de frutos secos, fruta desecada, caramelo o matices sabrosos, según el estilo.",
+        "reviewer": "Exigencia de repaso (RA4): debes poder justificar por qué «Notas de frutos secos y color oscuro» es correcta y por qué las otras tres opciones no lo son, citando el mecanismo del envejecimiento oxidativo y el desarrollo de aromas terciarios. Si no puedes reconstruir la cadena completa sin ver las opciones, repasa este concepto en tu material WSET L3.",
+        "trainer": "Concepto técnico (RA4): Fija el mecanismo del envejecimiento oxidativo y el desarrollo de aromas terciarios: El vino madura deliberadamente con un acceso controlado al oxígeno. → Las reacciones impulsadas por el oxígeno transforman los compuestos de fruta primaria y favorecen la aparición de aromas y sabores de evolución. En el examen, identifica este patrón causa→mecanismo→efecto antes de mirar las opciones."
+      },
+      "micro_drill": {
+        "correct_index": 0,
+        "explanation": "«Notas de frutos secos y color oscuro» corresponde al envejecimiento oxidativo y el desarrollo de aromas terciarios. Las demás afirmaciones son correctas, pero describen otros mecanismos.",
+        "options": [
+          "Notas de frutos secos y color oscuro",
+          "Protege al vino del oxígeno y desarrolla sabores únicos",
+          "Adición de aguardiente vínico",
+          "Estructura potente y necesidad de guarda"
+        ],
+        "prompt": "Consolidación: ¿cuál de estas afirmaciones corresponde al envejecimiento oxidativo y el desarrollo de aromas terciarios?",
+        "remediation_signal": "Revisa la cadena causal del envejecimiento oxidativo y el desarrollo de aromas terciarios"
       }
     },
     {
@@ -17931,10 +18369,10 @@ window.SESSION_BANK = {
         "correct_index": 1,
         "explanation": "«Sistema de soleras y criaderas» corresponde al sistema de solera y criaderas. Las demás afirmaciones son correctas, pero describen otros mecanismos.",
         "options": [
-          "Adición de aguardiente vínico",
+          "Protege al vino del oxígeno y desarrolla sabores únicos",
           "Sistema de soleras y criaderas",
-          "Estructura potente y necesidad de guarda",
-          "Pendiente del terreno"
+          "Adición de aguardiente vínico",
+          "Estructura potente y necesidad de guarda"
         ],
         "prompt": "Consolidación: ¿cuál de estas afirmaciones corresponde al sistema de solera y criaderas?",
         "remediation_signal": "Revisa la cadena causal del sistema de solera y criaderas"
@@ -18017,6 +18455,28 @@ window.SESSION_BANK = {
         "training_item_only": true,
         "official_wset_question": false,
         "disclaimer": "PROTOTIPO · ENTRENAMIENTO · NO EVALUACIÓN OFICIAL WSET"
+      },
+      "causal_chain": {
+        "causa": "El productor elige un determinado nivel de mecanización para las operaciones de viñedo o bodega.",
+        "efecto": "La mecanización modifica directamente la estructura de costes y puede reducir el coste unitario a escala adecuada, sin garantizarlo en toda explotación.",
+        "mecanismo": "La maquinaria sustituye parte de la mano de obra, pero introduce inversión, mantenimiento, combustible y depreciación; su efecto depende de la escala y del uso."
+      },
+      "feedback_by_mode": {
+        "mentor": "La respuesta correcta es D: «Nivel de mecanización». La clave está en el nivel de mecanización y los costes de producción: La maquinaria sustituye parte de la mano de obra, pero introduce inversión, mantenimiento, combustible y depreciación; su efecto depende de la escala y del uso. Por eso, la mecanización modifica directamente la estructura de costes y puede reducir el coste unitario a escala adecuada, sin garantizarlo en toda explotación.",
+        "reviewer": "Exigencia de repaso (RA5): debes poder justificar por qué «Nivel de mecanización» es correcta y por qué las otras tres opciones no lo son, citando el mecanismo del nivel de mecanización y los costes de producción. Si no puedes reconstruir la cadena completa sin ver las opciones, repasa este concepto en tu material WSET L3.",
+        "trainer": "Concepto técnico (RA5): Tema: price factors. Fija el mecanismo del nivel de mecanización y los costes de producción: El productor elige un determinado nivel de mecanización para las operaciones de viñedo o bodega. → La maquinaria sustituye parte de la mano de obra, pero introduce inversión, mantenimiento, combustible y depreciación; su efecto depende de la escala y del uso. En el examen, identifica este patrón causa→mecanismo→efecto antes de mirar las opciones."
+      },
+      "micro_drill": {
+        "correct_index": 3,
+        "explanation": "«Nivel de mecanización» corresponde al nivel de mecanización y los costes de producción. Las demás afirmaciones son correctas, pero describen otros mecanismos.",
+        "options": [
+          "Protege al vino del oxígeno y desarrolla sabores únicos",
+          "Adición de aguardiente vínico",
+          "Estructura potente y necesidad de guarda",
+          "Nivel de mecanización"
+        ],
+        "prompt": "Consolidación: ¿cuál de estas afirmaciones corresponde al nivel de mecanización y los costes de producción?",
+        "remediation_signal": "Revisa la cadena causal del nivel de mecanización y los costes de producción"
       }
     },
     {
@@ -18059,9 +18519,9 @@ window.SESSION_BANK = {
         "correct_index": 3,
         "explanation": "«Minimizar la evaporación y evolución prematura» corresponde a las condiciones estables para la guarda en botella. Las demás afirmaciones son correctas, pero describen otros mecanismos.",
         "options": [
+          "Protege al vino del oxígeno y desarrolla sabores únicos",
           "Adición de aguardiente vínico",
           "Estructura potente y necesidad de guarda",
-          "Sistema de soleras y criaderas",
           "Minimizar la evaporación y evolución prematura"
         ],
         "prompt": "Consolidación: ¿cuál de estas afirmaciones corresponde a las condiciones estables para la guarda en botella?",
@@ -18163,9 +18623,9 @@ window.SESSION_BANK = {
         "explanation": "«Acidez volátil elevada» corresponde a la acidez volátil elevada. Las demás afirmaciones son correctas, pero describen otros mecanismos.",
         "options": [
           "Acidez volátil elevada",
+          "Protege al vino del oxígeno y desarrolla sabores únicos",
           "Adición de aguardiente vínico",
-          "Estructura potente y necesidad de guarda",
-          "Sistema de soleras y criaderas"
+          "Estructura potente y necesidad de guarda"
         ],
         "prompt": "Consolidación: ¿cuál de estas afirmaciones corresponde a la acidez volátil elevada?",
         "remediation_signal": "Revisa la cadena causal de la acidez volátil elevada"
@@ -18763,6 +19223,28 @@ window.SESSION_BANK = {
         "training_item_only": true,
         "official_wset_question": false,
         "disclaimer": "PROTOTIPO · ENTRENAMIENTO · NO EVALUACIÓN OFICIAL WSET"
+      },
+      "causal_chain": {
+        "causa": "Los socios viticultores agrupan uvas, capital y organización mediante una cooperativa.",
+        "efecto": "Cada viticultor puede acceder a infraestructura de vinificación y canales comerciales sin financiar por sí solo toda la inversión.",
+        "mecanismo": "La cooperativa reparte entre muchos miembros los costes de equipos, personal técnico, elaboración, envasado y comercialización."
+      },
+      "feedback_by_mode": {
+        "mentor": "La respuesta correcta es B: «Les permite acceder a equipamiento de vinificación y canales de comercialización sin la inversión individual». La clave está en la cooperativa vinícola y los recursos compartidos: La cooperativa reparte entre muchos miembros los costes de equipos, personal técnico, elaboración, envasado y comercialización. Por eso, cada viticultor puede acceder a infraestructura de vinificación y canales comerciales sin financiar por sí solo toda la inversión.",
+        "reviewer": "Exigencia de repaso (RA5): debes poder justificar por qué «Les permite acceder a equipamiento de vinificación y canales de comercialización sin la inversión individual» es correcta y por qué las otras tres opciones no lo son, citando el mecanismo de la cooperativa vinícola y los recursos compartidos. Si no puedes reconstruir la cadena completa sin ver las opciones, repasa este concepto en tu material WSET L3.",
+        "trainer": "Concepto técnico (RA5): Fija el mecanismo de la cooperativa vinícola y los recursos compartidos: Los socios viticultores agrupan uvas, capital y organización mediante una cooperativa. → La cooperativa reparte entre muchos miembros los costes de equipos, personal técnico, elaboración, envasado y comercialización. En el examen, identifica este patrón causa→mecanismo→efecto antes de mirar las opciones."
+      },
+      "micro_drill": {
+        "correct_index": 2,
+        "explanation": "«Les permite acceder a equipamiento de vinificación y canales de comercialización sin la inversión individual» corresponde a la cooperativa vinícola y los recursos compartidos. Las demás afirmaciones son correctas, pero describen otros mecanismos.",
+        "options": [
+          "Protege al vino del oxígeno y desarrolla sabores únicos",
+          "Adición de aguardiente vínico",
+          "Les permite acceder a equipamiento de vinificación y canales de comercialización sin la inversión individual",
+          "Estructura potente y necesidad de guarda"
+        ],
+        "prompt": "Consolidación: ¿cuál de estas afirmaciones corresponde a la cooperativa vinícola y los recursos compartidos?",
+        "remediation_signal": "Revisa la cadena causal de la cooperativa vinícola y los recursos compartidos"
       }
     },
     {
@@ -18898,6 +19380,28 @@ window.SESSION_BANK = {
         "training_item_only": true,
         "official_wset_question": false,
         "disclaimer": "PROTOTIPO · ENTRENAMIENTO · NO EVALUACIÓN OFICIAL WSET"
+      },
+      "causal_chain": {
+        "causa": "El productor designa a un distribuidor exclusivo con capacidades establecidas en un mercado extranjero.",
+        "efecto": "El productor puede entrar y atender ese mercado con menos infraestructura comercial duplicada, aunque la exclusividad no garantiza ventas ni una representación adecuada.",
+        "mecanismo": "El distribuidor aporta conocimiento del mercado local, relaciones con clientes, logística y gestión legal o aduanera que el productor puede no tener directamente."
+      },
+      "feedback_by_mode": {
+        "mentor": "La respuesta correcta es B: «Porque el distribuidor aporta conocimiento del mercado local, red de clientes y gestión logística y legal». La clave está en un distribuidor exclusivo y el acceso a un mercado extranjero: El distribuidor aporta conocimiento del mercado local, relaciones con clientes, logística y gestión legal o aduanera que el productor puede no tener directamente. Por eso, el productor puede entrar y atender ese mercado con menos infraestructura comercial duplicada, aunque la exclusividad no garantiza ventas ni una representación adecuada.",
+        "reviewer": "Exigencia de repaso (RA5): debes poder justificar por qué «Porque el distribuidor aporta conocimiento del mercado local, red de clientes y gestión logística y legal» es correcta y por qué las otras tres opciones no lo son, citando el mecanismo de un distribuidor exclusivo y el acceso a un mercado extranjero. Si no puedes reconstruir la cadena completa sin ver las opciones, repasa este concepto en tu material WSET L3.",
+        "trainer": "Concepto técnico (RA5): Fija el mecanismo de un distribuidor exclusivo y el acceso a un mercado extranjero: El productor designa a un distribuidor exclusivo con capacidades establecidas en un mercado extranjero. → El distribuidor aporta conocimiento del mercado local, relaciones con clientes, logística y gestión legal o aduanera que el productor puede no tener directamente. En el examen, identifica este patrón causa→mecanismo→efecto antes de mirar las opciones."
+      },
+      "micro_drill": {
+        "correct_index": 3,
+        "explanation": "«Porque el distribuidor aporta conocimiento del mercado local, red de clientes y gestión logística y legal» corresponde a un distribuidor exclusivo y el acceso a un mercado extranjero. Las demás afirmaciones son correctas, pero describen otros mecanismos.",
+        "options": [
+          "Protege al vino del oxígeno y desarrolla sabores únicos",
+          "Adición de aguardiente vínico",
+          "Estructura potente y necesidad de guarda",
+          "Porque el distribuidor aporta conocimiento del mercado local, red de clientes y gestión logística y legal"
+        ],
+        "prompt": "Consolidación: ¿cuál de estas afirmaciones corresponde a un distribuidor exclusivo y el acceso a un mercado extranjero?",
+        "remediation_signal": "Revisa la cadena causal de un distribuidor exclusivo y el acceso a un mercado extranjero"
       }
     },
     {
@@ -18925,6 +19429,28 @@ window.SESSION_BANK = {
         "training_item_only": true,
         "official_wset_question": false,
         "disclaimer": "PROTOTIPO · ENTRENAMIENTO · NO EVALUACIÓN OFICIAL WSET"
+      },
+      "causal_chain": {
+        "causa": "La producción está estructuralmente limitada mientras la demanda de compradores supera ampliamente la oferta disponible.",
+        "efecto": "La escasez combinada con demanda fuerte ejerce presión alcista sobre el precio de mercado, junto con otros factores como reputación, añada y distribución.",
+        "mecanismo": "Más compradores compiten por una cantidad pequeña de vino, aumentando la disposición a pagar y el poder de fijación de precios de productores e intermediarios."
+      },
+      "feedback_by_mode": {
+        "mentor": "La respuesta correcta es B: «Porque la superficie total de los Grand Cru es muy limitada y la demanda global supera ampliamente la oferta». La clave está en la oferta limitada, la demanda fuerte y la presión sobre el precio: Más compradores compiten por una cantidad pequeña de vino, aumentando la disposición a pagar y el poder de fijación de precios de productores e intermediarios. Por eso, la escasez combinada con demanda fuerte ejerce presión alcista sobre el precio de mercado, junto con otros factores como reputación, añada y distribución.",
+        "reviewer": "Exigencia de repaso (RA5): debes poder justificar por qué «Porque la superficie total de los Grand Cru es muy limitada y la demanda global supera ampliamente la oferta» es correcta y por qué las otras tres opciones no lo son, citando el mecanismo de la oferta limitada, la demanda fuerte y la presión sobre el precio. Si no puedes reconstruir la cadena completa sin ver las opciones, repasa este concepto en tu material WSET L3.",
+        "trainer": "Concepto técnico (RA5): Fija el mecanismo de la oferta limitada, la demanda fuerte y la presión sobre el precio: La producción está estructuralmente limitada mientras la demanda de compradores supera ampliamente la oferta disponible. → Más compradores compiten por una cantidad pequeña de vino, aumentando la disposición a pagar y el poder de fijación de precios de productores e intermediarios. En el examen, identifica este patrón causa→mecanismo→efecto antes de mirar las opciones."
+      },
+      "micro_drill": {
+        "correct_index": 0,
+        "explanation": "«Porque la superficie total de los Grand Cru es muy limitada y la demanda global supera ampliamente la oferta» corresponde a la oferta limitada, la demanda fuerte y la presión sobre el precio. Las demás afirmaciones son correctas, pero describen otros mecanismos.",
+        "options": [
+          "Porque la superficie total de los Grand Cru es muy limitada y la demanda global supera ampliamente la oferta",
+          "Protege al vino del oxígeno y desarrolla sabores únicos",
+          "Adición de aguardiente vínico",
+          "Estructura potente y necesidad de guarda"
+        ],
+        "prompt": "Consolidación: ¿cuál de estas afirmaciones corresponde a la oferta limitada, la demanda fuerte y la presión sobre el precio?",
+        "remediation_signal": "Revisa la cadena causal de la oferta limitada, la demanda fuerte y la presión sobre el precio"
       }
     },
     {
@@ -19076,9 +19602,9 @@ window.SESSION_BANK = {
         "explanation": "«Contiene más vino en relación al oxígeno que penetra por el cierre, favoreciendo un envejecimiento más lento y complejo» corresponde al envejecimiento más lento en formato magnum. Las demás afirmaciones son correctas, pero describen otros mecanismos.",
         "options": [
           "Contiene más vino en relación al oxígeno que penetra por el cierre, favoreciendo un envejecimiento más lento y complejo",
+          "Protege al vino del oxígeno y desarrolla sabores únicos",
           "Adición de aguardiente vínico",
-          "Estructura potente y necesidad de guarda",
-          "Sistema de soleras y criaderas"
+          "Estructura potente y necesidad de guarda"
         ],
         "prompt": "Consolidación: ¿cuál de estas afirmaciones corresponde al envejecimiento más lento en formato magnum?",
         "remediation_signal": "Revisa la cadena causal del envejecimiento más lento en formato magnum"
@@ -19128,9 +19654,9 @@ window.SESSION_BANK = {
         "explanation": "«Estructura potente y necesidad de guarda» corresponde a la estructura que permite la guarda prolongada de un vino tinto. Las demás afirmaciones son correctas, pero describen otros mecanismos.",
         "options": [
           "Estructura potente y necesidad de guarda",
+          "Protege al vino del oxígeno y desarrolla sabores únicos",
           "Adición de aguardiente vínico",
-          "Sistema de soleras y criaderas",
-          "Pendiente del terreno"
+          "Sistema de soleras y criaderas"
         ],
         "prompt": "Consolidación: ¿cuál de estas afirmaciones corresponde a la estructura que permite la guarda prolongada de un vino tinto?",
         "remediation_signal": "Revisa la cadena causal de la estructura que permite la guarda prolongada de un vino tinto"
@@ -19164,6 +19690,16 @@ window.SESSION_BANK = {
         "training_item_only": true,
         "official_wset_question": false,
         "disclaimer": "PROTOTIPO · ENTRENAMIENTO · NO EVALUACIÓN OFICIAL WSET"
+      },
+      "causal_chain": {
+        "causa": "El mosto tinto fermenta con los hollejos mientras se gestiona el sombrero y la temperatura es suficientemente cálida.",
+        "efecto": "Pasan al vino más color y tanino, aumentando su profundidad y estructura.",
+        "mecanismo": "El remontado renueva el contacto entre líquido y hollejos; el calor y el alcohol creciente favorecen la extracción de compuestos fenólicos."
+      },
+      "feedback_by_mode": {
+        "mentor": "La respuesta correcta es C: «Remontado». La clave está en la extracción durante la fermentación de tintos: El remontado renueva el contacto entre líquido y hollejos; el calor y el alcohol creciente favorecen la extracción de compuestos fenólicos. Por eso, pasan al vino más color y tanino, aumentando su profundidad y estructura.",
+        "reviewer": "Exigencia de repaso (unknown): debes poder justificar por qué «Remontado» es correcta y por qué las otras tres opciones no lo son, citando el mecanismo de la extracción durante la fermentación de tintos. Si no puedes reconstruir la cadena completa sin ver las opciones, repasa este concepto en tu material WSET L3.",
+        "trainer": "Concepto técnico (unknown): Tema: extracción. Fija el mecanismo de la extracción durante la fermentación de tintos: El mosto tinto fermenta con los hollejos mientras se gestiona el sombrero y la temperatura es suficientemente cálida. → El remontado renueva el contacto entre líquido y hollejos; el calor y el alcohol creciente favorecen la extracción de compuestos fenólicos. En el examen, identifica este patrón causa→mecanismo→efecto antes de mirar las opciones."
       }
     }
   ],

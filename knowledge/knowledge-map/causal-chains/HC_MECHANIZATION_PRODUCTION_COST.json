@@ -1,40 +1,35 @@
 {
   "node_type": "causal_chain",
-  "node_id": "HC_CANOPY_AIRFLOW_FUNGAL_RISK",
-  "topic": "canopy airflow and fungal disease risk",
+  "node_id": "HC_MECHANIZATION_PRODUCTION_COST",
+  "topic": "mechanization and wine production cost structure",
   "trigger_keywords": [
-    "enfermedades fungicas en climas humedos",
-    "canopy management",
-    "dosel excesivamente denso",
-    "reduce la ventilacion",
-    "canopy abierto",
-    "reduce el riesgo de botrytis",
-    "deshoje",
-    "mejora la ventilacion del racimo",
-    "afirmaciones sobre el deshoje",
-    "deshoje mejora la circulación de aire alrededor del racimo",
-    "fungal disease canopy"
+    "factor humano tiene un impacto directo en el precio de producción del vino",
+    "factores humanos tiene un impacto directo en el precio de producción del vino",
+    "nivel de mecanización",
+    "mechanization production cost",
+    "capital equipment labour cost",
+    "scale affects machinery cost"
   ],
   "steps": [
     {
       "step": 1,
       "label": "cause",
-      "text": "Dense foliage around grape bunches restricts airflow and retains humidity after rain or dew."
+      "text": "A producer chooses a given level of mechanization for vineyard or winery operations."
     },
     {
       "step": 2,
       "label": "mechanism",
-      "text": "Opening the canopy through shoot positioning or leaf removal improves ventilation and speeds the drying of bunches."
+      "text": "Machinery replaces some manual labour but introduces capital, maintenance, fuel, and depreciation costs whose effect depends on scale and utilization."
     },
     {
       "step": 3,
       "label": "effect",
-      "text": "Conditions become less favourable for Botrytis and other fungal diseases, while an excessively dense canopy increases disease pressure."
+      "text": "The level of mechanization directly changes the production cost structure and may reduce unit cost at suitable scale without guaranteeing lower cost in every operation."
     },
     {
       "step": 4,
       "label": "exam_formulation",
-      "text": "Formative causal formulation: Conditions become less favourable for Botrytis and other fungal diseases, while an excessively dense canopy increases disease pressure."
+      "text": "Formative causal formulation: Mechanization changes the balance between labour and capital costs, so scale and equipment utilization determine its effect on production cost."
     }
   ],
   "agent_corpus": "tutor",

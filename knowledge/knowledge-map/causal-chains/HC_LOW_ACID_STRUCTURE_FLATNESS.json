@@ -1,40 +1,34 @@
 {
   "node_type": "causal_chain",
-  "node_id": "HC_CANOPY_AIRFLOW_FUNGAL_RISK",
-  "topic": "canopy airflow and fungal disease risk",
+  "node_id": "HC_LOW_ACID_STRUCTURE_FLATNESS",
+  "topic": "low acidity or structure and flat wine perception",
   "trigger_keywords": [
-    "enfermedades fungicas en climas humedos",
-    "canopy management",
-    "dosel excesivamente denso",
-    "reduce la ventilacion",
-    "canopy abierto",
-    "reduce el riesgo de botrytis",
-    "deshoje",
-    "mejora la ventilacion del racimo",
-    "afirmaciones sobre el deshoje",
-    "deshoje mejora la circulación de aire alrededor del racimo",
-    "fungal disease canopy"
+    "qué puede provocar la percepción de un vino",
+    "falta de acidez o estructura",
+    "low acidity flat wine",
+    "lack of structure flat wine",
+    "wine balance flatness"
   ],
   "steps": [
     {
       "step": 1,
       "label": "cause",
-      "text": "Dense foliage around grape bunches restricts airflow and retains humidity after rain or dew."
+      "text": "A wine has insufficient acidity or too little structural definition for its fruit, alcohol, sweetness, and body."
     },
     {
       "step": 2,
       "label": "mechanism",
-      "text": "Opening the canopy through shoot positioning or leaf removal improves ventilation and speeds the drying of bunches."
+      "text": "Acidity supplies freshness and tension, while structural components such as acid, tannin, and body give the palate shape and progression."
     },
     {
       "step": 3,
       "label": "effect",
-      "text": "Conditions become less favourable for Botrytis and other fungal diseases, while an excessively dense canopy increases disease pressure."
+      "text": "When these balancing elements are insufficient, the wine may seem flat, dull, or poorly defined rather than fresh and persistent."
     },
     {
       "step": 4,
       "label": "exam_formulation",
-      "text": "Formative causal formulation: Conditions become less favourable for Botrytis and other fungal diseases, while an excessively dense canopy increases disease pressure."
+      "text": "Formative causal formulation: Insufficient acidity or structure can make a wine seem flat because it lacks freshness, tension, or palate definition."
     }
   ],
   "agent_corpus": "tutor",
