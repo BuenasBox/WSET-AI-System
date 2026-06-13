@@ -1,6 +1,6 @@
 window.SESSION_BANK = {
   "schema_version": "session_bank_v1",
-  "generated_at": "2026-06-13T09:18:34.757150",
+  "generated_at": "2026-06-13T11:00:33.184789",
   "total_sba": 578,
   "total_sat_prompts": 6,
   "modes": {
@@ -2313,6 +2313,28 @@ window.SESSION_BANK = {
         "training_item_only": true,
         "official_wset_question": false,
         "disclaimer": "PROTOTIPO · ENTRENAMIENTO · NO EVALUACIÓN OFICIAL WSET"
+      },
+      "causal_chain": {
+        "causa": "Un plato con abundante acidez, como uno con vinagre, cítricos o ceviche, establece una referencia gustativa intensamente ácida.",
+        "efecto": "Un blanco joven de alta acidez resulta un acompañamiento fiable porque mantiene su frescura junto al plato sin que la combinación parezca apagada o desequilibrada.",
+        "mecanismo": "Frente a esa referencia, un vino con acidez insuficiente puede perder definición y parecer ancho o plano, mientras un vino de alta acidez conserva frescura y equilibrio estructural."
+      },
+      "feedback_by_mode": {
+        "mentor": "La respuesta correcta es B: «Vino blanco joven con alta acidez». La clave está en el equilibrio entre un plato ácido y un vino de alta acidez: Frente a esa referencia, un vino con acidez insuficiente puede perder definición y parecer ancho o plano, mientras un vino de alta acidez conserva frescura y equilibrio estructural. Por eso, un blanco joven de alta acidez resulta un acompañamiento fiable porque mantiene su frescura junto al plato sin que la combinación parezca apagada o desequilibrada.",
+        "reviewer": "Exigencia de repaso (RA1): debes poder justificar por qué «Vino blanco joven con alta acidez» es correcta y por qué las otras tres opciones no lo son, citando el mecanismo del equilibrio entre un plato ácido y un vino de alta acidez. Si no puedes reconstruir la cadena completa sin ver las opciones, repasa este concepto en tu material WSET L3.",
+        "trainer": "Concepto técnico (RA1): Fija el mecanismo del equilibrio entre un plato ácido y un vino de alta acidez: Un plato con abundante acidez, como uno con vinagre, cítricos o ceviche, establece una referencia gustativa intensamente ácida. → Frente a esa referencia, un vino con acidez insuficiente puede perder definición y parecer ancho o plano, mientras un vino de alta acidez conserva frescura y equilibrio estructural. En el examen, identifica este patrón causa→mecanismo→efecto antes de mirar las opciones."
+      },
+      "micro_drill": {
+        "correct_index": 2,
+        "explanation": "«Vino blanco joven con alta acidez» corresponde al equilibrio entre un plato ácido y un vino de alta acidez. Las demás afirmaciones son correctas, pero describen otros mecanismos.",
+        "options": [
+          "Protege al vino del oxígeno y desarrolla sabores únicos",
+          "Adición de aguardiente vínico",
+          "Vino blanco joven con alta acidez",
+          "Estructura potente y necesidad de guarda"
+        ],
+        "prompt": "Consolidación: ¿cuál de estas afirmaciones corresponde al equilibrio entre un plato ácido y un vino de alta acidez?",
+        "remediation_signal": "Revisa la cadena causal del equilibrio entre un plato ácido y un vino de alta acidez"
       }
     },
     {
@@ -4082,6 +4104,28 @@ window.SESSION_BANK = {
         "training_item_only": true,
         "official_wset_question": false,
         "disclaimer": "PROTOTIPO · ENTRENAMIENTO · NO EVALUACIÓN OFICIAL WSET"
+      },
+      "causal_chain": {
+        "causa": "La capsaicina de un plato picante produce una sensación ardiente persistente, y el alcohol del vino puede añadir una sensación cálida independiente.",
+        "efecto": "Un vino con alcohol moderado y algo de dulzor residual suele resultar más cómodo y equilibrado con comida picante que uno muy alcohólico o marcadamente tánico.",
+        "mecanismo": "Un vino de menor graduación evita reforzar ese calor alcohólico, mientras algo de dulzor residual puede suavizar el contraste y hacer la combinación menos intensa sin neutralizar la capsaicina."
+      },
+      "feedback_by_mode": {
+        "mentor": "La respuesta correcta es C: «Vino con dulzor residual y baja graduación». La clave está en el dulzor residual y el bajo alcohol con comida picante: Un vino de menor graduación evita reforzar ese calor alcohólico, mientras algo de dulzor residual puede suavizar el contraste y hacer la combinación menos intensa sin neutralizar la capsaicina. Por eso, un vino con alcohol moderado y algo de dulzor residual suele resultar más cómodo y equilibrado con comida picante que uno muy alcohólico o marcadamente tánico.",
+        "reviewer": "Exigencia de repaso (RA1): debes poder justificar por qué «Vino con dulzor residual y baja graduación» es correcta y por qué las otras tres opciones no lo son, citando el mecanismo del dulzor residual y el bajo alcohol con comida picante. Si no puedes reconstruir la cadena completa sin ver las opciones, repasa este concepto en tu material WSET L3.",
+        "trainer": "Concepto técnico (RA1): Fija el mecanismo del dulzor residual y el bajo alcohol con comida picante: La capsaicina de un plato picante produce una sensación ardiente persistente, y el alcohol del vino puede añadir una sensación cálida independiente. → Un vino de menor graduación evita reforzar ese calor alcohólico, mientras algo de dulzor residual puede suavizar el contraste y hacer la combinación menos intensa sin neutralizar la capsaicina. En el examen, identifica este patrón causa→mecanismo→efecto antes de mirar las opciones."
+      },
+      "micro_drill": {
+        "correct_index": 2,
+        "explanation": "«Vino con dulzor residual y baja graduación» corresponde al dulzor residual y el bajo alcohol con comida picante. Las demás afirmaciones son correctas, pero describen otros mecanismos.",
+        "options": [
+          "Protege al vino del oxígeno y desarrolla sabores únicos",
+          "Adición de aguardiente vínico",
+          "Vino con dulzor residual y baja graduación",
+          "Estructura potente y necesidad de guarda"
+        ],
+        "prompt": "Consolidación: ¿cuál de estas afirmaciones corresponde al dulzor residual y el bajo alcohol con comida picante?",
+        "remediation_signal": "Revisa la cadena causal del dulzor residual y el bajo alcohol con comida picante"
       }
     },
     {
@@ -9075,6 +9119,28 @@ window.SESSION_BANK = {
         "training_item_only": true,
         "official_wset_question": false,
         "disclaimer": "PROTOTIPO · ENTRENAMIENTO · NO EVALUACIÓN OFICIAL WSET"
+      },
+      "causal_chain": {
+        "causa": "Un plato con abundante acidez, como uno con vinagre, cítricos o ceviche, establece una referencia gustativa intensamente ácida.",
+        "efecto": "Un blanco joven de alta acidez resulta un acompañamiento fiable porque mantiene su frescura junto al plato sin que la combinación parezca apagada o desequilibrada.",
+        "mecanismo": "Frente a esa referencia, un vino con acidez insuficiente puede perder definición y parecer ancho o plano, mientras un vino de alta acidez conserva frescura y equilibrio estructural."
+      },
+      "feedback_by_mode": {
+        "mentor": "La respuesta correcta es B: «Vino blanco joven con alta acidez». La clave está en el equilibrio entre un plato ácido y un vino de alta acidez: Frente a esa referencia, un vino con acidez insuficiente puede perder definición y parecer ancho o plano, mientras un vino de alta acidez conserva frescura y equilibrio estructural. Por eso, un blanco joven de alta acidez resulta un acompañamiento fiable porque mantiene su frescura junto al plato sin que la combinación parezca apagada o desequilibrada.",
+        "reviewer": "Exigencia de repaso (RA1): debes poder justificar por qué «Vino blanco joven con alta acidez» es correcta y por qué las otras tres opciones no lo son, citando el mecanismo del equilibrio entre un plato ácido y un vino de alta acidez. Si no puedes reconstruir la cadena completa sin ver las opciones, repasa este concepto en tu material WSET L3.",
+        "trainer": "Concepto técnico (RA1): Fija el mecanismo del equilibrio entre un plato ácido y un vino de alta acidez: Un plato con abundante acidez, como uno con vinagre, cítricos o ceviche, establece una referencia gustativa intensamente ácida. → Frente a esa referencia, un vino con acidez insuficiente puede perder definición y parecer ancho o plano, mientras un vino de alta acidez conserva frescura y equilibrio estructural. En el examen, identifica este patrón causa→mecanismo→efecto antes de mirar las opciones."
+      },
+      "micro_drill": {
+        "correct_index": 2,
+        "explanation": "«Vino blanco joven con alta acidez» corresponde al equilibrio entre un plato ácido y un vino de alta acidez. Las demás afirmaciones son correctas, pero describen otros mecanismos.",
+        "options": [
+          "Protege al vino del oxígeno y desarrolla sabores únicos",
+          "Adición de aguardiente vínico",
+          "Vino blanco joven con alta acidez",
+          "Estructura potente y necesidad de guarda"
+        ],
+        "prompt": "Consolidación: ¿cuál de estas afirmaciones corresponde al equilibrio entre un plato ácido y un vino de alta acidez?",
+        "remediation_signal": "Revisa la cadena causal del equilibrio entre un plato ácido y un vino de alta acidez"
       }
     },
     {

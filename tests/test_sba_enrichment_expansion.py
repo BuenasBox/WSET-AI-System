@@ -264,6 +264,14 @@ OLOROSO_AMONTILLADO_PATH_NODE_IDS = {
     "HC_OLOROSO_AMONTILLADO_AGEING_PATH",
 }
 
+ACID_FOOD_WINE_BALANCE_NODE_IDS = {
+    "HC_ACID_FOOD_HIGH_ACID_WINE_BALANCE",
+}
+
+SPICY_FOOD_WINE_PAIRING_NODE_IDS = {
+    "HC_RESIDUAL_SUGAR_LOW_ALCOHOL_CHILI_PAIRING",
+}
+
 
 class FrozenMatcherContractTests(unittest.TestCase):
     def test_matcher_v2_controls_remain_frozen(self):
@@ -2217,6 +2225,131 @@ class OlorosoAmontilladoAgeingPathExpansionTests(unittest.TestCase):
                 self.assertNotIn(
                     record["_provenance"]["causal_chain"]["derived_from"],
                     OLOROSO_AMONTILLADO_PATH_NODE_IDS,
+                )
+
+
+class AcidFoodWineBalanceExpansionTests(unittest.TestCase):
+    @classmethod
+    def setUpClass(cls):
+        cls.nodes = {node["node_id"]: node for node in load_chain_nodes()}
+        payload = derive()
+        cls.records = {
+            record["item_id"]: record
+            for record in payload["items_by_source_question_id"].values()
+        }
+
+    def test_acid_food_balance_node_is_matcher_compatible_and_localized(self):
+        for node_id in ACID_FOOD_WINE_BALANCE_NODE_IDS:
+            self.assertIn(node_id, self.nodes)
+            self.assertIn(node_id, NODE_ES)
+
+    def test_exact_acid_food_balance_assignments(self):
+        expected = {
+            "wset3_57": "HC_ACID_FOOD_HIGH_ACID_WINE_BALANCE",
+            "wset3_737": "HC_ACID_FOOD_HIGH_ACID_WINE_BALANCE",
+        }
+        actual = {
+            item_id: record["_provenance"]["causal_chain"]["derived_from"]
+            for item_id, record in self.records.items()
+            if record["_provenance"]["causal_chain"]["derived_from"]
+            in ACID_FOOD_WINE_BALANCE_NODE_IDS
+        }
+        self.assertEqual(actual, expected)
+
+    def test_acid_food_balance_matches_have_dual_evidence(self):
+        for item_id in ("wset3_57", "wset3_737"):
+            provenance = self.records[item_id]["_provenance"]["causal_chain"]
+            self.assertTrue(provenance["stem_hits"], item_id)
+            self.assertEqual(
+                provenance["correct_option_hits"],
+                ["vino blanco joven con alta acidez"],
+                item_id,
+            )
+            self.assertGreaterEqual(provenance["match_score"], MIN_KEYWORD_HITS)
+
+    def test_other_food_pairing_mechanisms_remain_excluded(self):
+        for item_id in (
+            "wset3_43",
+            "wset3_44",
+            "wset3_47",
+            "wset3_56",
+            "wset3_69",
+            "wset3_79",
+            "wset3_90",
+            "wset3_332",
+            "wset3_333",
+            "wset3_721",
+            "wset3_738",
+        ):
+            record = self.records.get(item_id)
+            if record is not None:
+                self.assertNotIn(
+                    record["_provenance"]["causal_chain"]["derived_from"],
+                    ACID_FOOD_WINE_BALANCE_NODE_IDS,
+                )
+
+
+class SpicyFoodWinePairingExpansionTests(unittest.TestCase):
+    @classmethod
+    def setUpClass(cls):
+        cls.nodes = {node["node_id"]: node for node in load_chain_nodes()}
+        payload = derive()
+        cls.records = {
+            record["item_id"]: record
+            for record in payload["items_by_source_question_id"].values()
+        }
+
+    def test_spicy_food_pairing_node_is_matcher_compatible_and_localized(self):
+        for node_id in SPICY_FOOD_WINE_PAIRING_NODE_IDS:
+            self.assertIn(node_id, self.nodes)
+            self.assertIn(node_id, NODE_ES)
+
+    def test_exact_spicy_food_pairing_assignments(self):
+        expected = {
+            "wset3_333": "HC_RESIDUAL_SUGAR_LOW_ALCOHOL_CHILI_PAIRING",
+        }
+        actual = {
+            item_id: record["_provenance"]["causal_chain"]["derived_from"]
+            for item_id, record in self.records.items()
+            if record["_provenance"]["causal_chain"]["derived_from"]
+            in SPICY_FOOD_WINE_PAIRING_NODE_IDS
+        }
+        self.assertEqual(actual, expected)
+
+    def test_spicy_food_pairing_match_has_dual_evidence(self):
+        provenance = self.records["wset3_333"]["_provenance"]["causal_chain"]
+        self.assertEqual(
+            provenance["stem_hits"],
+            ["maridar vinos con platos picantes"],
+        )
+        self.assertEqual(
+            provenance["correct_option_hits"],
+            ["vino con dulzor residual y baja graduacion"],
+        )
+        self.assertGreaterEqual(provenance["match_score"], MIN_KEYWORD_HITS)
+
+    def test_related_food_and_alcohol_items_remain_excluded(self):
+        for item_id in (
+            "wset3_43",
+            "wset3_44",
+            "wset3_47",
+            "wset3_56",
+            "wset3_57",
+            "wset3_69",
+            "wset3_75",
+            "wset3_79",
+            "wset3_90",
+            "wset3_332",
+            "wset3_716",
+            "wset3_721",
+            "wset3_737",
+            "wset3_738",
+        ):
+            record = self.records.get(item_id)
+            if record is not None:
+                self.assertNotIn(
+                    record["_provenance"]["causal_chain"]["derived_from"],
+                    SPICY_FOOD_WINE_PAIRING_NODE_IDS,
                 )
 
 

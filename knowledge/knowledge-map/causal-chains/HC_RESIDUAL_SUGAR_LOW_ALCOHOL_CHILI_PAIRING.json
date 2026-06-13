@@ -1,0 +1,60 @@
+{
+  "node_type": "causal_chain",
+  "node_id": "HC_RESIDUAL_SUGAR_LOW_ALCOHOL_CHILI_PAIRING",
+  "topic": "Residual sugar and low alcohol for spicy-food pairing",
+  "trigger_keywords": [
+    "maridar vinos con platos picantes",
+    "vino con dulzor residual y baja graduación",
+    "residual sugar low alcohol chili pairing",
+    "sweet low-alcohol wine with spicy food",
+    "capsaicin alcohol heat pairing",
+    "wine pairing for spicy dishes"
+  ],
+  "steps": [
+    {
+      "step": 1,
+      "label": "cause",
+      "text": "Chili-containing food creates a persistent burning sensation through capsaicin, and wine alcohol can add a separate warming sensation."
+    },
+    {
+      "step": 2,
+      "label": "mechanism",
+      "text": "Choosing a lower-alcohol wine avoids reinforcing that alcoholic heat, while some residual sugar can soften the contrast and make the combination feel less severe without neutralising capsaicin."
+    },
+    {
+      "step": 3,
+      "label": "effect",
+      "text": "A wine with modest alcohol and some residual sugar usually gives a more comfortable and balanced pairing with spicy food than a highly alcoholic or strongly tannic wine."
+    },
+    {
+      "step": 4,
+      "label": "exam_formulation",
+      "text": "Formative causal formulation: with spicy food, favour some residual sugar and low alcohol because sweetness can soften the contrast while low alcohol avoids intensifying heat."
+    }
+  ],
+  "agent_corpus": "tutor",
+  "safe_for_examiner": false,
+  "examiner_scoring_allowed": false,
+  "requires_human_review": true,
+  "source": "heuristic",
+  "classification": "inferred",
+  "official": false,
+  "formative_only": true,
+  "official_mark_scheme": false,
+  "governance": {
+    "safe_for_examiner": false,
+    "examiner_scoring_allowed": false,
+    "agent_corpus": "tutor",
+    "source": "heuristic",
+    "classification": "inferred",
+    "official": false,
+    "formative_only": true
+  },
+  "_meta": {
+    "schema_version": "causal_chain_v1",
+    "heuristic_extension": "HC_v1",
+    "created_date": "2026-06-13",
+    "ingestion_status": "draft",
+    "source_note": "Inferred formative model - not official WSET assessment or mark-scheme content"
+  }
+}
