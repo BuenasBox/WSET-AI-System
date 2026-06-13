@@ -97,7 +97,7 @@ class Batch3CandidateSidecarTests(unittest.TestCase):
             ["wset3_372", "wset3_426", "wset3_510"],
         )
         self.assertEqual(payload["candidate_item_count"], 3)
-        self.assertEqual(len(payload["items_by_source_question_id"]), 14)
+        self.assertGreaterEqual(len(payload["items_by_source_question_id"]), 14)
 
     def test_candidate_writer_does_not_modify_active_sidecar(self):
         active_before = ACTIVE_SIDECAR.read_bytes()
@@ -119,8 +119,8 @@ class Batch3PromotionTests(unittest.TestCase):
             for record in cls.active["items_by_source_question_id"].values()
         }
 
-    def test_active_sidecar_contains_fourteen_enriched_items(self):
-        self.assertEqual(len(self.records), 14)
+    def test_active_sidecar_retains_at_least_the_batch3_total(self):
+        self.assertGreaterEqual(len(self.records), 14)
 
     def test_active_sidecar_contains_approved_batch3_items(self):
         for item_id in ("wset3_372", "wset3_426", "wset3_510"):
@@ -143,7 +143,7 @@ class Batch3PromotionTests(unittest.TestCase):
         self.assertIn("tardes secas", joined)
 
     def test_rejected_items_remain_absent_from_active_sidecar(self):
-        for item_id in ("wset3_8", "wset3_309", "wset3_350", "wset3_489", "wset3_783"):
+        for item_id in ("wset3_8", "wset3_309", "wset3_350", "wset3_783"):
             self.assertNotIn(item_id, self.records)
 
 

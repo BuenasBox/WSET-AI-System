@@ -1,0 +1,59 @@
+{
+  "node_type": "causal_chain",
+  "node_id": "HC_LOW_SERVICE_TEMPERATURE_TANNIN_AROMA",
+  "topic": "low serving temperature, tannin, and aroma expression",
+  "trigger_keywords": [
+    "temperatura de servicio demasiado baja en un vino tinto estructurado",
+    "destaca los taninos y reduce la expresión aromática",
+    "low serving temperature tannin aroma",
+    "schema metadata trigger HC_LOW_SERVICE_TEMPERATURE_TANNIN_AROMA 3",
+    "schema metadata trigger HC_LOW_SERVICE_TEMPERATURE_TANNIN_AROMA 4"
+  ],
+  "steps": [
+    {
+      "step": 1,
+      "label": "cause",
+      "text": "A structured red wine is served at an excessively low temperature."
+    },
+    {
+      "step": 2,
+      "label": "mechanism",
+      "text": "Low temperature suppresses the volatility of aromatic compounds and increases the prominence of firm tactile sensations."
+    },
+    {
+      "step": 3,
+      "label": "effect",
+      "text": "Aromas become less expressive while tannin and hardness appear more marked."
+    },
+    {
+      "step": 4,
+      "label": "exam_formulation",
+      "text": "Formative causal formulation: Aromas become less expressive while tannin and hardness appear more marked."
+    }
+  ],
+  "agent_corpus": "tutor",
+  "safe_for_examiner": false,
+  "examiner_scoring_allowed": false,
+  "requires_human_review": true,
+  "source": "heuristic",
+  "classification": "inferred",
+  "official": false,
+  "formative_only": true,
+  "official_mark_scheme": false,
+  "governance": {
+    "safe_for_examiner": false,
+    "examiner_scoring_allowed": false,
+    "agent_corpus": "tutor",
+    "source": "heuristic",
+    "classification": "inferred",
+    "official": false,
+    "formative_only": true
+  },
+  "_meta": {
+    "schema_version": "causal_chain_v1",
+    "heuristic_extension": "HC_v1",
+    "created_date": "2026-06-12",
+    "ingestion_status": "draft",
+    "source_note": "Inferred formative model - not official WSET assessment or mark-scheme content"
+  }
+}

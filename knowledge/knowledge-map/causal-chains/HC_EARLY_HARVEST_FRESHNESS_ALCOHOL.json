@@ -1,0 +1,61 @@
+{
+  "node_type": "causal_chain",
+  "node_id": "HC_EARLY_HARVEST_FRESHNESS_ALCOHOL",
+  "topic": "early harvesting, freshness, and potential alcohol",
+  "trigger_keywords": [
+    "vendimia anticipada sobre el vino",
+    "mayor frescura y menor alcohol",
+    "técnica utilizada para moderar el alcohol en climas cálidos",
+    "cosecha temprana",
+    "early harvest freshness",
+    "early harvest lower alcohol",
+    "schema metadata trigger HC_EARLY_HARVEST_FRESHNESS_ALCOHOL 4"
+  ],
+  "steps": [
+    {
+      "step": 1,
+      "label": "cause",
+      "text": "Grapes are harvested earlier in their ripening cycle."
+    },
+    {
+      "step": 2,
+      "label": "mechanism",
+      "text": "They have accumulated less sugar and retained more natural acidity than grapes left longer on the vine."
+    },
+    {
+      "step": 3,
+      "label": "effect",
+      "text": "The resulting wine generally has greater freshness and lower potential alcohol, provided flavour maturity is sufficient."
+    },
+    {
+      "step": 4,
+      "label": "exam_formulation",
+      "text": "Formative causal formulation: The resulting wine generally has greater freshness and lower potential alcohol, provided flavour maturity is sufficient."
+    }
+  ],
+  "agent_corpus": "tutor",
+  "safe_for_examiner": false,
+  "examiner_scoring_allowed": false,
+  "requires_human_review": true,
+  "source": "heuristic",
+  "classification": "inferred",
+  "official": false,
+  "formative_only": true,
+  "official_mark_scheme": false,
+  "governance": {
+    "safe_for_examiner": false,
+    "examiner_scoring_allowed": false,
+    "agent_corpus": "tutor",
+    "source": "heuristic",
+    "classification": "inferred",
+    "official": false,
+    "formative_only": true
+  },
+  "_meta": {
+    "schema_version": "causal_chain_v1",
+    "heuristic_extension": "HC_v1",
+    "created_date": "2026-06-12",
+    "ingestion_status": "draft",
+    "source_note": "Inferred formative model - not official WSET assessment or mark-scheme content"
+  }
+}

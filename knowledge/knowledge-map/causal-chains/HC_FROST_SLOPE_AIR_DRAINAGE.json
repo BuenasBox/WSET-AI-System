@@ -1,0 +1,61 @@
+{
+  "node_type": "causal_chain",
+  "node_id": "HC_FROST_SLOPE_AIR_DRAINAGE",
+  "topic": "slope, cold-air drainage, and spring frost risk",
+  "trigger_keywords": [
+    "factor natural",
+    "riesgo de heladas primaverales",
+    "pendiente del terreno",
+    "topografia",
+    "aire frio",
+    "drenaje del aire frio",
+    "slope frost air drainage"
+  ],
+  "steps": [
+    {
+      "step": 1,
+      "label": "cause",
+      "text": "Cold air forms on clear spring nights and moves downslope because it is denser than warm air."
+    },
+    {
+      "step": 2,
+      "label": "mechanism",
+      "text": "Slopes allow cold air to drain away, whereas valleys and depressions collect it around the vines."
+    },
+    {
+      "step": 3,
+      "label": "effect",
+      "text": "Slope and topography strongly influence frost exposure; well-drained slopes are usually less vulnerable than low-lying sites."
+    },
+    {
+      "step": 4,
+      "label": "exam_formulation",
+      "text": "Formative causal formulation: Slope and topography strongly influence frost exposure; well-drained slopes are usually less vulnerable than low-lying sites."
+    }
+  ],
+  "agent_corpus": "tutor",
+  "safe_for_examiner": false,
+  "examiner_scoring_allowed": false,
+  "requires_human_review": true,
+  "source": "heuristic",
+  "classification": "inferred",
+  "official": false,
+  "formative_only": true,
+  "official_mark_scheme": false,
+  "governance": {
+    "safe_for_examiner": false,
+    "examiner_scoring_allowed": false,
+    "agent_corpus": "tutor",
+    "source": "heuristic",
+    "classification": "inferred",
+    "official": false,
+    "formative_only": true
+  },
+  "_meta": {
+    "schema_version": "causal_chain_v1",
+    "heuristic_extension": "HC_v1",
+    "created_date": "2026-06-12",
+    "ingestion_status": "draft",
+    "source_note": "Inferred formative model - not official WSET assessment or mark-scheme content"
+  }
+}

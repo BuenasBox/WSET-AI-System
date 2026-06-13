@@ -1,0 +1,63 @@
+{
+  "node_type": "causal_chain",
+  "node_id": "HC_FOOD_SWEETNESS_WINE_CONTRAST",
+  "topic": "sweet food and wine sensory contrast",
+  "trigger_keywords": [
+    "dulzor en la comida sobre el vino",
+    "vino se perciba más amargo, ácido y menos frutal",
+    "impacto del azúcar en los alimentos sobre la percepción del vino",
+    "vino parezca más amargo y ácido",
+    "comida puede aumentar la percepción de acidez en un vino",
+    "comida dulce",
+    "alimento dulce sobre un vino seco",
+    "vino se perciba más ácido y amargo",
+    "sweet food wine contrast"
+  ],
+  "steps": [
+    {
+      "step": 1,
+      "label": "cause",
+      "text": "The food is sweeter than the wine served with it."
+    },
+    {
+      "step": 2,
+      "label": "mechanism",
+      "text": "The food's sweetness creates a contrast that lowers the wine's perceived sweetness and fruit while exposing its acid and bitter components."
+    },
+    {
+      "step": 3,
+      "label": "effect",
+      "text": "The wine can seem drier, more acidic, more bitter, and less fruity, especially when the wine itself is dry."
+    },
+    {
+      "step": 4,
+      "label": "exam_formulation",
+      "text": "Formative causal formulation: The wine can seem drier, more acidic, more bitter, and less fruity, especially when the wine itself is dry."
+    }
+  ],
+  "agent_corpus": "tutor",
+  "safe_for_examiner": false,
+  "examiner_scoring_allowed": false,
+  "requires_human_review": true,
+  "source": "heuristic",
+  "classification": "inferred",
+  "official": false,
+  "formative_only": true,
+  "official_mark_scheme": false,
+  "governance": {
+    "safe_for_examiner": false,
+    "examiner_scoring_allowed": false,
+    "agent_corpus": "tutor",
+    "source": "heuristic",
+    "classification": "inferred",
+    "official": false,
+    "formative_only": true
+  },
+  "_meta": {
+    "schema_version": "causal_chain_v1",
+    "heuristic_extension": "HC_v1",
+    "created_date": "2026-06-12",
+    "ingestion_status": "draft",
+    "source_note": "Inferred formative model - not official WSET assessment or mark-scheme content"
+  }
+}

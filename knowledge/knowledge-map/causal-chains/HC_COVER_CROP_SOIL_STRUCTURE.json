@@ -1,0 +1,59 @@
+{
+  "node_type": "causal_chain",
+  "node_id": "HC_COVER_CROP_SOIL_STRUCTURE",
+  "topic": "cover crops and soil compaction",
+  "trigger_keywords": [
+    "uso de cubiertas vegetales",
+    "cubiertas vegetales entre hileras",
+    "reducir la compactación del suelo",
+    "cover crops soil structure",
+    "cover crop roots compaction"
+  ],
+  "steps": [
+    {
+      "step": 1,
+      "label": "cause",
+      "text": "Cover crops grow between vineyard rows instead of leaving the inter-row soil bare."
+    },
+    {
+      "step": 2,
+      "label": "mechanism",
+      "text": "Their roots create channels and add organic matter, while surface vegetation cushions rainfall and some traffic pressure."
+    },
+    {
+      "step": 3,
+      "label": "effect",
+      "text": "Soil aggregation and porosity can improve, reducing compaction when the cover crop and vineyard traffic are managed appropriately."
+    },
+    {
+      "step": 4,
+      "label": "exam_formulation",
+      "text": "Formative causal formulation: Managed cover crops can reduce compaction by improving soil structure, organic matter, and pore space."
+    }
+  ],
+  "agent_corpus": "tutor",
+  "safe_for_examiner": false,
+  "examiner_scoring_allowed": false,
+  "requires_human_review": true,
+  "source": "heuristic",
+  "classification": "inferred",
+  "official": false,
+  "formative_only": true,
+  "official_mark_scheme": false,
+  "governance": {
+    "safe_for_examiner": false,
+    "examiner_scoring_allowed": false,
+    "agent_corpus": "tutor",
+    "source": "heuristic",
+    "classification": "inferred",
+    "official": false,
+    "formative_only": true
+  },
+  "_meta": {
+    "schema_version": "causal_chain_v1",
+    "heuristic_extension": "HC_v1",
+    "created_date": "2026-06-12",
+    "ingestion_status": "draft",
+    "source_note": "Inferred formative model - not official WSET assessment or mark-scheme content"
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "node_type": "causal_chain",
+  "node_id": "HC_LOW_VIGOUR_ROOTSTOCK_CONTROL",
+  "topic": "low-vigour rootstocks and vine growth control",
+  "trigger_keywords": [
+    "controlar el vigor de la vid sin disminuir el rendimiento",
+    "uso de portainjertos de bajo vigor",
+    "low vigour rootstock control",
+    "schema metadata trigger HC_LOW_VIGOUR_ROOTSTOCK_CONTROL 3",
+    "schema metadata trigger HC_LOW_VIGOUR_ROOTSTOCK_CONTROL 4"
+  ],
+  "steps": [
+    {
+      "step": 1,
+      "label": "cause",
+      "text": "The grape variety is grafted onto a rootstock selected for low or moderate vigour."
+    },
+    {
+      "step": 2,
+      "label": "mechanism",
+      "text": "The root system limits vegetative growth relative to a high-vigour rootstock while maintaining an appropriate crop under suitable conditions."
+    },
+    {
+      "step": 3,
+      "label": "effect",
+      "text": "Canopy growth is easier to control without using crop removal as the primary tool."
+    },
+    {
+      "step": 4,
+      "label": "exam_formulation",
+      "text": "Formative causal formulation: Canopy growth is easier to control without using crop removal as the primary tool."
+    }
+  ],
+  "agent_corpus": "tutor",
+  "safe_for_examiner": false,
+  "examiner_scoring_allowed": false,
+  "requires_human_review": true,
+  "source": "heuristic",
+  "classification": "inferred",
+  "official": false,
+  "formative_only": true,
+  "official_mark_scheme": false,
+  "governance": {
+    "safe_for_examiner": false,
+    "examiner_scoring_allowed": false,
+    "agent_corpus": "tutor",
+    "source": "heuristic",
+    "classification": "inferred",
+    "official": false,
+    "formative_only": true
+  },
+  "_meta": {
+    "schema_version": "causal_chain_v1",
+    "heuristic_extension": "HC_v1",
+    "created_date": "2026-06-12",
+    "ingestion_status": "draft",
+    "source_note": "Inferred formative model - not official WSET assessment or mark-scheme content"
+  }
+}

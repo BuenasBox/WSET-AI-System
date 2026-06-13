@@ -1,0 +1,59 @@
+{
+  "node_type": "causal_chain",
+  "node_id": "HC_AERATION_YOUNG_STRUCTURED_WINE",
+  "topic": "aeration of young structured red wine",
+  "trigger_keywords": [
+    "vino joven con alto contenido fenólico al ser aireado",
+    "mayor expresión aromática",
+    "vinos jóvenes con alta estructura tánica",
+    "aireación vigorosa",
+    "young structured wine aeration"
+  ],
+  "steps": [
+    {
+      "step": 1,
+      "label": "cause",
+      "text": "A young, phenolic, tightly aromatic red wine is exposed deliberately to air before service."
+    },
+    {
+      "step": 2,
+      "label": "mechanism",
+      "text": "Mixing with air increases the release of volatile compounds and can dissipate some closed or reductive characters; it does not instantly remove tannin."
+    },
+    {
+      "step": 3,
+      "label": "effect",
+      "text": "The wine can show greater aromatic expression and seem more open, while its underlying tannic structure remains."
+    },
+    {
+      "step": 4,
+      "label": "exam_formulation",
+      "text": "Formative causal formulation: Vigorous aeration can open a young structured wine aromatically without instantly eliminating its tannins."
+    }
+  ],
+  "agent_corpus": "tutor",
+  "safe_for_examiner": false,
+  "examiner_scoring_allowed": false,
+  "requires_human_review": true,
+  "source": "heuristic",
+  "classification": "inferred",
+  "official": false,
+  "formative_only": true,
+  "official_mark_scheme": false,
+  "governance": {
+    "safe_for_examiner": false,
+    "examiner_scoring_allowed": false,
+    "agent_corpus": "tutor",
+    "source": "heuristic",
+    "classification": "inferred",
+    "official": false,
+    "formative_only": true
+  },
+  "_meta": {
+    "schema_version": "causal_chain_v1",
+    "heuristic_extension": "HC_v1",
+    "created_date": "2026-06-12",
+    "ingestion_status": "draft",
+    "source_note": "Inferred formative model - not official WSET assessment or mark-scheme content"
+  }
+}

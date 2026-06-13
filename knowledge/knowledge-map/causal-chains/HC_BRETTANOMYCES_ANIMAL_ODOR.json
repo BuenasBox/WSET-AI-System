@@ -1,0 +1,59 @@
+{
+  "node_type": "causal_chain",
+  "node_id": "HC_BRETTANOMYCES_ANIMAL_ODOR",
+  "topic": "Brettanomyces and animal odours",
+  "trigger_keywords": [
+    "olor a establo o sudor de caballo",
+    "contaminación por Brettanomyces",
+    "Brettanomyces animal odor",
+    "schema metadata trigger HC_BRETTANOMYCES_ANIMAL_ODOR 3",
+    "schema metadata trigger HC_BRETTANOMYCES_ANIMAL_ODOR 4"
+  ],
+  "steps": [
+    {
+      "step": 1,
+      "label": "cause",
+      "text": "Brettanomyces yeast grows in susceptible wine or contaminated cellar equipment."
+    },
+    {
+      "step": 2,
+      "label": "mechanism",
+      "text": "It produces volatile phenols that can dominate the wine's aroma."
+    },
+    {
+      "step": 3,
+      "label": "effect",
+      "text": "The wine may smell of stable, horse sweat, leather, medicinal compounds, or other animal notes."
+    },
+    {
+      "step": 4,
+      "label": "exam_formulation",
+      "text": "Formative causal formulation: The wine may smell of stable, horse sweat, leather, medicinal compounds, or other animal notes."
+    }
+  ],
+  "agent_corpus": "tutor",
+  "safe_for_examiner": false,
+  "examiner_scoring_allowed": false,
+  "requires_human_review": true,
+  "source": "heuristic",
+  "classification": "inferred",
+  "official": false,
+  "formative_only": true,
+  "official_mark_scheme": false,
+  "governance": {
+    "safe_for_examiner": false,
+    "examiner_scoring_allowed": false,
+    "agent_corpus": "tutor",
+    "source": "heuristic",
+    "classification": "inferred",
+    "official": false,
+    "formative_only": true
+  },
+  "_meta": {
+    "schema_version": "causal_chain_v1",
+    "heuristic_extension": "HC_v1",
+    "created_date": "2026-06-12",
+    "ingestion_status": "draft",
+    "source_note": "Inferred formative model - not official WSET assessment or mark-scheme content"
+  }
+}

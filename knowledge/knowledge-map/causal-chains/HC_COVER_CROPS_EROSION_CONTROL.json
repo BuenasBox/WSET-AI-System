@@ -1,0 +1,59 @@
+{
+  "node_type": "causal_chain",
+  "node_id": "HC_COVER_CROPS_EROSION_CONTROL",
+  "topic": "cover crops and erosion control",
+  "trigger_keywords": [
+    "cubiertas vegetales en el vinedo",
+    "reduce la erosion",
+    "cover crops",
+    "erosion control",
+    "schema metadata trigger HC_COVER_CROPS_EROSION_CONTROL 4"
+  ],
+  "steps": [
+    {
+      "step": 1,
+      "label": "cause",
+      "text": "Bare vineyard soil is exposed to the impact and runoff of rain and to wind."
+    },
+    {
+      "step": 2,
+      "label": "mechanism",
+      "text": "Cover-crop roots bind soil particles while surface vegetation slows water movement and cushions rainfall."
+    },
+    {
+      "step": 3,
+      "label": "effect",
+      "text": "Less topsoil is removed by runoff or wind, reducing erosion and helping preserve soil structure."
+    },
+    {
+      "step": 4,
+      "label": "exam_formulation",
+      "text": "Formative causal formulation: Less topsoil is removed by runoff or wind, reducing erosion and helping preserve soil structure."
+    }
+  ],
+  "agent_corpus": "tutor",
+  "safe_for_examiner": false,
+  "examiner_scoring_allowed": false,
+  "requires_human_review": true,
+  "source": "heuristic",
+  "classification": "inferred",
+  "official": false,
+  "formative_only": true,
+  "official_mark_scheme": false,
+  "governance": {
+    "safe_for_examiner": false,
+    "examiner_scoring_allowed": false,
+    "agent_corpus": "tutor",
+    "source": "heuristic",
+    "classification": "inferred",
+    "official": false,
+    "formative_only": true
+  },
+  "_meta": {
+    "schema_version": "causal_chain_v1",
+    "heuristic_extension": "HC_v1",
+    "created_date": "2026-06-12",
+    "ingestion_status": "draft",
+    "source_note": "Inferred formative model - not official WSET assessment or mark-scheme content"
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "node_type": "causal_chain",
+  "node_id": "HC_REFERMENTATION_UNEXPECTED_BUBBLES",
+  "topic": "microbial refermentation and unexpected bubbles",
+  "trigger_keywords": [
+    "burbujas inesperadas en un vino tranquilo embotellado",
+    "contaminación microbiológica",
+    "unexpected bubbles still wine",
+    "schema metadata trigger HC_REFERMENTATION_UNEXPECTED_BUBBLES 3",
+    "schema metadata trigger HC_REFERMENTATION_UNEXPECTED_BUBBLES 4"
+  ],
+  "steps": [
+    {
+      "step": 1,
+      "label": "cause",
+      "text": "Viable yeast or bacteria remain in a bottled still wine containing fermentable substrate."
+    },
+    {
+      "step": 2,
+      "label": "mechanism",
+      "text": "Microorganisms resume activity in bottle and produce carbon dioxide that cannot escape."
+    },
+    {
+      "step": 3,
+      "label": "effect",
+      "text": "Unexpected bubbles, pressure, haze, sediment, or off-aromas can appear in a wine intended to be still."
+    },
+    {
+      "step": 4,
+      "label": "exam_formulation",
+      "text": "Formative causal formulation: Unexpected bubbles, pressure, haze, sediment, or off-aromas can appear in a wine intended to be still."
+    }
+  ],
+  "agent_corpus": "tutor",
+  "safe_for_examiner": false,
+  "examiner_scoring_allowed": false,
+  "requires_human_review": true,
+  "source": "heuristic",
+  "classification": "inferred",
+  "official": false,
+  "formative_only": true,
+  "official_mark_scheme": false,
+  "governance": {
+    "safe_for_examiner": false,
+    "examiner_scoring_allowed": false,
+    "agent_corpus": "tutor",
+    "source": "heuristic",
+    "classification": "inferred",
+    "official": false,
+    "formative_only": true
+  },
+  "_meta": {
+    "schema_version": "causal_chain_v1",
+    "heuristic_extension": "HC_v1",
+    "created_date": "2026-06-12",
+    "ingestion_status": "draft",
+    "source_note": "Inferred formative model - not official WSET assessment or mark-scheme content"
+  }
+}

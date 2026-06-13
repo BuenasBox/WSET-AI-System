@@ -1,0 +1,64 @@
+{
+  "node_type": "causal_chain",
+  "node_id": "HC_WHITE_LEES_TEXTURE_COMPLEXITY",
+  "topic": "white wine lees ageing, texture, and complexity",
+  "trigger_keywords": [
+    "crianza sobre lias en vinos blancos",
+    "envejecimiento en lias",
+    "uso de lias en vinos blancos",
+    "uso prolongado de lias",
+    "mayor textura y complejidad",
+    "mayor cuerpo",
+    "aporta cremosidad y complejidad",
+    "incrementa la textura cremosa",
+    "white wine lees ageing",
+    "lees contact texture"
+  ],
+  "steps": [
+    {
+      "step": 1,
+      "label": "cause",
+      "text": "A white wine remains in contact with fine lees after fermentation."
+    },
+    {
+      "step": 2,
+      "label": "mechanism",
+      "text": "As yeast cells break down, autolysis releases mannoproteins, polysaccharides, and flavour-active compounds into the wine."
+    },
+    {
+      "step": 3,
+      "label": "effect",
+      "text": "The wine develops greater body, a creamier texture, and additional aromatic and flavour complexity."
+    },
+    {
+      "step": 4,
+      "label": "exam_formulation",
+      "text": "Formative causal formulation: The wine develops greater body, a creamier texture, and additional aromatic and flavour complexity."
+    }
+  ],
+  "agent_corpus": "tutor",
+  "safe_for_examiner": false,
+  "examiner_scoring_allowed": false,
+  "requires_human_review": true,
+  "source": "heuristic",
+  "classification": "inferred",
+  "official": false,
+  "formative_only": true,
+  "official_mark_scheme": false,
+  "governance": {
+    "safe_for_examiner": false,
+    "examiner_scoring_allowed": false,
+    "agent_corpus": "tutor",
+    "source": "heuristic",
+    "classification": "inferred",
+    "official": false,
+    "formative_only": true
+  },
+  "_meta": {
+    "schema_version": "causal_chain_v1",
+    "heuristic_extension": "HC_v1",
+    "created_date": "2026-06-12",
+    "ingestion_status": "draft",
+    "source_note": "Inferred formative model - not official WSET assessment or mark-scheme content"
+  }
+}

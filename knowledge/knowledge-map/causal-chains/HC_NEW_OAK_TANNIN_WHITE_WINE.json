@@ -1,0 +1,59 @@
+{
+  "node_type": "causal_chain",
+  "node_id": "HC_NEW_OAK_TANNIN_WHITE_WINE",
+  "topic": "new oak and tannin contribution to white wine",
+  "trigger_keywords": [
+    "afirmaciones sobre la crianza en barrica nueva",
+    "barricas nuevas pueden aportar taninos adicionales a los vinos blancos",
+    "new oak tannin white wine",
+    "wood tannin extraction",
+    "new barrel phenolic contribution"
+  ],
+  "steps": [
+    {
+      "step": 1,
+      "label": "cause",
+      "text": "A white wine ferments or matures in a new oak barrel."
+    },
+    {
+      "step": 2,
+      "label": "mechanism",
+      "text": "Because the wood has not been depleted by previous use, oak-derived tannins and other phenolic compounds can dissolve into the wine."
+    },
+    {
+      "step": 3,
+      "label": "effect",
+      "text": "The white wine can gain additional phenolic structure and tannin alongside oak aromas; the amount depends on barrel and contact conditions."
+    },
+    {
+      "step": 4,
+      "label": "exam_formulation",
+      "text": "Formative causal formulation: New oak can contribute wood-derived tannins to white wine through extraction during contact."
+    }
+  ],
+  "agent_corpus": "tutor",
+  "safe_for_examiner": false,
+  "examiner_scoring_allowed": false,
+  "requires_human_review": true,
+  "source": "heuristic",
+  "classification": "inferred",
+  "official": false,
+  "formative_only": true,
+  "official_mark_scheme": false,
+  "governance": {
+    "safe_for_examiner": false,
+    "examiner_scoring_allowed": false,
+    "agent_corpus": "tutor",
+    "source": "heuristic",
+    "classification": "inferred",
+    "official": false,
+    "formative_only": true
+  },
+  "_meta": {
+    "schema_version": "causal_chain_v1",
+    "heuristic_extension": "HC_v1",
+    "created_date": "2026-06-12",
+    "ingestion_status": "draft",
+    "source_note": "Inferred formative model - not official WSET assessment or mark-scheme content"
+  }
+}

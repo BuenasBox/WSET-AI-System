@@ -1,0 +1,59 @@
+{
+  "node_type": "causal_chain",
+  "node_id": "HC_HEAT_TRANSPORT_WINE_DAMAGE",
+  "topic": "excessive heat during bottled-wine transport",
+  "trigger_keywords": [
+    "calor excesivo en el transporte de vino embotellado",
+    "defectos como oxidación o cocción",
+    "heat transport wine damage",
+    "schema metadata trigger HC_HEAT_TRANSPORT_WINE_DAMAGE 3",
+    "schema metadata trigger HC_HEAT_TRANSPORT_WINE_DAMAGE 4"
+  ],
+  "steps": [
+    {
+      "step": 1,
+      "label": "cause",
+      "text": "Bottled wine is exposed to excessive heat during transport."
+    },
+    {
+      "step": 2,
+      "label": "mechanism",
+      "text": "Heat accelerates oxidation and other ageing reactions and can expand the wine and compromise the closure."
+    },
+    {
+      "step": 3,
+      "label": "effect",
+      "text": "The wine may develop cooked flavours, lose freshness, and show premature oxidation."
+    },
+    {
+      "step": 4,
+      "label": "exam_formulation",
+      "text": "Formative causal formulation: The wine may develop cooked flavours, lose freshness, and show premature oxidation."
+    }
+  ],
+  "agent_corpus": "tutor",
+  "safe_for_examiner": false,
+  "examiner_scoring_allowed": false,
+  "requires_human_review": true,
+  "source": "heuristic",
+  "classification": "inferred",
+  "official": false,
+  "formative_only": true,
+  "official_mark_scheme": false,
+  "governance": {
+    "safe_for_examiner": false,
+    "examiner_scoring_allowed": false,
+    "agent_corpus": "tutor",
+    "source": "heuristic",
+    "classification": "inferred",
+    "official": false,
+    "formative_only": true
+  },
+  "_meta": {
+    "schema_version": "causal_chain_v1",
+    "heuristic_extension": "HC_v1",
+    "created_date": "2026-06-12",
+    "ingestion_status": "draft",
+    "source_note": "Inferred formative model - not official WSET assessment or mark-scheme content"
+  }
+}

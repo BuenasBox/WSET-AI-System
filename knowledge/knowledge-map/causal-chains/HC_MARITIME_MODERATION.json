@@ -39,6 +39,11 @@
       "step": 3,
       "label": "effect",
       "text": "Wines from maritime climates tend to show a moderate, even ripeness with retained acidity and elegance; the longer, gentler season favours balanced styles, while vintage rainfall around flowering or harvest is a key risk."
+    },
+    {
+      "step": 4,
+      "label": "exam_formulation",
+      "text": "Formative causal formulation: Wines from maritime climates tend to show a moderate, even ripeness with retained acidity and elegance; the longer, gentler season favours balanced styles, while vintage rainfall around flowering or harvest is a key risk."
     }
   ],
   "linked_topics": [

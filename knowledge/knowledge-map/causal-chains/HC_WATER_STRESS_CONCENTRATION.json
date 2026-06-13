@@ -39,6 +39,11 @@
       "step": 3,
       "label": "effect",
       "text": "Mild water stress tends to produce smaller berries with greater concentration of flavour, colour and tannin and higher quality potential; excessive irrigation or rainfall dilutes these and can reduce quality."
+    },
+    {
+      "step": 4,
+      "label": "exam_formulation",
+      "text": "Formative causal formulation: Mild water stress tends to produce smaller berries with greater concentration of flavour, colour and tannin and higher quality potential; excessive irrigation or rainfall dilutes these and can reduce quality."
     }
   ],
   "linked_topics": [

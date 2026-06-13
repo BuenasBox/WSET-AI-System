@@ -1,0 +1,59 @@
+{
+  "node_type": "causal_chain",
+  "node_id": "HC_BRUT_NATURE_NO_DOSAGE",
+  "topic": "Brut Nature and no added dosage",
+  "trigger_keywords": [
+    "termino brut nature",
+    "sin adicion de licor de expedicion",
+    "brut nature",
+    "zero dosage",
+    "no added dosage"
+  ],
+  "steps": [
+    {
+      "step": 1,
+      "label": "cause",
+      "text": "After disgorgement, the producer chooses not to add sugar in the liqueur d'expedition."
+    },
+    {
+      "step": 2,
+      "label": "mechanism",
+      "text": "Without dosage, the final sweetness is not increased; only naturally remaining residual sugar contributes to the measured level."
+    },
+    {
+      "step": 3,
+      "label": "effect",
+      "text": "The wine may be labelled Brut Nature or Zero Dosage when it meets the applicable residual-sugar limit, typically 0-3 g/L."
+    },
+    {
+      "step": 4,
+      "label": "exam_formulation",
+      "text": "Formative causal formulation: The wine may be labelled Brut Nature or Zero Dosage when it meets the applicable residual-sugar limit, typically 0-3 g/L."
+    }
+  ],
+  "agent_corpus": "tutor",
+  "safe_for_examiner": false,
+  "examiner_scoring_allowed": false,
+  "requires_human_review": true,
+  "source": "heuristic",
+  "classification": "inferred",
+  "official": false,
+  "formative_only": true,
+  "official_mark_scheme": false,
+  "governance": {
+    "safe_for_examiner": false,
+    "examiner_scoring_allowed": false,
+    "agent_corpus": "tutor",
+    "source": "heuristic",
+    "classification": "inferred",
+    "official": false,
+    "formative_only": true
+  },
+  "_meta": {
+    "schema_version": "causal_chain_v1",
+    "heuristic_extension": "HC_v1",
+    "created_date": "2026-06-12",
+    "ingestion_status": "draft",
+    "source_note": "Inferred formative model - not official WSET assessment or mark-scheme content"
+  }
+}

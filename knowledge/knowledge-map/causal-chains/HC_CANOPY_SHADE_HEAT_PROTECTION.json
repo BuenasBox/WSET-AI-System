@@ -1,0 +1,59 @@
+{
+  "node_type": "causal_chain",
+  "node_id": "HC_CANOPY_SHADE_HEAT_PROTECTION",
+  "topic": "canopy shade and heat protection",
+  "trigger_keywords": [
+    "clima excesivamente caluroso",
+    "cobertura vegetal alta",
+    "canopy shade heat",
+    "protect grapes from sunburn",
+    "schema metadata trigger HC_CANOPY_SHADE_HEAT_PROTECTION 4"
+  ],
+  "steps": [
+    {
+      "step": 1,
+      "label": "cause",
+      "text": "Grapes in a very hot climate risk excessive solar exposure, sunburn, and rapid loss of acidity."
+    },
+    {
+      "step": 2,
+      "label": "mechanism",
+      "text": "Retaining sufficient canopy provides shade and lowers the temperature of exposed bunches during the hottest part of the day."
+    },
+    {
+      "step": 3,
+      "label": "effect",
+      "text": "The fruit is better protected from heat damage and can retain more freshness, although excessive shade would hinder ripening."
+    },
+    {
+      "step": 4,
+      "label": "exam_formulation",
+      "text": "Formative causal formulation: The fruit is better protected from heat damage and can retain more freshness, although excessive shade would hinder ripening."
+    }
+  ],
+  "agent_corpus": "tutor",
+  "safe_for_examiner": false,
+  "examiner_scoring_allowed": false,
+  "requires_human_review": true,
+  "source": "heuristic",
+  "classification": "inferred",
+  "official": false,
+  "formative_only": true,
+  "official_mark_scheme": false,
+  "governance": {
+    "safe_for_examiner": false,
+    "examiner_scoring_allowed": false,
+    "agent_corpus": "tutor",
+    "source": "heuristic",
+    "classification": "inferred",
+    "official": false,
+    "formative_only": true
+  },
+  "_meta": {
+    "schema_version": "causal_chain_v1",
+    "heuristic_extension": "HC_v1",
+    "created_date": "2026-06-12",
+    "ingestion_status": "draft",
+    "source_note": "Inferred formative model - not official WSET assessment or mark-scheme content"
+  }
+}

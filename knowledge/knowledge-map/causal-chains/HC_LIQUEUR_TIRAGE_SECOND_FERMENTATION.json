@@ -1,0 +1,59 @@
+{
+  "node_type": "causal_chain",
+  "node_id": "HC_LIQUEUR_TIRAGE_SECOND_FERMENTATION",
+  "topic": "liqueur de tirage and secondary fermentation",
+  "trigger_keywords": [
+    "proposito del licor de tiraje",
+    "licor de tiraje",
+    "iniciar segunda fermentacion",
+    "liqueur de tirage",
+    "start secondary fermentation"
+  ],
+  "steps": [
+    {
+      "step": 1,
+      "label": "cause",
+      "text": "A measured mixture of wine, sugar, yeast, yeast nutrients, and a clarifying agent is added to the base-wine blend."
+    },
+    {
+      "step": 2,
+      "label": "mechanism",
+      "text": "The added yeast ferments the added sugar in the sealed bottle, producing alcohol and carbon dioxide."
+    },
+    {
+      "step": 3,
+      "label": "effect",
+      "text": "The second fermentation raises alcohol slightly and traps dissolved carbon dioxide, creating pressure and sparkle."
+    },
+    {
+      "step": 4,
+      "label": "exam_formulation",
+      "text": "Formative causal formulation: The second fermentation raises alcohol slightly and traps dissolved carbon dioxide, creating pressure and sparkle."
+    }
+  ],
+  "agent_corpus": "tutor",
+  "safe_for_examiner": false,
+  "examiner_scoring_allowed": false,
+  "requires_human_review": true,
+  "source": "heuristic",
+  "classification": "inferred",
+  "official": false,
+  "formative_only": true,
+  "official_mark_scheme": false,
+  "governance": {
+    "safe_for_examiner": false,
+    "examiner_scoring_allowed": false,
+    "agent_corpus": "tutor",
+    "source": "heuristic",
+    "classification": "inferred",
+    "official": false,
+    "formative_only": true
+  },
+  "_meta": {
+    "schema_version": "causal_chain_v1",
+    "heuristic_extension": "HC_v1",
+    "created_date": "2026-06-12",
+    "ingestion_status": "draft",
+    "source_note": "Inferred formative model - not official WSET assessment or mark-scheme content"
+  }
+}

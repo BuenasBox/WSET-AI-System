@@ -1,0 +1,59 @@
+{
+  "node_type": "causal_chain",
+  "node_id": "HC_MICROOXYGENATION_TANNIN_SOFTENING",
+  "topic": "microoxygenation and tannin integration",
+  "trigger_keywords": [
+    "técnica puede utilizarse para reducir la intensidad tánica en vinos tintos",
+    "microoxigenación",
+    "controlled oxygen tannin polymerisation",
+    "microoxygenation tannin integration",
+    "soften red wine tannins"
+  ],
+  "steps": [
+    {
+      "step": 1,
+      "label": "cause",
+      "text": "A red wine receives small, controlled doses of oxygen during maturation."
+    },
+    {
+      "step": 2,
+      "label": "mechanism",
+      "text": "Controlled oxygen supports reactions between tannins, pigments, and other phenolic compounds, encouraging polymerisation and integration."
+    },
+    {
+      "step": 3,
+      "label": "effect",
+      "text": "Tannins can feel less aggressive and more integrated even though the wine retains phenolic structure."
+    },
+    {
+      "step": 4,
+      "label": "exam_formulation",
+      "text": "Formative causal formulation: Controlled microoxygenation can soften perceived tannin intensity by promoting phenolic polymerisation and integration."
+    }
+  ],
+  "agent_corpus": "tutor",
+  "safe_for_examiner": false,
+  "examiner_scoring_allowed": false,
+  "requires_human_review": true,
+  "source": "heuristic",
+  "classification": "inferred",
+  "official": false,
+  "formative_only": true,
+  "official_mark_scheme": false,
+  "governance": {
+    "safe_for_examiner": false,
+    "examiner_scoring_allowed": false,
+    "agent_corpus": "tutor",
+    "source": "heuristic",
+    "classification": "inferred",
+    "official": false,
+    "formative_only": true
+  },
+  "_meta": {
+    "schema_version": "causal_chain_v1",
+    "heuristic_extension": "HC_v1",
+    "created_date": "2026-06-12",
+    "ingestion_status": "draft",
+    "source_note": "Inferred formative model - not official WSET assessment or mark-scheme content"
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "node_type": "causal_chain",
+  "node_id": "HC_FREQUENT_RACKING_OXYGEN",
+  "topic": "frequent racking and oxygen exposure",
+  "trigger_keywords": [
+    "trasiego frecuente durante la crianza",
+    "mayor exposición al oxígeno",
+    "frequent racking oxygen",
+    "racking during maturation",
+    "schema metadata trigger HC_FREQUENT_RACKING_OXYGEN 4"
+  ],
+  "steps": [
+    {
+      "step": 1,
+      "label": "cause",
+      "text": "Wine is transferred from one vessel to another repeatedly during maturation."
+    },
+    {
+      "step": 2,
+      "label": "mechanism",
+      "text": "Each transfer can mix a controlled amount of air into the wine while also separating it from deposited sediment."
+    },
+    {
+      "step": 3,
+      "label": "effect",
+      "text": "More frequent racking increases cumulative oxygen exposure and can accelerate oxidative development if not carefully controlled."
+    },
+    {
+      "step": 4,
+      "label": "exam_formulation",
+      "text": "Formative causal formulation: More frequent racking increases cumulative oxygen exposure and can accelerate oxidative development if not carefully controlled."
+    }
+  ],
+  "agent_corpus": "tutor",
+  "safe_for_examiner": false,
+  "examiner_scoring_allowed": false,
+  "requires_human_review": true,
+  "source": "heuristic",
+  "classification": "inferred",
+  "official": false,
+  "formative_only": true,
+  "official_mark_scheme": false,
+  "governance": {
+    "safe_for_examiner": false,
+    "examiner_scoring_allowed": false,
+    "agent_corpus": "tutor",
+    "source": "heuristic",
+    "classification": "inferred",
+    "official": false,
+    "formative_only": true
+  },
+  "_meta": {
+    "schema_version": "causal_chain_v1",
+    "heuristic_extension": "HC_v1",
+    "created_date": "2026-06-12",
+    "ingestion_status": "draft",
+    "source_note": "Inferred formative model - not official WSET assessment or mark-scheme content"
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "node_type": "causal_chain",
+  "node_id": "HC_COOL_SPARKLING_BASE_ACIDITY",
+  "topic": "cool growing conditions and sparkling base-wine acidity",
+  "trigger_keywords": [
+    "calidad de un espumoso de clima frío",
+    "alta acidez y lenta maduración",
+    "alta acidez en los espumosos del norte de Italia",
+    "altitud y clima fresco",
+    "clima favorece la producción de vinos base para espumosos de alta calidad",
+    "fresco y continental",
+    "cool sparkling base acidity"
+  ],
+  "steps": [
+    {
+      "step": 1,
+      "label": "cause",
+      "text": "Grapes for sparkling base wine grow in a cool climate or at a cool high-altitude site."
+    },
+    {
+      "step": 2,
+      "label": "mechanism",
+      "text": "Cool temperatures slow sugar accumulation and preserve natural acidity during ripening."
+    },
+    {
+      "step": 3,
+      "label": "effect",
+      "text": "The base wine can combine high acidity, moderate alcohol, and fresh flavours suited to secondary fermentation and lees ageing."
+    },
+    {
+      "step": 4,
+      "label": "exam_formulation",
+      "text": "Formative causal formulation: The base wine can combine high acidity, moderate alcohol, and fresh flavours suited to secondary fermentation and lees ageing."
+    }
+  ],
+  "agent_corpus": "tutor",
+  "safe_for_examiner": false,
+  "examiner_scoring_allowed": false,
+  "requires_human_review": true,
+  "source": "heuristic",
+  "classification": "inferred",
+  "official": false,
+  "formative_only": true,
+  "official_mark_scheme": false,
+  "governance": {
+    "safe_for_examiner": false,
+    "examiner_scoring_allowed": false,
+    "agent_corpus": "tutor",
+    "source": "heuristic",
+    "classification": "inferred",
+    "official": false,
+    "formative_only": true
+  },
+  "_meta": {
+    "schema_version": "causal_chain_v1",
+    "heuristic_extension": "HC_v1",
+    "created_date": "2026-06-12",
+    "ingestion_status": "draft",
+    "source_note": "Inferred formative model - not official WSET assessment or mark-scheme content"
+  }
+}

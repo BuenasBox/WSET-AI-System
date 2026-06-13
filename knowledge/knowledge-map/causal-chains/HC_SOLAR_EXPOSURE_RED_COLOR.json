@@ -1,0 +1,59 @@
+{
+  "node_type": "causal_chain",
+  "node_id": "HC_SOLAR_EXPOSURE_RED_COLOR",
+  "topic": "solar exposure and red-grape colour development",
+  "trigger_keywords": [
+    "clima influye directamente en la acumulación de color en uvas tintas",
+    "exposición solar",
+    "solar exposure red grape color",
+    "schema metadata trigger HC_SOLAR_EXPOSURE_RED_COLOR 3",
+    "schema metadata trigger HC_SOLAR_EXPOSURE_RED_COLOR 4"
+  ],
+  "steps": [
+    {
+      "step": 1,
+      "label": "cause",
+      "text": "Red grape bunches receive suitable sunlight exposure during ripening."
+    },
+    {
+      "step": 2,
+      "label": "mechanism",
+      "text": "Light supports anthocyanin synthesis and skin maturation, provided exposure is not so extreme that heat or sunburn causes degradation."
+    },
+    {
+      "step": 3,
+      "label": "effect",
+      "text": "Colour accumulation in the skins can increase and support deeper colour in the resulting red wine."
+    },
+    {
+      "step": 4,
+      "label": "exam_formulation",
+      "text": "Formative causal formulation: Colour accumulation in the skins can increase and support deeper colour in the resulting red wine."
+    }
+  ],
+  "agent_corpus": "tutor",
+  "safe_for_examiner": false,
+  "examiner_scoring_allowed": false,
+  "requires_human_review": true,
+  "source": "heuristic",
+  "classification": "inferred",
+  "official": false,
+  "formative_only": true,
+  "official_mark_scheme": false,
+  "governance": {
+    "safe_for_examiner": false,
+    "examiner_scoring_allowed": false,
+    "agent_corpus": "tutor",
+    "source": "heuristic",
+    "classification": "inferred",
+    "official": false,
+    "formative_only": true
+  },
+  "_meta": {
+    "schema_version": "causal_chain_v1",
+    "heuristic_extension": "HC_v1",
+    "created_date": "2026-06-12",
+    "ingestion_status": "draft",
+    "source_note": "Inferred formative model - not official WSET assessment or mark-scheme content"
+  }
+}

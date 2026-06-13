@@ -1,0 +1,59 @@
+{
+  "node_type": "causal_chain",
+  "node_id": "HC_HUMID_HARVEST_DILUTION",
+  "topic": "wet harvest conditions and grape dilution",
+  "trigger_keywords": [
+    "climas húmedos durante la cosecha",
+    "dilución de azúcares y acidez",
+    "wet harvest dilution",
+    "rain near harvest",
+    "schema metadata trigger HC_HUMID_HARVEST_DILUTION 4"
+  ],
+  "steps": [
+    {
+      "step": 1,
+      "label": "cause",
+      "text": "Substantial rain or persistently wet conditions occur close to harvest."
+    },
+    {
+      "step": 2,
+      "label": "mechanism",
+      "text": "Berries can absorb water and swell, increasing juice volume relative to dissolved sugars, acids, and flavour compounds."
+    },
+    {
+      "step": 3,
+      "label": "effect",
+      "text": "Grape components may be diluted, reducing sugar and acid concentration and potentially weakening flavour intensity; disease pressure also rises."
+    },
+    {
+      "step": 4,
+      "label": "exam_formulation",
+      "text": "Formative causal formulation: Grape components may be diluted, reducing sugar and acid concentration and potentially weakening flavour intensity; disease pressure also rises."
+    }
+  ],
+  "agent_corpus": "tutor",
+  "safe_for_examiner": false,
+  "examiner_scoring_allowed": false,
+  "requires_human_review": true,
+  "source": "heuristic",
+  "classification": "inferred",
+  "official": false,
+  "formative_only": true,
+  "official_mark_scheme": false,
+  "governance": {
+    "safe_for_examiner": false,
+    "examiner_scoring_allowed": false,
+    "agent_corpus": "tutor",
+    "source": "heuristic",
+    "classification": "inferred",
+    "official": false,
+    "formative_only": true
+  },
+  "_meta": {
+    "schema_version": "causal_chain_v1",
+    "heuristic_extension": "HC_v1",
+    "created_date": "2026-06-12",
+    "ingestion_status": "draft",
+    "source_note": "Inferred formative model - not official WSET assessment or mark-scheme content"
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "node_type": "causal_chain",
+  "node_id": "HC_HARVEST_COOLING_AROMA_PROTECTION",
+  "topic": "post-harvest grape cooling and volatile aroma protection",
+  "trigger_keywords": [
+    "enfriamiento de la vendimia",
+    "enfriar la uva tras la cosecha",
+    "conservar los aromas primarios volátiles",
+    "post-harvest grape cooling",
+    "harvest cooling aroma protection"
+  ],
+  "steps": [
+    {
+      "step": 1,
+      "label": "cause",
+      "text": "Warm grapes are cooled promptly after harvest and before processing."
+    },
+    {
+      "step": 2,
+      "label": "mechanism",
+      "text": "Lower temperature slows oxidation, microbial activity, and the loss or transformation of volatile aroma compounds."
+    },
+    {
+      "step": 3,
+      "label": "effect",
+      "text": "More primary volatile aromas can be retained for the intended fermentation and wine style."
+    },
+    {
+      "step": 4,
+      "label": "exam_formulation",
+      "text": "Formative causal formulation: Prompt cooling after harvest protects volatile primary aromas by slowing oxidation and biological activity."
+    }
+  ],
+  "agent_corpus": "tutor",
+  "safe_for_examiner": false,
+  "examiner_scoring_allowed": false,
+  "requires_human_review": true,
+  "source": "heuristic",
+  "classification": "inferred",
+  "official": false,
+  "formative_only": true,
+  "official_mark_scheme": false,
+  "governance": {
+    "safe_for_examiner": false,
+    "examiner_scoring_allowed": false,
+    "agent_corpus": "tutor",
+    "source": "heuristic",
+    "classification": "inferred",
+    "official": false,
+    "formative_only": true
+  },
+  "_meta": {
+    "schema_version": "causal_chain_v1",
+    "heuristic_extension": "HC_v1",
+    "created_date": "2026-06-12",
+    "ingestion_status": "draft",
+    "source_note": "Inferred formative model - not official WSET assessment or mark-scheme content"
+  }
+}

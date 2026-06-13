@@ -1,0 +1,59 @@
+{
+  "node_type": "causal_chain",
+  "node_id": "HC_PRESSURE_MOUSSE_INTENSITY",
+  "topic": "sparkling wine pressure and mousse intensity",
+  "trigger_keywords": [
+    "presion menor a 3 atmosferas",
+    "burbuja mas suave",
+    "sparkling pressure",
+    "softer mousse",
+    "schema metadata trigger HC_PRESSURE_MOUSSE_INTENSITY 4"
+  ],
+  "steps": [
+    {
+      "step": 1,
+      "label": "cause",
+      "text": "A sparkling wine contains less dissolved carbon dioxide and develops pressure below approximately three atmospheres."
+    },
+    {
+      "step": 2,
+      "label": "mechanism",
+      "text": "Lower pressure provides less force for carbon dioxide to leave solution when the bottle is opened and the wine is poured."
+    },
+    {
+      "step": 3,
+      "label": "effect",
+      "text": "Effervescence feels gentler and the mousse is softer than in a wine at the five-to-six-atmosphere pressure typical of Champagne."
+    },
+    {
+      "step": 4,
+      "label": "exam_formulation",
+      "text": "Formative causal formulation: Effervescence feels gentler and the mousse is softer than in a wine at the five-to-six-atmosphere pressure typical of Champagne."
+    }
+  ],
+  "agent_corpus": "tutor",
+  "safe_for_examiner": false,
+  "examiner_scoring_allowed": false,
+  "requires_human_review": true,
+  "source": "heuristic",
+  "classification": "inferred",
+  "official": false,
+  "formative_only": true,
+  "official_mark_scheme": false,
+  "governance": {
+    "safe_for_examiner": false,
+    "examiner_scoring_allowed": false,
+    "agent_corpus": "tutor",
+    "source": "heuristic",
+    "classification": "inferred",
+    "official": false,
+    "formative_only": true
+  },
+  "_meta": {
+    "schema_version": "causal_chain_v1",
+    "heuristic_extension": "HC_v1",
+    "created_date": "2026-06-12",
+    "ingestion_status": "draft",
+    "source_note": "Inferred formative model - not official WSET assessment or mark-scheme content"
+  }
+}

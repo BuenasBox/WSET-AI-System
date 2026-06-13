@@ -1,0 +1,61 @@
+{
+  "node_type": "causal_chain",
+  "node_id": "HC_REDUCTION_SULFUR_ODORS",
+  "topic": "reduction and sulfur odours",
+  "trigger_keywords": [
+    "aroma a col hervida o huevo podrido",
+    "reducción",
+    "qué causa los aromas de reducción en vinos tintos",
+    "deficiencia de nitrógeno",
+    "reduction sulfur odors",
+    "schema metadata trigger HC_REDUCTION_SULFUR_ODORS 3",
+    "schema metadata trigger HC_REDUCTION_SULFUR_ODORS 4"
+  ],
+  "steps": [
+    {
+      "step": 1,
+      "label": "cause",
+      "text": "Wine develops under very low oxygen conditions, or yeast becomes stressed during fermentation, for example when yeast-assimilable nitrogen is insufficient."
+    },
+    {
+      "step": 2,
+      "label": "mechanism",
+      "text": "Stressed yeast can produce hydrogen sulfide, while low-oxygen conditions can allow volatile sulfur compounds to persist or accumulate."
+    },
+    {
+      "step": 3,
+      "label": "effect",
+      "text": "The wine can smell of rotten egg, cooked cabbage, rubber, or struck match, depending on the compound."
+    },
+    {
+      "step": 4,
+      "label": "exam_formulation",
+      "text": "Formative causal formulation: The wine can smell of rotten egg, cooked cabbage, rubber, or struck match, depending on the compound."
+    }
+  ],
+  "agent_corpus": "tutor",
+  "safe_for_examiner": false,
+  "examiner_scoring_allowed": false,
+  "requires_human_review": true,
+  "source": "heuristic",
+  "classification": "inferred",
+  "official": false,
+  "formative_only": true,
+  "official_mark_scheme": false,
+  "governance": {
+    "safe_for_examiner": false,
+    "examiner_scoring_allowed": false,
+    "agent_corpus": "tutor",
+    "source": "heuristic",
+    "classification": "inferred",
+    "official": false,
+    "formative_only": true
+  },
+  "_meta": {
+    "schema_version": "causal_chain_v1",
+    "heuristic_extension": "HC_v1",
+    "created_date": "2026-06-12",
+    "ingestion_status": "draft",
+    "source_note": "Inferred formative model - not official WSET assessment or mark-scheme content"
+  }
+}

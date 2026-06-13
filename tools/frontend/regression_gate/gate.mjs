@@ -117,7 +117,14 @@ if(want('G5'))try{
     const qid=await p.evaluate(()=>currentQ().id); seen.push(qid);
     await p.evaluate(()=>{goToRead();goToCommit();selectOption(0);selectConf('seguro');commitAnswer();}); await sleep(700);
     await p.evaluate(()=>confirmCross()); await sleep(200);
-    await p.evaluate(()=>goToTrain()); await sleep(250);
+    await p.evaluate(()=>{
+      goToTrain();
+      if(STATE.stage==='train' && currentQ().micro_drill){
+        selectDrillOption(0);
+        submitDrill();
+        nextQuestion();
+      }
+    }); await sleep(250);
   }
   const st=await p.evaluate(()=>({stage:STATE.stage, n:STATE.attempts.length}));
   if(st.stage!=='map'){ok=false;msg.push('did not reach map: '+st.stage);}
@@ -151,7 +158,10 @@ if(want('G6'))try{
 /* G7 — no placebo panels */
 if(want('G7'))try{
   await fresh(p,'/diagnostic-sba/');
-  await p.evaluate(()=>startMode('quick_drill'));
+  await p.evaluate(()=>{
+    const it=PREGUNTAS_BANK.items.find(i=>!i.causal_chain&&!i.feedback_by_mode&&!i.micro_drill);
+    QUESTIONS=[bankToQ(it)]; STATE.questionIndex=0; STATE.stage='prepare'; render();
+  });
   await p.evaluate(()=>{goToRead();goToCommit();selectOption(0);selectConf('seguro');commitAnswer();}); await sleep(700);
   await p.evaluate(()=>confirmCross()); await sleep(200);
   const r=await p.evaluate(()=>({

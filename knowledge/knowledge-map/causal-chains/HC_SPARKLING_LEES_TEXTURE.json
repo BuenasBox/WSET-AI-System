@@ -1,0 +1,60 @@
+{
+  "node_type": "causal_chain",
+  "node_id": "HC_SPARKLING_LEES_TEXTURE",
+  "topic": "extended sparkling wine lees ageing and texture",
+  "trigger_keywords": [
+    "periodo largo de crianza sobre lias",
+    "crianza sobre lias en un vino espumoso",
+    "textura cremosa",
+    "notas de levadura",
+    "lees ageing sparkling",
+    "creamy texture sparkling"
+  ],
+  "steps": [
+    {
+      "step": 1,
+      "label": "cause",
+      "text": "A traditional-method sparkling wine spends a prolonged period in contact with the lees from its secondary fermentation."
+    },
+    {
+      "step": 2,
+      "label": "mechanism",
+      "text": "Autolysis releases mannoproteins and polysaccharides that increase palate weight and help stabilise the carbon dioxide bubbles, while other yeast compounds add aroma."
+    },
+    {
+      "step": 3,
+      "label": "effect",
+      "text": "The sparkling wine gains a creamier texture, finer and more persistent mousse, and greater complexity with yeast-derived notes."
+    },
+    {
+      "step": 4,
+      "label": "exam_formulation",
+      "text": "Formative causal formulation: The sparkling wine gains a creamier texture, finer and more persistent mousse, and greater complexity with yeast-derived notes."
+    }
+  ],
+  "agent_corpus": "tutor",
+  "safe_for_examiner": false,
+  "examiner_scoring_allowed": false,
+  "requires_human_review": true,
+  "source": "heuristic",
+  "classification": "inferred",
+  "official": false,
+  "formative_only": true,
+  "official_mark_scheme": false,
+  "governance": {
+    "safe_for_examiner": false,
+    "examiner_scoring_allowed": false,
+    "agent_corpus": "tutor",
+    "source": "heuristic",
+    "classification": "inferred",
+    "official": false,
+    "formative_only": true
+  },
+  "_meta": {
+    "schema_version": "causal_chain_v1",
+    "heuristic_extension": "HC_v1",
+    "created_date": "2026-06-12",
+    "ingestion_status": "draft",
+    "source_note": "Inferred formative model - not official WSET assessment or mark-scheme content"
+  }
+}

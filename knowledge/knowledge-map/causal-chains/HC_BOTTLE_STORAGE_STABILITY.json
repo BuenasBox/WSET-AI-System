@@ -1,0 +1,70 @@
+{
+  "node_type": "causal_chain",
+  "node_id": "HC_BOTTLE_STORAGE_STABILITY",
+  "topic": "stable storage conditions for bottle ageing",
+  "trigger_keywords": [
+    "almacenar botellas de vino tinto con corcho natural",
+    "envejecimiento adecuado de vinos finos embotellados",
+    "proteger vinos de calidad durante su almacenamiento a largo plazo",
+    "temperatura estable, oscuridad y humedad moderada",
+    "objetivo clave de la conservación del vino en bodegas comerciales",
+    "minimizar la evaporación y evolución prematura",
+    "temperatura recomendada para almacenar vinos de guarda a largo plazo",
+    "10–15 °C",
+    "buena práctica para almacenar vinos a largo plazo",
+    "ambiente oscuro y fresco con humedad controlada",
+    "deterioro del vino por mala conservación",
+    "pérdida de aromas primarios y color apagado",
+    "posicion horizontal",
+    "ambiente fresco y oscuro",
+    "temperatura constante",
+    "stable bottle storage"
+  ],
+  "steps": [
+    {
+      "step": 1,
+      "label": "cause",
+      "text": "A bottled wine is stored for an extended period before service."
+    },
+    {
+      "step": 2,
+      "label": "mechanism",
+      "text": "A cool, dark, vibration-free environment with a stable temperature slows chemical change; when the wine has a natural cork, horizontal storage keeps the wine in contact with it."
+    },
+    {
+      "step": 3,
+      "label": "effect",
+      "text": "Premature oxidation and heat damage are less likely, allowing bottle development to proceed more slowly and consistently."
+    },
+    {
+      "step": 4,
+      "label": "exam_formulation",
+      "text": "Formative causal formulation: Premature oxidation and heat damage are less likely, allowing bottle development to proceed more slowly and consistently."
+    }
+  ],
+  "agent_corpus": "tutor",
+  "safe_for_examiner": false,
+  "examiner_scoring_allowed": false,
+  "requires_human_review": true,
+  "source": "heuristic",
+  "classification": "inferred",
+  "official": false,
+  "formative_only": true,
+  "official_mark_scheme": false,
+  "governance": {
+    "safe_for_examiner": false,
+    "examiner_scoring_allowed": false,
+    "agent_corpus": "tutor",
+    "source": "heuristic",
+    "classification": "inferred",
+    "official": false,
+    "formative_only": true
+  },
+  "_meta": {
+    "schema_version": "causal_chain_v1",
+    "heuristic_extension": "HC_v1",
+    "created_date": "2026-06-12",
+    "ingestion_status": "draft",
+    "source_note": "Inferred formative model - not official WSET assessment or mark-scheme content"
+  }
+}

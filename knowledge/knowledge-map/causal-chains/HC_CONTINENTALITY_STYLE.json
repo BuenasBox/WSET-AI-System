@@ -37,6 +37,11 @@
       "step": 3,
       "label": "effect",
       "text": "Wines from continental climates typically show high acidity, firm tannic structure in reds, and pronounced vintage-to-vintage variation because the marginal season makes ripeness sensitive to the year's weather."
+    },
+    {
+      "step": 4,
+      "label": "exam_formulation",
+      "text": "Formative causal formulation: Wines from continental climates typically show high acidity, firm tannic structure in reds, and pronounced vintage-to-vintage variation because the marginal season makes ripeness sensitive to the year's weather."
     }
   ],
   "linked_topics": [

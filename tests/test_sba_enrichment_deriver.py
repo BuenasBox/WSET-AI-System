@@ -7,6 +7,7 @@ import re
 import unittest
 
 from tools.question_generation.sba_enrichment_deriver import (
+    BATCH_SIZE,
     GENERIC_TRIGGERS,
     MIN_KEYWORD_HITS,
     NODE_ES,
@@ -93,7 +94,7 @@ class StrongSignalContractTests(unittest.TestCase):
             self.assertIn(rec["_provenance"]["causal_chain"]["derived_from"], NODE_ES)
 
     def test_batch_is_small_and_bounded(self):
-        self.assertLessEqual(len(self.records), 50)
+        self.assertLessEqual(len(self.records), BATCH_SIZE)
         self.assertGreater(len(self.records), 0)
 
 

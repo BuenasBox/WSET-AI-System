@@ -1,0 +1,63 @@
+{
+  "node_type": "causal_chain",
+  "node_id": "HC_RED_WINE_AGEABILITY_STRUCTURE",
+  "topic": "red wine structure and ageing capacity",
+  "trigger_keywords": [
+    "porto vintage",
+    "vinos de porto vintage",
+    "grand cru classe del medoc",
+    "estructura potente",
+    "necesidad de guarda",
+    "estructura potente y necesidad de guarda",
+    "taninos firmes",
+    "capacidad de envejecimiento",
+    "structured red ageability"
+  ],
+  "steps": [
+    {
+      "step": 1,
+      "label": "cause",
+      "text": "A concentrated red wine begins with substantial tannin, acidity, fruit concentration, and, in fortified styles, alcohol and sugar."
+    },
+    {
+      "step": 2,
+      "label": "mechanism",
+      "text": "Acidity and other stable components slow deterioration while tannins polymerise and the concentrated flavour profile develops over time."
+    },
+    {
+      "step": 3,
+      "label": "effect",
+      "text": "The wine has the structural capacity for extended ageing, during which tannins can integrate and tertiary complexity can emerge; structure enables ageing but does not guarantee improvement under poor storage."
+    },
+    {
+      "step": 4,
+      "label": "exam_formulation",
+      "text": "Formative causal formulation: The wine has the structural capacity for extended ageing, during which tannins can integrate and tertiary complexity can emerge; structure enables ageing but does not guarantee improvement under poor storage."
+    }
+  ],
+  "agent_corpus": "tutor",
+  "safe_for_examiner": false,
+  "examiner_scoring_allowed": false,
+  "requires_human_review": true,
+  "source": "heuristic",
+  "classification": "inferred",
+  "official": false,
+  "formative_only": true,
+  "official_mark_scheme": false,
+  "governance": {
+    "safe_for_examiner": false,
+    "examiner_scoring_allowed": false,
+    "agent_corpus": "tutor",
+    "source": "heuristic",
+    "classification": "inferred",
+    "official": false,
+    "formative_only": true
+  },
+  "_meta": {
+    "schema_version": "causal_chain_v1",
+    "heuristic_extension": "HC_v1",
+    "created_date": "2026-06-12",
+    "ingestion_status": "draft",
+    "source_note": "Inferred formative model - not official WSET assessment or mark-scheme content"
+  }
+}

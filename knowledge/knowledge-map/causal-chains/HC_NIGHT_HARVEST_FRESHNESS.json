@@ -1,0 +1,61 @@
+{
+  "node_type": "causal_chain",
+  "node_id": "HC_NIGHT_HARVEST_FRESHNESS",
+  "topic": "night harvesting and grape freshness in warm climates",
+  "trigger_keywords": [
+    "vendimia nocturna en zonas cálidas",
+    "vendimia nocturna en climas cálidos",
+    "afirmaciones sobre la cosecha nocturna",
+    "cosechar de noche reduce la temperatura de la uva y disminuye el riesgo de oxidación",
+    "conserva frescura y compuestos aromáticos",
+    "preservar aromas y acidez",
+    "night harvest warm climate"
+  ],
+  "steps": [
+    {
+      "step": 1,
+      "label": "cause",
+      "text": "Grapes in a warm climate are harvested during the cooler night rather than after daytime heating."
+    },
+    {
+      "step": 2,
+      "label": "mechanism",
+      "text": "Cooler fruit arrives at the winery with less heat-driven oxidation and volatilisation, and requires less rapid chilling before processing."
+    },
+    {
+      "step": 3,
+      "label": "effect",
+      "text": "Fresh aromas and the acidity already present in the grapes are better preserved; night harvesting does not itself create additional acidity."
+    },
+    {
+      "step": 4,
+      "label": "exam_formulation",
+      "text": "Formative causal formulation: Fresh aromas and the acidity already present in the grapes are better preserved; night harvesting does not itself create additional acidity."
+    }
+  ],
+  "agent_corpus": "tutor",
+  "safe_for_examiner": false,
+  "examiner_scoring_allowed": false,
+  "requires_human_review": true,
+  "source": "heuristic",
+  "classification": "inferred",
+  "official": false,
+  "formative_only": true,
+  "official_mark_scheme": false,
+  "governance": {
+    "safe_for_examiner": false,
+    "examiner_scoring_allowed": false,
+    "agent_corpus": "tutor",
+    "source": "heuristic",
+    "classification": "inferred",
+    "official": false,
+    "formative_only": true
+  },
+  "_meta": {
+    "schema_version": "causal_chain_v1",
+    "heuristic_extension": "HC_v1",
+    "created_date": "2026-06-12",
+    "ingestion_status": "draft",
+    "source_note": "Inferred formative model - not official WSET assessment or mark-scheme content"
+  }
+}
