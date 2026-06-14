@@ -268,13 +268,16 @@ def _build_assessment_intelligence() -> dict[str, Any]:
         return {}
 
 
-def _render_item(candidate: Mapping[str, Any]) -> dict[str, str]:
+def _render_item(candidate: Mapping[str, Any]) -> dict[str, Any]:
     return {
         "item_id": _item_id(candidate.get("source_question_id")),
         "source_question_id": str(candidate.get("source_question_id", "")).strip(),
         "stem": str(candidate.get("stem", "")).strip(),
         "topic": str(candidate.get("topic", "")).strip(),
         "RA": str(candidate.get("RA", "")).strip(),
+        "command_verb": str(candidate.get("command_verb", "")).strip(),
+        "expected_concepts": _string_list(candidate.get("expected_concepts")),
+        "evaluation_config": candidate.get("evaluation_config", {}),
     }
 
 
