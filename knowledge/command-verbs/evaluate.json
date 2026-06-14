@@ -16,5 +16,16 @@
     "Evaluate the factors that contribute to the high price of Grand Cru Burgundy.",
     "Evaluate the impact of climate change on wine production in a region of your choice."
   ],
-  "mentor_hint": "Think of 'evaluate' as 'explain + judge': explain the key factors, then state which you consider most significant and why."
+  "mentor_hint": "Think of 'evaluate' as 'explain + judge': explain the key factors, then state which you consider most significant and why.",
+  "compliance_checks": {
+    "required_signals": ["because", "therefore", "significant", "important", "factor", "contributes"],
+    "forbidden_signals": ["opinion", "I think", "probably"],
+    "structure_rules": {
+      "minimum_components": 3,
+      "component_order": ["factor1", "factor2", "synthesis"],
+      "elaboration_required": true,
+      "multiple_factors_required": true,
+      "synthesis_required": true
+    }
+  }
 }

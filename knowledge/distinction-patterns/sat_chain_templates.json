@@ -1,0 +1,343 @@
+{
+  "schema_version": "sat_distinction_v1",
+  "description": "Universal SAT (Systematic Approach to Tasting) structure templates for distinction-chain evaluation",
+  "governance": {
+    "safe_for_examiner": false,
+    "examiner_scoring_allowed": false,
+    "formative_only": true,
+    "source": "WSET Level 3 SAT Framework"
+  },
+  "sat_sections": {
+    "appearance": {
+      "section_name": "Appearance",
+      "required": true,
+      "order": 1,
+      "assessment_dimensions": ["color", "clarity", "viscosity", "effervescence"],
+      "color_descriptors_primary": [
+        "pale gold", "straw yellow", "golden", "pale amber", "amber",
+        "pale red", "ruby red", "garnet", "brown", "pale pink", "salmon", "onion skin"
+      ],
+      "clarity_descriptors": [
+        "crystal clear", "bright", "clear", "slightly hazy", "hazy", "opaque"
+      ],
+      "viscosity_indicators": [
+        "thin", "light-bodied viscosity", "medium viscosity", "thick", "viscous"
+      ],
+      "quality_signals": [
+        "bright colors indicate freshness",
+        "clarity indicates proper handling",
+        "viscosity correlates with alcohol and extract"
+      ]
+    },
+
+    "nose": {
+      "section_name": "Nose",
+      "required": true,
+      "order": 2,
+      "assessment_dimensions": ["intensity", "character", "development"],
+      "intensity_scale": [
+        "closed", "restrained", "moderate", "pronounced", "very pronounced", "powerful"
+      ],
+      "descriptor_categories": {
+        "primary": {
+          "description": "Grape variety and fermentation aromas (fresh fruit, flowers, spice)",
+          "examples": [
+            "citrus", "stone fruits", "orchard fruits", "red fruits", "dark fruits",
+            "floral", "herbaceous", "spicy", "vegetal"
+          ]
+        },
+        "secondary": {
+          "description": "Winemaking and aging aromas (oak, yeast, butter, toast)",
+          "examples": [
+            "oak vanilla", "toast", "buttery", "creamy", "nutty", "mushroom",
+            "leather", "coffee", "chocolate"
+          ]
+        },
+        "tertiary": {
+          "description": "Oxidative and bottle-age aromas (leather, tobacco, dried fruits, honey)",
+          "examples": [
+            "dried fruits", "prune", "raisin", "tobacco", "leather", "honey",
+            "mushroom", "truffle", "earthy"
+          ]
+        }
+      },
+      "quality_signals": [
+        "clean nose indicates good winemaking",
+        "aromatic intensity suggests ripeness and fruit quality",
+        "absence of faults is essential",
+        "balance of primary, secondary, tertiary indicates complexity and age-ability"
+      ]
+    },
+
+    "palate": {
+      "section_name": "Palate",
+      "required": true,
+      "order": 3,
+      "assessment_dimensions": ["sweetness", "acidity", "tannin", "alcohol", "body", "flavor", "length"],
+      "sweetness_scale": [
+        "bone-dry (0g/L)", "dry (0-4g/L)", "off-dry (4-12g/L)", "medium-sweet (12-45g/L)", "sweet (45+g/L)"
+      ],
+      "acidity_assessment": {
+        "scale": ["lacking", "low", "balanced", "crisp", "pronounced", "excessive"],
+        "quality_indicators": [
+          "balanced acidity enhances freshness",
+          "high acidity in cool climate wines indicates authenticity",
+          "low acidity in white wines suggests poor vintage or over-ripeness"
+        ]
+      },
+      "tannin_assessment": {
+        "scale": ["absent/low", "moderate", "firm", "structured", "powerful", "harsh"],
+        "quality_indicators": [
+          "ripe tannins indicate proper ripeness",
+          "firm structure suggests aging potential",
+          "harsh tannins indicate under-ripeness or poor extraction"
+        ]
+      },
+      "alcohol_assessment": {
+        "scale": ["low (<11%)", "medium (11-13%)", "high (13-14.5%)", "very high (14.5%+)"],
+        "balance_factor": "alcohol should be in balance with fruit, acid, and tannin"
+      },
+      "body_assessment": {
+        "scale": ["light", "light-medium", "medium", "medium-full", "full"],
+        "correlation": "determined by alcohol, tannin, and extract"
+      },
+      "flavor_assessment": {
+        "dimensions": ["intensity", "character", "complexity"],
+        "intensity_scale": ["subtle", "moderate", "pronounced", "powerful"],
+        "quality_signals": [
+          "fruit-driven flavors indicate freshness and quality",
+          "integrated secondary flavors suggest good winemaking",
+          "complexity indicates quality and potential"
+        ]
+      },
+      "finish_assessment": {
+        "scale": ["short", "medium", "long", "very long"],
+        "quality_correlation": "longer finish indicates higher quality and aging potential"
+      }
+    },
+
+    "quality": {
+      "section_name": "Quality",
+      "required": true,
+      "order": 4,
+      "assessment_type": "judgement with evidence",
+      "quality_levels": {
+        "outstanding": {
+          "score": 5,
+          "descriptor": "Outstanding",
+          "definition": "Exceptional wine showing excellent concentration, complexity, and balance",
+          "evidence_requirements": [
+            "Excellent expression of terroir",
+            "Flawless balance across all dimensions",
+            "Complex, layered flavors",
+            "Significant aging potential",
+            "Professional winemaking evident"
+          ]
+        },
+        "excellent": {
+          "score": 4,
+          "descriptor": "Excellent",
+          "definition": "High-quality wine with strong concentration and complexity",
+          "evidence_requirements": [
+            "Good expression of variety/terroir",
+            "Well-balanced structure",
+            "Good complexity",
+            "Reasonable aging potential",
+            "Well-executed winemaking"
+          ]
+        },
+        "very_good": {
+          "score": 3,
+          "descriptor": "Very Good",
+          "definition": "Good quality wine, well-made, pleasant to drink",
+          "evidence_requirements": [
+            "Clear varietal character",
+            "Good balance",
+            "Some complexity",
+            "Some aging potential",
+            "Good winemaking technique"
+          ]
+        },
+        "good": {
+          "score": 2,
+          "descriptor": "Good",
+          "definition": "Decent, drinkable wine with basic quality",
+          "evidence_requirements": [
+            "Some varietal expression",
+            "Acceptable balance",
+            "Limited complexity",
+            "Short to medium term drinking",
+            "Competent winemaking"
+          ]
+        },
+        "acceptable": {
+          "score": 1,
+          "descriptor": "Acceptable",
+          "definition": "Basic, drinkable wine",
+          "evidence_requirements": [
+            "Minimal varietal expression",
+            "Rough balance",
+            "Simple",
+            "Immediate drinking",
+            "Basic winemaking"
+          ]
+        }
+      },
+      "quality_reasoning_drivers": [
+        "expression of terroir",
+        "balance of component parts",
+        "complexity and layering",
+        "aging potential",
+        "technical execution"
+      ]
+    },
+
+    "readiness": {
+      "section_name": "Readiness (Aging Potential)",
+      "required": false,
+      "order": 5,
+      "description": "Assessment of how long the wine will age and develop",
+      "assessment_framework": {
+        "immediate": {
+          "description": "Drink within 1-2 years",
+          "indicators": [
+            "Light-bodied",
+            "Low tannin (if red)",
+            "Low acidity",
+            "High alcohol",
+            "Simple structure"
+          ]
+        },
+        "short_term": {
+          "description": "Drink within 3-5 years",
+          "indicators": [
+            "Medium structure",
+            "Moderate acidity/tannin balance",
+            "Reasonable concentration",
+            "Some complexity"
+          ]
+        },
+        "medium_term": {
+          "description": "Potential 5-10 years development",
+          "indicators": [
+            "Good acidity",
+            "Firm tannin structure (reds)",
+            "Good concentration",
+            "Complexity developing",
+            "Good balance"
+          ]
+        },
+        "long_term": {
+          "description": "Potential 10+ years or extended aging",
+          "indicators": [
+            "Excellent acidity balance",
+            "Strong, structured tannins (reds)",
+            "High concentration",
+            "Significant complexity",
+            "Perfect balance"
+          ]
+        }
+      },
+      "key_factors": [
+        "acidity level",
+        "tannin structure (reds)",
+        "alcohol content",
+        "extract/concentration",
+        "balance",
+        "terroir expression"
+      ]
+    }
+  },
+
+  "descriptor_categorization": {
+    "primary_descriptors": {
+      "category": "Primary aromas from grape variety and fermentation",
+      "types": [
+        "Fresh fruits (citrus, stone, orchard, berries)",
+        "Floral aromas",
+        "Herbaceous/vegetal notes",
+        "Spice aromas"
+      ],
+      "quality_indication": "Primary descriptors should dominate young wines and indicate variety authenticity"
+    },
+    "secondary_descriptors": {
+      "category": "Secondary aromas from malolactic fermentation and oak aging",
+      "types": [
+        "Oak-derived (vanilla, toast, smoke)",
+        "Fermentation-derived (butter, cream, yeast)",
+        "Aging-derived (leather, dried fruits, nuts)"
+      ],
+      "quality_indication": "Secondary descriptors in balance with primary indicate good winemaking"
+    },
+    "tertiary_descriptors": {
+      "category": "Tertiary aromas from bottle aging and oxidation",
+      "types": [
+        "Dried fruits and honey",
+        "Tobacco and leather",
+        "Earthy and truffle notes",
+        "Oxidative development"
+      ],
+      "quality_indication": "Tertiary descriptors in appropriate wines indicate potential for aging"
+    }
+  },
+
+  "evaluation_guidance": {
+    "completeness_checklist": [
+      "Appearance assessed with color, clarity, viscosity",
+      "Nose assessed with intensity and character",
+      "Palate assessed with acidity, tannin (if red), alcohol, body, flavor, finish",
+      "Quality assessment with evidence",
+      "Readiness assessment (especially for premium wines)"
+    ],
+    "distinction_indicators": [
+      "All five sections present and substantive",
+      "Quality assessment well-reasoned with specific evidence",
+      "Readiness assessment shows understanding of aging potential",
+      "Descriptor categorization (primary, secondary, tertiary) evident",
+      "Technical language used accurately",
+      "Structure shows logical progression"
+    ],
+    "common_issues_to_avoid": [
+      "Incomplete SAT sections (missing appearance, nose, or palate detail)",
+      "Generic quality statement without supporting evidence",
+      "Vague readiness assessment",
+      "Confusing varietal character with descriptor categorization",
+      "Over-emphasis on minor faults",
+      "Failure to balance positive and negative observations"
+    ]
+  },
+
+  "coaching_patterns": {
+    "appearance_coaching": {
+      "if_missing_color": "Describe what you see: is it pale, medium, or deep? What hue? (gold, amber, ruby, garnet)",
+      "if_missing_clarity": "Is the wine bright and clear, or hazy? Any suspended particles?",
+      "if_missing_viscosity": "Watch how the wine flows down the glass - is it thin or viscous?",
+      "if_superficial": "Move beyond just stating color - explain what color tells you about the wine"
+    },
+    "nose_coaching": {
+      "if_closed": "Sometimes young wines smell closed. Try warming the glass or giving it time",
+      "if_one_descriptor": "You identified one aroma. What else do you smell? Primary, secondary, or tertiary?",
+      "if_generic": "Instead of 'fruity', be specific: what kind of fruit? (citrus, stone, red, dark?)",
+      "if_missing_intensity": "Rate the intensity: closed, restrained, moderate, pronounced, or powerful?"
+    },
+    "palate_coaching": {
+      "if_missing_acidity": "Every wine has acidity. Is it sharp/crisp or soft/low?",
+      "if_missing_tannin": "For reds: are there tannins? Firm, ripe, harsh, or absent?",
+      "if_missing_body": "Consider alcohol level and weight on the palate. Light, medium, or full?",
+      "if_no_finish": "Swallow and see how long flavors persist. Short, medium, or long?",
+      "if_unbalanced_view": "Consider all dimensions together. Do they balance? Or is something dominating?"
+    },
+    "quality_coaching": {
+      "if_missing_evidence": "State your quality judgment, then explain what in the wine supports it",
+      "if_vague": "Instead of 'good', be specific: very good because of clear terroir expression",
+      "if_all_negative": "All wines have some merit. What works well? What needs improvement?",
+      "if_no_reasoning": "Quality is about balance and expression. What does this wine express well?"
+    },
+    "readiness_coaching": {
+      "if_missing": "Consider: acidity, tannin structure, alcohol, concentration. Can it age?",
+      "if_vague": "Not just 'can age' - estimate how long: 5 years, 10 years, 20+ years?",
+      "if_inconsistent": "If you said it's outstanding, why would it only age 2 years?",
+      "if_ignoring_key_factor": "You have good acidity - that suggests aging potential. Explain"
+    }
+  }
+}

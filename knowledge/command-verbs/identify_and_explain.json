@@ -1,0 +1,31 @@
+{
+  "schema_version": "assessment_intelligence_v1",
+  "verb": "identify and explain",
+  "source": "WSET L3 Specification + marking keys",
+  "governance": {"safe_for_examiner": false, "examiner_scoring_allowed": false, "uses_llm": false, "uses_api": false},
+  "cognitive_level": "recall + comprehension",
+  "definition": "Two-part task: (1) Name or spot the item/concept/characteristic, then (2) give reasons or explain its significance. Both parts are required.",
+  "used_in_ras": ["RA1", "RA2", "RA3"],
+  "expected_response": {
+    "format": "[Identified item/concept]: [Brief name] + [Explanation of why it matters or how it functions]",
+    "do": ["Clearly name what you are identifying", "Then explain its significance or function", "Use technical vocabulary"],
+    "do_not": ["Only name without explanation", "Only explain without clearly identifying first"]
+  },
+  "mark_expectation": "1 mark for correct identification; additional marks for quality of explanation",
+  "question_stem_examples": [
+    "Identify and explain the role of malolactic bacteria in winemaking.",
+    "Identify two characteristics of Riesling grapes and explain why each is relevant to wine style."
+  ],
+  "mentor_hint": "Split your answer: PART 1: 'This is [X]' (definition/identification). PART 2: 'It matters because...' or 'Its function is...'. Both parts must be clear.",
+  "compliance_checks": {
+    "required_signals": ["is", "called", "known as", "identified as"],
+    "required_in_part2": ["because", "therefore", "results in", "causes", "explains"],
+    "forbidden_signals": ["opinion", "I think"],
+    "structure_rules": {
+      "minimum_components": 2,
+      "component_order": ["identification", "explanation"],
+      "elaboration_required": true,
+      "two_part_structure": true
+    }
+  }
+}

@@ -16,5 +16,16 @@
     "Assess the quality of the wine based on your tasting notes.",
     "Assess the potential for ageing of this wine."
   ],
-  "mentor_hint": "Lead with your judgement ('This wine is of outstanding quality'), then immediately provide 3 or more specific observations that support it. Do not build up to the conclusion."
+  "mentor_hint": "Lead with your judgement ('This wine is of outstanding quality'), then immediately provide 3 or more specific observations that support it. Do not build up to the conclusion.",
+  "compliance_checks": {
+    "required_signals": ["quality", "outstanding", "excellent", "very good", "good", "acceptable"],
+    "forbidden_signals": ["opinion", "I like", "tastes nice"],
+    "structure_rules": {
+      "minimum_components": 2,
+      "component_order": ["judgement", "evidence"],
+      "elaboration_required": true,
+      "evidence_required": true,
+      "judgement_first": true
+    }
+  }
 }

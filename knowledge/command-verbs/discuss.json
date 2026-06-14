@@ -1,0 +1,30 @@
+{
+  "schema_version": "assessment_intelligence_v1",
+  "verb": "discuss",
+  "source": "WSET L3 Specification + marking keys",
+  "governance": {"safe_for_examiner": false, "examiner_scoring_allowed": false, "uses_llm": false, "uses_api": false},
+  "cognitive_level": "balanced analysis + synthesis",
+  "definition": "Examine or explore a topic from multiple perspectives. Implies consideration of more than one viewpoint or dimension.",
+  "used_in_ras": ["RA3", "RA4"],
+  "expected_response": {
+    "format": "Multiple perspectives or factors presented; may conclude with a synthesis or balanced summary",
+    "do": ["Present at least two perspectives or factors", "Support each with evidence", "Show relationships between perspectives"],
+    "do_not": ["Present only one viewpoint", "Give opinion without evidence for each perspective"]
+  },
+  "mark_expectation": "Higher-order marks; requires breadth of understanding across multiple dimensions",
+  "question_stem_examples": [
+    "Discuss the advantages and disadvantages of mechanical harvesting in quality-focused regions.",
+    "Discuss the role of terroir in explaining regional wine character."
+  ],
+  "mentor_hint": "Identify 2-3 perspectives ('On one hand... On the other hand...'). Support each with evidence. End with synthesis: 'The relative importance depends on...'",
+  "compliance_checks": {
+    "required_signals": ["on one hand", "on the other hand", "however", "alternatively", "in contrast", "while", "conversely"],
+    "forbidden_signals": ["this is the best", "definitely", "always", "never"],
+    "structure_rules": {
+      "minimum_components": 2,
+      "component_order": ["perspective1", "perspective2", "synthesis"],
+      "elaboration_required": true,
+      "perspectives_required": 2
+    }
+  }
+}

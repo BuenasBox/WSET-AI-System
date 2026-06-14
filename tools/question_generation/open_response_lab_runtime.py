@@ -49,6 +49,10 @@ VISIBLE_QUESTION_FIELDS: tuple[str, ...] = (
     "stem",
     "topic",
     "RA",
+    # Phase P2.3: Evaluation metadata (formative only, safe for learner exposure)
+    "command_verb",
+    "expected_concepts",
+    "evaluation_config",
 )
 
 FEEDBACK_FIELD_MAP: dict[str, str] = {

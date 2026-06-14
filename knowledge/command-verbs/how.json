@@ -1,0 +1,30 @@
+{
+  "schema_version": "assessment_intelligence_v1",
+  "verb": "how",
+  "source": "WSET L3 Specification + marking keys",
+  "governance": {"safe_for_examiner": false, "examiner_scoring_allowed": false, "uses_llm": false, "uses_api": false},
+  "cognitive_level": "procedural reasoning + mechanism",
+  "definition": "Explain the process or method by which something happens or is done. Focus on sequence and mechanism, not just cause.",
+  "used_in_ras": ["RA2", "RA3", "RA4"],
+  "expected_response": {
+    "format": "Step-by-step sequence of process; can be linear or branched",
+    "do": ["Describe each step in sequence", "Use process vocabulary (first, then, as, when)", "Explain the outcome of each step"],
+    "do_not": ["Skip steps or jump between non-sequential stages", "Just name the process without explaining stages"]
+  },
+  "mark_expectation": "1 mark per correctly sequenced step or stage",
+  "question_stem_examples": [
+    "How does malolactic fermentation reduce acidity in wine?",
+    "How does the solera system in Sherry production ensure consistency?"
+  ],
+  "mentor_hint": "Use sequence words: 'First... Then... Finally...' or 'As X happens, Y occurs because...' Map each step to its effect.",
+  "compliance_checks": {
+    "required_signals": ["first", "then", "next", "after", "during", "process", "stage", "step", "como"],
+    "forbidden_signals": ["opinion", "probably", "I think", "seems"],
+    "structure_rules": {
+      "minimum_components": 3,
+      "component_order": ["step1", "step2", "step3"],
+      "elaboration_required": false,
+      "sequence_required": true
+    }
+  }
+}

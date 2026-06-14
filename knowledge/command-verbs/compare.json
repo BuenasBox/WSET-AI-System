@@ -16,5 +16,16 @@
     "Compare the climate and wine styles of Chablis and Meursault.",
     "Compare the vinification of fino and oloroso Sherry."
   ],
-  "mentor_hint": "Organise by dimension: 'In terms of climate, X is [cool/warm] whereas Y is [cool/warm]...' — do not write an essay on X then an essay on Y."
+  "mentor_hint": "Organise by dimension: 'In terms of climate, X is [cool/warm] whereas Y is [cool/warm]...' — do not write an essay on X then an essay on Y.",
+  "compliance_checks": {
+    "required_signals": ["whereas", "while", "both", "similarly", "in contrast", "however"],
+    "forbidden_signals": ["more important", "better"],
+    "structure_rules": {
+      "minimum_components": 4,
+      "component_order": ["dimension1", "dimension2", "dimension3", "synthesis"],
+      "elaboration_required": true,
+      "both_items_required": true,
+      "similarities_and_differences": true
+    }
+  }
 }

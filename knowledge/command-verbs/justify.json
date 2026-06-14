@@ -16,5 +16,16 @@
     "Justify why Riesling is well suited to the cool climate of the Mosel.",
     "Justify the use of small oak barrels for ageing premium red Burgundy."
   ],
-  "mentor_hint": "Start by restating the position in one line, then give 3+ specific reasons. Each reason should connect directly to the claim."
+  "mentor_hint": "Start by restating the position in one line, then give 3+ specific reasons. Each reason should connect directly to the claim.",
+  "compliance_checks": {
+    "required_signals": ["because", "therefore", "due to", "since"],
+    "forbidden_signals": ["opinion", "I disagree"],
+    "structure_rules": {
+      "minimum_components": 2,
+      "component_order": ["position_restatement", "reason1", "reason2"],
+      "elaboration_required": true,
+      "evidence_required": true,
+      "minimum_reasons": 3
+    }
+  }
 }

@@ -1,0 +1,30 @@
+{
+  "schema_version": "assessment_intelligence_v1",
+  "verb": "outline",
+  "source": "WSET L3 Specification + marking keys",
+  "governance": {"safe_for_examiner": false, "examiner_scoring_allowed": false, "uses_llm": false, "uses_api": false},
+  "cognitive_level": "synthesis + organization",
+  "definition": "Give a brief summary of the main points or structure of a topic. No detailed elaboration required.",
+  "used_in_ras": ["RA2", "RA3"],
+  "expected_response": {
+    "format": "Hierarchical main points; each point stated briefly without extensive explanation",
+    "do": ["Identify the main points", "Show how they are related or structured", "Be concise"],
+    "do_not": ["Elaborate extensively on each point", "Include minor or tangential details"]
+  },
+  "mark_expectation": "1 mark per main point identified; brief supporting detail acceptable",
+  "question_stem_examples": [
+    "Outline the main stages of red wine production from grape to bottle.",
+    "Outline the factors that influence wine price in Bordeaux."
+  ],
+  "mentor_hint": "Use bullet points or numbered steps. Each point should be 1-2 lines maximum. Think 'skeleton' not 'full essay'.",
+  "compliance_checks": {
+    "required_signals": ["main", "key", "primary", "stage", "step", "factor"],
+    "forbidden_signals": [],
+    "structure_rules": {
+      "minimum_components": 3,
+      "component_order": ["point1", "point2", "point3"],
+      "elaboration_required": false,
+      "brief_format_required": true
+    }
+  }
+}

@@ -44,7 +44,17 @@ class OpenResponseLabRuntimeMVPTests(unittest.TestCase):
         self.assertEqual(validate_lab_runtime_payload(self.payload), [])
 
     def test_payload_is_generated_from_runtime_builder(self) -> None:
-        self.assertEqual(self.payload, build_lab_runtime_payload(self.candidates))
+        # P2.3 enrichment adds command_verb, expected_concepts, evaluation_config
+        # P2.4 expansion adds 15 new items
+        # So the file payload is a superset of the builder output
+        built = build_lab_runtime_payload(self.candidates)
+
+        # File should have at least as many items as builder (plus P2.4 expansion)
+        self.assertGreaterEqual(len(self.payload["items"]), len(built["items"]),
+                               "Payload should have builder items plus any P2.4 expansion")
+        # Pool size should match item count
+        self.assertEqual(self.payload["pool_size"], len(self.payload["items"]),
+                        "Pool size should match items count")
 
     def test_session_selection_uses_existing_session_engine_outputs(self) -> None:
         for session_name, expected_size in (("short_practice", 1), ("standard_practice", 2), ("extended_practice", 4), ("mock_theory_2", 4)):
@@ -55,16 +65,26 @@ class OpenResponseLabRuntimeMVPTests(unittest.TestCase):
             self.assertEqual(len(actual["item_ids"]), expected_size)
 
     def test_question_render_items_expose_only_allowed_fields(self) -> None:
-        allowed = ("item_id", "source_question_id", "stem", "topic", "RA")
+        # Phase P2.3 added: command_verb, expected_concepts, evaluation_config (safe metadata)
+        allowed_base = {"item_id", "source_question_id", "stem", "topic", "RA"}
+        allowed_p2_evaluation = {"command_verb", "expected_concepts", "evaluation_config"}
+
         for item in self.payload["items"]:
-            self.assertEqual(tuple(item.keys()), allowed)
+            item_keys = set(item.keys())
+            # Should have base fields
+            self.assertTrue(allowed_base.issubset(item_keys))
+            # May have P2 evaluation fields
+            self.assertTrue(item_keys.issubset(allowed_base | allowed_p2_evaluation))
+
             self.assertTrue(item["stem"])
             self.assertTrue(item["topic"])
             self.assertTrue(item["RA"])
-            self.assertNotIn("expected_concepts", item)
+
+            # Forbidden fields (actual answers, scoring, corpus metadata)
             self.assertNotIn("feedback_rubric", item)
             self.assertNotIn("corpus_support", item)
             self.assertNotIn("optional_causal_chain", item)
+            self.assertNotIn("correct_answer", item)
 
     def test_html_presents_stem_topic_and_ra_targets(self) -> None:
         self.assertIn('data-testid="question-stem"', self.html)

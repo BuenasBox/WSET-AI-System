@@ -1,0 +1,29 @@
+{
+  "schema_version": "assessment_intelligence_v1",
+  "verb": "list",
+  "source": "WSET L3 Specification + marking keys",
+  "governance": {"safe_for_examiner": false, "examiner_scoring_allowed": false, "uses_llm": false, "uses_api": false},
+  "cognitive_level": "recall",
+  "definition": "Give a series of items, points, or names. No explanation or elaboration required.",
+  "used_in_ras": ["RA1"],
+  "expected_response": {
+    "format": "Enumerated or bulleted series; bare items are acceptable",
+    "do": ["Name the required number of items", "Be accurate"],
+    "do_not": ["Explain any item", "Give more than requested"]
+  },
+  "mark_expectation": "1 mark per correct item listed",
+  "question_stem_examples": [
+    "List four white grape varieties grown in Burgundy.",
+    "List three factors that influence wine quality."
+  ],
+  "mentor_hint": "Just name the items. One per line or bullet. No elaboration needed. If asked for 3, give exactly 3 (or more, but not fewer).",
+  "compliance_checks": {
+    "required_signals": [],
+    "forbidden_signals": ["because", "therefore", "due to"],
+    "structure_rules": {
+      "minimum_components": 1,
+      "elaboration_required": false,
+      "enumeration_format": true
+    }
+  }
+}

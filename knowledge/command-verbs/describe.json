@@ -16,5 +16,15 @@
     "Describe the main characteristics of the Médoc appellation.",
     "Describe the typical appearance of a Sauternes."
   ],
-  "mentor_hint": "Answer 'what' questions only. If you catch yourself writing 'because' or 'this means', you are explaining, not describing."
+  "mentor_hint": "Answer 'what' questions only. If you catch yourself writing 'because' or 'this means', you are explaining, not describing.",
+  "compliance_checks": {
+    "required_signals": [],
+    "forbidden_signals": ["because", "due to", "therefore", "since", "causes", "leads to"],
+    "structure_rules": {
+      "minimum_components": 2,
+      "component_order": ["feature1", "feature2"],
+      "elaboration_required": false,
+      "explanation_forbidden": true
+    }
+  }
 }

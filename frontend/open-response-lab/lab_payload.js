@@ -1,7 +1,7 @@
 window.OPEN_RESPONSE_LAB_PAYLOAD = {
   "lab_contract": "private_open_response_lab_runtime_mvp",
   "activation_status": "active_private_lab",
-  "pool_size": 26,
+  "pool_size": 41,
   "storage_key": "wset_open_response_lab_private_v1",
   "session_options": {
     "short_practice": 1,
@@ -65,184 +65,1294 @@ window.OPEN_RESPONSE_LAB_PAYLOAD = {
     {
       "item_id": "open_response_18",
       "source_question_id": "18",
-      "stem": "¿Cuál es una consecuencia del uso excesivo de sulfitos?",
+      "stem": "\u00bfCu\u00e1l es una consecuencia del uso excesivo de sulfitos?",
       "topic": "winemaking",
-      "RA": "RA1"
+      "RA": "RA1",
+      "command_verb": "explain",
+      "expected_concepts": [],
+      "evaluation_config": {
+        "verb_definition_key": "explain",
+        "requires_causal_chain": true,
+        "structure_rules": {
+          "minimum_components": 3,
+          "component_order": [
+            "cause",
+            "mechanism",
+            "effect"
+          ],
+          "elaboration_required": true,
+          "causal_chain_required": true
+        },
+        "required_signals": [
+          "because",
+          "due to",
+          "therefore",
+          "since",
+          "causes",
+          "leads to",
+          "results in"
+        ],
+        "forbidden_signals": [
+          "opinion",
+          "probably",
+          "I think"
+        ]
+      }
     },
     {
       "item_id": "open_response_798",
       "source_question_id": "798",
-      "stem": "Explique cómo prácticas sostenibles certificadas u orgánicas pueden aumentar los costes de producción y contribuir a la diferenciación comercial del vino.",
+      "stem": "Explique c\u00f3mo pr\u00e1cticas sostenibles certificadas u org\u00e1nicas pueden aumentar los costes de producci\u00f3n y contribuir a la diferenciaci\u00f3n comercial del vino.",
       "topic": "sostenibilidad",
-      "RA": "RA1"
+      "RA": "RA1",
+      "command_verb": "explain",
+      "expected_concepts": [],
+      "evaluation_config": {
+        "verb_definition_key": "explain",
+        "requires_causal_chain": true,
+        "structure_rules": {
+          "minimum_components": 3,
+          "component_order": [
+            "cause",
+            "mechanism",
+            "effect"
+          ],
+          "elaboration_required": true,
+          "causal_chain_required": true
+        },
+        "required_signals": [
+          "because",
+          "due to",
+          "therefore",
+          "since",
+          "causes",
+          "leads to",
+          "results in"
+        ],
+        "forbidden_signals": [
+          "opinion",
+          "probably",
+          "I think"
+        ]
+      }
     },
     {
       "item_id": "open_response_799",
       "source_question_id": "799",
-      "stem": "Justifica el uso de la fermentación maloláctica en la producción de ciertos estilos de vino blanco y cómo contribuye a la calidad final.",
-      "topic": "fermentación maloláctica",
-      "RA": "RA1"
+      "stem": "Justifica el uso de la fermentaci\u00f3n malol\u00e1ctica en la producci\u00f3n de ciertos estilos de vino blanco y c\u00f3mo contribuye a la calidad final.",
+      "topic": "fermentaci\u00f3n malol\u00e1ctica",
+      "RA": "RA1",
+      "command_verb": "explain",
+      "expected_concepts": [
+        "fermentaci\u00f3n",
+        "malol\u00e1ctica"
+      ],
+      "evaluation_config": {
+        "verb_definition_key": "explain",
+        "requires_causal_chain": true,
+        "structure_rules": {
+          "minimum_components": 3,
+          "component_order": [
+            "cause",
+            "mechanism",
+            "effect"
+          ],
+          "elaboration_required": true,
+          "causal_chain_required": true
+        },
+        "required_signals": [
+          "because",
+          "due to",
+          "therefore",
+          "since",
+          "causes",
+          "leads to",
+          "results in"
+        ],
+        "forbidden_signals": [
+          "opinion",
+          "probably",
+          "I think"
+        ]
+      }
     },
     {
       "item_id": "open_response_800",
       "source_question_id": "800",
-      "stem": "Explica cómo la altitud puede influir en el estilo de un vino tinto.",
+      "stem": "Explica c\u00f3mo la altitud puede influir en el estilo de un vino tinto.",
       "topic": "altitud",
-      "RA": "RA1"
+      "RA": "RA1",
+      "command_verb": "explain",
+      "expected_concepts": [
+        "altitud"
+      ],
+      "evaluation_config": {
+        "verb_definition_key": "explain",
+        "requires_causal_chain": true,
+        "structure_rules": {
+          "minimum_components": 3,
+          "component_order": [
+            "cause",
+            "mechanism",
+            "effect"
+          ],
+          "elaboration_required": true,
+          "causal_chain_required": true
+        },
+        "required_signals": [
+          "because",
+          "due to",
+          "therefore",
+          "since",
+          "causes",
+          "leads to",
+          "results in"
+        ],
+        "forbidden_signals": [
+          "opinion",
+          "probably",
+          "I think"
+        ]
+      }
     },
     {
       "item_id": "open_response_801",
       "source_question_id": "801",
-      "stem": "Explique cómo la orientación y la pendiente del viñedo pueden afectar la maduración de la uva.",
-      "topic": "orientación",
-      "RA": "RA1"
+      "stem": "Explique c\u00f3mo la orientaci\u00f3n y la pendiente del vi\u00f1edo pueden afectar la maduraci\u00f3n de la uva.",
+      "topic": "orientaci\u00f3n",
+      "RA": "RA1",
+      "command_verb": "explain",
+      "expected_concepts": [
+        "maduraci\u00f3n",
+        "pendiente",
+        "orientaci\u00f3n"
+      ],
+      "evaluation_config": {
+        "verb_definition_key": "explain",
+        "requires_causal_chain": true,
+        "structure_rules": {
+          "minimum_components": 3,
+          "component_order": [
+            "cause",
+            "mechanism",
+            "effect"
+          ],
+          "elaboration_required": true,
+          "causal_chain_required": true
+        },
+        "required_signals": [
+          "because",
+          "due to",
+          "therefore",
+          "since",
+          "causes",
+          "leads to",
+          "results in"
+        ],
+        "forbidden_signals": [
+          "opinion",
+          "probably",
+          "I think"
+        ]
+      }
     },
     {
       "item_id": "open_response_802",
       "source_question_id": "802",
-      "stem": "Describa cómo las prácticas de manejo en la bodega pueden reducir el riesgo de oxidación en vinos blancos.",
-      "topic": "oxidación",
-      "RA": "RA1"
+      "stem": "Describa c\u00f3mo las pr\u00e1cticas de manejo en la bodega pueden reducir el riesgo de oxidaci\u00f3n en vinos blancos.",
+      "topic": "oxidaci\u00f3n",
+      "RA": "RA1",
+      "command_verb": "explain",
+      "expected_concepts": [],
+      "evaluation_config": {
+        "verb_definition_key": "explain",
+        "requires_causal_chain": true,
+        "structure_rules": {
+          "minimum_components": 3,
+          "component_order": [
+            "cause",
+            "mechanism",
+            "effect"
+          ],
+          "elaboration_required": true,
+          "causal_chain_required": true
+        },
+        "required_signals": [
+          "because",
+          "due to",
+          "therefore",
+          "since",
+          "causes",
+          "leads to",
+          "results in"
+        ],
+        "forbidden_signals": [
+          "opinion",
+          "probably",
+          "I think"
+        ]
+      }
     },
     {
       "item_id": "open_response_803",
       "source_question_id": "803",
-      "stem": "Explique la influencia de la elección de levaduras en el perfil sensorial del vino.",
+      "stem": "Explique la influencia de la elecci\u00f3n de levaduras en el perfil sensorial del vino.",
       "topic": "levaduras",
-      "RA": "RA1"
+      "RA": "RA1",
+      "command_verb": "explain",
+      "expected_concepts": [],
+      "evaluation_config": {
+        "verb_definition_key": "explain",
+        "requires_causal_chain": true,
+        "structure_rules": {
+          "minimum_components": 3,
+          "component_order": [
+            "cause",
+            "mechanism",
+            "effect"
+          ],
+          "elaboration_required": true,
+          "causal_chain_required": true
+        },
+        "required_signals": [
+          "because",
+          "due to",
+          "therefore",
+          "since",
+          "causes",
+          "leads to",
+          "results in"
+        ],
+        "forbidden_signals": [
+          "opinion",
+          "probably",
+          "I think"
+        ]
+      }
     },
     {
       "item_id": "open_response_804",
       "source_question_id": "804",
-      "stem": "Explique cómo el drenaje del suelo puede influir en el vigor de la vid y en el estilo del vino.",
+      "stem": "Explique c\u00f3mo el drenaje del suelo puede influir en el vigor de la vid y en el estilo del vino.",
       "topic": "suelo",
-      "RA": "RA1"
+      "RA": "RA1",
+      "command_verb": "explain",
+      "expected_concepts": [],
+      "evaluation_config": {
+        "verb_definition_key": "explain",
+        "requires_causal_chain": true,
+        "structure_rules": {
+          "minimum_components": 3,
+          "component_order": [
+            "cause",
+            "mechanism",
+            "effect"
+          ],
+          "elaboration_required": true,
+          "causal_chain_required": true
+        },
+        "required_signals": [
+          "because",
+          "due to",
+          "therefore",
+          "since",
+          "causes",
+          "leads to",
+          "results in"
+        ],
+        "forbidden_signals": [
+          "opinion",
+          "probably",
+          "I think"
+        ]
+      }
     },
     {
       "item_id": "open_response_805",
       "source_question_id": "805",
-      "stem": "Compare cómo la elección de roble americano o francés puede afectar los aromas, el tanino y la integración del roble en vinos tintos.",
+      "stem": "Compare c\u00f3mo la elecci\u00f3n de roble americano o franc\u00e9s puede afectar los aromas, el tanino y la integraci\u00f3n del roble en vinos tintos.",
       "topic": "roble",
-      "RA": "RA1"
+      "RA": "RA1",
+      "command_verb": "explain",
+      "expected_concepts": [
+        "aroma",
+        "tanino",
+        "aroma",
+        "roble"
+      ],
+      "evaluation_config": {
+        "verb_definition_key": "explain",
+        "requires_causal_chain": true,
+        "structure_rules": {
+          "minimum_components": 3,
+          "component_order": [
+            "cause",
+            "mechanism",
+            "effect"
+          ],
+          "elaboration_required": true,
+          "causal_chain_required": true
+        },
+        "required_signals": [
+          "because",
+          "due to",
+          "therefore",
+          "since",
+          "causes",
+          "leads to",
+          "results in"
+        ],
+        "forbidden_signals": [
+          "opinion",
+          "probably",
+          "I think"
+        ]
+      }
     },
     {
       "item_id": "open_response_806",
       "source_question_id": "806",
-      "stem": "Describa dos técnicas de manejo del dosel (canopy management) y sus beneficios.",
+      "stem": "Describa dos t\u00e9cnicas de manejo del dosel (canopy management) y sus beneficios.",
       "topic": "manejo del dosel",
-      "RA": "RA1"
+      "RA": "RA1",
+      "command_verb": "describe",
+      "expected_concepts": [],
+      "evaluation_config": {
+        "verb_definition_key": "describe",
+        "requires_causal_chain": false,
+        "structure_rules": {
+          "minimum_components": 2,
+          "component_order": [
+            "feature1",
+            "feature2"
+          ],
+          "elaboration_required": false,
+          "explanation_forbidden": true
+        },
+        "required_signals": [],
+        "forbidden_signals": [
+          "because",
+          "due to",
+          "therefore",
+          "since",
+          "causes",
+          "leads to"
+        ]
+      }
     },
     {
       "item_id": "open_response_807",
       "source_question_id": "807",
-      "stem": "Explique cómo el riego y el manejo del dosel pueden reducir los efectos de la sequía o del calor extremo sobre la maduración de la uva.",
+      "stem": "Explique c\u00f3mo el riego y el manejo del dosel pueden reducir los efectos de la sequ\u00eda o del calor extremo sobre la maduraci\u00f3n de la uva.",
       "topic": "decisiones humanas",
-      "RA": "RA1"
+      "RA": "RA1",
+      "command_verb": "explain",
+      "expected_concepts": [
+        "maduraci\u00f3n"
+      ],
+      "evaluation_config": {
+        "verb_definition_key": "explain",
+        "requires_causal_chain": true,
+        "structure_rules": {
+          "minimum_components": 3,
+          "component_order": [
+            "cause",
+            "mechanism",
+            "effect"
+          ],
+          "elaboration_required": true,
+          "causal_chain_required": true
+        },
+        "required_signals": [
+          "because",
+          "due to",
+          "therefore",
+          "since",
+          "causes",
+          "leads to",
+          "results in"
+        ],
+        "forbidden_signals": [
+          "opinion",
+          "probably",
+          "I think"
+        ]
+      }
     },
     {
       "item_id": "open_response_808",
       "source_question_id": "808",
-      "stem": "Explica por qué la densidad de plantación es un factor clave en la gestión del viñedo y cómo afecta el estilo y costo del vino producido.",
-      "topic": "densidad de plantación",
-      "RA": "RA1"
+      "stem": "Explica por qu\u00e9 la densidad de plantaci\u00f3n es un factor clave en la gesti\u00f3n del vi\u00f1edo y c\u00f3mo afecta el estilo y costo del vino producido.",
+      "topic": "densidad de plantaci\u00f3n",
+      "RA": "RA1",
+      "command_verb": "explain",
+      "expected_concepts": [],
+      "evaluation_config": {
+        "verb_definition_key": "explain",
+        "requires_causal_chain": true,
+        "structure_rules": {
+          "minimum_components": 3,
+          "component_order": [
+            "cause",
+            "mechanism",
+            "effect"
+          ],
+          "elaboration_required": true,
+          "causal_chain_required": true
+        },
+        "required_signals": [
+          "because",
+          "due to",
+          "therefore",
+          "since",
+          "causes",
+          "leads to",
+          "results in"
+        ],
+        "forbidden_signals": [
+          "opinion",
+          "probably",
+          "I think"
+        ]
+      }
     },
     {
       "item_id": "open_response_809",
       "source_question_id": "809",
-      "stem": "Compare el uso de levaduras seleccionadas y levaduras autóctonas en fermentación, considerando control, consistencia, complejidad potencial y riesgos.",
+      "stem": "Compare el uso de levaduras seleccionadas y levaduras aut\u00f3ctonas en fermentaci\u00f3n, considerando control, consistencia, complejidad potencial y riesgos.",
       "topic": "levaduras seleccionadas",
-      "RA": "RA1"
+      "RA": "RA1",
+      "command_verb": "compare",
+      "expected_concepts": [
+        "fermentaci\u00f3n"
+      ],
+      "evaluation_config": {
+        "verb_definition_key": "compare",
+        "requires_causal_chain": false,
+        "structure_rules": {
+          "minimum_components": 4,
+          "component_order": [
+            "dimension1",
+            "dimension2",
+            "dimension3",
+            "synthesis"
+          ],
+          "elaboration_required": true,
+          "both_items_required": true,
+          "similarities_and_differences": true
+        },
+        "required_signals": [
+          "whereas",
+          "while",
+          "both",
+          "similarly",
+          "in contrast",
+          "however"
+        ],
+        "forbidden_signals": [
+          "more important",
+          "better"
+        ]
+      }
     },
     {
       "item_id": "open_response_810",
       "source_question_id": "810",
-      "stem": "Analice cómo el estrés hídrico moderado puede reducir el rendimiento, concentrar las bayas e influir potencialmente en el coste y el precio del vino.",
-      "topic": "estrés hídrico",
-      "RA": "RA1"
+      "stem": "Analice c\u00f3mo el estr\u00e9s h\u00eddrico moderado puede reducir el rendimiento, concentrar las bayas e influir potencialmente en el coste y el precio del vino.",
+      "topic": "estr\u00e9s h\u00eddrico",
+      "RA": "RA1",
+      "command_verb": "explain",
+      "expected_concepts": [],
+      "evaluation_config": {
+        "verb_definition_key": "explain",
+        "requires_causal_chain": true,
+        "structure_rules": {
+          "minimum_components": 3,
+          "component_order": [
+            "cause",
+            "mechanism",
+            "effect"
+          ],
+          "elaboration_required": true,
+          "causal_chain_required": true
+        },
+        "required_signals": [
+          "because",
+          "due to",
+          "therefore",
+          "since",
+          "causes",
+          "leads to",
+          "results in"
+        ],
+        "forbidden_signals": [
+          "opinion",
+          "probably",
+          "I think"
+        ]
+      }
     },
     {
       "item_id": "open_response_811",
       "source_question_id": "811",
-      "stem": "Describe cómo la latitud y la altitud interactúan para influir en el estilo del vino en una región de clima cálido.",
+      "stem": "Describe c\u00f3mo la latitud y la altitud interact\u00faan para influir en el estilo del vino en una regi\u00f3n de clima c\u00e1lido.",
       "topic": "latitud",
-      "RA": "RA1"
+      "RA": "RA1",
+      "command_verb": "explain",
+      "expected_concepts": [
+        "clima",
+        "altitud"
+      ],
+      "evaluation_config": {
+        "verb_definition_key": "explain",
+        "requires_causal_chain": true,
+        "structure_rules": {
+          "minimum_components": 3,
+          "component_order": [
+            "cause",
+            "mechanism",
+            "effect"
+          ],
+          "elaboration_required": true,
+          "causal_chain_required": true
+        },
+        "required_signals": [
+          "because",
+          "due to",
+          "therefore",
+          "since",
+          "causes",
+          "leads to",
+          "results in"
+        ],
+        "forbidden_signals": [
+          "opinion",
+          "probably",
+          "I think"
+        ]
+      }
     },
     {
       "item_id": "open_response_812",
       "source_question_id": "812",
-      "stem": "Explique cómo un estrés hídrico moderado, si no es excesivo, puede influir en el vigor de la vid, el tamaño de las bayas y la concentración del vino.",
-      "topic": "estrés hídrico",
-      "RA": "RA1"
+      "stem": "Explique c\u00f3mo un estr\u00e9s h\u00eddrico moderado, si no es excesivo, puede influir en el vigor de la vid, el tama\u00f1o de las bayas y la concentraci\u00f3n del vino.",
+      "topic": "estr\u00e9s h\u00eddrico",
+      "RA": "RA1",
+      "command_verb": "explain",
+      "expected_concepts": [],
+      "evaluation_config": {
+        "verb_definition_key": "explain",
+        "requires_causal_chain": true,
+        "structure_rules": {
+          "minimum_components": 3,
+          "component_order": [
+            "cause",
+            "mechanism",
+            "effect"
+          ],
+          "elaboration_required": true,
+          "causal_chain_required": true
+        },
+        "required_signals": [
+          "because",
+          "due to",
+          "therefore",
+          "since",
+          "causes",
+          "leads to",
+          "results in"
+        ],
+        "forbidden_signals": [
+          "opinion",
+          "probably",
+          "I think"
+        ]
+      }
     },
     {
       "item_id": "open_response_813",
       "source_question_id": "813",
-      "stem": "Menciona un riesgo enológico del uso de levaduras autóctonas.",
-      "topic": "levaduras autóctonas",
-      "RA": "RA1"
+      "stem": "Menciona un riesgo enol\u00f3gico del uso de levaduras aut\u00f3ctonas.",
+      "topic": "levaduras aut\u00f3ctonas",
+      "RA": "RA1",
+      "command_verb": "state",
+      "expected_concepts": [],
+      "evaluation_config": {
+        "verb_definition_key": "state",
+        "requires_causal_chain": false,
+        "structure_rules": {
+          "minimum_components": 1,
+          "elaboration_required": false,
+          "brevity_required": true
+        },
+        "required_signals": [],
+        "forbidden_signals": [
+          "because",
+          "therefore",
+          "this explains",
+          "opinion"
+        ]
+      }
     },
     {
       "item_id": "open_response_814",
       "source_question_id": "814",
-      "stem": "Justifica por qué un viticultor utilizaría poda en invierno.",
+      "stem": "Justifica por qu\u00e9 un viticultor utilizar\u00eda poda en invierno.",
       "topic": "poda de invierno",
-      "RA": "RA1"
+      "RA": "RA1",
+      "command_verb": "justify",
+      "expected_concepts": [],
+      "evaluation_config": {
+        "verb_definition_key": "justify",
+        "requires_causal_chain": false,
+        "structure_rules": {
+          "minimum_components": 2,
+          "component_order": [
+            "position_restatement",
+            "reason1",
+            "reason2"
+          ],
+          "elaboration_required": true,
+          "evidence_required": true,
+          "minimum_reasons": 3
+        },
+        "required_signals": [
+          "because",
+          "therefore",
+          "due to",
+          "since"
+        ],
+        "forbidden_signals": [
+          "opinion",
+          "I disagree"
+        ]
+      }
     },
     {
       "item_id": "open_response_815",
       "source_question_id": "815",
-      "stem": "Describe un beneficio técnico de la fermentación en acero inoxidable.",
+      "stem": "Describe un beneficio t\u00e9cnico de la fermentaci\u00f3n en acero inoxidable.",
       "topic": "acero inoxidable",
-      "RA": "RA1"
+      "RA": "RA1",
+      "command_verb": "describe",
+      "expected_concepts": [
+        "fermentaci\u00f3n"
+      ],
+      "evaluation_config": {
+        "verb_definition_key": "describe",
+        "requires_causal_chain": false,
+        "structure_rules": {
+          "minimum_components": 2,
+          "component_order": [
+            "feature1",
+            "feature2"
+          ],
+          "elaboration_required": false,
+          "explanation_forbidden": true
+        },
+        "required_signals": [],
+        "forbidden_signals": [
+          "because",
+          "due to",
+          "therefore",
+          "since",
+          "causes",
+          "leads to"
+        ]
+      }
     },
     {
       "item_id": "open_response_816",
       "source_question_id": "816",
-      "stem": "Analiza los efectos de la maceración prolongada en la vinificación de vinos tintos desde el punto de vista del estilo y calidad final.",
-      "topic": "maceración prolongada",
-      "RA": "RA1"
+      "stem": "Analiza los efectos de la maceraci\u00f3n prolongada en la vinificaci\u00f3n de vinos tintos desde el punto de vista del estilo y calidad final.",
+      "topic": "maceraci\u00f3n prolongada",
+      "RA": "RA1",
+      "command_verb": "evaluate",
+      "expected_concepts": [],
+      "evaluation_config": {
+        "verb_definition_key": "evaluate",
+        "requires_causal_chain": false,
+        "structure_rules": {
+          "minimum_components": 3,
+          "component_order": [
+            "factor1",
+            "factor2",
+            "synthesis"
+          ],
+          "elaboration_required": true,
+          "multiple_factors_required": true,
+          "synthesis_required": true
+        },
+        "required_signals": [
+          "because",
+          "therefore",
+          "significant",
+          "important",
+          "factor",
+          "contributes"
+        ],
+        "forbidden_signals": [
+          "opinion",
+          "I think",
+          "probably"
+        ]
+      }
     },
     {
       "item_id": "open_response_817",
       "source_question_id": "817",
-      "stem": "Compare cómo suelos arenosos y arcillosos pueden afectar la disponibilidad de agua, el vigor de la vid y el estilo del vino.",
+      "stem": "Compare c\u00f3mo suelos arenosos y arcillosos pueden afectar la disponibilidad de agua, el vigor de la vid y el estilo del vino.",
       "topic": "suelo",
-      "RA": "RA1"
+      "RA": "RA1",
+      "command_verb": "explain",
+      "expected_concepts": [],
+      "evaluation_config": {
+        "verb_definition_key": "explain",
+        "requires_causal_chain": true,
+        "structure_rules": {
+          "minimum_components": 3,
+          "component_order": [
+            "cause",
+            "mechanism",
+            "effect"
+          ],
+          "elaboration_required": true,
+          "causal_chain_required": true
+        },
+        "required_signals": [
+          "because",
+          "due to",
+          "therefore",
+          "since",
+          "causes",
+          "leads to",
+          "results in"
+        ],
+        "forbidden_signals": [
+          "opinion",
+          "probably",
+          "I think"
+        ]
+      }
     },
     {
       "item_id": "open_response_853",
       "source_question_id": "853",
-      "stem": "Explique qué indica la añada (vintage) en una etiqueta de vino y por qué no corresponde al año de embotellado.",
+      "stem": "Explique qu\u00e9 indica la a\u00f1ada (vintage) en una etiqueta de vino y por qu\u00e9 no corresponde al a\u00f1o de embotellado.",
       "topic": "wine_law_and_labelling",
-      "RA": "RA5"
+      "RA": "RA5",
+      "command_verb": "why",
+      "expected_concepts": [],
+      "evaluation_config": {
+        "verb_definition_key": "why",
+        "requires_causal_chain": true,
+        "structure_rules": {
+          "minimum_components": 2,
+          "component_order": [
+            "cause",
+            "mechanism"
+          ],
+          "elaboration_required": false
+        },
+        "required_signals": [
+          "because",
+          "due to",
+          "since",
+          "caused by",
+          "because of",
+          "results in"
+        ],
+        "forbidden_signals": [
+          "opinion",
+          "I think",
+          "seems like",
+          "probably"
+        ]
+      }
     },
     {
       "item_id": "open_response_854",
       "source_question_id": "854",
-      "stem": "Explique por qué los vinos DOP están sujetos a regulaciones más estrictas que los vinos IGP.",
+      "stem": "Explique por qu\u00e9 los vinos DOP est\u00e1n sujetos a regulaciones m\u00e1s estrictas que los vinos IGP.",
       "topic": "wine_law_and_labelling",
-      "RA": "RA5"
+      "RA": "RA5",
+      "command_verb": "why",
+      "expected_concepts": [],
+      "evaluation_config": {
+        "verb_definition_key": "why",
+        "requires_causal_chain": true,
+        "structure_rules": {
+          "minimum_components": 2,
+          "component_order": [
+            "cause",
+            "mechanism"
+          ],
+          "elaboration_required": false
+        },
+        "required_signals": [
+          "because",
+          "due to",
+          "since",
+          "caused by",
+          "because of",
+          "results in"
+        ],
+        "forbidden_signals": [
+          "opinion",
+          "I think",
+          "seems like",
+          "probably"
+        ]
+      }
     },
     {
       "item_id": "open_response_855",
       "source_question_id": "855",
-      "stem": "Explique los requisitos mínimos de crianza asociados al término Reserva en un vino tinto español.",
+      "stem": "Explique los requisitos m\u00ednimos de crianza asociados al t\u00e9rmino Reserva en un vino tinto espa\u00f1ol.",
       "topic": "wine_law_and_labelling",
-      "RA": "RA5"
+      "RA": "RA5",
+      "command_verb": "explain",
+      "expected_concepts": [
+        "crianza"
+      ],
+      "evaluation_config": {
+        "verb_definition_key": "explain",
+        "requires_causal_chain": true,
+        "structure_rules": {
+          "minimum_components": 3,
+          "component_order": [
+            "cause",
+            "mechanism",
+            "effect"
+          ],
+          "elaboration_required": true,
+          "causal_chain_required": true
+        },
+        "required_signals": [
+          "because",
+          "due to",
+          "therefore",
+          "since",
+          "causes",
+          "leads to",
+          "results in"
+        ],
+        "forbidden_signals": [
+          "opinion",
+          "probably",
+          "I think"
+        ]
+      }
     },
     {
       "item_id": "open_response_856",
       "source_question_id": "856",
-      "stem": "Compare Kabinett y Trockenbeerenauslese dentro del sistema Prädikat alemán en términos de madurez y concentración.",
+      "stem": "Compare Kabinett y Trockenbeerenauslese dentro del sistema Pr\u00e4dikat alem\u00e1n en t\u00e9rminos de madurez y concentraci\u00f3n.",
       "topic": "wine_law_and_labelling",
-      "RA": "RA5"
+      "RA": "RA5",
+      "command_verb": "compare",
+      "expected_concepts": [],
+      "evaluation_config": {
+        "verb_definition_key": "compare",
+        "requires_causal_chain": false,
+        "structure_rules": {
+          "minimum_components": 4,
+          "component_order": [
+            "dimension1",
+            "dimension2",
+            "dimension3",
+            "synthesis"
+          ],
+          "elaboration_required": true,
+          "both_items_required": true,
+          "similarities_and_differences": true
+        },
+        "required_signals": [
+          "whereas",
+          "while",
+          "both",
+          "similarly",
+          "in contrast",
+          "however"
+        ],
+        "forbidden_signals": [
+          "more important",
+          "better"
+        ]
+      }
     },
     {
       "item_id": "open_response_857",
       "source_question_id": "857",
-      "stem": "Compare los canales on-trade y off-trade e indique dónde se consume el vino en cada caso.",
+      "stem": "Compare los canales on-trade y off-trade e indique d\u00f3nde se consume el vino en cada caso.",
       "topic": "wine_business",
-      "RA": "RA5"
+      "RA": "RA5",
+      "command_verb": "compare",
+      "expected_concepts": [],
+      "evaluation_config": {
+        "verb_definition_key": "compare",
+        "requires_causal_chain": false,
+        "structure_rules": {
+          "minimum_components": 4,
+          "component_order": [
+            "dimension1",
+            "dimension2",
+            "dimension3",
+            "synthesis"
+          ],
+          "elaboration_required": true,
+          "both_items_required": true,
+          "similarities_and_differences": true
+        },
+        "required_signals": [
+          "whereas",
+          "while",
+          "both",
+          "similarly",
+          "in contrast",
+          "however"
+        ],
+        "forbidden_signals": [
+          "more important",
+          "better"
+        ]
+      }
+    },
+    {
+      "item_id": "open_response_2001",
+      "source_question_id": "2001",
+      "stem": "Compare the climates and resulting wine styles of Sancerre (Loire Valley) and Pouilly-Fum\u00e9.",
+      "topic": "Loire white wines",
+      "RA": "RA2",
+      "command_verb": "compare",
+      "expected_concepts": [
+        "climate",
+        "terroir",
+        "wine style",
+        "Loire Valley"
+      ],
+      "evaluation_config": {
+        "verb_definition_key": "compare",
+        "requires_causal_chain": false,
+        "structure_rules": {},
+        "required_signals": [],
+        "forbidden_signals": [],
+        "source": "phase_p2_4_expansion"
+      }
+    },
+    {
+      "item_id": "open_response_2002",
+      "source_question_id": "2002",
+      "stem": "Assess the quality of a wine that shows: pale gold color, lemon/green fruit on the nose, crisp acidity, medium body, and a clean, dry finish.",
+      "topic": "wine assessment",
+      "RA": "RA1",
+      "command_verb": "assess",
+      "expected_concepts": [
+        "quality",
+        "color",
+        "aroma",
+        "acidity",
+        "body"
+      ],
+      "evaluation_config": {
+        "verb_definition_key": "assess",
+        "requires_causal_chain": false,
+        "structure_rules": {},
+        "required_signals": [],
+        "forbidden_signals": [],
+        "source": "phase_p2_4_expansion"
+      }
+    },
+    {
+      "item_id": "open_response_2003",
+      "source_question_id": "2003",
+      "stem": "How does the use of whole-bunch fermentation in red wine production affect the final wine's structure and flavor profile?",
+      "topic": "fermentation",
+      "RA": "RA2",
+      "command_verb": "how",
+      "expected_concepts": [
+        "fermentation",
+        "structure",
+        "tannin",
+        "flavor"
+      ],
+      "evaluation_config": {
+        "verb_definition_key": "how",
+        "requires_causal_chain": false,
+        "structure_rules": {},
+        "required_signals": [],
+        "forbidden_signals": [],
+        "source": "phase_p2_4_expansion"
+      }
+    },
+    {
+      "item_id": "open_response_2004",
+      "source_question_id": "2004",
+      "stem": "Justify why small oak barrels are preferred over large oak vats for aging premium red Burgundy.",
+      "topic": "oak aging",
+      "RA": "RA2",
+      "command_verb": "justify",
+      "expected_concepts": [
+        "oak",
+        "aging",
+        "oak influence",
+        "Burgundy"
+      ],
+      "evaluation_config": {
+        "verb_definition_key": "justify",
+        "requires_causal_chain": false,
+        "structure_rules": {},
+        "required_signals": [],
+        "forbidden_signals": [],
+        "source": "phase_p2_4_expansion"
+      }
+    },
+    {
+      "item_id": "open_response_2005",
+      "source_question_id": "2005",
+      "stem": "Evaluate the significance of vintage variation in establishing a Bordeaux wine's classification and market price.",
+      "topic": "vintage",
+      "RA": "RA3",
+      "command_verb": "evaluate",
+      "expected_concepts": [
+        "vintage",
+        "classification",
+        "weather",
+        "quality"
+      ],
+      "evaluation_config": {
+        "verb_definition_key": "evaluate",
+        "requires_causal_chain": false,
+        "structure_rules": {},
+        "required_signals": [],
+        "forbidden_signals": [],
+        "source": "phase_p2_4_expansion"
+      }
+    },
+    {
+      "item_id": "open_response_2006",
+      "source_question_id": "2006",
+      "stem": "Describe the typical sensory characteristics of a premium, dry Riesling from the Mosel region.",
+      "topic": "Riesling",
+      "RA": "RA1",
+      "command_verb": "describe",
+      "expected_concepts": [
+        "Riesling",
+        "Mosel",
+        "color",
+        "aroma",
+        "acidity",
+        "body"
+      ],
+      "evaluation_config": {
+        "verb_definition_key": "describe",
+        "requires_causal_chain": false,
+        "structure_rules": {},
+        "required_signals": [],
+        "forbidden_signals": [],
+        "source": "phase_p2_4_expansion"
+      }
+    },
+    {
+      "item_id": "open_response_2007",
+      "source_question_id": "2007",
+      "stem": "Why is temperature control during fermentation critical for producing white wines with preserved fruit character and lower alcohol levels?",
+      "topic": "fermentation control",
+      "RA": "RA2",
+      "command_verb": "why",
+      "expected_concepts": [
+        "temperature",
+        "fermentation",
+        "alcohol",
+        "fruit"
+      ],
+      "evaluation_config": {
+        "verb_definition_key": "why",
+        "requires_causal_chain": false,
+        "structure_rules": {},
+        "required_signals": [],
+        "forbidden_signals": [],
+        "source": "phase_p2_4_expansion"
+      }
+    },
+    {
+      "item_id": "open_response_2008",
+      "source_question_id": "2008",
+      "stem": "Discuss the contrasting approaches to oak use in red Bordeaux versus Burgundy, considering the influence of terroir on winemaking decisions.",
+      "topic": "regional winemaking",
+      "RA": "RA3",
+      "command_verb": "discuss",
+      "expected_concepts": [
+        "oak",
+        "Bordeaux",
+        "Burgundy",
+        "terroir",
+        "winemaking"
+      ],
+      "evaluation_config": {
+        "verb_definition_key": "discuss",
+        "requires_causal_chain": false,
+        "structure_rules": {},
+        "required_signals": [],
+        "forbidden_signals": [],
+        "source": "phase_p2_4_expansion"
+      }
+    },
+    {
+      "item_id": "open_response_2009",
+      "source_question_id": "2009",
+      "stem": "Identify and explain the significance of malolactic fermentation in transforming the acidity and flavor profile of red wines.",
+      "topic": "malolactic fermentation",
+      "RA": "RA2",
+      "command_verb": "identify and explain",
+      "expected_concepts": [
+        "malolactic",
+        "acidity",
+        "flavor",
+        "fermentation"
+      ],
+      "evaluation_config": {
+        "verb_definition_key": "identify and explain",
+        "requires_causal_chain": true,
+        "structure_rules": {},
+        "required_signals": [],
+        "forbidden_signals": [],
+        "source": "phase_p2_4_expansion"
+      }
+    },
+    {
+      "item_id": "open_response_2010",
+      "source_question_id": "2010",
+      "stem": "Outline the main factors that determine the potential for aging in premium white Burgundy wines.",
+      "topic": "aging potential",
+      "RA": "RA2",
+      "command_verb": "outline",
+      "expected_concepts": [
+        "aging",
+        "acidity",
+        "structure",
+        "alcohol",
+        "oak"
+      ],
+      "evaluation_config": {
+        "verb_definition_key": "outline",
+        "requires_causal_chain": false,
+        "structure_rules": {},
+        "required_signals": [],
+        "forbidden_signals": [],
+        "source": "phase_p2_4_expansion"
+      }
+    },
+    {
+      "item_id": "open_response_2011",
+      "source_question_id": "2011",
+      "stem": "State the primary purpose of acid addition during winemaking in regions where grapes do not achieve sufficient natural acidity.",
+      "topic": "winemaking adjustments",
+      "RA": "RA1",
+      "command_verb": "state",
+      "expected_concepts": [
+        "acidity",
+        "winemaking",
+        "ripeness"
+      ],
+      "evaluation_config": {
+        "verb_definition_key": "state",
+        "requires_causal_chain": false,
+        "structure_rules": {},
+        "required_signals": [],
+        "forbidden_signals": [],
+        "source": "phase_p2_4_expansion"
+      }
+    },
+    {
+      "item_id": "open_response_2012",
+      "source_question_id": "2012",
+      "stem": "List the main grape varieties used in the production of premium Sherry, and identify which category (fino, amontillado, oloroso) they are associated with.",
+      "topic": "Sherry",
+      "RA": "RA1",
+      "command_verb": "list",
+      "expected_concepts": [
+        "Sherry",
+        "grape variety",
+        "fermentation",
+        "fortification"
+      ],
+      "evaluation_config": {
+        "verb_definition_key": "list",
+        "requires_causal_chain": false,
+        "structure_rules": {},
+        "required_signals": [],
+        "forbidden_signals": [],
+        "source": "phase_p2_4_expansion"
+      }
+    },
+    {
+      "item_id": "open_response_2013",
+      "source_question_id": "2013",
+      "stem": "Explain how the altitude of a vineyard influences grape ripening, sugar accumulation, and the final alcohol level in the wine.",
+      "topic": "altitude",
+      "RA": "RA1",
+      "command_verb": "explain",
+      "expected_concepts": [
+        "altitude",
+        "temperature",
+        "ripening",
+        "sugar",
+        "alcohol"
+      ],
+      "evaluation_config": {
+        "verb_definition_key": "explain",
+        "requires_causal_chain": true,
+        "structure_rules": {},
+        "required_signals": [],
+        "forbidden_signals": [],
+        "source": "phase_p2_4_expansion"
+      }
+    },
+    {
+      "item_id": "open_response_2014",
+      "source_question_id": "2014",
+      "stem": "Compare the production methods and resulting characteristics of sparkling wines made using the Traditional Method versus the Charmat Method.",
+      "topic": "sparkling wine",
+      "RA": "RA2",
+      "command_verb": "compare",
+      "expected_concepts": [
+        "sparkling wine",
+        "fermentation",
+        "method",
+        "bubbles"
+      ],
+      "evaluation_config": {
+        "verb_definition_key": "compare",
+        "requires_causal_chain": false,
+        "structure_rules": {},
+        "required_signals": [],
+        "forbidden_signals": [],
+        "source": "phase_p2_4_expansion"
+      }
+    },
+    {
+      "item_id": "open_response_2015",
+      "source_question_id": "2015",
+      "stem": "Evaluate the impact of climate change on WSET Level 3 growing regions, considering ripening patterns, acidity levels, and wine style evolution.",
+      "topic": "climate change",
+      "RA": "RA3",
+      "command_verb": "evaluate",
+      "expected_concepts": [
+        "climate",
+        "ripening",
+        "acidity",
+        "style",
+        "regions"
+      ],
+      "evaluation_config": {
+        "verb_definition_key": "evaluate",
+        "requires_causal_chain": false,
+        "structure_rules": {},
+        "required_signals": [],
+        "forbidden_signals": [],
+        "source": "phase_p2_4_expansion"
+      }
     }
   ],
   "evaluation_by_item_id": {
@@ -252,13 +1362,13 @@ window.OPEN_RESPONSE_LAB_PAYLOAD = {
       "expected_concepts": [
         "sulfitos",
         "SO2",
-        "inhibición de levaduras salvajes",
-        "protección antimicrobiana",
+        "inhibici\u00f3n de levaduras salvajes",
+        "protecci\u00f3n antimicrobiana",
         "RA1",
         "winemaking",
         "sulphur_dioxide_management"
       ],
-      "optional_causal_chain": "dosis de SO2 -> inhibición microbiana -> menor actividad de levaduras salvajes",
+      "optional_causal_chain": "dosis de SO2 -> inhibici\u00f3n microbiana -> menor actividad de levaduras salvajes",
       "governance_flags": {
         "safe_for_examiner": false,
         "examiner_scoring_allowed": false,
@@ -279,21 +1389,21 @@ window.OPEN_RESPONSE_LAB_PAYLOAD = {
       "expected_concepts": [
         "sostenibilidad",
         "sostenible",
-        "certificación",
-        "orgánico",
-        "biodinámico",
+        "certificaci\u00f3n",
+        "org\u00e1nico",
+        "biodin\u00e1mico",
         "coste",
         "costo",
         "precio",
         "mano de obra",
         "rendimiento",
-        "diferenciación",
-        "percepción",
+        "diferenciaci\u00f3n",
+        "percepci\u00f3n",
         "consumidor",
         "mercado",
         "RA1",
-        "coste de producción",
-        "diferenciación comercial"
+        "coste de producci\u00f3n",
+        "diferenciaci\u00f3n comercial"
       ],
       "optional_causal_chain": "sostenibilidad -> coste -> precio",
       "governance_flags": {
@@ -314,10 +1424,10 @@ window.OPEN_RESPONSE_LAB_PAYLOAD = {
       "item_id": "open_response_799",
       "source_question_id": "799",
       "expected_concepts": [
-        "fermentación maloláctica",
-        "maloláctica",
-        "ácido málico",
-        "ácido láctico",
+        "fermentaci\u00f3n malol\u00e1ctica",
+        "malol\u00e1ctica",
+        "\u00e1cido m\u00e1lico",
+        "\u00e1cido l\u00e1ctico",
         "acidez",
         "suave",
         "suaviza",
@@ -326,7 +1436,7 @@ window.OPEN_RESPONSE_LAB_PAYLOAD = {
         "cremosidad",
         "diacetilo",
         "mantequilla",
-        "láctico",
+        "l\u00e1ctico",
         "cuerpo",
         "complejidad",
         "calidad",
@@ -334,7 +1444,7 @@ window.OPEN_RESPONSE_LAB_PAYLOAD = {
         "RA1",
         "vino blanco"
       ],
-      "optional_causal_chain": "maloláctica -> acidez -> textura",
+      "optional_causal_chain": "malol\u00e1ctica -> acidez -> textura",
       "governance_flags": {
         "safe_for_examiner": false,
         "examiner_scoring_allowed": false,
@@ -356,16 +1466,16 @@ window.OPEN_RESPONSE_LAB_PAYLOAD = {
         "altitud",
         "altura",
         "temperatura",
-        "frío",
+        "fr\u00edo",
         "fresco",
         "rango diurno",
-        "oscilación térmica",
-        "maduración",
+        "oscilaci\u00f3n t\u00e9rmica",
+        "maduraci\u00f3n",
         "madura",
         "lenta",
         "despacio",
         "acidez",
-        "azúcar",
+        "az\u00facar",
         "alcohol",
         "estilo",
         "frescura",
@@ -373,7 +1483,7 @@ window.OPEN_RESPONSE_LAB_PAYLOAD = {
         "clima",
         "estilo de vino tinto"
       ],
-      "optional_causal_chain": "altitud -> temperatura -> maduración",
+      "optional_causal_chain": "altitud -> temperatura -> maduraci\u00f3n",
       "governance_flags": {
         "safe_for_examiner": false,
         "examiner_scoring_allowed": false,
@@ -392,25 +1502,25 @@ window.OPEN_RESPONSE_LAB_PAYLOAD = {
       "item_id": "open_response_801",
       "source_question_id": "801",
       "expected_concepts": [
-        "orientación",
+        "orientaci\u00f3n",
         "pendiente",
         "ladera",
-        "exposición",
+        "exposici\u00f3n",
         "sol",
         "solar",
-        "insolación",
+        "insolaci\u00f3n",
         "drenaje",
         "agua",
-        "maduración",
+        "maduraci\u00f3n",
         "madura",
-        "azúcar",
+        "az\u00facar",
         "acidez",
         "sombra",
         "temperatura",
         "RA1",
-        "exposición solar"
+        "exposici\u00f3n solar"
       ],
-      "optional_causal_chain": "orientación -> exposición -> maduración",
+      "optional_causal_chain": "orientaci\u00f3n -> exposici\u00f3n -> maduraci\u00f3n",
       "governance_flags": {
         "safe_for_examiner": false,
         "examiner_scoring_allowed": false,
@@ -429,18 +1539,18 @@ window.OPEN_RESPONSE_LAB_PAYLOAD = {
       "item_id": "open_response_802",
       "source_question_id": "802",
       "expected_concepts": [
-        "oxidación",
-        "oxígeno",
+        "oxidaci\u00f3n",
+        "ox\u00edgeno",
         "proteger",
-        "protección",
+        "protecci\u00f3n",
         "sulfuroso",
         "SO2",
         "inerte",
         "gas inerte",
         "temperatura",
-        "frío",
+        "fr\u00edo",
         "prensado",
-        "depósito",
+        "dep\u00f3sito",
         "aromas",
         "fruta",
         "frescura",
@@ -449,9 +1559,9 @@ window.OPEN_RESPONSE_LAB_PAYLOAD = {
         "RA1",
         "vino blanco",
         "bodega",
-        "manejo del oxígeno"
+        "manejo del ox\u00edgeno"
       ],
-      "optional_causal_chain": "oxígeno -> oxidación -> aromas",
+      "optional_causal_chain": "ox\u00edgeno -> oxidaci\u00f3n -> aromas",
       "governance_flags": {
         "safe_for_examiner": false,
         "examiner_scoring_allowed": false,
@@ -472,9 +1582,9 @@ window.OPEN_RESPONSE_LAB_PAYLOAD = {
       "expected_concepts": [
         "levadura",
         "levaduras",
-        "fermentación",
+        "fermentaci\u00f3n",
         "aromas",
-        "ésteres",
+        "\u00e9steres",
         "perfil sensorial",
         "sensorial",
         "levadura seleccionada",
@@ -483,10 +1593,10 @@ window.OPEN_RESPONSE_LAB_PAYLOAD = {
         "predecible",
         "estilo",
         "fruta",
-        "compuestos aromáticos",
+        "compuestos arom\u00e1ticos",
         "RA1"
       ],
-      "optional_causal_chain": "levadura -> fermentación -> aromas",
+      "optional_causal_chain": "levadura -> fermentaci\u00f3n -> aromas",
       "governance_flags": {
         "safe_for_examiner": false,
         "examiner_scoring_allowed": false,
@@ -508,12 +1618,12 @@ window.OPEN_RESPONSE_LAB_PAYLOAD = {
         "suelo",
         "drenaje",
         "agua",
-        "retención",
+        "retenci\u00f3n",
         "vigor",
-        "raíces",
+        "ra\u00edces",
         "rendimiento",
-        "concentración",
-        "maduración",
+        "concentraci\u00f3n",
+        "maduraci\u00f3n",
         "estilo",
         "RA1"
       ],
@@ -538,7 +1648,7 @@ window.OPEN_RESPONSE_LAB_PAYLOAD = {
       "expected_concepts": [
         "roble",
         "americano",
-        "francés",
+        "franc\u00e9s",
         "vainilla",
         "coco",
         "dulce",
@@ -546,14 +1656,14 @@ window.OPEN_RESPONSE_LAB_PAYLOAD = {
         "cedro",
         "tostado",
         "tanino",
-        "integración",
+        "integraci\u00f3n",
         "perfil sensorial",
         "estructura",
         "complejidad",
         "nuevo",
         "RA1",
         "roble americano",
-        "roble francés"
+        "roble franc\u00e9s"
       ],
       "optional_causal_chain": "roble americano -> vainilla -> perfil",
       "governance_flags": {
@@ -581,20 +1691,20 @@ window.OPEN_RESPONSE_LAB_PAYLOAD = {
         "hojas",
         "posicionamiento de brotes",
         "brotes",
-        "exposición",
+        "exposici\u00f3n",
         "sol",
-        "maduración",
-        "aireación",
-        "circulación de aire",
+        "maduraci\u00f3n",
+        "aireaci\u00f3n",
+        "circulaci\u00f3n de aire",
         "enfermedad",
         "hongos",
         "sombra",
         "racimos",
         "RA1",
-        "técnicas de viñedo",
+        "t\u00e9cnicas de vi\u00f1edo",
         "sanidad de la uva"
       ],
-      "optional_causal_chain": "deshojado -> exposición -> maduración",
+      "optional_causal_chain": "deshojado -> exposici\u00f3n -> maduraci\u00f3n",
       "governance_flags": {
         "safe_for_examiner": false,
         "examiner_scoring_allowed": false,
@@ -614,23 +1724,23 @@ window.OPEN_RESPONSE_LAB_PAYLOAD = {
       "source_question_id": "807",
       "expected_concepts": [
         "decisiones humanas",
-        "gestión",
-        "viña",
-        "viñedo",
+        "gesti\u00f3n",
+        "vi\u00f1a",
+        "vi\u00f1edo",
         "riego",
-        "estrés hídrico",
-        "sequía",
+        "estr\u00e9s h\u00eddrico",
+        "sequ\u00eda",
         "calor",
         "calor extremo",
         "dosel",
         "manejo del dosel",
-        "exposición",
+        "exposici\u00f3n",
         "sombra",
-        "maduración",
+        "maduraci\u00f3n",
         "equilibrio",
         "RA1"
       ],
-      "optional_causal_chain": "riego -> estrés hídrico -> maduración",
+      "optional_causal_chain": "riego -> estr\u00e9s h\u00eddrico -> maduraci\u00f3n",
       "governance_flags": {
         "safe_for_examiner": false,
         "examiner_scoring_allowed": false,
@@ -649,21 +1759,21 @@ window.OPEN_RESPONSE_LAB_PAYLOAD = {
       "item_id": "open_response_808",
       "source_question_id": "808",
       "expected_concepts": [
-        "densidad de plantación",
+        "densidad de plantaci\u00f3n",
         "densidad",
-        "plantación",
+        "plantaci\u00f3n",
         "competencia",
         "vigor",
         "rendimiento",
-        "producción",
+        "producci\u00f3n",
         "cosecha",
-        "concentración",
+        "concentraci\u00f3n",
         "uva",
         "estilo",
         "coste",
         "costo",
         "mano de obra",
-        "mecanización",
+        "mecanizaci\u00f3n",
         "precio",
         "RA1"
       ],
@@ -690,10 +1800,10 @@ window.OPEN_RESPONSE_LAB_PAYLOAD = {
         "levaduras",
         "levaduras seleccionadas",
         "seleccionadas",
-        "levaduras autóctonas",
-        "autóctonas",
+        "levaduras aut\u00f3ctonas",
+        "aut\u00f3ctonas",
         "salvajes",
-        "fermentación",
+        "fermentaci\u00f3n",
         "control",
         "consistencia",
         "predecible",
@@ -724,22 +1834,22 @@ window.OPEN_RESPONSE_LAB_PAYLOAD = {
       "item_id": "open_response_810",
       "source_question_id": "810",
       "expected_concepts": [
-        "estrés hídrico",
+        "estr\u00e9s h\u00eddrico",
         "agua",
         "moderado",
         "baya",
-        "bayas pequeñas",
-        "concentración",
+        "bayas peque\u00f1as",
+        "concentraci\u00f3n",
         "piel",
         "rendimiento",
         "coste",
         "costo",
         "precio",
-        "maduración",
-        "azúcar",
+        "maduraci\u00f3n",
+        "az\u00facar",
         "RA1"
       ],
-      "optional_causal_chain": "estrés hídrico -> baya -> concentración",
+      "optional_causal_chain": "estr\u00e9s h\u00eddrico -> baya -> concentraci\u00f3n",
       "governance_flags": {
         "safe_for_examiner": false,
         "examiner_scoring_allowed": false,
@@ -761,20 +1871,20 @@ window.OPEN_RESPONSE_LAB_PAYLOAD = {
         "latitud",
         "altitud",
         "altura",
-        "clima cálido",
+        "clima c\u00e1lido",
         "temperatura",
         "calor",
-        "maduración",
-        "rápida",
+        "maduraci\u00f3n",
+        "r\u00e1pida",
         "acidez",
         "rango diurno",
-        "oscilación térmica",
+        "oscilaci\u00f3n t\u00e9rmica",
         "frescura",
         "alcohol",
         "estilo",
         "RA1"
       ],
-      "optional_causal_chain": "latitud -> temperatura -> maduración",
+      "optional_causal_chain": "latitud -> temperatura -> maduraci\u00f3n",
       "governance_flags": {
         "safe_for_examiner": false,
         "examiner_scoring_allowed": false,
@@ -793,20 +1903,20 @@ window.OPEN_RESPONSE_LAB_PAYLOAD = {
       "item_id": "open_response_812",
       "source_question_id": "812",
       "expected_concepts": [
-        "estrés hídrico",
+        "estr\u00e9s h\u00eddrico",
         "agua",
         "moderado",
         "vigor",
         "crecimiento vegetativo",
         "baya",
-        "bayas pequeñas",
-        "concentración",
-        "maduración",
+        "bayas peque\u00f1as",
+        "concentraci\u00f3n",
+        "maduraci\u00f3n",
         "rendimiento",
-        "azúcar",
+        "az\u00facar",
         "RA1"
       ],
-      "optional_causal_chain": "estrés hídrico -> vigor -> concentración",
+      "optional_causal_chain": "estr\u00e9s h\u00eddrico -> vigor -> concentraci\u00f3n",
       "governance_flags": {
         "safe_for_examiner": false,
         "examiner_scoring_allowed": false,
@@ -825,10 +1935,10 @@ window.OPEN_RESPONSE_LAB_PAYLOAD = {
       "item_id": "open_response_813",
       "source_question_id": "813",
       "expected_concepts": [
-        "levaduras autóctonas",
-        "autóctonas",
+        "levaduras aut\u00f3ctonas",
+        "aut\u00f3ctonas",
         "salvajes",
-        "fermentación",
+        "fermentaci\u00f3n",
         "riesgo",
         "parada fermentativa",
         "lenta",
@@ -838,9 +1948,9 @@ window.OPEN_RESPONSE_LAB_PAYLOAD = {
         "control",
         "calidad",
         "RA1",
-        "riesgo enológico"
+        "riesgo enol\u00f3gico"
       ],
-      "optional_causal_chain": "levaduras autóctonas -> riesgo",
+      "optional_causal_chain": "levaduras aut\u00f3ctonas -> riesgo",
       "governance_flags": {
         "safe_for_examiner": false,
         "examiner_scoring_allowed": false,
@@ -867,7 +1977,7 @@ window.OPEN_RESPONSE_LAB_PAYLOAD = {
         "rendimiento",
         "vigor",
         "equilibrio",
-        "maduración",
+        "maduraci\u00f3n",
         "calidad",
         "uva",
         "vid",
@@ -897,13 +2007,13 @@ window.OPEN_RESPONSE_LAB_PAYLOAD = {
         "inoxidable",
         "temperatura",
         "control de temperatura",
-        "fermentación",
+        "fermentaci\u00f3n",
         "inerte",
         "aromas primarios",
         "fruta",
         "frescura",
         "limpio",
-        "oxígeno",
+        "ox\u00edgeno",
         "sabor",
         "RA1",
         "estilo fresco"
@@ -927,9 +2037,9 @@ window.OPEN_RESPONSE_LAB_PAYLOAD = {
       "item_id": "open_response_816",
       "source_question_id": "816",
       "expected_concepts": [
-        "maceración prolongada",
-        "maceración",
-        "extracción",
+        "maceraci\u00f3n prolongada",
+        "maceraci\u00f3n",
+        "extracci\u00f3n",
         "color",
         "tanino",
         "antocianos",
@@ -946,7 +2056,7 @@ window.OPEN_RESPONSE_LAB_PAYLOAD = {
         "vino tinto",
         "estilo"
       ],
-      "optional_causal_chain": "maceración -> extracción -> tanino",
+      "optional_causal_chain": "maceraci\u00f3n -> extracci\u00f3n -> tanino",
       "governance_flags": {
         "safe_for_examiner": false,
         "examiner_scoring_allowed": false,
@@ -969,12 +2079,12 @@ window.OPEN_RESPONSE_LAB_PAYLOAD = {
         "arena",
         "arcilla",
         "drenaje",
-        "retención de agua",
+        "retenci\u00f3n de agua",
         "agua",
         "vigor",
         "rendimiento",
-        "concentración",
-        "maduración",
+        "concentraci\u00f3n",
+        "maduraci\u00f3n",
         "estilo",
         "RA1"
       ],
@@ -997,8 +2107,8 @@ window.OPEN_RESPONSE_LAB_PAYLOAD = {
       "item_id": "open_response_853",
       "source_question_id": "853",
       "expected_concepts": [
-        "añada",
-        "año",
+        "a\u00f1ada",
+        "a\u00f1o",
         "uva",
         "cosechada",
         "vinificada",
@@ -1006,7 +2116,7 @@ window.OPEN_RESPONSE_LAB_PAYLOAD = {
         "wine_law_and_labelling",
         "vintage_labelling"
       ],
-      "optional_causal_chain": "añada declarada -> año de cosecha de la uva -> no año de embotellado",
+      "optional_causal_chain": "a\u00f1ada declarada -> a\u00f1o de cosecha de la uva -> no a\u00f1o de embotellado",
       "governance_flags": {
         "safe_for_examiner": false,
         "examiner_scoring_allowed": false,
@@ -1028,13 +2138,13 @@ window.OPEN_RESPONSE_LAB_PAYLOAD = {
         "DOP",
         "IGP",
         "origen",
-        "producción",
+        "producci\u00f3n",
         "regulaciones",
         "RA5",
         "wine_law_and_labelling",
         "dop_igp_hierarchy"
       ],
-      "optional_causal_chain": "vínculo más estrecho con el origen -> normas de producción más restrictivas",
+      "optional_causal_chain": "v\u00ednculo m\u00e1s estrecho con el origen -> normas de producci\u00f3n m\u00e1s restrictivas",
       "governance_flags": {
         "safe_for_examiner": false,
         "examiner_scoring_allowed": false,
@@ -1054,7 +2164,7 @@ window.OPEN_RESPONSE_LAB_PAYLOAD = {
       "source_question_id": "855",
       "expected_concepts": [
         "Reserva",
-        "tres años",
+        "tres a\u00f1os",
         "doce meses",
         "barrica",
         "botella",
@@ -1062,7 +2172,7 @@ window.OPEN_RESPONSE_LAB_PAYLOAD = {
         "wine_law_and_labelling",
         "spanish_reserva_ageing"
       ],
-      "optional_causal_chain": "Reserva tinto -> mínimo tres años totales -> al menos doce meses en barrica",
+      "optional_causal_chain": "Reserva tinto -> m\u00ednimo tres a\u00f1os totales -> al menos doce meses en barrica",
       "governance_flags": {
         "safe_for_examiner": false,
         "examiner_scoring_allowed": false,
@@ -1090,7 +2200,7 @@ window.OPEN_RESPONSE_LAB_PAYLOAD = {
         "wine_law_and_labelling",
         "german_pradikat"
       ],
-      "optional_causal_chain": "mayor madurez de la uva -> mayor concentración -> categoría Prädikat superior",
+      "optional_causal_chain": "mayor madurez de la uva -> mayor concentraci\u00f3n -> categor\u00eda Pr\u00e4dikat superior",
       "governance_flags": {
         "safe_for_examiner": false,
         "examiner_scoring_allowed": false,
@@ -1254,7 +2364,7 @@ window.OPEN_RESPONSE_LAB_PAYLOAD = {
           "corcho",
           "oxidado",
           "reducido",
-          "acidez volátil alta"
+          "acidez vol\u00e1til alta"
         ]
       },
       "pobre": {
@@ -1303,7 +2413,7 @@ window.OPEN_RESPONSE_LAB_PAYLOAD = {
           "aromas terciarios pronunciados",
           "final largo",
           "equilibrio perfecto",
-          "carácter varietal y regional muy definido",
+          "car\u00e1cter varietal y regional muy definido",
           "potencial de envejecimiento claro"
         ]
       }
@@ -1323,7 +2433,7 @@ window.OPEN_RESPONSE_LAB_PAYLOAD = {
           "Primary descriptors: specific (e.g., 'lemon, peach, melon, pineapple') not generic ('fruity')",
           "Secondary: MLF (butter/cream/cheese) or oak (vanilla/cedar/smoke/toast) identified and attributed",
           "Tertiary: bottle-age (honey/nutty/petroleum/leather/tobacco/forest floor) identified and attributed",
-          "Development stage correctly identified (joven/en evolución/evolucionado)",
+          "Development stage correctly identified (joven/en evoluci\u00f3n/evolucionado)",
           "All palate scale elements addressed: sweetness, acidity, [tannin for reds], alcohol, body, intensity, finish",
           "Quality level matches wine complexity evidenced (e.g., very good = secondary+tertiary noted)",
           "Readiness conclusion is logical given development stage observed"
@@ -1356,7 +2466,7 @@ window.OPEN_RESPONSE_LAB_PAYLOAD = {
         "id": "CRF_04",
         "failure": "Quality level inconsistent with tasting notes",
         "description": "Candidate selects Outstanding after noting simple/primary character",
-        "example": "Primary fruit only, short finish → 'Outstanding quality'",
+        "example": "Primary fruit only, short finish \u2192 'Outstanding quality'",
         "correction": "Simple wine with short finish = Acceptable quality"
       },
       {
@@ -1378,7 +2488,7 @@ window.OPEN_RESPONSE_LAB_PAYLOAD = {
         "failure": "Ignoring the simple wine exception",
         "description": "Candidate attempts to identify tertiary aromas for a simple wine and loses time/marks on non-existent complexity",
         "example": null,
-        "correction": "For simple wines: state 'simple' (1 mark) + 4–5 primary descriptors. Do not invent secondary or tertiary aromas."
+        "correction": "For simple wines: state 'simple' (1 mark) + 4\u20135 primary descriptors. Do not invent secondary or tertiary aromas."
       }
     ],
     "improvement_patterns": [
@@ -1431,7 +2541,7 @@ window.OPEN_RESPONSE_LAB_PAYLOAD = {
           "Forgetting to assess clarity",
           "Using non-SAT vocabulary (e.g. 'pretty', 'dark')"
         ],
-        "hint": "Work through Appearance in order: clarity → intensity → colour. Each element has its own scale. Colour must match the wine type (white, rosé, red)."
+        "hint": "Work through Appearance in order: clarity \u2192 intensity \u2192 colour. Each element has its own scale. Colour must match the wine type (white, ros\u00e9, red)."
       },
       "SAT_nose": {
         "common_errors": [
@@ -1474,7 +2584,7 @@ window.OPEN_RESPONSE_LAB_PAYLOAD = {
           "Overthinking distractors",
           "Selecting partially correct answers"
         ],
-        "hint": "For MCQ, eliminate clearly wrong options first. The correct answer will be fully accurate, not partially. WSET uses precise vocabulary — 'dry' is not the same as 'off-dry'."
+        "hint": "For MCQ, eliminate clearly wrong options first. The correct answer will be fully accurate, not partially. WSET uses precise vocabulary \u2014 'dry' is not the same as 'off-dry'."
       }
     }
   },
@@ -1490,5 +2600,37 @@ window.OPEN_RESPONSE_LAB_PAYLOAD = {
     "cloud_services_active": false,
     "public_frontend_active": false,
     "open_response_lab_active": false
-  }
+  },
+  "evaluation_metadata": {
+    "schema_version": "open_response_evaluation_v1",
+    "command_verbs_loaded": [
+      "assess",
+      "compare",
+      "describe",
+      "discuss",
+      "evaluate",
+      "explain",
+      "how",
+      "identify and explain",
+      "justify",
+      "list",
+      "outline",
+      "state",
+      "why"
+    ],
+    "enrichment_timestamp": "phase_p2_3",
+    "governance": {
+      "safe_for_examiner": false,
+      "examiner_scoring_allowed": false,
+      "formative_only": true
+    }
+  },
+  "expansion_history": [
+    {
+      "phase": "P2.4",
+      "items_added": 15,
+      "new_pool_size": 41,
+      "timestamp": "phase_p2_4_expansion"
+    }
+  ]
 };

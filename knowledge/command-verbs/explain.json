@@ -16,5 +16,15 @@
     "Explain why grapes grown in cool climates tend to have higher acidity.",
     "Explain how malolactic fermentation affects the style of white wine."
   ],
-  "mentor_hint": "Use the structure: [Factor] → [mechanism] → [result in the wine]. For example: 'Cool temperatures slow ripening → less sugar accumulation, more malic acid retained → higher acidity in finished wine.'"
+  "mentor_hint": "Use the structure: [Factor] → [mechanism] → [result in the wine]. For example: 'Cool temperatures slow ripening → less sugar accumulation, more malic acid retained → higher acidity in finished wine.'",
+  "compliance_checks": {
+    "required_signals": ["because", "due to", "therefore", "since", "causes", "leads to", "results in"],
+    "forbidden_signals": ["opinion", "probably", "I think"],
+    "structure_rules": {
+      "minimum_components": 3,
+      "component_order": ["cause", "mechanism", "effect"],
+      "elaboration_required": true,
+      "causal_chain_required": true
+    }
+  }
 }

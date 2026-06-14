@@ -1,0 +1,29 @@
+{
+  "schema_version": "assessment_intelligence_v1",
+  "verb": "state",
+  "source": "WSET L3 Specification + marking keys",
+  "governance": {"safe_for_examiner": false, "examiner_scoring_allowed": false, "uses_llm": false, "uses_api": false},
+  "cognitive_level": "recall",
+  "definition": "Give a clear, direct statement or assertion of fact. Minimal elaboration expected.",
+  "used_in_ras": ["RA1", "RA2"],
+  "expected_response": {
+    "format": "Brief factual statement; can be one sentence or short phrase",
+    "do": ["Be clear and direct", "Use appropriate terminology", "Answer only what is asked"],
+    "do_not": ["Elaborate or explain beyond what is asked", "Give opinion or interpretation"]
+  },
+  "mark_expectation": "1 mark for correct statement; no marks for explanation",
+  "question_stem_examples": [
+    "State the typical alcohol level of fino Sherry.",
+    "State two regions where Pinot Noir is grown."
+  ],
+  "mentor_hint": "Answer in 1-2 sentences. Give the fact directly. Do not explain why or elaborate.",
+  "compliance_checks": {
+    "required_signals": [],
+    "forbidden_signals": ["because", "therefore", "this explains", "opinion"],
+    "structure_rules": {
+      "minimum_components": 1,
+      "elaboration_required": false,
+      "brevity_required": true
+    }
+  }
+}
