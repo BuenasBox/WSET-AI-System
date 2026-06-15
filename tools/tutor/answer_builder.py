@@ -515,7 +515,7 @@ def _select_best_causal_chain(package: dict[str, Any]) -> dict[str, Any] | None:
         return None
     query = str(package.get("student_query") or "").lower()
     best = None
-    best_score = -1
+    best_score = 0
     for chain in chains:
         keywords = [str(kw).lower() for kw in chain.get("trigger_keywords", [])]
         score = sum(1 for kw in keywords if kw in query)

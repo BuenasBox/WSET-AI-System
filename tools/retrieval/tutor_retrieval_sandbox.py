@@ -78,6 +78,112 @@ STOPWORDS = {
     "where",
     "why",
     "with",
+    "al",
+    "como",
+    "con",
+    "cual",
+    "cuál",
+    "cuáles",
+    "cuando",
+    "de",
+    "del",
+    "donde",
+    "el",
+    "en",
+    "entre",
+    "es",
+    "está",
+    "están",
+    "estar",
+    "fue",
+    "fueron",
+    "ha",
+    "han",
+    "hay",
+    "la",
+    "las",
+    "los",
+    "más",
+    "menos",
+    "método",
+    "métodos",
+    "muy",
+    "para",
+    "pero",
+    "por",
+    "porque",
+    "proceso",
+    "procesos",
+    "que",
+    "qué",
+    "ser",
+    "sobre",
+    "son",
+    "también",
+    "técnica",
+    "técnicas",
+    "un",
+    "una",
+    "unas",
+    "unos",
+    "uva",
+    "uvas",
+    "vino",
+    "vinos",
+}
+CAUSAL_CHAIN_LOW_SIGNAL_TOKENS = {
+    "afirmación",
+    "afirmaciones",
+    "alta",
+    "alto",
+    "bajo",
+    "característica",
+    "características",
+    "calidad",
+    "consecuencia",
+    "consecuencias",
+    "contribuye",
+    "correcta",
+    "correcto",
+    "diferencia",
+    "diferencias",
+    "efecto",
+    "efectos",
+    "estilo",
+    "factor",
+    "factores",
+    "favorece",
+    "frente",
+    "influencia",
+    "influye",
+    "mejor",
+    "opción",
+    "principal",
+    "probable",
+    "produce",
+    "propósito",
+    "puede",
+    "resultado",
+    "resultados",
+    "se",
+    "siguiente",
+    "siguientes",
+    "su",
+    "término",
+    "tipo",
+    "uno",
+}
+CAUSAL_CHAIN_GEOGRAPHIC_SCOPE_TOKENS = {
+    "alsace",
+    "amontillado",
+    "asti",
+    "barolo",
+    "bordeaux",
+    "champagne",
+    "madeira",
+    "mosel",
+    "oloroso",
+    "tokaji",
 }
 SAT_TERMS = {
     "sat",
@@ -509,7 +615,12 @@ def detect_knowledge_nodes(query: str, knowledge_nodes: list[dict[str, Any]]) ->
         node_tokens = set(_tokens(" ".join([node_name, node_id_phrase, *phrases])))
         strong_hits = strong_query_tokens & node_tokens
         if node_type in {"causal_chains", "relationships"}:
-            token_hit = len(strong_hits) >= 2
+            domain_hits = strong_hits - CAUSAL_CHAIN_LOW_SIGNAL_TOKENS
+            token_hit = (
+                len(domain_hits) >= 2
+                and is_domain_specific_trigger_match(node, domain_hits)
+                and _geographic_scope_matches(node, query_tokens)
+            )
         elif node_type == "concepts":
             name_tokens = set(_tokens(f"{node_name} {node_id_phrase}"))
             token_hit = bool(strong_query_tokens & name_tokens)
@@ -524,6 +635,36 @@ def detect_knowledge_nodes(query: str, knowledge_nodes: list[dict[str, Any]]) ->
                 }
             )
     return matched
+
+
+def is_domain_specific_trigger_match(
+    node: dict[str, Any],
+    matched_tokens: set[str],
+) -> bool:
+    """Require at least one node-specific trigger token in a causal match."""
+    trigger_text = " ".join(
+        [
+            _knowledge_node_name(node),
+            _identifier_to_phrase(_knowledge_node_id(node)),
+            *_as_list(node.get("trigger_keywords")),
+        ]
+    )
+    domain_tokens = set(_tokens(trigger_text)) - CAUSAL_CHAIN_LOW_SIGNAL_TOKENS
+    return bool(matched_tokens & domain_tokens)
+
+
+def _geographic_scope_matches(
+    node: dict[str, Any],
+    query_tokens: set[str],
+) -> bool:
+    identity_tokens = set(
+        _tokens(
+            f"{_knowledge_node_name(node)} "
+            f"{_identifier_to_phrase(_knowledge_node_id(node))}"
+        )
+    )
+    required_scope = identity_tokens & CAUSAL_CHAIN_GEOGRAPHIC_SCOPE_TOKENS
+    return not required_scope or bool(required_scope & query_tokens)
 
 
 def expand_query_terms(
