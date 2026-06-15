@@ -1,0 +1,23 @@
+{
+  "node_type": "causal_chain",
+  "node_id": "HC_BORDEAUX_BLEND_VINTAGE_VARIATION",
+  "topic": "Bordeaux blending and vintage variation",
+  "trigger_keywords": ["bordeaux difficult vintage blend", "bordeaux blending vintage", "mezcla de uvas añada difícil", "ensamblaje bordeaux", "manage vintage variation"],
+  "steps": [
+    {"step": 1, "label": "cause", "text": "Bordeaux varieties differ in budding, ripening, structure and performance under a given season's weather."},
+    {"step": 2, "label": "mechanism", "text": "Blending lots and varieties lets the producer combine components that performed differently and balance fruit, acidity, tannin and body."},
+    {"step": 3, "label": "effect", "text": "The final wine can be more balanced and stylistically consistent than a wine dependent on one underperforming component."},
+    {"step": 4, "label": "exam_formulation", "text": "Formative causal formulation: blending varieties with different seasonal responses helps manage vintage variation and balance the final wine."}
+  ],
+  "agent_corpus": "tutor",
+  "safe_for_examiner": false,
+  "examiner_scoring_allowed": false,
+  "requires_human_review": true,
+  "source": "heuristic",
+  "classification": "inferred",
+  "official": false,
+  "formative_only": true,
+  "official_mark_scheme": false,
+  "governance": {"safe_for_examiner": false, "examiner_scoring_allowed": false, "agent_corpus": "tutor", "source": "heuristic", "classification": "inferred", "official": false, "formative_only": true},
+  "_meta": {"schema_version": "causal_chain_v1", "heuristic_extension": "HC_v1", "created_date": "2026-06-15", "ingestion_status": "draft", "source_note": "Inferred formative model - not official WSET assessment or mark-scheme content"}
+}

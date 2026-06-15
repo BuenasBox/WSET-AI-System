@@ -1,7 +1,7 @@
 # ENRICHMENT BATCH 1 — Reporte de muestra para aprobación
 
-Lote: **260 ítems** · derivación determinista desde nodos causales CC_/HC_ (umbral: ≥2 trigger keywords, mejor nodo único, capa ES con guard).
-Con micro_drill: **196** · fingerprint de entrada: `5c38a1e053635c2c`
+Lote: **285 ítems** · derivación determinista desde nodos causales CC_/HC_ (umbral: ≥2 trigger keywords, mejor nodo único, capa ES con guard).
+Con micro_drill: **218** · fingerprint de entrada: `86775c14a8b591ed`
 
 Política v2 (precisión primero): word-boundary, triggers genéricos prohibidos, el nodo debe
 explicar la respuesta correcta (hit en stem Y en opción correcta), stems de identificación excluidos.
@@ -302,6 +302,31 @@ Rechazos por regla: `{"below_threshold": 95, "identification_stem": 112, "no_ste
   - C. Adición de aguardiente vínico
   - D. Estructura potente y necesidad de guarda
   - _Explicación:_ «Las pendientes pronunciadas del Mosel favorecen la maduración del Riesling al maximizar la insolación.» corresponde a las pendientes bien orientadas y la maduración en clima fresco. Las demás afirmaciones son correctas, pero describen otros mecanismos.
+
+---
+
+## wset3_8 (sq 8) · RA2 · gold=False
+
+**Pregunta:** ¿Qué práctica específica distingue al Tokaji Aszú?
+**Correcta (C):** Adición de pasta de bayas botritizadas
+**Nodo:** `manual_review_v1` · score 0 · en stem:  · en respuesta correcta: Adición de pasta de bayas botritizadas
+
+- **Causa:** Bayas seleccionadas y concentradas por podredumbre noble se añaden al mosto en fermentación o al vino base.
+- **Mecanismo:** La maceración transfiere azúcar, acidez, sabor y compuestos derivados de la botrytis desde las bayas concentradas al líquido.
+- **Efecto:** El Tokaji Aszú gana dulzor, concentración y complejidad botritizada, equilibrados por su acidez.
+
+**Mentor Guía:** La respuesta correcta es C: «Adición de pasta de bayas botritizadas». La clave está en la adición de bayas Aszú botritizadas: La maceración transfiere azúcar, acidez, sabor y compuestos derivados de la botrytis desde las bayas concentradas al líquido. Por eso, el Tokaji Aszú gana dulzor, concentración y complejidad botritizada, equilibrados por su acidez. Matiz: El método concreto y las proporciones varían; la podredumbre noble y la acidez son tan importantes como la adición.
+
+**Entrenador Técnico:** Concepto técnico (RA2): Fija el mecanismo de la adición de bayas Aszú botritizadas: Bayas seleccionadas y concentradas por podredumbre noble se añaden al mosto en fermentación o al vino base. → La maceración transfiere azúcar, acidez, sabor y compuestos derivados de la botrytis desde las bayas concentradas al líquido. En el examen, identifica este patrón causa→mecanismo→efecto antes de mirar las opciones. Matiz: El método concreto y las proporciones varían; la podredumbre noble y la acidez son tan importantes como la adición.
+
+**Revisor Estricto:** Exigencia de repaso (RA2): debes poder justificar por qué «Adición de pasta de bayas botritizadas» es correcta y por qué las otras tres opciones no lo son, citando el mecanismo de la adición de bayas Aszú botritizadas. Si no puedes reconstruir la cadena completa sin ver las opciones, repasa este concepto en tu material WSET L3. Matiz: El método concreto y las proporciones varían; la podredumbre noble y la acidez son tan importantes como la adición.
+
+**Micro-drill:** Consolidación: ¿cuál de estas afirmaciones corresponde a la adición de bayas Aszú botritizadas?
+  - A. Adición de pasta de bayas botritizadas ✅
+  - B. Protege al vino del oxígeno y desarrolla sabores únicos
+  - C. Adición de aguardiente vínico
+  - D. Estructura potente y necesidad de guarda
+  - _Explicación:_ «Adición de pasta de bayas botritizadas» corresponde a la adición de bayas Aszú botritizadas. Las demás afirmaciones son correctas, pero describen otros mecanismos.
 
 ---
 
@@ -1167,31 +1192,6 @@ Rechazos por regla: `{"below_threshold": 95, "identification_stem": 112, "no_ste
   - C. Adición de aguardiente vínico
   - D. Estructura potente y necesidad de guarda
   - _Explicación:_ «Contiene más vino en relación al oxígeno que penetra por el cierre, favoreciendo un envejecimiento más lento y complejo» corresponde al envejecimiento más lento en formato magnum. Las demás afirmaciones son correctas, pero describen otros mecanismos.
-
----
-
-## wset3_5 (sq 5) · RA4 · gold=False
-
-**Pregunta:** ¿Qué diferencia al Oloroso del Amontillado en términos de crianza?
-**Correcta (C):** Envejecimiento exclusivamente oxidativo
-**Nodo:** `HC_OLOROSO_AMONTILLADO_AGEING_PATH` · score 3 · en stem: diferencia al oloroso del amontillado en terminos de crianza, oloroso del amontillado · en respuesta correcta: envejecimiento exclusivamente oxidativo
-
-- **Causa:** El Oloroso se fortifica a un nivel que impide mantener un velo de flor estable, mientras el Amontillado comienza como vino de crianza biológica bajo flor antes de perder esa protección.
-- **Mecanismo:** Sin la protección de la flor, el Oloroso permanece expuesto de forma controlada al oxígeno durante toda la maduración; el Amontillado primero desarrolla carácter biológico y después pasa a crianza oxidativa.
-- **Efecto:** El Oloroso sigue una ruta de crianza exclusivamente oxidativa, mientras el Amontillado combina una fase biológica inicial con desarrollo oxidativo posterior.
-
-**Mentor Guía:** La respuesta correcta es C: «Envejecimiento exclusivamente oxidativo». La clave está en las rutas de crianza de Oloroso y Amontillado: Sin la protección de la flor, el Oloroso permanece expuesto de forma controlada al oxígeno durante toda la maduración; el Amontillado primero desarrolla carácter biológico y después pasa a crianza oxidativa. Por eso, el Oloroso sigue una ruta de crianza exclusivamente oxidativa, mientras el Amontillado combina una fase biológica inicial con desarrollo oxidativo posterior.
-
-**Entrenador Técnico:** Concepto técnico (RA4): Tema: fortified wines. Fija el mecanismo de las rutas de crianza de Oloroso y Amontillado: El Oloroso se fortifica a un nivel que impide mantener un velo de flor estable, mientras el Amontillado comienza como vino de crianza biológica bajo flor antes de perder esa protección. → Sin la protección de la flor, el Oloroso permanece expuesto de forma controlada al oxígeno durante toda la maduración; el Amontillado primero desarrolla carácter biológico y después pasa a crianza oxidativa. En el examen, identifica este patrón causa→mecanismo→efecto antes de mirar las opciones.
-
-**Revisor Estricto:** Exigencia de repaso (RA4): debes poder justificar por qué «Envejecimiento exclusivamente oxidativo» es correcta y por qué las otras tres opciones no lo son, citando el mecanismo de las rutas de crianza de Oloroso y Amontillado. Si no puedes reconstruir la cadena completa sin ver las opciones, repasa este concepto en tu material WSET L3.
-
-**Micro-drill:** Consolidación: ¿cuál de estas afirmaciones corresponde a las rutas de crianza de Oloroso y Amontillado?
-  - A. Protege al vino del oxígeno y desarrolla sabores únicos
-  - B. Adición de aguardiente vínico
-  - C. Envejecimiento exclusivamente oxidativo ✅
-  - D. Estructura potente y necesidad de guarda
-  - _Explicación:_ «Envejecimiento exclusivamente oxidativo» corresponde a las rutas de crianza de Oloroso y Amontillado. Las demás afirmaciones son correctas, pero describen otros mecanismos.
 
 ---
 

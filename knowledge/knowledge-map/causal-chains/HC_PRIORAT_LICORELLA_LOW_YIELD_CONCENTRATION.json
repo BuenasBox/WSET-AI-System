@@ -1,0 +1,23 @@
+{
+  "node_type": "causal_chain",
+  "node_id": "HC_PRIORAT_LICORELLA_LOW_YIELD_CONCENTRATION",
+  "topic": "Priorat licorella slopes and concentration",
+  "trigger_keywords": ["priorat concentration", "priorat licorella", "llicorella concentration", "garnacha cariñena priorat", "suelos de licorella"],
+  "steps": [
+    {"step": 1, "label": "cause", "text": "Old Garnacha and Carinena vines grow on steep, low-fertility, freely draining licorella slopes in a warm, dry region."},
+    {"step": 2, "label": "mechanism", "text": "Limited water and nutrient availability restrict vigour and yields, while strong sunlight supports ripening; deep roots help vines access scarce water."},
+    {"step": 3, "label": "effect", "text": "Small crops of ripe grapes can produce deeply flavoured, concentrated and structured red wines."},
+    {"step": 4, "label": "exam_formulation", "text": "Formative causal formulation: low-yielding vines on dry, low-fertility licorella slopes help explain Priorat's concentration."}
+  ],
+  "agent_corpus": "tutor",
+  "safe_for_examiner": false,
+  "examiner_scoring_allowed": false,
+  "requires_human_review": true,
+  "source": "heuristic",
+  "classification": "inferred",
+  "official": false,
+  "formative_only": true,
+  "official_mark_scheme": false,
+  "governance": {"safe_for_examiner": false, "examiner_scoring_allowed": false, "agent_corpus": "tutor", "source": "heuristic", "classification": "inferred", "official": false, "formative_only": true},
+  "_meta": {"schema_version": "causal_chain_v1", "heuristic_extension": "HC_v1", "created_date": "2026-06-15", "ingestion_status": "draft", "source_note": "Inferred formative model - not official WSET assessment or mark-scheme content"}
+}

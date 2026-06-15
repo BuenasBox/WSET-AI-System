@@ -1,0 +1,23 @@
+{
+  "node_type": "causal_chain",
+  "node_id": "HC_VINTAGE_CHAMPAGNE_EXTENDED_AGEING",
+  "topic": "Vintage Champagne selection and extended ageing",
+  "trigger_keywords": ["vintage champagne complexity", "champagne vintage ageing", "single vintage champagne", "champagne de añada", "crianza extendida champagne"],
+  "steps": [
+    {"step": 1, "label": "cause", "text": "A producer declares a Champagne from one selected harvest and normally gives it longer maturation than a standard non-vintage bottling."},
+    {"step": 2, "label": "mechanism", "text": "Extended lees ageing increases autolytic development and integration, while fruit from one year preserves a more specific vintage character."},
+    {"step": 3, "label": "effect", "text": "The wine can show greater structure, developed complexity and ageing potential than a producer's standard non-vintage style."},
+    {"step": 4, "label": "exam_formulation", "text": "Formative causal formulation: selected single-vintage fruit plus extended lees ageing can increase structure, complexity and longevity."}
+  ],
+  "agent_corpus": "tutor",
+  "safe_for_examiner": false,
+  "examiner_scoring_allowed": false,
+  "requires_human_review": true,
+  "source": "heuristic",
+  "classification": "inferred",
+  "official": false,
+  "formative_only": true,
+  "official_mark_scheme": false,
+  "governance": {"safe_for_examiner": false, "examiner_scoring_allowed": false, "agent_corpus": "tutor", "source": "heuristic", "classification": "inferred", "official": false, "formative_only": true},
+  "_meta": {"schema_version": "causal_chain_v1", "heuristic_extension": "HC_v1", "created_date": "2026-06-15", "ingestion_status": "draft", "source_note": "Inferred formative model - not official WSET assessment or mark-scheme content"}
+}
