@@ -1,0 +1,14 @@
+{
+  "node_type": "causal_chain", "node_id": "HC_NEGOCIANT_BLEND_MATURATION_ROLE", "topic": "Negociant blending and maturation role",
+  "trigger_keywords": ["negociant blending maturation", "bordeaux wine trade style", "négociant mezcla crianza", "comercio bordeaux estilo", "merchant matures wine"],
+  "steps": [
+    {"step": 1, "label": "cause", "text": "A wine merchant purchases grapes, must or wine from growers and takes responsibility for blending, maturation or bottling."},
+    {"step": 2, "label": "mechanism", "text": "Selecting lots and controlling blending and ageing lets the merchant shape consistency, structure and market style across multiple sources."},
+    {"step": 3, "label": "effect", "text": "Trade intermediaries can influence the finished style rather than acting only as passive resellers."},
+    {"step": 4, "label": "exam_formulation", "text": "Formative causal formulation: a negociant can shape style through lot selection, blending and maturation."}
+  ],
+  "agent_corpus": "tutor", "safe_for_examiner": false, "examiner_scoring_allowed": false, "requires_human_review": true,
+  "source": "heuristic", "classification": "inferred", "official": false, "formative_only": true, "official_mark_scheme": false,
+  "governance": {"safe_for_examiner": false, "examiner_scoring_allowed": false, "agent_corpus": "tutor", "source": "heuristic", "classification": "inferred", "official": false, "formative_only": true},
+  "_meta": {"schema_version": "causal_chain_v1", "heuristic_extension": "HC_v1", "created_date": "2026-06-15", "ingestion_status": "draft", "source_note": "Inferred formative model - not official WSET assessment or mark-scheme content"}
+}

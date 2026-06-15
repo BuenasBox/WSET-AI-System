@@ -1,0 +1,14 @@
+{
+  "node_type": "causal_chain", "node_id": "HC_DOURO_TERRACES_SLOPE_ACCESS", "topic": "Douro terraces and steep-slope cultivation",
+  "trigger_keywords": ["douro terraces", "terraced steep vineyards", "bancales douro", "terrazas pendiente viñedo", "slope access erosion"],
+  "steps": [
+    {"step": 1, "label": "cause", "text": "Vines are planted on very steep Douro slopes where an unmodified surface is difficult to cultivate."},
+    {"step": 2, "label": "mechanism", "text": "Terraces create narrower workable planting surfaces and can manage access and erosion, while preserving slope exposure."},
+    {"step": 3, "label": "effect", "text": "Viticulture becomes possible on steep sites that receive strong solar exposure but remain costly and difficult to work."},
+    {"step": 4, "label": "exam_formulation", "text": "Formative causal formulation: terraces convert steep slopes into plantable, accessible vineyard surfaces."}
+  ],
+  "agent_corpus": "tutor", "safe_for_examiner": false, "examiner_scoring_allowed": false, "requires_human_review": true,
+  "source": "heuristic", "classification": "inferred", "official": false, "formative_only": true, "official_mark_scheme": false,
+  "governance": {"safe_for_examiner": false, "examiner_scoring_allowed": false, "agent_corpus": "tutor", "source": "heuristic", "classification": "inferred", "official": false, "formative_only": true},
+  "_meta": {"schema_version": "causal_chain_v1", "heuristic_extension": "HC_v1", "created_date": "2026-06-15", "ingestion_status": "draft", "source_note": "Inferred formative model - not official WSET assessment or mark-scheme content"}
+}

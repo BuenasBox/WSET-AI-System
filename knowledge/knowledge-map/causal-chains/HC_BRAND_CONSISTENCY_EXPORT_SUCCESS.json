@@ -1,0 +1,14 @@
+{
+  "node_type": "causal_chain", "node_id": "HC_BRAND_CONSISTENCY_EXPORT_SUCCESS", "topic": "Brand consistency and export success",
+  "trigger_keywords": ["brand consistency export", "modern wine image export", "imagen moderna consistente", "marlborough export success", "reliable style market"],
+  "steps": [
+    {"step": 1, "label": "cause", "text": "Producers communicate a recognizable regional image and deliver a relatively consistent style across export markets."},
+    {"step": 2, "label": "mechanism", "text": "Clear positioning reduces consumer uncertainty, supports repeat purchase and gives distributors an easy category message."},
+    {"step": 3, "label": "effect", "text": "A modern, consistent image can accelerate export recognition and commercial success without guaranteeing the quality of every producer."},
+    {"step": 4, "label": "exam_formulation", "text": "Formative causal formulation: recognizable positioning and consistent style support repeat purchase and export distribution."}
+  ],
+  "agent_corpus": "tutor", "safe_for_examiner": false, "examiner_scoring_allowed": false, "requires_human_review": true,
+  "source": "heuristic", "classification": "inferred", "official": false, "formative_only": true, "official_mark_scheme": false,
+  "governance": {"safe_for_examiner": false, "examiner_scoring_allowed": false, "agent_corpus": "tutor", "source": "heuristic", "classification": "inferred", "official": false, "formative_only": true},
+  "_meta": {"schema_version": "causal_chain_v1", "heuristic_extension": "HC_v1", "created_date": "2026-06-15", "ingestion_status": "draft", "source_note": "Inferred formative model - not official WSET assessment or mark-scheme content"}
+}

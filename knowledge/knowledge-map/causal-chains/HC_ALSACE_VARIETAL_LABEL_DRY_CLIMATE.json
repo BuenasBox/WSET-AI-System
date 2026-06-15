@@ -1,0 +1,14 @@
+{
+  "node_type": "causal_chain", "node_id": "HC_ALSACE_VARIETAL_LABEL_DRY_CLIMATE", "topic": "Alsace varietal labelling and dry climate",
+  "trigger_keywords": ["alsace varietal label", "alsace dry climate", "etiquetado varietal alsacia", "clima seco alsacia", "vosges rain shadow"],
+  "steps": [
+    {"step": 1, "label": "cause", "text": "Alsace lies in the rain shadow of the Vosges and commonly labels wines by the principal grape variety."},
+    {"step": 2, "label": "mechanism", "text": "Low rainfall and sunny autumns support ripening, while varietal labelling communicates the aromatic grape identity directly to consumers."},
+    {"step": 3, "label": "effect", "text": "The region is associated with ripe, clearly varietal white wines and labels that foreground grape names."},
+    {"step": 4, "label": "exam_formulation", "text": "Formative causal formulation: the Vosges rain shadow supports a dry ripening season, and varietal labels make grape identity central to Alsace style."}
+  ],
+  "agent_corpus": "tutor", "safe_for_examiner": false, "examiner_scoring_allowed": false, "requires_human_review": true,
+  "source": "heuristic", "classification": "inferred", "official": false, "formative_only": true, "official_mark_scheme": false,
+  "governance": {"safe_for_examiner": false, "examiner_scoring_allowed": false, "agent_corpus": "tutor", "source": "heuristic", "classification": "inferred", "official": false, "formative_only": true},
+  "_meta": {"schema_version": "causal_chain_v1", "heuristic_extension": "HC_v1", "created_date": "2026-06-15", "ingestion_status": "draft", "source_note": "Inferred formative model - not official WSET assessment or mark-scheme content"}
+}

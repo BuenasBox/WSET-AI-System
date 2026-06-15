@@ -1,0 +1,14 @@
+{
+  "node_type": "causal_chain", "node_id": "HC_BAG_IN_BOX_COLLAPSIBLE_OXYGEN", "topic": "Bag-in-box convenience and oxygen control",
+  "trigger_keywords": ["bag in box young wine", "collapsible bag oxygen", "bag-in-box vino joven", "bolsa colapsable oxígeno", "bib everyday wine"],
+  "steps": [
+    {"step": 1, "label": "cause", "text": "Young wine is packaged in a flexible inner bag fitted with a dispensing tap and protected by an outer box."},
+    {"step": 2, "label": "mechanism", "text": "As wine is dispensed the bag collapses, limiting replacement air, while lightweight packaging lowers transport and serving costs."},
+    {"step": 3, "label": "effect", "text": "The format is practical for affordable wines consumed over a relatively short period after purchase and can preserve an opened wine better than an air-filled bottle."},
+    {"step": 4, "label": "exam_formulation", "text": "Formative causal formulation: a collapsible bag limits air entry and offers economical, practical service for young everyday wine."}
+  ],
+  "agent_corpus": "tutor", "safe_for_examiner": false, "examiner_scoring_allowed": false, "requires_human_review": true,
+  "source": "heuristic", "classification": "inferred", "official": false, "formative_only": true, "official_mark_scheme": false,
+  "governance": {"safe_for_examiner": false, "examiner_scoring_allowed": false, "agent_corpus": "tutor", "source": "heuristic", "classification": "inferred", "official": false, "formative_only": true},
+  "_meta": {"schema_version": "causal_chain_v1", "heuristic_extension": "HC_v1", "created_date": "2026-06-15", "ingestion_status": "draft", "source_note": "Inferred formative model - not official WSET assessment or mark-scheme content"}
+}

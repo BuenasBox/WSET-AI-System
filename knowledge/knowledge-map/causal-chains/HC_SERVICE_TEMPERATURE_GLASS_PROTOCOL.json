@@ -1,0 +1,14 @@
+{
+  "node_type": "causal_chain", "node_id": "HC_SERVICE_TEMPERATURE_GLASS_PROTOCOL", "topic": "Wine service temperature, glass and protocol",
+  "trigger_keywords": ["correct wine service parameters", "temperature glass protocol", "servicio correcto vino", "temperatura copa protocolo", "professional wine presentation"],
+  "steps": [
+    {"step": 1, "label": "cause", "text": "A wine is prepared for service with a chosen temperature, suitable clean glassware and an orderly presentation procedure."},
+    {"step": 2, "label": "mechanism", "text": "Temperature changes aroma and structure perception, glass shape changes aroma delivery, and protocol reduces handling errors and confirms the intended bottle."},
+    {"step": 3, "label": "effect", "text": "The wine can be presented consistently and assessed under conditions appropriate to its style."},
+    {"step": 4, "label": "exam_formulation", "text": "Formative causal formulation: correct service combines temperature, glassware and presentation because each controls a different part of the experience."}
+  ],
+  "agent_corpus": "tutor", "safe_for_examiner": false, "examiner_scoring_allowed": false, "requires_human_review": true,
+  "source": "heuristic", "classification": "inferred", "official": false, "formative_only": true, "official_mark_scheme": false,
+  "governance": {"safe_for_examiner": false, "examiner_scoring_allowed": false, "agent_corpus": "tutor", "source": "heuristic", "classification": "inferred", "official": false, "formative_only": true},
+  "_meta": {"schema_version": "causal_chain_v1", "heuristic_extension": "HC_v1", "created_date": "2026-06-15", "ingestion_status": "draft", "source_note": "Inferred formative model - not official WSET assessment or mark-scheme content"}
+}
