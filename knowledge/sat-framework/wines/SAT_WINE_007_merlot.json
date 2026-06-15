@@ -1,0 +1,88 @@
+{
+  "id": "SAT_WINE_007",
+  "priority": 2,
+  "grape_variety": "Merlot",
+  "region": "Right Bank Bordeaux",
+  "country": "France",
+  "style": "Dry, medium/full body, medium/high tannin, plum/red-black fruit, oak possible. Softer tannin profile than Cabernet.",
+  "expected_sat_observations": {
+    "appearance": [
+      "Medium to medium-deep ruby colour",
+      "Clear",
+      "Medium to deep intensity"
+    ],
+    "nose": [
+      "Clean condition",
+      "Medium to pronounced intensity",
+      "Plum, red cherry, black fruit",
+      "Chocolate, cedar possible",
+      "Oak spice if present",
+      "Medium development"
+    ],
+    "palate": [
+      "Dry sweetness",
+      "Medium acidity",
+      "Medium to medium-high tannin",
+      "Medium to full body",
+      "Plum and cherry flavours",
+      "Oak and chocolate notes",
+      "Medium to long finish",
+      "Softer tannin texture than Cabernet"
+    ],
+    "conclusions": [
+      "Good to Very Good quality",
+      "Drink now to medium-term ageing (5-10 years)"
+    ]
+  },
+  "common_student_errors": [
+    "Calling all plum-driven wines low quality",
+    "Missing tannin because it is softer than Cabernet",
+    "Confusing ripe fruit with sweetness",
+    "Underestimating Merlot's structural seriousness",
+    "Assuming Merlot is always simple"
+  ],
+  "misconceptions_addressed": [
+    {
+      "misconception": "Merlot is always simple or soft",
+      "correction": "Quality Merlot shows clear structure, complexity, and ageing potential despite softer tannin texture"
+    },
+    {
+      "misconception": "Plum fruit means inferior quality",
+      "correction": "Plum is a characteristic of Merlot ripeness and terroir, not a quality fault"
+    },
+    {
+      "misconception": "Soft tannin means short finish",
+      "correction": "Merlot can show medium-long finish with good acidity balance despite low tannin"
+    }
+  ],
+  "coaching_hints": [
+    "Compare Merlot's tannin texture to Cabernet — softer, more plush, less astringent.",
+    "Does plum fruit indicate ripeness or overripeness?",
+    "How does acidity support structure without aggressive tannin?",
+    "What indicates ageing potential in this wine?"
+  ],
+  "causal_reasoning_paths": [
+    {
+      "cause": "Merlot ripens earlier than Cabernet",
+      "effect": "Plum and red-black fruit rather than blackcurrant; softer tannin; fuller body",
+      "example_in_wine": "Plum and cherry dominate over blackcurrant"
+    },
+    {
+      "cause": "Right Bank clay/limestone terroir",
+      "effect": "Structural seriousness despite softer fruit character",
+      "example_in_wine": "Pomerol Merlot shows excellent structure despite plush fruit"
+    },
+    {
+      "cause": "Softer tannin skin character",
+      "effect": "Less astringent mouthfeel; smoother, more velvety texture",
+      "example_in_wine": "Medium tannin feels more integrated than similar Cabernet"
+    }
+  ],
+  "examination_value": "High",
+  "governance": {
+    "safe_for_examiner": false,
+    "formative_only": true,
+    "training_context_only": true,
+    "external_tasting_required": false
+  }
+}

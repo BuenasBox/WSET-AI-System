@@ -1,0 +1,89 @@
+{
+  "id": "SAT_WINE_009",
+  "priority": 2,
+  "grape_variety": "Nebbiolo",
+  "region": "Barolo / Barbaresco",
+  "country": "Italy",
+  "style": "Pale garnet, high acid, high tannin, red cherry, rose, dried herbs, tar, earthy notes. Complex and ageworthy.",
+  "expected_sat_observations": {
+    "appearance": [
+      "Pale garnet to tawny colour",
+      "Clear",
+      "Medium intensity (pale despite age)"
+    ],
+    "nose": [
+      "Clean condition",
+      "Medium to pronounced intensity",
+      "Red cherry, sour cherry",
+      "Rose and floral notes",
+      "Dried herbs, tar, leather",
+      "Earthy/forest floor notes",
+      "Evolved development (even in youth)"
+    ],
+    "palate": [
+      "Dry sweetness",
+      "High acidity",
+      "High tannin",
+      "Medium to medium-full body",
+      "Red cherry and herbal flavours",
+      "Tar and leather notes",
+      "Earthy character",
+      "Long, structured finish"
+    ],
+    "conclusions": [
+      "Good to Excellent quality",
+      "Long ageing potential (10-30+ years); normally drink after 3-5 years minimum"
+    ]
+  },
+  "common_student_errors": [
+    "Calling it Pinot Noir due to pale colour",
+    "Underestimating tannin because of pale colour",
+    "Missing the complexity under the austerity",
+    "Confusing rose and floral with sweetness",
+    "Treating tar and leather as faults"
+  ],
+  "misconceptions_addressed": [
+    {
+      "misconception": "Pale colour indicates light tannin",
+      "correction": "Nebbiolo demonstrates that high tannin is completely independent of colour; pale colour can hide serious structure"
+    },
+    {
+      "misconception": "Never infer tannin from colour alone",
+      "correction": "Palate assessment of tannin is essential; colour is unreliable for predicting structure"
+    },
+    {
+      "misconception": "Tar and earthy notes are faults",
+      "correction": "Tar, leather, and forest floor are positive tertiary characteristics in Nebbiolo"
+    }
+  ],
+  "coaching_hints": [
+    "Never infer tannin from colour alone.",
+    "Feel the tannin texture on your palate — is it harsh or structured?",
+    "Notice the pale colour despite full tannin — a key diagnostic feature.",
+    "Can you identify the rose and herbal notes under the structure?"
+  ],
+  "causal_reasoning_paths": [
+    {
+      "cause": "Nebbiolo's pale pigment phenolic content",
+      "effect": "Pale colour despite high tannin extraction",
+      "example_in_wine": "Pale garnet with serious astringent mouthfeel"
+    },
+    {
+      "cause": "Cool Piedmont climate and high acidity",
+      "effect": "Red cherry and sour cherry rather than black fruit",
+      "example_in_wine": "Bright red fruit despite long ageing capacity"
+    },
+    {
+      "cause": "Long bottle age and reductive evolution",
+      "effect": "Tertiary development of tar, leather, forest floor",
+      "example_in_wine": "Aged Barolo shows pronounced tertiaries"
+    }
+  ],
+  "examination_value": "High",
+  "governance": {
+    "safe_for_examiner": false,
+    "formative_only": true,
+    "training_context_only": true,
+    "external_tasting_required": false
+  }
+}

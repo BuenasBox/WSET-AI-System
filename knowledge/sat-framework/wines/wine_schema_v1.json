@@ -1,0 +1,127 @@
+{
+  "schema_version": "sat_wine_v1",
+  "description": "Schema for SAT wine training items with coaching and causal reasoning",
+  "source": "EpistemicLab SAT Expansion — pedagogical wine selection",
+  "governance": {
+    "safe_for_examiner": false,
+    "examiner_scoring_allowed": false,
+    "uses_llm": false,
+    "uses_api": false,
+    "formative_only": true,
+    "training_context_only": true
+  },
+  "wine_object_schema": {
+    "id": {
+      "type": "string",
+      "description": "Unique SAT wine identifier (e.g., SAT_WINE_001)",
+      "required": true,
+      "format": "SAT_WINE_NNN"
+    },
+    "priority": {
+      "type": "integer",
+      "description": "Priority level (1 = highest, 3 = lower)",
+      "enum": [1, 2, 3],
+      "required": true
+    },
+    "grape_variety": {
+      "type": "string",
+      "description": "Primary grape variety",
+      "required": true
+    },
+    "region": {
+      "type": "string",
+      "description": "Wine region (e.g., Chablis, Mosel)",
+      "required": true
+    },
+    "country": {
+      "type": "string",
+      "description": "Country of origin",
+      "required": true
+    },
+    "style": {
+      "type": "string",
+      "description": "Detailed style description (dry, acidity, body, aromatics, etc.)",
+      "required": true
+    },
+    "expected_sat_observations": {
+      "type": "object",
+      "description": "Expected SAT observations across appearance, nose, palate, conclusions",
+      "properties": {
+        "appearance": {
+          "type": "array",
+          "items": {"type": "string"},
+          "description": "Expected appearance observations (clarity, intensity, colour)"
+        },
+        "nose": {
+          "type": "array",
+          "items": {"type": "string"},
+          "description": "Expected nose observations (condition, intensity, aroma characteristics, development)"
+        },
+        "palate": {
+          "type": "array",
+          "items": {"type": "string"},
+          "description": "Expected palate observations (sweetness, acidity, tannin, body, flavour, finish)"
+        },
+        "conclusions": {
+          "type": "array",
+          "items": {"type": "string"},
+          "description": "Expected conclusions (quality level, readiness for drinking)"
+        }
+      },
+      "required": true
+    },
+    "common_student_errors": {
+      "type": "array",
+      "items": {"type": "string"},
+      "description": "Typical mistakes students make when tasting this wine",
+      "required": true
+    },
+    "misconceptions_addressed": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "misconception": {"type": "string"},
+          "correction": {"type": "string"}
+        }
+      },
+      "description": "Misconceptions this wine helps correct",
+      "required": true
+    },
+    "coaching_hints": {
+      "type": "array",
+      "items": {"type": "string"},
+      "description": "Coaching questions or hints to guide student observation",
+      "required": true
+    },
+    "causal_reasoning_paths": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "cause": {"type": "string"},
+          "effect": {"type": "string"},
+          "example_in_wine": {"type": "string"}
+        }
+      },
+      "description": "Causal chain reasoning opportunities",
+      "required": true
+    },
+    "examination_value": {
+      "type": "string",
+      "enum": ["Very High", "High", "Medium-High"],
+      "description": "Estimated value for WSET Level 3 examination preparation",
+      "required": true
+    },
+    "governance": {
+      "type": "object",
+      "properties": {
+        "safe_for_examiner": {"type": "boolean", "const": false},
+        "formative_only": {"type": "boolean", "const": true},
+        "training_context_only": {"type": "boolean", "const": true},
+        "external_tasting_required": {"type": "boolean"}
+      },
+      "required": true
+    }
+  }
+}

@@ -1,0 +1,86 @@
+{
+  "id": "SAT_WINE_005",
+  "priority": 1,
+  "grape_variety": "Pinot Noir",
+  "region": "Burgundy",
+  "country": "France",
+  "style": "Dry red, pale ruby/garnet colour, high acidity, low to medium tannin, red fruit primary with earthy/tertiary notes.",
+  "expected_sat_observations": {
+    "appearance": [
+      "Pale ruby to garnet colour",
+      "Clear",
+      "Light to medium intensity"
+    ],
+    "nose": [
+      "Clean condition",
+      "Medium intensity",
+      "Red fruit (cherry, raspberry, strawberry)",
+      "Possible earthy or tertiary notes (forest floor, mushroom)",
+      "Medium to evolved development"
+    ],
+    "palate": [
+      "Dry sweetness",
+      "High acidity",
+      "Low to medium tannin",
+      "Red fruit flavours",
+      "Earthy or gamey notes possible",
+      "Medium finish",
+      "Good structure despite pale colour"
+    ],
+    "conclusions": [
+      "Good to Very Good quality",
+      "Drink now or age 3-7 years depending on vintage"
+    ]
+  },
+  "common_student_errors": [
+    "Assuming pale colour means low quality or weak wine",
+    "Overcalling tannin because of acidity perception",
+    "Calling earthy/mushroom notes a fault instead of style characteristic",
+    "Missing the balance between acidity and structure",
+    "Underestimating complexity from bottle age"
+  ],
+  "misconceptions_addressed": [
+    {
+      "misconception": "Deep colour always equals high quality",
+      "correction": "Pinot Noir's pale colour is varietal characteristic; quality comes from balance, complexity, and length"
+    },
+    {
+      "misconception": "High acidity and high tannin go together",
+      "correction": "Pinot Noir demonstrates that high acidity can coexist with low-medium tannin"
+    },
+    {
+      "misconception": "Earthy/tertiary notes are faults",
+      "correction": "Forest floor, mushroom, and tertiary characters are positive indicators of complexity and bottle age"
+    }
+  ],
+  "coaching_hints": [
+    "Focus on balance, complexity, and length rather than colour intensity.",
+    "Never infer structure from colour alone.",
+    "Can you identify red fruit under the earthy characters?",
+    "What indicates quality in a light-coloured red?"
+  ],
+  "causal_reasoning_paths": [
+    {
+      "cause": "Pinot Noir thin skins",
+      "effect": "Pale colour and lower tannin extraction",
+      "example_in_wine": "Ruby/garnet colour despite medium-full body"
+    },
+    {
+      "cause": "Cool Burgundy climate",
+      "effect": "High acidity retention and red fruit (not black fruit)",
+      "example_in_wine": "Cherry and raspberry rather than plum or blackberry"
+    },
+    {
+      "cause": "Bottle age and reductive evolution",
+      "effect": "Tertiary development of earthy, gamey, forest floor notes",
+      "example_in_wine": "Mushroom and leather aromas in matured wine"
+    }
+  ],
+  "examination_value": "Very High",
+  "governance": {
+    "safe_for_examiner": false,
+    "formative_only": true,
+    "training_context_only": true,
+    "external_tasting_required": false
+  }
+}

@@ -1,0 +1,88 @@
+{
+  "id": "SAT_WINE_012",
+  "priority": 3,
+  "grape_variety": "Grenache / Garnacha",
+  "region": "Southern Rhône or Spain",
+  "country": "France / Spain",
+  "style": "Dry red, high alcohol, red fruit, low/medium tannin, spicy. Warm-climate character without high tannin.",
+  "expected_sat_observations": {
+    "appearance": [
+      "Medium ruby colour (sometimes pale for alcohol level)",
+      "Clear",
+      "Medium intensity"
+    ],
+    "nose": [
+      "Clean condition",
+      "Medium to pronounced intensity",
+      "Red fruit (strawberry, raspberry)",
+      "Ripe fruit character",
+      "Spice (white pepper, anise)",
+      "Medium development"
+    ],
+    "palate": [
+      "Dry sweetness",
+      "Medium acidity (lower than cool-climate reds)",
+      "Low to medium tannin",
+      "Medium to full body",
+      "Ripe red fruit flavours",
+      "Spice on finish",
+      "Warm alcohol evident",
+      "Medium to long finish"
+    ],
+    "conclusions": [
+      "Good to Very Good quality",
+      "Drink now; not intended for long ageing"
+    ]
+  },
+  "common_student_errors": [
+    "Assuming full body always means high tannin",
+    "Calling alcohol warmth 'sweetness'",
+    "Missing warm-climate evidence in the wine",
+    "Underestimating quality due to lack of tannin",
+    "Confusing ripe fruit with overripe or jammy"
+  ],
+  "misconceptions_addressed": [
+    {
+      "misconception": "Body, alcohol, and tannin are the same thing",
+      "correction": "Grenache demonstrates that high alcohol and full body can coexist with low tannin"
+    },
+    {
+      "misconception": "Alcohol warmth means sweetness",
+      "correction": "Alcohol creates a warm sensation at finish; sweetness is a distinct palate element"
+    },
+    {
+      "misconception": "Low tannin means low quality",
+      "correction": "Grenache's soft tannin is varietal characteristic; quality comes from fruit expression and balance"
+    }
+  ],
+  "coaching_hints": [
+    "Separate body, alcohol level, and tannin assessment.",
+    "Notice the alcohol warmth on the finish — is the wine sweet or dry?",
+    "What warm-climate indicators are present?",
+    "How does low acidity affect freshness in a warm-climate wine?"
+  ],
+  "causal_reasoning_paths": [
+    {
+      "cause": "Warm Southern Rhône/Spain climate",
+      "effect": "High sugar accumulation; higher alcohol; riper red fruit; lower acidity",
+      "example_in_wine": "14-15% alcohol; ripe strawberry; low acidity"
+    },
+    {
+      "cause": "Grenache varietal thin skins",
+      "effect": "Low tannin despite full body and alcohol",
+      "example_in_wine": "Soft, plush texture despite warmth"
+    },
+    {
+      "cause": "Drought tolerance and low yields",
+      "effect": "High concentration of ripe fruit and spice",
+      "example_in_wine": "Pronounced fruit intensity from low-yield farming"
+    }
+  ],
+  "examination_value": "Medium-High",
+  "governance": {
+    "safe_for_examiner": false,
+    "formative_only": true,
+    "training_context_only": true,
+    "external_tasting_required": false
+  }
+}

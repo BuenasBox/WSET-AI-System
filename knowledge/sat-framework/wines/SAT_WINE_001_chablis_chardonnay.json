@@ -1,0 +1,85 @@
+{
+  "id": "SAT_WINE_001",
+  "priority": 1,
+  "grape_variety": "Chardonnay",
+  "region": "Chablis",
+  "country": "France",
+  "style": "Dry, high acidity, light-medium body, unoaked or minimal oak. Pale lemon colour, citrus and green apple primary aromas, possible lees/mineral impression.",
+  "expected_sat_observations": {
+    "appearance": [
+      "Pale lemon colour",
+      "Clear",
+      "Light to medium intensity"
+    ],
+    "nose": [
+      "Clean condition",
+      "Medium intensity",
+      "Citrus (lemon, lime), green apple",
+      "Possible wet stone or lees notes",
+      "Young development"
+    ],
+    "palate": [
+      "Dry sweetness",
+      "High acidity",
+      "Light to medium body",
+      "Citrus and green apple flavours",
+      "Medium finish",
+      "No obvious oak or butter notes"
+    ],
+    "conclusions": [
+      "Good to Very Good quality (when well-made)",
+      "Drink now; may age 3-5 years in better vintages"
+    ]
+  },
+  "common_student_errors": [
+    "Calling it Sauvignon Blanc automatically due to green aromas",
+    "Ignoring lack of herbaceous intensity as diagnostic",
+    "Marking quality as low because fruit is restrained",
+    "Confusing high acidity with underripeness",
+    "Missing mineral/lees character as positive indicator"
+  ],
+  "misconceptions_addressed": [
+    {
+      "misconception": "All Chardonnay is oaky",
+      "correction": "Chablis exemplifies Chardonnay in its most neutral form, relying on variety and terroir rather than winemaking"
+    },
+    {
+      "misconception": "Low aroma intensity means low quality",
+      "correction": "Restrained, precise aromatics combined with high acidity and good structure indicate quality in cool-climate whites"
+    },
+    {
+      "misconception": "Chablis and Sauvignon Blanc are confused",
+      "correction": "Chablis (Chardonnay) shows citrus without herbaceous intensity; Sauvignon Blanc shows tropical/herbaceous notes"
+    }
+  ],
+  "coaching_hints": [
+    "Is the wine neutral, or is it precise and balanced?",
+    "Notice the acidity on the finish — does it support or undermine quality?",
+    "Can you identify primary fruit without secondary winemaking notes?",
+    "What role does the cool climate play in the final structure?"
+  ],
+  "causal_reasoning_paths": [
+    {
+      "cause": "Cool climate",
+      "effect": "High acidity and restrained fruit maturity",
+      "example_in_wine": "Chablis shows vibrant acidity and citrus rather than ripe stone fruit"
+    },
+    {
+      "cause": "Minimal oak/lees contact",
+      "effect": "Neutral aromatic profile without butter or toast",
+      "example_in_wine": "Pure varietal character without secondary complexity"
+    },
+    {
+      "cause": "Limestone terroir (Kimmeridgian)",
+      "effect": "Mineral or flinty character in nose and palate",
+      "example_in_wine": "Possible wet stone or chalk impressions"
+    }
+  ],
+  "examination_value": "Very High",
+  "governance": {
+    "safe_for_examiner": false,
+    "formative_only": true,
+    "training_context_only": true,
+    "external_tasting_required": false
+  }
+}

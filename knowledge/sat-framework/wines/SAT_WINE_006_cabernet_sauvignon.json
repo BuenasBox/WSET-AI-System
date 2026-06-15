@@ -1,0 +1,88 @@
+{
+  "id": "SAT_WINE_006",
+  "priority": 1,
+  "grape_variety": "Cabernet Sauvignon",
+  "region": "Left Bank Bordeaux / Napa",
+  "country": "France / USA",
+  "style": "Dry, full-bodied, high tannin, black fruit, oak, ageing potential. Deep ruby colour, structured and ageworthy.",
+  "expected_sat_observations": {
+    "appearance": [
+      "Deep ruby colour",
+      "Clear",
+      "Deep intensity"
+    ],
+    "nose": [
+      "Clean condition",
+      "Medium to pronounced intensity",
+      "Black fruit (blackcurrant, plum)",
+      "Cedar, mint, herbal notes",
+      "Oak spice (vanilla, clove)",
+      "Medium to evolved development"
+    ],
+    "palate": [
+      "Dry sweetness",
+      "Medium to high acidity",
+      "High tannin",
+      "Full body",
+      "Black fruit flavours",
+      "Oak influence (spice, vanilla)",
+      "Long finish",
+      "Structure supports ageing"
+    ],
+    "conclusions": [
+      "Good to Excellent quality",
+      "Ready to drink or age 5-15+ years depending on vintage/terroir"
+    ]
+  },
+  "common_student_errors": [
+    "Confusing tannin with acidity",
+    "Assuming high alcohol equals quality",
+    "Missing the relationship between structure and ageing potential",
+    "Ignoring oak as a positive structural element",
+    "Overcalling harshness in young wines"
+  ],
+  "misconceptions_addressed": [
+    {
+      "misconception": "Tannin and acidity are the same thing",
+      "correction": "Tannin is structure and texture on palate; acidity is a taste sensation. Both contribute to Cabernet's ageability"
+    },
+    {
+      "misconception": "Higher alcohol always means better quality",
+      "correction": "Alcohol provides body, but balance of tannin, acidity, and fruit determines quality"
+    },
+    {
+      "misconception": "Oak in red wine is always visible",
+      "correction": "Well-integrated oak supports structure without being obvious; obvious oak suggests poor integration"
+    }
+  ],
+  "coaching_hints": [
+    "What structural elements support ageing?",
+    "How does tannin texture feel on the palate?",
+    "Is oak integrated or dominant?",
+    "Can you assess readiness for drinking based on tannin ripeness?"
+  ],
+  "causal_reasoning_paths": [
+    {
+      "cause": "Cabernet Sauvignon thick skins",
+      "effect": "High tannin extraction; deep colour",
+      "example_in_wine": "Full tannin and structure support ageing"
+    },
+    {
+      "cause": "Warm climate (Bordeaux/Napa)",
+      "effect": "Black fruit (not red fruit); higher alcohol; full body",
+      "example_in_wine": "Blackcurrant and plum rather than cherry"
+    },
+    {
+      "cause": "Oak maturation and bottle age",
+      "effect": "Tannin integration; oak spice softens; secondary complexity develops",
+      "example_in_wine": "Structure becomes more elegant with age"
+    }
+  ],
+  "examination_value": "Very High",
+  "governance": {
+    "safe_for_examiner": false,
+    "formative_only": true,
+    "training_context_only": true,
+    "external_tasting_required": false
+  }
+}

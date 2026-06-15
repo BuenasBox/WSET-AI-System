@@ -1,0 +1,87 @@
+{
+  "id": "SAT_WINE_003",
+  "priority": 1,
+  "grape_variety": "Riesling",
+  "region": "Mosel",
+  "country": "Germany",
+  "style": "Off-dry to medium-sweet, high acidity, low alcohol (8-9%), floral and citrus aromas. Pale lemon colour, stone fruit and green apple notes.",
+  "expected_sat_observations": {
+    "appearance": [
+      "Pale lemon colour",
+      "Clear",
+      "Light intensity"
+    ],
+    "nose": [
+      "Clean condition",
+      "Medium intensity",
+      "Citrus (lemon, lime), green apple, peach",
+      "Floral notes (rose, honeysuckle)",
+      "Stone fruit (apricot)",
+      "Possible lees/mineral notes",
+      "Young to medium development"
+    ],
+    "palate": [
+      "Off-dry to medium-sweet",
+      "High acidity",
+      "Light body",
+      "Low alcohol evident",
+      "Citrus, apple, peach flavours",
+      "Good length despite sweetness"
+    ],
+    "conclusions": [
+      "Good to Very Good quality",
+      "Excellent ageing potential despite sweetness"
+    ]
+  },
+  "common_student_errors": [
+    "Marking acidity as medium because sweetness softens perception",
+    "Assuming sweetness equals poor quality",
+    "Missing balance between sweetness and acidity",
+    "Underestimating ageing potential",
+    "Confusing Riesling with Sauvignon Blanc"
+  ],
+  "misconceptions_addressed": [
+    {
+      "misconception": "Sweet wine always means low quality",
+      "correction": "Off-dry Riesling with high acidity and complexity demonstrates that sweetness is a style choice, not a quality marker"
+    },
+    {
+      "misconception": "Low alcohol means simple wine",
+      "correction": "Low alcohol Riesling can show great complexity, finesse and ageing potential"
+    },
+    {
+      "misconception": "Sweetness masks acidity perception",
+      "correction": "High acidity in Riesling counterbalances residual sugar and is critical to quality assessment"
+    }
+  ],
+  "coaching_hints": [
+    "Are the sweetness and acidity in balance?",
+    "How does acidity support quality despite the residual sugar?",
+    "What indicates ageing potential in this sweet wine?",
+    "Notice the low alcohol — what does this tell you about the vintage/harvest timing?"
+  ],
+  "causal_reasoning_paths": [
+    {
+      "cause": "Cool Mosel climate",
+      "effect": "High acidity retained; low sugar accumulation; low alcohol results",
+      "example_in_wine": "Off-dry style with 8-9% alcohol and high acidity"
+    },
+    {
+      "cause": "Harvest timing (botrytis risk without full noble rot)",
+      "effect": "Residual sugar balanced by natural acidity",
+      "example_in_wine": "Sweet-acid balance creates harmony"
+    },
+    {
+      "cause": "Schist terroir and mineral soils",
+      "effect": "Mineral character and stone fruit aromatics",
+      "example_in_wine": "Possible flinty or slate impressions"
+    }
+  ],
+  "examination_value": "Very High",
+  "governance": {
+    "safe_for_examiner": false,
+    "formative_only": true,
+    "training_context_only": true,
+    "external_tasting_required": false
+  }
+}

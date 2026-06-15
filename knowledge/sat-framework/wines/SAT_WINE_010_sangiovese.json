@@ -1,0 +1,89 @@
+{
+  "id": "SAT_WINE_010",
+  "priority": 2,
+  "grape_variety": "Sangiovese",
+  "region": "Chianti Classico",
+  "country": "Italy",
+  "style": "Dry, high acid, medium/high tannin, sour cherry, herbal, earthy. Oak possible; food-friendly structure.",
+  "expected_sat_observations": {
+    "appearance": [
+      "Medium ruby to garnet colour",
+      "Clear",
+      "Medium intensity"
+    ],
+    "nose": [
+      "Clean condition",
+      "Medium intensity",
+      "Sour cherry, red plum",
+      "Herbs (oregano, thyme, sage)",
+      "Earthy/forest floor notes",
+      "Leather possible if aged",
+      "Medium development"
+    ],
+    "palate": [
+      "Dry sweetness",
+      "High acidity",
+      "Medium to medium-high tannin",
+      "Medium body",
+      "Sour cherry and herbal flavours",
+      "Savoury character",
+      "Medium to long finish",
+      "Food-friendly structure"
+    ],
+    "conclusions": [
+      "Good to Very Good quality",
+      "Drink now to medium-term ageing (3-8 years)"
+    ]
+  },
+  "common_student_errors": [
+    "Confusing with Pinot Noir due to red fruit",
+    "Missing tannin or underestimating its level",
+    "Treating savoury and herbal notes as negative",
+    "Not recognizing the food-pairing philosophy",
+    "Assuming acidity means underripeness"
+  ],
+  "misconceptions_addressed": [
+    {
+      "misconception": "High acidity red wines are underripe",
+      "correction": "Sangiovese's high acidity is varietal and regional character, intentional and quality-supporting"
+    },
+    {
+      "misconception": "Savoury notes are faults",
+      "correction": "Sangiovese's herb and earthy character is positive style expression and terroir identifier"
+    },
+    {
+      "misconception": "Italian wines are always low in tannin",
+      "correction": "Sangiovese shows serious tannin structure comparable to other quality reds"
+    }
+  ],
+  "coaching_hints": [
+    "Link the high acidity and tannin to regional food-wine style.",
+    "Notice how the savoury character complements food.",
+    "Can you identify the sour cherry vs red plum distinction?",
+    "How does acidity contribute to drinkability with food?"
+  ],
+  "causal_reasoning_paths": [
+    {
+      "cause": "Sangiovese varietal character",
+      "effect": "High acidity and sour cherry fruit regardless of terroir",
+      "example_in_wine": "Consistent acidity and cherry across Chianti bottlings"
+    },
+    {
+      "cause": "Tuscan terroir (calcareous soils) and climate",
+      "effect": "Herbal, earthy, and savoury notes; good structure",
+      "example_in_wine": "Oregano and thyme impressions; mineral finish"
+    },
+    {
+      "cause": "High acidity + medium+ tannin + food pairing philosophy",
+      "effect": "Wine designed to accompany Tuscan cuisine",
+      "example_in_wine": "Pairs naturally with aged cheeses and cured meats"
+    }
+  ],
+  "examination_value": "High",
+  "governance": {
+    "safe_for_examiner": false,
+    "formative_only": true,
+    "training_context_only": true,
+    "external_tasting_required": false
+  }
+}

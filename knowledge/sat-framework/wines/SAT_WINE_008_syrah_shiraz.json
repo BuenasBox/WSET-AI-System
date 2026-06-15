@@ -1,0 +1,87 @@
+{
+  "id": "SAT_WINE_008",
+  "priority": 2,
+  "grape_variety": "Syrah / Shiraz",
+  "region": "Northern Rhône or Barossa",
+  "country": "France / Australia",
+  "style": "Dry red, medium/full to full body, black fruit, pepper/spice, medium+ tannin. Climate expression varies dramatically.",
+  "expected_sat_observations": {
+    "appearance": [
+      "Deep ruby to purple colour",
+      "Clear",
+      "Deep intensity"
+    ],
+    "nose": [
+      "Clean condition",
+      "Medium to pronounced intensity",
+      "Black fruit (blackberry, plum)",
+      "Pepper and spice (white or black pepper)",
+      "Possible licorice or herbal notes",
+      "Development varies by climate"
+    ],
+    "palate": [
+      "Dry sweetness",
+      "Medium+ acidity",
+      "Medium+ tannin",
+      "Medium+ to full body",
+      "Black fruit flavours",
+      "Pepper and spice on the palate",
+      "Medium to long finish"
+    ],
+    "conclusions": [
+      "Good to Very Good quality",
+      "Moderate to long-term ageing (3-10+ years depending on site)"
+    ]
+  },
+  "common_student_errors": [
+    "Calling all pepper oak-derived (some is varietal)",
+    "Ignoring climate differences and concluding all Syrah tastes the same",
+    "Overusing 'jammy' for all warm-climate reds",
+    "Confusing Syrah and Shiraz as different wines",
+    "Missing the structure under ripe fruit"
+  ],
+  "misconceptions_addressed": [
+    {
+      "misconception": "Pepper in wine is always oak-derived",
+      "correction": "Syrah's pepper character is primary varietal expression (white pepper cool-climate; black pepper warm-climate)"
+    },
+    {
+      "misconception": "Syrah is always spicy and jammy",
+      "correction": "Climate dramatically affects Syrah: cool sites show pepper and fresh black fruit; warm sites show riper, jammy fruit with higher alcohol"
+    },
+    {
+      "misconception": "Syrah and Shiraz are different grapes",
+      "correction": "Shiraz is the Australian name for Syrah; same grape, different expression due to climate"
+    }
+  ],
+  "coaching_hints": [
+    "Is the fruit fresh black fruit or baked/jammy?",
+    "Identify whether pepper is white (cool) or black (warm).",
+    "What climate indicators are present in the wine?",
+    "How does alcohol level reflect the terroir?"
+  ],
+  "causal_reasoning_paths": [
+    {
+      "cause": "Cool climate (Northern Rhône)",
+      "effect": "Pepper and freshness retained; moderate alcohol; structured tannin",
+      "example_in_wine": "White pepper and herbal notes; fresh dark fruit; medium alcohol"
+    },
+    {
+      "cause": "Warm climate (Barossa, warm Rhône)",
+      "effect": "Riper, jammier fruit; higher alcohol; fuller body",
+      "example_in_wine": "Black pepper; baked plum; 14-15% alcohol; full tannin"
+    },
+    {
+      "cause": "Syrah varietal character",
+      "effect": "Pepper and licorice notes regardless of terroir",
+      "example_in_wine": "Pepper spice is consistent identifier across climates"
+    }
+  ],
+  "examination_value": "High",
+  "governance": {
+    "safe_for_examiner": false,
+    "formative_only": true,
+    "training_context_only": true,
+    "external_tasting_required": false
+  }
+}

@@ -1,0 +1,88 @@
+{
+  "id": "SAT_WINE_011",
+  "priority": 3,
+  "grape_variety": "Tempranillo",
+  "region": "Rioja Reserva",
+  "country": "Spain",
+  "style": "Dry red, medium/full body, red/black fruit, oak-influenced, vanilla, spice, tertiary development.",
+  "expected_sat_observations": {
+    "appearance": [
+      "Medium to medium-deep garnet colour",
+      "Clear",
+      "Medium intensity"
+    ],
+    "nose": [
+      "Clean condition",
+      "Medium to pronounced intensity",
+      "Red and black fruit (cherry, plum)",
+      "Vanilla, coconut, spice (oak-derived)",
+      "Leather and tobacco possible",
+      "Evolved development"
+    ],
+    "palate": [
+      "Dry sweetness",
+      "Medium acidity",
+      "Medium tannin",
+      "Medium to medium-full body",
+      "Red fruit flavours",
+      "Oak spice and vanilla",
+      "Leather and tobacco notes",
+      "Medium to long finish"
+    ],
+    "conclusions": [
+      "Good to Very Good quality",
+      "Ready to drink; can age further 5-10 years"
+    ]
+  },
+  "common_student_errors": [
+    "Calling vanilla 'sweetness'",
+    "Overvaluing oak without assessing balance",
+    "Missing tertiary development",
+    "Underestimating the complexity from controlled oak ageing",
+    "Not recognizing American vs French oak differences"
+  ],
+  "misconceptions_addressed": [
+    {
+      "misconception": "Oak spice and vanilla mean sweetness",
+      "correction": "Oak-derived aromas are winemaking effects, not residual sugar; wine remains dry"
+    },
+    {
+      "misconception": "Oak is always positive",
+      "correction": "Oak is positive when integrated and balanced; dominant oak indicates poor integration"
+    },
+    {
+      "misconception": "Tertiary development is deterioration",
+      "correction": "Tertiary aromas (leather, tobacco) are positive indicators of complexity and bottle age"
+    }
+  ],
+  "coaching_hints": [
+    "Separate primary, secondary, and tertiary descriptors.",
+    "Is oak integrated or does it dominate?",
+    "What indicates quality in an oaked red?",
+    "How does oak ageing support structure rather than mask it?"
+  ],
+  "causal_reasoning_paths": [
+    {
+      "cause": "Rioja Reserva classification (oak requirement)",
+      "effect": "Vanilla, spice, and oak-influenced aromas; increased complexity",
+      "example_in_wine": "American oak gives coconut; French oak gives subtler spice"
+    },
+    {
+      "cause": "Oak and bottle maturation",
+      "effect": "Oak spice softens; tertiary aromas develop; integration improves",
+      "example_in_wine": "Wine released after oak is already integrated"
+    },
+    {
+      "cause": "Traditional Spanish winemaking",
+      "effect": "Longer oak ageing than modern international style",
+      "example_in_wine": "Reserva shows pronounced oak and development"
+    }
+  ],
+  "examination_value": "Medium-High",
+  "governance": {
+    "safe_for_examiner": false,
+    "formative_only": true,
+    "training_context_only": true,
+    "external_tasting_required": false
+  }
+}

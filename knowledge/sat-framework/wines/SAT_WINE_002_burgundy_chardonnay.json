@@ -1,0 +1,85 @@
+{
+  "id": "SAT_WINE_002",
+  "priority": 1,
+  "grape_variety": "Chardonnay",
+  "region": "Côte de Beaune / Mâconnais",
+  "country": "France",
+  "style": "Dry, medium to full body, oak/lees texture possible, ripe citrus and stone fruit. Medium lemon colour, butter and toast secondary notes.",
+  "expected_sat_observations": {
+    "appearance": [
+      "Medium lemon to gold colour",
+      "Clear",
+      "Medium to deep intensity"
+    ],
+    "nose": [
+      "Clean condition",
+      "Medium to pronounced intensity",
+      "Stone fruit (peach, apricot), ripe citrus",
+      "Butter, toast, possible creamy/lees notes",
+      "Medium development"
+    ],
+    "palate": [
+      "Dry sweetness",
+      "Medium acidity",
+      "Medium to full body",
+      "Stone fruit and citrus flavours",
+      "Butter, oak and creamy texture",
+      "Medium to long finish"
+    ],
+    "conclusions": [
+      "Good to Very Good quality",
+      "Drink now to medium-term ageing (5-7 years)"
+    ]
+  },
+  "common_student_errors": [
+    "Calling sweetness because of full body and oak",
+    "Listing oak but not explaining why it's there",
+    "Missing quality assessment based on texture and length",
+    "Confusing oak-derived aromas with primary fruit",
+    "Underestimating complexity due to oaky character"
+  ],
+  "misconceptions_addressed": [
+    {
+      "misconception": "All Burgundy white is the same",
+      "correction": "Chablis, Côte de Beaune, and Mâconnais each have distinct styles based on ripeness and winemaking"
+    },
+    {
+      "misconception": "Oak always means poor quality",
+      "correction": "Well-integrated oak in Burgundy whites adds texture and complexity when balanced by acidity"
+    },
+    {
+      "misconception": "Full body and butter mean sweetness",
+      "correction": "These are winemaking effects (MLF, oak, lees) not sugar; acidity confirms dryness"
+    }
+  ],
+  "coaching_hints": [
+    "Separate primary fruit from secondary winemaking notes.",
+    "Does the oak feel integrated or dominant?",
+    "How does acidity balance the richness of the wine?",
+    "What tells you this is quality despite the richness?"
+  ],
+  "causal_reasoning_paths": [
+    {
+      "cause": "Warmer terroir within Burgundy",
+      "effect": "Riper fruit (stone fruit instead of citrus only)",
+      "example_in_wine": "Mâcon shows riper stone fruit than Chablis"
+    },
+    {
+      "cause": "Oak maturation and lees contact",
+      "effect": "Butter, toast, creamy texture; increased complexity",
+      "example_in_wine": "Secondary aromas of butter and toasted bread"
+    },
+    {
+      "cause": "Malolactic conversion",
+      "effect": "Reduced acidity sharpness, increased butter/creaminess",
+      "example_in_wine": "Medium acidity despite cool climate"
+    }
+  ],
+  "examination_value": "Very High",
+  "governance": {
+    "safe_for_examiner": false,
+    "formative_only": true,
+    "training_context_only": true,
+    "external_tasting_required": false
+  }
+}

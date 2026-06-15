@@ -1,0 +1,87 @@
+{
+  "id": "SAT_WINE_004",
+  "priority": 1,
+  "grape_variety": "Sauvignon Blanc",
+  "region": "Marlborough",
+  "country": "New Zealand",
+  "style": "Dry, high acidity, intense herbaceous and tropical aromatics. Pale yellow colour, pronounced thiol expression.",
+  "expected_sat_observations": {
+    "appearance": [
+      "Pale yellow colour",
+      "Clear",
+      "Light to medium intensity"
+    ],
+    "nose": [
+      "Clean condition",
+      "Pronounced intensity",
+      "Citrus (lime, grapefruit)",
+      "Tropical fruit (passion fruit, gooseberry)",
+      "Herbaceous notes (grass, fresh herbs, nettle)",
+      "Young development"
+    ],
+    "palate": [
+      "Dry sweetness",
+      "High acidity",
+      "Light to medium body",
+      "Citrus and tropical flavours",
+      "Herbaceous character",
+      "Medium to long finish",
+      "Pronounced flavour intensity"
+    ],
+    "conclusions": [
+      "Good to Very Good quality",
+      "Drink now; not intended for ageing"
+    ]
+  },
+  "common_student_errors": [
+    "Calling it Riesling due to acidity alone",
+    "Treating green notes as fault or underripeness",
+    "Missing intensity as a quality factor",
+    "Confusing herbaceous (positive) with vegetal (fault)",
+    "Underestimating aromatic profile complexity"
+  ],
+  "misconceptions_addressed": [
+    {
+      "misconception": "High acidity always equals Riesling",
+      "correction": "Aromatic profile (herbaceous/tropical vs floral/petrol) distinguishes Sauvignon Blanc from Riesling"
+    },
+    {
+      "misconception": "Green aromas mean underripe wine",
+      "correction": "Sauvignon Blanc's herbaceous character is varietal expression and terroir, not underripeness"
+    },
+    {
+      "misconception": "Intense aromatics mean expensive wine",
+      "correction": "Marlborough Sauvignon Blanc's value lies in clear varietal expression despite modest price"
+    }
+  ],
+  "coaching_hints": [
+    "Compare the aromatic profile: is it herbaceous/tropical or floral/petrol?",
+    "How does intensity contribute to quality assessment?",
+    "Distinguish between herbaceous (positive) and vegetal (fault).",
+    "What climate and winemaking choices support this intensity?"
+  ],
+  "causal_reasoning_paths": [
+    {
+      "cause": "Cool/moderate Marlborough maritime climate",
+      "effect": "Aromatic volatile retention; high acidity; thiol expression",
+      "example_in_wine": "Lime, passion fruit, grass aromas remain intact"
+    },
+    {
+      "cause": "Protective winemaking (stainless steel, low SO₂ at harvest)",
+      "effect": "Preservation of volatile aromatic compounds",
+      "example_in_wine": "Pronounced intensity and fresh character"
+    },
+    {
+      "cause": "Young varietal character without oak",
+      "effect": "Pure expression of grape and terroir",
+      "example_in_wine": "No tertiary or oak-influenced complexity"
+    }
+  ],
+  "examination_value": "Very High",
+  "governance": {
+    "safe_for_examiner": false,
+    "formative_only": true,
+    "training_context_only": true,
+    "external_tasting_required": false
+  }
+}

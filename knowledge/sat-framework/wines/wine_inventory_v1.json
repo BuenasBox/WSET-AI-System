@@ -1,0 +1,139 @@
+{
+  "inventory_version": "wine_inventory_v1",
+  "description": "Master inventory of SAT training wines",
+  "source": "EpistemicLab SAT Expansion",
+  "governance": {
+    "safe_for_examiner": false,
+    "formative_only": true,
+    "training_context_only": true
+  },
+  "wines": [
+    {
+      "wine_id": "SAT_WINE_001",
+      "file": "SAT_WINE_001_chablis_chardonnay.json",
+      "grape_variety": "Chardonnay",
+      "region": "Chablis",
+      "country": "France",
+      "priority": 1,
+      "examination_value": "Very High",
+      "key_learning": "cool-climate Chardonnay calibration, acidity retention, minimal oak distinction"
+    },
+    {
+      "wine_id": "SAT_WINE_002",
+      "file": "SAT_WINE_002_burgundy_chardonnay.json",
+      "grape_variety": "Chardonnay",
+      "region": "Côte de Beaune / Mâconnais",
+      "country": "France",
+      "priority": 1,
+      "examination_value": "Very High",
+      "key_learning": "oak maturation, lees texture, malolactic conversion, winemaking effect"
+    },
+    {
+      "wine_id": "SAT_WINE_003",
+      "file": "SAT_WINE_003_mosel_riesling.json",
+      "grape_variety": "Riesling",
+      "region": "Mosel",
+      "country": "Germany",
+      "priority": 1,
+      "examination_value": "Very High",
+      "key_learning": "sweet-acid balance, low alcohol, residual sugar quality, ageing potential"
+    },
+    {
+      "wine_id": "SAT_WINE_004",
+      "file": "SAT_WINE_004_marlborough_sauvignon_blanc.json",
+      "grape_variety": "Sauvignon Blanc",
+      "region": "Marlborough",
+      "country": "New Zealand",
+      "priority": 1,
+      "examination_value": "Very High",
+      "key_learning": "aromatic intensity, herbaceous character, cool-climate expression, thiol notes"
+    },
+    {
+      "wine_id": "SAT_WINE_005",
+      "file": "SAT_WINE_005_burgundy_pinot_noir.json",
+      "grape_variety": "Pinot Noir",
+      "region": "Burgundy",
+      "country": "France",
+      "priority": 1,
+      "examination_value": "Very High",
+      "key_learning": "pale colour with high structure, thin-skinned variety, cool-climate red, acidity focus"
+    },
+    {
+      "wine_id": "SAT_WINE_006",
+      "file": "SAT_WINE_006_cabernet_sauvignon.json",
+      "grape_variety": "Cabernet Sauvignon",
+      "region": "Left Bank Bordeaux / Napa",
+      "country": "France / USA",
+      "priority": 1,
+      "examination_value": "Very High",
+      "key_learning": "tannin structure, oak maturation, ageing potential, warm-climate black fruit"
+    },
+    {
+      "wine_id": "SAT_WINE_007",
+      "file": "SAT_WINE_007_merlot.json",
+      "grape_variety": "Merlot",
+      "region": "Right Bank Bordeaux",
+      "country": "France",
+      "priority": 2,
+      "examination_value": "High",
+      "key_learning": "comparison with Cabernet, earlier ripening, softer tannin, plum fruit"
+    },
+    {
+      "wine_id": "SAT_WINE_008",
+      "file": "SAT_WINE_008_syrah_shiraz.json",
+      "grape_variety": "Syrah / Shiraz",
+      "region": "Northern Rhône or Barossa",
+      "country": "France / Australia",
+      "priority": 2,
+      "examination_value": "High",
+      "key_learning": "climate expression variance, pepper varietal marker, alcohol-body relationship"
+    },
+    {
+      "wine_id": "SAT_WINE_009",
+      "file": "SAT_WINE_009_nebbiolo.json",
+      "grape_variety": "Nebbiolo",
+      "region": "Barolo / Barbaresco",
+      "country": "Italy",
+      "priority": 2,
+      "examination_value": "High",
+      "key_learning": "pale colour with high tannin, tannin-colour independence, long ageing"
+    },
+    {
+      "wine_id": "SAT_WINE_010",
+      "file": "SAT_WINE_010_sangiovese.json",
+      "grape_variety": "Sangiovese",
+      "region": "Chianti Classico",
+      "country": "Italy",
+      "priority": 2,
+      "examination_value": "High",
+      "key_learning": "high acidity red, food-pairing philosophy, savoury character, regional typicity"
+    },
+    {
+      "wine_id": "SAT_WINE_011",
+      "file": "SAT_WINE_011_tempranillo.json",
+      "grape_variety": "Tempranillo",
+      "region": "Rioja Reserva",
+      "country": "Spain",
+      "priority": 3,
+      "examination_value": "Medium-High",
+      "key_learning": "oak ageing, tertiary development, primary-secondary-tertiary separation"
+    },
+    {
+      "wine_id": "SAT_WINE_012",
+      "file": "SAT_WINE_012_grenache.json",
+      "grape_variety": "Grenache / Garnacha",
+      "region": "Southern Rhône or Spain",
+      "country": "France / Spain",
+      "priority": 3,
+      "examination_value": "Medium-High",
+      "key_learning": "alcohol-body-tannin separation, warm climate, soft tannin despite fullness"
+    }
+  ],
+  "integration_points": {
+    "diagnostic_sba": "Can reference wines for practice questions",
+    "adaptive_session": "Wines can appear as SAT prompts in adaptive flows",
+    "open_response_lab": "Wines can support open-response practice",
+    "full_simulation": "Wines available for simulated SAT components"
+  },
+  "access_pattern": "Load wine_inventory_v1.json, then load individual wine JSON files by ID or filename"
+}
