@@ -3,8 +3,12 @@
   "misconception": "Lees ageing in Champagne is only about adding flavour.",
   "why_incorrect": "Extended lees contact (tirage ageing) in Champagne serves multiple purposes simultaneously. Flavour development (brioche, toast, biscuit, nuts) through autolysis of dead yeast cells is one outcome — but it is not the only one. Polysaccharides and mannoproteins released during autolysis improve wine texture, stabilise the foam, and slow the rate of CO₂ release (creating finer, more persistent bubbles). Yeast cell walls also protect the wine from oxidation during the long period under crown cap or cork. Additionally, longer tirage ageing allows the residual sugar from the liqueur de tirage to be fully consumed and the resulting CO₂ to fully integrate into solution, producing a smoother, more harmonious mousse.",
   "corrected_understanding": "Tirage lees ageing in Champagne simultaneously develops autolytic flavours (brioche, toast), improves texture via polysaccharides, stabilises foam, creates finer bubbles, protects against oxidation, and integrates CO₂. Flavour is only one of several outcomes.",
-  "related_topics": ["T_RA3_CHAMPAGNE_PRODUCTION"],
-  "related_concepts": ["C_CHAMPAGNE_LEES_AGEING"],
+  "related_topics": [
+    "T_RA3_CHAMPAGNE_PRODUCTION"
+  ],
+  "related_concepts": [
+    "C_CHAMPAGNE_LEES_AGEING"
+  ],
   "severity": "medium",
   "frequency": "common",
   "distinction_relevance": true,
@@ -18,5 +22,18 @@
     "schema_version": "1.0",
     "created_date": "2026-05-13",
     "ingestion_status": "draft"
-  }
+  },
+  "weakness_signal": {
+    "signal_type": "misconception_hit",
+    "confidence_accumulation": "evidence_based",
+    "remediation_priority": "medium"
+  },
+  "coaching_content": {
+    "confusion_statement": "You seem to be confusing: Lees ageing in Champagne is only about adding flavour.",
+    "evidence_statement": "This is based on your answers showing this pattern.",
+    "improvement_signal": "Correctly explaining the relationship in similar questions"
+  },
+  "remediation_topics": [
+    "T_RA3_CHAMPAGNE_PRODUCTION"
+  ]
 }

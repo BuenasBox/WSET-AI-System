@@ -3,8 +3,13 @@
   "misconception": "All wines improve with age if stored correctly.",
   "why_incorrect": "The vast majority of wines are made to be consumed young, within 1–3 years of production. Wines that improve with age are structurally specific: they require sufficient tannin (reds), acidity, residual sugar (some whites), or specific compounds (Sauternes, Sherry) that evolve favourably over time. A simple, fresh Pinot Grigio or Beaujolais Nouveau will not improve with extended cellaring — it will lose its primary fruit character and gain no complexity. The ability to age is a stylistic quality of certain wines, not a universal property. On the SAT, readiness to drink and ageing potential are assessed as part of quality, not as a default assumption.",
   "corrected_understanding": "Only wines with specific structural characteristics — high tannin, high acidity, residual sugar, or particular stylistic qualities — benefit from extended ageing. Most wines are made to be consumed young.",
-  "related_topics": ["T_RA1_WINEMAKING", "T_RA1_SAT"],
-  "related_concepts": ["C_AGEING_POTENTIAL"],
+  "related_topics": [
+    "T_RA1_WINEMAKING",
+    "T_RA1_SAT"
+  ],
+  "related_concepts": [
+    "C_AGEING_POTENTIAL"
+  ],
   "severity": "medium",
   "frequency": "common",
   "distinction_relevance": true,
@@ -17,15 +22,64 @@
     "I said it had high ageing potential because all wines improve with time"
   ],
   "detection_keywords": [
-    {"tokens": ["age", "improve"], "require_all": true, "bias": 0.22},
-    {"tokens": ["ageing", "better"], "require_all": true, "bias": 0.20},
-    {"tokens": ["age", "all"], "require_all": true, "bias": 0.16},
-    {"tokens": ["store", "improve"], "require_all": true, "bias": 0.18},
-    {"tokens": ["age", "always"], "require_all": true, "bias": 0.20}
+    {
+      "tokens": [
+        "age",
+        "improve"
+      ],
+      "require_all": true,
+      "bias": 0.22
+    },
+    {
+      "tokens": [
+        "ageing",
+        "better"
+      ],
+      "require_all": true,
+      "bias": 0.2
+    },
+    {
+      "tokens": [
+        "age",
+        "all"
+      ],
+      "require_all": true,
+      "bias": 0.16
+    },
+    {
+      "tokens": [
+        "store",
+        "improve"
+      ],
+      "require_all": true,
+      "bias": 0.18
+    },
+    {
+      "tokens": [
+        "age",
+        "always"
+      ],
+      "require_all": true,
+      "bias": 0.2
+    }
   ],
   "_meta": {
     "schema_version": "1.0",
     "created_date": "2026-05-15",
     "ingestion_status": "draft"
-  }
+  },
+  "weakness_signal": {
+    "signal_type": "misconception_hit",
+    "confidence_accumulation": "evidence_based",
+    "remediation_priority": "medium"
+  },
+  "coaching_content": {
+    "confusion_statement": "You seem to be confusing: All wines improve with age if stored correctly.",
+    "evidence_statement": "This is based on your answers showing this pattern.",
+    "improvement_signal": "Correctly explaining the relationship in similar questions"
+  },
+  "remediation_topics": [
+    "T_RA1_WINEMAKING",
+    "T_RA1_SAT"
+  ]
 }

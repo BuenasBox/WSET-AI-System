@@ -3,8 +3,13 @@
   "misconception": "Tannins and acidity both taste 'sharp' so they are the same thing.",
   "why_incorrect": "Tannins and acidity are chemically and sensorially distinct components. Acidity is perceived as a sharp, mouth-watering sensation on the sides of the tongue and is caused by hydrogen ions (low pH). Tannins create astringency — a drying, gripping sensation across the gums and inner cheeks caused by polyphenols binding to salivary proteins. A wine can have high tannin and low acidity (e.g., some warm-climate reds), or high acidity and low tannin (e.g., dry Riesling). Confusing these leads to systematic errors in SAT assessments.",
   "corrected_understanding": "Acidity = mouth-watering sourness on the tongue sides (hydrogen ions). Tannins = drying, gripping astringency on gums and cheeks (polyphenols binding saliva proteins). They are independent structural components.",
-  "related_topics": ["T_RA1_WINE_COMPONENTS"],
-  "related_concepts": ["C_TANNIN", "C_ACIDITY"],
+  "related_topics": [
+    "T_RA1_WINE_COMPONENTS"
+  ],
+  "related_concepts": [
+    "C_TANNIN",
+    "C_ACIDITY"
+  ],
   "severity": "high",
   "frequency": "very_common",
   "distinction_relevance": true,
@@ -18,5 +23,18 @@
     "schema_version": "1.0",
     "created_date": "2026-05-13",
     "ingestion_status": "draft"
-  }
+  },
+  "weakness_signal": {
+    "signal_type": "misconception_hit",
+    "confidence_accumulation": "evidence_based",
+    "remediation_priority": "high"
+  },
+  "coaching_content": {
+    "confusion_statement": "You seem to be confusing: Tannins and acidity both taste 'sharp' so they are the same thing.",
+    "evidence_statement": "This is based on your answers showing this pattern.",
+    "improvement_signal": "Correctly explaining the relationship in similar questions"
+  },
+  "remediation_topics": [
+    "T_RA1_WINE_COMPONENTS"
+  ]
 }

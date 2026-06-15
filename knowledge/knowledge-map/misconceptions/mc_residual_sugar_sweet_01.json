@@ -3,8 +3,13 @@
   "misconception": "Residual sugar in a wine always means the wine will taste sweet.",
   "why_incorrect": "Perceived sweetness is not determined solely by residual sugar level. High acidity can mask or balance sweetness so that a wine with significant RS tastes dry or off-dry. A German Mosel Kabinett with 25 g/L residual sugar can taste nearly dry because the acidity (TA ~8 g/L) balances the sugar. Conversely, a wine with low RS but low acidity might seem sweeter than expected. Alcohol and tannin also interact with sweetness perception. WSET assessment evaluates perceived sweetness on the palate, not the technical RS level in g/L.",
   "corrected_understanding": "Perceived sweetness depends on the balance of residual sugar against acidity, tannin, and alcohol. High RS does not guarantee a sweet taste if acidity is high and balanced.",
-  "related_topics": ["T_RA1_WINE_COMPONENTS"],
-  "related_concepts": ["C_RESIDUAL_SUGAR", "C_ACIDITY"],
+  "related_topics": [
+    "T_RA1_WINE_COMPONENTS"
+  ],
+  "related_concepts": [
+    "C_RESIDUAL_SUGAR",
+    "C_ACIDITY"
+  ],
   "severity": "medium",
   "frequency": "common",
   "distinction_relevance": true,
@@ -17,15 +22,62 @@
     "I said the wine was sweet because it had residual sugar"
   ],
   "detection_keywords": [
-    {"tokens": ["residual", "sugar"], "require_all": true, "bias": 0.20},
-    {"tokens": ["residual", "sweet"], "require_all": true, "bias": 0.22},
-    {"tokens": ["sugar", "sweet"], "require_all": true, "bias": 0.18},
-    {"tokens": ["sugar", "taste"], "require_all": true, "bias": 0.14},
-    {"tokens": ["residual"], "require_all": false, "bias": 0.10}
+    {
+      "tokens": [
+        "residual",
+        "sugar"
+      ],
+      "require_all": true,
+      "bias": 0.2
+    },
+    {
+      "tokens": [
+        "residual",
+        "sweet"
+      ],
+      "require_all": true,
+      "bias": 0.22
+    },
+    {
+      "tokens": [
+        "sugar",
+        "sweet"
+      ],
+      "require_all": true,
+      "bias": 0.18
+    },
+    {
+      "tokens": [
+        "sugar",
+        "taste"
+      ],
+      "require_all": true,
+      "bias": 0.14
+    },
+    {
+      "tokens": [
+        "residual"
+      ],
+      "require_all": false,
+      "bias": 0.1
+    }
   ],
   "_meta": {
     "schema_version": "1.0",
     "created_date": "2026-05-15",
     "ingestion_status": "draft"
-  }
+  },
+  "weakness_signal": {
+    "signal_type": "misconception_hit",
+    "confidence_accumulation": "evidence_based",
+    "remediation_priority": "medium"
+  },
+  "coaching_content": {
+    "confusion_statement": "You seem to be confusing: Residual sugar in a wine always means the wine will taste sweet.",
+    "evidence_statement": "This is based on your answers showing this pattern.",
+    "improvement_signal": "Correctly explaining the relationship in similar questions"
+  },
+  "remediation_topics": [
+    "T_RA1_WINE_COMPONENTS"
+  ]
 }

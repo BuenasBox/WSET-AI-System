@@ -3,8 +3,12 @@
   "misconception": "More oak treatment automatically means higher quality wine.",
   "why_incorrect": "Oak is a winemaking tool used to add flavour, texture, and oxygen exposure. Excessive or inappropriate oak use can mask fruit character, overwhelm balance, and produce a wine that tastes dominated by vanilla, toast, or desiccated wood rather than grape character. WSET assessment evaluates whether oak is balanced and integrated with the wine's fruit, not whether oak is present or abundant. Many outstanding, high-complexity wines use no oak at all (tank-fermented Mosel Riesling, Muscadet sur lie). More oak does not equal more complexity or more quality — it equals more oak flavour, which may or may not serve the wine's style.",
   "corrected_understanding": "Oak is a stylistic tool. Its contribution to quality depends on whether it is balanced with the wine's other components and appropriate to the wine's style. More oak is not inherently better.",
-  "related_topics": ["T_RA1_WINEMAKING"],
-  "related_concepts": ["C_OAK_AGEING"],
+  "related_topics": [
+    "T_RA1_WINEMAKING"
+  ],
+  "related_concepts": [
+    "C_OAK_AGEING"
+  ],
   "severity": "medium",
   "frequency": "common",
   "distinction_relevance": true,
@@ -17,15 +21,63 @@
     "I gave it high marks for quality because it was heavily oaked"
   ],
   "detection_keywords": [
-    {"tokens": ["oak", "quality"], "require_all": true, "bias": 0.22},
-    {"tokens": ["oak", "better"], "require_all": true, "bias": 0.20},
-    {"tokens": ["oak", "oaky"], "require_all": false, "bias": 0.12},
-    {"tokens": ["oaky", "quality"], "require_all": true, "bias": 0.18},
-    {"tokens": ["oak", "complex"], "require_all": true, "bias": 0.14}
+    {
+      "tokens": [
+        "oak",
+        "quality"
+      ],
+      "require_all": true,
+      "bias": 0.22
+    },
+    {
+      "tokens": [
+        "oak",
+        "better"
+      ],
+      "require_all": true,
+      "bias": 0.2
+    },
+    {
+      "tokens": [
+        "oak",
+        "oaky"
+      ],
+      "require_all": false,
+      "bias": 0.12
+    },
+    {
+      "tokens": [
+        "oaky",
+        "quality"
+      ],
+      "require_all": true,
+      "bias": 0.18
+    },
+    {
+      "tokens": [
+        "oak",
+        "complex"
+      ],
+      "require_all": true,
+      "bias": 0.14
+    }
   ],
   "_meta": {
     "schema_version": "1.0",
     "created_date": "2026-05-15",
     "ingestion_status": "draft"
-  }
+  },
+  "weakness_signal": {
+    "signal_type": "misconception_hit",
+    "confidence_accumulation": "evidence_based",
+    "remediation_priority": "medium"
+  },
+  "coaching_content": {
+    "confusion_statement": "You seem to be confusing: More oak treatment automatically means higher quality wine.",
+    "evidence_statement": "This is based on your answers showing this pattern.",
+    "improvement_signal": "Correctly explaining the relationship in similar questions"
+  },
+  "remediation_topics": [
+    "T_RA1_WINEMAKING"
+  ]
 }

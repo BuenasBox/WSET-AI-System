@@ -3,8 +3,14 @@
   "misconception": "All botrytis is noble rot and makes wines sweet and complex.",
   "why_incorrect": "Botrytis cinerea causes two very different outcomes depending on climatic conditions. Noble rot (Botrytis bunch rot under alternating mist and sun) concentrates sugars and produces desirable honeyed, apricot, and marmalade aromatic compounds. Grey rot (Botrytis bunch rot under sustained wet, humid conditions without drying) destroys the grape, produces off-flavours, and is an unambiguous vineyard hazard. The same fungal organism produces opposite outcomes. Winemakers in Sauternes, Tokaj, and Mosel specifically seek noble rot; grey rot is always detrimental.",
   "corrected_understanding": "Botrytis cinerea produces noble rot under specific conditions (alternating morning humidity and dry sunny afternoons) and grey rot under sustained wet conditions. Noble rot is desirable; grey rot is destructive. Same organism, opposite outcomes.",
-  "related_topics": ["T_RA1_VITICULTURE_HAZARDS", "T_RA2_BORDEAUX_SWEET", "T_RA2_GERMANY"],
-  "related_concepts": ["C_BOTRYTIS_CINEREA"],
+  "related_topics": [
+    "T_RA1_VITICULTURE_HAZARDS",
+    "T_RA2_BORDEAUX_SWEET",
+    "T_RA2_GERMANY"
+  ],
+  "related_concepts": [
+    "C_BOTRYTIS_CINEREA"
+  ],
   "severity": "critical",
   "frequency": "common",
   "distinction_relevance": true,
@@ -18,5 +24,20 @@
     "schema_version": "1.0",
     "created_date": "2026-05-13",
     "ingestion_status": "draft"
-  }
+  },
+  "weakness_signal": {
+    "signal_type": "misconception_hit",
+    "confidence_accumulation": "evidence_based",
+    "remediation_priority": "medium"
+  },
+  "coaching_content": {
+    "confusion_statement": "You seem to be confusing: All botrytis is noble rot and makes wines sweet and complex.",
+    "evidence_statement": "This is based on your answers showing this pattern.",
+    "improvement_signal": "Correctly explaining the relationship in similar questions"
+  },
+  "remediation_topics": [
+    "T_RA1_VITICULTURE_HAZARDS",
+    "T_RA2_BORDEAUX_SWEET",
+    "T_RA2_GERMANY"
+  ]
 }

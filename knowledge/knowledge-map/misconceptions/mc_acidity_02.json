@@ -3,8 +3,14 @@
   "misconception": "Malolactic conversion removes acidity from the wine.",
   "why_incorrect": "MLF does not remove acid — it converts one acid (malic) to another (lactic). The total amount of acid by weight decreases only slightly because the reaction produces CO₂ as a byproduct. The perceived reduction in sharpness is due to the difference in sensory character between diprotic malic acid (sharper) and monoprotic lactic acid (softer). Saying MLF 'reduces acidity' is imprecise; saying it 'softens acidity' or 'converts malic to lactic acid, reducing perceived sharpness' is accurate.",
   "corrected_understanding": "MLF converts sharp malic acid to softer lactic acid. It makes the wine taste less sharp but does not substantially reduce the total acid content by weight.",
-  "related_topics": ["T_RA1_WINEMAKING_WHITE", "T_RA1_WINE_COMPONENTS"],
-  "related_concepts": ["C_ACIDITY", "C_MALOLACTIC_CONVERSION"],
+  "related_topics": [
+    "T_RA1_WINEMAKING_WHITE",
+    "T_RA1_WINE_COMPONENTS"
+  ],
+  "related_concepts": [
+    "C_ACIDITY",
+    "C_MALOLACTIC_CONVERSION"
+  ],
   "severity": "high",
   "frequency": "very_common",
   "distinction_relevance": true,
@@ -18,5 +24,19 @@
     "schema_version": "1.0",
     "created_date": "2026-05-13",
     "ingestion_status": "draft"
-  }
+  },
+  "weakness_signal": {
+    "signal_type": "misconception_hit",
+    "confidence_accumulation": "evidence_based",
+    "remediation_priority": "high"
+  },
+  "coaching_content": {
+    "confusion_statement": "You seem to be confusing: Malolactic conversion removes acidity from the wine.",
+    "evidence_statement": "This is based on your answers showing this pattern.",
+    "improvement_signal": "Correctly explaining the relationship in similar questions"
+  },
+  "remediation_topics": [
+    "T_RA1_WINEMAKING_WHITE",
+    "T_RA1_WINE_COMPONENTS"
+  ]
 }
