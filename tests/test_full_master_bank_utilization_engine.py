@@ -77,10 +77,10 @@ class DiagnosticBlueprintTests(FullMasterBankFixture):
 
 
 class MasterBankEligibilityTests(FullMasterBankFixture):
-    def test_all_616_records_are_classified(self) -> None:
+    def test_all_710_records_are_classified(self) -> None:
         index = build_eligibility_index(self.bank)
-        self.assertEqual(index["record_count"], 616)
-        self.assertEqual(sum(index["primary_counts"].values()), 616)
+        self.assertEqual(index["record_count"], 710)
+        self.assertEqual(sum(index["primary_counts"].values()), 710)
         self.assertEqual(set(index["primary_counts"]), set(ELIGIBILITY_CATEGORIES))
 
     def test_primary_classification_counts(self) -> None:
@@ -89,17 +89,17 @@ class MasterBankEligibilityTests(FullMasterBankFixture):
             index["primary_counts"],
             {
                 "public_lab": 36,
-                "private_practice": 553,
+                "private_practice": 634,
                 "adaptive_candidate": 0,
-                "open_response_candidate": 27,
-                "open_response_review_pool": 0,
+                "open_response_candidate": 38,
+                "open_response_review_pool": 2,
                 "inactive": 0,
             },
         )
 
     def test_adaptive_candidate_is_secondary_not_activation(self) -> None:
         index = build_eligibility_index(self.bank)
-        self.assertEqual(index["category_counts"]["adaptive_candidate"], 587)
+        self.assertEqual(index["category_counts"]["adaptive_candidate"], 668)
         self.assertEqual(index["primary_counts"]["adaptive_candidate"], 0)
 
     def test_operational_pool_metrics_match_suitability_contract(self) -> None:
@@ -107,10 +107,10 @@ class MasterBankEligibilityTests(FullMasterBankFixture):
         self.assertEqual(
             index["operational_counts"],
             {
-                "total_master_bank": 616,
-                "sba_operational_pool": 589,
-                "open_response_candidate_pool": 27,
-                "open_response_review_pool": 0,
+                "total_master_bank": 710,
+                "sba_operational_pool": 670,
+                "open_response_candidate_pool": 38,
+                "open_response_review_pool": 2,
                 "inactive": 0,
                 "public_lab": 36,
             },
@@ -250,7 +250,7 @@ class FullSessionComposerTests(FullMasterBankFixture):
         )
         self.assertGreater(session["active_pool_size"], 36)
         self.assertNotIn("wset3_14", session["master_item_ids"])
-        self.assertEqual(session["operational_pool_counts"]["sba_operational_pool"], 589)
+        self.assertEqual(session["operational_pool_counts"]["sba_operational_pool"], 670)
 
     def test_full_diagnostic_can_include_open_response_only_when_explicit(self) -> None:
         default = compose_master_bank_session(
@@ -377,12 +377,12 @@ class DashboardIntegrationDataTests(FullMasterBankFixture):
             DEFAULT_LES, session, timestamp="2026-06-06T12:00:00Z"
         )
         data = build_master_bank_utilization_data(self.bank, les, session)
-        self.assertEqual(data["bank"]["total_bank_size"], 616)
-        self.assertEqual(data["bank"]["active_pool"], 589)
-        self.assertEqual(data["bank"]["total_master_bank"], 616)
-        self.assertEqual(data["bank"]["sba_operational_pool"], 589)
-        self.assertEqual(data["bank"]["open_response_candidate_pool"], 27)
-        self.assertEqual(data["bank"]["open_response_review_pool"], 0)
+        self.assertEqual(data["bank"]["total_bank_size"], 710)
+        self.assertEqual(data["bank"]["active_pool"], 670)
+        self.assertEqual(data["bank"]["total_master_bank"], 710)
+        self.assertEqual(data["bank"]["sba_operational_pool"], 670)
+        self.assertEqual(data["bank"]["open_response_candidate_pool"], 38)
+        self.assertEqual(data["bank"]["open_response_review_pool"], 2)
         self.assertEqual(data["bank"]["inactive"], 0)
         self.assertEqual(data["bank"]["public_lab"], 36)
         self.assertEqual(data["session_composition"]["item_count"], 10)

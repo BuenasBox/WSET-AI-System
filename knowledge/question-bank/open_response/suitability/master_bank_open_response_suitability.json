@@ -2,30 +2,31 @@
   "schema_version": "open_response_suitability_report_v1",
   "classifier_version": "open_response_suitability_v1",
   "source_master_bank": "knowledge/question-bank/master_bank/master_bank.json",
-  "record_count": 616,
+  "record_count": 710,
   "quota_target": null,
   "classification_counts": {
-    "open_response_candidate": 27,
-    "human_review_required": 0,
-    "sba_only": 589,
+    "open_response_candidate": 38,
+    "human_review_required": 2,
+    "sba_only": 670,
     "inactive": 0
   },
   "signal_counts": {
-    "answer_boundary_support": 48,
-    "recognition_framing_detected": 140,
-    "recognition_only_sufficient": 589,
-    "requires_causal_chain": 22,
-    "requires_comparison": 18,
-    "requires_explanation": 69,
-    "requires_justification": 8
+    "answer_boundary_support": 208,
+    "recognition_framing_detected": 218,
+    "recognition_only_sufficient": 670,
+    "requires_causal_chain": 93,
+    "requires_comparison": 23,
+    "requires_explanation": 145,
+    "requires_justification": 9
   },
   "candidate_distribution_by_ra": {
-    "RA1": 21,
+    "RA1": 22,
+    "RA2": 10,
     "RA5": 5,
     "unknown": 1
   },
   "candidate_distribution_by_question_type": {
-    "open_response": 26,
+    "open_response": 37,
     "single_best_answer": 1
   },
   "records": [
@@ -16572,13 +16573,15 @@
         "requires_comparison": false,
         "requires_justification": false,
         "recognition_only_sufficient": true,
-        "recognition_framing_detected": false,
-        "answer_boundary_support": false
+        "recognition_framing_detected": true,
+        "answer_boundary_support": true
       },
       "confidence": "high",
       "evidence": [
         "question_type:single_best_answer",
-        "review_state:unreviewed"
+        "review_state:unreviewed",
+        "recognition_framing",
+        "answer_boundary_support"
       ],
       "review_status": "shadow_classified",
       "activation_status": "inactive",
@@ -16975,24 +16978,27 @@
       "schema_version": "open_response_suitability_v1",
       "master_item_id": "wset3_668",
       "source_question_id": "668",
-      "classification": "sba_only",
+      "classification": "human_review_required",
       "open_response_candidate": false,
-      "sba_only": true,
-      "sba_eligible": true,
-      "human_review_required": false,
+      "sba_only": false,
+      "sba_eligible": false,
+      "human_review_required": true,
       "signals": {
-        "requires_explanation": false,
+        "requires_explanation": true,
         "requires_causal_chain": false,
         "requires_comparison": false,
         "requires_justification": false,
-        "recognition_only_sufficient": true,
-        "recognition_framing_detected": false,
-        "answer_boundary_support": false
+        "recognition_only_sufficient": false,
+        "recognition_framing_detected": true,
+        "answer_boundary_support": true
       },
-      "confidence": "high",
+      "confidence": "medium",
       "evidence": [
         "question_type:single_best_answer",
-        "review_state:unreviewed"
+        "review_state:unreviewed",
+        "requires_explanation",
+        "recognition_framing",
+        "answer_boundary_support"
       ],
       "review_status": "shadow_classified",
       "activation_status": "inactive",
@@ -17023,13 +17029,15 @@
         "requires_comparison": false,
         "requires_justification": false,
         "recognition_only_sufficient": true,
-        "recognition_framing_detected": false,
-        "answer_boundary_support": false
+        "recognition_framing_detected": true,
+        "answer_boundary_support": true
       },
       "confidence": "high",
       "evidence": [
         "question_type:single_best_answer",
-        "review_state:unreviewed"
+        "review_state:unreviewed",
+        "recognition_framing",
+        "answer_boundary_support"
       ],
       "review_status": "shadow_classified",
       "activation_status": "inactive",
@@ -17055,20 +17063,21 @@
       "sba_eligible": true,
       "human_review_required": false,
       "signals": {
-        "requires_explanation": true,
+        "requires_explanation": false,
         "requires_causal_chain": false,
         "requires_comparison": false,
         "requires_justification": false,
         "recognition_only_sufficient": true,
-        "recognition_framing_detected": false,
-        "answer_boundary_support": false
+        "recognition_framing_detected": true,
+        "answer_boundary_support": true
       },
       "confidence": "high",
       "evidence": [
         "resolution:phase_4a_3_8_5_7_670",
         "question_type:single_best_answer",
         "review_state:approved_private_sba",
-        "requires_explanation"
+        "recognition_framing",
+        "answer_boundary_support"
       ],
       "review_status": "shadow_classified",
       "activation_status": "inactive",
@@ -17099,13 +17108,15 @@
         "requires_comparison": false,
         "requires_justification": false,
         "recognition_only_sufficient": true,
-        "recognition_framing_detected": false,
-        "answer_boundary_support": false
+        "recognition_framing_detected": true,
+        "answer_boundary_support": true
       },
       "confidence": "high",
       "evidence": [
         "question_type:single_best_answer",
-        "review_state:unreviewed"
+        "review_state:unreviewed",
+        "recognition_framing",
+        "answer_boundary_support"
       ],
       "review_status": "shadow_classified",
       "activation_status": "inactive",
@@ -17136,13 +17147,15 @@
         "requires_comparison": false,
         "requires_justification": false,
         "recognition_only_sufficient": true,
-        "recognition_framing_detected": false,
-        "answer_boundary_support": false
+        "recognition_framing_detected": true,
+        "answer_boundary_support": true
       },
       "confidence": "high",
       "evidence": [
         "question_type:single_best_answer",
-        "review_state:unreviewed"
+        "review_state:unreviewed",
+        "recognition_framing",
+        "answer_boundary_support"
       ],
       "review_status": "shadow_classified",
       "activation_status": "inactive",
@@ -17173,13 +17186,15 @@
         "requires_comparison": false,
         "requires_justification": false,
         "recognition_only_sufficient": true,
-        "recognition_framing_detected": false,
-        "answer_boundary_support": false
+        "recognition_framing_detected": true,
+        "answer_boundary_support": true
       },
       "confidence": "high",
       "evidence": [
         "question_type:single_best_answer",
-        "review_state:unreviewed"
+        "review_state:unreviewed",
+        "recognition_framing",
+        "answer_boundary_support"
       ],
       "review_status": "shadow_classified",
       "activation_status": "inactive",
@@ -17210,13 +17225,15 @@
         "requires_comparison": false,
         "requires_justification": false,
         "recognition_only_sufficient": true,
-        "recognition_framing_detected": false,
-        "answer_boundary_support": false
+        "recognition_framing_detected": true,
+        "answer_boundary_support": true
       },
       "confidence": "high",
       "evidence": [
         "question_type:single_best_answer",
-        "review_state:unreviewed"
+        "review_state:unreviewed",
+        "recognition_framing",
+        "answer_boundary_support"
       ],
       "review_status": "shadow_classified",
       "activation_status": "inactive",
@@ -17247,13 +17264,15 @@
         "requires_comparison": false,
         "requires_justification": false,
         "recognition_only_sufficient": true,
-        "recognition_framing_detected": false,
-        "answer_boundary_support": false
+        "recognition_framing_detected": true,
+        "answer_boundary_support": true
       },
       "confidence": "high",
       "evidence": [
         "question_type:single_best_answer",
-        "review_state:unreviewed"
+        "review_state:unreviewed",
+        "recognition_framing",
+        "answer_boundary_support"
       ],
       "review_status": "shadow_classified",
       "activation_status": "inactive",
@@ -17284,13 +17303,15 @@
         "requires_comparison": false,
         "requires_justification": false,
         "recognition_only_sufficient": true,
-        "recognition_framing_detected": false,
-        "answer_boundary_support": false
+        "recognition_framing_detected": true,
+        "answer_boundary_support": true
       },
       "confidence": "high",
       "evidence": [
         "question_type:single_best_answer",
-        "review_state:unreviewed"
+        "review_state:unreviewed",
+        "recognition_framing",
+        "answer_boundary_support"
       ],
       "review_status": "shadow_classified",
       "activation_status": "inactive",
@@ -17321,13 +17342,15 @@
         "requires_comparison": false,
         "requires_justification": false,
         "recognition_only_sufficient": true,
-        "recognition_framing_detected": false,
-        "answer_boundary_support": false
+        "recognition_framing_detected": true,
+        "answer_boundary_support": true
       },
       "confidence": "high",
       "evidence": [
         "question_type:single_best_answer",
-        "review_state:unreviewed"
+        "review_state:unreviewed",
+        "recognition_framing",
+        "answer_boundary_support"
       ],
       "review_status": "shadow_classified",
       "activation_status": "inactive",
@@ -17358,13 +17381,15 @@
         "requires_comparison": false,
         "requires_justification": false,
         "recognition_only_sufficient": true,
-        "recognition_framing_detected": false,
-        "answer_boundary_support": false
+        "recognition_framing_detected": true,
+        "answer_boundary_support": true
       },
       "confidence": "high",
       "evidence": [
         "question_type:single_best_answer",
-        "review_state:unreviewed"
+        "review_state:unreviewed",
+        "recognition_framing",
+        "answer_boundary_support"
       ],
       "review_status": "shadow_classified",
       "activation_status": "inactive",
@@ -17395,13 +17420,15 @@
         "requires_comparison": false,
         "requires_justification": false,
         "recognition_only_sufficient": true,
-        "recognition_framing_detected": false,
-        "answer_boundary_support": false
+        "recognition_framing_detected": true,
+        "answer_boundary_support": true
       },
       "confidence": "high",
       "evidence": [
         "question_type:single_best_answer",
-        "review_state:unreviewed"
+        "review_state:unreviewed",
+        "recognition_framing",
+        "answer_boundary_support"
       ],
       "review_status": "shadow_classified",
       "activation_status": "inactive",
@@ -17432,13 +17459,15 @@
         "requires_comparison": false,
         "requires_justification": false,
         "recognition_only_sufficient": true,
-        "recognition_framing_detected": false,
-        "answer_boundary_support": false
+        "recognition_framing_detected": true,
+        "answer_boundary_support": true
       },
       "confidence": "high",
       "evidence": [
         "question_type:single_best_answer",
-        "review_state:unreviewed"
+        "review_state:unreviewed",
+        "recognition_framing",
+        "answer_boundary_support"
       ],
       "review_status": "shadow_classified",
       "activation_status": "inactive",
@@ -17469,13 +17498,15 @@
         "requires_comparison": false,
         "requires_justification": false,
         "recognition_only_sufficient": true,
-        "recognition_framing_detected": false,
-        "answer_boundary_support": false
+        "recognition_framing_detected": true,
+        "answer_boundary_support": true
       },
       "confidence": "high",
       "evidence": [
         "question_type:single_best_answer",
-        "review_state:unreviewed"
+        "review_state:unreviewed",
+        "recognition_framing",
+        "answer_boundary_support"
       ],
       "review_status": "shadow_classified",
       "activation_status": "inactive",
@@ -17506,13 +17537,15 @@
         "requires_comparison": false,
         "requires_justification": false,
         "recognition_only_sufficient": true,
-        "recognition_framing_detected": false,
-        "answer_boundary_support": false
+        "recognition_framing_detected": true,
+        "answer_boundary_support": true
       },
       "confidence": "high",
       "evidence": [
         "question_type:single_best_answer",
-        "review_state:unreviewed"
+        "review_state:unreviewed",
+        "recognition_framing",
+        "answer_boundary_support"
       ],
       "review_status": "shadow_classified",
       "activation_status": "inactive",
@@ -17543,13 +17576,15 @@
         "requires_comparison": false,
         "requires_justification": false,
         "recognition_only_sufficient": true,
-        "recognition_framing_detected": false,
-        "answer_boundary_support": false
+        "recognition_framing_detected": true,
+        "answer_boundary_support": true
       },
       "confidence": "high",
       "evidence": [
         "question_type:single_best_answer",
-        "review_state:unreviewed"
+        "review_state:unreviewed",
+        "recognition_framing",
+        "answer_boundary_support"
       ],
       "review_status": "shadow_classified",
       "activation_status": "inactive",
@@ -17580,13 +17615,15 @@
         "requires_comparison": false,
         "requires_justification": false,
         "recognition_only_sufficient": true,
-        "recognition_framing_detected": false,
-        "answer_boundary_support": false
+        "recognition_framing_detected": true,
+        "answer_boundary_support": true
       },
       "confidence": "high",
       "evidence": [
         "question_type:single_best_answer",
-        "review_state:unreviewed"
+        "review_state:unreviewed",
+        "recognition_framing",
+        "answer_boundary_support"
       ],
       "review_status": "shadow_classified",
       "activation_status": "inactive",
@@ -17617,13 +17654,15 @@
         "requires_comparison": false,
         "requires_justification": false,
         "recognition_only_sufficient": true,
-        "recognition_framing_detected": false,
-        "answer_boundary_support": false
+        "recognition_framing_detected": true,
+        "answer_boundary_support": true
       },
       "confidence": "high",
       "evidence": [
         "question_type:single_best_answer",
-        "review_state:unreviewed"
+        "review_state:unreviewed",
+        "recognition_framing",
+        "answer_boundary_support"
       ],
       "review_status": "shadow_classified",
       "activation_status": "inactive",
@@ -17654,13 +17693,15 @@
         "requires_comparison": false,
         "requires_justification": false,
         "recognition_only_sufficient": true,
-        "recognition_framing_detected": false,
-        "answer_boundary_support": false
+        "recognition_framing_detected": true,
+        "answer_boundary_support": true
       },
       "confidence": "high",
       "evidence": [
         "question_type:single_best_answer",
-        "review_state:unreviewed"
+        "review_state:unreviewed",
+        "recognition_framing",
+        "answer_boundary_support"
       ],
       "review_status": "shadow_classified",
       "activation_status": "inactive",
@@ -17691,13 +17732,15 @@
         "requires_comparison": false,
         "requires_justification": false,
         "recognition_only_sufficient": true,
-        "recognition_framing_detected": false,
-        "answer_boundary_support": false
+        "recognition_framing_detected": true,
+        "answer_boundary_support": true
       },
       "confidence": "high",
       "evidence": [
         "question_type:single_best_answer",
-        "review_state:unreviewed"
+        "review_state:unreviewed",
+        "recognition_framing",
+        "answer_boundary_support"
       ],
       "review_status": "shadow_classified",
       "activation_status": "inactive",
@@ -18257,13 +18300,15 @@
         "requires_comparison": false,
         "requires_justification": false,
         "recognition_only_sufficient": true,
-        "recognition_framing_detected": false,
-        "answer_boundary_support": false
+        "recognition_framing_detected": true,
+        "answer_boundary_support": true
       },
       "confidence": "high",
       "evidence": [
         "question_type:single_best_answer",
-        "review_state:unreviewed"
+        "review_state:unreviewed",
+        "recognition_framing",
+        "answer_boundary_support"
       ],
       "review_status": "shadow_classified",
       "activation_status": "inactive",
@@ -18294,13 +18339,15 @@
         "requires_comparison": false,
         "requires_justification": false,
         "recognition_only_sufficient": true,
-        "recognition_framing_detected": false,
-        "answer_boundary_support": false
+        "recognition_framing_detected": true,
+        "answer_boundary_support": true
       },
       "confidence": "high",
       "evidence": [
         "question_type:single_best_answer",
-        "review_state:unreviewed"
+        "review_state:unreviewed",
+        "recognition_framing",
+        "answer_boundary_support"
       ],
       "review_status": "shadow_classified",
       "activation_status": "inactive",
@@ -18331,13 +18378,15 @@
         "requires_comparison": false,
         "requires_justification": false,
         "recognition_only_sufficient": true,
-        "recognition_framing_detected": false,
-        "answer_boundary_support": false
+        "recognition_framing_detected": true,
+        "answer_boundary_support": true
       },
       "confidence": "high",
       "evidence": [
         "question_type:single_best_answer",
-        "review_state:unreviewed"
+        "review_state:unreviewed",
+        "recognition_framing",
+        "answer_boundary_support"
       ],
       "review_status": "shadow_classified",
       "activation_status": "inactive",
@@ -18368,13 +18417,15 @@
         "requires_comparison": false,
         "requires_justification": false,
         "recognition_only_sufficient": true,
-        "recognition_framing_detected": false,
-        "answer_boundary_support": false
+        "recognition_framing_detected": true,
+        "answer_boundary_support": true
       },
       "confidence": "high",
       "evidence": [
         "question_type:single_best_answer",
-        "review_state:unreviewed"
+        "review_state:unreviewed",
+        "recognition_framing",
+        "answer_boundary_support"
       ],
       "review_status": "shadow_classified",
       "activation_status": "inactive",
@@ -18405,13 +18456,15 @@
         "requires_comparison": false,
         "requires_justification": false,
         "recognition_only_sufficient": true,
-        "recognition_framing_detected": false,
-        "answer_boundary_support": false
+        "recognition_framing_detected": true,
+        "answer_boundary_support": true
       },
       "confidence": "high",
       "evidence": [
         "question_type:single_best_answer",
-        "review_state:unreviewed"
+        "review_state:unreviewed",
+        "recognition_framing",
+        "answer_boundary_support"
       ],
       "review_status": "shadow_classified",
       "activation_status": "inactive",
@@ -18442,13 +18495,15 @@
         "requires_comparison": false,
         "requires_justification": false,
         "recognition_only_sufficient": true,
-        "recognition_framing_detected": false,
-        "answer_boundary_support": false
+        "recognition_framing_detected": true,
+        "answer_boundary_support": true
       },
       "confidence": "high",
       "evidence": [
         "question_type:single_best_answer",
-        "review_state:unreviewed"
+        "review_state:unreviewed",
+        "recognition_framing",
+        "answer_boundary_support"
       ],
       "review_status": "shadow_classified",
       "activation_status": "inactive",
@@ -18479,13 +18534,15 @@
         "requires_comparison": false,
         "requires_justification": false,
         "recognition_only_sufficient": true,
-        "recognition_framing_detected": false,
-        "answer_boundary_support": false
+        "recognition_framing_detected": true,
+        "answer_boundary_support": true
       },
       "confidence": "high",
       "evidence": [
         "question_type:single_best_answer",
-        "review_state:unreviewed"
+        "review_state:unreviewed",
+        "recognition_framing",
+        "answer_boundary_support"
       ],
       "review_status": "shadow_classified",
       "activation_status": "inactive",
@@ -18516,13 +18573,15 @@
         "requires_comparison": false,
         "requires_justification": false,
         "recognition_only_sufficient": true,
-        "recognition_framing_detected": false,
-        "answer_boundary_support": false
+        "recognition_framing_detected": true,
+        "answer_boundary_support": true
       },
       "confidence": "high",
       "evidence": [
         "question_type:single_best_answer",
-        "review_state:unreviewed"
+        "review_state:unreviewed",
+        "recognition_framing",
+        "answer_boundary_support"
       ],
       "review_status": "shadow_classified",
       "activation_status": "inactive",
@@ -18553,13 +18612,15 @@
         "requires_comparison": false,
         "requires_justification": false,
         "recognition_only_sufficient": true,
-        "recognition_framing_detected": false,
-        "answer_boundary_support": false
+        "recognition_framing_detected": true,
+        "answer_boundary_support": true
       },
       "confidence": "high",
       "evidence": [
         "question_type:single_best_answer",
-        "review_state:unreviewed"
+        "review_state:unreviewed",
+        "recognition_framing",
+        "answer_boundary_support"
       ],
       "review_status": "shadow_classified",
       "activation_status": "inactive",
@@ -18590,13 +18651,15 @@
         "requires_comparison": false,
         "requires_justification": false,
         "recognition_only_sufficient": true,
-        "recognition_framing_detected": false,
-        "answer_boundary_support": false
+        "recognition_framing_detected": true,
+        "answer_boundary_support": true
       },
       "confidence": "high",
       "evidence": [
         "question_type:single_best_answer",
-        "review_state:unreviewed"
+        "review_state:unreviewed",
+        "recognition_framing",
+        "answer_boundary_support"
       ],
       "review_status": "shadow_classified",
       "activation_status": "inactive",
@@ -19703,24 +19766,26 @@
       "schema_version": "open_response_suitability_v1",
       "master_item_id": "wset3_742",
       "source_question_id": "742",
-      "classification": "sba_only",
-      "open_response_candidate": false,
-      "sba_only": true,
-      "sba_eligible": true,
+      "classification": "open_response_candidate",
+      "open_response_candidate": true,
+      "sba_only": false,
+      "sba_eligible": false,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
         "requires_causal_chain": false,
         "requires_comparison": false,
         "requires_justification": false,
-        "recognition_only_sufficient": true,
+        "recognition_only_sufficient": false,
         "recognition_framing_detected": false,
-        "answer_boundary_support": false
+        "answer_boundary_support": true
       },
       "confidence": "high",
       "evidence": [
-        "question_type:single_best_answer",
-        "review_state:unreviewed"
+        "resolution:phase_y0_remediation_b_742",
+        "question_type:open_response",
+        "review_state:approved_open_response",
+        "answer_boundary_support"
       ],
       "review_status": "shadow_classified",
       "activation_status": "inactive",
@@ -19740,24 +19805,26 @@
       "schema_version": "open_response_suitability_v1",
       "master_item_id": "wset3_743",
       "source_question_id": "743",
-      "classification": "sba_only",
-      "open_response_candidate": false,
-      "sba_only": true,
-      "sba_eligible": true,
+      "classification": "open_response_candidate",
+      "open_response_candidate": true,
+      "sba_only": false,
+      "sba_eligible": false,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
         "requires_causal_chain": false,
         "requires_comparison": false,
         "requires_justification": false,
-        "recognition_only_sufficient": true,
+        "recognition_only_sufficient": false,
         "recognition_framing_detected": false,
-        "answer_boundary_support": false
+        "answer_boundary_support": true
       },
       "confidence": "high",
       "evidence": [
-        "question_type:single_best_answer",
-        "review_state:unreviewed"
+        "resolution:phase_y0_remediation_b_743",
+        "question_type:open_response",
+        "review_state:approved_open_response",
+        "answer_boundary_support"
       ],
       "review_status": "shadow_classified",
       "activation_status": "inactive",
@@ -19777,24 +19844,27 @@
       "schema_version": "open_response_suitability_v1",
       "master_item_id": "wset3_744",
       "source_question_id": "744",
-      "classification": "sba_only",
-      "open_response_candidate": false,
-      "sba_only": true,
-      "sba_eligible": true,
+      "classification": "open_response_candidate",
+      "open_response_candidate": true,
+      "sba_only": false,
+      "sba_eligible": false,
       "human_review_required": false,
       "signals": {
-        "requires_explanation": false,
+        "requires_explanation": true,
         "requires_causal_chain": false,
         "requires_comparison": false,
         "requires_justification": false,
-        "recognition_only_sufficient": true,
+        "recognition_only_sufficient": false,
         "recognition_framing_detected": false,
-        "answer_boundary_support": false
+        "answer_boundary_support": true
       },
       "confidence": "high",
       "evidence": [
-        "question_type:single_best_answer",
-        "review_state:unreviewed"
+        "resolution:phase_y0_remediation_b_744",
+        "question_type:open_response",
+        "review_state:approved_open_response",
+        "requires_explanation",
+        "answer_boundary_support"
       ],
       "review_status": "shadow_classified",
       "activation_status": "inactive",
@@ -19814,24 +19884,27 @@
       "schema_version": "open_response_suitability_v1",
       "master_item_id": "wset3_745",
       "source_question_id": "745",
-      "classification": "sba_only",
-      "open_response_candidate": false,
-      "sba_only": true,
-      "sba_eligible": true,
+      "classification": "open_response_candidate",
+      "open_response_candidate": true,
+      "sba_only": false,
+      "sba_eligible": false,
       "human_review_required": false,
       "signals": {
-        "requires_explanation": false,
+        "requires_explanation": true,
         "requires_causal_chain": false,
         "requires_comparison": false,
         "requires_justification": false,
-        "recognition_only_sufficient": true,
+        "recognition_only_sufficient": false,
         "recognition_framing_detected": false,
-        "answer_boundary_support": false
+        "answer_boundary_support": true
       },
       "confidence": "high",
       "evidence": [
-        "question_type:single_best_answer",
-        "review_state:unreviewed"
+        "resolution:phase_y0_remediation_b_745",
+        "question_type:open_response",
+        "review_state:approved_open_response",
+        "requires_explanation",
+        "answer_boundary_support"
       ],
       "review_status": "shadow_classified",
       "activation_status": "inactive",
@@ -19851,26 +19924,27 @@
       "schema_version": "open_response_suitability_v1",
       "master_item_id": "wset3_746",
       "source_question_id": "746",
-      "classification": "sba_only",
-      "open_response_candidate": false,
-      "sba_only": true,
-      "sba_eligible": true,
+      "classification": "open_response_candidate",
+      "open_response_candidate": true,
+      "sba_only": false,
+      "sba_eligible": false,
       "human_review_required": false,
       "signals": {
         "requires_explanation": true,
         "requires_causal_chain": false,
         "requires_comparison": false,
         "requires_justification": false,
-        "recognition_only_sufficient": true,
+        "recognition_only_sufficient": false,
         "recognition_framing_detected": false,
-        "answer_boundary_support": false
+        "answer_boundary_support": true
       },
       "confidence": "high",
       "evidence": [
         "resolution:phase_4a_3_8_5_7_746",
-        "question_type:single_best_answer",
-        "review_state:approved_private_sba",
-        "requires_explanation"
+        "question_type:open_response",
+        "review_state:approved_open_response",
+        "requires_explanation",
+        "answer_boundary_support"
       ],
       "review_status": "shadow_classified",
       "activation_status": "inactive",
@@ -19890,24 +19964,26 @@
       "schema_version": "open_response_suitability_v1",
       "master_item_id": "wset3_747",
       "source_question_id": "747",
-      "classification": "sba_only",
-      "open_response_candidate": false,
-      "sba_only": true,
-      "sba_eligible": true,
+      "classification": "open_response_candidate",
+      "open_response_candidate": true,
+      "sba_only": false,
+      "sba_eligible": false,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
         "requires_causal_chain": false,
         "requires_comparison": false,
         "requires_justification": false,
-        "recognition_only_sufficient": true,
+        "recognition_only_sufficient": false,
         "recognition_framing_detected": false,
-        "answer_boundary_support": false
+        "answer_boundary_support": true
       },
       "confidence": "high",
       "evidence": [
-        "question_type:single_best_answer",
-        "review_state:unreviewed"
+        "resolution:phase_y0_remediation_b_747",
+        "question_type:open_response",
+        "review_state:approved_open_response",
+        "answer_boundary_support"
       ],
       "review_status": "shadow_classified",
       "activation_status": "inactive",
@@ -19927,24 +20003,26 @@
       "schema_version": "open_response_suitability_v1",
       "master_item_id": "wset3_748",
       "source_question_id": "748",
-      "classification": "sba_only",
-      "open_response_candidate": false,
-      "sba_only": true,
-      "sba_eligible": true,
+      "classification": "open_response_candidate",
+      "open_response_candidate": true,
+      "sba_only": false,
+      "sba_eligible": false,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
         "requires_causal_chain": false,
         "requires_comparison": false,
         "requires_justification": false,
-        "recognition_only_sufficient": true,
+        "recognition_only_sufficient": false,
         "recognition_framing_detected": false,
-        "answer_boundary_support": false
+        "answer_boundary_support": true
       },
       "confidence": "high",
       "evidence": [
-        "question_type:single_best_answer",
-        "review_state:unreviewed"
+        "resolution:phase_y0_remediation_b_748",
+        "question_type:open_response",
+        "review_state:approved_open_response",
+        "answer_boundary_support"
       ],
       "review_status": "shadow_classified",
       "activation_status": "inactive",
@@ -19964,24 +20042,28 @@
       "schema_version": "open_response_suitability_v1",
       "master_item_id": "wset3_765",
       "source_question_id": "765",
-      "classification": "sba_only",
-      "open_response_candidate": false,
-      "sba_only": true,
-      "sba_eligible": true,
+      "classification": "open_response_candidate",
+      "open_response_candidate": true,
+      "sba_only": false,
+      "sba_eligible": false,
       "human_review_required": false,
       "signals": {
-        "requires_explanation": false,
+        "requires_explanation": true,
         "requires_causal_chain": false,
         "requires_comparison": false,
-        "requires_justification": false,
-        "recognition_only_sufficient": true,
+        "requires_justification": true,
+        "recognition_only_sufficient": false,
         "recognition_framing_detected": false,
-        "answer_boundary_support": false
+        "answer_boundary_support": true
       },
       "confidence": "high",
       "evidence": [
-        "question_type:single_best_answer",
-        "review_state:unreviewed"
+        "resolution:phase_y0_remediation_b_765",
+        "question_type:open_response",
+        "review_state:approved_open_response",
+        "requires_explanation",
+        "requires_justification",
+        "answer_boundary_support"
       ],
       "review_status": "shadow_classified",
       "activation_status": "inactive",
@@ -20012,13 +20094,15 @@
         "requires_comparison": false,
         "requires_justification": false,
         "recognition_only_sufficient": true,
-        "recognition_framing_detected": false,
-        "answer_boundary_support": false
+        "recognition_framing_detected": true,
+        "answer_boundary_support": true
       },
       "confidence": "high",
       "evidence": [
         "question_type:single_best_answer",
-        "review_state:unreviewed"
+        "review_state:unreviewed",
+        "recognition_framing",
+        "answer_boundary_support"
       ],
       "review_status": "shadow_classified",
       "activation_status": "inactive",
@@ -20049,13 +20133,15 @@
         "requires_comparison": false,
         "requires_justification": false,
         "recognition_only_sufficient": true,
-        "recognition_framing_detected": false,
-        "answer_boundary_support": false
+        "recognition_framing_detected": true,
+        "answer_boundary_support": true
       },
       "confidence": "high",
       "evidence": [
         "question_type:single_best_answer",
-        "review_state:unreviewed"
+        "review_state:unreviewed",
+        "recognition_framing",
+        "answer_boundary_support"
       ],
       "review_status": "shadow_classified",
       "activation_status": "inactive",
@@ -20086,13 +20172,15 @@
         "requires_comparison": false,
         "requires_justification": false,
         "recognition_only_sufficient": true,
-        "recognition_framing_detected": false,
-        "answer_boundary_support": false
+        "recognition_framing_detected": true,
+        "answer_boundary_support": true
       },
       "confidence": "high",
       "evidence": [
         "question_type:single_best_answer",
-        "review_state:unreviewed"
+        "review_state:unreviewed",
+        "recognition_framing",
+        "answer_boundary_support"
       ],
       "review_status": "shadow_classified",
       "activation_status": "inactive",
@@ -20123,13 +20211,15 @@
         "requires_comparison": false,
         "requires_justification": false,
         "recognition_only_sufficient": true,
-        "recognition_framing_detected": false,
-        "answer_boundary_support": false
+        "recognition_framing_detected": true,
+        "answer_boundary_support": true
       },
       "confidence": "high",
       "evidence": [
         "question_type:single_best_answer",
-        "review_state:unreviewed"
+        "review_state:unreviewed",
+        "recognition_framing",
+        "answer_boundary_support"
       ],
       "review_status": "shadow_classified",
       "activation_status": "inactive",
@@ -20160,13 +20250,15 @@
         "requires_comparison": false,
         "requires_justification": false,
         "recognition_only_sufficient": true,
-        "recognition_framing_detected": false,
-        "answer_boundary_support": false
+        "recognition_framing_detected": true,
+        "answer_boundary_support": true
       },
       "confidence": "high",
       "evidence": [
         "question_type:single_best_answer",
-        "review_state:unreviewed"
+        "review_state:unreviewed",
+        "recognition_framing",
+        "answer_boundary_support"
       ],
       "review_status": "shadow_classified",
       "activation_status": "inactive",
@@ -20197,13 +20289,15 @@
         "requires_comparison": false,
         "requires_justification": false,
         "recognition_only_sufficient": true,
-        "recognition_framing_detected": false,
-        "answer_boundary_support": false
+        "recognition_framing_detected": true,
+        "answer_boundary_support": true
       },
       "confidence": "high",
       "evidence": [
         "question_type:single_best_answer",
-        "review_state:unreviewed"
+        "review_state:unreviewed",
+        "recognition_framing",
+        "answer_boundary_support"
       ],
       "review_status": "shadow_classified",
       "activation_status": "inactive",
@@ -20234,13 +20328,15 @@
         "requires_comparison": false,
         "requires_justification": false,
         "recognition_only_sufficient": true,
-        "recognition_framing_detected": false,
-        "answer_boundary_support": false
+        "recognition_framing_detected": true,
+        "answer_boundary_support": true
       },
       "confidence": "high",
       "evidence": [
         "question_type:single_best_answer",
-        "review_state:unreviewed"
+        "review_state:unreviewed",
+        "recognition_framing",
+        "answer_boundary_support"
       ],
       "review_status": "shadow_classified",
       "activation_status": "inactive",
@@ -20271,13 +20367,15 @@
         "requires_comparison": false,
         "requires_justification": false,
         "recognition_only_sufficient": true,
-        "recognition_framing_detected": false,
-        "answer_boundary_support": false
+        "recognition_framing_detected": true,
+        "answer_boundary_support": true
       },
       "confidence": "high",
       "evidence": [
         "question_type:single_best_answer",
-        "review_state:unreviewed"
+        "review_state:unreviewed",
+        "recognition_framing",
+        "answer_boundary_support"
       ],
       "review_status": "shadow_classified",
       "activation_status": "inactive",
@@ -20308,13 +20406,15 @@
         "requires_comparison": false,
         "requires_justification": false,
         "recognition_only_sufficient": true,
-        "recognition_framing_detected": false,
-        "answer_boundary_support": false
+        "recognition_framing_detected": true,
+        "answer_boundary_support": true
       },
       "confidence": "high",
       "evidence": [
         "question_type:single_best_answer",
-        "review_state:unreviewed"
+        "review_state:unreviewed",
+        "recognition_framing",
+        "answer_boundary_support"
       ],
       "review_status": "shadow_classified",
       "activation_status": "inactive",
@@ -20345,13 +20445,15 @@
         "requires_comparison": false,
         "requires_justification": false,
         "recognition_only_sufficient": true,
-        "recognition_framing_detected": false,
-        "answer_boundary_support": false
+        "recognition_framing_detected": true,
+        "answer_boundary_support": true
       },
       "confidence": "high",
       "evidence": [
         "question_type:single_best_answer",
-        "review_state:unreviewed"
+        "review_state:unreviewed",
+        "recognition_framing",
+        "answer_boundary_support"
       ],
       "review_status": "shadow_classified",
       "activation_status": "inactive",
@@ -20371,24 +20473,27 @@
       "schema_version": "open_response_suitability_v1",
       "master_item_id": "wset3_781",
       "source_question_id": "781",
-      "classification": "sba_only",
+      "classification": "human_review_required",
       "open_response_candidate": false,
-      "sba_only": true,
-      "sba_eligible": true,
-      "human_review_required": false,
+      "sba_only": false,
+      "sba_eligible": false,
+      "human_review_required": true,
       "signals": {
-        "requires_explanation": false,
+        "requires_explanation": true,
         "requires_causal_chain": false,
         "requires_comparison": false,
         "requires_justification": false,
-        "recognition_only_sufficient": true,
-        "recognition_framing_detected": false,
-        "answer_boundary_support": false
+        "recognition_only_sufficient": false,
+        "recognition_framing_detected": true,
+        "answer_boundary_support": true
       },
-      "confidence": "high",
+      "confidence": "medium",
       "evidence": [
         "question_type:single_best_answer",
-        "review_state:unreviewed"
+        "review_state:unreviewed",
+        "requires_explanation",
+        "recognition_framing",
+        "answer_boundary_support"
       ],
       "review_status": "shadow_classified",
       "activation_status": "inactive",
@@ -20419,13 +20524,15 @@
         "requires_comparison": false,
         "requires_justification": false,
         "recognition_only_sufficient": true,
-        "recognition_framing_detected": false,
-        "answer_boundary_support": false
+        "recognition_framing_detected": true,
+        "answer_boundary_support": true
       },
       "confidence": "high",
       "evidence": [
         "question_type:single_best_answer",
-        "review_state:unreviewed"
+        "review_state:unreviewed",
+        "recognition_framing",
+        "answer_boundary_support"
       ],
       "review_status": "shadow_classified",
       "activation_status": "inactive",
@@ -20456,13 +20563,15 @@
         "requires_comparison": false,
         "requires_justification": false,
         "recognition_only_sufficient": true,
-        "recognition_framing_detected": false,
-        "answer_boundary_support": false
+        "recognition_framing_detected": true,
+        "answer_boundary_support": true
       },
       "confidence": "high",
       "evidence": [
         "question_type:single_best_answer",
-        "review_state:unreviewed"
+        "review_state:unreviewed",
+        "recognition_framing",
+        "answer_boundary_support"
       ],
       "review_status": "shadow_classified",
       "activation_status": "inactive",
@@ -20493,13 +20602,15 @@
         "requires_comparison": false,
         "requires_justification": false,
         "recognition_only_sufficient": true,
-        "recognition_framing_detected": false,
-        "answer_boundary_support": false
+        "recognition_framing_detected": true,
+        "answer_boundary_support": true
       },
       "confidence": "high",
       "evidence": [
         "question_type:single_best_answer",
-        "review_state:unreviewed"
+        "review_state:unreviewed",
+        "recognition_framing",
+        "answer_boundary_support"
       ],
       "review_status": "shadow_classified",
       "activation_status": "inactive",
@@ -20525,20 +20636,21 @@
       "sba_eligible": true,
       "human_review_required": false,
       "signals": {
-        "requires_explanation": true,
+        "requires_explanation": false,
         "requires_causal_chain": false,
         "requires_comparison": false,
         "requires_justification": false,
         "recognition_only_sufficient": true,
-        "recognition_framing_detected": false,
-        "answer_boundary_support": false
+        "recognition_framing_detected": true,
+        "answer_boundary_support": true
       },
       "confidence": "high",
       "evidence": [
         "resolution:phase_4a_3_8_5_7_785",
         "question_type:single_best_answer",
         "review_state:approved_private_sba",
-        "requires_explanation"
+        "recognition_framing",
+        "answer_boundary_support"
       ],
       "review_status": "shadow_classified",
       "activation_status": "inactive",
@@ -20569,13 +20681,15 @@
         "requires_comparison": false,
         "requires_justification": false,
         "recognition_only_sufficient": true,
-        "recognition_framing_detected": false,
-        "answer_boundary_support": false
+        "recognition_framing_detected": true,
+        "answer_boundary_support": true
       },
       "confidence": "high",
       "evidence": [
         "question_type:single_best_answer",
-        "review_state:unreviewed"
+        "review_state:unreviewed",
+        "recognition_framing",
+        "answer_boundary_support"
       ],
       "review_status": "shadow_classified",
       "activation_status": "inactive",
@@ -20606,13 +20720,15 @@
         "requires_comparison": false,
         "requires_justification": false,
         "recognition_only_sufficient": true,
-        "recognition_framing_detected": false,
-        "answer_boundary_support": false
+        "recognition_framing_detected": true,
+        "answer_boundary_support": true
       },
       "confidence": "high",
       "evidence": [
         "question_type:single_best_answer",
-        "review_state:unreviewed"
+        "review_state:unreviewed",
+        "recognition_framing",
+        "answer_boundary_support"
       ],
       "review_status": "shadow_classified",
       "activation_status": "inactive",
@@ -20643,13 +20759,15 @@
         "requires_comparison": false,
         "requires_justification": false,
         "recognition_only_sufficient": true,
-        "recognition_framing_detected": false,
-        "answer_boundary_support": false
+        "recognition_framing_detected": true,
+        "answer_boundary_support": true
       },
       "confidence": "high",
       "evidence": [
         "question_type:single_best_answer",
-        "review_state:unreviewed"
+        "review_state:unreviewed",
+        "recognition_framing",
+        "answer_boundary_support"
       ],
       "review_status": "shadow_classified",
       "activation_status": "inactive",
@@ -20680,13 +20798,15 @@
         "requires_comparison": false,
         "requires_justification": false,
         "recognition_only_sufficient": true,
-        "recognition_framing_detected": false,
-        "answer_boundary_support": false
+        "recognition_framing_detected": true,
+        "answer_boundary_support": true
       },
       "confidence": "high",
       "evidence": [
         "question_type:single_best_answer",
-        "review_state:unreviewed"
+        "review_state:unreviewed",
+        "recognition_framing",
+        "answer_boundary_support"
       ],
       "review_status": "shadow_classified",
       "activation_status": "inactive",
@@ -20717,13 +20837,15 @@
         "requires_comparison": false,
         "requires_justification": false,
         "recognition_only_sufficient": true,
-        "recognition_framing_detected": false,
-        "answer_boundary_support": false
+        "recognition_framing_detected": true,
+        "answer_boundary_support": true
       },
       "confidence": "high",
       "evidence": [
         "question_type:single_best_answer",
-        "review_state:unreviewed"
+        "review_state:unreviewed",
+        "recognition_framing",
+        "answer_boundary_support"
       ],
       "review_status": "shadow_classified",
       "activation_status": "inactive",
@@ -20754,13 +20876,15 @@
         "requires_comparison": false,
         "requires_justification": false,
         "recognition_only_sufficient": true,
-        "recognition_framing_detected": false,
-        "answer_boundary_support": false
+        "recognition_framing_detected": true,
+        "answer_boundary_support": true
       },
       "confidence": "high",
       "evidence": [
         "question_type:single_best_answer",
-        "review_state:unreviewed"
+        "review_state:unreviewed",
+        "recognition_framing",
+        "answer_boundary_support"
       ],
       "review_status": "shadow_classified",
       "activation_status": "inactive",
@@ -20791,13 +20915,15 @@
         "requires_comparison": false,
         "requires_justification": false,
         "recognition_only_sufficient": true,
-        "recognition_framing_detected": false,
-        "answer_boundary_support": false
+        "recognition_framing_detected": true,
+        "answer_boundary_support": true
       },
       "confidence": "high",
       "evidence": [
         "question_type:single_best_answer",
-        "review_state:unreviewed"
+        "review_state:unreviewed",
+        "recognition_framing",
+        "answer_boundary_support"
       ],
       "review_status": "shadow_classified",
       "activation_status": "inactive",
@@ -20828,13 +20954,15 @@
         "requires_comparison": false,
         "requires_justification": false,
         "recognition_only_sufficient": true,
-        "recognition_framing_detected": false,
-        "answer_boundary_support": false
+        "recognition_framing_detected": true,
+        "answer_boundary_support": true
       },
       "confidence": "high",
       "evidence": [
         "question_type:single_best_answer",
-        "review_state:unreviewed"
+        "review_state:unreviewed",
+        "recognition_framing",
+        "answer_boundary_support"
       ],
       "review_status": "shadow_classified",
       "activation_status": "inactive",
@@ -20865,13 +20993,15 @@
         "requires_comparison": false,
         "requires_justification": false,
         "recognition_only_sufficient": true,
-        "recognition_framing_detected": false,
-        "answer_boundary_support": false
+        "recognition_framing_detected": true,
+        "answer_boundary_support": true
       },
       "confidence": "high",
       "evidence": [
         "question_type:single_best_answer",
-        "review_state:unreviewed"
+        "review_state:unreviewed",
+        "recognition_framing",
+        "answer_boundary_support"
       ],
       "review_status": "shadow_classified",
       "activation_status": "inactive",
@@ -20891,24 +21021,27 @@
       "schema_version": "open_response_suitability_v1",
       "master_item_id": "wset3_795",
       "source_question_id": "795",
-      "classification": "sba_only",
-      "open_response_candidate": false,
-      "sba_only": true,
-      "sba_eligible": true,
+      "classification": "open_response_candidate",
+      "open_response_candidate": true,
+      "sba_only": false,
+      "sba_eligible": false,
       "human_review_required": false,
       "signals": {
-        "requires_explanation": false,
+        "requires_explanation": true,
         "requires_causal_chain": false,
         "requires_comparison": false,
         "requires_justification": false,
-        "recognition_only_sufficient": true,
+        "recognition_only_sufficient": false,
         "recognition_framing_detected": false,
-        "answer_boundary_support": false
+        "answer_boundary_support": true
       },
       "confidence": "high",
       "evidence": [
-        "question_type:single_best_answer",
-        "review_state:unreviewed"
+        "resolution:phase_y0_remediation_b_795",
+        "question_type:open_response",
+        "review_state:approved_open_response",
+        "requires_explanation",
+        "answer_boundary_support"
       ],
       "review_status": "shadow_classified",
       "activation_status": "inactive",
@@ -20928,24 +21061,26 @@
       "schema_version": "open_response_suitability_v1",
       "master_item_id": "wset3_796",
       "source_question_id": "796",
-      "classification": "sba_only",
-      "open_response_candidate": false,
-      "sba_only": true,
-      "sba_eligible": true,
+      "classification": "open_response_candidate",
+      "open_response_candidate": true,
+      "sba_only": false,
+      "sba_eligible": false,
       "human_review_required": false,
       "signals": {
         "requires_explanation": false,
         "requires_causal_chain": false,
         "requires_comparison": false,
         "requires_justification": false,
-        "recognition_only_sufficient": true,
+        "recognition_only_sufficient": false,
         "recognition_framing_detected": false,
-        "answer_boundary_support": false
+        "answer_boundary_support": true
       },
       "confidence": "high",
       "evidence": [
-        "question_type:single_best_answer",
-        "review_state:unreviewed"
+        "resolution:phase_y0_remediation_b_796",
+        "question_type:open_response",
+        "review_state:approved_open_response",
+        "answer_boundary_support"
       ],
       "review_status": "shadow_classified",
       "activation_status": "inactive",
@@ -20965,24 +21100,27 @@
       "schema_version": "open_response_suitability_v1",
       "master_item_id": "wset3_797",
       "source_question_id": "797",
-      "classification": "sba_only",
-      "open_response_candidate": false,
-      "sba_only": true,
-      "sba_eligible": true,
+      "classification": "open_response_candidate",
+      "open_response_candidate": true,
+      "sba_only": false,
+      "sba_eligible": false,
       "human_review_required": false,
       "signals": {
-        "requires_explanation": false,
+        "requires_explanation": true,
         "requires_causal_chain": false,
         "requires_comparison": false,
         "requires_justification": false,
-        "recognition_only_sufficient": true,
+        "recognition_only_sufficient": false,
         "recognition_framing_detected": false,
-        "answer_boundary_support": false
+        "answer_boundary_support": true
       },
       "confidence": "high",
       "evidence": [
-        "question_type:single_best_answer",
-        "review_state:unreviewed"
+        "resolution:phase_y0_remediation_b_797",
+        "question_type:open_response",
+        "review_state:approved_open_response",
+        "requires_explanation",
+        "answer_boundary_support"
       ],
       "review_status": "shadow_classified",
       "activation_status": "inactive",
@@ -23236,6 +23374,3936 @@
         "review_state:approved_open_response",
         "requires_causal_chain",
         "requires_comparison",
+        "answer_boundary_support",
+        "causal_link_count:1"
+      ],
+      "review_status": "shadow_classified",
+      "activation_status": "inactive",
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "official_wset_question": false,
+        "training_item_only": true,
+        "uses_llm": false,
+        "uses_api": false,
+        "uses_embeddings": false,
+        "uses_vector_db": false,
+        "cloud_services_active": false
+      }
+    },
+    {
+      "schema_version": "open_response_suitability_v1",
+      "master_item_id": "wset3_858",
+      "source_question_id": "858",
+      "classification": "sba_only",
+      "open_response_candidate": false,
+      "sba_only": true,
+      "sba_eligible": true,
+      "human_review_required": false,
+      "signals": {
+        "requires_explanation": true,
+        "requires_causal_chain": true,
+        "requires_comparison": false,
+        "requires_justification": false,
+        "recognition_only_sufficient": true,
+        "recognition_framing_detected": false,
+        "answer_boundary_support": true
+      },
+      "confidence": "high",
+      "evidence": [
+        "resolution:sba_gap_closure_sba_batch_1_858",
+        "question_type:single_best_answer",
+        "review_state:approved_private_sba",
+        "requires_explanation",
+        "requires_causal_chain",
+        "answer_boundary_support",
+        "causal_link_count:1"
+      ],
+      "review_status": "shadow_classified",
+      "activation_status": "inactive",
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "official_wset_question": false,
+        "training_item_only": true,
+        "uses_llm": false,
+        "uses_api": false,
+        "uses_embeddings": false,
+        "uses_vector_db": false,
+        "cloud_services_active": false
+      }
+    },
+    {
+      "schema_version": "open_response_suitability_v1",
+      "master_item_id": "wset3_859",
+      "source_question_id": "859",
+      "classification": "sba_only",
+      "open_response_candidate": false,
+      "sba_only": true,
+      "sba_eligible": true,
+      "human_review_required": false,
+      "signals": {
+        "requires_explanation": true,
+        "requires_causal_chain": true,
+        "requires_comparison": false,
+        "requires_justification": false,
+        "recognition_only_sufficient": true,
+        "recognition_framing_detected": false,
+        "answer_boundary_support": true
+      },
+      "confidence": "high",
+      "evidence": [
+        "resolution:sba_gap_closure_sba_batch_1_859",
+        "question_type:single_best_answer",
+        "review_state:approved_private_sba",
+        "requires_explanation",
+        "requires_causal_chain",
+        "answer_boundary_support",
+        "causal_link_count:1"
+      ],
+      "review_status": "shadow_classified",
+      "activation_status": "inactive",
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "official_wset_question": false,
+        "training_item_only": true,
+        "uses_llm": false,
+        "uses_api": false,
+        "uses_embeddings": false,
+        "uses_vector_db": false,
+        "cloud_services_active": false
+      }
+    },
+    {
+      "schema_version": "open_response_suitability_v1",
+      "master_item_id": "wset3_860",
+      "source_question_id": "860",
+      "classification": "sba_only",
+      "open_response_candidate": false,
+      "sba_only": true,
+      "sba_eligible": true,
+      "human_review_required": false,
+      "signals": {
+        "requires_explanation": true,
+        "requires_causal_chain": true,
+        "requires_comparison": false,
+        "requires_justification": false,
+        "recognition_only_sufficient": true,
+        "recognition_framing_detected": true,
+        "answer_boundary_support": true
+      },
+      "confidence": "high",
+      "evidence": [
+        "resolution:sba_gap_closure_sba_batch_1_860",
+        "question_type:single_best_answer",
+        "review_state:approved_private_sba",
+        "requires_explanation",
+        "requires_causal_chain",
+        "recognition_framing",
+        "answer_boundary_support",
+        "causal_link_count:1"
+      ],
+      "review_status": "shadow_classified",
+      "activation_status": "inactive",
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "official_wset_question": false,
+        "training_item_only": true,
+        "uses_llm": false,
+        "uses_api": false,
+        "uses_embeddings": false,
+        "uses_vector_db": false,
+        "cloud_services_active": false
+      }
+    },
+    {
+      "schema_version": "open_response_suitability_v1",
+      "master_item_id": "wset3_861",
+      "source_question_id": "861",
+      "classification": "sba_only",
+      "open_response_candidate": false,
+      "sba_only": true,
+      "sba_eligible": true,
+      "human_review_required": false,
+      "signals": {
+        "requires_explanation": true,
+        "requires_causal_chain": true,
+        "requires_comparison": false,
+        "requires_justification": false,
+        "recognition_only_sufficient": true,
+        "recognition_framing_detected": false,
+        "answer_boundary_support": true
+      },
+      "confidence": "high",
+      "evidence": [
+        "resolution:sba_gap_closure_sba_batch_1_861",
+        "question_type:single_best_answer",
+        "review_state:approved_private_sba",
+        "requires_explanation",
+        "requires_causal_chain",
+        "answer_boundary_support",
+        "causal_link_count:1"
+      ],
+      "review_status": "shadow_classified",
+      "activation_status": "inactive",
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "official_wset_question": false,
+        "training_item_only": true,
+        "uses_llm": false,
+        "uses_api": false,
+        "uses_embeddings": false,
+        "uses_vector_db": false,
+        "cloud_services_active": false
+      }
+    },
+    {
+      "schema_version": "open_response_suitability_v1",
+      "master_item_id": "wset3_862",
+      "source_question_id": "862",
+      "classification": "sba_only",
+      "open_response_candidate": false,
+      "sba_only": true,
+      "sba_eligible": true,
+      "human_review_required": false,
+      "signals": {
+        "requires_explanation": true,
+        "requires_causal_chain": true,
+        "requires_comparison": false,
+        "requires_justification": false,
+        "recognition_only_sufficient": true,
+        "recognition_framing_detected": true,
+        "answer_boundary_support": true
+      },
+      "confidence": "high",
+      "evidence": [
+        "resolution:sba_gap_closure_sba_batch_1_862",
+        "question_type:single_best_answer",
+        "review_state:approved_private_sba",
+        "requires_explanation",
+        "requires_causal_chain",
+        "recognition_framing",
+        "answer_boundary_support",
+        "causal_link_count:1"
+      ],
+      "review_status": "shadow_classified",
+      "activation_status": "inactive",
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "official_wset_question": false,
+        "training_item_only": true,
+        "uses_llm": false,
+        "uses_api": false,
+        "uses_embeddings": false,
+        "uses_vector_db": false,
+        "cloud_services_active": false
+      }
+    },
+    {
+      "schema_version": "open_response_suitability_v1",
+      "master_item_id": "wset3_863",
+      "source_question_id": "863",
+      "classification": "sba_only",
+      "open_response_candidate": false,
+      "sba_only": true,
+      "sba_eligible": true,
+      "human_review_required": false,
+      "signals": {
+        "requires_explanation": true,
+        "requires_causal_chain": true,
+        "requires_comparison": false,
+        "requires_justification": false,
+        "recognition_only_sufficient": true,
+        "recognition_framing_detected": false,
+        "answer_boundary_support": true
+      },
+      "confidence": "high",
+      "evidence": [
+        "resolution:sba_gap_closure_sba_batch_1_863",
+        "question_type:single_best_answer",
+        "review_state:approved_private_sba",
+        "requires_explanation",
+        "requires_causal_chain",
+        "answer_boundary_support",
+        "causal_link_count:1"
+      ],
+      "review_status": "shadow_classified",
+      "activation_status": "inactive",
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "official_wset_question": false,
+        "training_item_only": true,
+        "uses_llm": false,
+        "uses_api": false,
+        "uses_embeddings": false,
+        "uses_vector_db": false,
+        "cloud_services_active": false
+      }
+    },
+    {
+      "schema_version": "open_response_suitability_v1",
+      "master_item_id": "wset3_864",
+      "source_question_id": "864",
+      "classification": "sba_only",
+      "open_response_candidate": false,
+      "sba_only": true,
+      "sba_eligible": true,
+      "human_review_required": false,
+      "signals": {
+        "requires_explanation": false,
+        "requires_causal_chain": false,
+        "requires_comparison": false,
+        "requires_justification": false,
+        "recognition_only_sufficient": true,
+        "recognition_framing_detected": false,
+        "answer_boundary_support": true
+      },
+      "confidence": "high",
+      "evidence": [
+        "resolution:sba_gap_closure_sba_batch_1_864",
+        "question_type:single_best_answer",
+        "review_state:approved_private_sba",
+        "answer_boundary_support",
+        "causal_link_count:1"
+      ],
+      "review_status": "shadow_classified",
+      "activation_status": "inactive",
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "official_wset_question": false,
+        "training_item_only": true,
+        "uses_llm": false,
+        "uses_api": false,
+        "uses_embeddings": false,
+        "uses_vector_db": false,
+        "cloud_services_active": false
+      }
+    },
+    {
+      "schema_version": "open_response_suitability_v1",
+      "master_item_id": "wset3_865",
+      "source_question_id": "865",
+      "classification": "sba_only",
+      "open_response_candidate": false,
+      "sba_only": true,
+      "sba_eligible": true,
+      "human_review_required": false,
+      "signals": {
+        "requires_explanation": true,
+        "requires_causal_chain": true,
+        "requires_comparison": false,
+        "requires_justification": false,
+        "recognition_only_sufficient": true,
+        "recognition_framing_detected": true,
+        "answer_boundary_support": true
+      },
+      "confidence": "high",
+      "evidence": [
+        "resolution:sba_gap_closure_sba_batch_1_865",
+        "question_type:single_best_answer",
+        "review_state:approved_private_sba",
+        "requires_explanation",
+        "requires_causal_chain",
+        "recognition_framing",
+        "answer_boundary_support",
+        "causal_link_count:1"
+      ],
+      "review_status": "shadow_classified",
+      "activation_status": "inactive",
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "official_wset_question": false,
+        "training_item_only": true,
+        "uses_llm": false,
+        "uses_api": false,
+        "uses_embeddings": false,
+        "uses_vector_db": false,
+        "cloud_services_active": false
+      }
+    },
+    {
+      "schema_version": "open_response_suitability_v1",
+      "master_item_id": "wset3_866",
+      "source_question_id": "866",
+      "classification": "sba_only",
+      "open_response_candidate": false,
+      "sba_only": true,
+      "sba_eligible": true,
+      "human_review_required": false,
+      "signals": {
+        "requires_explanation": true,
+        "requires_causal_chain": true,
+        "requires_comparison": false,
+        "requires_justification": false,
+        "recognition_only_sufficient": true,
+        "recognition_framing_detected": true,
+        "answer_boundary_support": true
+      },
+      "confidence": "high",
+      "evidence": [
+        "resolution:sba_gap_closure_sba_batch_1_866",
+        "question_type:single_best_answer",
+        "review_state:approved_private_sba",
+        "requires_explanation",
+        "requires_causal_chain",
+        "recognition_framing",
+        "answer_boundary_support",
+        "causal_link_count:1"
+      ],
+      "review_status": "shadow_classified",
+      "activation_status": "inactive",
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "official_wset_question": false,
+        "training_item_only": true,
+        "uses_llm": false,
+        "uses_api": false,
+        "uses_embeddings": false,
+        "uses_vector_db": false,
+        "cloud_services_active": false
+      }
+    },
+    {
+      "schema_version": "open_response_suitability_v1",
+      "master_item_id": "wset3_867",
+      "source_question_id": "867",
+      "classification": "sba_only",
+      "open_response_candidate": false,
+      "sba_only": true,
+      "sba_eligible": true,
+      "human_review_required": false,
+      "signals": {
+        "requires_explanation": true,
+        "requires_causal_chain": true,
+        "requires_comparison": false,
+        "requires_justification": false,
+        "recognition_only_sufficient": true,
+        "recognition_framing_detected": false,
+        "answer_boundary_support": true
+      },
+      "confidence": "high",
+      "evidence": [
+        "resolution:sba_gap_closure_sba_batch_1_867",
+        "question_type:single_best_answer",
+        "review_state:approved_private_sba",
+        "requires_explanation",
+        "requires_causal_chain",
+        "answer_boundary_support",
+        "causal_link_count:1"
+      ],
+      "review_status": "shadow_classified",
+      "activation_status": "inactive",
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "official_wset_question": false,
+        "training_item_only": true,
+        "uses_llm": false,
+        "uses_api": false,
+        "uses_embeddings": false,
+        "uses_vector_db": false,
+        "cloud_services_active": false
+      }
+    },
+    {
+      "schema_version": "open_response_suitability_v1",
+      "master_item_id": "wset3_868",
+      "source_question_id": "868",
+      "classification": "sba_only",
+      "open_response_candidate": false,
+      "sba_only": true,
+      "sba_eligible": true,
+      "human_review_required": false,
+      "signals": {
+        "requires_explanation": true,
+        "requires_causal_chain": true,
+        "requires_comparison": false,
+        "requires_justification": false,
+        "recognition_only_sufficient": true,
+        "recognition_framing_detected": true,
+        "answer_boundary_support": true
+      },
+      "confidence": "high",
+      "evidence": [
+        "resolution:sba_gap_closure_sba_batch_1_868",
+        "question_type:single_best_answer",
+        "review_state:approved_private_sba",
+        "requires_explanation",
+        "requires_causal_chain",
+        "recognition_framing",
+        "answer_boundary_support",
+        "causal_link_count:1"
+      ],
+      "review_status": "shadow_classified",
+      "activation_status": "inactive",
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "official_wset_question": false,
+        "training_item_only": true,
+        "uses_llm": false,
+        "uses_api": false,
+        "uses_embeddings": false,
+        "uses_vector_db": false,
+        "cloud_services_active": false
+      }
+    },
+    {
+      "schema_version": "open_response_suitability_v1",
+      "master_item_id": "wset3_869",
+      "source_question_id": "869",
+      "classification": "sba_only",
+      "open_response_candidate": false,
+      "sba_only": true,
+      "sba_eligible": true,
+      "human_review_required": false,
+      "signals": {
+        "requires_explanation": true,
+        "requires_causal_chain": true,
+        "requires_comparison": true,
+        "requires_justification": false,
+        "recognition_only_sufficient": true,
+        "recognition_framing_detected": false,
+        "answer_boundary_support": true
+      },
+      "confidence": "high",
+      "evidence": [
+        "resolution:sba_gap_closure_sba_batch_1_869",
+        "question_type:single_best_answer",
+        "review_state:approved_private_sba",
+        "requires_explanation",
+        "requires_causal_chain",
+        "requires_comparison",
+        "answer_boundary_support",
+        "causal_link_count:1"
+      ],
+      "review_status": "shadow_classified",
+      "activation_status": "inactive",
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "official_wset_question": false,
+        "training_item_only": true,
+        "uses_llm": false,
+        "uses_api": false,
+        "uses_embeddings": false,
+        "uses_vector_db": false,
+        "cloud_services_active": false
+      }
+    },
+    {
+      "schema_version": "open_response_suitability_v1",
+      "master_item_id": "wset3_870",
+      "source_question_id": "870",
+      "classification": "sba_only",
+      "open_response_candidate": false,
+      "sba_only": true,
+      "sba_eligible": true,
+      "human_review_required": false,
+      "signals": {
+        "requires_explanation": true,
+        "requires_causal_chain": true,
+        "requires_comparison": false,
+        "requires_justification": false,
+        "recognition_only_sufficient": true,
+        "recognition_framing_detected": false,
+        "answer_boundary_support": true
+      },
+      "confidence": "high",
+      "evidence": [
+        "resolution:sba_gap_closure_sba_batch_1_870",
+        "question_type:single_best_answer",
+        "review_state:approved_private_sba",
+        "requires_explanation",
+        "requires_causal_chain",
+        "answer_boundary_support",
+        "causal_link_count:1"
+      ],
+      "review_status": "shadow_classified",
+      "activation_status": "inactive",
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "official_wset_question": false,
+        "training_item_only": true,
+        "uses_llm": false,
+        "uses_api": false,
+        "uses_embeddings": false,
+        "uses_vector_db": false,
+        "cloud_services_active": false
+      }
+    },
+    {
+      "schema_version": "open_response_suitability_v1",
+      "master_item_id": "wset3_871",
+      "source_question_id": "871",
+      "classification": "sba_only",
+      "open_response_candidate": false,
+      "sba_only": true,
+      "sba_eligible": true,
+      "human_review_required": false,
+      "signals": {
+        "requires_explanation": false,
+        "requires_causal_chain": false,
+        "requires_comparison": false,
+        "requires_justification": false,
+        "recognition_only_sufficient": true,
+        "recognition_framing_detected": false,
+        "answer_boundary_support": true
+      },
+      "confidence": "high",
+      "evidence": [
+        "resolution:sba_gap_closure_sba_batch_1_871",
+        "question_type:single_best_answer",
+        "review_state:approved_private_sba",
+        "answer_boundary_support",
+        "causal_link_count:1"
+      ],
+      "review_status": "shadow_classified",
+      "activation_status": "inactive",
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "official_wset_question": false,
+        "training_item_only": true,
+        "uses_llm": false,
+        "uses_api": false,
+        "uses_embeddings": false,
+        "uses_vector_db": false,
+        "cloud_services_active": false
+      }
+    },
+    {
+      "schema_version": "open_response_suitability_v1",
+      "master_item_id": "wset3_872",
+      "source_question_id": "872",
+      "classification": "sba_only",
+      "open_response_candidate": false,
+      "sba_only": true,
+      "sba_eligible": true,
+      "human_review_required": false,
+      "signals": {
+        "requires_explanation": true,
+        "requires_causal_chain": true,
+        "requires_comparison": false,
+        "requires_justification": false,
+        "recognition_only_sufficient": true,
+        "recognition_framing_detected": false,
+        "answer_boundary_support": true
+      },
+      "confidence": "high",
+      "evidence": [
+        "resolution:sba_gap_closure_sba_batch_1_872",
+        "question_type:single_best_answer",
+        "review_state:approved_private_sba",
+        "requires_explanation",
+        "requires_causal_chain",
+        "answer_boundary_support",
+        "causal_link_count:1"
+      ],
+      "review_status": "shadow_classified",
+      "activation_status": "inactive",
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "official_wset_question": false,
+        "training_item_only": true,
+        "uses_llm": false,
+        "uses_api": false,
+        "uses_embeddings": false,
+        "uses_vector_db": false,
+        "cloud_services_active": false
+      }
+    },
+    {
+      "schema_version": "open_response_suitability_v1",
+      "master_item_id": "wset3_873",
+      "source_question_id": "873",
+      "classification": "sba_only",
+      "open_response_candidate": false,
+      "sba_only": true,
+      "sba_eligible": true,
+      "human_review_required": false,
+      "signals": {
+        "requires_explanation": true,
+        "requires_causal_chain": true,
+        "requires_comparison": false,
+        "requires_justification": false,
+        "recognition_only_sufficient": true,
+        "recognition_framing_detected": false,
+        "answer_boundary_support": true
+      },
+      "confidence": "high",
+      "evidence": [
+        "resolution:sba_gap_closure_sba_batch_1_873",
+        "question_type:single_best_answer",
+        "review_state:approved_private_sba",
+        "requires_explanation",
+        "requires_causal_chain",
+        "answer_boundary_support",
+        "causal_link_count:1"
+      ],
+      "review_status": "shadow_classified",
+      "activation_status": "inactive",
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "official_wset_question": false,
+        "training_item_only": true,
+        "uses_llm": false,
+        "uses_api": false,
+        "uses_embeddings": false,
+        "uses_vector_db": false,
+        "cloud_services_active": false
+      }
+    },
+    {
+      "schema_version": "open_response_suitability_v1",
+      "master_item_id": "wset3_874",
+      "source_question_id": "874",
+      "classification": "sba_only",
+      "open_response_candidate": false,
+      "sba_only": true,
+      "sba_eligible": true,
+      "human_review_required": false,
+      "signals": {
+        "requires_explanation": true,
+        "requires_causal_chain": true,
+        "requires_comparison": false,
+        "requires_justification": false,
+        "recognition_only_sufficient": true,
+        "recognition_framing_detected": true,
+        "answer_boundary_support": true
+      },
+      "confidence": "high",
+      "evidence": [
+        "resolution:sba_gap_closure_sba_batch_1_874",
+        "question_type:single_best_answer",
+        "review_state:approved_private_sba",
+        "requires_explanation",
+        "requires_causal_chain",
+        "recognition_framing",
+        "answer_boundary_support",
+        "causal_link_count:1"
+      ],
+      "review_status": "shadow_classified",
+      "activation_status": "inactive",
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "official_wset_question": false,
+        "training_item_only": true,
+        "uses_llm": false,
+        "uses_api": false,
+        "uses_embeddings": false,
+        "uses_vector_db": false,
+        "cloud_services_active": false
+      }
+    },
+    {
+      "schema_version": "open_response_suitability_v1",
+      "master_item_id": "wset3_875",
+      "source_question_id": "875",
+      "classification": "sba_only",
+      "open_response_candidate": false,
+      "sba_only": true,
+      "sba_eligible": true,
+      "human_review_required": false,
+      "signals": {
+        "requires_explanation": false,
+        "requires_causal_chain": false,
+        "requires_comparison": false,
+        "requires_justification": false,
+        "recognition_only_sufficient": true,
+        "recognition_framing_detected": false,
+        "answer_boundary_support": true
+      },
+      "confidence": "high",
+      "evidence": [
+        "resolution:sba_gap_closure_sba_batch_1_875",
+        "question_type:single_best_answer",
+        "review_state:approved_private_sba",
+        "answer_boundary_support",
+        "causal_link_count:1"
+      ],
+      "review_status": "shadow_classified",
+      "activation_status": "inactive",
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "official_wset_question": false,
+        "training_item_only": true,
+        "uses_llm": false,
+        "uses_api": false,
+        "uses_embeddings": false,
+        "uses_vector_db": false,
+        "cloud_services_active": false
+      }
+    },
+    {
+      "schema_version": "open_response_suitability_v1",
+      "master_item_id": "wset3_876",
+      "source_question_id": "876",
+      "classification": "sba_only",
+      "open_response_candidate": false,
+      "sba_only": true,
+      "sba_eligible": true,
+      "human_review_required": false,
+      "signals": {
+        "requires_explanation": true,
+        "requires_causal_chain": true,
+        "requires_comparison": false,
+        "requires_justification": false,
+        "recognition_only_sufficient": true,
+        "recognition_framing_detected": false,
+        "answer_boundary_support": true
+      },
+      "confidence": "high",
+      "evidence": [
+        "resolution:sba_gap_closure_sba_batch_1_876",
+        "question_type:single_best_answer",
+        "review_state:approved_private_sba",
+        "requires_explanation",
+        "requires_causal_chain",
+        "answer_boundary_support",
+        "causal_link_count:1"
+      ],
+      "review_status": "shadow_classified",
+      "activation_status": "inactive",
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "official_wset_question": false,
+        "training_item_only": true,
+        "uses_llm": false,
+        "uses_api": false,
+        "uses_embeddings": false,
+        "uses_vector_db": false,
+        "cloud_services_active": false
+      }
+    },
+    {
+      "schema_version": "open_response_suitability_v1",
+      "master_item_id": "wset3_877",
+      "source_question_id": "877",
+      "classification": "sba_only",
+      "open_response_candidate": false,
+      "sba_only": true,
+      "sba_eligible": true,
+      "human_review_required": false,
+      "signals": {
+        "requires_explanation": true,
+        "requires_causal_chain": true,
+        "requires_comparison": false,
+        "requires_justification": false,
+        "recognition_only_sufficient": true,
+        "recognition_framing_detected": false,
+        "answer_boundary_support": true
+      },
+      "confidence": "high",
+      "evidence": [
+        "resolution:sba_gap_closure_sba_batch_1_877",
+        "question_type:single_best_answer",
+        "review_state:approved_private_sba",
+        "requires_explanation",
+        "requires_causal_chain",
+        "answer_boundary_support",
+        "causal_link_count:1"
+      ],
+      "review_status": "shadow_classified",
+      "activation_status": "inactive",
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "official_wset_question": false,
+        "training_item_only": true,
+        "uses_llm": false,
+        "uses_api": false,
+        "uses_embeddings": false,
+        "uses_vector_db": false,
+        "cloud_services_active": false
+      }
+    },
+    {
+      "schema_version": "open_response_suitability_v1",
+      "master_item_id": "wset3_878",
+      "source_question_id": "878",
+      "classification": "sba_only",
+      "open_response_candidate": false,
+      "sba_only": true,
+      "sba_eligible": true,
+      "human_review_required": false,
+      "signals": {
+        "requires_explanation": false,
+        "requires_causal_chain": false,
+        "requires_comparison": false,
+        "requires_justification": false,
+        "recognition_only_sufficient": true,
+        "recognition_framing_detected": false,
+        "answer_boundary_support": true
+      },
+      "confidence": "high",
+      "evidence": [
+        "resolution:sba_gap_closure_sba_batch_1_878",
+        "question_type:single_best_answer",
+        "review_state:approved_private_sba",
+        "answer_boundary_support",
+        "causal_link_count:1"
+      ],
+      "review_status": "shadow_classified",
+      "activation_status": "inactive",
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "official_wset_question": false,
+        "training_item_only": true,
+        "uses_llm": false,
+        "uses_api": false,
+        "uses_embeddings": false,
+        "uses_vector_db": false,
+        "cloud_services_active": false
+      }
+    },
+    {
+      "schema_version": "open_response_suitability_v1",
+      "master_item_id": "wset3_879",
+      "source_question_id": "879",
+      "classification": "sba_only",
+      "open_response_candidate": false,
+      "sba_only": true,
+      "sba_eligible": true,
+      "human_review_required": false,
+      "signals": {
+        "requires_explanation": true,
+        "requires_causal_chain": true,
+        "requires_comparison": false,
+        "requires_justification": false,
+        "recognition_only_sufficient": true,
+        "recognition_framing_detected": true,
+        "answer_boundary_support": true
+      },
+      "confidence": "high",
+      "evidence": [
+        "resolution:sba_gap_closure_sba_batch_1_879",
+        "question_type:single_best_answer",
+        "review_state:approved_private_sba",
+        "requires_explanation",
+        "requires_causal_chain",
+        "recognition_framing",
+        "answer_boundary_support",
+        "causal_link_count:1"
+      ],
+      "review_status": "shadow_classified",
+      "activation_status": "inactive",
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "official_wset_question": false,
+        "training_item_only": true,
+        "uses_llm": false,
+        "uses_api": false,
+        "uses_embeddings": false,
+        "uses_vector_db": false,
+        "cloud_services_active": false
+      }
+    },
+    {
+      "schema_version": "open_response_suitability_v1",
+      "master_item_id": "wset3_880",
+      "source_question_id": "880",
+      "classification": "sba_only",
+      "open_response_candidate": false,
+      "sba_only": true,
+      "sba_eligible": true,
+      "human_review_required": false,
+      "signals": {
+        "requires_explanation": true,
+        "requires_causal_chain": true,
+        "requires_comparison": false,
+        "requires_justification": false,
+        "recognition_only_sufficient": true,
+        "recognition_framing_detected": false,
+        "answer_boundary_support": true
+      },
+      "confidence": "high",
+      "evidence": [
+        "resolution:sba_gap_closure_sba_batch_1_880",
+        "question_type:single_best_answer",
+        "review_state:approved_private_sba",
+        "requires_explanation",
+        "requires_causal_chain",
+        "answer_boundary_support",
+        "causal_link_count:1"
+      ],
+      "review_status": "shadow_classified",
+      "activation_status": "inactive",
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "official_wset_question": false,
+        "training_item_only": true,
+        "uses_llm": false,
+        "uses_api": false,
+        "uses_embeddings": false,
+        "uses_vector_db": false,
+        "cloud_services_active": false
+      }
+    },
+    {
+      "schema_version": "open_response_suitability_v1",
+      "master_item_id": "wset3_881",
+      "source_question_id": "881",
+      "classification": "sba_only",
+      "open_response_candidate": false,
+      "sba_only": true,
+      "sba_eligible": true,
+      "human_review_required": false,
+      "signals": {
+        "requires_explanation": true,
+        "requires_causal_chain": true,
+        "requires_comparison": false,
+        "requires_justification": false,
+        "recognition_only_sufficient": true,
+        "recognition_framing_detected": true,
+        "answer_boundary_support": true
+      },
+      "confidence": "high",
+      "evidence": [
+        "resolution:sba_gap_closure_sba_batch_1_881",
+        "question_type:single_best_answer",
+        "review_state:approved_private_sba",
+        "requires_explanation",
+        "requires_causal_chain",
+        "recognition_framing",
+        "answer_boundary_support",
+        "causal_link_count:1"
+      ],
+      "review_status": "shadow_classified",
+      "activation_status": "inactive",
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "official_wset_question": false,
+        "training_item_only": true,
+        "uses_llm": false,
+        "uses_api": false,
+        "uses_embeddings": false,
+        "uses_vector_db": false,
+        "cloud_services_active": false
+      }
+    },
+    {
+      "schema_version": "open_response_suitability_v1",
+      "master_item_id": "wset3_882",
+      "source_question_id": "882",
+      "classification": "sba_only",
+      "open_response_candidate": false,
+      "sba_only": true,
+      "sba_eligible": true,
+      "human_review_required": false,
+      "signals": {
+        "requires_explanation": true,
+        "requires_causal_chain": true,
+        "requires_comparison": false,
+        "requires_justification": false,
+        "recognition_only_sufficient": true,
+        "recognition_framing_detected": false,
+        "answer_boundary_support": true
+      },
+      "confidence": "high",
+      "evidence": [
+        "resolution:sba_gap_closure_sba_batch_1_882",
+        "question_type:single_best_answer",
+        "review_state:approved_private_sba",
+        "requires_explanation",
+        "requires_causal_chain",
+        "answer_boundary_support",
+        "causal_link_count:1"
+      ],
+      "review_status": "shadow_classified",
+      "activation_status": "inactive",
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "official_wset_question": false,
+        "training_item_only": true,
+        "uses_llm": false,
+        "uses_api": false,
+        "uses_embeddings": false,
+        "uses_vector_db": false,
+        "cloud_services_active": false
+      }
+    },
+    {
+      "schema_version": "open_response_suitability_v1",
+      "master_item_id": "wset3_883",
+      "source_question_id": "883",
+      "classification": "sba_only",
+      "open_response_candidate": false,
+      "sba_only": true,
+      "sba_eligible": true,
+      "human_review_required": false,
+      "signals": {
+        "requires_explanation": true,
+        "requires_causal_chain": true,
+        "requires_comparison": false,
+        "requires_justification": false,
+        "recognition_only_sufficient": true,
+        "recognition_framing_detected": false,
+        "answer_boundary_support": true
+      },
+      "confidence": "high",
+      "evidence": [
+        "resolution:sba_gap_closure_sba_batch_1_883",
+        "question_type:single_best_answer",
+        "review_state:approved_private_sba",
+        "requires_explanation",
+        "requires_causal_chain",
+        "answer_boundary_support",
+        "causal_link_count:1"
+      ],
+      "review_status": "shadow_classified",
+      "activation_status": "inactive",
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "official_wset_question": false,
+        "training_item_only": true,
+        "uses_llm": false,
+        "uses_api": false,
+        "uses_embeddings": false,
+        "uses_vector_db": false,
+        "cloud_services_active": false
+      }
+    },
+    {
+      "schema_version": "open_response_suitability_v1",
+      "master_item_id": "wset3_884",
+      "source_question_id": "884",
+      "classification": "sba_only",
+      "open_response_candidate": false,
+      "sba_only": true,
+      "sba_eligible": true,
+      "human_review_required": false,
+      "signals": {
+        "requires_explanation": true,
+        "requires_causal_chain": true,
+        "requires_comparison": true,
+        "requires_justification": false,
+        "recognition_only_sufficient": true,
+        "recognition_framing_detected": true,
+        "answer_boundary_support": true
+      },
+      "confidence": "high",
+      "evidence": [
+        "resolution:sba_gap_closure_sba_batch_1_884",
+        "question_type:single_best_answer",
+        "review_state:approved_private_sba",
+        "requires_explanation",
+        "requires_causal_chain",
+        "requires_comparison",
+        "recognition_framing",
+        "answer_boundary_support",
+        "causal_link_count:1"
+      ],
+      "review_status": "shadow_classified",
+      "activation_status": "inactive",
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "official_wset_question": false,
+        "training_item_only": true,
+        "uses_llm": false,
+        "uses_api": false,
+        "uses_embeddings": false,
+        "uses_vector_db": false,
+        "cloud_services_active": false
+      }
+    },
+    {
+      "schema_version": "open_response_suitability_v1",
+      "master_item_id": "wset3_885",
+      "source_question_id": "885",
+      "classification": "sba_only",
+      "open_response_candidate": false,
+      "sba_only": true,
+      "sba_eligible": true,
+      "human_review_required": false,
+      "signals": {
+        "requires_explanation": true,
+        "requires_causal_chain": true,
+        "requires_comparison": false,
+        "requires_justification": false,
+        "recognition_only_sufficient": true,
+        "recognition_framing_detected": false,
+        "answer_boundary_support": true
+      },
+      "confidence": "high",
+      "evidence": [
+        "resolution:sba_gap_closure_sba_batch_1_885",
+        "question_type:single_best_answer",
+        "review_state:approved_private_sba",
+        "requires_explanation",
+        "requires_causal_chain",
+        "answer_boundary_support",
+        "causal_link_count:1"
+      ],
+      "review_status": "shadow_classified",
+      "activation_status": "inactive",
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "official_wset_question": false,
+        "training_item_only": true,
+        "uses_llm": false,
+        "uses_api": false,
+        "uses_embeddings": false,
+        "uses_vector_db": false,
+        "cloud_services_active": false
+      }
+    },
+    {
+      "schema_version": "open_response_suitability_v1",
+      "master_item_id": "wset3_886",
+      "source_question_id": "886",
+      "classification": "sba_only",
+      "open_response_candidate": false,
+      "sba_only": true,
+      "sba_eligible": true,
+      "human_review_required": false,
+      "signals": {
+        "requires_explanation": false,
+        "requires_causal_chain": false,
+        "requires_comparison": false,
+        "requires_justification": false,
+        "recognition_only_sufficient": true,
+        "recognition_framing_detected": false,
+        "answer_boundary_support": true
+      },
+      "confidence": "high",
+      "evidence": [
+        "resolution:sba_gap_closure_sba_batch_1_886",
+        "question_type:single_best_answer",
+        "review_state:approved_private_sba",
+        "answer_boundary_support",
+        "causal_link_count:1"
+      ],
+      "review_status": "shadow_classified",
+      "activation_status": "inactive",
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "official_wset_question": false,
+        "training_item_only": true,
+        "uses_llm": false,
+        "uses_api": false,
+        "uses_embeddings": false,
+        "uses_vector_db": false,
+        "cloud_services_active": false
+      }
+    },
+    {
+      "schema_version": "open_response_suitability_v1",
+      "master_item_id": "wset3_887",
+      "source_question_id": "887",
+      "classification": "sba_only",
+      "open_response_candidate": false,
+      "sba_only": true,
+      "sba_eligible": true,
+      "human_review_required": false,
+      "signals": {
+        "requires_explanation": false,
+        "requires_causal_chain": false,
+        "requires_comparison": false,
+        "requires_justification": false,
+        "recognition_only_sufficient": true,
+        "recognition_framing_detected": false,
+        "answer_boundary_support": true
+      },
+      "confidence": "high",
+      "evidence": [
+        "resolution:sba_gap_closure_sba_batch_1_887",
+        "question_type:single_best_answer",
+        "review_state:approved_private_sba",
+        "answer_boundary_support",
+        "causal_link_count:1"
+      ],
+      "review_status": "shadow_classified",
+      "activation_status": "inactive",
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "official_wset_question": false,
+        "training_item_only": true,
+        "uses_llm": false,
+        "uses_api": false,
+        "uses_embeddings": false,
+        "uses_vector_db": false,
+        "cloud_services_active": false
+      }
+    },
+    {
+      "schema_version": "open_response_suitability_v1",
+      "master_item_id": "wset3_888",
+      "source_question_id": "888",
+      "classification": "sba_only",
+      "open_response_candidate": false,
+      "sba_only": true,
+      "sba_eligible": true,
+      "human_review_required": false,
+      "signals": {
+        "requires_explanation": false,
+        "requires_causal_chain": false,
+        "requires_comparison": false,
+        "requires_justification": false,
+        "recognition_only_sufficient": true,
+        "recognition_framing_detected": false,
+        "answer_boundary_support": true
+      },
+      "confidence": "high",
+      "evidence": [
+        "resolution:sba_gap_closure_sba_batch_1_888",
+        "question_type:single_best_answer",
+        "review_state:approved_private_sba",
+        "answer_boundary_support",
+        "causal_link_count:1"
+      ],
+      "review_status": "shadow_classified",
+      "activation_status": "inactive",
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "official_wset_question": false,
+        "training_item_only": true,
+        "uses_llm": false,
+        "uses_api": false,
+        "uses_embeddings": false,
+        "uses_vector_db": false,
+        "cloud_services_active": false
+      }
+    },
+    {
+      "schema_version": "open_response_suitability_v1",
+      "master_item_id": "wset3_889",
+      "source_question_id": "889",
+      "classification": "sba_only",
+      "open_response_candidate": false,
+      "sba_only": true,
+      "sba_eligible": true,
+      "human_review_required": false,
+      "signals": {
+        "requires_explanation": true,
+        "requires_causal_chain": true,
+        "requires_comparison": false,
+        "requires_justification": false,
+        "recognition_only_sufficient": true,
+        "recognition_framing_detected": false,
+        "answer_boundary_support": true
+      },
+      "confidence": "high",
+      "evidence": [
+        "resolution:sba_gap_closure_sba_batch_1_889",
+        "question_type:single_best_answer",
+        "review_state:approved_private_sba",
+        "requires_explanation",
+        "requires_causal_chain",
+        "answer_boundary_support",
+        "causal_link_count:1"
+      ],
+      "review_status": "shadow_classified",
+      "activation_status": "inactive",
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "official_wset_question": false,
+        "training_item_only": true,
+        "uses_llm": false,
+        "uses_api": false,
+        "uses_embeddings": false,
+        "uses_vector_db": false,
+        "cloud_services_active": false
+      }
+    },
+    {
+      "schema_version": "open_response_suitability_v1",
+      "master_item_id": "wset3_890",
+      "source_question_id": "890",
+      "classification": "sba_only",
+      "open_response_candidate": false,
+      "sba_only": true,
+      "sba_eligible": true,
+      "human_review_required": false,
+      "signals": {
+        "requires_explanation": true,
+        "requires_causal_chain": true,
+        "requires_comparison": false,
+        "requires_justification": false,
+        "recognition_only_sufficient": true,
+        "recognition_framing_detected": false,
+        "answer_boundary_support": true
+      },
+      "confidence": "high",
+      "evidence": [
+        "resolution:sba_gap_closure_sba_batch_1_890",
+        "question_type:single_best_answer",
+        "review_state:approved_private_sba",
+        "requires_explanation",
+        "requires_causal_chain",
+        "answer_boundary_support",
+        "causal_link_count:1"
+      ],
+      "review_status": "shadow_classified",
+      "activation_status": "inactive",
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "official_wset_question": false,
+        "training_item_only": true,
+        "uses_llm": false,
+        "uses_api": false,
+        "uses_embeddings": false,
+        "uses_vector_db": false,
+        "cloud_services_active": false
+      }
+    },
+    {
+      "schema_version": "open_response_suitability_v1",
+      "master_item_id": "wset3_891",
+      "source_question_id": "891",
+      "classification": "sba_only",
+      "open_response_candidate": false,
+      "sba_only": true,
+      "sba_eligible": true,
+      "human_review_required": false,
+      "signals": {
+        "requires_explanation": false,
+        "requires_causal_chain": false,
+        "requires_comparison": false,
+        "requires_justification": false,
+        "recognition_only_sufficient": true,
+        "recognition_framing_detected": false,
+        "answer_boundary_support": true
+      },
+      "confidence": "high",
+      "evidence": [
+        "resolution:sba_gap_closure_sba_batch_1_891",
+        "question_type:single_best_answer",
+        "review_state:approved_private_sba",
+        "answer_boundary_support",
+        "causal_link_count:1"
+      ],
+      "review_status": "shadow_classified",
+      "activation_status": "inactive",
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "official_wset_question": false,
+        "training_item_only": true,
+        "uses_llm": false,
+        "uses_api": false,
+        "uses_embeddings": false,
+        "uses_vector_db": false,
+        "cloud_services_active": false
+      }
+    },
+    {
+      "schema_version": "open_response_suitability_v1",
+      "master_item_id": "wset3_892",
+      "source_question_id": "892",
+      "classification": "sba_only",
+      "open_response_candidate": false,
+      "sba_only": true,
+      "sba_eligible": true,
+      "human_review_required": false,
+      "signals": {
+        "requires_explanation": true,
+        "requires_causal_chain": true,
+        "requires_comparison": false,
+        "requires_justification": false,
+        "recognition_only_sufficient": true,
+        "recognition_framing_detected": false,
+        "answer_boundary_support": true
+      },
+      "confidence": "high",
+      "evidence": [
+        "resolution:sba_gap_closure_sba_batch_1_892",
+        "question_type:single_best_answer",
+        "review_state:approved_private_sba",
+        "requires_explanation",
+        "requires_causal_chain",
+        "answer_boundary_support",
+        "causal_link_count:1"
+      ],
+      "review_status": "shadow_classified",
+      "activation_status": "inactive",
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "official_wset_question": false,
+        "training_item_only": true,
+        "uses_llm": false,
+        "uses_api": false,
+        "uses_embeddings": false,
+        "uses_vector_db": false,
+        "cloud_services_active": false
+      }
+    },
+    {
+      "schema_version": "open_response_suitability_v1",
+      "master_item_id": "wset3_893",
+      "source_question_id": "893",
+      "classification": "sba_only",
+      "open_response_candidate": false,
+      "sba_only": true,
+      "sba_eligible": true,
+      "human_review_required": false,
+      "signals": {
+        "requires_explanation": false,
+        "requires_causal_chain": false,
+        "requires_comparison": false,
+        "requires_justification": false,
+        "recognition_only_sufficient": true,
+        "recognition_framing_detected": false,
+        "answer_boundary_support": true
+      },
+      "confidence": "high",
+      "evidence": [
+        "resolution:sba_gap_closure_sba_batch_1_893",
+        "question_type:single_best_answer",
+        "review_state:approved_private_sba",
+        "answer_boundary_support",
+        "causal_link_count:1"
+      ],
+      "review_status": "shadow_classified",
+      "activation_status": "inactive",
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "official_wset_question": false,
+        "training_item_only": true,
+        "uses_llm": false,
+        "uses_api": false,
+        "uses_embeddings": false,
+        "uses_vector_db": false,
+        "cloud_services_active": false
+      }
+    },
+    {
+      "schema_version": "open_response_suitability_v1",
+      "master_item_id": "wset3_894",
+      "source_question_id": "894",
+      "classification": "sba_only",
+      "open_response_candidate": false,
+      "sba_only": true,
+      "sba_eligible": true,
+      "human_review_required": false,
+      "signals": {
+        "requires_explanation": true,
+        "requires_causal_chain": true,
+        "requires_comparison": false,
+        "requires_justification": false,
+        "recognition_only_sufficient": true,
+        "recognition_framing_detected": false,
+        "answer_boundary_support": true
+      },
+      "confidence": "high",
+      "evidence": [
+        "resolution:sba_gap_closure_sba_batch_1_894",
+        "question_type:single_best_answer",
+        "review_state:approved_private_sba",
+        "requires_explanation",
+        "requires_causal_chain",
+        "answer_boundary_support",
+        "causal_link_count:1"
+      ],
+      "review_status": "shadow_classified",
+      "activation_status": "inactive",
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "official_wset_question": false,
+        "training_item_only": true,
+        "uses_llm": false,
+        "uses_api": false,
+        "uses_embeddings": false,
+        "uses_vector_db": false,
+        "cloud_services_active": false
+      }
+    },
+    {
+      "schema_version": "open_response_suitability_v1",
+      "master_item_id": "wset3_895",
+      "source_question_id": "895",
+      "classification": "sba_only",
+      "open_response_candidate": false,
+      "sba_only": true,
+      "sba_eligible": true,
+      "human_review_required": false,
+      "signals": {
+        "requires_explanation": false,
+        "requires_causal_chain": false,
+        "requires_comparison": false,
+        "requires_justification": false,
+        "recognition_only_sufficient": true,
+        "recognition_framing_detected": false,
+        "answer_boundary_support": true
+      },
+      "confidence": "high",
+      "evidence": [
+        "resolution:sba_gap_closure_sba_batch_1_895",
+        "question_type:single_best_answer",
+        "review_state:approved_private_sba",
+        "answer_boundary_support",
+        "causal_link_count:1"
+      ],
+      "review_status": "shadow_classified",
+      "activation_status": "inactive",
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "official_wset_question": false,
+        "training_item_only": true,
+        "uses_llm": false,
+        "uses_api": false,
+        "uses_embeddings": false,
+        "uses_vector_db": false,
+        "cloud_services_active": false
+      }
+    },
+    {
+      "schema_version": "open_response_suitability_v1",
+      "master_item_id": "wset3_896",
+      "source_question_id": "896",
+      "classification": "sba_only",
+      "open_response_candidate": false,
+      "sba_only": true,
+      "sba_eligible": true,
+      "human_review_required": false,
+      "signals": {
+        "requires_explanation": true,
+        "requires_causal_chain": true,
+        "requires_comparison": true,
+        "requires_justification": false,
+        "recognition_only_sufficient": true,
+        "recognition_framing_detected": true,
+        "answer_boundary_support": true
+      },
+      "confidence": "high",
+      "evidence": [
+        "resolution:sba_gap_closure_sba_batch_1_896",
+        "question_type:single_best_answer",
+        "review_state:approved_private_sba",
+        "requires_explanation",
+        "requires_causal_chain",
+        "requires_comparison",
+        "recognition_framing",
+        "answer_boundary_support",
+        "causal_link_count:1"
+      ],
+      "review_status": "shadow_classified",
+      "activation_status": "inactive",
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "official_wset_question": false,
+        "training_item_only": true,
+        "uses_llm": false,
+        "uses_api": false,
+        "uses_embeddings": false,
+        "uses_vector_db": false,
+        "cloud_services_active": false
+      }
+    },
+    {
+      "schema_version": "open_response_suitability_v1",
+      "master_item_id": "wset3_897",
+      "source_question_id": "897",
+      "classification": "sba_only",
+      "open_response_candidate": false,
+      "sba_only": true,
+      "sba_eligible": true,
+      "human_review_required": false,
+      "signals": {
+        "requires_explanation": true,
+        "requires_causal_chain": true,
+        "requires_comparison": false,
+        "requires_justification": false,
+        "recognition_only_sufficient": true,
+        "recognition_framing_detected": false,
+        "answer_boundary_support": true
+      },
+      "confidence": "high",
+      "evidence": [
+        "resolution:sba_gap_closure_sba_batch_1_897",
+        "question_type:single_best_answer",
+        "review_state:approved_private_sba",
+        "requires_explanation",
+        "requires_causal_chain",
+        "answer_boundary_support",
+        "causal_link_count:1"
+      ],
+      "review_status": "shadow_classified",
+      "activation_status": "inactive",
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "official_wset_question": false,
+        "training_item_only": true,
+        "uses_llm": false,
+        "uses_api": false,
+        "uses_embeddings": false,
+        "uses_vector_db": false,
+        "cloud_services_active": false
+      }
+    },
+    {
+      "schema_version": "open_response_suitability_v1",
+      "master_item_id": "wset3_898",
+      "source_question_id": "898",
+      "classification": "sba_only",
+      "open_response_candidate": false,
+      "sba_only": true,
+      "sba_eligible": true,
+      "human_review_required": false,
+      "signals": {
+        "requires_explanation": true,
+        "requires_causal_chain": true,
+        "requires_comparison": false,
+        "requires_justification": false,
+        "recognition_only_sufficient": true,
+        "recognition_framing_detected": false,
+        "answer_boundary_support": true
+      },
+      "confidence": "high",
+      "evidence": [
+        "resolution:sba_gap_closure_sba_batch_1_898",
+        "question_type:single_best_answer",
+        "review_state:approved_private_sba",
+        "requires_explanation",
+        "requires_causal_chain",
+        "answer_boundary_support",
+        "causal_link_count:1"
+      ],
+      "review_status": "shadow_classified",
+      "activation_status": "inactive",
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "official_wset_question": false,
+        "training_item_only": true,
+        "uses_llm": false,
+        "uses_api": false,
+        "uses_embeddings": false,
+        "uses_vector_db": false,
+        "cloud_services_active": false
+      }
+    },
+    {
+      "schema_version": "open_response_suitability_v1",
+      "master_item_id": "wset3_899",
+      "source_question_id": "899",
+      "classification": "sba_only",
+      "open_response_candidate": false,
+      "sba_only": true,
+      "sba_eligible": true,
+      "human_review_required": false,
+      "signals": {
+        "requires_explanation": true,
+        "requires_causal_chain": true,
+        "requires_comparison": false,
+        "requires_justification": false,
+        "recognition_only_sufficient": true,
+        "recognition_framing_detected": true,
+        "answer_boundary_support": true
+      },
+      "confidence": "high",
+      "evidence": [
+        "resolution:sba_gap_closure_sba_batch_1_899",
+        "question_type:single_best_answer",
+        "review_state:approved_private_sba",
+        "requires_explanation",
+        "requires_causal_chain",
+        "recognition_framing",
+        "answer_boundary_support",
+        "causal_link_count:1"
+      ],
+      "review_status": "shadow_classified",
+      "activation_status": "inactive",
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "official_wset_question": false,
+        "training_item_only": true,
+        "uses_llm": false,
+        "uses_api": false,
+        "uses_embeddings": false,
+        "uses_vector_db": false,
+        "cloud_services_active": false
+      }
+    },
+    {
+      "schema_version": "open_response_suitability_v1",
+      "master_item_id": "wset3_900",
+      "source_question_id": "900",
+      "classification": "sba_only",
+      "open_response_candidate": false,
+      "sba_only": true,
+      "sba_eligible": true,
+      "human_review_required": false,
+      "signals": {
+        "requires_explanation": true,
+        "requires_causal_chain": true,
+        "requires_comparison": false,
+        "requires_justification": false,
+        "recognition_only_sufficient": true,
+        "recognition_framing_detected": false,
+        "answer_boundary_support": true
+      },
+      "confidence": "high",
+      "evidence": [
+        "resolution:sba_gap_closure_sba_batch_1_900",
+        "question_type:single_best_answer",
+        "review_state:approved_private_sba",
+        "requires_explanation",
+        "requires_causal_chain",
+        "answer_boundary_support",
+        "causal_link_count:1"
+      ],
+      "review_status": "shadow_classified",
+      "activation_status": "inactive",
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "official_wset_question": false,
+        "training_item_only": true,
+        "uses_llm": false,
+        "uses_api": false,
+        "uses_embeddings": false,
+        "uses_vector_db": false,
+        "cloud_services_active": false
+      }
+    },
+    {
+      "schema_version": "open_response_suitability_v1",
+      "master_item_id": "wset3_901",
+      "source_question_id": "901",
+      "classification": "sba_only",
+      "open_response_candidate": false,
+      "sba_only": true,
+      "sba_eligible": true,
+      "human_review_required": false,
+      "signals": {
+        "requires_explanation": false,
+        "requires_causal_chain": false,
+        "requires_comparison": false,
+        "requires_justification": false,
+        "recognition_only_sufficient": true,
+        "recognition_framing_detected": false,
+        "answer_boundary_support": true
+      },
+      "confidence": "high",
+      "evidence": [
+        "resolution:sba_gap_closure_sba_batch_1_901",
+        "question_type:single_best_answer",
+        "review_state:approved_private_sba",
+        "answer_boundary_support",
+        "causal_link_count:1"
+      ],
+      "review_status": "shadow_classified",
+      "activation_status": "inactive",
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "official_wset_question": false,
+        "training_item_only": true,
+        "uses_llm": false,
+        "uses_api": false,
+        "uses_embeddings": false,
+        "uses_vector_db": false,
+        "cloud_services_active": false
+      }
+    },
+    {
+      "schema_version": "open_response_suitability_v1",
+      "master_item_id": "wset3_902",
+      "source_question_id": "902",
+      "classification": "sba_only",
+      "open_response_candidate": false,
+      "sba_only": true,
+      "sba_eligible": true,
+      "human_review_required": false,
+      "signals": {
+        "requires_explanation": true,
+        "requires_causal_chain": true,
+        "requires_comparison": false,
+        "requires_justification": false,
+        "recognition_only_sufficient": true,
+        "recognition_framing_detected": false,
+        "answer_boundary_support": true
+      },
+      "confidence": "high",
+      "evidence": [
+        "resolution:sba_gap_closure_sba_batch_1_902",
+        "question_type:single_best_answer",
+        "review_state:approved_private_sba",
+        "requires_explanation",
+        "requires_causal_chain",
+        "answer_boundary_support",
+        "causal_link_count:1"
+      ],
+      "review_status": "shadow_classified",
+      "activation_status": "inactive",
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "official_wset_question": false,
+        "training_item_only": true,
+        "uses_llm": false,
+        "uses_api": false,
+        "uses_embeddings": false,
+        "uses_vector_db": false,
+        "cloud_services_active": false
+      }
+    },
+    {
+      "schema_version": "open_response_suitability_v1",
+      "master_item_id": "wset3_903",
+      "source_question_id": "903",
+      "classification": "sba_only",
+      "open_response_candidate": false,
+      "sba_only": true,
+      "sba_eligible": true,
+      "human_review_required": false,
+      "signals": {
+        "requires_explanation": true,
+        "requires_causal_chain": true,
+        "requires_comparison": false,
+        "requires_justification": false,
+        "recognition_only_sufficient": true,
+        "recognition_framing_detected": false,
+        "answer_boundary_support": true
+      },
+      "confidence": "high",
+      "evidence": [
+        "resolution:sba_gap_closure_sba_batch_1_903",
+        "question_type:single_best_answer",
+        "review_state:approved_private_sba",
+        "requires_explanation",
+        "requires_causal_chain",
+        "answer_boundary_support",
+        "causal_link_count:1"
+      ],
+      "review_status": "shadow_classified",
+      "activation_status": "inactive",
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "official_wset_question": false,
+        "training_item_only": true,
+        "uses_llm": false,
+        "uses_api": false,
+        "uses_embeddings": false,
+        "uses_vector_db": false,
+        "cloud_services_active": false
+      }
+    },
+    {
+      "schema_version": "open_response_suitability_v1",
+      "master_item_id": "wset3_904",
+      "source_question_id": "904",
+      "classification": "sba_only",
+      "open_response_candidate": false,
+      "sba_only": true,
+      "sba_eligible": true,
+      "human_review_required": false,
+      "signals": {
+        "requires_explanation": false,
+        "requires_causal_chain": false,
+        "requires_comparison": false,
+        "requires_justification": false,
+        "recognition_only_sufficient": true,
+        "recognition_framing_detected": false,
+        "answer_boundary_support": true
+      },
+      "confidence": "high",
+      "evidence": [
+        "resolution:sba_gap_closure_sba_batch_1_904",
+        "question_type:single_best_answer",
+        "review_state:approved_private_sba",
+        "answer_boundary_support",
+        "causal_link_count:1"
+      ],
+      "review_status": "shadow_classified",
+      "activation_status": "inactive",
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "official_wset_question": false,
+        "training_item_only": true,
+        "uses_llm": false,
+        "uses_api": false,
+        "uses_embeddings": false,
+        "uses_vector_db": false,
+        "cloud_services_active": false
+      }
+    },
+    {
+      "schema_version": "open_response_suitability_v1",
+      "master_item_id": "wset3_905",
+      "source_question_id": "905",
+      "classification": "sba_only",
+      "open_response_candidate": false,
+      "sba_only": true,
+      "sba_eligible": true,
+      "human_review_required": false,
+      "signals": {
+        "requires_explanation": false,
+        "requires_causal_chain": false,
+        "requires_comparison": false,
+        "requires_justification": false,
+        "recognition_only_sufficient": true,
+        "recognition_framing_detected": false,
+        "answer_boundary_support": true
+      },
+      "confidence": "high",
+      "evidence": [
+        "resolution:sba_gap_closure_sba_batch_2_905",
+        "question_type:single_best_answer",
+        "review_state:approved_private_sba",
+        "answer_boundary_support",
+        "causal_link_count:1"
+      ],
+      "review_status": "shadow_classified",
+      "activation_status": "inactive",
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "official_wset_question": false,
+        "training_item_only": true,
+        "uses_llm": false,
+        "uses_api": false,
+        "uses_embeddings": false,
+        "uses_vector_db": false,
+        "cloud_services_active": false
+      }
+    },
+    {
+      "schema_version": "open_response_suitability_v1",
+      "master_item_id": "wset3_906",
+      "source_question_id": "906",
+      "classification": "sba_only",
+      "open_response_candidate": false,
+      "sba_only": true,
+      "sba_eligible": true,
+      "human_review_required": false,
+      "signals": {
+        "requires_explanation": true,
+        "requires_causal_chain": true,
+        "requires_comparison": false,
+        "requires_justification": false,
+        "recognition_only_sufficient": true,
+        "recognition_framing_detected": false,
+        "answer_boundary_support": true
+      },
+      "confidence": "high",
+      "evidence": [
+        "resolution:sba_gap_closure_sba_batch_2_906",
+        "question_type:single_best_answer",
+        "review_state:approved_private_sba",
+        "requires_explanation",
+        "requires_causal_chain",
+        "answer_boundary_support",
+        "causal_link_count:1"
+      ],
+      "review_status": "shadow_classified",
+      "activation_status": "inactive",
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "official_wset_question": false,
+        "training_item_only": true,
+        "uses_llm": false,
+        "uses_api": false,
+        "uses_embeddings": false,
+        "uses_vector_db": false,
+        "cloud_services_active": false
+      }
+    },
+    {
+      "schema_version": "open_response_suitability_v1",
+      "master_item_id": "wset3_907",
+      "source_question_id": "907",
+      "classification": "sba_only",
+      "open_response_candidate": false,
+      "sba_only": true,
+      "sba_eligible": true,
+      "human_review_required": false,
+      "signals": {
+        "requires_explanation": true,
+        "requires_causal_chain": true,
+        "requires_comparison": false,
+        "requires_justification": false,
+        "recognition_only_sufficient": true,
+        "recognition_framing_detected": false,
+        "answer_boundary_support": true
+      },
+      "confidence": "high",
+      "evidence": [
+        "resolution:sba_gap_closure_sba_batch_2_907",
+        "question_type:single_best_answer",
+        "review_state:approved_private_sba",
+        "requires_explanation",
+        "requires_causal_chain",
+        "answer_boundary_support",
+        "causal_link_count:1"
+      ],
+      "review_status": "shadow_classified",
+      "activation_status": "inactive",
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "official_wset_question": false,
+        "training_item_only": true,
+        "uses_llm": false,
+        "uses_api": false,
+        "uses_embeddings": false,
+        "uses_vector_db": false,
+        "cloud_services_active": false
+      }
+    },
+    {
+      "schema_version": "open_response_suitability_v1",
+      "master_item_id": "wset3_908",
+      "source_question_id": "908",
+      "classification": "sba_only",
+      "open_response_candidate": false,
+      "sba_only": true,
+      "sba_eligible": true,
+      "human_review_required": false,
+      "signals": {
+        "requires_explanation": true,
+        "requires_causal_chain": true,
+        "requires_comparison": false,
+        "requires_justification": false,
+        "recognition_only_sufficient": true,
+        "recognition_framing_detected": false,
+        "answer_boundary_support": true
+      },
+      "confidence": "high",
+      "evidence": [
+        "resolution:sba_gap_closure_sba_batch_2_908",
+        "question_type:single_best_answer",
+        "review_state:approved_private_sba",
+        "requires_explanation",
+        "requires_causal_chain",
+        "answer_boundary_support",
+        "causal_link_count:1"
+      ],
+      "review_status": "shadow_classified",
+      "activation_status": "inactive",
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "official_wset_question": false,
+        "training_item_only": true,
+        "uses_llm": false,
+        "uses_api": false,
+        "uses_embeddings": false,
+        "uses_vector_db": false,
+        "cloud_services_active": false
+      }
+    },
+    {
+      "schema_version": "open_response_suitability_v1",
+      "master_item_id": "wset3_909",
+      "source_question_id": "909",
+      "classification": "sba_only",
+      "open_response_candidate": false,
+      "sba_only": true,
+      "sba_eligible": true,
+      "human_review_required": false,
+      "signals": {
+        "requires_explanation": false,
+        "requires_causal_chain": false,
+        "requires_comparison": false,
+        "requires_justification": false,
+        "recognition_only_sufficient": true,
+        "recognition_framing_detected": false,
+        "answer_boundary_support": true
+      },
+      "confidence": "high",
+      "evidence": [
+        "resolution:sba_gap_closure_sba_batch_2_909",
+        "question_type:single_best_answer",
+        "review_state:approved_private_sba",
+        "answer_boundary_support",
+        "causal_link_count:1"
+      ],
+      "review_status": "shadow_classified",
+      "activation_status": "inactive",
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "official_wset_question": false,
+        "training_item_only": true,
+        "uses_llm": false,
+        "uses_api": false,
+        "uses_embeddings": false,
+        "uses_vector_db": false,
+        "cloud_services_active": false
+      }
+    },
+    {
+      "schema_version": "open_response_suitability_v1",
+      "master_item_id": "wset3_910",
+      "source_question_id": "910",
+      "classification": "sba_only",
+      "open_response_candidate": false,
+      "sba_only": true,
+      "sba_eligible": true,
+      "human_review_required": false,
+      "signals": {
+        "requires_explanation": true,
+        "requires_causal_chain": true,
+        "requires_comparison": false,
+        "requires_justification": false,
+        "recognition_only_sufficient": true,
+        "recognition_framing_detected": false,
+        "answer_boundary_support": true
+      },
+      "confidence": "high",
+      "evidence": [
+        "resolution:sba_gap_closure_sba_batch_2_910",
+        "question_type:single_best_answer",
+        "review_state:approved_private_sba",
+        "requires_explanation",
+        "requires_causal_chain",
+        "answer_boundary_support",
+        "causal_link_count:1"
+      ],
+      "review_status": "shadow_classified",
+      "activation_status": "inactive",
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "official_wset_question": false,
+        "training_item_only": true,
+        "uses_llm": false,
+        "uses_api": false,
+        "uses_embeddings": false,
+        "uses_vector_db": false,
+        "cloud_services_active": false
+      }
+    },
+    {
+      "schema_version": "open_response_suitability_v1",
+      "master_item_id": "wset3_911",
+      "source_question_id": "911",
+      "classification": "sba_only",
+      "open_response_candidate": false,
+      "sba_only": true,
+      "sba_eligible": true,
+      "human_review_required": false,
+      "signals": {
+        "requires_explanation": true,
+        "requires_causal_chain": true,
+        "requires_comparison": true,
+        "requires_justification": false,
+        "recognition_only_sufficient": true,
+        "recognition_framing_detected": false,
+        "answer_boundary_support": true
+      },
+      "confidence": "high",
+      "evidence": [
+        "resolution:sba_gap_closure_sba_batch_2_911",
+        "question_type:single_best_answer",
+        "review_state:approved_private_sba",
+        "requires_explanation",
+        "requires_causal_chain",
+        "requires_comparison",
+        "answer_boundary_support",
+        "causal_link_count:1"
+      ],
+      "review_status": "shadow_classified",
+      "activation_status": "inactive",
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "official_wset_question": false,
+        "training_item_only": true,
+        "uses_llm": false,
+        "uses_api": false,
+        "uses_embeddings": false,
+        "uses_vector_db": false,
+        "cloud_services_active": false
+      }
+    },
+    {
+      "schema_version": "open_response_suitability_v1",
+      "master_item_id": "wset3_912",
+      "source_question_id": "912",
+      "classification": "sba_only",
+      "open_response_candidate": false,
+      "sba_only": true,
+      "sba_eligible": true,
+      "human_review_required": false,
+      "signals": {
+        "requires_explanation": true,
+        "requires_causal_chain": true,
+        "requires_comparison": false,
+        "requires_justification": false,
+        "recognition_only_sufficient": true,
+        "recognition_framing_detected": false,
+        "answer_boundary_support": true
+      },
+      "confidence": "high",
+      "evidence": [
+        "resolution:sba_gap_closure_sba_batch_2_912",
+        "question_type:single_best_answer",
+        "review_state:approved_private_sba",
+        "requires_explanation",
+        "requires_causal_chain",
+        "answer_boundary_support",
+        "causal_link_count:1"
+      ],
+      "review_status": "shadow_classified",
+      "activation_status": "inactive",
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "official_wset_question": false,
+        "training_item_only": true,
+        "uses_llm": false,
+        "uses_api": false,
+        "uses_embeddings": false,
+        "uses_vector_db": false,
+        "cloud_services_active": false
+      }
+    },
+    {
+      "schema_version": "open_response_suitability_v1",
+      "master_item_id": "wset3_913",
+      "source_question_id": "913",
+      "classification": "sba_only",
+      "open_response_candidate": false,
+      "sba_only": true,
+      "sba_eligible": true,
+      "human_review_required": false,
+      "signals": {
+        "requires_explanation": true,
+        "requires_causal_chain": true,
+        "requires_comparison": false,
+        "requires_justification": false,
+        "recognition_only_sufficient": true,
+        "recognition_framing_detected": true,
+        "answer_boundary_support": true
+      },
+      "confidence": "high",
+      "evidence": [
+        "resolution:sba_gap_closure_sba_batch_2_913",
+        "question_type:single_best_answer",
+        "review_state:approved_private_sba",
+        "requires_explanation",
+        "requires_causal_chain",
+        "recognition_framing",
+        "answer_boundary_support",
+        "causal_link_count:1"
+      ],
+      "review_status": "shadow_classified",
+      "activation_status": "inactive",
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "official_wset_question": false,
+        "training_item_only": true,
+        "uses_llm": false,
+        "uses_api": false,
+        "uses_embeddings": false,
+        "uses_vector_db": false,
+        "cloud_services_active": false
+      }
+    },
+    {
+      "schema_version": "open_response_suitability_v1",
+      "master_item_id": "wset3_914",
+      "source_question_id": "914",
+      "classification": "sba_only",
+      "open_response_candidate": false,
+      "sba_only": true,
+      "sba_eligible": true,
+      "human_review_required": false,
+      "signals": {
+        "requires_explanation": true,
+        "requires_causal_chain": true,
+        "requires_comparison": false,
+        "requires_justification": false,
+        "recognition_only_sufficient": true,
+        "recognition_framing_detected": false,
+        "answer_boundary_support": true
+      },
+      "confidence": "high",
+      "evidence": [
+        "resolution:sba_gap_closure_sba_batch_2_914",
+        "question_type:single_best_answer",
+        "review_state:approved_private_sba",
+        "requires_explanation",
+        "requires_causal_chain",
+        "answer_boundary_support",
+        "causal_link_count:1"
+      ],
+      "review_status": "shadow_classified",
+      "activation_status": "inactive",
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "official_wset_question": false,
+        "training_item_only": true,
+        "uses_llm": false,
+        "uses_api": false,
+        "uses_embeddings": false,
+        "uses_vector_db": false,
+        "cloud_services_active": false
+      }
+    },
+    {
+      "schema_version": "open_response_suitability_v1",
+      "master_item_id": "wset3_915",
+      "source_question_id": "915",
+      "classification": "sba_only",
+      "open_response_candidate": false,
+      "sba_only": true,
+      "sba_eligible": true,
+      "human_review_required": false,
+      "signals": {
+        "requires_explanation": true,
+        "requires_causal_chain": true,
+        "requires_comparison": false,
+        "requires_justification": false,
+        "recognition_only_sufficient": true,
+        "recognition_framing_detected": false,
+        "answer_boundary_support": true
+      },
+      "confidence": "high",
+      "evidence": [
+        "resolution:sba_gap_closure_sba_batch_2_915",
+        "question_type:single_best_answer",
+        "review_state:approved_private_sba",
+        "requires_explanation",
+        "requires_causal_chain",
+        "answer_boundary_support",
+        "causal_link_count:1"
+      ],
+      "review_status": "shadow_classified",
+      "activation_status": "inactive",
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "official_wset_question": false,
+        "training_item_only": true,
+        "uses_llm": false,
+        "uses_api": false,
+        "uses_embeddings": false,
+        "uses_vector_db": false,
+        "cloud_services_active": false
+      }
+    },
+    {
+      "schema_version": "open_response_suitability_v1",
+      "master_item_id": "wset3_916",
+      "source_question_id": "916",
+      "classification": "sba_only",
+      "open_response_candidate": false,
+      "sba_only": true,
+      "sba_eligible": true,
+      "human_review_required": false,
+      "signals": {
+        "requires_explanation": false,
+        "requires_causal_chain": false,
+        "requires_comparison": false,
+        "requires_justification": false,
+        "recognition_only_sufficient": true,
+        "recognition_framing_detected": false,
+        "answer_boundary_support": true
+      },
+      "confidence": "high",
+      "evidence": [
+        "resolution:sba_gap_closure_sba_batch_2_916",
+        "question_type:single_best_answer",
+        "review_state:approved_private_sba",
+        "answer_boundary_support",
+        "causal_link_count:1"
+      ],
+      "review_status": "shadow_classified",
+      "activation_status": "inactive",
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "official_wset_question": false,
+        "training_item_only": true,
+        "uses_llm": false,
+        "uses_api": false,
+        "uses_embeddings": false,
+        "uses_vector_db": false,
+        "cloud_services_active": false
+      }
+    },
+    {
+      "schema_version": "open_response_suitability_v1",
+      "master_item_id": "wset3_917",
+      "source_question_id": "917",
+      "classification": "sba_only",
+      "open_response_candidate": false,
+      "sba_only": true,
+      "sba_eligible": true,
+      "human_review_required": false,
+      "signals": {
+        "requires_explanation": true,
+        "requires_causal_chain": true,
+        "requires_comparison": false,
+        "requires_justification": false,
+        "recognition_only_sufficient": true,
+        "recognition_framing_detected": false,
+        "answer_boundary_support": true
+      },
+      "confidence": "high",
+      "evidence": [
+        "resolution:sba_gap_closure_sba_batch_2_917",
+        "question_type:single_best_answer",
+        "review_state:approved_private_sba",
+        "requires_explanation",
+        "requires_causal_chain",
+        "answer_boundary_support",
+        "causal_link_count:1"
+      ],
+      "review_status": "shadow_classified",
+      "activation_status": "inactive",
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "official_wset_question": false,
+        "training_item_only": true,
+        "uses_llm": false,
+        "uses_api": false,
+        "uses_embeddings": false,
+        "uses_vector_db": false,
+        "cloud_services_active": false
+      }
+    },
+    {
+      "schema_version": "open_response_suitability_v1",
+      "master_item_id": "wset3_918",
+      "source_question_id": "918",
+      "classification": "sba_only",
+      "open_response_candidate": false,
+      "sba_only": true,
+      "sba_eligible": true,
+      "human_review_required": false,
+      "signals": {
+        "requires_explanation": true,
+        "requires_causal_chain": true,
+        "requires_comparison": false,
+        "requires_justification": false,
+        "recognition_only_sufficient": true,
+        "recognition_framing_detected": false,
+        "answer_boundary_support": true
+      },
+      "confidence": "high",
+      "evidence": [
+        "resolution:sba_gap_closure_sba_batch_2_918",
+        "question_type:single_best_answer",
+        "review_state:approved_private_sba",
+        "requires_explanation",
+        "requires_causal_chain",
+        "answer_boundary_support",
+        "causal_link_count:1"
+      ],
+      "review_status": "shadow_classified",
+      "activation_status": "inactive",
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "official_wset_question": false,
+        "training_item_only": true,
+        "uses_llm": false,
+        "uses_api": false,
+        "uses_embeddings": false,
+        "uses_vector_db": false,
+        "cloud_services_active": false
+      }
+    },
+    {
+      "schema_version": "open_response_suitability_v1",
+      "master_item_id": "wset3_919",
+      "source_question_id": "919",
+      "classification": "sba_only",
+      "open_response_candidate": false,
+      "sba_only": true,
+      "sba_eligible": true,
+      "human_review_required": false,
+      "signals": {
+        "requires_explanation": true,
+        "requires_causal_chain": true,
+        "requires_comparison": false,
+        "requires_justification": false,
+        "recognition_only_sufficient": true,
+        "recognition_framing_detected": false,
+        "answer_boundary_support": true
+      },
+      "confidence": "high",
+      "evidence": [
+        "resolution:sba_gap_closure_sba_batch_2_919",
+        "question_type:single_best_answer",
+        "review_state:approved_private_sba",
+        "requires_explanation",
+        "requires_causal_chain",
+        "answer_boundary_support",
+        "causal_link_count:1"
+      ],
+      "review_status": "shadow_classified",
+      "activation_status": "inactive",
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "official_wset_question": false,
+        "training_item_only": true,
+        "uses_llm": false,
+        "uses_api": false,
+        "uses_embeddings": false,
+        "uses_vector_db": false,
+        "cloud_services_active": false
+      }
+    },
+    {
+      "schema_version": "open_response_suitability_v1",
+      "master_item_id": "wset3_920",
+      "source_question_id": "920",
+      "classification": "sba_only",
+      "open_response_candidate": false,
+      "sba_only": true,
+      "sba_eligible": true,
+      "human_review_required": false,
+      "signals": {
+        "requires_explanation": true,
+        "requires_causal_chain": true,
+        "requires_comparison": false,
+        "requires_justification": false,
+        "recognition_only_sufficient": true,
+        "recognition_framing_detected": false,
+        "answer_boundary_support": true
+      },
+      "confidence": "high",
+      "evidence": [
+        "resolution:sba_gap_closure_sba_batch_2_920",
+        "question_type:single_best_answer",
+        "review_state:approved_private_sba",
+        "requires_explanation",
+        "requires_causal_chain",
+        "answer_boundary_support",
+        "causal_link_count:1"
+      ],
+      "review_status": "shadow_classified",
+      "activation_status": "inactive",
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "official_wset_question": false,
+        "training_item_only": true,
+        "uses_llm": false,
+        "uses_api": false,
+        "uses_embeddings": false,
+        "uses_vector_db": false,
+        "cloud_services_active": false
+      }
+    },
+    {
+      "schema_version": "open_response_suitability_v1",
+      "master_item_id": "wset3_921",
+      "source_question_id": "921",
+      "classification": "sba_only",
+      "open_response_candidate": false,
+      "sba_only": true,
+      "sba_eligible": true,
+      "human_review_required": false,
+      "signals": {
+        "requires_explanation": false,
+        "requires_causal_chain": false,
+        "requires_comparison": false,
+        "requires_justification": false,
+        "recognition_only_sufficient": true,
+        "recognition_framing_detected": false,
+        "answer_boundary_support": true
+      },
+      "confidence": "high",
+      "evidence": [
+        "resolution:sba_gap_closure_sba_batch_2_921",
+        "question_type:single_best_answer",
+        "review_state:approved_private_sba",
+        "answer_boundary_support",
+        "causal_link_count:1"
+      ],
+      "review_status": "shadow_classified",
+      "activation_status": "inactive",
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "official_wset_question": false,
+        "training_item_only": true,
+        "uses_llm": false,
+        "uses_api": false,
+        "uses_embeddings": false,
+        "uses_vector_db": false,
+        "cloud_services_active": false
+      }
+    },
+    {
+      "schema_version": "open_response_suitability_v1",
+      "master_item_id": "wset3_922",
+      "source_question_id": "922",
+      "classification": "sba_only",
+      "open_response_candidate": false,
+      "sba_only": true,
+      "sba_eligible": true,
+      "human_review_required": false,
+      "signals": {
+        "requires_explanation": false,
+        "requires_causal_chain": false,
+        "requires_comparison": false,
+        "requires_justification": false,
+        "recognition_only_sufficient": true,
+        "recognition_framing_detected": false,
+        "answer_boundary_support": true
+      },
+      "confidence": "high",
+      "evidence": [
+        "resolution:sba_gap_closure_sba_batch_2_922",
+        "question_type:single_best_answer",
+        "review_state:approved_private_sba",
+        "answer_boundary_support",
+        "causal_link_count:1"
+      ],
+      "review_status": "shadow_classified",
+      "activation_status": "inactive",
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "official_wset_question": false,
+        "training_item_only": true,
+        "uses_llm": false,
+        "uses_api": false,
+        "uses_embeddings": false,
+        "uses_vector_db": false,
+        "cloud_services_active": false
+      }
+    },
+    {
+      "schema_version": "open_response_suitability_v1",
+      "master_item_id": "wset3_923",
+      "source_question_id": "923",
+      "classification": "sba_only",
+      "open_response_candidate": false,
+      "sba_only": true,
+      "sba_eligible": true,
+      "human_review_required": false,
+      "signals": {
+        "requires_explanation": false,
+        "requires_causal_chain": false,
+        "requires_comparison": false,
+        "requires_justification": false,
+        "recognition_only_sufficient": true,
+        "recognition_framing_detected": false,
+        "answer_boundary_support": true
+      },
+      "confidence": "high",
+      "evidence": [
+        "resolution:sba_gap_closure_sba_batch_2_923",
+        "question_type:single_best_answer",
+        "review_state:approved_private_sba",
+        "answer_boundary_support",
+        "causal_link_count:1"
+      ],
+      "review_status": "shadow_classified",
+      "activation_status": "inactive",
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "official_wset_question": false,
+        "training_item_only": true,
+        "uses_llm": false,
+        "uses_api": false,
+        "uses_embeddings": false,
+        "uses_vector_db": false,
+        "cloud_services_active": false
+      }
+    },
+    {
+      "schema_version": "open_response_suitability_v1",
+      "master_item_id": "wset3_924",
+      "source_question_id": "924",
+      "classification": "sba_only",
+      "open_response_candidate": false,
+      "sba_only": true,
+      "sba_eligible": true,
+      "human_review_required": false,
+      "signals": {
+        "requires_explanation": true,
+        "requires_causal_chain": true,
+        "requires_comparison": false,
+        "requires_justification": false,
+        "recognition_only_sufficient": true,
+        "recognition_framing_detected": false,
+        "answer_boundary_support": true
+      },
+      "confidence": "high",
+      "evidence": [
+        "resolution:sba_gap_closure_sba_batch_2_924",
+        "question_type:single_best_answer",
+        "review_state:approved_private_sba",
+        "requires_explanation",
+        "requires_causal_chain",
+        "answer_boundary_support",
+        "causal_link_count:1"
+      ],
+      "review_status": "shadow_classified",
+      "activation_status": "inactive",
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "official_wset_question": false,
+        "training_item_only": true,
+        "uses_llm": false,
+        "uses_api": false,
+        "uses_embeddings": false,
+        "uses_vector_db": false,
+        "cloud_services_active": false
+      }
+    },
+    {
+      "schema_version": "open_response_suitability_v1",
+      "master_item_id": "wset3_925",
+      "source_question_id": "925",
+      "classification": "sba_only",
+      "open_response_candidate": false,
+      "sba_only": true,
+      "sba_eligible": true,
+      "human_review_required": false,
+      "signals": {
+        "requires_explanation": true,
+        "requires_causal_chain": true,
+        "requires_comparison": false,
+        "requires_justification": false,
+        "recognition_only_sufficient": true,
+        "recognition_framing_detected": false,
+        "answer_boundary_support": true
+      },
+      "confidence": "high",
+      "evidence": [
+        "resolution:sba_gap_closure_sba_batch_2_925",
+        "question_type:single_best_answer",
+        "review_state:approved_private_sba",
+        "requires_explanation",
+        "requires_causal_chain",
+        "answer_boundary_support",
+        "causal_link_count:1"
+      ],
+      "review_status": "shadow_classified",
+      "activation_status": "inactive",
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "official_wset_question": false,
+        "training_item_only": true,
+        "uses_llm": false,
+        "uses_api": false,
+        "uses_embeddings": false,
+        "uses_vector_db": false,
+        "cloud_services_active": false
+      }
+    },
+    {
+      "schema_version": "open_response_suitability_v1",
+      "master_item_id": "wset3_926",
+      "source_question_id": "926",
+      "classification": "sba_only",
+      "open_response_candidate": false,
+      "sba_only": true,
+      "sba_eligible": true,
+      "human_review_required": false,
+      "signals": {
+        "requires_explanation": true,
+        "requires_causal_chain": true,
+        "requires_comparison": false,
+        "requires_justification": false,
+        "recognition_only_sufficient": true,
+        "recognition_framing_detected": false,
+        "answer_boundary_support": true
+      },
+      "confidence": "high",
+      "evidence": [
+        "resolution:sba_gap_closure_sba_batch_2_926",
+        "question_type:single_best_answer",
+        "review_state:approved_private_sba",
+        "requires_explanation",
+        "requires_causal_chain",
+        "answer_boundary_support",
+        "causal_link_count:1"
+      ],
+      "review_status": "shadow_classified",
+      "activation_status": "inactive",
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "official_wset_question": false,
+        "training_item_only": true,
+        "uses_llm": false,
+        "uses_api": false,
+        "uses_embeddings": false,
+        "uses_vector_db": false,
+        "cloud_services_active": false
+      }
+    },
+    {
+      "schema_version": "open_response_suitability_v1",
+      "master_item_id": "wset3_927",
+      "source_question_id": "927",
+      "classification": "sba_only",
+      "open_response_candidate": false,
+      "sba_only": true,
+      "sba_eligible": true,
+      "human_review_required": false,
+      "signals": {
+        "requires_explanation": false,
+        "requires_causal_chain": false,
+        "requires_comparison": false,
+        "requires_justification": false,
+        "recognition_only_sufficient": true,
+        "recognition_framing_detected": false,
+        "answer_boundary_support": true
+      },
+      "confidence": "high",
+      "evidence": [
+        "resolution:sba_gap_closure_sba_batch_2_927",
+        "question_type:single_best_answer",
+        "review_state:approved_private_sba",
+        "answer_boundary_support",
+        "causal_link_count:1"
+      ],
+      "review_status": "shadow_classified",
+      "activation_status": "inactive",
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "official_wset_question": false,
+        "training_item_only": true,
+        "uses_llm": false,
+        "uses_api": false,
+        "uses_embeddings": false,
+        "uses_vector_db": false,
+        "cloud_services_active": false
+      }
+    },
+    {
+      "schema_version": "open_response_suitability_v1",
+      "master_item_id": "wset3_928",
+      "source_question_id": "928",
+      "classification": "sba_only",
+      "open_response_candidate": false,
+      "sba_only": true,
+      "sba_eligible": true,
+      "human_review_required": false,
+      "signals": {
+        "requires_explanation": true,
+        "requires_causal_chain": true,
+        "requires_comparison": false,
+        "requires_justification": false,
+        "recognition_only_sufficient": true,
+        "recognition_framing_detected": true,
+        "answer_boundary_support": true
+      },
+      "confidence": "high",
+      "evidence": [
+        "resolution:sba_gap_closure_sba_batch_2_928",
+        "question_type:single_best_answer",
+        "review_state:approved_private_sba",
+        "requires_explanation",
+        "requires_causal_chain",
+        "recognition_framing",
+        "answer_boundary_support",
+        "causal_link_count:1"
+      ],
+      "review_status": "shadow_classified",
+      "activation_status": "inactive",
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "official_wset_question": false,
+        "training_item_only": true,
+        "uses_llm": false,
+        "uses_api": false,
+        "uses_embeddings": false,
+        "uses_vector_db": false,
+        "cloud_services_active": false
+      }
+    },
+    {
+      "schema_version": "open_response_suitability_v1",
+      "master_item_id": "wset3_929",
+      "source_question_id": "929",
+      "classification": "sba_only",
+      "open_response_candidate": false,
+      "sba_only": true,
+      "sba_eligible": true,
+      "human_review_required": false,
+      "signals": {
+        "requires_explanation": true,
+        "requires_causal_chain": true,
+        "requires_comparison": false,
+        "requires_justification": false,
+        "recognition_only_sufficient": true,
+        "recognition_framing_detected": false,
+        "answer_boundary_support": true
+      },
+      "confidence": "high",
+      "evidence": [
+        "resolution:sba_gap_closure_sba_batch_2_929",
+        "question_type:single_best_answer",
+        "review_state:approved_private_sba",
+        "requires_explanation",
+        "requires_causal_chain",
+        "answer_boundary_support",
+        "causal_link_count:1"
+      ],
+      "review_status": "shadow_classified",
+      "activation_status": "inactive",
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "official_wset_question": false,
+        "training_item_only": true,
+        "uses_llm": false,
+        "uses_api": false,
+        "uses_embeddings": false,
+        "uses_vector_db": false,
+        "cloud_services_active": false
+      }
+    },
+    {
+      "schema_version": "open_response_suitability_v1",
+      "master_item_id": "wset3_930",
+      "source_question_id": "930",
+      "classification": "sba_only",
+      "open_response_candidate": false,
+      "sba_only": true,
+      "sba_eligible": true,
+      "human_review_required": false,
+      "signals": {
+        "requires_explanation": true,
+        "requires_causal_chain": true,
+        "requires_comparison": false,
+        "requires_justification": false,
+        "recognition_only_sufficient": true,
+        "recognition_framing_detected": false,
+        "answer_boundary_support": true
+      },
+      "confidence": "high",
+      "evidence": [
+        "resolution:sba_gap_closure_sba_batch_2_930",
+        "question_type:single_best_answer",
+        "review_state:approved_private_sba",
+        "requires_explanation",
+        "requires_causal_chain",
+        "answer_boundary_support",
+        "causal_link_count:1"
+      ],
+      "review_status": "shadow_classified",
+      "activation_status": "inactive",
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "official_wset_question": false,
+        "training_item_only": true,
+        "uses_llm": false,
+        "uses_api": false,
+        "uses_embeddings": false,
+        "uses_vector_db": false,
+        "cloud_services_active": false
+      }
+    },
+    {
+      "schema_version": "open_response_suitability_v1",
+      "master_item_id": "wset3_931",
+      "source_question_id": "931",
+      "classification": "sba_only",
+      "open_response_candidate": false,
+      "sba_only": true,
+      "sba_eligible": true,
+      "human_review_required": false,
+      "signals": {
+        "requires_explanation": true,
+        "requires_causal_chain": true,
+        "requires_comparison": false,
+        "requires_justification": false,
+        "recognition_only_sufficient": true,
+        "recognition_framing_detected": true,
+        "answer_boundary_support": true
+      },
+      "confidence": "high",
+      "evidence": [
+        "resolution:sba_gap_closure_sba_batch_2_931",
+        "question_type:single_best_answer",
+        "review_state:approved_private_sba",
+        "requires_explanation",
+        "requires_causal_chain",
+        "recognition_framing",
+        "answer_boundary_support",
+        "causal_link_count:1"
+      ],
+      "review_status": "shadow_classified",
+      "activation_status": "inactive",
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "official_wset_question": false,
+        "training_item_only": true,
+        "uses_llm": false,
+        "uses_api": false,
+        "uses_embeddings": false,
+        "uses_vector_db": false,
+        "cloud_services_active": false
+      }
+    },
+    {
+      "schema_version": "open_response_suitability_v1",
+      "master_item_id": "wset3_932",
+      "source_question_id": "932",
+      "classification": "sba_only",
+      "open_response_candidate": false,
+      "sba_only": true,
+      "sba_eligible": true,
+      "human_review_required": false,
+      "signals": {
+        "requires_explanation": false,
+        "requires_causal_chain": false,
+        "requires_comparison": false,
+        "requires_justification": false,
+        "recognition_only_sufficient": true,
+        "recognition_framing_detected": false,
+        "answer_boundary_support": true
+      },
+      "confidence": "high",
+      "evidence": [
+        "resolution:sba_gap_closure_sba_batch_2_932",
+        "question_type:single_best_answer",
+        "review_state:approved_private_sba",
+        "answer_boundary_support",
+        "causal_link_count:1"
+      ],
+      "review_status": "shadow_classified",
+      "activation_status": "inactive",
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "official_wset_question": false,
+        "training_item_only": true,
+        "uses_llm": false,
+        "uses_api": false,
+        "uses_embeddings": false,
+        "uses_vector_db": false,
+        "cloud_services_active": false
+      }
+    },
+    {
+      "schema_version": "open_response_suitability_v1",
+      "master_item_id": "wset3_933",
+      "source_question_id": "933",
+      "classification": "sba_only",
+      "open_response_candidate": false,
+      "sba_only": true,
+      "sba_eligible": true,
+      "human_review_required": false,
+      "signals": {
+        "requires_explanation": true,
+        "requires_causal_chain": true,
+        "requires_comparison": false,
+        "requires_justification": false,
+        "recognition_only_sufficient": true,
+        "recognition_framing_detected": true,
+        "answer_boundary_support": true
+      },
+      "confidence": "high",
+      "evidence": [
+        "resolution:sba_gap_closure_sba_batch_2_933",
+        "question_type:single_best_answer",
+        "review_state:approved_private_sba",
+        "requires_explanation",
+        "requires_causal_chain",
+        "recognition_framing",
+        "answer_boundary_support",
+        "causal_link_count:1"
+      ],
+      "review_status": "shadow_classified",
+      "activation_status": "inactive",
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "official_wset_question": false,
+        "training_item_only": true,
+        "uses_llm": false,
+        "uses_api": false,
+        "uses_embeddings": false,
+        "uses_vector_db": false,
+        "cloud_services_active": false
+      }
+    },
+    {
+      "schema_version": "open_response_suitability_v1",
+      "master_item_id": "wset3_934",
+      "source_question_id": "934",
+      "classification": "sba_only",
+      "open_response_candidate": false,
+      "sba_only": true,
+      "sba_eligible": true,
+      "human_review_required": false,
+      "signals": {
+        "requires_explanation": true,
+        "requires_causal_chain": true,
+        "requires_comparison": false,
+        "requires_justification": false,
+        "recognition_only_sufficient": true,
+        "recognition_framing_detected": true,
+        "answer_boundary_support": true
+      },
+      "confidence": "high",
+      "evidence": [
+        "resolution:sba_gap_closure_sba_batch_2_934",
+        "question_type:single_best_answer",
+        "review_state:approved_private_sba",
+        "requires_explanation",
+        "requires_causal_chain",
+        "recognition_framing",
+        "answer_boundary_support",
+        "causal_link_count:1"
+      ],
+      "review_status": "shadow_classified",
+      "activation_status": "inactive",
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "official_wset_question": false,
+        "training_item_only": true,
+        "uses_llm": false,
+        "uses_api": false,
+        "uses_embeddings": false,
+        "uses_vector_db": false,
+        "cloud_services_active": false
+      }
+    },
+    {
+      "schema_version": "open_response_suitability_v1",
+      "master_item_id": "wset3_935",
+      "source_question_id": "935",
+      "classification": "sba_only",
+      "open_response_candidate": false,
+      "sba_only": true,
+      "sba_eligible": true,
+      "human_review_required": false,
+      "signals": {
+        "requires_explanation": true,
+        "requires_causal_chain": true,
+        "requires_comparison": false,
+        "requires_justification": false,
+        "recognition_only_sufficient": true,
+        "recognition_framing_detected": false,
+        "answer_boundary_support": true
+      },
+      "confidence": "high",
+      "evidence": [
+        "resolution:sba_gap_closure_sba_batch_2_935",
+        "question_type:single_best_answer",
+        "review_state:approved_private_sba",
+        "requires_explanation",
+        "requires_causal_chain",
+        "answer_boundary_support",
+        "causal_link_count:1"
+      ],
+      "review_status": "shadow_classified",
+      "activation_status": "inactive",
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "official_wset_question": false,
+        "training_item_only": true,
+        "uses_llm": false,
+        "uses_api": false,
+        "uses_embeddings": false,
+        "uses_vector_db": false,
+        "cloud_services_active": false
+      }
+    },
+    {
+      "schema_version": "open_response_suitability_v1",
+      "master_item_id": "wset3_936",
+      "source_question_id": "936",
+      "classification": "sba_only",
+      "open_response_candidate": false,
+      "sba_only": true,
+      "sba_eligible": true,
+      "human_review_required": false,
+      "signals": {
+        "requires_explanation": false,
+        "requires_causal_chain": false,
+        "requires_comparison": false,
+        "requires_justification": false,
+        "recognition_only_sufficient": true,
+        "recognition_framing_detected": false,
+        "answer_boundary_support": true
+      },
+      "confidence": "high",
+      "evidence": [
+        "resolution:sba_gap_closure_sba_batch_2_936",
+        "question_type:single_best_answer",
+        "review_state:approved_private_sba",
+        "answer_boundary_support",
+        "causal_link_count:1"
+      ],
+      "review_status": "shadow_classified",
+      "activation_status": "inactive",
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "official_wset_question": false,
+        "training_item_only": true,
+        "uses_llm": false,
+        "uses_api": false,
+        "uses_embeddings": false,
+        "uses_vector_db": false,
+        "cloud_services_active": false
+      }
+    },
+    {
+      "schema_version": "open_response_suitability_v1",
+      "master_item_id": "wset3_937",
+      "source_question_id": "937",
+      "classification": "sba_only",
+      "open_response_candidate": false,
+      "sba_only": true,
+      "sba_eligible": true,
+      "human_review_required": false,
+      "signals": {
+        "requires_explanation": true,
+        "requires_causal_chain": true,
+        "requires_comparison": false,
+        "requires_justification": false,
+        "recognition_only_sufficient": true,
+        "recognition_framing_detected": false,
+        "answer_boundary_support": true
+      },
+      "confidence": "high",
+      "evidence": [
+        "resolution:sba_gap_closure_sba_batch_2_937",
+        "question_type:single_best_answer",
+        "review_state:approved_private_sba",
+        "requires_explanation",
+        "requires_causal_chain",
+        "answer_boundary_support",
+        "causal_link_count:1"
+      ],
+      "review_status": "shadow_classified",
+      "activation_status": "inactive",
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "official_wset_question": false,
+        "training_item_only": true,
+        "uses_llm": false,
+        "uses_api": false,
+        "uses_embeddings": false,
+        "uses_vector_db": false,
+        "cloud_services_active": false
+      }
+    },
+    {
+      "schema_version": "open_response_suitability_v1",
+      "master_item_id": "wset3_938",
+      "source_question_id": "938",
+      "classification": "sba_only",
+      "open_response_candidate": false,
+      "sba_only": true,
+      "sba_eligible": true,
+      "human_review_required": false,
+      "signals": {
+        "requires_explanation": false,
+        "requires_causal_chain": false,
+        "requires_comparison": false,
+        "requires_justification": false,
+        "recognition_only_sufficient": true,
+        "recognition_framing_detected": false,
+        "answer_boundary_support": true
+      },
+      "confidence": "high",
+      "evidence": [
+        "resolution:sba_gap_closure_sba_batch_2_938",
+        "question_type:single_best_answer",
+        "review_state:approved_private_sba",
+        "answer_boundary_support",
+        "causal_link_count:1"
+      ],
+      "review_status": "shadow_classified",
+      "activation_status": "inactive",
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "official_wset_question": false,
+        "training_item_only": true,
+        "uses_llm": false,
+        "uses_api": false,
+        "uses_embeddings": false,
+        "uses_vector_db": false,
+        "cloud_services_active": false
+      }
+    },
+    {
+      "schema_version": "open_response_suitability_v1",
+      "master_item_id": "wset3_939",
+      "source_question_id": "939",
+      "classification": "sba_only",
+      "open_response_candidate": false,
+      "sba_only": true,
+      "sba_eligible": true,
+      "human_review_required": false,
+      "signals": {
+        "requires_explanation": true,
+        "requires_causal_chain": true,
+        "requires_comparison": false,
+        "requires_justification": false,
+        "recognition_only_sufficient": true,
+        "recognition_framing_detected": true,
+        "answer_boundary_support": true
+      },
+      "confidence": "high",
+      "evidence": [
+        "resolution:sba_gap_closure_sba_batch_2_939",
+        "question_type:single_best_answer",
+        "review_state:approved_private_sba",
+        "requires_explanation",
+        "requires_causal_chain",
+        "recognition_framing",
+        "answer_boundary_support",
+        "causal_link_count:1"
+      ],
+      "review_status": "shadow_classified",
+      "activation_status": "inactive",
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "official_wset_question": false,
+        "training_item_only": true,
+        "uses_llm": false,
+        "uses_api": false,
+        "uses_embeddings": false,
+        "uses_vector_db": false,
+        "cloud_services_active": false
+      }
+    },
+    {
+      "schema_version": "open_response_suitability_v1",
+      "master_item_id": "wset3_940",
+      "source_question_id": "940",
+      "classification": "sba_only",
+      "open_response_candidate": false,
+      "sba_only": true,
+      "sba_eligible": true,
+      "human_review_required": false,
+      "signals": {
+        "requires_explanation": false,
+        "requires_causal_chain": false,
+        "requires_comparison": false,
+        "requires_justification": false,
+        "recognition_only_sufficient": true,
+        "recognition_framing_detected": false,
+        "answer_boundary_support": true
+      },
+      "confidence": "high",
+      "evidence": [
+        "resolution:sba_gap_closure_sba_batch_2_940",
+        "question_type:single_best_answer",
+        "review_state:approved_private_sba",
+        "answer_boundary_support",
+        "causal_link_count:1"
+      ],
+      "review_status": "shadow_classified",
+      "activation_status": "inactive",
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "official_wset_question": false,
+        "training_item_only": true,
+        "uses_llm": false,
+        "uses_api": false,
+        "uses_embeddings": false,
+        "uses_vector_db": false,
+        "cloud_services_active": false
+      }
+    },
+    {
+      "schema_version": "open_response_suitability_v1",
+      "master_item_id": "wset3_941",
+      "source_question_id": "941",
+      "classification": "sba_only",
+      "open_response_candidate": false,
+      "sba_only": true,
+      "sba_eligible": true,
+      "human_review_required": false,
+      "signals": {
+        "requires_explanation": true,
+        "requires_causal_chain": true,
+        "requires_comparison": false,
+        "requires_justification": false,
+        "recognition_only_sufficient": true,
+        "recognition_framing_detected": false,
+        "answer_boundary_support": true
+      },
+      "confidence": "high",
+      "evidence": [
+        "resolution:sba_gap_closure_sba_batch_2_941",
+        "question_type:single_best_answer",
+        "review_state:approved_private_sba",
+        "requires_explanation",
+        "requires_causal_chain",
+        "answer_boundary_support",
+        "causal_link_count:1"
+      ],
+      "review_status": "shadow_classified",
+      "activation_status": "inactive",
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "official_wset_question": false,
+        "training_item_only": true,
+        "uses_llm": false,
+        "uses_api": false,
+        "uses_embeddings": false,
+        "uses_vector_db": false,
+        "cloud_services_active": false
+      }
+    },
+    {
+      "schema_version": "open_response_suitability_v1",
+      "master_item_id": "wset3_942",
+      "source_question_id": "942",
+      "classification": "sba_only",
+      "open_response_candidate": false,
+      "sba_only": true,
+      "sba_eligible": true,
+      "human_review_required": false,
+      "signals": {
+        "requires_explanation": true,
+        "requires_causal_chain": true,
+        "requires_comparison": false,
+        "requires_justification": false,
+        "recognition_only_sufficient": true,
+        "recognition_framing_detected": false,
+        "answer_boundary_support": true
+      },
+      "confidence": "high",
+      "evidence": [
+        "resolution:sba_gap_closure_sba_batch_2_942",
+        "question_type:single_best_answer",
+        "review_state:approved_private_sba",
+        "requires_explanation",
+        "requires_causal_chain",
+        "answer_boundary_support",
+        "causal_link_count:1"
+      ],
+      "review_status": "shadow_classified",
+      "activation_status": "inactive",
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "official_wset_question": false,
+        "training_item_only": true,
+        "uses_llm": false,
+        "uses_api": false,
+        "uses_embeddings": false,
+        "uses_vector_db": false,
+        "cloud_services_active": false
+      }
+    },
+    {
+      "schema_version": "open_response_suitability_v1",
+      "master_item_id": "wset3_943",
+      "source_question_id": "943",
+      "classification": "sba_only",
+      "open_response_candidate": false,
+      "sba_only": true,
+      "sba_eligible": true,
+      "human_review_required": false,
+      "signals": {
+        "requires_explanation": true,
+        "requires_causal_chain": true,
+        "requires_comparison": false,
+        "requires_justification": false,
+        "recognition_only_sufficient": true,
+        "recognition_framing_detected": true,
+        "answer_boundary_support": true
+      },
+      "confidence": "high",
+      "evidence": [
+        "resolution:sba_gap_closure_sba_batch_2_943",
+        "question_type:single_best_answer",
+        "review_state:approved_private_sba",
+        "requires_explanation",
+        "requires_causal_chain",
+        "recognition_framing",
+        "answer_boundary_support",
+        "causal_link_count:1"
+      ],
+      "review_status": "shadow_classified",
+      "activation_status": "inactive",
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "official_wset_question": false,
+        "training_item_only": true,
+        "uses_llm": false,
+        "uses_api": false,
+        "uses_embeddings": false,
+        "uses_vector_db": false,
+        "cloud_services_active": false
+      }
+    },
+    {
+      "schema_version": "open_response_suitability_v1",
+      "master_item_id": "wset3_944",
+      "source_question_id": "944",
+      "classification": "sba_only",
+      "open_response_candidate": false,
+      "sba_only": true,
+      "sba_eligible": true,
+      "human_review_required": false,
+      "signals": {
+        "requires_explanation": true,
+        "requires_causal_chain": true,
+        "requires_comparison": false,
+        "requires_justification": false,
+        "recognition_only_sufficient": true,
+        "recognition_framing_detected": true,
+        "answer_boundary_support": true
+      },
+      "confidence": "high",
+      "evidence": [
+        "resolution:sba_gap_closure_sba_batch_2_944",
+        "question_type:single_best_answer",
+        "review_state:approved_private_sba",
+        "requires_explanation",
+        "requires_causal_chain",
+        "recognition_framing",
+        "answer_boundary_support",
+        "causal_link_count:1"
+      ],
+      "review_status": "shadow_classified",
+      "activation_status": "inactive",
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "official_wset_question": false,
+        "training_item_only": true,
+        "uses_llm": false,
+        "uses_api": false,
+        "uses_embeddings": false,
+        "uses_vector_db": false,
+        "cloud_services_active": false
+      }
+    },
+    {
+      "schema_version": "open_response_suitability_v1",
+      "master_item_id": "wset3_945",
+      "source_question_id": "945",
+      "classification": "sba_only",
+      "open_response_candidate": false,
+      "sba_only": true,
+      "sba_eligible": true,
+      "human_review_required": false,
+      "signals": {
+        "requires_explanation": true,
+        "requires_causal_chain": true,
+        "requires_comparison": false,
+        "requires_justification": false,
+        "recognition_only_sufficient": true,
+        "recognition_framing_detected": true,
+        "answer_boundary_support": true
+      },
+      "confidence": "high",
+      "evidence": [
+        "resolution:sba_gap_closure_sba_batch_2_945",
+        "question_type:single_best_answer",
+        "review_state:approved_private_sba",
+        "requires_explanation",
+        "requires_causal_chain",
+        "recognition_framing",
+        "answer_boundary_support",
+        "causal_link_count:1"
+      ],
+      "review_status": "shadow_classified",
+      "activation_status": "inactive",
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "official_wset_question": false,
+        "training_item_only": true,
+        "uses_llm": false,
+        "uses_api": false,
+        "uses_embeddings": false,
+        "uses_vector_db": false,
+        "cloud_services_active": false
+      }
+    },
+    {
+      "schema_version": "open_response_suitability_v1",
+      "master_item_id": "wset3_946",
+      "source_question_id": "946",
+      "classification": "sba_only",
+      "open_response_candidate": false,
+      "sba_only": true,
+      "sba_eligible": true,
+      "human_review_required": false,
+      "signals": {
+        "requires_explanation": true,
+        "requires_causal_chain": true,
+        "requires_comparison": false,
+        "requires_justification": false,
+        "recognition_only_sufficient": true,
+        "recognition_framing_detected": true,
+        "answer_boundary_support": true
+      },
+      "confidence": "high",
+      "evidence": [
+        "resolution:sba_gap_closure_sba_batch_2_946",
+        "question_type:single_best_answer",
+        "review_state:approved_private_sba",
+        "requires_explanation",
+        "requires_causal_chain",
+        "recognition_framing",
+        "answer_boundary_support",
+        "causal_link_count:1"
+      ],
+      "review_status": "shadow_classified",
+      "activation_status": "inactive",
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "official_wset_question": false,
+        "training_item_only": true,
+        "uses_llm": false,
+        "uses_api": false,
+        "uses_embeddings": false,
+        "uses_vector_db": false,
+        "cloud_services_active": false
+      }
+    },
+    {
+      "schema_version": "open_response_suitability_v1",
+      "master_item_id": "wset3_947",
+      "source_question_id": "947",
+      "classification": "sba_only",
+      "open_response_candidate": false,
+      "sba_only": true,
+      "sba_eligible": true,
+      "human_review_required": false,
+      "signals": {
+        "requires_explanation": true,
+        "requires_causal_chain": true,
+        "requires_comparison": false,
+        "requires_justification": false,
+        "recognition_only_sufficient": true,
+        "recognition_framing_detected": false,
+        "answer_boundary_support": true
+      },
+      "confidence": "high",
+      "evidence": [
+        "resolution:sba_gap_closure_sba_batch_2_947",
+        "question_type:single_best_answer",
+        "review_state:approved_private_sba",
+        "requires_explanation",
+        "requires_causal_chain",
+        "answer_boundary_support",
+        "causal_link_count:1"
+      ],
+      "review_status": "shadow_classified",
+      "activation_status": "inactive",
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "official_wset_question": false,
+        "training_item_only": true,
+        "uses_llm": false,
+        "uses_api": false,
+        "uses_embeddings": false,
+        "uses_vector_db": false,
+        "cloud_services_active": false
+      }
+    },
+    {
+      "schema_version": "open_response_suitability_v1",
+      "master_item_id": "wset3_948",
+      "source_question_id": "948",
+      "classification": "sba_only",
+      "open_response_candidate": false,
+      "sba_only": true,
+      "sba_eligible": true,
+      "human_review_required": false,
+      "signals": {
+        "requires_explanation": true,
+        "requires_causal_chain": true,
+        "requires_comparison": false,
+        "requires_justification": false,
+        "recognition_only_sufficient": true,
+        "recognition_framing_detected": false,
+        "answer_boundary_support": true
+      },
+      "confidence": "high",
+      "evidence": [
+        "resolution:sba_gap_closure_sba_batch_2_948",
+        "question_type:single_best_answer",
+        "review_state:approved_private_sba",
+        "requires_explanation",
+        "requires_causal_chain",
+        "answer_boundary_support",
+        "causal_link_count:1"
+      ],
+      "review_status": "shadow_classified",
+      "activation_status": "inactive",
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "official_wset_question": false,
+        "training_item_only": true,
+        "uses_llm": false,
+        "uses_api": false,
+        "uses_embeddings": false,
+        "uses_vector_db": false,
+        "cloud_services_active": false
+      }
+    },
+    {
+      "schema_version": "open_response_suitability_v1",
+      "master_item_id": "wset3_949",
+      "source_question_id": "949",
+      "classification": "sba_only",
+      "open_response_candidate": false,
+      "sba_only": true,
+      "sba_eligible": true,
+      "human_review_required": false,
+      "signals": {
+        "requires_explanation": true,
+        "requires_causal_chain": true,
+        "requires_comparison": true,
+        "requires_justification": false,
+        "recognition_only_sufficient": true,
+        "recognition_framing_detected": true,
+        "answer_boundary_support": true
+      },
+      "confidence": "high",
+      "evidence": [
+        "resolution:sba_gap_closure_sba_batch_2_949",
+        "question_type:single_best_answer",
+        "review_state:approved_private_sba",
+        "requires_explanation",
+        "requires_causal_chain",
+        "requires_comparison",
+        "recognition_framing",
+        "answer_boundary_support",
+        "causal_link_count:1"
+      ],
+      "review_status": "shadow_classified",
+      "activation_status": "inactive",
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "official_wset_question": false,
+        "training_item_only": true,
+        "uses_llm": false,
+        "uses_api": false,
+        "uses_embeddings": false,
+        "uses_vector_db": false,
+        "cloud_services_active": false
+      }
+    },
+    {
+      "schema_version": "open_response_suitability_v1",
+      "master_item_id": "wset3_950",
+      "source_question_id": "950",
+      "classification": "sba_only",
+      "open_response_candidate": false,
+      "sba_only": true,
+      "sba_eligible": true,
+      "human_review_required": false,
+      "signals": {
+        "requires_explanation": true,
+        "requires_causal_chain": true,
+        "requires_comparison": false,
+        "requires_justification": false,
+        "recognition_only_sufficient": true,
+        "recognition_framing_detected": true,
+        "answer_boundary_support": true
+      },
+      "confidence": "high",
+      "evidence": [
+        "resolution:sba_gap_closure_sba_batch_2_950",
+        "question_type:single_best_answer",
+        "review_state:approved_private_sba",
+        "requires_explanation",
+        "requires_causal_chain",
+        "recognition_framing",
+        "answer_boundary_support",
+        "causal_link_count:1"
+      ],
+      "review_status": "shadow_classified",
+      "activation_status": "inactive",
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "official_wset_question": false,
+        "training_item_only": true,
+        "uses_llm": false,
+        "uses_api": false,
+        "uses_embeddings": false,
+        "uses_vector_db": false,
+        "cloud_services_active": false
+      }
+    },
+    {
+      "schema_version": "open_response_suitability_v1",
+      "master_item_id": "wset3_951",
+      "source_question_id": "951",
+      "classification": "sba_only",
+      "open_response_candidate": false,
+      "sba_only": true,
+      "sba_eligible": true,
+      "human_review_required": false,
+      "signals": {
+        "requires_explanation": true,
+        "requires_causal_chain": true,
+        "requires_comparison": false,
+        "requires_justification": false,
+        "recognition_only_sufficient": true,
+        "recognition_framing_detected": false,
+        "answer_boundary_support": true
+      },
+      "confidence": "high",
+      "evidence": [
+        "resolution:sba_gap_closure_sba_batch_2_951",
+        "question_type:single_best_answer",
+        "review_state:approved_private_sba",
+        "requires_explanation",
+        "requires_causal_chain",
         "answer_boundary_support",
         "causal_link_count:1"
       ],
