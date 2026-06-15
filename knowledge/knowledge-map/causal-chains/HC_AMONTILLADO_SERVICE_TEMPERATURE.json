@@ -1,0 +1,16 @@
+{
+  "node_type": "causal_chain",
+  "node_id": "HC_AMONTILLADO_SERVICE_TEMPERATURE",
+  "topic": "service temperature for Amontillado",
+  "trigger_keywords": ["amontillado service", "13 c amontillado", "serve dry sherry", "fortified wine aroma temperature", "amontillado temperature"],
+  "steps": [
+    {"step": 1, "label": "cause", "text": "A dry Amontillado combines biological and oxidative aromatic development."},
+    {"step": 2, "label": "mechanism", "text": "Moderate chilling preserves freshness and limits alcohol warmth without suppressing its nutty, savoury and acetaldehyde-derived aromas."},
+    {"step": 3, "label": "effect", "text": "A service temperature around 13 C can balance freshness, alcohol and aromatic expression."},
+    {"step": 4, "label": "exam_formulation", "text": "Formative causal formulation: Amontillado is served cool rather than very cold so its developed aromas remain expressive."}
+  ],
+  "agent_corpus": "tutor", "safe_for_examiner": false, "examiner_scoring_allowed": false, "requires_human_review": true,
+  "source": "heuristic", "classification": "inferred", "official": false, "formative_only": true, "official_mark_scheme": false,
+  "governance": {"safe_for_examiner": false, "examiner_scoring_allowed": false, "agent_corpus": "tutor", "source": "heuristic", "classification": "inferred", "official": false, "formative_only": true},
+  "_meta": {"schema_version": "causal_chain_v1", "heuristic_extension": "HC_v1", "created_date": "2026-06-15", "ingestion_status": "draft", "source_note": "Inferred formative model - not official WSET assessment or mark-scheme content"}
+}

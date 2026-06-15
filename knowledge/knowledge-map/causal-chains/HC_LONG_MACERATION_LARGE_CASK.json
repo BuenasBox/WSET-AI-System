@@ -1,0 +1,16 @@
+{
+  "node_type": "causal_chain",
+  "node_id": "HC_LONG_MACERATION_LARGE_CASK",
+  "topic": "long maceration and large neutral cask maturation",
+  "trigger_keywords": ["long maceration large cask", "piemonte maceration cask", "larga maceracion grandes toneles", "phenolic extraction large oak", "traditional nebbiolo maturation"],
+  "steps": [
+    {"step": 1, "label": "cause", "text": "A structured red undergoes extended skin contact and then matures in a large, often seasoned oak vessel."},
+    {"step": 2, "label": "mechanism", "text": "Long maceration extracts substantial phenolics, while a large vessel has a lower wood-surface-to-wine ratio and therefore contributes less overt oak flavour than a small new barrel."},
+    {"step": 3, "label": "effect", "text": "The wine retains firm structure and can evolve gradually without being dominated by new-oak aromas."},
+    {"step": 4, "label": "exam_formulation", "text": "Formative causal formulation: long extraction builds structure and large casks permit maturation with restrained oak flavour."}
+  ],
+  "agent_corpus": "tutor", "safe_for_examiner": false, "examiner_scoring_allowed": false, "requires_human_review": true,
+  "source": "heuristic", "classification": "inferred", "official": false, "formative_only": true, "official_mark_scheme": false,
+  "governance": {"safe_for_examiner": false, "examiner_scoring_allowed": false, "agent_corpus": "tutor", "source": "heuristic", "classification": "inferred", "official": false, "formative_only": true},
+  "_meta": {"schema_version": "causal_chain_v1", "heuristic_extension": "HC_v1", "created_date": "2026-06-15", "ingestion_status": "draft", "source_note": "Inferred formative model - not official WSET assessment or mark-scheme content"}
+}

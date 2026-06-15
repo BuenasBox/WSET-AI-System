@@ -1,0 +1,16 @@
+{
+  "node_type": "causal_chain",
+  "node_id": "HC_WARM_CLIMATE_RIPE_FRUIT_ALCOHOL",
+  "topic": "warm climate ripe fruit and alcohol",
+  "trigger_keywords": ["warm climate ripe fruit", "ripe black fruit alcohol", "clima calido fruta madura", "high sugar warm climate", "full bodied warm climate red"],
+  "steps": [
+    {"step": 1, "label": "cause", "text": "Black grapes ripen under sustained warm conditions with adequate sunlight."},
+    {"step": 2, "label": "mechanism", "text": "Rapid sugar accumulation raises potential alcohol and advanced flavour development shifts fruit from fresh red tones toward ripe black or dried-fruit character."},
+    {"step": 3, "label": "effect", "text": "The wine can be fuller-bodied, higher in alcohol and dominated by ripe black fruit, provided water stress and heat are not excessive."},
+    {"step": 4, "label": "exam_formulation", "text": "Formative causal formulation: warm ripening commonly increases sugar, alcohol potential and ripe-fruit character."}
+  ],
+  "agent_corpus": "tutor", "safe_for_examiner": false, "examiner_scoring_allowed": false, "requires_human_review": true,
+  "source": "heuristic", "classification": "inferred", "official": false, "formative_only": true, "official_mark_scheme": false,
+  "governance": {"safe_for_examiner": false, "examiner_scoring_allowed": false, "agent_corpus": "tutor", "source": "heuristic", "classification": "inferred", "official": false, "formative_only": true},
+  "_meta": {"schema_version": "causal_chain_v1", "heuristic_extension": "HC_v1", "created_date": "2026-06-15", "ingestion_status": "draft", "source_note": "Inferred formative model - not official WSET assessment or mark-scheme content"}
+}

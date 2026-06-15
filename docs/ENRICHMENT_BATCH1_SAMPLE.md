@@ -1,7 +1,7 @@
 # ENRICHMENT BATCH 1 — Reporte de muestra para aprobación
 
-Lote: **235 ítems** · derivación determinista desde nodos causales CC_/HC_ (umbral: ≥2 trigger keywords, mejor nodo único, capa ES con guard).
-Con micro_drill: **179** · fingerprint de entrada: `07e789300d2e49d4`
+Lote: **260 ítems** · derivación determinista desde nodos causales CC_/HC_ (umbral: ≥2 trigger keywords, mejor nodo único, capa ES con guard).
+Con micro_drill: **196** · fingerprint de entrada: `5c38a1e053635c2c`
 
 Política v2 (precisión primero): word-boundary, triggers genéricos prohibidos, el nodo debe
 explicar la respuesta correcta (hit en stem Y en opción correcta), stems de identificación excluidos.

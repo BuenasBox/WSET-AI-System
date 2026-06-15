@@ -39,7 +39,7 @@
       "yeast"
     ],
     "identification_stems_excluded": true,
-    "manual_review_promotion_count": 25,
+    "manual_review_promotion_count": 50,
     "min_keyword_hits": 2,
     "policy": "precision first: populate only when the node explains the correct answer; omit otherwise; never invent content",
     "require_correct_option_hit": true,
@@ -55,7 +55,7 @@
     "uses_api": false,
     "uses_llm": false
   },
-  "input_fingerprint": "07e789300d2e49d4",
+  "input_fingerprint": "5c38a1e053635c2c",
   "items_by_source_question_id": {
     "1": {
       "_provenance": {
@@ -1334,6 +1334,53 @@
         "remediation_signal": "Revisa la cadena causal del envejecimiento oxidativo y el desarrollo de aromas terciarios"
       }
     },
+    "212": {
+      "_provenance": {
+        "causal_chain": {
+          "correct_option_hits": [
+            "Fruta blanca fresca, dulzor perceptible y acidez media"
+          ],
+          "derived_from": "manual_review_v1",
+          "learner_caveat": "El dulzor y la acidez concretos dependen de la uva, la dosificación y el equilibrio final.",
+          "match_score": 0,
+          "matched_keywords": [],
+          "node_id": "HC_TANK_METHOD_FRUIT_RETENTION",
+          "promotion_method": "manual_review_v1",
+          "review_reason": "El método de tanque y el contacto corto con lías explican fruta fresca y limitada autólisis.",
+          "stem_hits": []
+        },
+        "feedback_by_mode": {
+          "derived_from": "template_v1 + HC_TANK_METHOD_FRUIT_RETENTION"
+        },
+        "micro_drill": {
+          "derived_from": "node_anchored_v1 (HC_TANK_METHOD_FRUIT_RETENTION)",
+          "distractor_source": "correct options of batch items matched to other nodes"
+        }
+      },
+      "causal_chain": {
+        "causa": "La segunda fermentación se realiza en un tanque cerrado resistente a la presión en lugar de cada botella final.",
+        "efecto": "El espumoso conserva aromas primarios frescos, frutales y florales y puede producirse con mayor rapidez y menor coste.",
+        "mecanismo": "El acero inoxidable con temperatura controlada y un contacto relativamente corto con las lías limitan la oxidación y el desarrollo autolítico mientras retienen el CO₂ bajo presión."
+      },
+      "feedback_by_mode": {
+        "mentor": "La respuesta correcta es B: «Fruta blanca fresca, dulzor perceptible y acidez media». La clave está en el método de tanque y la conservación de la fruta primaria: El acero inoxidable con temperatura controlada y un contacto relativamente corto con las lías limitan la oxidación y el desarrollo autolítico mientras retienen el CO₂ bajo presión. Por eso, el espumoso conserva aromas primarios frescos, frutales y florales y puede producirse con mayor rapidez y menor coste. Matiz: El dulzor y la acidez concretos dependen de la uva, la dosificación y el equilibrio final.",
+        "reviewer": "Exigencia de repaso (RA3): debes poder justificar por qué «Fruta blanca fresca, dulzor perceptible y acidez media» es correcta y por qué las otras tres opciones no lo son, citando el mecanismo del método de tanque y la conservación de la fruta primaria. Si no puedes reconstruir la cadena completa sin ver las opciones, repasa este concepto en tu material WSET L3. Matiz: El dulzor y la acidez concretos dependen de la uva, la dosificación y el equilibrio final.",
+        "trainer": "Concepto técnico (RA3): Fija el mecanismo del método de tanque y la conservación de la fruta primaria: La segunda fermentación se realiza en un tanque cerrado resistente a la presión en lugar de cada botella final. → El acero inoxidable con temperatura controlada y un contacto relativamente corto con las lías limitan la oxidación y el desarrollo autolítico mientras retienen el CO₂ bajo presión. En el examen, identifica este patrón causa→mecanismo→efecto antes de mirar las opciones. Matiz: El dulzor y la acidez concretos dependen de la uva, la dosificación y el equilibrio final."
+      },
+      "item_id": "wset3_212",
+      "micro_drill": {
+        "correct_index": 3,
+        "explanation": "«Fruta blanca fresca, dulzor perceptible y acidez media» corresponde al método de tanque y la conservación de la fruta primaria. Las demás afirmaciones son correctas, pero describen otros mecanismos.",
+        "options": [
+          "Protege al vino del oxígeno y desarrolla sabores únicos",
+          "Adición de aguardiente vínico",
+          "Estructura potente y necesidad de guarda",
+          "Fruta blanca fresca, dulzor perceptible y acidez media"
+        ],
+        "prompt": "Consolidación: ¿cuál de estas afirmaciones corresponde al método de tanque y la conservación de la fruta primaria?",
+        "remediation_signal": "Revisa la cadena causal del método de tanque y la conservación de la fruta primaria"
+      }
+    },
     "214": {
       "_provenance": {
         "causal_chain": {
@@ -1527,6 +1574,53 @@
         "remediation_signal": "Revisa la cadena causal del clima fresco y la calidad del vino base para espumosos"
       }
     },
+    "227": {
+      "_provenance": {
+        "causal_chain": {
+          "correct_option_hits": [
+            "Más carácter tánico y fruta madura"
+          ],
+          "derived_from": "manual_review_v1",
+          "learner_caveat": "Saignée no garantiza siempre más tanino; variedad, tiempo y temperatura de contacto modifican el resultado.",
+          "match_score": 0,
+          "matched_keywords": [],
+          "node_id": "HC_SAIGNEE_ROSE_EXTRACTION",
+          "promotion_method": "manual_review_v1",
+          "review_reason": "El contacto previo con hollejos explica mayor color, fruta madura y estructura fenólica.",
+          "stem_hits": []
+        },
+        "feedback_by_mode": {
+          "derived_from": "template_v1 + HC_SAIGNEE_ROSE_EXTRACTION"
+        },
+        "micro_drill": {
+          "derived_from": "node_anchored_v1 (HC_SAIGNEE_ROSE_EXTRACTION)",
+          "distractor_source": "correct options of batch items matched to other nodes"
+        }
+      },
+      "causal_chain": {
+        "causa": "Se separa jugo de una vinificación tinta después de un periodo de contacto con los hollejos.",
+        "efecto": "Frente a un rosado pálido de mezcla, puede resultar un vino de color más profundo, fruta más madura y mayor estructura fenólica.",
+        "mecanismo": "Antes del sangrado, el contacto extrae pigmento, sabor y parte de los compuestos fenólicos de las pieles tintas."
+      },
+      "feedback_by_mode": {
+        "mentor": "La respuesta correcta es C: «Más carácter tánico y fruta madura». La clave está en el sangrado para elaborar un rosado: Antes del sangrado, el contacto extrae pigmento, sabor y parte de los compuestos fenólicos de las pieles tintas. Por eso, frente a un rosado pálido de mezcla, puede resultar un vino de color más profundo, fruta más madura y mayor estructura fenólica. Matiz: Saignée no garantiza siempre más tanino; variedad, tiempo y temperatura de contacto modifican el resultado.",
+        "reviewer": "Exigencia de repaso (RA3): debes poder justificar por qué «Más carácter tánico y fruta madura» es correcta y por qué las otras tres opciones no lo son, citando el mecanismo del sangrado para elaborar un rosado. Si no puedes reconstruir la cadena completa sin ver las opciones, repasa este concepto en tu material WSET L3. Matiz: Saignée no garantiza siempre más tanino; variedad, tiempo y temperatura de contacto modifican el resultado.",
+        "trainer": "Concepto técnico (RA3): Fija el mecanismo del sangrado para elaborar un rosado: Se separa jugo de una vinificación tinta después de un periodo de contacto con los hollejos. → Antes del sangrado, el contacto extrae pigmento, sabor y parte de los compuestos fenólicos de las pieles tintas. En el examen, identifica este patrón causa→mecanismo→efecto antes de mirar las opciones. Matiz: Saignée no garantiza siempre más tanino; variedad, tiempo y temperatura de contacto modifican el resultado."
+      },
+      "item_id": "wset3_227",
+      "micro_drill": {
+        "correct_index": 0,
+        "explanation": "«Más carácter tánico y fruta madura» corresponde al sangrado para elaborar un rosado. Las demás afirmaciones son correctas, pero describen otros mecanismos.",
+        "options": [
+          "Más carácter tánico y fruta madura",
+          "Protege al vino del oxígeno y desarrolla sabores únicos",
+          "Adición de aguardiente vínico",
+          "Estructura potente y necesidad de guarda"
+        ],
+        "prompt": "Consolidación: ¿cuál de estas afirmaciones corresponde al sangrado para elaborar un rosado?",
+        "remediation_signal": "Revisa la cadena causal del sangrado para elaborar un rosado"
+      }
+    },
     "23": {
       "_provenance": {
         "causal_chain": {
@@ -1654,6 +1748,53 @@
         "remediation_signal": "Revisa la cadena causal del método de tanque y la conservación de la fruta primaria"
       }
     },
+    "247": {
+      "_provenance": {
+        "causal_chain": {
+          "correct_option_hits": [
+            "Pendientes empinadas y clima fresco"
+          ],
+          "derived_from": "manual_review_v1",
+          "learner_caveat": "La pendiente ayuda a la madurez; no crea acidez por sí sola.",
+          "match_score": 0,
+          "matched_keywords": [],
+          "node_id": "HC_MOSEL_COOL_SLOPE_ACIDITY",
+          "promotion_method": "manual_review_v1",
+          "review_reason": "El clima fresco conserva acidez y las pendientes bien expuestas ayudan a completar la maduración.",
+          "stem_hits": []
+        },
+        "feedback_by_mode": {
+          "derived_from": "template_v1 + HC_MOSEL_COOL_SLOPE_ACIDITY"
+        },
+        "micro_drill": {
+          "derived_from": "node_anchored_v1 (HC_MOSEL_COOL_SLOPE_ACIDITY)",
+          "distractor_source": "correct options of batch items matched to other nodes"
+        }
+      },
+      "causal_chain": {
+        "causa": "Los viñedos del Mosel combinan clima fresco y septentrional con pendientes empinadas y bien expuestas.",
+        "efecto": "El Riesling puede mantener acidez alta y frescura a la vez que alcanza madurez aromática en los mejores sitios.",
+        "mecanismo": "El frío ralentiza la respiración y conserva los ácidos, mientras la exposición de la ladera mejora la captación solar y ayuda a completar la maduración."
+      },
+      "feedback_by_mode": {
+        "mentor": "La respuesta correcta es C: «Pendientes empinadas y clima fresco». La clave está en el clima fresco y las pendientes del Mosel: El frío ralentiza la respiración y conserva los ácidos, mientras la exposición de la ladera mejora la captación solar y ayuda a completar la maduración. Por eso, el Riesling puede mantener acidez alta y frescura a la vez que alcanza madurez aromática en los mejores sitios. Matiz: La pendiente ayuda a la madurez; no crea acidez por sí sola.",
+        "reviewer": "Exigencia de repaso (RA2): debes poder justificar por qué «Pendientes empinadas y clima fresco» es correcta y por qué las otras tres opciones no lo son, citando el mecanismo del clima fresco y las pendientes del Mosel. Si no puedes reconstruir la cadena completa sin ver las opciones, repasa este concepto en tu material WSET L3. Matiz: La pendiente ayuda a la madurez; no crea acidez por sí sola.",
+        "trainer": "Concepto técnico (RA2): Tema: still wines. Fija el mecanismo del clima fresco y las pendientes del Mosel: Los viñedos del Mosel combinan clima fresco y septentrional con pendientes empinadas y bien expuestas. → El frío ralentiza la respiración y conserva los ácidos, mientras la exposición de la ladera mejora la captación solar y ayuda a completar la maduración. En el examen, identifica este patrón causa→mecanismo→efecto antes de mirar las opciones. Matiz: La pendiente ayuda a la madurez; no crea acidez por sí sola."
+      },
+      "item_id": "wset3_247",
+      "micro_drill": {
+        "correct_index": 2,
+        "explanation": "«Pendientes empinadas y clima fresco» corresponde al clima fresco y las pendientes del Mosel. Las demás afirmaciones son correctas, pero describen otros mecanismos.",
+        "options": [
+          "Protege al vino del oxígeno y desarrolla sabores únicos",
+          "Adición de aguardiente vínico",
+          "Pendientes empinadas y clima fresco",
+          "Estructura potente y necesidad de guarda"
+        ],
+        "prompt": "Consolidación: ¿cuál de estas afirmaciones corresponde al clima fresco y las pendientes del Mosel?",
+        "remediation_signal": "Revisa la cadena causal del clima fresco y las pendientes del Mosel"
+      }
+    },
     "25": {
       "_provenance": {
         "causal_chain": {
@@ -1749,6 +1890,53 @@
         ],
         "prompt": "Consolidación: ¿cuál de estas afirmaciones corresponde a la influencia marítima u oceánica?",
         "remediation_signal": "Revisa la cadena causal de la influencia marítima u oceánica"
+      }
+    },
+    "262": {
+      "_provenance": {
+        "causal_chain": {
+          "correct_option_hits": [
+            "Fruta negra madura, taninos suaves y alcohol elevado"
+          ],
+          "derived_from": "manual_review_v1",
+          "learner_caveat": "La suavidad del tanino depende también de madurez fenólica, extracción y crianza.",
+          "match_score": 0,
+          "matched_keywords": [],
+          "node_id": "HC_WARM_CLIMATE_RIPE_FRUIT_ALCOHOL",
+          "promotion_method": "manual_review_v1",
+          "review_reason": "El calor explica azúcar, alcohol potencial y fruta negra madura en Merlot.",
+          "stem_hits": []
+        },
+        "feedback_by_mode": {
+          "derived_from": "template_v1 + HC_WARM_CLIMATE_RIPE_FRUIT_ALCOHOL"
+        },
+        "micro_drill": {
+          "derived_from": "node_anchored_v1 (HC_WARM_CLIMATE_RIPE_FRUIT_ALCOHOL)",
+          "distractor_source": "correct options of batch items matched to other nodes"
+        }
+      },
+      "causal_chain": {
+        "causa": "Uvas tintas maduran con calor sostenido y suficiente insolación.",
+        "efecto": "El vino puede mostrar mayor cuerpo, alcohol y fruta negra madura, siempre que el calor y el estrés hídrico no sean excesivos.",
+        "mecanismo": "La acumulación rápida de azúcar eleva el alcohol potencial y la maduración avanzada desplaza el perfil hacia fruta negra madura o desecada."
+      },
+      "feedback_by_mode": {
+        "mentor": "La respuesta correcta es B: «Fruta negra madura, taninos suaves y alcohol elevado». La clave está en el clima cálido, la fruta madura y el alcohol potencial: La acumulación rápida de azúcar eleva el alcohol potencial y la maduración avanzada desplaza el perfil hacia fruta negra madura o desecada. Por eso, el vino puede mostrar mayor cuerpo, alcohol y fruta negra madura, siempre que el calor y el estrés hídrico no sean excesivos. Matiz: La suavidad del tanino depende también de madurez fenólica, extracción y crianza.",
+        "reviewer": "Exigencia de repaso (RA2): debes poder justificar por qué «Fruta negra madura, taninos suaves y alcohol elevado» es correcta y por qué las otras tres opciones no lo son, citando el mecanismo del clima cálido, la fruta madura y el alcohol potencial. Si no puedes reconstruir la cadena completa sin ver las opciones, repasa este concepto en tu material WSET L3. Matiz: La suavidad del tanino depende también de madurez fenólica, extracción y crianza.",
+        "trainer": "Concepto técnico (RA2): Fija el mecanismo del clima cálido, la fruta madura y el alcohol potencial: Uvas tintas maduran con calor sostenido y suficiente insolación. → La acumulación rápida de azúcar eleva el alcohol potencial y la maduración avanzada desplaza el perfil hacia fruta negra madura o desecada. En el examen, identifica este patrón causa→mecanismo→efecto antes de mirar las opciones. Matiz: La suavidad del tanino depende también de madurez fenólica, extracción y crianza."
+      },
+      "item_id": "wset3_262",
+      "micro_drill": {
+        "correct_index": 0,
+        "explanation": "«Fruta negra madura, taninos suaves y alcohol elevado» corresponde al clima cálido, la fruta madura y el alcohol potencial. Las demás afirmaciones son correctas, pero describen otros mecanismos.",
+        "options": [
+          "Fruta negra madura, taninos suaves y alcohol elevado",
+          "Protege al vino del oxígeno y desarrolla sabores únicos",
+          "Adición de aguardiente vínico",
+          "Estructura potente y necesidad de guarda"
+        ],
+        "prompt": "Consolidación: ¿cuál de estas afirmaciones corresponde al clima cálido, la fruta madura y el alcohol potencial?",
+        "remediation_signal": "Revisa la cadena causal del clima cálido, la fruta madura y el alcohol potencial"
       }
     },
     "266": {
@@ -1894,6 +2082,53 @@
         ],
         "prompt": "Consolidación: ¿cuál de estas afirmaciones corresponde al clima fresco y su estilo de vino?",
         "remediation_signal": "Revisa la cadena causal del clima fresco y su estilo de vino"
+      }
+    },
+    "28": {
+      "_provenance": {
+        "causal_chain": {
+          "correct_option_hits": [
+            "Alta acidez y sin dulzor residual"
+          ],
+          "derived_from": "manual_review_v1",
+          "learner_caveat": "La acidez alta procede del vino base y del estilo, no de omitir la dosificación.",
+          "match_score": 0,
+          "matched_keywords": [],
+          "node_id": "HC_BRUT_NATURE_NO_DOSAGE",
+          "promotion_method": "manual_review_v1",
+          "review_reason": "La ausencia de dosificación explica el mínimo azúcar residual de Brut Nature.",
+          "stem_hits": []
+        },
+        "feedback_by_mode": {
+          "derived_from": "template_v1 + HC_BRUT_NATURE_NO_DOSAGE"
+        },
+        "micro_drill": {
+          "derived_from": "node_anchored_v1 (HC_BRUT_NATURE_NO_DOSAGE)",
+          "distractor_source": "correct options of batch items matched to other nodes"
+        }
+      },
+      "causal_chain": {
+        "causa": "Tras el degüelle, el productor decide no añadir azúcar mediante el licor de expedición.",
+        "efecto": "El vino puede etiquetarse Brut Nature o Zero Dosage si cumple el límite correspondiente, normalmente entre 0 y 3 g/L de azúcar residual.",
+        "mecanismo": "Sin dosificación no aumenta el dulzor final; solo contribuye el azúcar residual que haya quedado de forma natural."
+      },
+      "feedback_by_mode": {
+        "mentor": "La respuesta correcta es C: «Alta acidez y sin dulzor residual». La clave está en la ausencia de dosificación en un Brut Nature: Sin dosificación no aumenta el dulzor final; solo contribuye el azúcar residual que haya quedado de forma natural. Por eso, el vino puede etiquetarse Brut Nature o Zero Dosage si cumple el límite correspondiente, normalmente entre 0 y 3 g/L de azúcar residual. Matiz: La acidez alta procede del vino base y del estilo, no de omitir la dosificación.",
+        "reviewer": "Exigencia de repaso (RA3): debes poder justificar por qué «Alta acidez y sin dulzor residual» es correcta y por qué las otras tres opciones no lo son, citando el mecanismo de la ausencia de dosificación en un Brut Nature. Si no puedes reconstruir la cadena completa sin ver las opciones, repasa este concepto en tu material WSET L3. Matiz: La acidez alta procede del vino base y del estilo, no de omitir la dosificación.",
+        "trainer": "Concepto técnico (RA3): Fija el mecanismo de la ausencia de dosificación en un Brut Nature: Tras el degüelle, el productor decide no añadir azúcar mediante el licor de expedición. → Sin dosificación no aumenta el dulzor final; solo contribuye el azúcar residual que haya quedado de forma natural. En el examen, identifica este patrón causa→mecanismo→efecto antes de mirar las opciones. Matiz: La acidez alta procede del vino base y del estilo, no de omitir la dosificación."
+      },
+      "item_id": "wset3_28",
+      "micro_drill": {
+        "correct_index": 0,
+        "explanation": "«Alta acidez y sin dulzor residual» corresponde a la ausencia de dosificación en un Brut Nature. Las demás afirmaciones son correctas, pero describen otros mecanismos.",
+        "options": [
+          "Alta acidez y sin dulzor residual",
+          "Protege al vino del oxígeno y desarrolla sabores únicos",
+          "Adición de aguardiente vínico",
+          "Estructura potente y necesidad de guarda"
+        ],
+        "prompt": "Consolidación: ¿cuál de estas afirmaciones corresponde a la ausencia de dosificación en un Brut Nature?",
+        "remediation_signal": "Revisa la cadena causal de la ausencia de dosificación en un Brut Nature"
       }
     },
     "282": {
@@ -2478,6 +2713,131 @@
       },
       "item_id": "wset3_321"
     },
+    "322": {
+      "_provenance": {
+        "causal_chain": {
+          "correct_option_hits": [
+            "Pendientes pronunciadas y clima frío"
+          ],
+          "derived_from": "manual_review_v1",
+          "learner_caveat": "Latitud, río, orientación, suelo y añada también influyen en el resultado.",
+          "match_score": 0,
+          "matched_keywords": [],
+          "node_id": "HC_MOSEL_COOL_SLOPE_ACIDITY",
+          "promotion_method": "manual_review_v1",
+          "review_reason": "El clima frío conserva acidez y la exposición de pendiente permite madurez aromática.",
+          "stem_hits": []
+        },
+        "feedback_by_mode": {
+          "derived_from": "template_v1 + HC_MOSEL_COOL_SLOPE_ACIDITY"
+        },
+        "micro_drill": {
+          "derived_from": "node_anchored_v1 (HC_MOSEL_COOL_SLOPE_ACIDITY)",
+          "distractor_source": "correct options of batch items matched to other nodes"
+        }
+      },
+      "causal_chain": {
+        "causa": "Los viñedos del Mosel combinan clima fresco y septentrional con pendientes empinadas y bien expuestas.",
+        "efecto": "El Riesling puede mantener acidez alta y frescura a la vez que alcanza madurez aromática en los mejores sitios.",
+        "mecanismo": "El frío ralentiza la respiración y conserva los ácidos, mientras la exposición de la ladera mejora la captación solar y ayuda a completar la maduración."
+      },
+      "feedback_by_mode": {
+        "mentor": "La respuesta correcta es C: «Pendientes pronunciadas y clima frío». La clave está en el clima fresco y las pendientes del Mosel: El frío ralentiza la respiración y conserva los ácidos, mientras la exposición de la ladera mejora la captación solar y ayuda a completar la maduración. Por eso, el Riesling puede mantener acidez alta y frescura a la vez que alcanza madurez aromática en los mejores sitios. Matiz: Latitud, río, orientación, suelo y añada también influyen en el resultado.",
+        "reviewer": "Exigencia de repaso (RA2): debes poder justificar por qué «Pendientes pronunciadas y clima frío» es correcta y por qué las otras tres opciones no lo son, citando el mecanismo del clima fresco y las pendientes del Mosel. Si no puedes reconstruir la cadena completa sin ver las opciones, repasa este concepto en tu material WSET L3. Matiz: Latitud, río, orientación, suelo y añada también influyen en el resultado.",
+        "trainer": "Concepto técnico (RA2): Fija el mecanismo del clima fresco y las pendientes del Mosel: Los viñedos del Mosel combinan clima fresco y septentrional con pendientes empinadas y bien expuestas. → El frío ralentiza la respiración y conserva los ácidos, mientras la exposición de la ladera mejora la captación solar y ayuda a completar la maduración. En el examen, identifica este patrón causa→mecanismo→efecto antes de mirar las opciones. Matiz: Latitud, río, orientación, suelo y añada también influyen en el resultado."
+      },
+      "item_id": "wset3_322",
+      "micro_drill": {
+        "correct_index": 1,
+        "explanation": "«Pendientes pronunciadas y clima frío» corresponde al clima fresco y las pendientes del Mosel. Las demás afirmaciones son correctas, pero describen otros mecanismos.",
+        "options": [
+          "Protege al vino del oxígeno y desarrolla sabores únicos",
+          "Pendientes pronunciadas y clima frío",
+          "Adición de aguardiente vínico",
+          "Estructura potente y necesidad de guarda"
+        ],
+        "prompt": "Consolidación: ¿cuál de estas afirmaciones corresponde al clima fresco y las pendientes del Mosel?",
+        "remediation_signal": "Revisa la cadena causal del clima fresco y las pendientes del Mosel"
+      }
+    },
+    "323": {
+      "_provenance": {
+        "causal_chain": {
+          "correct_option_hits": [
+            "Estructurado, fruta negra madura y roble"
+          ],
+          "derived_from": "manual_review_v1",
+          "learner_caveat": "El roble es una decisión de bodega y no una consecuencia automática del clima.",
+          "match_score": 0,
+          "matched_keywords": [],
+          "node_id": "HC_WARM_CLIMATE_RIPE_FRUIT_ALCOHOL",
+          "promotion_method": "manual_review_v1",
+          "review_reason": "El clima cálido de Barossa explica fruta negra madura, cuerpo y alcohol potencial.",
+          "stem_hits": []
+        },
+        "feedback_by_mode": {
+          "derived_from": "template_v1 + HC_WARM_CLIMATE_RIPE_FRUIT_ALCOHOL"
+        },
+        "micro_drill": {
+          "derived_from": "node_anchored_v1 (HC_WARM_CLIMATE_RIPE_FRUIT_ALCOHOL)",
+          "distractor_source": "correct options of batch items matched to other nodes"
+        }
+      },
+      "causal_chain": {
+        "causa": "Uvas tintas maduran con calor sostenido y suficiente insolación.",
+        "efecto": "El vino puede mostrar mayor cuerpo, alcohol y fruta negra madura, siempre que el calor y el estrés hídrico no sean excesivos.",
+        "mecanismo": "La acumulación rápida de azúcar eleva el alcohol potencial y la maduración avanzada desplaza el perfil hacia fruta negra madura o desecada."
+      },
+      "feedback_by_mode": {
+        "mentor": "La respuesta correcta es C: «Estructurado, fruta negra madura y roble». La clave está en el clima cálido, la fruta madura y el alcohol potencial: La acumulación rápida de azúcar eleva el alcohol potencial y la maduración avanzada desplaza el perfil hacia fruta negra madura o desecada. Por eso, el vino puede mostrar mayor cuerpo, alcohol y fruta negra madura, siempre que el calor y el estrés hídrico no sean excesivos. Matiz: El roble es una decisión de bodega y no una consecuencia automática del clima.",
+        "reviewer": "Exigencia de repaso (RA2): debes poder justificar por qué «Estructurado, fruta negra madura y roble» es correcta y por qué las otras tres opciones no lo son, citando el mecanismo del clima cálido, la fruta madura y el alcohol potencial. Si no puedes reconstruir la cadena completa sin ver las opciones, repasa este concepto en tu material WSET L3. Matiz: El roble es una decisión de bodega y no una consecuencia automática del clima.",
+        "trainer": "Concepto técnico (RA2): Fija el mecanismo del clima cálido, la fruta madura y el alcohol potencial: Uvas tintas maduran con calor sostenido y suficiente insolación. → La acumulación rápida de azúcar eleva el alcohol potencial y la maduración avanzada desplaza el perfil hacia fruta negra madura o desecada. En el examen, identifica este patrón causa→mecanismo→efecto antes de mirar las opciones. Matiz: El roble es una decisión de bodega y no una consecuencia automática del clima."
+      },
+      "item_id": "wset3_323",
+      "micro_drill": {
+        "correct_index": 1,
+        "explanation": "«Estructurado, fruta negra madura y roble» corresponde al clima cálido, la fruta madura y el alcohol potencial. Las demás afirmaciones son correctas, pero describen otros mecanismos.",
+        "options": [
+          "Protege al vino del oxígeno y desarrolla sabores únicos",
+          "Estructurado, fruta negra madura y roble",
+          "Adición de aguardiente vínico",
+          "Estructura potente y necesidad de guarda"
+        ],
+        "prompt": "Consolidación: ¿cuál de estas afirmaciones corresponde al clima cálido, la fruta madura y el alcohol potencial?",
+        "remediation_signal": "Revisa la cadena causal del clima cálido, la fruta madura y el alcohol potencial"
+      }
+    },
+    "329": {
+      "_provenance": {
+        "causal_chain": {
+          "correct_option_hits": [
+            "6–8 °C"
+          ],
+          "derived_from": "manual_review_v1",
+          "learner_caveat": "Una temperatura demasiado baja puede ocultar los aromas primarios.",
+          "match_score": 0,
+          "matched_keywords": [],
+          "node_id": "HC_LIGHT_WHITE_SERVICE_TEMPERATURE",
+          "promotion_method": "manual_review_v1",
+          "review_reason": "El frío moderado conserva frescura y delicadeza en un blanco seco ligero.",
+          "stem_hits": []
+        },
+        "feedback_by_mode": {
+          "derived_from": "template_v1 + HC_LIGHT_WHITE_SERVICE_TEMPERATURE"
+        }
+      },
+      "causal_chain": {
+        "causa": "Un blanco ligero depende de su frescura y de aromas primarios delicados.",
+        "efecto": "Un intervalo cercano a 6-8 °C suele ser apropiado para blancos secos sencillos y ligeros.",
+        "mecanismo": "El servicio frío realza la acidez y limita la sensación alcohólica, aunque una temperatura demasiado baja reduce la expresión aromática."
+      },
+      "feedback_by_mode": {
+        "mentor": "La respuesta correcta es C: «6–8 °C». La clave está en la temperatura de servicio de un blanco seco y ligero: El servicio frío realza la acidez y limita la sensación alcohólica, aunque una temperatura demasiado baja reduce la expresión aromática. Por eso, un intervalo cercano a 6-8 °C suele ser apropiado para blancos secos sencillos y ligeros. Matiz: Una temperatura demasiado baja puede ocultar los aromas primarios.",
+        "reviewer": "Exigencia de repaso (RA1): debes poder justificar por qué «6–8 °C» es correcta y por qué las otras tres opciones no lo son, citando el mecanismo de la temperatura de servicio de un blanco seco y ligero. Si no puedes reconstruir la cadena completa sin ver las opciones, repasa este concepto en tu material WSET L3. Matiz: Una temperatura demasiado baja puede ocultar los aromas primarios.",
+        "trainer": "Concepto técnico (RA1): Fija el mecanismo de la temperatura de servicio de un blanco seco y ligero: Un blanco ligero depende de su frescura y de aromas primarios delicados. → El servicio frío realza la acidez y limita la sensación alcohólica, aunque una temperatura demasiado baja reduce la expresión aromática. En el examen, identifica este patrón causa→mecanismo→efecto antes de mirar las opciones. Matiz: Una temperatura demasiado baja puede ocultar los aromas primarios."
+      },
+      "item_id": "wset3_329"
+    },
     "33": {
       "_provenance": {
         "causal_chain": {
@@ -3007,6 +3367,53 @@
         "remediation_signal": "Revisa la cadena causal de las barricas nuevas y su aporte de estructura y especias"
       }
     },
+    "347": {
+      "_provenance": {
+        "causal_chain": {
+          "correct_option_hits": [
+            "Fruta roja, acidez vibrante y uso moderado de roble"
+          ],
+          "derived_from": "manual_review_v1",
+          "learner_caveat": "El uso de roble es una decisión de productor y varía entre regiones y niveles de calidad.",
+          "match_score": 0,
+          "matched_keywords": [],
+          "node_id": "HC_COOL_CLIMATE_STYLE",
+          "promotion_method": "manual_review_v1",
+          "review_reason": "La maduración fresca explica fruta roja y acidez vibrante en Pinot Noir.",
+          "stem_hits": []
+        },
+        "feedback_by_mode": {
+          "derived_from": "template_v1 + HC_COOL_CLIMATE_STYLE"
+        },
+        "micro_drill": {
+          "derived_from": "node_anchored_v1 (HC_COOL_CLIMATE_STYLE)",
+          "distractor_source": "correct options of batch items matched to other nodes"
+        }
+      },
+      "causal_chain": {
+        "causa": "En las regiones de clima fresco, las temperaturas medias del periodo de maduración son lo bastante bajas como para que la uva madure despacio, a veces de forma incompleta, en una temporada más corta.",
+        "efecto": "Los vinos de clima fresco suelen presentar acidez alta, menor alcohol, cuerpo más ligero y aromas primarios que tienden a manzana verde, cítricos y notas herbáceas.",
+        "mecanismo": "La maduración lenta y fresca preserva el ácido málico y tartárico de la uva, porque las noches no aceleran lo suficiente la respiración de los ácidos, y la acumulación de azúcar es más limitada."
+      },
+      "feedback_by_mode": {
+        "mentor": "La respuesta correcta es C: «Fruta roja, acidez vibrante y uso moderado de roble». La clave está en el clima fresco y su estilo de vino: La maduración lenta y fresca preserva el ácido málico y tartárico de la uva, porque las noches no aceleran lo suficiente la respiración de los ácidos, y la acumulación de azúcar es más limitada. Por eso, los vinos de clima fresco suelen presentar acidez alta, menor alcohol, cuerpo más ligero y aromas primarios que tienden a manzana verde, cítricos y notas herbáceas. Matiz: El uso de roble es una decisión de productor y varía entre regiones y niveles de calidad.",
+        "reviewer": "Exigencia de repaso (RA2): debes poder justificar por qué «Fruta roja, acidez vibrante y uso moderado de roble» es correcta y por qué las otras tres opciones no lo son, citando el mecanismo del clima fresco y su estilo de vino. Si no puedes reconstruir la cadena completa sin ver las opciones, repasa este concepto en tu material WSET L3. Matiz: El uso de roble es una decisión de productor y varía entre regiones y niveles de calidad.",
+        "trainer": "Concepto técnico (RA2): Fija el mecanismo del clima fresco y su estilo de vino: En las regiones de clima fresco, las temperaturas medias del periodo de maduración son lo bastante bajas como para que la uva madure despacio, a veces de forma incompleta, en una temporada más corta. → La maduración lenta y fresca preserva el ácido málico y tartárico de la uva, porque las noches no aceleran lo suficiente la respiración de los ácidos, y la acumulación de azúcar es más limitada. En el examen, identifica este patrón causa→mecanismo→efecto antes de mirar las opciones. Matiz: El uso de roble es una decisión de productor y varía entre regiones y niveles de calidad."
+      },
+      "item_id": "wset3_347",
+      "micro_drill": {
+        "correct_index": 1,
+        "explanation": "«Fruta roja, acidez vibrante y uso moderado de roble» corresponde al clima fresco y su estilo de vino. Las demás afirmaciones son correctas, pero describen otros mecanismos.",
+        "options": [
+          "Protege al vino del oxígeno y desarrolla sabores únicos",
+          "Fruta roja, acidez vibrante y uso moderado de roble",
+          "Adición de aguardiente vínico",
+          "Estructura potente y necesidad de guarda"
+        ],
+        "prompt": "Consolidación: ¿cuál de estas afirmaciones corresponde al clima fresco y su estilo de vino?",
+        "remediation_signal": "Revisa la cadena causal del clima fresco y su estilo de vino"
+      }
+    },
     "349": {
       "_provenance": {
         "causal_chain": {
@@ -3217,6 +3624,53 @@
         "remediation_signal": "Revisa la cadena causal de la corriente de Humboldt y la frescura del Valle de Casablanca"
       }
     },
+    "358": {
+      "_provenance": {
+        "causal_chain": {
+          "correct_option_hits": [
+            "Crianza en roble americano"
+          ],
+          "derived_from": "manual_review_v1",
+          "learner_caveat": "Tostado, edad, tamaño y uso previo de la barrica pueden cambiar el perfil.",
+          "match_score": 0,
+          "matched_keywords": [],
+          "node_id": "HC_FRENCH_AMERICAN_OAK_STYLE",
+          "promotion_method": "manual_review_v1",
+          "review_reason": "La tendencia aromática del roble americano explica su uso tradicional y sus notas más evidentes.",
+          "stem_hits": []
+        },
+        "feedback_by_mode": {
+          "derived_from": "template_v1 + HC_FRENCH_AMERICAN_OAK_STYLE"
+        },
+        "micro_drill": {
+          "derived_from": "node_anchored_v1 (HC_FRENCH_AMERICAN_OAK_STYLE)",
+          "distractor_source": "correct options of batch items matched to other nodes"
+        }
+      },
+      "causal_chain": {
+        "causa": "El vino madura en barricas elaboradas con especies y estructuras de grano asociadas habitualmente al roble francés o americano.",
+        "efecto": "El roble americano suele aportar vainilla y coco más evidentes, mientras el francés suele percibirse más sutil; la tonelería, el tostado y el uso previo pueden cambiar ambos patrones.",
+        "mecanismo": "La especie, el grano, el secado y el tostado modifican la extracción de lactonas, vainillina, taninos y compuestos tostados."
+      },
+      "feedback_by_mode": {
+        "mentor": "La respuesta correcta es C: «Crianza en roble americano». La clave está en el origen del roble y la intensidad de sus aromas: La especie, el grano, el secado y el tostado modifican la extracción de lactonas, vainillina, taninos y compuestos tostados. Por eso, el roble americano suele aportar vainilla y coco más evidentes, mientras el francés suele percibirse más sutil; la tonelería, el tostado y el uso previo pueden cambiar ambos patrones. Matiz: Tostado, edad, tamaño y uso previo de la barrica pueden cambiar el perfil.",
+        "reviewer": "Exigencia de repaso (RA2): debes poder justificar por qué «Crianza en roble americano» es correcta y por qué las otras tres opciones no lo son, citando el mecanismo del origen del roble y la intensidad de sus aromas. Si no puedes reconstruir la cadena completa sin ver las opciones, repasa este concepto en tu material WSET L3. Matiz: Tostado, edad, tamaño y uso previo de la barrica pueden cambiar el perfil.",
+        "trainer": "Concepto técnico (RA2): Fija el mecanismo del origen del roble y la intensidad de sus aromas: El vino madura en barricas elaboradas con especies y estructuras de grano asociadas habitualmente al roble francés o americano. → La especie, el grano, el secado y el tostado modifican la extracción de lactonas, vainillina, taninos y compuestos tostados. En el examen, identifica este patrón causa→mecanismo→efecto antes de mirar las opciones. Matiz: Tostado, edad, tamaño y uso previo de la barrica pueden cambiar el perfil."
+      },
+      "item_id": "wset3_358",
+      "micro_drill": {
+        "correct_index": 1,
+        "explanation": "«Crianza en roble americano» corresponde al origen del roble y la intensidad de sus aromas. Las demás afirmaciones son correctas, pero describen otros mecanismos.",
+        "options": [
+          "Protege al vino del oxígeno y desarrolla sabores únicos",
+          "Crianza en roble americano",
+          "Adición de aguardiente vínico",
+          "Estructura potente y necesidad de guarda"
+        ],
+        "prompt": "Consolidación: ¿cuál de estas afirmaciones corresponde al origen del roble y la intensidad de sus aromas?",
+        "remediation_signal": "Revisa la cadena causal del origen del roble y la intensidad de sus aromas"
+      }
+    },
     "362": {
       "_provenance": {
         "causal_chain": {
@@ -3311,6 +3765,53 @@
         ],
         "prompt": "Consolidación: ¿cuál de estas afirmaciones corresponde a la altitud elevada, la maduración lenta y la frescura?",
         "remediation_signal": "Revisa la cadena causal de la altitud elevada, la maduración lenta y la frescura"
+      }
+    },
+    "367": {
+      "_provenance": {
+        "causal_chain": {
+          "correct_option_hits": [
+            "Riesgo de heladas primaverales"
+          ],
+          "derived_from": "manual_review_v1",
+          "learner_caveat": "El riesgo varía con topografía, fase fenológica y condiciones de cada añada.",
+          "match_score": 0,
+          "matched_keywords": [],
+          "node_id": "HC_FROST_SHOOT_YIELD_DAMAGE",
+          "promotion_method": "manual_review_v1",
+          "review_reason": "La brotación temprana en clima fresco explica la exposición de Champagne a heladas primaverales.",
+          "stem_hits": []
+        },
+        "feedback_by_mode": {
+          "derived_from": "template_v1 + HC_FROST_SHOOT_YIELD_DAMAGE"
+        },
+        "micro_drill": {
+          "derived_from": "node_anchored_v1 (HC_FROST_SHOOT_YIELD_DAMAGE)",
+          "distractor_source": "correct options of batch items matched to other nodes"
+        }
+      },
+      "causal_chain": {
+        "causa": "La temperatura cae bajo cero después de que hayan aparecido yemas y brotes tiernos.",
+        "efecto": "Se pierde crecimiento primario y posibles racimos florales, reduciendo de forma importante el rendimiento de la campaña.",
+        "mecanismo": "La formación de hielo daña las células vivas de brotes, hojas e inflorescencias jóvenes."
+      },
+      "feedback_by_mode": {
+        "mentor": "La respuesta correcta es C: «Riesgo de heladas primaverales». La clave está en el daño de las heladas primaverales sobre brotes y rendimiento: La formación de hielo daña las células vivas de brotes, hojas e inflorescencias jóvenes. Por eso, se pierde crecimiento primario y posibles racimos florales, reduciendo de forma importante el rendimiento de la campaña. Matiz: El riesgo varía con topografía, fase fenológica y condiciones de cada añada.",
+        "reviewer": "Exigencia de repaso (RA3): debes poder justificar por qué «Riesgo de heladas primaverales» es correcta y por qué las otras tres opciones no lo son, citando el mecanismo del daño de las heladas primaverales sobre brotes y rendimiento. Si no puedes reconstruir la cadena completa sin ver las opciones, repasa este concepto en tu material WSET L3. Matiz: El riesgo varía con topografía, fase fenológica y condiciones de cada añada.",
+        "trainer": "Concepto técnico (RA3): Fija el mecanismo del daño de las heladas primaverales sobre brotes y rendimiento: La temperatura cae bajo cero después de que hayan aparecido yemas y brotes tiernos. → La formación de hielo daña las células vivas de brotes, hojas e inflorescencias jóvenes. En el examen, identifica este patrón causa→mecanismo→efecto antes de mirar las opciones. Matiz: El riesgo varía con topografía, fase fenológica y condiciones de cada añada."
+      },
+      "item_id": "wset3_367",
+      "micro_drill": {
+        "correct_index": 1,
+        "explanation": "«Riesgo de heladas primaverales» corresponde al daño de las heladas primaverales sobre brotes y rendimiento. Las demás afirmaciones son correctas, pero describen otros mecanismos.",
+        "options": [
+          "Protege al vino del oxígeno y desarrolla sabores únicos",
+          "Riesgo de heladas primaverales",
+          "Adición de aguardiente vínico",
+          "Estructura potente y necesidad de guarda"
+        ],
+        "prompt": "Consolidación: ¿cuál de estas afirmaciones corresponde al daño de las heladas primaverales sobre brotes y rendimiento?",
+        "remediation_signal": "Revisa la cadena causal del daño de las heladas primaverales sobre brotes y rendimiento"
       }
     },
     "37": {
@@ -3609,6 +4110,53 @@
         "remediation_signal": "Revisa la cadena causal de la estructura que permite la guarda prolongada de un vino tinto"
       }
     },
+    "386": {
+      "_provenance": {
+        "causal_chain": {
+          "correct_option_hits": [
+            "Mayor dulzor residual y menor alcohol"
+          ],
+          "derived_from": "manual_review_v1",
+          "learner_caveat": "No todos los Riesling del Mosel son dulces ni todos los del Pfalz son secos.",
+          "match_score": 0,
+          "matched_keywords": [],
+          "node_id": "HC_MOSEL_RESIDUAL_SUGAR_LOW_ALCOHOL",
+          "promotion_method": "manual_review_v1",
+          "review_reason": "Retener azúcar implica convertir menos azúcar en alcohol y explica el contraste de la respuesta.",
+          "stem_hits": []
+        },
+        "feedback_by_mode": {
+          "derived_from": "template_v1 + HC_MOSEL_RESIDUAL_SUGAR_LOW_ALCOHOL"
+        },
+        "micro_drill": {
+          "derived_from": "node_anchored_v1 (HC_MOSEL_RESIDUAL_SUGAR_LOW_ALCOHOL)",
+          "distractor_source": "correct options of batch items matched to other nodes"
+        }
+      },
+      "causal_chain": {
+        "causa": "Un Riesling de clima fresco fermenta hasta un estilo que conserva parte del azúcar de la uva.",
+        "efecto": "Muchos estilos dulces o semidulces del Mosel combinan azúcar residual perceptible, alcohol bajo y acidez alta.",
+        "mecanismo": "Al detener la fermentación antes de convertir todo el azúcar, queda dulzor residual y se produce menos alcohol, mientras la acidez alta equilibra el conjunto."
+      },
+      "feedback_by_mode": {
+        "mentor": "La respuesta correcta es C: «Mayor dulzor residual y menor alcohol». La clave está en el azúcar residual y el bajo alcohol en estilos del Mosel: Al detener la fermentación antes de convertir todo el azúcar, queda dulzor residual y se produce menos alcohol, mientras la acidez alta equilibra el conjunto. Por eso, muchos estilos dulces o semidulces del Mosel combinan azúcar residual perceptible, alcohol bajo y acidez alta. Matiz: No todos los Riesling del Mosel son dulces ni todos los del Pfalz son secos.",
+        "reviewer": "Exigencia de repaso (RA2): debes poder justificar por qué «Mayor dulzor residual y menor alcohol» es correcta y por qué las otras tres opciones no lo son, citando el mecanismo del azúcar residual y el bajo alcohol en estilos del Mosel. Si no puedes reconstruir la cadena completa sin ver las opciones, repasa este concepto en tu material WSET L3. Matiz: No todos los Riesling del Mosel son dulces ni todos los del Pfalz son secos.",
+        "trainer": "Concepto técnico (RA2): Tema: still wines. Fija el mecanismo del azúcar residual y el bajo alcohol en estilos del Mosel: Un Riesling de clima fresco fermenta hasta un estilo que conserva parte del azúcar de la uva. → Al detener la fermentación antes de convertir todo el azúcar, queda dulzor residual y se produce menos alcohol, mientras la acidez alta equilibra el conjunto. En el examen, identifica este patrón causa→mecanismo→efecto antes de mirar las opciones. Matiz: No todos los Riesling del Mosel son dulces ni todos los del Pfalz son secos."
+      },
+      "item_id": "wset3_386",
+      "micro_drill": {
+        "correct_index": 3,
+        "explanation": "«Mayor dulzor residual y menor alcohol» corresponde al azúcar residual y el bajo alcohol en estilos del Mosel. Las demás afirmaciones son correctas, pero describen otros mecanismos.",
+        "options": [
+          "Protege al vino del oxígeno y desarrolla sabores únicos",
+          "Adición de aguardiente vínico",
+          "Estructura potente y necesidad de guarda",
+          "Mayor dulzor residual y menor alcohol"
+        ],
+        "prompt": "Consolidación: ¿cuál de estas afirmaciones corresponde al azúcar residual y el bajo alcohol en estilos del Mosel?",
+        "remediation_signal": "Revisa la cadena causal del azúcar residual y el bajo alcohol en estilos del Mosel"
+      }
+    },
     "388": {
       "_provenance": {
         "causal_chain": {
@@ -3657,6 +4205,53 @@
         "remediation_signal": "Revisa la cadena causal de la influencia marítima u oceánica"
       }
     },
+    "389": {
+      "_provenance": {
+        "causal_chain": {
+          "correct_option_hits": [
+            "Uso tradicional de roble americano"
+          ],
+          "derived_from": "manual_review_v1",
+          "learner_caveat": "La calidad no depende únicamente del origen del roble; fruta, tonelería y tiempo de crianza también cuentan.",
+          "match_score": 0,
+          "matched_keywords": [],
+          "node_id": "HC_FRENCH_AMERICAN_OAK_STYLE",
+          "promotion_method": "manual_review_v1",
+          "review_reason": "El uso tradicional de roble americano explica parte del perfil de crianza de Rioja.",
+          "stem_hits": []
+        },
+        "feedback_by_mode": {
+          "derived_from": "template_v1 + HC_FRENCH_AMERICAN_OAK_STYLE"
+        },
+        "micro_drill": {
+          "derived_from": "node_anchored_v1 (HC_FRENCH_AMERICAN_OAK_STYLE)",
+          "distractor_source": "correct options of batch items matched to other nodes"
+        }
+      },
+      "causal_chain": {
+        "causa": "El vino madura en barricas elaboradas con especies y estructuras de grano asociadas habitualmente al roble francés o americano.",
+        "efecto": "El roble americano suele aportar vainilla y coco más evidentes, mientras el francés suele percibirse más sutil; la tonelería, el tostado y el uso previo pueden cambiar ambos patrones.",
+        "mecanismo": "La especie, el grano, el secado y el tostado modifican la extracción de lactonas, vainillina, taninos y compuestos tostados."
+      },
+      "feedback_by_mode": {
+        "mentor": "La respuesta correcta es C: «Uso tradicional de roble americano». La clave está en el origen del roble y la intensidad de sus aromas: La especie, el grano, el secado y el tostado modifican la extracción de lactonas, vainillina, taninos y compuestos tostados. Por eso, el roble americano suele aportar vainilla y coco más evidentes, mientras el francés suele percibirse más sutil; la tonelería, el tostado y el uso previo pueden cambiar ambos patrones. Matiz: La calidad no depende únicamente del origen del roble; fruta, tonelería y tiempo de crianza también cuentan.",
+        "reviewer": "Exigencia de repaso (RA2): debes poder justificar por qué «Uso tradicional de roble americano» es correcta y por qué las otras tres opciones no lo son, citando el mecanismo del origen del roble y la intensidad de sus aromas. Si no puedes reconstruir la cadena completa sin ver las opciones, repasa este concepto en tu material WSET L3. Matiz: La calidad no depende únicamente del origen del roble; fruta, tonelería y tiempo de crianza también cuentan.",
+        "trainer": "Concepto técnico (RA2): Fija el mecanismo del origen del roble y la intensidad de sus aromas: El vino madura en barricas elaboradas con especies y estructuras de grano asociadas habitualmente al roble francés o americano. → La especie, el grano, el secado y el tostado modifican la extracción de lactonas, vainillina, taninos y compuestos tostados. En el examen, identifica este patrón causa→mecanismo→efecto antes de mirar las opciones. Matiz: La calidad no depende únicamente del origen del roble; fruta, tonelería y tiempo de crianza también cuentan."
+      },
+      "item_id": "wset3_389",
+      "micro_drill": {
+        "correct_index": 0,
+        "explanation": "«Uso tradicional de roble americano» corresponde al origen del roble y la intensidad de sus aromas. Las demás afirmaciones son correctas, pero describen otros mecanismos.",
+        "options": [
+          "Uso tradicional de roble americano",
+          "Protege al vino del oxígeno y desarrolla sabores únicos",
+          "Adición de aguardiente vínico",
+          "Estructura potente y necesidad de guarda"
+        ],
+        "prompt": "Consolidación: ¿cuál de estas afirmaciones corresponde al origen del roble y la intensidad de sus aromas?",
+        "remediation_signal": "Revisa la cadena causal del origen del roble y la intensidad de sus aromas"
+      }
+    },
     "39": {
       "_provenance": {
         "causal_chain": {
@@ -3688,6 +4283,131 @@
         "trainer": "Concepto técnico (RA1): Fija el mecanismo de la arcilla y la retención de agua del suelo: El suelo contiene una proporción elevada de partículas de arcilla muy pequeñas. → Las partículas finas crean numerosos poros pequeños y una gran superficie que retienen agua mediante fuerzas capilares y de adsorción. En el examen, identifica este patrón causa→mecanismo→efecto antes de mirar las opciones."
       },
       "item_id": "wset3_39"
+    },
+    "390": {
+      "_provenance": {
+        "causal_chain": {
+          "correct_option_hits": [
+            "Napa tiene clima más cálido y vinos más potentes"
+          ],
+          "derived_from": "manual_review_v1",
+          "learner_caveat": "Ambas regiones contienen mesoclimas diversos y la comparación no se aplica a todos los vinos.",
+          "match_score": 0,
+          "matched_keywords": [],
+          "node_id": "HC_MARITIME_MODERATION",
+          "promotion_method": "manual_review_v1",
+          "review_reason": "La mayor moderación costera de Sonoma frente a Napa ayuda a explicar estilos más frescos.",
+          "stem_hits": []
+        },
+        "feedback_by_mode": {
+          "derived_from": "template_v1 + HC_MARITIME_MODERATION"
+        },
+        "micro_drill": {
+          "derived_from": "node_anchored_v1 (HC_MARITIME_MODERATION)",
+          "distractor_source": "correct options of batch items matched to other nodes"
+        }
+      },
+      "causal_chain": {
+        "causa": "Un clima marítimo u oceánico se da en regiones próximas al mar o al océano, cuya gran masa térmica se calienta y se enfría lentamente a lo largo del año.",
+        "efecto": "Los vinos de clima marítimo tienden a una maduración moderada y uniforme, con acidez conservada y elegancia; la temporada más larga y suave favorece estilos equilibrados, siendo la lluvia de la añada un riesgo clave.",
+        "mecanismo": "El agua cercana modera los extremos de temperatura: mantiene veranos más frescos e inviernos más suaves que los sitios de interior a la misma latitud, reduce el riesgo de heladas y de calor excesivo y alarga la temporada, aunque puede traer lluvia y humedad."
+      },
+      "feedback_by_mode": {
+        "mentor": "La respuesta correcta es C: «Napa tiene clima más cálido y vinos más potentes». La clave está en la influencia marítima u oceánica: El agua cercana modera los extremos de temperatura: mantiene veranos más frescos e inviernos más suaves que los sitios de interior a la misma latitud, reduce el riesgo de heladas y de calor excesivo y alarga la temporada, aunque puede traer lluvia y humedad. Por eso, los vinos de clima marítimo tienden a una maduración moderada y uniforme, con acidez conservada y elegancia; la temporada más larga y suave favorece estilos equilibrados, siendo la lluvia de la añada un riesgo clave. Matiz: Ambas regiones contienen mesoclimas diversos y la comparación no se aplica a todos los vinos.",
+        "reviewer": "Exigencia de repaso (RA2): debes poder justificar por qué «Napa tiene clima más cálido y vinos más potentes» es correcta y por qué las otras tres opciones no lo son, citando el mecanismo de la influencia marítima u oceánica. Si no puedes reconstruir la cadena completa sin ver las opciones, repasa este concepto en tu material WSET L3. Matiz: Ambas regiones contienen mesoclimas diversos y la comparación no se aplica a todos los vinos.",
+        "trainer": "Concepto técnico (RA2): Fija el mecanismo de la influencia marítima u oceánica: Un clima marítimo u oceánico se da en regiones próximas al mar o al océano, cuya gran masa térmica se calienta y se enfría lentamente a lo largo del año. → El agua cercana modera los extremos de temperatura: mantiene veranos más frescos e inviernos más suaves que los sitios de interior a la misma latitud, reduce el riesgo de heladas y de calor excesivo y alarga la temporada, aunque puede traer lluvia y humedad. En el examen, identifica este patrón causa→mecanismo→efecto antes de mirar las opciones. Matiz: Ambas regiones contienen mesoclimas diversos y la comparación no se aplica a todos los vinos."
+      },
+      "item_id": "wset3_390",
+      "micro_drill": {
+        "correct_index": 0,
+        "explanation": "«Napa tiene clima más cálido y vinos más potentes» corresponde a la influencia marítima u oceánica. Las demás afirmaciones son correctas, pero describen otros mecanismos.",
+        "options": [
+          "Napa tiene clima más cálido y vinos más potentes",
+          "Protege al vino del oxígeno y desarrolla sabores únicos",
+          "Adición de aguardiente vínico",
+          "Estructura potente y necesidad de guarda"
+        ],
+        "prompt": "Consolidación: ¿cuál de estas afirmaciones corresponde a la influencia marítima u oceánica?",
+        "remediation_signal": "Revisa la cadena causal de la influencia marítima u oceánica"
+      }
+    },
+    "393": {
+      "_provenance": {
+        "causal_chain": {
+          "correct_option_hits": [
+            "Larga maceración y crianza en grandes toneles"
+          ],
+          "derived_from": "manual_review_v1",
+          "learner_caveat": "La práctica varía por productor y convive con estilos modernos de maceración y barrica diferentes.",
+          "match_score": 0,
+          "matched_keywords": [],
+          "node_id": "HC_LONG_MACERATION_LARGE_CASK",
+          "promotion_method": "manual_review_v1",
+          "review_reason": "La maceración larga y los grandes toneles explican estructura y crianza con roble menos dominante.",
+          "stem_hits": []
+        },
+        "feedback_by_mode": {
+          "derived_from": "template_v1 + HC_LONG_MACERATION_LARGE_CASK"
+        },
+        "micro_drill": {
+          "derived_from": "node_anchored_v1 (HC_LONG_MACERATION_LARGE_CASK)",
+          "distractor_source": "correct options of batch items matched to other nodes"
+        }
+      },
+      "causal_chain": {
+        "causa": "Un tinto estructurado permanece largo tiempo con los hollejos y después madura en un recipiente grande, a menudo usado.",
+        "efecto": "El vino conserva estructura firme y puede evolucionar gradualmente sin quedar dominado por aromas de roble nuevo.",
+        "mecanismo": "La maceración extrae abundantes fenoles, mientras el gran volumen reduce la superficie de madera por litro y limita el sabor intenso de roble nuevo."
+      },
+      "feedback_by_mode": {
+        "mentor": "La respuesta correcta es C: «Larga maceración y crianza en grandes toneles». La clave está en la maceración larga y la crianza en grandes toneles: La maceración extrae abundantes fenoles, mientras el gran volumen reduce la superficie de madera por litro y limita el sabor intenso de roble nuevo. Por eso, el vino conserva estructura firme y puede evolucionar gradualmente sin quedar dominado por aromas de roble nuevo. Matiz: La práctica varía por productor y convive con estilos modernos de maceración y barrica diferentes.",
+        "reviewer": "Exigencia de repaso (RA2): debes poder justificar por qué «Larga maceración y crianza en grandes toneles» es correcta y por qué las otras tres opciones no lo son, citando el mecanismo de la maceración larga y la crianza en grandes toneles. Si no puedes reconstruir la cadena completa sin ver las opciones, repasa este concepto en tu material WSET L3. Matiz: La práctica varía por productor y convive con estilos modernos de maceración y barrica diferentes.",
+        "trainer": "Concepto técnico (RA2): Fija el mecanismo de la maceración larga y la crianza en grandes toneles: Un tinto estructurado permanece largo tiempo con los hollejos y después madura en un recipiente grande, a menudo usado. → La maceración extrae abundantes fenoles, mientras el gran volumen reduce la superficie de madera por litro y limita el sabor intenso de roble nuevo. En el examen, identifica este patrón causa→mecanismo→efecto antes de mirar las opciones. Matiz: La práctica varía por productor y convive con estilos modernos de maceración y barrica diferentes."
+      },
+      "item_id": "wset3_393",
+      "micro_drill": {
+        "correct_index": 3,
+        "explanation": "«Larga maceración y crianza en grandes toneles» corresponde a la maceración larga y la crianza en grandes toneles. Las demás afirmaciones son correctas, pero describen otros mecanismos.",
+        "options": [
+          "Protege al vino del oxígeno y desarrolla sabores únicos",
+          "Adición de aguardiente vínico",
+          "Estructura potente y necesidad de guarda",
+          "Larga maceración y crianza en grandes toneles"
+        ],
+        "prompt": "Consolidación: ¿cuál de estas afirmaciones corresponde a la maceración larga y la crianza en grandes toneles?",
+        "remediation_signal": "Revisa la cadena causal de la maceración larga y la crianza en grandes toneles"
+      }
+    },
+    "396": {
+      "_provenance": {
+        "causal_chain": {
+          "correct_option_hits": [
+            "Clima oceánico"
+          ],
+          "derived_from": "manual_review_v1",
+          "learner_caveat": "La influencia continental aumenta hacia el este y el Loira no tiene un clima uniforme.",
+          "match_score": 0,
+          "matched_keywords": [],
+          "node_id": "HC_MARITIME_MODERATION",
+          "promotion_method": "manual_review_v1",
+          "review_reason": "La influencia oceánica modera temperaturas y explica el marco climático del Loira.",
+          "stem_hits": []
+        },
+        "feedback_by_mode": {
+          "derived_from": "template_v1 + HC_MARITIME_MODERATION"
+        }
+      },
+      "causal_chain": {
+        "causa": "Un clima marítimo u oceánico se da en regiones próximas al mar o al océano, cuya gran masa térmica se calienta y se enfría lentamente a lo largo del año.",
+        "efecto": "Los vinos de clima marítimo tienden a una maduración moderada y uniforme, con acidez conservada y elegancia; la temporada más larga y suave favorece estilos equilibrados, siendo la lluvia de la añada un riesgo clave.",
+        "mecanismo": "El agua cercana modera los extremos de temperatura: mantiene veranos más frescos e inviernos más suaves que los sitios de interior a la misma latitud, reduce el riesgo de heladas y de calor excesivo y alarga la temporada, aunque puede traer lluvia y humedad."
+      },
+      "feedback_by_mode": {
+        "mentor": "La respuesta correcta es C: «Clima oceánico». La clave está en la influencia marítima u oceánica: El agua cercana modera los extremos de temperatura: mantiene veranos más frescos e inviernos más suaves que los sitios de interior a la misma latitud, reduce el riesgo de heladas y de calor excesivo y alarga la temporada, aunque puede traer lluvia y humedad. Por eso, los vinos de clima marítimo tienden a una maduración moderada y uniforme, con acidez conservada y elegancia; la temporada más larga y suave favorece estilos equilibrados, siendo la lluvia de la añada un riesgo clave. Matiz: La influencia continental aumenta hacia el este y el Loira no tiene un clima uniforme.",
+        "reviewer": "Exigencia de repaso (RA2): debes poder justificar por qué «Clima oceánico» es correcta y por qué las otras tres opciones no lo son, citando el mecanismo de la influencia marítima u oceánica. Si no puedes reconstruir la cadena completa sin ver las opciones, repasa este concepto en tu material WSET L3. Matiz: La influencia continental aumenta hacia el este y el Loira no tiene un clima uniforme.",
+        "trainer": "Concepto técnico (RA2): Fija el mecanismo de la influencia marítima u oceánica: Un clima marítimo u oceánico se da en regiones próximas al mar o al océano, cuya gran masa térmica se calienta y se enfría lentamente a lo largo del año. → El agua cercana modera los extremos de temperatura: mantiene veranos más frescos e inviernos más suaves que los sitios de interior a la misma latitud, reduce el riesgo de heladas y de calor excesivo y alarga la temporada, aunque puede traer lluvia y humedad. En el examen, identifica este patrón causa→mecanismo→efecto antes de mirar las opciones. Matiz: La influencia continental aumenta hacia el este y el Loira no tiene un clima uniforme."
+      },
+      "item_id": "wset3_396"
     },
     "4": {
       "_provenance": {
@@ -3981,6 +4701,53 @@
         "trainer": "Concepto técnico (RA1): Fija el mecanismo del sedimento de los tintos añejos y su servicio cuidadoso: Durante una larga crianza en botella, los taninos y pigmentos polimerizados pueden precipitar como sedimento en un tinto estructurado. → Colocar la botella en reposo y verter o decantar lentamente permite retener el depósito en la botella en lugar de dispersarlo por el vino. En el examen, identifica este patrón causa→mecanismo→efecto antes de mirar las opciones."
       },
       "item_id": "wset3_41"
+    },
+    "413": {
+      "_provenance": {
+        "causal_chain": {
+          "correct_option_hits": [
+            "Crianza prolongada en roble"
+          ],
+          "derived_from": "manual_review_v1",
+          "learner_caveat": "Reserva es una categoría regulada; el tiempo no garantiza por sí solo calidad ni complejidad.",
+          "match_score": 0,
+          "matched_keywords": [],
+          "node_id": "HC_OAK_AGEING_COMPLEXITY",
+          "promotion_method": "manual_review_v1",
+          "review_reason": "La crianza prolongada en roble explica integración, oxigenación y aromas secundarios o terciarios.",
+          "stem_hits": []
+        },
+        "feedback_by_mode": {
+          "derived_from": "template_v1 + HC_OAK_AGEING_COMPLEXITY"
+        },
+        "micro_drill": {
+          "derived_from": "node_anchored_v1 (HC_OAK_AGEING_COMPLEXITY)",
+          "distractor_source": "correct options of batch items matched to other nodes"
+        }
+      },
+      "causal_chain": {
+        "causa": "El vino criado en barrica de roble recibe pequeñas cantidades continuas de oxígeno a través de los poros de la madera y absorbe compuestos de la propia madera, como vainillina y lactonas.",
+        "efecto": "Los vinos criados en roble nuevo suelen mostrar taninos más suaves, mayor complejidad y aromas secundarios (vainilla, tostado, cedro, especias) sobre la fruta primaria.",
+        "mecanismo": "La microoxigenación lenta suaviza los taninos por polimerización y redondea la estructura; a la vez, los compuestos de la madera aportan vainilla, especias, tostado y humo."
+      },
+      "feedback_by_mode": {
+        "mentor": "La respuesta correcta es C: «Crianza prolongada en roble». La clave está en la crianza en barrica de roble: La microoxigenación lenta suaviza los taninos por polimerización y redondea la estructura; a la vez, los compuestos de la madera aportan vainilla, especias, tostado y humo. Por eso, los vinos criados en roble nuevo suelen mostrar taninos más suaves, mayor complejidad y aromas secundarios (vainilla, tostado, cedro, especias) sobre la fruta primaria. Matiz: Reserva es una categoría regulada; el tiempo no garantiza por sí solo calidad ni complejidad.",
+        "reviewer": "Exigencia de repaso (RA2): debes poder justificar por qué «Crianza prolongada en roble» es correcta y por qué las otras tres opciones no lo son, citando el mecanismo de la crianza en barrica de roble. Si no puedes reconstruir la cadena completa sin ver las opciones, repasa este concepto en tu material WSET L3. Matiz: Reserva es una categoría regulada; el tiempo no garantiza por sí solo calidad ni complejidad.",
+        "trainer": "Concepto técnico (RA2): Fija el mecanismo de la crianza en barrica de roble: El vino criado en barrica de roble recibe pequeñas cantidades continuas de oxígeno a través de los poros de la madera y absorbe compuestos de la propia madera, como vainillina y lactonas. → La microoxigenación lenta suaviza los taninos por polimerización y redondea la estructura; a la vez, los compuestos de la madera aportan vainilla, especias, tostado y humo. En el examen, identifica este patrón causa→mecanismo→efecto antes de mirar las opciones. Matiz: Reserva es una categoría regulada; el tiempo no garantiza por sí solo calidad ni complejidad."
+      },
+      "item_id": "wset3_413",
+      "micro_drill": {
+        "correct_index": 0,
+        "explanation": "«Crianza prolongada en roble» corresponde a la crianza en barrica de roble. Las demás afirmaciones son correctas, pero describen otros mecanismos.",
+        "options": [
+          "Crianza prolongada en roble",
+          "Protege al vino del oxígeno y desarrolla sabores únicos",
+          "Adición de aguardiente vínico",
+          "Estructura potente y necesidad de guarda"
+        ],
+        "prompt": "Consolidación: ¿cuál de estas afirmaciones corresponde a la crianza en barrica de roble?",
+        "remediation_signal": "Revisa la cadena causal de la crianza en barrica de roble"
+      }
     },
     "417": {
       "_provenance": {
@@ -5967,6 +6734,37 @@
       },
       "item_id": "wset3_489"
     },
+    "49": {
+      "_provenance": {
+        "causal_chain": {
+          "correct_option_hits": [
+            "10–13 °C"
+          ],
+          "derived_from": "manual_review_v1",
+          "learner_caveat": "El intervalo exacto depende del cuerpo, la complejidad y la temperatura ambiente.",
+          "match_score": 0,
+          "matched_keywords": [],
+          "node_id": "HC_OAKED_WHITE_SERVICE_TEMPERATURE",
+          "promotion_method": "manual_review_v1",
+          "review_reason": "Una temperatura moderadamente fresca equilibra frescura, textura y aromas de roble.",
+          "stem_hits": []
+        },
+        "feedback_by_mode": {
+          "derived_from": "template_v1 + HC_OAKED_WHITE_SERVICE_TEMPERATURE"
+        }
+      },
+      "causal_chain": {
+        "causa": "Un blanco seco tiene cuerpo, aromas de roble y complejidad.",
+        "efecto": "Un intervalo cercano a 10-13 °C puede equilibrar frescura y expresión en muchos blancos con cuerpo y roble.",
+        "mecanismo": "Servirlo moderadamente fresco conserva la frescura y permite que se expresen más aromas y textura que a una temperatura excesivamente baja."
+      },
+      "feedback_by_mode": {
+        "mentor": "La respuesta correcta es C: «10–13 °C». La clave está en la temperatura de servicio de un blanco con crianza en roble: Servirlo moderadamente fresco conserva la frescura y permite que se expresen más aromas y textura que a una temperatura excesivamente baja. Por eso, un intervalo cercano a 10-13 °C puede equilibrar frescura y expresión en muchos blancos con cuerpo y roble. Matiz: El intervalo exacto depende del cuerpo, la complejidad y la temperatura ambiente.",
+        "reviewer": "Exigencia de repaso (RA1): debes poder justificar por qué «10–13 °C» es correcta y por qué las otras tres opciones no lo son, citando el mecanismo de la temperatura de servicio de un blanco con crianza en roble. Si no puedes reconstruir la cadena completa sin ver las opciones, repasa este concepto en tu material WSET L3. Matiz: El intervalo exacto depende del cuerpo, la complejidad y la temperatura ambiente.",
+        "trainer": "Concepto técnico (RA1): Fija el mecanismo de la temperatura de servicio de un blanco con crianza en roble: Un blanco seco tiene cuerpo, aromas de roble y complejidad. → Servirlo moderadamente fresco conserva la frescura y permite que se expresen más aromas y textura que a una temperatura excesivamente baja. En el examen, identifica este patrón causa→mecanismo→efecto antes de mirar las opciones. Matiz: El intervalo exacto depende del cuerpo, la complejidad y la temperatura ambiente."
+      },
+      "item_id": "wset3_49"
+    },
     "490": {
       "_provenance": {
         "causal_chain": {
@@ -7611,6 +8409,37 @@
         "remediation_signal": "Revisa la cadena causal del clima continental"
       }
     },
+    "67": {
+      "_provenance": {
+        "causal_chain": {
+          "correct_option_hits": [
+            "6–8 °C"
+          ],
+          "derived_from": "manual_review_v1",
+          "learner_caveat": "Los espumosos complejos pueden expresarse mejor algo menos fríos que los estilos sencillos.",
+          "match_score": 0,
+          "matched_keywords": [],
+          "node_id": "HC_SPARKLING_SERVICE_TEMPERATURE",
+          "promotion_method": "manual_review_v1",
+          "review_reason": "El servicio frío conserva CO2, controla la espuma y mantiene la frescura.",
+          "stem_hits": []
+        },
+        "feedback_by_mode": {
+          "derived_from": "template_v1 + HC_SPARKLING_SERVICE_TEMPERATURE"
+        }
+      },
+      "causal_chain": {
+        "causa": "El espumoso contiene dióxido de carbono disuelto y se prepara para el servicio.",
+        "efecto": "Los espumosos secos suelen servirse bien fríos, ajustando la temperatura según su complejidad y tiempo de crianza.",
+        "mecanismo": "El frío retiene mejor el gas, reduce la formación brusca de espuma y conserva frescura; un frío extremo puede apagar los aromas."
+      },
+      "feedback_by_mode": {
+        "mentor": "La respuesta correcta es B: «6–8 °C». La clave está en la temperatura fresca de servicio de un espumoso: El frío retiene mejor el gas, reduce la formación brusca de espuma y conserva frescura; un frío extremo puede apagar los aromas. Por eso, los espumosos secos suelen servirse bien fríos, ajustando la temperatura según su complejidad y tiempo de crianza. Matiz: Los espumosos complejos pueden expresarse mejor algo menos fríos que los estilos sencillos.",
+        "reviewer": "Exigencia de repaso (RA3): debes poder justificar por qué «6–8 °C» es correcta y por qué las otras tres opciones no lo son, citando el mecanismo de la temperatura fresca de servicio de un espumoso. Si no puedes reconstruir la cadena completa sin ver las opciones, repasa este concepto en tu material WSET L3. Matiz: Los espumosos complejos pueden expresarse mejor algo menos fríos que los estilos sencillos.",
+        "trainer": "Concepto técnico (RA3): Fija el mecanismo de la temperatura fresca de servicio de un espumoso: El espumoso contiene dióxido de carbono disuelto y se prepara para el servicio. → El frío retiene mejor el gas, reduce la formación brusca de espuma y conserva frescura; un frío extremo puede apagar los aromas. En el examen, identifica este patrón causa→mecanismo→efecto antes de mirar las opciones. Matiz: Los espumosos complejos pueden expresarse mejor algo menos fríos que los estilos sencillos."
+      },
+      "item_id": "wset3_67"
+    },
     "671": {
       "_provenance": {
         "causal_chain": {
@@ -8605,6 +9434,37 @@
       },
       "item_id": "wset3_70"
     },
+    "701": {
+      "_provenance": {
+        "causal_chain": {
+          "correct_option_hits": [
+            "13 °C"
+          ],
+          "derived_from": "manual_review_v1",
+          "learner_caveat": "La cifra es orientativa y puede ajustarse al estilo, la copa y la temperatura ambiente.",
+          "match_score": 0,
+          "matched_keywords": [],
+          "node_id": "HC_AMONTILLADO_SERVICE_TEMPERATURE",
+          "promotion_method": "manual_review_v1",
+          "review_reason": "El enfriamiento moderado equilibra alcohol y expresión aromática en Amontillado.",
+          "stem_hits": []
+        },
+        "feedback_by_mode": {
+          "derived_from": "template_v1 + HC_AMONTILLADO_SERVICE_TEMPERATURE"
+        }
+      },
+      "causal_chain": {
+        "causa": "Un Amontillado seco combina desarrollo biológico y oxidativo.",
+        "efecto": "Una temperatura cercana a 13 °C puede equilibrar frescura, alcohol y expresión aromática.",
+        "mecanismo": "Un enfriamiento moderado conserva frescura y controla el calor alcohólico sin ocultar sus aromas de frutos secos y carácter sabroso."
+      },
+      "feedback_by_mode": {
+        "mentor": "La respuesta correcta es C: «13 °C». La clave está en la temperatura de servicio de un Amontillado: Un enfriamiento moderado conserva frescura y controla el calor alcohólico sin ocultar sus aromas de frutos secos y carácter sabroso. Por eso, una temperatura cercana a 13 °C puede equilibrar frescura, alcohol y expresión aromática. Matiz: La cifra es orientativa y puede ajustarse al estilo, la copa y la temperatura ambiente.",
+        "reviewer": "Exigencia de repaso (RA1): debes poder justificar por qué «13 °C» es correcta y por qué las otras tres opciones no lo son, citando el mecanismo de la temperatura de servicio de un Amontillado. Si no puedes reconstruir la cadena completa sin ver las opciones, repasa este concepto en tu material WSET L3. Matiz: La cifra es orientativa y puede ajustarse al estilo, la copa y la temperatura ambiente.",
+        "trainer": "Concepto técnico (RA1): Fija el mecanismo de la temperatura de servicio de un Amontillado: Un Amontillado seco combina desarrollo biológico y oxidativo. → Un enfriamiento moderado conserva frescura y controla el calor alcohólico sin ocultar sus aromas de frutos secos y carácter sabroso. En el examen, identifica este patrón causa→mecanismo→efecto antes de mirar las opciones. Matiz: La cifra es orientativa y puede ajustarse al estilo, la copa y la temperatura ambiente."
+      },
+      "item_id": "wset3_701"
+    },
     "702": {
       "_provenance": {
         "causal_chain": {
@@ -9208,6 +10068,37 @@
         "remediation_signal": "Revisa la cadena causal de una temperatura de servicio demasiado baja en un tinto estructurado"
       }
     },
+    "715": {
+      "_provenance": {
+        "causal_chain": {
+          "correct_option_hits": [
+            "14–16 °C"
+          ],
+          "derived_from": "manual_review_v1",
+          "learner_caveat": "El intervalo depende de alcohol, tanino, cuerpo, crianza y condiciones de servicio.",
+          "match_score": 0,
+          "matched_keywords": [],
+          "node_id": "HC_LOW_SERVICE_TEMPERATURE_TANNIN_AROMA",
+          "promotion_method": "manual_review_v1",
+          "review_reason": "Un tinto de cuerpo medio se sirve fresco, pero no tan frío como para apagar aromas o endurecer taninos.",
+          "stem_hits": []
+        },
+        "feedback_by_mode": {
+          "derived_from": "template_v1 + HC_LOW_SERVICE_TEMPERATURE_TANNIN_AROMA"
+        }
+      },
+      "causal_chain": {
+        "causa": "Un vino tinto estructurado se sirve a una temperatura excesivamente baja.",
+        "efecto": "Los aromas se expresan menos y los taninos y la dureza parecen más marcados.",
+        "mecanismo": "El frío reduce la volatilidad de los compuestos aromáticos y aumenta el protagonismo de las sensaciones táctiles firmes."
+      },
+      "feedback_by_mode": {
+        "mentor": "La respuesta correcta es C: «14–16 °C». La clave está en una temperatura de servicio demasiado baja en un tinto estructurado: El frío reduce la volatilidad de los compuestos aromáticos y aumenta el protagonismo de las sensaciones táctiles firmes. Por eso, los aromas se expresan menos y los taninos y la dureza parecen más marcados. Matiz: El intervalo depende de alcohol, tanino, cuerpo, crianza y condiciones de servicio.",
+        "reviewer": "Exigencia de repaso (RA1): debes poder justificar por qué «14–16 °C» es correcta y por qué las otras tres opciones no lo son, citando el mecanismo de una temperatura de servicio demasiado baja en un tinto estructurado. Si no puedes reconstruir la cadena completa sin ver las opciones, repasa este concepto en tu material WSET L3. Matiz: El intervalo depende de alcohol, tanino, cuerpo, crianza y condiciones de servicio.",
+        "trainer": "Concepto técnico (RA1): Fija el mecanismo de una temperatura de servicio demasiado baja en un tinto estructurado: Un vino tinto estructurado se sirve a una temperatura excesivamente baja. → El frío reduce la volatilidad de los compuestos aromáticos y aumenta el protagonismo de las sensaciones táctiles firmes. En el examen, identifica este patrón causa→mecanismo→efecto antes de mirar las opciones. Matiz: El intervalo depende de alcohol, tanino, cuerpo, crianza y condiciones de servicio."
+      },
+      "item_id": "wset3_715"
+    },
     "717": {
       "_provenance": {
         "causal_chain": {
@@ -9400,6 +10291,53 @@
         "remediation_signal": "Revisa la cadena causal del sedimento de los tintos añejos y su servicio cuidadoso"
       }
     },
+    "723": {
+      "_provenance": {
+        "causal_chain": {
+          "correct_option_hits": [
+            "Notas a nuez, manzana cocida o caramelo"
+          ],
+          "derived_from": "manual_review_v1",
+          "learner_caveat": "Esos aromas pueden ser buscados en estilos oxidativos; son defecto sólo cuando contradicen el estilo previsto.",
+          "match_score": 0,
+          "matched_keywords": [],
+          "node_id": "HC_EXCESSIVE_WHITE_OXIDATION",
+          "promotion_method": "manual_review_v1",
+          "review_reason": "La oxidación transforma fruta fresca y puede generar nuez, manzana cocida y caramelo.",
+          "stem_hits": []
+        },
+        "feedback_by_mode": {
+          "derived_from": "template_v1 + HC_EXCESSIVE_WHITE_OXIDATION"
+        },
+        "micro_drill": {
+          "derived_from": "node_anchored_v1 (HC_EXCESSIVE_WHITE_OXIDATION)",
+          "distractor_source": "correct options of batch items matched to other nodes"
+        }
+      },
+      "causal_chain": {
+        "causa": "El vino blanco recibe demasiado oxígeno durante la elaboración, la guarda o el servicio.",
+        "efecto": "El vino adquiere color dorado o marrón, notas de fruta magullada o frutos secos y pierde frescura.",
+        "mecanismo": "Las reacciones oxidativas consumen aromas frescos y oscurecen los pigmentos fenólicos."
+      },
+      "feedback_by_mode": {
+        "mentor": "La respuesta correcta es C: «Notas a nuez, manzana cocida o caramelo». La clave está en la oxidación excesiva de un vino blanco: Las reacciones oxidativas consumen aromas frescos y oscurecen los pigmentos fenólicos. Por eso, el vino adquiere color dorado o marrón, notas de fruta magullada o frutos secos y pierde frescura. Matiz: Esos aromas pueden ser buscados en estilos oxidativos; son defecto sólo cuando contradicen el estilo previsto.",
+        "reviewer": "Exigencia de repaso (RA1): debes poder justificar por qué «Notas a nuez, manzana cocida o caramelo» es correcta y por qué las otras tres opciones no lo son, citando el mecanismo de la oxidación excesiva de un vino blanco. Si no puedes reconstruir la cadena completa sin ver las opciones, repasa este concepto en tu material WSET L3. Matiz: Esos aromas pueden ser buscados en estilos oxidativos; son defecto sólo cuando contradicen el estilo previsto.",
+        "trainer": "Concepto técnico (RA1): Fija el mecanismo de la oxidación excesiva de un vino blanco: El vino blanco recibe demasiado oxígeno durante la elaboración, la guarda o el servicio. → Las reacciones oxidativas consumen aromas frescos y oscurecen los pigmentos fenólicos. En el examen, identifica este patrón causa→mecanismo→efecto antes de mirar las opciones. Matiz: Esos aromas pueden ser buscados en estilos oxidativos; son defecto sólo cuando contradicen el estilo previsto."
+      },
+      "item_id": "wset3_723",
+      "micro_drill": {
+        "correct_index": 0,
+        "explanation": "«Notas a nuez, manzana cocida o caramelo» corresponde a la oxidación excesiva de un vino blanco. Las demás afirmaciones son correctas, pero describen otros mecanismos.",
+        "options": [
+          "Notas a nuez, manzana cocida o caramelo",
+          "Protege al vino del oxígeno y desarrolla sabores únicos",
+          "Adición de aguardiente vínico",
+          "Estructura potente y necesidad de guarda"
+        ],
+        "prompt": "Consolidación: ¿cuál de estas afirmaciones corresponde a la oxidación excesiva de un vino blanco?",
+        "remediation_signal": "Revisa la cadena causal de la oxidación excesiva de un vino blanco"
+      }
+    },
     "724": {
       "_provenance": {
         "causal_chain": {
@@ -9495,6 +10433,37 @@
         "prompt": "Consolidación: ¿cuál de estas afirmaciones corresponde a la acidez volátil elevada?",
         "remediation_signal": "Revisa la cadena causal de la acidez volátil elevada"
       }
+    },
+    "726": {
+      "_provenance": {
+        "causal_chain": {
+          "correct_option_hits": [
+            "4–6 °C"
+          ],
+          "derived_from": "manual_review_v1",
+          "learner_caveat": "Los espumosos de larga crianza pueden servirse algo más cálidos para expresar complejidad.",
+          "match_score": 0,
+          "matched_keywords": [],
+          "node_id": "HC_SPARKLING_SERVICE_TEMPERATURE",
+          "promotion_method": "manual_review_v1",
+          "review_reason": "El servicio bien frío conserva presión y frescura en un espumoso seco.",
+          "stem_hits": []
+        },
+        "feedback_by_mode": {
+          "derived_from": "template_v1 + HC_SPARKLING_SERVICE_TEMPERATURE"
+        }
+      },
+      "causal_chain": {
+        "causa": "El espumoso contiene dióxido de carbono disuelto y se prepara para el servicio.",
+        "efecto": "Los espumosos secos suelen servirse bien fríos, ajustando la temperatura según su complejidad y tiempo de crianza.",
+        "mecanismo": "El frío retiene mejor el gas, reduce la formación brusca de espuma y conserva frescura; un frío extremo puede apagar los aromas."
+      },
+      "feedback_by_mode": {
+        "mentor": "La respuesta correcta es A: «4–6 °C». La clave está en la temperatura fresca de servicio de un espumoso: El frío retiene mejor el gas, reduce la formación brusca de espuma y conserva frescura; un frío extremo puede apagar los aromas. Por eso, los espumosos secos suelen servirse bien fríos, ajustando la temperatura según su complejidad y tiempo de crianza. Matiz: Los espumosos de larga crianza pueden servirse algo más cálidos para expresar complejidad.",
+        "reviewer": "Exigencia de repaso (RA1): debes poder justificar por qué «4–6 °C» es correcta y por qué las otras tres opciones no lo son, citando el mecanismo de la temperatura fresca de servicio de un espumoso. Si no puedes reconstruir la cadena completa sin ver las opciones, repasa este concepto en tu material WSET L3. Matiz: Los espumosos de larga crianza pueden servirse algo más cálidos para expresar complejidad.",
+        "trainer": "Concepto técnico (RA1): Fija el mecanismo de la temperatura fresca de servicio de un espumoso: El espumoso contiene dióxido de carbono disuelto y se prepara para el servicio. → El frío retiene mejor el gas, reduce la formación brusca de espuma y conserva frescura; un frío extremo puede apagar los aromas. En el examen, identifica este patrón causa→mecanismo→efecto antes de mirar las opciones. Matiz: Los espumosos de larga crianza pueden servirse algo más cálidos para expresar complejidad."
+      },
+      "item_id": "wset3_726"
     },
     "727": {
       "_provenance": {
@@ -9802,6 +10771,53 @@
         "remediation_signal": "Revisa la cadena causal del equilibrio entre un plato ácido y un vino de alta acidez"
       }
     },
+    "738": {
+      "_provenance": {
+        "causal_chain": {
+          "correct_option_hits": [
+            "Alimentos muy dulces"
+          ],
+          "derived_from": "manual_review_v1",
+          "learner_caveat": "El efecto depende de la diferencia real de dulzor y del equilibrio de acidez del espumoso.",
+          "match_score": 0,
+          "matched_keywords": [],
+          "node_id": "HC_FOOD_SWEETNESS_WINE_CONTRAST",
+          "promotion_method": "manual_review_v1",
+          "review_reason": "Un alimento más dulce reduce por contraste el dulzor y la fruta percibidos del vino.",
+          "stem_hits": []
+        },
+        "feedback_by_mode": {
+          "derived_from": "template_v1 + HC_FOOD_SWEETNESS_WINE_CONTRAST"
+        },
+        "micro_drill": {
+          "derived_from": "node_anchored_v1 (HC_FOOD_SWEETNESS_WINE_CONTRAST)",
+          "distractor_source": "correct options of batch items matched to other nodes"
+        }
+      },
+      "causal_chain": {
+        "causa": "El alimento es más dulce que el vino con el que se sirve.",
+        "efecto": "El vino puede parecer más seco, ácido, amargo y menos frutal, especialmente cuando el propio vino es seco.",
+        "mecanismo": "El dulzor de la comida crea un contraste que reduce el dulzor y la fruta percibidos del vino y deja más expuestos sus componentes ácidos y amargos."
+      },
+      "feedback_by_mode": {
+        "mentor": "La respuesta correcta es C: «Alimentos muy dulces». La clave está en el contraste entre un alimento dulce y el vino: El dulzor de la comida crea un contraste que reduce el dulzor y la fruta percibidos del vino y deja más expuestos sus componentes ácidos y amargos. Por eso, el vino puede parecer más seco, ácido, amargo y menos frutal, especialmente cuando el propio vino es seco. Matiz: El efecto depende de la diferencia real de dulzor y del equilibrio de acidez del espumoso.",
+        "reviewer": "Exigencia de repaso (RA1): debes poder justificar por qué «Alimentos muy dulces» es correcta y por qué las otras tres opciones no lo son, citando el mecanismo del contraste entre un alimento dulce y el vino. Si no puedes reconstruir la cadena completa sin ver las opciones, repasa este concepto en tu material WSET L3. Matiz: El efecto depende de la diferencia real de dulzor y del equilibrio de acidez del espumoso.",
+        "trainer": "Concepto técnico (RA1): Fija el mecanismo del contraste entre un alimento dulce y el vino: El alimento es más dulce que el vino con el que se sirve. → El dulzor de la comida crea un contraste que reduce el dulzor y la fruta percibidos del vino y deja más expuestos sus componentes ácidos y amargos. En el examen, identifica este patrón causa→mecanismo→efecto antes de mirar las opciones. Matiz: El efecto depende de la diferencia real de dulzor y del equilibrio de acidez del espumoso."
+      },
+      "item_id": "wset3_738",
+      "micro_drill": {
+        "correct_index": 1,
+        "explanation": "«Alimentos muy dulces» corresponde al contraste entre un alimento dulce y el vino. Las demás afirmaciones son correctas, pero describen otros mecanismos.",
+        "options": [
+          "Protege al vino del oxígeno y desarrolla sabores únicos",
+          "Alimentos muy dulces",
+          "Adición de aguardiente vínico",
+          "Estructura potente y necesidad de guarda"
+        ],
+        "prompt": "Consolidación: ¿cuál de estas afirmaciones corresponde al contraste entre un alimento dulce y el vino?",
+        "remediation_signal": "Revisa la cadena causal del contraste entre un alimento dulce y el vino"
+      }
+    },
     "74": {
       "_provenance": {
         "causal_chain": {
@@ -9896,6 +10912,37 @@
         "prompt": "Consolidación: ¿cuál de estas afirmaciones corresponde al manejo del dosel, el vigor y la exposición de los racimos?",
         "remediation_signal": "Revisa la cadena causal del manejo del dosel, el vigor y la exposición de los racimos"
       }
+    },
+    "76": {
+      "_provenance": {
+        "causal_chain": {
+          "correct_option_hits": [
+            "14–16 °C"
+          ],
+          "derived_from": "manual_review_v1",
+          "learner_caveat": "La temperatura recomendada es orientativa y debe ajustarse al cuerpo, tanino y ambiente.",
+          "match_score": 0,
+          "matched_keywords": [],
+          "node_id": "HC_LOW_SERVICE_TEMPERATURE_TANNIN_AROMA",
+          "promotion_method": "manual_review_v1",
+          "review_reason": "Un tinto ligero se sirve fresco para conservar fruta sin apagar aromas ni endurecer demasiado la estructura.",
+          "stem_hits": []
+        },
+        "feedback_by_mode": {
+          "derived_from": "template_v1 + HC_LOW_SERVICE_TEMPERATURE_TANNIN_AROMA"
+        }
+      },
+      "causal_chain": {
+        "causa": "Un vino tinto estructurado se sirve a una temperatura excesivamente baja.",
+        "efecto": "Los aromas se expresan menos y los taninos y la dureza parecen más marcados.",
+        "mecanismo": "El frío reduce la volatilidad de los compuestos aromáticos y aumenta el protagonismo de las sensaciones táctiles firmes."
+      },
+      "feedback_by_mode": {
+        "mentor": "La respuesta correcta es C: «14–16 °C». La clave está en una temperatura de servicio demasiado baja en un tinto estructurado: El frío reduce la volatilidad de los compuestos aromáticos y aumenta el protagonismo de las sensaciones táctiles firmes. Por eso, los aromas se expresan menos y los taninos y la dureza parecen más marcados. Matiz: La temperatura recomendada es orientativa y debe ajustarse al cuerpo, tanino y ambiente.",
+        "reviewer": "Exigencia de repaso (RA1): debes poder justificar por qué «14–16 °C» es correcta y por qué las otras tres opciones no lo son, citando el mecanismo de una temperatura de servicio demasiado baja en un tinto estructurado. Si no puedes reconstruir la cadena completa sin ver las opciones, repasa este concepto en tu material WSET L3. Matiz: La temperatura recomendada es orientativa y debe ajustarse al cuerpo, tanino y ambiente.",
+        "trainer": "Concepto técnico (RA1): Fija el mecanismo de una temperatura de servicio demasiado baja en un tinto estructurado: Un vino tinto estructurado se sirve a una temperatura excesivamente baja. → El frío reduce la volatilidad de los compuestos aromáticos y aumenta el protagonismo de las sensaciones táctiles firmes. En el examen, identifica este patrón causa→mecanismo→efecto antes de mirar las opciones. Matiz: La temperatura recomendada es orientativa y debe ajustarse al cuerpo, tanino y ambiente."
+      },
+      "item_id": "wset3_76"
     },
     "78": {
       "_provenance": {
@@ -10619,7 +11666,7 @@
       }
     }
   },
-  "phase": "P.4-batch4-manual-review",
+  "phase": "P.5-batch5-manual-review",
   "rejection_stats": {
     "below_threshold": 95,
     "identification_stem": 112,

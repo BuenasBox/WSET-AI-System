@@ -726,6 +726,18 @@ NODE_ES.update({
     },
 })
 
+NODE_ES.update({
+    "HC_OAKED_WHITE_SERVICE_TEMPERATURE": {"subject": "la temperatura de servicio de un blanco con crianza en roble", "causa": "Un blanco seco tiene cuerpo, aromas de roble y complejidad.", "mecanismo": "Servirlo moderadamente fresco conserva la frescura y permite que se expresen más aromas y textura que a una temperatura excesivamente baja.", "efecto": "Un intervalo cercano a 10-13 °C puede equilibrar frescura y expresión en muchos blancos con cuerpo y roble."},
+    "HC_SPARKLING_SERVICE_TEMPERATURE": {"subject": "la temperatura fresca de servicio de un espumoso", "causa": "El espumoso contiene dióxido de carbono disuelto y se prepara para el servicio.", "mecanismo": "El frío retiene mejor el gas, reduce la formación brusca de espuma y conserva frescura; un frío extremo puede apagar los aromas.", "efecto": "Los espumosos secos suelen servirse bien fríos, ajustando la temperatura según su complejidad y tiempo de crianza."},
+    "HC_LIGHT_WHITE_SERVICE_TEMPERATURE": {"subject": "la temperatura de servicio de un blanco seco y ligero", "causa": "Un blanco ligero depende de su frescura y de aromas primarios delicados.", "mecanismo": "El servicio frío realza la acidez y limita la sensación alcohólica, aunque una temperatura demasiado baja reduce la expresión aromática.", "efecto": "Un intervalo cercano a 6-8 °C suele ser apropiado para blancos secos sencillos y ligeros."},
+    "HC_AMONTILLADO_SERVICE_TEMPERATURE": {"subject": "la temperatura de servicio de un Amontillado", "causa": "Un Amontillado seco combina desarrollo biológico y oxidativo.", "mecanismo": "Un enfriamiento moderado conserva frescura y controla el calor alcohólico sin ocultar sus aromas de frutos secos y carácter sabroso.", "efecto": "Una temperatura cercana a 13 °C puede equilibrar frescura, alcohol y expresión aromática."},
+    "HC_SAIGNEE_ROSE_EXTRACTION": {"subject": "el sangrado para elaborar un rosado", "causa": "Se separa jugo de una vinificación tinta después de un periodo de contacto con los hollejos.", "mecanismo": "Antes del sangrado, el contacto extrae pigmento, sabor y parte de los compuestos fenólicos de las pieles tintas.", "efecto": "Frente a un rosado pálido de mezcla, puede resultar un vino de color más profundo, fruta más madura y mayor estructura fenólica."},
+    "HC_MOSEL_COOL_SLOPE_ACIDITY": {"subject": "el clima fresco y las pendientes del Mosel", "causa": "Los viñedos del Mosel combinan clima fresco y septentrional con pendientes empinadas y bien expuestas.", "mecanismo": "El frío ralentiza la respiración y conserva los ácidos, mientras la exposición de la ladera mejora la captación solar y ayuda a completar la maduración.", "efecto": "El Riesling puede mantener acidez alta y frescura a la vez que alcanza madurez aromática en los mejores sitios."},
+    "HC_WARM_CLIMATE_RIPE_FRUIT_ALCOHOL": {"subject": "el clima cálido, la fruta madura y el alcohol potencial", "causa": "Uvas tintas maduran con calor sostenido y suficiente insolación.", "mecanismo": "La acumulación rápida de azúcar eleva el alcohol potencial y la maduración avanzada desplaza el perfil hacia fruta negra madura o desecada.", "efecto": "El vino puede mostrar mayor cuerpo, alcohol y fruta negra madura, siempre que el calor y el estrés hídrico no sean excesivos."},
+    "HC_MOSEL_RESIDUAL_SUGAR_LOW_ALCOHOL": {"subject": "el azúcar residual y el bajo alcohol en estilos del Mosel", "causa": "Un Riesling de clima fresco fermenta hasta un estilo que conserva parte del azúcar de la uva.", "mecanismo": "Al detener la fermentación antes de convertir todo el azúcar, queda dulzor residual y se produce menos alcohol, mientras la acidez alta equilibra el conjunto.", "efecto": "Muchos estilos dulces o semidulces del Mosel combinan azúcar residual perceptible, alcohol bajo y acidez alta."},
+    "HC_LONG_MACERATION_LARGE_CASK": {"subject": "la maceración larga y la crianza en grandes toneles", "causa": "Un tinto estructurado permanece largo tiempo con los hollejos y después madura en un recipiente grande, a menudo usado.", "mecanismo": "La maceración extrae abundantes fenoles, mientras el gran volumen reduce la superficie de madera por litro y limita el sabor intenso de roble nuevo.", "efecto": "El vino conserva estructura firme y puede evolucionar gradualmente sin quedar dominado por aromas de roble nuevo."},
+})
+
 # Explicitly reviewed promotions supplement matcher v2 without changing it.
 # Every entry is deterministic, node-bound, provenance-rich, and caveated.
 MANUAL_REVIEW_PROMOTIONS: dict[str, dict[str, str]] = {
@@ -755,6 +767,34 @@ MANUAL_REVIEW_PROMOTIONS: dict[str, dict[str, str]] = {
     "wset3_740": {"node_id": "HC_CANOPY_VIGOUR_EXPOSURE", "reason": "La gestión del dosel regula luz, ventilación y vigor, afectando directamente la madurez de la fruta.", "caveat": "La exposición óptima depende del clima; demasiada luz y calor pueden quemar o deshidratar los racimos."},
     "wset3_850": {"node_id": "HC_NATURAL_CORK_SLOW_OXYGEN", "reason": "La transmisión limitada de oxígeno explica la evolución gradual asociada a cierres de corcho natural.", "caveat": "La porosidad no garantiza mejora y existe variación entre corchos; demasiado oxígeno acelera la oxidación."},
 }
+
+MANUAL_REVIEW_PROMOTIONS.update({
+    "wset3_28": {"node_id": "HC_BRUT_NATURE_NO_DOSAGE", "reason": "La ausencia de dosificación explica el mínimo azúcar residual de Brut Nature.", "caveat": "La acidez alta procede del vino base y del estilo, no de omitir la dosificación."},
+    "wset3_49": {"node_id": "HC_OAKED_WHITE_SERVICE_TEMPERATURE", "reason": "Una temperatura moderadamente fresca equilibra frescura, textura y aromas de roble.", "caveat": "El intervalo exacto depende del cuerpo, la complejidad y la temperatura ambiente."},
+    "wset3_67": {"node_id": "HC_SPARKLING_SERVICE_TEMPERATURE", "reason": "El servicio frío conserva CO2, controla la espuma y mantiene la frescura.", "caveat": "Los espumosos complejos pueden expresarse mejor algo menos fríos que los estilos sencillos."},
+    "wset3_76": {"node_id": "HC_LOW_SERVICE_TEMPERATURE_TANNIN_AROMA", "reason": "Un tinto ligero se sirve fresco para conservar fruta sin apagar aromas ni endurecer demasiado la estructura.", "caveat": "La temperatura recomendada es orientativa y debe ajustarse al cuerpo, tanino y ambiente."},
+    "wset3_212": {"node_id": "HC_TANK_METHOD_FRUIT_RETENTION", "reason": "El método de tanque y el contacto corto con lías explican fruta fresca y limitada autólisis.", "caveat": "El dulzor y la acidez concretos dependen de la uva, la dosificación y el equilibrio final."},
+    "wset3_227": {"node_id": "HC_SAIGNEE_ROSE_EXTRACTION", "reason": "El contacto previo con hollejos explica mayor color, fruta madura y estructura fenólica.", "caveat": "Saignée no garantiza siempre más tanino; variedad, tiempo y temperatura de contacto modifican el resultado."},
+    "wset3_247": {"node_id": "HC_MOSEL_COOL_SLOPE_ACIDITY", "reason": "El clima fresco conserva acidez y las pendientes bien expuestas ayudan a completar la maduración.", "caveat": "La pendiente ayuda a la madurez; no crea acidez por sí sola."},
+    "wset3_262": {"node_id": "HC_WARM_CLIMATE_RIPE_FRUIT_ALCOHOL", "reason": "El calor explica azúcar, alcohol potencial y fruta negra madura en Merlot.", "caveat": "La suavidad del tanino depende también de madurez fenólica, extracción y crianza."},
+    "wset3_322": {"node_id": "HC_MOSEL_COOL_SLOPE_ACIDITY", "reason": "El clima frío conserva acidez y la exposición de pendiente permite madurez aromática.", "caveat": "Latitud, río, orientación, suelo y añada también influyen en el resultado."},
+    "wset3_323": {"node_id": "HC_WARM_CLIMATE_RIPE_FRUIT_ALCOHOL", "reason": "El clima cálido de Barossa explica fruta negra madura, cuerpo y alcohol potencial.", "caveat": "El roble es una decisión de bodega y no una consecuencia automática del clima."},
+    "wset3_329": {"node_id": "HC_LIGHT_WHITE_SERVICE_TEMPERATURE", "reason": "El frío moderado conserva frescura y delicadeza en un blanco seco ligero.", "caveat": "Una temperatura demasiado baja puede ocultar los aromas primarios."},
+    "wset3_347": {"node_id": "HC_COOL_CLIMATE_STYLE", "reason": "La maduración fresca explica fruta roja y acidez vibrante en Pinot Noir.", "caveat": "El uso de roble es una decisión de productor y varía entre regiones y niveles de calidad."},
+    "wset3_358": {"node_id": "HC_FRENCH_AMERICAN_OAK_STYLE", "reason": "La tendencia aromática del roble americano explica su uso tradicional y sus notas más evidentes.", "caveat": "Tostado, edad, tamaño y uso previo de la barrica pueden cambiar el perfil."},
+    "wset3_367": {"node_id": "HC_FROST_SHOOT_YIELD_DAMAGE", "reason": "La brotación temprana en clima fresco explica la exposición de Champagne a heladas primaverales.", "caveat": "El riesgo varía con topografía, fase fenológica y condiciones de cada añada."},
+    "wset3_386": {"node_id": "HC_MOSEL_RESIDUAL_SUGAR_LOW_ALCOHOL", "reason": "Retener azúcar implica convertir menos azúcar en alcohol y explica el contraste de la respuesta.", "caveat": "No todos los Riesling del Mosel son dulces ni todos los del Pfalz son secos."},
+    "wset3_389": {"node_id": "HC_FRENCH_AMERICAN_OAK_STYLE", "reason": "El uso tradicional de roble americano explica parte del perfil de crianza de Rioja.", "caveat": "La calidad no depende únicamente del origen del roble; fruta, tonelería y tiempo de crianza también cuentan."},
+    "wset3_390": {"node_id": "HC_MARITIME_MODERATION", "reason": "La mayor moderación costera de Sonoma frente a Napa ayuda a explicar estilos más frescos.", "caveat": "Ambas regiones contienen mesoclimas diversos y la comparación no se aplica a todos los vinos."},
+    "wset3_393": {"node_id": "HC_LONG_MACERATION_LARGE_CASK", "reason": "La maceración larga y los grandes toneles explican estructura y crianza con roble menos dominante.", "caveat": "La práctica varía por productor y convive con estilos modernos de maceración y barrica diferentes."},
+    "wset3_396": {"node_id": "HC_MARITIME_MODERATION", "reason": "La influencia oceánica modera temperaturas y explica el marco climático del Loira.", "caveat": "La influencia continental aumenta hacia el este y el Loira no tiene un clima uniforme."},
+    "wset3_413": {"node_id": "HC_OAK_AGEING_COMPLEXITY", "reason": "La crianza prolongada en roble explica integración, oxigenación y aromas secundarios o terciarios.", "caveat": "Reserva es una categoría regulada; el tiempo no garantiza por sí solo calidad ni complejidad."},
+    "wset3_701": {"node_id": "HC_AMONTILLADO_SERVICE_TEMPERATURE", "reason": "El enfriamiento moderado equilibra alcohol y expresión aromática en Amontillado.", "caveat": "La cifra es orientativa y puede ajustarse al estilo, la copa y la temperatura ambiente."},
+    "wset3_715": {"node_id": "HC_LOW_SERVICE_TEMPERATURE_TANNIN_AROMA", "reason": "Un tinto de cuerpo medio se sirve fresco, pero no tan frío como para apagar aromas o endurecer taninos.", "caveat": "El intervalo depende de alcohol, tanino, cuerpo, crianza y condiciones de servicio."},
+    "wset3_723": {"node_id": "HC_EXCESSIVE_WHITE_OXIDATION", "reason": "La oxidación transforma fruta fresca y puede generar nuez, manzana cocida y caramelo.", "caveat": "Esos aromas pueden ser buscados en estilos oxidativos; son defecto sólo cuando contradicen el estilo previsto."},
+    "wset3_726": {"node_id": "HC_SPARKLING_SERVICE_TEMPERATURE", "reason": "El servicio bien frío conserva presión y frescura en un espumoso seco.", "caveat": "Los espumosos de larga crianza pueden servirse algo más cálidos para expresar complejidad."},
+    "wset3_738": {"node_id": "HC_FOOD_SWEETNESS_WINE_CONTRAST", "reason": "Un alimento más dulce reduce por contraste el dulzor y la fruta percibidos del vino.", "caveat": "El efecto depende de la diferencia real de dulzor y del equilibrio de acidez del espumoso."},
+})
 
 
 def _norm(text: str) -> str:
@@ -1050,7 +1090,7 @@ def derive() -> dict:
 
     return {
         "schema_version": "sba_enrichment_v1",
-        "phase": "P.4-batch4-manual-review",
+        "phase": "P.5-batch5-manual-review",
         "derivation": {
             "min_keyword_hits": MIN_KEYWORD_HITS,
             "require_stem_hit": REQUIRE_STEM_HIT,

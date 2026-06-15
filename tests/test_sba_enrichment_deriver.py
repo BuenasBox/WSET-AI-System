@@ -37,13 +37,17 @@ class FalsePositiveRegressionTests(unittest.TestCase):
             self.assertIsNone(match)
             self.assertEqual(reason, "identification_stem")
 
-    def test_loire_oceanic_not_enriched(self):
+    def test_loire_oceanic_not_automatically_enriched(self):
         # wset3_396: "¿Qué factor natural es más importante en los vinos del Valle del Loira?"
-        # v1 bug: substring 'port' in 'importante'.
-        self.assertNotIn("wset3_396", self.enriched_ids)
+        # v1 bug: substring 'port' in 'importante'. Batch 5 permits only an
+        # explicit manual-review promotion with a regional caveat.
         if "wset3_396" in self.items:
             match, _reason = match_item(self.items["wset3_396"], self.nodes)
             self.assertIsNone(match)
+        record = self.payload["items_by_source_question_id"]["396"]
+        provenance = record["_provenance"]["causal_chain"]
+        self.assertEqual(provenance["derived_from"], "manual_review_v1")
+        self.assertIn("continental", provenance["learner_caveat"].lower())
 
     def test_definitional_stems_rejected(self):
         # "¿Qué es un Manzanilla?" / "¿Qué indica un Porto LBV?" — definitional.
