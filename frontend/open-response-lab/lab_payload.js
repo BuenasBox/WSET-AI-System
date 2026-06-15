@@ -1,7 +1,7 @@
 window.OPEN_RESPONSE_LAB_PAYLOAD = {
   "lab_contract": "private_open_response_lab_runtime_mvp",
   "activation_status": "active_private_lab",
-  "pool_size": 138,
+  "pool_size": 148,
   "storage_key": "wset_open_response_lab_private_v1",
   "session_options": {
     "short_practice": 1,
@@ -13,50 +13,50 @@ window.OPEN_RESPONSE_LAB_PAYLOAD = {
     "short_practice": {
       "session_size": 1,
       "item_ids": [
-        "OR_107"
+        "OR_117"
       ],
       "source_question_ids": [
-        "OR_107"
+        "OR_117"
       ]
     },
     "standard_practice": {
       "session_size": 2,
       "item_ids": [
-        "OR_107",
-        "OR_108"
+        "OR_117",
+        "OR_118"
       ],
       "source_question_ids": [
-        "OR_107",
-        "OR_108"
+        "OR_117",
+        "OR_118"
       ]
     },
     "extended_practice": {
       "session_size": 4,
       "item_ids": [
-        "OR_107",
-        "OR_108",
-        "OR_109",
-        "OR_110"
+        "OR_117",
+        "OR_118",
+        "OR_119",
+        "OR_120"
       ],
       "source_question_ids": [
-        "OR_107",
-        "OR_108",
-        "OR_109",
-        "OR_110"
+        "OR_117",
+        "OR_118",
+        "OR_119",
+        "OR_120"
       ]
     },
     "mock_theory_2": {
       "session_size": 4,
       "item_ids": [
-        "OR_113",
-        "OR_114",
-        "OR_115",
+        "OR_117",
+        "OR_118",
+        "OR_119",
         "OR_125"
       ],
       "source_question_ids": [
-        "OR_113",
-        "OR_114",
-        "OR_115",
+        "OR_117",
+        "OR_118",
+        "OR_119",
         "OR_125"
       ]
     }
@@ -5891,6 +5891,468 @@ window.OPEN_RESPONSE_LAB_PAYLOAD = {
         ],
         "source": "open_response_bank_v1"
       }
+    },
+    {
+      "item_id": "OR_139",
+      "source_question_id": "OR_139",
+      "stem": "Explain how the duration of skin contact during fermentation affects the color, tannin extraction, and final style of a dry rosé wine.",
+      "topic": "rosé_skin_contact_production",
+      "RA": "RA2",
+      "command_verb": "explain",
+      "expected_concepts": [
+        "brief skin contact during fermentation",
+        "phenolic extraction from red grape skins",
+        "color intensity from anthocyanin transfer",
+        "tannin balance in rosé vs red wines",
+        "timing of skin separation from must",
+        "production method choice: saignée vs pressing",
+        "final wine style: dry, fresh, or structured depending on contact duration"
+      ],
+      "evaluation_config": {
+        "verb_definition_key": "explain",
+        "requires_causal_chain": true,
+        "structure_rules": {
+          "minimum_components": 2,
+          "response_depth_target": "strong"
+        },
+        "required_signals": [
+          "brief skin contact during fermentation",
+          "phenolic extraction from red grape skins",
+          "color intensity from anthocyanin transfer",
+          "tannin balance in rosé vs red wines",
+          "timing of skin separation from must",
+          "production method choice: saignée vs pressing",
+          "final wine style: dry, fresh, or structured depending on contact duration"
+        ],
+        "forbidden_signals": [
+          "mark",
+          "score",
+          "percentage",
+          "pass_fail",
+          "wset_equivalence",
+          "examiner_judgement",
+          "official_grade"
+        ],
+        "source": "open_response_bank_v1"
+      }
+    },
+    {
+      "item_id": "OR_140",
+      "source_question_id": "OR_140",
+      "stem": "Compare the production choices available for dry rosé wines in Provence, Navarra, and the Rhône Valley, and discuss how each region's climate influences those choices.",
+      "topic": "rosé_regional_production_variation",
+      "RA": "RA2",
+      "command_verb": "compare",
+      "expected_concepts": [
+        "Provence: pale color, fresh, minimal oak, early harvest for acidity",
+        "Navarra: deeper color, higher alcohol potential, longer skin contact, some oak aging",
+        "Rhône/Tavel: darkest color, higher tannin, longer maceration, warm climate ripeness",
+        "climate influence on ripe grape availability and harvest timing",
+        "production method as region-specific convention",
+        "oak aging decisions by region and market positioning",
+        "acid preservation in hot climates"
+      ],
+      "evaluation_config": {
+        "verb_definition_key": "compare",
+        "requires_causal_chain": true,
+        "structure_rules": {
+          "minimum_components": 2,
+          "response_depth_target": "strong"
+        },
+        "required_signals": [
+          "Provence: pale color, fresh, minimal oak, early harvest for acidity",
+          "Navarra: deeper color, higher alcohol potential, longer skin contact, some oak aging",
+          "Rhône/Tavel: darkest color, higher tannin, longer maceration, warm climate ripeness",
+          "climate influence on ripe grape availability and harvest timing",
+          "production method as region-specific convention",
+          "oak aging decisions by region and market positioning",
+          "acid preservation in hot climates"
+        ],
+        "forbidden_signals": [
+          "mark",
+          "score",
+          "percentage",
+          "pass_fail",
+          "wset_equivalence",
+          "examiner_judgement",
+          "official_grade"
+        ],
+        "source": "open_response_bank_v1"
+      }
+    },
+    {
+      "item_id": "OR_141",
+      "source_question_id": "OR_141",
+      "stem": "Discuss the decanting decision for a young Vintage Port (5–10 years old) versus a mature Vintage Port (20+ years), considering sediment formation, oxidative aging, and the balance between tannin softening and aroma evolution.",
+      "topic": "mature_port_decanting_strategy",
+      "RA": "RA5",
+      "command_verb": "discuss",
+      "expected_concepts": [
+        "Vintage Port sediment formation over decades",
+        "tannin evolution in bottle: gradual softening and integration",
+        "oxidative character development in fortified wine",
+        "oxygen ingress through cork over long aging",
+        "young Port: high tannin, benefit from aeration, minimal sediment",
+        "mature Port: soft tannin, complex tertiary aromas, significant sediment",
+        "decanting as a service choice: timing, vessel, duration",
+        "preservation of aromatic complexity in old Port",
+        "health and consumption safety in aged wine"
+      ],
+      "evaluation_config": {
+        "verb_definition_key": "discuss",
+        "requires_causal_chain": true,
+        "structure_rules": {
+          "minimum_components": 2,
+          "response_depth_target": "strong"
+        },
+        "required_signals": [
+          "Vintage Port sediment formation over decades",
+          "tannin evolution in bottle: gradual softening and integration",
+          "oxidative character development in fortified wine",
+          "oxygen ingress through cork over long aging",
+          "young Port: high tannin, benefit from aeration, minimal sediment",
+          "mature Port: soft tannin, complex tertiary aromas, significant sediment",
+          "decanting as a service choice: timing, vessel, duration",
+          "preservation of aromatic complexity in old Port",
+          "health and consumption safety in aged wine"
+        ],
+        "forbidden_signals": [
+          "mark",
+          "score",
+          "percentage",
+          "pass_fail",
+          "wset_equivalence",
+          "examiner_judgement",
+          "official_grade"
+        ],
+        "source": "open_response_bank_v1"
+      }
+    },
+    {
+      "item_id": "OR_142",
+      "source_question_id": "OR_142",
+      "stem": "Compare the decanting and aeration strategy for a structured young Burgundy (Pinot Noir) with that of a young Bordeaux (Cabernet Sauvignon blend), considering differences in tannin structure, barrel-aging method, and aromatic volatility.",
+      "topic": "burgundy_bordeaux_aeration_strategy",
+      "RA": "RA5",
+      "command_verb": "compare",
+      "expected_concepts": [
+        "Burgundy: smaller oak (225-liter puncheon), high-surface-area oxidation",
+        "Bordeaux: large oak (225–500-liter barrel), slower oxidation",
+        "Pinot Noir tannin structure: softer, integrated during barrel aging",
+        "Cabernet tannin structure: firmer, requires longer aging for integration",
+        "volatile aromatic compounds: fresh fruit in young wine, how aeration affects expression",
+        "decanting duration: brief aeration vs. extended air exposure",
+        "service glassware choice and aeration effect",
+        "oxidation risk: controlled aeration vs. over-exposure"
+      ],
+      "evaluation_config": {
+        "verb_definition_key": "compare",
+        "requires_causal_chain": true,
+        "structure_rules": {
+          "minimum_components": 2,
+          "response_depth_target": "strong"
+        },
+        "required_signals": [
+          "Burgundy: smaller oak (225-liter puncheon), high-surface-area oxidation",
+          "Bordeaux: large oak (225–500-liter barrel), slower oxidation",
+          "Pinot Noir tannin structure: softer, integrated during barrel aging",
+          "Cabernet tannin structure: firmer, requires longer aging for integration",
+          "volatile aromatic compounds: fresh fruit in young wine, how aeration affects expression",
+          "decanting duration: brief aeration vs. extended air exposure",
+          "service glassware choice and aeration effect",
+          "oxidation risk: controlled aeration vs. over-exposure"
+        ],
+        "forbidden_signals": [
+          "mark",
+          "score",
+          "percentage",
+          "pass_fail",
+          "wset_equivalence",
+          "examiner_judgement",
+          "official_grade"
+        ],
+        "source": "open_response_bank_v1"
+      }
+    },
+    {
+      "item_id": "OR_143",
+      "source_question_id": "OR_143",
+      "stem": "Assess a red wine with SAT appearance notes of 'pale-to-medium color with brownish edge.' Using production theory, explain what these observations suggest about the wine's age, production method, or storage history, and what causal mechanisms created those colors.",
+      "topic": "sat_appearance_to_production_theory",
+      "RA": "RA1",
+      "command_verb": "assess",
+      "expected_concepts": [
+        "SAT appearance scale: pale to deep color intensity",
+        "hue shift: bright red/purple (young) → garnet (mature) → brown (old)",
+        "brownish edge as sign of oxidation in bottle over time",
+        "pale color: light extraction, cool climate, lighter varietal, or sulfite protection during storage",
+        "medium color with brown edge: moderately mature bottle, possible bottle oxidation or heat damage",
+        "production method affecting initial color: carbonic maceration (lighter), long maceration (deeper)",
+        "storage conditions: light exposure, temperature, cork condition, aging potential"
+      ],
+      "evaluation_config": {
+        "verb_definition_key": "assess",
+        "requires_causal_chain": true,
+        "structure_rules": {
+          "minimum_components": 2,
+          "response_depth_target": "strong"
+        },
+        "required_signals": [
+          "SAT appearance scale: pale to deep color intensity",
+          "hue shift: bright red/purple (young) → garnet (mature) → brown (old)",
+          "brownish edge as sign of oxidation in bottle over time",
+          "pale color: light extraction, cool climate, lighter varietal, or sulfite protection during storage",
+          "medium color with brown edge: moderately mature bottle, possible bottle oxidation or heat damage",
+          "production method affecting initial color: carbonic maceration (lighter), long maceration (deeper)",
+          "storage conditions: light exposure, temperature, cork condition, aging potential"
+        ],
+        "forbidden_signals": [
+          "mark",
+          "score",
+          "percentage",
+          "pass_fail",
+          "wset_equivalence",
+          "examiner_judgement",
+          "official_grade"
+        ],
+        "source": "open_response_bank_v1"
+      }
+    },
+    {
+      "item_id": "OR_144",
+      "source_question_id": "OR_144",
+      "stem": "A white wine shows SAT nose notes of 'butter, cream, and vanilla alongside stone fruit.' Discuss the production choices that created these characteristics, and explain how malolactic fermentation and oak contact work together to produce this profile.",
+      "topic": "sat_nose_to_mlf_oak_production",
+      "RA": "RA2",
+      "command_verb": "discuss",
+      "expected_concepts": [
+        "SAT nose categories: primary (varietal), secondary (fermentation), tertiary (aging)",
+        "butter and cream notes: diacetyl from malolactic fermentation",
+        "vanilla: oak contact (French oak typically smoother than American)",
+        "stone fruit: primary varietal character (Chardonnay typical)",
+        "malolactic fermentation as a deliberate production choice",
+        "timing of MLF: in-barrel vs. pre-barrel, complete vs. partial",
+        "oak contact: barrel type, new vs. used, duration",
+        "microbial stability: MLF implications for pH and SO₂",
+        "style intent: fruit-forward vs. creamy oxidative styles"
+      ],
+      "evaluation_config": {
+        "verb_definition_key": "discuss",
+        "requires_causal_chain": true,
+        "structure_rules": {
+          "minimum_components": 2,
+          "response_depth_target": "strong"
+        },
+        "required_signals": [
+          "SAT nose categories: primary (varietal), secondary (fermentation), tertiary (aging)",
+          "butter and cream notes: diacetyl from malolactic fermentation",
+          "vanilla: oak contact (French oak typically smoother than American)",
+          "stone fruit: primary varietal character (Chardonnay typical)",
+          "malolactic fermentation as a deliberate production choice",
+          "timing of MLF: in-barrel vs. pre-barrel, complete vs. partial",
+          "oak contact: barrel type, new vs. used, duration",
+          "microbial stability: MLF implications for pH and SO₂",
+          "style intent: fruit-forward vs. creamy oxidative styles"
+        ],
+        "forbidden_signals": [
+          "mark",
+          "score",
+          "percentage",
+          "pass_fail",
+          "wset_equivalence",
+          "examiner_judgement",
+          "official_grade"
+        ],
+        "source": "open_response_bank_v1"
+      }
+    },
+    {
+      "item_id": "OR_145",
+      "source_question_id": "OR_145",
+      "stem": "A Madeira wine shows oxidative characteristics in the nose and palate: dried fruit, nutty, and caramel notes. Explain how the intentional heating and oxidative aging that define Madeira production create these characteristics, and contrast them with oxidative defects that would indicate wine fault.",
+      "topic": "madeira_oxidation_vs_fault_differentiation",
+      "RA": "RA4",
+      "command_verb": "explain",
+      "expected_concepts": [
+        "Madeira estufagem: controlled heat aging (warm room 45–50°C or heated wine tanks)",
+        "oxidative ripening during estufagem: browning, oxidation of phenolics, Maillard reactions",
+        "dried fruit, nut, caramel, chocolate notes as characteristic Madeira profile",
+        "long-term bottle storage after estufagem: slow oxidation through cork",
+        "fault indicators: sharpness, volatility, acetic acid (vinegar), cork taint (musty)",
+        "maderization: unintended oxidation in still wine (a fault), vs. intentional in Madeira (desired)",
+        "sensorial cues for distinguishing intentional from unintended oxidation",
+        "food pairing implications: oxidative character enables food pairing that young wine cannot achieve"
+      ],
+      "evaluation_config": {
+        "verb_definition_key": "explain",
+        "requires_causal_chain": true,
+        "structure_rules": {
+          "minimum_components": 2,
+          "response_depth_target": "strong"
+        },
+        "required_signals": [
+          "Madeira estufagem: controlled heat aging (warm room 45–50°C or heated wine tanks)",
+          "oxidative ripening during estufagem: browning, oxidation of phenolics, Maillard reactions",
+          "dried fruit, nut, caramel, chocolate notes as characteristic Madeira profile",
+          "long-term bottle storage after estufagem: slow oxidation through cork",
+          "fault indicators: sharpness, volatility, acetic acid (vinegar), cork taint (musty)",
+          "maderization: unintended oxidation in still wine (a fault), vs. intentional in Madeira (desired)",
+          "sensorial cues for distinguishing intentional from unintended oxidation",
+          "food pairing implications: oxidative character enables food pairing that young wine cannot achieve"
+        ],
+        "forbidden_signals": [
+          "mark",
+          "score",
+          "percentage",
+          "pass_fail",
+          "wset_equivalence",
+          "examiner_judgement",
+          "official_grade"
+        ],
+        "source": "open_response_bank_v1"
+      }
+    },
+    {
+      "item_id": "OR_146",
+      "source_question_id": "OR_146",
+      "stem": "Recommend appropriate storage conditions (temperature, light, humidity, bottle position) for three different wine types: a young dry white wine for early consumption, a structured red wine intended for 10+ years aging, and a mature fortified wine (Tawny Port) purchased for immediate enjoyment.",
+      "topic": "wine_storage_condition_recommendations",
+      "RA": "RA5",
+      "command_verb": "recommend",
+      "expected_concepts": [
+        "young white wine: cool (10–12°C), dark, short-term storage (months to 2 years), upright bottle position",
+        "structured red wine for aging: consistent cool temperature (12–15°C), dark, horizontal position (cork must stay moist), humidity 50–80% for cork integrity",
+        "Tawny Port: tolerant of temperature variation, lower UV sensitivity (oxidized already), upright position (ready to drink), shelf-stable",
+        "temperature stability as critical factor: fluctuation causes expansion/contraction, cork movement, oxidation acceleration",
+        "light exposure: UV-induced premature oxidation in white/light wines",
+        "humidity: cork drying in low-humidity environments, cork rot in high humidity",
+        "bottle position: cork contact critical for sealing; screw-cap and synthetic closures reduce this concern",
+        "storage location suitability: wine fridge, cellar, closet vs. above radiator"
+      ],
+      "evaluation_config": {
+        "verb_definition_key": "recommend",
+        "requires_causal_chain": true,
+        "structure_rules": {
+          "minimum_components": 2,
+          "response_depth_target": "strong"
+        },
+        "required_signals": [
+          "young white wine: cool (10–12°C), dark, short-term storage (months to 2 years), upright bottle position",
+          "structured red wine for aging: consistent cool temperature (12–15°C), dark, horizontal position (cork must stay moist), humidity 50–80% for cork integrity",
+          "Tawny Port: tolerant of temperature variation, lower UV sensitivity (oxidized already), upright position (ready to drink), shelf-stable",
+          "temperature stability as critical factor: fluctuation causes expansion/contraction, cork movement, oxidation acceleration",
+          "light exposure: UV-induced premature oxidation in white/light wines",
+          "humidity: cork drying in low-humidity environments, cork rot in high humidity",
+          "bottle position: cork contact critical for sealing; screw-cap and synthetic closures reduce this concern",
+          "storage location suitability: wine fridge, cellar, closet vs. above radiator"
+        ],
+        "forbidden_signals": [
+          "mark",
+          "score",
+          "percentage",
+          "pass_fail",
+          "wset_equivalence",
+          "examiner_judgement",
+          "official_grade"
+        ],
+        "source": "open_response_bank_v1"
+      }
+    },
+    {
+      "item_id": "OR_147",
+      "source_question_id": "OR_147",
+      "stem": "A customer asks whether a wine is safe to drink given their concerns about sulfites, histamines, and high alcohol content. As a sommelier, describe how you would assess the customer's health needs, advise on wine selection criteria, and explain the science behind these constituents.",
+      "topic": "health_allergen_customer_advice",
+      "RA": "RA5",
+      "command_verb": "describe",
+      "expected_concepts": [
+        "sulfite sensitivity: true allergy vs. sensitivity to high SO₂ levels",
+        "SO₂ levels by wine type: sweet wines (higher), dry wines (lower), organic wines (variable)",
+        "histamines: higher in red wine (skin contact) than white, accumulate with age and microbial activity",
+        "high alcohol wines: above 15%, thermophilic yeast and sugar-to-alcohol conversion, sensorial warmth/burn",
+        "alcohol sensitivity: individual variation, medications, health conditions",
+        "customer intake: asking about specific symptoms, allergies, medications",
+        "wine selection guidance: low-sulfite options, histamine-lower white wines, lower-alcohol alternatives (12–13%)",
+        "transparent communication: limitations of sommelier role vs. medical advice",
+        "labeling and transparency: SO₂ declarations (often mandatory in EU), histamine not required"
+      ],
+      "evaluation_config": {
+        "verb_definition_key": "describe",
+        "requires_causal_chain": false,
+        "structure_rules": {
+          "minimum_components": 2,
+          "response_depth_target": "strong"
+        },
+        "required_signals": [
+          "sulfite sensitivity: true allergy vs. sensitivity to high SO₂ levels",
+          "SO₂ levels by wine type: sweet wines (higher), dry wines (lower), organic wines (variable)",
+          "histamines: higher in red wine (skin contact) than white, accumulate with age and microbial activity",
+          "high alcohol wines: above 15%, thermophilic yeast and sugar-to-alcohol conversion, sensorial warmth/burn",
+          "alcohol sensitivity: individual variation, medications, health conditions",
+          "customer intake: asking about specific symptoms, allergies, medications",
+          "wine selection guidance: low-sulfite options, histamine-lower white wines, lower-alcohol alternatives (12–13%)",
+          "transparent communication: limitations of sommelier role vs. medical advice",
+          "labeling and transparency: SO₂ declarations (often mandatory in EU), histamine not required"
+        ],
+        "forbidden_signals": [
+          "mark",
+          "score",
+          "percentage",
+          "pass_fail",
+          "wset_equivalence",
+          "examiner_judgement",
+          "official_grade"
+        ],
+        "source": "open_response_bank_v1"
+      }
+    },
+    {
+      "item_id": "OR_148",
+      "source_question_id": "OR_148",
+      "stem": "Analyze how vintage variation in a classic region like Bordeaux (warm vs. cool year) influences the winemaker's production choices regarding harvest timing, fermentation temperature, malolactic fermentation, oak aging duration, and final blending decisions.",
+      "topic": "regional_vintage_variation_production_adaptation",
+      "RA": "RA2",
+      "command_verb": "analyze",
+      "expected_concepts": [
+        "vintage definition: annual variation in growing conditions and harvest quality",
+        "warm vintage: higher sugar ripeness, lower acid, ripe tannin, earlier harvest possible",
+        "cool vintage: lower sugar, higher acid retention, greener tannin, delayed harvest risk",
+        "harvest timing decision: balance ripeness against acid preservation",
+        "fermentation temperature: control for yeast health and aroma expression",
+        "malolactic fermentation: timing and extent as response to acid level and wine structure",
+        "oak aging: duration adjustment (longer in cool vintage for structure integration, shorter in warm for balance)",
+        "blending decision: varietal proportions adjusted by vintage character (more Cabernet in cool year for structure, more Merlot in warm year for softness)",
+        "appellation regulations: constraint on flexibility (e.g., Bordeaux blending rules)"
+      ],
+      "evaluation_config": {
+        "verb_definition_key": "analyze",
+        "requires_causal_chain": true,
+        "structure_rules": {
+          "minimum_components": 2,
+          "response_depth_target": "strong"
+        },
+        "required_signals": [
+          "vintage definition: annual variation in growing conditions and harvest quality",
+          "warm vintage: higher sugar ripeness, lower acid, ripe tannin, earlier harvest possible",
+          "cool vintage: lower sugar, higher acid retention, greener tannin, delayed harvest risk",
+          "harvest timing decision: balance ripeness against acid preservation",
+          "fermentation temperature: control for yeast health and aroma expression",
+          "malolactic fermentation: timing and extent as response to acid level and wine structure",
+          "oak aging: duration adjustment (longer in cool vintage for structure integration, shorter in warm for balance)",
+          "blending decision: varietal proportions adjusted by vintage character (more Cabernet in cool year for structure, more Merlot in warm year for softness)",
+          "appellation regulations: constraint on flexibility (e.g., Bordeaux blending rules)"
+        ],
+        "forbidden_signals": [
+          "mark",
+          "score",
+          "percentage",
+          "pass_fail",
+          "wset_equivalence",
+          "examiner_judgement",
+          "official_grade"
+        ],
+        "source": "open_response_bank_v1"
+      }
     }
   ],
   "evaluation_by_item_id": {
@@ -10199,6 +10661,377 @@ window.OPEN_RESPONSE_LAB_PAYLOAD = {
         "public_frontend_active": false,
         "open_response_lab_active": false
       }
+    },
+    "OR_139": {
+      "item_id": "OR_139",
+      "source_question_id": "OR_139",
+      "expected_concepts": [
+        "brief skin contact during fermentation",
+        "phenolic extraction from red grape skins",
+        "color intensity from anthocyanin transfer",
+        "tannin balance in rosé vs red wines",
+        "timing of skin separation from must",
+        "production method choice: saignée vs pressing",
+        "final wine style: dry, fresh, or structured depending on contact duration"
+      ],
+      "optional_causal_chain": "HC_MACERATION_EXTRACTION",
+      "causal_chain_reference": [
+        "HC_MACERATION_EXTRACTION"
+      ],
+      "feedback_profile": {
+        "FOUNDATIONAL_RESPONSE": "Identify skin contact as the source of color and tannin in rosé, but do not yet connect duration to specific style outcomes.",
+        "DEVELOPING_RESPONSE": "Link extended skin contact to deeper color and higher tannin, and explain why rosé uses shorter contact than red wine. Begin connecting contact duration to final style characteristics.",
+        "STRONG_RESPONSE": "Show a continuous causal chain: duration of skin contact → anthocyanin extraction → color depth, tannin extraction → wine style ranging from pale, fresh rosé to darker, more tannic styles. Distinguish saignée (continuous bleeding) from pressing (post-fermentation extraction)."
+      },
+      "governance_flags": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "official_wset_question": false,
+        "training_item_only": true,
+        "uses_llm": false,
+        "uses_api": false,
+        "uses_embeddings": false,
+        "uses_vector_db": false,
+        "cloud_services_active": false,
+        "public_frontend_active": false,
+        "open_response_lab_active": false
+      }
+    },
+    "OR_140": {
+      "item_id": "OR_140",
+      "source_question_id": "OR_140",
+      "expected_concepts": [
+        "Provence: pale color, fresh, minimal oak, early harvest for acidity",
+        "Navarra: deeper color, higher alcohol potential, longer skin contact, some oak aging",
+        "Rhône/Tavel: darkest color, higher tannin, longer maceration, warm climate ripeness",
+        "climate influence on ripe grape availability and harvest timing",
+        "production method as region-specific convention",
+        "oak aging decisions by region and market positioning",
+        "acid preservation in hot climates"
+      ],
+      "optional_causal_chain": "HC_ALTITUDE_TEMPERATURE -> HC_CLIMAT_RIPENESS_TIMING",
+      "causal_chain_reference": [
+        "HC_ALTITUDE_TEMPERATURE",
+        "HC_CLIMAT_RIPENESS_TIMING"
+      ],
+      "feedback_profile": {
+        "FOUNDATIONAL_RESPONSE": "Name the three regions and note that they produce rosés of different colors. Do not yet connect climate to production method.",
+        "DEVELOPING_RESPONSE": "Describe the color progression (pale Provence → darker Tavel) and link this to skin contact duration. Begin explaining how climate (warm vs. cooler, altitude) influences harvest timing and acid retention.",
+        "STRONG_RESPONSE": "Show how each region's climate determines ripeness level and residual acid at harvest, which then drives production choices: shorter maceration and earlier harvest in cool Provence to preserve freshness, longer contact and oak potential in warm Tavel. Explain the causal chain from climate → harvest timing → production method → final style."
+      },
+      "governance_flags": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "official_wset_question": false,
+        "training_item_only": true,
+        "uses_llm": false,
+        "uses_api": false,
+        "uses_embeddings": false,
+        "uses_vector_db": false,
+        "cloud_services_active": false,
+        "public_frontend_active": false,
+        "open_response_lab_active": false
+      }
+    },
+    "OR_141": {
+      "item_id": "OR_141",
+      "source_question_id": "OR_141",
+      "expected_concepts": [
+        "Vintage Port sediment formation over decades",
+        "tannin evolution in bottle: gradual softening and integration",
+        "oxidative character development in fortified wine",
+        "oxygen ingress through cork over long aging",
+        "young Port: high tannin, benefit from aeration, minimal sediment",
+        "mature Port: soft tannin, complex tertiary aromas, significant sediment",
+        "decanting as a service choice: timing, vessel, duration",
+        "preservation of aromatic complexity in old Port",
+        "health and consumption safety in aged wine"
+      ],
+      "optional_causal_chain": "HC_BOTTLE_TANNIN_SOFTENING -> HC_BAROLO_TERTIARY_EVOLUTION -> HC_OLD_RED_SEDIMENT_SERVICE",
+      "causal_chain_reference": [
+        "HC_BOTTLE_TANNIN_SOFTENING",
+        "HC_BAROLO_TERTIARY_EVOLUTION",
+        "HC_OLD_RED_SEDIMENT_SERVICE"
+      ],
+      "feedback_profile": {
+        "FOUNDATIONAL_RESPONSE": "Acknowledge that Port ages in bottle and sediment forms, but do not yet distinguish young from mature or explain the causal link between aging and decanting necessity.",
+        "DEVELOPING_RESPONSE": "Explain that young Port benefits from decanting aeration and mature Port has soft tannin already. Begin connecting sediment formation to aging duration and oxidative character development.",
+        "STRONG_RESPONSE": "Present the full causal chain for each age category: young Port → high tannin, low sediment, volatile aromas → aeration useful, decant before service. Mature Port → soft tannin, high sediment, stable oxidative character → gentle decant to separate sediment while preserving aromatic integrity. Show how oxidative aging in the bottle transforms the wine's character and how service strategy must adapt."
+      },
+      "governance_flags": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "official_wset_question": false,
+        "training_item_only": true,
+        "uses_llm": false,
+        "uses_api": false,
+        "uses_embeddings": false,
+        "uses_vector_db": false,
+        "cloud_services_active": false,
+        "public_frontend_active": false,
+        "open_response_lab_active": false
+      }
+    },
+    "OR_142": {
+      "item_id": "OR_142",
+      "source_question_id": "OR_142",
+      "expected_concepts": [
+        "Burgundy: smaller oak (225-liter puncheon), high-surface-area oxidation",
+        "Bordeaux: large oak (225–500-liter barrel), slower oxidation",
+        "Pinot Noir tannin structure: softer, integrated during barrel aging",
+        "Cabernet tannin structure: firmer, requires longer aging for integration",
+        "volatile aromatic compounds: fresh fruit in young wine, how aeration affects expression",
+        "decanting duration: brief aeration vs. extended air exposure",
+        "service glassware choice and aeration effect",
+        "oxidation risk: controlled aeration vs. over-exposure"
+      ],
+      "optional_causal_chain": "HC_AERATION_YOUNG_STRUCTURED_WINE -> HC_BARREL_SIZE_OAK_CONTACT",
+      "causal_chain_reference": [
+        "HC_AERATION_YOUNG_STRUCTURED_WINE",
+        "HC_BARREL_SIZE_OAK_CONTACT"
+      ],
+      "feedback_profile": {
+        "FOUNDATIONAL_RESPONSE": "Identify that both wines benefit from aeration but do not yet explain the differences in their aeration needs or the regional production differences.",
+        "DEVELOPING_RESPONSE": "Explain that Burgundy receives more oxidation during barrel aging (smaller, more surface area) and therefore may need less decanting aeration; Bordeaux in larger barrel receives less barrel oxidation and may benefit from more aeration. Begin connecting production method to service strategy.",
+        "STRONG_RESPONSE": "Construct a full causal chain for each region: Burgundy barrel method → higher oxidation in barrel → softer tannin at bottling → moderate aeration for aromatic expression, short decant (30 min) OR immediate service. Bordeaux barrel method → controlled barrel oxidation → firmer tannin at bottling → longer aeration beneficial for tannin integration and aromatic opening, decant 1–2 hours. Show how production method determines bottle-maturity profile and thus service strategy."
+      },
+      "governance_flags": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "official_wset_question": false,
+        "training_item_only": true,
+        "uses_llm": false,
+        "uses_api": false,
+        "uses_embeddings": false,
+        "uses_vector_db": false,
+        "cloud_services_active": false,
+        "public_frontend_active": false,
+        "open_response_lab_active": false
+      }
+    },
+    "OR_143": {
+      "item_id": "OR_143",
+      "source_question_id": "OR_143",
+      "expected_concepts": [
+        "SAT appearance scale: pale to deep color intensity",
+        "hue shift: bright red/purple (young) → garnet (mature) → brown (old)",
+        "brownish edge as sign of oxidation in bottle over time",
+        "pale color: light extraction, cool climate, lighter varietal, or sulfite protection during storage",
+        "medium color with brown edge: moderately mature bottle, possible bottle oxidation or heat damage",
+        "production method affecting initial color: carbonic maceration (lighter), long maceration (deeper)",
+        "storage conditions: light exposure, temperature, cork condition, aging potential"
+      ],
+      "optional_causal_chain": "HC_BAROLO_TERTIARY_EVOLUTION -> HC_BOTTLE_STORAGE_STABILITY -> HC_HEAT_PREMATURE_BOTTLE_AGEING",
+      "causal_chain_reference": [
+        "HC_BAROLO_TERTIARY_EVOLUTION",
+        "HC_BOTTLE_STORAGE_STABILITY",
+        "HC_HEAT_PREMATURE_BOTTLE_AGEING"
+      ],
+      "feedback_profile": {
+        "FOUNDATIONAL_RESPONSE": "Describe what pale-to-medium with brownish edge means (a relatively mature wine) but do not yet explain the causal mechanisms that created those colors.",
+        "DEVELOPING_RESPONSE": "Connect the brownish edge to oxidation and maturity in bottle. Begin explaining how production method (maceration duration) and initial color extraction affect the starting point for aging.",
+        "STRONG_RESPONSE": "Explain the full causal chain: initial color determined by grape varietal + maceration method + extraction during fermentation. During storage in bottle → gradual oxidation through natural cork permeability → color shift from red/purple toward garnet and brown. Brownish edge specifically indicates advanced age or oxidative stress. Link this back to production choices: wines with intention for aging receive longer maceration and deeper initial color; wines for early drinking receive shorter maceration and lighter initial color. Storage conditions (temperature stability, light, cork quality) then determine the rate of color evolution."
+      },
+      "governance_flags": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "official_wset_question": false,
+        "training_item_only": true,
+        "uses_llm": false,
+        "uses_api": false,
+        "uses_embeddings": false,
+        "uses_vector_db": false,
+        "cloud_services_active": false,
+        "public_frontend_active": false,
+        "open_response_lab_active": false
+      }
+    },
+    "OR_144": {
+      "item_id": "OR_144",
+      "source_question_id": "OR_144",
+      "expected_concepts": [
+        "SAT nose categories: primary (varietal), secondary (fermentation), tertiary (aging)",
+        "butter and cream notes: diacetyl from malolactic fermentation",
+        "vanilla: oak contact (French oak typically smoother than American)",
+        "stone fruit: primary varietal character (Chardonnay typical)",
+        "malolactic fermentation as a deliberate production choice",
+        "timing of MLF: in-barrel vs. pre-barrel, complete vs. partial",
+        "oak contact: barrel type, new vs. used, duration",
+        "microbial stability: MLF implications for pH and SO₂",
+        "style intent: fruit-forward vs. creamy oxidative styles"
+      ],
+      "optional_causal_chain": "HC_MLF_ACIDITY_TEXTURE -> HC_MLF_STYLE_CONTROL -> HC_BARREL_SIZE_OAK_CONTACT",
+      "causal_chain_reference": [
+        "HC_MLF_ACIDITY_TEXTURE",
+        "HC_MLF_STYLE_CONTROL",
+        "HC_BARREL_SIZE_OAK_CONTACT"
+      ],
+      "feedback_profile": {
+        "FOUNDATIONAL_RESPONSE": "Identify butter/cream as coming from MLF and vanilla from oak, but do not yet explain the causal relationship between these production methods and the sensorial outcome.",
+        "DEVELOPING_RESPONSE": "Explain that MLF converts malic acid and produces diacetyl (butter), and that oak contact provides vanilla/spice. Begin connecting these to intentional style creation.",
+        "STRONG_RESPONSE": "Build the full causal chain: winemaker chooses to allow MLF → malic acid converted to lactic acid by bacteria → production of diacetyl as byproduct → butter/cream character in nose. Simultaneously, barrel contact → oak phenolics extraction → vanilla/spice/toastiness. The combination of both choices creates a 'buttery oak-aged white' style distinct from unoaked fruit-forward whites. Explain how timing of MLF (in-barrel accelerates oak integration) and barrel selection (French vs. American oak and new vs. used) refine the final balance."
+      },
+      "governance_flags": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "official_wset_question": false,
+        "training_item_only": true,
+        "uses_llm": false,
+        "uses_api": false,
+        "uses_embeddings": false,
+        "uses_vector_db": false,
+        "cloud_services_active": false,
+        "public_frontend_active": false,
+        "open_response_lab_active": false
+      }
+    },
+    "OR_145": {
+      "item_id": "OR_145",
+      "source_question_id": "OR_145",
+      "expected_concepts": [
+        "Madeira estufagem: controlled heat aging (warm room 45–50°C or heated wine tanks)",
+        "oxidative ripening during estufagem: browning, oxidation of phenolics, Maillard reactions",
+        "dried fruit, nut, caramel, chocolate notes as characteristic Madeira profile",
+        "long-term bottle storage after estufagem: slow oxidation through cork",
+        "fault indicators: sharpness, volatility, acetic acid (vinegar), cork taint (musty)",
+        "maderization: unintended oxidation in still wine (a fault), vs. intentional in Madeira (desired)",
+        "sensorial cues for distinguishing intentional from unintended oxidation",
+        "food pairing implications: oxidative character enables food pairing that young wine cannot achieve"
+      ],
+      "optional_causal_chain": "HC_MADEIRA_HEAT_OXIDATIVE_AGEING -> HC_EXCESSIVE_WHITE_OXIDATION -> HC_OPEN_BOTTLE_OXYGEN_CONTROL",
+      "causal_chain_reference": [
+        "HC_MADEIRA_HEAT_OXIDATIVE_AGEING",
+        "HC_EXCESSIVE_WHITE_OXIDATION",
+        "HC_OPEN_BOTTLE_OXYGEN_CONTROL"
+      ],
+      "feedback_profile": {
+        "FOUNDATIONAL_RESPONSE": "Identify Madeira's heat-aging process and note that it creates oxidative character, but do not yet distinguish between intentional oxidation and wine fault.",
+        "DEVELOPING_RESPONSE": "Explain that Madeira's estufagem creates dried fruit and nutty notes through intentional oxidation. Begin identifying a few sensorial cues (acid sharpness, vinegar tones) that would indicate fault rather than intent.",
+        "STRONG_RESPONSE": "Show the complete causal chain: estufagem (controlled 45–50°C heat) → rapid oxidation of phenolics, sugars, amino acids → brown color, dried-fruit aromas, caramel/chocolate notes, lower acidity. Then contrast: intentional Madeira oxidation is balanced, warm, integrative; wine fault oxidation is sharp, volatile, unpleasant (acetic acid, vinegar character). Explain how sensorial assessment distinguishes: Madeira shows smooth caramel and balanced acidity; maderization shows sharp acidity and chemical off-notes. Connect this to product history: Madeira's heat treatment is a documented production choice; maderization indicates storage failure."
+      },
+      "governance_flags": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "official_wset_question": false,
+        "training_item_only": true,
+        "uses_llm": false,
+        "uses_api": false,
+        "uses_embeddings": false,
+        "uses_vector_db": false,
+        "cloud_services_active": false,
+        "public_frontend_active": false,
+        "open_response_lab_active": false
+      }
+    },
+    "OR_146": {
+      "item_id": "OR_146",
+      "source_question_id": "OR_146",
+      "expected_concepts": [
+        "young white wine: cool (10–12°C), dark, short-term storage (months to 2 years), upright bottle position",
+        "structured red wine for aging: consistent cool temperature (12–15°C), dark, horizontal position (cork must stay moist), humidity 50–80% for cork integrity",
+        "Tawny Port: tolerant of temperature variation, lower UV sensitivity (oxidized already), upright position (ready to drink), shelf-stable",
+        "temperature stability as critical factor: fluctuation causes expansion/contraction, cork movement, oxidation acceleration",
+        "light exposure: UV-induced premature oxidation in white/light wines",
+        "humidity: cork drying in low-humidity environments, cork rot in high humidity",
+        "bottle position: cork contact critical for sealing; screw-cap and synthetic closures reduce this concern",
+        "storage location suitability: wine fridge, cellar, closet vs. above radiator"
+      ],
+      "optional_causal_chain": "HC_BOTTLE_STORAGE_STABILITY -> HC_HEAT_PREMATURE_BOTTLE_AGEING",
+      "causal_chain_reference": [
+        "HC_BOTTLE_STORAGE_STABILITY",
+        "HC_HEAT_PREMATURE_BOTTLE_AGEING"
+      ],
+      "feedback_profile": {
+        "FOUNDATIONAL_RESPONSE": "Provide basic storage recommendations (cool, dark, quiet) without explaining the causal link between storage condition and wine preservation.",
+        "DEVELOPING_RESPONSE": "For each wine type, explain why certain conditions matter (e.g., young white needs cool to slow oxidation, red needs horizontal for cork contact). Begin connecting storage choices to wine's aging potential and intended consumption timeline.",
+        "STRONG_RESPONSE": "For each wine type, explain the complete causal chain: young white is sensitive to oxidation → requires cool, dark, stable temperature environment. Structured red intends long aging → requires horizontal position to maintain cork hydration → requires consistent cool temperature to prevent tannin evolution acceleration → requires darkness to prevent UV oxidation. Mature Tawny Port is pre-oxidized and stable → tolerates wider temperature and light range → can be stored upright → suitable for long-term shelf storage. Show how storage strategy is driven by wine's composition, aging intent, and closure type."
+      },
+      "governance_flags": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "official_wset_question": false,
+        "training_item_only": true,
+        "uses_llm": false,
+        "uses_api": false,
+        "uses_embeddings": false,
+        "uses_vector_db": false,
+        "cloud_services_active": false,
+        "public_frontend_active": false,
+        "open_response_lab_active": false
+      }
+    },
+    "OR_147": {
+      "item_id": "OR_147",
+      "source_question_id": "OR_147",
+      "expected_concepts": [
+        "sulfite sensitivity: true allergy vs. sensitivity to high SO₂ levels",
+        "SO₂ levels by wine type: sweet wines (higher), dry wines (lower), organic wines (variable)",
+        "histamines: higher in red wine (skin contact) than white, accumulate with age and microbial activity",
+        "high alcohol wines: above 15%, thermophilic yeast and sugar-to-alcohol conversion, sensorial warmth/burn",
+        "alcohol sensitivity: individual variation, medications, health conditions",
+        "customer intake: asking about specific symptoms, allergies, medications",
+        "wine selection guidance: low-sulfite options, histamine-lower white wines, lower-alcohol alternatives (12–13%)",
+        "transparent communication: limitations of sommelier role vs. medical advice",
+        "labeling and transparency: SO₂ declarations (often mandatory in EU), histamine not required"
+      ],
+      "optional_causal_chain": null,
+      "causal_chain_reference": [],
+      "feedback_profile": {
+        "FOUNDATIONAL_RESPONSE": "Acknowledge the customer's concerns and provide basic wine categories (organic, low-alcohol) without explaining the science or intake process.",
+        "DEVELOPING_RESPONSE": "Explain what sulfites do (preservation) and that red wine contains higher histamines. Begin discussing how to gather customer information and suggest specific wine types.",
+        "STRONG_RESPONSE": "Conduct a structured intake: ask about specific symptoms, reactions, medications, and allergies. Explain the science: SO₂ is a natural fermentation byproduct and intentional preservative; levels vary by wine type and producer; true sulfite allergy is rare. Histamines are amine compounds from microbial and enzymatic activity; higher in red (skin contact) and aged wines; lower in fresh, young white wines. Alcohol fermentation converts sugars; thermophilic yeasts produce higher-alcohol wines with sensorial intensity. Recommend based on science: low-alcohol white wine (histamine-lower, lighter alcohol), minimal-added-SO₂ options, or winemaker-specific knowledge of production. Clarify your role: recommend based on wine knowledge, not as medical advice; customer should consult physician for true allergies."
+      },
+      "governance_flags": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "official_wset_question": false,
+        "training_item_only": true,
+        "uses_llm": false,
+        "uses_api": false,
+        "uses_embeddings": false,
+        "uses_vector_db": false,
+        "cloud_services_active": false,
+        "public_frontend_active": false,
+        "open_response_lab_active": false
+      }
+    },
+    "OR_148": {
+      "item_id": "OR_148",
+      "source_question_id": "OR_148",
+      "expected_concepts": [
+        "vintage definition: annual variation in growing conditions and harvest quality",
+        "warm vintage: higher sugar ripeness, lower acid, ripe tannin, earlier harvest possible",
+        "cool vintage: lower sugar, higher acid retention, greener tannin, delayed harvest risk",
+        "harvest timing decision: balance ripeness against acid preservation",
+        "fermentation temperature: control for yeast health and aroma expression",
+        "malolactic fermentation: timing and extent as response to acid level and wine structure",
+        "oak aging: duration adjustment (longer in cool vintage for structure integration, shorter in warm for balance)",
+        "blending decision: varietal proportions adjusted by vintage character (more Cabernet in cool year for structure, more Merlot in warm year for softness)",
+        "appellation regulations: constraint on flexibility (e.g., Bordeaux blending rules)"
+      ],
+      "optional_causal_chain": "HC_BORDEAUX_BLEND_VINTAGE_VARIATION -> HC_ALTITUDE_TEMPERATURE",
+      "causal_chain_reference": [
+        "HC_BORDEAUX_BLEND_VINTAGE_VARIATION",
+        "HC_ALTITUDE_TEMPERATURE"
+      ],
+      "feedback_profile": {
+        "FOUNDATIONAL_RESPONSE": "Acknowledge that vintages differ in ripeness and identify at least two production choices that vary by vintage without explaining the causal logic.",
+        "DEVELOPING_RESPONSE": "Explain that warm vintages produce riper fruit and cooler vintages higher acid, and that these differences drive harvest timing and oak aging decisions. Begin linking vintage character to fermentation management.",
+        "STRONG_RESPONSE": "Show the complete causal chain for both scenarios: warm vintage → higher sugar, lower acid at harvest → harvest earlier if weather permits, use cooler fermentation to preserve volatiles, limited MLF to retain structure, moderate oak (12–18 months) for balance, blend toward softer varietals (more Merlot). Cool vintage → lower sugar, higher acid at harvest → harvest later if weather allows, manage fermentation carefully to avoid stuck fermentation, encourage complete MLF for acid softening, longer oak aging (18–24 months) for phenolic integration, blend toward structuring varietals (more Cabernet). Show how each decision flows from the vintage's fundamental character and how the producer uses technique to optimize quality within the vintage's potential."
+      },
+      "governance_flags": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "official_wset_question": false,
+        "training_item_only": true,
+        "uses_llm": false,
+        "uses_api": false,
+        "uses_embeddings": false,
+        "uses_vector_db": false,
+        "cloud_services_active": false,
+        "public_frontend_active": false,
+        "open_response_lab_active": false
+      }
     }
   },
   "feedback_fields": {
@@ -10244,12 +11077,12 @@ window.OPEN_RESPONSE_LAB_PAYLOAD = {
     {
       "phase": "P2.4",
       "items_added": 15,
-      "new_pool_size": 138
+      "new_pool_size": 148
     },
     {
       "phase": "OR_EXPANSION_BATCH_4",
       "items_added": 32,
-      "new_pool_size": 138
+      "new_pool_size": 148
     }
   ],
   "assessment_intelligence": {
@@ -10634,5 +11467,5 @@ window.OPEN_RESPONSE_LAB_PAYLOAD = {
     "public_frontend_active": false,
     "open_response_lab_active": false
   },
-  "source_bank_total": 138
+  "source_bank_total": 148
 };
