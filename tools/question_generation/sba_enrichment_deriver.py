@@ -746,6 +746,12 @@ NODE_ES.update({
     "HC_BORDEAUX_BLEND_VINTAGE_VARIATION": {"subject": "el ensamblaje bordelés frente a la variación de añada", "causa": "Las variedades bordelesas responden de manera distinta al tiempo de cada temporada y maduran en momentos diferentes.", "mecanismo": "Mezclar variedades y lotes permite combinar componentes que rindieron de forma desigual y equilibrar fruta, acidez, tanino y cuerpo.", "efecto": "El vino final puede resultar más equilibrado y coherente que si dependiera de un único componente afectado por la añada."},
 })
 
+NODE_ES.update({
+    "HC_COMPOST_SOIL_ORGANIC_MATTER": {"subject": "el compost y la materia orgánica del suelo", "causa": "Material vegetal y animal descompuesto vuelve al suelo del viñedo como compost.", "mecanismo": "La materia orgánica favorece organismos del suelo, agregación, comportamiento hídrico y liberación gradual de nutrientes.", "efecto": "El compostaje recicla residuos y puede sostener la salud del suelo reduciendo la dependencia de insumos rápidamente disponibles."},
+    "HC_STAINLESS_INERT_VESSEL": {"subject": "el acero inoxidable como recipiente inerte", "causa": "El mosto o vino se mantiene en un depósito de acero inoxidable en buen estado.", "mecanismo": "El acero no aporta sabor de madera, se limpia con facilidad y permite sellado y control de temperatura.", "efecto": "El productor controla fermentación o almacenamiento con poca aportación aromática del recipiente y exposición de oxígeno regulada."},
+    "HC_YEAST_STRAIN_AROMA_PROFILE": {"subject": "la cepa de levadura y el perfil aromático", "causa": "Distintas especies o cepas fermentan un mosto en condiciones comparables.", "mecanismo": "Su metabolismo produce proporciones diferentes de ésteres, alcoholes superiores, compuestos azufrados y otras moléculas volátiles.", "efecto": "La elección de levadura puede modificar de forma importante los aromas de fermentación y el estilo del vino."},
+})
+
 # Explicitly reviewed promotions supplement matcher v2 without changing it.
 # Every entry is deterministic, node-bound, provenance-rich, and caveated.
 MANUAL_REVIEW_PROMOTIONS: dict[str, dict[str, str]] = {
@@ -830,6 +836,34 @@ MANUAL_REVIEW_PROMOTIONS.update({
     "wset3_394": {"node_id": "HC_STEEP_SLOPE_SOLAR_RIPENING", "reason": "La pendiente y la exposición solar aumentan la intercepción de luz y ayudan a madurar la uva en el relieve del Douro Superior.", "caveat": "Orientación, altitud, disponibilidad de agua, suelo y añada modifican el efecto; la pendiente no garantiza calidad por sí sola."},
     "wset3_420": {"node_id": "HC_BORDEAUX_BLEND_VINTAGE_VARIATION", "reason": "Mezclar variedades con respuestas distintas a la añada permite equilibrar componentes fuertes y débiles.", "caveat": "El ensamblaje no corrige fruta defectuosa y puede complementarse con selección, manejo de viñedo y clasificación de lotes."},
     "wset3_439": {"node_id": "HC_MOSEL_COOL_SLOPE_ACIDITY", "reason": "La pendiente y orientación aumentan la captación solar y ayudan a completar la maduración en el clima fresco del Mosel.", "caveat": "El río, la roca, la altitud, la añada y el manejo del viñedo también contribuyen a la calidad."},
+})
+
+MANUAL_REVIEW_PROMOTIONS.update({
+    "wset3_229": {"node_id": "HC_WARM_CLIMATE_RIPE_FRUIT_ALCOHOL", "reason": "Las zonas cálidas y secas de Hawke's Bay permiten madurez de Merlot y Syrah, fruta intensa y estructura.", "caveat": "Hawke's Bay contiene mesoclimas y suelos diversos; variedad, sitio y productor cambian el perfil."},
+    "wset3_231": {"node_id": "HC_RED_WINE_AGEABILITY_STRUCTURE", "reason": "La acidez y el tanino de Sangiovese Grosso aportan estructura para una crianza prolongada.", "caveat": "La duración de crianza es regulada y la calidad final depende también de fruta, extracción, recipiente y almacenamiento."},
+    "wset3_246": {"node_id": "HC_COOL_CLIMATE_STYLE", "reason": "El clima fresco ayuda a conservar la alta acidez y el perfil herbal de Sauvignon Blanc en Sancerre.", "caveat": "Suelo, exposición, añada y decisiones de bodega modifican el estilo; el clima no explica por sí solo toda la expresión."},
+    "wset3_255": {"node_id": "HC_WARM_CLIMATE_RIPE_FRUIT_ALCOHOL", "reason": "El clima cálido y seco favorece fruta negra madura, cuerpo y graduación elevada en Châteauneuf-du-Pape.", "caveat": "La mezcla de variedades, rendimientos, suelos y fechas de cosecha producen estilos distintos dentro de la denominación."},
+    "wset3_259": {"node_id": "HC_COOL_CLIMATE_STYLE", "reason": "Furmint conserva acidez alta y puede producir un blanco seco de estructura firme cuando fermenta sin azúcar residual relevante.", "caveat": "La variedad aporta naturalmente acidez, pero sitio, madurez, rendimiento y vinificación determinan el resultado."},
+    "wset3_281": {"node_id": "HC_DIURNAL_RANGE_FRESHNESS", "reason": "La altitud y la amplitud térmica diurna permiten madurez durante el día y conservación de acidez por la noche.", "caveat": "Ribera del Duero también depende de continentalidad, exposición, agua, Tempranillo y decisiones de extracción y crianza."},
+    "wset3_283": {"node_id": "HC_CONTINENTALITY_STYLE", "reason": "Los sitios más cálidos y maduros del Rheingau pueden dar Riesling de mayor cuerpo y favorecer estilos secos frente a muchos estilos del Mosel.", "caveat": "Ambas regiones elaboran vinos secos y dulces; productor, sitio y categoría pesan más que una regla regional absoluta."},
+    "wset3_285": {"node_id": "HC_CARBONIC_MACERATION_FRUIT_LOW_TANNIN", "reason": "La maceración carbónica o semicarbónica favorece fruta roja, tanino bajo y cuerpo ligero en muchos Gamay de Beaujolais.", "caveat": "Beaujolais-Villages incluye estilos con extracción y crianza diferentes; no todos dependen del mismo grado de maceración carbónica."},
+    "wset3_288": {"node_id": "HC_MARITIME_MODERATION", "reason": "La influencia marina y la niebla enfrían el ciclo y reducen la pérdida respiratoria de ácidos.", "caveat": "Sonoma es muy diversa; distancia al mar, orientación, altitud y mesoclima cambian la intensidad del efecto."},
+    "wset3_305": {"node_id": "HC_PRIORAT_LICORELLA_LOW_YIELD_CONCENTRATION", "reason": "Las laderas secas de llicorella restringen vigor y rendimiento, ayudando a explicar la concentración.", "caveat": "La pizarra no transfiere un sabor literal; edad de las vides, agua, exposición y elaboración también son decisivas."},
+    "wset3_320": {"node_id": "HC_COOL_CLIMATE_STYLE", "reason": "El clima relativamente fresco conserva acidez y fruta roja fresca en Pinot Noir de Marlborough.", "caveat": "Marlborough tiene subregiones y niveles de madurez diversos; manejo del dosel, rendimiento y crianza modifican el estilo."},
+    "wset3_359": {"node_id": "HC_WARM_CLIMATE_RIPE_FRUIT_ALCOHOL", "reason": "Calor, insolación y rendimientos moderados favorecen fruta negra madura, concentración y taninos firmes en Toro.", "caveat": "Altitud y noches frescas pueden conservar acidez; edad de la vid, cosecha y extracción cambian la potencia final."},
+    "wset3_368": {"node_id": "HC_CONTINENTALITY_STYLE", "reason": "La mayor continentalidad y altitud de Ribera del Duero favorecen concentración y estructura frente a muchos estilos de Rioja.", "caveat": "Es una tendencia amplia: ambas regiones contienen sitios, crianzas y niveles de extracción muy diversos."},
+    "wset3_369": {"node_id": "HC_LONG_MACERATION_LARGE_CASK", "reason": "Las maceraciones largas extraen tanino y estructura de Nebbiolo, sosteniendo la evolución prolongada de Barolo.", "caveat": "El suelo calizo no actúa solo y los productores modernos usan tiempos y recipientes variados."},
+    "wset3_375": {"node_id": "HC_DIURNAL_RANGE_FRESHNESS", "reason": "La radiación diurna y las noches frías de Central Otago permiten fruta madura con acidez conservada.", "caveat": "Subregión, exposición, viento, agua y cosecha pueden producir Pinot Noir más ligero o más potente."},
+    "wset3_376": {"node_id": "HC_PRIORAT_LICORELLA_LOW_YIELD_CONCENTRATION", "reason": "La combinación de pizarra de drenaje libre, laderas e insolación restringe rendimientos y favorece concentración.", "caveat": "No implica un sabor mineral directo ni calidad automática; el balance hídrico y las decisiones humanas siguen siendo esenciales."},
+    "wset3_399": {"node_id": "HC_COOL_CLIMATE_STYLE", "reason": "El clima fresco de Willamette Valley ayuda a conservar acidez y fruta roja fresca en Pinot Noir.", "caveat": "Añada, subregión, madurez, extracción y roble producen una gama amplia de estilos en Oregon."},
+    "wset3_403": {"node_id": "HC_COOL_CLIMATE_STYLE", "reason": "La maduración relativamente fresca conserva alta acidez y favorece el perfil cítrico de lima del Riesling de Clare Valley.", "caveat": "La nota de queroseno se desarrolla sobre todo con la evolución y depende también de variedad, luz, sitio y botella."},
+    "wset3_441": {"node_id": "HC_RED_WINE_AGEABILITY_STRUCTURE", "reason": "Cabernet Sauvignon y las mezclas del Médoc aportan acidez y tanino firmes que sostienen estructura y guarda.", "caveat": "La proporción varietal, madurez, extracción y nivel de clasificación modifican ampliamente el estilo."},
+    "wset3_463": {"node_id": "HC_COMPOST_SOIL_ORGANIC_MATTER", "reason": "El compostaje recicla materia orgánica y puede mejorar estructura, actividad biológica y manejo de nutrientes del suelo.", "caveat": "La sostenibilidad depende de dosis, origen, transporte y necesidades reales; exceso de nutrientes también puede aumentar vigor."},
+    "wset3_465": {"node_id": "HC_STAINLESS_INERT_VESSEL", "reason": "El acero inoxidable es limpio, controlable y no aporta sabores de madera al vino.", "caveat": "El recipiente sólo es efectivamente protector si se gestiona bien el sellado, la temperatura y el espacio de cabeza."},
+    "wset3_471": {"node_id": "HC_YEAST_STRAIN_AROMA_PROFILE", "reason": "Las cepas de levadura producen proporciones distintas de ésteres y otros compuestos volátiles durante la fermentación.", "caveat": "Uva, temperatura, nutrientes, oxígeno y tiempo también influyen; la levadura no es la única variable aromática."},
+    "wset3_503": {"node_id": "HC_DIURNAL_RANGE_FRESHNESS", "reason": "La altitud suele enfriar las noches más que los días y aumenta la amplitud térmica diaria.", "caveat": "Latitud, nubosidad, humedad, viento y topografía también controlan la amplitud; no aumenta uniformemente con cada metro."},
+    "wset3_721": {"node_id": "HC_ACID_FOOD_HIGH_ACID_WINE_BALANCE", "reason": "La acidez y las burbujas refrescan el paladar frente a alimentos muy salados.", "caveat": "El dulzor, el umami, la grasa y la intensidad aromática del plato pueden exigir un estilo de espumoso diferente."},
+    "wset3_734": {"node_id": "HC_BOTTLE_STORAGE_STABILITY", "reason": "Un cierre de baja transmisión y una temperatura estable limitan entrada de oxígeno y aceleración térmica de reacciones.", "caveat": "El tapón de rosca no revierte oxidación previa; luz, calor, tiempo y calidad inicial siguen siendo importantes."},
 })
 
 
@@ -1126,7 +1160,7 @@ def derive() -> dict:
 
     return {
         "schema_version": "sba_enrichment_v1",
-        "phase": "P.6-batch6-manual-review",
+        "phase": "P.7-batch7-manual-review",
         "derivation": {
             "min_keyword_hits": MIN_KEYWORD_HITS,
             "require_stem_hit": REQUIRE_STEM_HIT,

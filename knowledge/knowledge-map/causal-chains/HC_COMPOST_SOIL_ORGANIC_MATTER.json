@@ -1,0 +1,23 @@
+{
+  "node_type": "causal_chain",
+  "node_id": "HC_COMPOST_SOIL_ORGANIC_MATTER",
+  "topic": "Compost and soil organic matter",
+  "trigger_keywords": ["compost viticulture", "compost sustainable vineyard", "soil organic matter compost", "compostaje viticultura", "materia orgánica suelo"],
+  "steps": [
+    {"step": 1, "label": "cause", "text": "Decomposed plant and animal material is returned to vineyard soil as compost."},
+    {"step": 2, "label": "mechanism", "text": "Organic matter supports soil organisms, improves aggregation and water-holding behaviour, and releases nutrients gradually as it decomposes."},
+    {"step": 3, "label": "effect", "text": "Composting can recycle vineyard waste and support soil health while reducing reliance on rapidly available synthetic inputs."},
+    {"step": 4, "label": "exam_formulation", "text": "Formative causal formulation: compost recycles organic material and can improve soil structure and biological activity."}
+  ],
+  "agent_corpus": "tutor",
+  "safe_for_examiner": false,
+  "examiner_scoring_allowed": false,
+  "requires_human_review": true,
+  "source": "heuristic",
+  "classification": "inferred",
+  "official": false,
+  "formative_only": true,
+  "official_mark_scheme": false,
+  "governance": {"safe_for_examiner": false, "examiner_scoring_allowed": false, "agent_corpus": "tutor", "source": "heuristic", "classification": "inferred", "official": false, "formative_only": true},
+  "_meta": {"schema_version": "causal_chain_v1", "heuristic_extension": "HC_v1", "created_date": "2026-06-15", "ingestion_status": "draft", "source_note": "Inferred formative model - not official WSET assessment or mark-scheme content"}
+}
