@@ -16,7 +16,7 @@ def test_batch_03_item_count():
     with open(OR_BANK, 'r', encoding='utf-8') as f:
         data = json.load(f)
 
-    assert len(data['items']) == 106, f"Expected 106 items, got {len(data['items'])}"
+    assert len(data['items']) >= 106, f"Expected at least 106 items, got {len(data['items'])}"
 
 def test_batch_03_exceeds_100_target():
     """Verify OR bank exceeds 100 items target."""
@@ -51,7 +51,10 @@ def test_batch_03_command_verb_coverage():
         data = json.load(f)
 
     # Check only Batch 3 items (OR_082 to OR_106)
-    batch_3_items = [item for item in data['items'] if item['item_id'] >= 'OR_082']
+    batch_3_items = [
+        item for item in data['items']
+        if 'OR_082' <= item['item_id'] <= 'OR_106'
+    ]
     verbs = set(item.get('command_verb', '') for item in batch_3_items if 'command_verb' in item)
     expected = {
         'describe', 'explain', 'compare', 'assess',
@@ -66,7 +69,10 @@ def test_batch_03_ra_distribution():
         data = json.load(f)
 
     # Check only Batch 3 items (OR_082 to OR_106)
-    batch_3_items = [item for item in data['items'] if item['item_id'] >= 'OR_082']
+    batch_3_items = [
+        item for item in data['items']
+        if 'OR_082' <= item['item_id'] <= 'OR_106'
+    ]
     ras = set(item.get('ra_id', '') for item in batch_3_items)
     expected = {'RA1', 'RA2', 'RA3', 'RA4', 'RA5'}
 
@@ -78,7 +84,10 @@ def test_batch_03_required_fields():
         data = json.load(f)
 
     # Check only Batch 3 items (OR_082 to OR_106)
-    batch_3_items = [item for item in data['items'] if item['item_id'] >= 'OR_082']
+    batch_3_items = [
+        item for item in data['items']
+        if 'OR_082' <= item['item_id'] <= 'OR_106'
+    ]
     required_fields = {
         'item_id', 'question_text', 'command_verb',
         'ra_id', 'topic', 'expected_concepts', 'response_depth_target'
@@ -105,7 +114,10 @@ def test_batch_03_causal_chains_valid():
         data = json.load(f)
 
     # Check only Batch 3 items (OR_082 to OR_106)
-    batch_3_items = [item for item in data['items'] if item['item_id'] >= 'OR_082']
+    batch_3_items = [
+        item for item in data['items']
+        if 'OR_082' <= item['item_id'] <= 'OR_106'
+    ]
 
     for item in batch_3_items:
         chains = item.get('causal_chain_target', [])

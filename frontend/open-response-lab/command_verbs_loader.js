@@ -256,6 +256,34 @@
       }
     },
 
+    recommend: {
+      verb: "recommend",
+      cognitive_level: "application + justified choice",
+      definition: "Select an appropriate option for the stated context and support it with evidence",
+      expected_response: {
+        format: "Clear recommendation followed by evidence and practical consequences",
+        do: [
+          "State the recommendation explicitly",
+          "Use evidence from the scenario",
+          "Explain why it suits the intended style or customer"
+        ],
+        do_not: [
+          "List options without choosing",
+          "Recommend without evidence"
+        ]
+      },
+      mentor_hint: "State the choice first, then link each reason to the scenario: 'I recommend X because...'.",
+      compliance_checks: {
+        required_signals: ["recommend", "because", "suitable", "therefore"],
+        forbidden_signals: ["always", "guaranteed"],
+        structure_rules: {
+          minimum_components: 3,
+          evidence_required: true
+        }
+      }
+    },
+
+    // Compatibility alias used by bank schemas: identify_and_explain
     "identify and explain": {
       verb: "identify and explain",
       cognitive_level: "recall + comprehension",

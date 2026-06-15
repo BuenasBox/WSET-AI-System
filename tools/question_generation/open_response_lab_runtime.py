@@ -26,16 +26,45 @@ from tools.question_generation.open_response_session_engine import (
 
 FRONTEND_LAB_DIR = Path("frontend/open-response-lab")
 LAB_PAYLOAD_JS_PATH = FRONTEND_LAB_DIR / "lab_payload.js"
+OPEN_RESPONSE_BANK_PATH = Path(
+    "knowledge/question-bank/open_response/open_response_bank.json"
+)
 LAB_PAYLOAD_GLOBAL = "OPEN_RESPONSE_LAB_PAYLOAD"
 LAB_STORAGE_KEY = "wset_open_response_lab_private_v1"
 LAB_CONTRACT = "private_open_response_lab_runtime_mvp"
 LAB_ACTIVATION_STATUS = "active_private_lab"
+COMMAND_VERBS_LOADED: tuple[str, ...] = (
+    "explain",
+    "describe",
+    "justify",
+    "assess",
+    "evaluate",
+    "compare",
+    "why",
+    "how",
+    "discuss",
+    "identify and explain",
+    "outline",
+    "state",
+    "list",
+    "recommend",
+)
 
 # Phase X.1 assessment intelligence source paths
 _KNOWLEDGE_ROOT = Path("knowledge")
 _COMMAND_VERB_PATHS = [
     _KNOWLEDGE_ROOT / "command-verbs" / f"{v}.json"
-    for v in ("describe", "explain", "compare", "assess", "evaluate", "justify")
+    for v in (
+        "describe",
+        "explain",
+        "compare",
+        "assess",
+        "evaluate",
+        "discuss",
+        "recommend",
+        "identify_and_explain",
+        "justify",
+    )
 ]
 _SAT_QUALITY_PATH = _KNOWLEDGE_ROOT / "sat-framework" / "sat_quality_framework.json"
 _EVIDENCE_REQ_PATH = _KNOWLEDGE_ROOT / "evaluator-framework" / "evidence_requirements.json"
@@ -71,19 +100,29 @@ def build_lab_runtime_payload(
     Phase X.2: includes all candidates (not just session-union), embeds
     assessment_intelligence from Phase X.1 knowledge assets.
     """
-    records = [dict(candidate) for candidate in (candidates or load_open_response_candidates())]
+    integrated_bank = candidates is None
+    source_records = (
+        load_integrated_open_response_candidates()
+        if integrated_bank
+        else candidates
+    )
+    records = [dict(candidate) for candidate in source_records]
     candidates_by_id = {
         str(candidate.get("source_question_id", "")).strip(): copy.deepcopy(dict(candidate))
         for candidate in records
     }
     all_source_ids = list(candidates_by_id.keys())
 
-    sessions = {
-        session_name: compose_session(records, session_size=session_name)
-        for session_name in SESSION_SIZES
-    }
+    sessions = (
+        _compose_integrated_sessions(records)
+        if integrated_bank
+        else {
+            session_name: compose_session(records, session_size=session_name)
+            for session_name in SESSION_SIZES
+        }
+    )
 
-    return {
+    payload = {
         "lab_contract": LAB_CONTRACT,
         "activation_status": LAB_ACTIVATION_STATUS,
         "pool_size": len(all_source_ids),
@@ -92,7 +131,10 @@ def build_lab_runtime_payload(
         "sessions": {
             name: {
                 "session_size": session["session_size"],
-                "item_ids": [_item_id(source_id) for source_id in session["source_question_ids"]],
+                "item_ids": [
+                    _runtime_item_id(candidates_by_id[source_id])
+                    for source_id in session["source_question_ids"]
+                ],
                 "source_question_ids": list(session["source_question_ids"]),
             }
             for name, session in sessions.items()
@@ -102,14 +144,51 @@ def build_lab_runtime_payload(
             for source_id in all_source_ids
         ],
         "evaluation_by_item_id": {
-            _item_id(source_id): _evaluation_item(candidates_by_id[source_id])
+            _runtime_item_id(candidates_by_id[source_id]): _evaluation_item(
+                candidates_by_id[source_id]
+            )
             for source_id in all_source_ids
         },
         "feedback_fields": copy.deepcopy(FEEDBACK_FIELD_MAP),
         "feedback_prohibited": list(FEEDBACK_PROHIBITED),
+        "evaluation_metadata": {
+            "schema_version": "open_response_evaluation_v1",
+            "command_verbs_loaded": list(COMMAND_VERBS_LOADED),
+            "governance": {
+                "safe_for_examiner": False,
+                "examiner_scoring_allowed": False,
+                "formative_only": True,
+            },
+        },
+        "expansion_history": [
+            {
+                "phase": "P2.4",
+                "items_added": 15,
+                "new_pool_size": len(records),
+            },
+            {
+                "phase": "OR_EXPANSION_BATCH_4",
+                "items_added": 32,
+                "new_pool_size": len(records),
+            },
+        ],
         "assessment_intelligence": _build_assessment_intelligence(),
         "governance_flags": copy.deepcopy(LAB_GOVERNANCE_FLAGS),
     }
+    if integrated_bank:
+        payload["source_bank_total"] = len(records)
+    return payload
+
+
+def load_integrated_open_response_candidates(
+    path: str | Path = OPEN_RESPONSE_BANK_PATH,
+) -> list[dict[str, Any]]:
+    """Normalize the canonical OR bank into the existing runtime candidate shape."""
+    data = json.loads(Path(path).read_text(encoding="utf-8"))
+    items = data.get("items", [])
+    if not isinstance(items, list):
+        raise ValueError("open response bank items must be a list")
+    return [_adapt_bank_item(item) for item in items if isinstance(item, Mapping)]
 
 
 def build_formative_feedback(candidate: Mapping[str, Any], learner_answer: str) -> dict[str, Any]:
@@ -270,7 +349,7 @@ def _build_assessment_intelligence() -> dict[str, Any]:
 
 def _render_item(candidate: Mapping[str, Any]) -> dict[str, Any]:
     return {
-        "item_id": _item_id(candidate.get("source_question_id")),
+        "item_id": _runtime_item_id(candidate),
         "source_question_id": str(candidate.get("source_question_id", "")).strip(),
         "stem": str(candidate.get("stem", "")).strip(),
         "topic": str(candidate.get("topic", "")).strip(),
@@ -283,16 +362,145 @@ def _render_item(candidate: Mapping[str, Any]) -> dict[str, Any]:
 
 def _evaluation_item(candidate: Mapping[str, Any]) -> dict[str, Any]:
     return {
-        "item_id": _item_id(candidate.get("source_question_id")),
+        "item_id": _runtime_item_id(candidate),
         "source_question_id": str(candidate.get("source_question_id", "")).strip(),
         "expected_concepts": _string_list(candidate.get("expected_concepts")),
         "optional_causal_chain": candidate.get("optional_causal_chain"),
+        "causal_chain_reference": _string_list(
+            candidate.get("causal_chain_reference")
+        ),
+        "feedback_profile": copy.deepcopy(candidate.get("feedback_profile", {})),
         "governance_flags": copy.deepcopy(LAB_GOVERNANCE_FLAGS),
     }
 
 
+def _runtime_item_id(candidate: Mapping[str, Any]) -> str:
+    item_id = str(candidate.get("item_id", "")).strip()
+    if item_id:
+        return item_id
+    return _item_id(candidate.get("source_question_id"))
+
+
 def _item_id(source_question_id: Any) -> str:
     return f"open_response_{str(source_question_id).strip()}"
+
+
+def _adapt_bank_item(item: Mapping[str, Any]) -> dict[str, Any]:
+    item_id = str(item.get("item_id") or item.get("question_id") or "").strip()
+    if not item_id:
+        raise ValueError("open response bank item requires item_id")
+    verb = _frontend_command_verb(
+        str(item.get("command_verb", "")).strip(),
+        str(item.get("question_text", "")).strip(),
+    )
+    concepts = _string_list(item.get("expected_concepts"))
+    chains = _string_list(
+        item.get("causal_chain_reference", item.get("causal_chain_target"))
+    )
+    question_text = str(item.get("question_text", "")).strip()
+    return {
+        "item_id": item_id,
+        "question_id": str(item.get("question_id", item_id)).strip(),
+        "source_question_id": item_id,
+        "question_text": question_text,
+        "stem": question_text,
+        "topic": str(item.get("topic", "")).strip(),
+        "RA": str(item.get("ra_id", "")).strip(),
+        "command_verb": verb,
+        "expected_concepts": concepts,
+        "optional_causal_chain": " -> ".join(chains) if chains else None,
+        "causal_chain_reference": chains,
+        "feedback_profile": copy.deepcopy(item.get("feedback_profile", {})),
+        "evaluation_config": {
+            "verb_definition_key": verb,
+            "requires_causal_chain": bool(chains),
+            "structure_rules": {
+                "minimum_components": 2,
+                "response_depth_target": str(
+                    item.get("response_depth_target", "developing")
+                ).strip()
+            },
+            "required_signals": concepts,
+            "forbidden_signals": list(FEEDBACK_PROHIBITED),
+            "source": "open_response_bank_v1",
+        },
+    }
+
+
+def _frontend_command_verb(verb: str, question_text: str) -> str:
+    normalized = verb.replace("_", " ").strip().casefold()
+    if normalized:
+        return normalized
+
+    stem = question_text.strip().casefold()
+    if stem.startswith(("justifica", "justify")):
+        return "justify"
+    if stem.startswith(("compare", "compara")):
+        return "compare"
+    if stem.startswith(("analice", "analiza", "assess", "evaluate")):
+        return "evaluate"
+    if stem.startswith(("describa", "describe")):
+        return "describe"
+    if stem.startswith(("menciona", "state")):
+        return "state"
+    if stem.startswith(("nombra", "list")):
+        return "list"
+    if stem.startswith(("identifica", "identify")):
+        return "identify and explain"
+    if "por qué" in stem[:40]:
+        return "why"
+    if stem.startswith(("explica cómo", "explique cómo", "how")):
+        return "how"
+    return "explain"
+
+
+def _compose_integrated_sessions(
+    records: Sequence[Mapping[str, Any]],
+) -> dict[str, dict[str, Any]]:
+    """Build deterministic sessions while preserving the established mode contract."""
+    source_ids = [
+        str(record.get("source_question_id", "")).strip()
+        for record in records
+        if str(record.get("source_question_id", "")).strip()
+    ]
+    if len(source_ids) < max(SESSION_SIZES.values()):
+        raise ValueError("integrated open response bank is too small for sessions")
+
+    latest_ids = source_ids[-32:] if len(source_ids) >= 32 else source_ids
+    by_ra: dict[str, list[str]] = {}
+    for record in records:
+        source_id = str(record.get("source_question_id", "")).strip()
+        if source_id not in latest_ids:
+            continue
+        by_ra.setdefault(str(record.get("RA", "")).strip(), []).append(source_id)
+
+    mock_ids = by_ra.get("RA2", [])[:3] + by_ra.get("RA4", [])[:1]
+    if len(mock_ids) < SESSION_SIZES["mock_theory_2"]:
+        mock_ids.extend(
+            source_id
+            for source_id in latest_ids
+            if source_id not in mock_ids
+        )
+    mock_ids = mock_ids[: SESSION_SIZES["mock_theory_2"]]
+
+    return {
+        "short_practice": {
+            "session_size": SESSION_SIZES["short_practice"],
+            "source_question_ids": latest_ids[:1],
+        },
+        "standard_practice": {
+            "session_size": SESSION_SIZES["standard_practice"],
+            "source_question_ids": latest_ids[:2],
+        },
+        "extended_practice": {
+            "session_size": SESSION_SIZES["extended_practice"],
+            "source_question_ids": latest_ids[:4],
+        },
+        "mock_theory_2": {
+            "session_size": SESSION_SIZES["mock_theory_2"],
+            "source_question_ids": mock_ids,
+        },
+    }
 
 
 def _missing_causal_reasoning(causal_feedback: str) -> list[str]:

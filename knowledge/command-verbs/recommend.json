@@ -1,0 +1,38 @@
+{
+  "schema_version": "assessment_intelligence_v1",
+  "verb": "recommend",
+  "source": "WSET Level 3 formative response practice",
+  "governance": {
+    "safe_for_examiner": false,
+    "examiner_scoring_allowed": false,
+    "uses_llm": false,
+    "uses_api": false
+  },
+  "cognitive_level": "application + justified choice",
+  "definition": "Select an appropriate option for the stated context and support the choice with relevant evidence and practical consequences.",
+  "used_in_ras": ["RA1", "RA2", "RA3", "RA4", "RA5"],
+  "expected_response": {
+    "format": "Clear recommendation followed by evidence, trade-offs, and practical application",
+    "do": [
+      "State the recommendation explicitly",
+      "Use evidence from the scenario",
+      "Explain why the recommendation suits the intended style or customer",
+      "Acknowledge a material trade-off where relevant"
+    ],
+    "do_not": [
+      "List options without choosing",
+      "Recommend without evidence",
+      "Present personal preference as sufficient justification"
+    ]
+  },
+  "mentor_hint": "State the choice first, then link each reason to the scenario: 'I recommend X because...'.",
+  "compliance_checks": {
+    "required_signals": ["recommend", "because", "suitable", "therefore"],
+    "forbidden_signals": ["always", "guaranteed", "official score"],
+    "structure_rules": {
+      "minimum_components": 3,
+      "component_order": ["recommendation", "evidence", "practical consequence"],
+      "evidence_required": true
+    }
+  }
+}

@@ -53,7 +53,8 @@ class LabPayloadEnrichmentTests(unittest.TestCase):
             self.assertIsNotNone(item["command_verb"])
             self.assertIn(item["command_verb"], {
                 "explain", "describe", "justify", "assess", "evaluate", "compare",
-                "why", "how", "discuss", "identify and explain", "outline", "state", "list"
+                "why", "how", "discuss", "identify and explain", "outline", "state",
+                "list", "recommend"
             })
 
     def test_all_items_have_expected_concepts(self) -> None:
