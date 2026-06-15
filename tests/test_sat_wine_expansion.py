@@ -4,9 +4,18 @@ Tests schema compliance, governance, and pedagogical completeness
 """
 
 import json
-import os
 import unittest
 from pathlib import Path
+
+from tools.sat_wine_loader import (
+    get_inventory_summary,
+    get_wines_by_examination_value,
+    get_wines_by_grape,
+    get_wines_by_priority,
+    load_all_wines,
+    load_wine_by_id,
+    load_wine_inventory,
+)
 
 
 class SATWineSchemaTests(unittest.TestCase):
@@ -331,6 +340,72 @@ class SATWineContentTests(unittest.TestCase):
         wine_observations = json.dumps(self.wines).lower()
         found_terms = sum(1 for term in sat_terms if term in wine_observations)
         self.assertGreater(found_terms, 8)
+
+
+class SATWineLoaderTests(unittest.TestCase):
+    """Verify deterministic discovery through the public loader."""
+
+    def test_inventory_and_all_wines_are_consistent(self):
+        inventory = load_wine_inventory()
+        wines = load_all_wines()
+
+        self.assertEqual(len(inventory["wines"]), 12)
+        self.assertEqual(
+            [record["wine_id"] for record in inventory["wines"]],
+            [wine["id"] for wine in wines],
+        )
+
+    def test_load_wine_by_id_handles_known_and_unknown_ids(self):
+        self.assertEqual(load_wine_by_id("SAT_WINE_001")["region"], "Chablis")
+        self.assertIsNone(load_wine_by_id("SAT_WINE_999"))
+
+    def test_loader_filters_match_inventory(self):
+        self.assertEqual(len(get_wines_by_priority(1)), 6)
+        self.assertEqual(len(get_wines_by_priority(2)), 4)
+        self.assertEqual(len(get_wines_by_priority(3)), 2)
+        self.assertEqual(
+            [wine["id"] for wine in get_wines_by_grape("Chardonnay")],
+            ["SAT_WINE_001", "SAT_WINE_002"],
+        )
+        self.assertEqual(len(get_wines_by_examination_value("Very High")), 6)
+
+    def test_inventory_summary_is_deterministic(self):
+        expected = {
+            "total_wines": 12,
+            "wines_by_priority": {1: 6, 2: 4, 3: 2},
+            "wines_by_examination_value": {
+                "Very High": 6,
+                "High": 4,
+                "Medium-High": 2,
+            },
+            "unique_grapes": 11,
+            "grape_varieties": [
+                "Cabernet Sauvignon",
+                "Chardonnay",
+                "Grenache / Garnacha",
+                "Merlot",
+                "Nebbiolo",
+                "Pinot Noir",
+                "Riesling",
+                "Sangiovese",
+                "Sauvignon Blanc",
+                "Syrah / Shiraz",
+                "Tempranillo",
+            ],
+            "unique_countries": 8,
+            "countries": [
+                "France",
+                "France / Australia",
+                "France / Spain",
+                "France / USA",
+                "Germany",
+                "Italy",
+                "New Zealand",
+                "Spain",
+            ],
+        }
+
+        self.assertEqual(get_inventory_summary(), expected)
 
 
 if __name__ == "__main__":
