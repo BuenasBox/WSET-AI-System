@@ -88,8 +88,8 @@ class Batch1Tests(unittest.TestCase):
             self.assertIn(
                 source_id, enrichment["items_by_source_question_id"]
             )
-        self.assertEqual(len(sba_eligible(master["items"])), 625)
-        self.assertEqual(len(enrichment["items_by_source_question_id"]), 407)
+        self.assertEqual(len(sba_eligible(master["items"])), 670)
+        self.assertEqual(len(enrichment["items_by_source_question_id"]), 454)
 
 
 if __name__ == "__main__":

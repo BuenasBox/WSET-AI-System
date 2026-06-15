@@ -37,10 +37,10 @@ class TestDashboardMaturityModel(unittest.TestCase):
     def test_verified_repository_counts_are_separate_from_estimates(self):
         self.assertEqual(self.state["tests"], 1593)
         self.assertEqual(self.state["tests_skipped"], 7)
-        self.assertEqual(self.state["active_sba_items"], 119)
+        self.assertEqual(self.state["active_sba_items"], 670)
         self.assertEqual(self.state["export_validation_errors"], 0)
-        self.assertEqual(self.state["master_bank_total"], 616)
-        self.assertEqual(self.state["master_bank_sba"], 579)        # 590 - 11 T/F→OR (Phase Y.0)
+        self.assertEqual(self.state["master_bank_total"], 710)
+        self.assertEqual(self.state["master_bank_sba"], 673)
         self.assertEqual(self.state["master_bank_open_response"], 37)  # 26 + 11 matching-stub→OR (Phase Y.0)
 
     def test_activation_and_governance_are_not_overstated(self):

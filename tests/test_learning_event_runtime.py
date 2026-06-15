@@ -334,10 +334,10 @@ class BoundaryTests(unittest.TestCase):
         self.assertEqual(
             counts,
             {
-                "total_master_bank": 616,
-                "sba_operational_pool": 589,
-                "open_response_candidate_pool": 27,
-                "open_response_review_pool": 0,
+                "total_master_bank": 710,
+                "sba_operational_pool": 670,
+                "open_response_candidate_pool": 38,
+                "open_response_review_pool": 2,
                 "inactive": 0,
                 "public_lab": 36,
             },

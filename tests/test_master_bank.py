@@ -57,10 +57,10 @@ class MasterBankTests(unittest.TestCase):
     def test_canonical_counts(self) -> None:
         counts = self.generated["counts"]
 
-        self.assertEqual(counts["total"], 663)
-        self.assertEqual(counts["single_best_answer"], 626)
+        self.assertEqual(counts["total"], 710)
+        self.assertEqual(counts["single_best_answer"], 673)
         self.assertEqual(counts["open_response"], 37)         # 26 + 11 matching-stub→OR conversions (Phase Y.0)
-        self.assertEqual(counts["inactive"], 627)
+        self.assertEqual(counts["inactive"], 674)
         self.assertEqual(counts["needs_review"], 461)         # 471 - 10 new OR resolution records (Phase Y.0)
         self.assertEqual(counts["gold"], 34)
         self.assertEqual(counts["public_lab"], 36)
@@ -71,7 +71,7 @@ class MasterBankTests(unittest.TestCase):
             {
                 "approved_for_static_demo": 36,
                 "approved_open_response": 37,   # +11 matching-stub→OR conversions (Phase Y.0)
-                "approved_private_sba": 129,
+                "approved_private_sba": 176,
                 "unreviewed": 461,               # -10 (new OR resolution records, Phase Y.0)
             },
         )

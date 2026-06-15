@@ -33,10 +33,10 @@ class OpenResponseSuitabilityTests(unittest.TestCase):
             item["source_question_id"]: item for item in cls.report["records"]
         }
 
-    def test_report_covers_all_616_records_without_quota(self) -> None:
-        self.assertEqual(self.report["record_count"], 616)
+    def test_report_covers_all_710_records_without_quota(self) -> None:
+        self.assertEqual(self.report["record_count"], 710)
         self.assertIsNone(self.report["quota_target"])
-        self.assertEqual(sum(self.report["classification_counts"].values()), 616)
+        self.assertEqual(sum(self.report["classification_counts"].values()), 710)
         self.assertEqual(
             set(self.report["classification_counts"]), set(CLASSIFICATIONS)
         )
@@ -45,9 +45,9 @@ class OpenResponseSuitabilityTests(unittest.TestCase):
         self.assertEqual(
             self.report["classification_counts"],
             {
-                "open_response_candidate": 27,
-                "human_review_required": 0,
-                "sba_only": 589,
+                "open_response_candidate": 38,
+                "human_review_required": 2,
+                "sba_only": 670,
                 "inactive": 0,
             },
         )
@@ -58,7 +58,7 @@ class OpenResponseSuitabilityTests(unittest.TestCase):
             for item in self.bank["items"]
             if item["status"]["review_state"] == "approved_open_response"
         ]
-        self.assertEqual(len(approved), 26)
+        self.assertEqual(len(approved), 37)
         self.assertTrue(
             all(
                 self.result_by_source[item["source_question_id"]][

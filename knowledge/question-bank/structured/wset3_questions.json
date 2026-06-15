@@ -15379,5 +15379,2830 @@
     },
     "correct_answer_letter": "Falso",
     "correct_answer_text": "Falso — el canal off-trade son ventas para consumo fuera del punto de venta (supermercados, vinotecas); on-trade incluye restaurantes y bares"
+  },
+  {
+    "question_id": "858",
+    "question_text": "Si unas uvas sanas se congelan de forma natural en la vid y se prensan aún congeladas, ¿qué resultado explica mejor la concentración del mosto?",
+    "question_type": "theory",
+    "expected_topics": [
+      "RA1",
+      "icewine_concentration"
+    ],
+    "expected_causal_links": [
+      "Las uvas alcanzan temperaturas de congelación en la vid. -> Al prensarlas congeladas, gran parte del agua permanece en la prensa como hielo. -> El rendimiento es bajo y el mosto queda intensamente concentrado."
+    ],
+    "expected_keywords": [
+      "Icewine",
+      "Eiswein",
+      "congelación",
+      "prensado",
+      "concentración"
+    ],
+    "expected_reasoning_type": "cause_effect",
+    "difficulty": "distinction",
+    "source_type": "SBA gap closure | manually curated from local official study guide",
+    "safe_for_examiner": false,
+    "options": {
+      "A": "Parte del agua queda como hielo y se obtiene poco mosto rico en azúcar, acidez y sabor.",
+      "B": "El hielo se derrite en la prensa y aumenta el rendimiento sin cambiar la concentración.",
+      "C": "La congelación transforma directamente los ácidos en azúcar.",
+      "D": "Las levaduras consumen el agua antes de iniciar la fermentación."
+    },
+    "correct_answer_letter": "A",
+    "correct_answer_text": "Parte del agua queda como hielo y se obtiene poco mosto rico en azúcar, acidez y sabor."
+  },
+  {
+    "question_id": "859",
+    "question_text": "Si un productor retrasa la vendimia para esperar la congelación necesaria para Eiswein, ¿qué consecuencia es más probable antes de cosechar?",
+    "question_type": "theory",
+    "expected_topics": [
+      "RA1",
+      "icewine_harvest_risk"
+    ],
+    "expected_causal_links": [
+      "La fruta madura permanece expuesta en la vid durante más tiempo. -> El retraso prolonga la exposición a clima adverso, fauna y deterioro. -> Puede perderse una parte importante de la cosecha antes de la congelación."
+    ],
+    "expected_keywords": [
+      "Eiswein",
+      "vendimia tardía",
+      "riesgo",
+      "bajo rendimiento"
+    ],
+    "expected_reasoning_type": "cause_effect",
+    "difficulty": "intermediate",
+    "source_type": "SBA gap closure | manually curated from local official study guide",
+    "safe_for_examiner": false,
+    "options": {
+      "A": "Disminuye toda presión de enfermedad porque el azúcar protege las bayas.",
+      "B": "Aumentan los riesgos de pérdida por podredumbre, aves y caída de fruta.",
+      "C": "La fruta gana volumen y eleva el rendimiento de mosto.",
+      "D": "La acidez desaparece por completo antes de que llegue la helada."
+    },
+    "correct_answer_letter": "B",
+    "correct_answer_text": "Aumentan los riesgos de pérdida por podredumbre, aves y caída de fruta."
+  },
+  {
+    "question_id": "860",
+    "question_text": "Al comparar crioconcentración y podredumbre noble, ¿qué factor explica mejor que ambos métodos den vinos dulces pero con perfiles distintos?",
+    "question_type": "theory",
+    "expected_topics": [
+      "RA1",
+      "icewine_vs_botrytis"
+    ],
+    "expected_causal_links": [
+      "Dos mecanismos diferentes reducen la proporción de agua respecto de los solutos. -> El hielo retiene agua en un caso; el hongo causa evaporación y cambios metabólicos en el otro. -> Ambos concentran, pero Botrytis aporta un carácter aromático y químico propio."
+    ],
+    "expected_keywords": [
+      "Icewine",
+      "Botrytis",
+      "crioconcentración",
+      "deshidratación"
+    ],
+    "expected_reasoning_type": "cause_effect",
+    "difficulty": "intermediate",
+    "source_type": "SBA gap closure | manually curated from local official study guide",
+    "safe_for_examiner": false,
+    "options": {
+      "A": "Ambos métodos dependen de que la levadura detenga la fermentación al mismo nivel de alcohol.",
+      "B": "Los dos métodos convierten la acidez de la uva en glicerol.",
+      "C": "La congelación separa agua físicamente, mientras Botrytis perfora la piel y modifica compuestos de la uva.",
+      "D": "La única diferencia es el momento del embotellado."
+    },
+    "correct_answer_letter": "C",
+    "correct_answer_text": "La congelación separa agua físicamente, mientras Botrytis perfora la piel y modifica compuestos de la uva."
+  },
+  {
+    "question_id": "861",
+    "question_text": "Si la bodega prensa uvas completamente congeladas para Icewine, ¿qué consecuencia productiva explica mejor su precio elevado?",
+    "question_type": "theory",
+    "expected_topics": [
+      "RA1",
+      "icewine_press_yield"
+    ],
+    "expected_causal_links": [
+      "El agua de las bayas está inmovilizada como hielo. -> La prensa libera sobre todo la fracción líquida más concentrada. -> El bajo rendimiento y la cosecha arriesgada elevan el coste por botella."
+    ],
+    "expected_keywords": [
+      "Icewine",
+      "prensado",
+      "rendimiento",
+      "coste"
+    ],
+    "expected_reasoning_type": "cause_effect",
+    "difficulty": "distinction",
+    "source_type": "SBA gap closure | manually curated from local official study guide",
+    "safe_for_examiner": false,
+    "options": {
+      "A": "Se obtiene más mosto porque los cristales rompen todas las paredes celulares.",
+      "B": "El alcohol final sube sin necesidad de fermentación.",
+      "C": "El vino puede embotellarse sin clarificación ni estabilización.",
+      "D": "Se extrae una fracción pequeña de mosto concentrado por kilogramo de uva."
+    },
+    "correct_answer_letter": "D",
+    "correct_answer_text": "Se extrae una fracción pequeña de mosto concentrado por kilogramo de uva."
+  },
+  {
+    "question_id": "862",
+    "question_text": "Un Icewine canadiense conserva acidez alta pese a su intenso dulzor. ¿Qué factor explica mejor ese equilibrio?",
+    "question_type": "theory",
+    "expected_topics": [
+      "RA2",
+      "canada_icewine_acidity"
+    ],
+    "expected_causal_links": [
+      "La maduración ocurre en un entorno fresco y la fruta se cosecha muy tarde. -> La crioconcentración aumenta azúcar y sabor mientras permanece una base ácida importante. -> El vino puede ser muy dulce sin resultar necesariamente pesado o plano."
+    ],
+    "expected_keywords": [
+      "Canadá",
+      "Icewine",
+      "acidez",
+      "equilibrio"
+    ],
+    "expected_reasoning_type": "cause_effect",
+    "difficulty": "intermediate",
+    "source_type": "SBA gap closure | manually curated from local official study guide",
+    "safe_for_examiner": false,
+    "options": {
+      "A": "La fruta se cultiva en clima frío y se concentra sin eliminar toda la acidez natural.",
+      "B": "La congelación añade ácido tartárico nuevo a las bayas.",
+      "C": "La elevada azúcar residual hace que la acidez deje de ser perceptible.",
+      "D": "La fermentación maloláctica siempre aumenta la acidez."
+    },
+    "correct_answer_letter": "A",
+    "correct_answer_text": "La fruta se cultiva en clima frío y se concentra sin eliminar toda la acidez natural."
+  },
+  {
+    "question_id": "863",
+    "question_text": "Si un invierno canadiense no alcanza a tiempo temperaturas suficientemente bajas, ¿qué consecuencia es más probable para un productor de Icewine?",
+    "question_type": "theory",
+    "expected_topics": [
+      "RA2",
+      "canada_icewine_vintage"
+    ],
+    "expected_causal_links": [
+      "La producción depende de una helada natural mientras la fruta sigue sana en la vid. -> Sin frío suficiente no se separa agua como hielo durante el prensado. -> La disponibilidad y el volumen varían mucho entre añadas."
+    ],
+    "expected_keywords": [
+      "Canadá",
+      "Icewine",
+      "helada",
+      "variación de añada"
+    ],
+    "expected_reasoning_type": "cause_effect",
+    "difficulty": "intermediate",
+    "source_type": "SBA gap closure | manually curated from local official study guide",
+    "safe_for_examiner": false,
+    "options": {
+      "A": "Puede congelar el vino terminado y venderlo con la misma indicación.",
+      "B": "Puede no reunir condiciones para cosechar fruta congelada y perder parte o toda la producción prevista.",
+      "C": "La falta de helada favorece automáticamente una concentración mayor.",
+      "D": "Puede sustituir la congelación por flor sin cambiar el estilo."
+    },
+    "correct_answer_letter": "B",
+    "correct_answer_text": "Puede no reunir condiciones para cosechar fruta congelada y perder parte o toda la producción prevista."
+  },
+  {
+    "question_id": "864",
+    "question_text": "Si el productor cosecha las uvas de Icewine antes de que estén congeladas, ¿qué resultado es más probable?",
+    "question_type": "theory",
+    "expected_topics": [
+      "RA2",
+      "canada_icewine_harvest"
+    ],
+    "expected_causal_links": [
+      "La separación de agua requiere cristales de hielo presentes al prensar. -> La fruta no congelada libera agua y solutos juntos. -> Se pierde el mecanismo que distingue la concentración del Icewine."
+    ],
+    "expected_keywords": [
+      "Canadá",
+      "Icewine",
+      "cosecha",
+      "crioconcentración"
+    ],
+    "expected_reasoning_type": "cause_effect",
+    "difficulty": "distinction",
+    "source_type": "SBA gap closure | manually curated from local official study guide",
+    "safe_for_examiner": false,
+    "options": {
+      "A": "El mosto será más concentrado porque las bayas estarán más blandas.",
+      "B": "La fermentación se detendrá automáticamente por el frío residual.",
+      "C": "El prensado no producirá la misma crioconcentración y el mosto será menos concentrado.",
+      "D": "Aparecerán aromas botritizados aunque no haya Botrytis."
+    },
+    "correct_answer_letter": "C",
+    "correct_answer_text": "El prensado no producirá la misma crioconcentración y el mosto será menos concentrado."
+  },
+  {
+    "question_id": "865",
+    "question_text": "Dos productores canadienses elaboran Icewine, uno con Riesling y otro con Vidal. ¿Qué factor explica mejor que ambos puedan equilibrar azúcar intensa?",
+    "question_type": "theory",
+    "expected_topics": [
+      "RA2",
+      "canada_icewine_variety_style"
+    ],
+    "expected_causal_links": [
+      "Las variedades aptas mantienen estructura ácida al madurar. -> La crioconcentración intensifica el mosto y exige una base estructural suficiente. -> El dulzor puede quedar equilibrado por acidez marcada y sabor concentrado."
+    ],
+    "expected_keywords": [
+      "Canadá",
+      "Riesling",
+      "Vidal",
+      "Icewine",
+      "acidez"
+    ],
+    "expected_reasoning_type": "cause_effect",
+    "difficulty": "intermediate",
+    "source_type": "SBA gap closure | manually curated from local official study guide",
+    "safe_for_examiner": false,
+    "options": {
+      "A": "El nivel de azúcar elimina cualquier diferencia varietal.",
+      "B": "La congelación produce taninos altos en ambas variedades.",
+      "C": "Ambos deben criarse bajo flor para conservar frescura.",
+      "D": "La acidez natural de la fruta y su conservación durante la concentración sostienen el equilibrio."
+    },
+    "correct_answer_letter": "D",
+    "correct_answer_text": "La acidez natural de la fruta y su conservación durante la concentración sostienen el equilibrio."
+  },
+  {
+    "question_id": "866",
+    "question_text": "¿Qué factor explica mejor que un Icewine canadiense suela tener un coste de producción alto?",
+    "question_type": "theory",
+    "expected_topics": [
+      "RA2",
+      "canada_icewine_cost"
+    ],
+    "expected_causal_links": [
+      "La fruta queda en la vid hasta el invierno y se prensa congelada. -> Aumentan la exposición a pérdidas, la necesidad de mano de obra y la proporción de sólidos retenidos. -> Pocas botellas absorben costes altos de viticultura y elaboración."
+    ],
+    "expected_keywords": [
+      "Canadá",
+      "Icewine",
+      "coste",
+      "bajo rendimiento"
+    ],
+    "expected_reasoning_type": "cause_effect",
+    "difficulty": "intermediate",
+    "source_type": "SBA gap closure | manually curated from local official study guide",
+    "safe_for_examiner": false,
+    "options": {
+      "A": "Vendimia arriesgada y tardía, selección exigente y rendimiento de prensado muy bajo.",
+      "B": "Fermentación rápida a alta temperatura y gran rendimiento por hectárea.",
+      "C": "Ausencia de pérdidas porque la fruta permanece protegida por el hielo.",
+      "D": "Uso obligatorio de roble nuevo durante décadas."
+    },
+    "correct_answer_letter": "A",
+    "correct_answer_text": "Vendimia arriesgada y tardía, selección exigente y rendimiento de prensado muy bajo."
+  },
+  {
+    "question_id": "867",
+    "question_text": "Un lote de uvas para Icewine muestra algo de Botrytis, pero alcanzó la concentración al congelarse. ¿Qué interpretación explica mejor el estilo?",
+    "question_type": "theory",
+    "expected_topics": [
+      "RA2",
+      "canada_icewine_botrytis_incidental"
+    ],
+    "expected_causal_links": [
+      "La fruta puede sufrir más de una influencia antes de cosecharse. -> La helada separa agua como hielo aunque existan bayas afectadas por Botrytis. -> El carácter principal procede de la crioconcentración, con posibles matices adicionales."
+    ],
+    "expected_keywords": [
+      "Canadá",
+      "Icewine",
+      "Botrytis",
+      "mecanismo"
+    ],
+    "expected_reasoning_type": "cause_effect",
+    "difficulty": "distinction",
+    "source_type": "SBA gap closure | manually curated from local official study guide",
+    "safe_for_examiner": false,
+    "options": {
+      "A": "La presencia de Botrytis convierte automáticamente el vino en Sauternes.",
+      "B": "La congelación sigue siendo el mecanismo definitorio; Botrytis puede ser incidental y modificar el perfil.",
+      "C": "La congelación deja de tener efecto cuando aparece cualquier hongo.",
+      "D": "El vino solo puede ser seco porque los dos mecanismos se neutralizan."
+    },
+    "correct_answer_letter": "B",
+    "correct_answer_text": "La congelación sigue siendo el mecanismo definitorio; Botrytis puede ser incidental y modificar el perfil."
+  },
+  {
+    "question_id": "868",
+    "question_text": "¿Qué factor explica mejor que un Eiswein alemán pueda mostrar dulzor intenso y acidez muy alta?",
+    "question_type": "theory",
+    "expected_topics": [
+      "RA2",
+      "germany_eiswein_acidity"
+    ],
+    "expected_causal_links": [
+      "La fruta madura en una región de clima fresco y permanece sana hasta la helada. -> El agua congelada se separa en la prensa y concentra los componentes presentes. -> Azúcar, sabor y acidez intensa pueden coexistir en el vino."
+    ],
+    "expected_keywords": [
+      "Alemania",
+      "Eiswein",
+      "acidez",
+      "congelación"
+    ],
+    "expected_reasoning_type": "cause_effect",
+    "difficulty": "intermediate",
+    "source_type": "SBA gap closure | manually curated from local official study guide",
+    "safe_for_examiner": false,
+    "options": {
+      "A": "La helada convierte azúcar en ácido málico.",
+      "B": "La legislación obliga a acidificar todos los Eiswein.",
+      "C": "La uva conserva acidez en un clima fresco y la congelación concentra el mosto sin requerir sobremaduración botritizada.",
+      "D": "La crianza oxidativa incrementa la acidez total."
+    },
+    "correct_answer_letter": "C",
+    "correct_answer_text": "La uva conserva acidez en un clima fresco y la congelación concentra el mosto sin requerir sobremaduración botritizada."
+  },
+  {
+    "question_id": "869",
+    "question_text": "Al comparar Eiswein y Trockenbeerenauslese, ¿qué opción explica mejor la diferencia de producción?",
+    "question_type": "theory",
+    "expected_topics": [
+      "RA2",
+      "germany_eiswein_vs_tba"
+    ],
+    "expected_causal_links": [
+      "Los estilos parten de mecanismos distintos de concentración. -> Uno retiene agua como hielo; el otro pierde agua por bayas intensamente botritizadas. -> Pueden compartir dulzor elevado, pero no la misma causa ni el mismo perfil."
+    ],
+    "expected_keywords": [
+      "Alemania",
+      "Eiswein",
+      "TBA",
+      "Botrytis"
+    ],
+    "expected_reasoning_type": "cause_effect",
+    "difficulty": "intermediate",
+    "source_type": "SBA gap closure | manually curated from local official study guide",
+    "safe_for_examiner": false,
+    "options": {
+      "A": "Ambos dependen exclusivamente de secado en esteras.",
+      "B": "Eiswein se fortifica durante la fermentación y TBA después.",
+      "C": "TBA se concentra por hielo y Eiswein por flor.",
+      "D": "Eiswein depende de uvas congeladas sanas o no necesariamente botritizadas; TBA depende de bayas muy afectadas por podredumbre noble."
+    },
+    "correct_answer_letter": "D",
+    "correct_answer_text": "Eiswein depende de uvas congeladas sanas o no necesariamente botritizadas; TBA depende de bayas muy afectadas por podredumbre noble."
+  },
+  {
+    "question_id": "870",
+    "question_text": "Un mosto de Icewine tiene concentración de azúcar muy alta. ¿Qué consecuencia es más probable durante la fermentación?",
+    "question_type": "theory",
+    "expected_topics": [
+      "RA2",
+      "canada_icewine_fermentation"
+    ],
+    "expected_causal_links": [
+      "El mosto contiene una proporción muy alta de azúcar disuelta. -> La presión osmótica y el alcohol creciente dificultan la actividad de la levadura. -> Es probable conservar azúcar residual y requerir control cuidadoso."
+    ],
+    "expected_keywords": [
+      "Icewine",
+      "fermentación",
+      "presión osmótica",
+      "azúcar residual"
+    ],
+    "expected_reasoning_type": "cause_effect",
+    "difficulty": "distinction",
+    "source_type": "SBA gap closure | manually curated from local official study guide",
+    "safe_for_examiner": false,
+    "options": {
+      "A": "La levadura trabaja bajo fuerte presión osmótica y la fermentación puede ser lenta o detenerse con azúcar residual.",
+      "B": "La alta concentración garantiza una fermentación completa y rápida.",
+      "C": "El mosto no puede producir alcohol porque toda el agua está congelada.",
+      "D": "La fermentación convierte toda la acidez en dióxido de carbono."
+    },
+    "correct_answer_letter": "A",
+    "correct_answer_text": "La levadura trabaja bajo fuerte presión osmótica y la fermentación puede ser lenta o detenerse con azúcar residual."
+  },
+  {
+    "question_id": "871",
+    "question_text": "Si un Icewine combina azúcar residual alta, acidez alta y sabores concentrados, ¿qué resultado sensorial es más probable?",
+    "question_type": "theory",
+    "expected_topics": [
+      "RA2",
+      "canada_icewine_style"
+    ],
+    "expected_causal_links": [
+      "El mosto concentra azúcar, ácidos y compuestos de sabor. -> La fermentación deja azúcar residual mientras la acidez aporta contraste estructural. -> El vino resulta rico e intenso, pero puede conservar equilibrio y longitud."
+    ],
+    "expected_keywords": [
+      "Icewine",
+      "dulzor",
+      "acidez",
+      "cuerpo",
+      "intensidad"
+    ],
+    "expected_reasoning_type": "cause_effect",
+    "difficulty": "intermediate",
+    "source_type": "SBA gap closure | manually curated from local official study guide",
+    "safe_for_examiner": false,
+    "options": {
+      "A": "Un vino seco y ligero porque la acidez neutraliza químicamente el azúcar.",
+      "B": "Un vino dulce, intenso y de cuerpo pleno cuya acidez evita una sensación empalagosa.",
+      "C": "Un vino tánico porque el hielo extrae compuestos de los raspones.",
+      "D": "Un vino neutro porque la congelación elimina los aromas."
+    },
+    "correct_answer_letter": "B",
+    "correct_answer_text": "Un vino dulce, intenso y de cuerpo pleno cuya acidez evita una sensación empalagosa."
+  },
+  {
+    "question_id": "872",
+    "question_text": "En Sauternes, ¿qué secuencia meteorológica explica mejor el desarrollo de podredumbre noble en lugar de podredumbre gris?",
+    "question_type": "theory",
+    "expected_topics": [
+      "RA2",
+      "sauternes_morning_mist"
+    ],
+    "expected_causal_links": [
+      "Las bayas maduras reciben humedad suficiente para que Botrytis se establezca. -> Periodos secos posteriores limitan la podredumbre destructiva y permiten pérdida de agua. -> Las bayas se arrugan y concentran azúcar y sabor con carácter noble."
+    ],
+    "expected_keywords": [
+      "Sauternes",
+      "Botrytis",
+      "niebla",
+      "tiempo seco"
+    ],
+    "expected_reasoning_type": "cause_effect",
+    "difficulty": "intermediate",
+    "source_type": "SBA gap closure | manually curated from local official study guide",
+    "safe_for_examiner": false,
+    "options": {
+      "A": "Lluvia continua mantiene las bayas mojadas hasta que se diluyen.",
+      "B": "Heladas intensas cada noche congelan el agua dentro de la baya.",
+      "C": "Mañanas húmedas o con niebla favorecen la infección y tardes cálidas y secas permiten la evaporación.",
+      "D": "Viento seco permanente impide toda infección por Botrytis."
+    },
+    "correct_answer_letter": "C",
+    "correct_answer_text": "Mañanas húmedas o con niebla favorecen la infección y tardes cálidas y secas permiten la evaporación."
+  },
+  {
+    "question_id": "873",
+    "question_text": "Si la podredumbre noble avanza de forma desigual dentro de una parcela de Sauternes, ¿qué decisión explica mejor la necesidad de varias pasadas de vendimia?",
+    "question_type": "theory",
+    "expected_topics": [
+      "RA2",
+      "sauternes_selective_picking"
+    ],
+    "expected_causal_links": [
+      "Botrytis no afecta todas las bayas al mismo ritmo. -> Las cuadrillas vuelven varias veces y eligen fruta en el punto adecuado. -> Mejora la concentración y pureza, pero suben mano de obra, riesgo y coste."
+    ],
+    "expected_keywords": [
+      "Sauternes",
+      "selección",
+      "tries",
+      "Botrytis"
+    ],
+    "expected_reasoning_type": "cause_effect",
+    "difficulty": "distinction",
+    "source_type": "SBA gap closure | manually curated from local official study guide",
+    "safe_for_examiner": false,
+    "options": {
+      "A": "Cosechar todo a la vez para igualar el grado de Botrytis.",
+      "B": "Esperar a que todas las bayas se conviertan en pasas secas.",
+      "C": "Vendimiar mecánicamente para mezclar fruta sana y dañada.",
+      "D": "Seleccionar solo las bayas adecuadamente botritizadas en cada pasada."
+    },
+    "correct_answer_letter": "D",
+    "correct_answer_text": "Seleccionar solo las bayas adecuadamente botritizadas en cada pasada."
+  },
+  {
+    "question_id": "874",
+    "question_text": "¿Qué factor explica mejor la importancia de Sémillon en muchos Sauternes?",
+    "question_type": "theory",
+    "expected_topics": [
+      "RA2",
+      "sauternes_semillon"
+    ],
+    "expected_causal_links": [
+      "La variedad se cultiva en condiciones favorables para noble rot. -> La piel susceptible facilita la acción del hongo y la concentración de la baya. -> Contribuye riqueza, textura y carácter botritizado al ensamblaje."
+    ],
+    "expected_keywords": [
+      "Sauternes",
+      "Sémillon",
+      "piel fina",
+      "Botrytis"
+    ],
+    "expected_reasoning_type": "cause_effect",
+    "difficulty": "intermediate",
+    "source_type": "SBA gap closure | manually curated from local official study guide",
+    "safe_for_examiner": false,
+    "options": {
+      "A": "Su piel relativamente fina favorece la infección por Botrytis y aporta cuerpo al vino.",
+      "B": "Su piel gruesa impide toda pérdida de agua.",
+      "C": "Su tanino alto estabiliza el color tinto.",
+      "D": "Su baja susceptibilidad permite vendimia mecánica temprana."
+    },
+    "correct_answer_letter": "A",
+    "correct_answer_text": "Su piel relativamente fina favorece la infección por Botrytis y aporta cuerpo al vino."
+  },
+  {
+    "question_id": "875",
+    "question_text": "Si un ensamblaje de Sauternes incorpora Sauvignon Blanc junto con Sémillon, ¿qué resultado de estilo es más probable?",
+    "question_type": "theory",
+    "expected_topics": [
+      "RA2",
+      "sauternes_sauvignon"
+    ],
+    "expected_causal_links": [
+      "El vino base combina variedades con contribuciones diferentes. -> Sauvignon Blanc aporta acidez y expresión aromática dentro de una matriz rica. -> El ensamblaje puede resultar más fresco y equilibrado."
+    ],
+    "expected_keywords": [
+      "Sauternes",
+      "Sauvignon Blanc",
+      "Sémillon",
+      "equilibrio"
+    ],
+    "expected_reasoning_type": "cause_effect",
+    "difficulty": "intermediate",
+    "source_type": "SBA gap closure | manually curated from local official study guide",
+    "safe_for_examiner": false,
+    "options": {
+      "A": "Más tanino y color porque Sauvignon Blanc aporta antocianos.",
+      "B": "Mayor frescura aromática y acidez para equilibrar la riqueza del Sémillon botritizado.",
+      "C": "Menor acidez porque la variedad siempre completa MLF.",
+      "D": "Un estilo biológico porque Sauvignon Blanc genera flor."
+    },
+    "correct_answer_letter": "B",
+    "correct_answer_text": "Mayor frescura aromática y acidez para equilibrar la riqueza del Sémillon botritizado."
+  },
+  {
+    "question_id": "876",
+    "question_text": "Si Botrytis concentra una baya pero también metaboliza parte de sus ácidos, ¿qué resultado explica mejor la acidez final de un Sauternes?",
+    "question_type": "theory",
+    "expected_topics": [
+      "RA2",
+      "sauternes_botrytis_acid"
+    ],
+    "expected_causal_links": [
+      "La pérdida de agua concentra los solutos de la baya. -> Al mismo tiempo, el hongo consume parte de ciertos ácidos. -> El vino necesita suficiente acidez restante para equilibrar su gran dulzor."
+    ],
+    "expected_keywords": [
+      "Sauternes",
+      "Botrytis",
+      "acidez",
+      "concentración"
+    ],
+    "expected_reasoning_type": "cause_effect",
+    "difficulty": "distinction",
+    "source_type": "SBA gap closure | manually curated from local official study guide",
+    "safe_for_examiner": false,
+    "options": {
+      "A": "La acidez siempre se duplica exactamente con el azúcar.",
+      "B": "Botrytis elimina toda acidez y vuelve plano cualquier vino.",
+      "C": "La acidez puede seguir siendo importante, pero no aumenta en la misma proporción que el azúcar por simple concentración.",
+      "D": "La concentración no afecta azúcar ni sabor."
+    },
+    "correct_answer_letter": "C",
+    "correct_answer_text": "La acidez puede seguir siendo importante, pero no aumenta en la misma proporción que el azúcar por simple concentración."
+  },
+  {
+    "question_id": "877",
+    "question_text": "Si durante la vendimia de Sauternes llega lluvia persistente después de iniciarse Botrytis, ¿qué consecuencia es más probable?",
+    "question_type": "theory",
+    "expected_topics": [
+      "RA2",
+      "sauternes_vintage_risk"
+    ],
+    "expected_causal_links": [
+      "Las bayas botritizadas y maduras son frágiles durante una cosecha prolongada. -> La humedad continua favorece deterioro y reduce la evaporación necesaria. -> La calidad y el volumen pueden caer con rapidez."
+    ],
+    "expected_keywords": [
+      "Sauternes",
+      "lluvia",
+      "podredumbre gris",
+      "riesgo"
+    ],
+    "expected_reasoning_type": "cause_effect",
+    "difficulty": "intermediate",
+    "source_type": "SBA gap closure | manually curated from local official study guide",
+    "safe_for_examiner": false,
+    "options": {
+      "A": "La lluvia garantiza una concentración más rápida y uniforme.",
+      "B": "La fruta se congela y pasa a ser Eiswein.",
+      "C": "La humedad detiene toda actividad del hongo.",
+      "D": "Aumenta el riesgo de podredumbre gris, dilución y pérdida de fruta."
+    },
+    "correct_answer_letter": "D",
+    "correct_answer_text": "Aumenta el riesgo de podredumbre gris, dilución y pérdida de fruta."
+  },
+  {
+    "question_id": "878",
+    "question_text": "Si un Sauternes concentrado fermenta o madura en roble nuevo, ¿qué resultado de estilo es más probable?",
+    "question_type": "theory",
+    "expected_topics": [
+      "RA2",
+      "sauternes_oak"
+    ],
+    "expected_causal_links": [
+      "Un vino concentrado entra en contacto con madera nueva y pequeñas cantidades de oxígeno. -> El roble aporta compuestos aromáticos y la maduración integra textura y sabores. -> El estilo gana complejidad, coste y potencial de evolución."
+    ],
+    "expected_keywords": [
+      "Sauternes",
+      "roble",
+      "vainilla",
+      "maduración"
+    ],
+    "expected_reasoning_type": "cause_effect",
+    "difficulty": "intermediate",
+    "source_type": "SBA gap closure | manually curated from local official study guide",
+    "safe_for_examiner": false,
+    "options": {
+      "A": "Mayor complejidad de vainilla y especias, con integración lenta de una estructura rica.",
+      "B": "Pérdida inmediata de todo azúcar residual.",
+      "C": "Desarrollo de taninos propios de un tinto muy extraído.",
+      "D": "Aromas de flor y acetaldehído por crianza biológica."
+    },
+    "correct_answer_letter": "A",
+    "correct_answer_text": "Mayor complejidad de vainilla y especias, con integración lenta de una estructura rica."
+  },
+  {
+    "question_id": "879",
+    "question_text": "Dos Sauternes tienen el mismo azúcar residual, pero uno posee mayor acidez, intensidad y longitud. ¿Qué factor explica mejor que se perciba de mayor calidad?",
+    "question_type": "theory",
+    "expected_topics": [
+      "RA2",
+      "sauternes_quality_balance"
+    ],
+    "expected_causal_links": [
+      "La calidad sensorial depende de varios componentes estructurales y aromáticos. -> Acidez, concentración y longitud sostienen el dulzor y evitan desequilibrio. -> El vino ofrece mayor definición y persistencia."
+    ],
+    "expected_keywords": [
+      "Sauternes",
+      "calidad",
+      "equilibrio",
+      "longitud"
+    ],
+    "expected_reasoning_type": "cause_effect",
+    "difficulty": "distinction",
+    "source_type": "SBA gap closure | manually curated from local official study guide",
+    "safe_for_examiner": false,
+    "options": {
+      "A": "El azúcar residual fija por sí solo la calidad.",
+      "B": "El segundo muestra mejor equilibrio, concentración y persistencia, no solo mayor dulzor.",
+      "C": "La menor acidez siempre indica mayor madurez y calidad.",
+      "D": "La intensidad aromática importa únicamente en vinos secos."
+    },
+    "correct_answer_letter": "B",
+    "correct_answer_text": "El segundo muestra mejor equilibrio, concentración y persistencia, no solo mayor dulzor."
+  },
+  {
+    "question_id": "880",
+    "question_text": "Si un productor añade bayas Aszú seleccionadas a mosto en fermentación o vino base, ¿qué resultado explica mejor el estilo posterior?",
+    "question_type": "theory",
+    "expected_topics": [
+      "RA2",
+      "tokaji_aszu_addition"
+    ],
+    "expected_causal_links": [
+      "Las bayas Aszú están deshidratadas y concentradas por noble rot. -> El contacto y la maceración extrae sus componentes al vino base. -> Aumentan dulzor, concentración y complejidad manteniendo acidez."
+    ],
+    "expected_keywords": [
+      "Tokaji",
+      "Aszú",
+      "bayas botritizadas",
+      "maceración"
+    ],
+    "expected_reasoning_type": "cause_effect",
+    "difficulty": "intermediate",
+    "source_type": "SBA gap closure | manually curated from local official study guide",
+    "safe_for_examiner": false,
+    "options": {
+      "A": "Las bayas eliminan todo alcohol ya formado.",
+      "B": "La adición crea burbujas por una segunda fermentación en botella.",
+      "C": "La maceración transfiere azúcar, acidez, sabor concentrado y carácter botritizado al líquido.",
+      "D": "El vino se vuelve seco porque la pasta absorbe azúcar."
+    },
+    "correct_answer_letter": "C",
+    "correct_answer_text": "La maceración transfiere azúcar, acidez, sabor concentrado y carácter botritizado al líquido."
+  },
+  {
+    "question_id": "881",
+    "question_text": "¿Qué factor explica mejor que Furmint sea útil para Tokaji Aszú de larga vida?",
+    "question_type": "theory",
+    "expected_topics": [
+      "RA2",
+      "tokaji_furmint"
+    ],
+    "expected_causal_links": [
+      "Furmint puede madurar con azúcar elevado conservando acidez marcada. -> La acidez aporta estructura frente a la concentración y el azúcar residual. -> El vino puede ser intenso, equilibrado y longevo."
+    ],
+    "expected_keywords": [
+      "Tokaji",
+      "Furmint",
+      "acidez",
+      "longevidad"
+    ],
+    "expected_reasoning_type": "cause_effect",
+    "difficulty": "intermediate",
+    "source_type": "SBA gap closure | manually curated from local official study guide",
+    "safe_for_examiner": false,
+    "options": {
+      "A": "Su tanino alto permite una extracción prolongada de hollejos.",
+      "B": "Su acidez baja hace innecesaria la selección de fruta.",
+      "C": "Su neutralidad impide cualquier aroma botritizado.",
+      "D": "Su acidez alta equilibra el dulzor y sostiene la evolución del vino."
+    },
+    "correct_answer_letter": "D",
+    "correct_answer_text": "Su acidez alta equilibra el dulzor y sostiene la evolución del vino."
+  },
+  {
+    "question_id": "882",
+    "question_text": "Si se cosechan racimos completos que mezclan bayas sanas y botritizadas para Szamorodni, ¿qué consecuencia de estilo es más probable frente a seleccionar bayas Aszú individualmente?",
+    "question_type": "theory",
+    "expected_topics": [
+      "RA2",
+      "tokaji_szamorodni"
+    ],
+    "expected_causal_links": [
+      "Los racimos contienen una mezcla variable de fruta sana y afectada. -> La cosecha conjunta incorpora esa proporción directamente al mosto. -> El estilo puede variar de seco a dulce y suele ser menos extremo que una selección Aszú intensa."
+    ],
+    "expected_keywords": [
+      "Tokaji",
+      "Szamorodni",
+      "racimos",
+      "Botrytis"
+    ],
+    "expected_reasoning_type": "cause_effect",
+    "difficulty": "distinction",
+    "source_type": "SBA gap closure | manually curated from local official study guide",
+    "safe_for_examiner": false,
+    "options": {
+      "A": "El grado de concentración depende de la proporción natural de bayas botritizadas del racimo.",
+      "B": "El vino siempre será más dulce que cualquier Tokaji Aszú.",
+      "C": "La mezcla elimina la influencia de Botrytis.",
+      "D": "El método exige congelar el racimo antes de prensarlo."
+    },
+    "correct_answer_letter": "A",
+    "correct_answer_text": "El grado de concentración depende de la proporción natural de bayas botritizadas del racimo."
+  },
+  {
+    "question_id": "883",
+    "question_text": "Si el mosto de escurrido libre de bayas Aszú contiene una concentración extrema de azúcar, ¿qué consecuencia es más probable durante la fermentación de Eszencia?",
+    "question_type": "theory",
+    "expected_topics": [
+      "RA2",
+      "tokaji_essencia"
+    ],
+    "expected_causal_links": [
+      "El jugo contiene una cantidad excepcional de azúcar y poca agua disponible. -> La presión osmótica limita fuertemente la actividad de la levadura. -> Se obtiene un líquido muy dulce, intenso y de alcohol muy bajo."
+    ],
+    "expected_keywords": [
+      "Tokaji",
+      "Eszencia",
+      "fermentación lenta",
+      "alcohol bajo"
+    ],
+    "expected_reasoning_type": "cause_effect",
+    "difficulty": "intermediate",
+    "source_type": "SBA gap closure | manually curated from local official study guide",
+    "safe_for_examiner": false,
+    "options": {
+      "A": "La levadura fermenta con rapidez hasta alcohol alto y sequedad.",
+      "B": "La fermentación avanza muy lentamente y alcanza alcohol muy bajo con enorme azúcar residual.",
+      "C": "El azúcar se convierte principalmente en tanino.",
+      "D": "La concentración obliga a una crianza biológica bajo flor."
+    },
+    "correct_answer_letter": "B",
+    "correct_answer_text": "La fermentación avanza muy lentamente y alcanza alcohol muy bajo con enorme azúcar residual."
+  },
+  {
+    "question_id": "884",
+    "question_text": "Dos Tokaji declaran una categoría Aszú comparable, pero muestran distinta percepción de dulzor. ¿Qué factor explica mejor la diferencia?",
+    "question_type": "theory",
+    "expected_topics": [
+      "RA2",
+      "tokaji_puttonyos"
+    ],
+    "expected_causal_links": [
+      "La clasificación describe un estilo y una concentración mínima, no toda la experiencia sensorial. -> Composición del vino base, acidez, fermentación y crianza modulan el resultado. -> Vinos de categoría similar pueden mostrar distinto equilibrio y perfil."
+    ],
+    "expected_keywords": [
+      "Tokaji",
+      "puttonyos",
+      "dulzor",
+      "acidez"
+    ],
+    "expected_reasoning_type": "cause_effect",
+    "difficulty": "intermediate",
+    "source_type": "SBA gap closure | manually curated from local official study guide",
+    "safe_for_examiner": false,
+    "options": {
+      "A": "La categoría determina una sensación idéntica en todos los vinos.",
+      "B": "El roble nuevo convierte automáticamente azúcar en acidez.",
+      "C": "La percepción final también depende de acidez, fermentación, vino base y equilibrio, no solo de la declaración.",
+      "D": "La añada no puede modificar concentración ni equilibrio."
+    },
+    "correct_answer_letter": "C",
+    "correct_answer_text": "La percepción final también depende de acidez, fermentación, vino base y equilibrio, no solo de la declaración."
+  },
+  {
+    "question_id": "885",
+    "question_text": "Si el otoño en Tokaj permanece húmedo sin periodos secos, ¿qué consecuencia es más probable para la fruta destinada a Aszú?",
+    "question_type": "theory",
+    "expected_topics": [
+      "RA2",
+      "tokaji_botrytis_conditions"
+    ],
+    "expected_causal_links": [
+      "Botrytis necesita humedad para infectar, pero también periodos secos. -> Sin secado, la baya puede deteriorarse en lugar de perder agua de forma beneficiosa. -> Bajan la proporción de fruta seleccionable y el potencial de calidad."
+    ],
+    "expected_keywords": [
+      "Tokaji",
+      "Botrytis",
+      "humedad",
+      "periodos secos"
+    ],
+    "expected_reasoning_type": "cause_effect",
+    "difficulty": "distinction",
+    "source_type": "SBA gap closure | manually curated from local official study guide",
+    "safe_for_examiner": false,
+    "options": {
+      "A": "La concentración mejora indefinidamente porque toda humedad favorece Aszú.",
+      "B": "Las bayas se congelan y se convierten en Eiswein.",
+      "C": "Botrytis deja de infectar por completo en presencia de agua.",
+      "D": "Aumenta el riesgo de podredumbre gris en vez de una deshidratación noble controlada."
+    },
+    "correct_answer_letter": "D",
+    "correct_answer_text": "Aumenta el riesgo de podredumbre gris en vez de una deshidratación noble controlada."
+  },
+  {
+    "question_id": "886",
+    "question_text": "Si Hárslevelű se mezcla con Furmint en Tokaji, ¿qué resultado de estilo es más probable?",
+    "question_type": "theory",
+    "expected_topics": [
+      "RA2",
+      "tokaji_harslevelu"
+    ],
+    "expected_causal_links": [
+      "Las variedades del ensamblaje aportan rasgos complementarios. -> Hárslevelű contribuye expresión aromática y Furmint estructura ácida. -> El vino puede combinar perfume, riqueza y equilibrio."
+    ],
+    "expected_keywords": [
+      "Tokaji",
+      "Hárslevelű",
+      "Furmint",
+      "ensamblaje"
+    ],
+    "expected_reasoning_type": "cause_effect",
+    "difficulty": "intermediate",
+    "source_type": "SBA gap closure | manually curated from local official study guide",
+    "safe_for_examiner": false,
+    "options": {
+      "A": "Puede aportar un perfil más perfumado mientras Furmint conserva la columna de acidez.",
+      "B": "Aumenta tanino y color como una variedad tinta.",
+      "C": "Elimina el carácter de Botrytis por completo.",
+      "D": "Obliga a terminar el vino seco."
+    },
+    "correct_answer_letter": "A",
+    "correct_answer_text": "Puede aportar un perfil más perfumado mientras Furmint conserva la columna de acidez."
+  },
+  {
+    "question_id": "887",
+    "question_text": "Si un Tokaji Aszú concentrado madura durante un periodo prolongado, ¿qué resultado de estilo es más probable?",
+    "question_type": "theory",
+    "expected_topics": [
+      "RA2",
+      "tokaji_ageing"
+    ],
+    "expected_causal_links": [
+      "El vino contiene alta concentración, azúcar, acidez y compuestos botritizados. -> La maduración lenta integra componentes y favorece aromas terciarios. -> Aumentan complejidad y armonía con potencial de larga evolución."
+    ],
+    "expected_keywords": [
+      "Tokaji",
+      "Aszú",
+      "maduración",
+      "complejidad"
+    ],
+    "expected_reasoning_type": "cause_effect",
+    "difficulty": "intermediate",
+    "source_type": "SBA gap closure | manually curated from local official study guide",
+    "safe_for_examiner": false,
+    "options": {
+      "A": "Se vuelve espumoso por presión acumulada.",
+      "B": "Desarrolla mayor integración y complejidad de frutos secos, miel y especias sin perder necesariamente su acidez.",
+      "C": "Pierde todo azúcar residual por evaporación.",
+      "D": "Adquiere tanino alto por contacto con hollejos tintos."
+    },
+    "correct_answer_letter": "B",
+    "correct_answer_text": "Desarrolla mayor integración y complejidad de frutos secos, miel y especias sin perder necesariamente su acidez."
+  },
+  {
+    "question_id": "888",
+    "question_text": "Si un productor deja uvas sanas en la vid después de la madurez normal sin esperar Botrytis ni helada, ¿qué resultado es más probable?",
+    "question_type": "theory",
+    "expected_topics": [
+      "RA2",
+      "late_harvest"
+    ],
+    "expected_causal_links": [
+      "La fruta continúa madurando y puede deshidratarse parcialmente en la vid. -> Sube la relación de azúcar y sabor respecto al agua. -> El mosto puede dar un vino más rico y dulce, con riesgo de menor acidez."
+    ],
+    "expected_keywords": [
+      "vendimia tardía",
+      "sobremaduración",
+      "concentración",
+      "acidez"
+    ],
+    "expected_reasoning_type": "cause_effect",
+    "difficulty": "distinction",
+    "source_type": "SBA gap closure | manually curated from local official study guide",
+    "safe_for_examiner": false,
+    "options": {
+      "A": "Aromas nobles de Botrytis aparecen obligatoriamente.",
+      "B": "El agua queda separada como hielo durante el prensado.",
+      "C": "Mayor concentración de azúcar y sabores maduros por sobremaduración y algo de pérdida de agua.",
+      "D": "El vino debe ser fortificado para conservar cualquier azúcar."
+    },
+    "correct_answer_letter": "C",
+    "correct_answer_text": "Mayor concentración de azúcar y sabores maduros por sobremaduración y algo de pérdida de agua."
+  },
+  {
+    "question_id": "889",
+    "question_text": "Si unas uvas se secan después de la vendimia antes de fermentar, ¿qué resultado explica mejor un vino passito?",
+    "question_type": "theory",
+    "expected_topics": [
+      "RA2",
+      "passito_drying"
+    ],
+    "expected_causal_links": [
+      "Las uvas cosechadas se exponen a condiciones de secado controlado. -> Pierden agua antes del prensado y aumentan los solutos por unidad de volumen. -> El mosto resulta concentrado, rico y escaso."
+    ],
+    "expected_keywords": [
+      "passito",
+      "secado",
+      "evaporación",
+      "bajo rendimiento"
+    ],
+    "expected_reasoning_type": "cause_effect",
+    "difficulty": "intermediate",
+    "source_type": "SBA gap closure | manually curated from local official study guide",
+    "safe_for_examiner": false,
+    "options": {
+      "A": "El secado diluye el azúcar al romper las pieles.",
+      "B": "La fruta desarrolla flor y envejecimiento biológico.",
+      "C": "El método elimina toda posibilidad de oxidación.",
+      "D": "La evaporación de agua concentra azúcar, acidez y sabores, mientras cae el rendimiento de mosto."
+    },
+    "correct_answer_letter": "D",
+    "correct_answer_text": "La evaporación de agua concentra azúcar, acidez y sabores, mientras cae el rendimiento de mosto."
+  },
+  {
+    "question_id": "890",
+    "question_text": "Si durante el secado de uvas para vino dulce falta ventilación, ¿qué consecuencia es más probable?",
+    "question_type": "theory",
+    "expected_topics": [
+      "RA2",
+      "drying_airflow"
+    ],
+    "expected_causal_links": [
+      "Las bayas húmedas permanecen juntas durante un periodo prolongado. -> Sin circulación de aire, la humedad se acumula y favorece microorganismos. -> Puede perderse fruta y aparecer carácter defectuoso."
+    ],
+    "expected_keywords": [
+      "uvas secadas",
+      "ventilación",
+      "podredumbre",
+      "deshidratación"
+    ],
+    "expected_reasoning_type": "cause_effect",
+    "difficulty": "intermediate",
+    "source_type": "SBA gap closure | manually curated from local official study guide",
+    "safe_for_examiner": false,
+    "options": {
+      "A": "Aumenta el riesgo de podredumbre no deseada en lugar de una deshidratación limpia.",
+      "B": "La concentración se vuelve más uniforme y segura.",
+      "C": "La falta de aire congela el agua de las bayas.",
+      "D": "El azúcar se transforma en alcohol antes del prensado."
+    },
+    "correct_answer_letter": "A",
+    "correct_answer_text": "Aumenta el riesgo de podredumbre no deseada en lugar de una deshidratación limpia."
+  },
+  {
+    "question_id": "891",
+    "question_text": "Si una bodega enfría y filtra un vino dulce antes de que la levadura consuma todo el azúcar, ¿qué resultado es más probable?",
+    "question_type": "theory",
+    "expected_topics": [
+      "RA2",
+      "sweet_fermentation_arrest"
+    ],
+    "expected_causal_links": [
+      "La fermentación todavía contiene levaduras activas y azúcar. -> El frío frena la actividad y la filtración retira células de levadura. -> Se conserva dulzor y mejora la estabilidad microbiológica si el proceso es eficaz."
+    ],
+    "expected_keywords": [
+      "vino dulce",
+      "parada de fermentación",
+      "filtración",
+      "azúcar residual"
+    ],
+    "expected_reasoning_type": "cause_effect",
+    "difficulty": "distinction",
+    "source_type": "SBA gap closure | manually curated from local official study guide",
+    "safe_for_examiner": false,
+    "options": {
+      "A": "El vino se vuelve más dulce porque el frío crea azúcar nuevo.",
+      "B": "Queda azúcar residual y la eliminación de levaduras reduce el riesgo de reinicio de fermentación.",
+      "C": "La filtración aumenta el alcohol después del embotellado.",
+      "D": "El proceso concentra el mosto mediante evaporación."
+    },
+    "correct_answer_letter": "B",
+    "correct_answer_text": "Queda azúcar residual y la eliminación de levaduras reduce el riesgo de reinicio de fermentación."
+  },
+  {
+    "question_id": "892",
+    "question_text": "Si un productor concentra mosto antes de fermentar, ¿qué consecuencia estilística es más probable respecto a un mosto sin concentrar?",
+    "question_type": "theory",
+    "expected_topics": [
+      "RA2",
+      "sweet_must_concentration"
+    ],
+    "expected_causal_links": [
+      "El mosto empieza con más solutos por unidad de agua. -> La levadura encuentra más azúcar y mayor presión osmótica. -> Puede producirse un vino más rico, alcohólico o dulce según cuánto fermente."
+    ],
+    "expected_keywords": [
+      "mosto concentrado",
+      "azúcar potencial",
+      "cuerpo",
+      "fermentación"
+    ],
+    "expected_reasoning_type": "cause_effect",
+    "difficulty": "intermediate",
+    "source_type": "SBA gap closure | manually curated from local official study guide",
+    "safe_for_examiner": false,
+    "options": {
+      "A": "Menor alcohol potencial porque hay menos azúcar.",
+      "B": "Desaparición automática de la acidez.",
+      "C": "Mayor azúcar potencial, cuerpo y sabor, con más dificultad fermentativa.",
+      "D": "Menor presión osmótica para la levadura."
+    },
+    "correct_answer_letter": "C",
+    "correct_answer_text": "Mayor azúcar potencial, cuerpo y sabor, con más dificultad fermentativa."
+  },
+  {
+    "question_id": "893",
+    "question_text": "Dos vinos dulces tienen igual azúcar residual; uno procede de fruta con acidez claramente mayor. ¿Qué resultado es más probable?",
+    "question_type": "theory",
+    "expected_topics": [
+      "RA2",
+      "sweet_balance_acidity"
+    ],
+    "expected_causal_links": [
+      "El dulzor y la acidez actúan simultáneamente en la estructura. -> La acidez contrasta con el azúcar y eleva la sensación de frescura. -> El vino puede sostener mejor la riqueza y el final."
+    ],
+    "expected_keywords": [
+      "vino dulce",
+      "acidez",
+      "equilibrio",
+      "frescura"
+    ],
+    "expected_reasoning_type": "cause_effect",
+    "difficulty": "intermediate",
+    "source_type": "SBA gap closure | manually curated from local official study guide",
+    "safe_for_examiner": false,
+    "options": {
+      "A": "Se percibe siempre más dulce porque ácido y azúcar se suman.",
+      "B": "Tiene necesariamente más tanino.",
+      "C": "Pierde intensidad aromática por neutralización química.",
+      "D": "El vino de mayor acidez se percibe más fresco y equilibrado."
+    },
+    "correct_answer_letter": "D",
+    "correct_answer_text": "El vino de mayor acidez se percibe más fresco y equilibrado."
+  },
+  {
+    "question_id": "894",
+    "question_text": "Si un vino dulce concentrado tiene acidez baja, ¿qué consecuencia sensorial es más probable?",
+    "question_type": "theory",
+    "expected_topics": [
+      "RA2",
+      "sweet_low_acid"
+    ],
+    "expected_causal_links": [
+      "El vino contiene azúcar y cuerpo elevados con poco contraste ácido. -> Falta tensión para equilibrar la riqueza y refrescar el paladar. -> El dulzor domina y reduce la sensación de precisión."
+    ],
+    "expected_keywords": [
+      "vino dulce",
+      "acidez baja",
+      "empalagoso",
+      "equilibrio"
+    ],
+    "expected_reasoning_type": "cause_effect",
+    "difficulty": "distinction",
+    "source_type": "SBA gap closure | manually curated from local official study guide",
+    "safe_for_examiner": false,
+    "options": {
+      "A": "Puede resultar pesado, empalagoso y con menor definición.",
+      "B": "La baja acidez vuelve el vino automáticamente seco.",
+      "C": "El dulzor se transforma en tanino.",
+      "D": "El final se alarga siempre por falta de acidez."
+    },
+    "correct_answer_letter": "A",
+    "correct_answer_text": "Puede resultar pesado, empalagoso y con menor definición."
+  },
+  {
+    "question_id": "895",
+    "question_text": "Si Botrytis noble se desarrolla de forma beneficiosa, ¿qué resultado aromático es más probable además de la concentración?",
+    "question_type": "theory",
+    "expected_topics": [
+      "RA2",
+      "sweet_botrytis_aroma"
+    ],
+    "expected_causal_links": [
+      "El hongo actúa metabólicamente sobre bayas maduras mientras pierden agua. -> Se modifican precursores y se concentran compuestos aromáticos. -> El vino muestra un perfil botritizado complejo y reconocible."
+    ],
+    "expected_keywords": [
+      "Botrytis",
+      "miel",
+      "albaricoque seco",
+      "azafrán"
+    ],
+    "expected_reasoning_type": "cause_effect",
+    "difficulty": "intermediate",
+    "source_type": "SBA gap closure | manually curated from local official study guide",
+    "safe_for_examiner": false,
+    "options": {
+      "A": "Aromas exclusivos de fruta verde sin cambio.",
+      "B": "Mayor complejidad con notas como miel, albaricoque seco y azafrán.",
+      "C": "Carácter de acetaldehído propio de flor.",
+      "D": "Aromas de hielo y agua mineral creados por congelación."
+    },
+    "correct_answer_letter": "B",
+    "correct_answer_text": "Mayor complejidad con notas como miel, albaricoque seco y azafrán."
+  },
+  {
+    "question_id": "896",
+    "question_text": "Al comparar uvas secadas después de la cosecha con uvas afectadas por podredumbre noble, ¿qué factor explica mejor una diferencia aromática entre los vinos?",
+    "question_type": "theory",
+    "expected_topics": [
+      "RA2",
+      "sweet_drying_vs_botrytis"
+    ],
+    "expected_causal_links": [
+      "Ambos métodos reducen agua, pero solo uno implica metabolismo fúngico. -> Botrytis perfora y transforma la baya; el secado controlado favorece evaporación sin esa acción. -> Los vinos pueden compartir concentración pero mostrar complejidad aromática distinta."
+    ],
+    "expected_keywords": [
+      "vino dulce",
+      "secado",
+      "Botrytis",
+      "perfil aromático"
+    ],
+    "expected_reasoning_type": "cause_effect",
+    "difficulty": "intermediate",
+    "source_type": "SBA gap closure | manually curated from local official study guide",
+    "safe_for_examiner": false,
+    "options": {
+      "A": "El secado siempre produce acetaldehído de flor.",
+      "B": "Botrytis concentra solo por congelación.",
+      "C": "Botrytis modifica químicamente la baya, mientras el secado sano concentra sin aportar el mismo carácter fúngico.",
+      "D": "Los dos métodos generan perfiles idénticos si el azúcar final coincide."
+    },
+    "correct_answer_letter": "C",
+    "correct_answer_text": "Botrytis modifica químicamente la baya, mientras el secado sano concentra sin aportar el mismo carácter fúngico."
+  },
+  {
+    "question_id": "897",
+    "question_text": "Si Botrytis afecta de forma irregular las bayas destinadas a Beerenauslese, ¿qué decisión explica mejor un vino de mayor concentración y pureza?",
+    "question_type": "theory",
+    "expected_topics": [
+      "RA2",
+      "germany_beerenauslese_selection"
+    ],
+    "expected_causal_links": [
+      "La infección beneficiosa y la madurez varían dentro de la parcela. -> La selección separa fruta concentrada sana de bayas insuficientes o deterioradas. -> El mosto gana precisión y concentración, aunque aumenta el coste y baja el rendimiento."
+    ],
+    "expected_keywords": [
+      "Alemania",
+      "Beerenauslese",
+      "selección",
+      "Botrytis"
+    ],
+    "expected_reasoning_type": "cause_effect",
+    "difficulty": "distinction",
+    "source_type": "SBA gap closure | manually curated from local official study guide",
+    "safe_for_examiner": false,
+    "options": {
+      "A": "Cosechar mecánicamente todos los racimos antes de la infección.",
+      "B": "Mezclar fruta podrida gris para elevar el rendimiento.",
+      "C": "Prensar las bayas sin revisar su estado sanitario.",
+      "D": "Seleccionar individualmente las bayas maduras y botritizadas adecuadas."
+    },
+    "correct_answer_letter": "D",
+    "correct_answer_text": "Seleccionar individualmente las bayas maduras y botritizadas adecuadas."
+  },
+  {
+    "question_id": "898",
+    "question_text": "Si un restaurante sirve un postre más dulce que el vino elegido, ¿qué consecuencia es más probable para la percepción del vino?",
+    "question_type": "theory",
+    "expected_topics": [
+      "RA5",
+      "sweet_pairing_dessert"
+    ],
+    "expected_causal_links": [
+      "La comida presenta mayor intensidad de dulzor que el vino. -> El contraste reduce el dulzor percibido del vino y expone acidez y amargor. -> El maridaje puede resultar duro y desequilibrado."
+    ],
+    "expected_keywords": [
+      "RA5",
+      "maridaje",
+      "postre",
+      "dulzor"
+    ],
+    "expected_reasoning_type": "cause_effect",
+    "difficulty": "intermediate",
+    "source_type": "SBA gap closure | manually curated from local official study guide",
+    "safe_for_examiner": false,
+    "options": {
+      "A": "El vino parecerá menos frutal, más seco, más ácido y posiblemente amargo.",
+      "B": "El vino parecerá más dulce y más afrutado.",
+      "C": "La comida reducirá toda percepción de acidez.",
+      "D": "El vino desarrollará más alcohol en la copa."
+    },
+    "correct_answer_letter": "A",
+    "correct_answer_text": "El vino parecerá menos frutal, más seco, más ácido y posiblemente amargo."
+  },
+  {
+    "question_id": "899",
+    "question_text": "Al comparar un vino dulce intenso con un queso azul salado, ¿qué factor explica mejor que el maridaje pueda funcionar?",
+    "question_type": "theory",
+    "expected_topics": [
+      "RA5",
+      "sweet_pairing_blue_cheese"
+    ],
+    "expected_causal_links": [
+      "El alimento combina sal, grasa y sabor intenso. -> El azúcar aporta contraste y la concentración evita que el vino quede eclipsado. -> El conjunto puede percibirse equilibrado si las intensidades son comparables."
+    ],
+    "expected_keywords": [
+      "RA5",
+      "maridaje",
+      "queso azul",
+      "vino dulce"
+    ],
+    "expected_reasoning_type": "cause_effect",
+    "difficulty": "intermediate",
+    "source_type": "SBA gap closure | manually curated from local official study guide",
+    "safe_for_examiner": false,
+    "options": {
+      "A": "La sal convierte químicamente el vino en seco.",
+      "B": "El dulzor contrasta la sal y la intensidad del vino puede igualar la del queso.",
+      "C": "El queso elimina el alcohol del vino.",
+      "D": "La acidez del vino desaparece al contacto con grasa."
+    },
+    "correct_answer_letter": "B",
+    "correct_answer_text": "El dulzor contrasta la sal y la intensidad del vino puede igualar la del queso."
+  },
+  {
+    "question_id": "900",
+    "question_text": "Si un Sauternes se sirve excesivamente frío, ¿qué consecuencia es más probable?",
+    "question_type": "theory",
+    "expected_topics": [
+      "RA5",
+      "sweet_service_temperature"
+    ],
+    "expected_causal_links": [
+      "La temperatura de servicio es muy baja para un vino aromático y complejo. -> El frío reduce volatilidad aromática y percepción de cuerpo y dulzor. -> El vino puede parecer más cerrado y menos expresivo."
+    ],
+    "expected_keywords": [
+      "RA5",
+      "servicio",
+      "Sauternes",
+      "temperatura"
+    ],
+    "expected_reasoning_type": "cause_effect",
+    "difficulty": "distinction",
+    "source_type": "SBA gap closure | manually curated from local official study guide",
+    "safe_for_examiner": false,
+    "options": {
+      "A": "Aumentan de inmediato los aromas de miel y roble.",
+      "B": "El azúcar precipita y el vino se vuelve seco.",
+      "C": "Se atenúan aromas y textura, aunque el frío también reduce la sensación de dulzor.",
+      "D": "El alcohol sube por la baja temperatura."
+    },
+    "correct_answer_letter": "C",
+    "correct_answer_text": "Se atenúan aromas y textura, aunque el frío también reduce la sensación de dulzor."
+  },
+  {
+    "question_id": "901",
+    "question_text": "Si una botella de vino dulce de alta calidad se almacena de pie junto a una fuente de calor y luz, ¿qué resultado es más probable?",
+    "question_type": "theory",
+    "expected_topics": [
+      "RA5",
+      "sweet_storage"
+    ],
+    "expected_causal_links": [
+      "La botella sufre temperatura alta, luz y posible desecación del cierre. -> Aumentan reacciones químicas y riesgo de entrada de oxígeno o pérdida de sellado. -> El vino puede evolucionar prematuramente y perder frescura."
+    ],
+    "expected_keywords": [
+      "RA5",
+      "almacenamiento",
+      "calor",
+      "luz",
+      "corcho"
+    ],
+    "expected_reasoning_type": "cause_effect",
+    "difficulty": "intermediate",
+    "source_type": "SBA gap closure | manually curated from local official study guide",
+    "safe_for_examiner": false,
+    "options": {
+      "A": "El azúcar protege por completo frente a calor y luz.",
+      "B": "La posición vertical mejora siempre la longevidad del corcho.",
+      "C": "La botella gana acidez y frescura con cada cambio térmico.",
+      "D": "El calor acelera el envejecimiento y la luz puede dañar aromas; el cierre también puede secarse si es corcho."
+    },
+    "correct_answer_letter": "D",
+    "correct_answer_text": "El calor acelera el envejecimiento y la luz puede dañar aromas; el cierre también puede secarse si es corcho."
+  },
+  {
+    "question_id": "902",
+    "question_text": "Si un restaurante quiere conservar una botella abierta de Tokaji durante varios días, ¿qué decisión explica mejor la práctica recomendada?",
+    "question_type": "theory",
+    "expected_topics": [
+      "RA5",
+      "sweet_open_bottle"
+    ],
+    "expected_causal_links": [
+      "Una botella abierta queda expuesta a oxígeno y microorganismos. -> Baja temperatura y buen cierre ralentizan oxidación y deterioro. -> El vino conserva mejor aromas y frescura durante el servicio posterior."
+    ],
+    "expected_keywords": [
+      "RA5",
+      "servicio",
+      "Tokaji",
+      "botella abierta",
+      "refrigeración"
+    ],
+    "expected_reasoning_type": "cause_effect",
+    "difficulty": "intermediate",
+    "source_type": "SBA gap closure | manually curated from local official study guide",
+    "safe_for_examiner": false,
+    "options": {
+      "A": "Refrigerarla y limitar su contacto con oxígeno mediante un cierre eficaz.",
+      "B": "Mantenerla abierta a temperatura ambiente para que respire.",
+      "C": "Agitarla cada día para reincorporar oxígeno.",
+      "D": "Exponerla a luz cálida para estabilizar el azúcar."
+    },
+    "correct_answer_letter": "A",
+    "correct_answer_text": "Refrigerarla y limitar su contacto con oxígeno mediante un cierre eficaz."
+  },
+  {
+    "question_id": "903",
+    "question_text": "Si se sirve un vino dulce muy concentrado después de una comida larga, ¿qué recomendación explica mejor una porción moderada?",
+    "question_type": "theory",
+    "expected_topics": [
+      "RA5",
+      "sweet_portion_service"
+    ],
+    "expected_causal_links": [
+      "El vino posee alta concentración y gran impacto sensorial. -> Una cantidad moderada permite apreciar complejidad sin saturar el paladar. -> Mejora la experiencia de servicio y el equilibrio con el plato."
+    ],
+    "expected_keywords": [
+      "RA5",
+      "servicio",
+      "vino dulce",
+      "porción"
+    ],
+    "expected_reasoning_type": "cause_effect",
+    "difficulty": "distinction",
+    "source_type": "SBA gap closure | manually curated from local official study guide",
+    "safe_for_examiner": false,
+    "options": {
+      "A": "Una porción pequeña impide percibir cualquier aroma.",
+      "B": "Su intensidad, dulzor y alcohol o cuerpo pueden fatigar el paladar en una medida grande.",
+      "C": "El azúcar se vuelve tóxico al superar media copa.",
+      "D": "La medida de servicio cambia la acidez química del vino."
+    },
+    "correct_answer_letter": "B",
+    "correct_answer_text": "Su intensidad, dulzor y alcohol o cuerpo pueden fatigar el paladar en una medida grande."
+  },
+  {
+    "question_id": "904",
+    "question_text": "Si un postre de fruta tiene dulzor alto y acidez marcada, ¿qué recomendación de vino es más probable que mantenga el equilibrio?",
+    "question_type": "theory",
+    "expected_topics": [
+      "RA5",
+      "sweet_pairing_acid"
+    ],
+    "expected_causal_links": [
+      "El plato combina azúcar y una línea ácida perceptible. -> El vino necesita dulzor para no parecer austero y acidez para no quedar pesado. -> Un estilo dulce y fresco conserva armonía con el postre."
+    ],
+    "expected_keywords": [
+      "RA5",
+      "maridaje",
+      "postre de fruta",
+      "acidez"
+    ],
+    "expected_reasoning_type": "cause_effect",
+    "difficulty": "intermediate",
+    "source_type": "SBA gap closure | manually curated from local official study guide",
+    "safe_for_examiner": false,
+    "options": {
+      "A": "Un tinto muy tánico y menos dulce que el postre.",
+      "B": "Un vino plano y de acidez baja para evitar contraste.",
+      "C": "Un vino al menos tan dulce como el postre y con acidez suficiente para acompañar su frescura.",
+      "D": "Cualquier vino seco, porque la fruta reduce la percepción de acidez."
+    },
+    "correct_answer_letter": "C",
+    "correct_answer_text": "Un vino al menos tan dulce como el postre y con acidez suficiente para acompañar su frescura."
+  },
+  {
+    "question_id": "905",
+    "question_text": "Si un productor de Port añade aguardiente antes de que la levadura consuma la mayor parte del azúcar, ¿qué resultado es más probable?",
+    "question_type": "theory",
+    "expected_topics": [
+      "RA4",
+      "port_early_fortification"
+    ],
+    "expected_causal_links": [
+      "El mosto tinto está fermentando cuando se añade aguardiente. -> El aumento brusco de alcohol inhibe o mata la levadura. -> Quedan azúcar residual y un grado alcohólico final alto."
+    ],
+    "expected_keywords": [
+      "Port",
+      "fortificación",
+      "fermentación",
+      "azúcar residual"
+    ],
+    "expected_reasoning_type": "cause_effect",
+    "difficulty": "distinction",
+    "source_type": "SBA gap closure | manually curated from local official study guide",
+    "safe_for_examiner": false,
+    "options": {
+      "A": "La fermentación se detiene y el vino conserva azúcar residual con alcohol elevado.",
+      "B": "La fermentación acelera hasta sequedad.",
+      "C": "El vino pierde color porque el alcohol impide toda extracción previa.",
+      "D": "El azúcar se transforma en acidez volátil."
+    },
+    "correct_answer_letter": "A",
+    "correct_answer_text": "La fermentación se detiene y el vino conserva azúcar residual con alcohol elevado."
+  },
+  {
+    "question_id": "906",
+    "question_text": "Si la fermentación de Port dura solo unas 24 a 36 horas antes de fortificar, ¿qué decisión explica mejor la necesidad de extracción intensa?",
+    "question_type": "theory",
+    "expected_topics": [
+      "RA4",
+      "port_extraction_speed"
+    ],
+    "expected_causal_links": [
+      "La fortificación interrumpe pronto una fermentación tinta corta. -> Hay poco tiempo para extraer pigmentos y taninos de los hollejos. -> Se requieren técnicas intensas para lograr estructura y color suficientes."
+    ],
+    "expected_keywords": [
+      "Port",
+      "extracción",
+      "lagares",
+      "fermentación corta"
+    ],
+    "expected_reasoning_type": "cause_effect",
+    "difficulty": "intermediate",
+    "source_type": "SBA gap closure | manually curated from local official study guide",
+    "safe_for_examiner": false,
+    "options": {
+      "A": "Reducir todo contacto con hollejos hasta después de fortificar.",
+      "B": "Usar pisado o sistemas mecánicos vigorosos para obtener color y tanino rápidamente.",
+      "C": "Fermentar a baja temperatura durante varias semanas.",
+      "D": "Filtrar el mosto antes de iniciar la fermentación."
+    },
+    "correct_answer_letter": "B",
+    "correct_answer_text": "Usar pisado o sistemas mecánicos vigorosos para obtener color y tanino rápidamente."
+  },
+  {
+    "question_id": "907",
+    "question_text": "Dos lotes de Port parten del mismo mosto; uno se fortifica antes. ¿Qué consecuencia es más probable?",
+    "question_type": "theory",
+    "expected_topics": [
+      "RA4",
+      "port_fortification_timing_sweetness"
+    ],
+    "expected_causal_links": [
+      "Los lotes fermentan el mismo azúcar durante tiempos distintos. -> La fortificación temprana detiene antes el consumo de azúcar por la levadura. -> El momento de adición ayuda a definir el dulzor del estilo."
+    ],
+    "expected_keywords": [
+      "Port",
+      "momento de fortificación",
+      "dulzor",
+      "azúcar residual"
+    ],
+    "expected_reasoning_type": "cause_effect",
+    "difficulty": "intermediate",
+    "source_type": "SBA gap closure | manually curated from local official study guide",
+    "safe_for_examiner": false,
+    "options": {
+      "A": "El lote fortificado antes será necesariamente más tánico.",
+      "B": "Ambos tendrán idéntico dulzor porque el aguardiente contiene azúcar.",
+      "C": "El lote fortificado antes conservará más azúcar residual.",
+      "D": "El lote tardío tendrá siempre menos alcohol final."
+    },
+    "correct_answer_letter": "C",
+    "correct_answer_text": "El lote fortificado antes conservará más azúcar residual."
+  },
+  {
+    "question_id": "908",
+    "question_text": "Si un Port madura poco tiempo en recipientes grandes con escaso efecto del oxígeno, ¿qué resultado de estilo es más probable?",
+    "question_type": "theory",
+    "expected_topics": [
+      "RA4",
+      "port_ruby_maturation"
+    ],
+    "expected_causal_links": [
+      "El vino se mantiene en un gran volumen con baja relación superficie-volumen. -> Se limita la exposición oxidativa durante la maduración. -> Se preservan color y fruta primaria intensa."
+    ],
+    "expected_keywords": [
+      "Port",
+      "ruby",
+      "recipiente grande",
+      "fruta primaria"
+    ],
+    "expected_reasoning_type": "cause_effect",
+    "difficulty": "distinction",
+    "source_type": "SBA gap closure | manually curated from local official study guide",
+    "safe_for_examiner": false,
+    "options": {
+      "A": "Color marrón y notas dominantes de nuez y caramelo.",
+      "B": "Carácter de flor, masa de pan y acetaldehído.",
+      "C": "Pérdida completa de tanino antes del embotellado.",
+      "D": "Color profundo y predominio de fruta primaria, propio de la familia ruby."
+    },
+    "correct_answer_letter": "D",
+    "correct_answer_text": "Color profundo y predominio de fruta primaria, propio de la familia ruby."
+  },
+  {
+    "question_id": "909",
+    "question_text": "Si un Port envejece durante años en pipes con exposición gradual al oxígeno, ¿qué resultado es más probable?",
+    "question_type": "theory",
+    "expected_topics": [
+      "RA4",
+      "port_tawny_maturation"
+    ],
+    "expected_causal_links": [
+      "El vino madura largo tiempo en recipientes de madera relativamente pequeños. -> El contacto con oxígeno transforma pigmentos y aromas primarios. -> El estilo evoluciona hacia color tawny y complejidad oxidativa."
+    ],
+    "expected_keywords": [
+      "Port",
+      "tawny",
+      "oxidación",
+      "pipes"
+    ],
+    "expected_reasoning_type": "cause_effect",
+    "difficulty": "intermediate",
+    "source_type": "SBA gap closure | manually curated from local official study guide",
+    "safe_for_examiner": false,
+    "options": {
+      "A": "Pierde color y fruta fresca mientras desarrolla nuez, café, caramelo y frutos secos.",
+      "B": "Conserva un perfil exclusivamente de fruta negra fresca.",
+      "C": "Forma flor protectora y permanece pálido.",
+      "D": "Aumenta su presión de dióxido de carbono."
+    },
+    "correct_answer_letter": "A",
+    "correct_answer_text": "Pierde color y fruta fresca mientras desarrolla nuez, café, caramelo y frutos secos."
+  },
+  {
+    "question_id": "910",
+    "question_text": "Si un Vintage Port se embotella joven sin filtrar, ¿qué consecuencia es más probable durante décadas de guarda?",
+    "question_type": "theory",
+    "expected_topics": [
+      "RA4",
+      "port_vintage_bottle_ageing"
+    ],
+    "expected_causal_links": [
+      "El vino concentrado y tánico entra joven en botella con materia sólida. -> La evolución reductiva integra estructura y precipita pigmentos y taninos. -> Aparecen complejidad terciaria y sedimento que puede exigir decantación."
+    ],
+    "expected_keywords": [
+      "Vintage Port",
+      "botella",
+      "tanino",
+      "sedimento"
+    ],
+    "expected_reasoning_type": "cause_effect",
+    "difficulty": "intermediate",
+    "source_type": "SBA gap closure | manually curated from local official study guide",
+    "safe_for_examiner": false,
+    "options": {
+      "A": "Se mantiene idéntico porque el alto alcohol detiene toda evolución.",
+      "B": "Desarrolla aromas terciarios, suaviza taninos y forma abundante sedimento.",
+      "C": "Se vuelve tawny por oxidación intensa en barrica.",
+      "D": "Pierde todo color en el primer año."
+    },
+    "correct_answer_letter": "B",
+    "correct_answer_text": "Desarrolla aromas terciarios, suaviza taninos y forma abundante sedimento."
+  },
+  {
+    "question_id": "911",
+    "question_text": "Al comparar un LBV filtrado con uno sin filtrar, ¿qué resultado explica mejor la diferencia de servicio y evolución?",
+    "question_type": "theory",
+    "expected_topics": [
+      "RA4",
+      "port_lbv_filtered"
+    ],
+    "expected_causal_links": [
+      "Los dos vinos reciben distinto tratamiento antes del embotellado. -> Filtrar retira partículas y reduce el material que precipitaría en botella. -> Cambian el potencial de guarda y la necesidad de decantar."
+    ],
+    "expected_keywords": [
+      "Port",
+      "LBV",
+      "filtración",
+      "decantación"
+    ],
+    "expected_reasoning_type": "cause_effect",
+    "difficulty": "distinction",
+    "source_type": "SBA gap closure | manually curated from local official study guide",
+    "safe_for_examiner": false,
+    "options": {
+      "A": "El filtrado siempre tiene más tanino y necesita décadas.",
+      "B": "El no filtrado no puede proceder de una sola añada.",
+      "C": "El filtrado suele estar listo al salir y forma poco sedimento; el no filtrado puede evolucionar y requerir decantación.",
+      "D": "La filtración convierte un ruby en tawny."
+    },
+    "correct_answer_letter": "C",
+    "correct_answer_text": "El filtrado suele estar listo al salir y forma poco sedimento; el no filtrado puede evolucionar y requerir decantación."
+  },
+  {
+    "question_id": "912",
+    "question_text": "Si una botella de Tawny indica 20 años, ¿qué interpretación explica mejor el estilo esperado?",
+    "question_type": "theory",
+    "expected_topics": [
+      "RA4",
+      "port_tawny_age_label"
+    ],
+    "expected_causal_links": [
+      "El productor mezcla vinos de distintas edades durante la maduración oxidativa. -> La categoría expresa el perfil típico de una edad media aprobada. -> El vino busca consistencia y complejidad, no identidad de una sola añada."
+    ],
+    "expected_keywords": [
+      "Port",
+      "Tawny",
+      "indicación de edad",
+      "mezcla"
+    ],
+    "expected_reasoning_type": "cause_effect",
+    "difficulty": "intermediate",
+    "source_type": "SBA gap closure | manually curated from local official study guide",
+    "safe_for_examiner": false,
+    "options": {
+      "A": "Todo el vino procede exactamente de una añada de hace 20 años.",
+      "B": "El componente más joven debe tener 20 años.",
+      "C": "La cifra indica años de botella después de la compra.",
+      "D": "Es una mezcla cuyo carácter corresponde a una edad media aproximada, no vino íntegramente de una sola cosecha de 20 años."
+    },
+    "correct_answer_letter": "D",
+    "correct_answer_text": "Es una mezcla cuyo carácter corresponde a una edad media aproximada, no vino íntegramente de una sola cosecha de 20 años."
+  },
+  {
+    "question_id": "913",
+    "question_text": "Al comparar Vintage Port madurado en botella y Tawny con indicación de edad madurado en madera, ¿qué factor explica mejor sus perfiles distintos?",
+    "question_type": "theory",
+    "expected_topics": [
+      "RA4",
+      "port_vintage_vs_tawny"
+    ],
+    "expected_causal_links": [
+      "Ambos parten de Port tinto fortificado, pero siguen recipientes y tiempos distintos. -> La botella protege más del oxígeno; las pipes favorecen oxidación gradual. -> Vintage conserva y transforma fruta y tanino; Tawny desarrolla carácter oxidativo y está listo al embotellar."
+    ],
+    "expected_keywords": [
+      "Port",
+      "Vintage",
+      "Tawny",
+      "maduración"
+    ],
+    "expected_reasoning_type": "cause_effect",
+    "difficulty": "intermediate",
+    "source_type": "SBA gap closure | manually curated from local official study guide",
+    "safe_for_examiner": false,
+    "options": {
+      "A": "El primero limita oxígeno antes de botella; el segundo recibe larga maduración oxidativa en pipes.",
+      "B": "La única diferencia es la variedad de uva.",
+      "C": "Vintage se fortifica y Tawny no.",
+      "D": "Tawny desarrolla flor mientras Vintage envejece bajo velo."
+    },
+    "correct_answer_letter": "A",
+    "correct_answer_text": "El primero limita oxígeno antes de botella; el segundo recibe larga maduración oxidativa en pipes."
+  },
+  {
+    "question_id": "914",
+    "question_text": "Si un Port madura en el ambiente costero más fresco de Vila Nova de Gaia en lugar de condiciones más cálidas del Douro, ¿qué consecuencia es más probable?",
+    "question_type": "theory",
+    "expected_topics": [
+      "RA4",
+      "port_gaia_climate"
+    ],
+    "expected_causal_links": [
+      "El vino se almacena en un entorno más fresco y moderado. -> La temperatura menor ralentiza reacciones de envejecimiento. -> La maduración puede ser más gradual y controlada."
+    ],
+    "expected_keywords": [
+      "Port",
+      "Vila Nova de Gaia",
+      "temperatura",
+      "maduración"
+    ],
+    "expected_reasoning_type": "cause_effect",
+    "difficulty": "distinction",
+    "source_type": "SBA gap closure | manually curated from local official study guide",
+    "safe_for_examiner": false,
+    "options": {
+      "A": "El vino se oxidará más rápido por la menor temperatura.",
+      "B": "La evolución será más lenta y se preservará mejor la frescura.",
+      "C": "La fermentación reiniciará necesariamente.",
+      "D": "El aguardiente se separará del vino."
+    },
+    "correct_answer_letter": "B",
+    "correct_answer_text": "La evolución será más lenta y se preservará mejor la frescura."
+  },
+  {
+    "question_id": "915",
+    "question_text": "Si un vino base de Palomino es pálido, ligero y fino tras la fermentación, ¿qué decisión explica mejor su destino inicial?",
+    "question_type": "theory",
+    "expected_topics": [
+      "RA4",
+      "sherry_first_classification"
+    ],
+    "expected_causal_links": [
+      "El productor clasifica el vino según su cuerpo y finura. -> Un grado cercano a 15% permite que la flor prospere. -> El vino puede desarrollar un estilo Fino o Manzanilla protegido del oxígeno."
+    ],
+    "expected_keywords": [
+      "Sherry",
+      "clasificación",
+      "flor",
+      "15.5%"
+    ],
+    "expected_reasoning_type": "cause_effect",
+    "difficulty": "intermediate",
+    "source_type": "SBA gap closure | manually curated from local official study guide",
+    "safe_for_examiner": false,
+    "options": {
+      "A": "Fortificarlo de inmediato a 22% para crear PX.",
+      "B": "Endulzarlo antes de que aparezca flor.",
+      "C": "Fortificarlo cerca de 15 a 15,5% para favorecer flor y crianza biológica.",
+      "D": "Concentrarlo por congelación."
+    },
+    "correct_answer_letter": "C",
+    "correct_answer_text": "Fortificarlo cerca de 15 a 15,5% para favorecer flor y crianza biológica."
+  },
+  {
+    "question_id": "916",
+    "question_text": "Si un vino base más robusto se fortifica a 17% antes de la crianza, ¿qué resultado es más probable?",
+    "question_type": "theory",
+    "expected_topics": [
+      "RA4",
+      "sherry_oloroso_fortification"
+    ],
+    "expected_causal_links": [
+      "El vino recibe una graduación superior al límite de tolerancia de la flor. -> Sin velo protector, el oxígeno actúa en la bota parcialmente llena. -> Se desarrollan color más oscuro, cuerpo y aromas de nuez, cuero y toffee."
+    ],
+    "expected_keywords": [
+      "Sherry",
+      "Oloroso",
+      "17%",
+      "oxidativa"
+    ],
+    "expected_reasoning_type": "cause_effect",
+    "difficulty": "intermediate",
+    "source_type": "SBA gap closure | manually curated from local official study guide",
+    "safe_for_examiner": false,
+    "options": {
+      "A": "La flor crece más gruesa y protege el vino.",
+      "B": "El vino se vuelve espumoso.",
+      "C": "La fortificación elimina todo cuerpo y color.",
+      "D": "La flor no sobrevive y el vino inicia crianza oxidativa hacia Oloroso."
+    },
+    "correct_answer_letter": "D",
+    "correct_answer_text": "La flor no sobrevive y el vino inicia crianza oxidativa hacia Oloroso."
+  },
+  {
+    "question_id": "917",
+    "question_text": "Si una capa sana de flor cubre un Fino, ¿qué consecuencia explica mejor que conserve color pálido durante la crianza?",
+    "question_type": "theory",
+    "expected_topics": [
+      "RA4",
+      "sherry_flor_protection"
+    ],
+    "expected_causal_links": [
+      "Levaduras de flor crecen sobre el vino en una bota parcialmente llena. -> La capa utiliza oxígeno y reduce el contacto oxidativo directo. -> El vino permanece pálido y desarrolla acetaldehído, almendra y notas de masa."
+    ],
+    "expected_keywords": [
+      "Sherry",
+      "Fino",
+      "flor",
+      "protección"
+    ],
+    "expected_reasoning_type": "cause_effect",
+    "difficulty": "distinction",
+    "source_type": "SBA gap closure | manually curated from local official study guide",
+    "safe_for_examiner": false,
+    "options": {
+      "A": "La flor consume oxígeno y forma una barrera que limita la oxidación del vino.",
+      "B": "La flor añade pigmentos blancos al vino.",
+      "C": "El alto tanino impide el oscurecimiento.",
+      "D": "La bota se llena por completo y no contiene aire."
+    },
+    "correct_answer_letter": "A",
+    "correct_answer_text": "La flor consume oxígeno y forma una barrera que limita la oxidación del vino."
+  },
+  {
+    "question_id": "918",
+    "question_text": "Si una bodega se vuelve demasiado cálida y seca durante la crianza de Fino, ¿qué consecuencia es más probable?",
+    "question_type": "theory",
+    "expected_topics": [
+      "RA4",
+      "sherry_flor_conditions"
+    ],
+    "expected_causal_links": [
+      "La flor necesita un rango adecuado de alcohol, temperatura y humedad. -> Condiciones adversas reducen su actividad y continuidad. -> Disminuyen la protección y el carácter biológico."
+    ],
+    "expected_keywords": [
+      "Sherry",
+      "flor",
+      "temperatura",
+      "humedad"
+    ],
+    "expected_reasoning_type": "cause_effect",
+    "difficulty": "intermediate",
+    "source_type": "SBA gap closure | manually curated from local official study guide",
+    "safe_for_examiner": false,
+    "options": {
+      "A": "La flor crece más vigorosa cuanto más calor y sequedad.",
+      "B": "La flor se debilita y aumenta el riesgo de desarrollo oxidativo.",
+      "C": "El vino pierde alcohol hasta quedar sin protección.",
+      "D": "La solera deja de mezclar edades."
+    },
+    "correct_answer_letter": "B",
+    "correct_answer_text": "La flor se debilita y aumenta el riesgo de desarrollo oxidativo."
+  },
+  {
+    "question_id": "919",
+    "question_text": "Si una solera se refresca periódicamente con vinos más jóvenes bien seleccionados, ¿qué resultado explica mejor su consistencia?",
+    "question_type": "theory",
+    "expected_topics": [
+      "RA4",
+      "sherry_solera_consistency"
+    ],
+    "expected_causal_links": [
+      "Se extrae solo una fracción del nivel más viejo y se repone desde criaderas. -> El ensamblaje repetido integra vinos de diferentes edades. -> La casa mantiene un perfil relativamente estable entre embotellados."
+    ],
+    "expected_keywords": [
+      "Sherry",
+      "solera",
+      "criaderas",
+      "consistencia"
+    ],
+    "expected_reasoning_type": "cause_effect",
+    "difficulty": "intermediate",
+    "source_type": "SBA gap closure | manually curated from local official study guide",
+    "safe_for_examiner": false,
+    "options": {
+      "A": "Cada botella conserva una única añada identificable.",
+      "B": "El vino joven reemplaza por completo al viejo en cada movimiento.",
+      "C": "Cada saca mezcla edades y el vino joven adopta gradualmente el carácter del sistema.",
+      "D": "La mezcla impide cualquier envejecimiento."
+    },
+    "correct_answer_letter": "C",
+    "correct_answer_text": "Cada saca mezcla edades y el vino joven adopta gradualmente el carácter del sistema."
+  },
+  {
+    "question_id": "920",
+    "question_text": "Si un productor extrae demasiado vino de una solera cada año, ¿qué consecuencia es más probable?",
+    "question_type": "theory",
+    "expected_topics": [
+      "RA4",
+      "sherry_solera_overdraw"
+    ],
+    "expected_causal_links": [
+      "La saca retira una proporción excesiva del vino viejo. -> La reposición introduce relativamente más vino joven en cada ciclo. -> Puede perderse concentración, continuidad y consistencia."
+    ],
+    "expected_keywords": [
+      "Sherry",
+      "solera",
+      "saca",
+      "edad media"
+    ],
+    "expected_reasoning_type": "cause_effect",
+    "difficulty": "distinction",
+    "source_type": "SBA gap closure | manually curated from local official study guide",
+    "safe_for_examiner": false,
+    "options": {
+      "A": "La edad media aumenta automáticamente.",
+      "B": "La flor se convierte en azúcar.",
+      "C": "El vino deja de mezclarse con componentes jóvenes.",
+      "D": "Se reduce la edad media y puede diluirse el carácter maduro del sistema."
+    },
+    "correct_answer_letter": "D",
+    "correct_answer_text": "Se reduce la edad media y puede diluirse el carácter maduro del sistema."
+  },
+  {
+    "question_id": "921",
+    "question_text": "Si un Fino se refortifica a 17% después de una etapa biológica, ¿qué resultado de estilo es más probable?",
+    "question_type": "theory",
+    "expected_topics": [
+      "RA4",
+      "sherry_amontillado_transition"
+    ],
+    "expected_causal_links": [
+      "El vino ya ha desarrollado carácter bajo flor. -> La nueva fortificación elimina la flor y expone el vino a oxígeno. -> Amontillado combina señales biológicas y oxidativas."
+    ],
+    "expected_keywords": [
+      "Sherry",
+      "Amontillado",
+      "refortificación",
+      "crianza mixta"
+    ],
+    "expected_reasoning_type": "cause_effect",
+    "difficulty": "intermediate",
+    "source_type": "SBA gap closure | manually curated from local official study guide",
+    "safe_for_examiner": false,
+    "options": {
+      "A": "La flor muere y el vino añade notas oxidativas a su carácter previo de levadura y almendra.",
+      "B": "La refortificación reinicia una flor más gruesa.",
+      "C": "El vino pierde todo rastro de crianza biológica.",
+      "D": "El estilo se convierte en PX naturalmente dulce."
+    },
+    "correct_answer_letter": "A",
+    "correct_answer_text": "La flor muere y el vino añade notas oxidativas a su carácter previo de levadura y almendra."
+  },
+  {
+    "question_id": "922",
+    "question_text": "Si un Sherry envejece exclusivamente sin flor en botas parcialmente llenas, ¿qué resultado es más probable?",
+    "question_type": "theory",
+    "expected_topics": [
+      "RA4",
+      "sherry_oloroso_style"
+    ],
+    "expected_causal_links": [
+      "El vino fortificado a 17% madura con aire en la bota. -> La oxidación prolongada transforma color y compuestos aromáticos. -> Aumentan riqueza, concentración y carácter terciario oxidativo."
+    ],
+    "expected_keywords": [
+      "Sherry",
+      "Oloroso",
+      "oxidación",
+      "nuez"
+    ],
+    "expected_reasoning_type": "cause_effect",
+    "difficulty": "intermediate",
+    "source_type": "SBA gap closure | manually curated from local official study guide",
+    "safe_for_examiner": false,
+    "options": {
+      "A": "Un Fino pálido con masa de pan.",
+      "B": "Un Oloroso de color oscuro, cuerpo pleno y aromas de nuez, cuero, especias y toffee.",
+      "C": "Un vino de fruta floral primaria sin evolución.",
+      "D": "Un espumoso de alta acidez."
+    },
+    "correct_answer_letter": "B",
+    "correct_answer_text": "Un Oloroso de color oscuro, cuerpo pleno y aromas de nuez, cuero, especias y toffee."
+  },
+  {
+    "question_id": "923",
+    "question_text": "Si un vino criado bajo flor madura en el ambiente costero fresco y húmedo de Sanlúcar, ¿qué resultado es más probable frente a un Fino interior?",
+    "question_type": "theory",
+    "expected_topics": [
+      "RA4",
+      "sherry_manzanilla"
+    ],
+    "expected_causal_links": [
+      "Sanlúcar ofrece condiciones frescas y húmedas favorables a la flor. -> La capa puede mantenerse gruesa y activa durante más tiempo. -> Manzanilla intensifica el carácter biológico y la frescura."
+    ],
+    "expected_keywords": [
+      "Sherry",
+      "Manzanilla",
+      "Sanlúcar",
+      "flor"
+    ],
+    "expected_reasoning_type": "cause_effect",
+    "difficulty": "distinction",
+    "source_type": "SBA gap closure | manually curated from local official study guide",
+    "safe_for_examiner": false,
+    "options": {
+      "A": "Una crianza exclusivamente oxidativa por la humedad.",
+      "B": "Mayor color por desaparición inmediata de la flor.",
+      "C": "Una flor más constante y un perfil especialmente fresco, tangy y salino.",
+      "D": "Un vino dulce por concentración costera."
+    },
+    "correct_answer_letter": "C",
+    "correct_answer_text": "Una flor más constante y un perfil especialmente fresco, tangy y salino."
+  },
+  {
+    "question_id": "924",
+    "question_text": "Si las uvas PX se secan al sol antes de fermentar, ¿qué resultado explica mejor el estilo posterior?",
+    "question_type": "theory",
+    "expected_topics": [
+      "RA4",
+      "sherry_px_drying"
+    ],
+    "expected_causal_links": [
+      "Las bayas de PX pierden agua bajo el sol. -> El jugo concentrado crea fuerte presión osmótica para la levadura. -> El vino conserva enorme azúcar residual y carácter de pasas."
+    ],
+    "expected_keywords": [
+      "Sherry",
+      "PX",
+      "secado al sol",
+      "azúcar residual"
+    ],
+    "expected_reasoning_type": "cause_effect",
+    "difficulty": "intermediate",
+    "source_type": "SBA gap closure | manually curated from local official study guide",
+    "safe_for_examiner": false,
+    "options": {
+      "A": "El secado reduce el azúcar y facilita fermentar hasta sequedad.",
+      "B": "Las uvas forman flor antes del prensado.",
+      "C": "El vino adquiere tanino alto de piel tinta.",
+      "D": "El agua se evapora, el mosto se concentra y la fermentación alcanza poco alcohol antes de fortificar."
+    },
+    "correct_answer_letter": "D",
+    "correct_answer_text": "El agua se evapora, el mosto se concentra y la fermentación alcanza poco alcohol antes de fortificar."
+  },
+  {
+    "question_id": "925",
+    "question_text": "Si un Fino se embotella en rama con mínima clarificación y filtración, ¿qué consecuencia de estilo es más probable?",
+    "question_type": "theory",
+    "expected_topics": [
+      "RA4",
+      "sherry_en_rama"
+    ],
+    "expected_causal_links": [
+      "El productor reduce intervenciones que retirarían parte del material del vino. -> Se conserva más carácter del vino de bota junto con mayor sensibilidad. -> El estilo puede ser más expresivo y menos estandarizado."
+    ],
+    "expected_keywords": [
+      "Sherry",
+      "en rama",
+      "filtración",
+      "intensidad"
+    ],
+    "expected_reasoning_type": "cause_effect",
+    "difficulty": "intermediate",
+    "source_type": "SBA gap closure | manually curated from local official study guide",
+    "safe_for_examiner": false,
+    "options": {
+      "A": "Puede conservar mayor intensidad y textura, pero exige manejo cuidadoso de estabilidad y frescura.",
+      "B": "Se vuelve oxidativo antes de salir de bodega por definición.",
+      "C": "Pierde todo carácter de flor.",
+      "D": "No puede contener partículas ni variación."
+    },
+    "correct_answer_letter": "A",
+    "correct_answer_text": "Puede conservar mayor intensidad y textura, pero exige manejo cuidadoso de estabilidad y frescura."
+  },
+  {
+    "question_id": "926",
+    "question_text": "Si una botella de Fino permanece abierta o guardada demasiado tiempo, ¿qué consecuencia es más probable?",
+    "question_type": "theory",
+    "expected_topics": [
+      "RA4",
+      "sherry_fino_freshness"
+    ],
+    "expected_causal_links": [
+      "El Fino ya no está protegido por una cultura activa de flor en la botella. -> El oxígeno del cierre abierto o el tiempo degrada sus aromas delicados. -> Disminuyen frescura, almendra y notas de masa."
+    ],
+    "expected_keywords": [
+      "Sherry",
+      "Fino",
+      "frescura",
+      "botella abierta"
+    ],
+    "expected_reasoning_type": "cause_effect",
+    "difficulty": "distinction",
+    "source_type": "SBA gap closure | manually curated from local official study guide",
+    "safe_for_examiner": false,
+    "options": {
+      "A": "Mejora indefinidamente porque la flor sigue viva en botella.",
+      "B": "Pierde frescura biológica y desarrolla oxidación no deseada.",
+      "C": "Aumenta su azúcar residual.",
+      "D": "Se convierte en Vintage Port."
+    },
+    "correct_answer_letter": "B",
+    "correct_answer_text": "Pierde frescura biológica y desarrolla oxidación no deseada."
+  },
+  {
+    "question_id": "927",
+    "question_text": "Si un Madeira madura con calor y oxígeno mediante estufagem, ¿qué resultado es más probable?",
+    "question_type": "theory",
+    "expected_topics": [
+      "RA4",
+      "madeira_heat_ageing"
+    ],
+    "expected_causal_links": [
+      "El vino fortificado se expone deliberadamente a calor y oxígeno. -> Se aceleran reacciones oxidativas y de calentamiento. -> Aparece un perfil desarrollado y resistente a oxidación posterior."
+    ],
+    "expected_keywords": [
+      "Madeira",
+      "estufagem",
+      "calor",
+      "oxidación"
+    ],
+    "expected_reasoning_type": "cause_effect",
+    "difficulty": "intermediate",
+    "source_type": "SBA gap closure | manually curated from local official study guide",
+    "safe_for_examiner": false,
+    "options": {
+      "A": "Conserva solo fruta primaria delicada.",
+      "B": "Forma flor y permanece pálido.",
+      "C": "Desarrolla rápidamente notas de caramelo, frutos secos y tostado con gran estabilidad posterior.",
+      "D": "Pierde toda acidez por efecto del calor."
+    },
+    "correct_answer_letter": "C",
+    "correct_answer_text": "Desarrolla rápidamente notas de caramelo, frutos secos y tostado con gran estabilidad posterior."
+  },
+  {
+    "question_id": "928",
+    "question_text": "Al comparar canteiro con estufagem, ¿qué factor explica mejor que canteiro pueda dar un estilo más fino y complejo?",
+    "question_type": "theory",
+    "expected_topics": [
+      "RA4",
+      "madeira_canteiro"
+    ],
+    "expected_causal_links": [
+      "El vino en canteiro envejece en madera en zonas cálidas sin calentamiento rápido de tanque. -> La energía térmica actúa de forma más suave durante años. -> La complejidad se desarrolla con mayor lentitud e integración."
+    ],
+    "expected_keywords": [
+      "Madeira",
+      "canteiro",
+      "estufagem",
+      "complejidad"
+    ],
+    "expected_reasoning_type": "cause_effect",
+    "difficulty": "intermediate",
+    "source_type": "SBA gap closure | manually curated from local official study guide",
+    "safe_for_examiner": false,
+    "options": {
+      "A": "Canteiro elimina por completo el oxígeno.",
+      "B": "Estufagem siempre usa flor.",
+      "C": "Canteiro congela el vino antes de madurarlo.",
+      "D": "El calentamiento natural es más lento y prolongado, permitiendo una evolución gradual."
+    },
+    "correct_answer_letter": "D",
+    "correct_answer_text": "El calentamiento natural es más lento y prolongado, permitiendo una evolución gradual."
+  },
+  {
+    "question_id": "929",
+    "question_text": "Si un Madeira dulce conserva acidez muy alta después de la maduración con calor, ¿qué consecuencia sensorial es más probable?",
+    "question_type": "theory",
+    "expected_topics": [
+      "RA4",
+      "madeira_acidity"
+    ],
+    "expected_causal_links": [
+      "El vino combina azúcar residual con una base ácida marcada. -> La acidez contrasta la riqueza y sostiene el final. -> Incluso estilos dulces pueden resultar tensos y longevos."
+    ],
+    "expected_keywords": [
+      "Madeira",
+      "acidez",
+      "dulzor",
+      "equilibrio"
+    ],
+    "expected_reasoning_type": "cause_effect",
+    "difficulty": "distinction",
+    "source_type": "SBA gap closure | manually curated from local official study guide",
+    "safe_for_examiner": false,
+    "options": {
+      "A": "El dulzor queda equilibrado y el vino mantiene frescura pese a su carácter desarrollado.",
+      "B": "La acidez alta impide cualquier percepción de dulzor.",
+      "C": "El calor convierte la acidez en tanino.",
+      "D": "El vino debe percibirse ligero y neutro."
+    },
+    "correct_answer_letter": "A",
+    "correct_answer_text": "El dulzor queda equilibrado y el vino mantiene frescura pese a su carácter desarrollado."
+  },
+  {
+    "question_id": "930",
+    "question_text": "Dos Madeiras parten del mismo mosto; uno se fortifica antes durante la fermentación. ¿Qué consecuencia es más probable?",
+    "question_type": "theory",
+    "expected_topics": [
+      "RA4",
+      "madeira_fortification_timing"
+    ],
+    "expected_causal_links": [
+      "La levadura consume azúcar hasta que el alcohol añadido detiene su actividad. -> Una interrupción temprana deja más azúcar sin fermentar. -> El productor puede definir estilos de distinto dulzor."
+    ],
+    "expected_keywords": [
+      "Madeira",
+      "fortificación",
+      "dulzor",
+      "fermentación"
+    ],
+    "expected_reasoning_type": "cause_effect",
+    "difficulty": "intermediate",
+    "source_type": "SBA gap closure | manually curated from local official study guide",
+    "safe_for_examiner": false,
+    "options": {
+      "A": "El fortificado antes será automáticamente más oxidativo.",
+      "B": "El fortificado antes conservará más azúcar residual.",
+      "C": "Ambos quedarán igual de secos.",
+      "D": "El momento solo cambia el color, no el dulzor."
+    },
+    "correct_answer_letter": "B",
+    "correct_answer_text": "El fortificado antes conservará más azúcar residual."
+  },
+  {
+    "question_id": "931",
+    "question_text": "Si una botella abierta de Madeira conserva bien su estilo durante más tiempo que muchos vinos tranquilos, ¿qué factor explica mejor esa resistencia?",
+    "question_type": "theory",
+    "expected_topics": [
+      "RA4",
+      "madeira_oxidative_stability"
+    ],
+    "expected_causal_links": [
+      "El vino se estabiliza mediante alcohol elevado y maduración oxidativa térmica. -> Muchos cambios que dañarían un vino delicado ya forman parte de su estilo. -> Tolera mejor una exposición posterior moderada al oxígeno."
+    ],
+    "expected_keywords": [
+      "Madeira",
+      "estabilidad",
+      "calor",
+      "oxígeno"
+    ],
+    "expected_reasoning_type": "cause_effect",
+    "difficulty": "intermediate",
+    "source_type": "SBA gap closure | manually curated from local official study guide",
+    "safe_for_examiner": false,
+    "options": {
+      "A": "No contiene agua que pueda oxidarse.",
+      "B": "La flor sigue protegiéndola en botella.",
+      "C": "Ya ha sido expuesta a calor, oxígeno y fortificación durante su elaboración.",
+      "D": "El azúcar impide toda reacción química."
+    },
+    "correct_answer_letter": "C",
+    "correct_answer_text": "Ya ha sido expuesta a calor, oxígeno y fortificación durante su elaboración."
+  },
+  {
+    "question_id": "932",
+    "question_text": "Si un Madeira envejece durante años con calor y oxígeno, ¿qué resultado visual y aromático es más probable?",
+    "question_type": "theory",
+    "expected_topics": [
+      "RA4",
+      "madeira_colour_aroma"
+    ],
+    "expected_causal_links": [
+      "Pigmentos y aromas reaccionan durante maduración oxidativa caliente. -> El tiempo y la temperatura transforman compuestos primarios. -> El vino adquiere color y complejidad desarrollados."
+    ],
+    "expected_keywords": [
+      "Madeira",
+      "color",
+      "caramelo",
+      "frutos secos"
+    ],
+    "expected_reasoning_type": "cause_effect",
+    "difficulty": "distinction",
+    "source_type": "SBA gap closure | manually curated from local official study guide",
+    "safe_for_examiner": false,
+    "options": {
+      "A": "Color más pálido y fruta verde primaria.",
+      "B": "Burbuja fina y autólisis.",
+      "C": "Aromas herbáceos de fermentación fría.",
+      "D": "Color más profundo con frutos secos, caramelo, piel de cítricos y especias."
+    },
+    "correct_answer_letter": "D",
+    "correct_answer_text": "Color más profundo con frutos secos, caramelo, piel de cítricos y especias."
+  },
+  {
+    "question_id": "933",
+    "question_text": "Dos Madeiras muestran igual dulzor; uno tiene mayor acidez, longitud e integración del carácter térmico. ¿Qué factor explica mejor su mayor calidad?",
+    "question_type": "theory",
+    "expected_topics": [
+      "RA4",
+      "madeira_quality_method"
+    ],
+    "expected_causal_links": [
+      "La calidad depende de estructura, concentración, complejidad y persistencia. -> La acidez y la integración evitan que calor y azúcar dominen. -> El vino resulta más equilibrado y largo."
+    ],
+    "expected_keywords": [
+      "Madeira",
+      "calidad",
+      "equilibrio",
+      "longitud"
+    ],
+    "expected_reasoning_type": "cause_effect",
+    "difficulty": "intermediate",
+    "source_type": "SBA gap closure | manually curated from local official study guide",
+    "safe_for_examiner": false,
+    "options": {
+      "A": "El equilibrio y la complejidad integrada importan más que el dulzor aislado.",
+      "B": "El vino más dulce siempre es superior.",
+      "C": "Más calor siempre produce mayor calidad.",
+      "D": "La acidez alta es un defecto en vinos fortificados."
+    },
+    "correct_answer_letter": "A",
+    "correct_answer_text": "El equilibrio y la complejidad integrada importan más que el dulzor aislado."
+  },
+  {
+    "question_id": "934",
+    "question_text": "Al comparar Madeira y Tawny Port, ¿qué factor explica mejor que ambos muestren frutos secos pero Madeira conserve una acidez más incisiva?",
+    "question_type": "theory",
+    "expected_topics": [
+      "RA4",
+      "madeira_vs_tawny"
+    ],
+    "expected_causal_links": [
+      "Ambos estilos evolucionan con oxígeno, pero parten de matrices distintas. -> El origen y el proceso térmico de Madeira mantienen una firma ácida particular. -> Comparten notas desarrolladas sin ser estilos equivalentes."
+    ],
+    "expected_keywords": [
+      "Madeira",
+      "Tawny Port",
+      "oxidación",
+      "acidez"
+    ],
+    "expected_reasoning_type": "cause_effect",
+    "difficulty": "intermediate",
+    "source_type": "SBA gap closure | manually curated from local official study guide",
+    "safe_for_examiner": false,
+    "options": {
+      "A": "Tawny no recibe oxígeno durante la crianza.",
+      "B": "Madeira combina maduración oxidativa con una base naturalmente muy ácida y exposición térmica.",
+      "C": "Madeira se cría bajo flor.",
+      "D": "Port se elabora sin fortificación."
+    },
+    "correct_answer_letter": "B",
+    "correct_answer_text": "Madeira combina maduración oxidativa con una base naturalmente muy ácida y exposición térmica."
+  },
+  {
+    "question_id": "935",
+    "question_text": "Si un Muscat fortificado busca un estilo juvenil y floral, ¿qué decisión explica mejor su elaboración?",
+    "question_type": "theory",
+    "expected_topics": [
+      "RA4",
+      "muscat_youthful_aroma"
+    ],
+    "expected_causal_links": [
+      "La uva posee aromas intensos de flor, rosa y uva fresca. -> Baja temperatura, fortificación y almacenamiento inerte reducen pérdida y oxidación aromática. -> El vino conserva perfume primario y dulzor fresco."
+    ],
+    "expected_keywords": [
+      "Muscat",
+      "juvenil",
+      "aromas florales",
+      "fortificación"
+    ],
+    "expected_reasoning_type": "cause_effect",
+    "difficulty": "distinction",
+    "source_type": "SBA gap closure | manually curated from local official study guide",
+    "safe_for_examiner": false,
+    "options": {
+      "A": "Larga crianza cálida en madera nueva.",
+      "B": "Secado extremo que enmascare el aroma varietal.",
+      "C": "Fermentación fresca, fortificación para conservar azúcar y protección del oxígeno en recipiente inerte.",
+      "D": "Crianza bajo flor durante décadas."
+    },
+    "correct_answer_letter": "C",
+    "correct_answer_text": "Fermentación fresca, fortificación para conservar azúcar y protección del oxígeno en recipiente inerte."
+  },
+  {
+    "question_id": "936",
+    "question_text": "Si un productor prolonga moderadamente el contacto con pieles en un Muscat fortificado juvenil, ¿qué resultado es más probable?",
+    "question_type": "theory",
+    "expected_topics": [
+      "RA4",
+      "muscat_skin_contact"
+    ],
+    "expected_causal_links": [
+      "Muchos compuestos aromáticos se concentran en las pieles de Muscat. -> El contacto permite extraerlos al mosto o vino en fermentación. -> El estilo gana perfume y cuerpo si la extracción se controla."
+    ],
+    "expected_keywords": [
+      "Muscat",
+      "contacto con pieles",
+      "aroma",
+      "textura"
+    ],
+    "expected_reasoning_type": "cause_effect",
+    "difficulty": "intermediate",
+    "source_type": "SBA gap closure | manually curated from local official study guide",
+    "safe_for_examiner": false,
+    "options": {
+      "A": "Desaparecen todos los aromas varietales.",
+      "B": "Se forma un tanino comparable al de Vintage Port.",
+      "C": "El vino se vuelve oxidativo por definición.",
+      "D": "Aumentan intensidad aromática y riqueza de textura."
+    },
+    "correct_answer_letter": "D",
+    "correct_answer_text": "Aumentan intensidad aromática y riqueza de textura."
+  },
+  {
+    "question_id": "937",
+    "question_text": "Si las uvas para un Rutherglen Muscat muy dulce se dejan raisinar parcialmente antes de cosechar, ¿qué consecuencia es más probable?",
+    "question_type": "theory",
+    "expected_topics": [
+      "RA4",
+      "muscat_raisining"
+    ],
+    "expected_causal_links": [
+      "La fruta pierde agua y avanza hacia pasificación. -> Se concentran azúcar y sabores, mientras los aromas frescos pueden degradarse. -> El productor equilibra riqueza con conservación del carácter Muscat."
+    ],
+    "expected_keywords": [
+      "Rutherglen Muscat",
+      "raisining",
+      "concentración",
+      "aroma varietal"
+    ],
+    "expected_reasoning_type": "cause_effect",
+    "difficulty": "intermediate",
+    "source_type": "SBA gap closure | manually curated from local official study guide",
+    "safe_for_examiner": false,
+    "options": {
+      "A": "Aumentan concentración y notas de fruta seca, pero un exceso puede reducir el perfume varietal.",
+      "B": "El secado intensifica indefinidamente la flor fresca sin riesgo.",
+      "C": "La uva pierde azúcar mientras gana agua.",
+      "D": "El método obliga a fermentar hasta sequedad."
+    },
+    "correct_answer_letter": "A",
+    "correct_answer_text": "Aumentan concentración y notas de fruta seca, pero un exceso puede reducir el perfume varietal."
+  },
+  {
+    "question_id": "938",
+    "question_text": "Si un Rutherglen Muscat se fortifica cuando la fermentación apenas alcanza alrededor de 2% de alcohol, ¿qué resultado es más probable?",
+    "question_type": "theory",
+    "expected_topics": [
+      "RA4",
+      "muscat_early_fortification"
+    ],
+    "expected_causal_links": [
+      "La fermentación ha consumido muy poco azúcar cuando llega el alcohol añadido. -> La levadura se detiene antes de transformar la mayor parte del azúcar. -> El vino queda muy dulce, rico y fortificado."
+    ],
+    "expected_keywords": [
+      "Rutherglen Muscat",
+      "fortificación temprana",
+      "luscious",
+      "azúcar residual"
+    ],
+    "expected_reasoning_type": "cause_effect",
+    "difficulty": "distinction",
+    "source_type": "SBA gap closure | manually curated from local official study guide",
+    "safe_for_examiner": false,
+    "options": {
+      "A": "Termina seco porque el aguardiente alimenta la levadura.",
+      "B": "Conserva una cantidad muy alta de azúcar residual y queda en estilo luscious.",
+      "C": "Pierde todo aroma de uva por falta de alcohol.",
+      "D": "Se vuelve biológico bajo flor."
+    },
+    "correct_answer_letter": "B",
+    "correct_answer_text": "Conserva una cantidad muy alta de azúcar residual y queda en estilo luscious."
+  },
+  {
+    "question_id": "939",
+    "question_text": "Si un Rutherglen Muscat envejece durante décadas, ¿qué factor explica mejor el uso de madera vieja en vez de roble nuevo?",
+    "question_type": "theory",
+    "expected_topics": [
+      "RA4",
+      "muscat_old_oak"
+    ],
+    "expected_causal_links": [
+      "El vino necesita maduración oxidativa prolongada, pero posee aromas varietales intensos. -> Recipientes viejos transmiten poco sabor de madera y permiten intercambio de oxígeno. -> Se desarrollan complejidad y concentración sin dominar el perfume de Muscat."
+    ],
+    "expected_keywords": [
+      "Rutherglen Muscat",
+      "madera vieja",
+      "oxidación",
+      "aroma"
+    ],
+    "expected_reasoning_type": "cause_effect",
+    "difficulty": "intermediate",
+    "source_type": "SBA gap closure | manually curated from local official study guide",
+    "safe_for_examiner": false,
+    "options": {
+      "A": "El roble viejo impide toda oxidación.",
+      "B": "La madera nueva eliminaría el alcohol.",
+      "C": "La madera vieja permite oxígeno sin aromas nuevos que compitan con el carácter Muscat.",
+      "D": "El roble viejo crea flor."
+    },
+    "correct_answer_letter": "C",
+    "correct_answer_text": "La madera vieja permite oxígeno sin aromas nuevos que compitan con el carácter Muscat."
+  },
+  {
+    "question_id": "940",
+    "question_text": "Si un Muscat fortificado envejece en condiciones cálidas y oxidativas, ¿qué resultado es más probable?",
+    "question_type": "theory",
+    "expected_topics": [
+      "RA4",
+      "muscat_warm_ageing"
+    ],
+    "expected_causal_links": [
+      "El vino dulce fortificado recibe calor y oxígeno durante años. -> Se aceleran oxidación, evaporación y transformación aromática. -> Aumentan concentración, color y complejidad desarrollada."
+    ],
+    "expected_keywords": [
+      "Rutherglen Muscat",
+      "calor",
+      "oxidación",
+      "color marrón"
+    ],
+    "expected_reasoning_type": "cause_effect",
+    "difficulty": "intermediate",
+    "source_type": "SBA gap closure | manually curated from local official study guide",
+    "safe_for_examiner": false,
+    "options": {
+      "A": "Conserva únicamente flor de azahar fresca.",
+      "B": "Se vuelve pálido por protección de flor.",
+      "C": "Desarrolla burbujas por el calor.",
+      "D": "Evoluciona de ámbar a marrón y desarrolla caramelo, frutos secos y fruta deshidratada."
+    },
+    "correct_answer_letter": "D",
+    "correct_answer_text": "Evoluciona de ámbar a marrón y desarrolla caramelo, frutos secos y fruta deshidratada."
+  },
+  {
+    "question_id": "941",
+    "question_text": "Si una pequeña proporción de Muscat joven se mezcla en un vino muy viejo antes de embotellar, ¿qué resultado explica mejor la decisión?",
+    "question_type": "theory",
+    "expected_topics": [
+      "RA4",
+      "muscat_young_blend"
+    ],
+    "expected_causal_links": [
+      "El vino viejo puede ser muy concentrado y dominado por aromas desarrollados. -> Una fracción joven aporta compuestos varietales más volátiles. -> El ensamblaje recupera perfume y equilibrio."
+    ],
+    "expected_keywords": [
+      "Rutherglen Muscat",
+      "mezcla",
+      "vino joven",
+      "aroma"
+    ],
+    "expected_reasoning_type": "cause_effect",
+    "difficulty": "distinction",
+    "source_type": "SBA gap closure | manually curated from local official study guide",
+    "safe_for_examiner": false,
+    "options": {
+      "A": "Aporta un levantamiento aromático floral sin borrar la complejidad oxidativa.",
+      "B": "Reduce el alcohol hasta convertirlo en vino tranquilo.",
+      "C": "Elimina todo azúcar residual del vino viejo.",
+      "D": "Crea una segunda fermentación obligatoria."
+    },
+    "correct_answer_letter": "A",
+    "correct_answer_text": "Aporta un levantamiento aromático floral sin borrar la complejidad oxidativa."
+  },
+  {
+    "question_id": "942",
+    "question_text": "Si un viñedo cálido de Muscat recibe una influencia refrescante, ¿qué consecuencia es más probable para un fortificado de calidad?",
+    "question_type": "theory",
+    "expected_topics": [
+      "RA4",
+      "muscat_cooling_influence"
+    ],
+    "expected_causal_links": [
+      "Muscat prospera en clima cálido pero sus aromas y acidez son sensibles al exceso de calor. -> La moderación térmica ralentiza pérdidas de ácido y compuestos volátiles. -> El vino puede combinar madurez, perfume y equilibrio."
+    ],
+    "expected_keywords": [
+      "Muscat",
+      "Rutherglen",
+      "influencia refrescante",
+      "acidez"
+    ],
+    "expected_reasoning_type": "cause_effect",
+    "difficulty": "intermediate",
+    "source_type": "SBA gap closure | manually curated from local official study guide",
+    "safe_for_examiner": false,
+    "options": {
+      "A": "Aumenta automáticamente el raisining extremo.",
+      "B": "Conserva mejor acidez y aromas florales durante la maduración.",
+      "C": "La fruta pierde todo azúcar.",
+      "D": "El vino desarrolla más tanino de piel."
+    },
+    "correct_answer_letter": "B",
+    "correct_answer_text": "Conserva mejor acidez y aromas florales durante la maduración."
+  },
+  {
+    "question_id": "943",
+    "question_text": "Al comparar un Muscat fortificado juvenil con uno envejecido, ¿qué factor explica mejor sus perfiles opuestos?",
+    "question_type": "theory",
+    "expected_topics": [
+      "RA4",
+      "muscat_young_vs_aged"
+    ],
+    "expected_causal_links": [
+      "Los estilos parten de la misma familia aromática con objetivos de maduración distintos. -> El control o la búsqueda de oxígeno dirige la evolución aromática. -> Se obtienen perfiles frescos o plenamente desarrollados."
+    ],
+    "expected_keywords": [
+      "Muscat",
+      "juvenil",
+      "envejecido",
+      "oxidación"
+    ],
+    "expected_reasoning_type": "cause_effect",
+    "difficulty": "intermediate",
+    "source_type": "SBA gap closure | manually curated from local official study guide",
+    "safe_for_examiner": false,
+    "options": {
+      "A": "Uno se fortifica y el otro no.",
+      "B": "El juvenil debe ser seco y el viejo siempre dulce.",
+      "C": "El juvenil evita oxígeno para conservar flores y uva; el envejecido usa calor y oxígeno para desarrollar frutos secos y caramelo.",
+      "D": "La única diferencia es el color de la botella."
+    },
+    "correct_answer_letter": "C",
+    "correct_answer_text": "El juvenil evita oxígeno para conservar flores y uva; el envejecido usa calor y oxígeno para desarrollar frutos secos y caramelo."
+  },
+  {
+    "question_id": "944",
+    "question_text": "Al comparar Port y Fino Sherry, ¿qué factor explica mejor que Port sea dulce y Fino seco?",
+    "question_type": "theory",
+    "expected_topics": [
+      "RA4",
+      "fortification_port_vs_sherry"
+    ],
+    "expected_causal_links": [
+      "Los dos vinos reciben alcohol en momentos diferentes. -> La fortificación temprana deja azúcar; la tardía modifica un vino ya seco. -> El momento de adición determina estilos estructuralmente distintos."
+    ],
+    "expected_keywords": [
+      "Port",
+      "Fino",
+      "fortificación",
+      "dulzor"
+    ],
+    "expected_reasoning_type": "cause_effect",
+    "difficulty": "distinction",
+    "source_type": "SBA gap closure | manually curated from local official study guide",
+    "safe_for_examiner": false,
+    "options": {
+      "A": "Fino no contiene alcohol añadido.",
+      "B": "Port se endulza solo después de embotellar.",
+      "C": "La flor convierte el azúcar de Port en alcohol.",
+      "D": "Port se fortifica durante la fermentación; Fino se fortifica después de fermentar hasta sequedad."
+    },
+    "correct_answer_letter": "D",
+    "correct_answer_text": "Port se fortifica durante la fermentación; Fino se fortifica después de fermentar hasta sequedad."
+  },
+  {
+    "question_id": "945",
+    "question_text": "Al comparar Fino y Oloroso, ¿qué factor explica mejor sus diferencias de color y aroma?",
+    "question_type": "theory",
+    "expected_topics": [
+      "RA4",
+      "biological_vs_oxidative"
+    ],
+    "expected_causal_links": [
+      "La graduación inicial determina si la flor puede sobrevivir. -> Con flor se limita oxidación; sin flor el aire transforma el vino. -> Fino queda pálido y punzante; Oloroso se vuelve oscuro, rico y nuez."
+    ],
+    "expected_keywords": [
+      "Fino",
+      "Oloroso",
+      "biológica",
+      "oxidativa"
+    ],
+    "expected_reasoning_type": "cause_effect",
+    "difficulty": "intermediate",
+    "source_type": "SBA gap closure | manually curated from local official study guide",
+    "safe_for_examiner": false,
+    "options": {
+      "A": "La flor protege al Fino; Oloroso envejece expuesto al oxígeno sin flor.",
+      "B": "Fino usa uvas tintas y Oloroso blancas.",
+      "C": "Oloroso no se fortifica.",
+      "D": "Fino envejece en barricas completamente llenas."
+    },
+    "correct_answer_letter": "A",
+    "correct_answer_text": "La flor protege al Fino; Oloroso envejece expuesto al oxígeno sin flor."
+  },
+  {
+    "question_id": "946",
+    "question_text": "Al comparar Oloroso, Tawny Port y Madeira, ¿qué factor explica mejor que compartan notas de nuez pero no sepan iguales?",
+    "question_type": "theory",
+    "expected_topics": [
+      "RA4",
+      "oxidative_style_comparison"
+    ],
+    "expected_causal_links": [
+      "Varios fortificados pueden usar oxígeno como herramienta de maduración. -> La matriz inicial y las condiciones específicas modifican las reacciones. -> Surgen familias aromáticas comunes junto con estructuras y firmas distintas."
+    ],
+    "expected_keywords": [
+      "Oloroso",
+      "Tawny Port",
+      "Madeira",
+      "comparación"
+    ],
+    "expected_reasoning_type": "cause_effect",
+    "difficulty": "intermediate",
+    "source_type": "SBA gap closure | manually curated from local official study guide",
+    "safe_for_examiner": false,
+    "options": {
+      "A": "La oxidación borra todas las diferencias de origen.",
+      "B": "Todos reciben oxidación, pero difieren en vino base, dulzor, fortificación, recipiente, temperatura y tiempo.",
+      "C": "Los tres se crían bajo flor.",
+      "D": "Los tres se fortifican en el mismo punto de fermentación."
+    },
+    "correct_answer_letter": "B",
+    "correct_answer_text": "Todos reciben oxidación, pero difieren en vino base, dulzor, fortificación, recipiente, temperatura y tiempo."
+  },
+  {
+    "question_id": "947",
+    "question_text": "Si un vino se fortifica cuando aún tiene alcohol fermentativo muy bajo, ¿qué consecuencia es más probable respecto al volumen de aguardiente necesario?",
+    "question_type": "theory",
+    "expected_topics": [
+      "RA4",
+      "fortification_volume"
+    ],
+    "expected_causal_links": [
+      "El vino base aporta poco alcohol antes de fortificar. -> Más alcohol externo debe cubrir la diferencia hasta el grado final. -> El aguardiente representa una parte mayor del volumen terminado."
+    ],
+    "expected_keywords": [
+      "fortificación",
+      "aguardiente",
+      "alcohol inicial",
+      "volumen"
+    ],
+    "expected_reasoning_type": "cause_effect",
+    "difficulty": "distinction",
+    "source_type": "SBA gap closure | manually curated from local official study guide",
+    "safe_for_examiner": false,
+    "options": {
+      "A": "Se necesita menos porque el azúcar cuenta como alcohol.",
+      "B": "No hace falta aguardiente si el vino es dulce.",
+      "C": "Se necesita una proporción mayor de aguardiente para alcanzar el alcohol final objetivo.",
+      "D": "El volumen añadido depende solo del color."
+    },
+    "correct_answer_letter": "C",
+    "correct_answer_text": "Se necesita una proporción mayor de aguardiente para alcanzar el alcohol final objetivo."
+  },
+  {
+    "question_id": "948",
+    "question_text": "Si un tinto fortificado interrumpe su fermentación muy pronto, ¿qué decisión explica mejor cómo conservar estructura suficiente?",
+    "question_type": "theory",
+    "expected_topics": [
+      "RA4",
+      "fortification_extraction"
+    ],
+    "expected_causal_links": [
+      "La extracción de color y tanino ocurre durante contacto con pieles. -> La fermentación corta limita el tiempo disponible. -> Una técnica más intensa compensa la ventana breve."
+    ],
+    "expected_keywords": [
+      "fortificación",
+      "extracción",
+      "hollejos",
+      "estructura"
+    ],
+    "expected_reasoning_type": "cause_effect",
+    "difficulty": "intermediate",
+    "source_type": "SBA gap closure | manually curated from local official study guide",
+    "safe_for_examiner": false,
+    "options": {
+      "A": "Esperar a extraer color después de filtrar las pieles.",
+      "B": "Evitar todo movimiento del sombrero.",
+      "C": "Usar exclusivamente crianza en botella para crear tanino.",
+      "D": "Aumentar la extracción antes de fortificar mediante contacto intenso con hollejos."
+    },
+    "correct_answer_letter": "D",
+    "correct_answer_text": "Aumentar la extracción antes de fortificar mediante contacto intenso con hollejos."
+  },
+  {
+    "question_id": "949",
+    "question_text": "Al comparar un gran tonel con una pipe pequeña para madurar Port, ¿qué factor explica mejor la diferencia de evolución?",
+    "question_type": "theory",
+    "expected_topics": [
+      "RA4",
+      "ageing_vessel_comparison"
+    ],
+    "expected_causal_links": [
+      "Los recipientes contienen volúmenes distintos para una superficie de contacto dada. -> El recipiente pequeño expone proporcionalmente más vino a madera y oxígeno. -> La evolución hacia carácter tawny se acelera."
+    ],
+    "expected_keywords": [
+      "Port",
+      "pipe",
+      "tonel",
+      "superficie-volumen"
+    ],
+    "expected_reasoning_type": "cause_effect",
+    "difficulty": "intermediate",
+    "source_type": "SBA gap closure | manually curated from local official study guide",
+    "safe_for_examiner": false,
+    "options": {
+      "A": "La pipe ofrece mayor relación superficie-volumen y favorece una oxidación más rápida.",
+      "B": "El tonel grande siempre aporta más roble nuevo.",
+      "C": "La pipe impide evaporación.",
+      "D": "El tamaño no cambia el contacto con oxígeno."
+    },
+    "correct_answer_letter": "A",
+    "correct_answer_text": "La pipe ofrece mayor relación superficie-volumen y favorece una oxidación más rápida."
+  },
+  {
+    "question_id": "950",
+    "question_text": "¿Qué factor explica mejor que Port, Sherry y Rutherglen Muscat usen con frecuencia madera vieja?",
+    "question_type": "theory",
+    "expected_topics": [
+      "RA4",
+      "old_oak_comparison"
+    ],
+    "expected_causal_links": [
+      "Los vinos poseen perfiles varietales o de crianza propios. -> Recipientes usados permiten evolución con poca cesión aromática de madera. -> El carácter de fruta, flor u oxidación permanece en primer plano."
+    ],
+    "expected_keywords": [
+      "Port",
+      "Sherry",
+      "Rutherglen Muscat",
+      "madera vieja"
+    ],
+    "expected_reasoning_type": "cause_effect",
+    "difficulty": "distinction",
+    "source_type": "SBA gap closure | manually curated from local official study guide",
+    "safe_for_examiner": false,
+    "options": {
+      "A": "La madera vieja añade más vainilla que la nueva.",
+      "B": "Buscan intercambio de oxígeno o almacenamiento sin que sabores de roble nuevo dominen el estilo.",
+      "C": "El roble viejo impide toda evaporación.",
+      "D": "Los reglamentos exigen el mismo tamaño de barrica."
+    },
+    "correct_answer_letter": "B",
+    "correct_answer_text": "Buscan intercambio de oxígeno o almacenamiento sin que sabores de roble nuevo dominen el estilo."
+  },
+  {
+    "question_id": "951",
+    "question_text": "Al comparar Vintage Port, Tawny con edad y Rutherglen Muscat viejo al salir al mercado, ¿qué interpretación explica mejor su preparación para beber?",
+    "question_type": "theory",
+    "expected_topics": [
+      "RA4",
+      "style_readiness_comparison"
+    ],
+    "expected_causal_links": [
+      "Los estilos completan su maduración principal en recipientes distintos. -> Vintage conserva estructura para evolución en botella; los oxidativos se afinan antes del embotellado. -> Cambian la ventana de consumo y el servicio."
+    ],
+    "expected_keywords": [
+      "Vintage Port",
+      "Tawny",
+      "Rutherglen Muscat",
+      "servicio"
+    ],
+    "expected_reasoning_type": "cause_effect",
+    "difficulty": "intermediate",
+    "source_type": "SBA gap closure | manually curated from local official study guide",
+    "safe_for_examiner": false,
+    "options": {
+      "A": "Todos necesitan décadas adicionales en botella.",
+      "B": "Ninguno forma sedimento.",
+      "C": "Vintage puede requerir botella y decantación; Tawny y Muscat viejo suelen estar plenamente desarrollados al embotellar.",
+      "D": "Tawny mejora más en botella que Vintage."
+    },
+    "correct_answer_letter": "C",
+    "correct_answer_text": "Vintage puede requerir botella y decantación; Tawny y Muscat viejo suelen estar plenamente desarrollados al embotellar."
   }
 ]

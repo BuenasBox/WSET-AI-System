@@ -124,7 +124,7 @@ class StructuredQuestionBankAdapterPilotTests(unittest.TestCase):
         cls.sampled_items = cls.clean_items + cls.invalid_items + cls.short_answer_items
 
     def test_source_bank_loads_with_expected_total_count(self) -> None:
-        self.assertEqual(len(self.source_bank), 616)
+        self.assertEqual(len(self.source_bank), 710)
         self.assertTrue(all(isinstance(item, dict) for item in self.source_bank))
 
     def test_deterministic_samples_include_required_categories(self) -> None:

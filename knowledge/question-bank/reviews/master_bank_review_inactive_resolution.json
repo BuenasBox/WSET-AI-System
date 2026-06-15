@@ -3,7 +3,7 @@
   "phase": "4A.3.8.5.7",
   "strategy": "recovery_first",
   "source_review_packet": "knowledge/question-bank/review_packets/master_bank_eligibility_review_packet.json",
-  "record_count": 102,
+  "record_count": 196,
   "initial_counts": {
     "review": 68,
     "inactive": 24
@@ -2731,6 +2731,2002 @@
       "quarantine_analysis": {
         "required": false,
         "why_sba_not_possible": "Matching stub with single option — cannot form valid 4-choice SBA",
+        "why_open_response_not_possible": null
+      }
+    },
+    {
+      "resolution_id": "sba_gap_closure_sba_batch_1_858",
+      "source_question_id": "858",
+      "source_pool": "sba_gap_closure",
+      "destination": "sba_operational",
+      "resolution_reason": "Governed specification-gap SBA authored with explicit source support, reasoning focus, and enrichment candidates.",
+      "repairs": [
+        "added targeted specification-gap SBA"
+      ],
+      "evidence_reviewed": [
+        "knowledge/official-wset/study-guide/wset_markdown/seccion_5_section_2_factors_affecting_the_style_quality_and_price_of_w/5-5_8_white_and_sweet_winemaking.md"
+      ],
+      "prior_review_reason": null,
+      "prior_recommendation": null,
+      "source_overrides": {},
+      "quarantine_analysis": {
+        "required": false,
+        "why_sba_not_possible": null,
+        "why_open_response_not_possible": null
+      }
+    },
+    {
+      "resolution_id": "sba_gap_closure_sba_batch_1_859",
+      "source_question_id": "859",
+      "source_pool": "sba_gap_closure",
+      "destination": "sba_operational",
+      "resolution_reason": "Governed specification-gap SBA authored with explicit source support, reasoning focus, and enrichment candidates.",
+      "repairs": [
+        "added targeted specification-gap SBA"
+      ],
+      "evidence_reviewed": [
+        "knowledge/official-wset/study-guide/wset_markdown/seccion_5_section_2_factors_affecting_the_style_quality_and_price_of_w/5-5_8_white_and_sweet_winemaking.md",
+        "knowledge/official-wset/study-guide/wset_markdown/seccion_6_section_3_still_wines_of_the_world/6-11_22_germany.md"
+      ],
+      "prior_review_reason": null,
+      "prior_recommendation": null,
+      "source_overrides": {},
+      "quarantine_analysis": {
+        "required": false,
+        "why_sba_not_possible": null,
+        "why_open_response_not_possible": null
+      }
+    },
+    {
+      "resolution_id": "sba_gap_closure_sba_batch_1_860",
+      "source_question_id": "860",
+      "source_pool": "sba_gap_closure",
+      "destination": "sba_operational",
+      "resolution_reason": "Governed specification-gap SBA authored with explicit source support, reasoning focus, and enrichment candidates.",
+      "repairs": [
+        "added targeted specification-gap SBA"
+      ],
+      "evidence_reviewed": [
+        "knowledge/official-wset/study-guide/wset_markdown/seccion_5_section_2_factors_affecting_the_style_quality_and_price_of_w/5-5_8_white_and_sweet_winemaking.md"
+      ],
+      "prior_review_reason": null,
+      "prior_recommendation": null,
+      "source_overrides": {},
+      "quarantine_analysis": {
+        "required": false,
+        "why_sba_not_possible": null,
+        "why_open_response_not_possible": null
+      }
+    },
+    {
+      "resolution_id": "sba_gap_closure_sba_batch_1_861",
+      "source_question_id": "861",
+      "source_pool": "sba_gap_closure",
+      "destination": "sba_operational",
+      "resolution_reason": "Governed specification-gap SBA authored with explicit source support, reasoning focus, and enrichment candidates.",
+      "repairs": [
+        "added targeted specification-gap SBA"
+      ],
+      "evidence_reviewed": [
+        "knowledge/official-wset/study-guide/wset_markdown/seccion_5_section_2_factors_affecting_the_style_quality_and_price_of_w/5-5_8_white_and_sweet_winemaking.md"
+      ],
+      "prior_review_reason": null,
+      "prior_recommendation": null,
+      "source_overrides": {},
+      "quarantine_analysis": {
+        "required": false,
+        "why_sba_not_possible": null,
+        "why_open_response_not_possible": null
+      }
+    },
+    {
+      "resolution_id": "sba_gap_closure_sba_batch_1_862",
+      "source_question_id": "862",
+      "source_pool": "sba_gap_closure",
+      "destination": "sba_operational",
+      "resolution_reason": "Governed specification-gap SBA authored with explicit source support, reasoning focus, and enrichment candidates.",
+      "repairs": [
+        "added targeted specification-gap SBA"
+      ],
+      "evidence_reviewed": [
+        "knowledge/official-wset/study-guide/wset_markdown/seccion_6_section_3_still_wines_of_the_world/6-24_35_canada.md",
+        "knowledge/official-wset/study-guide/wset_markdown/seccion_5_section_2_factors_affecting_the_style_quality_and_price_of_w/5-5_8_white_and_sweet_winemaking.md"
+      ],
+      "prior_review_reason": null,
+      "prior_recommendation": null,
+      "source_overrides": {},
+      "quarantine_analysis": {
+        "required": false,
+        "why_sba_not_possible": null,
+        "why_open_response_not_possible": null
+      }
+    },
+    {
+      "resolution_id": "sba_gap_closure_sba_batch_1_863",
+      "source_question_id": "863",
+      "source_pool": "sba_gap_closure",
+      "destination": "sba_operational",
+      "resolution_reason": "Governed specification-gap SBA authored with explicit source support, reasoning focus, and enrichment candidates.",
+      "repairs": [
+        "added targeted specification-gap SBA"
+      ],
+      "evidence_reviewed": [
+        "knowledge/official-wset/study-guide/wset_markdown/seccion_6_section_3_still_wines_of_the_world/6-24_35_canada.md"
+      ],
+      "prior_review_reason": null,
+      "prior_recommendation": null,
+      "source_overrides": {},
+      "quarantine_analysis": {
+        "required": false,
+        "why_sba_not_possible": null,
+        "why_open_response_not_possible": null
+      }
+    },
+    {
+      "resolution_id": "sba_gap_closure_sba_batch_1_864",
+      "source_question_id": "864",
+      "source_pool": "sba_gap_closure",
+      "destination": "sba_operational",
+      "resolution_reason": "Governed specification-gap SBA authored with explicit source support, reasoning focus, and enrichment candidates.",
+      "repairs": [
+        "added targeted specification-gap SBA"
+      ],
+      "evidence_reviewed": [
+        "knowledge/official-wset/study-guide/wset_markdown/seccion_6_section_3_still_wines_of_the_world/6-24_35_canada.md",
+        "knowledge/official-wset/study-guide/wset_markdown/seccion_5_section_2_factors_affecting_the_style_quality_and_price_of_w/5-5_8_white_and_sweet_winemaking.md"
+      ],
+      "prior_review_reason": null,
+      "prior_recommendation": null,
+      "source_overrides": {},
+      "quarantine_analysis": {
+        "required": false,
+        "why_sba_not_possible": null,
+        "why_open_response_not_possible": null
+      }
+    },
+    {
+      "resolution_id": "sba_gap_closure_sba_batch_1_865",
+      "source_question_id": "865",
+      "source_pool": "sba_gap_closure",
+      "destination": "sba_operational",
+      "resolution_reason": "Governed specification-gap SBA authored with explicit source support, reasoning focus, and enrichment candidates.",
+      "repairs": [
+        "added targeted specification-gap SBA"
+      ],
+      "evidence_reviewed": [
+        "knowledge/official-wset/study-guide/wset_markdown/seccion_6_section_3_still_wines_of_the_world/6-24_35_canada.md"
+      ],
+      "prior_review_reason": null,
+      "prior_recommendation": null,
+      "source_overrides": {},
+      "quarantine_analysis": {
+        "required": false,
+        "why_sba_not_possible": null,
+        "why_open_response_not_possible": null
+      }
+    },
+    {
+      "resolution_id": "sba_gap_closure_sba_batch_1_866",
+      "source_question_id": "866",
+      "source_pool": "sba_gap_closure",
+      "destination": "sba_operational",
+      "resolution_reason": "Governed specification-gap SBA authored with explicit source support, reasoning focus, and enrichment candidates.",
+      "repairs": [
+        "added targeted specification-gap SBA"
+      ],
+      "evidence_reviewed": [
+        "knowledge/official-wset/study-guide/wset_markdown/seccion_6_section_3_still_wines_of_the_world/6-24_35_canada.md",
+        "knowledge/official-wset/study-guide/wset_markdown/seccion_5_section_2_factors_affecting_the_style_quality_and_price_of_w/5-5_8_white_and_sweet_winemaking.md"
+      ],
+      "prior_review_reason": null,
+      "prior_recommendation": null,
+      "source_overrides": {},
+      "quarantine_analysis": {
+        "required": false,
+        "why_sba_not_possible": null,
+        "why_open_response_not_possible": null
+      }
+    },
+    {
+      "resolution_id": "sba_gap_closure_sba_batch_1_867",
+      "source_question_id": "867",
+      "source_pool": "sba_gap_closure",
+      "destination": "sba_operational",
+      "resolution_reason": "Governed specification-gap SBA authored with explicit source support, reasoning focus, and enrichment candidates.",
+      "repairs": [
+        "added targeted specification-gap SBA"
+      ],
+      "evidence_reviewed": [
+        "knowledge/official-wset/study-guide/wset_markdown/seccion_6_section_3_still_wines_of_the_world/6-24_35_canada.md",
+        "knowledge/official-wset/study-guide/wset_markdown/seccion_5_section_2_factors_affecting_the_style_quality_and_price_of_w/5-5_8_white_and_sweet_winemaking.md"
+      ],
+      "prior_review_reason": null,
+      "prior_recommendation": null,
+      "source_overrides": {},
+      "quarantine_analysis": {
+        "required": false,
+        "why_sba_not_possible": null,
+        "why_open_response_not_possible": null
+      }
+    },
+    {
+      "resolution_id": "sba_gap_closure_sba_batch_1_868",
+      "source_question_id": "868",
+      "source_pool": "sba_gap_closure",
+      "destination": "sba_operational",
+      "resolution_reason": "Governed specification-gap SBA authored with explicit source support, reasoning focus, and enrichment candidates.",
+      "repairs": [
+        "added targeted specification-gap SBA"
+      ],
+      "evidence_reviewed": [
+        "knowledge/official-wset/study-guide/wset_markdown/seccion_6_section_3_still_wines_of_the_world/6-11_22_germany.md",
+        "knowledge/official-wset/study-guide/wset_markdown/seccion_5_section_2_factors_affecting_the_style_quality_and_price_of_w/5-5_8_white_and_sweet_winemaking.md"
+      ],
+      "prior_review_reason": null,
+      "prior_recommendation": null,
+      "source_overrides": {},
+      "quarantine_analysis": {
+        "required": false,
+        "why_sba_not_possible": null,
+        "why_open_response_not_possible": null
+      }
+    },
+    {
+      "resolution_id": "sba_gap_closure_sba_batch_1_869",
+      "source_question_id": "869",
+      "source_pool": "sba_gap_closure",
+      "destination": "sba_operational",
+      "resolution_reason": "Governed specification-gap SBA authored with explicit source support, reasoning focus, and enrichment candidates.",
+      "repairs": [
+        "added targeted specification-gap SBA"
+      ],
+      "evidence_reviewed": [
+        "knowledge/official-wset/study-guide/wset_markdown/seccion_6_section_3_still_wines_of_the_world/6-11_22_germany.md",
+        "knowledge/official-wset/study-guide/wset_markdown/seccion_5_section_2_factors_affecting_the_style_quality_and_price_of_w/5-5_8_white_and_sweet_winemaking.md"
+      ],
+      "prior_review_reason": null,
+      "prior_recommendation": null,
+      "source_overrides": {},
+      "quarantine_analysis": {
+        "required": false,
+        "why_sba_not_possible": null,
+        "why_open_response_not_possible": null
+      }
+    },
+    {
+      "resolution_id": "sba_gap_closure_sba_batch_1_870",
+      "source_question_id": "870",
+      "source_pool": "sba_gap_closure",
+      "destination": "sba_operational",
+      "resolution_reason": "Governed specification-gap SBA authored with explicit source support, reasoning focus, and enrichment candidates.",
+      "repairs": [
+        "added targeted specification-gap SBA"
+      ],
+      "evidence_reviewed": [
+        "knowledge/official-wset/study-guide/wset_markdown/seccion_5_section_2_factors_affecting_the_style_quality_and_price_of_w/5-5_8_white_and_sweet_winemaking.md",
+        "knowledge/official-wset/study-guide/wset_markdown/seccion_6_section_3_still_wines_of_the_world/6-24_35_canada.md"
+      ],
+      "prior_review_reason": null,
+      "prior_recommendation": null,
+      "source_overrides": {},
+      "quarantine_analysis": {
+        "required": false,
+        "why_sba_not_possible": null,
+        "why_open_response_not_possible": null
+      }
+    },
+    {
+      "resolution_id": "sba_gap_closure_sba_batch_1_871",
+      "source_question_id": "871",
+      "source_pool": "sba_gap_closure",
+      "destination": "sba_operational",
+      "resolution_reason": "Governed specification-gap SBA authored with explicit source support, reasoning focus, and enrichment candidates.",
+      "repairs": [
+        "added targeted specification-gap SBA"
+      ],
+      "evidence_reviewed": [
+        "knowledge/official-wset/study-guide/wset_markdown/seccion_6_section_3_still_wines_of_the_world/6-24_35_canada.md",
+        "knowledge/official-wset/study-guide/wset_markdown/seccion_5_section_2_factors_affecting_the_style_quality_and_price_of_w/5-5_8_white_and_sweet_winemaking.md"
+      ],
+      "prior_review_reason": null,
+      "prior_recommendation": null,
+      "source_overrides": {},
+      "quarantine_analysis": {
+        "required": false,
+        "why_sba_not_possible": null,
+        "why_open_response_not_possible": null
+      }
+    },
+    {
+      "resolution_id": "sba_gap_closure_sba_batch_1_872",
+      "source_question_id": "872",
+      "source_pool": "sba_gap_closure",
+      "destination": "sba_operational",
+      "resolution_reason": "Governed specification-gap SBA authored with explicit source support, reasoning focus, and enrichment candidates.",
+      "repairs": [
+        "added targeted specification-gap SBA"
+      ],
+      "evidence_reviewed": [
+        "knowledge/official-wset/study-guide/wset_markdown/seccion_6_section_3_still_wines_of_the_world/6-2_13_bordeaux.md",
+        "knowledge/official-wset/study-guide/wset_markdown/seccion_5_section_2_factors_affecting_the_style_quality_and_price_of_w/5-5_8_white_and_sweet_winemaking.md"
+      ],
+      "prior_review_reason": null,
+      "prior_recommendation": null,
+      "source_overrides": {},
+      "quarantine_analysis": {
+        "required": false,
+        "why_sba_not_possible": null,
+        "why_open_response_not_possible": null
+      }
+    },
+    {
+      "resolution_id": "sba_gap_closure_sba_batch_1_873",
+      "source_question_id": "873",
+      "source_pool": "sba_gap_closure",
+      "destination": "sba_operational",
+      "resolution_reason": "Governed specification-gap SBA authored with explicit source support, reasoning focus, and enrichment candidates.",
+      "repairs": [
+        "added targeted specification-gap SBA"
+      ],
+      "evidence_reviewed": [
+        "knowledge/official-wset/study-guide/wset_markdown/seccion_6_section_3_still_wines_of_the_world/6-2_13_bordeaux.md"
+      ],
+      "prior_review_reason": null,
+      "prior_recommendation": null,
+      "source_overrides": {},
+      "quarantine_analysis": {
+        "required": false,
+        "why_sba_not_possible": null,
+        "why_open_response_not_possible": null
+      }
+    },
+    {
+      "resolution_id": "sba_gap_closure_sba_batch_1_874",
+      "source_question_id": "874",
+      "source_pool": "sba_gap_closure",
+      "destination": "sba_operational",
+      "resolution_reason": "Governed specification-gap SBA authored with explicit source support, reasoning focus, and enrichment candidates.",
+      "repairs": [
+        "added targeted specification-gap SBA"
+      ],
+      "evidence_reviewed": [
+        "knowledge/official-wset/study-guide/wset_markdown/seccion_6_section_3_still_wines_of_the_world/6-2_13_bordeaux.md"
+      ],
+      "prior_review_reason": null,
+      "prior_recommendation": null,
+      "source_overrides": {},
+      "quarantine_analysis": {
+        "required": false,
+        "why_sba_not_possible": null,
+        "why_open_response_not_possible": null
+      }
+    },
+    {
+      "resolution_id": "sba_gap_closure_sba_batch_1_875",
+      "source_question_id": "875",
+      "source_pool": "sba_gap_closure",
+      "destination": "sba_operational",
+      "resolution_reason": "Governed specification-gap SBA authored with explicit source support, reasoning focus, and enrichment candidates.",
+      "repairs": [
+        "added targeted specification-gap SBA"
+      ],
+      "evidence_reviewed": [
+        "knowledge/official-wset/study-guide/wset_markdown/seccion_6_section_3_still_wines_of_the_world/6-2_13_bordeaux.md"
+      ],
+      "prior_review_reason": null,
+      "prior_recommendation": null,
+      "source_overrides": {},
+      "quarantine_analysis": {
+        "required": false,
+        "why_sba_not_possible": null,
+        "why_open_response_not_possible": null
+      }
+    },
+    {
+      "resolution_id": "sba_gap_closure_sba_batch_1_876",
+      "source_question_id": "876",
+      "source_pool": "sba_gap_closure",
+      "destination": "sba_operational",
+      "resolution_reason": "Governed specification-gap SBA authored with explicit source support, reasoning focus, and enrichment candidates.",
+      "repairs": [
+        "added targeted specification-gap SBA"
+      ],
+      "evidence_reviewed": [
+        "knowledge/official-wset/study-guide/wset_markdown/seccion_6_section_3_still_wines_of_the_world/6-2_13_bordeaux.md",
+        "knowledge/official-wset/study-guide/wset_markdown/seccion_5_section_2_factors_affecting_the_style_quality_and_price_of_w/5-5_8_white_and_sweet_winemaking.md"
+      ],
+      "prior_review_reason": null,
+      "prior_recommendation": null,
+      "source_overrides": {},
+      "quarantine_analysis": {
+        "required": false,
+        "why_sba_not_possible": null,
+        "why_open_response_not_possible": null
+      }
+    },
+    {
+      "resolution_id": "sba_gap_closure_sba_batch_1_877",
+      "source_question_id": "877",
+      "source_pool": "sba_gap_closure",
+      "destination": "sba_operational",
+      "resolution_reason": "Governed specification-gap SBA authored with explicit source support, reasoning focus, and enrichment candidates.",
+      "repairs": [
+        "added targeted specification-gap SBA"
+      ],
+      "evidence_reviewed": [
+        "knowledge/official-wset/study-guide/wset_markdown/seccion_6_section_3_still_wines_of_the_world/6-2_13_bordeaux.md"
+      ],
+      "prior_review_reason": null,
+      "prior_recommendation": null,
+      "source_overrides": {},
+      "quarantine_analysis": {
+        "required": false,
+        "why_sba_not_possible": null,
+        "why_open_response_not_possible": null
+      }
+    },
+    {
+      "resolution_id": "sba_gap_closure_sba_batch_1_878",
+      "source_question_id": "878",
+      "source_pool": "sba_gap_closure",
+      "destination": "sba_operational",
+      "resolution_reason": "Governed specification-gap SBA authored with explicit source support, reasoning focus, and enrichment candidates.",
+      "repairs": [
+        "added targeted specification-gap SBA"
+      ],
+      "evidence_reviewed": [
+        "knowledge/official-wset/study-guide/wset_markdown/seccion_6_section_3_still_wines_of_the_world/6-2_13_bordeaux.md",
+        "knowledge/official-wset/study-guide/wset_markdown/seccion_5_section_2_factors_affecting_the_style_quality_and_price_of_w/5-5_8_white_and_sweet_winemaking.md"
+      ],
+      "prior_review_reason": null,
+      "prior_recommendation": null,
+      "source_overrides": {},
+      "quarantine_analysis": {
+        "required": false,
+        "why_sba_not_possible": null,
+        "why_open_response_not_possible": null
+      }
+    },
+    {
+      "resolution_id": "sba_gap_closure_sba_batch_1_879",
+      "source_question_id": "879",
+      "source_pool": "sba_gap_closure",
+      "destination": "sba_operational",
+      "resolution_reason": "Governed specification-gap SBA authored with explicit source support, reasoning focus, and enrichment candidates.",
+      "repairs": [
+        "added targeted specification-gap SBA"
+      ],
+      "evidence_reviewed": [
+        "knowledge/official-wset/study-guide/wset_markdown/seccion_6_section_3_still_wines_of_the_world/6-2_13_bordeaux.md"
+      ],
+      "prior_review_reason": null,
+      "prior_recommendation": null,
+      "source_overrides": {},
+      "quarantine_analysis": {
+        "required": false,
+        "why_sba_not_possible": null,
+        "why_open_response_not_possible": null
+      }
+    },
+    {
+      "resolution_id": "sba_gap_closure_sba_batch_1_880",
+      "source_question_id": "880",
+      "source_pool": "sba_gap_closure",
+      "destination": "sba_operational",
+      "resolution_reason": "Governed specification-gap SBA authored with explicit source support, reasoning focus, and enrichment candidates.",
+      "repairs": [
+        "added targeted specification-gap SBA"
+      ],
+      "evidence_reviewed": [
+        "knowledge/official-wset/study-guide/wset_markdown/seccion_6_section_3_still_wines_of_the_world/6-13_24_tokaj.md"
+      ],
+      "prior_review_reason": null,
+      "prior_recommendation": null,
+      "source_overrides": {},
+      "quarantine_analysis": {
+        "required": false,
+        "why_sba_not_possible": null,
+        "why_open_response_not_possible": null
+      }
+    },
+    {
+      "resolution_id": "sba_gap_closure_sba_batch_1_881",
+      "source_question_id": "881",
+      "source_pool": "sba_gap_closure",
+      "destination": "sba_operational",
+      "resolution_reason": "Governed specification-gap SBA authored with explicit source support, reasoning focus, and enrichment candidates.",
+      "repairs": [
+        "added targeted specification-gap SBA"
+      ],
+      "evidence_reviewed": [
+        "knowledge/official-wset/study-guide/wset_markdown/seccion_6_section_3_still_wines_of_the_world/6-13_24_tokaj.md"
+      ],
+      "prior_review_reason": null,
+      "prior_recommendation": null,
+      "source_overrides": {},
+      "quarantine_analysis": {
+        "required": false,
+        "why_sba_not_possible": null,
+        "why_open_response_not_possible": null
+      }
+    },
+    {
+      "resolution_id": "sba_gap_closure_sba_batch_1_882",
+      "source_question_id": "882",
+      "source_pool": "sba_gap_closure",
+      "destination": "sba_operational",
+      "resolution_reason": "Governed specification-gap SBA authored with explicit source support, reasoning focus, and enrichment candidates.",
+      "repairs": [
+        "added targeted specification-gap SBA"
+      ],
+      "evidence_reviewed": [
+        "knowledge/official-wset/study-guide/wset_markdown/seccion_6_section_3_still_wines_of_the_world/6-13_24_tokaj.md"
+      ],
+      "prior_review_reason": null,
+      "prior_recommendation": null,
+      "source_overrides": {},
+      "quarantine_analysis": {
+        "required": false,
+        "why_sba_not_possible": null,
+        "why_open_response_not_possible": null
+      }
+    },
+    {
+      "resolution_id": "sba_gap_closure_sba_batch_1_883",
+      "source_question_id": "883",
+      "source_pool": "sba_gap_closure",
+      "destination": "sba_operational",
+      "resolution_reason": "Governed specification-gap SBA authored with explicit source support, reasoning focus, and enrichment candidates.",
+      "repairs": [
+        "added targeted specification-gap SBA"
+      ],
+      "evidence_reviewed": [
+        "knowledge/official-wset/study-guide/wset_markdown/seccion_6_section_3_still_wines_of_the_world/6-13_24_tokaj.md"
+      ],
+      "prior_review_reason": null,
+      "prior_recommendation": null,
+      "source_overrides": {},
+      "quarantine_analysis": {
+        "required": false,
+        "why_sba_not_possible": null,
+        "why_open_response_not_possible": null
+      }
+    },
+    {
+      "resolution_id": "sba_gap_closure_sba_batch_1_884",
+      "source_question_id": "884",
+      "source_pool": "sba_gap_closure",
+      "destination": "sba_operational",
+      "resolution_reason": "Governed specification-gap SBA authored with explicit source support, reasoning focus, and enrichment candidates.",
+      "repairs": [
+        "added targeted specification-gap SBA"
+      ],
+      "evidence_reviewed": [
+        "knowledge/official-wset/study-guide/wset_markdown/seccion_6_section_3_still_wines_of_the_world/6-13_24_tokaj.md"
+      ],
+      "prior_review_reason": null,
+      "prior_recommendation": null,
+      "source_overrides": {},
+      "quarantine_analysis": {
+        "required": false,
+        "why_sba_not_possible": null,
+        "why_open_response_not_possible": null
+      }
+    },
+    {
+      "resolution_id": "sba_gap_closure_sba_batch_1_885",
+      "source_question_id": "885",
+      "source_pool": "sba_gap_closure",
+      "destination": "sba_operational",
+      "resolution_reason": "Governed specification-gap SBA authored with explicit source support, reasoning focus, and enrichment candidates.",
+      "repairs": [
+        "added targeted specification-gap SBA"
+      ],
+      "evidence_reviewed": [
+        "knowledge/official-wset/study-guide/wset_markdown/seccion_6_section_3_still_wines_of_the_world/6-13_24_tokaj.md"
+      ],
+      "prior_review_reason": null,
+      "prior_recommendation": null,
+      "source_overrides": {},
+      "quarantine_analysis": {
+        "required": false,
+        "why_sba_not_possible": null,
+        "why_open_response_not_possible": null
+      }
+    },
+    {
+      "resolution_id": "sba_gap_closure_sba_batch_1_886",
+      "source_question_id": "886",
+      "source_pool": "sba_gap_closure",
+      "destination": "sba_operational",
+      "resolution_reason": "Governed specification-gap SBA authored with explicit source support, reasoning focus, and enrichment candidates.",
+      "repairs": [
+        "added targeted specification-gap SBA"
+      ],
+      "evidence_reviewed": [
+        "knowledge/official-wset/study-guide/wset_markdown/seccion_6_section_3_still_wines_of_the_world/6-13_24_tokaj.md"
+      ],
+      "prior_review_reason": null,
+      "prior_recommendation": null,
+      "source_overrides": {},
+      "quarantine_analysis": {
+        "required": false,
+        "why_sba_not_possible": null,
+        "why_open_response_not_possible": null
+      }
+    },
+    {
+      "resolution_id": "sba_gap_closure_sba_batch_1_887",
+      "source_question_id": "887",
+      "source_pool": "sba_gap_closure",
+      "destination": "sba_operational",
+      "resolution_reason": "Governed specification-gap SBA authored with explicit source support, reasoning focus, and enrichment candidates.",
+      "repairs": [
+        "added targeted specification-gap SBA"
+      ],
+      "evidence_reviewed": [
+        "knowledge/official-wset/study-guide/wset_markdown/seccion_6_section_3_still_wines_of_the_world/6-13_24_tokaj.md"
+      ],
+      "prior_review_reason": null,
+      "prior_recommendation": null,
+      "source_overrides": {},
+      "quarantine_analysis": {
+        "required": false,
+        "why_sba_not_possible": null,
+        "why_open_response_not_possible": null
+      }
+    },
+    {
+      "resolution_id": "sba_gap_closure_sba_batch_1_888",
+      "source_question_id": "888",
+      "source_pool": "sba_gap_closure",
+      "destination": "sba_operational",
+      "resolution_reason": "Governed specification-gap SBA authored with explicit source support, reasoning focus, and enrichment candidates.",
+      "repairs": [
+        "added targeted specification-gap SBA"
+      ],
+      "evidence_reviewed": [
+        "knowledge/official-wset/study-guide/wset_markdown/seccion_5_section_2_factors_affecting_the_style_quality_and_price_of_w/5-5_8_white_and_sweet_winemaking.md"
+      ],
+      "prior_review_reason": null,
+      "prior_recommendation": null,
+      "source_overrides": {},
+      "quarantine_analysis": {
+        "required": false,
+        "why_sba_not_possible": null,
+        "why_open_response_not_possible": null
+      }
+    },
+    {
+      "resolution_id": "sba_gap_closure_sba_batch_1_889",
+      "source_question_id": "889",
+      "source_pool": "sba_gap_closure",
+      "destination": "sba_operational",
+      "resolution_reason": "Governed specification-gap SBA authored with explicit source support, reasoning focus, and enrichment candidates.",
+      "repairs": [
+        "added targeted specification-gap SBA"
+      ],
+      "evidence_reviewed": [
+        "knowledge/official-wset/study-guide/wset_markdown/seccion_5_section_2_factors_affecting_the_style_quality_and_price_of_w/5-5_8_white_and_sweet_winemaking.md"
+      ],
+      "prior_review_reason": null,
+      "prior_recommendation": null,
+      "source_overrides": {},
+      "quarantine_analysis": {
+        "required": false,
+        "why_sba_not_possible": null,
+        "why_open_response_not_possible": null
+      }
+    },
+    {
+      "resolution_id": "sba_gap_closure_sba_batch_1_890",
+      "source_question_id": "890",
+      "source_pool": "sba_gap_closure",
+      "destination": "sba_operational",
+      "resolution_reason": "Governed specification-gap SBA authored with explicit source support, reasoning focus, and enrichment candidates.",
+      "repairs": [
+        "added targeted specification-gap SBA"
+      ],
+      "evidence_reviewed": [
+        "knowledge/official-wset/study-guide/wset_markdown/seccion_5_section_2_factors_affecting_the_style_quality_and_price_of_w/5-5_8_white_and_sweet_winemaking.md"
+      ],
+      "prior_review_reason": null,
+      "prior_recommendation": null,
+      "source_overrides": {},
+      "quarantine_analysis": {
+        "required": false,
+        "why_sba_not_possible": null,
+        "why_open_response_not_possible": null
+      }
+    },
+    {
+      "resolution_id": "sba_gap_closure_sba_batch_1_891",
+      "source_question_id": "891",
+      "source_pool": "sba_gap_closure",
+      "destination": "sba_operational",
+      "resolution_reason": "Governed specification-gap SBA authored with explicit source support, reasoning focus, and enrichment candidates.",
+      "repairs": [
+        "added targeted specification-gap SBA"
+      ],
+      "evidence_reviewed": [
+        "knowledge/official-wset/study-guide/wset_markdown/seccion_5_section_2_factors_affecting_the_style_quality_and_price_of_w/5-5_8_white_and_sweet_winemaking.md"
+      ],
+      "prior_review_reason": null,
+      "prior_recommendation": null,
+      "source_overrides": {},
+      "quarantine_analysis": {
+        "required": false,
+        "why_sba_not_possible": null,
+        "why_open_response_not_possible": null
+      }
+    },
+    {
+      "resolution_id": "sba_gap_closure_sba_batch_1_892",
+      "source_question_id": "892",
+      "source_pool": "sba_gap_closure",
+      "destination": "sba_operational",
+      "resolution_reason": "Governed specification-gap SBA authored with explicit source support, reasoning focus, and enrichment candidates.",
+      "repairs": [
+        "added targeted specification-gap SBA"
+      ],
+      "evidence_reviewed": [
+        "knowledge/official-wset/study-guide/wset_markdown/seccion_5_section_2_factors_affecting_the_style_quality_and_price_of_w/5-5_8_white_and_sweet_winemaking.md"
+      ],
+      "prior_review_reason": null,
+      "prior_recommendation": null,
+      "source_overrides": {},
+      "quarantine_analysis": {
+        "required": false,
+        "why_sba_not_possible": null,
+        "why_open_response_not_possible": null
+      }
+    },
+    {
+      "resolution_id": "sba_gap_closure_sba_batch_1_893",
+      "source_question_id": "893",
+      "source_pool": "sba_gap_closure",
+      "destination": "sba_operational",
+      "resolution_reason": "Governed specification-gap SBA authored with explicit source support, reasoning focus, and enrichment candidates.",
+      "repairs": [
+        "added targeted specification-gap SBA"
+      ],
+      "evidence_reviewed": [
+        "knowledge/official-wset/study-guide/wset_markdown/seccion_5_section_2_factors_affecting_the_style_quality_and_price_of_w/5-5_8_white_and_sweet_winemaking.md"
+      ],
+      "prior_review_reason": null,
+      "prior_recommendation": null,
+      "source_overrides": {},
+      "quarantine_analysis": {
+        "required": false,
+        "why_sba_not_possible": null,
+        "why_open_response_not_possible": null
+      }
+    },
+    {
+      "resolution_id": "sba_gap_closure_sba_batch_1_894",
+      "source_question_id": "894",
+      "source_pool": "sba_gap_closure",
+      "destination": "sba_operational",
+      "resolution_reason": "Governed specification-gap SBA authored with explicit source support, reasoning focus, and enrichment candidates.",
+      "repairs": [
+        "added targeted specification-gap SBA"
+      ],
+      "evidence_reviewed": [
+        "knowledge/official-wset/study-guide/wset_markdown/seccion_5_section_2_factors_affecting_the_style_quality_and_price_of_w/5-5_8_white_and_sweet_winemaking.md"
+      ],
+      "prior_review_reason": null,
+      "prior_recommendation": null,
+      "source_overrides": {},
+      "quarantine_analysis": {
+        "required": false,
+        "why_sba_not_possible": null,
+        "why_open_response_not_possible": null
+      }
+    },
+    {
+      "resolution_id": "sba_gap_closure_sba_batch_1_895",
+      "source_question_id": "895",
+      "source_pool": "sba_gap_closure",
+      "destination": "sba_operational",
+      "resolution_reason": "Governed specification-gap SBA authored with explicit source support, reasoning focus, and enrichment candidates.",
+      "repairs": [
+        "added targeted specification-gap SBA"
+      ],
+      "evidence_reviewed": [
+        "knowledge/official-wset/study-guide/wset_markdown/seccion_5_section_2_factors_affecting_the_style_quality_and_price_of_w/5-5_8_white_and_sweet_winemaking.md"
+      ],
+      "prior_review_reason": null,
+      "prior_recommendation": null,
+      "source_overrides": {},
+      "quarantine_analysis": {
+        "required": false,
+        "why_sba_not_possible": null,
+        "why_open_response_not_possible": null
+      }
+    },
+    {
+      "resolution_id": "sba_gap_closure_sba_batch_1_896",
+      "source_question_id": "896",
+      "source_pool": "sba_gap_closure",
+      "destination": "sba_operational",
+      "resolution_reason": "Governed specification-gap SBA authored with explicit source support, reasoning focus, and enrichment candidates.",
+      "repairs": [
+        "added targeted specification-gap SBA"
+      ],
+      "evidence_reviewed": [
+        "knowledge/official-wset/study-guide/wset_markdown/seccion_5_section_2_factors_affecting_the_style_quality_and_price_of_w/5-5_8_white_and_sweet_winemaking.md"
+      ],
+      "prior_review_reason": null,
+      "prior_recommendation": null,
+      "source_overrides": {},
+      "quarantine_analysis": {
+        "required": false,
+        "why_sba_not_possible": null,
+        "why_open_response_not_possible": null
+      }
+    },
+    {
+      "resolution_id": "sba_gap_closure_sba_batch_1_897",
+      "source_question_id": "897",
+      "source_pool": "sba_gap_closure",
+      "destination": "sba_operational",
+      "resolution_reason": "Governed specification-gap SBA authored with explicit source support, reasoning focus, and enrichment candidates.",
+      "repairs": [
+        "added targeted specification-gap SBA"
+      ],
+      "evidence_reviewed": [
+        "knowledge/official-wset/study-guide/wset_markdown/seccion_6_section_3_still_wines_of_the_world/6-11_22_germany.md",
+        "knowledge/official-wset/study-guide/wset_markdown/seccion_5_section_2_factors_affecting_the_style_quality_and_price_of_w/5-5_8_white_and_sweet_winemaking.md"
+      ],
+      "prior_review_reason": null,
+      "prior_recommendation": null,
+      "source_overrides": {},
+      "quarantine_analysis": {
+        "required": false,
+        "why_sba_not_possible": null,
+        "why_open_response_not_possible": null
+      }
+    },
+    {
+      "resolution_id": "sba_gap_closure_sba_batch_1_898",
+      "source_question_id": "898",
+      "source_pool": "sba_gap_closure",
+      "destination": "sba_operational",
+      "resolution_reason": "Governed specification-gap SBA authored with explicit source support, reasoning focus, and enrichment candidates.",
+      "repairs": [
+        "added targeted specification-gap SBA"
+      ],
+      "evidence_reviewed": [
+        "knowledge/official-wset/study-guide/wset_markdown/seccion_4_section_1_wine_and_the_consumer/4-2_2_wine_with_food.md"
+      ],
+      "prior_review_reason": null,
+      "prior_recommendation": null,
+      "source_overrides": {},
+      "quarantine_analysis": {
+        "required": false,
+        "why_sba_not_possible": null,
+        "why_open_response_not_possible": null
+      }
+    },
+    {
+      "resolution_id": "sba_gap_closure_sba_batch_1_899",
+      "source_question_id": "899",
+      "source_pool": "sba_gap_closure",
+      "destination": "sba_operational",
+      "resolution_reason": "Governed specification-gap SBA authored with explicit source support, reasoning focus, and enrichment candidates.",
+      "repairs": [
+        "added targeted specification-gap SBA"
+      ],
+      "evidence_reviewed": [
+        "knowledge/official-wset/study-guide/wset_markdown/seccion_4_section_1_wine_and_the_consumer/4-2_2_wine_with_food.md"
+      ],
+      "prior_review_reason": null,
+      "prior_recommendation": null,
+      "source_overrides": {},
+      "quarantine_analysis": {
+        "required": false,
+        "why_sba_not_possible": null,
+        "why_open_response_not_possible": null
+      }
+    },
+    {
+      "resolution_id": "sba_gap_closure_sba_batch_1_900",
+      "source_question_id": "900",
+      "source_pool": "sba_gap_closure",
+      "destination": "sba_operational",
+      "resolution_reason": "Governed specification-gap SBA authored with explicit source support, reasoning focus, and enrichment candidates.",
+      "repairs": [
+        "added targeted specification-gap SBA"
+      ],
+      "evidence_reviewed": [
+        "knowledge/official-wset/study-guide/wset_markdown/seccion_4_section_1_wine_and_the_consumer/4-3_3_storage_and_service_of_wine.md"
+      ],
+      "prior_review_reason": null,
+      "prior_recommendation": null,
+      "source_overrides": {},
+      "quarantine_analysis": {
+        "required": false,
+        "why_sba_not_possible": null,
+        "why_open_response_not_possible": null
+      }
+    },
+    {
+      "resolution_id": "sba_gap_closure_sba_batch_1_901",
+      "source_question_id": "901",
+      "source_pool": "sba_gap_closure",
+      "destination": "sba_operational",
+      "resolution_reason": "Governed specification-gap SBA authored with explicit source support, reasoning focus, and enrichment candidates.",
+      "repairs": [
+        "added targeted specification-gap SBA"
+      ],
+      "evidence_reviewed": [
+        "knowledge/official-wset/study-guide/wset_markdown/seccion_4_section_1_wine_and_the_consumer/4-3_3_storage_and_service_of_wine.md"
+      ],
+      "prior_review_reason": null,
+      "prior_recommendation": null,
+      "source_overrides": {},
+      "quarantine_analysis": {
+        "required": false,
+        "why_sba_not_possible": null,
+        "why_open_response_not_possible": null
+      }
+    },
+    {
+      "resolution_id": "sba_gap_closure_sba_batch_1_902",
+      "source_question_id": "902",
+      "source_pool": "sba_gap_closure",
+      "destination": "sba_operational",
+      "resolution_reason": "Governed specification-gap SBA authored with explicit source support, reasoning focus, and enrichment candidates.",
+      "repairs": [
+        "added targeted specification-gap SBA"
+      ],
+      "evidence_reviewed": [
+        "knowledge/official-wset/study-guide/wset_markdown/seccion_4_section_1_wine_and_the_consumer/4-3_3_storage_and_service_of_wine.md"
+      ],
+      "prior_review_reason": null,
+      "prior_recommendation": null,
+      "source_overrides": {},
+      "quarantine_analysis": {
+        "required": false,
+        "why_sba_not_possible": null,
+        "why_open_response_not_possible": null
+      }
+    },
+    {
+      "resolution_id": "sba_gap_closure_sba_batch_1_903",
+      "source_question_id": "903",
+      "source_pool": "sba_gap_closure",
+      "destination": "sba_operational",
+      "resolution_reason": "Governed specification-gap SBA authored with explicit source support, reasoning focus, and enrichment candidates.",
+      "repairs": [
+        "added targeted specification-gap SBA"
+      ],
+      "evidence_reviewed": [
+        "knowledge/official-wset/study-guide/wset_markdown/seccion_4_section_1_wine_and_the_consumer/4-3_3_storage_and_service_of_wine.md"
+      ],
+      "prior_review_reason": null,
+      "prior_recommendation": null,
+      "source_overrides": {},
+      "quarantine_analysis": {
+        "required": false,
+        "why_sba_not_possible": null,
+        "why_open_response_not_possible": null
+      }
+    },
+    {
+      "resolution_id": "sba_gap_closure_sba_batch_1_904",
+      "source_question_id": "904",
+      "source_pool": "sba_gap_closure",
+      "destination": "sba_operational",
+      "resolution_reason": "Governed specification-gap SBA authored with explicit source support, reasoning focus, and enrichment candidates.",
+      "repairs": [
+        "added targeted specification-gap SBA"
+      ],
+      "evidence_reviewed": [
+        "knowledge/official-wset/study-guide/wset_markdown/seccion_4_section_1_wine_and_the_consumer/4-2_2_wine_with_food.md"
+      ],
+      "prior_review_reason": null,
+      "prior_recommendation": null,
+      "source_overrides": {},
+      "quarantine_analysis": {
+        "required": false,
+        "why_sba_not_possible": null,
+        "why_open_response_not_possible": null
+      }
+    },
+    {
+      "resolution_id": "sba_gap_closure_sba_batch_2_905",
+      "source_question_id": "905",
+      "source_pool": "sba_gap_closure",
+      "destination": "sba_operational",
+      "resolution_reason": "Governed specification-gap SBA authored with explicit source support, reasoning focus, and enrichment candidates.",
+      "repairs": [
+        "added targeted specification-gap SBA"
+      ],
+      "evidence_reviewed": [
+        "knowledge/official-wset/study-guide/wset_markdown/seccion_8_section_5_fortified_wines_of_the_world/8-2_44_port.md"
+      ],
+      "prior_review_reason": null,
+      "prior_recommendation": null,
+      "source_overrides": {},
+      "quarantine_analysis": {
+        "required": false,
+        "why_sba_not_possible": null,
+        "why_open_response_not_possible": null
+      }
+    },
+    {
+      "resolution_id": "sba_gap_closure_sba_batch_2_906",
+      "source_question_id": "906",
+      "source_pool": "sba_gap_closure",
+      "destination": "sba_operational",
+      "resolution_reason": "Governed specification-gap SBA authored with explicit source support, reasoning focus, and enrichment candidates.",
+      "repairs": [
+        "added targeted specification-gap SBA"
+      ],
+      "evidence_reviewed": [
+        "knowledge/official-wset/study-guide/wset_markdown/seccion_8_section_5_fortified_wines_of_the_world/8-2_44_port.md"
+      ],
+      "prior_review_reason": null,
+      "prior_recommendation": null,
+      "source_overrides": {},
+      "quarantine_analysis": {
+        "required": false,
+        "why_sba_not_possible": null,
+        "why_open_response_not_possible": null
+      }
+    },
+    {
+      "resolution_id": "sba_gap_closure_sba_batch_2_907",
+      "source_question_id": "907",
+      "source_pool": "sba_gap_closure",
+      "destination": "sba_operational",
+      "resolution_reason": "Governed specification-gap SBA authored with explicit source support, reasoning focus, and enrichment candidates.",
+      "repairs": [
+        "added targeted specification-gap SBA"
+      ],
+      "evidence_reviewed": [
+        "knowledge/official-wset/study-guide/wset_markdown/seccion_8_section_5_fortified_wines_of_the_world/8-2_44_port.md"
+      ],
+      "prior_review_reason": null,
+      "prior_recommendation": null,
+      "source_overrides": {},
+      "quarantine_analysis": {
+        "required": false,
+        "why_sba_not_possible": null,
+        "why_open_response_not_possible": null
+      }
+    },
+    {
+      "resolution_id": "sba_gap_closure_sba_batch_2_908",
+      "source_question_id": "908",
+      "source_pool": "sba_gap_closure",
+      "destination": "sba_operational",
+      "resolution_reason": "Governed specification-gap SBA authored with explicit source support, reasoning focus, and enrichment candidates.",
+      "repairs": [
+        "added targeted specification-gap SBA"
+      ],
+      "evidence_reviewed": [
+        "knowledge/official-wset/study-guide/wset_markdown/seccion_8_section_5_fortified_wines_of_the_world/8-2_44_port.md"
+      ],
+      "prior_review_reason": null,
+      "prior_recommendation": null,
+      "source_overrides": {},
+      "quarantine_analysis": {
+        "required": false,
+        "why_sba_not_possible": null,
+        "why_open_response_not_possible": null
+      }
+    },
+    {
+      "resolution_id": "sba_gap_closure_sba_batch_2_909",
+      "source_question_id": "909",
+      "source_pool": "sba_gap_closure",
+      "destination": "sba_operational",
+      "resolution_reason": "Governed specification-gap SBA authored with explicit source support, reasoning focus, and enrichment candidates.",
+      "repairs": [
+        "added targeted specification-gap SBA"
+      ],
+      "evidence_reviewed": [
+        "knowledge/official-wset/study-guide/wset_markdown/seccion_8_section_5_fortified_wines_of_the_world/8-2_44_port.md"
+      ],
+      "prior_review_reason": null,
+      "prior_recommendation": null,
+      "source_overrides": {},
+      "quarantine_analysis": {
+        "required": false,
+        "why_sba_not_possible": null,
+        "why_open_response_not_possible": null
+      }
+    },
+    {
+      "resolution_id": "sba_gap_closure_sba_batch_2_910",
+      "source_question_id": "910",
+      "source_pool": "sba_gap_closure",
+      "destination": "sba_operational",
+      "resolution_reason": "Governed specification-gap SBA authored with explicit source support, reasoning focus, and enrichment candidates.",
+      "repairs": [
+        "added targeted specification-gap SBA"
+      ],
+      "evidence_reviewed": [
+        "knowledge/official-wset/study-guide/wset_markdown/seccion_8_section_5_fortified_wines_of_the_world/8-2_44_port.md"
+      ],
+      "prior_review_reason": null,
+      "prior_recommendation": null,
+      "source_overrides": {},
+      "quarantine_analysis": {
+        "required": false,
+        "why_sba_not_possible": null,
+        "why_open_response_not_possible": null
+      }
+    },
+    {
+      "resolution_id": "sba_gap_closure_sba_batch_2_911",
+      "source_question_id": "911",
+      "source_pool": "sba_gap_closure",
+      "destination": "sba_operational",
+      "resolution_reason": "Governed specification-gap SBA authored with explicit source support, reasoning focus, and enrichment candidates.",
+      "repairs": [
+        "added targeted specification-gap SBA"
+      ],
+      "evidence_reviewed": [
+        "knowledge/official-wset/study-guide/wset_markdown/seccion_8_section_5_fortified_wines_of_the_world/8-2_44_port.md"
+      ],
+      "prior_review_reason": null,
+      "prior_recommendation": null,
+      "source_overrides": {},
+      "quarantine_analysis": {
+        "required": false,
+        "why_sba_not_possible": null,
+        "why_open_response_not_possible": null
+      }
+    },
+    {
+      "resolution_id": "sba_gap_closure_sba_batch_2_912",
+      "source_question_id": "912",
+      "source_pool": "sba_gap_closure",
+      "destination": "sba_operational",
+      "resolution_reason": "Governed specification-gap SBA authored with explicit source support, reasoning focus, and enrichment candidates.",
+      "repairs": [
+        "added targeted specification-gap SBA"
+      ],
+      "evidence_reviewed": [
+        "knowledge/official-wset/study-guide/wset_markdown/seccion_8_section_5_fortified_wines_of_the_world/8-2_44_port.md"
+      ],
+      "prior_review_reason": null,
+      "prior_recommendation": null,
+      "source_overrides": {},
+      "quarantine_analysis": {
+        "required": false,
+        "why_sba_not_possible": null,
+        "why_open_response_not_possible": null
+      }
+    },
+    {
+      "resolution_id": "sba_gap_closure_sba_batch_2_913",
+      "source_question_id": "913",
+      "source_pool": "sba_gap_closure",
+      "destination": "sba_operational",
+      "resolution_reason": "Governed specification-gap SBA authored with explicit source support, reasoning focus, and enrichment candidates.",
+      "repairs": [
+        "added targeted specification-gap SBA"
+      ],
+      "evidence_reviewed": [
+        "knowledge/official-wset/study-guide/wset_markdown/seccion_8_section_5_fortified_wines_of_the_world/8-2_44_port.md"
+      ],
+      "prior_review_reason": null,
+      "prior_recommendation": null,
+      "source_overrides": {},
+      "quarantine_analysis": {
+        "required": false,
+        "why_sba_not_possible": null,
+        "why_open_response_not_possible": null
+      }
+    },
+    {
+      "resolution_id": "sba_gap_closure_sba_batch_2_914",
+      "source_question_id": "914",
+      "source_pool": "sba_gap_closure",
+      "destination": "sba_operational",
+      "resolution_reason": "Governed specification-gap SBA authored with explicit source support, reasoning focus, and enrichment candidates.",
+      "repairs": [
+        "added targeted specification-gap SBA"
+      ],
+      "evidence_reviewed": [
+        "knowledge/official-wset/study-guide/wset_markdown/seccion_8_section_5_fortified_wines_of_the_world/8-2_44_port.md"
+      ],
+      "prior_review_reason": null,
+      "prior_recommendation": null,
+      "source_overrides": {},
+      "quarantine_analysis": {
+        "required": false,
+        "why_sba_not_possible": null,
+        "why_open_response_not_possible": null
+      }
+    },
+    {
+      "resolution_id": "sba_gap_closure_sba_batch_2_915",
+      "source_question_id": "915",
+      "source_pool": "sba_gap_closure",
+      "destination": "sba_operational",
+      "resolution_reason": "Governed specification-gap SBA authored with explicit source support, reasoning focus, and enrichment candidates.",
+      "repairs": [
+        "added targeted specification-gap SBA"
+      ],
+      "evidence_reviewed": [
+        "knowledge/official-wset/study-guide/wset_markdown/seccion_8_section_5_fortified_wines_of_the_world/8-1_43_sherry.md"
+      ],
+      "prior_review_reason": null,
+      "prior_recommendation": null,
+      "source_overrides": {},
+      "quarantine_analysis": {
+        "required": false,
+        "why_sba_not_possible": null,
+        "why_open_response_not_possible": null
+      }
+    },
+    {
+      "resolution_id": "sba_gap_closure_sba_batch_2_916",
+      "source_question_id": "916",
+      "source_pool": "sba_gap_closure",
+      "destination": "sba_operational",
+      "resolution_reason": "Governed specification-gap SBA authored with explicit source support, reasoning focus, and enrichment candidates.",
+      "repairs": [
+        "added targeted specification-gap SBA"
+      ],
+      "evidence_reviewed": [
+        "knowledge/official-wset/study-guide/wset_markdown/seccion_8_section_5_fortified_wines_of_the_world/8-1_43_sherry.md"
+      ],
+      "prior_review_reason": null,
+      "prior_recommendation": null,
+      "source_overrides": {},
+      "quarantine_analysis": {
+        "required": false,
+        "why_sba_not_possible": null,
+        "why_open_response_not_possible": null
+      }
+    },
+    {
+      "resolution_id": "sba_gap_closure_sba_batch_2_917",
+      "source_question_id": "917",
+      "source_pool": "sba_gap_closure",
+      "destination": "sba_operational",
+      "resolution_reason": "Governed specification-gap SBA authored with explicit source support, reasoning focus, and enrichment candidates.",
+      "repairs": [
+        "added targeted specification-gap SBA"
+      ],
+      "evidence_reviewed": [
+        "knowledge/official-wset/study-guide/wset_markdown/seccion_8_section_5_fortified_wines_of_the_world/8-1_43_sherry.md"
+      ],
+      "prior_review_reason": null,
+      "prior_recommendation": null,
+      "source_overrides": {},
+      "quarantine_analysis": {
+        "required": false,
+        "why_sba_not_possible": null,
+        "why_open_response_not_possible": null
+      }
+    },
+    {
+      "resolution_id": "sba_gap_closure_sba_batch_2_918",
+      "source_question_id": "918",
+      "source_pool": "sba_gap_closure",
+      "destination": "sba_operational",
+      "resolution_reason": "Governed specification-gap SBA authored with explicit source support, reasoning focus, and enrichment candidates.",
+      "repairs": [
+        "added targeted specification-gap SBA"
+      ],
+      "evidence_reviewed": [
+        "knowledge/official-wset/study-guide/wset_markdown/seccion_8_section_5_fortified_wines_of_the_world/8-1_43_sherry.md"
+      ],
+      "prior_review_reason": null,
+      "prior_recommendation": null,
+      "source_overrides": {},
+      "quarantine_analysis": {
+        "required": false,
+        "why_sba_not_possible": null,
+        "why_open_response_not_possible": null
+      }
+    },
+    {
+      "resolution_id": "sba_gap_closure_sba_batch_2_919",
+      "source_question_id": "919",
+      "source_pool": "sba_gap_closure",
+      "destination": "sba_operational",
+      "resolution_reason": "Governed specification-gap SBA authored with explicit source support, reasoning focus, and enrichment candidates.",
+      "repairs": [
+        "added targeted specification-gap SBA"
+      ],
+      "evidence_reviewed": [
+        "knowledge/official-wset/study-guide/wset_markdown/seccion_8_section_5_fortified_wines_of_the_world/8-1_43_sherry.md"
+      ],
+      "prior_review_reason": null,
+      "prior_recommendation": null,
+      "source_overrides": {},
+      "quarantine_analysis": {
+        "required": false,
+        "why_sba_not_possible": null,
+        "why_open_response_not_possible": null
+      }
+    },
+    {
+      "resolution_id": "sba_gap_closure_sba_batch_2_920",
+      "source_question_id": "920",
+      "source_pool": "sba_gap_closure",
+      "destination": "sba_operational",
+      "resolution_reason": "Governed specification-gap SBA authored with explicit source support, reasoning focus, and enrichment candidates.",
+      "repairs": [
+        "added targeted specification-gap SBA"
+      ],
+      "evidence_reviewed": [
+        "knowledge/official-wset/study-guide/wset_markdown/seccion_8_section_5_fortified_wines_of_the_world/8-1_43_sherry.md"
+      ],
+      "prior_review_reason": null,
+      "prior_recommendation": null,
+      "source_overrides": {},
+      "quarantine_analysis": {
+        "required": false,
+        "why_sba_not_possible": null,
+        "why_open_response_not_possible": null
+      }
+    },
+    {
+      "resolution_id": "sba_gap_closure_sba_batch_2_921",
+      "source_question_id": "921",
+      "source_pool": "sba_gap_closure",
+      "destination": "sba_operational",
+      "resolution_reason": "Governed specification-gap SBA authored with explicit source support, reasoning focus, and enrichment candidates.",
+      "repairs": [
+        "added targeted specification-gap SBA"
+      ],
+      "evidence_reviewed": [
+        "knowledge/official-wset/study-guide/wset_markdown/seccion_8_section_5_fortified_wines_of_the_world/8-1_43_sherry.md"
+      ],
+      "prior_review_reason": null,
+      "prior_recommendation": null,
+      "source_overrides": {},
+      "quarantine_analysis": {
+        "required": false,
+        "why_sba_not_possible": null,
+        "why_open_response_not_possible": null
+      }
+    },
+    {
+      "resolution_id": "sba_gap_closure_sba_batch_2_922",
+      "source_question_id": "922",
+      "source_pool": "sba_gap_closure",
+      "destination": "sba_operational",
+      "resolution_reason": "Governed specification-gap SBA authored with explicit source support, reasoning focus, and enrichment candidates.",
+      "repairs": [
+        "added targeted specification-gap SBA"
+      ],
+      "evidence_reviewed": [
+        "knowledge/official-wset/study-guide/wset_markdown/seccion_8_section_5_fortified_wines_of_the_world/8-1_43_sherry.md"
+      ],
+      "prior_review_reason": null,
+      "prior_recommendation": null,
+      "source_overrides": {},
+      "quarantine_analysis": {
+        "required": false,
+        "why_sba_not_possible": null,
+        "why_open_response_not_possible": null
+      }
+    },
+    {
+      "resolution_id": "sba_gap_closure_sba_batch_2_923",
+      "source_question_id": "923",
+      "source_pool": "sba_gap_closure",
+      "destination": "sba_operational",
+      "resolution_reason": "Governed specification-gap SBA authored with explicit source support, reasoning focus, and enrichment candidates.",
+      "repairs": [
+        "added targeted specification-gap SBA"
+      ],
+      "evidence_reviewed": [
+        "knowledge/official-wset/study-guide/wset_markdown/seccion_8_section_5_fortified_wines_of_the_world/8-1_43_sherry.md"
+      ],
+      "prior_review_reason": null,
+      "prior_recommendation": null,
+      "source_overrides": {},
+      "quarantine_analysis": {
+        "required": false,
+        "why_sba_not_possible": null,
+        "why_open_response_not_possible": null
+      }
+    },
+    {
+      "resolution_id": "sba_gap_closure_sba_batch_2_924",
+      "source_question_id": "924",
+      "source_pool": "sba_gap_closure",
+      "destination": "sba_operational",
+      "resolution_reason": "Governed specification-gap SBA authored with explicit source support, reasoning focus, and enrichment candidates.",
+      "repairs": [
+        "added targeted specification-gap SBA"
+      ],
+      "evidence_reviewed": [
+        "knowledge/official-wset/study-guide/wset_markdown/seccion_8_section_5_fortified_wines_of_the_world/8-1_43_sherry.md"
+      ],
+      "prior_review_reason": null,
+      "prior_recommendation": null,
+      "source_overrides": {},
+      "quarantine_analysis": {
+        "required": false,
+        "why_sba_not_possible": null,
+        "why_open_response_not_possible": null
+      }
+    },
+    {
+      "resolution_id": "sba_gap_closure_sba_batch_2_925",
+      "source_question_id": "925",
+      "source_pool": "sba_gap_closure",
+      "destination": "sba_operational",
+      "resolution_reason": "Governed specification-gap SBA authored with explicit source support, reasoning focus, and enrichment candidates.",
+      "repairs": [
+        "added targeted specification-gap SBA"
+      ],
+      "evidence_reviewed": [
+        "knowledge/official-wset/study-guide/wset_markdown/seccion_8_section_5_fortified_wines_of_the_world/8-1_43_sherry.md"
+      ],
+      "prior_review_reason": null,
+      "prior_recommendation": null,
+      "source_overrides": {},
+      "quarantine_analysis": {
+        "required": false,
+        "why_sba_not_possible": null,
+        "why_open_response_not_possible": null
+      }
+    },
+    {
+      "resolution_id": "sba_gap_closure_sba_batch_2_926",
+      "source_question_id": "926",
+      "source_pool": "sba_gap_closure",
+      "destination": "sba_operational",
+      "resolution_reason": "Governed specification-gap SBA authored with explicit source support, reasoning focus, and enrichment candidates.",
+      "repairs": [
+        "added targeted specification-gap SBA"
+      ],
+      "evidence_reviewed": [
+        "knowledge/official-wset/study-guide/wset_markdown/seccion_8_section_5_fortified_wines_of_the_world/8-1_43_sherry.md"
+      ],
+      "prior_review_reason": null,
+      "prior_recommendation": null,
+      "source_overrides": {},
+      "quarantine_analysis": {
+        "required": false,
+        "why_sba_not_possible": null,
+        "why_open_response_not_possible": null
+      }
+    },
+    {
+      "resolution_id": "sba_gap_closure_sba_batch_2_927",
+      "source_question_id": "927",
+      "source_pool": "sba_gap_closure",
+      "destination": "sba_operational",
+      "resolution_reason": "Governed specification-gap SBA authored with explicit source support, reasoning focus, and enrichment candidates.",
+      "repairs": [
+        "added targeted specification-gap SBA"
+      ],
+      "evidence_reviewed": [
+        "knowledge/knowledge-map/causal-chains/HC_MADEIRA_HEAT_OXIDATIVE_AGEING.json",
+        "knowledge/official-wset/study-guide/wset_markdown/seccion_5_section_2_factors_affecting_the_style_quality_and_price_of_w/5-4_7_common_elements_in_winemaking_and_maturation.md"
+      ],
+      "prior_review_reason": null,
+      "prior_recommendation": null,
+      "source_overrides": {},
+      "quarantine_analysis": {
+        "required": false,
+        "why_sba_not_possible": null,
+        "why_open_response_not_possible": null
+      }
+    },
+    {
+      "resolution_id": "sba_gap_closure_sba_batch_2_928",
+      "source_question_id": "928",
+      "source_pool": "sba_gap_closure",
+      "destination": "sba_operational",
+      "resolution_reason": "Governed specification-gap SBA authored with explicit source support, reasoning focus, and enrichment candidates.",
+      "repairs": [
+        "added targeted specification-gap SBA"
+      ],
+      "evidence_reviewed": [
+        "knowledge/knowledge-map/causal-chains/HC_MADEIRA_HEAT_OXIDATIVE_AGEING.json"
+      ],
+      "prior_review_reason": null,
+      "prior_recommendation": null,
+      "source_overrides": {},
+      "quarantine_analysis": {
+        "required": false,
+        "why_sba_not_possible": null,
+        "why_open_response_not_possible": null
+      }
+    },
+    {
+      "resolution_id": "sba_gap_closure_sba_batch_2_929",
+      "source_question_id": "929",
+      "source_pool": "sba_gap_closure",
+      "destination": "sba_operational",
+      "resolution_reason": "Governed specification-gap SBA authored with explicit source support, reasoning focus, and enrichment candidates.",
+      "repairs": [
+        "added targeted specification-gap SBA"
+      ],
+      "evidence_reviewed": [
+        "knowledge/knowledge-map/causal-chains/HC_MADEIRA_HEAT_OXIDATIVE_AGEING.json"
+      ],
+      "prior_review_reason": null,
+      "prior_recommendation": null,
+      "source_overrides": {},
+      "quarantine_analysis": {
+        "required": false,
+        "why_sba_not_possible": null,
+        "why_open_response_not_possible": null
+      }
+    },
+    {
+      "resolution_id": "sba_gap_closure_sba_batch_2_930",
+      "source_question_id": "930",
+      "source_pool": "sba_gap_closure",
+      "destination": "sba_operational",
+      "resolution_reason": "Governed specification-gap SBA authored with explicit source support, reasoning focus, and enrichment candidates.",
+      "repairs": [
+        "added targeted specification-gap SBA"
+      ],
+      "evidence_reviewed": [
+        "knowledge/knowledge-map/causal-chains/HC_MADEIRA_HEAT_OXIDATIVE_AGEING.json"
+      ],
+      "prior_review_reason": null,
+      "prior_recommendation": null,
+      "source_overrides": {},
+      "quarantine_analysis": {
+        "required": false,
+        "why_sba_not_possible": null,
+        "why_open_response_not_possible": null
+      }
+    },
+    {
+      "resolution_id": "sba_gap_closure_sba_batch_2_931",
+      "source_question_id": "931",
+      "source_pool": "sba_gap_closure",
+      "destination": "sba_operational",
+      "resolution_reason": "Governed specification-gap SBA authored with explicit source support, reasoning focus, and enrichment candidates.",
+      "repairs": [
+        "added targeted specification-gap SBA"
+      ],
+      "evidence_reviewed": [
+        "knowledge/knowledge-map/causal-chains/HC_MADEIRA_HEAT_OXIDATIVE_AGEING.json"
+      ],
+      "prior_review_reason": null,
+      "prior_recommendation": null,
+      "source_overrides": {},
+      "quarantine_analysis": {
+        "required": false,
+        "why_sba_not_possible": null,
+        "why_open_response_not_possible": null
+      }
+    },
+    {
+      "resolution_id": "sba_gap_closure_sba_batch_2_932",
+      "source_question_id": "932",
+      "source_pool": "sba_gap_closure",
+      "destination": "sba_operational",
+      "resolution_reason": "Governed specification-gap SBA authored with explicit source support, reasoning focus, and enrichment candidates.",
+      "repairs": [
+        "added targeted specification-gap SBA"
+      ],
+      "evidence_reviewed": [
+        "knowledge/knowledge-map/causal-chains/HC_MADEIRA_HEAT_OXIDATIVE_AGEING.json"
+      ],
+      "prior_review_reason": null,
+      "prior_recommendation": null,
+      "source_overrides": {},
+      "quarantine_analysis": {
+        "required": false,
+        "why_sba_not_possible": null,
+        "why_open_response_not_possible": null
+      }
+    },
+    {
+      "resolution_id": "sba_gap_closure_sba_batch_2_933",
+      "source_question_id": "933",
+      "source_pool": "sba_gap_closure",
+      "destination": "sba_operational",
+      "resolution_reason": "Governed specification-gap SBA authored with explicit source support, reasoning focus, and enrichment candidates.",
+      "repairs": [
+        "added targeted specification-gap SBA"
+      ],
+      "evidence_reviewed": [
+        "knowledge/knowledge-map/causal-chains/HC_MADEIRA_HEAT_OXIDATIVE_AGEING.json"
+      ],
+      "prior_review_reason": null,
+      "prior_recommendation": null,
+      "source_overrides": {},
+      "quarantine_analysis": {
+        "required": false,
+        "why_sba_not_possible": null,
+        "why_open_response_not_possible": null
+      }
+    },
+    {
+      "resolution_id": "sba_gap_closure_sba_batch_2_934",
+      "source_question_id": "934",
+      "source_pool": "sba_gap_closure",
+      "destination": "sba_operational",
+      "resolution_reason": "Governed specification-gap SBA authored with explicit source support, reasoning focus, and enrichment candidates.",
+      "repairs": [
+        "added targeted specification-gap SBA"
+      ],
+      "evidence_reviewed": [
+        "knowledge/knowledge-map/causal-chains/HC_MADEIRA_HEAT_OXIDATIVE_AGEING.json",
+        "knowledge/official-wset/study-guide/wset_markdown/seccion_8_section_5_fortified_wines_of_the_world/8-2_44_port.md"
+      ],
+      "prior_review_reason": null,
+      "prior_recommendation": null,
+      "source_overrides": {},
+      "quarantine_analysis": {
+        "required": false,
+        "why_sba_not_possible": null,
+        "why_open_response_not_possible": null
+      }
+    },
+    {
+      "resolution_id": "sba_gap_closure_sba_batch_2_935",
+      "source_question_id": "935",
+      "source_pool": "sba_gap_closure",
+      "destination": "sba_operational",
+      "resolution_reason": "Governed specification-gap SBA authored with explicit source support, reasoning focus, and enrichment candidates.",
+      "repairs": [
+        "added targeted specification-gap SBA"
+      ],
+      "evidence_reviewed": [
+        "knowledge/official-wset/study-guide/wset_markdown/seccion_8_section_5_fortified_wines_of_the_world/8-3_45_fortified_muscats.md"
+      ],
+      "prior_review_reason": null,
+      "prior_recommendation": null,
+      "source_overrides": {},
+      "quarantine_analysis": {
+        "required": false,
+        "why_sba_not_possible": null,
+        "why_open_response_not_possible": null
+      }
+    },
+    {
+      "resolution_id": "sba_gap_closure_sba_batch_2_936",
+      "source_question_id": "936",
+      "source_pool": "sba_gap_closure",
+      "destination": "sba_operational",
+      "resolution_reason": "Governed specification-gap SBA authored with explicit source support, reasoning focus, and enrichment candidates.",
+      "repairs": [
+        "added targeted specification-gap SBA"
+      ],
+      "evidence_reviewed": [
+        "knowledge/official-wset/study-guide/wset_markdown/seccion_8_section_5_fortified_wines_of_the_world/8-3_45_fortified_muscats.md"
+      ],
+      "prior_review_reason": null,
+      "prior_recommendation": null,
+      "source_overrides": {},
+      "quarantine_analysis": {
+        "required": false,
+        "why_sba_not_possible": null,
+        "why_open_response_not_possible": null
+      }
+    },
+    {
+      "resolution_id": "sba_gap_closure_sba_batch_2_937",
+      "source_question_id": "937",
+      "source_pool": "sba_gap_closure",
+      "destination": "sba_operational",
+      "resolution_reason": "Governed specification-gap SBA authored with explicit source support, reasoning focus, and enrichment candidates.",
+      "repairs": [
+        "added targeted specification-gap SBA"
+      ],
+      "evidence_reviewed": [
+        "knowledge/official-wset/study-guide/wset_markdown/seccion_8_section_5_fortified_wines_of_the_world/8-3_45_fortified_muscats.md"
+      ],
+      "prior_review_reason": null,
+      "prior_recommendation": null,
+      "source_overrides": {},
+      "quarantine_analysis": {
+        "required": false,
+        "why_sba_not_possible": null,
+        "why_open_response_not_possible": null
+      }
+    },
+    {
+      "resolution_id": "sba_gap_closure_sba_batch_2_938",
+      "source_question_id": "938",
+      "source_pool": "sba_gap_closure",
+      "destination": "sba_operational",
+      "resolution_reason": "Governed specification-gap SBA authored with explicit source support, reasoning focus, and enrichment candidates.",
+      "repairs": [
+        "added targeted specification-gap SBA"
+      ],
+      "evidence_reviewed": [
+        "knowledge/official-wset/study-guide/wset_markdown/seccion_8_section_5_fortified_wines_of_the_world/8-3_45_fortified_muscats.md"
+      ],
+      "prior_review_reason": null,
+      "prior_recommendation": null,
+      "source_overrides": {},
+      "quarantine_analysis": {
+        "required": false,
+        "why_sba_not_possible": null,
+        "why_open_response_not_possible": null
+      }
+    },
+    {
+      "resolution_id": "sba_gap_closure_sba_batch_2_939",
+      "source_question_id": "939",
+      "source_pool": "sba_gap_closure",
+      "destination": "sba_operational",
+      "resolution_reason": "Governed specification-gap SBA authored with explicit source support, reasoning focus, and enrichment candidates.",
+      "repairs": [
+        "added targeted specification-gap SBA"
+      ],
+      "evidence_reviewed": [
+        "knowledge/official-wset/study-guide/wset_markdown/seccion_8_section_5_fortified_wines_of_the_world/8-3_45_fortified_muscats.md"
+      ],
+      "prior_review_reason": null,
+      "prior_recommendation": null,
+      "source_overrides": {},
+      "quarantine_analysis": {
+        "required": false,
+        "why_sba_not_possible": null,
+        "why_open_response_not_possible": null
+      }
+    },
+    {
+      "resolution_id": "sba_gap_closure_sba_batch_2_940",
+      "source_question_id": "940",
+      "source_pool": "sba_gap_closure",
+      "destination": "sba_operational",
+      "resolution_reason": "Governed specification-gap SBA authored with explicit source support, reasoning focus, and enrichment candidates.",
+      "repairs": [
+        "added targeted specification-gap SBA"
+      ],
+      "evidence_reviewed": [
+        "knowledge/official-wset/study-guide/wset_markdown/seccion_8_section_5_fortified_wines_of_the_world/8-3_45_fortified_muscats.md"
+      ],
+      "prior_review_reason": null,
+      "prior_recommendation": null,
+      "source_overrides": {},
+      "quarantine_analysis": {
+        "required": false,
+        "why_sba_not_possible": null,
+        "why_open_response_not_possible": null
+      }
+    },
+    {
+      "resolution_id": "sba_gap_closure_sba_batch_2_941",
+      "source_question_id": "941",
+      "source_pool": "sba_gap_closure",
+      "destination": "sba_operational",
+      "resolution_reason": "Governed specification-gap SBA authored with explicit source support, reasoning focus, and enrichment candidates.",
+      "repairs": [
+        "added targeted specification-gap SBA"
+      ],
+      "evidence_reviewed": [
+        "knowledge/official-wset/study-guide/wset_markdown/seccion_8_section_5_fortified_wines_of_the_world/8-3_45_fortified_muscats.md"
+      ],
+      "prior_review_reason": null,
+      "prior_recommendation": null,
+      "source_overrides": {},
+      "quarantine_analysis": {
+        "required": false,
+        "why_sba_not_possible": null,
+        "why_open_response_not_possible": null
+      }
+    },
+    {
+      "resolution_id": "sba_gap_closure_sba_batch_2_942",
+      "source_question_id": "942",
+      "source_pool": "sba_gap_closure",
+      "destination": "sba_operational",
+      "resolution_reason": "Governed specification-gap SBA authored with explicit source support, reasoning focus, and enrichment candidates.",
+      "repairs": [
+        "added targeted specification-gap SBA"
+      ],
+      "evidence_reviewed": [
+        "knowledge/official-wset/study-guide/wset_markdown/seccion_8_section_5_fortified_wines_of_the_world/8-3_45_fortified_muscats.md"
+      ],
+      "prior_review_reason": null,
+      "prior_recommendation": null,
+      "source_overrides": {},
+      "quarantine_analysis": {
+        "required": false,
+        "why_sba_not_possible": null,
+        "why_open_response_not_possible": null
+      }
+    },
+    {
+      "resolution_id": "sba_gap_closure_sba_batch_2_943",
+      "source_question_id": "943",
+      "source_pool": "sba_gap_closure",
+      "destination": "sba_operational",
+      "resolution_reason": "Governed specification-gap SBA authored with explicit source support, reasoning focus, and enrichment candidates.",
+      "repairs": [
+        "added targeted specification-gap SBA"
+      ],
+      "evidence_reviewed": [
+        "knowledge/official-wset/study-guide/wset_markdown/seccion_8_section_5_fortified_wines_of_the_world/8-3_45_fortified_muscats.md"
+      ],
+      "prior_review_reason": null,
+      "prior_recommendation": null,
+      "source_overrides": {},
+      "quarantine_analysis": {
+        "required": false,
+        "why_sba_not_possible": null,
+        "why_open_response_not_possible": null
+      }
+    },
+    {
+      "resolution_id": "sba_gap_closure_sba_batch_2_944",
+      "source_question_id": "944",
+      "source_pool": "sba_gap_closure",
+      "destination": "sba_operational",
+      "resolution_reason": "Governed specification-gap SBA authored with explicit source support, reasoning focus, and enrichment candidates.",
+      "repairs": [
+        "added targeted specification-gap SBA"
+      ],
+      "evidence_reviewed": [
+        "knowledge/official-wset/study-guide/wset_markdown/seccion_8_section_5_fortified_wines_of_the_world/8-2_44_port.md",
+        "knowledge/official-wset/study-guide/wset_markdown/seccion_8_section_5_fortified_wines_of_the_world/8-1_43_sherry.md"
+      ],
+      "prior_review_reason": null,
+      "prior_recommendation": null,
+      "source_overrides": {},
+      "quarantine_analysis": {
+        "required": false,
+        "why_sba_not_possible": null,
+        "why_open_response_not_possible": null
+      }
+    },
+    {
+      "resolution_id": "sba_gap_closure_sba_batch_2_945",
+      "source_question_id": "945",
+      "source_pool": "sba_gap_closure",
+      "destination": "sba_operational",
+      "resolution_reason": "Governed specification-gap SBA authored with explicit source support, reasoning focus, and enrichment candidates.",
+      "repairs": [
+        "added targeted specification-gap SBA"
+      ],
+      "evidence_reviewed": [
+        "knowledge/official-wset/study-guide/wset_markdown/seccion_8_section_5_fortified_wines_of_the_world/8-1_43_sherry.md"
+      ],
+      "prior_review_reason": null,
+      "prior_recommendation": null,
+      "source_overrides": {},
+      "quarantine_analysis": {
+        "required": false,
+        "why_sba_not_possible": null,
+        "why_open_response_not_possible": null
+      }
+    },
+    {
+      "resolution_id": "sba_gap_closure_sba_batch_2_946",
+      "source_question_id": "946",
+      "source_pool": "sba_gap_closure",
+      "destination": "sba_operational",
+      "resolution_reason": "Governed specification-gap SBA authored with explicit source support, reasoning focus, and enrichment candidates.",
+      "repairs": [
+        "added targeted specification-gap SBA"
+      ],
+      "evidence_reviewed": [
+        "knowledge/official-wset/study-guide/wset_markdown/seccion_8_section_5_fortified_wines_of_the_world/8-1_43_sherry.md",
+        "knowledge/official-wset/study-guide/wset_markdown/seccion_8_section_5_fortified_wines_of_the_world/8-2_44_port.md",
+        "knowledge/knowledge-map/causal-chains/HC_MADEIRA_HEAT_OXIDATIVE_AGEING.json"
+      ],
+      "prior_review_reason": null,
+      "prior_recommendation": null,
+      "source_overrides": {},
+      "quarantine_analysis": {
+        "required": false,
+        "why_sba_not_possible": null,
+        "why_open_response_not_possible": null
+      }
+    },
+    {
+      "resolution_id": "sba_gap_closure_sba_batch_2_947",
+      "source_question_id": "947",
+      "source_pool": "sba_gap_closure",
+      "destination": "sba_operational",
+      "resolution_reason": "Governed specification-gap SBA authored with explicit source support, reasoning focus, and enrichment candidates.",
+      "repairs": [
+        "added targeted specification-gap SBA"
+      ],
+      "evidence_reviewed": [
+        "knowledge/official-wset/study-guide/wset_markdown/seccion_8_section_5_fortified_wines_of_the_world/8-2_44_port.md",
+        "knowledge/official-wset/study-guide/wset_markdown/seccion_8_section_5_fortified_wines_of_the_world/8-3_45_fortified_muscats.md"
+      ],
+      "prior_review_reason": null,
+      "prior_recommendation": null,
+      "source_overrides": {},
+      "quarantine_analysis": {
+        "required": false,
+        "why_sba_not_possible": null,
+        "why_open_response_not_possible": null
+      }
+    },
+    {
+      "resolution_id": "sba_gap_closure_sba_batch_2_948",
+      "source_question_id": "948",
+      "source_pool": "sba_gap_closure",
+      "destination": "sba_operational",
+      "resolution_reason": "Governed specification-gap SBA authored with explicit source support, reasoning focus, and enrichment candidates.",
+      "repairs": [
+        "added targeted specification-gap SBA"
+      ],
+      "evidence_reviewed": [
+        "knowledge/official-wset/study-guide/wset_markdown/seccion_8_section_5_fortified_wines_of_the_world/8-2_44_port.md"
+      ],
+      "prior_review_reason": null,
+      "prior_recommendation": null,
+      "source_overrides": {},
+      "quarantine_analysis": {
+        "required": false,
+        "why_sba_not_possible": null,
+        "why_open_response_not_possible": null
+      }
+    },
+    {
+      "resolution_id": "sba_gap_closure_sba_batch_2_949",
+      "source_question_id": "949",
+      "source_pool": "sba_gap_closure",
+      "destination": "sba_operational",
+      "resolution_reason": "Governed specification-gap SBA authored with explicit source support, reasoning focus, and enrichment candidates.",
+      "repairs": [
+        "added targeted specification-gap SBA"
+      ],
+      "evidence_reviewed": [
+        "knowledge/official-wset/study-guide/wset_markdown/seccion_8_section_5_fortified_wines_of_the_world/8-2_44_port.md"
+      ],
+      "prior_review_reason": null,
+      "prior_recommendation": null,
+      "source_overrides": {},
+      "quarantine_analysis": {
+        "required": false,
+        "why_sba_not_possible": null,
+        "why_open_response_not_possible": null
+      }
+    },
+    {
+      "resolution_id": "sba_gap_closure_sba_batch_2_950",
+      "source_question_id": "950",
+      "source_pool": "sba_gap_closure",
+      "destination": "sba_operational",
+      "resolution_reason": "Governed specification-gap SBA authored with explicit source support, reasoning focus, and enrichment candidates.",
+      "repairs": [
+        "added targeted specification-gap SBA"
+      ],
+      "evidence_reviewed": [
+        "knowledge/official-wset/study-guide/wset_markdown/seccion_8_section_5_fortified_wines_of_the_world/8-2_44_port.md",
+        "knowledge/official-wset/study-guide/wset_markdown/seccion_8_section_5_fortified_wines_of_the_world/8-1_43_sherry.md",
+        "knowledge/official-wset/study-guide/wset_markdown/seccion_8_section_5_fortified_wines_of_the_world/8-3_45_fortified_muscats.md"
+      ],
+      "prior_review_reason": null,
+      "prior_recommendation": null,
+      "source_overrides": {},
+      "quarantine_analysis": {
+        "required": false,
+        "why_sba_not_possible": null,
+        "why_open_response_not_possible": null
+      }
+    },
+    {
+      "resolution_id": "sba_gap_closure_sba_batch_2_951",
+      "source_question_id": "951",
+      "source_pool": "sba_gap_closure",
+      "destination": "sba_operational",
+      "resolution_reason": "Governed specification-gap SBA authored with explicit source support, reasoning focus, and enrichment candidates.",
+      "repairs": [
+        "added targeted specification-gap SBA"
+      ],
+      "evidence_reviewed": [
+        "knowledge/official-wset/study-guide/wset_markdown/seccion_8_section_5_fortified_wines_of_the_world/8-2_44_port.md",
+        "knowledge/official-wset/study-guide/wset_markdown/seccion_8_section_5_fortified_wines_of_the_world/8-3_45_fortified_muscats.md"
+      ],
+      "prior_review_reason": null,
+      "prior_recommendation": null,
+      "source_overrides": {},
+      "quarantine_analysis": {
+        "required": false,
+        "why_sba_not_possible": null,
         "why_open_response_not_possible": null
       }
     }

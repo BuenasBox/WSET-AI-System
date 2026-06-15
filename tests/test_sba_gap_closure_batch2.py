@@ -7,6 +7,9 @@ from tools.question_generation.sba_gap_closure import validate_batch_payload
 
 
 BATCH_PATH = Path("knowledge/question-bank/sba_expansion/sba_batch_02.json")
+STRUCTURED_PATH = Path("knowledge/question-bank/structured/wset3_questions.json")
+MASTER_PATH = Path("knowledge/question-bank/master_bank/master_bank.json")
+ENRICHMENT_PATH = Path("knowledge/question-bank/enrichment/sba_enrichment_v1.json")
 
 
 class Batch2Tests(unittest.TestCase):
@@ -54,6 +57,29 @@ class Batch2Tests(unittest.TestCase):
                     "misconception_id"
                 ],
                 known,
+            )
+
+    def test_batch_is_integrated_into_backend_corpus(self):
+        structured = json.loads(STRUCTURED_PATH.read_text(encoding="utf-8"))
+        master = json.loads(MASTER_PATH.read_text(encoding="utf-8"))
+        enrichment = json.loads(ENRICHMENT_PATH.read_text(encoding="utf-8"))
+        expected_ids = {str(value) for value in range(905, 952)}
+
+        self.assertTrue(
+            expected_ids.issubset(
+                {str(record["question_id"]) for record in structured}
+            )
+        )
+        master_by_source = {
+            item["source_question_id"]: item for item in master["items"]
+        }
+        for source_id in expected_ids:
+            self.assertEqual(
+                master_by_source[source_id]["status"]["review_state"],
+                "approved_private_sba",
+            )
+            self.assertIn(
+                source_id, enrichment["items_by_source_question_id"]
             )
 
 

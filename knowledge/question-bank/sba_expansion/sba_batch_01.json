@@ -1,0 +1,3620 @@
+{
+  "schema_version": "sba_gap_closure_batch_v1",
+  "batch_id": "SBA_BATCH_1",
+  "records": [
+    {
+      "question_id": "858",
+      "question_text": "Si unas uvas sanas se congelan de forma natural en la vid y se prensan aún congeladas, ¿qué resultado explica mejor la concentración del mosto?",
+      "question_type": "theory",
+      "expected_topics": [
+        "RA1",
+        "icewine_concentration"
+      ],
+      "expected_causal_links": [
+        "Las uvas alcanzan temperaturas de congelación en la vid. -> Al prensarlas congeladas, gran parte del agua permanece en la prensa como hielo. -> El rendimiento es bajo y el mosto queda intensamente concentrado."
+      ],
+      "expected_keywords": [
+        "Icewine",
+        "Eiswein",
+        "congelación",
+        "prensado",
+        "concentración"
+      ],
+      "expected_reasoning_type": "cause_effect",
+      "difficulty": "distinction",
+      "source_type": "SBA gap closure | manually curated from local official study guide",
+      "safe_for_examiner": false,
+      "options": {
+        "A": "Parte del agua queda como hielo y se obtiene poco mosto rico en azúcar, acidez y sabor.",
+        "B": "El hielo se derrite en la prensa y aumenta el rendimiento sin cambiar la concentración.",
+        "C": "La congelación transforma directamente los ácidos en azúcar.",
+        "D": "Las levaduras consumen el agua antes de iniciar la fermentación."
+      },
+      "correct_answer_letter": "A",
+      "correct_answer_text": "Parte del agua queda como hielo y se obtiene poco mosto rico en azúcar, acidez y sabor.",
+      "source_support": {
+        "source_ids": [
+          "5-5_8_white_and_sweet_winemaking"
+        ],
+        "source_files": [
+          "knowledge/official-wset/study-guide/wset_markdown/seccion_5_section_2_factors_affecting_the_style_quality_and_price_of_w/5-5_8_white_and_sweet_winemaking.md"
+        ],
+        "support_rationale": "Las fuentes locales sustentan el mecanismo, el resultado de estilo y el contraste diagnóstico evaluado."
+      },
+      "enrichment": {
+        "causal_chain_candidate": {
+          "candidate_id": "CC_CAND_ICEWINE_CONCENTRATION",
+          "cause": "Las uvas alcanzan temperaturas de congelación en la vid.",
+          "mechanism": "Al prensarlas congeladas, gran parte del agua permanece en la prensa como hielo.",
+          "effect": "El rendimiento es bajo y el mosto queda intensamente concentrado."
+        },
+        "feedback_profile": {
+          "correct_rationale": "Las uvas alcanzan temperaturas de congelación en la vid. Al prensarlas congeladas, gran parte del agua permanece en la prensa como hielo. Por ello, el rendimiento es bajo y el mosto queda intensamente concentrado.",
+          "distractor_rationales": {
+            "A": "Es la relación causal correcta.",
+            "B": "No explica el mecanismo clave: Al prensarlas congeladas, gran parte del agua permanece en la prensa como hielo.",
+            "C": "No explica el mecanismo clave: Al prensarlas congeladas, gran parte del agua permanece en la prensa como hielo.",
+            "D": "No explica el mecanismo clave: Al prensarlas congeladas, gran parte del agua permanece en la prensa como hielo."
+          },
+          "remediation_recommendation": "Reconstruya la cadena de icewine concentration como causa, mecanismo y efecto."
+        },
+        "micro_drill_candidate": {
+          "prompt": "Micro-drill: ¿qué efecto sigue a este mecanismo: Al prensarlas congeladas, gran parte del agua permanece en la prensa como hielo.?",
+          "answer": "El rendimiento es bajo y el mosto queda intensamente concentrado."
+        },
+        "misconception_linkage_candidate": {
+          "misconception_id": "MC_ICEWINE_NOBLE_01",
+          "target_error": "Confundir crioconcentración con botrytis."
+        }
+      },
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "official_wset_question": false,
+        "training_item_only": true,
+        "uses_llm": false,
+        "uses_api": false,
+        "uses_embeddings": false,
+        "uses_vector_db": false,
+        "cloud_services_active": false
+      }
+    },
+    {
+      "question_id": "859",
+      "question_text": "Si un productor retrasa la vendimia para esperar la congelación necesaria para Eiswein, ¿qué consecuencia es más probable antes de cosechar?",
+      "question_type": "theory",
+      "expected_topics": [
+        "RA1",
+        "icewine_harvest_risk"
+      ],
+      "expected_causal_links": [
+        "La fruta madura permanece expuesta en la vid durante más tiempo. -> El retraso prolonga la exposición a clima adverso, fauna y deterioro. -> Puede perderse una parte importante de la cosecha antes de la congelación."
+      ],
+      "expected_keywords": [
+        "Eiswein",
+        "vendimia tardía",
+        "riesgo",
+        "bajo rendimiento"
+      ],
+      "expected_reasoning_type": "cause_effect",
+      "difficulty": "intermediate",
+      "source_type": "SBA gap closure | manually curated from local official study guide",
+      "safe_for_examiner": false,
+      "options": {
+        "A": "Disminuye toda presión de enfermedad porque el azúcar protege las bayas.",
+        "B": "Aumentan los riesgos de pérdida por podredumbre, aves y caída de fruta.",
+        "C": "La fruta gana volumen y eleva el rendimiento de mosto.",
+        "D": "La acidez desaparece por completo antes de que llegue la helada."
+      },
+      "correct_answer_letter": "B",
+      "correct_answer_text": "Aumentan los riesgos de pérdida por podredumbre, aves y caída de fruta.",
+      "source_support": {
+        "source_ids": [
+          "5-5_8_white_and_sweet_winemaking",
+          "6-11_22_germany"
+        ],
+        "source_files": [
+          "knowledge/official-wset/study-guide/wset_markdown/seccion_5_section_2_factors_affecting_the_style_quality_and_price_of_w/5-5_8_white_and_sweet_winemaking.md",
+          "knowledge/official-wset/study-guide/wset_markdown/seccion_6_section_3_still_wines_of_the_world/6-11_22_germany.md"
+        ],
+        "support_rationale": "Las fuentes locales sustentan el mecanismo, el resultado de estilo y el contraste diagnóstico evaluado."
+      },
+      "enrichment": {
+        "causal_chain_candidate": {
+          "candidate_id": "CC_CAND_ICEWINE_HARVEST_RISK",
+          "cause": "La fruta madura permanece expuesta en la vid durante más tiempo.",
+          "mechanism": "El retraso prolonga la exposición a clima adverso, fauna y deterioro.",
+          "effect": "Puede perderse una parte importante de la cosecha antes de la congelación."
+        },
+        "feedback_profile": {
+          "correct_rationale": "La fruta madura permanece expuesta en la vid durante más tiempo. El retraso prolonga la exposición a clima adverso, fauna y deterioro. Por ello, puede perderse una parte importante de la cosecha antes de la congelación.",
+          "distractor_rationales": {
+            "A": "No explica el mecanismo clave: El retraso prolonga la exposición a clima adverso, fauna y deterioro.",
+            "B": "Es la relación causal correcta.",
+            "C": "No explica el mecanismo clave: El retraso prolonga la exposición a clima adverso, fauna y deterioro.",
+            "D": "No explica el mecanismo clave: El retraso prolonga la exposición a clima adverso, fauna y deterioro."
+          },
+          "remediation_recommendation": "Reconstruya la cadena de icewine harvest risk como causa, mecanismo y efecto."
+        },
+        "micro_drill_candidate": {
+          "prompt": "Micro-drill: ¿qué efecto sigue a este mecanismo: El retraso prolonga la exposición a clima adverso, fauna y deterioro.?",
+          "answer": "Puede perderse una parte importante de la cosecha antes de la congelación."
+        },
+        "misconception_linkage_candidate": {
+          "misconception_id": "MC_ICEWINE_RESIDUAL_02",
+          "target_error": "Suponer que esperar la helada no añade riesgo ni coste."
+        }
+      },
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "official_wset_question": false,
+        "training_item_only": true,
+        "uses_llm": false,
+        "uses_api": false,
+        "uses_embeddings": false,
+        "uses_vector_db": false,
+        "cloud_services_active": false
+      }
+    },
+    {
+      "question_id": "860",
+      "question_text": "Al comparar crioconcentración y podredumbre noble, ¿qué factor explica mejor que ambos métodos den vinos dulces pero con perfiles distintos?",
+      "question_type": "theory",
+      "expected_topics": [
+        "RA1",
+        "icewine_vs_botrytis"
+      ],
+      "expected_causal_links": [
+        "Dos mecanismos diferentes reducen la proporción de agua respecto de los solutos. -> El hielo retiene agua en un caso; el hongo causa evaporación y cambios metabólicos en el otro. -> Ambos concentran, pero Botrytis aporta un carácter aromático y químico propio."
+      ],
+      "expected_keywords": [
+        "Icewine",
+        "Botrytis",
+        "crioconcentración",
+        "deshidratación"
+      ],
+      "expected_reasoning_type": "cause_effect",
+      "difficulty": "intermediate",
+      "source_type": "SBA gap closure | manually curated from local official study guide",
+      "safe_for_examiner": false,
+      "options": {
+        "A": "Ambos métodos dependen de que la levadura detenga la fermentación al mismo nivel de alcohol.",
+        "B": "Los dos métodos convierten la acidez de la uva en glicerol.",
+        "C": "La congelación separa agua físicamente, mientras Botrytis perfora la piel y modifica compuestos de la uva.",
+        "D": "La única diferencia es el momento del embotellado."
+      },
+      "correct_answer_letter": "C",
+      "correct_answer_text": "La congelación separa agua físicamente, mientras Botrytis perfora la piel y modifica compuestos de la uva.",
+      "source_support": {
+        "source_ids": [
+          "5-5_8_white_and_sweet_winemaking"
+        ],
+        "source_files": [
+          "knowledge/official-wset/study-guide/wset_markdown/seccion_5_section_2_factors_affecting_the_style_quality_and_price_of_w/5-5_8_white_and_sweet_winemaking.md"
+        ],
+        "support_rationale": "Las fuentes locales sustentan el mecanismo, el resultado de estilo y el contraste diagnóstico evaluado."
+      },
+      "enrichment": {
+        "causal_chain_candidate": {
+          "candidate_id": "CC_CAND_ICEWINE_VS_BOTRYTIS",
+          "cause": "Dos mecanismos diferentes reducen la proporción de agua respecto de los solutos.",
+          "mechanism": "El hielo retiene agua en un caso; el hongo causa evaporación y cambios metabólicos en el otro.",
+          "effect": "Ambos concentran, pero Botrytis aporta un carácter aromático y químico propio."
+        },
+        "feedback_profile": {
+          "correct_rationale": "Dos mecanismos diferentes reducen la proporción de agua respecto de los solutos. El hielo retiene agua en un caso; el hongo causa evaporación y cambios metabólicos en el otro. Por ello, ambos concentran, pero Botrytis aporta un carácter aromático y químico propio.",
+          "distractor_rationales": {
+            "A": "No explica el mecanismo clave: El hielo retiene agua en un caso; el hongo causa evaporación y cambios metabólicos en el otro.",
+            "B": "No explica el mecanismo clave: El hielo retiene agua en un caso; el hongo causa evaporación y cambios metabólicos en el otro.",
+            "C": "Es la relación causal correcta.",
+            "D": "No explica el mecanismo clave: El hielo retiene agua en un caso; el hongo causa evaporación y cambios metabólicos en el otro."
+          },
+          "remediation_recommendation": "Reconstruya la cadena de icewine vs botrytis como causa, mecanismo y efecto."
+        },
+        "micro_drill_candidate": {
+          "prompt": "Micro-drill: ¿qué efecto sigue a este mecanismo: El hielo retiene agua en un caso; el hongo causa evaporación y cambios metabólicos en el otro.?",
+          "answer": "Ambos concentran, pero Botrytis aporta un carácter aromático y químico propio."
+        },
+        "misconception_linkage_candidate": {
+          "misconception_id": "MC_ICEWINE_NOBLE_01",
+          "target_error": "Tratar Icewine y vino botritizado como el mismo proceso."
+        }
+      },
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "official_wset_question": false,
+        "training_item_only": true,
+        "uses_llm": false,
+        "uses_api": false,
+        "uses_embeddings": false,
+        "uses_vector_db": false,
+        "cloud_services_active": false
+      }
+    },
+    {
+      "question_id": "861",
+      "question_text": "Si la bodega prensa uvas completamente congeladas para Icewine, ¿qué consecuencia productiva explica mejor su precio elevado?",
+      "question_type": "theory",
+      "expected_topics": [
+        "RA1",
+        "icewine_press_yield"
+      ],
+      "expected_causal_links": [
+        "El agua de las bayas está inmovilizada como hielo. -> La prensa libera sobre todo la fracción líquida más concentrada. -> El bajo rendimiento y la cosecha arriesgada elevan el coste por botella."
+      ],
+      "expected_keywords": [
+        "Icewine",
+        "prensado",
+        "rendimiento",
+        "coste"
+      ],
+      "expected_reasoning_type": "cause_effect",
+      "difficulty": "distinction",
+      "source_type": "SBA gap closure | manually curated from local official study guide",
+      "safe_for_examiner": false,
+      "options": {
+        "A": "Se obtiene más mosto porque los cristales rompen todas las paredes celulares.",
+        "B": "El alcohol final sube sin necesidad de fermentación.",
+        "C": "El vino puede embotellarse sin clarificación ni estabilización.",
+        "D": "Se extrae una fracción pequeña de mosto concentrado por kilogramo de uva."
+      },
+      "correct_answer_letter": "D",
+      "correct_answer_text": "Se extrae una fracción pequeña de mosto concentrado por kilogramo de uva.",
+      "source_support": {
+        "source_ids": [
+          "5-5_8_white_and_sweet_winemaking"
+        ],
+        "source_files": [
+          "knowledge/official-wset/study-guide/wset_markdown/seccion_5_section_2_factors_affecting_the_style_quality_and_price_of_w/5-5_8_white_and_sweet_winemaking.md"
+        ],
+        "support_rationale": "Las fuentes locales sustentan el mecanismo, el resultado de estilo y el contraste diagnóstico evaluado."
+      },
+      "enrichment": {
+        "causal_chain_candidate": {
+          "candidate_id": "CC_CAND_ICEWINE_PRESS_YIELD",
+          "cause": "El agua de las bayas está inmovilizada como hielo.",
+          "mechanism": "La prensa libera sobre todo la fracción líquida más concentrada.",
+          "effect": "El bajo rendimiento y la cosecha arriesgada elevan el coste por botella."
+        },
+        "feedback_profile": {
+          "correct_rationale": "El agua de las bayas está inmovilizada como hielo. La prensa libera sobre todo la fracción líquida más concentrada. Por ello, el bajo rendimiento y la cosecha arriesgada elevan el coste por botella.",
+          "distractor_rationales": {
+            "A": "No explica el mecanismo clave: La prensa libera sobre todo la fracción líquida más concentrada.",
+            "B": "No explica el mecanismo clave: La prensa libera sobre todo la fracción líquida más concentrada.",
+            "C": "No explica el mecanismo clave: La prensa libera sobre todo la fracción líquida más concentrada.",
+            "D": "Es la relación causal correcta."
+          },
+          "remediation_recommendation": "Reconstruya la cadena de icewine press yield como causa, mecanismo y efecto."
+        },
+        "micro_drill_candidate": {
+          "prompt": "Micro-drill: ¿qué efecto sigue a este mecanismo: La prensa libera sobre todo la fracción líquida más concentrada.?",
+          "answer": "El bajo rendimiento y la cosecha arriesgada elevan el coste por botella."
+        },
+        "misconception_linkage_candidate": {
+          "misconception_id": "MC_ICEWINE_RESIDUAL_02",
+          "target_error": "Asumir que congelar aumenta el rendimiento."
+        }
+      },
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "official_wset_question": false,
+        "training_item_only": true,
+        "uses_llm": false,
+        "uses_api": false,
+        "uses_embeddings": false,
+        "uses_vector_db": false,
+        "cloud_services_active": false
+      }
+    },
+    {
+      "question_id": "862",
+      "question_text": "Un Icewine canadiense conserva acidez alta pese a su intenso dulzor. ¿Qué factor explica mejor ese equilibrio?",
+      "question_type": "theory",
+      "expected_topics": [
+        "RA2",
+        "canada_icewine_acidity"
+      ],
+      "expected_causal_links": [
+        "La maduración ocurre en un entorno fresco y la fruta se cosecha muy tarde. -> La crioconcentración aumenta azúcar y sabor mientras permanece una base ácida importante. -> El vino puede ser muy dulce sin resultar necesariamente pesado o plano."
+      ],
+      "expected_keywords": [
+        "Canadá",
+        "Icewine",
+        "acidez",
+        "equilibrio"
+      ],
+      "expected_reasoning_type": "cause_effect",
+      "difficulty": "intermediate",
+      "source_type": "SBA gap closure | manually curated from local official study guide",
+      "safe_for_examiner": false,
+      "options": {
+        "A": "La fruta se cultiva en clima frío y se concentra sin eliminar toda la acidez natural.",
+        "B": "La congelación añade ácido tartárico nuevo a las bayas.",
+        "C": "La elevada azúcar residual hace que la acidez deje de ser perceptible.",
+        "D": "La fermentación maloláctica siempre aumenta la acidez."
+      },
+      "correct_answer_letter": "A",
+      "correct_answer_text": "La fruta se cultiva en clima frío y se concentra sin eliminar toda la acidez natural.",
+      "source_support": {
+        "source_ids": [
+          "6-24_35_canada",
+          "5-5_8_white_and_sweet_winemaking"
+        ],
+        "source_files": [
+          "knowledge/official-wset/study-guide/wset_markdown/seccion_6_section_3_still_wines_of_the_world/6-24_35_canada.md",
+          "knowledge/official-wset/study-guide/wset_markdown/seccion_5_section_2_factors_affecting_the_style_quality_and_price_of_w/5-5_8_white_and_sweet_winemaking.md"
+        ],
+        "support_rationale": "Las fuentes locales sustentan el mecanismo, el resultado de estilo y el contraste diagnóstico evaluado."
+      },
+      "enrichment": {
+        "causal_chain_candidate": {
+          "candidate_id": "CC_CAND_CANADA_ICEWINE_ACIDITY",
+          "cause": "La maduración ocurre en un entorno fresco y la fruta se cosecha muy tarde.",
+          "mechanism": "La crioconcentración aumenta azúcar y sabor mientras permanece una base ácida importante.",
+          "effect": "El vino puede ser muy dulce sin resultar necesariamente pesado o plano."
+        },
+        "feedback_profile": {
+          "correct_rationale": "La maduración ocurre en un entorno fresco y la fruta se cosecha muy tarde. La crioconcentración aumenta azúcar y sabor mientras permanece una base ácida importante. Por ello, el vino puede ser muy dulce sin resultar necesariamente pesado o plano.",
+          "distractor_rationales": {
+            "A": "Es la relación causal correcta.",
+            "B": "No explica el mecanismo clave: La crioconcentración aumenta azúcar y sabor mientras permanece una base ácida importante.",
+            "C": "No explica el mecanismo clave: La crioconcentración aumenta azúcar y sabor mientras permanece una base ácida importante.",
+            "D": "No explica el mecanismo clave: La crioconcentración aumenta azúcar y sabor mientras permanece una base ácida importante."
+          },
+          "remediation_recommendation": "Reconstruya la cadena de canada icewine acidity como causa, mecanismo y efecto."
+        },
+        "micro_drill_candidate": {
+          "prompt": "Micro-drill: ¿qué efecto sigue a este mecanismo: La crioconcentración aumenta azúcar y sabor mientras permanece una base ácida importante.?",
+          "answer": "El vino puede ser muy dulce sin resultar necesariamente pesado o plano."
+        },
+        "misconception_linkage_candidate": {
+          "misconception_id": "MC_ACIDITY_02",
+          "target_error": "Creer que un vino muy dulce no puede tener acidez alta."
+        }
+      },
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "official_wset_question": false,
+        "training_item_only": true,
+        "uses_llm": false,
+        "uses_api": false,
+        "uses_embeddings": false,
+        "uses_vector_db": false,
+        "cloud_services_active": false
+      }
+    },
+    {
+      "question_id": "863",
+      "question_text": "Si un invierno canadiense no alcanza a tiempo temperaturas suficientemente bajas, ¿qué consecuencia es más probable para un productor de Icewine?",
+      "question_type": "theory",
+      "expected_topics": [
+        "RA2",
+        "canada_icewine_vintage"
+      ],
+      "expected_causal_links": [
+        "La producción depende de una helada natural mientras la fruta sigue sana en la vid. -> Sin frío suficiente no se separa agua como hielo durante el prensado. -> La disponibilidad y el volumen varían mucho entre añadas."
+      ],
+      "expected_keywords": [
+        "Canadá",
+        "Icewine",
+        "helada",
+        "variación de añada"
+      ],
+      "expected_reasoning_type": "cause_effect",
+      "difficulty": "intermediate",
+      "source_type": "SBA gap closure | manually curated from local official study guide",
+      "safe_for_examiner": false,
+      "options": {
+        "A": "Puede congelar el vino terminado y venderlo con la misma indicación.",
+        "B": "Puede no reunir condiciones para cosechar fruta congelada y perder parte o toda la producción prevista.",
+        "C": "La falta de helada favorece automáticamente una concentración mayor.",
+        "D": "Puede sustituir la congelación por flor sin cambiar el estilo."
+      },
+      "correct_answer_letter": "B",
+      "correct_answer_text": "Puede no reunir condiciones para cosechar fruta congelada y perder parte o toda la producción prevista.",
+      "source_support": {
+        "source_ids": [
+          "6-24_35_canada"
+        ],
+        "source_files": [
+          "knowledge/official-wset/study-guide/wset_markdown/seccion_6_section_3_still_wines_of_the_world/6-24_35_canada.md"
+        ],
+        "support_rationale": "Las fuentes locales sustentan el mecanismo, el resultado de estilo y el contraste diagnóstico evaluado."
+      },
+      "enrichment": {
+        "causal_chain_candidate": {
+          "candidate_id": "CC_CAND_CANADA_ICEWINE_VINTAGE",
+          "cause": "La producción depende de una helada natural mientras la fruta sigue sana en la vid.",
+          "mechanism": "Sin frío suficiente no se separa agua como hielo durante el prensado.",
+          "effect": "La disponibilidad y el volumen varían mucho entre añadas."
+        },
+        "feedback_profile": {
+          "correct_rationale": "La producción depende de una helada natural mientras la fruta sigue sana en la vid. Sin frío suficiente no se separa agua como hielo durante el prensado. Por ello, la disponibilidad y el volumen varían mucho entre añadas.",
+          "distractor_rationales": {
+            "A": "No explica el mecanismo clave: Sin frío suficiente no se separa agua como hielo durante el prensado.",
+            "B": "Es la relación causal correcta.",
+            "C": "No explica el mecanismo clave: Sin frío suficiente no se separa agua como hielo durante el prensado.",
+            "D": "No explica el mecanismo clave: Sin frío suficiente no se separa agua como hielo durante el prensado."
+          },
+          "remediation_recommendation": "Reconstruya la cadena de canada icewine vintage como causa, mecanismo y efecto."
+        },
+        "micro_drill_candidate": {
+          "prompt": "Micro-drill: ¿qué efecto sigue a este mecanismo: Sin frío suficiente no se separa agua como hielo durante el prensado.?",
+          "answer": "La disponibilidad y el volumen varían mucho entre añadas."
+        },
+        "misconception_linkage_candidate": {
+          "misconception_id": "MC_ICEWINE_NOBLE_01",
+          "target_error": "Ignorar la dependencia de una congelación natural."
+        }
+      },
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "official_wset_question": false,
+        "training_item_only": true,
+        "uses_llm": false,
+        "uses_api": false,
+        "uses_embeddings": false,
+        "uses_vector_db": false,
+        "cloud_services_active": false
+      }
+    },
+    {
+      "question_id": "864",
+      "question_text": "Si el productor cosecha las uvas de Icewine antes de que estén congeladas, ¿qué resultado es más probable?",
+      "question_type": "theory",
+      "expected_topics": [
+        "RA2",
+        "canada_icewine_harvest"
+      ],
+      "expected_causal_links": [
+        "La separación de agua requiere cristales de hielo presentes al prensar. -> La fruta no congelada libera agua y solutos juntos. -> Se pierde el mecanismo que distingue la concentración del Icewine."
+      ],
+      "expected_keywords": [
+        "Canadá",
+        "Icewine",
+        "cosecha",
+        "crioconcentración"
+      ],
+      "expected_reasoning_type": "cause_effect",
+      "difficulty": "distinction",
+      "source_type": "SBA gap closure | manually curated from local official study guide",
+      "safe_for_examiner": false,
+      "options": {
+        "A": "El mosto será más concentrado porque las bayas estarán más blandas.",
+        "B": "La fermentación se detendrá automáticamente por el frío residual.",
+        "C": "El prensado no producirá la misma crioconcentración y el mosto será menos concentrado.",
+        "D": "Aparecerán aromas botritizados aunque no haya Botrytis."
+      },
+      "correct_answer_letter": "C",
+      "correct_answer_text": "El prensado no producirá la misma crioconcentración y el mosto será menos concentrado.",
+      "source_support": {
+        "source_ids": [
+          "6-24_35_canada",
+          "5-5_8_white_and_sweet_winemaking"
+        ],
+        "source_files": [
+          "knowledge/official-wset/study-guide/wset_markdown/seccion_6_section_3_still_wines_of_the_world/6-24_35_canada.md",
+          "knowledge/official-wset/study-guide/wset_markdown/seccion_5_section_2_factors_affecting_the_style_quality_and_price_of_w/5-5_8_white_and_sweet_winemaking.md"
+        ],
+        "support_rationale": "Las fuentes locales sustentan el mecanismo, el resultado de estilo y el contraste diagnóstico evaluado."
+      },
+      "enrichment": {
+        "causal_chain_candidate": {
+          "candidate_id": "CC_CAND_CANADA_ICEWINE_HARVEST",
+          "cause": "La separación de agua requiere cristales de hielo presentes al prensar.",
+          "mechanism": "La fruta no congelada libera agua y solutos juntos.",
+          "effect": "Se pierde el mecanismo que distingue la concentración del Icewine."
+        },
+        "feedback_profile": {
+          "correct_rationale": "La separación de agua requiere cristales de hielo presentes al prensar. La fruta no congelada libera agua y solutos juntos. Por ello, se pierde el mecanismo que distingue la concentración del Icewine.",
+          "distractor_rationales": {
+            "A": "No explica el mecanismo clave: La fruta no congelada libera agua y solutos juntos.",
+            "B": "No explica el mecanismo clave: La fruta no congelada libera agua y solutos juntos.",
+            "C": "Es la relación causal correcta.",
+            "D": "No explica el mecanismo clave: La fruta no congelada libera agua y solutos juntos."
+          },
+          "remediation_recommendation": "Reconstruya la cadena de canada icewine harvest como causa, mecanismo y efecto."
+        },
+        "micro_drill_candidate": {
+          "prompt": "Micro-drill: ¿qué efecto sigue a este mecanismo: La fruta no congelada libera agua y solutos juntos.?",
+          "answer": "Se pierde el mecanismo que distingue la concentración del Icewine."
+        },
+        "misconception_linkage_candidate": {
+          "misconception_id": "MC_ICEWINE_RESIDUAL_02",
+          "target_error": "Pensar que basta una vendimia tardía sin congelación."
+        }
+      },
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "official_wset_question": false,
+        "training_item_only": true,
+        "uses_llm": false,
+        "uses_api": false,
+        "uses_embeddings": false,
+        "uses_vector_db": false,
+        "cloud_services_active": false
+      }
+    },
+    {
+      "question_id": "865",
+      "question_text": "Dos productores canadienses elaboran Icewine, uno con Riesling y otro con Vidal. ¿Qué factor explica mejor que ambos puedan equilibrar azúcar intensa?",
+      "question_type": "theory",
+      "expected_topics": [
+        "RA2",
+        "canada_icewine_variety_style"
+      ],
+      "expected_causal_links": [
+        "Las variedades aptas mantienen estructura ácida al madurar. -> La crioconcentración intensifica el mosto y exige una base estructural suficiente. -> El dulzor puede quedar equilibrado por acidez marcada y sabor concentrado."
+      ],
+      "expected_keywords": [
+        "Canadá",
+        "Riesling",
+        "Vidal",
+        "Icewine",
+        "acidez"
+      ],
+      "expected_reasoning_type": "cause_effect",
+      "difficulty": "intermediate",
+      "source_type": "SBA gap closure | manually curated from local official study guide",
+      "safe_for_examiner": false,
+      "options": {
+        "A": "El nivel de azúcar elimina cualquier diferencia varietal.",
+        "B": "La congelación produce taninos altos en ambas variedades.",
+        "C": "Ambos deben criarse bajo flor para conservar frescura.",
+        "D": "La acidez natural de la fruta y su conservación durante la concentración sostienen el equilibrio."
+      },
+      "correct_answer_letter": "D",
+      "correct_answer_text": "La acidez natural de la fruta y su conservación durante la concentración sostienen el equilibrio.",
+      "source_support": {
+        "source_ids": [
+          "6-24_35_canada"
+        ],
+        "source_files": [
+          "knowledge/official-wset/study-guide/wset_markdown/seccion_6_section_3_still_wines_of_the_world/6-24_35_canada.md"
+        ],
+        "support_rationale": "Las fuentes locales sustentan el mecanismo, el resultado de estilo y el contraste diagnóstico evaluado."
+      },
+      "enrichment": {
+        "causal_chain_candidate": {
+          "candidate_id": "CC_CAND_CANADA_ICEWINE_VARIETY_STYLE",
+          "cause": "Las variedades aptas mantienen estructura ácida al madurar.",
+          "mechanism": "La crioconcentración intensifica el mosto y exige una base estructural suficiente.",
+          "effect": "El dulzor puede quedar equilibrado por acidez marcada y sabor concentrado."
+        },
+        "feedback_profile": {
+          "correct_rationale": "Las variedades aptas mantienen estructura ácida al madurar. La crioconcentración intensifica el mosto y exige una base estructural suficiente. Por ello, el dulzor puede quedar equilibrado por acidez marcada y sabor concentrado.",
+          "distractor_rationales": {
+            "A": "No explica el mecanismo clave: La crioconcentración intensifica el mosto y exige una base estructural suficiente.",
+            "B": "No explica el mecanismo clave: La crioconcentración intensifica el mosto y exige una base estructural suficiente.",
+            "C": "No explica el mecanismo clave: La crioconcentración intensifica el mosto y exige una base estructural suficiente.",
+            "D": "Es la relación causal correcta."
+          },
+          "remediation_recommendation": "Reconstruya la cadena de canada icewine variety style como causa, mecanismo y efecto."
+        },
+        "micro_drill_candidate": {
+          "prompt": "Micro-drill: ¿qué efecto sigue a este mecanismo: La crioconcentración intensifica el mosto y exige una base estructural suficiente.?",
+          "answer": "El dulzor puede quedar equilibrado por acidez marcada y sabor concentrado."
+        },
+        "misconception_linkage_candidate": {
+          "misconception_id": "MC_ACIDITY_01",
+          "target_error": "Separar dulzor y acidez como si no interactuaran."
+        }
+      },
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "official_wset_question": false,
+        "training_item_only": true,
+        "uses_llm": false,
+        "uses_api": false,
+        "uses_embeddings": false,
+        "uses_vector_db": false,
+        "cloud_services_active": false
+      }
+    },
+    {
+      "question_id": "866",
+      "question_text": "¿Qué factor explica mejor que un Icewine canadiense suela tener un coste de producción alto?",
+      "question_type": "theory",
+      "expected_topics": [
+        "RA2",
+        "canada_icewine_cost"
+      ],
+      "expected_causal_links": [
+        "La fruta queda en la vid hasta el invierno y se prensa congelada. -> Aumentan la exposición a pérdidas, la necesidad de mano de obra y la proporción de sólidos retenidos. -> Pocas botellas absorben costes altos de viticultura y elaboración."
+      ],
+      "expected_keywords": [
+        "Canadá",
+        "Icewine",
+        "coste",
+        "bajo rendimiento"
+      ],
+      "expected_reasoning_type": "cause_effect",
+      "difficulty": "intermediate",
+      "source_type": "SBA gap closure | manually curated from local official study guide",
+      "safe_for_examiner": false,
+      "options": {
+        "A": "Vendimia arriesgada y tardía, selección exigente y rendimiento de prensado muy bajo.",
+        "B": "Fermentación rápida a alta temperatura y gran rendimiento por hectárea.",
+        "C": "Ausencia de pérdidas porque la fruta permanece protegida por el hielo.",
+        "D": "Uso obligatorio de roble nuevo durante décadas."
+      },
+      "correct_answer_letter": "A",
+      "correct_answer_text": "Vendimia arriesgada y tardía, selección exigente y rendimiento de prensado muy bajo.",
+      "source_support": {
+        "source_ids": [
+          "6-24_35_canada",
+          "5-5_8_white_and_sweet_winemaking"
+        ],
+        "source_files": [
+          "knowledge/official-wset/study-guide/wset_markdown/seccion_6_section_3_still_wines_of_the_world/6-24_35_canada.md",
+          "knowledge/official-wset/study-guide/wset_markdown/seccion_5_section_2_factors_affecting_the_style_quality_and_price_of_w/5-5_8_white_and_sweet_winemaking.md"
+        ],
+        "support_rationale": "Las fuentes locales sustentan el mecanismo, el resultado de estilo y el contraste diagnóstico evaluado."
+      },
+      "enrichment": {
+        "causal_chain_candidate": {
+          "candidate_id": "CC_CAND_CANADA_ICEWINE_COST",
+          "cause": "La fruta queda en la vid hasta el invierno y se prensa congelada.",
+          "mechanism": "Aumentan la exposición a pérdidas, la necesidad de mano de obra y la proporción de sólidos retenidos.",
+          "effect": "Pocas botellas absorben costes altos de viticultura y elaboración."
+        },
+        "feedback_profile": {
+          "correct_rationale": "La fruta queda en la vid hasta el invierno y se prensa congelada. Aumentan la exposición a pérdidas, la necesidad de mano de obra y la proporción de sólidos retenidos. Por ello, pocas botellas absorben costes altos de viticultura y elaboración.",
+          "distractor_rationales": {
+            "A": "Es la relación causal correcta.",
+            "B": "No explica el mecanismo clave: Aumentan la exposición a pérdidas, la necesidad de mano de obra y la proporción de sólidos retenidos.",
+            "C": "No explica el mecanismo clave: Aumentan la exposición a pérdidas, la necesidad de mano de obra y la proporción de sólidos retenidos.",
+            "D": "No explica el mecanismo clave: Aumentan la exposición a pérdidas, la necesidad de mano de obra y la proporción de sólidos retenidos."
+          },
+          "remediation_recommendation": "Reconstruya la cadena de canada icewine cost como causa, mecanismo y efecto."
+        },
+        "micro_drill_candidate": {
+          "prompt": "Micro-drill: ¿qué efecto sigue a este mecanismo: Aumentan la exposición a pérdidas, la necesidad de mano de obra y la proporción de sólidos retenidos.?",
+          "answer": "Pocas botellas absorben costes altos de viticultura y elaboración."
+        },
+        "misconception_linkage_candidate": {
+          "misconception_id": "MC_ICEWINE_RESIDUAL_02",
+          "target_error": "Atribuir el precio solo al dulzor o al marketing."
+        }
+      },
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "official_wset_question": false,
+        "training_item_only": true,
+        "uses_llm": false,
+        "uses_api": false,
+        "uses_embeddings": false,
+        "uses_vector_db": false,
+        "cloud_services_active": false
+      }
+    },
+    {
+      "question_id": "867",
+      "question_text": "Un lote de uvas para Icewine muestra algo de Botrytis, pero alcanzó la concentración al congelarse. ¿Qué interpretación explica mejor el estilo?",
+      "question_type": "theory",
+      "expected_topics": [
+        "RA2",
+        "canada_icewine_botrytis_incidental"
+      ],
+      "expected_causal_links": [
+        "La fruta puede sufrir más de una influencia antes de cosecharse. -> La helada separa agua como hielo aunque existan bayas afectadas por Botrytis. -> El carácter principal procede de la crioconcentración, con posibles matices adicionales."
+      ],
+      "expected_keywords": [
+        "Canadá",
+        "Icewine",
+        "Botrytis",
+        "mecanismo"
+      ],
+      "expected_reasoning_type": "cause_effect",
+      "difficulty": "distinction",
+      "source_type": "SBA gap closure | manually curated from local official study guide",
+      "safe_for_examiner": false,
+      "options": {
+        "A": "La presencia de Botrytis convierte automáticamente el vino en Sauternes.",
+        "B": "La congelación sigue siendo el mecanismo definitorio; Botrytis puede ser incidental y modificar el perfil.",
+        "C": "La congelación deja de tener efecto cuando aparece cualquier hongo.",
+        "D": "El vino solo puede ser seco porque los dos mecanismos se neutralizan."
+      },
+      "correct_answer_letter": "B",
+      "correct_answer_text": "La congelación sigue siendo el mecanismo definitorio; Botrytis puede ser incidental y modificar el perfil.",
+      "source_support": {
+        "source_ids": [
+          "6-24_35_canada",
+          "5-5_8_white_and_sweet_winemaking"
+        ],
+        "source_files": [
+          "knowledge/official-wset/study-guide/wset_markdown/seccion_6_section_3_still_wines_of_the_world/6-24_35_canada.md",
+          "knowledge/official-wset/study-guide/wset_markdown/seccion_5_section_2_factors_affecting_the_style_quality_and_price_of_w/5-5_8_white_and_sweet_winemaking.md"
+        ],
+        "support_rationale": "Las fuentes locales sustentan el mecanismo, el resultado de estilo y el contraste diagnóstico evaluado."
+      },
+      "enrichment": {
+        "causal_chain_candidate": {
+          "candidate_id": "CC_CAND_CANADA_ICEWINE_BOTRYTIS_INCIDENTAL",
+          "cause": "La fruta puede sufrir más de una influencia antes de cosecharse.",
+          "mechanism": "La helada separa agua como hielo aunque existan bayas afectadas por Botrytis.",
+          "effect": "El carácter principal procede de la crioconcentración, con posibles matices adicionales."
+        },
+        "feedback_profile": {
+          "correct_rationale": "La fruta puede sufrir más de una influencia antes de cosecharse. La helada separa agua como hielo aunque existan bayas afectadas por Botrytis. Por ello, el carácter principal procede de la crioconcentración, con posibles matices adicionales.",
+          "distractor_rationales": {
+            "A": "No explica el mecanismo clave: La helada separa agua como hielo aunque existan bayas afectadas por Botrytis.",
+            "B": "Es la relación causal correcta.",
+            "C": "No explica el mecanismo clave: La helada separa agua como hielo aunque existan bayas afectadas por Botrytis.",
+            "D": "No explica el mecanismo clave: La helada separa agua como hielo aunque existan bayas afectadas por Botrytis."
+          },
+          "remediation_recommendation": "Reconstruya la cadena de canada icewine botrytis incidental como causa, mecanismo y efecto."
+        },
+        "micro_drill_candidate": {
+          "prompt": "Micro-drill: ¿qué efecto sigue a este mecanismo: La helada separa agua como hielo aunque existan bayas afectadas por Botrytis.?",
+          "answer": "El carácter principal procede de la crioconcentración, con posibles matices adicionales."
+        },
+        "misconception_linkage_candidate": {
+          "misconception_id": "MC_ICEWINE_NOBLE_01",
+          "target_error": "Creer que Botrytis es obligatorio o redefine por completo Icewine."
+        }
+      },
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "official_wset_question": false,
+        "training_item_only": true,
+        "uses_llm": false,
+        "uses_api": false,
+        "uses_embeddings": false,
+        "uses_vector_db": false,
+        "cloud_services_active": false
+      }
+    },
+    {
+      "question_id": "868",
+      "question_text": "¿Qué factor explica mejor que un Eiswein alemán pueda mostrar dulzor intenso y acidez muy alta?",
+      "question_type": "theory",
+      "expected_topics": [
+        "RA2",
+        "germany_eiswein_acidity"
+      ],
+      "expected_causal_links": [
+        "La fruta madura en una región de clima fresco y permanece sana hasta la helada. -> El agua congelada se separa en la prensa y concentra los componentes presentes. -> Azúcar, sabor y acidez intensa pueden coexistir en el vino."
+      ],
+      "expected_keywords": [
+        "Alemania",
+        "Eiswein",
+        "acidez",
+        "congelación"
+      ],
+      "expected_reasoning_type": "cause_effect",
+      "difficulty": "intermediate",
+      "source_type": "SBA gap closure | manually curated from local official study guide",
+      "safe_for_examiner": false,
+      "options": {
+        "A": "La helada convierte azúcar en ácido málico.",
+        "B": "La legislación obliga a acidificar todos los Eiswein.",
+        "C": "La uva conserva acidez en un clima fresco y la congelación concentra el mosto sin requerir sobremaduración botritizada.",
+        "D": "La crianza oxidativa incrementa la acidez total."
+      },
+      "correct_answer_letter": "C",
+      "correct_answer_text": "La uva conserva acidez en un clima fresco y la congelación concentra el mosto sin requerir sobremaduración botritizada.",
+      "source_support": {
+        "source_ids": [
+          "6-11_22_germany",
+          "5-5_8_white_and_sweet_winemaking"
+        ],
+        "source_files": [
+          "knowledge/official-wset/study-guide/wset_markdown/seccion_6_section_3_still_wines_of_the_world/6-11_22_germany.md",
+          "knowledge/official-wset/study-guide/wset_markdown/seccion_5_section_2_factors_affecting_the_style_quality_and_price_of_w/5-5_8_white_and_sweet_winemaking.md"
+        ],
+        "support_rationale": "Las fuentes locales sustentan el mecanismo, el resultado de estilo y el contraste diagnóstico evaluado."
+      },
+      "enrichment": {
+        "causal_chain_candidate": {
+          "candidate_id": "CC_CAND_GERMANY_EISWEIN_ACIDITY",
+          "cause": "La fruta madura en una región de clima fresco y permanece sana hasta la helada.",
+          "mechanism": "El agua congelada se separa en la prensa y concentra los componentes presentes.",
+          "effect": "Azúcar, sabor y acidez intensa pueden coexistir en el vino."
+        },
+        "feedback_profile": {
+          "correct_rationale": "La fruta madura en una región de clima fresco y permanece sana hasta la helada. El agua congelada se separa en la prensa y concentra los componentes presentes. Por ello, azúcar, sabor y acidez intensa pueden coexistir en el vino.",
+          "distractor_rationales": {
+            "A": "No explica el mecanismo clave: El agua congelada se separa en la prensa y concentra los componentes presentes.",
+            "B": "No explica el mecanismo clave: El agua congelada se separa en la prensa y concentra los componentes presentes.",
+            "C": "Es la relación causal correcta.",
+            "D": "No explica el mecanismo clave: El agua congelada se separa en la prensa y concentra los componentes presentes."
+          },
+          "remediation_recommendation": "Reconstruya la cadena de germany eiswein acidity como causa, mecanismo y efecto."
+        },
+        "micro_drill_candidate": {
+          "prompt": "Micro-drill: ¿qué efecto sigue a este mecanismo: El agua congelada se separa en la prensa y concentra los componentes presentes.?",
+          "answer": "Azúcar, sabor y acidez intensa pueden coexistir en el vino."
+        },
+        "misconception_linkage_candidate": {
+          "misconception_id": "MC_ACIDITY_02",
+          "target_error": "Suponer que la concentración dulce elimina la acidez."
+        }
+      },
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "official_wset_question": false,
+        "training_item_only": true,
+        "uses_llm": false,
+        "uses_api": false,
+        "uses_embeddings": false,
+        "uses_vector_db": false,
+        "cloud_services_active": false
+      }
+    },
+    {
+      "question_id": "869",
+      "question_text": "Al comparar Eiswein y Trockenbeerenauslese, ¿qué opción explica mejor la diferencia de producción?",
+      "question_type": "theory",
+      "expected_topics": [
+        "RA2",
+        "germany_eiswein_vs_tba"
+      ],
+      "expected_causal_links": [
+        "Los estilos parten de mecanismos distintos de concentración. -> Uno retiene agua como hielo; el otro pierde agua por bayas intensamente botritizadas. -> Pueden compartir dulzor elevado, pero no la misma causa ni el mismo perfil."
+      ],
+      "expected_keywords": [
+        "Alemania",
+        "Eiswein",
+        "TBA",
+        "Botrytis"
+      ],
+      "expected_reasoning_type": "cause_effect",
+      "difficulty": "intermediate",
+      "source_type": "SBA gap closure | manually curated from local official study guide",
+      "safe_for_examiner": false,
+      "options": {
+        "A": "Ambos dependen exclusivamente de secado en esteras.",
+        "B": "Eiswein se fortifica durante la fermentación y TBA después.",
+        "C": "TBA se concentra por hielo y Eiswein por flor.",
+        "D": "Eiswein depende de uvas congeladas sanas o no necesariamente botritizadas; TBA depende de bayas muy afectadas por podredumbre noble."
+      },
+      "correct_answer_letter": "D",
+      "correct_answer_text": "Eiswein depende de uvas congeladas sanas o no necesariamente botritizadas; TBA depende de bayas muy afectadas por podredumbre noble.",
+      "source_support": {
+        "source_ids": [
+          "6-11_22_germany",
+          "5-5_8_white_and_sweet_winemaking"
+        ],
+        "source_files": [
+          "knowledge/official-wset/study-guide/wset_markdown/seccion_6_section_3_still_wines_of_the_world/6-11_22_germany.md",
+          "knowledge/official-wset/study-guide/wset_markdown/seccion_5_section_2_factors_affecting_the_style_quality_and_price_of_w/5-5_8_white_and_sweet_winemaking.md"
+        ],
+        "support_rationale": "Las fuentes locales sustentan el mecanismo, el resultado de estilo y el contraste diagnóstico evaluado."
+      },
+      "enrichment": {
+        "causal_chain_candidate": {
+          "candidate_id": "CC_CAND_GERMANY_EISWEIN_VS_TBA",
+          "cause": "Los estilos parten de mecanismos distintos de concentración.",
+          "mechanism": "Uno retiene agua como hielo; el otro pierde agua por bayas intensamente botritizadas.",
+          "effect": "Pueden compartir dulzor elevado, pero no la misma causa ni el mismo perfil."
+        },
+        "feedback_profile": {
+          "correct_rationale": "Los estilos parten de mecanismos distintos de concentración. Uno retiene agua como hielo; el otro pierde agua por bayas intensamente botritizadas. Por ello, pueden compartir dulzor elevado, pero no la misma causa ni el mismo perfil.",
+          "distractor_rationales": {
+            "A": "No explica el mecanismo clave: Uno retiene agua como hielo; el otro pierde agua por bayas intensamente botritizadas.",
+            "B": "No explica el mecanismo clave: Uno retiene agua como hielo; el otro pierde agua por bayas intensamente botritizadas.",
+            "C": "No explica el mecanismo clave: Uno retiene agua como hielo; el otro pierde agua por bayas intensamente botritizadas.",
+            "D": "Es la relación causal correcta."
+          },
+          "remediation_recommendation": "Reconstruya la cadena de germany eiswein vs tba como causa, mecanismo y efecto."
+        },
+        "micro_drill_candidate": {
+          "prompt": "Micro-drill: ¿qué efecto sigue a este mecanismo: Uno retiene agua como hielo; el otro pierde agua por bayas intensamente botritizadas.?",
+          "answer": "Pueden compartir dulzor elevado, pero no la misma causa ni el mismo perfil."
+        },
+        "misconception_linkage_candidate": {
+          "misconception_id": "MC_ICEWINE_NOBLE_01",
+          "target_error": "Confundir Eiswein con TBA."
+        }
+      },
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "official_wset_question": false,
+        "training_item_only": true,
+        "uses_llm": false,
+        "uses_api": false,
+        "uses_embeddings": false,
+        "uses_vector_db": false,
+        "cloud_services_active": false
+      }
+    },
+    {
+      "question_id": "870",
+      "question_text": "Un mosto de Icewine tiene concentración de azúcar muy alta. ¿Qué consecuencia es más probable durante la fermentación?",
+      "question_type": "theory",
+      "expected_topics": [
+        "RA2",
+        "canada_icewine_fermentation"
+      ],
+      "expected_causal_links": [
+        "El mosto contiene una proporción muy alta de azúcar disuelta. -> La presión osmótica y el alcohol creciente dificultan la actividad de la levadura. -> Es probable conservar azúcar residual y requerir control cuidadoso."
+      ],
+      "expected_keywords": [
+        "Icewine",
+        "fermentación",
+        "presión osmótica",
+        "azúcar residual"
+      ],
+      "expected_reasoning_type": "cause_effect",
+      "difficulty": "distinction",
+      "source_type": "SBA gap closure | manually curated from local official study guide",
+      "safe_for_examiner": false,
+      "options": {
+        "A": "La levadura trabaja bajo fuerte presión osmótica y la fermentación puede ser lenta o detenerse con azúcar residual.",
+        "B": "La alta concentración garantiza una fermentación completa y rápida.",
+        "C": "El mosto no puede producir alcohol porque toda el agua está congelada.",
+        "D": "La fermentación convierte toda la acidez en dióxido de carbono."
+      },
+      "correct_answer_letter": "A",
+      "correct_answer_text": "La levadura trabaja bajo fuerte presión osmótica y la fermentación puede ser lenta o detenerse con azúcar residual.",
+      "source_support": {
+        "source_ids": [
+          "5-5_8_white_and_sweet_winemaking",
+          "6-24_35_canada"
+        ],
+        "source_files": [
+          "knowledge/official-wset/study-guide/wset_markdown/seccion_5_section_2_factors_affecting_the_style_quality_and_price_of_w/5-5_8_white_and_sweet_winemaking.md",
+          "knowledge/official-wset/study-guide/wset_markdown/seccion_6_section_3_still_wines_of_the_world/6-24_35_canada.md"
+        ],
+        "support_rationale": "Las fuentes locales sustentan el mecanismo, el resultado de estilo y el contraste diagnóstico evaluado."
+      },
+      "enrichment": {
+        "causal_chain_candidate": {
+          "candidate_id": "CC_CAND_CANADA_ICEWINE_FERMENTATION",
+          "cause": "El mosto contiene una proporción muy alta de azúcar disuelta.",
+          "mechanism": "La presión osmótica y el alcohol creciente dificultan la actividad de la levadura.",
+          "effect": "Es probable conservar azúcar residual y requerir control cuidadoso."
+        },
+        "feedback_profile": {
+          "correct_rationale": "El mosto contiene una proporción muy alta de azúcar disuelta. La presión osmótica y el alcohol creciente dificultan la actividad de la levadura. Por ello, es probable conservar azúcar residual y requerir control cuidadoso.",
+          "distractor_rationales": {
+            "A": "Es la relación causal correcta.",
+            "B": "No explica el mecanismo clave: La presión osmótica y el alcohol creciente dificultan la actividad de la levadura.",
+            "C": "No explica el mecanismo clave: La presión osmótica y el alcohol creciente dificultan la actividad de la levadura.",
+            "D": "No explica el mecanismo clave: La presión osmótica y el alcohol creciente dificultan la actividad de la levadura."
+          },
+          "remediation_recommendation": "Reconstruya la cadena de canada icewine fermentation como causa, mecanismo y efecto."
+        },
+        "micro_drill_candidate": {
+          "prompt": "Micro-drill: ¿qué efecto sigue a este mecanismo: La presión osmótica y el alcohol creciente dificultan la actividad de la levadura.?",
+          "answer": "Es probable conservar azúcar residual y requerir control cuidadoso."
+        },
+        "misconception_linkage_candidate": {
+          "misconception_id": "MC_RESIDUAL_SUGAR_SWEET_01",
+          "target_error": "Pensar que todo azúcar elevado fermenta necesariamente hasta sequedad."
+        }
+      },
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "official_wset_question": false,
+        "training_item_only": true,
+        "uses_llm": false,
+        "uses_api": false,
+        "uses_embeddings": false,
+        "uses_vector_db": false,
+        "cloud_services_active": false
+      }
+    },
+    {
+      "question_id": "871",
+      "question_text": "Si un Icewine combina azúcar residual alta, acidez alta y sabores concentrados, ¿qué resultado sensorial es más probable?",
+      "question_type": "theory",
+      "expected_topics": [
+        "RA2",
+        "canada_icewine_style"
+      ],
+      "expected_causal_links": [
+        "El mosto concentra azúcar, ácidos y compuestos de sabor. -> La fermentación deja azúcar residual mientras la acidez aporta contraste estructural. -> El vino resulta rico e intenso, pero puede conservar equilibrio y longitud."
+      ],
+      "expected_keywords": [
+        "Icewine",
+        "dulzor",
+        "acidez",
+        "cuerpo",
+        "intensidad"
+      ],
+      "expected_reasoning_type": "cause_effect",
+      "difficulty": "intermediate",
+      "source_type": "SBA gap closure | manually curated from local official study guide",
+      "safe_for_examiner": false,
+      "options": {
+        "A": "Un vino seco y ligero porque la acidez neutraliza químicamente el azúcar.",
+        "B": "Un vino dulce, intenso y de cuerpo pleno cuya acidez evita una sensación empalagosa.",
+        "C": "Un vino tánico porque el hielo extrae compuestos de los raspones.",
+        "D": "Un vino neutro porque la congelación elimina los aromas."
+      },
+      "correct_answer_letter": "B",
+      "correct_answer_text": "Un vino dulce, intenso y de cuerpo pleno cuya acidez evita una sensación empalagosa.",
+      "source_support": {
+        "source_ids": [
+          "6-24_35_canada",
+          "5-5_8_white_and_sweet_winemaking"
+        ],
+        "source_files": [
+          "knowledge/official-wset/study-guide/wset_markdown/seccion_6_section_3_still_wines_of_the_world/6-24_35_canada.md",
+          "knowledge/official-wset/study-guide/wset_markdown/seccion_5_section_2_factors_affecting_the_style_quality_and_price_of_w/5-5_8_white_and_sweet_winemaking.md"
+        ],
+        "support_rationale": "Las fuentes locales sustentan el mecanismo, el resultado de estilo y el contraste diagnóstico evaluado."
+      },
+      "enrichment": {
+        "causal_chain_candidate": {
+          "candidate_id": "CC_CAND_CANADA_ICEWINE_STYLE",
+          "cause": "El mosto concentra azúcar, ácidos y compuestos de sabor.",
+          "mechanism": "La fermentación deja azúcar residual mientras la acidez aporta contraste estructural.",
+          "effect": "El vino resulta rico e intenso, pero puede conservar equilibrio y longitud."
+        },
+        "feedback_profile": {
+          "correct_rationale": "El mosto concentra azúcar, ácidos y compuestos de sabor. La fermentación deja azúcar residual mientras la acidez aporta contraste estructural. Por ello, el vino resulta rico e intenso, pero puede conservar equilibrio y longitud.",
+          "distractor_rationales": {
+            "A": "No explica el mecanismo clave: La fermentación deja azúcar residual mientras la acidez aporta contraste estructural.",
+            "B": "Es la relación causal correcta.",
+            "C": "No explica el mecanismo clave: La fermentación deja azúcar residual mientras la acidez aporta contraste estructural.",
+            "D": "No explica el mecanismo clave: La fermentación deja azúcar residual mientras la acidez aporta contraste estructural."
+          },
+          "remediation_recommendation": "Reconstruya la cadena de canada icewine style como causa, mecanismo y efecto."
+        },
+        "micro_drill_candidate": {
+          "prompt": "Micro-drill: ¿qué efecto sigue a este mecanismo: La fermentación deja azúcar residual mientras la acidez aporta contraste estructural.?",
+          "answer": "El vino resulta rico e intenso, pero puede conservar equilibrio y longitud."
+        },
+        "misconception_linkage_candidate": {
+          "misconception_id": "MC_SWEET_BALANCING_02",
+          "target_error": "Confundir dulzor alto con falta automática de equilibrio."
+        }
+      },
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "official_wset_question": false,
+        "training_item_only": true,
+        "uses_llm": false,
+        "uses_api": false,
+        "uses_embeddings": false,
+        "uses_vector_db": false,
+        "cloud_services_active": false
+      }
+    },
+    {
+      "question_id": "872",
+      "question_text": "En Sauternes, ¿qué secuencia meteorológica explica mejor el desarrollo de podredumbre noble en lugar de podredumbre gris?",
+      "question_type": "theory",
+      "expected_topics": [
+        "RA2",
+        "sauternes_morning_mist"
+      ],
+      "expected_causal_links": [
+        "Las bayas maduras reciben humedad suficiente para que Botrytis se establezca. -> Periodos secos posteriores limitan la podredumbre destructiva y permiten pérdida de agua. -> Las bayas se arrugan y concentran azúcar y sabor con carácter noble."
+      ],
+      "expected_keywords": [
+        "Sauternes",
+        "Botrytis",
+        "niebla",
+        "tiempo seco"
+      ],
+      "expected_reasoning_type": "cause_effect",
+      "difficulty": "intermediate",
+      "source_type": "SBA gap closure | manually curated from local official study guide",
+      "safe_for_examiner": false,
+      "options": {
+        "A": "Lluvia continua mantiene las bayas mojadas hasta que se diluyen.",
+        "B": "Heladas intensas cada noche congelan el agua dentro de la baya.",
+        "C": "Mañanas húmedas o con niebla favorecen la infección y tardes cálidas y secas permiten la evaporación.",
+        "D": "Viento seco permanente impide toda infección por Botrytis."
+      },
+      "correct_answer_letter": "C",
+      "correct_answer_text": "Mañanas húmedas o con niebla favorecen la infección y tardes cálidas y secas permiten la evaporación.",
+      "source_support": {
+        "source_ids": [
+          "6-2_13_bordeaux",
+          "5-5_8_white_and_sweet_winemaking"
+        ],
+        "source_files": [
+          "knowledge/official-wset/study-guide/wset_markdown/seccion_6_section_3_still_wines_of_the_world/6-2_13_bordeaux.md",
+          "knowledge/official-wset/study-guide/wset_markdown/seccion_5_section_2_factors_affecting_the_style_quality_and_price_of_w/5-5_8_white_and_sweet_winemaking.md"
+        ],
+        "support_rationale": "Las fuentes locales sustentan el mecanismo, el resultado de estilo y el contraste diagnóstico evaluado."
+      },
+      "enrichment": {
+        "causal_chain_candidate": {
+          "candidate_id": "CC_CAND_SAUTERNES_MORNING_MIST",
+          "cause": "Las bayas maduras reciben humedad suficiente para que Botrytis se establezca.",
+          "mechanism": "Periodos secos posteriores limitan la podredumbre destructiva y permiten pérdida de agua.",
+          "effect": "Las bayas se arrugan y concentran azúcar y sabor con carácter noble."
+        },
+        "feedback_profile": {
+          "correct_rationale": "Las bayas maduras reciben humedad suficiente para que Botrytis se establezca. Periodos secos posteriores limitan la podredumbre destructiva y permiten pérdida de agua. Por ello, las bayas se arrugan y concentran azúcar y sabor con carácter noble.",
+          "distractor_rationales": {
+            "A": "No explica el mecanismo clave: Periodos secos posteriores limitan la podredumbre destructiva y permiten pérdida de agua.",
+            "B": "No explica el mecanismo clave: Periodos secos posteriores limitan la podredumbre destructiva y permiten pérdida de agua.",
+            "C": "Es la relación causal correcta.",
+            "D": "No explica el mecanismo clave: Periodos secos posteriores limitan la podredumbre destructiva y permiten pérdida de agua."
+          },
+          "remediation_recommendation": "Reconstruya la cadena de sauternes morning mist como causa, mecanismo y efecto."
+        },
+        "micro_drill_candidate": {
+          "prompt": "Micro-drill: ¿qué efecto sigue a este mecanismo: Periodos secos posteriores limitan la podredumbre destructiva y permiten pérdida de agua.?",
+          "answer": "Las bayas se arrugan y concentran azúcar y sabor con carácter noble."
+        },
+        "misconception_linkage_candidate": {
+          "misconception_id": "MC_BOTRYTIS_01",
+          "target_error": "Creer que cualquier humedad produce podredumbre noble."
+        }
+      },
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "official_wset_question": false,
+        "training_item_only": true,
+        "uses_llm": false,
+        "uses_api": false,
+        "uses_embeddings": false,
+        "uses_vector_db": false,
+        "cloud_services_active": false
+      }
+    },
+    {
+      "question_id": "873",
+      "question_text": "Si la podredumbre noble avanza de forma desigual dentro de una parcela de Sauternes, ¿qué decisión explica mejor la necesidad de varias pasadas de vendimia?",
+      "question_type": "theory",
+      "expected_topics": [
+        "RA2",
+        "sauternes_selective_picking"
+      ],
+      "expected_causal_links": [
+        "Botrytis no afecta todas las bayas al mismo ritmo. -> Las cuadrillas vuelven varias veces y eligen fruta en el punto adecuado. -> Mejora la concentración y pureza, pero suben mano de obra, riesgo y coste."
+      ],
+      "expected_keywords": [
+        "Sauternes",
+        "selección",
+        "tries",
+        "Botrytis"
+      ],
+      "expected_reasoning_type": "cause_effect",
+      "difficulty": "distinction",
+      "source_type": "SBA gap closure | manually curated from local official study guide",
+      "safe_for_examiner": false,
+      "options": {
+        "A": "Cosechar todo a la vez para igualar el grado de Botrytis.",
+        "B": "Esperar a que todas las bayas se conviertan en pasas secas.",
+        "C": "Vendimiar mecánicamente para mezclar fruta sana y dañada.",
+        "D": "Seleccionar solo las bayas adecuadamente botritizadas en cada pasada."
+      },
+      "correct_answer_letter": "D",
+      "correct_answer_text": "Seleccionar solo las bayas adecuadamente botritizadas en cada pasada.",
+      "source_support": {
+        "source_ids": [
+          "6-2_13_bordeaux"
+        ],
+        "source_files": [
+          "knowledge/official-wset/study-guide/wset_markdown/seccion_6_section_3_still_wines_of_the_world/6-2_13_bordeaux.md"
+        ],
+        "support_rationale": "Las fuentes locales sustentan el mecanismo, el resultado de estilo y el contraste diagnóstico evaluado."
+      },
+      "enrichment": {
+        "causal_chain_candidate": {
+          "candidate_id": "CC_CAND_SAUTERNES_SELECTIVE_PICKING",
+          "cause": "Botrytis no afecta todas las bayas al mismo ritmo.",
+          "mechanism": "Las cuadrillas vuelven varias veces y eligen fruta en el punto adecuado.",
+          "effect": "Mejora la concentración y pureza, pero suben mano de obra, riesgo y coste."
+        },
+        "feedback_profile": {
+          "correct_rationale": "Botrytis no afecta todas las bayas al mismo ritmo. Las cuadrillas vuelven varias veces y eligen fruta en el punto adecuado. Por ello, mejora la concentración y pureza, pero suben mano de obra, riesgo y coste.",
+          "distractor_rationales": {
+            "A": "No explica el mecanismo clave: Las cuadrillas vuelven varias veces y eligen fruta en el punto adecuado.",
+            "B": "No explica el mecanismo clave: Las cuadrillas vuelven varias veces y eligen fruta en el punto adecuado.",
+            "C": "No explica el mecanismo clave: Las cuadrillas vuelven varias veces y eligen fruta en el punto adecuado.",
+            "D": "Es la relación causal correcta."
+          },
+          "remediation_recommendation": "Reconstruya la cadena de sauternes selective picking como causa, mecanismo y efecto."
+        },
+        "micro_drill_candidate": {
+          "prompt": "Micro-drill: ¿qué efecto sigue a este mecanismo: Las cuadrillas vuelven varias veces y eligen fruta en el punto adecuado.?",
+          "answer": "Mejora la concentración y pureza, pero suben mano de obra, riesgo y coste."
+        },
+        "misconception_linkage_candidate": {
+          "misconception_id": "MC_SAUTERNES_HARVEST_01",
+          "target_error": "Reducir la vendimia de Sauternes a un único nivel fijo de azúcar."
+        }
+      },
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "official_wset_question": false,
+        "training_item_only": true,
+        "uses_llm": false,
+        "uses_api": false,
+        "uses_embeddings": false,
+        "uses_vector_db": false,
+        "cloud_services_active": false
+      }
+    },
+    {
+      "question_id": "874",
+      "question_text": "¿Qué factor explica mejor la importancia de Sémillon en muchos Sauternes?",
+      "question_type": "theory",
+      "expected_topics": [
+        "RA2",
+        "sauternes_semillon"
+      ],
+      "expected_causal_links": [
+        "La variedad se cultiva en condiciones favorables para noble rot. -> La piel susceptible facilita la acción del hongo y la concentración de la baya. -> Contribuye riqueza, textura y carácter botritizado al ensamblaje."
+      ],
+      "expected_keywords": [
+        "Sauternes",
+        "Sémillon",
+        "piel fina",
+        "Botrytis"
+      ],
+      "expected_reasoning_type": "cause_effect",
+      "difficulty": "intermediate",
+      "source_type": "SBA gap closure | manually curated from local official study guide",
+      "safe_for_examiner": false,
+      "options": {
+        "A": "Su piel relativamente fina favorece la infección por Botrytis y aporta cuerpo al vino.",
+        "B": "Su piel gruesa impide toda pérdida de agua.",
+        "C": "Su tanino alto estabiliza el color tinto.",
+        "D": "Su baja susceptibilidad permite vendimia mecánica temprana."
+      },
+      "correct_answer_letter": "A",
+      "correct_answer_text": "Su piel relativamente fina favorece la infección por Botrytis y aporta cuerpo al vino.",
+      "source_support": {
+        "source_ids": [
+          "6-2_13_bordeaux"
+        ],
+        "source_files": [
+          "knowledge/official-wset/study-guide/wset_markdown/seccion_6_section_3_still_wines_of_the_world/6-2_13_bordeaux.md"
+        ],
+        "support_rationale": "Las fuentes locales sustentan el mecanismo, el resultado de estilo y el contraste diagnóstico evaluado."
+      },
+      "enrichment": {
+        "causal_chain_candidate": {
+          "candidate_id": "CC_CAND_SAUTERNES_SEMILLON",
+          "cause": "La variedad se cultiva en condiciones favorables para noble rot.",
+          "mechanism": "La piel susceptible facilita la acción del hongo y la concentración de la baya.",
+          "effect": "Contribuye riqueza, textura y carácter botritizado al ensamblaje."
+        },
+        "feedback_profile": {
+          "correct_rationale": "La variedad se cultiva en condiciones favorables para noble rot. La piel susceptible facilita la acción del hongo y la concentración de la baya. Por ello, contribuye riqueza, textura y carácter botritizado al ensamblaje.",
+          "distractor_rationales": {
+            "A": "Es la relación causal correcta.",
+            "B": "No explica el mecanismo clave: La piel susceptible facilita la acción del hongo y la concentración de la baya.",
+            "C": "No explica el mecanismo clave: La piel susceptible facilita la acción del hongo y la concentración de la baya.",
+            "D": "No explica el mecanismo clave: La piel susceptible facilita la acción del hongo y la concentración de la baya."
+          },
+          "remediation_recommendation": "Reconstruya la cadena de sauternes semillon como causa, mecanismo y efecto."
+        },
+        "micro_drill_candidate": {
+          "prompt": "Micro-drill: ¿qué efecto sigue a este mecanismo: La piel susceptible facilita la acción del hongo y la concentración de la baya.?",
+          "answer": "Contribuye riqueza, textura y carácter botritizado al ensamblaje."
+        },
+        "misconception_linkage_candidate": {
+          "misconception_id": "MC_SAUTERNES_HARVEST_01",
+          "target_error": "Explicar Sauternes solo por azúcar sin considerar variedad y Botrytis."
+        }
+      },
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "official_wset_question": false,
+        "training_item_only": true,
+        "uses_llm": false,
+        "uses_api": false,
+        "uses_embeddings": false,
+        "uses_vector_db": false,
+        "cloud_services_active": false
+      }
+    },
+    {
+      "question_id": "875",
+      "question_text": "Si un ensamblaje de Sauternes incorpora Sauvignon Blanc junto con Sémillon, ¿qué resultado de estilo es más probable?",
+      "question_type": "theory",
+      "expected_topics": [
+        "RA2",
+        "sauternes_sauvignon"
+      ],
+      "expected_causal_links": [
+        "El vino base combina variedades con contribuciones diferentes. -> Sauvignon Blanc aporta acidez y expresión aromática dentro de una matriz rica. -> El ensamblaje puede resultar más fresco y equilibrado."
+      ],
+      "expected_keywords": [
+        "Sauternes",
+        "Sauvignon Blanc",
+        "Sémillon",
+        "equilibrio"
+      ],
+      "expected_reasoning_type": "cause_effect",
+      "difficulty": "intermediate",
+      "source_type": "SBA gap closure | manually curated from local official study guide",
+      "safe_for_examiner": false,
+      "options": {
+        "A": "Más tanino y color porque Sauvignon Blanc aporta antocianos.",
+        "B": "Mayor frescura aromática y acidez para equilibrar la riqueza del Sémillon botritizado.",
+        "C": "Menor acidez porque la variedad siempre completa MLF.",
+        "D": "Un estilo biológico porque Sauvignon Blanc genera flor."
+      },
+      "correct_answer_letter": "B",
+      "correct_answer_text": "Mayor frescura aromática y acidez para equilibrar la riqueza del Sémillon botritizado.",
+      "source_support": {
+        "source_ids": [
+          "6-2_13_bordeaux"
+        ],
+        "source_files": [
+          "knowledge/official-wset/study-guide/wset_markdown/seccion_6_section_3_still_wines_of_the_world/6-2_13_bordeaux.md"
+        ],
+        "support_rationale": "Las fuentes locales sustentan el mecanismo, el resultado de estilo y el contraste diagnóstico evaluado."
+      },
+      "enrichment": {
+        "causal_chain_candidate": {
+          "candidate_id": "CC_CAND_SAUTERNES_SAUVIGNON",
+          "cause": "El vino base combina variedades con contribuciones diferentes.",
+          "mechanism": "Sauvignon Blanc aporta acidez y expresión aromática dentro de una matriz rica.",
+          "effect": "El ensamblaje puede resultar más fresco y equilibrado."
+        },
+        "feedback_profile": {
+          "correct_rationale": "El vino base combina variedades con contribuciones diferentes. Sauvignon Blanc aporta acidez y expresión aromática dentro de una matriz rica. Por ello, el ensamblaje puede resultar más fresco y equilibrado.",
+          "distractor_rationales": {
+            "A": "No explica el mecanismo clave: Sauvignon Blanc aporta acidez y expresión aromática dentro de una matriz rica.",
+            "B": "Es la relación causal correcta.",
+            "C": "No explica el mecanismo clave: Sauvignon Blanc aporta acidez y expresión aromática dentro de una matriz rica.",
+            "D": "No explica el mecanismo clave: Sauvignon Blanc aporta acidez y expresión aromática dentro de una matriz rica."
+          },
+          "remediation_recommendation": "Reconstruya la cadena de sauternes sauvignon como causa, mecanismo y efecto."
+        },
+        "micro_drill_candidate": {
+          "prompt": "Micro-drill: ¿qué efecto sigue a este mecanismo: Sauvignon Blanc aporta acidez y expresión aromática dentro de una matriz rica.?",
+          "answer": "El ensamblaje puede resultar más fresco y equilibrado."
+        },
+        "misconception_linkage_candidate": {
+          "misconception_id": "MC_ACIDITY_01",
+          "target_error": "Ignorar el papel estructural de la acidez en vinos dulces."
+        }
+      },
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "official_wset_question": false,
+        "training_item_only": true,
+        "uses_llm": false,
+        "uses_api": false,
+        "uses_embeddings": false,
+        "uses_vector_db": false,
+        "cloud_services_active": false
+      }
+    },
+    {
+      "question_id": "876",
+      "question_text": "Si Botrytis concentra una baya pero también metaboliza parte de sus ácidos, ¿qué resultado explica mejor la acidez final de un Sauternes?",
+      "question_type": "theory",
+      "expected_topics": [
+        "RA2",
+        "sauternes_botrytis_acid"
+      ],
+      "expected_causal_links": [
+        "La pérdida de agua concentra los solutos de la baya. -> Al mismo tiempo, el hongo consume parte de ciertos ácidos. -> El vino necesita suficiente acidez restante para equilibrar su gran dulzor."
+      ],
+      "expected_keywords": [
+        "Sauternes",
+        "Botrytis",
+        "acidez",
+        "concentración"
+      ],
+      "expected_reasoning_type": "cause_effect",
+      "difficulty": "distinction",
+      "source_type": "SBA gap closure | manually curated from local official study guide",
+      "safe_for_examiner": false,
+      "options": {
+        "A": "La acidez siempre se duplica exactamente con el azúcar.",
+        "B": "Botrytis elimina toda acidez y vuelve plano cualquier vino.",
+        "C": "La acidez puede seguir siendo importante, pero no aumenta en la misma proporción que el azúcar por simple concentración.",
+        "D": "La concentración no afecta azúcar ni sabor."
+      },
+      "correct_answer_letter": "C",
+      "correct_answer_text": "La acidez puede seguir siendo importante, pero no aumenta en la misma proporción que el azúcar por simple concentración.",
+      "source_support": {
+        "source_ids": [
+          "6-2_13_bordeaux",
+          "5-5_8_white_and_sweet_winemaking"
+        ],
+        "source_files": [
+          "knowledge/official-wset/study-guide/wset_markdown/seccion_6_section_3_still_wines_of_the_world/6-2_13_bordeaux.md",
+          "knowledge/official-wset/study-guide/wset_markdown/seccion_5_section_2_factors_affecting_the_style_quality_and_price_of_w/5-5_8_white_and_sweet_winemaking.md"
+        ],
+        "support_rationale": "Las fuentes locales sustentan el mecanismo, el resultado de estilo y el contraste diagnóstico evaluado."
+      },
+      "enrichment": {
+        "causal_chain_candidate": {
+          "candidate_id": "CC_CAND_SAUTERNES_BOTRYTIS_ACID",
+          "cause": "La pérdida de agua concentra los solutos de la baya.",
+          "mechanism": "Al mismo tiempo, el hongo consume parte de ciertos ácidos.",
+          "effect": "El vino necesita suficiente acidez restante para equilibrar su gran dulzor."
+        },
+        "feedback_profile": {
+          "correct_rationale": "La pérdida de agua concentra los solutos de la baya. Al mismo tiempo, el hongo consume parte de ciertos ácidos. Por ello, el vino necesita suficiente acidez restante para equilibrar su gran dulzor.",
+          "distractor_rationales": {
+            "A": "No explica el mecanismo clave: Al mismo tiempo, el hongo consume parte de ciertos ácidos.",
+            "B": "No explica el mecanismo clave: Al mismo tiempo, el hongo consume parte de ciertos ácidos.",
+            "C": "Es la relación causal correcta.",
+            "D": "No explica el mecanismo clave: Al mismo tiempo, el hongo consume parte de ciertos ácidos."
+          },
+          "remediation_recommendation": "Reconstruya la cadena de sauternes botrytis acid como causa, mecanismo y efecto."
+        },
+        "micro_drill_candidate": {
+          "prompt": "Micro-drill: ¿qué efecto sigue a este mecanismo: Al mismo tiempo, el hongo consume parte de ciertos ácidos.?",
+          "answer": "El vino necesita suficiente acidez restante para equilibrar su gran dulzor."
+        },
+        "misconception_linkage_candidate": {
+          "misconception_id": "MC_BOTRYTIS_01",
+          "target_error": "Aplicar una regla de concentración idéntica a todos los componentes."
+        }
+      },
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "official_wset_question": false,
+        "training_item_only": true,
+        "uses_llm": false,
+        "uses_api": false,
+        "uses_embeddings": false,
+        "uses_vector_db": false,
+        "cloud_services_active": false
+      }
+    },
+    {
+      "question_id": "877",
+      "question_text": "Si durante la vendimia de Sauternes llega lluvia persistente después de iniciarse Botrytis, ¿qué consecuencia es más probable?",
+      "question_type": "theory",
+      "expected_topics": [
+        "RA2",
+        "sauternes_vintage_risk"
+      ],
+      "expected_causal_links": [
+        "Las bayas botritizadas y maduras son frágiles durante una cosecha prolongada. -> La humedad continua favorece deterioro y reduce la evaporación necesaria. -> La calidad y el volumen pueden caer con rapidez."
+      ],
+      "expected_keywords": [
+        "Sauternes",
+        "lluvia",
+        "podredumbre gris",
+        "riesgo"
+      ],
+      "expected_reasoning_type": "cause_effect",
+      "difficulty": "intermediate",
+      "source_type": "SBA gap closure | manually curated from local official study guide",
+      "safe_for_examiner": false,
+      "options": {
+        "A": "La lluvia garantiza una concentración más rápida y uniforme.",
+        "B": "La fruta se congela y pasa a ser Eiswein.",
+        "C": "La humedad detiene toda actividad del hongo.",
+        "D": "Aumenta el riesgo de podredumbre gris, dilución y pérdida de fruta."
+      },
+      "correct_answer_letter": "D",
+      "correct_answer_text": "Aumenta el riesgo de podredumbre gris, dilución y pérdida de fruta.",
+      "source_support": {
+        "source_ids": [
+          "6-2_13_bordeaux"
+        ],
+        "source_files": [
+          "knowledge/official-wset/study-guide/wset_markdown/seccion_6_section_3_still_wines_of_the_world/6-2_13_bordeaux.md"
+        ],
+        "support_rationale": "Las fuentes locales sustentan el mecanismo, el resultado de estilo y el contraste diagnóstico evaluado."
+      },
+      "enrichment": {
+        "causal_chain_candidate": {
+          "candidate_id": "CC_CAND_SAUTERNES_VINTAGE_RISK",
+          "cause": "Las bayas botritizadas y maduras son frágiles durante una cosecha prolongada.",
+          "mechanism": "La humedad continua favorece deterioro y reduce la evaporación necesaria.",
+          "effect": "La calidad y el volumen pueden caer con rapidez."
+        },
+        "feedback_profile": {
+          "correct_rationale": "Las bayas botritizadas y maduras son frágiles durante una cosecha prolongada. La humedad continua favorece deterioro y reduce la evaporación necesaria. Por ello, la calidad y el volumen pueden caer con rapidez.",
+          "distractor_rationales": {
+            "A": "No explica el mecanismo clave: La humedad continua favorece deterioro y reduce la evaporación necesaria.",
+            "B": "No explica el mecanismo clave: La humedad continua favorece deterioro y reduce la evaporación necesaria.",
+            "C": "No explica el mecanismo clave: La humedad continua favorece deterioro y reduce la evaporación necesaria.",
+            "D": "Es la relación causal correcta."
+          },
+          "remediation_recommendation": "Reconstruya la cadena de sauternes vintage risk como causa, mecanismo y efecto."
+        },
+        "micro_drill_candidate": {
+          "prompt": "Micro-drill: ¿qué efecto sigue a este mecanismo: La humedad continua favorece deterioro y reduce la evaporación necesaria.?",
+          "answer": "La calidad y el volumen pueden caer con rapidez."
+        },
+        "misconception_linkage_candidate": {
+          "misconception_id": "MC_BOTRYTIS_01",
+          "target_error": "Creer que más humedad siempre mejora noble rot."
+        }
+      },
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "official_wset_question": false,
+        "training_item_only": true,
+        "uses_llm": false,
+        "uses_api": false,
+        "uses_embeddings": false,
+        "uses_vector_db": false,
+        "cloud_services_active": false
+      }
+    },
+    {
+      "question_id": "878",
+      "question_text": "Si un Sauternes concentrado fermenta o madura en roble nuevo, ¿qué resultado de estilo es más probable?",
+      "question_type": "theory",
+      "expected_topics": [
+        "RA2",
+        "sauternes_oak"
+      ],
+      "expected_causal_links": [
+        "Un vino concentrado entra en contacto con madera nueva y pequeñas cantidades de oxígeno. -> El roble aporta compuestos aromáticos y la maduración integra textura y sabores. -> El estilo gana complejidad, coste y potencial de evolución."
+      ],
+      "expected_keywords": [
+        "Sauternes",
+        "roble",
+        "vainilla",
+        "maduración"
+      ],
+      "expected_reasoning_type": "cause_effect",
+      "difficulty": "intermediate",
+      "source_type": "SBA gap closure | manually curated from local official study guide",
+      "safe_for_examiner": false,
+      "options": {
+        "A": "Mayor complejidad de vainilla y especias, con integración lenta de una estructura rica.",
+        "B": "Pérdida inmediata de todo azúcar residual.",
+        "C": "Desarrollo de taninos propios de un tinto muy extraído.",
+        "D": "Aromas de flor y acetaldehído por crianza biológica."
+      },
+      "correct_answer_letter": "A",
+      "correct_answer_text": "Mayor complejidad de vainilla y especias, con integración lenta de una estructura rica.",
+      "source_support": {
+        "source_ids": [
+          "6-2_13_bordeaux",
+          "5-5_8_white_and_sweet_winemaking"
+        ],
+        "source_files": [
+          "knowledge/official-wset/study-guide/wset_markdown/seccion_6_section_3_still_wines_of_the_world/6-2_13_bordeaux.md",
+          "knowledge/official-wset/study-guide/wset_markdown/seccion_5_section_2_factors_affecting_the_style_quality_and_price_of_w/5-5_8_white_and_sweet_winemaking.md"
+        ],
+        "support_rationale": "Las fuentes locales sustentan el mecanismo, el resultado de estilo y el contraste diagnóstico evaluado."
+      },
+      "enrichment": {
+        "causal_chain_candidate": {
+          "candidate_id": "CC_CAND_SAUTERNES_OAK",
+          "cause": "Un vino concentrado entra en contacto con madera nueva y pequeñas cantidades de oxígeno.",
+          "mechanism": "El roble aporta compuestos aromáticos y la maduración integra textura y sabores.",
+          "effect": "El estilo gana complejidad, coste y potencial de evolución."
+        },
+        "feedback_profile": {
+          "correct_rationale": "Un vino concentrado entra en contacto con madera nueva y pequeñas cantidades de oxígeno. El roble aporta compuestos aromáticos y la maduración integra textura y sabores. Por ello, el estilo gana complejidad, coste y potencial de evolución.",
+          "distractor_rationales": {
+            "A": "Es la relación causal correcta.",
+            "B": "No explica el mecanismo clave: El roble aporta compuestos aromáticos y la maduración integra textura y sabores.",
+            "C": "No explica el mecanismo clave: El roble aporta compuestos aromáticos y la maduración integra textura y sabores.",
+            "D": "No explica el mecanismo clave: El roble aporta compuestos aromáticos y la maduración integra textura y sabores."
+          },
+          "remediation_recommendation": "Reconstruya la cadena de sauternes oak como causa, mecanismo y efecto."
+        },
+        "micro_drill_candidate": {
+          "prompt": "Micro-drill: ¿qué efecto sigue a este mecanismo: El roble aporta compuestos aromáticos y la maduración integra textura y sabores.?",
+          "answer": "El estilo gana complejidad, coste y potencial de evolución."
+        },
+        "misconception_linkage_candidate": {
+          "misconception_id": "MC_OAK_QUALITY_01",
+          "target_error": "Suponer que el roble crea calidad por sí solo o elimina el dulzor."
+        }
+      },
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "official_wset_question": false,
+        "training_item_only": true,
+        "uses_llm": false,
+        "uses_api": false,
+        "uses_embeddings": false,
+        "uses_vector_db": false,
+        "cloud_services_active": false
+      }
+    },
+    {
+      "question_id": "879",
+      "question_text": "Dos Sauternes tienen el mismo azúcar residual, pero uno posee mayor acidez, intensidad y longitud. ¿Qué factor explica mejor que se perciba de mayor calidad?",
+      "question_type": "theory",
+      "expected_topics": [
+        "RA2",
+        "sauternes_quality_balance"
+      ],
+      "expected_causal_links": [
+        "La calidad sensorial depende de varios componentes estructurales y aromáticos. -> Acidez, concentración y longitud sostienen el dulzor y evitan desequilibrio. -> El vino ofrece mayor definición y persistencia."
+      ],
+      "expected_keywords": [
+        "Sauternes",
+        "calidad",
+        "equilibrio",
+        "longitud"
+      ],
+      "expected_reasoning_type": "cause_effect",
+      "difficulty": "distinction",
+      "source_type": "SBA gap closure | manually curated from local official study guide",
+      "safe_for_examiner": false,
+      "options": {
+        "A": "El azúcar residual fija por sí solo la calidad.",
+        "B": "El segundo muestra mejor equilibrio, concentración y persistencia, no solo mayor dulzor.",
+        "C": "La menor acidez siempre indica mayor madurez y calidad.",
+        "D": "La intensidad aromática importa únicamente en vinos secos."
+      },
+      "correct_answer_letter": "B",
+      "correct_answer_text": "El segundo muestra mejor equilibrio, concentración y persistencia, no solo mayor dulzor.",
+      "source_support": {
+        "source_ids": [
+          "6-2_13_bordeaux"
+        ],
+        "source_files": [
+          "knowledge/official-wset/study-guide/wset_markdown/seccion_6_section_3_still_wines_of_the_world/6-2_13_bordeaux.md"
+        ],
+        "support_rationale": "Las fuentes locales sustentan el mecanismo, el resultado de estilo y el contraste diagnóstico evaluado."
+      },
+      "enrichment": {
+        "causal_chain_candidate": {
+          "candidate_id": "CC_CAND_SAUTERNES_QUALITY_BALANCE",
+          "cause": "La calidad sensorial depende de varios componentes estructurales y aromáticos.",
+          "mechanism": "Acidez, concentración y longitud sostienen el dulzor y evitan desequilibrio.",
+          "effect": "El vino ofrece mayor definición y persistencia."
+        },
+        "feedback_profile": {
+          "correct_rationale": "La calidad sensorial depende de varios componentes estructurales y aromáticos. Acidez, concentración y longitud sostienen el dulzor y evitan desequilibrio. Por ello, el vino ofrece mayor definición y persistencia.",
+          "distractor_rationales": {
+            "A": "No explica el mecanismo clave: Acidez, concentración y longitud sostienen el dulzor y evitan desequilibrio.",
+            "B": "Es la relación causal correcta.",
+            "C": "No explica el mecanismo clave: Acidez, concentración y longitud sostienen el dulzor y evitan desequilibrio.",
+            "D": "No explica el mecanismo clave: Acidez, concentración y longitud sostienen el dulzor y evitan desequilibrio."
+          },
+          "remediation_recommendation": "Reconstruya la cadena de sauternes quality balance como causa, mecanismo y efecto."
+        },
+        "micro_drill_candidate": {
+          "prompt": "Micro-drill: ¿qué efecto sigue a este mecanismo: Acidez, concentración y longitud sostienen el dulzor y evitan desequilibrio.?",
+          "answer": "El vino ofrece mayor definición y persistencia."
+        },
+        "misconception_linkage_candidate": {
+          "misconception_id": "MC_SWEET_BALANCING_02",
+          "target_error": "Equiparar dulzor con calidad."
+        }
+      },
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "official_wset_question": false,
+        "training_item_only": true,
+        "uses_llm": false,
+        "uses_api": false,
+        "uses_embeddings": false,
+        "uses_vector_db": false,
+        "cloud_services_active": false
+      }
+    },
+    {
+      "question_id": "880",
+      "question_text": "Si un productor añade bayas Aszú seleccionadas a mosto en fermentación o vino base, ¿qué resultado explica mejor el estilo posterior?",
+      "question_type": "theory",
+      "expected_topics": [
+        "RA2",
+        "tokaji_aszu_addition"
+      ],
+      "expected_causal_links": [
+        "Las bayas Aszú están deshidratadas y concentradas por noble rot. -> El contacto y la maceración extrae sus componentes al vino base. -> Aumentan dulzor, concentración y complejidad manteniendo acidez."
+      ],
+      "expected_keywords": [
+        "Tokaji",
+        "Aszú",
+        "bayas botritizadas",
+        "maceración"
+      ],
+      "expected_reasoning_type": "cause_effect",
+      "difficulty": "intermediate",
+      "source_type": "SBA gap closure | manually curated from local official study guide",
+      "safe_for_examiner": false,
+      "options": {
+        "A": "Las bayas eliminan todo alcohol ya formado.",
+        "B": "La adición crea burbujas por una segunda fermentación en botella.",
+        "C": "La maceración transfiere azúcar, acidez, sabor concentrado y carácter botritizado al líquido.",
+        "D": "El vino se vuelve seco porque la pasta absorbe azúcar."
+      },
+      "correct_answer_letter": "C",
+      "correct_answer_text": "La maceración transfiere azúcar, acidez, sabor concentrado y carácter botritizado al líquido.",
+      "source_support": {
+        "source_ids": [
+          "6-13_24_tokaj"
+        ],
+        "source_files": [
+          "knowledge/official-wset/study-guide/wset_markdown/seccion_6_section_3_still_wines_of_the_world/6-13_24_tokaj.md"
+        ],
+        "support_rationale": "Las fuentes locales sustentan el mecanismo, el resultado de estilo y el contraste diagnóstico evaluado."
+      },
+      "enrichment": {
+        "causal_chain_candidate": {
+          "candidate_id": "CC_CAND_TOKAJI_ASZU_ADDITION",
+          "cause": "Las bayas Aszú están deshidratadas y concentradas por noble rot.",
+          "mechanism": "El contacto y la maceración extrae sus componentes al vino base.",
+          "effect": "Aumentan dulzor, concentración y complejidad manteniendo acidez."
+        },
+        "feedback_profile": {
+          "correct_rationale": "Las bayas Aszú están deshidratadas y concentradas por noble rot. El contacto y la maceración extrae sus componentes al vino base. Por ello, aumentan dulzor, concentración y complejidad manteniendo acidez.",
+          "distractor_rationales": {
+            "A": "No explica el mecanismo clave: El contacto y la maceración extrae sus componentes al vino base.",
+            "B": "No explica el mecanismo clave: El contacto y la maceración extrae sus componentes al vino base.",
+            "C": "Es la relación causal correcta.",
+            "D": "No explica el mecanismo clave: El contacto y la maceración extrae sus componentes al vino base."
+          },
+          "remediation_recommendation": "Reconstruya la cadena de tokaji aszu addition como causa, mecanismo y efecto."
+        },
+        "micro_drill_candidate": {
+          "prompt": "Micro-drill: ¿qué efecto sigue a este mecanismo: El contacto y la maceración extrae sus componentes al vino base.?",
+          "answer": "Aumentan dulzor, concentración y complejidad manteniendo acidez."
+        },
+        "misconception_linkage_candidate": {
+          "misconception_id": "MC_TOKAJI_QUALITY_01",
+          "target_error": "Tratar la adición de Aszú como simple aromatización."
+        }
+      },
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "official_wset_question": false,
+        "training_item_only": true,
+        "uses_llm": false,
+        "uses_api": false,
+        "uses_embeddings": false,
+        "uses_vector_db": false,
+        "cloud_services_active": false
+      }
+    },
+    {
+      "question_id": "881",
+      "question_text": "¿Qué factor explica mejor que Furmint sea útil para Tokaji Aszú de larga vida?",
+      "question_type": "theory",
+      "expected_topics": [
+        "RA2",
+        "tokaji_furmint"
+      ],
+      "expected_causal_links": [
+        "Furmint puede madurar con azúcar elevado conservando acidez marcada. -> La acidez aporta estructura frente a la concentración y el azúcar residual. -> El vino puede ser intenso, equilibrado y longevo."
+      ],
+      "expected_keywords": [
+        "Tokaji",
+        "Furmint",
+        "acidez",
+        "longevidad"
+      ],
+      "expected_reasoning_type": "cause_effect",
+      "difficulty": "intermediate",
+      "source_type": "SBA gap closure | manually curated from local official study guide",
+      "safe_for_examiner": false,
+      "options": {
+        "A": "Su tanino alto permite una extracción prolongada de hollejos.",
+        "B": "Su acidez baja hace innecesaria la selección de fruta.",
+        "C": "Su neutralidad impide cualquier aroma botritizado.",
+        "D": "Su acidez alta equilibra el dulzor y sostiene la evolución del vino."
+      },
+      "correct_answer_letter": "D",
+      "correct_answer_text": "Su acidez alta equilibra el dulzor y sostiene la evolución del vino.",
+      "source_support": {
+        "source_ids": [
+          "6-13_24_tokaj"
+        ],
+        "source_files": [
+          "knowledge/official-wset/study-guide/wset_markdown/seccion_6_section_3_still_wines_of_the_world/6-13_24_tokaj.md"
+        ],
+        "support_rationale": "Las fuentes locales sustentan el mecanismo, el resultado de estilo y el contraste diagnóstico evaluado."
+      },
+      "enrichment": {
+        "causal_chain_candidate": {
+          "candidate_id": "CC_CAND_TOKAJI_FURMINT",
+          "cause": "Furmint puede madurar con azúcar elevado conservando acidez marcada.",
+          "mechanism": "La acidez aporta estructura frente a la concentración y el azúcar residual.",
+          "effect": "El vino puede ser intenso, equilibrado y longevo."
+        },
+        "feedback_profile": {
+          "correct_rationale": "Furmint puede madurar con azúcar elevado conservando acidez marcada. La acidez aporta estructura frente a la concentración y el azúcar residual. Por ello, el vino puede ser intenso, equilibrado y longevo.",
+          "distractor_rationales": {
+            "A": "No explica el mecanismo clave: La acidez aporta estructura frente a la concentración y el azúcar residual.",
+            "B": "No explica el mecanismo clave: La acidez aporta estructura frente a la concentración y el azúcar residual.",
+            "C": "No explica el mecanismo clave: La acidez aporta estructura frente a la concentración y el azúcar residual.",
+            "D": "Es la relación causal correcta."
+          },
+          "remediation_recommendation": "Reconstruya la cadena de tokaji furmint como causa, mecanismo y efecto."
+        },
+        "micro_drill_candidate": {
+          "prompt": "Micro-drill: ¿qué efecto sigue a este mecanismo: La acidez aporta estructura frente a la concentración y el azúcar residual.?",
+          "answer": "El vino puede ser intenso, equilibrado y longevo."
+        },
+        "misconception_linkage_candidate": {
+          "misconception_id": "MC_ACIDITY_02",
+          "target_error": "Suponer que el dulzor basta para conservar y equilibrar Tokaji."
+        }
+      },
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "official_wset_question": false,
+        "training_item_only": true,
+        "uses_llm": false,
+        "uses_api": false,
+        "uses_embeddings": false,
+        "uses_vector_db": false,
+        "cloud_services_active": false
+      }
+    },
+    {
+      "question_id": "882",
+      "question_text": "Si se cosechan racimos completos que mezclan bayas sanas y botritizadas para Szamorodni, ¿qué consecuencia de estilo es más probable frente a seleccionar bayas Aszú individualmente?",
+      "question_type": "theory",
+      "expected_topics": [
+        "RA2",
+        "tokaji_szamorodni"
+      ],
+      "expected_causal_links": [
+        "Los racimos contienen una mezcla variable de fruta sana y afectada. -> La cosecha conjunta incorpora esa proporción directamente al mosto. -> El estilo puede variar de seco a dulce y suele ser menos extremo que una selección Aszú intensa."
+      ],
+      "expected_keywords": [
+        "Tokaji",
+        "Szamorodni",
+        "racimos",
+        "Botrytis"
+      ],
+      "expected_reasoning_type": "cause_effect",
+      "difficulty": "distinction",
+      "source_type": "SBA gap closure | manually curated from local official study guide",
+      "safe_for_examiner": false,
+      "options": {
+        "A": "El grado de concentración depende de la proporción natural de bayas botritizadas del racimo.",
+        "B": "El vino siempre será más dulce que cualquier Tokaji Aszú.",
+        "C": "La mezcla elimina la influencia de Botrytis.",
+        "D": "El método exige congelar el racimo antes de prensarlo."
+      },
+      "correct_answer_letter": "A",
+      "correct_answer_text": "El grado de concentración depende de la proporción natural de bayas botritizadas del racimo.",
+      "source_support": {
+        "source_ids": [
+          "6-13_24_tokaj"
+        ],
+        "source_files": [
+          "knowledge/official-wset/study-guide/wset_markdown/seccion_6_section_3_still_wines_of_the_world/6-13_24_tokaj.md"
+        ],
+        "support_rationale": "Las fuentes locales sustentan el mecanismo, el resultado de estilo y el contraste diagnóstico evaluado."
+      },
+      "enrichment": {
+        "causal_chain_candidate": {
+          "candidate_id": "CC_CAND_TOKAJI_SZAMORODNI",
+          "cause": "Los racimos contienen una mezcla variable de fruta sana y afectada.",
+          "mechanism": "La cosecha conjunta incorpora esa proporción directamente al mosto.",
+          "effect": "El estilo puede variar de seco a dulce y suele ser menos extremo que una selección Aszú intensa."
+        },
+        "feedback_profile": {
+          "correct_rationale": "Los racimos contienen una mezcla variable de fruta sana y afectada. La cosecha conjunta incorpora esa proporción directamente al mosto. Por ello, el estilo puede variar de seco a dulce y suele ser menos extremo que una selección Aszú intensa.",
+          "distractor_rationales": {
+            "A": "Es la relación causal correcta.",
+            "B": "No explica el mecanismo clave: La cosecha conjunta incorpora esa proporción directamente al mosto.",
+            "C": "No explica el mecanismo clave: La cosecha conjunta incorpora esa proporción directamente al mosto.",
+            "D": "No explica el mecanismo clave: La cosecha conjunta incorpora esa proporción directamente al mosto."
+          },
+          "remediation_recommendation": "Reconstruya la cadena de tokaji szamorodni como causa, mecanismo y efecto."
+        },
+        "micro_drill_candidate": {
+          "prompt": "Micro-drill: ¿qué efecto sigue a este mecanismo: La cosecha conjunta incorpora esa proporción directamente al mosto.?",
+          "answer": "El estilo puede variar de seco a dulce y suele ser menos extremo que una selección Aszú intensa."
+        },
+        "misconception_linkage_candidate": {
+          "misconception_id": "MC_TOKAJI_QUALITY_01",
+          "target_error": "Interpretar todas las categorías de Tokaji como una escala única de dulzor."
+        }
+      },
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "official_wset_question": false,
+        "training_item_only": true,
+        "uses_llm": false,
+        "uses_api": false,
+        "uses_embeddings": false,
+        "uses_vector_db": false,
+        "cloud_services_active": false
+      }
+    },
+    {
+      "question_id": "883",
+      "question_text": "Si el mosto de escurrido libre de bayas Aszú contiene una concentración extrema de azúcar, ¿qué consecuencia es más probable durante la fermentación de Eszencia?",
+      "question_type": "theory",
+      "expected_topics": [
+        "RA2",
+        "tokaji_essencia"
+      ],
+      "expected_causal_links": [
+        "El jugo contiene una cantidad excepcional de azúcar y poca agua disponible. -> La presión osmótica limita fuertemente la actividad de la levadura. -> Se obtiene un líquido muy dulce, intenso y de alcohol muy bajo."
+      ],
+      "expected_keywords": [
+        "Tokaji",
+        "Eszencia",
+        "fermentación lenta",
+        "alcohol bajo"
+      ],
+      "expected_reasoning_type": "cause_effect",
+      "difficulty": "intermediate",
+      "source_type": "SBA gap closure | manually curated from local official study guide",
+      "safe_for_examiner": false,
+      "options": {
+        "A": "La levadura fermenta con rapidez hasta alcohol alto y sequedad.",
+        "B": "La fermentación avanza muy lentamente y alcanza alcohol muy bajo con enorme azúcar residual.",
+        "C": "El azúcar se convierte principalmente en tanino.",
+        "D": "La concentración obliga a una crianza biológica bajo flor."
+      },
+      "correct_answer_letter": "B",
+      "correct_answer_text": "La fermentación avanza muy lentamente y alcanza alcohol muy bajo con enorme azúcar residual.",
+      "source_support": {
+        "source_ids": [
+          "6-13_24_tokaj"
+        ],
+        "source_files": [
+          "knowledge/official-wset/study-guide/wset_markdown/seccion_6_section_3_still_wines_of_the_world/6-13_24_tokaj.md"
+        ],
+        "support_rationale": "Las fuentes locales sustentan el mecanismo, el resultado de estilo y el contraste diagnóstico evaluado."
+      },
+      "enrichment": {
+        "causal_chain_candidate": {
+          "candidate_id": "CC_CAND_TOKAJI_ESSENCIA",
+          "cause": "El jugo contiene una cantidad excepcional de azúcar y poca agua disponible.",
+          "mechanism": "La presión osmótica limita fuertemente la actividad de la levadura.",
+          "effect": "Se obtiene un líquido muy dulce, intenso y de alcohol muy bajo."
+        },
+        "feedback_profile": {
+          "correct_rationale": "El jugo contiene una cantidad excepcional de azúcar y poca agua disponible. La presión osmótica limita fuertemente la actividad de la levadura. Por ello, se obtiene un líquido muy dulce, intenso y de alcohol muy bajo.",
+          "distractor_rationales": {
+            "A": "No explica el mecanismo clave: La presión osmótica limita fuertemente la actividad de la levadura.",
+            "B": "Es la relación causal correcta.",
+            "C": "No explica el mecanismo clave: La presión osmótica limita fuertemente la actividad de la levadura.",
+            "D": "No explica el mecanismo clave: La presión osmótica limita fuertemente la actividad de la levadura."
+          },
+          "remediation_recommendation": "Reconstruya la cadena de tokaji essencia como causa, mecanismo y efecto."
+        },
+        "micro_drill_candidate": {
+          "prompt": "Micro-drill: ¿qué efecto sigue a este mecanismo: La presión osmótica limita fuertemente la actividad de la levadura.?",
+          "answer": "Se obtiene un líquido muy dulce, intenso y de alcohol muy bajo."
+        },
+        "misconception_linkage_candidate": {
+          "misconception_id": "MC_RESIDUAL_SUGAR_SWEET_01",
+          "target_error": "Creer que más azúcar siempre produce más alcohol."
+        }
+      },
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "official_wset_question": false,
+        "training_item_only": true,
+        "uses_llm": false,
+        "uses_api": false,
+        "uses_embeddings": false,
+        "uses_vector_db": false,
+        "cloud_services_active": false
+      }
+    },
+    {
+      "question_id": "884",
+      "question_text": "Dos Tokaji declaran una categoría Aszú comparable, pero muestran distinta percepción de dulzor. ¿Qué factor explica mejor la diferencia?",
+      "question_type": "theory",
+      "expected_topics": [
+        "RA2",
+        "tokaji_puttonyos"
+      ],
+      "expected_causal_links": [
+        "La clasificación describe un estilo y una concentración mínima, no toda la experiencia sensorial. -> Composición del vino base, acidez, fermentación y crianza modulan el resultado. -> Vinos de categoría similar pueden mostrar distinto equilibrio y perfil."
+      ],
+      "expected_keywords": [
+        "Tokaji",
+        "puttonyos",
+        "dulzor",
+        "acidez"
+      ],
+      "expected_reasoning_type": "cause_effect",
+      "difficulty": "intermediate",
+      "source_type": "SBA gap closure | manually curated from local official study guide",
+      "safe_for_examiner": false,
+      "options": {
+        "A": "La categoría determina una sensación idéntica en todos los vinos.",
+        "B": "El roble nuevo convierte automáticamente azúcar en acidez.",
+        "C": "La percepción final también depende de acidez, fermentación, vino base y equilibrio, no solo de la declaración.",
+        "D": "La añada no puede modificar concentración ni equilibrio."
+      },
+      "correct_answer_letter": "C",
+      "correct_answer_text": "La percepción final también depende de acidez, fermentación, vino base y equilibrio, no solo de la declaración.",
+      "source_support": {
+        "source_ids": [
+          "6-13_24_tokaj"
+        ],
+        "source_files": [
+          "knowledge/official-wset/study-guide/wset_markdown/seccion_6_section_3_still_wines_of_the_world/6-13_24_tokaj.md"
+        ],
+        "support_rationale": "Las fuentes locales sustentan el mecanismo, el resultado de estilo y el contraste diagnóstico evaluado."
+      },
+      "enrichment": {
+        "causal_chain_candidate": {
+          "candidate_id": "CC_CAND_TOKAJI_PUTTONYOS",
+          "cause": "La clasificación describe un estilo y una concentración mínima, no toda la experiencia sensorial.",
+          "mechanism": "Composición del vino base, acidez, fermentación y crianza modulan el resultado.",
+          "effect": "Vinos de categoría similar pueden mostrar distinto equilibrio y perfil."
+        },
+        "feedback_profile": {
+          "correct_rationale": "La clasificación describe un estilo y una concentración mínima, no toda la experiencia sensorial. Composición del vino base, acidez, fermentación y crianza modulan el resultado. Por ello, vinos de categoría similar pueden mostrar distinto equilibrio y perfil.",
+          "distractor_rationales": {
+            "A": "No explica el mecanismo clave: Composición del vino base, acidez, fermentación y crianza modulan el resultado.",
+            "B": "No explica el mecanismo clave: Composición del vino base, acidez, fermentación y crianza modulan el resultado.",
+            "C": "Es la relación causal correcta.",
+            "D": "No explica el mecanismo clave: Composición del vino base, acidez, fermentación y crianza modulan el resultado."
+          },
+          "remediation_recommendation": "Reconstruya la cadena de tokaji puttonyos como causa, mecanismo y efecto."
+        },
+        "micro_drill_candidate": {
+          "prompt": "Micro-drill: ¿qué efecto sigue a este mecanismo: Composición del vino base, acidez, fermentación y crianza modulan el resultado.?",
+          "answer": "Vinos de categoría similar pueden mostrar distinto equilibrio y perfil."
+        },
+        "misconception_linkage_candidate": {
+          "misconception_id": "MC_TOKAJI_QUALITY_01",
+          "target_error": "Usar puttonyos como lectura absoluta de dulzor percibido."
+        }
+      },
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "official_wset_question": false,
+        "training_item_only": true,
+        "uses_llm": false,
+        "uses_api": false,
+        "uses_embeddings": false,
+        "uses_vector_db": false,
+        "cloud_services_active": false
+      }
+    },
+    {
+      "question_id": "885",
+      "question_text": "Si el otoño en Tokaj permanece húmedo sin periodos secos, ¿qué consecuencia es más probable para la fruta destinada a Aszú?",
+      "question_type": "theory",
+      "expected_topics": [
+        "RA2",
+        "tokaji_botrytis_conditions"
+      ],
+      "expected_causal_links": [
+        "Botrytis necesita humedad para infectar, pero también periodos secos. -> Sin secado, la baya puede deteriorarse en lugar de perder agua de forma beneficiosa. -> Bajan la proporción de fruta seleccionable y el potencial de calidad."
+      ],
+      "expected_keywords": [
+        "Tokaji",
+        "Botrytis",
+        "humedad",
+        "periodos secos"
+      ],
+      "expected_reasoning_type": "cause_effect",
+      "difficulty": "distinction",
+      "source_type": "SBA gap closure | manually curated from local official study guide",
+      "safe_for_examiner": false,
+      "options": {
+        "A": "La concentración mejora indefinidamente porque toda humedad favorece Aszú.",
+        "B": "Las bayas se congelan y se convierten en Eiswein.",
+        "C": "Botrytis deja de infectar por completo en presencia de agua.",
+        "D": "Aumenta el riesgo de podredumbre gris en vez de una deshidratación noble controlada."
+      },
+      "correct_answer_letter": "D",
+      "correct_answer_text": "Aumenta el riesgo de podredumbre gris en vez de una deshidratación noble controlada.",
+      "source_support": {
+        "source_ids": [
+          "6-13_24_tokaj"
+        ],
+        "source_files": [
+          "knowledge/official-wset/study-guide/wset_markdown/seccion_6_section_3_still_wines_of_the_world/6-13_24_tokaj.md"
+        ],
+        "support_rationale": "Las fuentes locales sustentan el mecanismo, el resultado de estilo y el contraste diagnóstico evaluado."
+      },
+      "enrichment": {
+        "causal_chain_candidate": {
+          "candidate_id": "CC_CAND_TOKAJI_BOTRYTIS_CONDITIONS",
+          "cause": "Botrytis necesita humedad para infectar, pero también periodos secos.",
+          "mechanism": "Sin secado, la baya puede deteriorarse en lugar de perder agua de forma beneficiosa.",
+          "effect": "Bajan la proporción de fruta seleccionable y el potencial de calidad."
+        },
+        "feedback_profile": {
+          "correct_rationale": "Botrytis necesita humedad para infectar, pero también periodos secos. Sin secado, la baya puede deteriorarse en lugar de perder agua de forma beneficiosa. Por ello, bajan la proporción de fruta seleccionable y el potencial de calidad.",
+          "distractor_rationales": {
+            "A": "No explica el mecanismo clave: Sin secado, la baya puede deteriorarse en lugar de perder agua de forma beneficiosa.",
+            "B": "No explica el mecanismo clave: Sin secado, la baya puede deteriorarse en lugar de perder agua de forma beneficiosa.",
+            "C": "No explica el mecanismo clave: Sin secado, la baya puede deteriorarse en lugar de perder agua de forma beneficiosa.",
+            "D": "Es la relación causal correcta."
+          },
+          "remediation_recommendation": "Reconstruya la cadena de tokaji botrytis conditions como causa, mecanismo y efecto."
+        },
+        "micro_drill_candidate": {
+          "prompt": "Micro-drill: ¿qué efecto sigue a este mecanismo: Sin secado, la baya puede deteriorarse en lugar de perder agua de forma beneficiosa.?",
+          "answer": "Bajan la proporción de fruta seleccionable y el potencial de calidad."
+        },
+        "misconception_linkage_candidate": {
+          "misconception_id": "MC_BOTRYTIS_01",
+          "target_error": "Creer que humedad continua equivale a noble rot."
+        }
+      },
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "official_wset_question": false,
+        "training_item_only": true,
+        "uses_llm": false,
+        "uses_api": false,
+        "uses_embeddings": false,
+        "uses_vector_db": false,
+        "cloud_services_active": false
+      }
+    },
+    {
+      "question_id": "886",
+      "question_text": "Si Hárslevelű se mezcla con Furmint en Tokaji, ¿qué resultado de estilo es más probable?",
+      "question_type": "theory",
+      "expected_topics": [
+        "RA2",
+        "tokaji_harslevelu"
+      ],
+      "expected_causal_links": [
+        "Las variedades del ensamblaje aportan rasgos complementarios. -> Hárslevelű contribuye expresión aromática y Furmint estructura ácida. -> El vino puede combinar perfume, riqueza y equilibrio."
+      ],
+      "expected_keywords": [
+        "Tokaji",
+        "Hárslevelű",
+        "Furmint",
+        "ensamblaje"
+      ],
+      "expected_reasoning_type": "cause_effect",
+      "difficulty": "intermediate",
+      "source_type": "SBA gap closure | manually curated from local official study guide",
+      "safe_for_examiner": false,
+      "options": {
+        "A": "Puede aportar un perfil más perfumado mientras Furmint conserva la columna de acidez.",
+        "B": "Aumenta tanino y color como una variedad tinta.",
+        "C": "Elimina el carácter de Botrytis por completo.",
+        "D": "Obliga a terminar el vino seco."
+      },
+      "correct_answer_letter": "A",
+      "correct_answer_text": "Puede aportar un perfil más perfumado mientras Furmint conserva la columna de acidez.",
+      "source_support": {
+        "source_ids": [
+          "6-13_24_tokaj"
+        ],
+        "source_files": [
+          "knowledge/official-wset/study-guide/wset_markdown/seccion_6_section_3_still_wines_of_the_world/6-13_24_tokaj.md"
+        ],
+        "support_rationale": "Las fuentes locales sustentan el mecanismo, el resultado de estilo y el contraste diagnóstico evaluado."
+      },
+      "enrichment": {
+        "causal_chain_candidate": {
+          "candidate_id": "CC_CAND_TOKAJI_HARSLEVELU",
+          "cause": "Las variedades del ensamblaje aportan rasgos complementarios.",
+          "mechanism": "Hárslevelű contribuye expresión aromática y Furmint estructura ácida.",
+          "effect": "El vino puede combinar perfume, riqueza y equilibrio."
+        },
+        "feedback_profile": {
+          "correct_rationale": "Las variedades del ensamblaje aportan rasgos complementarios. Hárslevelű contribuye expresión aromática y Furmint estructura ácida. Por ello, el vino puede combinar perfume, riqueza y equilibrio.",
+          "distractor_rationales": {
+            "A": "Es la relación causal correcta.",
+            "B": "No explica el mecanismo clave: Hárslevelű contribuye expresión aromática y Furmint estructura ácida.",
+            "C": "No explica el mecanismo clave: Hárslevelű contribuye expresión aromática y Furmint estructura ácida.",
+            "D": "No explica el mecanismo clave: Hárslevelű contribuye expresión aromática y Furmint estructura ácida."
+          },
+          "remediation_recommendation": "Reconstruya la cadena de tokaji harslevelu como causa, mecanismo y efecto."
+        },
+        "micro_drill_candidate": {
+          "prompt": "Micro-drill: ¿qué efecto sigue a este mecanismo: Hárslevelű contribuye expresión aromática y Furmint estructura ácida.?",
+          "answer": "El vino puede combinar perfume, riqueza y equilibrio."
+        },
+        "misconception_linkage_candidate": {
+          "misconception_id": "MC_TOKAJI_QUALITY_01",
+          "target_error": "Reducir el estilo de Tokaji a una sola variedad o al azúcar."
+        }
+      },
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "official_wset_question": false,
+        "training_item_only": true,
+        "uses_llm": false,
+        "uses_api": false,
+        "uses_embeddings": false,
+        "uses_vector_db": false,
+        "cloud_services_active": false
+      }
+    },
+    {
+      "question_id": "887",
+      "question_text": "Si un Tokaji Aszú concentrado madura durante un periodo prolongado, ¿qué resultado de estilo es más probable?",
+      "question_type": "theory",
+      "expected_topics": [
+        "RA2",
+        "tokaji_ageing"
+      ],
+      "expected_causal_links": [
+        "El vino contiene alta concentración, azúcar, acidez y compuestos botritizados. -> La maduración lenta integra componentes y favorece aromas terciarios. -> Aumentan complejidad y armonía con potencial de larga evolución."
+      ],
+      "expected_keywords": [
+        "Tokaji",
+        "Aszú",
+        "maduración",
+        "complejidad"
+      ],
+      "expected_reasoning_type": "cause_effect",
+      "difficulty": "intermediate",
+      "source_type": "SBA gap closure | manually curated from local official study guide",
+      "safe_for_examiner": false,
+      "options": {
+        "A": "Se vuelve espumoso por presión acumulada.",
+        "B": "Desarrolla mayor integración y complejidad de frutos secos, miel y especias sin perder necesariamente su acidez.",
+        "C": "Pierde todo azúcar residual por evaporación.",
+        "D": "Adquiere tanino alto por contacto con hollejos tintos."
+      },
+      "correct_answer_letter": "B",
+      "correct_answer_text": "Desarrolla mayor integración y complejidad de frutos secos, miel y especias sin perder necesariamente su acidez.",
+      "source_support": {
+        "source_ids": [
+          "6-13_24_tokaj"
+        ],
+        "source_files": [
+          "knowledge/official-wset/study-guide/wset_markdown/seccion_6_section_3_still_wines_of_the_world/6-13_24_tokaj.md"
+        ],
+        "support_rationale": "Las fuentes locales sustentan el mecanismo, el resultado de estilo y el contraste diagnóstico evaluado."
+      },
+      "enrichment": {
+        "causal_chain_candidate": {
+          "candidate_id": "CC_CAND_TOKAJI_AGEING",
+          "cause": "El vino contiene alta concentración, azúcar, acidez y compuestos botritizados.",
+          "mechanism": "La maduración lenta integra componentes y favorece aromas terciarios.",
+          "effect": "Aumentan complejidad y armonía con potencial de larga evolución."
+        },
+        "feedback_profile": {
+          "correct_rationale": "El vino contiene alta concentración, azúcar, acidez y compuestos botritizados. La maduración lenta integra componentes y favorece aromas terciarios. Por ello, aumentan complejidad y armonía con potencial de larga evolución.",
+          "distractor_rationales": {
+            "A": "No explica el mecanismo clave: La maduración lenta integra componentes y favorece aromas terciarios.",
+            "B": "Es la relación causal correcta.",
+            "C": "No explica el mecanismo clave: La maduración lenta integra componentes y favorece aromas terciarios.",
+            "D": "No explica el mecanismo clave: La maduración lenta integra componentes y favorece aromas terciarios."
+          },
+          "remediation_recommendation": "Reconstruya la cadena de tokaji ageing como causa, mecanismo y efecto."
+        },
+        "micro_drill_candidate": {
+          "prompt": "Micro-drill: ¿qué efecto sigue a este mecanismo: La maduración lenta integra componentes y favorece aromas terciarios.?",
+          "answer": "Aumentan complejidad y armonía con potencial de larga evolución."
+        },
+        "misconception_linkage_candidate": {
+          "misconception_id": "MC_AGEING_IMPROVEMENT_01",
+          "target_error": "Suponer que la edad mejora cualquier vino o elimina el dulzor."
+        }
+      },
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "official_wset_question": false,
+        "training_item_only": true,
+        "uses_llm": false,
+        "uses_api": false,
+        "uses_embeddings": false,
+        "uses_vector_db": false,
+        "cloud_services_active": false
+      }
+    },
+    {
+      "question_id": "888",
+      "question_text": "Si un productor deja uvas sanas en la vid después de la madurez normal sin esperar Botrytis ni helada, ¿qué resultado es más probable?",
+      "question_type": "theory",
+      "expected_topics": [
+        "RA2",
+        "late_harvest"
+      ],
+      "expected_causal_links": [
+        "La fruta continúa madurando y puede deshidratarse parcialmente en la vid. -> Sube la relación de azúcar y sabor respecto al agua. -> El mosto puede dar un vino más rico y dulce, con riesgo de menor acidez."
+      ],
+      "expected_keywords": [
+        "vendimia tardía",
+        "sobremaduración",
+        "concentración",
+        "acidez"
+      ],
+      "expected_reasoning_type": "cause_effect",
+      "difficulty": "distinction",
+      "source_type": "SBA gap closure | manually curated from local official study guide",
+      "safe_for_examiner": false,
+      "options": {
+        "A": "Aromas nobles de Botrytis aparecen obligatoriamente.",
+        "B": "El agua queda separada como hielo durante el prensado.",
+        "C": "Mayor concentración de azúcar y sabores maduros por sobremaduración y algo de pérdida de agua.",
+        "D": "El vino debe ser fortificado para conservar cualquier azúcar."
+      },
+      "correct_answer_letter": "C",
+      "correct_answer_text": "Mayor concentración de azúcar y sabores maduros por sobremaduración y algo de pérdida de agua.",
+      "source_support": {
+        "source_ids": [
+          "5-5_8_white_and_sweet_winemaking"
+        ],
+        "source_files": [
+          "knowledge/official-wset/study-guide/wset_markdown/seccion_5_section_2_factors_affecting_the_style_quality_and_price_of_w/5-5_8_white_and_sweet_winemaking.md"
+        ],
+        "support_rationale": "Las fuentes locales sustentan el mecanismo, el resultado de estilo y el contraste diagnóstico evaluado."
+      },
+      "enrichment": {
+        "causal_chain_candidate": {
+          "candidate_id": "CC_CAND_LATE_HARVEST",
+          "cause": "La fruta continúa madurando y puede deshidratarse parcialmente en la vid.",
+          "mechanism": "Sube la relación de azúcar y sabor respecto al agua.",
+          "effect": "El mosto puede dar un vino más rico y dulce, con riesgo de menor acidez."
+        },
+        "feedback_profile": {
+          "correct_rationale": "La fruta continúa madurando y puede deshidratarse parcialmente en la vid. Sube la relación de azúcar y sabor respecto al agua. Por ello, el mosto puede dar un vino más rico y dulce, con riesgo de menor acidez.",
+          "distractor_rationales": {
+            "A": "No explica el mecanismo clave: Sube la relación de azúcar y sabor respecto al agua.",
+            "B": "No explica el mecanismo clave: Sube la relación de azúcar y sabor respecto al agua.",
+            "C": "Es la relación causal correcta.",
+            "D": "No explica el mecanismo clave: Sube la relación de azúcar y sabor respecto al agua."
+          },
+          "remediation_recommendation": "Reconstruya la cadena de late harvest como causa, mecanismo y efecto."
+        },
+        "micro_drill_candidate": {
+          "prompt": "Micro-drill: ¿qué efecto sigue a este mecanismo: Sube la relación de azúcar y sabor respecto al agua.?",
+          "answer": "El mosto puede dar un vino más rico y dulce, con riesgo de menor acidez."
+        },
+        "misconception_linkage_candidate": {
+          "misconception_id": "MC_SWEET_CONCENTRATION_01",
+          "target_error": "Confundir vendimia tardía con Botrytis o congelación."
+        }
+      },
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "official_wset_question": false,
+        "training_item_only": true,
+        "uses_llm": false,
+        "uses_api": false,
+        "uses_embeddings": false,
+        "uses_vector_db": false,
+        "cloud_services_active": false
+      }
+    },
+    {
+      "question_id": "889",
+      "question_text": "Si unas uvas se secan después de la vendimia antes de fermentar, ¿qué resultado explica mejor un vino passito?",
+      "question_type": "theory",
+      "expected_topics": [
+        "RA2",
+        "passito_drying"
+      ],
+      "expected_causal_links": [
+        "Las uvas cosechadas se exponen a condiciones de secado controlado. -> Pierden agua antes del prensado y aumentan los solutos por unidad de volumen. -> El mosto resulta concentrado, rico y escaso."
+      ],
+      "expected_keywords": [
+        "passito",
+        "secado",
+        "evaporación",
+        "bajo rendimiento"
+      ],
+      "expected_reasoning_type": "cause_effect",
+      "difficulty": "intermediate",
+      "source_type": "SBA gap closure | manually curated from local official study guide",
+      "safe_for_examiner": false,
+      "options": {
+        "A": "El secado diluye el azúcar al romper las pieles.",
+        "B": "La fruta desarrolla flor y envejecimiento biológico.",
+        "C": "El método elimina toda posibilidad de oxidación.",
+        "D": "La evaporación de agua concentra azúcar, acidez y sabores, mientras cae el rendimiento de mosto."
+      },
+      "correct_answer_letter": "D",
+      "correct_answer_text": "La evaporación de agua concentra azúcar, acidez y sabores, mientras cae el rendimiento de mosto.",
+      "source_support": {
+        "source_ids": [
+          "5-5_8_white_and_sweet_winemaking"
+        ],
+        "source_files": [
+          "knowledge/official-wset/study-guide/wset_markdown/seccion_5_section_2_factors_affecting_the_style_quality_and_price_of_w/5-5_8_white_and_sweet_winemaking.md"
+        ],
+        "support_rationale": "Las fuentes locales sustentan el mecanismo, el resultado de estilo y el contraste diagnóstico evaluado."
+      },
+      "enrichment": {
+        "causal_chain_candidate": {
+          "candidate_id": "CC_CAND_PASSITO_DRYING",
+          "cause": "Las uvas cosechadas se exponen a condiciones de secado controlado.",
+          "mechanism": "Pierden agua antes del prensado y aumentan los solutos por unidad de volumen.",
+          "effect": "El mosto resulta concentrado, rico y escaso."
+        },
+        "feedback_profile": {
+          "correct_rationale": "Las uvas cosechadas se exponen a condiciones de secado controlado. Pierden agua antes del prensado y aumentan los solutos por unidad de volumen. Por ello, el mosto resulta concentrado, rico y escaso.",
+          "distractor_rationales": {
+            "A": "No explica el mecanismo clave: Pierden agua antes del prensado y aumentan los solutos por unidad de volumen.",
+            "B": "No explica el mecanismo clave: Pierden agua antes del prensado y aumentan los solutos por unidad de volumen.",
+            "C": "No explica el mecanismo clave: Pierden agua antes del prensado y aumentan los solutos por unidad de volumen.",
+            "D": "Es la relación causal correcta."
+          },
+          "remediation_recommendation": "Reconstruya la cadena de passito drying como causa, mecanismo y efecto."
+        },
+        "micro_drill_candidate": {
+          "prompt": "Micro-drill: ¿qué efecto sigue a este mecanismo: Pierden agua antes del prensado y aumentan los solutos por unidad de volumen.?",
+          "answer": "El mosto resulta concentrado, rico y escaso."
+        },
+        "misconception_linkage_candidate": {
+          "misconception_id": "MC_SWEET_CONCENTRATION_01",
+          "target_error": "Creer que solo Botrytis concentra vinos dulces."
+        }
+      },
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "official_wset_question": false,
+        "training_item_only": true,
+        "uses_llm": false,
+        "uses_api": false,
+        "uses_embeddings": false,
+        "uses_vector_db": false,
+        "cloud_services_active": false
+      }
+    },
+    {
+      "question_id": "890",
+      "question_text": "Si durante el secado de uvas para vino dulce falta ventilación, ¿qué consecuencia es más probable?",
+      "question_type": "theory",
+      "expected_topics": [
+        "RA2",
+        "drying_airflow"
+      ],
+      "expected_causal_links": [
+        "Las bayas húmedas permanecen juntas durante un periodo prolongado. -> Sin circulación de aire, la humedad se acumula y favorece microorganismos. -> Puede perderse fruta y aparecer carácter defectuoso."
+      ],
+      "expected_keywords": [
+        "uvas secadas",
+        "ventilación",
+        "podredumbre",
+        "deshidratación"
+      ],
+      "expected_reasoning_type": "cause_effect",
+      "difficulty": "intermediate",
+      "source_type": "SBA gap closure | manually curated from local official study guide",
+      "safe_for_examiner": false,
+      "options": {
+        "A": "Aumenta el riesgo de podredumbre no deseada en lugar de una deshidratación limpia.",
+        "B": "La concentración se vuelve más uniforme y segura.",
+        "C": "La falta de aire congela el agua de las bayas.",
+        "D": "El azúcar se transforma en alcohol antes del prensado."
+      },
+      "correct_answer_letter": "A",
+      "correct_answer_text": "Aumenta el riesgo de podredumbre no deseada en lugar de una deshidratación limpia.",
+      "source_support": {
+        "source_ids": [
+          "5-5_8_white_and_sweet_winemaking"
+        ],
+        "source_files": [
+          "knowledge/official-wset/study-guide/wset_markdown/seccion_5_section_2_factors_affecting_the_style_quality_and_price_of_w/5-5_8_white_and_sweet_winemaking.md"
+        ],
+        "support_rationale": "Las fuentes locales sustentan el mecanismo, el resultado de estilo y el contraste diagnóstico evaluado."
+      },
+      "enrichment": {
+        "causal_chain_candidate": {
+          "candidate_id": "CC_CAND_DRYING_AIRFLOW",
+          "cause": "Las bayas húmedas permanecen juntas durante un periodo prolongado.",
+          "mechanism": "Sin circulación de aire, la humedad se acumula y favorece microorganismos.",
+          "effect": "Puede perderse fruta y aparecer carácter defectuoso."
+        },
+        "feedback_profile": {
+          "correct_rationale": "Las bayas húmedas permanecen juntas durante un periodo prolongado. Sin circulación de aire, la humedad se acumula y favorece microorganismos. Por ello, puede perderse fruta y aparecer carácter defectuoso.",
+          "distractor_rationales": {
+            "A": "Es la relación causal correcta.",
+            "B": "No explica el mecanismo clave: Sin circulación de aire, la humedad se acumula y favorece microorganismos.",
+            "C": "No explica el mecanismo clave: Sin circulación de aire, la humedad se acumula y favorece microorganismos.",
+            "D": "No explica el mecanismo clave: Sin circulación de aire, la humedad se acumula y favorece microorganismos."
+          },
+          "remediation_recommendation": "Reconstruya la cadena de drying airflow como causa, mecanismo y efecto."
+        },
+        "micro_drill_candidate": {
+          "prompt": "Micro-drill: ¿qué efecto sigue a este mecanismo: Sin circulación de aire, la humedad se acumula y favorece microorganismos.?",
+          "answer": "Puede perderse fruta y aparecer carácter defectuoso."
+        },
+        "misconception_linkage_candidate": {
+          "misconception_id": "MC_SWEET_CONCENTRATION_01",
+          "target_error": "Suponer que cualquier deshidratación ocurre sin riesgo microbiológico."
+        }
+      },
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "official_wset_question": false,
+        "training_item_only": true,
+        "uses_llm": false,
+        "uses_api": false,
+        "uses_embeddings": false,
+        "uses_vector_db": false,
+        "cloud_services_active": false
+      }
+    },
+    {
+      "question_id": "891",
+      "question_text": "Si una bodega enfría y filtra un vino dulce antes de que la levadura consuma todo el azúcar, ¿qué resultado es más probable?",
+      "question_type": "theory",
+      "expected_topics": [
+        "RA2",
+        "sweet_fermentation_arrest"
+      ],
+      "expected_causal_links": [
+        "La fermentación todavía contiene levaduras activas y azúcar. -> El frío frena la actividad y la filtración retira células de levadura. -> Se conserva dulzor y mejora la estabilidad microbiológica si el proceso es eficaz."
+      ],
+      "expected_keywords": [
+        "vino dulce",
+        "parada de fermentación",
+        "filtración",
+        "azúcar residual"
+      ],
+      "expected_reasoning_type": "cause_effect",
+      "difficulty": "distinction",
+      "source_type": "SBA gap closure | manually curated from local official study guide",
+      "safe_for_examiner": false,
+      "options": {
+        "A": "El vino se vuelve más dulce porque el frío crea azúcar nuevo.",
+        "B": "Queda azúcar residual y la eliminación de levaduras reduce el riesgo de reinicio de fermentación.",
+        "C": "La filtración aumenta el alcohol después del embotellado.",
+        "D": "El proceso concentra el mosto mediante evaporación."
+      },
+      "correct_answer_letter": "B",
+      "correct_answer_text": "Queda azúcar residual y la eliminación de levaduras reduce el riesgo de reinicio de fermentación.",
+      "source_support": {
+        "source_ids": [
+          "5-5_8_white_and_sweet_winemaking"
+        ],
+        "source_files": [
+          "knowledge/official-wset/study-guide/wset_markdown/seccion_5_section_2_factors_affecting_the_style_quality_and_price_of_w/5-5_8_white_and_sweet_winemaking.md"
+        ],
+        "support_rationale": "Las fuentes locales sustentan el mecanismo, el resultado de estilo y el contraste diagnóstico evaluado."
+      },
+      "enrichment": {
+        "causal_chain_candidate": {
+          "candidate_id": "CC_CAND_SWEET_FERMENTATION_ARREST",
+          "cause": "La fermentación todavía contiene levaduras activas y azúcar.",
+          "mechanism": "El frío frena la actividad y la filtración retira células de levadura.",
+          "effect": "Se conserva dulzor y mejora la estabilidad microbiológica si el proceso es eficaz."
+        },
+        "feedback_profile": {
+          "correct_rationale": "La fermentación todavía contiene levaduras activas y azúcar. El frío frena la actividad y la filtración retira células de levadura. Por ello, se conserva dulzor y mejora la estabilidad microbiológica si el proceso es eficaz.",
+          "distractor_rationales": {
+            "A": "No explica el mecanismo clave: El frío frena la actividad y la filtración retira células de levadura.",
+            "B": "Es la relación causal correcta.",
+            "C": "No explica el mecanismo clave: El frío frena la actividad y la filtración retira células de levadura.",
+            "D": "No explica el mecanismo clave: El frío frena la actividad y la filtración retira células de levadura."
+          },
+          "remediation_recommendation": "Reconstruya la cadena de sweet fermentation arrest como causa, mecanismo y efecto."
+        },
+        "micro_drill_candidate": {
+          "prompt": "Micro-drill: ¿qué efecto sigue a este mecanismo: El frío frena la actividad y la filtración retira células de levadura.?",
+          "answer": "Se conserva dulzor y mejora la estabilidad microbiológica si el proceso es eficaz."
+        },
+        "misconception_linkage_candidate": {
+          "misconception_id": "MC_RESIDUAL_SUGAR_SWEET_01",
+          "target_error": "Confundir parada de fermentación con concentración de azúcar."
+        }
+      },
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "official_wset_question": false,
+        "training_item_only": true,
+        "uses_llm": false,
+        "uses_api": false,
+        "uses_embeddings": false,
+        "uses_vector_db": false,
+        "cloud_services_active": false
+      }
+    },
+    {
+      "question_id": "892",
+      "question_text": "Si un productor concentra mosto antes de fermentar, ¿qué consecuencia estilística es más probable respecto a un mosto sin concentrar?",
+      "question_type": "theory",
+      "expected_topics": [
+        "RA2",
+        "sweet_must_concentration"
+      ],
+      "expected_causal_links": [
+        "El mosto empieza con más solutos por unidad de agua. -> La levadura encuentra más azúcar y mayor presión osmótica. -> Puede producirse un vino más rico, alcohólico o dulce según cuánto fermente."
+      ],
+      "expected_keywords": [
+        "mosto concentrado",
+        "azúcar potencial",
+        "cuerpo",
+        "fermentación"
+      ],
+      "expected_reasoning_type": "cause_effect",
+      "difficulty": "intermediate",
+      "source_type": "SBA gap closure | manually curated from local official study guide",
+      "safe_for_examiner": false,
+      "options": {
+        "A": "Menor alcohol potencial porque hay menos azúcar.",
+        "B": "Desaparición automática de la acidez.",
+        "C": "Mayor azúcar potencial, cuerpo y sabor, con más dificultad fermentativa.",
+        "D": "Menor presión osmótica para la levadura."
+      },
+      "correct_answer_letter": "C",
+      "correct_answer_text": "Mayor azúcar potencial, cuerpo y sabor, con más dificultad fermentativa.",
+      "source_support": {
+        "source_ids": [
+          "5-5_8_white_and_sweet_winemaking"
+        ],
+        "source_files": [
+          "knowledge/official-wset/study-guide/wset_markdown/seccion_5_section_2_factors_affecting_the_style_quality_and_price_of_w/5-5_8_white_and_sweet_winemaking.md"
+        ],
+        "support_rationale": "Las fuentes locales sustentan el mecanismo, el resultado de estilo y el contraste diagnóstico evaluado."
+      },
+      "enrichment": {
+        "causal_chain_candidate": {
+          "candidate_id": "CC_CAND_SWEET_MUST_CONCENTRATION",
+          "cause": "El mosto empieza con más solutos por unidad de agua.",
+          "mechanism": "La levadura encuentra más azúcar y mayor presión osmótica.",
+          "effect": "Puede producirse un vino más rico, alcohólico o dulce según cuánto fermente."
+        },
+        "feedback_profile": {
+          "correct_rationale": "El mosto empieza con más solutos por unidad de agua. La levadura encuentra más azúcar y mayor presión osmótica. Por ello, puede producirse un vino más rico, alcohólico o dulce según cuánto fermente.",
+          "distractor_rationales": {
+            "A": "No explica el mecanismo clave: La levadura encuentra más azúcar y mayor presión osmótica.",
+            "B": "No explica el mecanismo clave: La levadura encuentra más azúcar y mayor presión osmótica.",
+            "C": "Es la relación causal correcta.",
+            "D": "No explica el mecanismo clave: La levadura encuentra más azúcar y mayor presión osmótica."
+          },
+          "remediation_recommendation": "Reconstruya la cadena de sweet must concentration como causa, mecanismo y efecto."
+        },
+        "micro_drill_candidate": {
+          "prompt": "Micro-drill: ¿qué efecto sigue a este mecanismo: La levadura encuentra más azúcar y mayor presión osmótica.?",
+          "answer": "Puede producirse un vino más rico, alcohólico o dulce según cuánto fermente."
+        },
+        "misconception_linkage_candidate": {
+          "misconception_id": "MC_RESIDUAL_SUGAR_SWEET_01",
+          "target_error": "Asumir que concentración y fermentación no interactúan."
+        }
+      },
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "official_wset_question": false,
+        "training_item_only": true,
+        "uses_llm": false,
+        "uses_api": false,
+        "uses_embeddings": false,
+        "uses_vector_db": false,
+        "cloud_services_active": false
+      }
+    },
+    {
+      "question_id": "893",
+      "question_text": "Dos vinos dulces tienen igual azúcar residual; uno procede de fruta con acidez claramente mayor. ¿Qué resultado es más probable?",
+      "question_type": "theory",
+      "expected_topics": [
+        "RA2",
+        "sweet_balance_acidity"
+      ],
+      "expected_causal_links": [
+        "El dulzor y la acidez actúan simultáneamente en la estructura. -> La acidez contrasta con el azúcar y eleva la sensación de frescura. -> El vino puede sostener mejor la riqueza y el final."
+      ],
+      "expected_keywords": [
+        "vino dulce",
+        "acidez",
+        "equilibrio",
+        "frescura"
+      ],
+      "expected_reasoning_type": "cause_effect",
+      "difficulty": "intermediate",
+      "source_type": "SBA gap closure | manually curated from local official study guide",
+      "safe_for_examiner": false,
+      "options": {
+        "A": "Se percibe siempre más dulce porque ácido y azúcar se suman.",
+        "B": "Tiene necesariamente más tanino.",
+        "C": "Pierde intensidad aromática por neutralización química.",
+        "D": "El vino de mayor acidez se percibe más fresco y equilibrado."
+      },
+      "correct_answer_letter": "D",
+      "correct_answer_text": "El vino de mayor acidez se percibe más fresco y equilibrado.",
+      "source_support": {
+        "source_ids": [
+          "5-5_8_white_and_sweet_winemaking"
+        ],
+        "source_files": [
+          "knowledge/official-wset/study-guide/wset_markdown/seccion_5_section_2_factors_affecting_the_style_quality_and_price_of_w/5-5_8_white_and_sweet_winemaking.md"
+        ],
+        "support_rationale": "Las fuentes locales sustentan el mecanismo, el resultado de estilo y el contraste diagnóstico evaluado."
+      },
+      "enrichment": {
+        "causal_chain_candidate": {
+          "candidate_id": "CC_CAND_SWEET_BALANCE_ACIDITY",
+          "cause": "El dulzor y la acidez actúan simultáneamente en la estructura.",
+          "mechanism": "La acidez contrasta con el azúcar y eleva la sensación de frescura.",
+          "effect": "El vino puede sostener mejor la riqueza y el final."
+        },
+        "feedback_profile": {
+          "correct_rationale": "El dulzor y la acidez actúan simultáneamente en la estructura. La acidez contrasta con el azúcar y eleva la sensación de frescura. Por ello, el vino puede sostener mejor la riqueza y el final.",
+          "distractor_rationales": {
+            "A": "No explica el mecanismo clave: La acidez contrasta con el azúcar y eleva la sensación de frescura.",
+            "B": "No explica el mecanismo clave: La acidez contrasta con el azúcar y eleva la sensación de frescura.",
+            "C": "No explica el mecanismo clave: La acidez contrasta con el azúcar y eleva la sensación de frescura.",
+            "D": "Es la relación causal correcta."
+          },
+          "remediation_recommendation": "Reconstruya la cadena de sweet balance acidity como causa, mecanismo y efecto."
+        },
+        "micro_drill_candidate": {
+          "prompt": "Micro-drill: ¿qué efecto sigue a este mecanismo: La acidez contrasta con el azúcar y eleva la sensación de frescura.?",
+          "answer": "El vino puede sostener mejor la riqueza y el final."
+        },
+        "misconception_linkage_candidate": {
+          "misconception_id": "MC_ACIDITY_01",
+          "target_error": "Evaluar el dulzor sin considerar la acidez."
+        }
+      },
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "official_wset_question": false,
+        "training_item_only": true,
+        "uses_llm": false,
+        "uses_api": false,
+        "uses_embeddings": false,
+        "uses_vector_db": false,
+        "cloud_services_active": false
+      }
+    },
+    {
+      "question_id": "894",
+      "question_text": "Si un vino dulce concentrado tiene acidez baja, ¿qué consecuencia sensorial es más probable?",
+      "question_type": "theory",
+      "expected_topics": [
+        "RA2",
+        "sweet_low_acid"
+      ],
+      "expected_causal_links": [
+        "El vino contiene azúcar y cuerpo elevados con poco contraste ácido. -> Falta tensión para equilibrar la riqueza y refrescar el paladar. -> El dulzor domina y reduce la sensación de precisión."
+      ],
+      "expected_keywords": [
+        "vino dulce",
+        "acidez baja",
+        "empalagoso",
+        "equilibrio"
+      ],
+      "expected_reasoning_type": "cause_effect",
+      "difficulty": "distinction",
+      "source_type": "SBA gap closure | manually curated from local official study guide",
+      "safe_for_examiner": false,
+      "options": {
+        "A": "Puede resultar pesado, empalagoso y con menor definición.",
+        "B": "La baja acidez vuelve el vino automáticamente seco.",
+        "C": "El dulzor se transforma en tanino.",
+        "D": "El final se alarga siempre por falta de acidez."
+      },
+      "correct_answer_letter": "A",
+      "correct_answer_text": "Puede resultar pesado, empalagoso y con menor definición.",
+      "source_support": {
+        "source_ids": [
+          "5-5_8_white_and_sweet_winemaking"
+        ],
+        "source_files": [
+          "knowledge/official-wset/study-guide/wset_markdown/seccion_5_section_2_factors_affecting_the_style_quality_and_price_of_w/5-5_8_white_and_sweet_winemaking.md"
+        ],
+        "support_rationale": "Las fuentes locales sustentan el mecanismo, el resultado de estilo y el contraste diagnóstico evaluado."
+      },
+      "enrichment": {
+        "causal_chain_candidate": {
+          "candidate_id": "CC_CAND_SWEET_LOW_ACID",
+          "cause": "El vino contiene azúcar y cuerpo elevados con poco contraste ácido.",
+          "mechanism": "Falta tensión para equilibrar la riqueza y refrescar el paladar.",
+          "effect": "El dulzor domina y reduce la sensación de precisión."
+        },
+        "feedback_profile": {
+          "correct_rationale": "El vino contiene azúcar y cuerpo elevados con poco contraste ácido. Falta tensión para equilibrar la riqueza y refrescar el paladar. Por ello, el dulzor domina y reduce la sensación de precisión.",
+          "distractor_rationales": {
+            "A": "Es la relación causal correcta.",
+            "B": "No explica el mecanismo clave: Falta tensión para equilibrar la riqueza y refrescar el paladar.",
+            "C": "No explica el mecanismo clave: Falta tensión para equilibrar la riqueza y refrescar el paladar.",
+            "D": "No explica el mecanismo clave: Falta tensión para equilibrar la riqueza y refrescar el paladar."
+          },
+          "remediation_recommendation": "Reconstruya la cadena de sweet low acid como causa, mecanismo y efecto."
+        },
+        "micro_drill_candidate": {
+          "prompt": "Micro-drill: ¿qué efecto sigue a este mecanismo: Falta tensión para equilibrar la riqueza y refrescar el paladar.?",
+          "answer": "El dulzor domina y reduce la sensación de precisión."
+        },
+        "misconception_linkage_candidate": {
+          "misconception_id": "MC_SWEET_BALANCING_02",
+          "target_error": "Creer que concentración alta garantiza equilibrio."
+        }
+      },
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "official_wset_question": false,
+        "training_item_only": true,
+        "uses_llm": false,
+        "uses_api": false,
+        "uses_embeddings": false,
+        "uses_vector_db": false,
+        "cloud_services_active": false
+      }
+    },
+    {
+      "question_id": "895",
+      "question_text": "Si Botrytis noble se desarrolla de forma beneficiosa, ¿qué resultado aromático es más probable además de la concentración?",
+      "question_type": "theory",
+      "expected_topics": [
+        "RA2",
+        "sweet_botrytis_aroma"
+      ],
+      "expected_causal_links": [
+        "El hongo actúa metabólicamente sobre bayas maduras mientras pierden agua. -> Se modifican precursores y se concentran compuestos aromáticos. -> El vino muestra un perfil botritizado complejo y reconocible."
+      ],
+      "expected_keywords": [
+        "Botrytis",
+        "miel",
+        "albaricoque seco",
+        "azafrán"
+      ],
+      "expected_reasoning_type": "cause_effect",
+      "difficulty": "intermediate",
+      "source_type": "SBA gap closure | manually curated from local official study guide",
+      "safe_for_examiner": false,
+      "options": {
+        "A": "Aromas exclusivos de fruta verde sin cambio.",
+        "B": "Mayor complejidad con notas como miel, albaricoque seco y azafrán.",
+        "C": "Carácter de acetaldehído propio de flor.",
+        "D": "Aromas de hielo y agua mineral creados por congelación."
+      },
+      "correct_answer_letter": "B",
+      "correct_answer_text": "Mayor complejidad con notas como miel, albaricoque seco y azafrán.",
+      "source_support": {
+        "source_ids": [
+          "5-5_8_white_and_sweet_winemaking"
+        ],
+        "source_files": [
+          "knowledge/official-wset/study-guide/wset_markdown/seccion_5_section_2_factors_affecting_the_style_quality_and_price_of_w/5-5_8_white_and_sweet_winemaking.md"
+        ],
+        "support_rationale": "Las fuentes locales sustentan el mecanismo, el resultado de estilo y el contraste diagnóstico evaluado."
+      },
+      "enrichment": {
+        "causal_chain_candidate": {
+          "candidate_id": "CC_CAND_SWEET_BOTRYTIS_AROMA",
+          "cause": "El hongo actúa metabólicamente sobre bayas maduras mientras pierden agua.",
+          "mechanism": "Se modifican precursores y se concentran compuestos aromáticos.",
+          "effect": "El vino muestra un perfil botritizado complejo y reconocible."
+        },
+        "feedback_profile": {
+          "correct_rationale": "El hongo actúa metabólicamente sobre bayas maduras mientras pierden agua. Se modifican precursores y se concentran compuestos aromáticos. Por ello, el vino muestra un perfil botritizado complejo y reconocible.",
+          "distractor_rationales": {
+            "A": "No explica el mecanismo clave: Se modifican precursores y se concentran compuestos aromáticos.",
+            "B": "Es la relación causal correcta.",
+            "C": "No explica el mecanismo clave: Se modifican precursores y se concentran compuestos aromáticos.",
+            "D": "No explica el mecanismo clave: Se modifican precursores y se concentran compuestos aromáticos."
+          },
+          "remediation_recommendation": "Reconstruya la cadena de sweet botrytis aroma como causa, mecanismo y efecto."
+        },
+        "micro_drill_candidate": {
+          "prompt": "Micro-drill: ¿qué efecto sigue a este mecanismo: Se modifican precursores y se concentran compuestos aromáticos.?",
+          "answer": "El vino muestra un perfil botritizado complejo y reconocible."
+        },
+        "misconception_linkage_candidate": {
+          "misconception_id": "MC_BOTRYTIS_01",
+          "target_error": "Tratar Botrytis como simple pérdida de agua."
+        }
+      },
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "official_wset_question": false,
+        "training_item_only": true,
+        "uses_llm": false,
+        "uses_api": false,
+        "uses_embeddings": false,
+        "uses_vector_db": false,
+        "cloud_services_active": false
+      }
+    },
+    {
+      "question_id": "896",
+      "question_text": "Al comparar uvas secadas después de la cosecha con uvas afectadas por podredumbre noble, ¿qué factor explica mejor una diferencia aromática entre los vinos?",
+      "question_type": "theory",
+      "expected_topics": [
+        "RA2",
+        "sweet_drying_vs_botrytis"
+      ],
+      "expected_causal_links": [
+        "Ambos métodos reducen agua, pero solo uno implica metabolismo fúngico. -> Botrytis perfora y transforma la baya; el secado controlado favorece evaporación sin esa acción. -> Los vinos pueden compartir concentración pero mostrar complejidad aromática distinta."
+      ],
+      "expected_keywords": [
+        "vino dulce",
+        "secado",
+        "Botrytis",
+        "perfil aromático"
+      ],
+      "expected_reasoning_type": "cause_effect",
+      "difficulty": "intermediate",
+      "source_type": "SBA gap closure | manually curated from local official study guide",
+      "safe_for_examiner": false,
+      "options": {
+        "A": "El secado siempre produce acetaldehído de flor.",
+        "B": "Botrytis concentra solo por congelación.",
+        "C": "Botrytis modifica químicamente la baya, mientras el secado sano concentra sin aportar el mismo carácter fúngico.",
+        "D": "Los dos métodos generan perfiles idénticos si el azúcar final coincide."
+      },
+      "correct_answer_letter": "C",
+      "correct_answer_text": "Botrytis modifica químicamente la baya, mientras el secado sano concentra sin aportar el mismo carácter fúngico.",
+      "source_support": {
+        "source_ids": [
+          "5-5_8_white_and_sweet_winemaking"
+        ],
+        "source_files": [
+          "knowledge/official-wset/study-guide/wset_markdown/seccion_5_section_2_factors_affecting_the_style_quality_and_price_of_w/5-5_8_white_and_sweet_winemaking.md"
+        ],
+        "support_rationale": "Las fuentes locales sustentan el mecanismo, el resultado de estilo y el contraste diagnóstico evaluado."
+      },
+      "enrichment": {
+        "causal_chain_candidate": {
+          "candidate_id": "CC_CAND_SWEET_DRYING_VS_BOTRYTIS",
+          "cause": "Ambos métodos reducen agua, pero solo uno implica metabolismo fúngico.",
+          "mechanism": "Botrytis perfora y transforma la baya; el secado controlado favorece evaporación sin esa acción.",
+          "effect": "Los vinos pueden compartir concentración pero mostrar complejidad aromática distinta."
+        },
+        "feedback_profile": {
+          "correct_rationale": "Ambos métodos reducen agua, pero solo uno implica metabolismo fúngico. Botrytis perfora y transforma la baya; el secado controlado favorece evaporación sin esa acción. Por ello, los vinos pueden compartir concentración pero mostrar complejidad aromática distinta.",
+          "distractor_rationales": {
+            "A": "No explica el mecanismo clave: Botrytis perfora y transforma la baya; el secado controlado favorece evaporación sin esa acción.",
+            "B": "No explica el mecanismo clave: Botrytis perfora y transforma la baya; el secado controlado favorece evaporación sin esa acción.",
+            "C": "Es la relación causal correcta.",
+            "D": "No explica el mecanismo clave: Botrytis perfora y transforma la baya; el secado controlado favorece evaporación sin esa acción."
+          },
+          "remediation_recommendation": "Reconstruya la cadena de sweet drying vs botrytis como causa, mecanismo y efecto."
+        },
+        "micro_drill_candidate": {
+          "prompt": "Micro-drill: ¿qué efecto sigue a este mecanismo: Botrytis perfora y transforma la baya; el secado controlado favorece evaporación sin esa acción.?",
+          "answer": "Los vinos pueden compartir concentración pero mostrar complejidad aromática distinta."
+        },
+        "misconception_linkage_candidate": {
+          "misconception_id": "MC_SWEET_CONCENTRATION_01",
+          "target_error": "Suponer que igual concentración produce el mismo estilo."
+        }
+      },
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "official_wset_question": false,
+        "training_item_only": true,
+        "uses_llm": false,
+        "uses_api": false,
+        "uses_embeddings": false,
+        "uses_vector_db": false,
+        "cloud_services_active": false
+      }
+    },
+    {
+      "question_id": "897",
+      "question_text": "Si Botrytis afecta de forma irregular las bayas destinadas a Beerenauslese, ¿qué decisión explica mejor un vino de mayor concentración y pureza?",
+      "question_type": "theory",
+      "expected_topics": [
+        "RA2",
+        "germany_beerenauslese_selection"
+      ],
+      "expected_causal_links": [
+        "La infección beneficiosa y la madurez varían dentro de la parcela. -> La selección separa fruta concentrada sana de bayas insuficientes o deterioradas. -> El mosto gana precisión y concentración, aunque aumenta el coste y baja el rendimiento."
+      ],
+      "expected_keywords": [
+        "Alemania",
+        "Beerenauslese",
+        "selección",
+        "Botrytis"
+      ],
+      "expected_reasoning_type": "cause_effect",
+      "difficulty": "distinction",
+      "source_type": "SBA gap closure | manually curated from local official study guide",
+      "safe_for_examiner": false,
+      "options": {
+        "A": "Cosechar mecánicamente todos los racimos antes de la infección.",
+        "B": "Mezclar fruta podrida gris para elevar el rendimiento.",
+        "C": "Prensar las bayas sin revisar su estado sanitario.",
+        "D": "Seleccionar individualmente las bayas maduras y botritizadas adecuadas."
+      },
+      "correct_answer_letter": "D",
+      "correct_answer_text": "Seleccionar individualmente las bayas maduras y botritizadas adecuadas.",
+      "source_support": {
+        "source_ids": [
+          "6-11_22_germany",
+          "5-5_8_white_and_sweet_winemaking"
+        ],
+        "source_files": [
+          "knowledge/official-wset/study-guide/wset_markdown/seccion_6_section_3_still_wines_of_the_world/6-11_22_germany.md",
+          "knowledge/official-wset/study-guide/wset_markdown/seccion_5_section_2_factors_affecting_the_style_quality_and_price_of_w/5-5_8_white_and_sweet_winemaking.md"
+        ],
+        "support_rationale": "Las fuentes locales sustentan el mecanismo, el resultado de estilo y el contraste diagnóstico evaluado."
+      },
+      "enrichment": {
+        "causal_chain_candidate": {
+          "candidate_id": "CC_CAND_GERMANY_BEERENAUSLESE_SELECTION",
+          "cause": "La infección beneficiosa y la madurez varían dentro de la parcela.",
+          "mechanism": "La selección separa fruta concentrada sana de bayas insuficientes o deterioradas.",
+          "effect": "El mosto gana precisión y concentración, aunque aumenta el coste y baja el rendimiento."
+        },
+        "feedback_profile": {
+          "correct_rationale": "La infección beneficiosa y la madurez varían dentro de la parcela. La selección separa fruta concentrada sana de bayas insuficientes o deterioradas. Por ello, el mosto gana precisión y concentración, aunque aumenta el coste y baja el rendimiento.",
+          "distractor_rationales": {
+            "A": "No explica el mecanismo clave: La selección separa fruta concentrada sana de bayas insuficientes o deterioradas.",
+            "B": "No explica el mecanismo clave: La selección separa fruta concentrada sana de bayas insuficientes o deterioradas.",
+            "C": "No explica el mecanismo clave: La selección separa fruta concentrada sana de bayas insuficientes o deterioradas.",
+            "D": "Es la relación causal correcta."
+          },
+          "remediation_recommendation": "Reconstruya la cadena de germany beerenauslese selection como causa, mecanismo y efecto."
+        },
+        "micro_drill_candidate": {
+          "prompt": "Micro-drill: ¿qué efecto sigue a este mecanismo: La selección separa fruta concentrada sana de bayas insuficientes o deterioradas.?",
+          "answer": "El mosto gana precisión y concentración, aunque aumenta el coste y baja el rendimiento."
+        },
+        "misconception_linkage_candidate": {
+          "misconception_id": "MC_BOTRYTIS_01",
+          "target_error": "Creer que toda fruta afectada por Botrytis tiene igual calidad."
+        }
+      },
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "official_wset_question": false,
+        "training_item_only": true,
+        "uses_llm": false,
+        "uses_api": false,
+        "uses_embeddings": false,
+        "uses_vector_db": false,
+        "cloud_services_active": false
+      }
+    },
+    {
+      "question_id": "898",
+      "question_text": "Si un restaurante sirve un postre más dulce que el vino elegido, ¿qué consecuencia es más probable para la percepción del vino?",
+      "question_type": "theory",
+      "expected_topics": [
+        "RA5",
+        "sweet_pairing_dessert"
+      ],
+      "expected_causal_links": [
+        "La comida presenta mayor intensidad de dulzor que el vino. -> El contraste reduce el dulzor percibido del vino y expone acidez y amargor. -> El maridaje puede resultar duro y desequilibrado."
+      ],
+      "expected_keywords": [
+        "RA5",
+        "maridaje",
+        "postre",
+        "dulzor"
+      ],
+      "expected_reasoning_type": "cause_effect",
+      "difficulty": "intermediate",
+      "source_type": "SBA gap closure | manually curated from local official study guide",
+      "safe_for_examiner": false,
+      "options": {
+        "A": "El vino parecerá menos frutal, más seco, más ácido y posiblemente amargo.",
+        "B": "El vino parecerá más dulce y más afrutado.",
+        "C": "La comida reducirá toda percepción de acidez.",
+        "D": "El vino desarrollará más alcohol en la copa."
+      },
+      "correct_answer_letter": "A",
+      "correct_answer_text": "El vino parecerá menos frutal, más seco, más ácido y posiblemente amargo.",
+      "source_support": {
+        "source_ids": [
+          "4-2_2_wine_with_food"
+        ],
+        "source_files": [
+          "knowledge/official-wset/study-guide/wset_markdown/seccion_4_section_1_wine_and_the_consumer/4-2_2_wine_with_food.md"
+        ],
+        "support_rationale": "Las fuentes locales sustentan el mecanismo, el resultado de estilo y el contraste diagnóstico evaluado."
+      },
+      "enrichment": {
+        "causal_chain_candidate": {
+          "candidate_id": "CC_CAND_SWEET_PAIRING_DESSERT",
+          "cause": "La comida presenta mayor intensidad de dulzor que el vino.",
+          "mechanism": "El contraste reduce el dulzor percibido del vino y expone acidez y amargor.",
+          "effect": "El maridaje puede resultar duro y desequilibrado."
+        },
+        "feedback_profile": {
+          "correct_rationale": "La comida presenta mayor intensidad de dulzor que el vino. El contraste reduce el dulzor percibido del vino y expone acidez y amargor. Por ello, el maridaje puede resultar duro y desequilibrado.",
+          "distractor_rationales": {
+            "A": "Es la relación causal correcta.",
+            "B": "No explica el mecanismo clave: El contraste reduce el dulzor percibido del vino y expone acidez y amargor.",
+            "C": "No explica el mecanismo clave: El contraste reduce el dulzor percibido del vino y expone acidez y amargor.",
+            "D": "No explica el mecanismo clave: El contraste reduce el dulzor percibido del vino y expone acidez y amargor."
+          },
+          "remediation_recommendation": "Reconstruya la cadena de sweet pairing dessert como causa, mecanismo y efecto."
+        },
+        "micro_drill_candidate": {
+          "prompt": "Micro-drill: ¿qué efecto sigue a este mecanismo: El contraste reduce el dulzor percibido del vino y expone acidez y amargor.?",
+          "answer": "El maridaje puede resultar duro y desequilibrado."
+        },
+        "misconception_linkage_candidate": {
+          "misconception_id": "MC_SWEET_BALANCING_02",
+          "target_error": "Suponer que cualquier vino dulce funciona con cualquier postre."
+        }
+      },
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "official_wset_question": false,
+        "training_item_only": true,
+        "uses_llm": false,
+        "uses_api": false,
+        "uses_embeddings": false,
+        "uses_vector_db": false,
+        "cloud_services_active": false
+      }
+    },
+    {
+      "question_id": "899",
+      "question_text": "Al comparar un vino dulce intenso con un queso azul salado, ¿qué factor explica mejor que el maridaje pueda funcionar?",
+      "question_type": "theory",
+      "expected_topics": [
+        "RA5",
+        "sweet_pairing_blue_cheese"
+      ],
+      "expected_causal_links": [
+        "El alimento combina sal, grasa y sabor intenso. -> El azúcar aporta contraste y la concentración evita que el vino quede eclipsado. -> El conjunto puede percibirse equilibrado si las intensidades son comparables."
+      ],
+      "expected_keywords": [
+        "RA5",
+        "maridaje",
+        "queso azul",
+        "vino dulce"
+      ],
+      "expected_reasoning_type": "cause_effect",
+      "difficulty": "intermediate",
+      "source_type": "SBA gap closure | manually curated from local official study guide",
+      "safe_for_examiner": false,
+      "options": {
+        "A": "La sal convierte químicamente el vino en seco.",
+        "B": "El dulzor contrasta la sal y la intensidad del vino puede igualar la del queso.",
+        "C": "El queso elimina el alcohol del vino.",
+        "D": "La acidez del vino desaparece al contacto con grasa."
+      },
+      "correct_answer_letter": "B",
+      "correct_answer_text": "El dulzor contrasta la sal y la intensidad del vino puede igualar la del queso.",
+      "source_support": {
+        "source_ids": [
+          "4-2_2_wine_with_food"
+        ],
+        "source_files": [
+          "knowledge/official-wset/study-guide/wset_markdown/seccion_4_section_1_wine_and_the_consumer/4-2_2_wine_with_food.md"
+        ],
+        "support_rationale": "Las fuentes locales sustentan el mecanismo, el resultado de estilo y el contraste diagnóstico evaluado."
+      },
+      "enrichment": {
+        "causal_chain_candidate": {
+          "candidate_id": "CC_CAND_SWEET_PAIRING_BLUE_CHEESE",
+          "cause": "El alimento combina sal, grasa y sabor intenso.",
+          "mechanism": "El azúcar aporta contraste y la concentración evita que el vino quede eclipsado.",
+          "effect": "El conjunto puede percibirse equilibrado si las intensidades son comparables."
+        },
+        "feedback_profile": {
+          "correct_rationale": "El alimento combina sal, grasa y sabor intenso. El azúcar aporta contraste y la concentración evita que el vino quede eclipsado. Por ello, el conjunto puede percibirse equilibrado si las intensidades son comparables.",
+          "distractor_rationales": {
+            "A": "No explica el mecanismo clave: El azúcar aporta contraste y la concentración evita que el vino quede eclipsado.",
+            "B": "Es la relación causal correcta.",
+            "C": "No explica el mecanismo clave: El azúcar aporta contraste y la concentración evita que el vino quede eclipsado.",
+            "D": "No explica el mecanismo clave: El azúcar aporta contraste y la concentración evita que el vino quede eclipsado."
+          },
+          "remediation_recommendation": "Reconstruya la cadena de sweet pairing blue cheese como causa, mecanismo y efecto."
+        },
+        "micro_drill_candidate": {
+          "prompt": "Micro-drill: ¿qué efecto sigue a este mecanismo: El azúcar aporta contraste y la concentración evita que el vino quede eclipsado.?",
+          "answer": "El conjunto puede percibirse equilibrado si las intensidades son comparables."
+        },
+        "misconception_linkage_candidate": {
+          "misconception_id": "MC_SWEET_BALANCING_02",
+          "target_error": "Ignorar la interacción entre intensidad, sal y dulzor."
+        }
+      },
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "official_wset_question": false,
+        "training_item_only": true,
+        "uses_llm": false,
+        "uses_api": false,
+        "uses_embeddings": false,
+        "uses_vector_db": false,
+        "cloud_services_active": false
+      }
+    },
+    {
+      "question_id": "900",
+      "question_text": "Si un Sauternes se sirve excesivamente frío, ¿qué consecuencia es más probable?",
+      "question_type": "theory",
+      "expected_topics": [
+        "RA5",
+        "sweet_service_temperature"
+      ],
+      "expected_causal_links": [
+        "La temperatura de servicio es muy baja para un vino aromático y complejo. -> El frío reduce volatilidad aromática y percepción de cuerpo y dulzor. -> El vino puede parecer más cerrado y menos expresivo."
+      ],
+      "expected_keywords": [
+        "RA5",
+        "servicio",
+        "Sauternes",
+        "temperatura"
+      ],
+      "expected_reasoning_type": "cause_effect",
+      "difficulty": "distinction",
+      "source_type": "SBA gap closure | manually curated from local official study guide",
+      "safe_for_examiner": false,
+      "options": {
+        "A": "Aumentan de inmediato los aromas de miel y roble.",
+        "B": "El azúcar precipita y el vino se vuelve seco.",
+        "C": "Se atenúan aromas y textura, aunque el frío también reduce la sensación de dulzor.",
+        "D": "El alcohol sube por la baja temperatura."
+      },
+      "correct_answer_letter": "C",
+      "correct_answer_text": "Se atenúan aromas y textura, aunque el frío también reduce la sensación de dulzor.",
+      "source_support": {
+        "source_ids": [
+          "4-3_3_storage_and_service_of_wine"
+        ],
+        "source_files": [
+          "knowledge/official-wset/study-guide/wset_markdown/seccion_4_section_1_wine_and_the_consumer/4-3_3_storage_and_service_of_wine.md"
+        ],
+        "support_rationale": "Las fuentes locales sustentan el mecanismo, el resultado de estilo y el contraste diagnóstico evaluado."
+      },
+      "enrichment": {
+        "causal_chain_candidate": {
+          "candidate_id": "CC_CAND_SWEET_SERVICE_TEMPERATURE",
+          "cause": "La temperatura de servicio es muy baja para un vino aromático y complejo.",
+          "mechanism": "El frío reduce volatilidad aromática y percepción de cuerpo y dulzor.",
+          "effect": "El vino puede parecer más cerrado y menos expresivo."
+        },
+        "feedback_profile": {
+          "correct_rationale": "La temperatura de servicio es muy baja para un vino aromático y complejo. El frío reduce volatilidad aromática y percepción de cuerpo y dulzor. Por ello, el vino puede parecer más cerrado y menos expresivo.",
+          "distractor_rationales": {
+            "A": "No explica el mecanismo clave: El frío reduce volatilidad aromática y percepción de cuerpo y dulzor.",
+            "B": "No explica el mecanismo clave: El frío reduce volatilidad aromática y percepción de cuerpo y dulzor.",
+            "C": "Es la relación causal correcta.",
+            "D": "No explica el mecanismo clave: El frío reduce volatilidad aromática y percepción de cuerpo y dulzor."
+          },
+          "remediation_recommendation": "Reconstruya la cadena de sweet service temperature como causa, mecanismo y efecto."
+        },
+        "micro_drill_candidate": {
+          "prompt": "Micro-drill: ¿qué efecto sigue a este mecanismo: El frío reduce volatilidad aromática y percepción de cuerpo y dulzor.?",
+          "answer": "El vino puede parecer más cerrado y menos expresivo."
+        },
+        "misconception_linkage_candidate": {
+          "misconception_id": "MC_TEMPERATURE_INFLUENCE_01",
+          "target_error": "Creer que cuanto más frío, mejor para todo vino dulce."
+        }
+      },
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "official_wset_question": false,
+        "training_item_only": true,
+        "uses_llm": false,
+        "uses_api": false,
+        "uses_embeddings": false,
+        "uses_vector_db": false,
+        "cloud_services_active": false
+      }
+    },
+    {
+      "question_id": "901",
+      "question_text": "Si una botella de vino dulce de alta calidad se almacena de pie junto a una fuente de calor y luz, ¿qué resultado es más probable?",
+      "question_type": "theory",
+      "expected_topics": [
+        "RA5",
+        "sweet_storage"
+      ],
+      "expected_causal_links": [
+        "La botella sufre temperatura alta, luz y posible desecación del cierre. -> Aumentan reacciones químicas y riesgo de entrada de oxígeno o pérdida de sellado. -> El vino puede evolucionar prematuramente y perder frescura."
+      ],
+      "expected_keywords": [
+        "RA5",
+        "almacenamiento",
+        "calor",
+        "luz",
+        "corcho"
+      ],
+      "expected_reasoning_type": "cause_effect",
+      "difficulty": "intermediate",
+      "source_type": "SBA gap closure | manually curated from local official study guide",
+      "safe_for_examiner": false,
+      "options": {
+        "A": "El azúcar protege por completo frente a calor y luz.",
+        "B": "La posición vertical mejora siempre la longevidad del corcho.",
+        "C": "La botella gana acidez y frescura con cada cambio térmico.",
+        "D": "El calor acelera el envejecimiento y la luz puede dañar aromas; el cierre también puede secarse si es corcho."
+      },
+      "correct_answer_letter": "D",
+      "correct_answer_text": "El calor acelera el envejecimiento y la luz puede dañar aromas; el cierre también puede secarse si es corcho.",
+      "source_support": {
+        "source_ids": [
+          "4-3_3_storage_and_service_of_wine"
+        ],
+        "source_files": [
+          "knowledge/official-wset/study-guide/wset_markdown/seccion_4_section_1_wine_and_the_consumer/4-3_3_storage_and_service_of_wine.md"
+        ],
+        "support_rationale": "Las fuentes locales sustentan el mecanismo, el resultado de estilo y el contraste diagnóstico evaluado."
+      },
+      "enrichment": {
+        "causal_chain_candidate": {
+          "candidate_id": "CC_CAND_SWEET_STORAGE",
+          "cause": "La botella sufre temperatura alta, luz y posible desecación del cierre.",
+          "mechanism": "Aumentan reacciones químicas y riesgo de entrada de oxígeno o pérdida de sellado.",
+          "effect": "El vino puede evolucionar prematuramente y perder frescura."
+        },
+        "feedback_profile": {
+          "correct_rationale": "La botella sufre temperatura alta, luz y posible desecación del cierre. Aumentan reacciones químicas y riesgo de entrada de oxígeno o pérdida de sellado. Por ello, el vino puede evolucionar prematuramente y perder frescura.",
+          "distractor_rationales": {
+            "A": "No explica el mecanismo clave: Aumentan reacciones químicas y riesgo de entrada de oxígeno o pérdida de sellado.",
+            "B": "No explica el mecanismo clave: Aumentan reacciones químicas y riesgo de entrada de oxígeno o pérdida de sellado.",
+            "C": "No explica el mecanismo clave: Aumentan reacciones químicas y riesgo de entrada de oxígeno o pérdida de sellado.",
+            "D": "Es la relación causal correcta."
+          },
+          "remediation_recommendation": "Reconstruya la cadena de sweet storage como causa, mecanismo y efecto."
+        },
+        "micro_drill_candidate": {
+          "prompt": "Micro-drill: ¿qué efecto sigue a este mecanismo: Aumentan reacciones químicas y riesgo de entrada de oxígeno o pérdida de sellado.?",
+          "answer": "El vino puede evolucionar prematuramente y perder frescura."
+        },
+        "misconception_linkage_candidate": {
+          "misconception_id": "MC_AGEING_IMPROVEMENT_01",
+          "target_error": "Suponer que el azúcar hace indestructible un vino dulce."
+        }
+      },
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "official_wset_question": false,
+        "training_item_only": true,
+        "uses_llm": false,
+        "uses_api": false,
+        "uses_embeddings": false,
+        "uses_vector_db": false,
+        "cloud_services_active": false
+      }
+    },
+    {
+      "question_id": "902",
+      "question_text": "Si un restaurante quiere conservar una botella abierta de Tokaji durante varios días, ¿qué decisión explica mejor la práctica recomendada?",
+      "question_type": "theory",
+      "expected_topics": [
+        "RA5",
+        "sweet_open_bottle"
+      ],
+      "expected_causal_links": [
+        "Una botella abierta queda expuesta a oxígeno y microorganismos. -> Baja temperatura y buen cierre ralentizan oxidación y deterioro. -> El vino conserva mejor aromas y frescura durante el servicio posterior."
+      ],
+      "expected_keywords": [
+        "RA5",
+        "servicio",
+        "Tokaji",
+        "botella abierta",
+        "refrigeración"
+      ],
+      "expected_reasoning_type": "cause_effect",
+      "difficulty": "intermediate",
+      "source_type": "SBA gap closure | manually curated from local official study guide",
+      "safe_for_examiner": false,
+      "options": {
+        "A": "Refrigerarla y limitar su contacto con oxígeno mediante un cierre eficaz.",
+        "B": "Mantenerla abierta a temperatura ambiente para que respire.",
+        "C": "Agitarla cada día para reincorporar oxígeno.",
+        "D": "Exponerla a luz cálida para estabilizar el azúcar."
+      },
+      "correct_answer_letter": "A",
+      "correct_answer_text": "Refrigerarla y limitar su contacto con oxígeno mediante un cierre eficaz.",
+      "source_support": {
+        "source_ids": [
+          "4-3_3_storage_and_service_of_wine"
+        ],
+        "source_files": [
+          "knowledge/official-wset/study-guide/wset_markdown/seccion_4_section_1_wine_and_the_consumer/4-3_3_storage_and_service_of_wine.md"
+        ],
+        "support_rationale": "Las fuentes locales sustentan el mecanismo, el resultado de estilo y el contraste diagnóstico evaluado."
+      },
+      "enrichment": {
+        "causal_chain_candidate": {
+          "candidate_id": "CC_CAND_SWEET_OPEN_BOTTLE",
+          "cause": "Una botella abierta queda expuesta a oxígeno y microorganismos.",
+          "mechanism": "Baja temperatura y buen cierre ralentizan oxidación y deterioro.",
+          "effect": "El vino conserva mejor aromas y frescura durante el servicio posterior."
+        },
+        "feedback_profile": {
+          "correct_rationale": "Una botella abierta queda expuesta a oxígeno y microorganismos. Baja temperatura y buen cierre ralentizan oxidación y deterioro. Por ello, el vino conserva mejor aromas y frescura durante el servicio posterior.",
+          "distractor_rationales": {
+            "A": "Es la relación causal correcta.",
+            "B": "No explica el mecanismo clave: Baja temperatura y buen cierre ralentizan oxidación y deterioro.",
+            "C": "No explica el mecanismo clave: Baja temperatura y buen cierre ralentizan oxidación y deterioro.",
+            "D": "No explica el mecanismo clave: Baja temperatura y buen cierre ralentizan oxidación y deterioro."
+          },
+          "remediation_recommendation": "Reconstruya la cadena de sweet open bottle como causa, mecanismo y efecto."
+        },
+        "micro_drill_candidate": {
+          "prompt": "Micro-drill: ¿qué efecto sigue a este mecanismo: Baja temperatura y buen cierre ralentizan oxidación y deterioro.?",
+          "answer": "El vino conserva mejor aromas y frescura durante el servicio posterior."
+        },
+        "misconception_linkage_candidate": {
+          "misconception_id": "MC_OXIDATIVE_VS_BIOLOGICAL_01",
+          "target_error": "Confundir aireación breve con almacenamiento abierto prolongado."
+        }
+      },
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "official_wset_question": false,
+        "training_item_only": true,
+        "uses_llm": false,
+        "uses_api": false,
+        "uses_embeddings": false,
+        "uses_vector_db": false,
+        "cloud_services_active": false
+      }
+    },
+    {
+      "question_id": "903",
+      "question_text": "Si se sirve un vino dulce muy concentrado después de una comida larga, ¿qué recomendación explica mejor una porción moderada?",
+      "question_type": "theory",
+      "expected_topics": [
+        "RA5",
+        "sweet_portion_service"
+      ],
+      "expected_causal_links": [
+        "El vino posee alta concentración y gran impacto sensorial. -> Una cantidad moderada permite apreciar complejidad sin saturar el paladar. -> Mejora la experiencia de servicio y el equilibrio con el plato."
+      ],
+      "expected_keywords": [
+        "RA5",
+        "servicio",
+        "vino dulce",
+        "porción"
+      ],
+      "expected_reasoning_type": "cause_effect",
+      "difficulty": "distinction",
+      "source_type": "SBA gap closure | manually curated from local official study guide",
+      "safe_for_examiner": false,
+      "options": {
+        "A": "Una porción pequeña impide percibir cualquier aroma.",
+        "B": "Su intensidad, dulzor y alcohol o cuerpo pueden fatigar el paladar en una medida grande.",
+        "C": "El azúcar se vuelve tóxico al superar media copa.",
+        "D": "La medida de servicio cambia la acidez química del vino."
+      },
+      "correct_answer_letter": "B",
+      "correct_answer_text": "Su intensidad, dulzor y alcohol o cuerpo pueden fatigar el paladar en una medida grande.",
+      "source_support": {
+        "source_ids": [
+          "4-3_3_storage_and_service_of_wine"
+        ],
+        "source_files": [
+          "knowledge/official-wset/study-guide/wset_markdown/seccion_4_section_1_wine_and_the_consumer/4-3_3_storage_and_service_of_wine.md"
+        ],
+        "support_rationale": "Las fuentes locales sustentan el mecanismo, el resultado de estilo y el contraste diagnóstico evaluado."
+      },
+      "enrichment": {
+        "causal_chain_candidate": {
+          "candidate_id": "CC_CAND_SWEET_PORTION_SERVICE",
+          "cause": "El vino posee alta concentración y gran impacto sensorial.",
+          "mechanism": "Una cantidad moderada permite apreciar complejidad sin saturar el paladar.",
+          "effect": "Mejora la experiencia de servicio y el equilibrio con el plato."
+        },
+        "feedback_profile": {
+          "correct_rationale": "El vino posee alta concentración y gran impacto sensorial. Una cantidad moderada permite apreciar complejidad sin saturar el paladar. Por ello, mejora la experiencia de servicio y el equilibrio con el plato.",
+          "distractor_rationales": {
+            "A": "No explica el mecanismo clave: Una cantidad moderada permite apreciar complejidad sin saturar el paladar.",
+            "B": "Es la relación causal correcta.",
+            "C": "No explica el mecanismo clave: Una cantidad moderada permite apreciar complejidad sin saturar el paladar.",
+            "D": "No explica el mecanismo clave: Una cantidad moderada permite apreciar complejidad sin saturar el paladar."
+          },
+          "remediation_recommendation": "Reconstruya la cadena de sweet portion service como causa, mecanismo y efecto."
+        },
+        "micro_drill_candidate": {
+          "prompt": "Micro-drill: ¿qué efecto sigue a este mecanismo: Una cantidad moderada permite apreciar complejidad sin saturar el paladar.?",
+          "answer": "Mejora la experiencia de servicio y el equilibrio con el plato."
+        },
+        "misconception_linkage_candidate": {
+          "misconception_id": "MC_SWEET_BALANCING_02",
+          "target_error": "Tratar todos los vinos como si exigieran la misma medida."
+        }
+      },
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "official_wset_question": false,
+        "training_item_only": true,
+        "uses_llm": false,
+        "uses_api": false,
+        "uses_embeddings": false,
+        "uses_vector_db": false,
+        "cloud_services_active": false
+      }
+    },
+    {
+      "question_id": "904",
+      "question_text": "Si un postre de fruta tiene dulzor alto y acidez marcada, ¿qué recomendación de vino es más probable que mantenga el equilibrio?",
+      "question_type": "theory",
+      "expected_topics": [
+        "RA5",
+        "sweet_pairing_acid"
+      ],
+      "expected_causal_links": [
+        "El plato combina azúcar y una línea ácida perceptible. -> El vino necesita dulzor para no parecer austero y acidez para no quedar pesado. -> Un estilo dulce y fresco conserva armonía con el postre."
+      ],
+      "expected_keywords": [
+        "RA5",
+        "maridaje",
+        "postre de fruta",
+        "acidez"
+      ],
+      "expected_reasoning_type": "cause_effect",
+      "difficulty": "intermediate",
+      "source_type": "SBA gap closure | manually curated from local official study guide",
+      "safe_for_examiner": false,
+      "options": {
+        "A": "Un tinto muy tánico y menos dulce que el postre.",
+        "B": "Un vino plano y de acidez baja para evitar contraste.",
+        "C": "Un vino al menos tan dulce como el postre y con acidez suficiente para acompañar su frescura.",
+        "D": "Cualquier vino seco, porque la fruta reduce la percepción de acidez."
+      },
+      "correct_answer_letter": "C",
+      "correct_answer_text": "Un vino al menos tan dulce como el postre y con acidez suficiente para acompañar su frescura.",
+      "source_support": {
+        "source_ids": [
+          "4-2_2_wine_with_food"
+        ],
+        "source_files": [
+          "knowledge/official-wset/study-guide/wset_markdown/seccion_4_section_1_wine_and_the_consumer/4-2_2_wine_with_food.md"
+        ],
+        "support_rationale": "Las fuentes locales sustentan el mecanismo, el resultado de estilo y el contraste diagnóstico evaluado."
+      },
+      "enrichment": {
+        "causal_chain_candidate": {
+          "candidate_id": "CC_CAND_SWEET_PAIRING_ACID",
+          "cause": "El plato combina azúcar y una línea ácida perceptible.",
+          "mechanism": "El vino necesita dulzor para no parecer austero y acidez para no quedar pesado.",
+          "effect": "Un estilo dulce y fresco conserva armonía con el postre."
+        },
+        "feedback_profile": {
+          "correct_rationale": "El plato combina azúcar y una línea ácida perceptible. El vino necesita dulzor para no parecer austero y acidez para no quedar pesado. Por ello, un estilo dulce y fresco conserva armonía con el postre.",
+          "distractor_rationales": {
+            "A": "No explica el mecanismo clave: El vino necesita dulzor para no parecer austero y acidez para no quedar pesado.",
+            "B": "No explica el mecanismo clave: El vino necesita dulzor para no parecer austero y acidez para no quedar pesado.",
+            "C": "Es la relación causal correcta.",
+            "D": "No explica el mecanismo clave: El vino necesita dulzor para no parecer austero y acidez para no quedar pesado."
+          },
+          "remediation_recommendation": "Reconstruya la cadena de sweet pairing acid como causa, mecanismo y efecto."
+        },
+        "micro_drill_candidate": {
+          "prompt": "Micro-drill: ¿qué efecto sigue a este mecanismo: El vino necesita dulzor para no parecer austero y acidez para no quedar pesado.?",
+          "answer": "Un estilo dulce y fresco conserva armonía con el postre."
+        },
+        "misconception_linkage_candidate": {
+          "misconception_id": "MC_SWEET_BALANCING_02",
+          "target_error": "Elegir por dulzor sin considerar acidez e intensidad."
+        }
+      },
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "official_wset_question": false,
+        "training_item_only": true,
+        "uses_llm": false,
+        "uses_api": false,
+        "uses_embeddings": false,
+        "uses_vector_db": false,
+        "cloud_services_active": false
+      }
+    }
+  ],
+  "governance": {
+    "safe_for_examiner": false,
+    "examiner_scoring_allowed": false,
+    "official_wset_question": false,
+    "training_item_only": true,
+    "uses_llm": false,
+    "uses_api": false,
+    "uses_embeddings": false,
+    "uses_vector_db": false,
+    "cloud_services_active": false
+  }
+}
