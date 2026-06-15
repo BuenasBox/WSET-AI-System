@@ -27,12 +27,12 @@ The strongest coverage is climate, core viticulture, fermentation, extraction, o
 | Enriched SBA | `knowledge/question-bank/enrichment/sba_enrichment_v1.json` | 360 |
 | Micro-drills | Same enrichment sidecar | 276 |
 | Causal chains | `knowledge/knowledge-map/causal-chains/*.json` | 199 |
-| Open Response | Committed `HEAD` version of `open_response_bank.json` | 31 |
+| Open Response | Frozen Git object captured at audit start | 31 |
 | SAT prompts | `frontend/adaptive-session/session_bank.js` | 6 |
 | Misconceptions | `knowledge/knowledge-map/misconceptions/*.json` | 20 |
 | Coaching/readiness | `knowledge/{mentor-framework,command-verbs,distinction-patterns,sat-framework}` | 26 JSON assets |
 
-The uncommitted 25-item OR expansion was excluded because it was being produced separately while this audit ran. The committed OR object hash is `15e8d77252bf265017870f76a6c2f8a5df00dde8`.
+The separately executed OR expansion was excluded because it was changing and being committed while this audit ran. The immutable baseline object captured at audit start is `15e8d77252bf265017870f76a6c2f8a5df00dde8` and contains 31 items.
 
 Snapshot hashes:
 
@@ -201,4 +201,3 @@ Highest-confidence content gaps:
 - No causal-chain governance field was truthy for `safe_for_examiner` or `examiner_scoring_allowed`.
 - Counts in this matrix are evidence counts, not quality scores.
 - A lexical match can establish presence but not pedagogical correctness. Borderline mappings were kept out or marked `UNKNOWN`.
-

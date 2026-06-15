@@ -1,0 +1,470 @@
+{
+  "schema_version": "open_response_bank_v1",
+  "batch_number": 3,
+  "batch_size": 25,
+  "generated_at": "2026-06-15",
+  "phase": "expansion_program",
+  "governance": {
+    "safe_for_examiner": false,
+    "examiner_scoring_allowed": false,
+    "training_item_only": true,
+    "uses_llm": false,
+    "uses_api": false,
+    "uses_embeddings": false,
+    "uses_vector_db": false
+  },
+  "items": [
+    {
+      "item_id": "OR_082",
+      "question_text": "Describe the sensory journey through a horizontal tasting of the same wine from 5 consecutive vintages (e.g., Pauillac 2014-2018), identifying which vintage shows optimal maturity balance.",
+      "command_verb": "describe",
+      "ra_id": "RA1",
+      "topic": "horizontal_vintage_tasting_evolution",
+      "expected_concepts": [
+        "vintage weather variation impact",
+        "aging progression across similar wines",
+        "maturity markers",
+        "consistency within producer style",
+        "optimal drinking window identification"
+      ],
+      "causal_chain_target": [],
+      "response_depth_target": "developing"
+    },
+    {
+      "item_id": "OR_083",
+      "question_text": "Explain the biochemistry of why sparkling wines aged on lees for 3 years develop richer, more complex aromas than those aged for only 1 year, despite the same yeast strain.",
+      "command_verb": "explain",
+      "ra_id": "RA2",
+      "topic": "lees_autolysis_time_complexity",
+      "expected_concepts": [
+        "yeast cell wall breakdown over time",
+        "amino acid release kinetics",
+        "nucleotide release",
+        "aldehyde and alcohol interactions",
+        "complexity tier progression",
+        "aromatic compound generation rate"
+      ],
+      "causal_chain_target": [
+        "HC_SPARKLING_LEES_TEXTURE"
+      ],
+      "response_depth_target": "strong"
+    },
+    {
+      "item_id": "OR_084",
+      "question_text": "Compare the commercial viability and quality potential of a small, hand-crafted winery in a cool climate vs. a large-scale mechanized operation in a warm climate, assessing which can achieve premium pricing.",
+      "command_verb": "compare",
+      "ra_id": "RA3",
+      "topic": "production_scale_climate_economics",
+      "expected_concepts": [
+        "quality/quantity trade-off",
+        "labor cost variation by region",
+        "climate risk and vintage consistency",
+        "market positioning flexibility",
+        "brand identity development",
+        "export potential variation"
+      ],
+      "causal_chain_target": [],
+      "response_depth_target": "developing"
+    },
+    {
+      "item_id": "OR_085",
+      "question_text": "Assess a Cabernet Sauvignon showing mature leather, tobacco, and dried fruit aromas but with a surprisingly tight, tannic structure, evaluating whether this indicates a problem or represents a highly ageworthy wine.",
+      "command_verb": "assess",
+      "ra_id": "RA4",
+      "topic": "aroma_structure_mismatch_assessment",
+      "expected_concepts": [
+        "phenolic ripeness indicators",
+        "tannin polymerization status",
+        "color development consistency",
+        "barrel aging effects",
+        "vintage character variation",
+        "individual wine potential"
+      ],
+      "causal_chain_target": [
+        "HC_BOTTLE_TANNIN_SOFTENING"
+      ],
+      "response_depth_target": "strong"
+    },
+    {
+      "item_id": "OR_086",
+      "question_text": "Evaluate the environmental impact of converting to biodynamic farming in an established vineyard, considering soil recovery timeline, pest management transition challenges, and potential quality changes.",
+      "command_verb": "evaluate",
+      "ra_id": "RA5",
+      "topic": "biodynamic_conversion_assessment",
+      "expected_concepts": [
+        "soil microbiome recovery",
+        "pest and disease management evolution",
+        "certification timeline",
+        "yield variation during transition",
+        "quality attribute changes",
+        "market positioning benefits"
+      ],
+      "causal_chain_target": [],
+      "response_depth_target": "developing"
+    },
+    {
+      "item_id": "OR_087",
+      "question_text": "Discuss how climate zones (cool, moderate, warm, hot) in wine regions create fundamentally different winemaking strategies, from harvest timing to fermentation choices to oak aging philosophy.",
+      "command_verb": "discuss",
+      "ra_id": "RA1",
+      "topic": "climate_zone_winemaking_paradigm",
+      "expected_concepts": [
+        "ripeness achievement strategies",
+        "acidity management approaches",
+        "color and tannin development",
+        "fermentation temperature control",
+        "oak influence suitability",
+        "alcohol risk mitigation"
+      ],
+      "causal_chain_target": [
+        "HC_CONTINENTALITY_STYLE"
+      ],
+      "response_depth_target": "strong"
+    },
+    {
+      "item_id": "OR_088",
+      "question_text": "Recommend a complete blending strategy and trial protocol for a winemaker aiming to create a 3-varietal red blend that achieves both immediate approachability and 20-year aging potential.",
+      "command_verb": "recommend",
+      "ra_id": "RA2",
+      "topic": "strategic_aging_blend_development",
+      "expected_concepts": [
+        "varietal role definition",
+        "tannin structure balance",
+        "acidity preservation",
+        "aromatics complexity",
+        "early fruit expression",
+        "long-term evolution potential"
+      ],
+      "causal_chain_target": [],
+      "response_depth_target": "strong"
+    },
+    {
+      "item_id": "OR_089",
+      "question_text": "Identify and explain the terroir components (soil, aspect, elevation, microclimate) that make the Barossa Valley structurally different from the Adelaide Hills, 60km apart, resulting in dramatically different wine styles.",
+      "command_verb": "identify_and_explain",
+      "ra_id": "RA3",
+      "topic": "micro_terroir_regional_distinction",
+      "expected_concepts": [
+        "Barossa: warm valley floor ripeness",
+        "Adelaide Hills: cool altitude freshness",
+        "soil composition differences",
+        "maritime influence variation",
+        "ripeness profiles",
+        "style expression signature"
+      ],
+      "causal_chain_target": [
+        "HC_ALTITUDE_SLOW_RIPENING_FRESHNESS"
+      ],
+      "response_depth_target": "developing"
+    },
+    {
+      "item_id": "OR_090",
+      "question_text": "Describe the complete oxidation curve of a fine Oloroso Sherry over 50 years of solera aging, tracking color, aroma, texture, and structural changes at key intervals.",
+      "command_verb": "describe",
+      "ra_id": "RA4",
+      "topic": "oloroso_oxidative_maturation_curve",
+      "expected_concepts": [
+        "solera system continuous blending",
+        "controlled oxidation progression",
+        "color browning increments",
+        "aromatic complexity tiers",
+        "alcohol and acidity stability",
+        "final integration achievement"
+      ],
+      "causal_chain_target": [
+        "HC_OLOROSO_AMONTILLADO_AGEING_PATH"
+      ],
+      "response_depth_target": "strong"
+    },
+    {
+      "item_id": "OR_091",
+      "question_text": "Explain how the geographic origin (soil mineralogy, elevation, aspect, precipitation) of a Pinot Noir vineyard directly influences whether the final wine will display earthy, mineral-driven character vs. fruit-forward expressiveness.",
+      "command_verb": "explain",
+      "ra_id": "RA1",
+      "topic": "geology_aromatics_expression_link",
+      "expected_concepts": [
+        "soil mineral composition",
+        "nutrient availability to vines",
+        "water stress effects",
+        "transpiration patterns",
+        "phenolic ripeness",
+        "aromatic compound accumulation pathways"
+      ],
+      "causal_chain_target": [],
+      "response_depth_target": "strong"
+    },
+    {
+      "item_id": "OR_092",
+      "question_text": "Compare the structural and aromatic development of two Riesling wines from the same vintage but different vineyard sites—one steep slate slope, one flat alluvial plain—tracing 10-year aging trajectories.",
+      "command_verb": "compare",
+      "ra_id": "RA4",
+      "topic": "site_terroir_riesling_evolution",
+      "expected_concepts": [
+        "slope drainage and ripeness",
+        "alluvial soil water retention",
+        "mineral expression variation",
+        "acidity preservation",
+        "aging potential difference",
+        "complexity development rate"
+      ],
+      "causal_chain_target": [
+        "HC_MOSEL_COOL_SLOPE_ACIDITY"
+      ],
+      "response_depth_target": "developing"
+    },
+    {
+      "item_id": "OR_093",
+      "question_text": "Assess a Chardonnay from a warm vintage showing full ripeness markers (14.5% alcohol, tropical fruit) but with wine-maker's note indicating cool-climate winemaking technique, determining quality consistency.",
+      "command_verb": "assess",
+      "ra_id": "RA2",
+      "topic": "technique_vintage_alignment_assessment",
+      "expected_concepts": [
+        "ripeness potential vs. technique intent",
+        "alcohol expression vs. acid preservation",
+        "aroma profile alignment",
+        "structure development",
+        "style coherence evaluation",
+        "producer philosophy expression"
+      ],
+      "causal_chain_target": [],
+      "response_depth_target": "developing"
+    },
+    {
+      "item_id": "OR_094",
+      "question_text": "Evaluate the commercial and qualitative implications of using indigenous yeast fermentation vs. selected commercial strains for a high-value Burgundy-style Pinot Noir, considering consistency, expressiveness, and market perception.",
+      "command_verb": "evaluate",
+      "ra_id": "RA3",
+      "topic": "indigenous_yeast_strategy",
+      "expected_concepts": [
+        "fermentation predictability variation",
+        "aromatic profile diversity",
+        "malolactic interaction timing",
+        "risk of stuck fermentation",
+        "terroir expression enhancement",
+        "consumer perception and marketing"
+      ],
+      "causal_chain_target": [
+        "HC_YEAST_STRAIN_AROMA_PROFILE"
+      ],
+      "response_depth_target": "strong"
+    },
+    {
+      "item_id": "OR_095",
+      "question_text": "Discuss the trade-offs between modern sustainability certifications (organic, biodynamic, natural) and traditional conventional viticulture in terms of yield, quality, cost, and environmental genuine benefit.",
+      "command_verb": "discuss",
+      "ra_id": "RA5",
+      "topic": "sustainability_certification_trade_offs",
+      "expected_concepts": [
+        "yield reduction reality",
+        "input cost changes",
+        "chemical residue impacts",
+        "soil recovery benefits",
+        "marketing value vs. production cost",
+        "certification program trade-offs",
+        "genuine environmental metrics"
+      ],
+      "causal_chain_target": [],
+      "response_depth_target": "strong"
+    },
+    {
+      "item_id": "OR_096",
+      "question_text": "Recommend a complete protocol for conducting a 10-wine comparative tasting evaluating the impact of different cork closures (natural, technical, synthetic, screw cap) on a 10-year-aged Bordeaux.",
+      "command_verb": "recommend",
+      "ra_id": "RA1",
+      "topic": "closure_impact_comparative_protocol",
+      "expected_concepts": [
+        "oxygen transmission variation",
+        "TCA taint incidence",
+        "cork integration consistency",
+        "blind assessment methodology",
+        "aging trajectory tracking",
+        "chemical analysis integration"
+      ],
+      "causal_chain_target": [
+        "HC_NATURAL_CORK_SLOW_OXYGEN"
+      ],
+      "response_depth_target": "developing"
+    },
+    {
+      "item_id": "OR_097",
+      "question_text": "Identify and explain how the three distinct soil zones within the Chablis region (Kimmeridgian limestone, Portlandian limestone, Jurassic clay) each produce characteristic mineral-driven white wine styles.",
+      "command_verb": "identify_and_explain",
+      "ra_id": "RA5",
+      "topic": "chablis_limestone_terroir_expression",
+      "expected_concepts": [
+        "Kimmeridgian: shells and mineral intensity",
+        "Portlandian: limestone with clay blend",
+        "soil chemistry and mineral uptake",
+        "pH influence",
+        "aroma profile distinction",
+        "aging potential variation"
+      ],
+      "causal_chain_target": [],
+      "response_depth_target": "strong"
+    },
+    {
+      "item_id": "OR_098",
+      "question_text": "Describe the complete 3-phase harvest decision-making process for a grower managing multiple parcels in a vintage where some blocks ripen early while others lag, optimizing for quality across diverse conditions.",
+      "command_verb": "describe",
+      "ra_id": "RA2",
+      "topic": "parcel_selective_harvest_strategy",
+      "expected_concepts": [
+        "analytical ripeness (Brix/TA/pH)",
+        "phenolic maturity assessment",
+        "disease and pest pressure",
+        "weather forecast integration",
+        "quality target definition",
+        "separate lot production strategy"
+      ],
+      "causal_chain_target": [
+        "HC_HARVEST_BRIX_RIPENESS_DECISION"
+      ],
+      "response_depth_target": "developing"
+    },
+    {
+      "item_id": "OR_099",
+      "question_text": "Explain the cascade effect whereby residual sugar in a lower-alcohol wine (below 12.5%) changes not only sweetness perception but also tannin expression, acidity balance, and food pairing suitability.",
+      "command_verb": "explain",
+      "ra_id": "RA3",
+      "topic": "residual_sugar_perceptual_cascade",
+      "expected_concepts": [
+        "RS and tannin softening perception",
+        "acid and sweetness balance interaction",
+        "alcohol and structure relationship",
+        "food pairing dynamics",
+        "flavor intensity masking effects",
+        "viscosity and texture effects"
+      ],
+      "causal_chain_target": [
+        "HC_RESIDUAL_SUGAR_LOW_ALCOHOL_CHILI_PAIRING"
+      ],
+      "response_depth_target": "strong"
+    },
+    {
+      "item_id": "OR_100",
+      "question_text": "Compare the market economics and production challenges of small-batch, limited-release wines vs. high-volume flagship brands from the same winery, evaluating profitability and brand positioning strategies.",
+      "command_verb": "compare",
+      "ra_id": "RA1",
+      "topic": "production_scale_brand_strategy",
+      "expected_concepts": [
+        "production efficiency economies of scale",
+        "quality-cost relationship",
+        "brand tier positioning",
+        "marketing spend ratios",
+        "distribution channel differences",
+        "collector vs. consumer market"
+      ],
+      "causal_chain_target": [],
+      "response_depth_target": "developing"
+    },
+    {
+      "item_id": "OR_101",
+      "question_text": "Assess a Sauvignon Blanc from a warm region displaying higher-than-expected acidity (9.5 g/L TA) and grassy, herbaceous aromas normally associated with cool-climate styles, determining whether this is anomalous or represents valid expression.",
+      "command_verb": "assess",
+      "ra_id": "RA5",
+      "topic": "regional_anomaly_quality_assessment",
+      "expected_concepts": [
+        "climate expectation vs. actual expression",
+        "terroir anomaly possibility",
+        "winemaker intervention effects",
+        "acidity source determination",
+        "aroma profile origins",
+        "quality merit independent of category"
+      ],
+      "causal_chain_target": [],
+      "response_depth_target": "strong"
+    },
+    {
+      "item_id": "OR_102",
+      "question_text": "Evaluate whether extended maceration (30+ days) on skins for a white wine (e.g., orange/natural wine style) produces legitimately improved complexity or represents excessive oxidation risk and microbiological spoilage danger.",
+      "command_verb": "evaluate",
+      "ra_id": "RA4",
+      "topic": "extended_maceration_risk_benefit",
+      "expected_concepts": [
+        "tannin extraction from skins",
+        "color and oxidative browning",
+        "aromatic compound release",
+        "spoilage organism growth risk",
+        "SO2 preservation challenge",
+        "style achievement vs. execution risk"
+      ],
+      "causal_chain_target": [
+        "HC_RED_FERMENTATION_EXTRACTION"
+      ],
+      "response_depth_target": "developing"
+    },
+    {
+      "item_id": "OR_103",
+      "question_text": "Discuss the implications of using synthetic or alternative closures (screw caps, glass stoppers, plastic corks) on wine aging, perceived quality, tradition, sustainability, and long-term market adoption.",
+      "command_verb": "discuss",
+      "ra_id": "RA2",
+      "topic": "closure_technology_market_evolution",
+      "expected_concepts": [
+        "oxygen control precision",
+        "TCA contamination elimination",
+        "consumer perception lag",
+        "tradition vs. innovation tension",
+        "environmental footprint comparison",
+        "aging reliability and consistency"
+      ],
+      "causal_chain_target": [],
+      "response_depth_target": "developing"
+    },
+    {
+      "item_id": "OR_104",
+      "question_text": "Recommend a complete vineyard management plan for converting a 20-hectare conventional vineyard to organic certification over 5 years, including pest management, soil recovery, and transition vintage handling.",
+      "command_verb": "recommend",
+      "ra_id": "RA3",
+      "topic": "conventional_organic_transition_plan",
+      "expected_concepts": [
+        "soil health restoration timeline",
+        "pest and disease integrated management",
+        "yield expectation during transition",
+        "harvest timing decisions",
+        "separate vintage production consideration",
+        "marketing and certification strategy"
+      ],
+      "causal_chain_target": [],
+      "response_depth_target": "strong"
+    },
+    {
+      "item_id": "OR_105",
+      "question_text": "Identify and explain how the glacial heritage of New Zealand's South Island (Marlborough, Central Otago) creates distinctive soil compositions and microclimates that define regional wine styles.",
+      "command_verb": "identify_and_explain",
+      "ra_id": "RA4",
+      "topic": "glacial_geology_soil_wine_expression",
+      "expected_concepts": [
+        "glacial valley formation and aspect",
+        "soil minerality from glacial deposit",
+        "temperature extremes from altitude",
+        "diurnal temperature range benefit",
+        "water drainage patterns",
+        "regional style consistency"
+      ],
+      "causal_chain_target": [
+        "HC_DIURNAL_RANGE_FRESHNESS"
+      ],
+      "response_depth_target": "developing"
+    },
+    {
+      "item_id": "OR_106",
+      "question_text": "Describe the complete evolution of a Tokaji Aszú wine from harvest (noble rot concentration), through fermentation arrest, aging in wooden casks, and 10+ year bottle maturation, tracking quality and character transformation.",
+      "command_verb": "describe",
+      "ra_id": "RA5",
+      "topic": "tokaji_aszu_complete_maturation_arc",
+      "expected_concepts": [
+        "botrytized berry concentration",
+        "fermentation control complexity",
+        "solera-style blending",
+        "oxidative maturation in cask",
+        "botrytis complexity emergence",
+        "long-aging capacity",
+        "tertiary aromatics development"
+      ],
+      "causal_chain_target": [
+        "HC_TOKAJI_ASZU_BERRY_ADDITION"
+      ],
+      "response_depth_target": "strong"
+    }
+  ]
+}

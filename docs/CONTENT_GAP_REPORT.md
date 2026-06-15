@@ -88,7 +88,7 @@ Total: **27**.
 
 Two prompts per cell are needed to avoid one-item mastery illusions and to permit different command verbs. This produces a balanced operating target of **54 additions**.
 
-The 25-item uncommitted expansion is not credited here. Recalculate after it is reviewed and becomes part of the authoritative corpus.
+The separately executed OR expansion is not credited here because the audit baseline was frozen before those batches were committed. Recalculate after the expanded corpus is reviewed and declared authoritative.
 
 ## 5. Additional SAT prompts
 
@@ -195,4 +195,3 @@ These must not be mistaken for content shortages:
 - There is no curated chain-to-subtopic registry, causing exact causal counts for generic SAT concepts to remain `UNKNOWN`.
 
 Creating more content will not repair these structural gaps.
-

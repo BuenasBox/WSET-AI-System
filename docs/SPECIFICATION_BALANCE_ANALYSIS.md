@@ -57,7 +57,7 @@ This is materially misaligned with the official short-answer structure.
 - RA2, which carries most short-answer content weight, has only 10 items.
 - RA3, RA4, and RA5 have no committed deployed OR coverage.
 
-The separate 25-item expansion in the working tree was excluded from this baseline because it was not part of the committed/deployed corpus at the audit cutoff.
+The separate expansion work was excluded from this baseline because it was not part of the frozen 31-item corpus at the audit cutoff. Two expansion batches were committed later while verification was still running.
 
 ## 4. SAT balance
 
@@ -194,4 +194,3 @@ The corpus is not proportionally aligned with the official specification.
 - Open Response is the most severe format imbalance.
 - SAT is structurally capable but archetypically narrow.
 - Misconception and coaching coverage are concentrated in a small set of concepts.
-
