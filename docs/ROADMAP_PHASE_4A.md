@@ -1,5 +1,11 @@
 # Roadmap Phase 4A
 
+> **STATUS: HISTORICAL**
+>
+> **DO NOT USE AS CURRENT PROJECT STATE**
+>
+> Current pending work is recorded in [PROJECT_STATE_RECONCILIATION.md](PROJECT_STATE_RECONCILIATION.md).
+
 Date: 2026-06-01
 
 Phase 4A is the diagnostic single-best-answer and structured question-bank workstream. It is governance-first: contracts, schemas, validators, fixtures, and review gates come before any connected runtime.

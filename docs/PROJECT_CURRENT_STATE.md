@@ -1,5 +1,11 @@
 # Project Current State
 
+> **STATUS: HISTORICAL**
+>
+> **DO NOT USE AS CURRENT PROJECT STATE**
+>
+> Superseded by [PROJECT_STATE_RECONCILIATION.md](PROJECT_STATE_RECONCILIATION.md).
+
 Date: 2026-06-01
 
 ## Project Identity

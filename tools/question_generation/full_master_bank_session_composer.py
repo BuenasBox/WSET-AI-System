@@ -31,6 +31,15 @@ SUPPORTED_MODES = (
 )
 RA_IDS = ("RA1", "RA2", "RA3", "RA4", "RA5")
 DIFFICULTIES = ("foundational", "intermediate", "distinction")
+FORBIDDEN_GOVERNANCE_FLAGS = (
+    "safe_for_examiner",
+    "examiner_scoring_allowed",
+    "uses_llm",
+    "uses_api",
+    "uses_embeddings",
+    "uses_vector_db",
+    "cloud_services_active",
+)
 
 
 def load_diagnostic_blueprint(
@@ -96,6 +105,7 @@ def compose_master_bank_session(
     question_count: int | None = None,
     include_open_response: bool = False,
     blueprint: Mapping[str, Any] | None = None,
+    next_session_signals: Mapping[str, Any] | None = None,
 ) -> dict[str, Any]:
     """Compose one deterministic private session without writing state."""
     bank = master_bank if master_bank is not None else load_master_bank(MASTER_BANK_PATH)
@@ -117,6 +127,7 @@ def compose_master_bank_session(
         include_open_response
         and config.get("composition", {}).get("allow_open_response_candidates", False)
     )
+    adaptive_signals = _normalize_next_session_signals(next_session_signals)
     suitability_index = load_open_response_suitability_index()
 
     candidates = [
@@ -131,8 +142,17 @@ def compose_master_bank_session(
         and (resolved_ra is None or _curriculum(item).get("ra") == resolved_ra)
     ]
     exposure = _question_exposure_map(learner_state)
-    recent_ids = _recent_question_ids(learner_state, diagnostic_blueprint)
-    candidates.sort(key=lambda item: _candidate_rank(item, exposure, recent_ids))
+    recent_ids = _recent_question_ids(learner_state, diagnostic_blueprint) | set(
+        adaptive_signals["exposure_avoidance"]
+    )
+    candidates.sort(
+        key=lambda item: _candidate_rank(
+            item,
+            exposure,
+            recent_ids,
+            adaptive_signals,
+        )
+    )
 
     ra_targets = _ra_targets(config, requested_count, resolved_ra)
     difficulty_targets = _allocate_by_ratio(
@@ -163,7 +183,7 @@ def compose_master_bank_session(
     session_id = _session_id(normalized_mode, resolved_ra, item_ids)
     eligibility = build_eligibility_index(bank, suitability_index)
 
-    return {
+    session = {
         "schema_version": "full_master_bank_session_v1",
         "session_id": session_id,
         "mode": normalized_mode,
@@ -187,6 +207,46 @@ def compose_master_bank_session(
         "items": copy.deepcopy(selected),
         "governance": copy.deepcopy(SAFE_GOVERNANCE),
     }
+    if next_session_signals is not None:
+        session["adaptive_selection"] = _adaptive_selection_summary(adaptive_signals)
+    return session
+
+
+def compose_adaptive_master_bank_session(
+    next_session_signals: Mapping[str, Any],
+    master_bank: Mapping[str, Any] | None = None,
+    les: Mapping[str, Any] | None = None,
+    *,
+    mode: str | None = None,
+    target_ra: str | None = None,
+    question_count: int | None = None,
+    include_open_response: bool = False,
+    blueprint: Mapping[str, Any] | None = None,
+) -> dict[str, Any]:
+    """Compose the next session from validated learning-event signals."""
+    signals = _normalize_next_session_signals(next_session_signals)
+    resolved_mode = str(
+        mode or signals["recommended_next_mode"] or "EXPRESS_10"
+    ).strip().upper()
+    resolved_ra = target_ra
+    if resolved_mode == "RA_FOCUS" and resolved_ra is None:
+        priorities = signals["RA_reinforcement_priority"]
+        if priorities:
+            resolved_ra = priorities[0]["ra_id"]
+        else:
+            resolved_mode = "QUICK_25"
+    session = compose_master_bank_session(
+        master_bank,
+        les,
+        mode=resolved_mode,
+        target_ra=resolved_ra,
+        question_count=question_count,
+        include_open_response=include_open_response,
+        blueprint=blueprint,
+        next_session_signals=signals,
+    )
+    session["schema_version"] = "adaptive_master_bank_session_v1"
+    return session
 
 
 def _select_candidates(
@@ -250,15 +310,205 @@ def _candidate_rank(
     item: Mapping[str, Any],
     exposure: Mapping[str, Mapping[str, Any]],
     recent_ids: set[str],
-) -> tuple[int, int, str, tuple[int, str]]:
+    signals: Mapping[str, Any],
+) -> tuple[int, int, int, str, tuple[int, str]]:
     item_id = str(item.get("master_item_id", ""))
     signal = exposure.get(item_id, {})
     return (
         1 if item_id in recent_ids else 0,
+        _adaptive_candidate_priority(item, signals),
         int(signal.get("exposure_count", 0) or 0),
         str(signal.get("last_seen") or ""),
         _numeric_sort_key(item.get("source_question_id")),
     )
+
+
+def _adaptive_candidate_priority(
+    item: Mapping[str, Any],
+    signals: Mapping[str, Any],
+) -> int:
+    curriculum = _curriculum(item)
+    topic = str(curriculum.get("topic") or "")
+    ra_id = str(curriculum.get("ra") or "")
+    difficulty = str(curriculum.get("difficulty") or "")
+    links = _learning_link_ids(item)
+    if links["misconceptions"] & set(signals["misconception_repair_candidate"]):
+        return 0
+    if links["causal_chains"] & set(
+        signals["causal_chain_reinforcement_candidate"]
+    ):
+        return 1
+    weak_topics = {
+        entry["topic"]: entry["priority"]
+        for entry in signals["weak_topic_priority"]
+    }
+    if topic in weak_topics:
+        return 2 if weak_topics[topic] == "urgent" else 3
+    strong_topics = {
+        entry["topic"]
+        for entry in signals["strong_topic_progression_candidate"]
+    }
+    if topic in strong_topics and difficulty == "distinction":
+        return 4
+    prioritized_ras = {
+        entry["ra_id"]
+        for entry in signals["RA_reinforcement_priority"]
+    }
+    if ra_id in prioritized_ras:
+        return 5
+    if topic in strong_topics:
+        return 6
+    return 7
+
+
+def _normalize_next_session_signals(
+    signals: Mapping[str, Any] | None,
+) -> dict[str, Any]:
+    empty = {
+        "schema_version": "next_session_learning_signals_v1",
+        "weak_topic_priority": [],
+        "strong_topic_progression_candidate": [],
+        "RA_reinforcement_priority": [],
+        "misconception_repair_candidate": [],
+        "causal_chain_reinforcement_candidate": [],
+        "exposure_avoidance": [],
+        "recommended_next_mode": None,
+        "governance": copy.deepcopy(SAFE_GOVERNANCE),
+    }
+    if signals is None:
+        return empty
+    if not isinstance(signals, Mapping):
+        raise ValueError("next_session_signals must be an object")
+    if str(signals.get("schema_version") or "") != "next_session_learning_signals_v1":
+        raise ValueError("unsupported next_session_signals schema_version")
+    governance = signals.get("governance")
+    if not isinstance(governance, Mapping) or any(
+        bool(governance.get(key)) for key in FORBIDDEN_GOVERNANCE_FLAGS
+    ):
+        raise ValueError("next_session_signals governance must fail closed")
+    normalized = copy.deepcopy(empty)
+    normalized["weak_topic_priority"] = _normalized_signal_rows(
+        signals.get("weak_topic_priority"),
+        identity_key="topic",
+        allowed_extra={"priority", "stage"},
+    )
+    normalized["strong_topic_progression_candidate"] = _normalized_signal_rows(
+        signals.get("strong_topic_progression_candidate"),
+        identity_key="topic",
+        allowed_extra={"stage", "next_challenge"},
+    )
+    normalized["RA_reinforcement_priority"] = _normalized_signal_rows(
+        signals.get("RA_reinforcement_priority"),
+        identity_key="ra_id",
+        allowed_extra={"priority"},
+        allowed_id_values=set(RA_IDS),
+    )
+    for key in (
+        "misconception_repair_candidate",
+        "causal_chain_reinforcement_candidate",
+        "exposure_avoidance",
+    ):
+        normalized[key] = _normalized_text_list(signals.get(key))
+    recommended = str(signals.get("recommended_next_mode") or "").strip().upper()
+    if recommended and recommended not in SUPPORTED_MODES:
+        raise ValueError("recommended_next_mode is unsupported")
+    normalized["recommended_next_mode"] = recommended or None
+    return normalized
+
+
+def _normalized_signal_rows(
+    value: Any,
+    *,
+    identity_key: str,
+    allowed_extra: set[str],
+    allowed_id_values: set[str] | None = None,
+) -> list[dict[str, str]]:
+    if value is None:
+        return []
+    if not isinstance(value, list):
+        raise ValueError(f"{identity_key} signals must be a list")
+    rows: list[dict[str, str]] = []
+    seen: set[str] = set()
+    for entry in value:
+        if not isinstance(entry, Mapping):
+            raise ValueError(f"{identity_key} signal entries must be objects")
+        identity = str(entry.get(identity_key) or "").strip()
+        if not identity:
+            raise ValueError(f"{identity_key} signal entry requires {identity_key}")
+        if allowed_id_values is not None and identity not in allowed_id_values:
+            raise ValueError(f"unsupported {identity_key}: {identity}")
+        if identity in seen:
+            continue
+        row = {identity_key: identity}
+        for key in sorted(allowed_extra):
+            text = str(entry.get(key) or "").strip()
+            if text:
+                row[key] = text
+        rows.append(row)
+        seen.add(identity)
+    return rows
+
+
+def _normalized_text_list(value: Any) -> list[str]:
+    if value is None:
+        return []
+    if not isinstance(value, list):
+        raise ValueError("adaptive signal IDs must be lists")
+    return list(dict.fromkeys(str(item).strip() for item in value if str(item).strip()))
+
+
+def _learning_link_ids(item: Mapping[str, Any]) -> dict[str, set[str]]:
+    links = item.get("learning_links")
+    if not isinstance(links, Mapping):
+        return {"misconceptions": set(), "causal_chains": set()}
+    misconceptions: set[str] = set()
+    causal_chains: set[str] = set()
+    direct_chain = str(links.get("causal_chain_id") or "").strip()
+    if direct_chain:
+        causal_chains.add(direct_chain)
+    options = links.get("options")
+    if isinstance(options, Mapping):
+        for option in options.values():
+            if not isinstance(option, Mapping):
+                continue
+            misconception = str(option.get("misconception_id") or "").strip()
+            chain = str(option.get("causal_chain_id") or "").strip()
+            if misconception:
+                misconceptions.add(misconception)
+            if chain:
+                causal_chains.add(chain)
+    return {"misconceptions": misconceptions, "causal_chains": causal_chains}
+
+
+def _adaptive_selection_summary(signals: Mapping[str, Any]) -> dict[str, Any]:
+    active = any(
+        signals[key]
+        for key in (
+            "weak_topic_priority",
+            "strong_topic_progression_candidate",
+            "RA_reinforcement_priority",
+            "misconception_repair_candidate",
+            "causal_chain_reinforcement_candidate",
+            "exposure_avoidance",
+        )
+    )
+    return {
+        "signals_consumed": bool(active or signals["recommended_next_mode"]),
+        "recommended_next_mode": signals["recommended_next_mode"],
+        "weak_topics": [entry["topic"] for entry in signals["weak_topic_priority"]],
+        "strong_topics": [
+            entry["topic"]
+            for entry in signals["strong_topic_progression_candidate"]
+        ],
+        "reinforcement_ras": [
+            entry["ra_id"] for entry in signals["RA_reinforcement_priority"]
+        ],
+        "misconception_targets": list(signals["misconception_repair_candidate"]),
+        "causal_chain_targets": list(
+            signals["causal_chain_reinforcement_candidate"]
+        ),
+        "exposure_avoidance_count": len(signals["exposure_avoidance"]),
+    }
 
 
 def _question_exposure_map(les: Mapping[str, Any]) -> dict[str, Mapping[str, Any]]:

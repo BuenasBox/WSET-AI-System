@@ -1,5 +1,11 @@
 # DEPLOYMENT DOMAIN
 
+> **STATUS: HISTORICAL**
+>
+> **DO NOT USE AS CURRENT PROJECT STATE**
+>
+> Current production ownership is defined in [FRONTEND_SOURCE_OF_TRUTH_RECONCILIATION.md](FRONTEND_SOURCE_OF_TRUTH_RECONCILIATION.md).
+
 **Status:** Reserved for future frontend testing.
 **Frontend status:** Not active.
 **Deployment status:** Not active.

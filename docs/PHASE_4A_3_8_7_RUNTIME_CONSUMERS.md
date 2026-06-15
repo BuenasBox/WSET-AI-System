@@ -1,5 +1,9 @@
 # Phase 4A.3.8.7 — Knowledge Runtime Consumers & Open Response Evaluator
 
+> **STATUS: CANONICAL**
+>
+> **LAST RECONCILED: 2026-06-06**
+
 **Implemented:** 2026-06-06
 **Status:** Complete
 

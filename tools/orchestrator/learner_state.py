@@ -162,6 +162,13 @@ def write_learner_state(
     return path
 
 
+def normalize_learner_state(state: dict[str, Any]) -> dict[str, Any]:
+    """Return the additive LES contract with governance pinned false."""
+    if not isinstance(state, dict):
+        raise ValueError("Learner epistemic state must be a dictionary.")
+    return _with_governance_defaults(state)
+
+
 def create_topic_signal(
     topic: str,
     *,
