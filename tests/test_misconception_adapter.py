@@ -7,6 +7,8 @@ from tools.learner_model.misconception_adapter import (
     detect_text_evidence,
     load_node_index,
     normalize_node,
+    record_evidence,
+    summarize_evidence,
 )
 
 
@@ -100,6 +102,106 @@ class TextEvidenceDetectionTests(unittest.TestCase):
         )
         self.assertTrue(weakness_result["detected"])
         self.assertEqual(weakness_result["source_type"], "weakness_profile")
+
+
+class EvidenceAccumulationTests(unittest.TestCase):
+    def _observe(
+        self,
+        les: dict,
+        *,
+        session_id: str,
+        item_id: str,
+        timestamp: str,
+        outcome: str = "observed",
+    ) -> dict:
+        return record_evidence(
+            les,
+            misconception_id="MC_MLF_01",
+            source_type="sba",
+            session_id=session_id,
+            item_id=item_id,
+            timestamp=timestamp,
+            outcome=outcome,
+            matched_signals=["MLF always makes a wine taste buttery."],
+        )
+
+    def test_confidence_labels_follow_evidence_frequency(self) -> None:
+        first = self._observe(
+            {},
+            session_id="s1",
+            item_id="q1",
+            timestamp="2026-06-15T10:00:00Z",
+        )
+        self.assertEqual(summarize_evidence(first, "MC_MLF_01")["confidence_label"], "low")
+
+        second = self._observe(
+            first,
+            session_id="s1",
+            item_id="q2",
+            timestamp="2026-06-15T10:01:00Z",
+        )
+        self.assertEqual(summarize_evidence(second, "MC_MLF_01")["confidence_label"], "medium")
+
+        third = self._observe(
+            second,
+            session_id="s2",
+            item_id="q3",
+            timestamp="2026-06-15T11:00:00Z",
+        )
+        summary = summarize_evidence(third, "MC_MLF_01")
+        self.assertEqual(summary["confidence_label"], "high")
+        self.assertEqual(summary["evidence_count"], 3)
+        self.assertEqual(summary["session_count"], 2)
+
+    def test_correction_reduces_active_confidence_without_deleting_history(self) -> None:
+        observed = self._observe(
+            {},
+            session_id="s1",
+            item_id="q1",
+            timestamp="2026-06-15T10:00:00Z",
+        )
+        corrected = self._observe(
+            observed,
+            session_id="s2",
+            item_id="q2",
+            timestamp="2026-06-15T11:00:00Z",
+            outcome="corrected",
+        )
+
+        summary = summarize_evidence(corrected, "MC_MLF_01")
+        self.assertFalse(summary["active"])
+        self.assertEqual(summary["confidence_label"], "none")
+        self.assertEqual(summary["lifetime_observation_count"], 1)
+        self.assertEqual(summary["correction_count"], 1)
+
+    def test_duplicate_event_is_idempotent(self) -> None:
+        first = self._observe(
+            {},
+            session_id="s1",
+            item_id="q1",
+            timestamp="2026-06-15T10:00:00Z",
+        )
+        duplicate = self._observe(
+            first,
+            session_id="s1",
+            item_id="q1",
+            timestamp="2026-06-15T10:00:00Z",
+        )
+
+        self.assertEqual(first, duplicate)
+
+    def test_evidence_recording_does_not_mutate_input(self) -> None:
+        les = {"misconception_evidence": {}}
+        before = copy.deepcopy(les)
+
+        self._observe(
+            les,
+            session_id="s1",
+            item_id="q1",
+            timestamp="2026-06-15T10:00:00Z",
+        )
+
+        self.assertEqual(les, before)
 
 
 if __name__ == "__main__":

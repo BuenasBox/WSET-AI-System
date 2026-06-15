@@ -12,6 +12,7 @@ from tools.constants import KNOWLEDGE_DIR
 
 DEFAULT_MISCONCEPTION_DIR = KNOWLEDGE_DIR / "knowledge-map" / "misconceptions"
 DETECTION_THRESHOLD = 0.45
+MAX_EVIDENCE_EVENTS = 100
 
 _STOPWORDS = {
     "a", "an", "and", "are", "as", "because", "do", "does", "for", "from",
@@ -135,6 +136,106 @@ def detect_text_evidence(
     return best
 
 
+def record_evidence(
+    les: dict[str, Any],
+    *,
+    misconception_id: str,
+    source_type: str,
+    session_id: str,
+    timestamp: str,
+    outcome: str,
+    item_id: str | None = None,
+    matched_signals: Iterable[str] | None = None,
+    directory: Path = DEFAULT_MISCONCEPTION_DIR,
+) -> dict[str, Any]:
+    """Append one deterministic evidence event to a copied LES."""
+    if misconception_id not in load_node_index(directory):
+        return les
+    if outcome not in {"observed", "corrected"}:
+        raise ValueError("outcome must be observed or corrected")
+
+    updated = deepcopy(les)
+    evidence = updated.setdefault("misconception_evidence", {})
+    entry = deepcopy(evidence.get(misconception_id) or {"events": []})
+    events = list(entry.get("events") or [])
+    event = {
+        "misconception_id": misconception_id,
+        "source_type": str(source_type or "unknown"),
+        "session_id": str(session_id or ""),
+        "item_id": str(item_id or ""),
+        "timestamp": str(timestamp or ""),
+        "outcome": outcome,
+        "matched_signals": [
+            str(signal) for signal in (matched_signals or []) if str(signal).strip()
+        ][:3],
+    }
+    identity = _event_identity(event)
+    if any(_event_identity(existing) == identity for existing in events):
+        return updated
+
+    events.append(event)
+    entry["events"] = events[-MAX_EVIDENCE_EVENTS:]
+    evidence[misconception_id] = entry
+    return updated
+
+
+def summarize_evidence(
+    les: dict[str, Any],
+    misconception_id: str,
+) -> dict[str, Any]:
+    """Summarize evidence frequency without probability or scoring."""
+    raw_entry = (les.get("misconception_evidence") or {}).get(misconception_id) or {}
+    events = [
+        event
+        for event in raw_entry.get("events", [])
+        if isinstance(event, dict)
+    ]
+    observed = [event for event in events if event.get("outcome") == "observed"]
+    corrected = [event for event in events if event.get("outcome") == "corrected"]
+
+    last_correction_index = max(
+        (index for index, event in enumerate(events) if event.get("outcome") == "corrected"),
+        default=-1,
+    )
+    active_events = [
+        event
+        for event in events[last_correction_index + 1 :]
+        if event.get("outcome") == "observed"
+    ]
+    active_sessions = {
+        str(event.get("session_id") or "")
+        for event in active_events
+        if str(event.get("session_id") or "")
+    }
+    source_types = sorted({
+        str(event.get("source_type") or "")
+        for event in active_events
+        if str(event.get("source_type") or "")
+    })
+
+    count = len(active_events)
+    if count >= 3 and len(active_sessions) >= 2:
+        label = "high"
+    elif count >= 2:
+        label = "medium"
+    elif count == 1:
+        label = "low"
+    else:
+        label = "none"
+
+    return {
+        "misconception_id": misconception_id,
+        "active": bool(active_events),
+        "confidence_label": label,
+        "evidence_count": count,
+        "session_count": len(active_sessions),
+        "source_types": source_types,
+        "evidence_trace": deepcopy(active_events),
+        "lifetime_observation_count": len(observed),
+        "correction_count": len(corrected),
+    }
+
+
 def _score_text(text: str, node: dict[str, Any]) -> dict[str, Any]:
     query_tokens = _tokens(text)
     phrases = [
@@ -200,6 +301,17 @@ def _not_detected(reason: str, source_type: str) -> dict[str, Any]:
         "match_strength": 0.0,
         "reason": reason,
     }
+
+
+def _event_identity(event: dict[str, Any]) -> tuple[str, ...]:
+    return (
+        str(event.get("misconception_id") or ""),
+        str(event.get("source_type") or ""),
+        str(event.get("session_id") or ""),
+        str(event.get("item_id") or ""),
+        str(event.get("timestamp") or ""),
+        str(event.get("outcome") or ""),
+    )
 
 
 def _is_explanatory(text: str) -> bool:

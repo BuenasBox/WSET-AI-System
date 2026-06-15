@@ -23,6 +23,7 @@ from pathlib import Path
 from typing import Any
 
 from tools.constants import KNOWLEDGE_DIR
+from tools.learner_model.misconception_adapter import record_evidence, summarize_evidence
 
 MISCONCEPTION_SIGNALS_PATH = KNOWLEDGE_DIR / "knowledge-map" / "misconception_signals.json"
 
@@ -55,6 +56,9 @@ def process_sba_outcome(
     session_id: str,
     reference_date: str | None = None,
     signals_path: Path = MISCONCEPTION_SIGNALS_PATH,
+    source_type: str = "sba",
+    item_id: str | None = None,
+    matched_signals: list[str] | None = None,
 ) -> tuple[dict[str, Any], list[str]]:
     """Update in-memory LES for one SBA item linked to a misconception.
 
@@ -75,6 +79,7 @@ def process_sba_outcome(
     updated = deepcopy(les)
     emitted: list[str] = []
     now = reference_date or _utc_now()
+    evidence_outcome: str | None = None
 
     # --- Existing LES key: misconception_signals ---
     mc_signals: dict[str, Any] = updated.setdefault("misconception_signals", {})
@@ -107,12 +112,14 @@ def process_sba_outcome(
 
         if len(sess["session_ids"]) > 1:
             emitted.append(SIGNAL_PERSISTENT)
+        evidence_outcome = "observed"
 
     elif outcome == "correct":
         if detection_count > 0 and not res.get("resolved"):
             res["resolved"] = True
             res["resolved_at"] = now
             emitted.append(SIGNAL_RESOLVED)
+            evidence_outcome = "corrected"
 
     mc_signals[mc_id] = {
         "misconception_id": mc_id,
@@ -121,6 +128,22 @@ def process_sba_outcome(
     }
     mc_sessions[mc_id] = sess
     mc_resolution[mc_id] = res
+
+    if evidence_outcome:
+        updated = record_evidence(
+            updated,
+            misconception_id=mc_id,
+            source_type=source_type,
+            session_id=session_id,
+            item_id=item_id,
+            timestamp=now,
+            outcome=evidence_outcome,
+            matched_signals=matched_signals if evidence_outcome == "observed" else None,
+        )
+
+    evidence_summary = summarize_evidence(updated, mc_id)
+    updated["misconception_signals"][mc_id]["confidence_label"] = evidence_summary["confidence_label"]
+    updated["misconception_signals"][mc_id]["evidence_count"] = evidence_summary["evidence_count"]
 
     return updated, emitted
 
