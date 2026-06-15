@@ -18,7 +18,7 @@ class LegacyNodeCompatibilityTests(unittest.TestCase):
     def test_all_legacy_nodes_load_without_schema_migration(self) -> None:
         index = load_node_index()
 
-        self.assertEqual(len(index), 20)
+        self.assertEqual(len(index), 42)
         for mc_id, node in index.items():
             with self.subTest(mc_id=mc_id):
                 self.assertEqual(node["misconception_id"], mc_id)

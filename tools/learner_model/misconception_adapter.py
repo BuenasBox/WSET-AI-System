@@ -34,7 +34,7 @@ def load_node_index(
     """Load the legacy nodes unchanged and index them by misconception ID."""
     index: dict[str, dict[str, Any]] = {}
     for path in sorted(directory.glob("*.json")):
-        with path.open("r", encoding="utf-8") as file:
+        with path.open("r", encoding="utf-8-sig") as file:
             node = json.load(file)
         if not isinstance(node, dict):
             continue
