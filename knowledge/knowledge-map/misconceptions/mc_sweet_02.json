@@ -1,0 +1,28 @@
+﻿{
+  "related_concepts": [
+    "C_SWEETNESS_BALANCE",
+    "C_QUALITY_ASSESSMENT"
+  ],
+  "detection_signals": [
+    "High residual sugar means the wine is of excellent quality",
+    "More sweetness always means better tasting",
+    "If the residual sugar is low, the sweet wine is not properly made"
+  ],
+  "misconception_id": "MC_SWEET_BALANCING_02",
+  "why_incorrect": "High residual sugar is a characteristic of sweet styles, but does not automatically indicate quality or balance. A wine with 200 g/L but low acidity may be cloyingly sweet.",
+  "frequency": "very_common",
+  "distinction_relevance": true,
+  "severity": "medium",
+  "misconception": "High residual sugar in a sweet wine is always a sign of good quality and balanced winemaking.",
+  "tutor_intervention": "sensory_analysis",
+  "_meta": {
+    "created_date": "2026-06-15",
+    "schema_version": "1.0",
+    "ingestion_status": "draft"
+  },
+  "related_topics": [
+    "T_RA1_TASTING_ANALYSIS",
+    "T_RA1_FERMENTATION_WHITE"
+  ],
+  "corrected_understanding": "Sweet wine quality depends on the balance between residual sugar, acidity, alcohol, and aromatic complexity."
+}

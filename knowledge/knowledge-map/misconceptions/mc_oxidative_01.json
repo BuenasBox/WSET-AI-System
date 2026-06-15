@@ -1,0 +1,28 @@
+﻿{
+  "related_concepts": [
+    "C_OXIDATIVE_AGEING",
+    "C_BIOLOGICAL_PROTECTION"
+  ],
+  "detection_signals": [
+    "Oxidative aging is always worse than protected aging",
+    "Wines aged under flor are always superior in quality",
+    "Oloroso is a lower quality version of Fino because it's oxidized"
+  ],
+  "misconception_id": "MC_OXIDATIVE_VS_BIOLOGICAL_01",
+  "why_incorrect": "Oxidative and biological ageing produce different flavor profiles. However, the sensory results are not universally better or worse—they are stylistically different.",
+  "frequency": "uncommon",
+  "distinction_relevance": true,
+  "severity": "medium",
+  "misconception": "Oxidative ageing and biological ageing (flor protection) always produce wines with distinctly different flavors, and one is always better than the other.",
+  "tutor_intervention": "sensory_comparison",
+  "_meta": {
+    "created_date": "2026-06-15",
+    "schema_version": "1.0",
+    "ingestion_status": "draft"
+  },
+  "related_topics": [
+    "T_RA2_SPAIN_SHERRY",
+    "T_RA1_OAK_AGEING"
+  ],
+  "corrected_understanding": "Oxidative and biological ageing produce distinct flavor profiles. Neither is inherently superior; they are stylistic choices producing different quality expressions."
+}

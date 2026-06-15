@@ -1,0 +1,28 @@
+﻿{
+  "related_concepts": [
+    "C_TRADITIONAL_METHOD",
+    "C_AUTOLYSIS"
+  ],
+  "detection_signals": [
+    "All quality Champagne must age for 10 years minimum",
+    "Cava aged for less than 10 years is not a quality product",
+    "Traditional method sparkling wine quality is determined by lees contact duration"
+  ],
+  "misconception_id": "MC_SPARKLING_TRADITIONAL_01",
+  "why_incorrect": "Traditional method wines have minimum lees aging requirements set by regulation (15 months for Champagne, 9 months for Cava), not 10 years. Many quality producers age well beyond minimums (2-5+ years).",
+  "frequency": "common",
+  "distinction_relevance": false,
+  "severity": "low",
+  "misconception": "Traditional method sparkling wine (Champagne, Cava) must age in the bottle on lees for a minimum of 10 years to be considered high quality.",
+  "tutor_intervention": "regulation_clarification",
+  "_meta": {
+    "created_date": "2026-06-15",
+    "schema_version": "1.0",
+    "ingestion_status": "draft"
+  },
+  "related_topics": [
+    "T_RA2_FRANCE_CHAMPAGNE",
+    "T_RA2_SPAIN_SPARKLING"
+  ],
+  "corrected_understanding": "Traditional method sparkling wines have regulatory minimum lees aging periods. Quality producers often exceed these minimums, but high-quality wines can be produced at minimum requirements."
+}

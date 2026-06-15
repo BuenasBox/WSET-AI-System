@@ -1,0 +1,22 @@
+{
+  "misconception_id": "MC_ICEWINE_NOBLE_01",
+  "misconception": "Icewine requires noble rot (Botrytis) to be produced.",
+  "why_incorrect": "Icewine (Eiswein in German-speaking regions) is produced by leaving grapes on the vine until they freeze naturally. The freezing concentrates the sugars in the juice while water remains frozen and can be separated. Noble rot is NOT required for Icewine production — it occurs when natural frost concentrates the must. Some Icewines may have botrytis present, but it is incidental, not required. Botrytis requires specific warm/humid conditions, while Icewine requires freezing temperatures. These are distinct concentration mechanisms.",
+  "corrected_understanding": "Icewine is produced by freezing grapes naturally to concentrate sugars through cryoconcentration. Botrytis may incidentally occur but is not required. Icewine and noble rot wines are separate production methods for similar final sweetness levels.",
+  "related_topics": ["T_RA2_GERMANY", "T_RA2_CANADA", "T_RA1_VITICULTURE_HAZARDS"],
+  "related_concepts": ["C_ICEWINE_PRODUCTION", "C_CRYOCONCENTRATION"],
+  "severity": "medium",
+  "frequency": "uncommon",
+  "distinction_relevance": true,
+  "tutor_intervention": "contrast_comparison",
+  "detection_signals": [
+    "Icewine needs botrytis to be sweet",
+    "You can't make Icewine without noble rot",
+    "Icewine and Sauternes are made the same way"
+  ],
+  "_meta": {
+    "schema_version": "1.0",
+    "created_date": "2026-06-15",
+    "ingestion_status": "draft"
+  }
+}

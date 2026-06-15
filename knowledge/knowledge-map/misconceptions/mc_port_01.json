@@ -1,0 +1,28 @@
+﻿{
+  "related_concepts": [
+    "C_PORT_CLASSIFICATION",
+    "C_OXIDATIVE_AGEING"
+  ],
+  "detection_signals": [
+    "All Port wines must age for 10 years in barrel",
+    "Vintage Port and Tawny Port are aged the same way",
+    "Every Port wine is aged for a minimum of 20 years before release"
+  ],
+  "misconception_id": "MC_PORT_VINTAGE_01",
+  "why_incorrect": "Port production involves multiple distinct styles with very different ageing protocols. Vintage Ports age briefly in barrel (2-3 years), then in bottle. Tawny Ports age in wooden barrels (10, 20, 30, or 40+ years).",
+  "frequency": "common",
+  "distinction_relevance": true,
+  "severity": "medium",
+  "misconception": "All Port wines are aged in wooden barrels for a fixed minimum period (e.g., 10 years) before release.",
+  "tutor_intervention": "classification_system",
+  "_meta": {
+    "created_date": "2026-06-15",
+    "schema_version": "1.0",
+    "ingestion_status": "draft"
+  },
+  "related_topics": [
+    "T_RA2_PORTUGAL",
+    "T_RA1_OAK_AGEING"
+  ],
+  "corrected_understanding": "Port styles have different ageing requirements: Vintage Port ages briefly in barrel then in bottle; Tawny Port ages in wooden casks for specified periods."
+}

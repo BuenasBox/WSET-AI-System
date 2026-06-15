@@ -1,0 +1,28 @@
+﻿{
+  "related_concepts": [
+    "C_COLD_MACERATION",
+    "C_PHENOLIC_EXTRACTION"
+  ],
+  "detection_signals": [
+    "Cold soaking always makes wine more colored and tannic",
+    "Every red wine must be cold soaked to get good extraction",
+    "Cold soaking is the best way to extract tannins"
+  ],
+  "misconception_id": "MC_COLD_SOAK_EXTRACTION_01",
+  "why_incorrect": "Cold soaking can increase extraction of certain compounds, but the relationship is not simple. Extraction depends on temperature, duration, pH, grape maturity. Some winemakers achieve excellent color without cold soaking.",
+  "frequency": "occasional",
+  "distinction_relevance": false,
+  "severity": "low",
+  "misconception": "Cold soaking (pre-fermentation maceration at cold temperatures) always extracts more color and tannin from red grape skins.",
+  "tutor_intervention": "technical_nuance",
+  "_meta": {
+    "created_date": "2026-06-15",
+    "schema_version": "1.0",
+    "ingestion_status": "draft"
+  },
+  "related_topics": [
+    "T_RA1_VINIFICATION_RED",
+    "T_RA1_EXTRACTION"
+  ],
+  "corrected_understanding": "Cold soaking can enhance extraction of color and some tannins, but results vary by grape ripeness, temperature, duration. It is not universally necessary or beneficial."
+}

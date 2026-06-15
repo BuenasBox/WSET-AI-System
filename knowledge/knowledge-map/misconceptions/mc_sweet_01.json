@@ -1,0 +1,29 @@
+﻿{
+  "related_concepts": [
+    "C_CONCENTRATION_METHODS",
+    "C_SWEET_WINE_PRODUCTION"
+  ],
+  "detection_signals": [
+    "All sweet wines are made with botrytis",
+    "If there's no noble rot, the wine can't be sweet",
+    "Botrytis is the only way to concentrate wine sugars"
+  ],
+  "misconception_id": "MC_SWEET_CONCENTRATION_01",
+  "why_incorrect": "While botrytis is one important method, it is not the only concentration mechanism. Other methods include cryoconcentration, drying, late harvest, fortification.",
+  "frequency": "common",
+  "distinction_relevance": true,
+  "severity": "medium",
+  "misconception": "The only way to make a concentrated sweet wine is through botrytis (noble rot).",
+  "tutor_intervention": "categorical_expansion",
+  "_meta": {
+    "created_date": "2026-06-15",
+    "schema_version": "1.0",
+    "ingestion_status": "draft"
+  },
+  "related_topics": [
+    "T_RA1_VITICULTURE_HAZARDS",
+    "T_RA2_ITALY",
+    "T_RA2_GERMANY"
+  ],
+  "corrected_understanding": "Sweet wine concentration can be achieved through multiple methods: botrytis, cryoconcentration, drying, late harvest, fortification, and other dehydration techniques."
+}

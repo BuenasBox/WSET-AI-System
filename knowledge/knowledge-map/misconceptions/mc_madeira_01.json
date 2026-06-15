@@ -1,0 +1,28 @@
+﻿{
+  "related_concepts": [
+    "C_OXIDATIVE_AGEING",
+    "C_ESTUFAGEM"
+  ],
+  "detection_signals": [
+    "Madeira tastes oxidized because it was stored badly",
+    "Good Madeira should taste fresh and unoxygenated",
+    "The brown color in Madeira indicates spoilage"
+  ],
+  "misconception_id": "MC_MADEIRA_OXIDATION_01",
+  "why_incorrect": "Oxidation is fundamental and intentional in Madeira production. Madeira is aged in warm conditions through Estufagem, deliberately heating wine. This controlled oxidation develops characteristic caramel, toffee, and toasted flavors.",
+  "frequency": "uncommon",
+  "distinction_relevance": true,
+  "severity": "high",
+  "misconception": "Madeira's oxidized character is a flaw caused by poor storage or old age, not an intentional production method.",
+  "tutor_intervention": "process_clarification",
+  "_meta": {
+    "created_date": "2026-06-15",
+    "schema_version": "1.0",
+    "ingestion_status": "draft"
+  },
+  "related_topics": [
+    "T_RA2_PORTUGAL_MADEIRA",
+    "T_RA1_OAK_AGEING"
+  ],
+  "corrected_understanding": "Madeira's oxidized character and browning are the result of intentional thermal and oxidative ageing (Estufagem). This is not a flaw but the defining production method."
+}

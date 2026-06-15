@@ -1,0 +1,28 @@
+﻿{
+  "related_concepts": [
+    "C_CANOPY_VIGOR",
+    "C_CANOPY_MANAGEMENT"
+  ],
+  "detection_signals": [
+    "A vigorous canopy always makes bad wine",
+    "Low vigor means higher quality fruit automatically",
+    "You can't make quality wine from vigorous vines"
+  ],
+  "misconception_id": "MC_CANOPY_VIGOR_EXPOSURE_01",
+  "why_incorrect": "Canopy vigor and fruit quality are related but not in a simple proportion. Moderate vigor with good balance produces quality grapes. Canopy management practices can achieve optimal structure regardless of vigor.",
+  "frequency": "common",
+  "distinction_relevance": false,
+  "severity": "medium",
+  "misconception": "Higher canopy vigor (more leaf growth) always produces lower quality fruit because the vine prioritizes vegetative growth over fruit ripening.",
+  "tutor_intervention": "systems_thinking",
+  "_meta": {
+    "created_date": "2026-06-15",
+    "schema_version": "1.0",
+    "ingestion_status": "draft"
+  },
+  "related_topics": [
+    "T_RA1_VITICULTURE_CANOPY",
+    "T_RA1_RIPENESS"
+  ],
+  "corrected_understanding": "Moderate canopy vigor with good balance and management practices produces quality fruit. Canopy quality depends on management, not vigor level alone."
+}

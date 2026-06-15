@@ -1,0 +1,28 @@
+﻿{
+  "related_concepts": [
+    "C_TOKAJI_CLASSIFICATION",
+    "C_AGEING_STYLES"
+  ],
+  "detection_signals": [
+    "All Tokaji must age for 5 years minimum",
+    "If it hasn't been aged in oak for 5 years, it's not real Tokaji",
+    "The longer Tokaji ages, the better the quality"
+  ],
+  "misconception_id": "MC_TOKAJI_AGING_02",
+  "why_incorrect": "While traditional Tokaji Aszú is often aged in large oak vessels, not all Tokaji styles require the same ageing. Modern producers may use different vessel types and durations based on their style. Ageing duration is a winemaking choice, not a defining authenticity requirement.",
+  "frequency": "occasional",
+  "distinction_relevance": false,
+  "severity": "low",
+  "misconception": "Tokaji wines must be aged in oak for a minimum of 5 years to be considered authentic.",
+  "tutor_intervention": "regulation_clarification",
+  "_meta": {
+    "created_date": "2026-06-15",
+    "schema_version": "1.0",
+    "ingestion_status": "draft"
+  },
+  "related_topics": [
+    "T_RA2_HUNGARY",
+    "T_RA1_OAK_AGEING"
+  ],
+  "corrected_understanding": "Tokaji ageing requirements vary by wine type and quality declaration. Ageing length is a winemaking decision, not an absolute authenticity marker."
+}

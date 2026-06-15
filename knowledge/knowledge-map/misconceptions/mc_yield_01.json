@@ -1,0 +1,28 @@
+﻿{
+  "related_concepts": [
+    "C_YIELD_MANAGEMENT",
+    "C_CONCENTRATION"
+  ],
+  "detection_signals": [
+    "The lowest-yielding vineyard always makes the best wine",
+    "If the yield is high, the quality must be low",
+    "Reducing yield infinitely will infinitely improve wine quality"
+  ],
+  "misconception_id": "MC_YIELD_CONCENTRATION_02",
+  "why_incorrect": "While lower yield can concentrate sugars per grape, there is no absolute relationship guaranteeing better wine. Different varieties and terroirs have different optimal yield points.",
+  "frequency": "very_common",
+  "distinction_relevance": false,
+  "severity": "low",
+  "misconception": "Lower yield always produces more concentrated and higher-quality wine.",
+  "tutor_intervention": "systems_thinking",
+  "_meta": {
+    "created_date": "2026-06-15",
+    "schema_version": "1.0",
+    "ingestion_status": "draft"
+  },
+  "related_topics": [
+    "T_RA1_VITICULTURE_YIELD",
+    "T_RA1_RIPENESS"
+  ],
+  "corrected_understanding": "Lower yield can enhance concentration, but there is no absolute yield-to-quality relationship. Optimal yield varies by terroir, variety, and vintage."
+}

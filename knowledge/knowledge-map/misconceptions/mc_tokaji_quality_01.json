@@ -1,0 +1,22 @@
+{
+  "misconception_id": "MC_TOKAJI_QUALITY_01",
+  "misconception": "Tokaji sweetness level is determined solely by the Aszú rating (puttonyos number).",
+  "why_incorrect": "The Aszú classification system (3-6 puttonyos, where one puttony = a small wooden bucket of Aszú grapes) indicates the proportion of botrytized grapes added to dry base wine. However, the final sweetness of the wine is influenced by multiple factors: the residual sugar of the base wine, the amount of Aszú paste used, extended barrel ageing (which allows further concentration and oxidation), vintage conditions, and fermentation management. A 6 puttonyos Tokaji may not always be sweeter than a well-made Szamorodni if the base wines differ. The puttonyos is a production declaration, not a direct sweetness guarantee.",
+  "corrected_understanding": "Tokaji puttonyos rating indicates the proportion of Aszú grapes used, but final sweetness also depends on base wine residual sugar, ageing, and vintage conditions. Puttonyos is a production descriptor, not an absolute sweetness scale.",
+  "related_topics": ["T_RA2_HUNGARY", "T_RA1_VITICULTURE_BOTRYTIS"],
+  "related_concepts": ["C_TOKAJI_CLASSIFICATION", "C_ASZÚ_GRAPES"],
+  "severity": "medium",
+  "frequency": "common",
+  "distinction_relevance": true,
+  "tutor_intervention": "causal_chain_walkthrough",
+  "detection_signals": [
+    "Puttonyos number directly tells you the residual sugar",
+    "A 6 puttonyos Tokaji is always sweeter than 3 puttonyos",
+    "All 6 puttonyos Tokajis taste the same because of the rating"
+  ],
+  "_meta": {
+    "schema_version": "1.0",
+    "created_date": "2026-06-15",
+    "ingestion_status": "draft"
+  }
+}

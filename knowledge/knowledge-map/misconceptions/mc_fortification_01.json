@@ -1,0 +1,29 @@
+﻿{
+  "related_concepts": [
+    "C_FORTIFICATION_TIMING",
+    "C_RESIDUAL_SUGAR"
+  ],
+  "detection_signals": [
+    "All fortified wines are fortified after fermentation ends",
+    "Fortification always happens in the same stage for every wine",
+    "Port and Sherry are fortified at the same time in their production"
+  ],
+  "misconception_id": "MC_FORTIFICATION_TIMING_01",
+  "why_incorrect": "Fortification timing varies by wine type. In Port, spirit is added during fermentation. In Sherry, the base wine is usually fermented dry first, then fortified.",
+  "frequency": "common",
+  "distinction_relevance": true,
+  "severity": "medium",
+  "misconception": "Fortified wines are always fortified after fermentation is completely finished.",
+  "tutor_intervention": "process_walkthrough",
+  "_meta": {
+    "created_date": "2026-06-15",
+    "schema_version": "1.0",
+    "ingestion_status": "draft"
+  },
+  "related_topics": [
+    "T_RA2_PORTUGAL",
+    "T_RA2_SPAIN_SHERRY",
+    "T_RA1_FERMENTATION"
+  ],
+  "corrected_understanding": "Fortification timing varies by wine type and producer choice. Port is typically fortified during fermentation; Sherry after fermentation. Timing is deliberate."
+}

@@ -1,0 +1,28 @@
+﻿{
+  "related_concepts": [
+    "C_FORTIFICATION_TIMING",
+    "C_RESIDUAL_SUGAR"
+  ],
+  "detection_signals": [
+    "Port makers add brandy at any point they feel like",
+    "Fortification doesn't really affect the sweetness",
+    "All Port wines are fortified the same way"
+  ],
+  "misconception_id": "MC_PORT_FORTIFICATION_02",
+  "why_incorrect": "Fortification timing is deliberate and precise, not random. In Port production, grape brandy is added at a specific point to stop fermentation and retain residual sugar.",
+  "frequency": "uncommon",
+  "distinction_relevance": false,
+  "severity": "low",
+  "misconception": "Port is fortified by adding brandy at a random point during fermentation to stop it and create sweetness.",
+  "tutor_intervention": "process_precision",
+  "_meta": {
+    "created_date": "2026-06-15",
+    "schema_version": "1.0",
+    "ingestion_status": "draft"
+  },
+  "related_topics": [
+    "T_RA2_PORTUGAL",
+    "T_RA1_FERMENTATION_RED"
+  ],
+  "corrected_understanding": "Port is fortified at a planned point during fermentation with a calculated amount of neutral spirit. Timing is deliberate and affects final characteristics."
+}

@@ -1,0 +1,28 @@
+﻿{
+  "related_concepts": [
+    "C_FLOR_YEAST",
+    "C_SHERRY_CLASSIFICATION"
+  ],
+  "detection_signals": [
+    "All Sherry has flor on the surface",
+    "Flor is required for every type of Sherry",
+    "Oloroso Sherry develops flor just like Fino"
+  ],
+  "misconception_id": "MC_SHERRY_FLOR_01",
+  "why_incorrect": "Flor naturally develops on some Sherry wines. Fino and Manzanilla deliberately cultivate flor. Oloroso, by contrast, intentionally suppresses flor development.",
+  "frequency": "common",
+  "distinction_relevance": true,
+  "severity": "medium",
+  "misconception": "Flor yeast develops on the surface of all Sherry wines and is essential for all Sherry production.",
+  "tutor_intervention": "contrast_comparison",
+  "_meta": {
+    "created_date": "2026-06-15",
+    "schema_version": "1.0",
+    "ingestion_status": "draft"
+  },
+  "related_topics": [
+    "T_RA2_SPAIN_SHERRY",
+    "T_RA1_FERMENTATION_WHITE"
+  ],
+  "corrected_understanding": "Flor develops naturally on Fino and Manzanilla Sherry but is deliberately suppressed in Oloroso production. Flor is not universal to all Sherry styles."
+}

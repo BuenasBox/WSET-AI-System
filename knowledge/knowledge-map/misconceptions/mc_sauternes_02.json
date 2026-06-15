@@ -1,0 +1,28 @@
+﻿{
+  "related_concepts": [
+    "C_SWEETNESS_PERCEPTION",
+    "C_RESIDUAL_SUGAR"
+  ],
+  "detection_signals": [
+    "Sauternes is always the sweetest wine",
+    "More residual sugar always means sweeter on the palate",
+    "Sauternes has more residual sugar than any Icewine"
+  ],
+  "misconception_id": "MC_SAUTERNES_SWEETNESS_02",
+  "why_incorrect": "While Sauternes is sweet, it is not always the sweetest dessert wine. Icewines, some Tokajis, and certain other styles can exceed Sauternes in residual sugar.",
+  "frequency": "common",
+  "distinction_relevance": false,
+  "severity": "low",
+  "misconception": "Sauternes is the sweetest style of dessert wine because of the highest residual sugar content.",
+  "tutor_intervention": "sensory_comparison",
+  "_meta": {
+    "created_date": "2026-06-15",
+    "schema_version": "1.0",
+    "ingestion_status": "draft"
+  },
+  "related_topics": [
+    "T_RA2_BORDEAUX_SWEET",
+    "T_RA1_TASTING_ANALYSIS"
+  ],
+  "corrected_understanding": "Sauternes is a sweet wine with botrytis influence, but it is not necessarily the highest in residual sugar among dessert wines."
+}

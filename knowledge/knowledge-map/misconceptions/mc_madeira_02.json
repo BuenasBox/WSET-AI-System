@@ -1,0 +1,27 @@
+﻿{
+  "related_concepts": [
+    "C_MADEIRA_SWEETNESS_CATEGORIES"
+  ],
+  "detection_signals": [
+    "All Madeira is sweet wine",
+    "Dry Madeira doesn't exist",
+    "Every bottle of Madeira tastes sweet"
+  ],
+  "misconception_id": "MC_MADEIRA_SWEETNESS_02",
+  "why_incorrect": "Madeira exists in a range of styles from dry to sweet. Categories include: Dry/Seco, Medium Dry/Meio Seco, Medium Sweet/Meio Doce, and Sweet/Doce. Sweetness is a production declaration choice.",
+  "frequency": "common",
+  "distinction_relevance": false,
+  "severity": "low",
+  "misconception": "All Madeira wines are sweet, regardless of producer or vintage.",
+  "tutor_intervention": "classification_system",
+  "_meta": {
+    "created_date": "2026-06-15",
+    "schema_version": "1.0",
+    "ingestion_status": "draft"
+  },
+  "related_topics": [
+    "T_RA2_PORTUGAL_MADEIRA",
+    "T_RA1_TASTING_ANALYSIS"
+  ],
+  "corrected_understanding": "Madeira is produced in multiple sweetness levels: Dry, Medium Dry, Medium Sweet, and Sweet. Not all Madeiras are sweet."
+}

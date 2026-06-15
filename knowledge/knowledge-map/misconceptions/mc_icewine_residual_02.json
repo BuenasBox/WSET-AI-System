@@ -1,0 +1,22 @@
+{
+  "misconception_id": "MC_ICEWINE_RESIDUAL_02",
+  "misconception": "All Icewines have very high residual sugar (200+ g/L).",
+  "why_incorrect": "While Icewines are sweet wines, their residual sugar concentration varies based on the degree of freeze concentration and fermentation management. Some Icewines may reach 200+ g/L residual sugar, but others (especially those from cooler vintages or with higher yields) may have 80-150 g/L. The fermentation can be managed to retain varying levels of sweetness. Additionally, alcohol content, total acidity, and residual sugar work together to determine the wine's balance and perceived sweetness. High residual sugar does not automatically mean high quality or that the wine is 'true' Icewine.",
+  "corrected_understanding": "Icewines vary in residual sugar concentration (approximately 80-200+ g/L) depending on harvest conditions, grape maturity, and fermentation choices. Sweetness is balanced by acidity and alcohol. Residual sugar level alone does not determine Icewine quality.",
+  "related_topics": ["T_RA2_GERMANY", "T_RA2_CANADA", "T_RA1_FERMENTATION_WHITE"],
+  "related_concepts": ["C_RESIDUAL_SUGAR", "C_CRYOCONCENTRATION"],
+  "severity": "low",
+  "frequency": "occasional",
+  "distinction_relevance": false,
+  "tutor_intervention": "numerical_reasoning",
+  "detection_signals": [
+    "All Icewines must have over 200 g/L residual sugar",
+    "True Icewine always has extremely high sweetness",
+    "Icewine residual sugar is more important than acidity balance"
+  ],
+  "_meta": {
+    "schema_version": "1.0",
+    "created_date": "2026-06-15",
+    "ingestion_status": "draft"
+  }
+}

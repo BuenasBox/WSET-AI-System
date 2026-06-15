@@ -1,0 +1,28 @@
+﻿{
+  "related_concepts": [
+    "C_SAUTERNES_PRODUCTION",
+    "C_NOBLE_ROT"
+  ],
+  "detection_signals": [
+    "Sauternes is made from grapes at a specific sugar level",
+    "If the grapes don't reach the target Brix, it can't be Sauternes",
+    "All Sauternes vintages use the same harvest criteria"
+  ],
+  "misconception_id": "MC_SAUTERNES_HARVEST_01",
+  "why_incorrect": "While harvest maturity is critical, the focus is on noble rot development, not a fixed Brix reading. A rigid Brix threshold ignores the biological development and vintage variability.",
+  "frequency": "uncommon",
+  "distinction_relevance": true,
+  "severity": "medium",
+  "misconception": "Sauternes grapes must be harvested when they reach a specific sugar level (e.g., 20 Brix), and earlier or later harvests produce inferior wine.",
+  "tutor_intervention": "process_walkthrough",
+  "_meta": {
+    "created_date": "2026-06-15",
+    "schema_version": "1.0",
+    "ingestion_status": "draft"
+  },
+  "related_topics": [
+    "T_RA2_BORDEAUX_SWEET",
+    "T_RA1_VITICULTURE_BOTRYTIS"
+  ],
+  "corrected_understanding": "Sauternes harvest timing prioritizes noble rot development and grape maturity, not a fixed Brix level."
+}

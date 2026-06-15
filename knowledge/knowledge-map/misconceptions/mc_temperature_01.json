@@ -1,0 +1,28 @@
+﻿{
+  "related_concepts": [
+    "C_VINTAGE_VARIATION",
+    "C_TEMPERATURE_EFFECTS"
+  ],
+  "detection_signals": [
+    "Warm vintages are always better than cool vintages",
+    "The hottest vintage always produces the best wine",
+    "Every region makes better wine in warm years"
+  ],
+  "misconception_id": "MC_TEMPERATURE_INFLUENCE_01",
+  "why_incorrect": "While adequate warmth is necessary for ripening, the relationship is not linear. Warmer vintages can produce ripe grapes, but may result in lower acidity. Excessive heat can stress vines.",
+  "frequency": "very_common",
+  "distinction_relevance": true,
+  "severity": "medium",
+  "misconception": "Warmer vintages always produce riper, higher-quality wines because grapes ripen more fully.",
+  "tutor_intervention": "systems_thinking",
+  "_meta": {
+    "created_date": "2026-06-15",
+    "schema_version": "1.0",
+    "ingestion_status": "draft"
+  },
+  "related_topics": [
+    "T_RA1_CLIMATE_INFLUENCE",
+    "T_RA1_RIPENESS"
+  ],
+  "corrected_understanding": "Warmer vintages can produce riper fruit, but quality depends on balance. Excessive heat can create unbalanced wines. Quality results from good match between vintage conditions and terroir."
+}

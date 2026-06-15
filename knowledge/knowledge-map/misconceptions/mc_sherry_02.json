@@ -1,0 +1,28 @@
+﻿{
+  "related_concepts": [
+    "C_SOLERA_SYSTEM",
+    "C_FRACTIONAL_BLENDING"
+  ],
+  "detection_signals": [
+    "Solera aging only happens in Sherry",
+    "You can't use solera for any wine except Sherry",
+    "Solera is a technique unique to the Sherry region"
+  ],
+  "misconception_id": "MC_SHERRY_SOLERA_02",
+  "why_incorrect": "While solera is most famously associated with Sherry, the system is not exclusive to Sherry. Solera-like systems have been used in other Spanish regions and some locations elsewhere.",
+  "frequency": "occasional",
+  "distinction_relevance": false,
+  "severity": "low",
+  "misconception": "Solera ageing is a unique Sherry production method that cannot be used for any other wine.",
+  "tutor_intervention": "categorical_expansion",
+  "_meta": {
+    "created_date": "2026-06-15",
+    "schema_version": "1.0",
+    "ingestion_status": "draft"
+  },
+  "related_topics": [
+    "T_RA2_SPAIN_SHERRY",
+    "T_RA1_OAK_AGEING"
+  ],
+  "corrected_understanding": "Solera is a fractional blending system primarily used for Sherry, but the technique is not unique to Sherry. Sherry's character comes from the combination of solera aging and terroir."
+}

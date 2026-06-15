@@ -1,0 +1,28 @@
+﻿{
+  "related_concepts": [
+    "C_FLOR_PROTECTION",
+    "C_OXIDATIVE_CHEMISTRY"
+  ],
+  "detection_signals": [
+    "Flor completely stops all oxidation",
+    "Wine under flor has zero contact with oxygen",
+    "Biological protection means the wine never oxidizes at all"
+  ],
+  "misconception_id": "MC_BIOLOGICAL_PROTECTION_02",
+  "why_incorrect": "Flor creates a protective barrier that significantly slows oxidation, but does not completely prevent it. A small amount of oxygen can still reach the wine beneath the flor through diffusion.",
+  "frequency": "occasional",
+  "distinction_relevance": false,
+  "severity": "low",
+  "misconception": "Biological protection (flor/veil) completely prevents any oxidation in the wine during ageing.",
+  "tutor_intervention": "chemical_precision",
+  "_meta": {
+    "created_date": "2026-06-15",
+    "schema_version": "1.0",
+    "ingestion_status": "draft"
+  },
+  "related_topics": [
+    "T_RA2_SPAIN_SHERRY",
+    "T_RA1_FERMENTATION_WHITE"
+  ],
+  "corrected_understanding": "Flor provides biological protection by slowing oxidation significantly, but does not completely prevent it. Some chemical evolution continues under flor."
+}
