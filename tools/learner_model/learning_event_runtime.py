@@ -56,6 +56,7 @@ LES_REVERSIBLE_KEYS = (
     "causal_chain_signals",
     "question_exposure_log",
     "question_exposure_signals",
+    "misconception_evidence",
     "misconception_sessions",
     "misconception_resolution",
     "causal_strength",

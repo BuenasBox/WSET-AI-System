@@ -124,3 +124,10 @@ Add one in-place adapter over the existing nodes. It must:
 - provide Profile and simulation-scoped presentation models
 
 This audit creates no new pedagogical content and makes no production claim.
+
+## Ending-State Addendum
+
+After M.2-M.6, all 20 nodes pass the shared adapter contract and are classified
+`FULLY DETECTABLE` when direct evidence is available. See
+`MISCONCEPTION_CLOSURE_REPORT.md` for the ending matrix and the explicit
+cross-deployment payload limitation.
