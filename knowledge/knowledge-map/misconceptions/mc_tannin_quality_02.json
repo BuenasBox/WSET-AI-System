@@ -3,13 +3,8 @@
   "misconception": "More tannin automatically means better quality or greater age-worthiness.",
   "why_incorrect": "Tannin level alone does not determine quality or ageing potential. A wine with very high tannin but low fruit concentration, poor balance, or harsh unripe tannin will not improve with age and will not score well in WSET assessment. In the SAT, tannin is assessed as a structural component (low/medium/high) and its quality is judged by whether it is ripe, smooth, grippy, chalky, or harsh. Quality requires balance — tannin must be proportionate to fruit, acidity, alcohol, and body. Very high tannin without commensurate fruit and structure is a fault, not a virtue.",
   "corrected_understanding": "Tannin contributes to structure and potentially to ageing potential when it is ripe, balanced, and integrated. High tannin alone does not guarantee quality. The assessment considers balance, integration, and the overall style.",
-  "related_topics": [
-    "T_RA1_WINE_COMPONENTS",
-    "T_RA1_SAT"
-  ],
-  "related_concepts": [
-    "C_TANNIN"
-  ],
+  "related_topics": ["T_RA1_WINE_COMPONENTS", "T_RA1_SAT"],
+  "related_concepts": ["C_TANNIN"],
   "severity": "high",
   "frequency": "common",
   "distinction_relevance": true,
@@ -22,64 +17,15 @@
     "I said the wine had high tannins because that means better quality"
   ],
   "detection_keywords": [
-    {
-      "tokens": [
-        "tannin",
-        "better"
-      ],
-      "require_all": true,
-      "bias": 0.2
-    },
-    {
-      "tokens": [
-        "tannin",
-        "quality"
-      ],
-      "require_all": true,
-      "bias": 0.18
-    },
-    {
-      "tokens": [
-        "tannin",
-        "age"
-      ],
-      "require_all": true,
-      "bias": 0.16
-    },
-    {
-      "tokens": [
-        "tannin",
-        "more"
-      ],
-      "require_all": true,
-      "bias": 0.14
-    },
-    {
-      "tokens": [
-        "tannin",
-        "tannins"
-      ],
-      "require_all": false,
-      "bias": 0.1
-    }
+    {"tokens": ["tannin", "better"], "require_all": true, "bias": 0.20},
+    {"tokens": ["tannin", "quality"], "require_all": true, "bias": 0.18},
+    {"tokens": ["tannin", "age"], "require_all": true, "bias": 0.16},
+    {"tokens": ["tannin", "more"], "require_all": true, "bias": 0.14},
+    {"tokens": ["tannin", "tannins"], "require_all": false, "bias": 0.10}
   ],
   "_meta": {
     "schema_version": "1.0",
     "created_date": "2026-05-15",
     "ingestion_status": "draft"
-  },
-  "weakness_signal": {
-    "signal_type": "misconception_hit",
-    "confidence_accumulation": "evidence_based",
-    "remediation_priority": "medium"
-  },
-  "coaching_content": {
-    "confusion_statement": "You seem to be confusing: More tannin automatically means better quality or greater age-worthiness.",
-    "evidence_statement": "This is based on your answers showing this pattern.",
-    "improvement_signal": "Correctly explaining the relationship in similar questions"
-  },
-  "remediation_topics": [
-    "T_RA1_WINE_COMPONENTS",
-    "T_RA1_SAT"
-  ]
+  }
 }

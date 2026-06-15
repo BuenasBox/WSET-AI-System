@@ -3,15 +3,8 @@
   "misconception": "High acidity in a wine means the wine is low quality or unpleasant.",
   "why_incorrect": "Acidity is a structural component, not a quality indicator in isolation. High acidity in a cool-climate Riesling or Champagne is not a defect — it provides freshness, food-pairing versatility, and the backbone for long-term ageing. Whether acidity is pleasant depends on its balance with fruit intensity, residual sugar, and other wine components. An unbalanced high-acid wine may be unpleasant, but the acidity itself is not the cause of poor quality.",
   "corrected_understanding": "High acidity can be a hallmark of quality in cool-climate wines. Its contribution to wine quality depends on whether it is balanced by other components — particularly fruit concentration, sweetness, and alcohol.",
-  "related_topics": [
-    "T_RA1_WINE_COMPONENTS",
-    "T_RA1_CLIMATE_VITICULTURE",
-    "T_RA2_GERMANY"
-  ],
-  "related_concepts": [
-    "C_ACIDITY",
-    "C_COOL_CLIMATE"
-  ],
+  "related_topics": ["T_RA1_WINE_COMPONENTS", "T_RA1_CLIMATE_VITICULTURE", "T_RA2_GERMANY"],
+  "related_concepts": ["C_ACIDITY", "C_COOL_CLIMATE"],
   "severity": "medium",
   "frequency": "common",
   "distinction_relevance": true,
@@ -27,82 +20,16 @@
     "High acidity detracts from the quality of the wine"
   ],
   "detection_keywords": [
-    {
-      "tokens": [
-        "acid",
-        "acidity"
-      ],
-      "require_all": false,
-      "bias": 0.14
-    },
-    {
-      "tokens": [
-        "acid",
-        "quality"
-      ],
-      "require_all": true,
-      "bias": 0.24
-    },
-    {
-      "tokens": [
-        "acidity",
-        "lower"
-      ],
-      "require_all": true,
-      "bias": 0.2
-    },
-    {
-      "tokens": [
-        "acid",
-        "poor"
-      ],
-      "require_all": true,
-      "bias": 0.2
-    },
-    {
-      "tokens": [
-        "acidic",
-        "quality"
-      ],
-      "require_all": true,
-      "bias": 0.2
-    },
-    {
-      "tokens": [
-        "acid",
-        "unripe"
-      ],
-      "require_all": true,
-      "bias": 0.16
-    }
+    {"tokens": ["acid", "acidity"], "require_all": false, "bias": 0.14},
+    {"tokens": ["acid", "quality"], "require_all": true, "bias": 0.24},
+    {"tokens": ["acidity", "lower"], "require_all": true, "bias": 0.20},
+    {"tokens": ["acid", "poor"], "require_all": true, "bias": 0.20},
+    {"tokens": ["acidic", "quality"], "require_all": true, "bias": 0.20},
+    {"tokens": ["acid", "unripe"], "require_all": true, "bias": 0.16}
   ],
   "_meta": {
     "schema_version": "1.0",
     "created_date": "2026-05-13",
     "ingestion_status": "draft"
-  },
-  "weakness_signal": {
-    "signal_type": "misconception_hit",
-    "confidence_accumulation": "evidence_based",
-    "evidence_source": [
-      "detection_signal_match",
-      "answer_analysis",
-      "concept_gap"
-    ],
-    "low_confidence_threshold": 0.45,
-    "medium_confidence_threshold": 0.7,
-    "high_confidence_threshold": 0.85,
-    "remediation_priority": "medium"
-  },
-  "coaching_content": {
-    "confusion_statement": "You seem to be confusing: High acidity in a wine means the wine is low quality or unpleasant.",
-    "evidence_statement": "This is based on your answers showing this pattern.",
-    "what_to_practice": "Review: C_ACIDITY, C_COOL_CLIMATE",
-    "improvement_signal": "Correctly explaining the causal relationship in similar questions"
-  },
-  "remediation_topics": [
-    "T_RA1_WINE_COMPONENTS",
-    "T_RA1_CLIMATE_VITICULTURE",
-    "T_RA2_GERMANY"
-  ]
+  }
 }

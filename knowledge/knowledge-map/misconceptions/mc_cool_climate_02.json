@@ -3,12 +3,8 @@
   "misconception": "Cool climate wines always have green, unripe flavours.",
   "why_incorrect": "Green or herbaceous characters in grapes arise from methoxypyrazines — compounds that degrade as grapes ripen. In a cool climate, if grapes achieve full phenolic and sugar ripeness before harvest, methoxypyrazines will have degraded and the wine will not taste green. The green flavour is a sign of under-ripeness, not of cool climate per se. A well-made, fully ripe Mosel Spätlese or Chablis Premier Cru shows no green notes — it shows citrus, stone fruit, mineral, and floral characters. Growers in cool climates manage canopy, yield, and harvest date specifically to achieve ripeness.",
   "corrected_understanding": "Green, herbaceous notes come from methoxypyrazines and indicate under-ripeness. Cool climates require careful viticulture to achieve full ripeness, but when they do, wines show ripe fruit, floral, and mineral characters — not greenness.",
-  "related_topics": [
-    "T_RA1_CLIMATE_VITICULTURE"
-  ],
-  "related_concepts": [
-    "C_COOL_CLIMATE"
-  ],
+  "related_topics": ["T_RA1_CLIMATE_VITICULTURE"],
+  "related_concepts": ["C_COOL_CLIMATE"],
   "severity": "high",
   "frequency": "very_common",
   "distinction_relevance": true,
@@ -24,87 +20,18 @@
     "cool climate means unripe and green flavours"
   ],
   "detection_keywords": [
-    {
-      "tokens": [
-        "cool",
-        "climate"
-      ],
-      "require_all": true,
-      "bias": 0.18
-    },
-    {
-      "tokens": [
-        "cool",
-        "unripe"
-      ],
-      "require_all": true,
-      "bias": 0.2
-    },
-    {
-      "tokens": [
-        "cool",
-        "green"
-      ],
-      "require_all": true,
-      "bias": 0.2
-    },
-    {
-      "tokens": [
-        "cool",
-        "vegetal"
-      ],
-      "require_all": true,
-      "bias": 0.22
-    },
-    {
-      "tokens": [
-        "cold",
-        "unripe"
-      ],
-      "require_all": true,
-      "bias": 0.18
-    },
-    {
-      "tokens": [
-        "cool",
-        "underripe"
-      ],
-      "require_all": true,
-      "bias": 0.22
-    },
-    {
-      "tokens": [
-        "cool",
-        "herbaceous"
-      ],
-      "require_all": true,
-      "bias": 0.2
-    },
-    {
-      "tokens": [
-        "climate",
-        "green"
-      ],
-      "require_all": true,
-      "bias": 0.14
-    }
+    {"tokens": ["cool", "climate"], "require_all": true, "bias": 0.18},
+    {"tokens": ["cool", "unripe"], "require_all": true, "bias": 0.20},
+    {"tokens": ["cool", "green"], "require_all": true, "bias": 0.20},
+    {"tokens": ["cool", "vegetal"], "require_all": true, "bias": 0.22},
+    {"tokens": ["cold", "unripe"], "require_all": true, "bias": 0.18},
+    {"tokens": ["cool", "underripe"], "require_all": true, "bias": 0.22},
+    {"tokens": ["cool", "herbaceous"], "require_all": true, "bias": 0.20},
+    {"tokens": ["climate", "green"], "require_all": true, "bias": 0.14}
   ],
   "_meta": {
     "schema_version": "1.0",
     "created_date": "2026-05-13",
     "ingestion_status": "draft"
-  },
-  "weakness_signal": {
-    "signal_type": "misconception_hit",
-    "confidence_accumulation": "evidence_based",
-    "remediation_priority": "high"
-  },
-  "coaching_content": {
-    "confusion_statement": "You seem to be confusing: Cool climate wines always have green, unripe flavours.",
-    "evidence_statement": "This is based on your answers showing this pattern.",
-    "improvement_signal": "Correctly explaining the relationship in similar questions"
-  },
-  "remediation_topics": [
-    "T_RA1_CLIMATE_VITICULTURE"
-  ]
+  }
 }

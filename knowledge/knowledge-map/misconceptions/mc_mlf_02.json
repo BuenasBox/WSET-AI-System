@@ -3,14 +3,8 @@
   "misconception": "MLF removes all acidity from a wine.",
   "why_incorrect": "MLF converts malic acid to lactic acid (and CO₂) through bacterial activity. It does not remove acidity — it converts one acid to another. The total acidity decreases slightly because the conversion reduces the total acid load (malic acid is diprotic; lactic acid is monoprotic, so fewer hydrogen ions per molecule). However, the wine retains all its tartaric acid (which is stable and unaffected by MLF) and any remaining unconverted malic acid. A wine with high tartaric acid will still taste quite acidic even after full MLF. The result is a softer, creamier perception of acidity — not the absence of acidity.",
   "corrected_understanding": "MLF converts sharp malic acid to softer lactic acid, reducing perceived sharpness and total acidity slightly. Tartaric acid is unaffected. MLF softens the acid profile — it does not eliminate acidity.",
-  "related_topics": [
-    "T_RA1_WINEMAKING_WHITE",
-    "T_RA1_WINEMAKING_RED"
-  ],
-  "related_concepts": [
-    "C_MALOLACTIC_CONVERSION",
-    "C_ACIDITY"
-  ],
+  "related_topics": ["T_RA1_WINEMAKING_WHITE", "T_RA1_WINEMAKING_RED"],
+  "related_concepts": ["C_MALOLACTIC_CONVERSION", "C_ACIDITY"],
   "severity": "high",
   "frequency": "common",
   "distinction_relevance": true,
@@ -24,19 +18,5 @@
     "schema_version": "1.0",
     "created_date": "2026-05-13",
     "ingestion_status": "draft"
-  },
-  "weakness_signal": {
-    "signal_type": "misconception_hit",
-    "confidence_accumulation": "evidence_based",
-    "remediation_priority": "medium"
-  },
-  "coaching_content": {
-    "confusion_statement": "You seem to be confusing: MLF removes all acidity from a wine.",
-    "evidence_statement": "This is based on your answers showing this pattern.",
-    "improvement_signal": "Correctly explaining the relationship in similar questions"
-  },
-  "remediation_topics": [
-    "T_RA1_WINEMAKING_WHITE",
-    "T_RA1_WINEMAKING_RED"
-  ]
+  }
 }

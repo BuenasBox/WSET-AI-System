@@ -3,12 +3,8 @@
   "misconception": "Whole bunch fermentation always adds a green, stalky character to wine.",
   "why_incorrect": "Whether whole bunch fermentation contributes positive or negative characters depends critically on the ripeness of the stems at harvest. When stems are fully lignified (woody and brown, not green), they contribute structural tannins, a distinctive spice character, and increased pH from potassium leaching — without adding green or vegetal notes. Green, stalky character results from unripe, chlorophyll-rich stems. In regions like Burgundy and Northern Rhône, whole bunch is used regularly with ripe stems to add aromatic complexity and textural interest. The technique is thus ripe-stem dependent, not inherently green.",
   "corrected_understanding": "Whole bunch fermentation with ripe, lignified stems adds spice, structure, and complexity without greenness. Green/stalky characters only arise when unripe green stems are used. Stem ripeness is the key variable.",
-  "related_topics": [
-    "T_RA1_WINEMAKING_RED"
-  ],
-  "related_concepts": [
-    "C_WHOLE_BUNCH_FERMENTATION"
-  ],
+  "related_topics": ["T_RA1_WINEMAKING_RED"],
+  "related_concepts": ["C_WHOLE_BUNCH_FERMENTATION"],
   "severity": "medium",
   "frequency": "common",
   "distinction_relevance": true,
@@ -22,18 +18,5 @@
     "schema_version": "1.0",
     "created_date": "2026-05-13",
     "ingestion_status": "draft"
-  },
-  "weakness_signal": {
-    "signal_type": "misconception_hit",
-    "confidence_accumulation": "evidence_based",
-    "remediation_priority": "medium"
-  },
-  "coaching_content": {
-    "confusion_statement": "You seem to be confusing: Whole bunch fermentation always adds a green, stalky character to wine.",
-    "evidence_statement": "This is based on your answers showing this pattern.",
-    "improvement_signal": "Correctly explaining the relationship in similar questions"
-  },
-  "remediation_topics": [
-    "T_RA1_WINEMAKING_RED"
-  ]
+  }
 }

@@ -3,13 +3,8 @@
   "misconception": "Tartrate crystals in a white wine mean the wine is poor quality or faulty.",
   "why_incorrect": "Tartrate crystals (potassium bitartrate, or 'wine diamonds') are a natural byproduct of cold temperatures. Tartaric acid combines with potassium to form these harmless crystals, which precipitate out of solution when wine is chilled. They are odourless, flavourless, and completely harmless. Many producers deliberately avoid cold stabilisation (chilling before bottling to cause crystals to precipitate before sale) because cold stabilisation can strip delicate aromas. The presence of tartrate crystals therefore often indicates minimal processing and is considered a positive sign by many sommeliers and wine professionals. WSET makes clear that tartrate crystals are not a fault.",
   "corrected_understanding": "Tartrate crystals are a natural, harmless byproduct of cold temperatures. They have no impact on wine quality or flavour and are not a fault. Their presence may indicate minimal processing.",
-  "related_topics": [
-    "T_RA1_WINE_COMPONENTS",
-    "T_RA1_WINEMAKING"
-  ],
-  "related_concepts": [
-    "C_TARTARIC_ACID"
-  ],
+  "related_topics": ["T_RA1_WINE_COMPONENTS", "T_RA1_WINEMAKING"],
+  "related_concepts": ["C_TARTARIC_ACID"],
   "severity": "low",
   "frequency": "uncommon",
   "distinction_relevance": false,
@@ -22,64 +17,15 @@
     "I said the wine was faulty because of the tartrate crystals at the bottom"
   ],
   "detection_keywords": [
-    {
-      "tokens": [
-        "crystal",
-        "crystals"
-      ],
-      "require_all": false,
-      "bias": 0.18
-    },
-    {
-      "tokens": [
-        "tartrate",
-        "crystal"
-      ],
-      "require_all": true,
-      "bias": 0.26
-    },
-    {
-      "tokens": [
-        "crystal",
-        "quality"
-      ],
-      "require_all": true,
-      "bias": 0.2
-    },
-    {
-      "tokens": [
-        "tartrate",
-        "fault"
-      ],
-      "require_all": true,
-      "bias": 0.24
-    },
-    {
-      "tokens": [
-        "crystal",
-        "faulty"
-      ],
-      "require_all": true,
-      "bias": 0.22
-    }
+    {"tokens": ["crystal", "crystals"], "require_all": false, "bias": 0.18},
+    {"tokens": ["tartrate", "crystal"], "require_all": true, "bias": 0.26},
+    {"tokens": ["crystal", "quality"], "require_all": true, "bias": 0.20},
+    {"tokens": ["tartrate", "fault"], "require_all": true, "bias": 0.24},
+    {"tokens": ["crystal", "faulty"], "require_all": true, "bias": 0.22}
   ],
   "_meta": {
     "schema_version": "1.0",
     "created_date": "2026-05-15",
     "ingestion_status": "draft"
-  },
-  "weakness_signal": {
-    "signal_type": "misconception_hit",
-    "confidence_accumulation": "evidence_based",
-    "remediation_priority": "medium"
-  },
-  "coaching_content": {
-    "confusion_statement": "You seem to be confusing: Tartrate crystals in a white wine mean the wine is poor quality or faulty.",
-    "evidence_statement": "This is based on your answers showing this pattern.",
-    "improvement_signal": "Correctly explaining the relationship in similar questions"
-  },
-  "remediation_topics": [
-    "T_RA1_WINE_COMPONENTS",
-    "T_RA1_WINEMAKING"
-  ]
+  }
 }

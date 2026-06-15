@@ -3,12 +3,8 @@
   "misconception": "MLF always makes a wine taste buttery.",
   "why_incorrect": "The buttery aroma in wines that have undergone MLF comes from diacetyl, a byproduct of the bacterial conversion. However, diacetyl concentration is highly variable and depends on the bacterial strain used, temperature, timing (when MLF is stopped or completed), and subsequent winemaking choices (stirring, oxygen exposure). Many modern winemakers use bacterial strains that produce minimal diacetyl, resulting in a creamy texture without overt butteriness. A wine that has undergone full MLF may taste clean and fresh, not buttery at all.",
   "corrected_understanding": "MLF produces diacetyl, which can cause a buttery aroma — but diacetyl levels vary greatly depending on winemaking conditions. MLF does not automatically make a wine buttery; it primarily softens acidity and adds texture.",
-  "related_topics": [
-    "T_RA1_WINEMAKING_WHITE"
-  ],
-  "related_concepts": [
-    "C_MALOLACTIC_CONVERSION"
-  ],
+  "related_topics": ["T_RA1_WINEMAKING_WHITE"],
+  "related_concepts": ["C_MALOLACTIC_CONVERSION"],
   "severity": "medium",
   "frequency": "very_common",
   "distinction_relevance": false,
@@ -22,18 +18,5 @@
     "schema_version": "1.0",
     "created_date": "2026-05-13",
     "ingestion_status": "draft"
-  },
-  "weakness_signal": {
-    "signal_type": "misconception_hit",
-    "confidence_accumulation": "evidence_based",
-    "remediation_priority": "high"
-  },
-  "coaching_content": {
-    "confusion_statement": "You seem to be confusing: MLF always makes a wine taste buttery.",
-    "evidence_statement": "This is based on your answers showing this pattern.",
-    "improvement_signal": "Correctly explaining the relationship in similar questions"
-  },
-  "remediation_topics": [
-    "T_RA1_WINEMAKING_WHITE"
-  ]
+  }
 }
