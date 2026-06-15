@@ -1,5 +1,9 @@
 # Project State Reconciliation - Canonical Repository State
 
+> **STATUS: CANONICAL**
+>
+> **LAST RECONCILED: 2026-06-06**
+
 Fecha de reconciliacion: 2026-06-06
 
 ## Decision documental
@@ -20,10 +24,11 @@ evidencia ejecutable y este archivo debe actualizarse.
 Merge pull request #5 from BuenasBox/codex/phase-4a3-9-learning-event-runtime
 ```
 
-Phase 4A.3.9.0 esta mergeada. El sistema convierte intentos SBA en eventos
-formativos, actualiza el mapa cognitivo y LES existentes, y emite senales para
-la siguiente sesion. No crea scoring oficial, porcentaje, pass/fail ni
-exam-readiness.
+Phase 4A.3.9.0 esta mergeada. Phase 4A.3.9.2 cierra localmente el ciclo
+adaptativo: convierte intentos SBA en eventos formativos, actualiza y persiste
+coordinadamente el mapa cognitivo y LES, y hace que el Composer consuma las
+senales para producir la siguiente sesion. No crea scoring oficial, porcentaje,
+pass/fail ni exam-readiness.
 
 Estado global:
 
@@ -98,7 +103,22 @@ Reutiliza:
 
 Produce senales de refuerzo, progresion, misconception repair, causal-chain
 reinforcement, exposure avoidance y modo recomendado. El Session Composer
-adaptativo completo sigue fuera de alcance.
+las consume mediante una entrada adaptativa explicita sin cambiar los modos ni
+la elegibilidad del banco.
+
+`tools/learner_model/adaptive_loop.py` coordina:
+
+```text
+Question Attempt
+  -> Formative Event
+  -> Cognitive Map + LES
+  -> Atomic Coordinated Persistence
+  -> Next Session Signals
+  -> Adaptive Master Bank Session
+```
+
+La persistencia usa archivos temporales y rollback de ambos destinos si falla
+la instalacion de cualquiera de los dos estados.
 
 ## Verificacion
 
@@ -113,6 +133,14 @@ Slow Golden: 7/7 OK
 Verificacion post-merge ejecutada sobre `origin/main`:
 
 ```text
+SBA export dry-run: 36 eligible, 0 validation errors
+Slow Golden: 7/7 OK
+```
+
+Verificacion de Phase 4A.3.9.2 en el worktree:
+
+```text
+Full suite: 1643 tests, 9 skipped, 0 failures
 SBA export dry-run: 36 eligible, 0 validation errors
 Slow Golden: 7/7 OK
 ```
@@ -165,13 +193,12 @@ WSET, autoridad de examinador ni resultado oficial.
 
 ## Pendientes reales
 
-- Hacer que el Session Composer consuma las nuevas next-session signals en una
-  fase separada.
 - Completar `learning_links` gobernados para distractores, misconceptions y
-  causal chains donde falten.
+  causal chains. El Master Bank actual tiene 0/616 registros con esos enlaces.
 - Mantener sincronizada la metadata versionada del Dashboard con el estado
   ejecutable.
-- Definir persistencia atomica coordinada para actualizaciones de memory y LES.
+- Integrar el coordinador adaptativo en una futura superficie de sesion
+  learner-facing sin cambiar la autoridad cognitiva del backend.
 
 No hay una discrepancia pendiente de elegibilidad. El estado canonico es
 589/27.

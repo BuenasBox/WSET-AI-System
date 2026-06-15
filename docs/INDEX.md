@@ -1,5 +1,11 @@
 # WSET-AI-System — Documentation Index
 
+> **STATUS: HISTORICAL**
+>
+> **DO NOT USE AS CURRENT PROJECT STATE**
+>
+> Use [CANONICAL_DOCUMENTS_INDEX.md](CANONICAL_DOCUMENTS_INDEX.md) as the current documentation entry point.
+
 This index maps every document in `docs/` to its purpose, canonical status, and
 relationship to other documents. Use this as the entry point when navigating the
 architecture or governance documentation.

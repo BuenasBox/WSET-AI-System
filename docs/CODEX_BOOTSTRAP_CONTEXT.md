@@ -1,5 +1,11 @@
 # Codex Bootstrap Context
 
+> **STATUS: HISTORICAL**
+>
+> **DO NOT USE AS CURRENT PROJECT STATE**
+>
+> Start with [CANONICAL_DOCUMENTS_INDEX.md](CANONICAL_DOCUMENTS_INDEX.md).
+
 This file is written for a future coding agent or human contributor who has no access to historical chats.
 
 ## What This Project Is

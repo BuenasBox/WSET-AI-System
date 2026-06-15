@@ -1,5 +1,9 @@
 # Phase 4A.3.9.0 - Cognitive Map Learning Event Runtime
 
+> **STATUS: CANONICAL**
+>
+> **LAST RECONCILED: 2026-06-06**
+
 ## Status
 
 Implemented as deterministic, private learning infrastructure.
@@ -144,7 +148,7 @@ runtimes can be reproducible.
 
 ## Next Session Signals
 
-The runtime emits, but does not consume:
+The runtime emits:
 
 - `weak_topic_priority`
 - `strong_topic_progression_candidate`
@@ -154,8 +158,9 @@ The runtime emits, but does not consume:
 - `exposure_avoidance`
 - `recommended_next_mode`
 
-This is a projection for a later adaptive composer. It does not alter the
-current Session Composer.
+Phase 4A.3.9.2 adds the separate adaptive composer entry point that consumes
+this projection. The base Session Composer remains unchanged when signals are
+not supplied.
 
 ## Boundaries
 
@@ -186,10 +191,10 @@ when present and otherwise records topic/RA evidence without inventing IDs.
 ## Pending Work
 
 - Populate governed Master Bank `learning_links` for real SBA distractors.
-- Let the Session Composer consume next-session signals in a separate phase.
 - Add future Open Response attempts through the same formative event contract
   without activating the current Open Response surface.
-- Define a persistence coordinator for atomic memory/LES writes.
+- Connect the private adaptive-loop coordinator to a future learner-facing
+  session surface.
 
 ## Verification
 

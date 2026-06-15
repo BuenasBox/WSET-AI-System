@@ -1,5 +1,9 @@
 # Phase 4A.3.8.5.7 - Master Bank Review & Inactive Resolution
 
+> **STATUS: CANONICAL**
+>
+> **LAST RECONCILED: 2026-06-06**
+
 ## Scope
 
 Recovery-first resolution of the 68 operational Review records and 24

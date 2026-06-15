@@ -1,5 +1,9 @@
 # Frontend Source of Truth Reconciliation
 
+> **STATUS: CANONICAL**
+>
+> **LAST RECONCILED: 2026-06-06**
+
 **Fecha:** 2026-06-05  
 **Método:** Inspección directa de GitHub API — SHAs de blobs y trees verificados por comparación criptográfica  
 **Alcance:** Todos los paths de frontend en WSET-AI-System + repo epistemiclab-dashboard + URLs de producción
