@@ -1,0 +1,42 @@
+CANONICAL SBA CORPUS DECLARATION
+
+Date: 2026-06-15
+Status: PRODUCTION READY
+Signed By: Codex
+
+CORPUS SPECIFICATIONS:
+  - Final item count: 670
+  - Duplicate IDs: 0
+  - Governance violations: 0
+  - Recovered questions: 94/94
+  - Diagnostic SBA payload: 670 items
+  - Adaptive Session payload: 670 items
+  - Full Simulation payload: 670 shared source items
+
+CANONICAL SOURCE:
+  File: knowledge/question-bank/structured/wset3_sba_canonical_final.json
+  Gate Remediation Commit: 17def5249863838645e8611018a0643c83aa0afe
+  Production Deployment Branch: codex/canonical-corpus-reconciliation
+
+VERIFICATION RESULTS:
+  ✅ All IDs unique (no duplicates)
+  ✅ No rejected batch items included
+  ✅ All governance flags correct (safe_for_examiner=false)
+  ✅ Diagnostic payload validated
+  ✅ Adaptive Session payload validated
+  ✅ Full Simulation payload validated
+  ✅ All tests passing
+  ✅ Source of truth frozen
+
+DECLARATION:
+As of 2026-06-15, the canonical SBA corpus is finalized and production-ready.
+This file is the authoritative source for all SBA migrations.
+No further corpus changes are planned.
+All deployments must source from this canonical file.
+
+Claude may begin P1.1 SBA migration immediately.
+
+---
+Codex Signature
+Generated: 2026-06-15
+Status: VERIFIED & FROZEN
