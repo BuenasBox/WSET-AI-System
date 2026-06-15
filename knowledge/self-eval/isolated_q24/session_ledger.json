@@ -1,0 +1,35 @@
+{
+  "version": 1,
+  "session_count": 2,
+  "retention_policy": "keep_last_100",
+  "sessions": [
+    {
+      "timestamp": "2026-06-15T15:55:33.914255+00:00",
+      "route": "normal_tutor",
+      "cold_start": true,
+      "planning_confidence": 0.0,
+      "difficulty_progression": "stable",
+      "sat_drill_needed": false,
+      "review_topics": [],
+      "topics_covered": [],
+      "misconceptions_triggered": [],
+      "causal_chains_seen": [
+        "HC_CANOPY_VIGOUR_EXPOSURE"
+      ]
+    },
+    {
+      "timestamp": "2026-06-15T15:55:45.590164+00:00",
+      "route": "normal_tutor",
+      "cold_start": true,
+      "planning_confidence": 0.0,
+      "difficulty_progression": "stable",
+      "sat_drill_needed": false,
+      "review_topics": [],
+      "topics_covered": [],
+      "misconceptions_triggered": [],
+      "causal_chains_seen": [
+        "HC_CANOPY_VIGOUR_EXPOSURE"
+      ]
+    }
+  ]
+}

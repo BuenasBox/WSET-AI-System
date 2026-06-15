@@ -1,0 +1,316 @@
+{
+  "student_query": "\u00bfCu\u00e1l es una diferencia t\u00e9cnica entre Cava y Champagne?",
+  "language": "es",
+  "orchestrator_decision": {
+    "route": "normal_tutor",
+    "reason": "no_misconception_detected",
+    "matched_misconception_id": null,
+    "confidence": 0.0
+  },
+  "pedagogical_act": "answer_normally",
+  "forced_retrieval_nodes": [],
+  "matched_misconception": {},
+  "learner_state_context": {
+    "learner_id": "nazareth",
+    "current_level": "WSET_L3",
+    "known_weak_areas": [],
+    "recent_misconceptions": [],
+    "session_count": 0,
+    "pedagogical_memory": {
+      "schema_version": "pedagogical_memory_v1",
+      "low_mastery_concepts": [],
+      "retention_risks": [],
+      "recurrent_misconceptions": [],
+      "difficult_causal_chains": [],
+      "mastered_concepts": [],
+      "preferred_depth": "standard",
+      "overload_patterns": [],
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "uses_llm": false,
+        "uses_api": false,
+        "uses_embeddings": false,
+        "uses_vector_db": false,
+        "cloud_services_active": false
+      }
+    },
+    "governance": {
+      "safe_for_examiner": false,
+      "examiner_scoring_allowed": false,
+      "examiner_scoring_active": false,
+      "embeddings_active": false,
+      "vector_db_active": false,
+      "cloud_services_active": false
+    }
+  },
+  "retrieval_plan": {
+    "mode": "normal_retrieval",
+    "query": "\u00bfCu\u00e1l es una diferencia t\u00e9cnica entre Cava y Champagne?",
+    "top_k": 5,
+    "forced_retrieval_nodes": [],
+    "pedagogical_priority_boost": {
+      "low_mastery_concepts": [],
+      "causal_chain_boosts": [],
+      "misconception_persistence_boost": false,
+      "force_deep_explanation": false,
+      "resurfacing_concepts": [],
+      "preferred_depth": "standard",
+      "safe_for_examiner": false,
+      "examiner_scoring_allowed": false
+    },
+    "retrieval_engine": "tools.retrieval.tutor_retrieval_sandbox",
+    "uses_embeddings": false,
+    "uses_vector_db": false,
+    "uses_llm": false,
+    "uses_api": false
+  },
+  "retrieved_context": [
+    {
+      "context_type": "retrieval_sandbox_chunk",
+      "chunk_id": "OFFICIAL_WSET_4_7_COMMON_ELEMENTS_IN_WINEMAKING_AND_MATURATION_001",
+      "forced_retrieval": false,
+      "agent_corpus": "tutor",
+      "safe_for_examiner": false,
+      "score": 0.6759,
+      "source_type": "official_wset_extracted",
+      "source_file": "knowledge/official-wset/study-guide/wset_markdown/seccion_5_section_2_factors_affecting_the_style_quality_and_price_of_w/5-4_7_common_elements_in_winemaking_and_maturation.md",
+      "source_trust_tier": 1,
+      "title": "7 Common Elements in Winemaking and Maturation",
+      "section": "5",
+      "subtopic": "5.4",
+      "official_grading_authority": false,
+      "requires_human_review": true,
+      "reasoning_type": "theory_foundation",
+      "pedagogical_role": "official_reference",
+      "why_retrieved": [
+        "matched canonical/query terms: Champagne, balance, champagne, complexity",
+        "matches knowledge-map concept or relationship terms",
+        "matches knowledge-map causal-chain mechanism",
+        "matches knowledge-map concept vocabulary",
+        "official WSET extracted Tutor support",
+        "exact term match"
+      ],
+      "text_excerpt": "# 7 Common Elements in Winemaking and Maturation <!-- p\u00e1gina 52 --> COMMONE LEMENTISN W INEMAKINGAN D MATURATION 43 CommoEnl ementisn W inemakinagn dM aturation 7 There are certain factors and processes that are common to all wines and these are explored in this chapter. It is important to get an appreciation of their roles in winemaking and maturation an...",
+      "source_video": "",
+      "source_filename": "5-4_7_common_elements_in_winemaking_and_maturation.md"
+    },
+    {
+      "context_type": "retrieval_sandbox_chunk",
+      "chunk_id": "OFFICIAL_WSET_1_1_THE_SYSTEMATIC_APPROACH_TO_TASTING_WINE_001",
+      "forced_retrieval": false,
+      "agent_corpus": "tutor",
+      "safe_for_examiner": false,
+      "score": 0.6274,
+      "source_type": "official_wset_extracted",
+      "source_file": "knowledge/official-wset/study-guide/wset_markdown/seccion_4_section_1_wine_and_the_consumer/4-1_1_the_systematic_approach_to_tasting_wine.md",
+      "source_trust_tier": 1,
+      "title": "1 The Systematic Approach to Tasting Wine\u00ae",
+      "section": "4",
+      "subtopic": "4.1",
+      "official_grading_authority": false,
+      "requires_human_review": true,
+      "reasoning_type": "theory_foundation",
+      "pedagogical_role": "official_reference",
+      "why_retrieved": [
+        "matched canonical/query terms: balance, complexity",
+        "matches knowledge-map concept or relationship terms",
+        "matches knowledge-map causal-chain mechanism",
+        "matches knowledge-map concept vocabulary",
+        "official WSET extracted Tutor support",
+        "exact term match"
+      ],
+      "text_excerpt": "# 1 The Systematic Approach to Tasting Wine\u00ae <!-- p\u00e1gina 10 --> THES YSTEMATICA PPROACHT OT ASTINGW INE\" TheS ystematiAc pproactho TastinWg ine\u00ae The WSET Level 3. Syst~matic Approach to Tasting Wine (SAT) is a tool that allows you to write a complete description of a wine and then use this information to make an evaluation of its quality and readiness for...",
+      "source_video": "",
+      "source_filename": "4-1_1_the_systematic_approach_to_tasting_wine.md"
+    },
+    {
+      "context_type": "retrieval_sandbox_chunk",
+      "chunk_id": "OFFICIAL_WSET_WINES_OF_THE_WORLD_6_19_30_SPAIN_001",
+      "forced_retrieval": false,
+      "agent_corpus": "tutor",
+      "safe_for_examiner": false,
+      "score": 0.6253,
+      "source_type": "official_wset_extracted",
+      "source_file": "knowledge/official-wset/study-guide/wset_markdown/seccion_6_section_3_still_wines_of_the_world/6-19_30_spain.md",
+      "source_trust_tier": 1,
+      "title": "30 Spain",
+      "section": "6",
+      "subtopic": "6.19",
+      "official_grading_authority": false,
+      "requires_human_review": true,
+      "reasoning_type": "theory_foundation",
+      "pedagogical_role": "official_reference",
+      "why_retrieved": [
+        "matched canonical/query terms: Cava, balance, cava, complexity, growing season",
+        "matches knowledge-map concept or relationship terms",
+        "matches knowledge-map causal-chain mechanism",
+        "matches knowledge-map concept vocabulary",
+        "official WSET extracted Tutor support",
+        "exact term match"
+      ],
+      "text_excerpt": "# 30 Spain <!-- p\u00e1gina 140 --> SPAIN 131 SpainS pain has a long history of wine production but its wines have only relatively recently come 30 to prominence on international markets. Styles vary from traditional barrel-aged reds to modern, fruity whites; and although international varieties have been planted in many of Spain's wine regions, it is the coun...",
+      "source_video": "",
+      "source_filename": "6-19_30_spain.md"
+    },
+    {
+      "context_type": "retrieval_sandbox_chunk",
+      "chunk_id": "OFFICIAL_WSET_WINES_OF_THE_WORLD_8_1_43_SHERRY_001",
+      "forced_retrieval": false,
+      "agent_corpus": "tutor",
+      "safe_for_examiner": false,
+      "score": 0.6218,
+      "source_type": "official_wset_extracted",
+      "source_file": "knowledge/official-wset/study-guide/wset_markdown/seccion_8_section_5_fortified_wines_of_the_world/8-1_43_sherry.md",
+      "source_trust_tier": 1,
+      "title": "43 Sherry",
+      "section": "8",
+      "subtopic": "8.1",
+      "official_grading_authority": false,
+      "requires_human_review": true,
+      "reasoning_type": "theory_foundation",
+      "pedagogical_role": "official_reference",
+      "why_retrieved": [
+        "matched canonical/query terms: balance, complexity, growing season",
+        "matches knowledge-map concept or relationship terms",
+        "matches knowledge-map causal-chain mechanism",
+        "matches knowledge-map concept vocabulary",
+        "official WSET extracted Tutor support",
+        "exact term match"
+      ],
+      "text_excerpt": "# 43 Sherry <!-- p\u00e1gina 193 --> 184 UNDERSTANDINGW INES: EXPLAININGST YLEA ND QUALITY Sherry 43 Probably more than any other wine, Sherry is a wine style that is defined by the processes used during maturation. None of the key techniques, the so/era system, biological ageing or oxidative ageing, are unique to this region, but it is in Jerez that they are...",
+      "source_video": "",
+      "source_filename": "8-1_43_sherry.md"
+    },
+    {
+      "context_type": "retrieval_sandbox_chunk",
+      "chunk_id": "How_to_assess_the_quality_of_a_wine_for_WSET_Level_3-0001",
+      "forced_retrieval": false,
+      "agent_corpus": "tutor",
+      "safe_for_examiner": false,
+      "score": 0.4368,
+      "source_type": "manual_curated_srt",
+      "source_file": "",
+      "source_trust_tier": "pedagogical",
+      "title": "",
+      "section": "",
+      "subtopic": "",
+      "official_grading_authority": false,
+      "requires_human_review": false,
+      "reasoning_type": "tasting_calibration",
+      "pedagogical_role": "tasting_practice",
+      "why_retrieved": [
+        "matched canonical/query terms: balance, complexity",
+        "medium retrieval priority in golden QA report",
+        "matches knowledge-map concept or relationship terms",
+        "matches knowledge-map causal-chain mechanism",
+        "matches knowledge-map concept vocabulary",
+        "exact term match"
+      ],
+      "text_excerpt": "winwith jimmy.com okay okay the conclusion section overview here is the conclusion section as per the systematic approach to tasting split into that quality level and Readiness for drinking I've just left highlighted here the quality level as that's what we're going through here so many criteria is used when assessing quality of wine now there are many in...",
+      "source_video": "How to assess the quality of a wine for WSET Level 3",
+      "source_filename": "How to assess the quality of a wine for WSET Level 3 [English (auto-generated)] [DownloadYoutubeSubtitles.com].srt"
+    }
+  ],
+  "forced_causal_chains": [
+    {
+      "node_type": "causal_chain",
+      "node_id": "HC_CANOPY_VIGOUR_EXPOSURE",
+      "topic": "canopy management, vigour, and bunch exposure",
+      "trigger_keywords": [
+        "poda en verde durante la fase de crecimiento de la vid",
+        "controlar el vigor y mejorar la exposici\u00f3n de los racimos",
+        "t\u00e9cnica en la vi\u00f1a es esencial en Sancerre para controlar el vigor",
+        "manejo del dosel",
+        "qu\u00e9 se busca con el manejo del dosel",
+        "deshoje",
+        "poda severa",
+        "reducir el vigor",
+        "limitar el rendimiento",
+        "poda en verde",
+        "incrementar la exposici\u00f3n solar",
+        "afirmaciones sobre el sistema de conducci\u00f3n de la vid",
+        "sistema de conducci\u00f3n de la vid influye directamente en la exposici\u00f3n solar del racimo",
+        "canopy vigour bunch exposure"
+      ],
+      "steps": [
+        {
+          "step": 1,
+          "label": "cause",
+          "text": "Shoots and leaves are managed during the growing season through canopy operations."
+        },
+        {
+          "step": 2,
+          "label": "mechanism",
+          "text": "Removing or positioning growth limits canopy density and improves light penetration and airflow around bunches."
+        },
+        {
+          "step": 3,
+          "label": "effect",
+          "text": "Vigour is controlled and bunch exposure and ripening conditions become more balanced."
+        },
+        {
+          "step": 4,
+          "label": "exam_formulation",
+          "text": "Formative causal formulation: Vigour is controlled and bunch exposure and ripening conditions become more balanced."
+        }
+      ],
+      "agent_corpus": "tutor",
+      "safe_for_examiner": false,
+      "examiner_scoring_allowed": false,
+      "requires_human_review": true,
+      "source": "heuristic",
+      "classification": "inferred",
+      "official": false,
+      "formative_only": true,
+      "official_mark_scheme": false,
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "agent_corpus": "tutor",
+        "source": "heuristic",
+        "classification": "inferred",
+        "official": false,
+        "formative_only": true
+      },
+      "_meta": {
+        "schema_version": "causal_chain_v1",
+        "heuristic_extension": "HC_v1",
+        "created_date": "2026-06-12",
+        "ingestion_status": "draft",
+        "source_note": "Inferred formative model - not official WSET assessment or mark-scheme content"
+      },
+      "id": "HC_CANOPY_VIGOUR_EXPOSURE",
+      "type": "causal_chain"
+    }
+  ],
+  "tutor_directive": {
+    "pedagogical_act": "answer_normally",
+    "forced_retrieval_nodes": [],
+    "confidence": 0.0,
+    "safe_for_examiner": false,
+    "language": "es",
+    "response_language_instruction": "Respond in Spanish. Preserve official WSET terms where useful, and do not translate key terms if translation would reduce precision. Distinguish official WSET content from pedagogical content.",
+    "source_handling": [
+      "Use this as a context package only; do not treat it as a final answer.",
+      "Use official WSET support first when available.",
+      "Use pedagogical transcript chunks only as enrichment.",
+      "Do not present pedagogical sources as official authority.",
+      "Distinguish official WSET content from pedagogical enrichment when explaining.",
+      "Do not translate source chunks; preserve official WSET terms where useful.",
+      "Do not translate key terms if translation would reduce precision.",
+      "If forced_causal_chains is populated, render the causal chain steps for the Cadena causa \u2192 efecto section."
+    ]
+  },
+  "success_criteria": [
+    "Answer the learner's question using the retrieved Tutor context.",
+    "Preserve official WSET terminology where precision matters.",
+    "Distinguish official WSET content from pedagogical enrichment.",
+    "Keep Examiner scoring disabled and safe_for_examiner false."
+  ],
+  "governance": {
+    "agent_corpus": "tutor",
+    "safe_for_examiner": false,
+    "examiner_scoring_allowed": false
+  }
+}

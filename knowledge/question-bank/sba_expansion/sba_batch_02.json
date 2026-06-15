@@ -1,0 +1,3607 @@
+{
+  "schema_version": "sba_gap_closure_batch_v1",
+  "batch_id": "SBA_BATCH_2",
+  "records": [
+    {
+      "question_id": "905",
+      "question_text": "Si un productor de Port añade aguardiente antes de que la levadura consuma la mayor parte del azúcar, ¿qué resultado es más probable?",
+      "question_type": "theory",
+      "expected_topics": [
+        "RA4",
+        "port_early_fortification"
+      ],
+      "expected_causal_links": [
+        "El mosto tinto está fermentando cuando se añade aguardiente. -> El aumento brusco de alcohol inhibe o mata la levadura. -> Quedan azúcar residual y un grado alcohólico final alto."
+      ],
+      "expected_keywords": [
+        "Port",
+        "fortificación",
+        "fermentación",
+        "azúcar residual"
+      ],
+      "expected_reasoning_type": "cause_effect",
+      "difficulty": "distinction",
+      "source_type": "SBA gap closure | manually curated from local official study guide",
+      "safe_for_examiner": false,
+      "options": {
+        "A": "La fermentación se detiene y el vino conserva azúcar residual con alcohol elevado.",
+        "B": "La fermentación acelera hasta sequedad.",
+        "C": "El vino pierde color porque el alcohol impide toda extracción previa.",
+        "D": "El azúcar se transforma en acidez volátil."
+      },
+      "correct_answer_letter": "A",
+      "correct_answer_text": "La fermentación se detiene y el vino conserva azúcar residual con alcohol elevado.",
+      "source_support": {
+        "source_ids": [
+          "8-2_44_port"
+        ],
+        "source_files": [
+          "knowledge/official-wset/study-guide/wset_markdown/seccion_8_section_5_fortified_wines_of_the_world/8-2_44_port.md"
+        ],
+        "support_rationale": "Las fuentes locales sustentan el mecanismo, el resultado de estilo y el contraste diagnóstico evaluado."
+      },
+      "enrichment": {
+        "causal_chain_candidate": {
+          "candidate_id": "CC_CAND_PORT_EARLY_FORTIFICATION",
+          "cause": "El mosto tinto está fermentando cuando se añade aguardiente.",
+          "mechanism": "El aumento brusco de alcohol inhibe o mata la levadura.",
+          "effect": "Quedan azúcar residual y un grado alcohólico final alto."
+        },
+        "feedback_profile": {
+          "correct_rationale": "El mosto tinto está fermentando cuando se añade aguardiente. El aumento brusco de alcohol inhibe o mata la levadura. Por ello, quedan azúcar residual y un grado alcohólico final alto.",
+          "distractor_rationales": {
+            "A": "Es la relación causal correcta.",
+            "B": "No explica el mecanismo clave: El aumento brusco de alcohol inhibe o mata la levadura.",
+            "C": "No explica el mecanismo clave: El aumento brusco de alcohol inhibe o mata la levadura.",
+            "D": "No explica el mecanismo clave: El aumento brusco de alcohol inhibe o mata la levadura."
+          },
+          "remediation_recommendation": "Reconstruya la cadena de port early fortification como causa, mecanismo y efecto."
+        },
+        "micro_drill_candidate": {
+          "prompt": "Micro-drill: ¿qué efecto sigue a este mecanismo: El aumento brusco de alcohol inhibe o mata la levadura.?",
+          "answer": "Quedan azúcar residual y un grado alcohólico final alto."
+        },
+        "misconception_linkage_candidate": {
+          "misconception_id": "MC_PORT_FORTIFICATION_02",
+          "target_error": "Confundir fortificación temprana con simple aumento de alcohol."
+        }
+      },
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "official_wset_question": false,
+        "training_item_only": true,
+        "uses_llm": false,
+        "uses_api": false,
+        "uses_embeddings": false,
+        "uses_vector_db": false,
+        "cloud_services_active": false
+      }
+    },
+    {
+      "question_id": "906",
+      "question_text": "Si la fermentación de Port dura solo unas 24 a 36 horas antes de fortificar, ¿qué decisión explica mejor la necesidad de extracción intensa?",
+      "question_type": "theory",
+      "expected_topics": [
+        "RA4",
+        "port_extraction_speed"
+      ],
+      "expected_causal_links": [
+        "La fortificación interrumpe pronto una fermentación tinta corta. -> Hay poco tiempo para extraer pigmentos y taninos de los hollejos. -> Se requieren técnicas intensas para lograr estructura y color suficientes."
+      ],
+      "expected_keywords": [
+        "Port",
+        "extracción",
+        "lagares",
+        "fermentación corta"
+      ],
+      "expected_reasoning_type": "cause_effect",
+      "difficulty": "intermediate",
+      "source_type": "SBA gap closure | manually curated from local official study guide",
+      "safe_for_examiner": false,
+      "options": {
+        "A": "Reducir todo contacto con hollejos hasta después de fortificar.",
+        "B": "Usar pisado o sistemas mecánicos vigorosos para obtener color y tanino rápidamente.",
+        "C": "Fermentar a baja temperatura durante varias semanas.",
+        "D": "Filtrar el mosto antes de iniciar la fermentación."
+      },
+      "correct_answer_letter": "B",
+      "correct_answer_text": "Usar pisado o sistemas mecánicos vigorosos para obtener color y tanino rápidamente.",
+      "source_support": {
+        "source_ids": [
+          "8-2_44_port"
+        ],
+        "source_files": [
+          "knowledge/official-wset/study-guide/wset_markdown/seccion_8_section_5_fortified_wines_of_the_world/8-2_44_port.md"
+        ],
+        "support_rationale": "Las fuentes locales sustentan el mecanismo, el resultado de estilo y el contraste diagnóstico evaluado."
+      },
+      "enrichment": {
+        "causal_chain_candidate": {
+          "candidate_id": "CC_CAND_PORT_EXTRACTION_SPEED",
+          "cause": "La fortificación interrumpe pronto una fermentación tinta corta.",
+          "mechanism": "Hay poco tiempo para extraer pigmentos y taninos de los hollejos.",
+          "effect": "Se requieren técnicas intensas para lograr estructura y color suficientes."
+        },
+        "feedback_profile": {
+          "correct_rationale": "La fortificación interrumpe pronto una fermentación tinta corta. Hay poco tiempo para extraer pigmentos y taninos de los hollejos. Por ello, se requieren técnicas intensas para lograr estructura y color suficientes.",
+          "distractor_rationales": {
+            "A": "No explica el mecanismo clave: Hay poco tiempo para extraer pigmentos y taninos de los hollejos.",
+            "B": "Es la relación causal correcta.",
+            "C": "No explica el mecanismo clave: Hay poco tiempo para extraer pigmentos y taninos de los hollejos.",
+            "D": "No explica el mecanismo clave: Hay poco tiempo para extraer pigmentos y taninos de los hollejos."
+          },
+          "remediation_recommendation": "Reconstruya la cadena de port extraction speed como causa, mecanismo y efecto."
+        },
+        "micro_drill_candidate": {
+          "prompt": "Micro-drill: ¿qué efecto sigue a este mecanismo: Hay poco tiempo para extraer pigmentos y taninos de los hollejos.?",
+          "answer": "Se requieren técnicas intensas para lograr estructura y color suficientes."
+        },
+        "misconception_linkage_candidate": {
+          "misconception_id": "MC_PORT_FORTIFICATION_02",
+          "target_error": "Ignorar cómo el momento de fortificación limita la extracción."
+        }
+      },
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "official_wset_question": false,
+        "training_item_only": true,
+        "uses_llm": false,
+        "uses_api": false,
+        "uses_embeddings": false,
+        "uses_vector_db": false,
+        "cloud_services_active": false
+      }
+    },
+    {
+      "question_id": "907",
+      "question_text": "Dos lotes de Port parten del mismo mosto; uno se fortifica antes. ¿Qué consecuencia es más probable?",
+      "question_type": "theory",
+      "expected_topics": [
+        "RA4",
+        "port_fortification_timing_sweetness"
+      ],
+      "expected_causal_links": [
+        "Los lotes fermentan el mismo azúcar durante tiempos distintos. -> La fortificación temprana detiene antes el consumo de azúcar por la levadura. -> El momento de adición ayuda a definir el dulzor del estilo."
+      ],
+      "expected_keywords": [
+        "Port",
+        "momento de fortificación",
+        "dulzor",
+        "azúcar residual"
+      ],
+      "expected_reasoning_type": "cause_effect",
+      "difficulty": "intermediate",
+      "source_type": "SBA gap closure | manually curated from local official study guide",
+      "safe_for_examiner": false,
+      "options": {
+        "A": "El lote fortificado antes será necesariamente más tánico.",
+        "B": "Ambos tendrán idéntico dulzor porque el aguardiente contiene azúcar.",
+        "C": "El lote fortificado antes conservará más azúcar residual.",
+        "D": "El lote tardío tendrá siempre menos alcohol final."
+      },
+      "correct_answer_letter": "C",
+      "correct_answer_text": "El lote fortificado antes conservará más azúcar residual.",
+      "source_support": {
+        "source_ids": [
+          "8-2_44_port"
+        ],
+        "source_files": [
+          "knowledge/official-wset/study-guide/wset_markdown/seccion_8_section_5_fortified_wines_of_the_world/8-2_44_port.md"
+        ],
+        "support_rationale": "Las fuentes locales sustentan el mecanismo, el resultado de estilo y el contraste diagnóstico evaluado."
+      },
+      "enrichment": {
+        "causal_chain_candidate": {
+          "candidate_id": "CC_CAND_PORT_FORTIFICATION_TIMING_SWEETNESS",
+          "cause": "Los lotes fermentan el mismo azúcar durante tiempos distintos.",
+          "mechanism": "La fortificación temprana detiene antes el consumo de azúcar por la levadura.",
+          "effect": "El momento de adición ayuda a definir el dulzor del estilo."
+        },
+        "feedback_profile": {
+          "correct_rationale": "Los lotes fermentan el mismo azúcar durante tiempos distintos. La fortificación temprana detiene antes el consumo de azúcar por la levadura. Por ello, el momento de adición ayuda a definir el dulzor del estilo.",
+          "distractor_rationales": {
+            "A": "No explica el mecanismo clave: La fortificación temprana detiene antes el consumo de azúcar por la levadura.",
+            "B": "No explica el mecanismo clave: La fortificación temprana detiene antes el consumo de azúcar por la levadura.",
+            "C": "Es la relación causal correcta.",
+            "D": "No explica el mecanismo clave: La fortificación temprana detiene antes el consumo de azúcar por la levadura."
+          },
+          "remediation_recommendation": "Reconstruya la cadena de port fortification timing sweetness como causa, mecanismo y efecto."
+        },
+        "micro_drill_candidate": {
+          "prompt": "Micro-drill: ¿qué efecto sigue a este mecanismo: La fortificación temprana detiene antes el consumo de azúcar por la levadura.?",
+          "answer": "El momento de adición ayuda a definir el dulzor del estilo."
+        },
+        "misconception_linkage_candidate": {
+          "misconception_id": "MC_FORTIFICATION_TIMING_01",
+          "target_error": "Creer que el dulzor de Port no depende del momento de fortificación."
+        }
+      },
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "official_wset_question": false,
+        "training_item_only": true,
+        "uses_llm": false,
+        "uses_api": false,
+        "uses_embeddings": false,
+        "uses_vector_db": false,
+        "cloud_services_active": false
+      }
+    },
+    {
+      "question_id": "908",
+      "question_text": "Si un Port madura poco tiempo en recipientes grandes con escaso efecto del oxígeno, ¿qué resultado de estilo es más probable?",
+      "question_type": "theory",
+      "expected_topics": [
+        "RA4",
+        "port_ruby_maturation"
+      ],
+      "expected_causal_links": [
+        "El vino se mantiene en un gran volumen con baja relación superficie-volumen. -> Se limita la exposición oxidativa durante la maduración. -> Se preservan color y fruta primaria intensa."
+      ],
+      "expected_keywords": [
+        "Port",
+        "ruby",
+        "recipiente grande",
+        "fruta primaria"
+      ],
+      "expected_reasoning_type": "cause_effect",
+      "difficulty": "distinction",
+      "source_type": "SBA gap closure | manually curated from local official study guide",
+      "safe_for_examiner": false,
+      "options": {
+        "A": "Color marrón y notas dominantes de nuez y caramelo.",
+        "B": "Carácter de flor, masa de pan y acetaldehído.",
+        "C": "Pérdida completa de tanino antes del embotellado.",
+        "D": "Color profundo y predominio de fruta primaria, propio de la familia ruby."
+      },
+      "correct_answer_letter": "D",
+      "correct_answer_text": "Color profundo y predominio de fruta primaria, propio de la familia ruby.",
+      "source_support": {
+        "source_ids": [
+          "8-2_44_port"
+        ],
+        "source_files": [
+          "knowledge/official-wset/study-guide/wset_markdown/seccion_8_section_5_fortified_wines_of_the_world/8-2_44_port.md"
+        ],
+        "support_rationale": "Las fuentes locales sustentan el mecanismo, el resultado de estilo y el contraste diagnóstico evaluado."
+      },
+      "enrichment": {
+        "causal_chain_candidate": {
+          "candidate_id": "CC_CAND_PORT_RUBY_MATURATION",
+          "cause": "El vino se mantiene en un gran volumen con baja relación superficie-volumen.",
+          "mechanism": "Se limita la exposición oxidativa durante la maduración.",
+          "effect": "Se preservan color y fruta primaria intensa."
+        },
+        "feedback_profile": {
+          "correct_rationale": "El vino se mantiene en un gran volumen con baja relación superficie-volumen. Se limita la exposición oxidativa durante la maduración. Por ello, se preservan color y fruta primaria intensa.",
+          "distractor_rationales": {
+            "A": "No explica el mecanismo clave: Se limita la exposición oxidativa durante la maduración.",
+            "B": "No explica el mecanismo clave: Se limita la exposición oxidativa durante la maduración.",
+            "C": "No explica el mecanismo clave: Se limita la exposición oxidativa durante la maduración.",
+            "D": "Es la relación causal correcta."
+          },
+          "remediation_recommendation": "Reconstruya la cadena de port ruby maturation como causa, mecanismo y efecto."
+        },
+        "micro_drill_candidate": {
+          "prompt": "Micro-drill: ¿qué efecto sigue a este mecanismo: Se limita la exposición oxidativa durante la maduración.?",
+          "answer": "Se preservan color y fruta primaria intensa."
+        },
+        "misconception_linkage_candidate": {
+          "misconception_id": "MC_PORT_VINTAGE_01",
+          "target_error": "Confundir todo Port envejecido con estilo tawny."
+        }
+      },
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "official_wset_question": false,
+        "training_item_only": true,
+        "uses_llm": false,
+        "uses_api": false,
+        "uses_embeddings": false,
+        "uses_vector_db": false,
+        "cloud_services_active": false
+      }
+    },
+    {
+      "question_id": "909",
+      "question_text": "Si un Port envejece durante años en pipes con exposición gradual al oxígeno, ¿qué resultado es más probable?",
+      "question_type": "theory",
+      "expected_topics": [
+        "RA4",
+        "port_tawny_maturation"
+      ],
+      "expected_causal_links": [
+        "El vino madura largo tiempo en recipientes de madera relativamente pequeños. -> El contacto con oxígeno transforma pigmentos y aromas primarios. -> El estilo evoluciona hacia color tawny y complejidad oxidativa."
+      ],
+      "expected_keywords": [
+        "Port",
+        "tawny",
+        "oxidación",
+        "pipes"
+      ],
+      "expected_reasoning_type": "cause_effect",
+      "difficulty": "intermediate",
+      "source_type": "SBA gap closure | manually curated from local official study guide",
+      "safe_for_examiner": false,
+      "options": {
+        "A": "Pierde color y fruta fresca mientras desarrolla nuez, café, caramelo y frutos secos.",
+        "B": "Conserva un perfil exclusivamente de fruta negra fresca.",
+        "C": "Forma flor protectora y permanece pálido.",
+        "D": "Aumenta su presión de dióxido de carbono."
+      },
+      "correct_answer_letter": "A",
+      "correct_answer_text": "Pierde color y fruta fresca mientras desarrolla nuez, café, caramelo y frutos secos.",
+      "source_support": {
+        "source_ids": [
+          "8-2_44_port"
+        ],
+        "source_files": [
+          "knowledge/official-wset/study-guide/wset_markdown/seccion_8_section_5_fortified_wines_of_the_world/8-2_44_port.md"
+        ],
+        "support_rationale": "Las fuentes locales sustentan el mecanismo, el resultado de estilo y el contraste diagnóstico evaluado."
+      },
+      "enrichment": {
+        "causal_chain_candidate": {
+          "candidate_id": "CC_CAND_PORT_TAWNY_MATURATION",
+          "cause": "El vino madura largo tiempo en recipientes de madera relativamente pequeños.",
+          "mechanism": "El contacto con oxígeno transforma pigmentos y aromas primarios.",
+          "effect": "El estilo evoluciona hacia color tawny y complejidad oxidativa."
+        },
+        "feedback_profile": {
+          "correct_rationale": "El vino madura largo tiempo en recipientes de madera relativamente pequeños. El contacto con oxígeno transforma pigmentos y aromas primarios. Por ello, el estilo evoluciona hacia color tawny y complejidad oxidativa.",
+          "distractor_rationales": {
+            "A": "Es la relación causal correcta.",
+            "B": "No explica el mecanismo clave: El contacto con oxígeno transforma pigmentos y aromas primarios.",
+            "C": "No explica el mecanismo clave: El contacto con oxígeno transforma pigmentos y aromas primarios.",
+            "D": "No explica el mecanismo clave: El contacto con oxígeno transforma pigmentos y aromas primarios."
+          },
+          "remediation_recommendation": "Reconstruya la cadena de port tawny maturation como causa, mecanismo y efecto."
+        },
+        "micro_drill_candidate": {
+          "prompt": "Micro-drill: ¿qué efecto sigue a este mecanismo: El contacto con oxígeno transforma pigmentos y aromas primarios.?",
+          "answer": "El estilo evoluciona hacia color tawny y complejidad oxidativa."
+        },
+        "misconception_linkage_candidate": {
+          "misconception_id": "MC_PORT_VINTAGE_01",
+          "target_error": "Confundir tawny auténtico con un ruby de color aclarado."
+        }
+      },
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "official_wset_question": false,
+        "training_item_only": true,
+        "uses_llm": false,
+        "uses_api": false,
+        "uses_embeddings": false,
+        "uses_vector_db": false,
+        "cloud_services_active": false
+      }
+    },
+    {
+      "question_id": "910",
+      "question_text": "Si un Vintage Port se embotella joven sin filtrar, ¿qué consecuencia es más probable durante décadas de guarda?",
+      "question_type": "theory",
+      "expected_topics": [
+        "RA4",
+        "port_vintage_bottle_ageing"
+      ],
+      "expected_causal_links": [
+        "El vino concentrado y tánico entra joven en botella con materia sólida. -> La evolución reductiva integra estructura y precipita pigmentos y taninos. -> Aparecen complejidad terciaria y sedimento que puede exigir decantación."
+      ],
+      "expected_keywords": [
+        "Vintage Port",
+        "botella",
+        "tanino",
+        "sedimento"
+      ],
+      "expected_reasoning_type": "cause_effect",
+      "difficulty": "intermediate",
+      "source_type": "SBA gap closure | manually curated from local official study guide",
+      "safe_for_examiner": false,
+      "options": {
+        "A": "Se mantiene idéntico porque el alto alcohol detiene toda evolución.",
+        "B": "Desarrolla aromas terciarios, suaviza taninos y forma abundante sedimento.",
+        "C": "Se vuelve tawny por oxidación intensa en barrica.",
+        "D": "Pierde todo color en el primer año."
+      },
+      "correct_answer_letter": "B",
+      "correct_answer_text": "Desarrolla aromas terciarios, suaviza taninos y forma abundante sedimento.",
+      "source_support": {
+        "source_ids": [
+          "8-2_44_port"
+        ],
+        "source_files": [
+          "knowledge/official-wset/study-guide/wset_markdown/seccion_8_section_5_fortified_wines_of_the_world/8-2_44_port.md"
+        ],
+        "support_rationale": "Las fuentes locales sustentan el mecanismo, el resultado de estilo y el contraste diagnóstico evaluado."
+      },
+      "enrichment": {
+        "causal_chain_candidate": {
+          "candidate_id": "CC_CAND_PORT_VINTAGE_BOTTLE_AGEING",
+          "cause": "El vino concentrado y tánico entra joven en botella con materia sólida.",
+          "mechanism": "La evolución reductiva integra estructura y precipita pigmentos y taninos.",
+          "effect": "Aparecen complejidad terciaria y sedimento que puede exigir decantación."
+        },
+        "feedback_profile": {
+          "correct_rationale": "El vino concentrado y tánico entra joven en botella con materia sólida. La evolución reductiva integra estructura y precipita pigmentos y taninos. Por ello, aparecen complejidad terciaria y sedimento que puede exigir decantación.",
+          "distractor_rationales": {
+            "A": "No explica el mecanismo clave: La evolución reductiva integra estructura y precipita pigmentos y taninos.",
+            "B": "Es la relación causal correcta.",
+            "C": "No explica el mecanismo clave: La evolución reductiva integra estructura y precipita pigmentos y taninos.",
+            "D": "No explica el mecanismo clave: La evolución reductiva integra estructura y precipita pigmentos y taninos."
+          },
+          "remediation_recommendation": "Reconstruya la cadena de port vintage bottle ageing como causa, mecanismo y efecto."
+        },
+        "micro_drill_candidate": {
+          "prompt": "Micro-drill: ¿qué efecto sigue a este mecanismo: La evolución reductiva integra estructura y precipita pigmentos y taninos.?",
+          "answer": "Aparecen complejidad terciaria y sedimento que puede exigir decantación."
+        },
+        "misconception_linkage_candidate": {
+          "misconception_id": "MC_PORT_VINTAGE_01",
+          "target_error": "Creer que Vintage Port está listo y estable al embotellarse."
+        }
+      },
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "official_wset_question": false,
+        "training_item_only": true,
+        "uses_llm": false,
+        "uses_api": false,
+        "uses_embeddings": false,
+        "uses_vector_db": false,
+        "cloud_services_active": false
+      }
+    },
+    {
+      "question_id": "911",
+      "question_text": "Al comparar un LBV filtrado con uno sin filtrar, ¿qué resultado explica mejor la diferencia de servicio y evolución?",
+      "question_type": "theory",
+      "expected_topics": [
+        "RA4",
+        "port_lbv_filtered"
+      ],
+      "expected_causal_links": [
+        "Los dos vinos reciben distinto tratamiento antes del embotellado. -> Filtrar retira partículas y reduce el material que precipitaría en botella. -> Cambian el potencial de guarda y la necesidad de decantar."
+      ],
+      "expected_keywords": [
+        "Port",
+        "LBV",
+        "filtración",
+        "decantación"
+      ],
+      "expected_reasoning_type": "cause_effect",
+      "difficulty": "distinction",
+      "source_type": "SBA gap closure | manually curated from local official study guide",
+      "safe_for_examiner": false,
+      "options": {
+        "A": "El filtrado siempre tiene más tanino y necesita décadas.",
+        "B": "El no filtrado no puede proceder de una sola añada.",
+        "C": "El filtrado suele estar listo al salir y forma poco sedimento; el no filtrado puede evolucionar y requerir decantación.",
+        "D": "La filtración convierte un ruby en tawny."
+      },
+      "correct_answer_letter": "C",
+      "correct_answer_text": "El filtrado suele estar listo al salir y forma poco sedimento; el no filtrado puede evolucionar y requerir decantación.",
+      "source_support": {
+        "source_ids": [
+          "8-2_44_port"
+        ],
+        "source_files": [
+          "knowledge/official-wset/study-guide/wset_markdown/seccion_8_section_5_fortified_wines_of_the_world/8-2_44_port.md"
+        ],
+        "support_rationale": "Las fuentes locales sustentan el mecanismo, el resultado de estilo y el contraste diagnóstico evaluado."
+      },
+      "enrichment": {
+        "causal_chain_candidate": {
+          "candidate_id": "CC_CAND_PORT_LBV_FILTERED",
+          "cause": "Los dos vinos reciben distinto tratamiento antes del embotellado.",
+          "mechanism": "Filtrar retira partículas y reduce el material que precipitaría en botella.",
+          "effect": "Cambian el potencial de guarda y la necesidad de decantar."
+        },
+        "feedback_profile": {
+          "correct_rationale": "Los dos vinos reciben distinto tratamiento antes del embotellado. Filtrar retira partículas y reduce el material que precipitaría en botella. Por ello, cambian el potencial de guarda y la necesidad de decantar.",
+          "distractor_rationales": {
+            "A": "No explica el mecanismo clave: Filtrar retira partículas y reduce el material que precipitaría en botella.",
+            "B": "No explica el mecanismo clave: Filtrar retira partículas y reduce el material que precipitaría en botella.",
+            "C": "Es la relación causal correcta.",
+            "D": "No explica el mecanismo clave: Filtrar retira partículas y reduce el material que precipitaría en botella."
+          },
+          "remediation_recommendation": "Reconstruya la cadena de port lbv filtered como causa, mecanismo y efecto."
+        },
+        "micro_drill_candidate": {
+          "prompt": "Micro-drill: ¿qué efecto sigue a este mecanismo: Filtrar retira partículas y reduce el material que precipitaría en botella.?",
+          "answer": "Cambian el potencial de guarda y la necesidad de decantar."
+        },
+        "misconception_linkage_candidate": {
+          "misconception_id": "MC_PORT_VINTAGE_01",
+          "target_error": "Tratar todos los LBV como un único estilo de servicio."
+        }
+      },
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "official_wset_question": false,
+        "training_item_only": true,
+        "uses_llm": false,
+        "uses_api": false,
+        "uses_embeddings": false,
+        "uses_vector_db": false,
+        "cloud_services_active": false
+      }
+    },
+    {
+      "question_id": "912",
+      "question_text": "Si una botella de Tawny indica 20 años, ¿qué interpretación explica mejor el estilo esperado?",
+      "question_type": "theory",
+      "expected_topics": [
+        "RA4",
+        "port_tawny_age_label"
+      ],
+      "expected_causal_links": [
+        "El productor mezcla vinos de distintas edades durante la maduración oxidativa. -> La categoría expresa el perfil típico de una edad media aprobada. -> El vino busca consistencia y complejidad, no identidad de una sola añada."
+      ],
+      "expected_keywords": [
+        "Port",
+        "Tawny",
+        "indicación de edad",
+        "mezcla"
+      ],
+      "expected_reasoning_type": "cause_effect",
+      "difficulty": "intermediate",
+      "source_type": "SBA gap closure | manually curated from local official study guide",
+      "safe_for_examiner": false,
+      "options": {
+        "A": "Todo el vino procede exactamente de una añada de hace 20 años.",
+        "B": "El componente más joven debe tener 20 años.",
+        "C": "La cifra indica años de botella después de la compra.",
+        "D": "Es una mezcla cuyo carácter corresponde a una edad media aproximada, no vino íntegramente de una sola cosecha de 20 años."
+      },
+      "correct_answer_letter": "D",
+      "correct_answer_text": "Es una mezcla cuyo carácter corresponde a una edad media aproximada, no vino íntegramente de una sola cosecha de 20 años.",
+      "source_support": {
+        "source_ids": [
+          "8-2_44_port"
+        ],
+        "source_files": [
+          "knowledge/official-wset/study-guide/wset_markdown/seccion_8_section_5_fortified_wines_of_the_world/8-2_44_port.md"
+        ],
+        "support_rationale": "Las fuentes locales sustentan el mecanismo, el resultado de estilo y el contraste diagnóstico evaluado."
+      },
+      "enrichment": {
+        "causal_chain_candidate": {
+          "candidate_id": "CC_CAND_PORT_TAWNY_AGE_LABEL",
+          "cause": "El productor mezcla vinos de distintas edades durante la maduración oxidativa.",
+          "mechanism": "La categoría expresa el perfil típico de una edad media aprobada.",
+          "effect": "El vino busca consistencia y complejidad, no identidad de una sola añada."
+        },
+        "feedback_profile": {
+          "correct_rationale": "El productor mezcla vinos de distintas edades durante la maduración oxidativa. La categoría expresa el perfil típico de una edad media aprobada. Por ello, el vino busca consistencia y complejidad, no identidad de una sola añada.",
+          "distractor_rationales": {
+            "A": "No explica el mecanismo clave: La categoría expresa el perfil típico de una edad media aprobada.",
+            "B": "No explica el mecanismo clave: La categoría expresa el perfil típico de una edad media aprobada.",
+            "C": "No explica el mecanismo clave: La categoría expresa el perfil típico de una edad media aprobada.",
+            "D": "Es la relación causal correcta."
+          },
+          "remediation_recommendation": "Reconstruya la cadena de port tawny age label como causa, mecanismo y efecto."
+        },
+        "micro_drill_candidate": {
+          "prompt": "Micro-drill: ¿qué efecto sigue a este mecanismo: La categoría expresa el perfil típico de una edad media aprobada.?",
+          "answer": "El vino busca consistencia y complejidad, no identidad de una sola añada."
+        },
+        "misconception_linkage_candidate": {
+          "misconception_id": "MC_PORT_VINTAGE_01",
+          "target_error": "Leer la indicación de edad como una añada literal."
+        }
+      },
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "official_wset_question": false,
+        "training_item_only": true,
+        "uses_llm": false,
+        "uses_api": false,
+        "uses_embeddings": false,
+        "uses_vector_db": false,
+        "cloud_services_active": false
+      }
+    },
+    {
+      "question_id": "913",
+      "question_text": "Al comparar Vintage Port madurado en botella y Tawny con indicación de edad madurado en madera, ¿qué factor explica mejor sus perfiles distintos?",
+      "question_type": "theory",
+      "expected_topics": [
+        "RA4",
+        "port_vintage_vs_tawny"
+      ],
+      "expected_causal_links": [
+        "Ambos parten de Port tinto fortificado, pero siguen recipientes y tiempos distintos. -> La botella protege más del oxígeno; las pipes favorecen oxidación gradual. -> Vintage conserva y transforma fruta y tanino; Tawny desarrolla carácter oxidativo y está listo al embotellar."
+      ],
+      "expected_keywords": [
+        "Port",
+        "Vintage",
+        "Tawny",
+        "maduración"
+      ],
+      "expected_reasoning_type": "cause_effect",
+      "difficulty": "intermediate",
+      "source_type": "SBA gap closure | manually curated from local official study guide",
+      "safe_for_examiner": false,
+      "options": {
+        "A": "El primero limita oxígeno antes de botella; el segundo recibe larga maduración oxidativa en pipes.",
+        "B": "La única diferencia es la variedad de uva.",
+        "C": "Vintage se fortifica y Tawny no.",
+        "D": "Tawny desarrolla flor mientras Vintage envejece bajo velo."
+      },
+      "correct_answer_letter": "A",
+      "correct_answer_text": "El primero limita oxígeno antes de botella; el segundo recibe larga maduración oxidativa en pipes.",
+      "source_support": {
+        "source_ids": [
+          "8-2_44_port"
+        ],
+        "source_files": [
+          "knowledge/official-wset/study-guide/wset_markdown/seccion_8_section_5_fortified_wines_of_the_world/8-2_44_port.md"
+        ],
+        "support_rationale": "Las fuentes locales sustentan el mecanismo, el resultado de estilo y el contraste diagnóstico evaluado."
+      },
+      "enrichment": {
+        "causal_chain_candidate": {
+          "candidate_id": "CC_CAND_PORT_VINTAGE_VS_TAWNY",
+          "cause": "Ambos parten de Port tinto fortificado, pero siguen recipientes y tiempos distintos.",
+          "mechanism": "La botella protege más del oxígeno; las pipes favorecen oxidación gradual.",
+          "effect": "Vintage conserva y transforma fruta y tanino; Tawny desarrolla carácter oxidativo y está listo al embotellar."
+        },
+        "feedback_profile": {
+          "correct_rationale": "Ambos parten de Port tinto fortificado, pero siguen recipientes y tiempos distintos. La botella protege más del oxígeno; las pipes favorecen oxidación gradual. Por ello, vintage conserva y transforma fruta y tanino; Tawny desarrolla carácter oxidativo y está listo al embotellar.",
+          "distractor_rationales": {
+            "A": "Es la relación causal correcta.",
+            "B": "No explica el mecanismo clave: La botella protege más del oxígeno; las pipes favorecen oxidación gradual.",
+            "C": "No explica el mecanismo clave: La botella protege más del oxígeno; las pipes favorecen oxidación gradual.",
+            "D": "No explica el mecanismo clave: La botella protege más del oxígeno; las pipes favorecen oxidación gradual."
+          },
+          "remediation_recommendation": "Reconstruya la cadena de port vintage vs tawny como causa, mecanismo y efecto."
+        },
+        "micro_drill_candidate": {
+          "prompt": "Micro-drill: ¿qué efecto sigue a este mecanismo: La botella protege más del oxígeno; las pipes favorecen oxidación gradual.?",
+          "answer": "Vintage conserva y transforma fruta y tanino; Tawny desarrolla carácter oxidativo y está listo al embotellar."
+        },
+        "misconception_linkage_candidate": {
+          "misconception_id": "MC_PORT_VINTAGE_01",
+          "target_error": "Confundir estilo de maduración con nivel de calidad."
+        }
+      },
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "official_wset_question": false,
+        "training_item_only": true,
+        "uses_llm": false,
+        "uses_api": false,
+        "uses_embeddings": false,
+        "uses_vector_db": false,
+        "cloud_services_active": false
+      }
+    },
+    {
+      "question_id": "914",
+      "question_text": "Si un Port madura en el ambiente costero más fresco de Vila Nova de Gaia en lugar de condiciones más cálidas del Douro, ¿qué consecuencia es más probable?",
+      "question_type": "theory",
+      "expected_topics": [
+        "RA4",
+        "port_gaia_climate"
+      ],
+      "expected_causal_links": [
+        "El vino se almacena en un entorno más fresco y moderado. -> La temperatura menor ralentiza reacciones de envejecimiento. -> La maduración puede ser más gradual y controlada."
+      ],
+      "expected_keywords": [
+        "Port",
+        "Vila Nova de Gaia",
+        "temperatura",
+        "maduración"
+      ],
+      "expected_reasoning_type": "cause_effect",
+      "difficulty": "distinction",
+      "source_type": "SBA gap closure | manually curated from local official study guide",
+      "safe_for_examiner": false,
+      "options": {
+        "A": "El vino se oxidará más rápido por la menor temperatura.",
+        "B": "La evolución será más lenta y se preservará mejor la frescura.",
+        "C": "La fermentación reiniciará necesariamente.",
+        "D": "El aguardiente se separará del vino."
+      },
+      "correct_answer_letter": "B",
+      "correct_answer_text": "La evolución será más lenta y se preservará mejor la frescura.",
+      "source_support": {
+        "source_ids": [
+          "8-2_44_port"
+        ],
+        "source_files": [
+          "knowledge/official-wset/study-guide/wset_markdown/seccion_8_section_5_fortified_wines_of_the_world/8-2_44_port.md"
+        ],
+        "support_rationale": "Las fuentes locales sustentan el mecanismo, el resultado de estilo y el contraste diagnóstico evaluado."
+      },
+      "enrichment": {
+        "causal_chain_candidate": {
+          "candidate_id": "CC_CAND_PORT_GAIA_CLIMATE",
+          "cause": "El vino se almacena en un entorno más fresco y moderado.",
+          "mechanism": "La temperatura menor ralentiza reacciones de envejecimiento.",
+          "effect": "La maduración puede ser más gradual y controlada."
+        },
+        "feedback_profile": {
+          "correct_rationale": "El vino se almacena en un entorno más fresco y moderado. La temperatura menor ralentiza reacciones de envejecimiento. Por ello, la maduración puede ser más gradual y controlada.",
+          "distractor_rationales": {
+            "A": "No explica el mecanismo clave: La temperatura menor ralentiza reacciones de envejecimiento.",
+            "B": "Es la relación causal correcta.",
+            "C": "No explica el mecanismo clave: La temperatura menor ralentiza reacciones de envejecimiento.",
+            "D": "No explica el mecanismo clave: La temperatura menor ralentiza reacciones de envejecimiento."
+          },
+          "remediation_recommendation": "Reconstruya la cadena de port gaia climate como causa, mecanismo y efecto."
+        },
+        "micro_drill_candidate": {
+          "prompt": "Micro-drill: ¿qué efecto sigue a este mecanismo: La temperatura menor ralentiza reacciones de envejecimiento.?",
+          "answer": "La maduración puede ser más gradual y controlada."
+        },
+        "misconception_linkage_candidate": {
+          "misconception_id": "MC_PORT_VINTAGE_01",
+          "target_error": "Ignorar el efecto de la temperatura de almacenamiento en Port."
+        }
+      },
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "official_wset_question": false,
+        "training_item_only": true,
+        "uses_llm": false,
+        "uses_api": false,
+        "uses_embeddings": false,
+        "uses_vector_db": false,
+        "cloud_services_active": false
+      }
+    },
+    {
+      "question_id": "915",
+      "question_text": "Si un vino base de Palomino es pálido, ligero y fino tras la fermentación, ¿qué decisión explica mejor su destino inicial?",
+      "question_type": "theory",
+      "expected_topics": [
+        "RA4",
+        "sherry_first_classification"
+      ],
+      "expected_causal_links": [
+        "El productor clasifica el vino según su cuerpo y finura. -> Un grado cercano a 15% permite que la flor prospere. -> El vino puede desarrollar un estilo Fino o Manzanilla protegido del oxígeno."
+      ],
+      "expected_keywords": [
+        "Sherry",
+        "clasificación",
+        "flor",
+        "15.5%"
+      ],
+      "expected_reasoning_type": "cause_effect",
+      "difficulty": "intermediate",
+      "source_type": "SBA gap closure | manually curated from local official study guide",
+      "safe_for_examiner": false,
+      "options": {
+        "A": "Fortificarlo de inmediato a 22% para crear PX.",
+        "B": "Endulzarlo antes de que aparezca flor.",
+        "C": "Fortificarlo cerca de 15 a 15,5% para favorecer flor y crianza biológica.",
+        "D": "Concentrarlo por congelación."
+      },
+      "correct_answer_letter": "C",
+      "correct_answer_text": "Fortificarlo cerca de 15 a 15,5% para favorecer flor y crianza biológica.",
+      "source_support": {
+        "source_ids": [
+          "8-1_43_sherry"
+        ],
+        "source_files": [
+          "knowledge/official-wset/study-guide/wset_markdown/seccion_8_section_5_fortified_wines_of_the_world/8-1_43_sherry.md"
+        ],
+        "support_rationale": "Las fuentes locales sustentan el mecanismo, el resultado de estilo y el contraste diagnóstico evaluado."
+      },
+      "enrichment": {
+        "causal_chain_candidate": {
+          "candidate_id": "CC_CAND_SHERRY_FIRST_CLASSIFICATION",
+          "cause": "El productor clasifica el vino según su cuerpo y finura.",
+          "mechanism": "Un grado cercano a 15% permite que la flor prospere.",
+          "effect": "El vino puede desarrollar un estilo Fino o Manzanilla protegido del oxígeno."
+        },
+        "feedback_profile": {
+          "correct_rationale": "El productor clasifica el vino según su cuerpo y finura. Un grado cercano a 15% permite que la flor prospere. Por ello, el vino puede desarrollar un estilo Fino o Manzanilla protegido del oxígeno.",
+          "distractor_rationales": {
+            "A": "No explica el mecanismo clave: Un grado cercano a 15% permite que la flor prospere.",
+            "B": "No explica el mecanismo clave: Un grado cercano a 15% permite que la flor prospere.",
+            "C": "Es la relación causal correcta.",
+            "D": "No explica el mecanismo clave: Un grado cercano a 15% permite que la flor prospere."
+          },
+          "remediation_recommendation": "Reconstruya la cadena de sherry first classification como causa, mecanismo y efecto."
+        },
+        "micro_drill_candidate": {
+          "prompt": "Micro-drill: ¿qué efecto sigue a este mecanismo: Un grado cercano a 15% permite que la flor prospere.?",
+          "answer": "El vino puede desarrollar un estilo Fino o Manzanilla protegido del oxígeno."
+        },
+        "misconception_linkage_candidate": {
+          "misconception_id": "MC_SHERRY_FLOR_01",
+          "target_error": "Creer que la clasificación inicial es aleatoria."
+        }
+      },
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "official_wset_question": false,
+        "training_item_only": true,
+        "uses_llm": false,
+        "uses_api": false,
+        "uses_embeddings": false,
+        "uses_vector_db": false,
+        "cloud_services_active": false
+      }
+    },
+    {
+      "question_id": "916",
+      "question_text": "Si un vino base más robusto se fortifica a 17% antes de la crianza, ¿qué resultado es más probable?",
+      "question_type": "theory",
+      "expected_topics": [
+        "RA4",
+        "sherry_oloroso_fortification"
+      ],
+      "expected_causal_links": [
+        "El vino recibe una graduación superior al límite de tolerancia de la flor. -> Sin velo protector, el oxígeno actúa en la bota parcialmente llena. -> Se desarrollan color más oscuro, cuerpo y aromas de nuez, cuero y toffee."
+      ],
+      "expected_keywords": [
+        "Sherry",
+        "Oloroso",
+        "17%",
+        "oxidativa"
+      ],
+      "expected_reasoning_type": "cause_effect",
+      "difficulty": "intermediate",
+      "source_type": "SBA gap closure | manually curated from local official study guide",
+      "safe_for_examiner": false,
+      "options": {
+        "A": "La flor crece más gruesa y protege el vino.",
+        "B": "El vino se vuelve espumoso.",
+        "C": "La fortificación elimina todo cuerpo y color.",
+        "D": "La flor no sobrevive y el vino inicia crianza oxidativa hacia Oloroso."
+      },
+      "correct_answer_letter": "D",
+      "correct_answer_text": "La flor no sobrevive y el vino inicia crianza oxidativa hacia Oloroso.",
+      "source_support": {
+        "source_ids": [
+          "8-1_43_sherry"
+        ],
+        "source_files": [
+          "knowledge/official-wset/study-guide/wset_markdown/seccion_8_section_5_fortified_wines_of_the_world/8-1_43_sherry.md"
+        ],
+        "support_rationale": "Las fuentes locales sustentan el mecanismo, el resultado de estilo y el contraste diagnóstico evaluado."
+      },
+      "enrichment": {
+        "causal_chain_candidate": {
+          "candidate_id": "CC_CAND_SHERRY_OLOROSO_FORTIFICATION",
+          "cause": "El vino recibe una graduación superior al límite de tolerancia de la flor.",
+          "mechanism": "Sin velo protector, el oxígeno actúa en la bota parcialmente llena.",
+          "effect": "Se desarrollan color más oscuro, cuerpo y aromas de nuez, cuero y toffee."
+        },
+        "feedback_profile": {
+          "correct_rationale": "El vino recibe una graduación superior al límite de tolerancia de la flor. Sin velo protector, el oxígeno actúa en la bota parcialmente llena. Por ello, se desarrollan color más oscuro, cuerpo y aromas de nuez, cuero y toffee.",
+          "distractor_rationales": {
+            "A": "No explica el mecanismo clave: Sin velo protector, el oxígeno actúa en la bota parcialmente llena.",
+            "B": "No explica el mecanismo clave: Sin velo protector, el oxígeno actúa en la bota parcialmente llena.",
+            "C": "No explica el mecanismo clave: Sin velo protector, el oxígeno actúa en la bota parcialmente llena.",
+            "D": "Es la relación causal correcta."
+          },
+          "remediation_recommendation": "Reconstruya la cadena de sherry oloroso fortification como causa, mecanismo y efecto."
+        },
+        "micro_drill_candidate": {
+          "prompt": "Micro-drill: ¿qué efecto sigue a este mecanismo: Sin velo protector, el oxígeno actúa en la bota parcialmente llena.?",
+          "answer": "Se desarrollan color más oscuro, cuerpo y aromas de nuez, cuero y toffee."
+        },
+        "misconception_linkage_candidate": {
+          "misconception_id": "MC_SHERRY_FLOR_01",
+          "target_error": "Pensar que más alcohol fortalece la flor."
+        }
+      },
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "official_wset_question": false,
+        "training_item_only": true,
+        "uses_llm": false,
+        "uses_api": false,
+        "uses_embeddings": false,
+        "uses_vector_db": false,
+        "cloud_services_active": false
+      }
+    },
+    {
+      "question_id": "917",
+      "question_text": "Si una capa sana de flor cubre un Fino, ¿qué consecuencia explica mejor que conserve color pálido durante la crianza?",
+      "question_type": "theory",
+      "expected_topics": [
+        "RA4",
+        "sherry_flor_protection"
+      ],
+      "expected_causal_links": [
+        "Levaduras de flor crecen sobre el vino en una bota parcialmente llena. -> La capa utiliza oxígeno y reduce el contacto oxidativo directo. -> El vino permanece pálido y desarrolla acetaldehído, almendra y notas de masa."
+      ],
+      "expected_keywords": [
+        "Sherry",
+        "Fino",
+        "flor",
+        "protección"
+      ],
+      "expected_reasoning_type": "cause_effect",
+      "difficulty": "distinction",
+      "source_type": "SBA gap closure | manually curated from local official study guide",
+      "safe_for_examiner": false,
+      "options": {
+        "A": "La flor consume oxígeno y forma una barrera que limita la oxidación del vino.",
+        "B": "La flor añade pigmentos blancos al vino.",
+        "C": "El alto tanino impide el oscurecimiento.",
+        "D": "La bota se llena por completo y no contiene aire."
+      },
+      "correct_answer_letter": "A",
+      "correct_answer_text": "La flor consume oxígeno y forma una barrera que limita la oxidación del vino.",
+      "source_support": {
+        "source_ids": [
+          "8-1_43_sherry"
+        ],
+        "source_files": [
+          "knowledge/official-wset/study-guide/wset_markdown/seccion_8_section_5_fortified_wines_of_the_world/8-1_43_sherry.md"
+        ],
+        "support_rationale": "Las fuentes locales sustentan el mecanismo, el resultado de estilo y el contraste diagnóstico evaluado."
+      },
+      "enrichment": {
+        "causal_chain_candidate": {
+          "candidate_id": "CC_CAND_SHERRY_FLOR_PROTECTION",
+          "cause": "Levaduras de flor crecen sobre el vino en una bota parcialmente llena.",
+          "mechanism": "La capa utiliza oxígeno y reduce el contacto oxidativo directo.",
+          "effect": "El vino permanece pálido y desarrolla acetaldehído, almendra y notas de masa."
+        },
+        "feedback_profile": {
+          "correct_rationale": "Levaduras de flor crecen sobre el vino en una bota parcialmente llena. La capa utiliza oxígeno y reduce el contacto oxidativo directo. Por ello, el vino permanece pálido y desarrolla acetaldehído, almendra y notas de masa.",
+          "distractor_rationales": {
+            "A": "Es la relación causal correcta.",
+            "B": "No explica el mecanismo clave: La capa utiliza oxígeno y reduce el contacto oxidativo directo.",
+            "C": "No explica el mecanismo clave: La capa utiliza oxígeno y reduce el contacto oxidativo directo.",
+            "D": "No explica el mecanismo clave: La capa utiliza oxígeno y reduce el contacto oxidativo directo."
+          },
+          "remediation_recommendation": "Reconstruya la cadena de sherry flor protection como causa, mecanismo y efecto."
+        },
+        "micro_drill_candidate": {
+          "prompt": "Micro-drill: ¿qué efecto sigue a este mecanismo: La capa utiliza oxígeno y reduce el contacto oxidativo directo.?",
+          "answer": "El vino permanece pálido y desarrolla acetaldehído, almendra y notas de masa."
+        },
+        "misconception_linkage_candidate": {
+          "misconception_id": "MC_BIOLOGICAL_PROTECTION_02",
+          "target_error": "Creer que una bota parcialmente llena siempre oxida el vino por igual."
+        }
+      },
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "official_wset_question": false,
+        "training_item_only": true,
+        "uses_llm": false,
+        "uses_api": false,
+        "uses_embeddings": false,
+        "uses_vector_db": false,
+        "cloud_services_active": false
+      }
+    },
+    {
+      "question_id": "918",
+      "question_text": "Si una bodega se vuelve demasiado cálida y seca durante la crianza de Fino, ¿qué consecuencia es más probable?",
+      "question_type": "theory",
+      "expected_topics": [
+        "RA4",
+        "sherry_flor_conditions"
+      ],
+      "expected_causal_links": [
+        "La flor necesita un rango adecuado de alcohol, temperatura y humedad. -> Condiciones adversas reducen su actividad y continuidad. -> Disminuyen la protección y el carácter biológico."
+      ],
+      "expected_keywords": [
+        "Sherry",
+        "flor",
+        "temperatura",
+        "humedad"
+      ],
+      "expected_reasoning_type": "cause_effect",
+      "difficulty": "intermediate",
+      "source_type": "SBA gap closure | manually curated from local official study guide",
+      "safe_for_examiner": false,
+      "options": {
+        "A": "La flor crece más vigorosa cuanto más calor y sequedad.",
+        "B": "La flor se debilita y aumenta el riesgo de desarrollo oxidativo.",
+        "C": "El vino pierde alcohol hasta quedar sin protección.",
+        "D": "La solera deja de mezclar edades."
+      },
+      "correct_answer_letter": "B",
+      "correct_answer_text": "La flor se debilita y aumenta el riesgo de desarrollo oxidativo.",
+      "source_support": {
+        "source_ids": [
+          "8-1_43_sherry"
+        ],
+        "source_files": [
+          "knowledge/official-wset/study-guide/wset_markdown/seccion_8_section_5_fortified_wines_of_the_world/8-1_43_sherry.md"
+        ],
+        "support_rationale": "Las fuentes locales sustentan el mecanismo, el resultado de estilo y el contraste diagnóstico evaluado."
+      },
+      "enrichment": {
+        "causal_chain_candidate": {
+          "candidate_id": "CC_CAND_SHERRY_FLOR_CONDITIONS",
+          "cause": "La flor necesita un rango adecuado de alcohol, temperatura y humedad.",
+          "mechanism": "Condiciones adversas reducen su actividad y continuidad.",
+          "effect": "Disminuyen la protección y el carácter biológico."
+        },
+        "feedback_profile": {
+          "correct_rationale": "La flor necesita un rango adecuado de alcohol, temperatura y humedad. Condiciones adversas reducen su actividad y continuidad. Por ello, disminuyen la protección y el carácter biológico.",
+          "distractor_rationales": {
+            "A": "No explica el mecanismo clave: Condiciones adversas reducen su actividad y continuidad.",
+            "B": "Es la relación causal correcta.",
+            "C": "No explica el mecanismo clave: Condiciones adversas reducen su actividad y continuidad.",
+            "D": "No explica el mecanismo clave: Condiciones adversas reducen su actividad y continuidad."
+          },
+          "remediation_recommendation": "Reconstruya la cadena de sherry flor conditions como causa, mecanismo y efecto."
+        },
+        "micro_drill_candidate": {
+          "prompt": "Micro-drill: ¿qué efecto sigue a este mecanismo: Condiciones adversas reducen su actividad y continuidad.?",
+          "answer": "Disminuyen la protección y el carácter biológico."
+        },
+        "misconception_linkage_candidate": {
+          "misconception_id": "MC_SHERRY_FLOR_01",
+          "target_error": "Suponer que la flor prospera en cualquier ambiente."
+        }
+      },
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "official_wset_question": false,
+        "training_item_only": true,
+        "uses_llm": false,
+        "uses_api": false,
+        "uses_embeddings": false,
+        "uses_vector_db": false,
+        "cloud_services_active": false
+      }
+    },
+    {
+      "question_id": "919",
+      "question_text": "Si una solera se refresca periódicamente con vinos más jóvenes bien seleccionados, ¿qué resultado explica mejor su consistencia?",
+      "question_type": "theory",
+      "expected_topics": [
+        "RA4",
+        "sherry_solera_consistency"
+      ],
+      "expected_causal_links": [
+        "Se extrae solo una fracción del nivel más viejo y se repone desde criaderas. -> El ensamblaje repetido integra vinos de diferentes edades. -> La casa mantiene un perfil relativamente estable entre embotellados."
+      ],
+      "expected_keywords": [
+        "Sherry",
+        "solera",
+        "criaderas",
+        "consistencia"
+      ],
+      "expected_reasoning_type": "cause_effect",
+      "difficulty": "intermediate",
+      "source_type": "SBA gap closure | manually curated from local official study guide",
+      "safe_for_examiner": false,
+      "options": {
+        "A": "Cada botella conserva una única añada identificable.",
+        "B": "El vino joven reemplaza por completo al viejo en cada movimiento.",
+        "C": "Cada saca mezcla edades y el vino joven adopta gradualmente el carácter del sistema.",
+        "D": "La mezcla impide cualquier envejecimiento."
+      },
+      "correct_answer_letter": "C",
+      "correct_answer_text": "Cada saca mezcla edades y el vino joven adopta gradualmente el carácter del sistema.",
+      "source_support": {
+        "source_ids": [
+          "8-1_43_sherry"
+        ],
+        "source_files": [
+          "knowledge/official-wset/study-guide/wset_markdown/seccion_8_section_5_fortified_wines_of_the_world/8-1_43_sherry.md"
+        ],
+        "support_rationale": "Las fuentes locales sustentan el mecanismo, el resultado de estilo y el contraste diagnóstico evaluado."
+      },
+      "enrichment": {
+        "causal_chain_candidate": {
+          "candidate_id": "CC_CAND_SHERRY_SOLERA_CONSISTENCY",
+          "cause": "Se extrae solo una fracción del nivel más viejo y se repone desde criaderas.",
+          "mechanism": "El ensamblaje repetido integra vinos de diferentes edades.",
+          "effect": "La casa mantiene un perfil relativamente estable entre embotellados."
+        },
+        "feedback_profile": {
+          "correct_rationale": "Se extrae solo una fracción del nivel más viejo y se repone desde criaderas. El ensamblaje repetido integra vinos de diferentes edades. Por ello, la casa mantiene un perfil relativamente estable entre embotellados.",
+          "distractor_rationales": {
+            "A": "No explica el mecanismo clave: El ensamblaje repetido integra vinos de diferentes edades.",
+            "B": "No explica el mecanismo clave: El ensamblaje repetido integra vinos de diferentes edades.",
+            "C": "Es la relación causal correcta.",
+            "D": "No explica el mecanismo clave: El ensamblaje repetido integra vinos de diferentes edades."
+          },
+          "remediation_recommendation": "Reconstruya la cadena de sherry solera consistency como causa, mecanismo y efecto."
+        },
+        "micro_drill_candidate": {
+          "prompt": "Micro-drill: ¿qué efecto sigue a este mecanismo: El ensamblaje repetido integra vinos de diferentes edades.?",
+          "answer": "La casa mantiene un perfil relativamente estable entre embotellados."
+        },
+        "misconception_linkage_candidate": {
+          "misconception_id": "MC_SHERRY_SOLERA_02",
+          "target_error": "Confundir solera con un sistema de añadas separadas."
+        }
+      },
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "official_wset_question": false,
+        "training_item_only": true,
+        "uses_llm": false,
+        "uses_api": false,
+        "uses_embeddings": false,
+        "uses_vector_db": false,
+        "cloud_services_active": false
+      }
+    },
+    {
+      "question_id": "920",
+      "question_text": "Si un productor extrae demasiado vino de una solera cada año, ¿qué consecuencia es más probable?",
+      "question_type": "theory",
+      "expected_topics": [
+        "RA4",
+        "sherry_solera_overdraw"
+      ],
+      "expected_causal_links": [
+        "La saca retira una proporción excesiva del vino viejo. -> La reposición introduce relativamente más vino joven en cada ciclo. -> Puede perderse concentración, continuidad y consistencia."
+      ],
+      "expected_keywords": [
+        "Sherry",
+        "solera",
+        "saca",
+        "edad media"
+      ],
+      "expected_reasoning_type": "cause_effect",
+      "difficulty": "distinction",
+      "source_type": "SBA gap closure | manually curated from local official study guide",
+      "safe_for_examiner": false,
+      "options": {
+        "A": "La edad media aumenta automáticamente.",
+        "B": "La flor se convierte en azúcar.",
+        "C": "El vino deja de mezclarse con componentes jóvenes.",
+        "D": "Se reduce la edad media y puede diluirse el carácter maduro del sistema."
+      },
+      "correct_answer_letter": "D",
+      "correct_answer_text": "Se reduce la edad media y puede diluirse el carácter maduro del sistema.",
+      "source_support": {
+        "source_ids": [
+          "8-1_43_sherry"
+        ],
+        "source_files": [
+          "knowledge/official-wset/study-guide/wset_markdown/seccion_8_section_5_fortified_wines_of_the_world/8-1_43_sherry.md"
+        ],
+        "support_rationale": "Las fuentes locales sustentan el mecanismo, el resultado de estilo y el contraste diagnóstico evaluado."
+      },
+      "enrichment": {
+        "causal_chain_candidate": {
+          "candidate_id": "CC_CAND_SHERRY_SOLERA_OVERDRAW",
+          "cause": "La saca retira una proporción excesiva del vino viejo.",
+          "mechanism": "La reposición introduce relativamente más vino joven en cada ciclo.",
+          "effect": "Puede perderse concentración, continuidad y consistencia."
+        },
+        "feedback_profile": {
+          "correct_rationale": "La saca retira una proporción excesiva del vino viejo. La reposición introduce relativamente más vino joven en cada ciclo. Por ello, puede perderse concentración, continuidad y consistencia.",
+          "distractor_rationales": {
+            "A": "No explica el mecanismo clave: La reposición introduce relativamente más vino joven en cada ciclo.",
+            "B": "No explica el mecanismo clave: La reposición introduce relativamente más vino joven en cada ciclo.",
+            "C": "No explica el mecanismo clave: La reposición introduce relativamente más vino joven en cada ciclo.",
+            "D": "Es la relación causal correcta."
+          },
+          "remediation_recommendation": "Reconstruya la cadena de sherry solera overdraw como causa, mecanismo y efecto."
+        },
+        "micro_drill_candidate": {
+          "prompt": "Micro-drill: ¿qué efecto sigue a este mecanismo: La reposición introduce relativamente más vino joven en cada ciclo.?",
+          "answer": "Puede perderse concentración, continuidad y consistencia."
+        },
+        "misconception_linkage_candidate": {
+          "misconception_id": "MC_SHERRY_SOLERA_02",
+          "target_error": "Suponer que el volumen extraído no afecta la solera."
+        }
+      },
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "official_wset_question": false,
+        "training_item_only": true,
+        "uses_llm": false,
+        "uses_api": false,
+        "uses_embeddings": false,
+        "uses_vector_db": false,
+        "cloud_services_active": false
+      }
+    },
+    {
+      "question_id": "921",
+      "question_text": "Si un Fino se refortifica a 17% después de una etapa biológica, ¿qué resultado de estilo es más probable?",
+      "question_type": "theory",
+      "expected_topics": [
+        "RA4",
+        "sherry_amontillado_transition"
+      ],
+      "expected_causal_links": [
+        "El vino ya ha desarrollado carácter bajo flor. -> La nueva fortificación elimina la flor y expone el vino a oxígeno. -> Amontillado combina señales biológicas y oxidativas."
+      ],
+      "expected_keywords": [
+        "Sherry",
+        "Amontillado",
+        "refortificación",
+        "crianza mixta"
+      ],
+      "expected_reasoning_type": "cause_effect",
+      "difficulty": "intermediate",
+      "source_type": "SBA gap closure | manually curated from local official study guide",
+      "safe_for_examiner": false,
+      "options": {
+        "A": "La flor muere y el vino añade notas oxidativas a su carácter previo de levadura y almendra.",
+        "B": "La refortificación reinicia una flor más gruesa.",
+        "C": "El vino pierde todo rastro de crianza biológica.",
+        "D": "El estilo se convierte en PX naturalmente dulce."
+      },
+      "correct_answer_letter": "A",
+      "correct_answer_text": "La flor muere y el vino añade notas oxidativas a su carácter previo de levadura y almendra.",
+      "source_support": {
+        "source_ids": [
+          "8-1_43_sherry"
+        ],
+        "source_files": [
+          "knowledge/official-wset/study-guide/wset_markdown/seccion_8_section_5_fortified_wines_of_the_world/8-1_43_sherry.md"
+        ],
+        "support_rationale": "Las fuentes locales sustentan el mecanismo, el resultado de estilo y el contraste diagnóstico evaluado."
+      },
+      "enrichment": {
+        "causal_chain_candidate": {
+          "candidate_id": "CC_CAND_SHERRY_AMONTILLADO_TRANSITION",
+          "cause": "El vino ya ha desarrollado carácter bajo flor.",
+          "mechanism": "La nueva fortificación elimina la flor y expone el vino a oxígeno.",
+          "effect": "Amontillado combina señales biológicas y oxidativas."
+        },
+        "feedback_profile": {
+          "correct_rationale": "El vino ya ha desarrollado carácter bajo flor. La nueva fortificación elimina la flor y expone el vino a oxígeno. Por ello, amontillado combina señales biológicas y oxidativas.",
+          "distractor_rationales": {
+            "A": "Es la relación causal correcta.",
+            "B": "No explica el mecanismo clave: La nueva fortificación elimina la flor y expone el vino a oxígeno.",
+            "C": "No explica el mecanismo clave: La nueva fortificación elimina la flor y expone el vino a oxígeno.",
+            "D": "No explica el mecanismo clave: La nueva fortificación elimina la flor y expone el vino a oxígeno."
+          },
+          "remediation_recommendation": "Reconstruya la cadena de sherry amontillado transition como causa, mecanismo y efecto."
+        },
+        "micro_drill_candidate": {
+          "prompt": "Micro-drill: ¿qué efecto sigue a este mecanismo: La nueva fortificación elimina la flor y expone el vino a oxígeno.?",
+          "answer": "Amontillado combina señales biológicas y oxidativas."
+        },
+        "misconception_linkage_candidate": {
+          "misconception_id": "MC_OXIDATIVE_VS_BIOLOGICAL_01",
+          "target_error": "Tratar Amontillado como exclusivamente biológico u oxidativo."
+        }
+      },
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "official_wset_question": false,
+        "training_item_only": true,
+        "uses_llm": false,
+        "uses_api": false,
+        "uses_embeddings": false,
+        "uses_vector_db": false,
+        "cloud_services_active": false
+      }
+    },
+    {
+      "question_id": "922",
+      "question_text": "Si un Sherry envejece exclusivamente sin flor en botas parcialmente llenas, ¿qué resultado es más probable?",
+      "question_type": "theory",
+      "expected_topics": [
+        "RA4",
+        "sherry_oloroso_style"
+      ],
+      "expected_causal_links": [
+        "El vino fortificado a 17% madura con aire en la bota. -> La oxidación prolongada transforma color y compuestos aromáticos. -> Aumentan riqueza, concentración y carácter terciario oxidativo."
+      ],
+      "expected_keywords": [
+        "Sherry",
+        "Oloroso",
+        "oxidación",
+        "nuez"
+      ],
+      "expected_reasoning_type": "cause_effect",
+      "difficulty": "intermediate",
+      "source_type": "SBA gap closure | manually curated from local official study guide",
+      "safe_for_examiner": false,
+      "options": {
+        "A": "Un Fino pálido con masa de pan.",
+        "B": "Un Oloroso de color oscuro, cuerpo pleno y aromas de nuez, cuero, especias y toffee.",
+        "C": "Un vino de fruta floral primaria sin evolución.",
+        "D": "Un espumoso de alta acidez."
+      },
+      "correct_answer_letter": "B",
+      "correct_answer_text": "Un Oloroso de color oscuro, cuerpo pleno y aromas de nuez, cuero, especias y toffee.",
+      "source_support": {
+        "source_ids": [
+          "8-1_43_sherry"
+        ],
+        "source_files": [
+          "knowledge/official-wset/study-guide/wset_markdown/seccion_8_section_5_fortified_wines_of_the_world/8-1_43_sherry.md"
+        ],
+        "support_rationale": "Las fuentes locales sustentan el mecanismo, el resultado de estilo y el contraste diagnóstico evaluado."
+      },
+      "enrichment": {
+        "causal_chain_candidate": {
+          "candidate_id": "CC_CAND_SHERRY_OLOROSO_STYLE",
+          "cause": "El vino fortificado a 17% madura con aire en la bota.",
+          "mechanism": "La oxidación prolongada transforma color y compuestos aromáticos.",
+          "effect": "Aumentan riqueza, concentración y carácter terciario oxidativo."
+        },
+        "feedback_profile": {
+          "correct_rationale": "El vino fortificado a 17% madura con aire en la bota. La oxidación prolongada transforma color y compuestos aromáticos. Por ello, aumentan riqueza, concentración y carácter terciario oxidativo.",
+          "distractor_rationales": {
+            "A": "No explica el mecanismo clave: La oxidación prolongada transforma color y compuestos aromáticos.",
+            "B": "Es la relación causal correcta.",
+            "C": "No explica el mecanismo clave: La oxidación prolongada transforma color y compuestos aromáticos.",
+            "D": "No explica el mecanismo clave: La oxidación prolongada transforma color y compuestos aromáticos."
+          },
+          "remediation_recommendation": "Reconstruya la cadena de sherry oloroso style como causa, mecanismo y efecto."
+        },
+        "micro_drill_candidate": {
+          "prompt": "Micro-drill: ¿qué efecto sigue a este mecanismo: La oxidación prolongada transforma color y compuestos aromáticos.?",
+          "answer": "Aumentan riqueza, concentración y carácter terciario oxidativo."
+        },
+        "misconception_linkage_candidate": {
+          "misconception_id": "MC_OXIDATIVE_VS_BIOLOGICAL_01",
+          "target_error": "Confundir Oloroso con un vino biológico."
+        }
+      },
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "official_wset_question": false,
+        "training_item_only": true,
+        "uses_llm": false,
+        "uses_api": false,
+        "uses_embeddings": false,
+        "uses_vector_db": false,
+        "cloud_services_active": false
+      }
+    },
+    {
+      "question_id": "923",
+      "question_text": "Si un vino criado bajo flor madura en el ambiente costero fresco y húmedo de Sanlúcar, ¿qué resultado es más probable frente a un Fino interior?",
+      "question_type": "theory",
+      "expected_topics": [
+        "RA4",
+        "sherry_manzanilla"
+      ],
+      "expected_causal_links": [
+        "Sanlúcar ofrece condiciones frescas y húmedas favorables a la flor. -> La capa puede mantenerse gruesa y activa durante más tiempo. -> Manzanilla intensifica el carácter biológico y la frescura."
+      ],
+      "expected_keywords": [
+        "Sherry",
+        "Manzanilla",
+        "Sanlúcar",
+        "flor"
+      ],
+      "expected_reasoning_type": "cause_effect",
+      "difficulty": "distinction",
+      "source_type": "SBA gap closure | manually curated from local official study guide",
+      "safe_for_examiner": false,
+      "options": {
+        "A": "Una crianza exclusivamente oxidativa por la humedad.",
+        "B": "Mayor color por desaparición inmediata de la flor.",
+        "C": "Una flor más constante y un perfil especialmente fresco, tangy y salino.",
+        "D": "Un vino dulce por concentración costera."
+      },
+      "correct_answer_letter": "C",
+      "correct_answer_text": "Una flor más constante y un perfil especialmente fresco, tangy y salino.",
+      "source_support": {
+        "source_ids": [
+          "8-1_43_sherry"
+        ],
+        "source_files": [
+          "knowledge/official-wset/study-guide/wset_markdown/seccion_8_section_5_fortified_wines_of_the_world/8-1_43_sherry.md"
+        ],
+        "support_rationale": "Las fuentes locales sustentan el mecanismo, el resultado de estilo y el contraste diagnóstico evaluado."
+      },
+      "enrichment": {
+        "causal_chain_candidate": {
+          "candidate_id": "CC_CAND_SHERRY_MANZANILLA",
+          "cause": "Sanlúcar ofrece condiciones frescas y húmedas favorables a la flor.",
+          "mechanism": "La capa puede mantenerse gruesa y activa durante más tiempo.",
+          "effect": "Manzanilla intensifica el carácter biológico y la frescura."
+        },
+        "feedback_profile": {
+          "correct_rationale": "Sanlúcar ofrece condiciones frescas y húmedas favorables a la flor. La capa puede mantenerse gruesa y activa durante más tiempo. Por ello, manzanilla intensifica el carácter biológico y la frescura.",
+          "distractor_rationales": {
+            "A": "No explica el mecanismo clave: La capa puede mantenerse gruesa y activa durante más tiempo.",
+            "B": "No explica el mecanismo clave: La capa puede mantenerse gruesa y activa durante más tiempo.",
+            "C": "Es la relación causal correcta.",
+            "D": "No explica el mecanismo clave: La capa puede mantenerse gruesa y activa durante más tiempo."
+          },
+          "remediation_recommendation": "Reconstruya la cadena de sherry manzanilla como causa, mecanismo y efecto."
+        },
+        "micro_drill_candidate": {
+          "prompt": "Micro-drill: ¿qué efecto sigue a este mecanismo: La capa puede mantenerse gruesa y activa durante más tiempo.?",
+          "answer": "Manzanilla intensifica el carácter biológico y la frescura."
+        },
+        "misconception_linkage_candidate": {
+          "misconception_id": "MC_SHERRY_FLOR_01",
+          "target_error": "Creer que costa y humedad impiden la flor."
+        }
+      },
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "official_wset_question": false,
+        "training_item_only": true,
+        "uses_llm": false,
+        "uses_api": false,
+        "uses_embeddings": false,
+        "uses_vector_db": false,
+        "cloud_services_active": false
+      }
+    },
+    {
+      "question_id": "924",
+      "question_text": "Si las uvas PX se secan al sol antes de fermentar, ¿qué resultado explica mejor el estilo posterior?",
+      "question_type": "theory",
+      "expected_topics": [
+        "RA4",
+        "sherry_px_drying"
+      ],
+      "expected_causal_links": [
+        "Las bayas de PX pierden agua bajo el sol. -> El jugo concentrado crea fuerte presión osmótica para la levadura. -> El vino conserva enorme azúcar residual y carácter de pasas."
+      ],
+      "expected_keywords": [
+        "Sherry",
+        "PX",
+        "secado al sol",
+        "azúcar residual"
+      ],
+      "expected_reasoning_type": "cause_effect",
+      "difficulty": "intermediate",
+      "source_type": "SBA gap closure | manually curated from local official study guide",
+      "safe_for_examiner": false,
+      "options": {
+        "A": "El secado reduce el azúcar y facilita fermentar hasta sequedad.",
+        "B": "Las uvas forman flor antes del prensado.",
+        "C": "El vino adquiere tanino alto de piel tinta.",
+        "D": "El agua se evapora, el mosto se concentra y la fermentación alcanza poco alcohol antes de fortificar."
+      },
+      "correct_answer_letter": "D",
+      "correct_answer_text": "El agua se evapora, el mosto se concentra y la fermentación alcanza poco alcohol antes de fortificar.",
+      "source_support": {
+        "source_ids": [
+          "8-1_43_sherry"
+        ],
+        "source_files": [
+          "knowledge/official-wset/study-guide/wset_markdown/seccion_8_section_5_fortified_wines_of_the_world/8-1_43_sherry.md"
+        ],
+        "support_rationale": "Las fuentes locales sustentan el mecanismo, el resultado de estilo y el contraste diagnóstico evaluado."
+      },
+      "enrichment": {
+        "causal_chain_candidate": {
+          "candidate_id": "CC_CAND_SHERRY_PX_DRYING",
+          "cause": "Las bayas de PX pierden agua bajo el sol.",
+          "mechanism": "El jugo concentrado crea fuerte presión osmótica para la levadura.",
+          "effect": "El vino conserva enorme azúcar residual y carácter de pasas."
+        },
+        "feedback_profile": {
+          "correct_rationale": "Las bayas de PX pierden agua bajo el sol. El jugo concentrado crea fuerte presión osmótica para la levadura. Por ello, el vino conserva enorme azúcar residual y carácter de pasas.",
+          "distractor_rationales": {
+            "A": "No explica el mecanismo clave: El jugo concentrado crea fuerte presión osmótica para la levadura.",
+            "B": "No explica el mecanismo clave: El jugo concentrado crea fuerte presión osmótica para la levadura.",
+            "C": "No explica el mecanismo clave: El jugo concentrado crea fuerte presión osmótica para la levadura.",
+            "D": "Es la relación causal correcta."
+          },
+          "remediation_recommendation": "Reconstruya la cadena de sherry px drying como causa, mecanismo y efecto."
+        },
+        "micro_drill_candidate": {
+          "prompt": "Micro-drill: ¿qué efecto sigue a este mecanismo: El jugo concentrado crea fuerte presión osmótica para la levadura.?",
+          "answer": "El vino conserva enorme azúcar residual y carácter de pasas."
+        },
+        "misconception_linkage_candidate": {
+          "misconception_id": "MC_SWEET_CONCENTRATION_01",
+          "target_error": "Confundir secado con fermentación completa."
+        }
+      },
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "official_wset_question": false,
+        "training_item_only": true,
+        "uses_llm": false,
+        "uses_api": false,
+        "uses_embeddings": false,
+        "uses_vector_db": false,
+        "cloud_services_active": false
+      }
+    },
+    {
+      "question_id": "925",
+      "question_text": "Si un Fino se embotella en rama con mínima clarificación y filtración, ¿qué consecuencia de estilo es más probable?",
+      "question_type": "theory",
+      "expected_topics": [
+        "RA4",
+        "sherry_en_rama"
+      ],
+      "expected_causal_links": [
+        "El productor reduce intervenciones que retirarían parte del material del vino. -> Se conserva más carácter del vino de bota junto con mayor sensibilidad. -> El estilo puede ser más expresivo y menos estandarizado."
+      ],
+      "expected_keywords": [
+        "Sherry",
+        "en rama",
+        "filtración",
+        "intensidad"
+      ],
+      "expected_reasoning_type": "cause_effect",
+      "difficulty": "intermediate",
+      "source_type": "SBA gap closure | manually curated from local official study guide",
+      "safe_for_examiner": false,
+      "options": {
+        "A": "Puede conservar mayor intensidad y textura, pero exige manejo cuidadoso de estabilidad y frescura.",
+        "B": "Se vuelve oxidativo antes de salir de bodega por definición.",
+        "C": "Pierde todo carácter de flor.",
+        "D": "No puede contener partículas ni variación."
+      },
+      "correct_answer_letter": "A",
+      "correct_answer_text": "Puede conservar mayor intensidad y textura, pero exige manejo cuidadoso de estabilidad y frescura.",
+      "source_support": {
+        "source_ids": [
+          "8-1_43_sherry"
+        ],
+        "source_files": [
+          "knowledge/official-wset/study-guide/wset_markdown/seccion_8_section_5_fortified_wines_of_the_world/8-1_43_sherry.md"
+        ],
+        "support_rationale": "Las fuentes locales sustentan el mecanismo, el resultado de estilo y el contraste diagnóstico evaluado."
+      },
+      "enrichment": {
+        "causal_chain_candidate": {
+          "candidate_id": "CC_CAND_SHERRY_EN_RAMA",
+          "cause": "El productor reduce intervenciones que retirarían parte del material del vino.",
+          "mechanism": "Se conserva más carácter del vino de bota junto con mayor sensibilidad.",
+          "effect": "El estilo puede ser más expresivo y menos estandarizado."
+        },
+        "feedback_profile": {
+          "correct_rationale": "El productor reduce intervenciones que retirarían parte del material del vino. Se conserva más carácter del vino de bota junto con mayor sensibilidad. Por ello, el estilo puede ser más expresivo y menos estandarizado.",
+          "distractor_rationales": {
+            "A": "Es la relación causal correcta.",
+            "B": "No explica el mecanismo clave: Se conserva más carácter del vino de bota junto con mayor sensibilidad.",
+            "C": "No explica el mecanismo clave: Se conserva más carácter del vino de bota junto con mayor sensibilidad.",
+            "D": "No explica el mecanismo clave: Se conserva más carácter del vino de bota junto con mayor sensibilidad."
+          },
+          "remediation_recommendation": "Reconstruya la cadena de sherry en rama como causa, mecanismo y efecto."
+        },
+        "micro_drill_candidate": {
+          "prompt": "Micro-drill: ¿qué efecto sigue a este mecanismo: Se conserva más carácter del vino de bota junto con mayor sensibilidad.?",
+          "answer": "El estilo puede ser más expresivo y menos estandarizado."
+        },
+        "misconception_linkage_candidate": {
+          "misconception_id": "MC_SHERRY_FLOR_01",
+          "target_error": "Suponer que más filtración siempre mejora un Fino."
+        }
+      },
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "official_wset_question": false,
+        "training_item_only": true,
+        "uses_llm": false,
+        "uses_api": false,
+        "uses_embeddings": false,
+        "uses_vector_db": false,
+        "cloud_services_active": false
+      }
+    },
+    {
+      "question_id": "926",
+      "question_text": "Si una botella de Fino permanece abierta o guardada demasiado tiempo, ¿qué consecuencia es más probable?",
+      "question_type": "theory",
+      "expected_topics": [
+        "RA4",
+        "sherry_fino_freshness"
+      ],
+      "expected_causal_links": [
+        "El Fino ya no está protegido por una cultura activa de flor en la botella. -> El oxígeno del cierre abierto o el tiempo degrada sus aromas delicados. -> Disminuyen frescura, almendra y notas de masa."
+      ],
+      "expected_keywords": [
+        "Sherry",
+        "Fino",
+        "frescura",
+        "botella abierta"
+      ],
+      "expected_reasoning_type": "cause_effect",
+      "difficulty": "distinction",
+      "source_type": "SBA gap closure | manually curated from local official study guide",
+      "safe_for_examiner": false,
+      "options": {
+        "A": "Mejora indefinidamente porque la flor sigue viva en botella.",
+        "B": "Pierde frescura biológica y desarrolla oxidación no deseada.",
+        "C": "Aumenta su azúcar residual.",
+        "D": "Se convierte en Vintage Port."
+      },
+      "correct_answer_letter": "B",
+      "correct_answer_text": "Pierde frescura biológica y desarrolla oxidación no deseada.",
+      "source_support": {
+        "source_ids": [
+          "8-1_43_sherry"
+        ],
+        "source_files": [
+          "knowledge/official-wset/study-guide/wset_markdown/seccion_8_section_5_fortified_wines_of_the_world/8-1_43_sherry.md"
+        ],
+        "support_rationale": "Las fuentes locales sustentan el mecanismo, el resultado de estilo y el contraste diagnóstico evaluado."
+      },
+      "enrichment": {
+        "causal_chain_candidate": {
+          "candidate_id": "CC_CAND_SHERRY_FINO_FRESHNESS",
+          "cause": "El Fino ya no está protegido por una cultura activa de flor en la botella.",
+          "mechanism": "El oxígeno del cierre abierto o el tiempo degrada sus aromas delicados.",
+          "effect": "Disminuyen frescura, almendra y notas de masa."
+        },
+        "feedback_profile": {
+          "correct_rationale": "El Fino ya no está protegido por una cultura activa de flor en la botella. El oxígeno del cierre abierto o el tiempo degrada sus aromas delicados. Por ello, disminuyen frescura, almendra y notas de masa.",
+          "distractor_rationales": {
+            "A": "No explica el mecanismo clave: El oxígeno del cierre abierto o el tiempo degrada sus aromas delicados.",
+            "B": "Es la relación causal correcta.",
+            "C": "No explica el mecanismo clave: El oxígeno del cierre abierto o el tiempo degrada sus aromas delicados.",
+            "D": "No explica el mecanismo clave: El oxígeno del cierre abierto o el tiempo degrada sus aromas delicados."
+          },
+          "remediation_recommendation": "Reconstruya la cadena de sherry fino freshness como causa, mecanismo y efecto."
+        },
+        "micro_drill_candidate": {
+          "prompt": "Micro-drill: ¿qué efecto sigue a este mecanismo: El oxígeno del cierre abierto o el tiempo degrada sus aromas delicados.?",
+          "answer": "Disminuyen frescura, almendra y notas de masa."
+        },
+        "misconception_linkage_candidate": {
+          "misconception_id": "MC_OXIDATIVE_VS_BIOLOGICAL_01",
+          "target_error": "Creer que Fino mejora con larga guarda en botella."
+        }
+      },
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "official_wset_question": false,
+        "training_item_only": true,
+        "uses_llm": false,
+        "uses_api": false,
+        "uses_embeddings": false,
+        "uses_vector_db": false,
+        "cloud_services_active": false
+      }
+    },
+    {
+      "question_id": "927",
+      "question_text": "Si un Madeira madura con calor y oxígeno mediante estufagem, ¿qué resultado es más probable?",
+      "question_type": "theory",
+      "expected_topics": [
+        "RA4",
+        "madeira_heat_ageing"
+      ],
+      "expected_causal_links": [
+        "El vino fortificado se expone deliberadamente a calor y oxígeno. -> Se aceleran reacciones oxidativas y de calentamiento. -> Aparece un perfil desarrollado y resistente a oxidación posterior."
+      ],
+      "expected_keywords": [
+        "Madeira",
+        "estufagem",
+        "calor",
+        "oxidación"
+      ],
+      "expected_reasoning_type": "cause_effect",
+      "difficulty": "intermediate",
+      "source_type": "SBA gap closure | manually curated from local official study guide",
+      "safe_for_examiner": false,
+      "options": {
+        "A": "Conserva solo fruta primaria delicada.",
+        "B": "Forma flor y permanece pálido.",
+        "C": "Desarrolla rápidamente notas de caramelo, frutos secos y tostado con gran estabilidad posterior.",
+        "D": "Pierde toda acidez por efecto del calor."
+      },
+      "correct_answer_letter": "C",
+      "correct_answer_text": "Desarrolla rápidamente notas de caramelo, frutos secos y tostado con gran estabilidad posterior.",
+      "source_support": {
+        "source_ids": [
+          "HC_MADEIRA_HEAT_OXIDATIVE_AGEING",
+          "5-4_7_common_elements_in_winemaking_and_maturation"
+        ],
+        "source_files": [
+          "knowledge/knowledge-map/causal-chains/HC_MADEIRA_HEAT_OXIDATIVE_AGEING.json",
+          "knowledge/official-wset/study-guide/wset_markdown/seccion_5_section_2_factors_affecting_the_style_quality_and_price_of_w/5-4_7_common_elements_in_winemaking_and_maturation.md"
+        ],
+        "support_rationale": "Las fuentes locales sustentan el mecanismo, el resultado de estilo y el contraste diagnóstico evaluado."
+      },
+      "enrichment": {
+        "causal_chain_candidate": {
+          "candidate_id": "CC_CAND_MADEIRA_HEAT_AGEING",
+          "cause": "El vino fortificado se expone deliberadamente a calor y oxígeno.",
+          "mechanism": "Se aceleran reacciones oxidativas y de calentamiento.",
+          "effect": "Aparece un perfil desarrollado y resistente a oxidación posterior."
+        },
+        "feedback_profile": {
+          "correct_rationale": "El vino fortificado se expone deliberadamente a calor y oxígeno. Se aceleran reacciones oxidativas y de calentamiento. Por ello, aparece un perfil desarrollado y resistente a oxidación posterior.",
+          "distractor_rationales": {
+            "A": "No explica el mecanismo clave: Se aceleran reacciones oxidativas y de calentamiento.",
+            "B": "No explica el mecanismo clave: Se aceleran reacciones oxidativas y de calentamiento.",
+            "C": "Es la relación causal correcta.",
+            "D": "No explica el mecanismo clave: Se aceleran reacciones oxidativas y de calentamiento."
+          },
+          "remediation_recommendation": "Reconstruya la cadena de madeira heat ageing como causa, mecanismo y efecto."
+        },
+        "micro_drill_candidate": {
+          "prompt": "Micro-drill: ¿qué efecto sigue a este mecanismo: Se aceleran reacciones oxidativas y de calentamiento.?",
+          "answer": "Aparece un perfil desarrollado y resistente a oxidación posterior."
+        },
+        "misconception_linkage_candidate": {
+          "misconception_id": "MC_MADEIRA_OXIDATION_01",
+          "target_error": "Tratar el calor como defecto accidental en todo Madeira."
+        }
+      },
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "official_wset_question": false,
+        "training_item_only": true,
+        "uses_llm": false,
+        "uses_api": false,
+        "uses_embeddings": false,
+        "uses_vector_db": false,
+        "cloud_services_active": false
+      }
+    },
+    {
+      "question_id": "928",
+      "question_text": "Al comparar canteiro con estufagem, ¿qué factor explica mejor que canteiro pueda dar un estilo más fino y complejo?",
+      "question_type": "theory",
+      "expected_topics": [
+        "RA4",
+        "madeira_canteiro"
+      ],
+      "expected_causal_links": [
+        "El vino en canteiro envejece en madera en zonas cálidas sin calentamiento rápido de tanque. -> La energía térmica actúa de forma más suave durante años. -> La complejidad se desarrolla con mayor lentitud e integración."
+      ],
+      "expected_keywords": [
+        "Madeira",
+        "canteiro",
+        "estufagem",
+        "complejidad"
+      ],
+      "expected_reasoning_type": "cause_effect",
+      "difficulty": "intermediate",
+      "source_type": "SBA gap closure | manually curated from local official study guide",
+      "safe_for_examiner": false,
+      "options": {
+        "A": "Canteiro elimina por completo el oxígeno.",
+        "B": "Estufagem siempre usa flor.",
+        "C": "Canteiro congela el vino antes de madurarlo.",
+        "D": "El calentamiento natural es más lento y prolongado, permitiendo una evolución gradual."
+      },
+      "correct_answer_letter": "D",
+      "correct_answer_text": "El calentamiento natural es más lento y prolongado, permitiendo una evolución gradual.",
+      "source_support": {
+        "source_ids": [
+          "HC_MADEIRA_HEAT_OXIDATIVE_AGEING"
+        ],
+        "source_files": [
+          "knowledge/knowledge-map/causal-chains/HC_MADEIRA_HEAT_OXIDATIVE_AGEING.json"
+        ],
+        "support_rationale": "Las fuentes locales sustentan el mecanismo, el resultado de estilo y el contraste diagnóstico evaluado."
+      },
+      "enrichment": {
+        "causal_chain_candidate": {
+          "candidate_id": "CC_CAND_MADEIRA_CANTEIRO",
+          "cause": "El vino en canteiro envejece en madera en zonas cálidas sin calentamiento rápido de tanque.",
+          "mechanism": "La energía térmica actúa de forma más suave durante años.",
+          "effect": "La complejidad se desarrolla con mayor lentitud e integración."
+        },
+        "feedback_profile": {
+          "correct_rationale": "El vino en canteiro envejece en madera en zonas cálidas sin calentamiento rápido de tanque. La energía térmica actúa de forma más suave durante años. Por ello, la complejidad se desarrolla con mayor lentitud e integración.",
+          "distractor_rationales": {
+            "A": "No explica el mecanismo clave: La energía térmica actúa de forma más suave durante años.",
+            "B": "No explica el mecanismo clave: La energía térmica actúa de forma más suave durante años.",
+            "C": "No explica el mecanismo clave: La energía térmica actúa de forma más suave durante años.",
+            "D": "Es la relación causal correcta."
+          },
+          "remediation_recommendation": "Reconstruya la cadena de madeira canteiro como causa, mecanismo y efecto."
+        },
+        "micro_drill_candidate": {
+          "prompt": "Micro-drill: ¿qué efecto sigue a este mecanismo: La energía térmica actúa de forma más suave durante años.?",
+          "answer": "La complejidad se desarrolla con mayor lentitud e integración."
+        },
+        "misconception_linkage_candidate": {
+          "misconception_id": "MC_MADEIRA_OXIDATION_01",
+          "target_error": "Suponer que ambos métodos de calentamiento producen idéntico resultado."
+        }
+      },
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "official_wset_question": false,
+        "training_item_only": true,
+        "uses_llm": false,
+        "uses_api": false,
+        "uses_embeddings": false,
+        "uses_vector_db": false,
+        "cloud_services_active": false
+      }
+    },
+    {
+      "question_id": "929",
+      "question_text": "Si un Madeira dulce conserva acidez muy alta después de la maduración con calor, ¿qué consecuencia sensorial es más probable?",
+      "question_type": "theory",
+      "expected_topics": [
+        "RA4",
+        "madeira_acidity"
+      ],
+      "expected_causal_links": [
+        "El vino combina azúcar residual con una base ácida marcada. -> La acidez contrasta la riqueza y sostiene el final. -> Incluso estilos dulces pueden resultar tensos y longevos."
+      ],
+      "expected_keywords": [
+        "Madeira",
+        "acidez",
+        "dulzor",
+        "equilibrio"
+      ],
+      "expected_reasoning_type": "cause_effect",
+      "difficulty": "distinction",
+      "source_type": "SBA gap closure | manually curated from local official study guide",
+      "safe_for_examiner": false,
+      "options": {
+        "A": "El dulzor queda equilibrado y el vino mantiene frescura pese a su carácter desarrollado.",
+        "B": "La acidez alta impide cualquier percepción de dulzor.",
+        "C": "El calor convierte la acidez en tanino.",
+        "D": "El vino debe percibirse ligero y neutro."
+      },
+      "correct_answer_letter": "A",
+      "correct_answer_text": "El dulzor queda equilibrado y el vino mantiene frescura pese a su carácter desarrollado.",
+      "source_support": {
+        "source_ids": [
+          "HC_MADEIRA_HEAT_OXIDATIVE_AGEING"
+        ],
+        "source_files": [
+          "knowledge/knowledge-map/causal-chains/HC_MADEIRA_HEAT_OXIDATIVE_AGEING.json"
+        ],
+        "support_rationale": "Las fuentes locales sustentan el mecanismo, el resultado de estilo y el contraste diagnóstico evaluado."
+      },
+      "enrichment": {
+        "causal_chain_candidate": {
+          "candidate_id": "CC_CAND_MADEIRA_ACIDITY",
+          "cause": "El vino combina azúcar residual con una base ácida marcada.",
+          "mechanism": "La acidez contrasta la riqueza y sostiene el final.",
+          "effect": "Incluso estilos dulces pueden resultar tensos y longevos."
+        },
+        "feedback_profile": {
+          "correct_rationale": "El vino combina azúcar residual con una base ácida marcada. La acidez contrasta la riqueza y sostiene el final. Por ello, incluso estilos dulces pueden resultar tensos y longevos.",
+          "distractor_rationales": {
+            "A": "Es la relación causal correcta.",
+            "B": "No explica el mecanismo clave: La acidez contrasta la riqueza y sostiene el final.",
+            "C": "No explica el mecanismo clave: La acidez contrasta la riqueza y sostiene el final.",
+            "D": "No explica el mecanismo clave: La acidez contrasta la riqueza y sostiene el final."
+          },
+          "remediation_recommendation": "Reconstruya la cadena de madeira acidity como causa, mecanismo y efecto."
+        },
+        "micro_drill_candidate": {
+          "prompt": "Micro-drill: ¿qué efecto sigue a este mecanismo: La acidez contrasta la riqueza y sostiene el final.?",
+          "answer": "Incluso estilos dulces pueden resultar tensos y longevos."
+        },
+        "misconception_linkage_candidate": {
+          "misconception_id": "MC_MADEIRA_SWEETNESS_02",
+          "target_error": "Creer que Madeira dulce es necesariamente pesado."
+        }
+      },
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "official_wset_question": false,
+        "training_item_only": true,
+        "uses_llm": false,
+        "uses_api": false,
+        "uses_embeddings": false,
+        "uses_vector_db": false,
+        "cloud_services_active": false
+      }
+    },
+    {
+      "question_id": "930",
+      "question_text": "Dos Madeiras parten del mismo mosto; uno se fortifica antes durante la fermentación. ¿Qué consecuencia es más probable?",
+      "question_type": "theory",
+      "expected_topics": [
+        "RA4",
+        "madeira_fortification_timing"
+      ],
+      "expected_causal_links": [
+        "La levadura consume azúcar hasta que el alcohol añadido detiene su actividad. -> Una interrupción temprana deja más azúcar sin fermentar. -> El productor puede definir estilos de distinto dulzor."
+      ],
+      "expected_keywords": [
+        "Madeira",
+        "fortificación",
+        "dulzor",
+        "fermentación"
+      ],
+      "expected_reasoning_type": "cause_effect",
+      "difficulty": "intermediate",
+      "source_type": "SBA gap closure | manually curated from local official study guide",
+      "safe_for_examiner": false,
+      "options": {
+        "A": "El fortificado antes será automáticamente más oxidativo.",
+        "B": "El fortificado antes conservará más azúcar residual.",
+        "C": "Ambos quedarán igual de secos.",
+        "D": "El momento solo cambia el color, no el dulzor."
+      },
+      "correct_answer_letter": "B",
+      "correct_answer_text": "El fortificado antes conservará más azúcar residual.",
+      "source_support": {
+        "source_ids": [
+          "HC_MADEIRA_HEAT_OXIDATIVE_AGEING"
+        ],
+        "source_files": [
+          "knowledge/knowledge-map/causal-chains/HC_MADEIRA_HEAT_OXIDATIVE_AGEING.json"
+        ],
+        "support_rationale": "Las fuentes locales sustentan el mecanismo, el resultado de estilo y el contraste diagnóstico evaluado."
+      },
+      "enrichment": {
+        "causal_chain_candidate": {
+          "candidate_id": "CC_CAND_MADEIRA_FORTIFICATION_TIMING",
+          "cause": "La levadura consume azúcar hasta que el alcohol añadido detiene su actividad.",
+          "mechanism": "Una interrupción temprana deja más azúcar sin fermentar.",
+          "effect": "El productor puede definir estilos de distinto dulzor."
+        },
+        "feedback_profile": {
+          "correct_rationale": "La levadura consume azúcar hasta que el alcohol añadido detiene su actividad. Una interrupción temprana deja más azúcar sin fermentar. Por ello, el productor puede definir estilos de distinto dulzor.",
+          "distractor_rationales": {
+            "A": "No explica el mecanismo clave: Una interrupción temprana deja más azúcar sin fermentar.",
+            "B": "Es la relación causal correcta.",
+            "C": "No explica el mecanismo clave: Una interrupción temprana deja más azúcar sin fermentar.",
+            "D": "No explica el mecanismo clave: Una interrupción temprana deja más azúcar sin fermentar."
+          },
+          "remediation_recommendation": "Reconstruya la cadena de madeira fortification timing como causa, mecanismo y efecto."
+        },
+        "micro_drill_candidate": {
+          "prompt": "Micro-drill: ¿qué efecto sigue a este mecanismo: Una interrupción temprana deja más azúcar sin fermentar.?",
+          "answer": "El productor puede definir estilos de distinto dulzor."
+        },
+        "misconception_linkage_candidate": {
+          "misconception_id": "MC_FORTIFICATION_TIMING_01",
+          "target_error": "Ignorar el vínculo entre fortificación y dulzor de Madeira."
+        }
+      },
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "official_wset_question": false,
+        "training_item_only": true,
+        "uses_llm": false,
+        "uses_api": false,
+        "uses_embeddings": false,
+        "uses_vector_db": false,
+        "cloud_services_active": false
+      }
+    },
+    {
+      "question_id": "931",
+      "question_text": "Si una botella abierta de Madeira conserva bien su estilo durante más tiempo que muchos vinos tranquilos, ¿qué factor explica mejor esa resistencia?",
+      "question_type": "theory",
+      "expected_topics": [
+        "RA4",
+        "madeira_oxidative_stability"
+      ],
+      "expected_causal_links": [
+        "El vino se estabiliza mediante alcohol elevado y maduración oxidativa térmica. -> Muchos cambios que dañarían un vino delicado ya forman parte de su estilo. -> Tolera mejor una exposición posterior moderada al oxígeno."
+      ],
+      "expected_keywords": [
+        "Madeira",
+        "estabilidad",
+        "calor",
+        "oxígeno"
+      ],
+      "expected_reasoning_type": "cause_effect",
+      "difficulty": "intermediate",
+      "source_type": "SBA gap closure | manually curated from local official study guide",
+      "safe_for_examiner": false,
+      "options": {
+        "A": "No contiene agua que pueda oxidarse.",
+        "B": "La flor sigue protegiéndola en botella.",
+        "C": "Ya ha sido expuesta a calor, oxígeno y fortificación durante su elaboración.",
+        "D": "El azúcar impide toda reacción química."
+      },
+      "correct_answer_letter": "C",
+      "correct_answer_text": "Ya ha sido expuesta a calor, oxígeno y fortificación durante su elaboración.",
+      "source_support": {
+        "source_ids": [
+          "HC_MADEIRA_HEAT_OXIDATIVE_AGEING"
+        ],
+        "source_files": [
+          "knowledge/knowledge-map/causal-chains/HC_MADEIRA_HEAT_OXIDATIVE_AGEING.json"
+        ],
+        "support_rationale": "Las fuentes locales sustentan el mecanismo, el resultado de estilo y el contraste diagnóstico evaluado."
+      },
+      "enrichment": {
+        "causal_chain_candidate": {
+          "candidate_id": "CC_CAND_MADEIRA_OXIDATIVE_STABILITY",
+          "cause": "El vino se estabiliza mediante alcohol elevado y maduración oxidativa térmica.",
+          "mechanism": "Muchos cambios que dañarían un vino delicado ya forman parte de su estilo.",
+          "effect": "Tolera mejor una exposición posterior moderada al oxígeno."
+        },
+        "feedback_profile": {
+          "correct_rationale": "El vino se estabiliza mediante alcohol elevado y maduración oxidativa térmica. Muchos cambios que dañarían un vino delicado ya forman parte de su estilo. Por ello, tolera mejor una exposición posterior moderada al oxígeno.",
+          "distractor_rationales": {
+            "A": "No explica el mecanismo clave: Muchos cambios que dañarían un vino delicado ya forman parte de su estilo.",
+            "B": "No explica el mecanismo clave: Muchos cambios que dañarían un vino delicado ya forman parte de su estilo.",
+            "C": "Es la relación causal correcta.",
+            "D": "No explica el mecanismo clave: Muchos cambios que dañarían un vino delicado ya forman parte de su estilo."
+          },
+          "remediation_recommendation": "Reconstruya la cadena de madeira oxidative stability como causa, mecanismo y efecto."
+        },
+        "micro_drill_candidate": {
+          "prompt": "Micro-drill: ¿qué efecto sigue a este mecanismo: Muchos cambios que dañarían un vino delicado ya forman parte de su estilo.?",
+          "answer": "Tolera mejor una exposición posterior moderada al oxígeno."
+        },
+        "misconception_linkage_candidate": {
+          "misconception_id": "MC_MADEIRA_OXIDATION_01",
+          "target_error": "Creer que Madeira es estable solo por el azúcar."
+        }
+      },
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "official_wset_question": false,
+        "training_item_only": true,
+        "uses_llm": false,
+        "uses_api": false,
+        "uses_embeddings": false,
+        "uses_vector_db": false,
+        "cloud_services_active": false
+      }
+    },
+    {
+      "question_id": "932",
+      "question_text": "Si un Madeira envejece durante años con calor y oxígeno, ¿qué resultado visual y aromático es más probable?",
+      "question_type": "theory",
+      "expected_topics": [
+        "RA4",
+        "madeira_colour_aroma"
+      ],
+      "expected_causal_links": [
+        "Pigmentos y aromas reaccionan durante maduración oxidativa caliente. -> El tiempo y la temperatura transforman compuestos primarios. -> El vino adquiere color y complejidad desarrollados."
+      ],
+      "expected_keywords": [
+        "Madeira",
+        "color",
+        "caramelo",
+        "frutos secos"
+      ],
+      "expected_reasoning_type": "cause_effect",
+      "difficulty": "distinction",
+      "source_type": "SBA gap closure | manually curated from local official study guide",
+      "safe_for_examiner": false,
+      "options": {
+        "A": "Color más pálido y fruta verde primaria.",
+        "B": "Burbuja fina y autólisis.",
+        "C": "Aromas herbáceos de fermentación fría.",
+        "D": "Color más profundo con frutos secos, caramelo, piel de cítricos y especias."
+      },
+      "correct_answer_letter": "D",
+      "correct_answer_text": "Color más profundo con frutos secos, caramelo, piel de cítricos y especias.",
+      "source_support": {
+        "source_ids": [
+          "HC_MADEIRA_HEAT_OXIDATIVE_AGEING"
+        ],
+        "source_files": [
+          "knowledge/knowledge-map/causal-chains/HC_MADEIRA_HEAT_OXIDATIVE_AGEING.json"
+        ],
+        "support_rationale": "Las fuentes locales sustentan el mecanismo, el resultado de estilo y el contraste diagnóstico evaluado."
+      },
+      "enrichment": {
+        "causal_chain_candidate": {
+          "candidate_id": "CC_CAND_MADEIRA_COLOUR_AROMA",
+          "cause": "Pigmentos y aromas reaccionan durante maduración oxidativa caliente.",
+          "mechanism": "El tiempo y la temperatura transforman compuestos primarios.",
+          "effect": "El vino adquiere color y complejidad desarrollados."
+        },
+        "feedback_profile": {
+          "correct_rationale": "Pigmentos y aromas reaccionan durante maduración oxidativa caliente. El tiempo y la temperatura transforman compuestos primarios. Por ello, el vino adquiere color y complejidad desarrollados.",
+          "distractor_rationales": {
+            "A": "No explica el mecanismo clave: El tiempo y la temperatura transforman compuestos primarios.",
+            "B": "No explica el mecanismo clave: El tiempo y la temperatura transforman compuestos primarios.",
+            "C": "No explica el mecanismo clave: El tiempo y la temperatura transforman compuestos primarios.",
+            "D": "Es la relación causal correcta."
+          },
+          "remediation_recommendation": "Reconstruya la cadena de madeira colour aroma como causa, mecanismo y efecto."
+        },
+        "micro_drill_candidate": {
+          "prompt": "Micro-drill: ¿qué efecto sigue a este mecanismo: El tiempo y la temperatura transforman compuestos primarios.?",
+          "answer": "El vino adquiere color y complejidad desarrollados."
+        },
+        "misconception_linkage_candidate": {
+          "misconception_id": "MC_MADEIRA_OXIDATION_01",
+          "target_error": "Esperar que Madeira conserve un perfil juvenil."
+        }
+      },
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "official_wset_question": false,
+        "training_item_only": true,
+        "uses_llm": false,
+        "uses_api": false,
+        "uses_embeddings": false,
+        "uses_vector_db": false,
+        "cloud_services_active": false
+      }
+    },
+    {
+      "question_id": "933",
+      "question_text": "Dos Madeiras muestran igual dulzor; uno tiene mayor acidez, longitud e integración del carácter térmico. ¿Qué factor explica mejor su mayor calidad?",
+      "question_type": "theory",
+      "expected_topics": [
+        "RA4",
+        "madeira_quality_method"
+      ],
+      "expected_causal_links": [
+        "La calidad depende de estructura, concentración, complejidad y persistencia. -> La acidez y la integración evitan que calor y azúcar dominen. -> El vino resulta más equilibrado y largo."
+      ],
+      "expected_keywords": [
+        "Madeira",
+        "calidad",
+        "equilibrio",
+        "longitud"
+      ],
+      "expected_reasoning_type": "cause_effect",
+      "difficulty": "intermediate",
+      "source_type": "SBA gap closure | manually curated from local official study guide",
+      "safe_for_examiner": false,
+      "options": {
+        "A": "El equilibrio y la complejidad integrada importan más que el dulzor aislado.",
+        "B": "El vino más dulce siempre es superior.",
+        "C": "Más calor siempre produce mayor calidad.",
+        "D": "La acidez alta es un defecto en vinos fortificados."
+      },
+      "correct_answer_letter": "A",
+      "correct_answer_text": "El equilibrio y la complejidad integrada importan más que el dulzor aislado.",
+      "source_support": {
+        "source_ids": [
+          "HC_MADEIRA_HEAT_OXIDATIVE_AGEING"
+        ],
+        "source_files": [
+          "knowledge/knowledge-map/causal-chains/HC_MADEIRA_HEAT_OXIDATIVE_AGEING.json"
+        ],
+        "support_rationale": "Las fuentes locales sustentan el mecanismo, el resultado de estilo y el contraste diagnóstico evaluado."
+      },
+      "enrichment": {
+        "causal_chain_candidate": {
+          "candidate_id": "CC_CAND_MADEIRA_QUALITY_METHOD",
+          "cause": "La calidad depende de estructura, concentración, complejidad y persistencia.",
+          "mechanism": "La acidez y la integración evitan que calor y azúcar dominen.",
+          "effect": "El vino resulta más equilibrado y largo."
+        },
+        "feedback_profile": {
+          "correct_rationale": "La calidad depende de estructura, concentración, complejidad y persistencia. La acidez y la integración evitan que calor y azúcar dominen. Por ello, el vino resulta más equilibrado y largo.",
+          "distractor_rationales": {
+            "A": "Es la relación causal correcta.",
+            "B": "No explica el mecanismo clave: La acidez y la integración evitan que calor y azúcar dominen.",
+            "C": "No explica el mecanismo clave: La acidez y la integración evitan que calor y azúcar dominen.",
+            "D": "No explica el mecanismo clave: La acidez y la integración evitan que calor y azúcar dominen."
+          },
+          "remediation_recommendation": "Reconstruya la cadena de madeira quality method como causa, mecanismo y efecto."
+        },
+        "micro_drill_candidate": {
+          "prompt": "Micro-drill: ¿qué efecto sigue a este mecanismo: La acidez y la integración evitan que calor y azúcar dominen.?",
+          "answer": "El vino resulta más equilibrado y largo."
+        },
+        "misconception_linkage_candidate": {
+          "misconception_id": "MC_MADEIRA_SWEETNESS_02",
+          "target_error": "Equiparar dulzor o calentamiento con calidad."
+        }
+      },
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "official_wset_question": false,
+        "training_item_only": true,
+        "uses_llm": false,
+        "uses_api": false,
+        "uses_embeddings": false,
+        "uses_vector_db": false,
+        "cloud_services_active": false
+      }
+    },
+    {
+      "question_id": "934",
+      "question_text": "Al comparar Madeira y Tawny Port, ¿qué factor explica mejor que ambos muestren frutos secos pero Madeira conserve una acidez más incisiva?",
+      "question_type": "theory",
+      "expected_topics": [
+        "RA4",
+        "madeira_vs_tawny"
+      ],
+      "expected_causal_links": [
+        "Ambos estilos evolucionan con oxígeno, pero parten de matrices distintas. -> El origen y el proceso térmico de Madeira mantienen una firma ácida particular. -> Comparten notas desarrolladas sin ser estilos equivalentes."
+      ],
+      "expected_keywords": [
+        "Madeira",
+        "Tawny Port",
+        "oxidación",
+        "acidez"
+      ],
+      "expected_reasoning_type": "cause_effect",
+      "difficulty": "intermediate",
+      "source_type": "SBA gap closure | manually curated from local official study guide",
+      "safe_for_examiner": false,
+      "options": {
+        "A": "Tawny no recibe oxígeno durante la crianza.",
+        "B": "Madeira combina maduración oxidativa con una base naturalmente muy ácida y exposición térmica.",
+        "C": "Madeira se cría bajo flor.",
+        "D": "Port se elabora sin fortificación."
+      },
+      "correct_answer_letter": "B",
+      "correct_answer_text": "Madeira combina maduración oxidativa con una base naturalmente muy ácida y exposición térmica.",
+      "source_support": {
+        "source_ids": [
+          "HC_MADEIRA_HEAT_OXIDATIVE_AGEING",
+          "8-2_44_port"
+        ],
+        "source_files": [
+          "knowledge/knowledge-map/causal-chains/HC_MADEIRA_HEAT_OXIDATIVE_AGEING.json",
+          "knowledge/official-wset/study-guide/wset_markdown/seccion_8_section_5_fortified_wines_of_the_world/8-2_44_port.md"
+        ],
+        "support_rationale": "Las fuentes locales sustentan el mecanismo, el resultado de estilo y el contraste diagnóstico evaluado."
+      },
+      "enrichment": {
+        "causal_chain_candidate": {
+          "candidate_id": "CC_CAND_MADEIRA_VS_TAWNY",
+          "cause": "Ambos estilos evolucionan con oxígeno, pero parten de matrices distintas.",
+          "mechanism": "El origen y el proceso térmico de Madeira mantienen una firma ácida particular.",
+          "effect": "Comparten notas desarrolladas sin ser estilos equivalentes."
+        },
+        "feedback_profile": {
+          "correct_rationale": "Ambos estilos evolucionan con oxígeno, pero parten de matrices distintas. El origen y el proceso térmico de Madeira mantienen una firma ácida particular. Por ello, comparten notas desarrolladas sin ser estilos equivalentes.",
+          "distractor_rationales": {
+            "A": "No explica el mecanismo clave: El origen y el proceso térmico de Madeira mantienen una firma ácida particular.",
+            "B": "Es la relación causal correcta.",
+            "C": "No explica el mecanismo clave: El origen y el proceso térmico de Madeira mantienen una firma ácida particular.",
+            "D": "No explica el mecanismo clave: El origen y el proceso térmico de Madeira mantienen una firma ácida particular."
+          },
+          "remediation_recommendation": "Reconstruya la cadena de madeira vs tawny como causa, mecanismo y efecto."
+        },
+        "micro_drill_candidate": {
+          "prompt": "Micro-drill: ¿qué efecto sigue a este mecanismo: El origen y el proceso térmico de Madeira mantienen una firma ácida particular.?",
+          "answer": "Comparten notas desarrolladas sin ser estilos equivalentes."
+        },
+        "misconception_linkage_candidate": {
+          "misconception_id": "MC_MADEIRA_SWEETNESS_02",
+          "target_error": "Tratar todos los fortificados oxidativos como intercambiables."
+        }
+      },
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "official_wset_question": false,
+        "training_item_only": true,
+        "uses_llm": false,
+        "uses_api": false,
+        "uses_embeddings": false,
+        "uses_vector_db": false,
+        "cloud_services_active": false
+      }
+    },
+    {
+      "question_id": "935",
+      "question_text": "Si un Muscat fortificado busca un estilo juvenil y floral, ¿qué decisión explica mejor su elaboración?",
+      "question_type": "theory",
+      "expected_topics": [
+        "RA4",
+        "muscat_youthful_aroma"
+      ],
+      "expected_causal_links": [
+        "La uva posee aromas intensos de flor, rosa y uva fresca. -> Baja temperatura, fortificación y almacenamiento inerte reducen pérdida y oxidación aromática. -> El vino conserva perfume primario y dulzor fresco."
+      ],
+      "expected_keywords": [
+        "Muscat",
+        "juvenil",
+        "aromas florales",
+        "fortificación"
+      ],
+      "expected_reasoning_type": "cause_effect",
+      "difficulty": "distinction",
+      "source_type": "SBA gap closure | manually curated from local official study guide",
+      "safe_for_examiner": false,
+      "options": {
+        "A": "Larga crianza cálida en madera nueva.",
+        "B": "Secado extremo que enmascare el aroma varietal.",
+        "C": "Fermentación fresca, fortificación para conservar azúcar y protección del oxígeno en recipiente inerte.",
+        "D": "Crianza bajo flor durante décadas."
+      },
+      "correct_answer_letter": "C",
+      "correct_answer_text": "Fermentación fresca, fortificación para conservar azúcar y protección del oxígeno en recipiente inerte.",
+      "source_support": {
+        "source_ids": [
+          "8-3_45_fortified_muscats"
+        ],
+        "source_files": [
+          "knowledge/official-wset/study-guide/wset_markdown/seccion_8_section_5_fortified_wines_of_the_world/8-3_45_fortified_muscats.md"
+        ],
+        "support_rationale": "Las fuentes locales sustentan el mecanismo, el resultado de estilo y el contraste diagnóstico evaluado."
+      },
+      "enrichment": {
+        "causal_chain_candidate": {
+          "candidate_id": "CC_CAND_MUSCAT_YOUTHFUL_AROMA",
+          "cause": "La uva posee aromas intensos de flor, rosa y uva fresca.",
+          "mechanism": "Baja temperatura, fortificación y almacenamiento inerte reducen pérdida y oxidación aromática.",
+          "effect": "El vino conserva perfume primario y dulzor fresco."
+        },
+        "feedback_profile": {
+          "correct_rationale": "La uva posee aromas intensos de flor, rosa y uva fresca. Baja temperatura, fortificación y almacenamiento inerte reducen pérdida y oxidación aromática. Por ello, el vino conserva perfume primario y dulzor fresco.",
+          "distractor_rationales": {
+            "A": "No explica el mecanismo clave: Baja temperatura, fortificación y almacenamiento inerte reducen pérdida y oxidación aromática.",
+            "B": "No explica el mecanismo clave: Baja temperatura, fortificación y almacenamiento inerte reducen pérdida y oxidación aromática.",
+            "C": "Es la relación causal correcta.",
+            "D": "No explica el mecanismo clave: Baja temperatura, fortificación y almacenamiento inerte reducen pérdida y oxidación aromática."
+          },
+          "remediation_recommendation": "Reconstruya la cadena de muscat youthful aroma como causa, mecanismo y efecto."
+        },
+        "micro_drill_candidate": {
+          "prompt": "Micro-drill: ¿qué efecto sigue a este mecanismo: Baja temperatura, fortificación y almacenamiento inerte reducen pérdida y oxidación aromática.?",
+          "answer": "El vino conserva perfume primario y dulzor fresco."
+        },
+        "misconception_linkage_candidate": {
+          "misconception_id": "MC_FORTIFICATION_TIMING_01",
+          "target_error": "Confundir Muscat juvenil con Muscat oxidativo envejecido."
+        }
+      },
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "official_wset_question": false,
+        "training_item_only": true,
+        "uses_llm": false,
+        "uses_api": false,
+        "uses_embeddings": false,
+        "uses_vector_db": false,
+        "cloud_services_active": false
+      }
+    },
+    {
+      "question_id": "936",
+      "question_text": "Si un productor prolonga moderadamente el contacto con pieles en un Muscat fortificado juvenil, ¿qué resultado es más probable?",
+      "question_type": "theory",
+      "expected_topics": [
+        "RA4",
+        "muscat_skin_contact"
+      ],
+      "expected_causal_links": [
+        "Muchos compuestos aromáticos se concentran en las pieles de Muscat. -> El contacto permite extraerlos al mosto o vino en fermentación. -> El estilo gana perfume y cuerpo si la extracción se controla."
+      ],
+      "expected_keywords": [
+        "Muscat",
+        "contacto con pieles",
+        "aroma",
+        "textura"
+      ],
+      "expected_reasoning_type": "cause_effect",
+      "difficulty": "intermediate",
+      "source_type": "SBA gap closure | manually curated from local official study guide",
+      "safe_for_examiner": false,
+      "options": {
+        "A": "Desaparecen todos los aromas varietales.",
+        "B": "Se forma un tanino comparable al de Vintage Port.",
+        "C": "El vino se vuelve oxidativo por definición.",
+        "D": "Aumentan intensidad aromática y riqueza de textura."
+      },
+      "correct_answer_letter": "D",
+      "correct_answer_text": "Aumentan intensidad aromática y riqueza de textura.",
+      "source_support": {
+        "source_ids": [
+          "8-3_45_fortified_muscats"
+        ],
+        "source_files": [
+          "knowledge/official-wset/study-guide/wset_markdown/seccion_8_section_5_fortified_wines_of_the_world/8-3_45_fortified_muscats.md"
+        ],
+        "support_rationale": "Las fuentes locales sustentan el mecanismo, el resultado de estilo y el contraste diagnóstico evaluado."
+      },
+      "enrichment": {
+        "causal_chain_candidate": {
+          "candidate_id": "CC_CAND_MUSCAT_SKIN_CONTACT",
+          "cause": "Muchos compuestos aromáticos se concentran en las pieles de Muscat.",
+          "mechanism": "El contacto permite extraerlos al mosto o vino en fermentación.",
+          "effect": "El estilo gana perfume y cuerpo si la extracción se controla."
+        },
+        "feedback_profile": {
+          "correct_rationale": "Muchos compuestos aromáticos se concentran en las pieles de Muscat. El contacto permite extraerlos al mosto o vino en fermentación. Por ello, el estilo gana perfume y cuerpo si la extracción se controla.",
+          "distractor_rationales": {
+            "A": "No explica el mecanismo clave: El contacto permite extraerlos al mosto o vino en fermentación.",
+            "B": "No explica el mecanismo clave: El contacto permite extraerlos al mosto o vino en fermentación.",
+            "C": "No explica el mecanismo clave: El contacto permite extraerlos al mosto o vino en fermentación.",
+            "D": "Es la relación causal correcta."
+          },
+          "remediation_recommendation": "Reconstruya la cadena de muscat skin contact como causa, mecanismo y efecto."
+        },
+        "micro_drill_candidate": {
+          "prompt": "Micro-drill: ¿qué efecto sigue a este mecanismo: El contacto permite extraerlos al mosto o vino en fermentación.?",
+          "answer": "El estilo gana perfume y cuerpo si la extracción se controla."
+        },
+        "misconception_linkage_candidate": {
+          "misconception_id": "MC_FORTIFICATION_TIMING_01",
+          "target_error": "Suponer que todo contacto con pieles busca tanino alto."
+        }
+      },
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "official_wset_question": false,
+        "training_item_only": true,
+        "uses_llm": false,
+        "uses_api": false,
+        "uses_embeddings": false,
+        "uses_vector_db": false,
+        "cloud_services_active": false
+      }
+    },
+    {
+      "question_id": "937",
+      "question_text": "Si las uvas para un Rutherglen Muscat muy dulce se dejan raisinar parcialmente antes de cosechar, ¿qué consecuencia es más probable?",
+      "question_type": "theory",
+      "expected_topics": [
+        "RA4",
+        "muscat_raisining"
+      ],
+      "expected_causal_links": [
+        "La fruta pierde agua y avanza hacia pasificación. -> Se concentran azúcar y sabores, mientras los aromas frescos pueden degradarse. -> El productor equilibra riqueza con conservación del carácter Muscat."
+      ],
+      "expected_keywords": [
+        "Rutherglen Muscat",
+        "raisining",
+        "concentración",
+        "aroma varietal"
+      ],
+      "expected_reasoning_type": "cause_effect",
+      "difficulty": "intermediate",
+      "source_type": "SBA gap closure | manually curated from local official study guide",
+      "safe_for_examiner": false,
+      "options": {
+        "A": "Aumentan concentración y notas de fruta seca, pero un exceso puede reducir el perfume varietal.",
+        "B": "El secado intensifica indefinidamente la flor fresca sin riesgo.",
+        "C": "La uva pierde azúcar mientras gana agua.",
+        "D": "El método obliga a fermentar hasta sequedad."
+      },
+      "correct_answer_letter": "A",
+      "correct_answer_text": "Aumentan concentración y notas de fruta seca, pero un exceso puede reducir el perfume varietal.",
+      "source_support": {
+        "source_ids": [
+          "8-3_45_fortified_muscats"
+        ],
+        "source_files": [
+          "knowledge/official-wset/study-guide/wset_markdown/seccion_8_section_5_fortified_wines_of_the_world/8-3_45_fortified_muscats.md"
+        ],
+        "support_rationale": "Las fuentes locales sustentan el mecanismo, el resultado de estilo y el contraste diagnóstico evaluado."
+      },
+      "enrichment": {
+        "causal_chain_candidate": {
+          "candidate_id": "CC_CAND_MUSCAT_RAISINING",
+          "cause": "La fruta pierde agua y avanza hacia pasificación.",
+          "mechanism": "Se concentran azúcar y sabores, mientras los aromas frescos pueden degradarse.",
+          "effect": "El productor equilibra riqueza con conservación del carácter Muscat."
+        },
+        "feedback_profile": {
+          "correct_rationale": "La fruta pierde agua y avanza hacia pasificación. Se concentran azúcar y sabores, mientras los aromas frescos pueden degradarse. Por ello, el productor equilibra riqueza con conservación del carácter Muscat.",
+          "distractor_rationales": {
+            "A": "Es la relación causal correcta.",
+            "B": "No explica el mecanismo clave: Se concentran azúcar y sabores, mientras los aromas frescos pueden degradarse.",
+            "C": "No explica el mecanismo clave: Se concentran azúcar y sabores, mientras los aromas frescos pueden degradarse.",
+            "D": "No explica el mecanismo clave: Se concentran azúcar y sabores, mientras los aromas frescos pueden degradarse."
+          },
+          "remediation_recommendation": "Reconstruya la cadena de muscat raisining como causa, mecanismo y efecto."
+        },
+        "micro_drill_candidate": {
+          "prompt": "Micro-drill: ¿qué efecto sigue a este mecanismo: Se concentran azúcar y sabores, mientras los aromas frescos pueden degradarse.?",
+          "answer": "El productor equilibra riqueza con conservación del carácter Muscat."
+        },
+        "misconception_linkage_candidate": {
+          "misconception_id": "MC_MADEIRA_SWEETNESS_02",
+          "target_error": "Creer que más pasificación siempre mejora Muscat."
+        }
+      },
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "official_wset_question": false,
+        "training_item_only": true,
+        "uses_llm": false,
+        "uses_api": false,
+        "uses_embeddings": false,
+        "uses_vector_db": false,
+        "cloud_services_active": false
+      }
+    },
+    {
+      "question_id": "938",
+      "question_text": "Si un Rutherglen Muscat se fortifica cuando la fermentación apenas alcanza alrededor de 2% de alcohol, ¿qué resultado es más probable?",
+      "question_type": "theory",
+      "expected_topics": [
+        "RA4",
+        "muscat_early_fortification"
+      ],
+      "expected_causal_links": [
+        "La fermentación ha consumido muy poco azúcar cuando llega el alcohol añadido. -> La levadura se detiene antes de transformar la mayor parte del azúcar. -> El vino queda muy dulce, rico y fortificado."
+      ],
+      "expected_keywords": [
+        "Rutherglen Muscat",
+        "fortificación temprana",
+        "luscious",
+        "azúcar residual"
+      ],
+      "expected_reasoning_type": "cause_effect",
+      "difficulty": "distinction",
+      "source_type": "SBA gap closure | manually curated from local official study guide",
+      "safe_for_examiner": false,
+      "options": {
+        "A": "Termina seco porque el aguardiente alimenta la levadura.",
+        "B": "Conserva una cantidad muy alta de azúcar residual y queda en estilo luscious.",
+        "C": "Pierde todo aroma de uva por falta de alcohol.",
+        "D": "Se vuelve biológico bajo flor."
+      },
+      "correct_answer_letter": "B",
+      "correct_answer_text": "Conserva una cantidad muy alta de azúcar residual y queda en estilo luscious.",
+      "source_support": {
+        "source_ids": [
+          "8-3_45_fortified_muscats"
+        ],
+        "source_files": [
+          "knowledge/official-wset/study-guide/wset_markdown/seccion_8_section_5_fortified_wines_of_the_world/8-3_45_fortified_muscats.md"
+        ],
+        "support_rationale": "Las fuentes locales sustentan el mecanismo, el resultado de estilo y el contraste diagnóstico evaluado."
+      },
+      "enrichment": {
+        "causal_chain_candidate": {
+          "candidate_id": "CC_CAND_MUSCAT_EARLY_FORTIFICATION",
+          "cause": "La fermentación ha consumido muy poco azúcar cuando llega el alcohol añadido.",
+          "mechanism": "La levadura se detiene antes de transformar la mayor parte del azúcar.",
+          "effect": "El vino queda muy dulce, rico y fortificado."
+        },
+        "feedback_profile": {
+          "correct_rationale": "La fermentación ha consumido muy poco azúcar cuando llega el alcohol añadido. La levadura se detiene antes de transformar la mayor parte del azúcar. Por ello, el vino queda muy dulce, rico y fortificado.",
+          "distractor_rationales": {
+            "A": "No explica el mecanismo clave: La levadura se detiene antes de transformar la mayor parte del azúcar.",
+            "B": "Es la relación causal correcta.",
+            "C": "No explica el mecanismo clave: La levadura se detiene antes de transformar la mayor parte del azúcar.",
+            "D": "No explica el mecanismo clave: La levadura se detiene antes de transformar la mayor parte del azúcar."
+          },
+          "remediation_recommendation": "Reconstruya la cadena de muscat early fortification como causa, mecanismo y efecto."
+        },
+        "micro_drill_candidate": {
+          "prompt": "Micro-drill: ¿qué efecto sigue a este mecanismo: La levadura se detiene antes de transformar la mayor parte del azúcar.?",
+          "answer": "El vino queda muy dulce, rico y fortificado."
+        },
+        "misconception_linkage_candidate": {
+          "misconception_id": "MC_FORTIFICATION_TIMING_01",
+          "target_error": "Creer que una fortificación muy temprana produce más alcohol fermentativo."
+        }
+      },
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "official_wset_question": false,
+        "training_item_only": true,
+        "uses_llm": false,
+        "uses_api": false,
+        "uses_embeddings": false,
+        "uses_vector_db": false,
+        "cloud_services_active": false
+      }
+    },
+    {
+      "question_id": "939",
+      "question_text": "Si un Rutherglen Muscat envejece durante décadas, ¿qué factor explica mejor el uso de madera vieja en vez de roble nuevo?",
+      "question_type": "theory",
+      "expected_topics": [
+        "RA4",
+        "muscat_old_oak"
+      ],
+      "expected_causal_links": [
+        "El vino necesita maduración oxidativa prolongada, pero posee aromas varietales intensos. -> Recipientes viejos transmiten poco sabor de madera y permiten intercambio de oxígeno. -> Se desarrollan complejidad y concentración sin dominar el perfume de Muscat."
+      ],
+      "expected_keywords": [
+        "Rutherglen Muscat",
+        "madera vieja",
+        "oxidación",
+        "aroma"
+      ],
+      "expected_reasoning_type": "cause_effect",
+      "difficulty": "intermediate",
+      "source_type": "SBA gap closure | manually curated from local official study guide",
+      "safe_for_examiner": false,
+      "options": {
+        "A": "El roble viejo impide toda oxidación.",
+        "B": "La madera nueva eliminaría el alcohol.",
+        "C": "La madera vieja permite oxígeno sin aromas nuevos que compitan con el carácter Muscat.",
+        "D": "El roble viejo crea flor."
+      },
+      "correct_answer_letter": "C",
+      "correct_answer_text": "La madera vieja permite oxígeno sin aromas nuevos que compitan con el carácter Muscat.",
+      "source_support": {
+        "source_ids": [
+          "8-3_45_fortified_muscats"
+        ],
+        "source_files": [
+          "knowledge/official-wset/study-guide/wset_markdown/seccion_8_section_5_fortified_wines_of_the_world/8-3_45_fortified_muscats.md"
+        ],
+        "support_rationale": "Las fuentes locales sustentan el mecanismo, el resultado de estilo y el contraste diagnóstico evaluado."
+      },
+      "enrichment": {
+        "causal_chain_candidate": {
+          "candidate_id": "CC_CAND_MUSCAT_OLD_OAK",
+          "cause": "El vino necesita maduración oxidativa prolongada, pero posee aromas varietales intensos.",
+          "mechanism": "Recipientes viejos transmiten poco sabor de madera y permiten intercambio de oxígeno.",
+          "effect": "Se desarrollan complejidad y concentración sin dominar el perfume de Muscat."
+        },
+        "feedback_profile": {
+          "correct_rationale": "El vino necesita maduración oxidativa prolongada, pero posee aromas varietales intensos. Recipientes viejos transmiten poco sabor de madera y permiten intercambio de oxígeno. Por ello, se desarrollan complejidad y concentración sin dominar el perfume de Muscat.",
+          "distractor_rationales": {
+            "A": "No explica el mecanismo clave: Recipientes viejos transmiten poco sabor de madera y permiten intercambio de oxígeno.",
+            "B": "No explica el mecanismo clave: Recipientes viejos transmiten poco sabor de madera y permiten intercambio de oxígeno.",
+            "C": "Es la relación causal correcta.",
+            "D": "No explica el mecanismo clave: Recipientes viejos transmiten poco sabor de madera y permiten intercambio de oxígeno."
+          },
+          "remediation_recommendation": "Reconstruya la cadena de muscat old oak como causa, mecanismo y efecto."
+        },
+        "micro_drill_candidate": {
+          "prompt": "Micro-drill: ¿qué efecto sigue a este mecanismo: Recipientes viejos transmiten poco sabor de madera y permiten intercambio de oxígeno.?",
+          "answer": "Se desarrollan complejidad y concentración sin dominar el perfume de Muscat."
+        },
+        "misconception_linkage_candidate": {
+          "misconception_id": "MC_OAK_QUALITY_01",
+          "target_error": "Suponer que roble nuevo siempre mejora un fortificado."
+        }
+      },
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "official_wset_question": false,
+        "training_item_only": true,
+        "uses_llm": false,
+        "uses_api": false,
+        "uses_embeddings": false,
+        "uses_vector_db": false,
+        "cloud_services_active": false
+      }
+    },
+    {
+      "question_id": "940",
+      "question_text": "Si un Muscat fortificado envejece en condiciones cálidas y oxidativas, ¿qué resultado es más probable?",
+      "question_type": "theory",
+      "expected_topics": [
+        "RA4",
+        "muscat_warm_ageing"
+      ],
+      "expected_causal_links": [
+        "El vino dulce fortificado recibe calor y oxígeno durante años. -> Se aceleran oxidación, evaporación y transformación aromática. -> Aumentan concentración, color y complejidad desarrollada."
+      ],
+      "expected_keywords": [
+        "Rutherglen Muscat",
+        "calor",
+        "oxidación",
+        "color marrón"
+      ],
+      "expected_reasoning_type": "cause_effect",
+      "difficulty": "intermediate",
+      "source_type": "SBA gap closure | manually curated from local official study guide",
+      "safe_for_examiner": false,
+      "options": {
+        "A": "Conserva únicamente flor de azahar fresca.",
+        "B": "Se vuelve pálido por protección de flor.",
+        "C": "Desarrolla burbujas por el calor.",
+        "D": "Evoluciona de ámbar a marrón y desarrolla caramelo, frutos secos y fruta deshidratada."
+      },
+      "correct_answer_letter": "D",
+      "correct_answer_text": "Evoluciona de ámbar a marrón y desarrolla caramelo, frutos secos y fruta deshidratada.",
+      "source_support": {
+        "source_ids": [
+          "8-3_45_fortified_muscats"
+        ],
+        "source_files": [
+          "knowledge/official-wset/study-guide/wset_markdown/seccion_8_section_5_fortified_wines_of_the_world/8-3_45_fortified_muscats.md"
+        ],
+        "support_rationale": "Las fuentes locales sustentan el mecanismo, el resultado de estilo y el contraste diagnóstico evaluado."
+      },
+      "enrichment": {
+        "causal_chain_candidate": {
+          "candidate_id": "CC_CAND_MUSCAT_WARM_AGEING",
+          "cause": "El vino dulce fortificado recibe calor y oxígeno durante años.",
+          "mechanism": "Se aceleran oxidación, evaporación y transformación aromática.",
+          "effect": "Aumentan concentración, color y complejidad desarrollada."
+        },
+        "feedback_profile": {
+          "correct_rationale": "El vino dulce fortificado recibe calor y oxígeno durante años. Se aceleran oxidación, evaporación y transformación aromática. Por ello, aumentan concentración, color y complejidad desarrollada.",
+          "distractor_rationales": {
+            "A": "No explica el mecanismo clave: Se aceleran oxidación, evaporación y transformación aromática.",
+            "B": "No explica el mecanismo clave: Se aceleran oxidación, evaporación y transformación aromática.",
+            "C": "No explica el mecanismo clave: Se aceleran oxidación, evaporación y transformación aromática.",
+            "D": "Es la relación causal correcta."
+          },
+          "remediation_recommendation": "Reconstruya la cadena de muscat warm ageing como causa, mecanismo y efecto."
+        },
+        "micro_drill_candidate": {
+          "prompt": "Micro-drill: ¿qué efecto sigue a este mecanismo: Se aceleran oxidación, evaporación y transformación aromática.?",
+          "answer": "Aumentan concentración, color y complejidad desarrollada."
+        },
+        "misconception_linkage_candidate": {
+          "misconception_id": "MC_OXIDATIVE_VS_BIOLOGICAL_01",
+          "target_error": "Confundir oxidación controlada con defecto simple."
+        }
+      },
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "official_wset_question": false,
+        "training_item_only": true,
+        "uses_llm": false,
+        "uses_api": false,
+        "uses_embeddings": false,
+        "uses_vector_db": false,
+        "cloud_services_active": false
+      }
+    },
+    {
+      "question_id": "941",
+      "question_text": "Si una pequeña proporción de Muscat joven se mezcla en un vino muy viejo antes de embotellar, ¿qué resultado explica mejor la decisión?",
+      "question_type": "theory",
+      "expected_topics": [
+        "RA4",
+        "muscat_young_blend"
+      ],
+      "expected_causal_links": [
+        "El vino viejo puede ser muy concentrado y dominado por aromas desarrollados. -> Una fracción joven aporta compuestos varietales más volátiles. -> El ensamblaje recupera perfume y equilibrio."
+      ],
+      "expected_keywords": [
+        "Rutherglen Muscat",
+        "mezcla",
+        "vino joven",
+        "aroma"
+      ],
+      "expected_reasoning_type": "cause_effect",
+      "difficulty": "distinction",
+      "source_type": "SBA gap closure | manually curated from local official study guide",
+      "safe_for_examiner": false,
+      "options": {
+        "A": "Aporta un levantamiento aromático floral sin borrar la complejidad oxidativa.",
+        "B": "Reduce el alcohol hasta convertirlo en vino tranquilo.",
+        "C": "Elimina todo azúcar residual del vino viejo.",
+        "D": "Crea una segunda fermentación obligatoria."
+      },
+      "correct_answer_letter": "A",
+      "correct_answer_text": "Aporta un levantamiento aromático floral sin borrar la complejidad oxidativa.",
+      "source_support": {
+        "source_ids": [
+          "8-3_45_fortified_muscats"
+        ],
+        "source_files": [
+          "knowledge/official-wset/study-guide/wset_markdown/seccion_8_section_5_fortified_wines_of_the_world/8-3_45_fortified_muscats.md"
+        ],
+        "support_rationale": "Las fuentes locales sustentan el mecanismo, el resultado de estilo y el contraste diagnóstico evaluado."
+      },
+      "enrichment": {
+        "causal_chain_candidate": {
+          "candidate_id": "CC_CAND_MUSCAT_YOUNG_BLEND",
+          "cause": "El vino viejo puede ser muy concentrado y dominado por aromas desarrollados.",
+          "mechanism": "Una fracción joven aporta compuestos varietales más volátiles.",
+          "effect": "El ensamblaje recupera perfume y equilibrio."
+        },
+        "feedback_profile": {
+          "correct_rationale": "El vino viejo puede ser muy concentrado y dominado por aromas desarrollados. Una fracción joven aporta compuestos varietales más volátiles. Por ello, el ensamblaje recupera perfume y equilibrio.",
+          "distractor_rationales": {
+            "A": "Es la relación causal correcta.",
+            "B": "No explica el mecanismo clave: Una fracción joven aporta compuestos varietales más volátiles.",
+            "C": "No explica el mecanismo clave: Una fracción joven aporta compuestos varietales más volátiles.",
+            "D": "No explica el mecanismo clave: Una fracción joven aporta compuestos varietales más volátiles."
+          },
+          "remediation_recommendation": "Reconstruya la cadena de muscat young blend como causa, mecanismo y efecto."
+        },
+        "micro_drill_candidate": {
+          "prompt": "Micro-drill: ¿qué efecto sigue a este mecanismo: Una fracción joven aporta compuestos varietales más volátiles.?",
+          "answer": "El ensamblaje recupera perfume y equilibrio."
+        },
+        "misconception_linkage_candidate": {
+          "misconception_id": "MC_AGEING_IMPROVEMENT_01",
+          "target_error": "Creer que el componente más viejo siempre debe ser el único."
+        }
+      },
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "official_wset_question": false,
+        "training_item_only": true,
+        "uses_llm": false,
+        "uses_api": false,
+        "uses_embeddings": false,
+        "uses_vector_db": false,
+        "cloud_services_active": false
+      }
+    },
+    {
+      "question_id": "942",
+      "question_text": "Si un viñedo cálido de Muscat recibe una influencia refrescante, ¿qué consecuencia es más probable para un fortificado de calidad?",
+      "question_type": "theory",
+      "expected_topics": [
+        "RA4",
+        "muscat_cooling_influence"
+      ],
+      "expected_causal_links": [
+        "Muscat prospera en clima cálido pero sus aromas y acidez son sensibles al exceso de calor. -> La moderación térmica ralentiza pérdidas de ácido y compuestos volátiles. -> El vino puede combinar madurez, perfume y equilibrio."
+      ],
+      "expected_keywords": [
+        "Muscat",
+        "Rutherglen",
+        "influencia refrescante",
+        "acidez"
+      ],
+      "expected_reasoning_type": "cause_effect",
+      "difficulty": "intermediate",
+      "source_type": "SBA gap closure | manually curated from local official study guide",
+      "safe_for_examiner": false,
+      "options": {
+        "A": "Aumenta automáticamente el raisining extremo.",
+        "B": "Conserva mejor acidez y aromas florales durante la maduración.",
+        "C": "La fruta pierde todo azúcar.",
+        "D": "El vino desarrolla más tanino de piel."
+      },
+      "correct_answer_letter": "B",
+      "correct_answer_text": "Conserva mejor acidez y aromas florales durante la maduración.",
+      "source_support": {
+        "source_ids": [
+          "8-3_45_fortified_muscats"
+        ],
+        "source_files": [
+          "knowledge/official-wset/study-guide/wset_markdown/seccion_8_section_5_fortified_wines_of_the_world/8-3_45_fortified_muscats.md"
+        ],
+        "support_rationale": "Las fuentes locales sustentan el mecanismo, el resultado de estilo y el contraste diagnóstico evaluado."
+      },
+      "enrichment": {
+        "causal_chain_candidate": {
+          "candidate_id": "CC_CAND_MUSCAT_COOLING_INFLUENCE",
+          "cause": "Muscat prospera en clima cálido pero sus aromas y acidez son sensibles al exceso de calor.",
+          "mechanism": "La moderación térmica ralentiza pérdidas de ácido y compuestos volátiles.",
+          "effect": "El vino puede combinar madurez, perfume y equilibrio."
+        },
+        "feedback_profile": {
+          "correct_rationale": "Muscat prospera en clima cálido pero sus aromas y acidez son sensibles al exceso de calor. La moderación térmica ralentiza pérdidas de ácido y compuestos volátiles. Por ello, el vino puede combinar madurez, perfume y equilibrio.",
+          "distractor_rationales": {
+            "A": "No explica el mecanismo clave: La moderación térmica ralentiza pérdidas de ácido y compuestos volátiles.",
+            "B": "Es la relación causal correcta.",
+            "C": "No explica el mecanismo clave: La moderación térmica ralentiza pérdidas de ácido y compuestos volátiles.",
+            "D": "No explica el mecanismo clave: La moderación térmica ralentiza pérdidas de ácido y compuestos volátiles."
+          },
+          "remediation_recommendation": "Reconstruya la cadena de muscat cooling influence como causa, mecanismo y efecto."
+        },
+        "micro_drill_candidate": {
+          "prompt": "Micro-drill: ¿qué efecto sigue a este mecanismo: La moderación térmica ralentiza pérdidas de ácido y compuestos volátiles.?",
+          "answer": "El vino puede combinar madurez, perfume y equilibrio."
+        },
+        "misconception_linkage_candidate": {
+          "misconception_id": "MC_COOL_CLIMATE_01",
+          "target_error": "Suponer que más calor siempre mejora Muscat."
+        }
+      },
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "official_wset_question": false,
+        "training_item_only": true,
+        "uses_llm": false,
+        "uses_api": false,
+        "uses_embeddings": false,
+        "uses_vector_db": false,
+        "cloud_services_active": false
+      }
+    },
+    {
+      "question_id": "943",
+      "question_text": "Al comparar un Muscat fortificado juvenil con uno envejecido, ¿qué factor explica mejor sus perfiles opuestos?",
+      "question_type": "theory",
+      "expected_topics": [
+        "RA4",
+        "muscat_young_vs_aged"
+      ],
+      "expected_causal_links": [
+        "Los estilos parten de la misma familia aromática con objetivos de maduración distintos. -> El control o la búsqueda de oxígeno dirige la evolución aromática. -> Se obtienen perfiles frescos o plenamente desarrollados."
+      ],
+      "expected_keywords": [
+        "Muscat",
+        "juvenil",
+        "envejecido",
+        "oxidación"
+      ],
+      "expected_reasoning_type": "cause_effect",
+      "difficulty": "intermediate",
+      "source_type": "SBA gap closure | manually curated from local official study guide",
+      "safe_for_examiner": false,
+      "options": {
+        "A": "Uno se fortifica y el otro no.",
+        "B": "El juvenil debe ser seco y el viejo siempre dulce.",
+        "C": "El juvenil evita oxígeno para conservar flores y uva; el envejecido usa calor y oxígeno para desarrollar frutos secos y caramelo.",
+        "D": "La única diferencia es el color de la botella."
+      },
+      "correct_answer_letter": "C",
+      "correct_answer_text": "El juvenil evita oxígeno para conservar flores y uva; el envejecido usa calor y oxígeno para desarrollar frutos secos y caramelo.",
+      "source_support": {
+        "source_ids": [
+          "8-3_45_fortified_muscats"
+        ],
+        "source_files": [
+          "knowledge/official-wset/study-guide/wset_markdown/seccion_8_section_5_fortified_wines_of_the_world/8-3_45_fortified_muscats.md"
+        ],
+        "support_rationale": "Las fuentes locales sustentan el mecanismo, el resultado de estilo y el contraste diagnóstico evaluado."
+      },
+      "enrichment": {
+        "causal_chain_candidate": {
+          "candidate_id": "CC_CAND_MUSCAT_YOUNG_VS_AGED",
+          "cause": "Los estilos parten de la misma familia aromática con objetivos de maduración distintos.",
+          "mechanism": "El control o la búsqueda de oxígeno dirige la evolución aromática.",
+          "effect": "Se obtienen perfiles frescos o plenamente desarrollados."
+        },
+        "feedback_profile": {
+          "correct_rationale": "Los estilos parten de la misma familia aromática con objetivos de maduración distintos. El control o la búsqueda de oxígeno dirige la evolución aromática. Por ello, se obtienen perfiles frescos o plenamente desarrollados.",
+          "distractor_rationales": {
+            "A": "No explica el mecanismo clave: El control o la búsqueda de oxígeno dirige la evolución aromática.",
+            "B": "No explica el mecanismo clave: El control o la búsqueda de oxígeno dirige la evolución aromática.",
+            "C": "Es la relación causal correcta.",
+            "D": "No explica el mecanismo clave: El control o la búsqueda de oxígeno dirige la evolución aromática."
+          },
+          "remediation_recommendation": "Reconstruya la cadena de muscat young vs aged como causa, mecanismo y efecto."
+        },
+        "micro_drill_candidate": {
+          "prompt": "Micro-drill: ¿qué efecto sigue a este mecanismo: El control o la búsqueda de oxígeno dirige la evolución aromática.?",
+          "answer": "Se obtienen perfiles frescos o plenamente desarrollados."
+        },
+        "misconception_linkage_candidate": {
+          "misconception_id": "MC_OXIDATIVE_VS_BIOLOGICAL_01",
+          "target_error": "Confundir edad con una simple escala de calidad."
+        }
+      },
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "official_wset_question": false,
+        "training_item_only": true,
+        "uses_llm": false,
+        "uses_api": false,
+        "uses_embeddings": false,
+        "uses_vector_db": false,
+        "cloud_services_active": false
+      }
+    },
+    {
+      "question_id": "944",
+      "question_text": "Al comparar Port y Fino Sherry, ¿qué factor explica mejor que Port sea dulce y Fino seco?",
+      "question_type": "theory",
+      "expected_topics": [
+        "RA4",
+        "fortification_port_vs_sherry"
+      ],
+      "expected_causal_links": [
+        "Los dos vinos reciben alcohol en momentos diferentes. -> La fortificación temprana deja azúcar; la tardía modifica un vino ya seco. -> El momento de adición determina estilos estructuralmente distintos."
+      ],
+      "expected_keywords": [
+        "Port",
+        "Fino",
+        "fortificación",
+        "dulzor"
+      ],
+      "expected_reasoning_type": "cause_effect",
+      "difficulty": "distinction",
+      "source_type": "SBA gap closure | manually curated from local official study guide",
+      "safe_for_examiner": false,
+      "options": {
+        "A": "Fino no contiene alcohol añadido.",
+        "B": "Port se endulza solo después de embotellar.",
+        "C": "La flor convierte el azúcar de Port en alcohol.",
+        "D": "Port se fortifica durante la fermentación; Fino se fortifica después de fermentar hasta sequedad."
+      },
+      "correct_answer_letter": "D",
+      "correct_answer_text": "Port se fortifica durante la fermentación; Fino se fortifica después de fermentar hasta sequedad.",
+      "source_support": {
+        "source_ids": [
+          "8-2_44_port",
+          "8-1_43_sherry"
+        ],
+        "source_files": [
+          "knowledge/official-wset/study-guide/wset_markdown/seccion_8_section_5_fortified_wines_of_the_world/8-2_44_port.md",
+          "knowledge/official-wset/study-guide/wset_markdown/seccion_8_section_5_fortified_wines_of_the_world/8-1_43_sherry.md"
+        ],
+        "support_rationale": "Las fuentes locales sustentan el mecanismo, el resultado de estilo y el contraste diagnóstico evaluado."
+      },
+      "enrichment": {
+        "causal_chain_candidate": {
+          "candidate_id": "CC_CAND_FORTIFICATION_PORT_VS_SHERRY",
+          "cause": "Los dos vinos reciben alcohol en momentos diferentes.",
+          "mechanism": "La fortificación temprana deja azúcar; la tardía modifica un vino ya seco.",
+          "effect": "El momento de adición determina estilos estructuralmente distintos."
+        },
+        "feedback_profile": {
+          "correct_rationale": "Los dos vinos reciben alcohol en momentos diferentes. La fortificación temprana deja azúcar; la tardía modifica un vino ya seco. Por ello, el momento de adición determina estilos estructuralmente distintos.",
+          "distractor_rationales": {
+            "A": "No explica el mecanismo clave: La fortificación temprana deja azúcar; la tardía modifica un vino ya seco.",
+            "B": "No explica el mecanismo clave: La fortificación temprana deja azúcar; la tardía modifica un vino ya seco.",
+            "C": "No explica el mecanismo clave: La fortificación temprana deja azúcar; la tardía modifica un vino ya seco.",
+            "D": "Es la relación causal correcta."
+          },
+          "remediation_recommendation": "Reconstruya la cadena de fortification port vs sherry como causa, mecanismo y efecto."
+        },
+        "micro_drill_candidate": {
+          "prompt": "Micro-drill: ¿qué efecto sigue a este mecanismo: La fortificación temprana deja azúcar; la tardía modifica un vino ya seco.?",
+          "answer": "El momento de adición determina estilos estructuralmente distintos."
+        },
+        "misconception_linkage_candidate": {
+          "misconception_id": "MC_FORTIFICATION_TIMING_01",
+          "target_error": "Tratar toda fortificación como el mismo proceso."
+        }
+      },
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "official_wset_question": false,
+        "training_item_only": true,
+        "uses_llm": false,
+        "uses_api": false,
+        "uses_embeddings": false,
+        "uses_vector_db": false,
+        "cloud_services_active": false
+      }
+    },
+    {
+      "question_id": "945",
+      "question_text": "Al comparar Fino y Oloroso, ¿qué factor explica mejor sus diferencias de color y aroma?",
+      "question_type": "theory",
+      "expected_topics": [
+        "RA4",
+        "biological_vs_oxidative"
+      ],
+      "expected_causal_links": [
+        "La graduación inicial determina si la flor puede sobrevivir. -> Con flor se limita oxidación; sin flor el aire transforma el vino. -> Fino queda pálido y punzante; Oloroso se vuelve oscuro, rico y nuez."
+      ],
+      "expected_keywords": [
+        "Fino",
+        "Oloroso",
+        "biológica",
+        "oxidativa"
+      ],
+      "expected_reasoning_type": "cause_effect",
+      "difficulty": "intermediate",
+      "source_type": "SBA gap closure | manually curated from local official study guide",
+      "safe_for_examiner": false,
+      "options": {
+        "A": "La flor protege al Fino; Oloroso envejece expuesto al oxígeno sin flor.",
+        "B": "Fino usa uvas tintas y Oloroso blancas.",
+        "C": "Oloroso no se fortifica.",
+        "D": "Fino envejece en barricas completamente llenas."
+      },
+      "correct_answer_letter": "A",
+      "correct_answer_text": "La flor protege al Fino; Oloroso envejece expuesto al oxígeno sin flor.",
+      "source_support": {
+        "source_ids": [
+          "8-1_43_sherry"
+        ],
+        "source_files": [
+          "knowledge/official-wset/study-guide/wset_markdown/seccion_8_section_5_fortified_wines_of_the_world/8-1_43_sherry.md"
+        ],
+        "support_rationale": "Las fuentes locales sustentan el mecanismo, el resultado de estilo y el contraste diagnóstico evaluado."
+      },
+      "enrichment": {
+        "causal_chain_candidate": {
+          "candidate_id": "CC_CAND_BIOLOGICAL_VS_OXIDATIVE",
+          "cause": "La graduación inicial determina si la flor puede sobrevivir.",
+          "mechanism": "Con flor se limita oxidación; sin flor el aire transforma el vino.",
+          "effect": "Fino queda pálido y punzante; Oloroso se vuelve oscuro, rico y nuez."
+        },
+        "feedback_profile": {
+          "correct_rationale": "La graduación inicial determina si la flor puede sobrevivir. Con flor se limita oxidación; sin flor el aire transforma el vino. Por ello, fino queda pálido y punzante; Oloroso se vuelve oscuro, rico y nuez.",
+          "distractor_rationales": {
+            "A": "Es la relación causal correcta.",
+            "B": "No explica el mecanismo clave: Con flor se limita oxidación; sin flor el aire transforma el vino.",
+            "C": "No explica el mecanismo clave: Con flor se limita oxidación; sin flor el aire transforma el vino.",
+            "D": "No explica el mecanismo clave: Con flor se limita oxidación; sin flor el aire transforma el vino."
+          },
+          "remediation_recommendation": "Reconstruya la cadena de biological vs oxidative como causa, mecanismo y efecto."
+        },
+        "micro_drill_candidate": {
+          "prompt": "Micro-drill: ¿qué efecto sigue a este mecanismo: Con flor se limita oxidación; sin flor el aire transforma el vino.?",
+          "answer": "Fino queda pálido y punzante; Oloroso se vuelve oscuro, rico y nuez."
+        },
+        "misconception_linkage_candidate": {
+          "misconception_id": "MC_OXIDATIVE_VS_BIOLOGICAL_01",
+          "target_error": "Confundir el nivel de llenado con la presencia efectiva de protección."
+        }
+      },
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "official_wset_question": false,
+        "training_item_only": true,
+        "uses_llm": false,
+        "uses_api": false,
+        "uses_embeddings": false,
+        "uses_vector_db": false,
+        "cloud_services_active": false
+      }
+    },
+    {
+      "question_id": "946",
+      "question_text": "Al comparar Oloroso, Tawny Port y Madeira, ¿qué factor explica mejor que compartan notas de nuez pero no sepan iguales?",
+      "question_type": "theory",
+      "expected_topics": [
+        "RA4",
+        "oxidative_style_comparison"
+      ],
+      "expected_causal_links": [
+        "Varios fortificados pueden usar oxígeno como herramienta de maduración. -> La matriz inicial y las condiciones específicas modifican las reacciones. -> Surgen familias aromáticas comunes junto con estructuras y firmas distintas."
+      ],
+      "expected_keywords": [
+        "Oloroso",
+        "Tawny Port",
+        "Madeira",
+        "comparación"
+      ],
+      "expected_reasoning_type": "cause_effect",
+      "difficulty": "intermediate",
+      "source_type": "SBA gap closure | manually curated from local official study guide",
+      "safe_for_examiner": false,
+      "options": {
+        "A": "La oxidación borra todas las diferencias de origen.",
+        "B": "Todos reciben oxidación, pero difieren en vino base, dulzor, fortificación, recipiente, temperatura y tiempo.",
+        "C": "Los tres se crían bajo flor.",
+        "D": "Los tres se fortifican en el mismo punto de fermentación."
+      },
+      "correct_answer_letter": "B",
+      "correct_answer_text": "Todos reciben oxidación, pero difieren en vino base, dulzor, fortificación, recipiente, temperatura y tiempo.",
+      "source_support": {
+        "source_ids": [
+          "8-1_43_sherry",
+          "8-2_44_port",
+          "HC_MADEIRA_HEAT_OXIDATIVE_AGEING"
+        ],
+        "source_files": [
+          "knowledge/official-wset/study-guide/wset_markdown/seccion_8_section_5_fortified_wines_of_the_world/8-1_43_sherry.md",
+          "knowledge/official-wset/study-guide/wset_markdown/seccion_8_section_5_fortified_wines_of_the_world/8-2_44_port.md",
+          "knowledge/knowledge-map/causal-chains/HC_MADEIRA_HEAT_OXIDATIVE_AGEING.json"
+        ],
+        "support_rationale": "Las fuentes locales sustentan el mecanismo, el resultado de estilo y el contraste diagnóstico evaluado."
+      },
+      "enrichment": {
+        "causal_chain_candidate": {
+          "candidate_id": "CC_CAND_OXIDATIVE_STYLE_COMPARISON",
+          "cause": "Varios fortificados pueden usar oxígeno como herramienta de maduración.",
+          "mechanism": "La matriz inicial y las condiciones específicas modifican las reacciones.",
+          "effect": "Surgen familias aromáticas comunes junto con estructuras y firmas distintas."
+        },
+        "feedback_profile": {
+          "correct_rationale": "Varios fortificados pueden usar oxígeno como herramienta de maduración. La matriz inicial y las condiciones específicas modifican las reacciones. Por ello, surgen familias aromáticas comunes junto con estructuras y firmas distintas.",
+          "distractor_rationales": {
+            "A": "No explica el mecanismo clave: La matriz inicial y las condiciones específicas modifican las reacciones.",
+            "B": "Es la relación causal correcta.",
+            "C": "No explica el mecanismo clave: La matriz inicial y las condiciones específicas modifican las reacciones.",
+            "D": "No explica el mecanismo clave: La matriz inicial y las condiciones específicas modifican las reacciones."
+          },
+          "remediation_recommendation": "Reconstruya la cadena de oxidative style comparison como causa, mecanismo y efecto."
+        },
+        "micro_drill_candidate": {
+          "prompt": "Micro-drill: ¿qué efecto sigue a este mecanismo: La matriz inicial y las condiciones específicas modifican las reacciones.?",
+          "answer": "Surgen familias aromáticas comunes junto con estructuras y firmas distintas."
+        },
+        "misconception_linkage_candidate": {
+          "misconception_id": "MC_OXIDATIVE_VS_BIOLOGICAL_01",
+          "target_error": "Tratar oxidativo como un único estilo uniforme."
+        }
+      },
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "official_wset_question": false,
+        "training_item_only": true,
+        "uses_llm": false,
+        "uses_api": false,
+        "uses_embeddings": false,
+        "uses_vector_db": false,
+        "cloud_services_active": false
+      }
+    },
+    {
+      "question_id": "947",
+      "question_text": "Si un vino se fortifica cuando aún tiene alcohol fermentativo muy bajo, ¿qué consecuencia es más probable respecto al volumen de aguardiente necesario?",
+      "question_type": "theory",
+      "expected_topics": [
+        "RA4",
+        "fortification_volume"
+      ],
+      "expected_causal_links": [
+        "El vino base aporta poco alcohol antes de fortificar. -> Más alcohol externo debe cubrir la diferencia hasta el grado final. -> El aguardiente representa una parte mayor del volumen terminado."
+      ],
+      "expected_keywords": [
+        "fortificación",
+        "aguardiente",
+        "alcohol inicial",
+        "volumen"
+      ],
+      "expected_reasoning_type": "cause_effect",
+      "difficulty": "distinction",
+      "source_type": "SBA gap closure | manually curated from local official study guide",
+      "safe_for_examiner": false,
+      "options": {
+        "A": "Se necesita menos porque el azúcar cuenta como alcohol.",
+        "B": "No hace falta aguardiente si el vino es dulce.",
+        "C": "Se necesita una proporción mayor de aguardiente para alcanzar el alcohol final objetivo.",
+        "D": "El volumen añadido depende solo del color."
+      },
+      "correct_answer_letter": "C",
+      "correct_answer_text": "Se necesita una proporción mayor de aguardiente para alcanzar el alcohol final objetivo.",
+      "source_support": {
+        "source_ids": [
+          "8-2_44_port",
+          "8-3_45_fortified_muscats"
+        ],
+        "source_files": [
+          "knowledge/official-wset/study-guide/wset_markdown/seccion_8_section_5_fortified_wines_of_the_world/8-2_44_port.md",
+          "knowledge/official-wset/study-guide/wset_markdown/seccion_8_section_5_fortified_wines_of_the_world/8-3_45_fortified_muscats.md"
+        ],
+        "support_rationale": "Las fuentes locales sustentan el mecanismo, el resultado de estilo y el contraste diagnóstico evaluado."
+      },
+      "enrichment": {
+        "causal_chain_candidate": {
+          "candidate_id": "CC_CAND_FORTIFICATION_VOLUME",
+          "cause": "El vino base aporta poco alcohol antes de fortificar.",
+          "mechanism": "Más alcohol externo debe cubrir la diferencia hasta el grado final.",
+          "effect": "El aguardiente representa una parte mayor del volumen terminado."
+        },
+        "feedback_profile": {
+          "correct_rationale": "El vino base aporta poco alcohol antes de fortificar. Más alcohol externo debe cubrir la diferencia hasta el grado final. Por ello, el aguardiente representa una parte mayor del volumen terminado.",
+          "distractor_rationales": {
+            "A": "No explica el mecanismo clave: Más alcohol externo debe cubrir la diferencia hasta el grado final.",
+            "B": "No explica el mecanismo clave: Más alcohol externo debe cubrir la diferencia hasta el grado final.",
+            "C": "Es la relación causal correcta.",
+            "D": "No explica el mecanismo clave: Más alcohol externo debe cubrir la diferencia hasta el grado final."
+          },
+          "remediation_recommendation": "Reconstruya la cadena de fortification volume como causa, mecanismo y efecto."
+        },
+        "micro_drill_candidate": {
+          "prompt": "Micro-drill: ¿qué efecto sigue a este mecanismo: Más alcohol externo debe cubrir la diferencia hasta el grado final.?",
+          "answer": "El aguardiente representa una parte mayor del volumen terminado."
+        },
+        "misconception_linkage_candidate": {
+          "misconception_id": "MC_FORTIFICATION_TIMING_01",
+          "target_error": "Ignorar el alcohol inicial al comparar fortificación."
+        }
+      },
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "official_wset_question": false,
+        "training_item_only": true,
+        "uses_llm": false,
+        "uses_api": false,
+        "uses_embeddings": false,
+        "uses_vector_db": false,
+        "cloud_services_active": false
+      }
+    },
+    {
+      "question_id": "948",
+      "question_text": "Si un tinto fortificado interrumpe su fermentación muy pronto, ¿qué decisión explica mejor cómo conservar estructura suficiente?",
+      "question_type": "theory",
+      "expected_topics": [
+        "RA4",
+        "fortification_extraction"
+      ],
+      "expected_causal_links": [
+        "La extracción de color y tanino ocurre durante contacto con pieles. -> La fermentación corta limita el tiempo disponible. -> Una técnica más intensa compensa la ventana breve."
+      ],
+      "expected_keywords": [
+        "fortificación",
+        "extracción",
+        "hollejos",
+        "estructura"
+      ],
+      "expected_reasoning_type": "cause_effect",
+      "difficulty": "intermediate",
+      "source_type": "SBA gap closure | manually curated from local official study guide",
+      "safe_for_examiner": false,
+      "options": {
+        "A": "Esperar a extraer color después de filtrar las pieles.",
+        "B": "Evitar todo movimiento del sombrero.",
+        "C": "Usar exclusivamente crianza en botella para crear tanino.",
+        "D": "Aumentar la extracción antes de fortificar mediante contacto intenso con hollejos."
+      },
+      "correct_answer_letter": "D",
+      "correct_answer_text": "Aumentar la extracción antes de fortificar mediante contacto intenso con hollejos.",
+      "source_support": {
+        "source_ids": [
+          "8-2_44_port"
+        ],
+        "source_files": [
+          "knowledge/official-wset/study-guide/wset_markdown/seccion_8_section_5_fortified_wines_of_the_world/8-2_44_port.md"
+        ],
+        "support_rationale": "Las fuentes locales sustentan el mecanismo, el resultado de estilo y el contraste diagnóstico evaluado."
+      },
+      "enrichment": {
+        "causal_chain_candidate": {
+          "candidate_id": "CC_CAND_FORTIFICATION_EXTRACTION",
+          "cause": "La extracción de color y tanino ocurre durante contacto con pieles.",
+          "mechanism": "La fermentación corta limita el tiempo disponible.",
+          "effect": "Una técnica más intensa compensa la ventana breve."
+        },
+        "feedback_profile": {
+          "correct_rationale": "La extracción de color y tanino ocurre durante contacto con pieles. La fermentación corta limita el tiempo disponible. Por ello, una técnica más intensa compensa la ventana breve.",
+          "distractor_rationales": {
+            "A": "No explica el mecanismo clave: La fermentación corta limita el tiempo disponible.",
+            "B": "No explica el mecanismo clave: La fermentación corta limita el tiempo disponible.",
+            "C": "No explica el mecanismo clave: La fermentación corta limita el tiempo disponible.",
+            "D": "Es la relación causal correcta."
+          },
+          "remediation_recommendation": "Reconstruya la cadena de fortification extraction como causa, mecanismo y efecto."
+        },
+        "micro_drill_candidate": {
+          "prompt": "Micro-drill: ¿qué efecto sigue a este mecanismo: La fermentación corta limita el tiempo disponible.?",
+          "answer": "Una técnica más intensa compensa la ventana breve."
+        },
+        "misconception_linkage_candidate": {
+          "misconception_id": "MC_PORT_FORTIFICATION_02",
+          "target_error": "Separar fortificación temprana de la estrategia de extracción."
+        }
+      },
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "official_wset_question": false,
+        "training_item_only": true,
+        "uses_llm": false,
+        "uses_api": false,
+        "uses_embeddings": false,
+        "uses_vector_db": false,
+        "cloud_services_active": false
+      }
+    },
+    {
+      "question_id": "949",
+      "question_text": "Al comparar un gran tonel con una pipe pequeña para madurar Port, ¿qué factor explica mejor la diferencia de evolución?",
+      "question_type": "theory",
+      "expected_topics": [
+        "RA4",
+        "ageing_vessel_comparison"
+      ],
+      "expected_causal_links": [
+        "Los recipientes contienen volúmenes distintos para una superficie de contacto dada. -> El recipiente pequeño expone proporcionalmente más vino a madera y oxígeno. -> La evolución hacia carácter tawny se acelera."
+      ],
+      "expected_keywords": [
+        "Port",
+        "pipe",
+        "tonel",
+        "superficie-volumen"
+      ],
+      "expected_reasoning_type": "cause_effect",
+      "difficulty": "intermediate",
+      "source_type": "SBA gap closure | manually curated from local official study guide",
+      "safe_for_examiner": false,
+      "options": {
+        "A": "La pipe ofrece mayor relación superficie-volumen y favorece una oxidación más rápida.",
+        "B": "El tonel grande siempre aporta más roble nuevo.",
+        "C": "La pipe impide evaporación.",
+        "D": "El tamaño no cambia el contacto con oxígeno."
+      },
+      "correct_answer_letter": "A",
+      "correct_answer_text": "La pipe ofrece mayor relación superficie-volumen y favorece una oxidación más rápida.",
+      "source_support": {
+        "source_ids": [
+          "8-2_44_port"
+        ],
+        "source_files": [
+          "knowledge/official-wset/study-guide/wset_markdown/seccion_8_section_5_fortified_wines_of_the_world/8-2_44_port.md"
+        ],
+        "support_rationale": "Las fuentes locales sustentan el mecanismo, el resultado de estilo y el contraste diagnóstico evaluado."
+      },
+      "enrichment": {
+        "causal_chain_candidate": {
+          "candidate_id": "CC_CAND_AGEING_VESSEL_COMPARISON",
+          "cause": "Los recipientes contienen volúmenes distintos para una superficie de contacto dada.",
+          "mechanism": "El recipiente pequeño expone proporcionalmente más vino a madera y oxígeno.",
+          "effect": "La evolución hacia carácter tawny se acelera."
+        },
+        "feedback_profile": {
+          "correct_rationale": "Los recipientes contienen volúmenes distintos para una superficie de contacto dada. El recipiente pequeño expone proporcionalmente más vino a madera y oxígeno. Por ello, la evolución hacia carácter tawny se acelera.",
+          "distractor_rationales": {
+            "A": "Es la relación causal correcta.",
+            "B": "No explica el mecanismo clave: El recipiente pequeño expone proporcionalmente más vino a madera y oxígeno.",
+            "C": "No explica el mecanismo clave: El recipiente pequeño expone proporcionalmente más vino a madera y oxígeno.",
+            "D": "No explica el mecanismo clave: El recipiente pequeño expone proporcionalmente más vino a madera y oxígeno."
+          },
+          "remediation_recommendation": "Reconstruya la cadena de ageing vessel comparison como causa, mecanismo y efecto."
+        },
+        "micro_drill_candidate": {
+          "prompt": "Micro-drill: ¿qué efecto sigue a este mecanismo: El recipiente pequeño expone proporcionalmente más vino a madera y oxígeno.?",
+          "answer": "La evolución hacia carácter tawny se acelera."
+        },
+        "misconception_linkage_candidate": {
+          "misconception_id": "MC_PORT_VINTAGE_01",
+          "target_error": "Ignorar el efecto del tamaño de recipiente."
+        }
+      },
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "official_wset_question": false,
+        "training_item_only": true,
+        "uses_llm": false,
+        "uses_api": false,
+        "uses_embeddings": false,
+        "uses_vector_db": false,
+        "cloud_services_active": false
+      }
+    },
+    {
+      "question_id": "950",
+      "question_text": "¿Qué factor explica mejor que Port, Sherry y Rutherglen Muscat usen con frecuencia madera vieja?",
+      "question_type": "theory",
+      "expected_topics": [
+        "RA4",
+        "old_oak_comparison"
+      ],
+      "expected_causal_links": [
+        "Los vinos poseen perfiles varietales o de crianza propios. -> Recipientes usados permiten evolución con poca cesión aromática de madera. -> El carácter de fruta, flor u oxidación permanece en primer plano."
+      ],
+      "expected_keywords": [
+        "Port",
+        "Sherry",
+        "Rutherglen Muscat",
+        "madera vieja"
+      ],
+      "expected_reasoning_type": "cause_effect",
+      "difficulty": "distinction",
+      "source_type": "SBA gap closure | manually curated from local official study guide",
+      "safe_for_examiner": false,
+      "options": {
+        "A": "La madera vieja añade más vainilla que la nueva.",
+        "B": "Buscan intercambio de oxígeno o almacenamiento sin que sabores de roble nuevo dominen el estilo.",
+        "C": "El roble viejo impide toda evaporación.",
+        "D": "Los reglamentos exigen el mismo tamaño de barrica."
+      },
+      "correct_answer_letter": "B",
+      "correct_answer_text": "Buscan intercambio de oxígeno o almacenamiento sin que sabores de roble nuevo dominen el estilo.",
+      "source_support": {
+        "source_ids": [
+          "8-2_44_port",
+          "8-1_43_sherry",
+          "8-3_45_fortified_muscats"
+        ],
+        "source_files": [
+          "knowledge/official-wset/study-guide/wset_markdown/seccion_8_section_5_fortified_wines_of_the_world/8-2_44_port.md",
+          "knowledge/official-wset/study-guide/wset_markdown/seccion_8_section_5_fortified_wines_of_the_world/8-1_43_sherry.md",
+          "knowledge/official-wset/study-guide/wset_markdown/seccion_8_section_5_fortified_wines_of_the_world/8-3_45_fortified_muscats.md"
+        ],
+        "support_rationale": "Las fuentes locales sustentan el mecanismo, el resultado de estilo y el contraste diagnóstico evaluado."
+      },
+      "enrichment": {
+        "causal_chain_candidate": {
+          "candidate_id": "CC_CAND_OLD_OAK_COMPARISON",
+          "cause": "Los vinos poseen perfiles varietales o de crianza propios.",
+          "mechanism": "Recipientes usados permiten evolución con poca cesión aromática de madera.",
+          "effect": "El carácter de fruta, flor u oxidación permanece en primer plano."
+        },
+        "feedback_profile": {
+          "correct_rationale": "Los vinos poseen perfiles varietales o de crianza propios. Recipientes usados permiten evolución con poca cesión aromática de madera. Por ello, el carácter de fruta, flor u oxidación permanece en primer plano.",
+          "distractor_rationales": {
+            "A": "No explica el mecanismo clave: Recipientes usados permiten evolución con poca cesión aromática de madera.",
+            "B": "Es la relación causal correcta.",
+            "C": "No explica el mecanismo clave: Recipientes usados permiten evolución con poca cesión aromática de madera.",
+            "D": "No explica el mecanismo clave: Recipientes usados permiten evolución con poca cesión aromática de madera."
+          },
+          "remediation_recommendation": "Reconstruya la cadena de old oak comparison como causa, mecanismo y efecto."
+        },
+        "micro_drill_candidate": {
+          "prompt": "Micro-drill: ¿qué efecto sigue a este mecanismo: Recipientes usados permiten evolución con poca cesión aromática de madera.?",
+          "answer": "El carácter de fruta, flor u oxidación permanece en primer plano."
+        },
+        "misconception_linkage_candidate": {
+          "misconception_id": "MC_OAK_QUALITY_01",
+          "target_error": "Asumir que madera nueva es siempre superior."
+        }
+      },
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "official_wset_question": false,
+        "training_item_only": true,
+        "uses_llm": false,
+        "uses_api": false,
+        "uses_embeddings": false,
+        "uses_vector_db": false,
+        "cloud_services_active": false
+      }
+    },
+    {
+      "question_id": "951",
+      "question_text": "Al comparar Vintage Port, Tawny con edad y Rutherglen Muscat viejo al salir al mercado, ¿qué interpretación explica mejor su preparación para beber?",
+      "question_type": "theory",
+      "expected_topics": [
+        "RA4",
+        "style_readiness_comparison"
+      ],
+      "expected_causal_links": [
+        "Los estilos completan su maduración principal en recipientes distintos. -> Vintage conserva estructura para evolución en botella; los oxidativos se afinan antes del embotellado. -> Cambian la ventana de consumo y el servicio."
+      ],
+      "expected_keywords": [
+        "Vintage Port",
+        "Tawny",
+        "Rutherglen Muscat",
+        "servicio"
+      ],
+      "expected_reasoning_type": "cause_effect",
+      "difficulty": "intermediate",
+      "source_type": "SBA gap closure | manually curated from local official study guide",
+      "safe_for_examiner": false,
+      "options": {
+        "A": "Todos necesitan décadas adicionales en botella.",
+        "B": "Ninguno forma sedimento.",
+        "C": "Vintage puede requerir botella y decantación; Tawny y Muscat viejo suelen estar plenamente desarrollados al embotellar.",
+        "D": "Tawny mejora más en botella que Vintage."
+      },
+      "correct_answer_letter": "C",
+      "correct_answer_text": "Vintage puede requerir botella y decantación; Tawny y Muscat viejo suelen estar plenamente desarrollados al embotellar.",
+      "source_support": {
+        "source_ids": [
+          "8-2_44_port",
+          "8-3_45_fortified_muscats"
+        ],
+        "source_files": [
+          "knowledge/official-wset/study-guide/wset_markdown/seccion_8_section_5_fortified_wines_of_the_world/8-2_44_port.md",
+          "knowledge/official-wset/study-guide/wset_markdown/seccion_8_section_5_fortified_wines_of_the_world/8-3_45_fortified_muscats.md"
+        ],
+        "support_rationale": "Las fuentes locales sustentan el mecanismo, el resultado de estilo y el contraste diagnóstico evaluado."
+      },
+      "enrichment": {
+        "causal_chain_candidate": {
+          "candidate_id": "CC_CAND_STYLE_READINESS_COMPARISON",
+          "cause": "Los estilos completan su maduración principal en recipientes distintos.",
+          "mechanism": "Vintage conserva estructura para evolución en botella; los oxidativos se afinan antes del embotellado.",
+          "effect": "Cambian la ventana de consumo y el servicio."
+        },
+        "feedback_profile": {
+          "correct_rationale": "Los estilos completan su maduración principal en recipientes distintos. Vintage conserva estructura para evolución en botella; los oxidativos se afinan antes del embotellado. Por ello, cambian la ventana de consumo y el servicio.",
+          "distractor_rationales": {
+            "A": "No explica el mecanismo clave: Vintage conserva estructura para evolución en botella; los oxidativos se afinan antes del embotellado.",
+            "B": "No explica el mecanismo clave: Vintage conserva estructura para evolución en botella; los oxidativos se afinan antes del embotellado.",
+            "C": "Es la relación causal correcta.",
+            "D": "No explica el mecanismo clave: Vintage conserva estructura para evolución en botella; los oxidativos se afinan antes del embotellado."
+          },
+          "remediation_recommendation": "Reconstruya la cadena de style readiness comparison como causa, mecanismo y efecto."
+        },
+        "micro_drill_candidate": {
+          "prompt": "Micro-drill: ¿qué efecto sigue a este mecanismo: Vintage conserva estructura para evolución en botella; los oxidativos se afinan antes del embotellado.?",
+          "answer": "Cambian la ventana de consumo y el servicio."
+        },
+        "misconception_linkage_candidate": {
+          "misconception_id": "MC_PORT_VINTAGE_01",
+          "target_error": "Aplicar la misma regla de guarda a todos los fortificados."
+        }
+      },
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "official_wset_question": false,
+        "training_item_only": true,
+        "uses_llm": false,
+        "uses_api": false,
+        "uses_embeddings": false,
+        "uses_vector_db": false,
+        "cloud_services_active": false
+      }
+    }
+  ],
+  "governance": {
+    "safe_for_examiner": false,
+    "examiner_scoring_allowed": false,
+    "official_wset_question": false,
+    "training_item_only": true,
+    "uses_llm": false,
+    "uses_api": false,
+    "uses_embeddings": false,
+    "uses_vector_db": false,
+    "cloud_services_active": false
+  }
+}

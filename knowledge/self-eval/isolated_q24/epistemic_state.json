@@ -1,0 +1,73 @@
+{
+  "learner_id": "nazareth",
+  "schema_version": "minimal_brain_v2",
+  "current_level": "WSET_L3",
+  "known_weak_areas": [],
+  "recent_misconceptions": [],
+  "session_count": 0,
+  "topic_signals": {},
+  "RA_signals": {
+    "RA1": {
+      "ra_id": "RA1",
+      "exposure_count": 0,
+      "performance": {
+        "correct_count": 0,
+        "incorrect_count": 0
+      },
+      "trend": "not_observed",
+      "last_seen": null
+    },
+    "RA2": {
+      "ra_id": "RA2",
+      "exposure_count": 0,
+      "performance": {
+        "correct_count": 0,
+        "incorrect_count": 0
+      },
+      "trend": "not_observed",
+      "last_seen": null
+    },
+    "RA3": {
+      "ra_id": "RA3",
+      "exposure_count": 0,
+      "performance": {
+        "correct_count": 0,
+        "incorrect_count": 0
+      },
+      "trend": "not_observed",
+      "last_seen": null
+    },
+    "RA4": {
+      "ra_id": "RA4",
+      "exposure_count": 0,
+      "performance": {
+        "correct_count": 0,
+        "incorrect_count": 0
+      },
+      "trend": "not_observed",
+      "last_seen": null
+    },
+    "RA5": {
+      "ra_id": "RA5",
+      "exposure_count": 0,
+      "performance": {
+        "correct_count": 0,
+        "incorrect_count": 0
+      },
+      "trend": "not_observed",
+      "last_seen": null
+    }
+  },
+  "misconception_signals": {},
+  "causal_chain_signals": {},
+  "question_exposure_log": [],
+  "question_exposure_signals": {},
+  "governance": {
+    "safe_for_examiner": false,
+    "examiner_scoring_allowed": false,
+    "examiner_scoring_active": false,
+    "embeddings_active": false,
+    "vector_db_active": false,
+    "cloud_services_active": false
+  }
+}
