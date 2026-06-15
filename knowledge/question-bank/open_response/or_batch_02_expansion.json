@@ -1,0 +1,268 @@
+{
+  "schema_version": "open_response_bank_v1",
+  "batch_number": 2,
+  "batch_size": 25,
+  "generated_at": "2026-06-15",
+  "phase": "expansion_program",
+  "governance": {
+    "safe_for_examiner": false,
+    "examiner_scoring_allowed": false,
+    "training_item_only": true,
+    "uses_llm": false,
+    "uses_api": false,
+    "uses_embeddings": false,
+    "uses_vector_db": false
+  },
+  "items": [
+    {
+      "item_id": "OR_057",
+      "question_text": "Describe the role of cork's porosity in enabling the slow oxidation that allows a fine red wine to age gracefully in the bottle.",
+      "command_verb": "describe",
+      "ra_id": "RA1",
+      "topic": "cork_oxygen_transmission",
+      "expected_concepts": ["cork structure and microporosity", "oxygen transmission rate", "slow oxidation benefits", "tannin polymerization", "color brick development", "aromatic integration"],
+      "causal_chain_target": ["HC_BOTTLE_STORAGE_STABILITY"],
+      "response_depth_target": "developing"
+    },
+    {
+      "item_id": "OR_058",
+      "question_text": "Explain why a wine from a warm vintage in Bordeaux might have higher alcohol but lower acidity than a cool vintage from the same vineyard.",
+      "command_verb": "explain",
+      "ra_id": "RA1",
+      "topic": "vintage_climate_variation",
+      "expected_concepts": ["temperature impact on ripening", "sugar accumulation rate", "malic acid retention", "phenolic maturity variation", "vintage character expression"],
+      "causal_chain_target": ["HC_WARM_DRY_OVERRIPENING"],
+      "response_depth_target": "strong"
+    },
+    {
+      "item_id": "OR_059",
+      "question_text": "Compare the sensory and structural impact of malolactic fermentation on Chardonnay vs. Sauvignon Blanc, explaining why producers choose differently for each varietal.",
+      "command_verb": "compare",
+      "ra_id": "RA2",
+      "topic": "varietal_mlf_strategy",
+      "expected_concepts": ["Chardonnay: benefits from MLF texture", "Sauvignon Blanc: benefits from acidity preservation", "acidity role in style", "aromatic complexity vs. freshness", "producer intent and market positioning"],
+      "causal_chain_target": ["HC_MLF_ACID_CONVERSION"],
+      "response_depth_target": "strong"
+    },
+    {
+      "item_id": "OR_060",
+      "question_text": "Assess a Pinot Noir showing bright red fruit aromas, silky tannins, and good acidity balance at age 5, determining whether it is still in its primary character or approaching maturity evolution.",
+      "command_verb": "assess",
+      "ra_id": "RA2",
+      "topic": "tannin_maturity_age_assessment",
+      "expected_concepts": ["tannin softening indicators", "aroma stability vs. evolution", "age estimation from structure", "remaining drinking window", "peak expression timeline"],
+      "causal_chain_target": [],
+      "response_depth_target": "developing"
+    },
+    {
+      "item_id": "OR_061",
+      "question_text": "Evaluate the trade-offs between using temperature-controlled stainless steel fermentation (for aroma retention) vs. open vat fermentation (for tannin extraction and contact) in red winemaking.",
+      "command_verb": "evaluate",
+      "ra_id": "RA3",
+      "topic": "fermentation_vessel_trade_offs",
+      "expected_concepts": ["temperature control precision", "aroma volatility", "tannin extraction dynamics", "spoilage risk", "winemaker intent and market target", "cost considerations"],
+      "causal_chain_target": ["HC_STAINLESS_TEMPERATURE_CONTROL"],
+      "response_depth_target": "developing"
+    },
+    {
+      "item_id": "OR_062",
+      "question_text": "Discuss the implications of residual sugar in a dry-appearing wine (below 1 g/L perceived sweetness threshold) and why some producers deliberately leave RS while others work to eliminate it completely.",
+      "command_verb": "discuss",
+      "ra_id": "RA3",
+      "topic": "residual_sugar_strategy",
+      "expected_concepts": ["RS and tannin perception", "microbial stability", "food pairing implications", "consumer expectations", "production philosophy", "climate and ripeness variation"],
+      "causal_chain_target": ["HC_RESIDUAL_SUGAR_LOW_ALCOHOL_CHILI_PAIRING"],
+      "response_depth_target": "strong"
+    },
+    {
+      "item_id": "OR_063",
+      "question_text": "Recommend a complete winemaking protocol for a cool-climate Riesling that targets a dry, mineral style with maximum expression of terroir and site-specific character.",
+      "command_verb": "recommend",
+      "ra_id": "RA4",
+      "topic": "riesling_terroir_expression_protocol",
+      "expected_concepts": ["harvest timing for acidity retention", "whole-bunch pressing", "cool fermentation temperature", "yeast strain selection", "malolactic prevention", "early bottling", "oak avoidance"],
+      "causal_chain_target": ["HC_COOL_FERMENTATION_AROMA_RETENTION"],
+      "response_depth_target": "developing"
+    },
+    {
+      "item_id": "OR_064",
+      "question_text": "Identify and explain the key vineyard site factors that make the Mosel region in Germany structurally suited to producing ultra-fresh, low-alcohol wines with high acidity.",
+      "command_verb": "identify_and_explain",
+      "ra_id": "RA4",
+      "topic": "mosel_terroir_structure",
+      "expected_concepts": ["steep south-facing slopes maximize sunlight", "cool continental influence", "slate soil drainage", "altitude and temperature", "late harvest ripeness without excessive alcohol", "acidity preservation natural advantage"],
+      "causal_chain_target": ["HC_STEEP_SLOPE_SOLAR_RIPENING"],
+      "response_depth_target": "strong"
+    },
+    {
+      "item_id": "OR_065",
+      "question_text": "Describe the physical and chemical changes that occur when a fortified wine (Port, Sherry) ages oxidatively vs. reductively, and how each aging style influences final character.",
+      "command_verb": "describe",
+      "ra_id": "RA1",
+      "topic": "fortified_aging_oxidative_reductive",
+      "expected_concepts": ["oxidative aging (oxygen contact)", "reductive aging (sealed environment)", "color development", "aromatic evolution", "tannin integration", "complexity tier progression"],
+      "causal_chain_target": ["HC_OXIDATIVE_AGEING_TERTIARY"],
+      "response_depth_target": "developing"
+    },
+    {
+      "item_id": "OR_066",
+      "question_text": "Explain the relationship between soil type, water availability during veraison, and the final concentration of tannins and phenolic ripeness in red grapes.",
+      "command_verb": "explain",
+      "ra_id": "RA2",
+      "topic": "soil_water_phenolic_ripeness",
+      "expected_concepts": ["water stress during veraison", "tannin synthesis activation", "phenolic maturity markers", "grape concentration", "soil drainage role", "irrigation decisions impact"],
+      "causal_chain_target": ["HC_MODERATE_WATER_STRESS_PHENOLICS"],
+      "response_depth_target": "strong"
+    },
+    {
+      "item_id": "OR_067",
+      "question_text": "Compare noble rot (Botrytis cinerea) development in Sauternes vs. Tokaji, explaining how climate, humidity, morning fog, and vineyard management create different expressions of sweet complexity.",
+      "command_verb": "compare",
+      "ra_id": "RA3",
+      "topic": "noble_rot_regional_expression",
+      "expected_concepts": ["Sauternes: maritime humidity and Gironde moisture", "Tokaji: continental cool nights and lake effect", "noble rot timing and intensity", "concentration levels", "aromatic profiles variation", "acidity retention differences"],
+      "causal_chain_target": ["HC_NOBLE_ROT_DEVELOPMENT_CONDITIONS"],
+      "response_depth_target": "developing"
+    },
+    {
+      "item_id": "OR_068",
+      "question_text": "Assess the quality and style consistency of a barrel-fermented Chardonnay that shows both primary orchard fruit and developed oak-driven spice, determining whether oak integration is balanced or dominating.",
+      "command_verb": "assess",
+      "ra_id": "RA4",
+      "topic": "oak_integration_balance_assessment",
+      "expected_concepts": ["primary fruit preservation", "oak vanillin and toasted character integration", "texture development", "balance vs. imbalance markers", "oak age and intensity", "malolactic influence"],
+      "causal_chain_target": ["HC_NEW_OAK_STRUCTURE_SPICE"],
+      "response_depth_target": "developing"
+    },
+    {
+      "item_id": "OR_069",
+      "question_text": "Evaluate the risks and benefits of using enzyme treatments to increase extraction and aroma release during red grape maceration, considering both sensory outcomes and production goals.",
+      "command_verb": "evaluate",
+      "ra_id": "RA2",
+      "topic": "enzyme_treatment_maceration",
+      "expected_concepts": ["enzyme action on cell walls", "tannin extraction increase", "color development", "aroma compound release", "time reduction benefit", "potential over-extraction risk", "cost efficiency"],
+      "causal_chain_target": ["HC_EXTRACTION_BODY_STRUCTURE"],
+      "response_depth_target": "developing"
+    },
+    {
+      "item_id": "OR_070",
+      "question_text": "Discuss how climate change is altering traditional wine regions' capacity to produce their signature styles, and what viticultural and winemaking adaptations producers are implementing to maintain character.",
+      "command_verb": "discuss",
+      "ra_id": "RA4",
+      "topic": "climate_change_adaptation",
+      "expected_concepts": ["warmer growing seasons", "earlier harvest timing", "higher potential alcohol", "lower acidity challenges", "higher altitude vineyard migration", "varietal shifting", "water scarcity adaptation", "style preservation strategies"],
+      "causal_chain_target": [],
+      "response_depth_target": "strong"
+    },
+    {
+      "item_id": "OR_071",
+      "question_text": "Recommend a structured tasting protocol for evaluating 6 different oak regimes (new vs. used, different origins, different toast levels) applied to the same base wine, to isolate oak's specific impact.",
+      "command_verb": "recommend",
+      "ra_id": "RA5",
+      "topic": "oak_regime_evaluation_protocol",
+      "expected_concepts": ["control wine requirement", "blind tasting methodology", "flavor compound identification", "tannin structure comparison", "aroma intensity progression", "systematic note-taking", "statistical comparison approach"],
+      "causal_chain_target": ["HC_BARREL_SIZE_OAK_CONTACT"],
+      "response_depth_target": "developing"
+    },
+    {
+      "item_id": "OR_072",
+      "question_text": "Identify and explain how volcanic soils (particularly in regions like Alsace, Tokaji, and New Zealand) influence wine structure, mineral expression, and aging potential.",
+      "command_verb": "identify_and_explain",
+      "ra_id": "RA3",
+      "topic": "volcanic_soil_mineral_expression",
+      "expected_concepts": ["volcanic soil composition (basalt, pumice)", "mineral nutrient availability", "drainage properties", "mineral compound uptake in fruit", "terroir expression intensity", "aging structure from minerals"],
+      "causal_chain_target": [],
+      "response_depth_target": "strong"
+    },
+    {
+      "item_id": "OR_073",
+      "question_text": "Describe the sensory evolution of a bottled sparkling wine during secondary fermentation and post-disgorged aging, highlighting how autolytic yeast contact creates complexity.",
+      "command_verb": "describe",
+      "ra_id": "RA2",
+      "topic": "sparkling_autolysis_evolution",
+      "expected_concepts": ["secondary fermentation CO2 production", "yeast autolysis process", "amino acid and nucleotide release", "creamy texture development", "bread/biscuit aroma emergence", "bubble structure refinement"],
+      "causal_chain_target": ["HC_SPARKLING_AUTOLYTIC_AROMAS"],
+      "response_depth_target": "developing"
+    },
+    {
+      "item_id": "OR_074",
+      "question_text": "Explain why a Nebbiolo wine at 10 years old, despite having moderate alcohol (14%), can still show intense tannins that feel astringent, whereas a Pinot Noir at the same age feels silky.",
+      "command_verb": "explain",
+      "ra_id": "RA5",
+      "topic": "tannin_structure_varietal_difference",
+      "expected_concepts": ["Nebbiolo: thick-skinned grape variety", "phenolic tannin concentration", "polymerization rate", "tannin structure chemical differences", "aging softening variation by variety", "sensory threshold differences"],
+      "causal_chain_target": ["HC_RED_WINE_AGEABILITY_STRUCTURE"],
+      "response_depth_target": "strong"
+    },
+    {
+      "item_id": "OR_075",
+      "question_text": "Compare two identical harvest lots split into different cellar conditions (temperature-controlled vs. non-climate-controlled, oak vs. stainless, sealed vs. vented), predicting how each will diverge in character.",
+      "command_verb": "compare",
+      "ra_id": "RA1",
+      "topic": "cellar_conditions_divergence",
+      "expected_concepts": ["temperature stability impact", "oxidation rate variation", "oxygen transmission", "spoilage risk scenarios", "aging trajectory prediction", "compound evolution speed"],
+      "causal_chain_target": ["HC_BOTTLE_STORAGE_STABILITY"],
+      "response_depth_target": "developing"
+    },
+    {
+      "item_id": "OR_076",
+      "question_text": "Assess the maturity stage of a Bordeaux blend showing dried fruit, resolved tannins, and subtle mineral secondary aromas, determining whether immediate consumption or continued aging is optimal.",
+      "command_verb": "assess",
+      "ra_id": "RA5",
+      "topic": "bordeaux_maturity_drinking_window",
+      "expected_concepts": ["primary to secondary aroma transition", "tannin integration timeline", "color and clarity markers", "flavor intensity plateau", "drinking window definition", "cellaring continuation decision"],
+      "causal_chain_target": ["HC_BAROLO_TERTIARY_EVOLUTION"],
+      "response_depth_target": "strong"
+    },
+    {
+      "item_id": "OR_077",
+      "question_text": "Evaluate whether hand-harvesting vs. mechanical harvesting for a delicate Pinot Noir affects quality, considering grape damage, oxidation exposure, berry separation, and final wine outcomes.",
+      "command_verb": "evaluate",
+      "ra_id": "RA3",
+      "topic": "harvest_method_quality_impact",
+      "expected_concepts": ["mechanical efficiency and speed", "grape skin integrity", "oxidation during transport", "stems and leaf contamination", "vineyard slope accessibility", "cost efficiency comparison", "quality vs. production tradeoff"],
+      "causal_chain_target": ["HC_SELECTIVE_HAND_HARVEST_QUALITY"],
+      "response_depth_target": "developing"
+    },
+    {
+      "item_id": "OR_078",
+      "question_text": "Discuss the role of wine glass shape and size in releasing and concentrating aromas, directing flow patterns to the nose, and how different glass styles suit different wine types.",
+      "command_verb": "discuss",
+      "ra_id": "RA1",
+      "topic": "glass_design_aroma_perception",
+      "expected_concepts": ["bowl shape and aroma capture", "rim opening size", "surface area for oxidation", "flow dynamics", "temperature maintenance", "psychological expectation", "sensory expression optimization"],
+      "causal_chain_target": ["HC_LARGE_BOWL_AROMA_EXPRESSION"],
+      "response_depth_target": "developing"
+    },
+    {
+      "item_id": "OR_079",
+      "question_text": "Recommend a complete protocol for evaluating whether a wine at 8 years is approaching its peak drinking window or still has significant aging potential, including sensory and analytical benchmarks.",
+      "command_verb": "recommend",
+      "ra_id": "RA4",
+      "topic": "peak_drinking_window_assessment_protocol",
+      "expected_concepts": ["color development observation", "aroma evolution stage identification", "tannin integration level", "acidity preservation check", "residual sugar stability", "bottle variation acknowledgment", "cellar condition consideration"],
+      "causal_chain_target": [],
+      "response_depth_target": "strong"
+    },
+    {
+      "item_id": "OR_080",
+      "question_text": "Identify and explain the viticultural practices that define the traditional Burgundy classification system (Grand Cru vs. Premier Cru vs. Village), connecting soil, microclimate, and site hierarchy to quality expression.",
+      "command_verb": "identify_and_explain",
+      "ra_id": "RA2",
+      "topic": "burgundy_classification_soil_hierarchy",
+      "expected_concepts": ["soil composition limestone variation", "aspect and sun exposure gradient", "drainage and minerality", "historical selection by Benedictine monks", "classification continuity", "site-specific expression documentation"],
+      "causal_chain_target": ["HC_BURGUNDY_SITE_HIERARCHY_CONCENTRATION"],
+      "response_depth_target": "developing"
+    },
+    {
+      "item_id": "OR_081",
+      "question_text": "Describe the complete evolution of a sweet wine made from botrytized grapes over 20 years in bottle, from initial concentration and honey aromas to mature complexity and integration.",
+      "command_verb": "describe",
+      "ra_id": "RA5",
+      "topic": "botrytized_sweet_wine_maturation",
+      "expected_concepts": ["initial honey and apricot aromas", "secondary citrus and spice development", "tannin softening in sweet context", "acidity preservation role", "oxidative browning", "tertiary complexity emergence", "long aging potential"],
+      "causal_chain_target": ["HC_BOTRYTIS_CONCENTRATION"],
+      "response_depth_target": "strong"
+    }
+  ]
+}
