@@ -1,12 +1,12 @@
 # ENRICHMENT BATCH 1 — Reporte de muestra para aprobación
 
-Lote: **205 ítems** · derivación determinista desde nodos causales CC_/HC_ (umbral: ≥2 trigger keywords, mejor nodo único, capa ES con guard).
-Con micro_drill: **158** · fingerprint de entrada: `cd4527d042f3c1d7`
+Lote: **235 ítems** · derivación determinista desde nodos causales CC_/HC_ (umbral: ≥2 trigger keywords, mejor nodo único, capa ES con guard).
+Con micro_drill: **179** · fingerprint de entrada: `07e789300d2e49d4`
 
 Política v2 (precisión primero): word-boundary, triggers genéricos prohibidos, el nodo debe
 explicar la respuesta correcta (hit en stem Y en opción correcta), stems de identificación excluidos.
 
-Rechazos por regla: `{"below_threshold": 100, "identification_stem": 112, "no_stem_hit": 2, "negative_polarity_stem": 24, "no_correct_option_hit": 3}`
+Rechazos por regla: `{"below_threshold": 95, "identification_stem": 112, "no_stem_hit": 2, "negative_polarity_stem": 24, "no_correct_option_hit": 3}`
 
 ---
 
@@ -302,6 +302,31 @@ Rechazos por regla: `{"below_threshold": 100, "identification_stem": 112, "no_st
   - C. Adición de aguardiente vínico
   - D. Estructura potente y necesidad de guarda
   - _Explicación:_ «Las pendientes pronunciadas del Mosel favorecen la maduración del Riesling al maximizar la insolación.» corresponde a las pendientes bien orientadas y la maduración en clima fresco. Las demás afirmaciones son correctas, pero describen otros mecanismos.
+
+---
+
+## wset3_339 (sq 339) · RA2 · gold=False
+
+**Pregunta:** ¿Qué práctica de vinificación se emplea para producir Amarone della Valpolicella?
+**Correcta (C):** Secado parcial de uvas antes de la fermentación
+**Nodo:** `manual_review_v1` · score 0 · en stem:  · en respuesta correcta: Secado parcial de uvas antes de la fermentación
+
+- **Causa:** Uvas maduras y sanas se secan después de la vendimia antes de iniciar la fermentación alcohólica.
+- **Mecanismo:** La evaporación de agua concentra azúcares, ácidos, compuestos de sabor y fenoles en las bayas.
+- **Efecto:** El vino puede alcanzar alcohol potencial alto, cuerpo considerable y sabores concentrados de fruta madura o desecada; la sanidad y el control del secado siguen siendo esenciales.
+
+**Mentor Guía:** La respuesta correcta es C: «Secado parcial de uvas antes de la fermentación». La clave está en el secado parcial de uvas antes de la fermentación: La evaporación de agua concentra azúcares, ácidos, compuestos de sabor y fenoles en las bayas. Por eso, el vino puede alcanzar alcohol potencial alto, cuerpo considerable y sabores concentrados de fruta madura o desecada; la sanidad y el control del secado siguen siendo esenciales. Matiz: El secado debe controlarse para evitar podredumbre no deseada y no es equivalente a añadir azúcar.
+
+**Entrenador Técnico:** Concepto técnico (RA2): Fija el mecanismo del secado parcial de uvas antes de la fermentación: Uvas maduras y sanas se secan después de la vendimia antes de iniciar la fermentación alcohólica. → La evaporación de agua concentra azúcares, ácidos, compuestos de sabor y fenoles en las bayas. En el examen, identifica este patrón causa→mecanismo→efecto antes de mirar las opciones. Matiz: El secado debe controlarse para evitar podredumbre no deseada y no es equivalente a añadir azúcar.
+
+**Revisor Estricto:** Exigencia de repaso (RA2): debes poder justificar por qué «Secado parcial de uvas antes de la fermentación» es correcta y por qué las otras tres opciones no lo son, citando el mecanismo del secado parcial de uvas antes de la fermentación. Si no puedes reconstruir la cadena completa sin ver las opciones, repasa este concepto en tu material WSET L3. Matiz: El secado debe controlarse para evitar podredumbre no deseada y no es equivalente a añadir azúcar.
+
+**Micro-drill:** Consolidación: ¿cuál de estas afirmaciones corresponde al secado parcial de uvas antes de la fermentación?
+  - A. Protege al vino del oxígeno y desarrolla sabores únicos
+  - B. Adición de aguardiente vínico
+  - C. Estructura potente y necesidad de guarda
+  - D. Secado parcial de uvas antes de la fermentación ✅
+  - _Explicación:_ «Secado parcial de uvas antes de la fermentación» corresponde al secado parcial de uvas antes de la fermentación. Las demás afirmaciones son correctas, pero describen otros mecanismos.
 
 ---
 
@@ -645,6 +670,26 @@ Rechazos por regla: `{"below_threshold": 100, "identification_stem": 112, "no_st
 
 ---
 
+## wset3_516 (sq 516) · RA2 · gold=False
+
+**Pregunta:** ¿Qué práctica agrícola puede reducir el vigor en un suelo fértil?
+**Correcta (C):** Poda severa
+**Nodo:** `HC_CANOPY_VIGOUR_EXPOSURE` · score 2 · en stem: reducir el vigor · en respuesta correcta: poda severa
+
+- **Causa:** Se gestionan brotes y hojas durante la temporada mediante poda en verde y otras operaciones de dosel.
+- **Mecanismo:** Retirar o posicionar crecimiento limita la densidad vegetal y mejora la entrada de luz y la ventilación alrededor de los racimos.
+- **Efecto:** Se controla el vigor y se equilibran la exposición de los racimos y sus condiciones de maduración.
+
+**Mentor Guía:** La respuesta correcta es C: «Poda severa». La clave está en el manejo del dosel, el vigor y la exposición de los racimos: Retirar o posicionar crecimiento limita la densidad vegetal y mejora la entrada de luz y la ventilación alrededor de los racimos. Por eso, se controla el vigor y se equilibran la exposición de los racimos y sus condiciones de maduración.
+
+**Entrenador Técnico:** Concepto técnico (RA2): Fija el mecanismo del manejo del dosel, el vigor y la exposición de los racimos: Se gestionan brotes y hojas durante la temporada mediante poda en verde y otras operaciones de dosel. → Retirar o posicionar crecimiento limita la densidad vegetal y mejora la entrada de luz y la ventilación alrededor de los racimos. En el examen, identifica este patrón causa→mecanismo→efecto antes de mirar las opciones.
+
+**Revisor Estricto:** Exigencia de repaso (RA2): debes poder justificar por qué «Poda severa» es correcta y por qué las otras tres opciones no lo son, citando el mecanismo del manejo del dosel, el vigor y la exposición de los racimos. Si no puedes reconstruir la cadena completa sin ver las opciones, repasa este concepto en tu material WSET L3.
+
+**Micro-drill:** no derivado (sin patrón claro) — etapa ENTRENAR se salta para este ítem.
+
+---
+
 ## wset3_518 (sq 518) · RA2 · gold=False
 
 **Pregunta:** ¿Qué factor natural tiende a aumentar la acidez en la uva?
@@ -955,6 +1000,26 @@ Rechazos por regla: `{"below_threshold": 100, "identification_stem": 112, "no_st
 
 ---
 
+## wset3_504 (sq 504) · RA1 · gold=False
+
+**Pregunta:** ¿Cuál es un riesgo de plantar en zonas con alto índice de lluvias durante la floración?
+**Correcta (C):** Pobre cuajado
+**Nodo:** `HC_FLOWERING_RAIN_FRUIT_SET` · score 4 · en stem: alto indice de lluvias durante la floracion, lluvias durante la floracion · en respuesta correcta: cuajado, pobre cuajado
+
+- **Causa:** La lluvia y un tiempo fresco e inestable coinciden con la floración de la vid.
+- **Mecanismo:** La humedad interfiere con la polinización y la fecundación y puede hacer que las flores fallen o se desprendan.
+- **Efecto:** El cuajado es pobre, se forman menos bayas y disminuye el rendimiento potencial.
+
+**Mentor Guía:** La respuesta correcta es C: «Pobre cuajado». La clave está en la lluvia durante la floración y el cuajado: La humedad interfiere con la polinización y la fecundación y puede hacer que las flores fallen o se desprendan. Por eso, el cuajado es pobre, se forman menos bayas y disminuye el rendimiento potencial.
+
+**Entrenador Técnico:** Concepto técnico (RA1): Fija el mecanismo de la lluvia durante la floración y el cuajado: La lluvia y un tiempo fresco e inestable coinciden con la floración de la vid. → La humedad interfiere con la polinización y la fecundación y puede hacer que las flores fallen o se desprendan. En el examen, identifica este patrón causa→mecanismo→efecto antes de mirar las opciones.
+
+**Revisor Estricto:** Exigencia de repaso (RA1): debes poder justificar por qué «Pobre cuajado» es correcta y por qué las otras tres opciones no lo son, citando el mecanismo de la lluvia durante la floración y el cuajado. Si no puedes reconstruir la cadena completa sin ver las opciones, repasa este concepto en tu material WSET L3.
+
+**Micro-drill:** no derivado (sin patrón claro) — etapa ENTRENAR se salta para este ítem.
+
+---
+
 ## wset3_672 (sq 672) · RA1 · gold=False
 
 **Pregunta:** ¿Cuál de las siguientes afirmaciones sobre el control de la filoxera es CORRECTA?
@@ -1127,76 +1192,6 @@ Rechazos por regla: `{"below_threshold": 100, "identification_stem": 112, "no_st
   - C. Envejecimiento exclusivamente oxidativo ✅
   - D. Estructura potente y necesidad de guarda
   - _Explicación:_ «Envejecimiento exclusivamente oxidativo» corresponde a las rutas de crianza de Oloroso y Amontillado. Las demás afirmaciones son correctas, pero describen otros mecanismos.
-
----
-
-## wset3_16 (sq 16) · unknown · gold=False
-
-**Pregunta:** ¿Qué práctica enológica se utiliza para aumentar la extracción de color y taninos en tintos?
-**Correcta (C):** Remontado
-**Nodo:** `HC_RED_FERMENTATION_EXTRACTION` · score 3 · en stem: aumentar la extraccion de color y taninos, practica enologica se utiliza para aumentar la extraccion de color y taninos en tintos · en respuesta correcta: remontado
-
-- **Causa:** El mosto tinto fermenta con los hollejos mientras se gestiona el sombrero y la temperatura es suficientemente cálida.
-- **Mecanismo:** El remontado renueva el contacto entre líquido y hollejos; el calor y el alcohol creciente favorecen la extracción de compuestos fenólicos.
-- **Efecto:** Pasan al vino más color y tanino, aumentando su profundidad y estructura.
-
-**Mentor Guía:** La respuesta correcta es C: «Remontado». La clave está en la extracción durante la fermentación de tintos: El remontado renueva el contacto entre líquido y hollejos; el calor y el alcohol creciente favorecen la extracción de compuestos fenólicos. Por eso, pasan al vino más color y tanino, aumentando su profundidad y estructura.
-
-**Entrenador Técnico:** Concepto técnico (unknown): Tema: extracción. Fija el mecanismo de la extracción durante la fermentación de tintos: El mosto tinto fermenta con los hollejos mientras se gestiona el sombrero y la temperatura es suficientemente cálida. → El remontado renueva el contacto entre líquido y hollejos; el calor y el alcohol creciente favorecen la extracción de compuestos fenólicos. En el examen, identifica este patrón causa→mecanismo→efecto antes de mirar las opciones.
-
-**Revisor Estricto:** Exigencia de repaso (unknown): debes poder justificar por qué «Remontado» es correcta y por qué las otras tres opciones no lo son, citando el mecanismo de la extracción durante la fermentación de tintos. Si no puedes reconstruir la cadena completa sin ver las opciones, repasa este concepto en tu material WSET L3.
-
-**Micro-drill:** no derivado (sin patrón claro) — etapa ENTRENAR se salta para este ítem.
-
----
-
-## wset3_25 (sq 25) · RA3 · gold=False
-
-**Pregunta:** ¿Cuál es el propósito del licor de tiraje?
-**Correcta (C):** Iniciar segunda fermentación
-**Nodo:** `HC_LIQUEUR_TIRAGE_SECOND_FERMENTATION` · score 3 · en stem: licor de tiraje, proposito del licor de tiraje · en respuesta correcta: iniciar segunda fermentacion
-
-- **Causa:** Se añade a la mezcla de vinos base una cantidad medida de vino, azúcar, levadura, nutrientes y un agente clarificante.
-- **Mecanismo:** La levadura añadida fermenta el azúcar dentro de la botella cerrada, produciendo alcohol y dióxido de carbono.
-- **Efecto:** La segunda fermentación eleva ligeramente el alcohol y atrapa el CO₂ disuelto, creando presión y burbujas.
-
-**Mentor Guía:** La respuesta correcta es C: «Iniciar segunda fermentación». La clave está en el licor de tiraje y la segunda fermentación: La levadura añadida fermenta el azúcar dentro de la botella cerrada, produciendo alcohol y dióxido de carbono. Por eso, la segunda fermentación eleva ligeramente el alcohol y atrapa el CO₂ disuelto, creando presión y burbujas.
-
-**Entrenador Técnico:** Concepto técnico (RA3): Fija el mecanismo del licor de tiraje y la segunda fermentación: Se añade a la mezcla de vinos base una cantidad medida de vino, azúcar, levadura, nutrientes y un agente clarificante. → La levadura añadida fermenta el azúcar dentro de la botella cerrada, produciendo alcohol y dióxido de carbono. En el examen, identifica este patrón causa→mecanismo→efecto antes de mirar las opciones.
-
-**Revisor Estricto:** Exigencia de repaso (RA3): debes poder justificar por qué «Iniciar segunda fermentación» es correcta y por qué las otras tres opciones no lo son, citando el mecanismo del licor de tiraje y la segunda fermentación. Si no puedes reconstruir la cadena completa sin ver las opciones, repasa este concepto en tu material WSET L3.
-
-**Micro-drill:** Consolidación: ¿cuál de estas afirmaciones corresponde al licor de tiraje y la segunda fermentación?
-  - A. Iniciar segunda fermentación ✅
-  - B. Protege al vino del oxígeno y desarrolla sabores únicos
-  - C. Adición de aguardiente vínico
-  - D. Estructura potente y necesidad de guarda
-  - _Explicación:_ «Iniciar segunda fermentación» corresponde al licor de tiraje y la segunda fermentación. Las demás afirmaciones son correctas, pero describen otros mecanismos.
-
----
-
-## wset3_29 (sq 29) · RA3 · gold=False
-
-**Pregunta:** ¿Cuál es una diferencia clave entre un espumoso elaborado por método ancestral y uno por método tradicional?
-**Correcta (C):** Se embotella con levadura natural sin degüelle
-**Nodo:** `HC_ANCESTRAL_SINGLE_FERMENTATION` · score 3 · en stem: ancestral, metodo ancestral · en respuesta correcta: se embotella con levadura natural sin deguelle
-
-- **Causa:** Un vino parcialmente fermentado se embotella antes de que termine su primera fermentación alcohólica.
-- **Mecanismo:** La fermentación continúa dentro de la botella cerrada y el CO₂ producido por la levadura se disuelve en el vino en vez de escapar.
-- **Efecto:** Las burbujas proceden de una sola fermentación continua; los ejemplos tradicionales pueden conservar sedimento porque el removido y el degüelle no son obligatorios.
-
-**Mentor Guía:** La respuesta correcta es C: «Se embotella con levadura natural sin degüelle». La clave está en el método ancestral y su fermentación única: La fermentación continúa dentro de la botella cerrada y el CO₂ producido por la levadura se disuelve en el vino en vez de escapar. Por eso, las burbujas proceden de una sola fermentación continua; los ejemplos tradicionales pueden conservar sedimento porque el removido y el degüelle no son obligatorios.
-
-**Entrenador Técnico:** Concepto técnico (RA3): Fija el mecanismo del método ancestral y su fermentación única: Un vino parcialmente fermentado se embotella antes de que termine su primera fermentación alcohólica. → La fermentación continúa dentro de la botella cerrada y el CO₂ producido por la levadura se disuelve en el vino en vez de escapar. En el examen, identifica este patrón causa→mecanismo→efecto antes de mirar las opciones.
-
-**Revisor Estricto:** Exigencia de repaso (RA3): debes poder justificar por qué «Se embotella con levadura natural sin degüelle» es correcta y por qué las otras tres opciones no lo son, citando el mecanismo del método ancestral y su fermentación única. Si no puedes reconstruir la cadena completa sin ver las opciones, repasa este concepto en tu material WSET L3.
-
-**Micro-drill:** Consolidación: ¿cuál de estas afirmaciones corresponde al método ancestral y su fermentación única?
-  - A. Protege al vino del oxígeno y desarrolla sabores únicos
-  - B. Se embotella con levadura natural sin degüelle ✅
-  - C. Adición de aguardiente vínico
-  - D. Estructura potente y necesidad de guarda
-  - _Explicación:_ «Se embotella con levadura natural sin degüelle» corresponde al método ancestral y su fermentación única. Las demás afirmaciones son correctas, pero describen otros mecanismos.
 
 ---
 

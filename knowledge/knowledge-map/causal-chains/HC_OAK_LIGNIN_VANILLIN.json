@@ -1,0 +1,30 @@
+{
+  "node_type": "causal_chain",
+  "node_id": "HC_OAK_LIGNIN_VANILLIN",
+  "topic": "oak lignin breakdown and vanilla aroma",
+  "trigger_keywords": [
+    "lignina",
+    "lignin",
+    "vainillina",
+    "vanillin",
+    "notas de vainilla",
+    "oak lignin vanilla"
+  ],
+  "steps": [
+    {"step": 1, "label": "cause", "text": "Oak is seasoned and toasted before a barrel is used for fermentation or maturation."},
+    {"step": 2, "label": "mechanism", "text": "Heat and seasoning break down part of the wood's lignin and create aromatic aldehydes including vanillin, which can then be extracted into wine."},
+    {"step": 3, "label": "effect", "text": "The wine may gain a vanilla aroma alongside other oak-derived characters, with intensity depending on oak origin, toast, age and contact."},
+    {"step": 4, "label": "exam_formulation", "text": "Formative causal formulation: lignin breakdown contributes vanillin, helping explain vanilla notes from oak."}
+  ],
+  "agent_corpus": "tutor",
+  "safe_for_examiner": false,
+  "examiner_scoring_allowed": false,
+  "requires_human_review": true,
+  "source": "heuristic",
+  "classification": "inferred",
+  "official": false,
+  "formative_only": true,
+  "official_mark_scheme": false,
+  "governance": {"safe_for_examiner": false, "examiner_scoring_allowed": false, "agent_corpus": "tutor", "source": "heuristic", "classification": "inferred", "official": false, "formative_only": true},
+  "_meta": {"schema_version": "causal_chain_v1", "heuristic_extension": "HC_v1", "created_date": "2026-06-15", "ingestion_status": "draft", "source_note": "Inferred formative model - not official WSET assessment or mark-scheme content"}
+}

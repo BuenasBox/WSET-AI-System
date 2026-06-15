@@ -526,6 +526,7 @@ class ViticultureHazardExpansionTests(unittest.TestCase):
             "wset3_12": "HC_FROST_SLOPE_AIR_DRAINAGE",
             "wset3_316": "HC_EARLY_GROWTH_FROST_EXPOSURE",
             "wset3_318": "HC_CANOPY_AIRFLOW_FUNGAL_RISK",
+            "wset3_33": "HC_DRIP_IRRIGATION_PRECISION",
             "wset3_433": "HC_EXCESS_NITROGEN_DISEASE_RISK",
             "wset3_488": "HC_CANOPY_SHADE_HEAT_PROTECTION",
             "wset3_489": "HC_CANOPY_AIRFLOW_FUNGAL_RISK",
@@ -559,7 +560,7 @@ class ViticultureHazardExpansionTests(unittest.TestCase):
             self.assertGreaterEqual(provenance["match_score"], MIN_KEYWORD_HITS)
 
     def test_questionable_and_negative_hazard_items_remain_excluded(self):
-        for item_id in ("wset3_33", "wset3_429", "wset3_454", "wset3_772", "wset3_777", "wset3_791"):
+        for item_id in ("wset3_429", "wset3_454", "wset3_772", "wset3_777", "wset3_791"):
             record = self.records.get(item_id)
             if record is not None:
                 self.assertNotIn(
@@ -764,7 +765,7 @@ class VineyardMechanismExpansionTests(unittest.TestCase):
             self.assertGreaterEqual(provenance["match_score"], MIN_KEYWORD_HITS)
 
     def test_context_dependent_vineyard_claims_remain_excluded(self):
-        for item_id in ("wset3_19", "wset3_509"):
+        for item_id in ("wset3_509",):
             record = self.records.get(item_id)
             if record is not None:
                 self.assertNotIn(
@@ -1289,14 +1290,18 @@ class VineyardManagementExpansionTests(unittest.TestCase):
 
     def test_exact_vineyard_management_assignments(self):
         expected = {
+            "wset3_19": "HC_YIELD_CONCENTRATION",
             "wset3_319": "HC_CANOPY_VIGOUR_EXPOSURE",
             "wset3_351": "HC_EARLY_HARVEST_FRESHNESS_ALCOHOL",
             "wset3_417": "HC_CANOPY_VIGOUR_EXPOSURE",
             "wset3_436": "HC_CANOPY_VIGOUR_EXPOSURE",
+            "wset3_452": "HC_CANOPY_VIGOUR_EXPOSURE",
             "wset3_457": "HC_SELECTIVE_HAND_HARVEST_QUALITY",
             "wset3_484": "HC_YIELD_CONCENTRATION",
             "wset3_496": "HC_EARLY_HARVEST_FRESHNESS_ALCOHOL",
             "wset3_497": "HC_YIELD_CONCENTRATION",
+            "wset3_462": "HC_CANOPY_VIGOUR_EXPOSURE",
+            "wset3_516": "HC_CANOPY_VIGOUR_EXPOSURE",
             "wset3_685": "HC_SELECTIVE_HAND_HARVEST_QUALITY",
             "wset3_710": "HC_CANOPY_VIGOUR_EXPOSURE",
         }
@@ -1319,15 +1324,10 @@ class VineyardManagementExpansionTests(unittest.TestCase):
 
     def test_absolute_doubtful_and_negative_claims_remain_excluded(self):
         for item_id in (
-            "wset3_19",
             "wset3_32",
-            "wset3_33",
-            "wset3_452",
             "wset3_458",
-            "wset3_462",
             "wset3_471",
             "wset3_519",
-            "wset3_516",
             "wset3_788",
         ):
             record = self.records.get(item_id)

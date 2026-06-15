@@ -85,13 +85,20 @@ class StrongSignalContractTests(unittest.TestCase):
     def test_every_match_has_stem_and_correct_option_hits(self):
         for rec in self.records:
             prov = rec["_provenance"]["causal_chain"]
+            if prov.get("promotion_method") == "manual_review_v1":
+                self.assertTrue(prov["review_reason"], rec["item_id"])
+                self.assertTrue(prov["learner_caveat"], rec["item_id"])
+                self.assertTrue(prov["correct_option_hits"], rec["item_id"])
+                continue
             self.assertTrue(prov["stem_hits"], rec["item_id"])
             self.assertTrue(prov["correct_option_hits"], rec["item_id"])
             self.assertGreaterEqual(prov["match_score"], MIN_KEYWORD_HITS)
 
     def test_every_chain_node_has_spanish_layer(self):
         for rec in self.records:
-            self.assertIn(rec["_provenance"]["causal_chain"]["derived_from"], NODE_ES)
+            prov = rec["_provenance"]["causal_chain"]
+            node_id = prov.get("node_id") or prov["derived_from"]
+            self.assertIn(node_id, NODE_ES)
 
     def test_batch_is_small_and_bounded(self):
         self.assertLessEqual(len(self.records), BATCH_SIZE)

@@ -1,0 +1,30 @@
+{
+  "node_type": "causal_chain",
+  "node_id": "HC_FRENCH_AMERICAN_OAK_STYLE",
+  "topic": "French and American oak flavour intensity",
+  "trigger_keywords": [
+    "french oak",
+    "american oak",
+    "french oak subtle flavour",
+    "american oak overt flavour",
+    "oak origin flavour comparison",
+    "french american oak style"
+  ],
+  "steps": [
+    {"step": 1, "label": "cause", "text": "Wine matures in barrels made from oak species and grain structures commonly associated with French or American sources."},
+    {"step": 2, "label": "mechanism", "text": "Oak species, grain, seasoning and toast influence the amount and balance of lactones, vanillin, tannins and toast-derived compounds extracted into wine."},
+    {"step": 3, "label": "effect", "text": "American oak often gives more overt vanilla and coconut character, while French oak is often perceived as subtler and more restrained; cooperage and use can alter either pattern."},
+    {"step": 4, "label": "exam_formulation", "text": "Formative causal formulation: oak origin can influence flavour intensity, but barrel construction, toast, age and contact also matter."}
+  ],
+  "agent_corpus": "tutor",
+  "safe_for_examiner": false,
+  "examiner_scoring_allowed": false,
+  "requires_human_review": true,
+  "source": "heuristic",
+  "classification": "inferred",
+  "official": false,
+  "formative_only": true,
+  "official_mark_scheme": false,
+  "governance": {"safe_for_examiner": false, "examiner_scoring_allowed": false, "agent_corpus": "tutor", "source": "heuristic", "classification": "inferred", "official": false, "formative_only": true},
+  "_meta": {"schema_version": "causal_chain_v1", "heuristic_extension": "HC_v1", "created_date": "2026-06-15", "ingestion_status": "draft", "source_note": "Inferred formative model - not official WSET assessment or mark-scheme content"}
+}

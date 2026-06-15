@@ -687,6 +687,75 @@ NODE_ES.update({
     "HC_NEW_OAK_TANNIN_WHITE_WINE": {"subject": "el aporte de tanino de barrica nueva a un vino blanco", "causa": "Un vino blanco fermenta o madura en una barrica de roble nueva.", "mecanismo": "Como la madera aún no se ha agotado por usos anteriores, taninos y otros compuestos fenólicos del roble pueden disolverse en el vino.", "efecto": "El blanco puede ganar estructura fenólica y tanino además de aromas de roble; la magnitud depende de la barrica y del contacto."},
 })
 
+NODE_ES.update({
+    "HC_MADEIRA_HEAT_OXIDATIVE_AGEING": {
+        "subject": "el calor y la crianza oxidativa de Madeira",
+        "causa": "El Madeira fortificado madura con exposición al calor y al oxígeno, de forma más rápida mediante estufagem o más gradual mediante canteiro.",
+        "mecanismo": "El calor y la oxidación controlada transforman los aromas de fruta fresca, mientras la acidez natural elevada sigue siendo un elemento estructural importante.",
+        "efecto": "El vino desarrolla notas de nuez, caramelo y fruta seca; en Malmsey, el dulzor elevado queda equilibrado por la acidez.",
+    },
+    "HC_MOSCATO_ASTI_FERMENTATION_ARREST": {
+        "subject": "la detención de la fermentación en Moscato d'Asti",
+        "causa": "Un mosto aromático de Moscatel fermenta bajo presión y la fermentación se detiene antes de consumir todo el azúcar de la uva.",
+        "mecanismo": "El enfriamiento y la filtración frenan la levadura, conservan azúcar residual, limitan la producción de alcohol y retienen aromas primarios y parte del dióxido de carbono.",
+        "efecto": "El vino resulta ligeramente espumoso, dulce, de baja graduación y con aromas florales y de uva marcados.",
+    },
+    "HC_APPASSIMENTO_GRAPE_DRYING_CONCENTRATION": {
+        "subject": "el secado parcial de uvas antes de la fermentación",
+        "causa": "Uvas maduras y sanas se secan después de la vendimia antes de iniciar la fermentación alcohólica.",
+        "mecanismo": "La evaporación de agua concentra azúcares, ácidos, compuestos de sabor y fenoles en las bayas.",
+        "efecto": "El vino puede alcanzar alcohol potencial alto, cuerpo considerable y sabores concentrados de fruta madura o desecada; la sanidad y el control del secado siguen siendo esenciales.",
+    },
+    "HC_OAK_LIGNIN_VANILLIN": {
+        "subject": "la lignina del roble y la formación de vainillina",
+        "causa": "La madera de roble se sazona y tuesta antes de utilizarse como barrica.",
+        "mecanismo": "El calor y el secado degradan parte de la lignina y forman aldehídos aromáticos como la vainillina, que después puede extraerse hacia el vino.",
+        "efecto": "El vino puede adquirir aroma de vainilla junto con otros caracteres de roble; la intensidad depende del origen, tostado, edad y tiempo de contacto de la barrica.",
+    },
+    "HC_FRENCH_AMERICAN_OAK_STYLE": {
+        "subject": "el origen del roble y la intensidad de sus aromas",
+        "causa": "El vino madura en barricas elaboradas con especies y estructuras de grano asociadas habitualmente al roble francés o americano.",
+        "mecanismo": "La especie, el grano, el secado y el tostado modifican la extracción de lactonas, vainillina, taninos y compuestos tostados.",
+        "efecto": "El roble americano suele aportar vainilla y coco más evidentes, mientras el francés suele percibirse más sutil; la tonelería, el tostado y el uso previo pueden cambiar ambos patrones.",
+    },
+    "HC_NATURAL_CORK_SLOW_OXYGEN": {
+        "subject": "el corcho natural y la evolución lenta en botella",
+        "causa": "Un vino apto para guarda se sella con corcho natural y se conserva en condiciones estables.",
+        "mecanismo": "El cierre y el oxígeno inicial del espacio de cabeza exponen al vino a cantidades muy pequeñas de oxígeno con el tiempo, aunque la transmisión varía entre corchos y condiciones de almacenamiento.",
+        "efecto": "La evolución química lenta puede favorecer integración y aromas terciarios, pero el corcho no garantiza una mejora y un aporte excesivo o variable puede causar oxidación prematura.",
+    },
+})
+
+# Explicitly reviewed promotions supplement matcher v2 without changing it.
+# Every entry is deterministic, node-bound, provenance-rich, and caveated.
+MANUAL_REVIEW_PROMOTIONS: dict[str, dict[str, str]] = {
+    "wset3_11": {"node_id": "CC_COOL_CLIMATE_ACIDITY", "reason": "El clima fresco explica directamente la retención de acidez de la respuesta correcta.", "caveat": "La continentalidad por sí sola no garantiza acidez alta; importan la temperatura de maduración, el sitio y la añada."},
+    "wset3_65": {"node_id": "HC_EXCESSIVE_WHITE_OXIDATION", "reason": "El nodo explica el apagamiento de fruta, el cambio de color y las notas de nuez de la opción correcta.", "caveat": "Las notas de nuez pueden ser buscadas en estilos oxidativos; aquí se interpretan como defecto dentro del contexto de la pregunta."},
+    "wset3_104": {"node_id": "HC_MADEIRA_HEAT_OXIDATIVE_AGEING", "reason": "El calor, la oxidación y la acidez explican el perfil sensorial de Malmsey envejecido.", "caveat": "Malmsey describe el estilo más dulce de Madeira; otros estilos muestran distinto nivel de dulzor."},
+    "wset3_113": {"node_id": "HC_COOL_SPARKLING_BASE_ACIDITY", "reason": "La acidez suficiente del vino base permite conservar frescura tras la segunda fermentación y la crianza.", "caveat": "La acidez no es el único requisito técnico; sanidad, alcohol y estabilidad del vino base también importan."},
+    "wset3_208": {"node_id": "CC_FLOR_BIOLOGICAL_AGEING", "reason": "La flor protege frente al oxígeno y genera el carácter biológico señalado por la respuesta.", "caveat": "La percepción salina no procede de añadir sal y varía con el vino y el contexto sensorial."},
+    "wset3_210": {"node_id": "HC_OXIDATIVE_AGEING_TERTIARY", "reason": "La larga crianza oxidativa en toneles explica el carácter desarrollado del Tawny con indicación de edad.", "caveat": "La indicación expresa un perfil de edad, no la edad exacta de cada componente de la mezcla."},
+    "wset3_219": {"node_id": "HC_MOSCATO_ASTI_FERMENTATION_ARREST", "reason": "La fermentación detenida explica conjuntamente el dulzor, el bajo alcohol y los aromas florales.", "caveat": "El estilo es ligeramente espumoso y no debe generalizarse a todos los vinos de Moscatel."},
+    "wset3_230": {"node_id": "HC_CONTINENTALITY_STYLE", "reason": "La temporada continental y sus oscilaciones térmicas explican acidez y estructura firme en tintos aptos.", "caveat": "El resultado depende de variedad, madurez, sitio y añada; no todos los tintos continentales son idénticos."},
+    "wset3_251": {"node_id": "HC_MARITIME_MODERATION", "reason": "La influencia oceánica modera extremos y favorece maduración más uniforme y estilos frescos.", "caveat": "La lluvia y la humedad marítimas también pueden elevar el riesgo de enfermedad y dilución."},
+    "wset3_266": {"node_id": "HC_ALTITUDE_SLOW_RIPENING_FRESHNESS", "reason": "La altitud y las noches frescas explican la maduración lenta y la retención de acidez.", "caveat": "La altitud no garantiza calidad por sí sola; exposición, agua, suelo y manejo siguen siendo decisivos."},
+    "wset3_282": {"node_id": "HC_OXIDATIVE_AGEING_TERTIARY", "reason": "La crianza prolongada con roble y oxígeno controlado explica la evolución terciaria de la opción.", "caveat": "La categoría regional y el tiempo de crianza no garantizan por sí solos calidad ni un perfil único."},
+    "wset3_321": {"node_id": "HC_COOL_CLIMATE_STYLE", "reason": "El clima continental fresco de Chablis explica maduración lenta, acidez alta y alcohol moderado.", "caveat": "La añada y la ubicación dentro de Chablis modifican madurez y concentración."},
+    "wset3_339": {"node_id": "HC_APPASSIMENTO_GRAPE_DRYING_CONCENTRATION", "reason": "El secado parcial previo a la fermentación explica la concentración del mosto para Amarone.", "caveat": "El secado debe controlarse para evitar podredumbre no deseada y no es equivalente a añadir azúcar."},
+    "wset3_341": {"node_id": "HC_ALTITUDE_GRAPE_ACIDITY", "reason": "La altitud y el clima fresco reducen la pérdida respiratoria de ácidos y explican la respuesta.", "caveat": "En Mosel, latitud, exposición y pendiente interactúan; la altitud no actúa de forma aislada."},
+    "wset3_345": {"node_id": "HC_MARITIME_MODERATION", "reason": "La influencia marítima modera el clima y explica la maduración equilibrada de Cabernet Sauvignon.", "caveat": "La influencia marítima también trae variabilidad de lluvia y no elimina los riesgos de la añada."},
+    "wset3_401": {"node_id": "HC_NEW_OAK_STRUCTURE_SPICE", "reason": "El roble nuevo explica el aporte de especias, estructura y oxigenación controlada de la opción.", "caveat": "El uso de roble nuevo no es universal ni garantiza calidad; debe integrarse con la fruta."},
+    "wset3_421": {"node_id": "HC_CONTINENTALITY_STYLE", "reason": "La amplitud térmica continental explica la combinación de madurez, tanino y acidez de la respuesta.", "caveat": "La intensidad final depende además de variedad, rendimiento, extracción, crianza y añada."},
+    "wset3_460": {"node_id": "HC_SELECTED_YEAST_PREDICTABILITY", "reason": "Una cepa seleccionada permite orientar la fermentación y hacer más predecible su perfil aromático.", "caveat": "La levadura influye, pero no controla por sí sola todo el perfil aromático del vino."},
+    "wset3_466": {"node_id": "HC_SELECTED_YEAST_PREDICTABILITY", "reason": "Las características conocidas de una levadura seleccionada explican el mayor control fermentativo.", "caveat": "La predictibilidad depende también de temperatura, nutrientes, higiene y composición del mosto."},
+    "wset3_499": {"node_id": "HC_OAK_LIGNIN_VANILLIN", "reason": "La degradación de lignina genera vainillina y explica directamente las notas de vainilla.", "caveat": "La vainilla no depende solo de la lignina: origen, tostado, edad y contacto del roble modifican su intensidad."},
+    "wset3_514": {"node_id": "HC_SO2_MICROBIAL_INHIBITION", "reason": "El sulfitado inhibe microorganismos no deseados y explica el control antes de la fermentación.", "caveat": "El SO2 no esteriliza el mosto ni sustituye higiene, temperatura y una inoculación adecuada."},
+    "wset3_669": {"node_id": "HC_CONTINENTALITY_STYLE", "reason": "El clima continental de Piemonte explica maduración ajustada, acidez conservada y tanino firme.", "caveat": "La variedad y el mesoclima determinan cuánto se expresa este patrón."},
+    "wset3_673": {"node_id": "HC_FRENCH_AMERICAN_OAK_STYLE", "reason": "La composición y el grano del roble explican la diferencia habitual de intensidad aromática.", "caveat": "Es una tendencia, no una regla absoluta; tostado, tonelero, edad y tamaño pueden cambiar el resultado."},
+    "wset3_740": {"node_id": "HC_CANOPY_VIGOUR_EXPOSURE", "reason": "La gestión del dosel regula luz, ventilación y vigor, afectando directamente la madurez de la fruta.", "caveat": "La exposición óptima depende del clima; demasiada luz y calor pueden quemar o deshidratar los racimos."},
+    "wset3_850": {"node_id": "HC_NATURAL_CORK_SLOW_OXYGEN", "reason": "La transmisión limitada de oxígeno explica la evolución gradual asociada a cierres de corcho natural.", "caveat": "La porosidad no garantiza mejora y existe variación entre corchos; demasiado oxígeno acelera la oxidación."},
+}
+
 
 def _norm(text: str) -> str:
     """Lowercase + strip accents for robust word-boundary matching."""
@@ -889,6 +958,56 @@ def build_micro_drill(entry: dict, batch: list[dict]):
     }
 
 
+def _build_enrichment_record(
+    entry: dict,
+    batch: list[dict],
+    promotion: dict[str, str] | None = None,
+) -> dict:
+    item, match = entry["item"], entry["match"]
+    chain_es = NODE_ES[match["node_id"]]
+    causal_provenance = {
+        "derived_from": match["node_id"],
+        "matched_keywords": match["matched_keywords"],
+        "stem_hits": match["stem_hits"],
+        "correct_option_hits": match["correct_option_hits"],
+        "match_score": match["score"],
+    }
+    if promotion:
+        causal_provenance.update({
+            "node_id": match["node_id"],
+            "derived_from": "manual_review_v1",
+            "promotion_method": "manual_review_v1",
+            "review_reason": promotion["reason"],
+            "learner_caveat": promotion["caveat"],
+        })
+    record = {
+        "item_id": item["id"],
+        "causal_chain": {
+            "causa": chain_es["causa"],
+            "mecanismo": chain_es["mecanismo"],
+            "efecto": chain_es["efecto"],
+        },
+        "feedback_by_mode": build_feedback_by_mode(item, chain_es),
+        "_provenance": {
+            "causal_chain": causal_provenance,
+            "feedback_by_mode": {"derived_from": f"template_v1 + {match['node_id']}"},
+        },
+    }
+    if promotion:
+        caveat = promotion["caveat"]
+        record["feedback_by_mode"]["mentor"] += f" Matiz: {caveat}"
+        record["feedback_by_mode"]["trainer"] += f" Matiz: {caveat}"
+        record["feedback_by_mode"]["reviewer"] += f" Matiz: {caveat}"
+    drill = build_micro_drill(entry, batch)
+    if drill:
+        record["micro_drill"] = drill
+        record["_provenance"]["micro_drill"] = {
+            "derived_from": f"node_anchored_v1 ({match['node_id']})",
+            "distractor_source": "correct options of batch items matched to other nodes",
+        }
+    return record
+
+
 def derive() -> dict:
     nodes = load_chain_nodes()
     items = load_frontend_items()
@@ -896,43 +1015,42 @@ def derive() -> dict:
 
     enriched = {}
     for entry in batch:
-        item, match = entry["item"], entry["match"]
-        chain_es = NODE_ES[match["node_id"]]
-        record = {
-            "item_id": item["id"],
-            "causal_chain": {
-                "causa": chain_es["causa"],
-                "mecanismo": chain_es["mecanismo"],
-                "efecto": chain_es["efecto"],
-            },
-            "feedback_by_mode": build_feedback_by_mode(item, chain_es),
-            "_provenance": {
-                "causal_chain": {
-                    "derived_from": match["node_id"],
-                    "matched_keywords": match["matched_keywords"],
-                    "stem_hits": match["stem_hits"],
-                    "correct_option_hits": match["correct_option_hits"],
-                    "match_score": match["score"],
-                },
-                "feedback_by_mode": {"derived_from": f"template_v1 + {match['node_id']}"},
+        enriched[entry["item"]["source_question_id"]] = _build_enrichment_record(entry, batch)
+
+    items_by_id = {item["id"]: item for item in items}
+    for item_id, promotion in MANUAL_REVIEW_PROMOTIONS.items():
+        item = items_by_id[item_id]
+        if _is_identification_stem(item["text"]) or _is_negative_polarity_stem(item["text"]):
+            raise ValueError(f"Unsafe manual promotion: {item_id}")
+        ci = item.get("correct_index", 0)
+        correct = (item.get("options") or [""])[ci]
+        entry = {
+            "item": item,
+            "match": {
+                "node_id": promotion["node_id"],
+                "matched_keywords": [],
+                "stem_hits": [],
+                "correct_option_hits": [correct],
+                "score": 0,
             },
         }
-        drill = build_micro_drill(entry, batch)
-        if drill:
-            record["micro_drill"] = drill
-            record["_provenance"]["micro_drill"] = {
-                "derived_from": f"node_anchored_v1 ({match['node_id']})",
-                "distractor_source": "correct options of batch items matched to other nodes",
-            }
-        enriched[item["source_question_id"]] = record
+        enriched[item["source_question_id"]] = _build_enrichment_record(
+            entry,
+            batch,
+            promotion=promotion,
+        )
 
     fingerprint = hashlib.sha256(
-        (FRONTEND_BANK.read_text(encoding="utf-8") + json.dumps(NODE_ES, sort_keys=True, ensure_ascii=False)).encode()
+        (
+            FRONTEND_BANK.read_text(encoding="utf-8")
+            + json.dumps(NODE_ES, sort_keys=True, ensure_ascii=False)
+            + json.dumps(MANUAL_REVIEW_PROMOTIONS, sort_keys=True, ensure_ascii=False)
+        ).encode()
     ).hexdigest()[:16]
 
     return {
         "schema_version": "sba_enrichment_v1",
-        "phase": "P.1-batch1-v2-precision",
+        "phase": "P.4-batch4-manual-review",
         "derivation": {
             "min_keyword_hits": MIN_KEYWORD_HITS,
             "require_stem_hit": REQUIRE_STEM_HIT,
@@ -941,6 +1059,7 @@ def derive() -> dict:
             "word_boundary_matching": True,
             "generic_triggers_banned": sorted(GENERIC_TRIGGERS),
             "identification_stems_excluded": True,
+            "manual_review_promotion_count": len(MANUAL_REVIEW_PROMOTIONS),
             "batch_size": BATCH_SIZE,
             "policy": "precision first: populate only when the node explains the correct answer; omit otherwise; never invent content",
         },

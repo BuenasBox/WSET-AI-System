@@ -1,0 +1,30 @@
+{
+  "node_type": "causal_chain",
+  "node_id": "HC_NATURAL_CORK_SLOW_OXYGEN",
+  "topic": "natural cork oxygen transmission and bottle ageing",
+  "trigger_keywords": [
+    "corcho natural",
+    "natural cork",
+    "estructura porosa",
+    "micro oxigenacion lenta y gradual",
+    "oxygen transmission closure",
+    "bottle ageing cork"
+  ],
+  "steps": [
+    {"step": 1, "label": "cause", "text": "A wine suitable for ageing is sealed with natural cork and stored under appropriate stable conditions."},
+    {"step": 2, "label": "mechanism", "text": "The closure and initial headspace expose the wine to very small amounts of oxygen over time, while the exact transmission rate varies between corks and storage conditions."},
+    {"step": 3, "label": "effect", "text": "Slow chemical evolution can support integration and tertiary development, but cork does not guarantee improvement and excessive or variable oxygen can cause premature oxidation."},
+    {"step": 4, "label": "exam_formulation", "text": "Formative causal formulation: limited oxygen exposure can contribute to gradual bottle evolution, with meaningful variation between closures."}
+  ],
+  "agent_corpus": "tutor",
+  "safe_for_examiner": false,
+  "examiner_scoring_allowed": false,
+  "requires_human_review": true,
+  "source": "heuristic",
+  "classification": "inferred",
+  "official": false,
+  "formative_only": true,
+  "official_mark_scheme": false,
+  "governance": {"safe_for_examiner": false, "examiner_scoring_allowed": false, "agent_corpus": "tutor", "source": "heuristic", "classification": "inferred", "official": false, "formative_only": true},
+  "_meta": {"schema_version": "causal_chain_v1", "heuristic_extension": "HC_v1", "created_date": "2026-06-15", "ingestion_status": "draft", "source_note": "Inferred formative model - not official WSET assessment or mark-scheme content"}
+}
