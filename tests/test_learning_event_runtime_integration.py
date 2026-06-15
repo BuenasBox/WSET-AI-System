@@ -553,7 +553,7 @@ class TestOpenResponseMisconcepSignals(unittest.TestCase):
         )
 
         self.assertEqual(
-            result["diagnostic_outcome"]["misconception_id"],
+            result["diagnostic_outcome"]["mc_id"],
             _MC_AVAILABLE,
         )
         self.assertEqual(
