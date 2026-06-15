@@ -1,6 +1,6 @@
 window.PREGUNTAS_BANK = {
   "schema_version": "sba_bank_v1",
-  "generated_at": "2026-06-14T16:27:08.279726",
+  "generated_at": "2026-06-14T19:03:13.625634",
   "total_items": 578,
   "ra_distribution": {
     "RA1": 225,
