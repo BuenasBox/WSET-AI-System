@@ -9,6 +9,7 @@ from pathlib import Path
 from typing import Any, Iterable
 
 from tools.constants import KNOWLEDGE_DIR
+from tools.learner_model.wwj_remediation import get_remediation_path
 
 DEFAULT_MISCONCEPTION_DIR = KNOWLEDGE_DIR / "knowledge-map" / "misconceptions"
 DETECTION_THRESHOLD = 0.45
@@ -236,6 +237,83 @@ def summarize_evidence(
     }
 
 
+def build_insight(
+    les: dict[str, Any],
+    misconception_id: str,
+    *,
+    directory: Path = DEFAULT_MISCONCEPTION_DIR,
+) -> dict[str, Any]:
+    """Build the recommendation and formative coaching view for one node."""
+    node = load_node_index(directory).get(misconception_id)
+    if node is None:
+        return {}
+
+    adapted = normalize_node(node)
+    summary = summarize_evidence(les, misconception_id)
+    relationships = adapted["recommendation_relationships"]
+    remediation = get_remediation_path(misconception_id)
+    evidence_trace = summary["evidence_trace"]
+
+    return {
+        "misconception_id": misconception_id,
+        "active": summary["active"],
+        "confidence_label": summary["confidence_label"],
+        "evidence_count": summary["evidence_count"],
+        "session_count": summary["session_count"],
+        "source_types": summary["source_types"],
+        "student_statement": (
+            "Your recorded answers contain this misunderstanding: "
+            + str(node.get("misconception") or "").strip()
+        ),
+        "coaching": {
+            "why_it_matters": str(node.get("why_incorrect") or "").strip(),
+            "what_is_confused": str(node.get("misconception") or "").strip(),
+            "evidence_triggered": deepcopy(evidence_trace),
+            "practice_next": {
+                "topics": deepcopy(relationships["practice_topics"]),
+                "concepts": deepcopy(relationships["practice_concepts"]),
+                "intervention": relationships["intervention"],
+                "wwj_chunks": deepcopy(remediation["wwj_chunks"]),
+                "availability": remediation["availability"],
+            },
+            "improvement_signal": str(node.get("corrected_understanding") or "").strip(),
+        },
+        "recommendation": {
+            "type": "misconception_review",
+            "target_id": misconception_id,
+            "priority": _recommendation_priority(summary["confidence_label"]),
+            "practice_topics": deepcopy(relationships["practice_topics"]),
+            "practice_concepts": deepcopy(relationships["practice_concepts"]),
+            "intervention": relationships["intervention"],
+            "remediation": remediation,
+        },
+        "governance": deepcopy(adapted["governance"]),
+    }
+
+
+def build_active_insights(
+    les: dict[str, Any],
+    *,
+    directory: Path = DEFAULT_MISCONCEPTION_DIR,
+) -> list[dict[str, Any]]:
+    """Return active insights ordered by evidence frequency and ID."""
+    evidence = les.get("misconception_evidence") or {}
+    insights = [
+        build_insight(les, mc_id, directory=directory)
+        for mc_id in evidence
+    ]
+    active = [insight for insight in insights if insight.get("active")]
+    label_rank = {"high": 3, "medium": 2, "low": 1, "none": 0}
+    active.sort(
+        key=lambda insight: (
+            -label_rank.get(str(insight.get("confidence_label")), 0),
+            -int(insight.get("evidence_count", 0)),
+            str(insight.get("misconception_id") or ""),
+        )
+    )
+    return active
+
+
 def _score_text(text: str, node: dict[str, Any]) -> dict[str, Any]:
     query_tokens = _tokens(text)
     phrases = [
@@ -312,6 +390,14 @@ def _event_identity(event: dict[str, Any]) -> tuple[str, ...]:
         str(event.get("timestamp") or ""),
         str(event.get("outcome") or ""),
     )
+
+
+def _recommendation_priority(confidence_label: str) -> str:
+    if confidence_label == "high":
+        return "high"
+    if confidence_label == "medium":
+        return "medium"
+    return "standard"
 
 
 def _is_explanatory(text: str) -> bool:

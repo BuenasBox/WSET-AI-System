@@ -19,6 +19,10 @@ from tools.learner_model.knowledge_tracing import (
     normalize_pedagogical_memory,
     update_mastery,
 )
+from tools.learner_model.misconception_adapter import (
+    build_active_insights,
+    detect_text_evidence,
+)
 from tools.learner_model.misconception_runtime import process_sba_outcome
 from tools.learner_model.open_response_evaluator import evaluate_open_response
 from tools.learner_model.wwj_remediation import get_remediation_path
@@ -561,6 +565,10 @@ def process_question_attempt(**kwargs: Any) -> dict[str, Any]:
     correct = str(question_item.get("correct_answer") or "").strip().upper()
     student = student_answer.strip().upper()
     outcome = "correct" if student == correct else "incorrect"
+    if not mc_id and outcome == "incorrect":
+        selected_text = _selected_option_text(question_item, student_answer)
+        detection = detect_text_evidence(selected_text, source_type="sba")
+        mc_id = _optional_text(detection.get("misconception_id"))
 
     updated_les = copy.deepcopy(les)
     all_signals: list[str] = []
@@ -570,6 +578,8 @@ def process_question_attempt(**kwargs: Any) -> dict[str, Any]:
             mc_id=mc_id,
             outcome=outcome,
             session_id=session_id,
+            source_type="sba",
+            item_id=question_id,
         )
         all_signals.extend(mc_signals)
 
@@ -614,6 +624,46 @@ def process_question_attempt(**kwargs: Any) -> dict[str, Any]:
         "les_change_set": les_change_set,
         "emitted_signals": all_signals,
         "next_session_signals": next_signals,
+        "governance": _governance(),
+    }
+
+
+def process_text_misconception_attempt(
+    *,
+    answer_text: str,
+    source_type: str,
+    session_id: str,
+    item_id: str,
+    timestamp: str,
+    les: dict[str, Any],
+    candidate_ids: list[str] | None = None,
+    explicit_id: str | None = None,
+) -> dict[str, Any]:
+    """Detect and record misconception evidence for text-based learning events."""
+    detection = detect_text_evidence(
+        answer_text,
+        explicit_id=explicit_id,
+        candidate_ids=candidate_ids,
+        source_type=source_type,
+    )
+    updated_les = deepcopy(les)
+    emitted: list[str] = []
+    if detection["detected"]:
+        updated_les, emitted = process_sba_outcome(
+            updated_les,
+            mc_id=detection["misconception_id"],
+            outcome="incorrect",
+            session_id=session_id,
+            reference_date=timestamp,
+            source_type=source_type,
+            item_id=item_id,
+            matched_signals=detection["matched_signals"],
+        )
+    return {
+        "detection": detection,
+        "les": updated_les,
+        "emitted_signals": emitted,
+        "misconception_insights": build_active_insights(updated_les),
         "governance": _governance(),
     }
 
@@ -902,6 +952,17 @@ def _string_list(value: Any) -> list[str]:
     return [str(item) for item in value] if isinstance(value, list) else []
 
 
+def _selected_option_text(question_item: Mapping[str, Any], student_answer: str) -> str:
+    options = question_item.get("options")
+    if not isinstance(options, Mapping):
+        return ""
+    selected = str(student_answer or "").strip()
+    value = options.get(selected) or options.get(selected.upper()) or options.get(selected.lower())
+    if isinstance(value, Mapping):
+        return str(value.get("text") or value.get("option_text") or "")
+    return str(value or "")
+
+
 def _required_text(value: Any, field: str) -> str:
     normalized = str(value or "").strip()
     if not normalized:
@@ -974,20 +1035,19 @@ def process_open_response_attempt(
         entry["hits"] = int(entry.get("hits", 0)) + 1
         diff_cc[cc_id] = entry
 
-    # 4. Process mc_ids_relevant as misconception signals
-    # A mc_id is treated as "incorrect" when any targeted chain is absent;
-    # "correct" only when all targeted chains are present.
-    any_absent = bool(chains_absent)
-    all_present = not any_absent and bool(cc_ids_targeted)
-    for mc_id in mc_ids_relevant:
-        mc_outcome = "correct" if all_present else "incorrect"
-        updated_les, mc_sigs = process_sba_outcome(
-            updated_les,
-            mc_id=mc_id,
-            outcome=mc_outcome,
+    # 4. Record only direct misconception evidence from the learner response.
+    if mc_ids_relevant:
+        misconception_result = process_text_misconception_attempt(
+            answer_text=student_response_text,
+            source_type="open_response",
             session_id=session_id,
+            item_id=question_id,
+            timestamp=timestamp,
+            les=updated_les,
+            candidate_ids=mc_ids_relevant,
         )
-        all_signals.extend(mc_sigs)
+        updated_les = misconception_result["les"]
+        all_signals.extend(misconception_result["emitted_signals"])
 
     # 5. Collect WWJ remediation chunks for mc_ids_relevant
     wwj_chunks: list[str] = []

@@ -19,6 +19,7 @@ from tools.learner_model.learning_event_runtime import (
     build_next_session_signals,
     process_open_response_attempt,
     process_question_attempt,
+    process_text_misconception_attempt,
 )
 from tools.learner_model.misconception_runtime import process_sba_outcome
 from tools.learner_model.causal_runtime import update_les_causal
@@ -479,7 +480,7 @@ class TestOpenResponseWwjRemediation(unittest.TestCase):
 class TestOpenResponseMisconcepSignals(unittest.TestCase):
     """mc_ids_relevant in OR item should update LES misconception signals."""
 
-    def test_absent_chains_trigger_mc_as_incorrect(self):
+    def test_absent_chains_without_direct_evidence_do_not_trigger_mc(self):
         response = "The wine is aged in stainless steel."  # no MLF, no oak
         result = process_open_response_attempt(
             student_response_text=response,
@@ -492,12 +493,10 @@ class TestOpenResponseMisconcepSignals(unittest.TestCase):
             les=_fresh_les(),
         )
         mc_signals = result["les"].get("misconception_signals", {})
-        # MC_AVAILABLE should have been triggered (incorrect)
-        self.assertIn(_MC_AVAILABLE, mc_signals)
-        self.assertGreaterEqual(mc_signals[_MC_AVAILABLE]["detection_count"], 1)
+        self.assertNotIn(_MC_AVAILABLE, mc_signals)
 
-    def test_misconception_signals_in_next_session_signals(self):
-        response = "The wine is aged in stainless steel."
+    def test_direct_response_evidence_enters_next_session_signals(self):
+        response = "High acidity in a wine means the wine is low quality or unpleasant."
         result = process_open_response_attempt(
             student_response_text=response,
             question_id="OR_002",
@@ -511,6 +510,56 @@ class TestOpenResponseMisconcepSignals(unittest.TestCase):
         repair = result["next_session_signals"]["misconception_repair_candidate"]
         mc_ids = [r["mc_id"] for r in repair]
         self.assertIn(_MC_AVAILABLE, mc_ids)
+
+    def test_sat_text_evidence_uses_same_runtime_path(self):
+        result = process_text_misconception_attempt(
+            answer_text="High acidity in a wine means the wine is low quality or unpleasant.",
+            source_type="sat",
+            session_id="sat-session",
+            item_id="sat-1",
+            timestamp="2026-06-15T12:00:00Z",
+            les=_fresh_les(),
+            candidate_ids=[_MC_AVAILABLE],
+        )
+
+        self.assertTrue(result["detection"]["detected"])
+        self.assertEqual(result["detection"]["source_type"], "sat")
+        self.assertEqual(
+            result["les"]["misconception_signals"][_MC_AVAILABLE]["confidence_label"],
+            "low",
+        )
+        self.assertEqual(
+            result["misconception_insights"][0]["recommendation"]["type"],
+            "misconception_review",
+        )
+
+    def test_sba_selected_distractor_text_can_trigger_without_explicit_id(self):
+        item = {
+            "correct_answer": "A",
+            "options": {
+                "A": "Acidity can support balance and ageing.",
+                "B": "High acidity in a wine means the wine is low quality or unpleasant.",
+            },
+        }
+        result = process_question_attempt(
+            student_answer="B",
+            question_id="sba-adapted",
+            session_id="sba-session",
+            mode="practice",
+            timestamp="2026-06-15T12:30:00Z",
+            question_item=item,
+            memory=_fresh_memory(),
+            les=_fresh_les(),
+        )
+
+        self.assertEqual(
+            result["diagnostic_outcome"]["misconception_id"],
+            _MC_AVAILABLE,
+        )
+        self.assertEqual(
+            result["les"]["misconception_signals"][_MC_AVAILABLE]["confidence_label"],
+            "low",
+        )
 
 
 # ---------------------------------------------------------------------------

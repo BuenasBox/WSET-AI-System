@@ -4,6 +4,8 @@ import copy
 import unittest
 
 from tools.learner_model.misconception_adapter import (
+    build_active_insights,
+    build_insight,
     detect_text_evidence,
     load_node_index,
     normalize_node,
@@ -202,6 +204,83 @@ class EvidenceAccumulationTests(unittest.TestCase):
         )
 
         self.assertEqual(les, before)
+
+
+class RecommendationAndCoachingTests(unittest.TestCase):
+    def test_each_node_builds_complete_formative_coaching(self) -> None:
+        for mc_id in load_node_index():
+            with self.subTest(mc_id=mc_id):
+                les = record_evidence(
+                    {},
+                    misconception_id=mc_id,
+                    source_type="open_response",
+                    session_id="s1",
+                    item_id="or1",
+                    timestamp="2026-06-15T10:00:00Z",
+                    outcome="observed",
+                )
+                insight = build_insight(les, mc_id)
+
+                self.assertTrue(insight["active"])
+                self.assertTrue(insight["student_statement"])
+                self.assertTrue(insight["coaching"]["why_it_matters"])
+                self.assertTrue(insight["coaching"]["what_is_confused"])
+                self.assertTrue(insight["coaching"]["evidence_triggered"])
+                self.assertTrue(insight["coaching"]["practice_next"])
+                self.assertTrue(insight["coaching"]["improvement_signal"])
+                self.assertTrue(insight["recommendation"]["practice_topics"])
+                self.assertFalse(insight["governance"]["safe_for_examiner"])
+                self.assertFalse(insight["governance"]["examiner_scoring_allowed"])
+
+    def test_active_insights_are_ranked_by_evidence_frequency(self) -> None:
+        les: dict = {}
+        for index in range(3):
+            les = record_evidence(
+                les,
+                misconception_id="MC_MLF_01",
+                source_type="sba",
+                session_id=f"s{index // 2}",
+                item_id=f"q{index}",
+                timestamp=f"2026-06-15T10:0{index}:00Z",
+                outcome="observed",
+            )
+        les = record_evidence(
+            les,
+            misconception_id="MC_OAK_01",
+            source_type="sat",
+            session_id="s1",
+            item_id="sat1",
+            timestamp="2026-06-15T11:00:00Z",
+            outcome="observed",
+        )
+
+        insights = build_active_insights(les)
+
+        self.assertEqual(insights[0]["misconception_id"], "MC_MLF_01")
+        self.assertEqual(insights[0]["confidence_label"], "high")
+        self.assertEqual(insights[1]["confidence_label"], "low")
+
+    def test_corrected_insight_is_not_returned_as_active(self) -> None:
+        les = record_evidence(
+            {},
+            misconception_id="MC_MLF_01",
+            source_type="sba",
+            session_id="s1",
+            item_id="q1",
+            timestamp="2026-06-15T10:00:00Z",
+            outcome="observed",
+        )
+        les = record_evidence(
+            les,
+            misconception_id="MC_MLF_01",
+            source_type="sba",
+            session_id="s2",
+            item_id="q2",
+            timestamp="2026-06-15T11:00:00Z",
+            outcome="corrected",
+        )
+
+        self.assertEqual(build_active_insights(les), [])
 
 
 if __name__ == "__main__":
