@@ -7,6 +7,7 @@ import re
 from pathlib import Path
 from typing import Any
 
+from tools.learner_model.misconception_adapter import detect_text_evidence
 from tools.youtube_transcription.config import PROJECT_ROOT
 
 
@@ -82,10 +83,12 @@ def detect_misconception(
     directory: Path = DEFAULT_MISCONCEPTION_DIR,
 ) -> dict[str, Any]:
     """Return the highest-recall local misconception match for a student query."""
-    nodes = load_misconception_nodes(directory)
-    scored = [_score_node(query, node) for node in nodes]
-    scored = [row for row in scored if row["confidence"] >= 0.45]
-    if not scored:
+    result = detect_text_evidence(
+        query,
+        source_type="tutor",
+        directory=directory,
+    )
+    if not result["detected"]:
         return {
             "detected": False,
             "matched_misconception_id": None,
@@ -96,16 +99,20 @@ def detect_misconception(
             "matched_signals": [],
         }
 
-    best = max(scored, key=lambda row: (row["confidence"], row["signal_overlap"], row["node_id"]))
+    nodes = {
+        str(node.get("misconception_id") or ""): node
+        for node in load_misconception_nodes(directory)
+    }
+    node = nodes[result["misconception_id"]]
     return {
         "detected": True,
-        "matched_misconception_id": best["node_id"],
-        "confidence": round(min(best["confidence"], 0.99), 2),
-        "severity": best["severity"],
-        "intervention_type": best["intervention_type"],
-        "corrected_understanding": best["corrected_understanding"],
-        "matched_signals": best["matched_signals"],
-        "misconception": best["misconception"],
+        "matched_misconception_id": result["misconception_id"],
+        "confidence": result["match_strength"],
+        "severity": node.get("severity"),
+        "intervention_type": node.get("tutor_intervention"),
+        "corrected_understanding": node.get("corrected_understanding"),
+        "matched_signals": result["matched_signals"],
+        "misconception": node.get("misconception"),
     }
 
 
