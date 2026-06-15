@@ -1246,6 +1246,585 @@
         "official_wset_question": false,
         "training_item_only": true
       }
+    },
+    {
+      "item_id": "OR_032",
+      "question_text": "Describe las características sensoriales de un vino blanco criado en roble y cómo el tiempo de envejecimiento modifica su perfil.",
+      "command_verb": "describe",
+      "ra_id": "RA1",
+      "topic": "oak_ageing_sensory",
+      "expected_concepts": [
+        "color evolution",
+        "secondary aromas",
+        "vanillin and toasted notes",
+        "texture increase",
+        "finish prolongation"
+      ],
+      "causal_chain_target": [
+        "HC_OAK_AGEING_COMPLEXITY"
+      ],
+      "response_depth_target": "strong",
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "training_item_only": true
+      }
+    },
+    {
+      "item_id": "OR_033",
+      "question_text": "Explica cómo la altitud de los viñedos influye en la madurez de la uva y en el perfil final del vino.",
+      "command_verb": "explain",
+      "ra_id": "RA1",
+      "topic": "altitude_ripeness",
+      "expected_concepts": [
+        "temperature decrease",
+        "slower ripening",
+        "malic acid retention",
+        "sugar accumulation delay",
+        "fresh profile result"
+      ],
+      "causal_chain_target": [
+        "HC_ALTITUDE_TEMPERATURE"
+      ],
+      "response_depth_target": "strong",
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "training_item_only": true
+      }
+    },
+    {
+      "item_id": "OR_034",
+      "question_text": "Compare los estilos de vino blanco producidos en climas fríos vs. cálidos, destacando las diferencias en perfil aromático y estructura.",
+      "command_verb": "compare",
+      "ra_id": "RA2",
+      "topic": "climate_style_differences",
+      "expected_concepts": [
+        "cool climate: primary aromas",
+        "cool climate: higher acidity",
+        "warm climate: secondary/tertiary aromas",
+        "warm climate: lower acidity",
+        "ripeness differential"
+      ],
+      "causal_chain_target": [
+        "HC_COOL_CLIMATE_STYLE"
+      ],
+      "response_depth_target": "developing",
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "training_item_only": true
+      }
+    },
+    {
+      "item_id": "OR_035",
+      "question_text": "Assess la calidad de un vino blanco criado en acero inoxidable basándote en su fruta y estructura ácida, considerando el estilo esperado.",
+      "command_verb": "assess",
+      "ra_id": "RA2",
+      "topic": "stainless_steel_quality",
+      "expected_concepts": [
+        "primary aromas preserved",
+        "clear acidity",
+        "mineral structure",
+        "style-dependent judgment",
+        "variety expression"
+      ],
+      "causal_chain_target": [],
+      "response_depth_target": "developing",
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "training_item_only": true
+      }
+    },
+    {
+      "item_id": "OR_036",
+      "question_text": "Evaluate el impacto de la fermentación maloláctica en un vino blanco, considerando tanto beneficios como compromisos estilísticos.",
+      "command_verb": "evaluate",
+      "ra_id": "RA2",
+      "topic": "mlf_tradeoffs",
+      "expected_concepts": [
+        "texture softening",
+        "aromatic complexity",
+        "acidity loss",
+        "freshness compromise",
+        "diacetyl risk",
+        "style-dependent value"
+      ],
+      "causal_chain_target": [
+        "CC_MLF_ACIDITY",
+        "CC_MLF_TEXTURE"
+      ],
+      "response_depth_target": "strong",
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "training_item_only": true
+      }
+    },
+    {
+      "item_id": "OR_037",
+      "question_text": "Discuss la sostenibilidad en la viticultura moderna y cómo las prácticas certificadas impactan tanto el coste como la percepción del consumidor.",
+      "command_verb": "discuss",
+      "ra_id": "RA1",
+      "topic": "sustainability_economics",
+      "expected_concepts": [
+        "certification types",
+        "production cost increase",
+        "premium pricing",
+        "consumer perception",
+        "market positioning",
+        "labor intensity"
+      ],
+      "causal_chain_target": [],
+      "response_depth_target": "developing",
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "training_item_only": true
+      }
+    },
+    {
+      "item_id": "OR_038",
+      "question_text": "Recommend un enfoque de vinificación para un Riesling seco de clima frío que busca máxima expresión de terroir.",
+      "command_verb": "recommend",
+      "ra_id": "RA3",
+      "topic": "riesling_dry_vinification",
+      "expected_concepts": [
+        "temperature control during fermentation",
+        "stainless steel fermentation",
+        "prevent MLF",
+        "minimal oak",
+        "early bottling",
+        "preserve acidity"
+      ],
+      "causal_chain_target": [],
+      "response_depth_target": "developing",
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "training_item_only": true
+      }
+    },
+    {
+      "item_id": "OR_039",
+      "question_text": "Identify and explain los factores que hacen que la Borgoña sea una región de vinos finos, conectando terroir con estilo.",
+      "command_verb": "identify_and_explain",
+      "ra_id": "RA3",
+      "topic": "burgundy_terroir_style",
+      "expected_concepts": [
+        "continental climate",
+        "limestone-rich soils",
+        "cool growing season",
+        "low yields",
+        "Pinot Noir/Chardonnay varieties",
+        "regional regulations",
+        "expression of place"
+      ],
+      "causal_chain_target": [
+        "HC_COOL_CLIMATE_STYLE"
+      ],
+      "response_depth_target": "strong",
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "training_item_only": true
+      }
+    },
+    {
+      "item_id": "OR_040",
+      "question_text": "Describe los cambios en color, aroma y estructura que ocurren cuando un vino tinto joven se expone al aire después de descorchar.",
+      "command_verb": "describe",
+      "ra_id": "RA3",
+      "topic": "red_wine_oxidation_sensory",
+      "expected_concepts": [
+        "color brightening",
+        "tannin softening",
+        "aroma opening",
+        "fruit expression increase",
+        "alcohol perception change",
+        "structural integration"
+      ],
+      "causal_chain_target": [],
+      "response_depth_target": "developing",
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "training_item_only": true
+      }
+    },
+    {
+      "item_id": "OR_041",
+      "question_text": "Explica por qué algunos viñedos de Cabernet Sauvignon en Burdeos alcanzan mayor concentración tanínica que otros en el mismo viñedo.",
+      "command_verb": "explain",
+      "ra_id": "RA4",
+      "topic": "tannin_concentration_variation",
+      "expected_concepts": [
+        "berry size variation",
+        "skin-to-juice ratio",
+        "ripeness level",
+        "exposition differences",
+        "soil drainage variation",
+        "terroir micro-variation"
+      ],
+      "causal_chain_target": [
+        "HC_YIELD_CONCENTRATION"
+      ],
+      "response_depth_target": "developing",
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "training_item_only": true
+      }
+    },
+    {
+      "item_id": "OR_042",
+      "question_text": "Compare el potencial de envejecimiento entre un Barolo de uvas de viña vieja vs. viña joven, explicando las razones.",
+      "command_verb": "compare",
+      "ra_id": "RA4",
+      "topic": "vineyard_age_aging_potential",
+      "expected_concepts": [
+        "old vine: deeper roots",
+        "old vine: lower yields",
+        "old vine: higher concentration",
+        "old vine: higher tannins",
+        "aging structure benefit",
+        "complexity development"
+      ],
+      "causal_chain_target": [
+        "HC_YIELD_CONCENTRATION"
+      ],
+      "response_depth_target": "strong",
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "training_item_only": true
+      }
+    },
+    {
+      "item_id": "OR_043",
+      "question_text": "Assess la calidad de un vino tinto que muestra estructura tánica fuerte pero aroma de frutas difuso, considerando edad probable.",
+      "command_verb": "assess",
+      "ra_id": "RA4",
+      "topic": "tannin_aroma_age_judgment",
+      "expected_concepts": [
+        "tannin maturity indicator",
+        "aroma volatility",
+        "age estimation",
+        "structure vs. development",
+        "aging trajectory",
+        "quality judgment context"
+      ],
+      "causal_chain_target": [],
+      "response_depth_target": "developing",
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "training_item_only": true
+      }
+    },
+    {
+      "item_id": "OR_044",
+      "question_text": "Evaluate la influencia del corcho natural vs. alternativas de cierre en la evolución a largo plazo de un Burdeos tinto de guarda.",
+      "command_verb": "evaluate",
+      "ra_id": "RA4",
+      "topic": "closure_aging_impact",
+      "expected_concepts": [
+        "oxygen permeability",
+        "cork taint risk",
+        "alternative closure benefits",
+        "TCA contamination",
+        "consistent aging",
+        "cost trade-offs"
+      ],
+      "causal_chain_target": [],
+      "response_depth_target": "developing",
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "training_item_only": true
+      }
+    },
+    {
+      "item_id": "OR_045",
+      "question_text": "Discuss la relevancia de los taninos en la estructura y evolución de vinos tintos, y cómo el winemaker puede gestionarlos.",
+      "command_verb": "discuss",
+      "ra_id": "RA5",
+      "topic": "tannin_management",
+      "expected_concepts": [
+        "tannin sources",
+        "seed tannins: astringency",
+        "skin tannins: structure",
+        "extraction control",
+        "temperature management",
+        "aging benefits",
+        "softening mechanisms"
+      ],
+      "causal_chain_target": [],
+      "response_depth_target": "strong",
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "training_item_only": true
+      }
+    },
+    {
+      "item_id": "OR_046",
+      "question_text": "Recommend una estrategia de mezcla (blend) para un vino tinto que busca equilibrio entre estructura, fruit, y elegancia.",
+      "command_verb": "recommend",
+      "ra_id": "RA5",
+      "topic": "red_blend_strategy",
+      "expected_concepts": [
+        "varietal roles in blend",
+        "Cabernet for structure",
+        "Merlot for flesh",
+        "Petit Verdot for aging",
+        "balance proportions",
+        "tasting evaluation iterative"
+      ],
+      "causal_chain_target": [],
+      "response_depth_target": "developing",
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "training_item_only": true
+      }
+    },
+    {
+      "item_id": "OR_047",
+      "question_text": "Identify and explain las características que permiten diferenciar un vino tinto de Napa Valley de uno similar de Sonoma, basándote en clima y suelo.",
+      "command_verb": "identify_and_explain",
+      "ra_id": "RA5",
+      "topic": "napa_sonoma_terroir_distinction",
+      "expected_concepts": [
+        "valley floor: riper fruit",
+        "hillside: structure and complexity",
+        "fog influence variation",
+        "soil mineral expression",
+        "Cabernet ripeness difference",
+        "regional identity"
+      ],
+      "causal_chain_target": [
+        "HC_COOL_CLIMATE_STYLE"
+      ],
+      "response_depth_target": "developing",
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "training_item_only": true
+      }
+    },
+    {
+      "item_id": "OR_048",
+      "question_text": "Describe el proceso de elaboración de un vino espumoso tradicional (méthode champenoise) y cómo afecta al sabor final.",
+      "command_verb": "describe",
+      "ra_id": "RA3",
+      "topic": "traditional_sparkling_method",
+      "expected_concepts": [
+        "primary fermentation",
+        "secondary fermentation in bottle",
+        "autolysis",
+        "yeast contact",
+        "creamy texture",
+        "complex aromatic development",
+        "bubble formation"
+      ],
+      "causal_chain_target": [],
+      "response_depth_target": "developing",
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "training_item_only": true
+      }
+    },
+    {
+      "item_id": "OR_049",
+      "question_text": "Explica cómo el diurnal temperature range (DTR) en viñedos afecta la frescura y complejidad aromatic del vino final.",
+      "command_verb": "explain",
+      "ra_id": "RA1",
+      "topic": "diurnal_range_freshness",
+      "expected_concepts": [
+        "warm day: sugar accumulation",
+        "cool night: acid retention",
+        "DTR benefit: both sugar and acidity",
+        "flavor maturity vs. acid balance",
+        "ideal DTR zones",
+        "aromatic complexity from acid preservation"
+      ],
+      "causal_chain_target": [
+        "HC_DIURNAL_RANGE_FRESHNESS"
+      ],
+      "response_depth_target": "strong",
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "training_item_only": true
+      }
+    },
+    {
+      "item_id": "OR_050",
+      "question_text": "Compare la elegancia y potencial de envejecimiento de vinos dulces elaborados por botrytis (noble rot) vs. deshidratación de uvas.",
+      "command_verb": "compare",
+      "ra_id": "RA5",
+      "topic": "sweet_wine_production_methods",
+      "expected_concepts": [
+        "botrytis: noble rot complexity",
+        "botrytis: honey and citrus notes",
+        "botrytis: acidity retention",
+        "drying: concentration",
+        "drying: less complexity",
+        "aging potential variation"
+      ],
+      "causal_chain_target": [],
+      "response_depth_target": "developing",
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "training_item_only": true
+      }
+    },
+    {
+      "item_id": "OR_051",
+      "question_text": "Assess la calidad de un vino fortificado que muestra balance entre alcohol, sweetness, y complejidad aromática.",
+      "command_verb": "assess",
+      "ra_id": "RA1",
+      "topic": "fortified_wine_quality",
+      "expected_concepts": [
+        "alcohol role: structure and preservation",
+        "sweetness level appropriateness",
+        "aroma complexity",
+        "aging indicators",
+        "style expectations",
+        "balance judgment"
+      ],
+      "causal_chain_target": [],
+      "response_depth_target": "developing",
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "training_item_only": true
+      }
+    },
+    {
+      "item_id": "OR_052",
+      "question_text": "Evaluate los beneficios y riesgos de utilizar microoxygenation durante la crianza de un vino tinto para suavizar táninos.",
+      "command_verb": "evaluate",
+      "ra_id": "RA2",
+      "topic": "microoxygenation_risk_benefit",
+      "expected_concepts": [
+        "tannin polymerization",
+        "color stabilization",
+        "oxidation risk",
+        "over-oxidation possibility",
+        "cost consideration",
+        "style impact unpredictability"
+      ],
+      "causal_chain_target": [],
+      "response_depth_target": "developing",
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "training_item_only": true
+      }
+    },
+    {
+      "item_id": "OR_053",
+      "question_text": "Discuss la importancia del pH y su interacción con acidez, táninos, y color en la estabilidad y evolución del vino.",
+      "command_verb": "discuss",
+      "ra_id": "RA3",
+      "topic": "ph_stability_interaction",
+      "expected_concepts": [
+        "pH vs. titratable acidity distinction",
+        "microbiological stability",
+        "tannin color expression",
+        "oxidation sensitivity",
+        "aging trajectory impact",
+        "winemaker pH management tools"
+      ],
+      "causal_chain_target": [],
+      "response_depth_target": "strong",
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "training_item_only": true
+      }
+    },
+    {
+      "item_id": "OR_054",
+      "question_text": "Recommend un calendario de cosecha (picking schedule) para un viñedo de Chardonnay que busca elaborar un espumoso de alta elegancia.",
+      "command_verb": "recommend",
+      "ra_id": "RA4",
+      "topic": "sparkling_chardonnay_harvest",
+      "expected_concepts": [
+        "lower alcohol target",
+        "higher acidity retention",
+        "optimal ripeness for aroma",
+        "timing precision",
+        "multiple picks vs. single",
+        "analytical targets: brix, pH, TA"
+      ],
+      "causal_chain_target": [],
+      "response_depth_target": "developing",
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "training_item_only": true
+      }
+    },
+    {
+      "item_id": "OR_055",
+      "question_text": "Identify and explain los mecanismos por los cuales el canopy management (manipulación del dosel) impacta la composición de la uva.",
+      "command_verb": "identify_and_explain",
+      "ra_id": "RA2",
+      "topic": "canopy_management_grape_composition",
+      "expected_concepts": [
+        "leaf area management",
+        "fruit exposure balance",
+        "sugar accumulation",
+        "phenolic ripeness",
+        "sunlight interception",
+        "shade prevention"
+      ],
+      "causal_chain_target": [
+        "HC_CANOPY_VIGOUR_EXPOSURE"
+      ],
+      "response_depth_target": "strong",
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "training_item_only": true
+      }
+    },
+    {
+      "item_id": "OR_056",
+      "question_text": "Describe la evolución sensorial de un vino envejecido en botella durante 10-15 años, explicando los cambios químicos subyacentes.",
+      "command_verb": "describe",
+      "ra_id": "RA5",
+      "topic": "bottle_aging_evolution",
+      "expected_concepts": [
+        "tannin polymerization",
+        "color brick formation",
+        "secondary aromatics development",
+        "fruit to earth shift",
+        "texture integration",
+        "aromatic complexity peak"
+      ],
+      "causal_chain_target": [],
+      "response_depth_target": "strong",
+      "governance": {
+        "safe_for_examiner": false,
+        "examiner_scoring_allowed": false,
+        "training_item_only": true
+      }
     }
-  ]
+  ],
+  "last_batch": 1,
+  "total_items": 56,
+  "batch_metadata": {
+    "batch_1": {
+      "batch_number": 1,
+      "items_added": 25,
+      "generated_at": "2026-06-15"
+    }
+  }
 }
